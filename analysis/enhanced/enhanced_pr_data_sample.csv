@@ -1,0 +1,19 @@
+repository,pr_number,title,description_length,description_preview,author,state,created_at,merged_at,closed_at,time_to_merge_hours,head_branch,base_branch,labels,milestone,assignees,reviews_count,approvals_count,changes_requested_count,unique_reviewers,comments_count,commits_count,files_changed,total_reactions,additions,deletions,net_lines,url,enhancement_failed
+vinted/dataverse-vintedgo-dbt,7200,chore: new service names for postnord-SE,432,"new service names to be added to accepted values:
+
+<img width=""956"" height=""595"" alt=""image"" src=""https://github.com/user-attachments/assets/36da6664-15b5-4e83-befa-846bf11abfcb"" />
+
+i am going to...",jeremychia,OPEN,2026-02-04T08:04:23Z,,,,chore--account-for-new-service-names-for-postnord-se,main,vgo_finance,,,2,1,0,jsakalyte|jeremychia,3,7,2,0,97,15,82,https://github.com/vinted/dataverse-vintedgo-dbt/pull/7200,False
+vinted/dataverse-vintedgo-dbt,7199,feat: propogate invoice_id by file for postnord-se,534,"there were missing `invoice_id`. 
+
+when investigating, i found that it's possible to propogate the invoice_id within the whole file, as there's only one invoice_id per file uploaded.
+
+i added also...",jeremychia,OPEN,2026-02-04T07:43:41Z,,,,fix-missing-invoice-id,main,vgo_finance,,,1,1,0,jsakalyte,1,7,3,0,82,1,81,https://github.com/vinted/dataverse-vintedgo-dbt/pull/7199,False
+vinted/dataverse-vintedgo-finance,215,chore: replace jeremy.chia in alerts with georgi.evlogiev,179,"as @jeremychia is leaving vinted, this PR changes the alerts to @geoevl, who will be supporting @jsakalyte in addressing issues with finance's alerts.
+
+thank you for your support!",jeremychia,MERGED,2026-02-04T06:38:56Z,2026-02-04T07:11:56Z,2026-02-04T07:11:56Z,0.55,chore--replace-jeremy.chia-in-alerts-with-georgi.evlogiev,main,,,,1,1,0,geoevl,0,1,6,0,6,12,-6,https://github.com/vinted/dataverse-vintedgo-finance/pull/215,False
+vinted/dataverse-vintedgo-dbt,7198,chore: remove jeremy.chia from alerts,181,"as @jeremychia is leaving vinted, this PR changes the alerts to @geoevl, who will be supporting @jsakalyte in addressing issues with finance's alerts.
+
+thank you for your support!",jeremychia,MERGED,2026-02-04T06:34:50Z,2026-02-04T07:23:35Z,2026-02-04T07:23:35Z,0.8125,chore--remove-jeremy.chia-from-alerts,main,vgo_carrier|vgo_finance|vgo_d2c|scheduler,,,1,1,0,geoevl,9,1,4,0,18,19,-1,https://github.com/vinted/dataverse-vintedgo-dbt/pull/7198,False
+vinted/dataverse-vintedgo-finance,213,fix: time-zone aware cases,132,"<img width=""659"" height=""258"" alt=""image"" src=""https://github.com/user-attachments/assets/60a73ed8-4f8e-4b35-9237-ca83fcf12160"" />
+",jeremychia,MERGED,2026-02-03T09:26:17Z,2026-02-03T09:31:00Z,2026-02-03T09:31:00Z,0.07861111111111112,fix--time-zone-aware-cases,main,,,,1,1,0,jsakalyte,0,1,1,0,18,10,8,https://github.com/vinted/dataverse-vintedgo-finance/pull/213,False

@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "github-pr-scraper"
+version = "0.1.0"
+description = "Advanced GitHub PR analysis tool using web scraping for detailed metrics"
+authors = ["Jeremy Chia <jeremy.chia@example.com>"]
+readme = "README.md"
+packages = [{include = "github_pr_scraper"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+playwright = "^1.40.0"
+pydantic = "^2.5.0"
+click = "^8.1.7"
+pandas = "^2.1.0"
+python-dotenv = "^1.0.0"
+rich = "^13.7.0"
+pyyaml = "^6.0.1"
+asyncio = "^3.4.3"
+beautifulsoup4 = "^4.12.0"
+lxml = "^4.9.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.23.0"
+black = "^23.12.0"
+flake8 = "^6.1.0"
+mypy = "^1.8.0"
+
+[tool.poetry.scripts]
+github-pr-scraper = "github_pr_scraper.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

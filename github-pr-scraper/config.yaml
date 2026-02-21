@@ -1,0 +1,30 @@
+filters:
+  exclude_labels:
+  - wontfix
+  - duplicate
+  exclude_repositories: []
+  include_closed: true
+  include_drafts: true
+  include_merged: true
+  labels_filter: []
+  max_prs: 100
+  repositories: []
+github:
+  base_url: https://github.com
+  browser_user_data_dir: null
+  use_existing_session: true
+log_file: null
+log_level: INFO
+output:
+  default_format: csv
+  generate_report: true
+  include_summary: true
+  output_dir: ./outputs
+  pretty_json: true
+scraping:
+  concurrent_pages: 3
+  headless: false
+  retry_attempts: 3
+  retry_delay: 2000
+  slow_mo: 1000
+  timeout: 30000
