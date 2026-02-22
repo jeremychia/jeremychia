@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "generated_date": "2026-02-22T09:55:42.519763",
+    "analyst_role": "Analytics Engineer",
+    "performance_period": {
+      "start": "2023-08-17T09:30:49+00:00",
+      "end": "2026-02-04T08:04:23+00:00"
+    }
+  },
+  "performance_scores": {
+    "overall_score": 83.81830130472554,
+    "velocity_score": 100.0,
+    "quality_score": 98.81040892193309,
+    "efficiency_score": 42.937978453102936,
+    "impact_score": 92.20342007434944,
+    "tier": "\ud83e\udd47 EXCELLENT (Top 15%)",
+    "metrics": {
+      "pr_rate_monthly": 45.44039955604884,
+      "merge_rate": 95.09293680297398,
+      "avg_merge_time": 28.47173399357137,
+      "avg_pr_size": 160.3345724907063,
+      "feature_rate": 40.96654275092937,
+      "detailed_desc_rate": 86.31970260223049,
+      "collab_rate": 96.6542750929368
+    }
+  },
+  "key_metrics": {
+    "total_prs": 1345,
+    "monthly_velocity": 45.44039955604884,
+    "success_rate": 95.09293680297398,
+    "performance_score": 83.81830130472554,
+    "performance_tier": "\ud83e\udd47 EXCELLENT (Top 15%)"
+  },
+  "achievement_bullets": [
+    "\ud83c\udfaf Delivered 1,345 production code changes with 95.1% success rate as Staff Analytics Engineer",
+    "\u26a1 Optimized development cycle time to 28.5h average merge time through data-driven process improvements",
+    "\ud83c\udfc6 Achieved \ud83e\udd47 EXCELLENT (Top 15%) performance tier with 84/100 comprehensive score across velocity, quality, efficiency, and impact metrics",
+    "\ud83d\udd27 Led technical contributions across 6 major platform components, demonstrating cross-system architectural expertise",
+    "\ud83d\udcc8 Sustained 45.4 PRs/month delivery velocity while maintaining industry-leading quality standards",
+    "\ud83e\udd1d Maintained 96.7% collaborative development engagement, driving knowledge sharing and team excellence",
+    "\ud83d\udca1 Established performance benchmarking methodologies for engineering organization development and optimization",
+    "\ud83c\udf96\ufe0f Delivered 551 major feature developments with end-to-end technical ownership"
+  ],
+  "documents": {
+    "performance_review": "\nANNUAL PERFORMANCE SELF-EVALUATION\nAnalytics Engineer | Performance Period: August 2023 - February 2026\n\n\u25b6 DELIVERY EXCELLENCE:\n\u2022 Technical Output: 1,345 PRs delivered with 95.1% success rate\n\u2022 Velocity Achievement: 45.4 PRs/month (sustained high performance)\n\u2022 Quality Leadership: 99/100 quality score - \ud83e\udd47 EXCELLENT (Top 15%)\n\u2022 Efficiency Optimization: 28.5h average merge time (industry-leading)\n\n\u25b6 TECHNICAL LEADERSHIP:\n\u2022 Cross-System Expertise: Active across 6 major platform components\n\u2022 Architectural Impact: 215,650 lines of production code\n\u2022 Feature Leadership: 551 major feature developments\n\u2022 Innovation Focus: Data-driven performance optimization methodologies\n\n\u25b6 COLLABORATION & MENTORSHIP:\n\u2022 Team Engagement: 96.7% collaborative development participation\n\u2022 Knowledge Sharing: Cross-repository expertise and review leadership\n\u2022 Standard Setting: Consistent quality patterns for team adoption\n\u2022 Process Excellence: Established performance benchmarks for organization\n\n\u25b6 BUSINESS IMPACT:\n\u2022 System Reliability: Maintained platform stability across high-velocity delivery\n\u2022 Technical Debt Reduction: Quality-first approach minimizing future maintenance\n\u2022 Process Innovation: Created data-driven development performance frameworks\n\u2022 Organizational Influence: Performance tier achievement demonstrating technical leadership\n",
+    "promotion_case": "\nPROMOTION CASE: ANALYTICS ENGINEER \u2192 SENIOR ANALYTICS ENGINEER\n\n\u25b6 TECHNICAL EXCELLENCE DEMONSTRATED:\nEvidence: 84/100 comprehensive performance score\n\u2022 Sustained high-velocity delivery: 1,345 PRs over 29.6 months\n\u2022 Quality leadership: 95.1% success rate with minimal rework\n\u2022 Efficiency innovation: 28.5h merge time optimization\n\u2022 Cross-system mastery: 6 platform components\n\n\u25b6 ORGANIZATIONAL IMPACT:\n\u2022 Technical Leadership: Performance benchmark establishment for engineering org\n\u2022 Knowledge Multiplication: 96.7% collaborative engagement rate\n\u2022 Process Innovation: Data-driven performance measurement methodologies\n\u2022 Quality Standards: Consistent excellence patterns for team adoption\n\n\u25b6 SCOPE & COMPLEXITY HANDLING:\n\u2022 Multi-System Architecture: Delivered across 6 diverse codebases\n\u2022 Feature Ownership: 551 end-to-end feature deliveries\n\u2022 Technical Decision Making: Architectural choices evidenced by code impact patterns\n\u2022 Scalability Focus: Maintained quality while increasing delivery velocity\n\n\u25b6 LEADERSHIP READINESS:\n\u2022 Mentorship Capability: Demonstrated through consistent quality examples\n\u2022 Technical Vision: Long-term architectural thinking across system boundaries  \n\u2022 Influence Without Authority: Performance tier achievement inspiring team standards\n\u2022 Innovation Mindset: Created frameworks for organizational performance improvement\n\n\u25b6 STRATEGIC CONTRIBUTIONS:\n\u2022 Performance Optimization: Established data-driven delivery improvement patterns\n\u2022 Cross-Functional Impact: Technical excellence supporting business objectives\n\u2022 Team Development: Knowledge sharing and standard-setting leadership\n\u2022 Organizational Growth: Scalable methodologies for engineering excellence\n\nRECOMMENDATION: Promotion to Senior Staff Engineer based on demonstrated technical leadership,\norganizational impact, and readiness for increased scope and influence.\n",
+    "executive_summary": "\n\u250c\u2500 STAFF ANALYTICS ENGINEER PERFORMANCE SUMMARY \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                     \u2502\n\u2502  \ud83c\udfaf OVERALL SCORE: 84/100 (\ud83e\udd47 EXCELLENT (Top 15%))                            \u2502\n\u2502                                                                     \u2502\n\u2502  \ud83d\udcc8 KEY METRICS:                                                    \u2502\n\u2502     \u2022 Delivery: 1,345 PRs | 45.4/month sustained velocity            \u2502\n\u2502     \u2022 Quality: 95.1% success rate | 99/100 quality score        \u2502\n\u2502     \u2022 Efficiency: 28.5h avg merge time | Industry-leading cycle    \u2502\n\u2502     \u2022 Impact: 6 systems | 215,650 lines of code              \u2502\n\u2502                                                                     \u2502\n\u2502  \ud83c\udfc6 ACHIEVEMENTS:                                                   \u2502\n\u2502     \u2022 Technical leadership across multiple platform components      \u2502\n\u2502     \u2022 Performance benchmark establishment for organization          \u2502\n\u2502     \u2022 Data-driven development optimization methodologies           \u2502\n\u2502     \u2022 Cross-functional collaboration and knowledge leadership       \u2502\n\u2502                                                                     \u2502\n\u2502  \ud83d\udccb READY FOR: Senior Staff promotion, technical leadership,        \u2502\n\u2502     mentorship programs, organizational impact initiatives          \u2502\n\u2502                                                                     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n"
+  }
+}
