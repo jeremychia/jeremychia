@@ -209,6 +209,21 @@
       font-size: 0.76rem;
       color: #1d4ed8;
       white-space: nowrap;
+      cursor: pointer;
+      transition: background-color 120ms ease, color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-0.5px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    .experience-highlight {
+      background: rgba(239, 246, 255, 0.9);
+    }
+
+    .experience-dim {
+      opacity: 0.4;
     }
 
     @media (max-width: 640px) {
@@ -503,5 +518,60 @@
       </section>
     </main>
   </div>
+  <script>
+    (function () {
+      const pillSkills = {
+        'dbt': 'dbt',
+        'BigQuery': 'BigQuery',
+        'Snowflake': 'Snowflake',
+        'Apache Spark': 'Spark',
+        'Looker': 'Looker',
+        'Power BI': 'Power BI',
+        'Analytics Engineering': 'analytics',
+        'Finance Data': 'finance'
+      };
+
+      const pills = document.querySelectorAll('.pill-list .pill');
+      const experienceSection = document.querySelector('#experience');
+      if (!pills.length || !experienceSection) return;
+
+      const items = Array.from(experienceSection.querySelectorAll('li'));
+      let activeKey = null;
+
+      function applyFilter(key) {
+        if (!key) {
+          items.forEach(li => {
+            li.classList.remove('experience-highlight', 'experience-dim');
+          });
+          return;
+        }
+        const needle = pillSkills[key].toLowerCase();
+        items.forEach(li => {
+          const text = li.textContent.toLowerCase();
+          if (text.includes(needle)) {
+            li.classList.add('experience-highlight');
+            li.classList.remove('experience-dim');
+          } else {
+            li.classList.remove('experience-highlight');
+            li.classList.add('experience-dim');
+          }
+        });
+      }
+
+      pills.forEach(pill => {
+        const label = pill.textContent.trim();
+        if (!(label in pillSkills)) return;
+        pill.addEventListener('click', () => {
+          if (activeKey === label) {
+            activeKey = null;
+            applyFilter(null);
+          } else {
+            activeKey = label;
+            applyFilter(label);
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
