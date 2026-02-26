@@ -28,6 +28,10 @@
       line-height: 1.5;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     .page {
       max-width: 880px;
       margin: 0 auto;
@@ -55,6 +59,26 @@
       padding-top: 0.4rem;
       padding-bottom: 0.75rem;
       margin-bottom: 1.25rem;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted-color);
+      margin-bottom: 0.35rem;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--muted-color);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .top-nav a:hover {
+      color: var(--accent-color);
     }
 
     @media (min-width: 640px) {
@@ -250,6 +274,13 @@
       <button type="button" onclick="window.print()" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; cursor:pointer;">Download PDF</button>
       <a href="resume-jeremy-chia.md" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; text-decoration:none; color:#374151;">Download Markdown</a>
     </div>
+    <nav class="top-nav" aria-label="Resume sections">
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#community">Community</a>
+      <a href="#skills">Skills</a>
+    </nav>
     <header>
       <div>
         <h1>Jeremy Chia</h1>
@@ -264,7 +295,7 @@
     </header>
 
     <main>
-      <section aria-label="Professional Summary">
+      <section id="summary" aria-label="Professional Summary">
         <h2>Summary</h2>
         <p class="summary-text">
           Senior Analytics Engineer with 6+ years of experience bridging finance and data engineering across APAC and Europe.
@@ -274,7 +305,7 @@
         </p>
       </section>
 
-      <section aria-label="Professional Experience">
+      <section id="experience" aria-label="Professional Experience">
         <h2>Experience</h2>
 
         <article class="item">
@@ -341,7 +372,7 @@
         </article>
       </section>
 
-      <section aria-label="Education">
+      <section id="education" aria-label="Education">
         <h2>Education</h2>
 
         <article class="item">
@@ -371,7 +402,7 @@
         </article>
       </section>
 
-      <section aria-label="Community and Volunteering">
+      <section id="community" aria-label="Community and Volunteering">
         <h2>Community and Volunteering</h2>
 
         <article class="item">
@@ -405,7 +436,7 @@
         </article>
       </section>
 
-      <section aria-label="Skills and Certifications">
+      <section id="skills" aria-label="Skills and Certifications">
         <h2>Skills</h2>
         <div class="item">
           <strong>Technical</strong>
