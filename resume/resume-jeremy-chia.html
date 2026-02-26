@@ -230,19 +230,34 @@
 
     .pill {
       border-radius: 999px;
-      border: 1px solid #bfdbfe;
-      background: var(--accent-soft);
-      padding: 0.12rem 0.5rem;
+      border: 1px solid #1d4ed8;
+      background: #eff6ff;
+      padding: 0.16rem 0.6rem;
       font-size: 0.76rem;
       color: #1d4ed8;
       white-space: nowrap;
       cursor: pointer;
-      transition: background-color 120ms ease, color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: background-color 120ms ease, color 120ms ease, transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
     }
 
     .pill:hover {
       transform: translateY(-0.5px);
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.16);
+      background: #dbeafe;
+    }
+
+    body.dark-mode .pill {
+      border-color: #60a5fa;
+      background: rgba(30, 64, 175, 0.6);
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .pill:hover {
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.8);
+      background: rgba(37, 99, 235, 0.85);
     }
 
     .experience-highlight {
