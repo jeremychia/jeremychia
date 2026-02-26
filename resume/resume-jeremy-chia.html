@@ -26,6 +26,7 @@
       color: var(--text-color);
       background: var(--bg-color);
       line-height: 1.5;
+        transition: background-color 150ms ease, color 150ms ease;
     }
 
     html {
@@ -45,6 +46,16 @@
     }
 
     .page::before {
+    body.dark-mode {
+      --text-color: #e5e7eb;
+      --muted-color: #9ca3af;
+      --accent-color: #60a5fa;
+      --accent-soft: rgba(96, 165, 250, 0.12);
+      --border-color: #374151;
+      --bg-color: #020617;
+      background: #020617;
+      color: var(--text-color);
+    }
       content: "";
       position: absolute;
       inset: 0 0 auto 0;
@@ -279,6 +290,7 @@
 <body>
   <div class="page">
     <div class="controls" aria-hidden="true" style="display:flex; justify-content:flex-end; gap:0.5rem; font-size:0.78rem; margin-bottom:0.5rem;">
+      <button type="button" onclick="document.body.classList.toggle('dark-mode');" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; cursor:pointer;">Toggle dark mode</button>
       <button type="button" onclick="window.print()" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; cursor:pointer;">Download PDF</button>
       <a href="resume-jeremy-chia.md" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; text-decoration:none; color:#374151;">Download Markdown</a>
     </div>
