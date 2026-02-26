@@ -26,7 +26,7 @@
       color: var(--text-color);
       background: var(--bg-color);
       line-height: 1.5;
-        transition: background-color 150ms ease, color 150ms ease;
+      transition: background-color 150ms ease, color 150ms ease;
     }
 
     html {
@@ -38,7 +38,7 @@
       margin: 0 auto;
       padding: 2rem 2.25rem 2.25rem;
       background: #ffffff;
-      border-radius: 0.75rem;
+      border-radius: 0.9rem;
       border: 1px solid var(--border-color);
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
       position: relative;
@@ -86,8 +86,16 @@
       color: #93c5fd;
     }
 
-    body.dark-mode .top-nav a {
-      color: var(--muted-color);
+    body.dark-mode .control-button {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: #1f2937;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .control-button:hover {
+      background: rgba(30, 41, 59, 0.95);
+      border-color: #334155;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
     }
 
     header {
@@ -97,6 +105,34 @@
       padding-top: 0.4rem;
       padding-bottom: 0.75rem;
       margin-bottom: 1.25rem;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .control-button {
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #374151;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .control-button:hover {
+      background: #e5e7eb;
+      border-color: #cbd5f5;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
     }
 
     .top-nav {
@@ -113,10 +149,26 @@
       color: var(--muted-color);
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      padding: 0.12rem 0.4rem;
+      border-radius: 999px;
+      background: #f8fafc;
     }
 
     .top-nav a:hover {
       color: var(--accent-color);
+      background: var(--accent-soft);
+    }
+
+    body.dark-mode .top-nav a {
+      color: var(--muted-color);
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+
+    body.dark-mode .top-nav a:hover {
+      color: #e5e7eb;
+      background: rgba(30, 41, 59, 0.9);
+      border-color: rgba(96, 165, 250, 0.65);
     }
 
     @media (min-width: 640px) {
@@ -168,12 +220,25 @@
 
     h2 {
       font-size: 0.98rem;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.25rem;
+      padding: 0.1rem 0 0.25rem 0.7rem;
       margin: 1.25rem 0 0.55rem;
       color: #111827;
+      position: relative;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 0.85rem;
+      border-radius: 999px;
+      background: var(--accent-color);
     }
 
     h3 {
@@ -193,6 +258,7 @@
 
     .item {
       margin-bottom: 0.7rem;
+      padding: 0.2rem 0.35rem;
       transition: background-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
       border-radius: 0.4rem;
     }
@@ -329,6 +395,7 @@
       }
       .item {
         margin-bottom: 0.35rem;
+        padding: 0;
       }
       ul {
         margin: 0.05rem 0 0.2rem 0.8rem;
@@ -351,10 +418,10 @@
 </head>
 <body>
   <div class="page">
-    <div class="controls" aria-hidden="true" style="display:flex; justify-content:flex-end; gap:0.5rem; font-size:0.78rem; margin-bottom:0.5rem;">
-      <button type="button" onclick="document.body.classList.toggle('dark-mode');" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; cursor:pointer;">Toggle dark mode</button>
-      <button type="button" onclick="window.print()" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; cursor:pointer;">Download PDF</button>
-      <a href="resume-jeremy-chia.md" style="border:1px solid #e5e7eb; background:#f9fafb; padding:0.2rem 0.6rem; border-radius:999px; text-decoration:none; color:#374151;">Download Markdown</a>
+    <div class="controls" aria-hidden="true">
+      <button type="button" class="control-button" onclick="document.body.classList.toggle('dark-mode');">Toggle dark mode</button>
+      <button type="button" class="control-button" onclick="window.print()">Download PDF</button>
+      <a href="resume-jeremy-chia.md" class="control-button">Download Markdown</a>
     </div>
     <nav class="top-nav" aria-label="Resume sections">
       <a href="#summary">Summary</a>
