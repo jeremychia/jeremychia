@@ -1,0 +1,30 @@
+📊 **GitHub Contributions Overview**
+   • Authored **1,628 pull requests** across 43 repositories
+   • Achieved **94.0% merge rate** with 1,531 successful merges
+   • Sustained contributions over **1023 days** (2023-05-22 to 2026-03-11)
+
+🏗️ **Key Repository Contributions**
+   • **dataverse-vintedgo-dbt**: 921 PRs (56.6% of total)
+   • **dataverse-vintedgo-finance**: 136 PRs (8.4% of total)
+   • **dataverse-vintedgo-looker**: 124 PRs (7.6% of total)
+   • **warehouse-jobs**: 98 PRs (6.0% of total)
+   • **dataverse-marketplace-dbt**: 70 PRs (4.3% of total)
+
+💬 **Collaboration & Code Quality**
+   • Engaged in **2.3 comments per PR** on average
+   • Average PR lifecycle of **8173.0 days** from creation to closure
+
+📈 **Recent Activity Pattern**
+   • **2025-10**: 89 PRs
+   • **2025-11**: 47 PRs
+   • **2025-12**: 56 PRs
+   • **2026-01**: 61 PRs
+   • **2026-02**: 23 PRs
+   • **2026-03**: 16 PRs
+
+🏷️ **Technical Focus Areas**
+   • **vgo_finance**: 894 PRs
+   • **docs**: 73 PRs
+   • **views**: 70 PRs
+   • **vgo_d2c**: 65 PRs
+   • **vgo_carrier**: 52 PRs

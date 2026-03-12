@@ -1,0 +1,53 @@
+{
+  "analysis_date": "2026-03-12 08:52:33",
+  "total_prs": 1628,
+  "merged_prs": 1531,
+  "closed_prs": 79,
+  "open_prs": 18,
+  "date_range": {
+    "earliest": "2023-05-22",
+    "latest": "2026-03-11"
+  },
+  "repositories": {
+    "dataverse-vintedgo-dbt": 921,
+    "dataverse-vintedgo-finance": 136,
+    "dataverse-vintedgo-looker": 124,
+    "warehouse-jobs": 98,
+    "dataverse-marketplace-dbt": 70,
+    "lookml": 68,
+    "singapore-parliament-speeches-dbt": 35,
+    "terraform-dataverse": 23,
+    "dataverse-groupfunctions-looker": 16,
+    "dataverse-metrics": 16
+  },
+  "repository_count": 43,
+  "avg_comments_per_pr": 2.2843980343980346,
+  "avg_days_open": 8173.011670761671,
+  "merge_rate": 94.04176904176904,
+  "monthly_activity": {
+    "2025-04": 47,
+    "2025-05": 58,
+    "2025-06": 54,
+    "2025-07": 87,
+    "2025-08": 78,
+    "2025-09": 59,
+    "2025-10": 89,
+    "2025-11": 47,
+    "2025-12": 56,
+    "2026-01": 61,
+    "2026-02": 23,
+    "2026-03": 16
+  },
+  "top_labels": {
+    "vgo_finance": 894,
+    "docs": 73,
+    "views": 70,
+    "vgo_d2c": 65,
+    "vgo_carrier": 52,
+    "vgo_general": 46,
+    "scheduler": 31,
+    "DAGs": 26,
+    "vgo_hvf": 25,
+    "marketing": 23
+  }
+}
