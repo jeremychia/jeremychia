@@ -1,0 +1,103 @@
+﻿# Jeremy Jerome Chia
+
+**Senior Analytics Engineer – Finance and Data**
+
+Berlin, Germany  \
+Mobile: +33 6 95 92 48 39  \
+Email: jeremyjchia@gmail.com  \
+GitHub: https://github.com/jeremychia  \
+LinkedIn: https://linkedin.com/in/jjchia
+
+---
+
+## Summary
+
+Senior Analytics Engineer with 6+ years of experience bridging finance and data engineering across APAC and Europe. Specialises in dbt, BigQuery, Apache Spark, and Snowflake to build scalable data models and analytics infrastructure that drive measurable business impact. Chartered Accountant background provides deep expertise in finance data domains, controls, and reporting.
+
+---
+
+## Experience
+
+### Senior Analytics Engineer, Shipping Finance
+**Vinted GmbH** – Berlin, Germany / Vilnius, Lithuania  \
+Aug 2023 – Present
+
+- Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.
+- Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.
+- Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.
+- Built and extended monitoring and observability (freshness, completeness, volume and metric drift) for critical pipelines, improving time-to-detect and time-to-resolve incidents for Finance stakeholders.
+- Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs.
+- Partner with Finance to translate plain-language requirements and definitions into documented metrics and data models, enabling self-serve analysis and smoother change management when logic evolves.
+
+### Data Analyst, Finance Lead
+**Tourlane GmbH** – Berlin, Germany  \
+Jul 2022 – Aug 2023
+
+- Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.
+- Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per month in the month-end close process.
+- Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.
+
+### Senior Finance Transformation Consultant
+**LucaNet AG** – Singapore / Paris, France  \
+Mar 2020 – Mar 2022
+
+- Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.
+- Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times.
+- Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5.
+
+### Finance Analyst
+**Keppel Corporation Ltd** – Singapore  \
+Jul 2019 – Mar 2020
+
+- Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving transparency of service delivery KPIs.
+- Streamlined service delivery reporting across 300 entities in 6 business units by coordinating cross-functional stakeholders, improving timeliness and data consistency.
+- Automated 3 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the team for higher-value analysis.
+
+---
+
+## Education
+
+### MSc, Big Data and Business Analytics (Mention Très Bien)
+**École Supérieure de Commerce de Paris (ESCP) Business School** – Paris and Berlin  \
+Sep 2021 – Dec 2022
+
+- Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).
+- Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore.
+
+### Bachelor of Accountancy (Highest Distinction)
+**Nanyang Technological University (NTU)** – Singapore  \
+Aug 2016 – Jul 2019
+
+- Dean’s List (AY 2016/2017).
+- Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong.
+
+---
+
+## Community and Volunteering
+
+### Board Member and Director, Finance
+**Soap Cycling (Singapore) Ltd** – Singapore and Hong Kong  \
+Aug 2018 – Present
+
+- Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact programmes.
+- Oversaw finance and regulatory compliance, including preparation of financial statements and coordination of year-end audits.
+- Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making.
+
+### Instructor, Python and Data Analytics
+**ReDI School of Digital Integration** – Berlin, Germany  \
+Mar 2023 – Jun 2025
+
+- Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.
+- Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team.
+
+---
+
+## Skills
+
+**Programming and Data Engineering:** Python, SQL, R, Scala, dbt, Apache Spark  \
+**Data Warehousing and Databases:** Google BigQuery, Snowflake  \
+**Analytics and Visualisation:** Looker, Looker Studio, Tableau, Microsoft Power BI  \
+**Finance and Automation Tools:** LucaNet, UiPath, SAP  \
+
+**Certifications:** Chartered Global Management Accountant (CGMA); Microsoft Certified: Data Analyst Associate; LucaNet Certified Professional (Financial Performance Management)  \
+**Languages:** English (Native / C2), Mandarin (B2), Cantonese (B2), German (A1), French (A1)
