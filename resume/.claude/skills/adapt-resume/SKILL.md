@@ -130,77 +130,53 @@ Apply **concrete anchoring**: always lead metrics first within a sentence. "90% 
 
 ---
 
-## Step 6 — Write the HTML file
+## Step 6 — Write the HTML and convert to PDF
 
-Write `applications/{base name}/{base name}.html`. ATS-safe Word-document style:
+Write `applications/{base name}/{base name}.html` using the CSS spec in Step 5.
 
-### Page / typography
-- White background, black text, no colours
-- Font: Georgia or Times New Roman (serif); fallback to serif
-- Font size: 10pt
-- `@page { margin: 0.9cm; }`
-- Body: `max-width: 780px; margin: 0 auto; padding: 0.5cm 1cm;`
+**Calibrated CSS values** (tested to fill A4 comfortably on one page):
+- `@page { size: A4; margin: 0.65cm; }`
+- `body { font-size: 9.5pt; line-height: 1.18; }`
+- `header h1 { font-size: 14pt; }`
+- `header .contact-line { font-size: 8.5pt; }`
+- `h2 { font-size: 9.5pt; margin: 7px 0 1px; }`
+- `hr { margin: 2px 0 4px; }`
+- `.entry { margin-bottom: 4px; }`
+- `.entry-role { font-size: 9pt; }`
+- `li { font-size: 9pt; }`
+- `.summary { font-size: 9pt; }`
+- `.skills-block p { font-size: 9pt; }`
 
-### Header (centred)
-- Name: bold, ~16pt, all caps, letter-spacing
-- Line 2: phone · email (linked) · GitHub (linked) · LinkedIn (linked) separated by ` &middot; `
-- Line 3: location
-
-### Section headings
-- ALL CAPS, bold, 10pt, letter-spacing 0.1em
-- Followed by `<hr style="margin:2px 0 6px; border:none; border-top:1px solid #000;">`
-
-### Entries
-- Company/institution row: `<div style="display:flex; justify-content:space-between;">`
-- Company: `<strong>`, Role: `<em>`, date right-aligned
-- Bullets: `<ul style="list-style-type:disc; margin:3px 0; padding-left:1.2em;">` with `<li style="margin-bottom:2px;">`
-
-### Skills section
-One `<p>` per technical category: `<strong>Category:</strong> item1, item2, item3`.
-Then certifications and languages the same way.
-
-### ATS rules
-- No images, SVGs, tables, text boxes, or JavaScript
-- Section heading strings: "Professional Experience", "Education", "Community and Volunteering", "Skills"
-- All links use full URLs
-- No `display:none` on any content
-
----
-
-## Step 7 — Convert to PDF
-
-Try browsers in this order, using the absolute path to the HTML file:
+**After writing the HTML**, convert to PDF using Chrome headless with A4 paper size:
 
 ```bash
 DIR="applications/{base name}"
-HTML="${DIR}/{base name}.html"
-PDF="${DIR}/{base name}.pdf"
-ABS_HTML="$(pwd)/${HTML}"
-ABS_PDF="$(pwd)/${PDF}"
+ABS_HTML="$(pwd)/${DIR}/{base name}.html"
+ABS_PDF="$(pwd)/${DIR}/{base name}.pdf"
 
-for BROWSER in \
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  "/Applications/Chromium.app/Contents/MacOS/Chromium" \
-  "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser" \
-  "chromium-browser" \
-  "google-chrome"; do
-  if [ -f "$BROWSER" ] || command -v "$BROWSER" &>/dev/null; then
-    "$BROWSER" \
-      --headless=new \
-      --print-to-pdf="$ABS_PDF" \
-      --print-to-pdf-no-header-footer \
-      --no-margins \
-      --disable-gpu \
-      --paper-width=8.27 --paper-height=11.69 \
-      "$ABS_HTML" 2>/dev/null
-    break
-  fi
-done
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless=new \
+  --print-to-pdf="$ABS_PDF" \
+  --print-to-pdf-no-header-footer \
+  --no-margins \
+  --disable-gpu \
+  --paper-width=8.27 --paper-height=11.69 \
+  "$ABS_HTML" 2>/dev/null
 
-[ -f "$ABS_PDF" ] && echo "PDF OK" || echo "PDF FAILED"
+echo "exit:$?"
 ```
 
-If PDF generation fails, tell the user to open the HTML in Chrome and use File → Print → Save as PDF, saving to `applications/{base name}/{base name}.pdf`.
+**Check the page count** after generation:
+```bash
+python3 -c "
+import re
+with open('$ABS_PDF', 'rb') as f: content = f.read()
+pages = len(re.findall(b'/Type\\\\s*/Page[^s]', content))
+print('pages:', pages)
+"
+```
+
+If the PDF is more than 1 page, trim bullets from the least-important roles (Keppel first, then LucaNet) one at a time until it fits. If PDF generation fails entirely, tell the user to open the HTML in Chrome and use File → Print → Save as PDF.
 
 ---
 
