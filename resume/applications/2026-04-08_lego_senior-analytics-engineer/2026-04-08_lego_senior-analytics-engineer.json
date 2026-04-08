@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "version": "2026-04-08_lego_senior-analytics-engineer",
+    "lastUpdated": "2026-04-08",
+    "targetRole": "Senior Analytics Engineer",
+    "targetCompany": "The LEGO Group",
+    "sourceUrl": "https://www.lego.com/de-de/careers/job/senior-analytics-engineer-a3245e08168b1000dbc6187d0c820000",
+    "adaptationNotes": [
+      "Summary rewritten to lead with data quality, pipeline engineering, and quantifiable commercial value — the JD's three recurring themes. Coding assistant proficiency (Cursor, GitHub Copilot) added as explicit differentiator since JD calls it out.",
+      "Vinted bullets reordered: data quality controls first (JD's primary theme), then monitoring/observability, then performance optimisation, then self-serve/semantic layer. Finance-specific control framework moved last.",
+      "Tourlane bullet order swapped: SLA hardening moved to second to reinforce pipeline reliability theme before the commercial savings bullet.",
+      "Skills: DevOps/CI/CD and Data Quality promoted to top tiers (JD explicitly requires CI/CD, Git, and data quality frameworks). SQL and Python moved to front of programming items per JD priority.",
+      "AI-Assisted Development category kept prominent — JD explicitly lists 'coding assistant proficiency' as a preferred skill.",
+      "ReDI School teaching bullet is a soft match for JD's 'data literacy initiatives' — kept and not trimmed.",
+      "pillHighlights updated to reflect JD keywords: data quality, CI/CD, Airflow, commercial analytics."
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Analytics Engineer with 6+ years building scalable, self-service data products and pipeline infrastructure across large-scale commercial organisations. Specialises in data pipeline engineering, data quality frameworks, and CI/CD standards — using dbt, Apache Spark, Airflow, and BigQuery — to deliver reliable data products that drive quantifiable commercial value. Track record of championing data literacy, governance, and best practices in data product development across cross-functional teams.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Owned shipping finance data pipeline engineering and orchestration (Apache Airflow), applying CI/CD standards and end-to-end monitoring (freshness, completeness, metric drift) to maintain data product reliability at scale.",
+        "Implemented data quality frameworks — dbt tests, reconciliations, anomaly detection — reducing misstatement risk by 90% on €40m of exposure across core data products.",
+        "75% faster pipeline runtimes and 15% lower cloud costs through Spark and BigQuery performance and cost optimisation, while maintaining SLAs.",
+        "Championed data catalog governance via OpenMetadata — scoped requirements, prioritised features, led UAT — improving metadata tagging and data discoverability.",
+        "Recovered €1.6m in carrier overcharges by embedding risk-based assertion checks into core datasets, enabling autonomous detection of billing discrepancies."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
+        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per month in the month-end close process.",
+        "Designed and ran an internal data bootcamp, training business teams on SQL and analytics tools to drive self-serve data adoption."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times.",
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving transparency of service delivery KPIs.",
+        "Streamlined service delivery reporting across 300 entities in 6 business units by coordinating cross-functional stakeholders, improving timeliness and data consistency.",
+        "Automated 3 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the team for higher-value analysis."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact programmes.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
+        "Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Programming and Data Engineering", "items": ["SQL", "Python", "dbt", "Apache Spark", "Apache Airflow", "Scala", "R"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests"] },
+      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
+      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt",
+    "SQL",
+    "Python",
+    "Data Quality",
+    "CI/CD",
+    "Apache Spark",
+    "Apache Airflow",
+    "Analytics Engineering",
+    "AI-Assisted Development",
+    "Commercial Analytics"
+  ]
+}
