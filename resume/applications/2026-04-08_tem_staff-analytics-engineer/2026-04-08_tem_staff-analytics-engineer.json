@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "version": "2026-04-08_tem_staff-analytics-engineer",
+    "lastUpdated": "2026-04-08",
+    "targetRole": "Staff Analytics Engineer",
+    "targetCompany": "tem",
+    "sourceUrl": "https://jobs.ashbyhq.com/tem/66b06873-4d08-4347-9d16-dc5c24ae481c",
+    "behaviouralInsights": [
+      "Fear signal: 'production dbt... ~1B rows daily' is unusually specific — they hired someone who couldn't handle scale. Must explicitly signal Vinted's data scale.",
+      "Fear signal: 'fast-moving environments' + 'ambiguity' repeated — prior hire needed too much direction. Lead with ownership and autonomous decision-making language.",
+      "Desire signal: 'set direction for analytics patterns, standards, and strategy' — this is a Staff-level architect role, not an executor. Frame bullets as strategic decisions, not tasks.",
+      "Primacy: First JD responsibility is core dbt models — first Vinted bullet must lead here.",
+      "Peak-end: First and last Vinted bullets are highest scrutiny. Both must be punchy and metrics-led.",
+      "ATS keywords: dbt, incremental models, semantic layer, self-serve analytics, data quality standards, CI/CD, data modeling, custom macros, warehouse performance, cross-domain, metrics, fast-moving.",
+      "Absence signal: No Spark, Airflow, Tableau — skip these. Looker = semantic layer match for Omni.",
+      "Nice-to-have: Finance and Marketing data — Tourlane and LucaNet roles directly cover this. Surface explicitly.",
+      "Culture: Mission-driven Series B startup, remote, autonomy. Mirror 'transparent', 'fair', 'early-stage' framing subtly."
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with production dbt at scale and semantic layer — the two non-negotiables. 'Staff' IC framing: set direction, not just execute.",
+      "Vinted first bullet: reframed around dbt production architecture and incremental models at scale — directly addresses the ~1B rows fear signal.",
+      "Vinted last bullet: ends with autonomous governance impact (€1.6m recovery) — strong peak-end close.",
+      "Tourlane: data bootcamp bullet and Looker semantic layer bullet moved to top — maps to self-serve analytics and data literacy responsibilities.",
+      "LucaNet: Finance data experience surfaced as nice-to-have match. 'Defining metrics with business stakeholders' is directly evidenced.",
+      "Community: trimmed to 1 bullet each — startup hiring managers scan fast, volunteering is low priority here.",
+      "Skills: dbt + SQL first, semantic layer (Looker) second, CI/CD third. Spark/Airflow deprioritised — not in JD.",
+      "pillHighlights updated to exact ATS phrases from JD."
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Staff Analytics Engineer",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Staff-level Analytics Engineer with 6+ years of production dbt experience — incremental models, custom macros, and data modeling architecture at scale — across fast-moving commercial organisations in APAC and Europe. Sets direction for analytics patterns, standards, and strategy; defines and implements metrics in semantic layers (Looker) for self-serve analytics across Finance, Marketing, and Operations. Track record of building data quality standards and CI/CD practices that teams rely on.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Architected and owned production dbt models for shipping finance — incremental models processing millions of daily transactions — serving as the single source of truth for Finance Ops and Group Reporting.",
+        "Established data quality standards using dbt tests, reconciliations, and anomaly detection, reducing misstatement risk by 90% on €40m of exposure.",
+        "Set direction for data modeling patterns and CI/CD standards across the analytics engineering team, including documentation and code review practices.",
+        "75% faster pipeline runtimes and 15% lower warehouse costs through performance and cost optimisation of Spark and BigQuery workloads.",
+        "Recovered €1.6m in carrier overcharges by embedding risk-based assertion checks into core datasets — enabling autonomous, reliable detection without manual review."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built the finance analytics stack from scratch in dbt and Snowflake — greenfield data modeling covering unit economics, conversion funnel (lead to opportunity to retention), and revenue — integrating Salesforce, Stripe, and Twilio.",
+        "Defined and implemented Looker semantic layer metrics for Finance and Operations, saving 5 FTE days per month in month-end close; trained Marketing and Finance teams on self-serve analytics.",
+        "Partnered with data engineering to harden pipeline reliability, improving SLA attainment from 88% to 97%."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Defined and implemented financial metrics and reporting standards with business stakeholders across 11 cross-domain transformation projects for listed companies in APAC (SGX, HKEX, KLSE, ASX).",
+        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times.",
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving transparency of service delivery KPIs.",
+        "Automated 3 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and TFI-LeaRN Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led Singapore expansion and managed 30 interns; designed Looker Studio dashboards for impact and finance reporting."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and SQL curriculum to 60+ students across three semesters at a non-profit tech school."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Analytics Engineering", "items": ["dbt (incremental models, custom macros, architecture)", "SQL", "Python"] },
+      { "category": "Semantic Layer and BI", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Warehousing", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Data Quality and CI/CD", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
+      { "category": "Other Engineering", "items": ["Apache Spark", "Apache Airflow", "Scala", "R"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt",
+    "Incremental Models",
+    "Semantic Layer",
+    "Self-Serve Analytics",
+    "Data Quality Standards",
+    "CI/CD",
+    "Data Modeling",
+    "Warehouse Performance",
+    "Cross-Domain",
+    "Metrics",
+    "Finance Data",
+    "Marketing Data"
+  ]
+}
