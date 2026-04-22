@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "version": "2026-04-09_ai-futures_data-team-lead",
+    "lastUpdated": "2026-04-09",
+    "targetRole": "Data Team Lead",
+    "targetCompany": "AI Futures",
+    "sourceUrl": "https://www.linkedin.com/jobs/view/4398675612/",
+    "behaviouralInsights": [
+      "Platform-first thinking: JD leads with 'modern data platform' and emphasises systems-wide architecture, not task-level pipeline coding",
+      "Scaled infrastructure ownership: Repeated emphasis on 'building,' 'productionise,' and 'at pace' signals they need an autonomous architect, not a task-executor",
+      "Leadership + mentoring: Growing and mentoring a team is explicit; signals readiness for first-time or experienced leads",
+      "Reliability through design: High-volume real-time + AI-driven financial decisioning implies correctness/SLA-critical mindset",
+      "Absent: No BI, analytics, or reporting focus — pure platform and infrastructure engineering"
+    ],
+    "adaptationNotes": [
+      "Reframed summary to emphasise platform architecture and infrastructure at scale, leading with reliability and real-time systems experience",
+      "Reordered Vinted bullets to lead with end-to-end pipeline ownership and platform design (from quality controls first)",
+      "Promoted Spark/BigQuery optimisation to peak-end position in Vinted role (last bullet) to reinforce infrastructure mindset",
+      "Highlighted mentoring and team-building potential from community roles",
+      "Reordered skills: moved Python and Spark to front of programming category; elevated Data Engineering tooling",
+      "Updated pillHighlights with ATS-critical phrases: 'modern data platform,' 'ETL and ELT pipeline,' 'medallion architectures,' 'high-volume real-time,' 'AI-driven infrastructure,' 'team mentoring'",
+      "Added German language proficiency (A1) to acknowledge JD requirement, though noted as developmental"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Finance and Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Data platform engineer with 6+ years of experience designing and building scalable, production-grade infrastructure for high-volume data pipelines across finance and mobility sectors. Expert in ETL and ELT development using Python, Apache Spark, and modern data architectures (medallion, data lakes) to power real-time decisioning systems. Proven track record leading teams, optimising infrastructure at scale, and delivering reliability through systematic design and observability.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end ETL pipeline architecture in dbt, BigQuery, and Apache Spark for shipping finance and revenue models; designed layered data quality controls and observability (freshness, completeness, volume, metric drift detection) reducing misstatement risk by 90% on €40m exposure.",
+        "Built infrastructure powering real-time financial decisioning: embedded risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Optimised Spark and BigQuery workloads and storage patterns across medallion-style architecture, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs for Finance Ops and Group Reporting."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised data transformation layer in dbt and Snowflake, integrating multi-source data (Salesforce, Stripe, Twilio, backend systems) to power operational analytics.",
+        "Improved data pipeline reliability: partnered with data engineering and business teams to harden pipelines, raising SLA attainment from 88% to 97%."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC, designing end-to-end consolidation and budgeting solutions.",
+        "Managed cross-functional teams and partner stakeholders to productionise solutions at pace; achieved 50% reduction in reporting and planning cycle times."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017)."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion of operations and managed 30 interns over 3 years; designed Looker Studio dashboards for impact, operations, and finance reporting."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Programming and Data Engineering", "items": ["Python", "Apache Spark", "SQL", "dbt", "Apache Airflow", "R", "Scala"] },
+      { "category": "Data Warehousing and Architectures", "items": ["Google BigQuery", "Snowflake", "Medallion Architecture", "Data Lakes"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Microsoft Power BI", "Looker Studio", "Tableau"] },
+      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "Monitoring and Alerting"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Finance and Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" }
+    ]
+  },
+  "pillHighlights": [
+    "Modern data platform design",
+    "ETL and ELT pipeline development",
+    "Medallion architectures",
+    "High-volume real-time data",
+    "AI-driven infrastructure",
+    "Python (high-code and low-code)",
+    "Apache Spark and BigQuery",
+    "Data quality and observability",
+    "Team mentoring and leadership",
+    "Productionise pipelines at scale",
+    "Microsoft Azure and Power BI",
+    "Finance data domains"
+  ]
+}
