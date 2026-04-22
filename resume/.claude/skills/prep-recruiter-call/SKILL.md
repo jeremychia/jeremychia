@@ -1,7 +1,7 @@
 ---
 name: prep-recruiter-call
 description: Generates a tailored recruiter call preparation document for a specific application, using the saved JD and adapted resume JSON to surface behavioural talking points, STAR stories, and research prompts.
-allowed-tools: Read Write Bash
+allowed-tools: Read Write Bash WebSearch WebFetch
 argument-hint: <application-folder-name or partial match>
 ---
 
@@ -31,40 +31,59 @@ If `jd.md` is missing, proceed using the JSON only and note the gap.
 
 ---
 
-## Step 3 — Analyse for the prep document
+## Step 3 — Research the company
 
-Before writing, derive the following from the source files:
+Actively research the company using WebSearch and WebFetch. You are doing the research — do not ask the user to do it. Compile real findings; if a search returns nothing useful, note that explicitly rather than inventing facts.
 
-### 3A — The Three Pillars assessment
-For this specific role, determine:
+### 3A — Engineering / data blog
+Search `{company} engineering blog data` and `{company} data stack dbt snowflake`. Fetch any relevant posts. Extract: what data tools they use, any platform migrations, modelling decisions, or data culture signals.
 
+### 3B — Data team size and structure
+Search `{company} analytics engineer linkedin` and `{company} data team size`. Try to infer: how many people are in the data function, whether analytics engineers are centralised or embedded, and how senior the team appears.
+
+### 3C — Recent company news
+Search `{company} news 2025 2026` and `{company} product launch funding`. Extract: growth signals, new product areas, expansion, or funding rounds that would affect the data team's priorities.
+
+### 3D — Company-specific signal from JD
+Based on the JD context (e.g. ERP integration, subscription metrics, logistics costs), run one targeted search to find something concretely useful before the call — e.g. which ERP they use, their pricing model tiers, or whether they recently migrated BI tools.
+
+### Sourcing rule
+For every specific fact, figure, or quote used anywhere in the output document, include the source URL as a markdown link immediately after — e.g. "ARR hit $400M in February 2026 ([Bloomberg](https://...))". This applies throughout Sections 4 and 5. Do not add sources to claims derived from the JD or resume JSON.
+
+---
+
+## Step 4 — Analyse for the prep document
+
+Before writing, derive the following from the source files and research:
+
+### 4A — The Three Pillars assessment
 **Viability signals** (from jd.md requirements):
 - The 3–5 "must-have" qualifications — what will the recruiter check first?
 - Any likely sticking points (e.g. location, notice period, tools not in resume)
 
 **Coachability & soft skill signals** (from JD language):
-- What personality or working-style language does the JD use? (e.g. "ownership", "pioneering", "collaborative")
+- What personality or working-style language does the JD use?
 - What does this signal about the team culture the recruiter is screening for?
 
 **Narrative consistency risks**:
-- Are there any gaps between the adapted resume and the JD requirements that a recruiter might flag?
+- Are there gaps between the adapted resume and the JD requirements a recruiter might flag?
 - What is the likely "hardest question" based on those gaps?
 
-### 3B — Peak moment selection
-From the `experience` bullets in the adapted JSON, select the single strongest achievement — the one that is most relevant to the JD's top-listed responsibility and most quantified. This is the "Peak" to deliver with energy.
+### 4B — Peak moment selection
+From the `experience` bullets in the adapted JSON, select the single strongest achievement — most relevant to the JD's top-listed responsibility and most quantified.
 
-### 3C — STAR story candidates
-Identify 3 distinct themes the JD emphasises (from `behaviouralInsights` or repeated JD language). For each theme, identify the best matching bullet from experience. These become STAR story prompts.
+### 4C — STAR story candidates
+Identify 3 distinct themes the JD emphasises. For each, identify the best matching bullet from experience.
 
-### 3D — Closing statement ("End")
-Draft a 2–3 sentence enthusiastic closing statement the candidate can use to end the call. It should: (1) restate specific interest in this role at this company using one genuine detail from the JD, (2) confirm availability and intent to move forward, (3) leave the recruiter with one memorable phrase.
+### 4D — Closing statement
+Draft a 2–3 sentence enthusiastic closing statement: (1) restate specific interest using one genuine detail from the JD, (2) confirm availability and intent to move forward, (3) leave one memorable phrase.
 
-### 3E — Culture-refining question
+### 4E — Culture-refining question
 Draft one specific question using the "90-day perfect hire" framing, tailored to what the JD signals the team is building or fixing.
 
 ---
 
-## Step 4 — Write the prep document
+## Step 5 — Write the prep document
 
 Write the output to `{path}/recruiter-prep.md`.
 
@@ -118,37 +137,38 @@ For each theme below, use the STAR+Spark structure: Situation/Task (20%), Action
 
 ---
 
-## 4. Company and recruiter research checklist
+## 4. Company research findings
 
-### Company (do before the call)
-- [ ] **Engineering or data blog** — search `{company} engineering blog` or `{company} data blog`. Look for posts on their data stack (dbt, Airflow, Spark, Snowflake/BigQuery, etc.), data platform migrations, or modelling decisions. A post here tells you more about the actual work than the JD does.
-- [ ] **LinkedIn "People" tab filtered to data roles** — search within the company for "analytics engineer", "data engineer", "analytics". How many people? How senior? This signals whether you'd be building from scratch or joining a mature team.
-- [ ] **Data team structure signal** — are analytics engineers centralised (one data team serving the whole company) or embedded (sitting in product/commercial squads)? Look at job titles and reporting lines in LinkedIn profiles. This affects your day-to-day autonomy significantly.
-- [ ] **Company LinkedIn posts in the last 30 days** — look for product launches, data-related announcements, or culture posts. Note one specific post to reference on the call.
-- [ ] {Company-specific prompt derived from JD context — e.g. "Check if they've recently announced a data platform migration, a new product area generating new data, or a move from a legacy BI tool to a modern stack."}
+### Data stack and engineering culture
+{What you found about their data tools, stack, or engineering blog. If nothing found, say so.}
 
-### Recruiter (if name is known)
-- [ ] Career trajectory — did they move from agency to in-house? They likely value brand loyalty and stability.
-- [ ] Do they specialise in data/tech roles? A recruiter who places data roles regularly will understand the stack — you can use technical language with them.
-- [ ] Recent activity feed — what topics do they engage with? Mirror one if relevant.
-- [ ] Shared connections — use for vibe-check of their professional circle, not necessarily to name-drop.
+### Data team size and structure
+{What you found about headcount, centralised vs embedded, seniority signals. If nothing found, say so.}
+
+### Recent news and growth signals
+{Key funding, product launches, or expansion news relevant to why the data team is hiring. If nothing found, say so.}
+
+### Role-specific insight
+{The one targeted finding from Step 3D — e.g. which ERP they use, their pricing tiers, a recent BI migration. If nothing found, say so.}
+
+### Suggested opening hook
+> "{A specific, genuine sentence to open the call with — referencing one real finding from the research above. Not generic.}"
 
 ---
 
 ## 5. Opening and closing
 
 ### Opening (first 60 seconds)
-Start with one genuine thing you admire about the company. Use a specific detail from your research — not "I love your mission." Example framing:
-> "Before we dive in, I wanted to say I came across [specific post/initiative] and it really resonated — it's exactly the kind of [data culture / product thinking / engineering rigour] I want to be part of."
+Use the suggested hook from Section 4 above. The goal is one specific, genuine observation — not "I love your mission."
 
 ### Closing statement
-> {Draft 2–3 sentence closing statement from Step 3D.}
+> {Draft 2–3 sentence closing statement from Step 4D.}
 
 ---
 
 ## 6. Question to ask
 
-> "{Culture-refining question from Step 3E}"
+> "{Culture-refining question from Step 4E}"
 
 *Why this question works:* It forces the recruiter to visualise you succeeding in the role, and signals you are thinking about impact from day one — not just salary and perks.
 
@@ -164,10 +184,10 @@ Start with one genuine thing you admire about the company. Use a specific detail
 
 ---
 
-## Step 5 — Report
+## Step 6 — Report
 
 Tell the user:
 - The output file path: `{path}/recruiter-prep.md`
 - The three STAR themes identified
 - The selected Peak moment (one sentence)
-- A reminder to do the LinkedIn research before the call
+- Two or three of the most useful research findings
