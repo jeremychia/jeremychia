@@ -146,29 +146,47 @@ Ask only for gaps that are genuinely missing — do not ask about things already
 
 ---
 
-## Step 7 — Render HTML and PDF
+## Step 7 — Check length BEFORE rendering
 
-Generate HTML from the adapted JSON using the render script, then convert to PDF:
+Run the length estimator on the adapted JSON. This avoids wasting a render on content that will overflow to 2 pages.
 
 ```bash
-cd /path/to/resume/root  # wherever resume-base.json lives
+python3 .claude/tools/check_resume_length.py \
+  "applications/{base name}/{base name}.json" --verbose
+```
+
+**Interpret the result:**
+
+| Result | Action |
+|--------|--------|
+| **GREEN** (< 70 LU) | Safe — render HTML + PDF directly |
+| **AMBER** (70–78 LU) | Borderline — render HTML only (`--no-pdf`), open in browser to verify it fits, then render PDF |
+| **RED** (> 78 LU) | Over budget — trim bullets in JSON first, re-run estimator, repeat until AMBER/GREEN |
+
+**How to trim when RED:**
+- Each bullet costs `max(1.0, len / 110)` LU. A 220-char bullet costs ~2 LU; a 100-char bullet costs 1 LU.
+- Trim by priority: remove bullets from the least-relevant roles first (Keppel, then LucaNet), or shorten long bullets (> 150 chars) to ≤ 110 chars.
+- Re-run the estimator after each trim — do not guess and re-render.
+- Only render once the estimator returns GREEN or AMBER.
+
+**Tip when writing bullets:** Prefer ≤ 100 chars per bullet (guaranteed single line). Tolerate up to 200 chars (2-liner). Avoid > 200 chars.
+
+---
+
+## Step 8 — Render HTML and PDF
+
+Once the estimator is GREEN or AMBER:
+
+```bash
 python3 .claude/tools/render_resume.py \
   "applications/{base name}/{base name}.json" \
   "applications/{base name}/{base name}.html"
 ```
 
-**Check the page count** after generation:
-```bash
-ABS_PDF="$(pwd)/applications/{base name}/{base name}.pdf"
-python3 -c "
-import re
-with open('$ABS_PDF', 'rb') as f: content = f.read()
-pages = len(re.findall(b'/Type\\\\s*/Page[^s]', content))
-print('pages:', pages)
-"
-```
+- **GREEN**: render with PDF (default). Done.
+- **AMBER**: add `--no-pdf` first, open the HTML in a browser to confirm it fits, then re-run without `--no-pdf`.
 
-If the PDF is more than 1 page, trim bullets from the least-important roles (Keppel first, then LucaNet) in the JSON one at a time, then re-run the render script until it fits. If PDF generation fails entirely, tell the user to open the HTML in Chrome and use File → Print → Save as PDF.
+If PDF generation fails entirely, tell the user to open the HTML in Chrome and use File → Print → Save as PDF.
 
 ---
 
