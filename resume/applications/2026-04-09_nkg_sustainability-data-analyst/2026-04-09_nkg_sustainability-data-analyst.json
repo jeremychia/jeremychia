@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "version": "2026-04-09_nkg_sustainability-data-analyst",
+    "lastUpdated": "2026-04-09",
+    "targetRole": "Sustainability Data Analyst",
+    "targetCompany": "Neumann Kaffee Gruppe (NKG)",
+    "sourceUrl": "https://nkg.wd103.myworkdayjobs.com/en-US/nkg/job/Sustainability-Data-Analyst_JR102809-1",
+    "behaviouralInsights": [
+      "Data quality and reliability are paramount (loss-aversion signal); frame all achievements as risk reduction and governance",
+      "Microsoft Fabric + Power BI are core platform skills; lead with visualization and reporting capabilities",
+      "Cross-functional requirement translation is critical (repeated emphasis on 'translating requirements into solutions')",
+      "Autonomous ownership expected; seniority signals point to an IC role, not management-track",
+      "Sustainability domain knowledge is preferred but not required; emphasize data modeling and pipeline scalability"
+    ],
+    "adaptationNotes": [
+      "Reordered experience bullets to lead with Power BI, data modeling, and dashboarding",
+      "Emphasized data quality controls and reconciliation work to address reliability concerns",
+      "Strengthened requirements translation example (Tourlane) to directly address JD's emphasis on 'gathering requirements and translating into effective reporting solutions'",
+      "Moved Looker/Power BI skills to top of visualization category; added DAX explicitly",
+      "Highlighted Python and scalability (BigQuery, Spark) as technical depth for pipeline design; noted transferability from BigQuery/Spark to Fabric Spark",
+      "Reframed finance domain expertise as governance and control framework background, closely aligned with EUDR/compliance sensibilities",
+      "Embedded ATS keywords: 'data modeling', 'Power BI', 'DAX', 'scalable data pipelines', 'data quality', 'cross-functional collaboration', 'requirements translation'"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer – Data Quality, Reporting & Scalable Pipelines",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineer with 6+ years of experience building scalable data pipelines and governance-first reporting solutions across finance and operational domains. Expert in Power BI and data modeling; proven track record designing and implementing data quality controls that reduce misstatement risk and ensure reliable, compliant analytics. Bridges business requirements and technical implementation through structured, cross-functional collaboration.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Built scalable data models in BigQuery and Apache Spark, optimizing pipeline performance and cost-efficiency while establishing data modeling frameworks for concurrent analytical and operational needs.",
+        "Own end-to-end finance-ready shipping cost and revenue models in dbt and Looker, used as the single source of truth for Finance Ops month-end close and Group Reporting.",
+        "Built monitoring and observability (freshness, completeness, metric drift) for critical pipelines, improving incident detection and resolution times."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Gathered fragmented requirements from Finance, Operations, and Product teams and translated them into a unified data transformation layer (dbt + Snowflake), integrating Salesforce, Stripe, Twilio, and backend systems with a single source of truth.",
+        "Led finance reporting transformation using Looker dashboards, translating business requirements into effective analytics solutions; saved 5 FTE days per month in month-end close process."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC, translating client requirements into Power BI reporting solutions and technical implementations, achieving up to 50% reduction in reporting cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to assess performance across 140 staff and 5 process areas, improving transparency of KPIs and enabling cross-functional reporting coordination."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and TFI-LeaRN Programme scholarship."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters.",
+        "Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team."
+      ]
+    },
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Oversaw finance and regulatory compliance, including preparation of financial statements and coordination of year-end audits.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Business Intelligence and Reporting", "items": ["Microsoft Power BI", "DAX", "Looker", "Looker Studio", "Tableau"] },
+      { "category": "Data Warehousing, Modeling and Pipelines", "items": ["Google BigQuery", "Snowflake", "dbt", "Microsoft Fabric", "Apache Spark", "Apache Airflow"] },
+      { "category": "Programming and Data Engineering", "items": ["Python", "SQL", "PySpark", "R", "Scala"] },
+      { "category": "Data Quality and Governance", "items": ["Elementary", "dbt tests", "Reconciliation frameworks"] },
+      { "category": "DevOps and Version Control", "items": ["GitHub Actions", "Git"] },
+      { "category": "Finance and Compliance Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Microsoft Certified: Data Analyst Associate",
+      "Chartered Global Management Accountant (CGMA)",
+      "LucaNet Certified Professional – Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Data Quality",
+    "Power BI",
+    "DAX",
+    "Data Modeling",
+    "Scalable Data Pipelines",
+    "Microsoft Fabric",
+    "BigQuery",
+    "Python",
+    "Cross-functional Collaboration",
+    "EUDR and Governance",
+    "dbt",
+    "Snowflake"
+  ]
+}
