@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "version": "2026-04-09_lovable_analytics-engineer-finance",
+    "lastUpdated": "2026-04-09",
+    "targetRole": "Analytics Engineer - Finance",
+    "targetCompany": "Lovable",
+    "sourceUrl": "https://jobs.ashbyhq.com/lovable/081be99e-95bf-4992-9cf2-d16371635ac1",
+    "behaviouralInsights": [
+      "Loss aversion signal: 'data consistency' and 'financial accuracy' appear repeatedly—they've been burned by reconciliation failures",
+      "Primacy bias: SQLMesh dimensional modeling is listed first responsibility; data infrastructure (not BI) is the priority",
+      "Seniority: No mentorship or management language; pure IC role seeking autonomous contributor",
+      "Domain fear: Subscription metrics (MRR/ARR/churn) expertise critical; missing this will auto-filter",
+      "Culture: Reliability and 'foundational' language; they value correctness over velocity"
+    ],
+    "adaptationNotes": [
+      "Summary reframed: lead with 'dependable financial data infrastructure' and subscription metrics (addresses loss aversion)",
+      "Vinted bullets reordered: 1st bullet now addresses dbt + dimensional models + financial accuracy (primacy bias)",
+      "Highlighted €1.6m recovery and reconciliation (data consistency pain point)",
+      "Suppressed RPA/UiPath from Keppel (irrelevant to data modeling focus)",
+      "Skills: dbt moved first in Programming category; SQLMesh, Stripe, BigQuery, Snowflake prioritized",
+      "Highlights: 6 exact ATS phrases from JD (dimensional models, subscription metrics, data consistency, revenue recognition, dbt expertise, financial data accuracy)"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer - Finance and Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineer with 6+ years of expertise building dependable financial data infrastructure for finance teams across APAC and Europe. Specialises in dimensional models using dbt (including Jinja templating frameworks) and cloud warehouses (BigQuery, Snowflake) to power revenue recognition and subscription analytics. Deep experience with payment platform integration, metric definition, data quality frameworks, and translating finance requirements into reliable, auditable data models.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end finance-ready dimensional models in dbt and BigQuery for shipping costs and revenue, used as single source of truth by Finance Ops during month-end close, achieving 90% reduction in misstatement risk on €40m of exposure.",
+        "Designed and embedded data quality controls (dbt tests, reconciliations, anomaly detection) across critical financial datasets, ensuring data consistency and accuracy for month-end reporting and forecasting.",
+        "Implemented layered monitoring and observability (freshness, completeness, volume and metric drift) for financial pipelines, improving incident detection and resolution for Finance stakeholders.",
+        "Embedded risk-based control framework into revenue and cost models, detecting carrier billing discrepancies and recovering €1.6m in overcharges through systematic reconciliation.",
+        "Optimised BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and compute costs by 15% while maintaining SLAs.",
+        "Partner with Finance to translate requirements into documented metrics and models, enabling self-serve analysis."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised data transformation layer in dbt and Snowflake, integrating Stripe, Salesforce, Twilio, and backend systems to power subscription and finance analytics, including churn rate estimation models.",
+        "Defined and documented core subscription and financial metrics in Looker, enabling consistent reporting and self-serve analysis across product and finance teams.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close and improving data pipeline SLA attainment from 88% to 97%."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC, designing consolidation and budgeting solutions using Power BI.",
+        "Achieved up to 50% reduction in reporting and planning cycle times through structured data solutions."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact programmes.",
+        "Oversaw finance and regulatory compliance, including preparation of financial statements and coordination of year-end audits."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Transformation and Analytics Engineering", "items": ["dbt", "SQL", "Python", "Apache Spark", "Scala", "Apache Airflow", "R"] },
+      { "category": "Cloud Data Warehouses", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Payment and Billing Platforms", "items": ["Stripe", "Salesforce"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Finance Tools", "items": ["LucaNet"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dimensional models using dbt",
+    "subscription economy metrics",
+    "data consistency across systems",
+    "revenue recognition",
+    "financial data accuracy",
+    "dbt expertise including data modeling and testing",
+    "cloud data warehouses",
+    "BigQuery and Snowflake",
+    "Stripe and payment platforms",
+    "dimensional modeling"
+  ]
+}
