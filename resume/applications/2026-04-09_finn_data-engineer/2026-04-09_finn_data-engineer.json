@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "version": "FINN Data Engineer",
+    "lastUpdated": "2026-04-09",
+    "targetRole": "Data Engineer at FINN"
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Data Engineer | BigQuery & dbt specialist | Financial Data Infrastructure",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Data Engineer with 6+ years building scalable data infrastructure and pipelines for finance and fintech. Advanced expertise in BigQuery, dbt (dbt Champion), and data modeling. Proven track record at early-stage operations scaling and regulated environments. Combines technical depth in SQL, Python, and analytics engineering with financial domain knowledge to deliver reliable, self-serve data platforms.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Built production-grade data pipelines in dbt and BigQuery powering €40m+ in financial exposure, with rigorous data quality controls and reconciliation checks.",
+        "Architected layered data models using dimensional design patterns and dbt best practices, enabling finance teams to self-serve analytics without engineering support.",
+        "Implemented comprehensive monitoring and alerting (dbt tests, anomaly detection, freshness checks), reducing incident detection time by 80% and enabling proactive issue resolution.",
+        "Optimised BigQuery workloads through query optimization, materialization strategies, and cost-efficiency improvements, reducing cloud compute costs by 15% while maintaining SLAs.",
+        "Designed data quality framework detecting billing discrepancies and recovering €1.6m in overcharges through systematic control implementation."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Designed and built centralised data transformation layer using dbt and Snowflake, integrating Salesforce, Stripe, Twilio data for finance and operational analytics.",
+        "Created self-serve Looker dashboards for finance reporting, reducing month-end close cycle time by 5 FTE days per month through automation and improved visibility.",
+        "Partnered with data engineering teams to harden ETL pipelines and establish SLA frameworks, improving pipeline reliability from 88% to 97% uptime."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 digital transformation projects for listed companies across APAC during early-stage operations scaling in Singapore, delivering consolidation and reporting solutions from requirements through go-live.",
+        "Designed financial data models and reporting architectures supporting regulatory compliance and month-end close processes for SGX, HKEX, KLSE, ASX-listed entities.",
+        "Achieved up to 50% reduction in reporting and planning cycle times through process automation and data infrastructure improvements."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Built dashboards (Power BI, Tableau) tracking 140 staff KPIs across 5 process areas and 300+ entities in 6 business units.",
+        "Automated 3 manual finance workflows using RPA integrated with SAP, freeing 50 person-hours per month for higher-value analysis.",
+        "Streamlined cross-functional data processes and established consistent reporting standards across distributed business units."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP and sentiment analysis of sustainability reports and their relationship with corporate financial performance."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017); recipient of Isetan Foundation Scholarship and TFI-LeaRN Programme scholarship for exchange at University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting informing board-level decision-making.",
+        "Led operations expansion to Singapore and managed financial compliance including audits and financial statement preparation."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students, including modules on SQL, data pipelines, and analytics engineering best practices."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering and Transformation", "items": ["dbt (Champion)", "SQL", "Python", "Apache Spark", "Apache Airflow", "Data Modeling", "ETL/ELT"] },
+      { "category": "Data Warehousing", "items": ["Google BigQuery", "Snowflake", "Data Architecture", "Query Optimization"] },
+      { "category": "Analytics and Dashboarding", "items": ["Looker", "Looker Studio", "Data Visualization"] },
+      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary", "Monitoring", "Anomaly Detection"] },
+      { "category": "Infrastructure and DevOps", "items": ["Terraform", "GitHub Actions", "Git", "CI/CD"] },
+      { "category": "Streaming Data", "items": ["Kafka", "Event Processing"] },
+      { "category": "Finance Domain Tools", "items": ["LucaNet", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "dbt Certification (Champion)"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "BigQuery",
+    "dbt",
+    "Data Modeling",
+    "Looker",
+    "Python",
+    "SQL",
+    "FinTech",
+    "Kafka",
+    "Terraform",
+    "Early-Stage Scaling"
+  ]
+}
