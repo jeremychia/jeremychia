@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "version": "2026-04-22_shine_senior-analytics-engineer",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Senior Analytics Engineer",
+    "targetCompany": "Shine",
+    "sourceUrl": "https://careers.shine.co/jobs/7556260-senior-analytics-engineer",
+    "behaviouralInsights": [
+      "Fear signal: 'data governance, testing, and quality frameworks' listed as a core responsibility — they have suffered from unreliable or poorly tested data; frame Jeremy's 90% risk reduction and control framework bullets as the lead",
+      "Desire signal: 'Enable Data Analysts to deliver insights through reliable, documented dbt models' — they want a force multiplier who lifts the team, not just a builder; the Vinted self-serve and Tourlane SLA bullets address this",
+      "Seniority signal: 'Drive AI-assisted workflows', 'Define SQL styling standards', 'peer review processes' — strong senior IC with technical authority, no people management desired; lead with outcomes and scale",
+      "Engineering identity signal: 'engineering mindset treating models as production software' — mirror this language in the summary; the monitoring/observability and CI/CD bullets reinforce this",
+      "Loss aversion: 'reliable, documented dbt models' repeated — framing as risk reduction and reliability wins resonates more than speed or efficiency here",
+      "Absence signal: no mention of team leadership or managing data engineers — pure senior IC play, do not frame Jeremy as a manager or team lead"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with dbt + Snowflake expertise and data governance framing, mirroring 'engineering mindset treating models as production software'",
+      "Vinted first bullet pivoted to dbt model reliability and cross-functional trust, placing quality/governance second to match JD primacy order",
+      "Vinted bullets reordered: governance and quality first, then observability, then partner enablement (self-serve), then performance",
+      "Tourlane first bullet moved to dbt + Snowflake integration to reinforce primary stack; SLA bullet brought forward as quality/governance signal",
+      "Skills reordered: dbt and Snowflake surfaced to front of Programming category; GitHub Copilot and AI tools made more visible",
+      "pillHighlights replaced with ATS phrases from Layer B"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Finance and Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Analytics Engineer with 6+ years of experience building scalable dbt models and analytics infrastructure across fintech and finance domains. Treats data models as production software — with layered testing, governance frameworks, and observability baked in. Chartered Accountant background enables precise translation of finance requirements into reliable, documented dbt models that analysts and stakeholders can trust.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end finance-ready dbt models in a data mesh architecture, enabling cross-domain analytics consumed by Finance Ops and Group Reporting as the single source of truth during month-end close.",
+        "Established layered data quality controls — dbt tests, reconciliations, and anomaly detection — reducing misstatement risk by 90% on €40m of exposure.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Implemented OpenMetadata as developer advocate, driving adoption of data cataloguing and documentation standards to enable Data Analysts to self-serve reliably on dbt models.",
+        "Drove AI-assisted development workflows including GitHub Copilot skills authoring and code review refinements, raising engineering standards across the Analytics team."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised dbt and Snowflake transformation layer integrating Fivetran-managed sources (Salesforce, Stripe, Twilio) and backend systems to power finance and operational analytics across a multi-product environment.",
+        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Automated 3 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the team for higher-value analysis."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact programmes.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Analytics Engineering", "items": ["dbt", "SQL", "Python", "Apache Spark", "Apache Airflow", "R", "Scala"] },
+      { "category": "Data Warehousing and Databases", "items": ["Snowflake", "Google BigQuery"] },
+      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary", "OpenMetadata", "Fivetran"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Omni", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "DevOps, CI/CD and AI Tools", "items": ["GitHub Copilot", "GitHub Actions", "Git", "Cursor"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt models",
+    "Snowflake",
+    "Analytics Engineering",
+    "data governance",
+    "data quality",
+    "cross-entity analytics",
+    "GitHub Copilot",
+    "SQL styling standards",
+    "peer review",
+    "multi-product environments",
+    "data testing",
+    "Looker",
+    "BI platforms",
+    "data ingestion",
+    "engineering mindset"
+  ]
+}
