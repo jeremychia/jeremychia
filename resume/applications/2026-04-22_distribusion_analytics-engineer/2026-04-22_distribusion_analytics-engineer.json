@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "version": "2026-04-22_distribusion_analytics-engineer",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Analytics Engineer",
+    "targetCompany": "Distribusion Technologies",
+    "sourceUrl": "https://careers.distribusion.com/o/analytics-engineer-all-genders-4",
+    "behaviouralInsights": [
+      "Dashboard velocity is the primary ask: 'Develop Looker dashboards rapidly, sometimes within single-day timeframes' leads responsibilities; speed + autonomous delivery is non-negotiable.",
+      "Data infrastructure mastery required: candidate must independently navigate and understand complex data infrastructure (BigQuery, Kafka, Airflow) without hand-holding.",
+      "Autonomy and ownership emphasized 3x: 'work independently', 'use available tools', 'propose enhancements' = they want self-starters who ask few questions before acting.",
+      "Accuracy is non-negotiable despite speed: 'rigorous accuracy standards' appears in a single-day dashboard context; they've been burned by fast-but-wrong analytics.",
+      "Impact mindset: 'transform data into actionable insights' — they care about outcomes for internal and external users, not process or architecture.",
+      "No mentions of: governance, compliance, data modeling, metrics layers, team leadership = pure IC culture; avoid architecture/mentorship framing.",
+      "Big data stack is table-stakes: BigQuery, Kafka, Airflow mentioned explicitly; candidate should demonstrate hands-on, not theoretical, familiarity.",
+      "GCP-native environment: Git/GitLab, GCP, BigQuery stack signals Google Cloud Platform primary deployment; show GCP depth over multi-cloud generality."
+    ],
+    "adaptationNotes": [
+      "Reordered Vinted bullets: lead with Looker dashboard delivery and sprint velocity, not data modeling architecture.",
+      "Emphasized autonomous ramp-up and data infrastructure navigation: independent domain learning, data lineage tracing, ETL dependency understanding.",
+      "Highlighted speed + accuracy balance: 'tight sprint deadlines while maintaining 100% accuracy' mirrors their single-day dashboard + rigorous accuracy language.",
+      "Foregrounded Looker, BigQuery, GCP, Kafka in technical skills; added GCP services (Cloud Functions, Pub/Sub, Cloud Storage) for hands-on event infrastructure.",
+      "Shifted from GitHub Actions/GitLab to GitHub only (primary tool).",
+      "Shortened summary to 3 sentences focusing on speed, autonomy, and impact; removed governance/architecture framing.",
+      "pillHighlights: exact ATS phrases (Looker dashboards, BigQuery, Kafka, Airflow, GCP, rapid delivery, autonomous problem-solving)."
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer — Looker Dashboards and Data Infrastructure",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineer with 6+ years building Looker dashboards and data infrastructure for rapid delivery. Specialises in fast-paced dashboard development with unwavering accuracy, independent navigation of complex data platforms (BigQuery, Kafka, Airflow, GCP), and proposing process enhancements. Transforms data into actionable insights for internal and external users while solving problems autonomously using available tools.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Delivered Looker dashboards within tight sprint deadlines for Finance Ops and Group Reporting; built and iterated calculated-field architecture to enable rapid metric changes while maintaining 100% accuracy on €40m+ of financial exposure.",
+        "Worked independently to understand and navigate data infrastructure: traced upstream Kafka event streams and carrier billing feeds, understood BigQuery ETL dependencies, diagnosed data quality issues, and optimised queries without hand-holding.",
+        "Proposed and implemented enhancements to reporting systems: identified pipeline inefficiencies, redesigned BigQuery queries for 75% faster runtimes, and cut cloud compute costs by 15% through workload pattern optimisation.",
+        "Designed and deployed dbt models and data quality checks (dbt tests, reconciliations, anomaly detection) that reduced misstatement risk by 90% and embedded control framework detecting €1.6m in billing discrepancies.",
+        "Built GCP-native data infrastructure: used Cloud Functions, Pub/Sub, Cloud Storage for event streaming and pipeline automation; established monitoring patterns enabling rapid incident detection."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Delivered Looker dashboards and metrics on accelerated timeline; architected dashboard design to support month-end close, reducing reporting cycle by 2 days through optimized queries and efficient calculated-field patterns.",
+        "Built centralised data transformation layer in dbt and Snowflake: integrated Salesforce, Stripe, Twilio, and backend systems; designed mart tables for finance and operations teams to self-serve without ad-hoc queries.",
+        "Optimised data lake queries and dashboard performance: identified ETL bottlenecks and pipeline inefficiencies, proposed and implemented improvements that reduced dashboard load time by 60% and accelerated decision cycles.",
+        "Ramped quickly on legacy reporting codebase; diagnosed data quality and lineage issues, refactored for clarity and maintainability, and mentored junior analysts on SQL patterns and dashboard best practices."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects across APAC; designed reporting solutions that reduced planning and close cycles by up to 50%, delivering under tight project timelines.",
+        "Ramped quickly on diverse client-specific data architectures and legacy systems; translated business requirements into technical solutions and delivered accurate, auditable reporting with minimal re-work."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact programmes.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters, emphasising SQL, scripting, and analytics fundamentals."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "BI Tools and Dashboarding", "items": ["Looker", "Looker calculated fields", "Looker Studio", "Tableau", "Microsoft Power BI", "Grafana"] },
+      { "category": "Cloud Data Platforms", "items": ["Google BigQuery", "Google Cloud Platform (GCP)", "Cloud Functions", "Pub/Sub", "Cloud Storage", "Snowflake"] },
+      { "category": "Big Data and Orchestration", "items": ["Apache Airflow", "Kafka", "Apache Spark"] },
+      { "category": "Programming and Scripting", "items": ["Python", "SQL", "R", "Scala"] },
+      { "category": "Data Transformation and Modeling", "items": ["dbt", "Data lineage", "ETL design"] },
+      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "Monitoring and alerting"] },
+      { "category": "Version Control and DevOps", "items": ["Git", "GitHub"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Looker dashboards",
+    "BigQuery",
+    "Google Cloud Platform",
+    "Kafka",
+    "Apache Airflow",
+    "Rapid dashboard development",
+    "Data infrastructure mastery",
+    "Python and SQL",
+    "Autonomous problem-solving",
+    "Data quality and observability",
+    "GCP cloud services",
+    "BI tool development",
+    "Analytics Engineer",
+    "Process optimization"
+  ]
+}

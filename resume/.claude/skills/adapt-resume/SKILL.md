@@ -159,15 +159,18 @@ python3 .claude/tools/check_resume_length.py \
 
 | Result | Action |
 |--------|--------|
-| **GREEN** (< 70 LU) | Safe — render HTML + PDF directly |
-| **AMBER** (70–78 LU) | Borderline — render HTML only (`--no-pdf`), open in browser to verify it fits, then render PDF |
-| **RED** (> 78 LU) | Over budget — trim bullets in JSON first, re-run estimator, repeat until AMBER/GREEN |
+| **TARGET** (65–68 LU) | Optimal — good content density with breathing room. Render HTML + PDF directly. |
+| **GREEN** (< 70 LU) | Safe to render, but if > 68 LU, consider light trimming for tighter fit. |
+| **AMBER** (70–78 LU) | Borderline — trim bullets, then re-run estimator to get below 70 LU. |
+| **RED** (> 78 LU) | Over budget — aggressive trim required. |
 
-**How to trim when RED:**
+**Trimming strategy:**
+- **Target 65–68 LU first.** This gives optimal one-page fit with breathing room for PDF rendering variance.
 - Each bullet costs `max(1.0, len / 110)` LU. A 220-char bullet costs ~2 LU; a 100-char bullet costs 1 LU.
-- Trim by priority: remove bullets from the least-relevant roles first (Keppel, then LucaNet), or shorten long bullets (> 150 chars) to ≤ 110 chars.
+- Trim by priority: remove bullets from least-relevant roles first, or shorten long bullets (> 150 chars).
+- Prefer keeping Vinted (most recent, most relevant) and Tourlane bullets; trim Keppel/LucaNet/Community first.
 - Re-run the estimator after each trim — do not guess and re-render.
-- Only render once the estimator returns GREEN or AMBER.
+- Only render once the estimator returns 65–70 LU (TARGET or GREEN).
 
 **Tip when writing bullets:** Prefer ≤ 100 chars per bullet (guaranteed single line). Tolerate up to 200 chars (2-liner). Avoid > 200 chars.
 

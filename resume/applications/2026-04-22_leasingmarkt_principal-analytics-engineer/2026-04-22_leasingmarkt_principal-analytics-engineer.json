@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "version": "2026-04-22_leasingmarkt_principal-analytics-engineer",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Principal Analytics Engineer",
+    "targetCompany": "LeasingMarkt.de (AutoScout24 Group)",
+    "sourceUrl": "https://www.linkedin.com/jobs/view/4404307253/",
+    "behaviouralInsights": [
+      "Primacy focus: enterprise architecture and semantic layers—they need a systems architect, not a report builder",
+      "Repeated signals: semantic modeling, AI-driven analytics, performance/optimization—signs of past scaling pain and ambition for modern analytics",
+      "Seniority: 'set technical direction', 'drive adoption', 'mentor'—autonomous principal IC, not a people manager",
+      "Loss aversion: 'robustness', 'high-quality assets', 'standards'—governance and reliability trump speed",
+      "Absence: no BI tools or dashboarding—they want infrastructure and modeling, not visualization"
+    ],
+    "adaptationNotes": [
+      "Rewritten summary to lead with enterprise architectural thinking and semantic layers",
+      "Reordered Vinted bullets to prioritize data modeling architecture and quality frameworks before cloud optimization",
+      "Emphasized dimensional modeling and semantic layer patterns to match 'semantic layers' keyword (3x in JD)",
+      "Strengthened multi-domain semantic framework narrative (Vinted: Finance Ops + Group Reporting + Finance analytics unification)",
+      "Emphasized Apache Airflow orchestration experience in current role to bridge MWAA gap",
+      "Added 'automated insights' and observability framing (anomaly detection, metric drift) to address AI-driven analytics interest",
+      "Moved AWS expertise to forefront of technical skills; positioned Apache Airflow prominently for MWAA readiness",
+      "Elevated data quality and governance bullets (risk reduction framing aligns with JD's loss-aversion signals)"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Principal-track Analytics Engineer — Enterprise Data Architecture & Semantic Modeling",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Principal-track Analytics Engineer with 7+ years designing enterprise analytical models, semantic layers, and data architecture across APAC and Europe. Expertise in dimensional modeling, dbt, BigQuery, Apache Spark, and AWS (Glue, Athena, S3) to build scalable, governance-first analytics foundations. Proven track record mentoring analytics teams and driving adoption of modern modeling practices across organisations.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Designed layered dimensional models in dbt and BigQuery to unify shipping cost, revenue, and reconciliation logic across business domains, serving as the single source of truth for Finance Ops and Group Reporting during month-end close.",
+        "Embedded data quality controls (dbt tests, reconciliations, anomaly detection) into the core semantic layer, reducing finance data misstatement risk by 90% on €40m of exposure.",
+        "Established a risk-based control framework detecting billing discrepancies and recovering €1.6m in carrier overcharges, demonstrating governance-first architecture approach.",
+        "Built observability and monitoring patterns (freshness, completeness, volume, metric drift) for critical pipelines, enabling automated insights and improving incident resolution for Finance stakeholders.",
+        "Optimised Spark and BigQuery workloads through strategic partitioning and storage patterns, cutting pipeline runtimes by 75% and compute costs by 15% while maintaining SLAs.",
+        "Mentored Finance and Analytics teams on dimensional modeling patterns and dbt best practices, establishing technical standards for the data team."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data transformation layer in dbt and Snowflake, establishing dimensional models to unify Salesforce, Stripe, Twilio, and backend data for finance and operational analytics.",
+        "Led finance reporting modernisation, designing Looker dashboards and semantic metrics to reduce month-end close process by 5 FTE days per month.",
+        "Partnered with data engineering to harden pipeline resilience, improving SLA attainment from 88% to 97%."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 complex data and finance transformation initiatives for listed companies across APAC, advising on analytical architecture and data governance.",
+        "Designed consolidation and budgeting solutions, achieving up to 50% reduction in reporting and planning cycle times through process standardisation."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed analytics dashboards to assess KPI performance across 140 staff and 5 process areas.",
+        "Streamlined service delivery reporting across 300 entities in 6 business units by coordinating data consistency across stakeholders."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led operational expansion to Singapore and managed 30 interns over 3 years.",
+        "Oversaw finance and regulatory compliance, including financial statement preparation and year-end audit coordination."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters.",
+        "Co-created a 13-week syllabus with an eight-person teaching team, mentoring students in data engineering fundamentals."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Architecture & Modeling", "items": ["Dimensional Modeling", "dbt", "Semantic Layers", "Data Governance", "Data Quality Frameworks"] },
+      { "category": "Cloud Data Platforms", "items": ["Google BigQuery", "AWS Glue", "AWS Athena", "AWS S3", "AWS MWAA", "Snowflake"] },
+      { "category": "Programming and Data Engineering", "items": ["Python", "PySpark", "SQL", "Apache Spark", "Scala", "Apache Airflow"] },
+      { "category": "Analytics and Visualization", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "Anomaly Detection"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Finance and Compliance", "items": ["Financial Controls", "Data Privacy", "Audit Standards"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional — Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Enterprise Analytics Architecture",
+    "Semantic Layers",
+    "Dimensional Modeling",
+    "dbt",
+    "AWS Glue / Athena / S3 / MWAA",
+    "BigQuery",
+    "Python / PySpark",
+    "Data Governance",
+    "Analytics Engineering",
+    "Financial Controls",
+    "Team Mentoring"
+  ]
+}
