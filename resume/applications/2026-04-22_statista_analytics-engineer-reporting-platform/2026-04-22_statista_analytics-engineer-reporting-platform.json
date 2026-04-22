@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "version": "2026-04-22_statista_analytics-engineer-reporting-platform",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Analytics Engineer - Reporting Platform",
+    "targetCompany": "Statista",
+    "sourceUrl": "https://jobs.ashbyhq.com/statista/daa5811c-c67e-4fdc-abf9-e96b68a5269d",
+    "behaviouralInsights": [
+      "Loss aversion signals (governance, documentation, trust, maintainability) — frame achievements as risk reduction and order-restoration",
+      "Seniority signals (autonomy, 'first point of contact', 'shape the future') — lead with ownership, impact, and platform-wide responsibility",
+      "Primacy bias: platform administration and governance are top priorities, not dashboards or analytics",
+      "Repetition theme: standards, best practices, governance, data quality — restore structure to chaotic reporting estate",
+      "IC-only role: no mention of team leadership or mentorship — emphasise hands-on expertise and individual ownership"
+    ],
+    "adaptationNotes": [
+      "Reordered Vinted bullets to lead with platform ownership and governance (dbt tests, quality controls, risk mitigation)",
+      "Emphasised 90% risk reduction and €1.6m recovery to address governance/loss aversion",
+      "Shortened Tourlane bullets for clarity and leading with data transformation layer (governance angle)",
+      "Trimmed LucaNet and Keppel bullets for relevance (less BI/governance focus)",
+      "Reordered skills: moved Power BI, Snowflake, SQL, dbt tests, and governance tools to the front",
+      "Updated pillHighlights to match ATS keywords and job priorities"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer specialising in BI platform governance and data quality",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineer with 6+ years building reporting platforms, data quality frameworks, and governance practices. Expertise in Power BI, dbt, Snowflake, and BigQuery establishing standards and controls in complex analytical environments. Proven track record translating data landscapes into maintainable, trusted platforms enabling self-serve analytics.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end reporting platform for shipping finance (dbt, BigQuery, Looker); designed data warehouse architecture and governance for 50+ analytics assets.",
+        "Designed risk-based control framework with layered data quality tests, reconciliations, and anomaly detection reducing risk by 90% on €40m exposure.",
+        "Detected and recovered €1.6m in carrier billing overcharges through embedded control governance.",
+        "Built monitoring and observability layer (freshness, completeness, volume and metric drift) for critical pipelines, improving incident resolution.",
+        "Optimised workloads and storage patterns, cutting runtimes by 75% and cloud costs by 15% while maintaining SLAs.",
+        "Partnered with Finance to translate requirements into documented metrics and models, enabling self-serve analysis and standards-based change management."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised dbt + Snowflake transformation layer integrating Salesforce, Stripe, Twilio and backend systems; led data warehouse migration.",
+        "Led finance reporting transformation using Looker, improving SLA attainment from 88% to 97% and saving 5 FTE days per month.",
+        "Designed BI architecture and governance frameworks establishing standards and documentation practices for 50+ analytical assets."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies (SGX, HKEX, KLSE, ASX), designing consolidation and reporting solutions.",
+        "Designed solutions achieving up to 50% reduction in reporting and planning cycle times through automation and standardised frameworks."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Tableau dashboards assessing performance across 140 staff in 5 process areas, improving transparency of KPIs.",
+        "Streamlined reporting across 300 entities, improving consistency and timeliness."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion to Singapore and managed 30 interns over 3 years."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Analytics and Visualisation", "items": ["Power BI", "Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Warehousing and Databases", "items": ["Snowflake", "Google BigQuery"] },
+      { "category": "Programming and Data Engineering", "items": ["SQL", "dbt", "Python", "R", "Scala", "Apache Spark", "Apache Airflow"] },
+      { "category": "Data Quality and Governance", "items": ["dbt tests", "Elementary", "reconciliations", "anomaly detection"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] },
+      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Analytics Engineer",
+    "Reporting Platform",
+    "Power BI",
+    "BI tools migration",
+    "SQL",
+    "Data modeling",
+    "Data Warehouse (Snowflake, BigQuery)",
+    "Data governance",
+    "Data quality",
+    "dbt",
+    "Standards and best practices",
+    "KPI definitions",
+    "Report ownership",
+    "BI stack modernization"
+  ]
+}

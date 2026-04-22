@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "version": "2026-04-22_polyteia_analytics-engineering-lead",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Analytics Engineering Lead",
+    "targetCompany": "Polyteia",
+    "sourceUrl": "https://polyteia.jobs.personio.de/job/2478119",
+    "behaviouralInsights": [
+      "Domain-technical bridge: JD repeats 'domain expertise' 3x — fear signal they've had technically correct but contextually wrong solutions",
+      "Client delivery focus: 'Implementations' and 'guiding clients' are primary — resume must lead with ability to translate between domain and technical",
+      "Technical IC + team leader: Want someone who codes (Python, dbt, Airflow) AND develops people — not manager-only",
+      "Loss aversion: Public sector implies governance/compliance — frame achievements as reducing risk and ensuring reliability",
+      "Autonomous decision-maker: 'Influence over platform strategy' — they want strategic thinking, not task execution"
+    ],
+    "adaptationNotes": [
+      "Reframed summary to emphasize domain-technical bridge and client delivery leadership",
+      "Reordered Vinted bullets to lead with client-facing data quality and controls (risk reduction)",
+      "Added parliamentary data and government domain context via Soap Cycling",
+      "Highlighted mentoring and senior IC leadership across roles",
+      "Moved dbt, Airflow, Python to front of technical skills per ATS keywords",
+      "Pivoted pillHighlights to align with JD's public sector + analytics engineering focus"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineering Lead - Finance and Data Infrastructure",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineering Lead with 6+ years bridging domain expertise and technical delivery across finance and public sector. Specialises in designing scalable dbt and data pipeline architectures that translate stakeholder requirements into reliable data products. Proven ability to guide client implementations, mentor engineers, and establish domain-centric control frameworks that reduce risk while enabling self-serve analytics.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Designed and embedded risk-based control framework into core dbt models, reducing misstatement risk by 90% on €40m exposure and detecting carrier billing discrepancies, recovering €1.6m in overcharges.",
+        "Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker, serving as single source of truth for Finance Ops and Group Reporting during month-end close.",
+        "Built data quality infrastructure (dbt tests, reconciliations, anomaly detection) for Finance stakeholders.",
+        "Mentored junior analytics engineers on dbt best practices, data modeling philosophy, and cross-functional stakeholder engagement.",
+        "Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised data transformation layer in dbt and Snowflake for finance and operational analytics.",
+        "Led finance reporting transformation using Looker, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation implementations across APAC, guiding stakeholders from requirements through go-live.",
+        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to assess performance across 5 process areas, improving transparency of service delivery KPIs."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Managed government relationships and compliance, coordinating with Singapore regulatory bodies on impact reporting.",
+        "Led expansion to Singapore and managed 30 interns to scale collections and impact programmes.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters, mentoring teaching team on pedagogy and curriculum design."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Programming and Data Engineering", "items": ["dbt", "Python", "SQL", "Apache Airflow", "Apache Spark", "Scala", "R"] },
+      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Analytics Engineering Lead",
+    "dbt",
+    "Python",
+    "SQL",
+    "Apache Airflow",
+    "Client Implementations",
+    "Data Quality & Controls",
+    "Stakeholder Management",
+    "Team Leadership",
+    "Public Sector",
+    "BigQuery",
+    "Finance Data",
+    "Domain Expertise",
+    "Data Infrastructure"
+  ]
+}

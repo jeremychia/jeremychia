@@ -1,0 +1,2 @@
+- own arr, revenue, subscription, billing
+- hiring 3 AEs
