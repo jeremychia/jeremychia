@@ -7,11 +7,11 @@ help:
 commit-applications:
 	@echo "Committing new application folders..."
 	@git status --short resume/applications/ | grep "^??" | awk '{print $$2}' | sed 's|/.*||' | sort -u | while read folder; do \
-		if [ -n "$$folder" ]; then \
+		if [ -n "$$folder" ] && [ "$$folder" != "resume" ]; then \
 			folder_name=$$(basename "$$folder"); \
 			echo ""; \
 			echo "Committing: $$folder_name"; \
-			git add "$$folder"; \
+			git add "$$folder/"; \
 			git commit -m "chore(application): $$folder_name"; \
 		fi; \
 	done
