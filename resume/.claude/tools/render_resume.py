@@ -37,9 +37,9 @@ def _link(url: str, label: str) -> str:
 
 def _section_heading(title: str) -> str:
     return (
-        f'<p style="font-size:10pt;font-weight:bold;letter-spacing:0.1em;'
-        f'text-transform:uppercase;margin:10px 0 0;">{_esc(title)}</p>'
-        f'<hr style="margin:2px 0 6px;border:none;border-top:1px solid #000;">'
+        f'<p style="font-size:9.5pt;font-weight:bold;letter-spacing:0.1em;'
+        f'text-transform:uppercase;margin:7px 0 0;">{_esc(title)}</p>'
+        f'<hr style="margin:2px 0 4px;border:none;border-top:1px solid #000;">'
     )
 
 
@@ -52,9 +52,9 @@ def _flex_row(left_html: str, right_html: str) -> str:
 
 def _bullets(items: list[str]) -> str:
     lis = "".join(
-        f'<li style="margin-bottom:2px;">{_esc(b)}</li>' for b in items if b
+        f'<li style="margin-bottom:1px;font-size:9pt;">{_esc(b)}</li>' for b in items if b
     )
-    return f'<ul style="list-style-type:disc;margin:3px 0;padding-left:1.2em;">{lis}</ul>'
+    return f'<ul style="list-style-type:disc;margin:2px 0;padding-left:1.1em;">{lis}</ul>'
 
 
 # ---------------------------------------------------------------------------
@@ -81,11 +81,11 @@ def _render_header(header: dict) -> str:
     contact_line = " &middot; ".join(links)
 
     return f"""
-<div style="text-align:center;margin-bottom:8px;">
-  <p style="font-size:16pt;font-weight:bold;letter-spacing:0.08em;
-             text-transform:uppercase;margin:0 0 3px;">{name}</p>
-  <p style="font-size:10pt;margin:0 0 2px;">{contact_line}</p>
-  <p style="font-size:10pt;margin:0;">{location}</p>
+<div style="text-align:center;margin-bottom:6px;">
+  <p style="font-size:14pt;font-weight:bold;letter-spacing:0.1em;
+             text-transform:uppercase;margin:0 0 2px;">{name}</p>
+  <p style="font-size:8.5pt;margin:1px 0;">{location}</p>
+  <p style="font-size:8.5pt;margin:1px 0;">{contact_line}</p>
 </div>"""
 
 
@@ -94,7 +94,7 @@ def _render_summary(summary: str) -> str:
         return ""
     return (
         _section_heading("Summary")
-        + f'<p style="margin:4px 0 8px;font-size:10pt;">{_esc(summary)}</p>'
+        + f'<p style="margin:0 0 4px;font-size:9pt;">{_esc(summary)}</p>'
     )
 
 
@@ -102,14 +102,14 @@ def _render_experience(experience: list[dict]) -> str:
     parts = [_section_heading("Professional Experience")]
     for job in experience:
         date_range = f'{_esc(job.get("startDate",""))} – {_esc(job.get("endDate",""))}'
-        loc_date = f'{_esc(job.get("location",""))} &nbsp;|&nbsp; {date_range}'
-        left = (
-            f'<strong>{_esc(job.get("company",""))}</strong>'
-            f', <em>{_esc(job.get("title",""))}</em>'
-        )
-        parts.append(_flex_row(left, loc_date))
+        loc_date = f'<span style="font-size:8.5pt;white-space:nowrap;">{_esc(job.get("location",""))} &nbsp;|&nbsp; {date_range}</span>'
+        left = f'<strong style="font-size:9.5pt;">{_esc(job.get("company",""))}</strong>'
+        row1 = _flex_row(left, loc_date)
+        row2 = f'<div style="font-style:italic;font-size:9pt;margin:1px 0 2px;">{_esc(job.get("title",""))}</div>'
+        entry = row1 + "\n" + row2
         if job.get("bullets"):
-            parts.append(_bullets(job["bullets"]))
+            entry += "\n" + _bullets(job["bullets"])
+        parts.append(f'<div style="margin-bottom:4px;">{entry}</div>')
     return "\n".join(parts)
 
 
@@ -117,14 +117,14 @@ def _render_education(education: list[dict]) -> str:
     parts = [_section_heading("Education")]
     for edu in education:
         date_range = f'{_esc(edu.get("startDate",""))} – {_esc(edu.get("endDate",""))}'
-        loc_date = f'{_esc(edu.get("location",""))} &nbsp;|&nbsp; {date_range}'
-        left = (
-            f'<strong>{_esc(edu.get("institution",""))}</strong>'
-            f', <em>{_esc(edu.get("degree",""))}</em>'
-        )
-        parts.append(_flex_row(left, loc_date))
+        loc_date = f'<span style="font-size:8.5pt;white-space:nowrap;">{_esc(edu.get("location",""))} &nbsp;|&nbsp; {date_range}</span>'
+        left = f'<strong style="font-size:9.5pt;">{_esc(edu.get("institution",""))}</strong>'
+        row1 = _flex_row(left, loc_date)
+        row2 = f'<div style="font-style:italic;font-size:9pt;margin:1px 0 2px;">{_esc(edu.get("degree",""))}</div>'
+        entry = row1 + "\n" + row2
         if edu.get("bullets"):
-            parts.append(_bullets(edu["bullets"]))
+            entry += "\n" + _bullets(edu["bullets"])
+        parts.append(f'<div style="margin-bottom:4px;">{entry}</div>')
     return "\n".join(parts)
 
 
@@ -134,14 +134,14 @@ def _render_community(community: list[dict]) -> str:
     parts = [_section_heading("Community and Volunteering")]
     for item in community:
         date_range = f'{_esc(item.get("startDate",""))} – {_esc(item.get("endDate",""))}'
-        loc_date = f'{_esc(item.get("location",""))} &nbsp;|&nbsp; {date_range}'
-        left = (
-            f'<strong>{_esc(item.get("organisation",""))}</strong>'
-            f', <em>{_esc(item.get("title",""))}</em>'
-        )
-        parts.append(_flex_row(left, loc_date))
+        loc_date = f'<span style="font-size:8.5pt;white-space:nowrap;">{_esc(item.get("location",""))} &nbsp;|&nbsp; {date_range}</span>'
+        left = f'<strong style="font-size:9.5pt;">{_esc(item.get("organisation",""))}</strong>'
+        row1 = _flex_row(left, loc_date)
+        row2 = f'<div style="font-style:italic;font-size:9pt;margin:1px 0 2px;">{_esc(item.get("title",""))}</div>'
+        entry = row1 + "\n" + row2
         if item.get("bullets"):
-            parts.append(_bullets(item["bullets"]))
+            entry += "\n" + _bullets(item["bullets"])
+        parts.append(f'<div style="margin-bottom:4px;">{entry}</div>')
     return "\n".join(parts)
 
 
@@ -151,12 +151,12 @@ def _render_skills(skills: dict) -> str:
     for cat in skills.get("technical", []):
         name = _esc(cat.get("category", ""))
         items = ", ".join(_esc(i) for i in cat.get("items", []))
-        parts.append(f'<p style="margin:2px 0;font-size:10pt;"><strong>{name}:</strong> {items}</p>')
+        parts.append(f'<p style="margin:2px 0;font-size:9pt;"><strong>{name}:</strong> {items}</p>')
 
     certs = skills.get("certifications", [])
     if certs:
         cert_str = " &middot; ".join(_esc(c) for c in certs)
-        parts.append(f'<p style="margin:2px 0;font-size:10pt;"><strong>Certifications:</strong> {cert_str}</p>')
+        parts.append(f'<p style="margin:2px 0;font-size:9pt;"><strong>Certifications:</strong> {cert_str}</p>')
 
     langs = skills.get("languages", [])
     if langs:
@@ -164,7 +164,7 @@ def _render_skills(skills: dict) -> str:
             f'{_esc(l.get("language",""))} ({_esc(l.get("level",""))})'
             for l in langs
         )
-        parts.append(f'<p style="margin:2px 0;font-size:10pt;"><strong>Languages:</strong> {lang_str}</p>')
+        parts.append(f'<p style="margin:2px 0;font-size:9pt;"><strong>Languages:</strong> {lang_str}</p>')
 
     return "\n".join(parts)
 
@@ -192,7 +192,7 @@ def render_html(data: dict) -> str:
 <style>
   @page {{
     size: A4;
-    margin: 0.9cm;
+    margin: 0.65cm;
   }}
   @media print {{
     -webkit-print-color-adjust: exact;
@@ -201,17 +201,18 @@ def render_html(data: dict) -> str:
   * {{ box-sizing: border-box; }}
   body {{
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 10pt;
+    font-size: 9.5pt;
+    line-height: 1.18;
     color: #000;
     background: #fff;
     max-width: 780px;
     margin: 0 auto;
-    padding: 0.5cm 1cm;
+    padding: 0;
   }}
   a {{ color: #000; text-decoration: none; }}
   p {{ margin: 0; }}
-  ul {{ margin: 3px 0; padding-left: 1.2em; list-style-type: disc; }}
-  li {{ margin-bottom: 2px; }}
+  ul {{ margin: 2px 0; padding-left: 1.1em; list-style-type: disc; }}
+  li {{ margin-bottom: 1px; font-size: 9pt; }}
 </style>
 </head>
 <body>
