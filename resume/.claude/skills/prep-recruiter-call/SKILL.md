@@ -76,7 +76,7 @@ From the `experience` bullets in the adapted JSON, select the single strongest a
 Identify 3 distinct themes the JD emphasises. For each, identify the best matching bullet from experience.
 
 ### 4D — Closing statement
-Draft a 2–3 sentence enthusiastic closing statement: (1) restate specific interest using one genuine detail from the JD, (2) confirm availability and intent to move forward, (3) leave one memorable phrase.
+Draft a 1–2 sentence direct closing statement (European/grounded tone, no enthusiasm marketing). (1) State one concrete capability you bring, (2) Signal availability and readiness. Keep it short and confident.
 
 ### 4E — Culture-refining question
 Draft one specific question using the "90-day perfect hire" framing, tailored to what the JD signals the team is building or fixing.
@@ -152,17 +152,17 @@ For each theme below, use the STAR+Spark structure: Situation/Task (20%), Action
 {The one targeted finding from Step 3D — e.g. which ERP they use, their pricing tiers, a recent BI migration. If nothing found, say so.}
 
 ### Suggested opening hook
-> "{A specific, genuine sentence to open the call with — referencing one real finding from the research above. Not generic.}"
+> "{A specific, direct sentence to open the call with — referencing one real finding from the research. Matter-of-fact tone (German, Lithuanian directness), not marketing language. Lead with the fact, then the capability. Example: 'You hit $400M ARR in eight months. That growth means your MRR model is complex. That's the problem I solve.'}"
 
 ---
 
 ## 5. Opening and closing
 
 ### Opening (first 60 seconds)
-Use the suggested hook from Section 4 above. The goal is one specific, genuine observation — not "I love your mission."
+Use the suggested hook from Section 4 above. Tone: grounded, European directness. Lead with a specific fact or number. Name the problem plainly. End with a statement of capability — short, confident, no flourish.
 
 ### Closing statement
-> {Draft 2–3 sentence closing statement from Step 4D.}
+> {Draft 1–2 sentence closing from Step 4D. Tone: direct and grounded. No "genuinely excited" or "move forward with the team". Instead: concrete capabilities, availability, confidence. Example: "I've built the exact thing you need. I'm in Berlin, ready to start. When do we move forward?"}
 
 ---
 

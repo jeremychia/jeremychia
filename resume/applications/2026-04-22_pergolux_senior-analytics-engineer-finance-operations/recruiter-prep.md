@@ -64,7 +64,7 @@ Pergolux had a strong 2025: 180% year-over-year growth ([PERGOLUX press release]
 ERP identity not publicly confirmed. Based on supply chain job postings referencing ERP/WMS experience and their operational profile (physical product, logistics, warehousing), candidates for similar roles at comparable companies typically encounter NetSuite or SAP. Worth asking directly on the call: "Which ERP are you currently running?" — this is a natural, informed question that signals you're already thinking about the integration.
 
 ### Suggested opening hook
-> "I had a look at what you've been building — 180% growth last year, 100,000 pergolas across 14 countries, and now a West Coast manufacturing footprint ([PERGOLUX 2025 announcement](https://markets.financialcontent.com/wral/article/abnewswire-2025-12-31-pergolux-ends-2025-with-us-expansion-smart-pergola-launch-and-roadshow-tour)). That kind of operational scale creates exactly the kind of financial data complexity I find most interesting: COGS that spans multiple fulfilment locations, logistics costs that need to roll up cleanly into EBITDA. That's the problem I want to work on."
+> "I looked at what you've built — 180% growth, 100,000 pergolas across 14 countries, now manufacturing on the West Coast ([PERGOLUX 2025 announcement](https://markets.financialcontent.com/wral/article/abnewswire-2025-12-31-pergolux-ends-2025-with-us-expansion-smart-pergola-launch-and-roadshow-tour)). This scale means your COGS and logistics costs are genuinely complex. Multiple warehouses, different sourcing costs, margin pressure across geographies. That's the problem I know how to solve."
 
 ---
 
@@ -74,7 +74,7 @@ ERP identity not publicly confirmed. Based on supply chain job postings referenc
 Use the suggested hook above — it references real, specific numbers from Pergolux's own press releases.
 
 ### Closing statement
-> "I'm genuinely excited about this role — building a Finance Single Source of Truth from scratch for a fast-growing operations business is exactly the kind of high-impact, end-to-end work I do best, and my Chartered Accountant background means I can engage at the finance domain level that this role clearly demands. I'm available to move forward quickly and happy to do a technical screen whenever works for the team. The thing I'd want you to take away from this call is: I've already built what you're trying to hire for."
+> "I've built the exact thing you need — a single source of truth for financial data that Finance actually uses, with controls embedded from the start. My accounting background means I understand the domain, not just the SQL. I'm in Berlin, ready to start, and I can handle the ambiguity of building systems in a fast-growing company. When do we move forward?"
 
 ---
 

@@ -64,7 +64,7 @@ Lovable raised $330M Series B in December 2025 at a $6.6B valuation ([TechCrunch
 Lovable's pricing tiers ([Lovable Pricing](https://lovable.dev/pricing)): **Free** (basic), **Pro** ($25/month, 100 credits, custom domains), **Business** ($50/month, SSO, team workspace, internal publish), **Enterprise** (platform fee by company size). The mix of free-to-paid conversion, credit-based usage, and tiered subscriptions means the MRR model is genuinely complex — you're not just tracking plan upgrades, you're also modelling credit consumption, rollovers, and usage-based billing. Understand this model before the call; it signals the level of subscription complexity you'd be dealing with.
 
 ### Suggested opening hook
-> "Before we dive in — I saw that Lovable hit $400M ARR in February, up from $100M just eight months earlier ([Bloomberg](https://www.bloomberg.com/news/articles/2026-03-12/vibe-coding-startup-lovable-hits-400-million-recurring-revenue)). That kind of growth trajectory means your MRR model is tracking something that almost no one has had to model before — subscription tiers, credit rollovers, usage-based billing all at once, all moving fast. That's exactly the kind of financial data problem I want to be building for."
+> "You hit $400M ARR in February, up from $100M eight months earlier ([Bloomberg](https://www.bloomberg.com/news/articles/2026-03-12/vibe-coding-startup-lovable-hits-400-million-recurring-revenue)). That growth rate means your MRR numbers are moving too fast for manual work. Subscription tiers, credits rolling over, usage stacking on top of plans — it's genuinely complex. That's the problem I solve."
 
 ---
 
@@ -74,7 +74,7 @@ Lovable's pricing tiers ([Lovable Pricing](https://lovable.dev/pricing)): **Free
 Use the suggested hook above — it references real ARR numbers and shows you understand the specific complexity of their subscription model.
 
 ### Closing statement
-> "I'm really excited about this role — the combination of subscription metrics, Stripe integration, and building the financial data foundation at a company growing this fast is exactly the work I've been preparing for with my last three years in finance analytics engineering. I'm available to move quickly and happy to do a technical assessment on SQLMesh or dimensional modeling if that would help. The thing I'd want you to take away: I've built financial models that Finance actually trusts and uses every day — that's the outcome you're looking for."
+> "I've built subscription models at scale — handling churn, plan changes, usage-based billing. Finance trusts the numbers because they're built right and reconciled properly. I can ramp on SQLMesh fast — I know the paradigm, I learn tools quickly. Let's move forward."
 
 ---
 
