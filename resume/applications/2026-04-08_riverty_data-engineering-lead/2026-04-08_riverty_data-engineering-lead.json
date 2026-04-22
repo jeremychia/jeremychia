@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "version": "2026-04-08_riverty_data-engineering-lead",
+    "lastUpdated": "2026-04-08",
+    "targetRole": "Data Engineering Lead",
+    "targetCompany": "Riverty Group GmbH",
+    "sourceUrl": "https://jobsearch.createyourowncareer.com/Riverty/job/Berlin-Data-Engineering-Lead-%28mwd%29-BE-10623/284720-de_DE/",
+    "adaptationNotes": [
+      "Summary repositioned to lead with ETL/ELT pipeline ownership and data reliability — matching JD's top fear signal (trusted, high-quality data products).",
+      "Vinted bullets reordered: ETL/ELT pipeline ownership first (JD primacy: Data Pipelines & Modeling), data quality second, data observability third.",
+      "OpenMetadata data catalog bullet included to address JD's 'Work hand-in-hand with Data Governance and Data Architecture to ensure alignment on metadata, lineage, and data ownership.'",
+      "Risk-based control framework + €1.6m recovery bullet retained as accountability/ownership signal (JD repeats 'accountability' 3x).",
+      "Pipeline performance bullet retained as peak-end (hard metrics: 75% faster, 15% cheaper, SLAs maintained).",
+      "Tourlane: 'data-as-a-product' framing applied to centralised layer bullet; SLA attainment bullet moved up.",
+      "Skills reordered: dbt and Python leading Programming category; Data Quality and Observability elevated to second position; CI/CD third.",
+      "Tagline updated to 'Data Engineering Lead — FinTech and Finance' to match target role title.",
+      "pillHighlights replaced with 15 ATS keyword phrases extracted from JD.",
+      "Azure and Databricks Medallion architecture are absent from this resume — flagged as gaps below."
+    ],
+    "behaviouralInsights": [
+      "FEAR SIGNAL: 'trusted' appears 2x, 'accountability' 3x, 'agile data product teams' 7x — they have had ownership and reliability problems across distributed teams.",
+      "FEAR SIGNAL: 'compliance' included in delivery outcomes alongside timeliness/quality/completeness — regulated FinTech with real data governance risk.",
+      "DESIRE SIGNAL: Strategic Leadership listed first in responsibilities — they want a vision-setter and operating model builder, not just a technical executor.",
+      "SENIORITY SIGNAL: 'define and execute', 'establish and continuously improve', 'champion adoption', 'lead, mentor, and grow' — strong autonomous leadership expected.",
+      "LOSS AVERSION: 'reliable and robust interfaces to source systems', 'data SLAs and SLOs', 'detect and resolve issues early' — fear of pipeline failures affecting business decisions.",
+      "CULTURE SIGNAL: 'culture of ownership, accountability, and collaboration', 'high-performing', 'agile, cross-functional' — delivery excellence with personal accountability.",
+      "ABSENCE SIGNAL: No hands-on IC data work in responsibilities — this is a pure leadership and governance role. Resume should frame Jeremy's IC work as owned outcomes, not tasks.",
+      "GAP: Role requires 10+ years and 3–5 years managing multi-team delivery with team size >10. Jeremy has 6+ years and no listed direct reports — significant stretch."
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Data Engineering Lead — FinTech and Finance",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Data engineering practitioner with 6+ years delivering trusted, high-quality data products across FinTech-adjacent and e-commerce environments. Leads end-to-end ETL/ELT pipeline delivery, data quality frameworks, and data observability practices using dbt, Apache Spark, BigQuery, and Snowflake — ensuring data SLAs are met and analytics teams are unblocked. Chartered Accountant background provides deep expertise in financial services data, compliance requirements, and stakeholder management across agile cross-functional teams.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end ETL/ELT pipelines and finance-ready data products in dbt and BigQuery, serving as the single source of truth for Finance Ops and Group Reporting during month-end close.",
+        "Designed and implemented layered data quality frameworks (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Built and extended data observability practices (freshness, completeness, volume and metric drift) for critical Airflow-orchestrated pipelines, improving time-to-detect and time-to-resolve data incidents.",
+        "Drove product requirements and feature prioritisation for OpenMetadata data catalog implementation, from initial scoping through UAT, improving data discoverability and governance.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data-as-a-product transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems for finance and operational analytics.",
+        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per month in the month-end close process."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards for 140 staff across 5 process areas; automated 3 manual finance workflows with UiPath RPA and SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and TFI-LeaRN exchange scholarship at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led Singapore expansion and managed 30 interns over 3 years; oversaw finance, regulatory compliance, and year-end audits."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
+        "Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Programming and Data Engineering", "items": ["dbt", "Python", "SQL", "Apache Spark", "Apache Airflow", "Scala", "R"] },
+      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "OpenMetadata", "anomaly detection"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Data Engineering",
+    "ETL/ELT Pipelines",
+    "Agile Data Product Teams",
+    "Data Quality Frameworks",
+    "Data Observability",
+    "Data SLAs",
+    "CI/CD for Data",
+    "Data Modeling",
+    "Data-as-a-Product",
+    "FinTech",
+    "dbt",
+    "Apache Spark",
+    "Stakeholder Management",
+    "Pipeline Performance",
+    "Data Reliability"
+  ]
+}
