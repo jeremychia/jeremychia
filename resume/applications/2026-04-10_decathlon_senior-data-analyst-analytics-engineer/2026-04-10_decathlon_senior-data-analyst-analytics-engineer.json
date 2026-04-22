@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "version": "2026-04-10_decathlon_senior-data-analyst-analytics-engineer",
+    "lastUpdated": "2026-04-10",
+    "targetRole": "Senior Data Analyst & Analytics Engineer - Franchise",
+    "targetCompany": "Decathlon Digital FR",
+    "sourceUrl": "https://job-boards.eu.greenhouse.io/decathlontechnology/jobs/4796699101?gh_src=cb30d7c2teu",
+    "behaviouralInsights": [
+      "Primacy bias: Business analytics (decision support for stock/supply chain/pricing) listed first — core value is actionable insights, not infrastructure",
+      "Repetition signal: 'Clear, actionable recommendations' and 'communicate to non-technical' repeated — governance and translation anxiety",
+      "Seniority signal: 'Self-directed', 'negotiate access', 'translate findings' — expect autonomous IC with stakeholder management skills",
+      "Loss aversion: Heavy governance/audit language (row-level security, royalty auditability, KPI documentation) — data integrity and compliance are critical",
+      "Absence signal: No mention of ML/prediction or team leadership — pure operational BI/analytics IC role",
+      "Gaps vs. base resume: No Databricks experience (BigQuery/Snowflake only); limited Tableau RLS; limited supply chain/retail domain (finance-focused)"
+    ],
+    "adaptationNotes": [
+      "Reframed summary to lead with decision-support and operational analytics (vs. generic data engineering)",
+      "Prioritized Vinted experience for supply chain/logistics parallels (shipping domain shares inventory/cost dynamics with retail)",
+      "Reordered Vinted bullets: embedded finance-ready modeling first (governance/audit focus mirrors Decathlon's compliance anxiety)",
+      "Emphasized dbt + SQL expertise and data quality controls (directly matches JD requirements and ATS keywords)",
+      "Moved Keppel bullets to highlight Tableau experience and dashboard adaptability across domains",
+      "Reordered skills: dbt and SQL moved to front; Databricks gap noted but BigQuery/Snowflake lakehouse concepts transferable",
+      "Updated pillHighlights to match ATS keywords: dbt, SQL, Tableau, Row-Level Security, Data Modeling, Star Schema, Analytics Engineering"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer — Operational Analytics and Data Modeling",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Analytics Engineer with 6+ years bridging operations and data across APAC and Europe. Specialises in translating complex business requirements into dbt-driven data models and governance-first analytics infrastructure. Expert in advanced SQL, data quality controls, and cross-functional stakeholder collaboration to deliver clear, actionable insights for decision-makers. Chartered Accountant background drives focus on audit trails, compliance, and data integrity.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own finance-ready shipping cost and revenue data models built in dbt and BigQuery, serving as single source of truth for Finance Ops and Group Reporting; embedded governance controls and auditability into core datasets to meet compliance requirements.",
+        "Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Built risk-based control framework detecting carrier billing discrepancies and recovering €1.6m in overcharges through systematic data validation.",
+        "Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs.",
+        "Translate plain-language business requirements into documented metrics, data models, and KPI definitions, enabling self-serve analysis and smoother change management.",
+        "Partner across Finance, Operations, and Business teams to gather requirements, document business logic, and deliver insights that inform inventory, pricing, and cost decisions."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised data transformation layer in dbt and Snowflake, integrating Salesforce, Stripe, Twilio, and backend data to power finance and operational analytics.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in close process."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects across APAC listed companies, from requirements to go-live.",
+        "Designed consolidation and budgeting solutions achieving up to 50% reduction in reporting and planning cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Tableau dashboards and adapted them across business domains, implementing row-level access controls and improving KPI transparency."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion to Singapore, managed 30 interns over 3 years, and oversaw finance and regulatory compliance."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Analytics Engineering and Transformation", "items": ["dbt", "SQL", "Data modeling", "Star schema", "Python", "Scala", "Apache Spark", "Apache Airflow"] },
+      { "category": "Data Warehousing", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Analytics and Business Intelligence", "items": ["Tableau", "Looker", "Looker Studio", "Microsoft Power BI"] },
+      { "category": "Data Quality and Governance", "items": ["dbt tests", "Elementary", "Data reconciliation"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "Finance and Compliance", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "French", "level": "A1" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Advanced SQL",
+    "dbt",
+    "Data Modeling",
+    "Star Schema",
+    "Analytics Engineering",
+    "Tableau",
+    "Row-Level Security",
+    "Business Rules",
+    "Data Quality",
+    "Databricks-adjacent (BigQuery, Snowflake)"
+  ]
+}
