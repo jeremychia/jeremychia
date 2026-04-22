@@ -130,44 +130,36 @@ Apply **concrete anchoring**: always lead metrics first within a sentence. "90% 
 
 ---
 
-## Step 6 — Write the HTML and convert to PDF
+## Step 6 — Probe for gaps (BEFORE rendering)
 
-Write `applications/{base name}/{base name}.html` using the CSS spec in Step 5.
+Before generating HTML or PDF, identify gaps — JD requirements or themes that are weakly covered or absent in the base resume.
 
-**Calibrated CSS values** (tested to fill A4 comfortably on one page):
-- `@page { size: A4; margin: 0.65cm; }`
-- `body { font-size: 9.5pt; line-height: 1.18; }`
-- `header h1 { font-size: 14pt; }`
-- `header .contact-line { font-size: 8.5pt; }`
-- `h2 { font-size: 9.5pt; margin: 7px 0 1px; }`
-- `hr { margin: 2px 0 4px; }`
-- `.entry { margin-bottom: 4px; }`
-- `.entry-role { font-size: 9pt; }`
-- `li { font-size: 9pt; }`
-- `.summary { font-size: 9pt; }`
-- `.skills-block p { font-size: 9pt; }`
+For each gap, ask the user a targeted question to find out if there is an experience or achievement that could fill it. Frame each question specifically, e.g.:
 
-**After writing the HTML**, convert to PDF using Chrome headless with A4 paper size:
+> "The JD emphasises Unity Catalog / Databricks governance. Have you worked with any data catalog or governance tooling (Databricks, Alation, DataHub, Apache Atlas) in your current or previous roles — even partially?"
+
+> "They mention driving data literacy across Markets & Channels teams. Do you have a specific example of running training, office hours, or documentation initiatives beyond the ReDI School teaching?"
+
+Ask only for gaps that are genuinely missing — do not ask about things already in the base resume. Limit to 3–5 questions so it is not overwhelming.
+
+**Wait for the user to respond.** Then update the adapted JSON with any new information before proceeding to rendering.
+
+---
+
+## Step 7 — Render HTML and PDF
+
+Generate HTML from the adapted JSON using the render script, then convert to PDF:
 
 ```bash
-DIR="applications/{base name}"
-ABS_HTML="$(pwd)/${DIR}/{base name}.html"
-ABS_PDF="$(pwd)/${DIR}/{base name}.pdf"
-
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless=new \
-  --print-to-pdf="$ABS_PDF" \
-  --print-to-pdf-no-header-footer \
-  --no-margins \
-  --disable-gpu \
-  --paper-width=8.27 --paper-height=11.69 \
-  "$ABS_HTML" 2>/dev/null
-
-echo "exit:$?"
+cd /path/to/resume/root  # wherever resume-base.json lives
+python3 .claude/tools/render_resume.py \
+  "applications/{base name}/{base name}.json" \
+  "applications/{base name}/{base name}.html"
 ```
 
 **Check the page count** after generation:
 ```bash
+ABS_PDF="$(pwd)/applications/{base name}/{base name}.pdf"
 python3 -c "
 import re
 with open('$ABS_PDF', 'rb') as f: content = f.read()
@@ -176,21 +168,13 @@ print('pages:', pages)
 "
 ```
 
-If the PDF is more than 1 page, trim bullets from the least-important roles (Keppel first, then LucaNet) one at a time until it fits. If PDF generation fails entirely, tell the user to open the HTML in Chrome and use File → Print → Save as PDF.
+If the PDF is more than 1 page, trim bullets from the least-important roles (Keppel first, then LucaNet) in the JSON one at a time, then re-run the render script until it fits. If PDF generation fails entirely, tell the user to open the HTML in Chrome and use File → Print → Save as PDF.
 
 ---
 
-## Step 8 — Report and probe for gaps
+## Step 8 — Report
 
 Tell the user:
 - Output folder: `applications/{base name}/`
 - Which of the 3 files were successfully created (JSON, HTML, PDF)
 - A short bullet list of key adaptations made (from `adaptationNotes`)
-
-Then identify gaps — JD requirements or themes that are weakly covered or absent in the base resume. For each gap, ask the user a targeted question to find out if there is an experience or achievement that could fill it. Frame each question specifically, e.g.:
-
-> "The JD emphasises Unity Catalog / Databricks governance. Have you worked with any data catalog or governance tooling (Databricks, Alation, DataHub, Apache Atlas) in your current or previous roles — even partially?"
-
-> "They mention driving data literacy across Markets & Channels teams. Do you have a specific example of running training, office hours, or documentation initiatives beyond the ReDI School teaching?"
-
-Ask only for gaps that are genuinely missing — do not ask about things already in the base resume. Limit to 3–5 questions so it is not overwhelming. After the user answers, offer to update the adapted JSON and regenerate the PDF with the new information.
