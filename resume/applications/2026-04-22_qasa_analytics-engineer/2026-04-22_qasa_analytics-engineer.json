@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "version": "2026-04-22_qasa_analytics-engineer",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Analytics Engineer",
+    "targetCompany": "Qasa",
+    "sourceUrl": "https://careers.qasa.se/jobs/7452878-analytics-engineer-build-qasa-s-data-foundation",
+    "behaviouralInsights": [
+      "Primacy bias: KPI/metrics definition and unification is their top priority—lead with metrics expertise",
+      "Repetition signal: 'KPIs', 'data models', 'cross-functional' repeated 3-4x—they want someone who unifies chaos and enables teams",
+      "Loss aversion: Heavy emphasis on GDPR compliance and data governance—frame as risk reduction and operational reliability",
+      "Seniority signal: Expect autonomous ownership of metrics and data architecture; not a support role",
+      "Culture signal: 'Data-native' transformation mindset—they value initiative and empowering teams over process",
+      "IC strength: No mentorship/team leadership required—want a strong individual contributor with depth"
+    ],
+    "adaptationNotes": [
+      "Reordered Vinted role bullets: KPI/metrics ownership first, governance/controls second",
+      "Emphasized data modeling across all roles; repositioned governance work as risk management",
+      "Skills: Prioritized SQL, dbt, BigQuery; moved Looker forward (similar to Metabase); added AI tools",
+      "Removed Keppel RPA bullet (not relevant); kept analytics/KPI focus",
+      "Summary: Data models + KPIs + cross-functional metrics alignment; governance as compliance/risk"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer - KPIs, Data Models, and Cross-Functional Metrics",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineer with 6+ years defining and maintaining unified KPIs, data models, and metrics across finance, product, and operations. Expert in dbt, BigQuery, and Looker to build self-serve analytics capabilities and governance frameworks that empower cross-functional teams. Chartered Accountant background provides deep business acumen across finance, reporting, and compliance domains.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Defined and maintained unified KPIs for shipping cost and revenue across Finance, Operations, and Product teams using dbt, BigQuery, and Looker—established as single source of truth for month-end reporting and strategic decisions.",
+        "Designed and implemented layered data governance and quality controls (dbt tests, reconciliations, anomaly detection, GDPR compliance), reducing misstatement risk by 90% on €40m exposure.",
+        "Embedded risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Built and extended monitoring and observability for critical pipelines (freshness, completeness, volume drift), improving incident detection and resolution time for Finance stakeholders.",
+        "Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud costs by 15% while maintaining SLAs."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built and maintained centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to enable cross-functional analytics on finance and operations metrics.",
+        "Defined unified metric standards across finance and operations; led Looker dashboard transformation that saved 5 FTE days per month in month-end close.",
+        "Partnered with data engineering to harden data pipelines, improving SLA attainment from 88% to 97%."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC, designing consolidation and reporting solutions that achieved up to 50% reduction in cycle times."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion and managed 30 interns over 3 years to scale operations and impact programmes.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters.",
+        "Co-created 13-week syllabus with eight-person teaching team, combining instructional content with hands-on case-study projects."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Modeling and Analytics", "items": ["dbt", "SQL", "Data modeling", "KPI definition", "Metric standards"] },
+      { "category": "Data Warehousing and Analytics Platforms", "items": ["Google BigQuery", "Snowflake", "Looker", "Looker Studio", "Metabase"] },
+      { "category": "Data Quality and Governance", "items": ["GDPR compliance", "Data governance", "dbt tests", "Elementary", "Access management"] },
+      { "category": "Programming Languages", "items": ["Python", "R", "Scala"] },
+      { "category": "Data Engineering", "items": ["Apache Spark", "Apache Airflow"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Tools", "items": ["LucaNet", "SAP", "UiPath"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Unified KPIs",
+    "Data models",
+    "Self-serve analytics",
+    "GDPR compliance",
+    "Data governance",
+    "dbt",
+    "BigQuery",
+    "Looker",
+    "Cross-functional metrics",
+    "Metric standards",
+    "Data quality",
+    "Finance analytics",
+    "Chartered Accountant"
+  ]
+}
