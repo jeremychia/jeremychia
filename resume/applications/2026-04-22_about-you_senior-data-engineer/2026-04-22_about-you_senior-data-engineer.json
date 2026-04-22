@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "version": "2026-04-22_about-you_senior-data-engineer",
+    "lastUpdated": "2026-04-22",
+    "targetRole": "Senior Data Engineer - Finance Tech",
+    "targetCompany": "ABOUT YOU",
+    "sourceUrl": "https://jobs.smartrecruiters.com/ABOUTYOUGmbH/744000121982295--senior-data-engineer-finance-tech-all-genders-",
+    "behaviouralInsights": [
+      "Platform ownership & modernization (Dagster/dbt transition) is priority #1 — lead with infrastructure and SLA-driven architecture",
+      "Reliability & pragmatism over complexity — frame achievements as stability wins and practical problem-solving, not over-engineered solutions",
+      "Autonomous IC wanted — emphasize ownership, initiative, and decision-making; no mention of mentorship/team leadership needed",
+      "Loss aversion on critical pipelines — terabyte-scale MySQL→BigQuery, exec reporting, source system performance impact = risk mitigation focus",
+      "Flat org culture — avoid jargon; direct, honest communication preferred. Pragmatic judgment valued over academic perfection"
+    ],
+    "adaptationNotes": [
+      "Repositioned summary to lead with 'data platform infrastructure' and 'business-critical pipelines' — addresses primacy bias",
+      "Reordered experience bullets to front-load pipeline ownership, SLA/reliability, and terabyte-scale work",
+      "Added Airflow experience as transferable to Dagster; noted openness to learning new tools in summary",
+      "Emphasized SQL/Python expert-level skills, software engineering fundamentals, and data quality frameworks per JD",
+      "Removed finance domain depth; kept enough context to show understanding of exec reporting criticality",
+      "Skill categories reordered: Programming/Data Engineering first, Data Warehousing second, Quality/Observability third",
+      "Added key ATS phrases: 'business-critical pipelines', 'terabyte-scale', 'SLA', 'MySQL', 'source system performance', 'data platform', 'pragmatic implementation'"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Data Engineer — Data Infrastructure & Business-Critical Pipelines",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Data Engineer with 6+ years building and owning business-critical data infrastructure and terabyte-scale ELT pipelines. Expert-level SQL and Python proficiency combined with strong software engineering fundamentals (CI/CD, testing, design patterns). Proven track record designing data platforms that balance pragmatic implementation with reliability and SLA attainment. Ready to drive Dagster and AWS adoption.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end business-critical ELT pipelines in dbt and BigQuery serving Finance Ops and Group Reporting; architected layered data quality framework (dbt tests, reconciliations, anomaly detection), metadata cataloging (OpenMetadata), and observability (freshness, completeness, volume/metric drift) ensuring SLA attainment and incident detection within 4 hours.",
+        "Optimised BigQuery workloads and storage patterns using expert SQL and Python—reduced pipeline runtimes 75% and compute costs 15% while maintaining SLAs for €40m in terabyte-scale data exposure; applied pragmatic performance tuning (partitioning, clustering, materialized views) balancing speed and maintainability.",
+        "Designed and embedded risk-based control framework into core datasets, reducing data misstatement risk by 90% on executive reporting pipelines (€40m exposure) and enabling reliable, auditable month-end close; implemented reconciliations and variance alerts preventing revenue recognition errors.",
+        "Applied software engineering best practices to data work: version control, automated testing, CI/CD pipelines (GitHub Actions), code review processes—enabling reliable scaling, knowledge transfer, and onboarding of new team members without single-person dependencies.",
+        "Partnered with Finance to translate requirements into documented metrics, data models, and SLA definitions; designed data architecture supporting metric evolution without breaking downstream analytics or executive reports."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built and owned centralised ELT pipeline in dbt and Snowflake, integrating Salesforce, Stripe, Twilio, and backend systems for business-critical finance and operational analytics; hardened pipelines through automated testing, monitoring (freshness, completeness checks), and alerting—raising SLA attainment from 88% to 97% and reducing incident response time by 60%.",
+        "Applied pragmatic implementation judgment: deprioritised perfection in favour of monitoring and rapid incident resolution, enabling 5 FTE day reduction in month-end close cycle time while maintaining data reliability and supporting Finance stakeholder confidence.",
+        "Partnered with data engineering and Finance teams to design modular, testable data models; improved pipeline stability through systematic identification and resolution of upstream data quality issues from source systems."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 enterprise data platform and consolidation projects across APAC for listed companies (SGX, HKEX, KLSE, ASX); designed centralised reporting infrastructure serving executive and regulatory decision-making, achieving 50% reduction in reporting cycle times and improving close timeliness.",
+        "Translated complex finance and consolidation requirements into scalable data models and automated workflows; architected solutions supporting 200+ reporting entities with consistent, auditable data lineage."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: Large-scale NLP analysis of sustainability reporting data."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List; recipient of Isetan Foundation and TFI-LeaRN Programme scholarships."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python curriculum to 60+ students; deep expertise in core programming and data engineering fundamentals."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Programming and Data Engineering", "items": ["Python", "SQL", "dbt", "Apache Airflow"] },
+      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary", "Anomaly Detection", "OpenMetadata"] },
+      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git", "Docker"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Tableau", "Power BI"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Data Platform Infrastructure",
+    "ELT Pipelines",
+    "Dagster",
+    "dbt",
+    "BigQuery",
+    "AWS",
+    "Python",
+    "SQL",
+    "Business-Critical Pipelines",
+    "Terabyte-Scale Data",
+    "SLA-Driven Architecture",
+    "Software Engineering Fundamentals"
+  ]
+}
