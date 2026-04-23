@@ -12,9 +12,10 @@ What you're actually optimising for. Be honest — this file is for you, not a r
 - **Autonomy within clear guardrails** — knowing exactly what's expected and having the freedom to execute independently
 - **Working with competent, direct people** — teams that value logic over sentiment and straight talk over politics
 - **Fixing broken systems** — spotting inefficiencies and improving processes to work right the first time
-- **Helping others improve in practical ways** — being the person people can rely on; creating clarity so others can do their best work
+- **Helping others improve in practical ways** — being the person people can rely on; creating clarity so others can do their best work; explaining the *why* so people understand the domain, not just the answer
 - **Growing practitioners in a field** — building systems, frameworks, and communities where people can develop expertise and confidence; staying connected with people across years to see how they apply what they learned
 - **Quiet time to think and reflect** — calm, contemplative conversations; solitude to process and prepare
+- **Enabling impact at scale** — moving beyond solving the immediate problem to helping others develop the judgment to solve similar problems independently; amplifying my impact through others' capability
 
 ## What drains me
 
