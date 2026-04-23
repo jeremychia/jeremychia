@@ -1,34 +1,24 @@
 # Logistics
 
-Factual details that come up in every recruiter call. Keep this current.
-
----
-
 ## Availability
-
 - **Notice period:**
 - **Earliest start date:**
-- **Currently employed:** yes / no
+- **Currently employed:**
 
 ## Location
-
 - **Current location:**
-- **Open to relocation:** yes / no / depends
+- **Open to relocation:**
 - **Preferred locations:**
-- **Remote preference:** fully remote / hybrid / in-office
+- **Remote preference:**
 
 ## Compensation
-
 - **Target base salary (gross/year):**
 - **Acceptable floor:**
-- **What else matters in the package:** (equity, bonus, pension, PTO, learning budget, etc.)
-- **If pushed early on the call:** "I'm flexible depending on the full package — can you share the budgeted range?"
+- **Package priorities:** (equity, bonus, pension, PTO, learning budget)
+- **If pushed early:** "I'm flexible depending on the full package — can you share the budgeted range?"
 
 ## Right to work
-
-- **Visa / work authorisation status:**
-- **Sponsorship required:** yes / no
+- **Visa / work authorisation:**
+- **Sponsorship required:**
 
 ## Other constraints
-
-<!-- Anything else that affects your search — part-time, travel limits, etc. -->
