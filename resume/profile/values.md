@@ -12,7 +12,8 @@ Non-negotiables and strong preferences. Use this to filter opportunities and to 
 - **Autonomy to do the work right** — can't be in an environment where I'm forced to ship half-measures or ignore obvious problems
 - **Environment where people can be themselves** — I don't want to work somewhere that treats politics as inevitable and necessary. I believe that wherever someone comes from, they probably have a reason for how they want to work. There's usually a point where you can join up and find common ground. I want to work in places that make that easy, not hard.
 - **Kindness, fairness, and meaningful contribution** — work that helps others while maintaining a sense of order and purpose. I want to make a positive impact without sacrificing my own need for downtime and reflection.
-- **Investing in practitioners and communities** — roles where there's real opportunity to help others improve their craft, whether formally (mentoring/teaching) or informally (code review, system design help). I want to work somewhere that values this as contribution, not a side activity.
+- **Investing in practitioners and communities** — roles where there's real opportunity to help others improve their craft, whether formally (mentoring/teaching) or informally (code review, system design help). I want to work somewhere that values this as contribution, not a side activity. This includes the ability to raise team standards through direct, honest feedback and working with people until they understand not just *what* to do, but *why* it matters.
+- **Enabling impact at scale** — I'm not interested in just solving problems myself. I want roles where I can help others develop judgment and capability, so the impact compounds. This might mean leading a small team, designing systems that are "easy to get right," or being a recognized expert that others learn from.
 
 ## Strong preferences (will bend for the right role, but default is yes/no)
 
