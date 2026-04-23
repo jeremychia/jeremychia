@@ -38,6 +38,13 @@ How you actually work best. Useful for culture-fit questions, "how do you handle
 - **May miss emotional subtext** — I focus on the logical problem, not the personal stakes. Stakeholders sometimes feel unheard because I'm problem-solving instead of validating
 - **Learning to see the broader context** — I'm getting better at understanding that people make decisions based on the context they're in. If someone's pushing for something that seems illogical to me, there's usually a reason. Instead of dismissing it, I'm trying to first understand what problem they're solving from their perspective. Usually there's a place where our interests align.
 
+## As a mentor
+
+- **Tool-agnostic, principle-focused** — teach frameworks and reasoning (how to approach a problem) rather than just tools or recipes. This stays relevant as technology changes.
+- **Co-create, don't prescribe** — I learn as much from understanding what my mentees care about as they learn from me. Use their context and passions to make the material relevant.
+- **Adapt to motivation profiles** — people come with different goals (some want operational expertise, some want management, most want collaboration skills). I help them understand which path makes sense for them, not push them all in the same direction.
+- **Stay connected** — mentorship doesn't stop after a course or project. I maintain relationships and learn from how people apply what they learned, which informs how I refine my teaching and thinking.
+
 ## As a leader
 
 If I move into a leadership role, these blind spots are exactly what I'll need to manage. Here's what I actually do well and where I'll likely struggle:
