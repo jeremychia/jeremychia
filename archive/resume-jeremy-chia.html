@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jeremy Jerome Chia - Senior Analytics Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --text-color: #0f172a;
+      --muted-color: #4b5563;
+      --accent-color: #2563eb;
+      --accent-soft: #dbeafe;
+      --border-color: #e5e7eb;
+      --bg-color: #f3f4f6;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2.5rem 1rem;
+      font-family: var(--font-body);
+      color: var(--text-color);
+      background: var(--bg-color);
+      line-height: 1.5;
+      transition: background-color 150ms ease, color 150ms ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2rem 2.25rem 2.25rem;
+      background: #ffffff;
+      border-radius: 0.9rem;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb, #22c55e);
+    }
+
+    body.dark-mode {
+      --text-color: #e5e7eb;
+      --muted-color: #9ca3af;
+      --accent-color: #60a5fa;
+      --accent-soft: rgba(96, 165, 250, 0.12);
+      --border-color: #374151;
+      --bg-color: #020617;
+      background: #020617;
+      color: var(--text-color);
+    }
+
+    body.dark-mode .page {
+      background: #020617;
+      border-color: #111827;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65);
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3 {
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .tagline,
+    body.dark-mode .subline,
+    body.dark-mode .top-nav {
+      color: var(--muted-color);
+    }
+
+    body.dark-mode a {
+      color: #93c5fd;
+    }
+
+    body.dark-mode .control-button {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: #1f2937;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .control-button:hover {
+      background: rgba(30, 41, 59, 0.95);
+      border-color: #334155;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-top: 0.4rem;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      margin: 0 auto 0.6rem;
+      max-width: 880px;
+      width: 100%;
+      padding: 0 0.25rem;
+    }
+
+    .control-button {
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #374151;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .control-button:hover {
+      background: #e5e7eb;
+      border-color: #cbd5f5;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted-color);
+      margin-bottom: 0.35rem;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--muted-color);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.12rem 0.4rem;
+      border-radius: 999px;
+      background: #f8fafc;
+    }
+
+    .top-nav a:hover {
+      color: var(--accent-color);
+      background: var(--accent-soft);
+    }
+
+    body.dark-mode .top-nav a {
+      color: var(--muted-color);
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+
+    body.dark-mode .top-nav a:hover {
+      color: #e5e7eb;
+      background: rgba(30, 41, 59, 0.9);
+      border-color: rgba(96, 165, 250, 0.65);
+    }
+
+    @media (min-width: 640px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      letter-spacing: 0.06em;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      font-size: 0.98rem;
+      color: var(--muted-color);
+      margin-top: 0.35rem;
+    }
+
+    .contact {
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    .contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-line {
+      white-space: nowrap;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      font-size: 0.92rem;
+      margin-top: 0.5rem;
+    }
+
+    h2 {
+      font-size: 0.98rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.1rem 0 0.25rem 0.7rem;
+      margin: 1.25rem 0 0.55rem;
+      color: #111827;
+      position: relative;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 0.85rem;
+      border-radius: 999px;
+      background: var(--accent-color);
+    }
+
+    h3 {
+      font-size: 0.98rem;
+      margin: 0 0 0.15rem;
+    }
+
+    .subline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.25rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .item {
+      margin-bottom: 0.7rem;
+      padding: 0.2rem 0.35rem;
+      transition: background-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+      border-radius: 0.4rem;
+    }
+
+    .item:hover {
+      background: #f9fafb;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      transform: translateY(-1px);
+    }
+
+    body.dark-mode .item:hover {
+      background: rgba(15, 23, 42, 0.85);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+    }
+
+    ul {
+      margin: 0.2rem 0 0.4rem 1rem;
+      padding-left: 0.9rem;
+    }
+
+    li {
+      margin-bottom: 0.22rem;
+    }
+
+    .summary-text {
+      margin: 0.1rem 0 0;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.25rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid #1d4ed8;
+      background: #eff6ff;
+      padding: 0.16rem 0.6rem;
+      font-size: 0.76rem;
+      color: #1d4ed8;
+      white-space: nowrap;
+      cursor: pointer;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: background-color 120ms ease, color 120ms ease, transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-0.5px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.16);
+      background: #dbeafe;
+    }
+
+    body.dark-mode .pill {
+      border-color: #60a5fa;
+      background: rgba(30, 64, 175, 0.6);
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .pill:hover {
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.8);
+      background: rgba(37, 99, 235, 0.85);
+    }
+
+    .experience-highlight {
+      background: rgba(239, 246, 255, 0.9);
+    }
+
+    .experience-dim {
+      opacity: 0.4;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      .page {
+        padding: 1.25rem 1.25rem 1.5rem;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      header {
+        gap: 0.75rem;
+      }
+      .contact {
+        text-align: left;
+      }
+      .contact-line {
+        white-space: normal;
+      }
+      main {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 1cm;
+      }
+      body {
+        padding: 0;
+        background: #ffffff;
+        font-size: 0.8rem;
+        line-height: 1.25;
+      }
+      .page {
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      header {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
+      }
+      h1 {
+        font-size: 1.3rem;
+        letter-spacing: 0.04em;
+      }
+      .tagline {
+        font-size: 0.85rem;
+        margin-top: 0.2rem;
+      }
+      h2 {
+        margin: 0.9rem 0 0.35rem;
+        padding-bottom: 0.15rem;
+      }
+      main {
+        gap: 0.7rem;
+        font-size: 0.8rem;
+      }
+      .item {
+        margin-bottom: 0.35rem;
+        padding: 0;
+      }
+      ul {
+        margin: 0.05rem 0 0.2rem 0.8rem;
+      }
+      li {
+        margin-bottom: 0.12rem;
+      }
+      .pill-list {
+        display: none !important;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .controls {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="controls" aria-hidden="true">
+    <button type="button" class="control-button" onclick="document.body.classList.toggle('dark-mode');">Toggle dark mode</button>
+    <button type="button" class="control-button" onclick="window.print()">Download PDF</button>
+    <a href="resume-jeremy-chia.md" class="control-button">Download Markdown</a>
+  </div>
+  <div class="page">
+    <nav class="top-nav" aria-label="Resume sections">
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#community">Community</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <header>
+      <div>
+        <h1>Jeremy Chia</h1>
+        <div class="tagline">Senior Analytics Engineer - Finance and Data</div>
+      </div>
+      <div class="contact">
+        <div class="contact-line">Berlin, Germany</div>
+        <div class="contact-line">Mobile: <a href="tel:+33695924839">+33 6 95 92 48 39</a> &middot; Email: <a href="mailto:jeremyjchia@gmail.com">jeremyjchia@gmail.com</a></div>
+        <div class="contact-line">GitHub: <a href="https://github.com/jeremychia" target="_blank" rel="noreferrer">github.com/jeremychia</a> &middot;
+          LinkedIn: <a href="https://linkedin.com/in/jjchia" target="_blank" rel="noreferrer">linkedin.com/in/jjchia</a></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="summary" aria-label="Professional Summary">
+        <h2>Summary</h2>
+        <p class="summary-text">
+          Senior Analytics Engineer with 6+ years of experience bridging finance and data engineering across APAC and Europe.
+          Specialises in dbt, BigQuery, Apache Spark, and Snowflake to build scalable data models and analytics infrastructure that
+          drive measurable business impact. Chartered Accountant background provides deep expertise in finance data domains,
+          controls, and reporting.
+        </p>
+      </section>
+
+      <section id="experience" aria-label="Professional Experience">
+        <h2>Experience</h2>
+
+        <article class="item">
+          <h3>Senior Analytics Engineer, Shipping Finance</h3>
+          <div class="subline">
+            <span>Vinted GmbH - Berlin, Germany / Vilnius, Lithuania</span>
+            <span>Aug 2023 &ndash; Present</span>
+          </div>
+          <ul>
+            <li>Own end-to-end finance-ready shipping cost and revenue models in <abbr title="data build tool">dbt</abbr>, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.</li>
+            <li>Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on &euro;40m of exposure.</li>
+            <li>Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering &euro;1.6m in overcharges.</li>
+            <li>Built and extended monitoring and observability (freshness, completeness, volume and metric drift) for critical pipelines, improving time-to-detect and time-to-resolve incidents for Finance stakeholders.</li>
+            <li>Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs.</li>
+            <li>Partner with Finance to translate plain-language requirements and definitions into documented metrics and data models, enabling self-serve analysis and smoother change management when logic evolves.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Data Analyst, Finance Lead</h3>
+          <div class="subline">
+            <span>Tourlane GmbH - Berlin, Germany</span>
+            <span>Jul 2022 &ndash; Aug 2023</span>
+          </div>
+          <ul>
+            <li>Built a centralised data transformation layer in <abbr title="data build tool">dbt</abbr> and Snowflake, integrating data from Salesforce, Stripe,
+              Twilio, and backend systems to power finance and operational analytics.</li>
+            <li>Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per
+              month in the month-end close process.</li>
+            <li>Partnered with data engineering and business teams to harden data pipelines, improving SLA (Service Level Agreement) attainment from 88%
+              to 97%.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Senior Finance Transformation Consultant</h3>
+          <div class="subline">
+            <span>LucaNet AG - Singapore / Paris, France</span>
+            <span>Mar 2020 &ndash; Mar 2022</span>
+          </div>
+          <ul>
+            <li>Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from
+              requirements to go-live.</li>
+            <li>Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in
+              reporting and planning cycle times.</li>
+            <li>Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Finance Analyst</h3>
+          <div class="subline">
+            <span>Keppel Corporation Ltd - Singapore</span>
+            <span>Jul 2019 &ndash; Mar 2020</span>
+          </div>
+          <ul>
+            <li>Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving
+              transparency of service delivery KPIs.</li>
+            <li>Streamlined service delivery reporting across 300 entities in 6 business units by coordinating
+              cross-functional stakeholders, improving timeliness and data consistency.</li>
+            <li>Automated 3 manual finance workflows using UiPath RPA (Robotic Process Automation) integrated with SAP, saving 50 person-hours per month and
+              freeing the team for higher-value analysis.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education" aria-label="Education">
+        <h2>Education</h2>
+
+        <article class="item">
+          <h3>MSc, Big Data and Business Analytics (Mention Tr&egrave;s Bien)</h3>
+          <div class="subline">
+            <span>&Eacute;cole Sup&eacute;rieure de Commerce de Paris (ESCP) Business School - Paris and Berlin</span>
+            <span>Sep 2021 &ndash; Dec 2022</span>
+          </div>
+          <ul>
+            <li>Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).</li>
+            <li>Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with
+              corporate financial performance in Singapore.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Bachelor of Accountancy (Highest Distinction)</h3>
+          <div class="subline">
+            <span>Nanyang Technological University (NTU) - Singapore</span>
+            <span>Aug 2016 &ndash; Jul 2019</span>
+          </div>
+          <ul>
+            <li>Dean&rsquo;s List (AY 2016/2017).</li>
+            <li>Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and
+              Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="community" aria-label="Community and Volunteering">
+        <h2>Community and Volunteering</h2>
+
+        <article class="item">
+          <h3>Board Member &amp; Director, Finance</h3>
+          <div class="subline">
+            <span>Soap Cycling (Singapore) Ltd - Singapore and Hong Kong</span>
+            <span>Aug 2018 &ndash; Present</span>
+          </div>
+          <ul>
+            <li>Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact
+              programmes.</li>
+            <li>Oversaw finance and regulatory compliance, including preparation of financial statements and coordination of
+              year-end audits.</li>
+            <li>Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level
+              decision-making.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Instructor, Python and Data Analytics</h3>
+          <div class="subline">
+            <span>ReDI School of Digital Integration - Berlin, Germany</span>
+            <span>Mar 2023 &ndash; Jun 2025</span>
+          </div>
+          <ul>
+            <li>Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a
+              non-profit tech school serving migrants and marginalised communities.</li>
+            <li>Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person
+              teaching team.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="skills" aria-label="Skills and Certifications">
+        <h2>Skills</h2>
+        <div class="item">
+          <strong>Technical</strong>
+          <ul>
+            <li><strong>Programming and Data Engineering:</strong> Python, SQL, R, Scala, dbt, Apache Spark.</li>
+            <li><strong>Data Warehousing and Databases:</strong> Google BigQuery, Snowflake.</li>
+            <li><strong>Analytics and Visualisation:</strong> Looker, Looker Studio, Tableau, Microsoft Power BI.</li>
+            <li><strong>Finance and Automation Tools:</strong> LucaNet, UiPath, SAP.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <strong>Certifications</strong>
+          <ul>
+            <li>Chartered Global Management Accountant (<abbr title="Chartered Global Management Accountant">CGMA</abbr>).</li>
+            <li>Microsoft Certified: Data Analyst Associate.</li>
+            <li>LucaNet Certified Professional - Financial Performance Management.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <strong>Languages</strong>
+          <ul>
+            <li>English (Native / C2), Mandarin (B2), Cantonese (B2), German (A1), French (A1).</li>
+          </ul>
+        </div>
+
+        <div class="pill-list" aria-hidden="true">
+          <span class="pill">Analytics Engineering</span>
+          <span class="pill">Finance Data</span>
+          <span class="pill">dbt</span>
+          <span class="pill">BigQuery</span>
+          <span class="pill">Snowflake</span>
+          <span class="pill">Apache Spark</span>
+          <span class="pill">Looker</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Chartered Accountant</span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    (function () {
+      const pillSkills = {
+        'dbt': 'dbt',
+        'BigQuery': 'BigQuery',
+        'Snowflake': 'Snowflake',
+        'Apache Spark': 'Spark',
+        'Looker': 'Looker',
+        'Power BI': 'Power BI',
+        'Analytics Engineering': 'analytics',
+        'Finance Data': 'finance'
+      };
+
+      const pills = document.querySelectorAll('.pill-list .pill');
+      const experienceSection = document.querySelector('#experience');
+      if (!pills.length || !experienceSection) return;
+
+      const items = Array.from(experienceSection.querySelectorAll('li'));
+      let activeKey = null;
+
+      function applyFilter(key) {
+        if (!key) {
+          items.forEach(li => {
+            li.classList.remove('experience-highlight', 'experience-dim');
+          });
+          return;
+        }
+        const needle = pillSkills[key].toLowerCase();
+        items.forEach(li => {
+          const text = li.textContent.toLowerCase();
+          if (text.includes(needle)) {
+            li.classList.add('experience-highlight');
+            li.classList.remove('experience-dim');
+          } else {
+            li.classList.remove('experience-highlight');
+            li.classList.add('experience-dim');
+          }
+        });
+      }
+
+      pills.forEach(pill => {
+        const label = pill.textContent.trim();
+        if (!(label in pillSkills)) return;
+        pill.addEventListener('click', () => {
+          if (activeKey === label) {
+            activeKey = null;
+            applyFilter(null);
+          } else {
+            activeKey = label;
+            applyFilter(label);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
