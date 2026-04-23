@@ -36,6 +36,21 @@ What you're actually optimising for. Be honest — this file is for you, not a r
 6. **Competent collaborators** — team members who take ownership and pull their weight
 7. **Opportunity to grow people** — if moving into leadership, the ability to set others up for success by understanding their strengths, weaknesses, and motivations; helping them grow and think about what's next in their careers
 
+## Leadership style
+
+**As a leader, you operate as a clarifier and enabler, not a motivator or cheerleader.** Your strength is in seeing complex problems clearly and helping others see them the same way. You:
+
+- **Set crisp expectations and guard them fiercely** — vagueness frustrates you, so you make trade-offs visible and scope explicit. Teams know where they stand.
+- **Advocate loudly for your people's work** — you see impact clearly and aren't shy about claiming credit on their behalf. This matters for career progression and resource allocation.
+- **Create psychological safety through directness** — your discomfort with soft-peddling feedback is actually a feature. Teams that can say "that's wrong, here's why" without fear improve faster. You model that it's possible.
+- **Match people to problems based on strengths** — you notice what people are good at and what motivates them (mastery vs. impact vs. autonomy) and put them where they compound. You're not assuming everyone wants to be like you.
+- **Stay hands-on in the domain** — you won't become a pure manager. You'll lead through technical judgment and deep expertise, not just delegation. Teams trust leaders who can still think in the domain.
+- **Protect autonomy and focus time** — you know what kills good work, so you actively block the things that drain energy: endless meetings, vague roadmaps, politics. You create space for people to think.
+
+**What you're not:** a motivational speaker, a conflict resolver who smooths things over, someone who builds culture through team outings. You also won't naturally mentor people through emotional challenges — you'll mentor them toward competence. That's okay; some of the best leaders are like this.
+
+**Watch for:** The tendency to mistake "this person isn't thinking logically" for "this person isn't competent." Sometimes people are right for reasons you haven't uncovered yet. Also, your need for autonomy can read as distance; be explicit that your lack of check-ins means trust, not indifference.
+
 ## What "good" looks like in 2 years
 
 In two years, I'm leading a technical initiative that required genuine expertise to execute — something that couldn't have been done a year ago. I've deepened my knowledge in a domain where I'm now a go-to resource on my team. I'm working with people who respect directness and logic, where feedback flows freely without ego getting in the way. The team trusts my judgment enough that I'm steering decisions on important trade-offs. I've shipped work that raised the standard for how we approach the problem; my contributions are concrete and visible. And I have enough autonomy that I'm not burnt out from constant stakeholder management — I'm energised by the work itself, not drained by the people dynamics.

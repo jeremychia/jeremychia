@@ -38,6 +38,25 @@ How you actually work best. Useful for culture-fit questions, "how do you handle
 - **May miss emotional subtext** — I focus on the logical problem, not the personal stakes. Stakeholders sometimes feel unheard because I'm problem-solving instead of validating
 - **Learning to see the broader context** — I'm getting better at understanding that people make decisions based on the context they're in. If someone's pushing for something that seems illogical to me, there's usually a reason. Instead of dismissing it, I'm trying to first understand what problem they're solving from their perspective. Usually there's a place where our interests align.
 
+## As a leader
+
+If I move into a leadership role, these blind spots are exactly what I'll need to manage. Here's what I actually do well and where I'll likely struggle:
+
+**Strengths in leadership:**
+- **Set crisp expectations and defend them** — teams know where they stand because I make trade-offs visible and scope explicit. This clarity is rare and valuable.
+- **Advocate fiercely for team accomplishments** — I see impact clearly and won't let good work go unrecognised. I care about making sure my reports get credit.
+- **Stay hands-on in the domain** — I won't become a pure manager disconnected from the work. I can still think in the problem space, which means teams trust my technical judgment.
+- **Create psychological safety through directness** — teams that can say "that's wrong, here's why" without fear improve faster. I model that disagreement is okay.
+- **Match people to strengths** — I notice what people are good at and what actually motivates them (mastery vs. impact vs. autonomy), not what I assume. I put them where they can compound their strengths.
+- **Protect focus and autonomy** — I actively block things that kill good work: endless meetings, vague roadmaps, politics. People have space to think because I've removed obstacles.
+
+**Where I'm likely to struggle and what I'm watching for:**
+- **Directness without context** — I can land feedback as harsh when people need to hear "here's what's wrong AND why you can do better." I'm learning to pair critique with confidence in the person's ability.
+- **Missing the emotional dimension** — I'll focus on the problem and miss that someone is discouraged, overwhelmed, or needs recognition. I need to slow down and check in on the human element, especially with self-critical people who might internalise criticism as failure.
+- **Impatience with pace** — Some people improve methodically; I want them to improve faster. I need to remember that my pace isn't everyone's pace, and forcing it creates resentment, not growth.
+- **Assuming disagreement = not listening** — When someone challenges my logic and I push back, they may hear me as unmovable. I'm learning to distinguish between "you're wrong" and "I haven't understood your reasoning yet." The conversation should be about getting to better understanding, not proving who's right.
+- **Autonomy reading as distance** — my tendency to give people space and not check in constantly can feel like I don't care. I need to be explicit: lack of check-ins means trust, not indifference.
+
 ## Known blind spots
 
 1. **Assume others reason the same way I do** — I value logic and directness so much that I'm sometimes surprised when feedback lands as harsh or when someone cares about something non-logical. I hear "this won't work" as neutral data; others may hear it as "you're wrong." I'm learning to notice this and adjust my delivery.
