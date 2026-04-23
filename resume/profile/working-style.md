@@ -6,24 +6,46 @@ How you actually work best. Useful for culture-fit questions, "how do you handle
 
 ## Team dynamics
 
-<!-- What team size do you work best in? What's your natural role — lead, contributor, connector? -->
+- **Best in teams of 5–15 people** — large enough for interesting problems, small enough to know everyone and maintain shared standards
+- **Natural role: Problem solver + standard-setter + quiet supporter** — I gravitate toward identifying broken processes and fixing them. I'm not the social connector, but I'm the person people can rely on when things get hard. Not strictly a lead or pure IC, but someone who sets the bar, pulls others up, and cares about people improving
+- **Work best with 1–2 peers I can debate with** — collaborative on hard problems, but not in a consensus-building sense. I want smart people to push back on my logic
+- **Not a "glue person" but genuinely invested in others' success** — I'm not naturally the connector or the one making everyone feel included. I'm useful because I solve things and because I care about people getting better at their craft. I show this care through honesty and reliability, not through constant availability or warmth
 
 ## Handling ambiguity
 
-<!-- How do you behave when the brief is unclear or the problem is underspecified? -->
+- **Uncomfortable initially, but productive** — I immediately try to narrow it. Ask clarifying questions, propose a structure, work with stakeholders to lock down constraints
+- **Need some guardrails** — total open-endedness (no goals, no constraints) is paralyzing. I work best when I know the problem space, even if the solution is undefined
+- **May seem impatient with exploration** — I want to get to the actual problem, not spend weeks discussing possibilities. I prefer "here's what I think we should test" over brainstorming sessions
 
 ## Giving and receiving feedback
 
-<!-- How do you prefer to receive feedback? How do you give it to others? -->
+- **Receiving:** Direct, logical, specific. "That approach won't work because..." is useful. "I'm not sure I loved that" is not. Don't soften it or wrap it in praise; I want the data
+- **Giving:** Similarly direct and fact-based. I assume people want to improve and that honest feedback is a gift. I may not realise my feedback lands as harsh; I'm not being cold, I'm being useful
+- **Blindspot:** I can miss that others take feedback personally or need encouragement alongside correction. My instinct is "here's what's wrong, now fix it," not "here's what's wrong, AND here's why you can do better." I'm working on remembering to give feedback in a way that opens doors, not closes them — especially with people who are self-critical and might internalize critique as failure rather than input.
 
 ## Under pressure
 
-<!-- What does "stress mode" look like for you, and how do you manage it? -->
+- **Initial mode: Focus tighter, move faster** — stress clarifies thinking. I can be more efficient under moderate pressure (better prioritisation, fewer distractions)
+- **Breaking point: Withdraw and regroup** — under extreme pressure, I may pull back briefly to reset, then reengage. Don't mistake quiet for giving up; I'm preparing
+- **How I manage:** Shift to systematic problem-solving. Work through the issue methodically rather than reacting emotionally. May need downtime afterward to recharge from the intensity
+- **What helps:** Clear escalation paths (knowing I can hand things off if needed), autonomy to make quick decisions, and minimal process overhead in a crisis
 
 ## Working with stakeholders
 
-<!-- How do you manage up, across, or with non-technical stakeholders? -->
+- **Default mode: Direct and efficient** — I tell stakeholders what I think, why, and what I need from them. No sugar-coating or consensus-building for its own sake
+- **Can negotiate and find unconventional solutions** — I'm a pragmatist; if someone needs X and we can't do it directly, I'll explore alternatives. But I won't pretend a bad solution is good
+- **Wears me out over time** — constant stakeholder management is draining after a while. I can do it, but I need technical work and downtime to recharge
+- **May miss emotional subtext** — I focus on the logical problem, not the personal stakes. Stakeholders sometimes feel unheard because I'm problem-solving instead of validating
+- **Learning to see the broader context** — I'm getting better at understanding that people make decisions based on the context they're in. If someone's pushing for something that seems illogical to me, there's usually a reason. Instead of dismissing it, I'm trying to first understand what problem they're solving from their perspective. Usually there's a place where our interests align.
 
 ## Known blind spots
 
-<!-- One or two genuine ones, with evidence. Useful for "what's your biggest weakness?" questions. -->
+1. **Assume others reason the same way I do** — I value logic and directness so much that I'm sometimes surprised when feedback lands as harsh or when someone cares about something non-logical. I hear "this won't work" as neutral data; others may hear it as "you're wrong." I'm learning to notice this and adjust my delivery.
+
+2. **Difficult to hear that I'm wrong once I've decided** — I can come across as dismissive of alternatives. In reality, I have high confidence in my reasoning and can be defensive when challenged. This makes people reluctant to disagree with me, even when they should. I benefit from people who push back anyway. And I'm getting better at saying "that's a good point" without it feeling like losing.
+
+3. **May not show appreciation clearly** — I assume good work speaks for itself. I don't naturally give praise or acknowledgment, which can feel cold to people who need validation. It's not that I don't notice; I just don't express it the way others do. But I do care — I care enough to give honest feedback and to notice when people are improving.
+
+4. **Natural stance: impatient, unfeeling** — I know that leading people is about people, not just outcomes. But my instinct is to jump to problem-solving without noticing the human element. I can come across as detached when I'm actually just focused. I'm learning to slow down and make sure people feel heard, even when I'm already thinking three steps ahead.
+
+5. **Need for solitude and quiet can feel like withdrawal** — I need substantial downtime to recharge after intense interactions. Some people may misinterpret this as disengagement when it's actually necessary self-care. I'm more available and present when I've had space to think and decompress.
