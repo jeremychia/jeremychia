@@ -58,6 +58,29 @@ Facts, dates, and numbers are never changed.
 
 ---
 
+## `/prep-recruiter-call` — prepare for a recruiter conversation
+
+Generates a tailored preparation document for a specific job application, surfacing behavioural talking points, STAR stories, and research prompts based on the saved JD and adapted resume.
+
+```
+/prep-recruiter-call <application-folder-name>
+```
+
+**Example:**
+```
+/prep-recruiter-call 2026-04-08_lego_senior-analytics-engineer
+```
+
+Outputs a markdown file inside the application folder with:
+- **Talking points** — key themes from your resume aligned to the JD
+- **STAR stories** — structured examples you can reference during the call
+- **Company research prompts** — questions to ask and areas to explore
+- **Common recruiter questions** — prepared answers tailored to this role
+
+Use this before recruiter calls or interviews to stay focused and confident.
+
+---
+
 ## Updating the base resume
 
 Edit `resume-base.json` directly. Key fields:
