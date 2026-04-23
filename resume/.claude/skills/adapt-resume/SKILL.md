@@ -56,6 +56,7 @@ All output files go inside this folder:
 - `applications/{base name}/{base name}.json`
 - `applications/{base name}/{base name}.html`
 - `applications/{base name}/{base name}.pdf`
+- `applications/{base name}/{base name}-cover-letter.md`
 
 ---
 
@@ -95,9 +96,15 @@ Use the full verbatim text from the fetched page — do not summarise or paraphr
 
 ---
 
-## Step 4 — Read the base resume
+## Step 4 — Read the base resume and profile
 
-Read `resume-base.json` from the current directory (not from the output folder).
+Read the following files:
+- `resume-base.json` from the current directory (not from the output folder)
+- `profile/motivations.md` — what Jeremy is optimising for in a next role
+- `profile/values.md` — non-negotiables and culture preferences
+- `profile/narrative.md` — career arc and the "why" behind each move
+
+These profile files inform both the summary rewrite and the cover letter in Step 9. Note the specific "what I'm optimising for" priorities from `motivations.md` and the culture green/red flags from `values.md` — use these to judge genuine role alignment.
 
 ---
 
@@ -193,9 +200,36 @@ If PDF generation fails entirely, tell the user to open the HTML in Chrome and u
 
 ---
 
-## Step 8 — Report
+## Step 9 — Generate the cover letter
+
+Using the profile files read in Step 4 and the JD analysis from Step 1, write `applications/{base name}/{base name}-cover-letter.md`.
+
+### Structure (4 paragraphs, max 350 words)
+
+**Paragraph 1 — Why this company**
+Open with something specific about the company — a product decision, a growth signal, a technical choice, or a mission element that connects with Jeremy's values or interests. Do not open with "I am writing to apply for...". Reference one thing from the JD or company that signals you have done more than read the posting. Tone: curious, direct, grounded.
+
+**Paragraph 2 — Why you fit**
+Surface 2–3 concrete capability matches, connecting experience directly to the JD's top-listed responsibilities and repeated themes from Layer B. Lead with the most relevant quantified achievement. This is not a resume recap — it is a tight argument for why the technical match is strong.
+
+**Paragraph 3 — Gaps (conditional)**
+Include only if gaps were identified in Step 6. For each genuine gap: one honest, forward-looking sentence — what the gap is, the closest relevant experience, and how it is being addressed. Do not apologise or over-explain. Frame as context, not a defence.
+
+**Paragraph 4 — Alignment and intent**
+Draw from `motivations.md` and `values.md`. State what Jeremy is optimising for in the next role (1–2 sentences) and why this specific role and company fit those criteria. This should be specific and logical — not "I'm passionate about your mission" but a concrete reason grounded in his actual stated priorities. End with one direct sentence of readiness.
+
+### Tone rules
+- European directness: confident without enthusiasm marketing
+- No filler: "excited to", "passionate about", "thrilled to", "look forward to hearing from you"
+- First person throughout; trust the reader to have read the resume
+- Close: `Best regards,\nJeremy Chia`
+
+---
+
+## Step 10 — Report
 
 Tell the user:
 - Output folder: `applications/{base name}/`
-- Which of the 3 files were successfully created (JSON, HTML, PDF)
+- Which of the 4 files were successfully created (JSON, HTML, PDF, cover letter)
 - A short bullet list of key adaptations made (from `adaptationNotes`)
+- One sentence on the main alignment and one sentence on the main gap (if any) surfaced in the cover letter
