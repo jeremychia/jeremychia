@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "version": "2026-04-24_getsafe_analytics-engineer",
+    "lastUpdated": "2026-04-24",
+    "targetRole": "Analytics Engineer",
+    "targetCompany": "Getsafe",
+    "sourceUrl": "https://getsafe.jobs.personio.com/job/2612426?language=en",
+    "behaviouralInsights": [
+      "Ownership is the #1 hiring signal — 'own and evolve' metrics appears first in responsibilities, 'ownership mindset' in requirements",
+      "'Single source of truth' repeated twice — indicates prior pain with inconsistent or ungoverned metrics",
+      "AI stack/GenAI is a forward-looking desire, listed as second responsibility — surface any AI/ML adjacent work",
+      "Loss aversion framing: 'governed, discoverable, well-documented' language signals fear of knowledge silos and broken foundations",
+      "No mentorship or people management mentioned — autonomous IC role; frame as deep technical ownership",
+      "Metabase (not Looker) is their BI tool — generalist mindset expected, self-serve analytics valued",
+      "Cross-functional drive explicitly listed — not just building models, but pushing initiatives across teams",
+      "Small startup feel — generalist scope with high ownership per person"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with ownership and single source of truth framing, mirroring top JD priorities",
+      "Vinted bullets reordered: SSOT/metric ownership bullet moved to first position",
+      "AI-ready data foundations and self-serve analytics surfaced prominently",
+      "Cross-functional stakeholder work emphasised in Vinted and Tourlane",
+      "Skills reordered: dbt, SQL, Python moved to front of items arrays",
+      "Metabase added to BI tools list; self-serve analytics terminology used",
+      "pillHighlights replaced with JD ATS keywords",
+      "Finance-specific framing de-emphasised in favour of product/growth/operational analytics language"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer - Data Modelling and Business Metrics",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics Engineer with 6+ years owning business metrics, data models, and pipelines at high-growth companies in Europe. Builds AI-ready data foundations — structured, governed, discoverable — as a single source of truth using dbt, BigQuery, and Snowflake. Chartered Accountant background enables depth in operational and financial analytics, from requirements to self-serve data marts.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end business metrics and data models in dbt and BigQuery, serving as the single source of truth for Finance Ops and Group Reporting during month-end close.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Designed layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Built pipeline observability (freshness, completeness, metric drift), improving time-to-detect and time-to-resolve for Finance and Ops stakeholders.",
+        "Developed conversion and operational metrics for a cross-functional commercial initiative; documented definitions to enable self-serve analysis."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data transformation layer in dbt and Snowflake, integrating Salesforce, Stripe, Twilio, and backend data into a single source of truth for operational analytics.",
+        "Drove cross-functional data initiatives with Finance, Engineering, and Operations, improving pipeline SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards and self-serve analytics, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting data models using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Built Power BI and Tableau dashboards tracking KPIs for 140 staff across 5 process areas, improving transparency of operational analytics.",
+        "Automated 3 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and TFI-LeaRN Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making.",
+        "Oversaw finance and regulatory compliance, including preparation of financial statements and coordination of year-end audits."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters.",
+        "Co-created a 13-week syllabus with an eight-person teaching team."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "SQL", "Python", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["GenAI", "Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Analytics Engineering",
+    "dbt",
+    "data modeling",
+    "single source of truth",
+    "data pipelines",
+    "data marts",
+    "AI-ready data foundations",
+    "self-serve analytics",
+    "business metrics",
+    "cross-functional",
+    "Python",
+    "data quality",
+    "ownership mindset",
+    "scalable pipelines"
+  ]
+}
