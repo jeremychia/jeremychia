@@ -119,12 +119,10 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Programming and Data Engineering", "items": ["Python", "SQL", "R", "Scala", "dbt", "Apache Spark", "Apache Airflow"] },
-      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
+      { "category": "Data Engineering", "items": ["Python", "SQL", "dbt", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow", "R", "Scala"] },
       { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
+      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
       { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
     ],
     "certifications": [
