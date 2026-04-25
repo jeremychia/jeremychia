@@ -26,9 +26,12 @@
         "Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.",
         "Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
         "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
-        "Built and extended monitoring and observability (freshness, completeness, volume and metric drift) for critical pipelines, improving time-to-detect and time-to-resolve incidents for Finance stakeholders.",
-        "Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and cloud compute costs by 15% while maintaining SLAs.",
-        "Partner with Finance to translate plain-language requirements and definitions into documented metrics and data models, enabling self-serve analysis and smoother change management when logic evolves."
+        "Built and extended monitoring and observability including a full redesign of invoice completeness alerting, delivering faster and more actionable signals for Finance and cutting time-to-detect data issues.",
+        "Optimised Spark and BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and reducing query volume by 1.5TB/day through incremental model redesign, cutting compute costs by 15% while maintaining SLAs.",
+        "Designed and facilitated the first cross-functional workshop between VGo DSA, VGo Finance Operations, and Group Finance, producing shared alignment on priorities and earning praise from all participants.",
+        "Raised dbt unit test coverage from <1% to 50%+ in the vgo_finance domain in four weeks using agentic AI for test data generation; authored a reusable testing guide independently adopted by teammates.",
+        "Partner with Finance to translate plain-language requirements and definitions into documented metrics and data models, enabling self-serve analysis and smoother change management when logic evolves.",
+        "Presented testing strategy at Forward Data Conference and hosted a dbt Meetup at Vinted Berlin, building external visibility for the team."
       ]
     },
     {

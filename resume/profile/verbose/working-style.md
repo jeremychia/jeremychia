@@ -75,3 +75,9 @@ If I move into a leadership role, these blind spots are exactly what I'll need t
 4. **Natural stance: impatient, unfeeling** — I know that leading people is about people, not just outcomes. But my instinct is to jump to problem-solving without noticing the human element. I can come across as detached when I'm actually just focused. I'm learning to slow down and make sure people feel heard, even when I'm already thinking three steps ahead.
 
 5. **Need for solitude and quiet can feel like withdrawal** — I need substantial downtime to recharge after intense interactions. Some people may misinterpret this as disengagement when it's actually necessary self-care. I'm more available and present when I've had space to think and decompress.
+
+6. **Over-explaining when communicating** — manager feedback (Q4 2024): "you sometimes go in a lot more detail than necessary, and this may cause you to 'lose' your audience along the way." I tend to want to give complete context, but conciseness signals command of the topic more than comprehensiveness does. Actively working on distilling to the essential point first.
+
+7. **Difficulty fully disengaging** — I have a tendency to work weekends (reviewing PRs, fixing broken pipelines, engaging across domains). The intention is ownership; the effect is that I don't recharge properly and I inadvertently model expectations I don't want to normalise for others. This is something I'm actively watching.
+
+8. **Breadth over depth when left to my own device** — I gravitate toward picking up diverse, concurrent threads. Manager feedback (2025 annual review) named this as my key growth area: greater focus on fewer topics at a time produces more impact than being spread thin across many.
