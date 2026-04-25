@@ -27,40 +27,58 @@ I learned that leadership isn't about title — it's about clarity, ownership, a
 
 ## Handling conflict or misalignment
 
-### Story 1
+### Story 1: Interim Lead, Finance Data Control (Jul–Oct 2025)
+*Context: stepped into informal lead role during a difficult period for the team*
+
 **Situation/Task:**
+The Finance Data Control team at Vinted went through a difficult stretch mid-year while I was the most senior person present. Morale was fragile and there was no clear escalation path — the team needed to keep delivering while managing uncertainty about direction and workload.
 
 **Action:**
+I didn't wait to be asked. I checked in with teammates individually and regularly — not to manage up, but to understand what each person needed and to make sure no one felt isolated. I helped clarify priorities and kept the team focused on what we could control. I translated ambiguity into actionable next steps and was explicit with the team that I was there to support, not to take over.
 
 **Result:**
+The team maintained output throughout the period. No critical deliverables slipped. Team members later described the period as difficult but navigable — and credited the regular check-ins with keeping spirits up. The role confirmed that I can hold a team together under pressure without needing formal authority to do so.
 
 **Learning:**
+Care doesn't have to look like warmth — consistent presence, clear priorities, and honest communication are forms of care too. People feel supported when they know what's expected and that someone is paying attention.
 
 ---
 
 ## Navigating failure or setback
 
-### Story 1
+### Story 1: First AE Intern Hire That Didn't Land
+*Manager note: "you did everything right and the outcome was outside of your control"*
+
 **Situation/Task:**
+I led Vinted's first-ever Analytics Engineering intern hiring process end-to-end — a new initiative with no existing playbook. The goal was to find a strong candidate and set a template for future intern cycles.
 
 **Action:**
+I designed the hiring process from scratch: defined the role, set evaluation criteria, ran the sourcing and interview stages, and coordinated with HR. I applied the same rigour I'd use for a technical project — clear milestones, documented decisions, and consistent candidate experience. I kept stakeholders informed throughout and made sure each decision was defensible.
 
 **Result:**
+The hire ultimately didn't work out for reasons outside my control. But the process itself was recognised as well-run and became the foundation for future AE intern hiring at Vinted. My manager explicitly noted that the outcome wasn't a reflection of the effort or quality of execution.
 
 **Learning:**
+A well-run process is worth building even when the outcome isn't in your hands. The value of doing it right compounds — the template now exists where it didn't before. I also learned to separate process quality from outcome, which matters when you're building something new.
 
 ---
 
 ## Delivering at scale or under pressure
 
-### Story 1
+### Story 1: Unit Test Coverage Drive (vgo_finance, Q4 2025)
+*Manager note: "significant achievement...also helped us uncover some bugs"*
+
 **Situation/Task:**
+The vgo_finance dbt project had fewer than 2 models with unit tests — roughly 1% coverage. There was an agreed goal to clear this tech debt, but no clear method, no existing examples, and a 4-week window alongside other live work.
 
 **Action:**
+I didn't just write tests — I aimed for something reusable. I used agentic AI tools to generate mock data for test cases, which reduced the most manual and error-prone part of the process. I wrote tests systematically across staging and intermediate models, documented the approach, and created a step-by-step instruction guide. I shared the guide with teammates and worked with them until they could apply it independently.
 
 **Result:**
+Coverage reached 50%+ (from ~1%) within four weeks. The guide was successfully used by two other engineers (Arabella and Quirine) to write their own tests without my involvement. The testing sprint also surfaced real bugs in existing models. My manager described it as a "visible dent" and the team now has a replicable pattern for future coverage work.
 
 **Learning:**
+The highest-leverage version of any implementation task is one that leaves others able to continue without you. Writing the guide cost extra time in the short term but multiplied the impact immediately.
 
 ---
 
@@ -80,6 +98,23 @@ Dashboard became a crucial tool for Pricing (Monika: "crucial tool for the prici
 
 **Learning:**
 The best technical solutions fail if they don't account for the human/organizational context. My willingness to understand other domains and help teams improve — not just deliver — creates trust and enables them to grow beyond my help.
+
+---
+
+### Story 2: First Cross-Functional Workshop (VGo DSA × Finance Ops × Group Finance, Q4 2024)
+*Manager note: "first such forum...you came up with a great format which was engaging and useful"*
+
+**Situation/Task:**
+VGo DSA, VGo Finance Operations, and Group Finance teams had never formally come together. There were no shared forums, no common understanding of each team's constraints, and recurring misalignments on priorities that surfaced as ad-hoc fires.
+
+**Action:**
+I proposed, designed, and facilitated two workshops from scratch — no template to follow. I structured each session to surface shared concerns rather than have one team present to another: exercises that surfaced assumptions, made trade-offs visible, and produced concrete next-quarter priorities. I coordinated logistics, facilitated on the day, and synthesised outputs into actionable takeaways afterward.
+
+**Result:**
+All three teams attended and the feedback was unanimously positive. The workshops produced shared alignment on priorities that directly shaped the following quarter's roadmap. My manager noted it as a standout example of ownership and co-creation — "from ideation to facilitation" — and that it was the first such forum of its kind at Vinted.
+
+**Learning:**
+Structural misalignment between teams rarely resolves itself — someone has to create the conditions for it. Creating a neutral format that makes it safe for each team to say what's actually wrong is more valuable than any individual deliverable. I'm more effective at this than I expected.
 
 ---
 
