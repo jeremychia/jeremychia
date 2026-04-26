@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "base",
-    "lastUpdated": "2026-04-08"
+    "lastUpdated": "2026-04-26"
   },
   "header": {
     "name": "Jeremy Jerome Chia",
@@ -41,9 +41,11 @@
       "startDate": "Jul 2022",
       "endDate": "Aug 2023",
       "bullets": [
+        "Owned the Finance Data Products roadmap as the sole finance data analyst, aligning priorities with company OKRs and acting as product manager, data analyst, and analytics engineer.",
         "Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
         "Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per month in the month-end close process.",
-        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%."
+        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
+        "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity."
       ]
     },
     {
@@ -55,7 +57,8 @@
       "bullets": [
         "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
         "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times.",
-        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5."
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5.",
+        "Appointed as Culture Ambassador for Singapore, driving internal initiatives that improved employee NPS by 20 points."
       ]
     },
     {
@@ -67,7 +70,7 @@
       "bullets": [
         "Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving transparency of service delivery KPIs.",
         "Streamlined service delivery reporting across 300 entities in 6 business units by coordinating cross-functional stakeholders, improving timeliness and data consistency.",
-        "Automated 3 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the team for higher-value analysis."
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the team for higher-value analysis."
       ]
     }
   ],
@@ -79,6 +82,7 @@
       "startDate": "Sep 2021",
       "endDate": "Dec 2022",
       "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
         "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
         "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
       ]
@@ -90,6 +94,7 @@
       "startDate": "Aug 2016",
       "endDate": "Jul 2019",
       "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
         "Dean's List (AY 2016/2017).",
         "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
       ]
@@ -105,7 +110,8 @@
       "bullets": [
         "Led expansion of operations to Singapore and managed 30 interns over 3 years to scale collections and impact programmes.",
         "Oversaw finance and regulatory compliance, including preparation of financial statements and coordination of year-end audits.",
-        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making."
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to inform board-level decision-making.",
+        "Co-planned a fundraising cycling trip across Guangdong for 30 participants, raising HK$90,000 for Soap Cycling Hong Kong."
       ]
     },
     {
@@ -113,11 +119,22 @@
       "organisation": "ReDI School of Digital Integration",
       "location": "Berlin, Germany",
       "startDate": "Mar 2023",
-      "endDate": "Jun 2025",
+      "endDate": "Present",
       "bullets": [
         "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
-        "Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team."
+        "Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team.",
+        "Achieved a class progression rate of 80% against the school average of 50%."
       ]
+    }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
     }
   ],
   "skills": {
