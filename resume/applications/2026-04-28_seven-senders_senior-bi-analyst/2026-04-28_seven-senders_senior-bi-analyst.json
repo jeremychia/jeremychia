@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "version": "2026-04-28_seven-senders_senior-bi-analyst",
+    "lastUpdated": "2026-04-28",
+    "targetRole": "Senior Business Intelligence Analyst",
+    "targetCompany": "Seven Senders",
+    "sourceUrl": "https://www.linkedin.com/jobs/view/4406635718",
+    "behaviouralInsights": [
+      "Signal ordering: dbt model expertise is the #1 priority, followed by SQL performance at scale, then autonomous ownership, then junior mentoring",
+      "Repetition signals: dbt appears in 3+ distinct requirements (model building, scalable projects, dependency/reusability) — this is the core hire criterion",
+      "Loss aversion: 'multi-billion row datasets', 'cost-optimized', 'production-grade SQL' signals fear of expensive/slow queries; frame resume around performance wins",
+      "Seniority signals: 'independently lead', 'take full ownership from definition to delivery', 'act as translator' — autonomous IC with cross-functional communication",
+      "Mentoring is explicit: 'code reviews, coaching, documentation' and 'support growth of junior analysts' — not optional",
+      "Absence signals: no Python/data science, no product management language — pure BI/analytics IC role",
+      "Looker is the self-service endpoint: 'backend development to storytelling' shows they want full-stack Looker ownership",
+      "Culture: 'data culture quality' phrase suggests quality-focused, pragmatic team; no flashy culture signals"
+    ],
+    "adaptationNotes": [
+      "Tagline changed from Analytics Engineer to Senior BI Analyst to mirror JD title",
+      "Summary leads with production-grade SQL at scale (loss aversion) then dbt ownership then bridge capability",
+      "Vinted bullets reordered: dbt+Looker ownership first, SQL performance second, mentoring third",
+      "Dropped conference/meetup and workshop facilitation bullets (no JD signal for external visibility)",
+      "Tourlane: dbt first, ownership second, Looker third, mentoring fourth",
+      "LucaNet trimmed to 2 bullets (least relevant role)",
+      "Keppel trimmed to 2 bullets (least relevant role)",
+      "Skills reordered: dbt and SQL prominent in Data Engineering; Looker first in Analytics",
+      "pillHighlights replaced with 15 ATS keywords from Layer B analysis"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Business Intelligence Analyst — dbt, SQL at Scale, and Looker",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Builds production-grade dbt models at scale — 75% runtime reduction, 1.5TB/day query cut, and €1.6m recovered via controls at Vinted. Independently owns the Discovery-to-Delivery cycle from scalable dbt pipelines to self-service Looker analytics. Bridges engineering and Finance: translates ambiguous requirements into documented, tested, reusable metrics.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own shipping dbt models (Jinja macros, DRY abstractions) in BigQuery and Looker — single source of truth for Finance Ops and Group Reporting during month-end close.",
+        "75% runtime reduction on multi-billion row shipping datasets; 1.5TB/day query cut via incremental dbt redesign, reducing compute costs by 15% while maintaining SLAs.",
+        "Raised dbt unit test coverage <1%→50%+ in 4 weeks; testing guide independently adopted by teammates.",
+        "Layered dbt tests, reconciliations, and anomaly detection: 90% misstatement risk cut on €40m.",
+        "Translate Finance requirements into documented dbt metrics enabling Looker self-serve analysis.",
+        "Recovered €1.6m in carrier overcharges via risk controls across parcel-level shipping datasets.",
+        "Presented testing strategy at Forward Data Conference; hosted dbt Meetup at Vinted Berlin."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised dbt and Snowflake transformation layer integrating Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
+        "Owned Finance Data Products roadmap as sole analyst — end-to-end delivery from definition to OKRs.",
+        "Looker dashboards saved 5 FTE days/month in month-end close; improved data pipeline SLA from 88% to 97% partnering with data engineering and business teams.",
+        "Mentored 3 new team members to the data stack, accelerating time-to-productivity."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance transformation projects for listed APAC companies (SGX, HKEX, KLSE, ASX), from business requirements to go-live, delivering on time and budget.",
+        "LucaNet and Power BI solutions reduced reporting and planning cycle times by up to 50%."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving visibility of service delivery KPIs for business leadership."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "QS Business Analytics top-10 globally (2024); Valedictorian; French Excellence Master Scholarship."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "QS top-2 in Asia for Accounting and Finance (2023); Dean's List; Isetan and TFI-LeaRN scholar."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Delivered Python and Data Analytics curriculum to 60+ students across 3 semesters at ReDI School.",
+        "Achieved 80% class progression rate against school average of 50%.",
+        "Co-created a 13-week syllabus with case studies and hands-on projects across an eight-person teaching team."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "SQL", "Google BigQuery", "Snowflake", "Python", "Apache Spark", "Apache Airflow", "R", "Scala"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt models",
+    "Jinja macros",
+    "cost-optimized SQL",
+    "multi-billion row datasets",
+    "Discovery-to-Delivery",
+    "scalable dbt projects",
+    "dependency management",
+    "runtime optimization",
+    "self-service analytics",
+    "Looker backend development",
+    "code reviews and coaching",
+    "production-grade SQL",
+    "data pipeline architecture",
+    "reusability",
+    "non-technical audiences"
+  ]
+}
