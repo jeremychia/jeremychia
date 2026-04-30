@@ -151,17 +151,19 @@ python3 .claude/tools/check_resume_length.py \
 
 | Result | Action |
 |--------|--------|
-| **TARGET** (65–68 LU) | Optimal — render directly. |
-| **GREEN** (< 70 LU) | Safe to render; trim lightly if > 68 LU. |
-| **AMBER** (70–78 LU) | Trim bullets, re-run until below 70 LU. |
-| **RED** (> 78 LU) | Aggressive trim required. |
+| **TARGET** (67–69 LU) | Optimal — full page, no orphans. Render directly. |
+| **GREEN** (< 70 LU) | Safe to render; expand lightly if < 67 LU. |
+| **AMBER** (70–77 LU) | Render HTML first, verify page count, then PDF. Trim until GREEN. |
+| **RED** (> 77 LU) | Aggressive trim required before any render. |
 
-**Trimming strategy:**
-- Target 65–68 LU first (optimal one-page fit with rendering variance headroom).
-- Each bullet costs `max(1.0, len / 110)` LU. A 220-char bullet = ~2 LU; a 100-char bullet = 1 LU.
-- Trim least-relevant roles first. Prefer keeping Vinted and Tourlane; trim Keppel/LucaNet/Community first.
-- Prefer ≤ 100 chars per bullet (single line). Tolerate up to 200 chars. Avoid > 200 chars.
-- Re-run after each trim. Only render once ≤ 70 LU.
+**Trimming / expanding strategy:**
+- Target 67–69 LU (fills the page completely, one orphan-free LU ≈ one physical line).
+- Each bullet costs `ceil(len / 110)` LU: ≤110 chars = 1 LU; 111–220 chars = 2 LU; 221–330 chars = 3 LU.
+- **Orphan zone (111–154 chars):** costs 2 LU but leaves the second line mostly empty. Fix by shortening to ≤ 110 chars OR extending to ≥ 155 chars.
+- **Bullet sweet spots:** ≤ 110 chars (1 LU, clean line) or 155–220 chars (2 LU, both lines ≥ 40% full).
+- If under 67 LU: expand short bullets by adding context, or restore trimmed bullets from the base resume.
+- If over 70 LU: trim least-relevant roles first. Prefer Vinted and Tourlane; trim Keppel/LucaNet/Community first.
+- Re-run after each change. Only render once GREEN.
 
 ---
 
@@ -173,8 +175,8 @@ python3 .claude/tools/render_resume.py \
   "applications/{base name}/{base name}.html"
 ```
 
-- **GREEN**: render with PDF (default).
-- **AMBER**: add `--no-pdf` first, check HTML in browser, then re-run without `--no-pdf`.
+- **GREEN**: render with PDF (default). The renderer will report page count — if > 1 page, trim and re-render.
+- **AMBER**: add `--no-pdf` first, check HTML in browser, then re-run without `--no-pdf`. Verify page count in output.
 
 If PDF generation fails, tell the user to open the HTML in Chrome → File → Print → Save as PDF.
 
