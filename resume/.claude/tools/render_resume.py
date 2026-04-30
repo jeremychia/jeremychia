@@ -16,7 +16,6 @@ Exit codes:
 """
 
 import json
-import os
 import subprocess
 import sys
 from html import escape
@@ -247,6 +246,30 @@ def find_chrome() -> str | None:
     return None
 
 
+def count_pdf_pages(pdf_path: Path) -> int | None:
+    """Return page count using pdfinfo or pypdf, or None if unavailable."""
+    try:
+        result = subprocess.run(
+            ["pdfinfo", str(pdf_path)], capture_output=True, text=True
+        )
+    except FileNotFoundError:
+        result = None
+    if result is not None and result.returncode == 0:
+        for line in result.stdout.splitlines():
+            if line.startswith("Pages:"):
+                try:
+                    return int(line.split(":", 1)[1].strip())
+                except ValueError:
+                    pass
+    try:
+        import pypdf  # type: ignore
+        with open(pdf_path, "rb") as f:
+            return len(pypdf.PdfReader(f).pages)
+    except (ImportError, Exception):
+        pass
+    return None
+
+
 def html_to_pdf(html_path: Path, pdf_path: Path) -> bool:
     chrome = find_chrome()
     if not chrome:
@@ -311,7 +334,12 @@ def main() -> None:
     if not no_pdf:
         ok = html_to_pdf(html_path, pdf_path)
         if ok:
-            print(f"  ✓ PDF  → {pdf_path}")
+            pages = count_pdf_pages(pdf_path)
+            if pages is not None and pages > 1:
+                print(f"  ✗ PDF  → {pdf_path}  ⚠  {pages} PAGES — trim before submitting!", file=sys.stderr)
+            else:
+                suffix = f" ({pages}p)" if pages else ""
+                print(f"  ✓ PDF  → {pdf_path}{suffix}")
         else:
             print(f"  ✗ PDF  → failed (see above)")
 
