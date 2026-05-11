@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "version": "2026-05-09_forward-college_lecturer-business-analytics-statistics",
+    "lastUpdated": "2026-05-10",
+    "targetRole": "Lecturer in Business Analytics and Statistics (Part-Time)",
+    "targetCompany": "Forward College",
+    "sourceUrl": "https://www.linkedin.com/jobs/view/4410103338/",
+    "behaviouralInsights": [
+      "Primacy on pedagogy and delivery method: flipped classroom mentioned first, subject expertise second",
+      "Repetition of teaching/students/engagement = fear of a subject expert who cannot connect with an international cohort",
+      "Absence of research requirement = practitioner-teacher preferred over academic",
+      "Culture signals: positive leadership, 4 intelligences, active learning pedagogy — want someone who teaches as craft, not side gig",
+      "Decision paralysis is the core teaching problem in ST2187 — rigorous LSE content framed around managerial decision-making",
+      "Loss aversion: validated LSE curriculum reduces content risk; student experience and progression are the KPIs they fear underdelivering",
+      "Forward College pedagogy: seminars for challenge not content delivery; students arrive with 4-8hrs prep; Oxbridge-style weekly tutorials; 15 students per class",
+      "Candidate nuanced flipped classroom view: direct instruction for deterministic content; inquiry-based for applied/judgement content — signals genuine pedagogical curiosity"
+    ],
+    "adaptationNotes": [
+      "Expanded to 2-page practitioner CV — appropriate for academic/teaching role at a college",
+      "Teaching Experience section leads: ReDI (full) + NTU TA (full entry, not buried under education)",
+      "Industry Experience restored to full depth: Vinted (7 bullets), Tourlane (5), LucaNet (4), Keppel (3)",
+      "Keppel and Soap Cycling restored — full career arc and community involvement relevant to Forward College ethos",
+      "Education NTU: removed TA bullet (now a full section entry in Teaching Experience)",
+      "Publications retained: both papers render after community",
+      "Summary expanded to cover teaching + industry + academic dimensions",
+      "Skills: Analytics and Visualisation first",
+      "GAP: statistics teaching depth limited — cover letter addresses honestly"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Lecturer and Analytics Practitioner — Business Analytics and Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics practitioner and instructor with 6+ years building finance data systems at scale across APAC and Europe, 3 years designing and delivering data analytics curriculum in Berlin (80% class progression vs. 50% school average), and 2 years as Teaching Assistant at NTU across three 45-student seminar groups. Combines subject matter depth in business analytics, statistical modelling, and data engineering with hands-on curriculum design, assessment grading, and one-on-one student support. MSc in Big Data and Business Analytics (ESCP, Valedictorian) and peer-reviewed publications in applied analytics and NLP. Permanent Resident, Germany — no visa sponsorship required.",
+  "teachingPhilosophy": "The real obstacle in analytics education is rarely mathematical: students freeze not because they misunderstand a confidence interval or decision tree, but because they do not yet trust themselves to act on uncertain, quantified information. The goal of every course is a specific transformation — from 'I do not know how to approach this' to 'I know how to approach this' — and staying connected with students long enough to see that confidence carry forward. Courses are structured around frameworks and concepts rather than tools, so the foundation outlasts the next wave of software change. Direct instruction for deterministic content; inquiry-based seminars for applied, judgement-heavy questions where reasonable people working from the same data can legitimately reach different recommendations.",
+  "teachingExperience": [
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "company": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
+        "Co-created a 13-week syllabus combining structured instructional content with practical case-study projects, collaborating across an eight-person volunteer teaching team.",
+        "Achieved a class progression rate of 80% against the school average of 50%."
+      ]
+    },
+    {
+      "title": "Teaching Assistant, Information Technology",
+      "company": "Nanyang Technological University",
+      "location": "Singapore",
+      "startDate": "Aug 2017",
+      "endDate": "May 2019",
+      "bullets": [
+        "Assisted three undergraduate seminar groups (45 students each) per semester for AB1401 Technological Innovations and Developments across two academic years.",
+        "Provided feedback on weekly student submissions covering technology trends and developments.",
+        "Produced supplementary instructional material on Microsoft Excel to support student learning."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges from shipping partners.",
+        "Designed layered data quality controls — dbt tests, reconciliations, and anomaly detection — reducing misstatement risk by 90% on €40m of financial exposure.",
+        "Optimised Spark and BigQuery workloads, cutting pipeline runtimes by 75% and reducing query volume by 1.5TB/day; cut compute costs by 15% while maintaining SLAs.",
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks using agentic AI for test data generation; authored a reusable testing guide independently adopted by teammates.",
+        "Designed and facilitated the first cross-functional workshop between VGo DSA, VGo Finance Operations, and Group Finance, producing shared alignment on priorities."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Owned the Finance Data Products roadmap as the sole finance data analyst, aligning priorities with company OKRs and acting as product manager, analyst, and analytics engineer.",
+        "Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close.",
+        "Partnered with data engineering to harden data pipelines, improving SLA attainment from 88% to 97%.",
+        "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed APAC companies (SGX, HKEX, KLSE, ASX) from requirements through go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting and planning cycle times by up to 50% across listed APAC clients."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to track performance of 140 staff across 5 process areas; automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and TFI-LeaRN Programme scholarship for exchange semester at the University of Hong Kong.",
+        "Residential Education Representative: designed and delivered engagement programmes for ~50 hall residents across one academic year.",
+        "Studied across flipped classroom courses — independent pre-class preparation followed by seminar-led discussion, mirroring the Forward College pedagogy."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion of operations into Singapore; managed 30 interns over 3 years to scale soap collection and community impact programmes.",
+        "Oversaw finance and regulatory compliance, including preparation of annual financial statements and coordination of year-end audits.",
+        "Designed Looker Studio dashboards for impact, operations, and finance reporting to support board-level decision-making and grant applications."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
+    }
+  ],
+  "pageBreakBeforeEducation": true,
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host — Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin", "year": "Sep 2025" },
+    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Analytics and Visualisation", "items": ["Python", "R", "SQL", "Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Engineering", "items": ["dbt", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow", "Scala"] },
+      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "Business Analytics and Statistics",
+    "curriculum design",
+    "seminar delivery",
+    "formative assessments",
+    "one-on-one tutoring",
+    "flipped classroom",
+    "student engagement",
+    "pedagogical methods",
+    "Python and Data Analytics",
+    "international student body",
+    "class progression",
+    "data analytics curriculum",
+    "assessment design"
+  ]
+}
