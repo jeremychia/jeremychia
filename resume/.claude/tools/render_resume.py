@@ -97,8 +97,10 @@ def _render_summary(summary: str) -> str:
     )
 
 
-def _render_experience(experience: list[dict]) -> str:
-    parts = [_section_heading("Professional Experience")]
+def _render_experience(experience: list[dict], label: str = "Professional Experience") -> str:
+    if not experience:
+        return ""
+    parts = [_section_heading(label)]
     for job in experience:
         date_range = f'{_esc(job.get("startDate",""))} – {_esc(job.get("endDate",""))}'
         loc_date = f'<span style="font-size:8.5pt;white-space:nowrap;">{_esc(job.get("location",""))} &nbsp;|&nbsp; {date_range}</span>'
@@ -112,8 +114,9 @@ def _render_experience(experience: list[dict]) -> str:
     return "\n".join(parts)
 
 
-def _render_education(education: list[dict]) -> str:
-    parts = [_section_heading("Education")]
+def _render_education(education: list[dict], page_break: bool = False) -> str:
+    pb = '<div style="page-break-before:always;"></div>' if page_break else ""
+    parts = [pb + _section_heading("Education")]
     for edu in education:
         date_range = f'{_esc(edu.get("startDate",""))} – {_esc(edu.get("endDate",""))}'
         loc_date = f'<span style="font-size:8.5pt;white-space:nowrap;">{_esc(edu.get("location",""))} &nbsp;|&nbsp; {date_range}</span>'
@@ -141,6 +144,43 @@ def _render_community(community: list[dict]) -> str:
         if item.get("bullets"):
             entry += "\n" + _bullets(item["bullets"])
         parts.append(f'<div style="margin-bottom:4px;">{entry}</div>')
+    return "\n".join(parts)
+
+
+def _render_teaching_philosophy(text: str) -> str:
+    if not text:
+        return ""
+    return (
+        _section_heading("Teaching Philosophy")
+        + f'<p style="margin:0 0 4px;font-size:9pt;font-style:italic;">{_esc(text)}</p>'
+    )
+
+
+def _render_talks(talks: list[dict]) -> str:
+    if not talks:
+        return ""
+    parts = [_section_heading("Talks and Presentations")]
+    for t in talks:
+        title = _esc(t.get("title", ""))
+        event = _esc(t.get("event", ""))
+        location = _esc(t.get("location", ""))
+        year = _esc(t.get("year", ""))
+        right = f'<span style="font-size:8.5pt;white-space:nowrap;">{location} &nbsp;|&nbsp; {year}</span>'
+        left = f'<span style="font-size:9pt;"><strong>{title}</strong> &mdash; {event}</span>'
+        parts.append(f'<div style="margin-bottom:2px;">{_flex_row(left, right)}</div>')
+    return "\n".join(parts)
+
+
+def _render_publications(publications: list[dict]) -> str:
+    if not publications:
+        return ""
+    parts = [_section_heading("Publications")]
+    for pub in publications:
+        citation = _esc(pub.get("citation", ""))
+        venue = _esc(pub.get("venue", ""))
+        parts.append(
+            f'<p style="margin:2px 0 4px;font-size:8.5pt;">{citation} <em>{venue}</em></p>'
+        )
     return "\n".join(parts)
 
 
@@ -173,12 +213,25 @@ def _render_skills(skills: dict) -> str:
 # ---------------------------------------------------------------------------
 
 def render_html(data: dict) -> str:
+    teaching = data.get("teachingExperience", [])
+    industry = data.get("experience", [])
+    if teaching:
+        exp_parts = [
+            _render_experience(teaching, label="Teaching Experience"),
+            _render_experience(industry, label="Industry Experience"),
+        ]
+    else:
+        exp_parts = [_render_experience(industry)]
+
     body_parts = [
         _render_header(data.get("header", {})),
         _render_summary(data.get("summary", "")),
-        _render_experience(data.get("experience", [])),
-        _render_education(data.get("education", [])),
+        _render_teaching_philosophy(data.get("teachingPhilosophy", "")),
+        *exp_parts,
+        _render_education(data.get("education", []), page_break=data.get("pageBreakBeforeEducation", False)),
         _render_community(data.get("community", [])),
+        _render_publications(data.get("publications", [])),
+        _render_talks(data.get("talks", [])),
         _render_skills(data.get("skills", {})),
     ]
     body = "\n".join(p for p in body_parts if p)
