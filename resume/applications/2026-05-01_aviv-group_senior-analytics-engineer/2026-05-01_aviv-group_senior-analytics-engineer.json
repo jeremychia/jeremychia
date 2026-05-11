@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "version": "2026-05-01_aviv-group_senior-analytics-engineer",
+    "lastUpdated": "2026-05-01",
+    "targetRole": "Senior Analytics Engineer",
+    "targetCompany": "AVIV Group",
+    "sourceUrl": "https://www.linkedin.com/jobs/view/4378126108/",
+    "behaviouralInsights": [
+      "dbt modeling and Snowflake mastery is top priority (listed first, appears throughout)",
+      "Loss aversion signals: emphasis on reliability, testing, documentation, monitoring—they fear data quality failures",
+      "Data contracts and semantic modeling are foundational (repeated themes)",
+      "Architecture thinking valued: bronze/silver/gold, CI/CD, governance signals autonomous IC expected to shape standards",
+      "Collaboration and cross-functional work emphasized—communicators needed",
+      "No mentorship/leadership signals: pure IC role, deep technical contributor valued",
+      "Modern data stack maturity: team expects ELT/dbt best practices and standards"
+    ],
+    "adaptationNotes": [
+      "Reordered Vinted bullets to lead with dbt architecture and data contracts",
+      "Emphasized testing/documentation/monitoring to address loss-aversion signal",
+      "Added Snowflake prominence in skills and summary",
+      "Replaced pillHighlights with ATS keywords: dbt, Snowflake, data contracts, metrics, semantic models, testing, governance, bronze/silver/gold, CI/CD, ELT",
+      "Trimmed Keppel and LucaNet roles to focus on modern data stack (dbt/Snowflake)",
+      "Summary rewritten to emphasize platform architecture, reliability, and semantic modeling"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Data Platform Architecture",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Analytics Engineer with 6+ years building scalable data platforms in dbt and BigQuery, specializing in data quality controls, comprehensive testing, and metrics definition that drive reliable analytics at scale. Proven ability to architect dbt models, automate testing and deployment workflows, and implement monitoring and governance frameworks that enable cross-functional teams. Deep expertise in testing strategies and reliability engineering, combining technical rigor with clear communication across analysts, data scientists, and business stakeholders.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Architect and maintain end-to-end dbt models in BigQuery, defining documented metrics and semantic models across finance and operations domains to power reliable analytics for 40+ downstream stakeholders.",
+        "Implemented GitHub Actions to automate dbt testing, documentation generation, and deployment; raised unit test coverage from <1% to 50%+ in four weeks and authored testing and version control best practices independently adopted by teammates.",
+        "Developed custom dbt macros for data quality checks and reconciliations, designing comprehensive test suite (anomaly detection, referential integrity) reducing misstatement risk by 90% on €40m of exposure.",
+        "Built end-to-end monitoring and observability including redesigned alerting for data completeness and freshness, enabling faster issue detection while maintaining SLAs across all pipelines.",
+        "Optimised BigQuery and Spark workloads through incremental model redesign, cutting pipeline runtimes by 75%, reducing daily query volume by 1.5TB, and delivering 15% compute savings while maintaining SLAs.",
+        "Partner with analysts, data scientists, and business stakeholders to translate requirements into documented metrics and semantic models, enabling self-serve analysis and smooth change management when logic evolves."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power reliable finance and operational analytics.",
+        "Hardened data pipelines in collaboration with data engineering team, improving SLA attainment from 88% to 97% through testing and monitoring enhancements.",
+        "Mentored and onboarded three analytics team members, accelerating their productivity and establishing documentation and testing standards."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), designing consolidation and budgeting solutions achieving up to 50% reduction in reporting cycle times.",
+        "Delivered client enablement and documentation, achieving average satisfaction scores of 4.5 / 5."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
+        "Achieved a class progression rate of 80% against the school average of 50%."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "SQL", "Snowflake", "Google BigQuery", "Python", "Apache Spark", "Apache Airflow", "R", "Scala"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Git", "GitHub Actions", "Elementary"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt",
+    "Snowflake",
+    "Data contracts",
+    "Metrics",
+    "Semantic models",
+    "dbt tests",
+    "ELT workflows",
+    "Data governance",
+    "Bronze/silver/gold",
+    "CI/CD pipelines",
+    "Data quality",
+    "Testing",
+    "Documentation",
+    "Version control"
+  ]
+}
