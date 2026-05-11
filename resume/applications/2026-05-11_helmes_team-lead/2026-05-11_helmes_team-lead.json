@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "version": "2026-05-11_helmes_team-lead",
+    "lastUpdated": "2026-05-11",
+    "targetRole": "Team Lead",
+    "targetCompany": "Helmes",
+    "sourceUrl": "https://www.helmes.com/position/team-lead-12/",
+    "behaviouralInsights": [
+      "Team management repeated 4+ times — primary hire signal; lead every role with people/coordination impact",
+      "Client relationships repeated 4+ times — primary contact, develop clients, support sales; needs commercial mindset",
+      "Financial management is explicit scope (billing, reporting, budget) — not background; surface finance ownership directly",
+      "Take responsibility and follow through signals they want an autonomous, reliable leader, not a task-follower",
+      "Scrum knowledge explicitly required — flag if absent from resume",
+      "Estonian language is a hard-listed requirement — disqualifier if not met",
+      "Culture language (caring, freedom, trust) mirrors autonomy-first, people-first values — mirror without copy-paste",
+      "No deep technical tools listed — management and people focus; do not lead with engineering",
+      "Seek new opportunities + support sales signals entrepreneurial commercial mindset expected",
+      "Absence of data/analytics language — this is general software development management, not analytics"
+    ],
+    "adaptationNotes": [
+      "Tagline changed from analytics engineer to team lead framing",
+      "Summary leads with autonomous team leadership and client delivery, not technical engineering",
+      "LucaNet experience repositioned as primary — strongest client-facing, project management, 11 clients across APAC",
+      "Vinted leads with cross-functional workshop (team coordination signal); closes with €1.6m recovery (financial impact peak-end)",
+      "Tourlane leads with roadmap ownership and mentoring; surfaces SLA improvement as performance monitoring",
+      "Soap Cycling board role surfaces as direct team management (30 interns) and financial compliance oversight",
+      "Keppel trimmed to 2 bullets; cross-functional coordination leads",
+      "Skills reordered: Finance and Automation Tools first (financial management requirement), Data Engineering second",
+      "CRITICAL GAP: Estonian language required (very good, written and spoken); Jeremy has no Estonian proficiency",
+      "GAP: Scrum process management not explicitly evidenced in base resume",
+      "GAP: Role based in Estonia; Jeremy currently in Berlin — relocation required"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Team Lead — Project Delivery and Client Engagement",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Autonomous leader with 6+ years managing technical delivery, cross-functional teams, and client relationships across APAC and Europe. Combines hands-on project ownership — spanning 11 enterprise client engagements and multi-team coordination — with direct financial oversight and a track record of raising team capability and improving delivery SLAs. Chartered Accountant background enables confident engagement with billing, budget management, and financial reporting at unit level.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Led the first cross-functional alignment workshop between three teams — VGo DSA, VGo Finance Operations, and Group Finance — producing shared priorities and earning praise from all participants.",
+        "90% reduction in misstatement risk across €40m of exposure through layered data quality controls — dbt tests, reconciliations, and anomaly detection — across all core datasets.",
+        "Translated Finance requirements into documented data models for self-serve analytics.",
+        "75% runtime reduction and 15% cost cut via Spark and BigQuery workload optimisation.",
+        "Embedded billing controls detecting carrier discrepancies and recovering €1.6m in overcharges."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Owned the Finance Data Products roadmap as sole lead, aligning priorities with company OKRs while acting as PM, analyst, and analytics engineer across the full stack.",
+        "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity.",
+        "Improved SLA attainment from 88% to 97% by partnering with engineering and business teams.",
+        "Built a centralised dbt and Snowflake transformation layer integrating Salesforce, Stripe, and Twilio.",
+        "Looker-led finance reporting transformation saved 5 FTE days per month in the month-end close process."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC — from requirements through go-live — managing client relationships and delivery timelines.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, achieving up to 50% reduction in client reporting and planning cycle times across APAC.",
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5.",
+        "Appointed Culture Ambassador for Singapore; improved employee NPS by 20 points through internal initiatives."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore)."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017)."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Led expansion to Singapore and managed 30 interns over 3 years to scale collections and impact.",
+        "Oversaw finance and regulatory compliance, including financial statement preparation and audit coordination."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters.",
+        "80% class progression rate against a school average of 50%."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] },
+      { "category": "Data Engineering", "items": ["Python", "SQL", "dbt", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow", "R", "Scala"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "team lead",
+    "project management",
+    "managing teams",
+    "client relationships",
+    "financial and budget management",
+    "Scrum processes",
+    "motivate people",
+    "billing and reporting",
+    "take responsibility",
+    "client acquisition",
+    "software development",
+    "performance monitoring",
+    "work methods",
+    "cross-functional",
+    "team development"
+  ]
+}
