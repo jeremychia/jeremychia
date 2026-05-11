@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "version": "2026-05-09_lightdash_analytics-engineering-advocate",
+    "lastUpdated": "2026-05-09",
+    "targetRole": "Analytics Engineering Advocate - Europe",
+    "targetCompany": "Lightdash",
+    "sourceUrl": "https://jobs.ashbyhq.com/lightdash/309706bc-1081-48b6-89dc-f769bbe17e6d",
+    "behaviouralInsights": [
+      "AI-forward is the #1 differentiator — 7+ mentions of AI in JD; candidate must demonstrate genuine daily AI tool usage, not just familiarity",
+      "Primary job is user success through technical debugging and pair-programming, not just evangelism — lead with technical depth",
+      "dbt + analytics engineering fluency is non-negotiable core requirement",
+      "Community building repeated 5+ times — fear of losing momentum; want authentic relationship-builder, not corporate marketer",
+      "Strong autonomous IC expected — no mentorship or stakeholder management language in JD; owns community strategy independently",
+      "Culture signals: 'obsess', 'bias towards impact', 'build in public' — high-intensity, pragmatic, curiosity-driven team",
+      "Loss aversion: 'maintaining quality and authenticity' — fear of hollow AI-generated content",
+      "Teaching in multiple formats (Slack, calls, docs, video, conference) is a core deliverable, not a side activity",
+      "Absence of stakeholder management language = strong IC, not a project manager or diplomat"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with AI-powered technical depth and teaching credentials matching JD's top themes",
+      "Vinted bullets reordered: AI/agentic testing guide leads (AI-forward + teaching); dbt Champion/Igniter in last bullet (peak-end community signal)",
+      "Tourlane: teaching/mentoring bullet moved to lead; Looker dashboards surfaced as BI tool relevance",
+      "LucaNet: client enablement + blog posts moved to lead; satisfaction scores support teaching credibility",
+      "Keppel: data visualisation tools (Power BI, Tableau) surfaced for JD 'data visualization tools' keyword",
+      "Skills: AI-Assisted Development moved to second category; dbt moved to front of Data Engineering items",
+      "Community: ReDI School teaching (60+ students, 80% progression) highlighted as direct signal for 'teach and share' responsibility",
+      "dbt Champion and dbt Igniter designation added to Vinted — confirms active dbt Community Slack presence",
+      "pillHighlights replaced with JD ATS keyword phrases",
+      "Trimmed Soap Cycling, Tourlane IC ownership, LucaNet Power BI, Keppel RPA, and education scholarship bullets for length"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineering Advocate | dbt · Looker · AI-Powered Workflows",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Analytics engineer with 6+ years of hands-on dbt, BigQuery, and Snowflake experience helping data teams succeed through technical problem-solving and teaching. Uses AI coding assistants daily — from agentic test generation to pair-programming — sharing practices through conference talks, Meetups, and with 60+ students at ReDI School.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks using agentic AI for test data generation; authored a reusable testing guide independently adopted by teammates.",
+        "Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.",
+        "Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges from vendor invoices.",
+        "Partner with Finance to translate plain-language requirements into documented metrics and data models, enabling self-serve analysis and smoother change management when logic evolves.",
+        "Presented testing strategy at Forward Data Conference and hosted a dbt Meetup at Vinted Berlin; recognised as a dbt Champion and dbt Igniter in the global dbt Community Slack."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Delivered client enablement sessions and technical blog posts, achieving average satisfaction scores of 4.5/5.",
+        "Led 11 finance digital transformation projects for listed companies across APAC, from requirements to go-live."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin", "year": "Sep 2025" }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore)."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017)."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
+        "Achieved a class progression rate of 80% against the school average of 50%."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "SQL", "Python", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow", "R", "Scala"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "Git", "GitHub Actions"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A1" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "analytics engineering",
+    "dbt",
+    "data modeling",
+    "modern data stacks",
+    "analytics engineering best practices",
+    "business intelligence workflows",
+    "AI coding assistants",
+    "pair-programming",
+    "data visualization tools",
+    "community building",
+    "technical problem-solving",
+    "content creation",
+    "user success",
+    "open source BI"
+  ]
+}
