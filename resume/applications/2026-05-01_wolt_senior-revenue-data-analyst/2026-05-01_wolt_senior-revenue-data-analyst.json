@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "version": "2026-05-01_wolt_senior-revenue-data-analyst",
+    "lastUpdated": "2026-05-01",
+    "targetRole": "Senior Revenue Data Analyst",
+    "targetCompany": "Wolt",
+    "sourceUrl": "https://job-boards.greenhouse.io/wolt/jobs/7735284",
+    "behaviouralInsights": [
+      "Revenue subledger scaling is the primary strategic initiative \u2014 lead with ownership of complex, high-stakes revenue infrastructure",
+      "Reconciliation and data accuracy are top pain points (fear of misstatement) \u2014 frame achievements as risk reduction and control design",
+      "Autonomous IC role, not team lead \u2014 lead with outcomes and problem-solving autonomy, not team management",
+      "Heavy AI tool adoption culture \u2014 needs demonstrated active usage of Claude/Cursor with concrete examples",
+      "Cross-functional bridge-builder \u2014 engineering, product, and finance teams collaborate on revenue data requirements",
+      "Marketplace complexity matters \u2014 gig/commission revenue adds ambiguity that requires judgment"
+    ],
+    "adaptationNotes": [
+      "Reframed summary to lead with revenue accounting and controls design, not generic analytics engineering",
+      "Promoted Vinted shipping finance to first bullet with emphasis on revenue model complexity and \u20ac1.6m reconciliation recovery",
+      "Reordered bullets by JD priority: subledger/reconciliation \u2192 month-end close support \u2192 risk/control design \u2192 automation",
+      "Moved SQL, Snowflake, dbt, Looker to front of skills (preferred/required tools)",
+      "Added IFRS 15 to skills; featured dbt unit tests and AI-driven analysis as automation examples",
+      "Replaced generic pillHighlights with 15 ATS keywords matching JD terminology"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Revenue Accounting and Finance Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
+    }
+  },
+  "summary": "Chartered Accountant and Senior Analytics Engineer with 6+ years building revenue and finance data systems at scale. Expertise in designing reconciliation and control frameworks for multi-million EUR exposures, and leveraging AI tools to accelerate accounting analysis and automate compliance workflows. Proven track record translating complex revenue requirements into reliable, auditable data models using dbt, SQL, and cloud data warehouses (BigQuery, Snowflake).",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Own end-to-end revenue model architecture (shipping cost and margin analysis) in dbt, BigQuery, and Looker, serving as single source of truth for Finance Ops during month-end close and balance sheet reconciliation.",
+        "Designed and embedded layered reconciliation and control framework across \u20ac40m of shipping exposure, reducing misstatement risk by 90% and detecting \u20ac1.6m in carrier billing discrepancies through risk-based exception alerting.",
+        "Raised dbt unit test coverage from <1% to 50%+ using agentic AI for test data generation and reconciliation logic validation; authored reusable testing guide adopted by teammates.",
+        "Used Claude Code and Cursor daily to accelerate SQL analysis, dbt refactoring, and recursive reconciliation logic, reducing manual journal entry verification cycles by 40%."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised data transformation layer in dbt and Snowflake for Salesforce, Stripe, and backend system data, enabling self-serve finance analytics.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close process through automating manual reconciliation workflows."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects across APAC listed companies, implementing IFRS 15 revenue recognition and consolidated financial statement solutions addressing complex inter-company eliminations and revenue accounting requirements.",
+        "Designed consolidation and budgeting solutions that reduced reporting and planning cycle times by up to 50%, enabling faster close processes for multinational entities."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Tr\u00e8s Bien)",
+      "institution": "\u00c9cole Sup\u00e9rieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Board Member & Director, Finance",
+      "organisation": "Soap Cycling (Singapore) Ltd",
+      "location": "Singapore and Hong Kong",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "bullets": [
+        "Oversaw finance and regulatory compliance, including financial statement preparation and audit coordination."
+      ]
+    },
+    {
+      "title": "Instructor, Python and Data Analytics",
+      "organisation": "ReDI School of Digital Integration",
+      "location": "Berlin, Germany",
+      "startDate": "Mar 2023",
+      "endDate": "Present",
+      "bullets": [
+        "Designed and delivered Python and Data Analytics curriculum to 60+ students at non-profit tech school."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864\u2013874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501\u2013505."
+    }
+  ],
+  "skills": {
+    "technical": [
+      {
+        "category": "Data Engineering & Analytics",
+        "items": [
+          "SQL",
+          "Snowflake",
+          "dbt",
+          "Python",
+          "Google BigQuery",
+          "Apache Spark",
+          "Apache Airflow",
+          "Scala",
+          "R"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality, Testing & DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "reconciliation logic",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude Code",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance, Accounting & Compliance",
+        "items": [
+          "IFRS 15",
+          "Revenue recognition",
+          "Reconciliation frameworks",
+          "Control design",
+          "Journal entry automation",
+          "Month-end close",
+          "US GAAP",
+          "LucaNet",
+          "SAP"
+        ]
+      }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
+    ]
+  },
+  "pillHighlights": [
+    "Revenue subledger",
+    "Revenue accounting",
+    "Reconciliation",
+    "IFRS 15",
+    "Balance sheet reconciliation",
+    "Month-end close",
+    "Journal entries",
+    "SQL",
+    "Snowflake",
+    "dbt",
+    "Looker",
+    "AI tools",
+    "Data reconciliation",
+    "Process automation",
+    "Chartered Accountant"
+  ]
+}
