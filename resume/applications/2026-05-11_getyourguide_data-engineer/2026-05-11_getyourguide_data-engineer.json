@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "version": "2026-05-11_getyourguide_data-engineer",
+    "lastUpdated": "2026-05-11",
+    "targetRole": "Data Engineer, Traveler Data Engineering",
+    "targetCompany": "GetYourGuide",
+    "sourceUrl": "https://www.linkedin.com/jobs/view/data-engineer-traveler-data-engineering-at-getyourguide-4383493346/",
+    "behaviouralInsights": [
+      "Reliability is #1 fear — JD opens with 'trusted data foundations' and 'reliable, high-quality datasets/pipelines'. Frame achievements as reliability wins.",
+      "Autonomy signals — 'independently' in first responsibility. They want a strong IC who self-directs.",
+      "Pragmatic improvement valued — 'Pragmatically refactor and simplify existing pipelines' = existing tech debt. SLA wins and pipeline refactoring are directly relevant.",
+      "Best practices repeated 3+ times (code quality, data modeling, testing, monitoring) = they've been burned by poor quality before.",
+      "AI-first is a genuine bonus signal — listed explicitly as preferred. Agentic AI usage in test generation is directly relevant.",
+      "No mentorship in JD = pure IC role. De-emphasise people management.",
+      "Travel domain (Tourlane) + marketplace (Vinted) are directly relevant to GYG's traveler marketplace context."
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with reliability wins and pipeline scale — addresses JD's #1 fear of unreliable data.",
+      "Community section omitted entirely — no signal for this DE technical role.",
+      "Vinted bullets reordered: pipeline ownership and data quality controls lead over finance-specific framing.",
+      "Tourlane bullets reordered: dbt/Snowflake solution and SLA improvement lead.",
+      "LucaNet trimmed to 2 bullets — least JD-relevant role.",
+      "Keppel trimmed to 2 bullets (Tableau + automation).",
+      "Skills: Data Engineering category first, dbt moved to front of items.",
+      "pillHighlights replaced with JD ATS keywords.",
+      "Tagline updated to Data Engineer positioning.",
+      "Phone set to EU number (Berlin-based role)."
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Data Engineer · dbt · Snowflake · BigQuery",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Builds reliable end-to-end data pipelines at scale — 75% faster runtimes, 90% reduction in misstatement risk on €40m of exposure, and €1.6m recovered through automated quality controls. 6+ years delivering production dbt, Snowflake, and BigQuery solutions across travel (Tourlane) and marketplace (Vinted) domains. Translates business requirements into documented data models and SLA-grade infrastructure, working autonomously across Product, Finance, and Engineering.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Own end-to-end shipping data pipelines in dbt and BigQuery, serving as the single source of truth for Finance Ops and Group Reporting during month-end close.",
+        "90% reduction in data misstatement risk on €40m of monthly exposure, enforced through layered quality controls — dbt tests, reconciliations, and anomaly detection.",
+        "75% faster BigQuery pipelines via incremental model redesign; 1.5TB/day lower query volume, 15% compute cost reduction, with all SLAs maintained throughout.",
+        "Embedded control framework detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Raised dbt unit test coverage from <1% to 50%+ across the finance domain in four weeks using agentic AI; authored a reusable testing guide adopted by teammates.",
+        "Redesigned invoice completeness alerting to deliver faster, more actionable monitoring signals — cut time-to-detect data issues and improved Finance response time."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built centralised transformation layer in dbt and Snowflake integrating Salesforce, Stripe, Twilio, and backend systems for finance and operational analytics.",
+        "Hardened data pipelines with data engineering and business teams, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per month — eliminating manual export workflows in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from initial requirements definition through to go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI for APAC-listed companies, achieving up to 50% reduction in financial reporting cycle times."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Tableau dashboards to assess performance of 140 staff across 5 process areas, improving overall visibility and transparency of service delivery KPIs.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "SQL", "Python", "Snowflake", "Google BigQuery", "PostgreSQL", "Apache Airflow", "Scala", "R"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Tableau", "Looker Studio", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "end-to-end data pipelines",
+    "dbt",
+    "data modeling",
+    "Snowflake",
+    "data quality controls",
+    "testing and monitoring",
+    "SQL & Python",
+    "Looker",
+    "marketplace platforms",
+    "SLA attainment",
+    "code quality",
+    "AI-first mindset",
+    "Google BigQuery",
+    "customer journey"
+  ]
+}
