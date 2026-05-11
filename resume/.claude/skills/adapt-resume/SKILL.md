@@ -126,6 +126,10 @@ Apply **fluency**: short declarative sentences over long compound ones. Lead met
 
 **Skills:** Reorder categories so most relevant appear first. Move ATS keyword matches to the front of each `items` array.
 
+**Volunteering:** Only include volunteering experience if it directly reinforces a skill or theme the JD explicitly calls for. Omit it entirely for technical or business roles where it adds no signal.
+
+**Business impact framing:** For business, analytics, or data roles, frame every achievement in terms of business outcome — revenue, cost, retention, decision-quality — not technical process. Lead the metric, follow with the mechanism. Avoid tool-centric bullets that describe what was built without stating what changed for the business.
+
 **pillHighlights:** Replace with the 10–15 ATS phrases from Layer B.
 
 **meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"sourceUrl"`, `"behaviouralInsights"` array (Layer B findings), and `"adaptationNotes"`.
@@ -184,9 +188,31 @@ If PDF generation fails, tell the user to open the HTML in Chrome → File → P
 
 ## Step 9 — Generate the cover letter
 
-Write `applications/{base name}/{base name}-cover-letter.md`. 4 paragraphs, max 350 words.
+Write `applications/{base name}/{base name}-cover-letter.md`.
 
-**P1 — Why this company:** Open with something specific — a product decision, growth signal, technical choice, or mission element that connects with Jeremy's values. Not "I am writing to apply for...". Tone: curious, direct, grounded.
+**For teaching / academic roles:** write as a **motivation statement**, not a cover letter. The structure is personal and reflective — why I teach, why this institution, what I would do with this course — not a credentials parade. The CV carries the credentials.
+
+**For industry roles:** write as a cover letter. 4 paragraphs, max 350 words.
+
+---
+
+### Motivation statement structure (teaching roles)
+
+**Opening:** Address a specific person by name if known (e.g. "Dear Dr. [Name],"). Open with a personal statement of intent — what drives Jeremy at the level of values, not skills. The "I strive to live intentionally" register. Not "I am writing to apply for...".
+
+**P1 — Why I teach:** The personal motivation, grounded in a specific moment or realisation. The transformation Jeremy cares about: from "I do not know how to approach this" to "I know how to approach this." Long-term student connection as part of what makes teaching meaningful.
+
+**P2 — Why this institution:** A genuine critique or observation about education in general, then why this institution's approach is designed against that failure. Use the institution's own language and frameworks correctly. Be specific about the pedagogy — class size, format, tutorials, mission — not generic praise.
+
+**P3 — What I would do with this course:** Concrete course vision. Use project examples anchored in decisions students are already living with. Break out parallel projects as bullet lists when there are multiple examples. Connect project outputs to practical outcomes — portfolio, public communication, building a voice — and link to the institution's stated competencies where relevant.
+
+**P4 — Closing:** Dual fluency or distinctive positioning (e.g. accountant-turned-practitioner). Acknowledge any genuine gaps honestly, one sentence, no apology. Right to work and availability. Location and date in the sign-off.
+
+---
+
+### Cover letter structure (industry roles)
+
+**P1 — Why this company:** Something specific — a product decision, growth signal, technical choice, or mission element that connects with Jeremy's values. Not "I am writing to apply for...". Tone: curious, direct, grounded.
 
 **P2 — Why you fit:** 2–3 concrete capability matches, leading with the most relevant quantified achievement. Connect directly to the JD's top-listed responsibilities and Layer B repeated themes. Not a resume recap — a tight argument for fit.
 
@@ -194,7 +220,9 @@ Write `applications/{base name}/{base name}-cover-letter.md`. 4 paragraphs, max 
 
 **P4 — Alignment and intent:** From `motivations.md` and `values.md`. State what Jeremy is optimising for (1–2 sentences) and why this role fits those criteria specifically. End with one direct sentence of readiness.
 
-**Tone rules:** European directness — confident without enthusiasm marketing. No "excited to", "passionate about", "thrilled to", "look forward to hearing from you". First person throughout. Close: `Best regards,\nJeremy Chia`
+---
+
+**Tone rules (both types):** European directness — confident without enthusiasm marketing. No "excited to", "passionate about", "thrilled to", "look forward to hearing from you". First person throughout. Dashes freely used. Close: `Best regards,\nJeremy Chia\n{City}, {Month} {Year}`
 
 ---
 
