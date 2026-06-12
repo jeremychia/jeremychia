@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "version": "2026-06-04_vinted_analytics-engineer-finance",
+    "lastUpdated": "2026-06-04",
+    "targetRole": "Analytics Engineer, Finance",
+    "targetCompany": "Vinted Group",
+    "sourceUrl": "https://careers.vinted.com/jobs/j/4879309101",
+    "behaviouralInsights": [
+      "Reliability-first framing: 'efficient and reliable' leads responsibilities; quality assurance, monitoring, root cause analysis repeat 3+ times — fear of data quality failures dominates",
+      "Loss aversion dominant: compliance, consistency, and production reliability language signals fear of failure over ambition for speed",
+      "Strong IC role: no mentorship or people management signals — they want deep individual contributor capability",
+      "Finance translation is the core unlock: 'converting Finance requirements into technical solutions' is unique to this hybrid profile",
+      "Documentation as a first-class value: listed in required qualifications, not preferred — signals prior pain from undocumented models",
+      "No stakeholder management framing: collaborator role, not project manager",
+      "BigQuery is a direct match; Airflow observational only — retain in skills but do not overstate in bullets"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with reliability and data quality framing, mirroring JD's dominant loss-aversion signal",
+      "Vinted bullets reordered: data quality controls and risk reduction lead; finance translation and monitoring follow",
+      "Tourlane bullets reordered: pipeline reliability (SLA 88%→97%) leads as it directly mirrors production reliability theme",
+      "LucaNet trimmed to 2 most relevant bullets; Keppel trimmed to 2 most relevant bullets",
+      "Community section omitted — no JD signal for volunteering or teaching in this technical/finance IC role",
+      "Skills reordered: Data Engineering leads; dbt, BigQuery, Airflow moved to front of items arrays",
+      "pillHighlights replaced with 13 ATS keyword phrases from Layer B"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Finance and Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Analytics Engineer with 6+ years building reliable data models and pipelines for Finance domains across APAC and Europe. Specialises in dbt, BigQuery, and data quality controls — reducing misstatement risk and recovering €1.6m through embedded control frameworks. Chartered Accountant background enables direct translation of Finance requirements into tested, documented, and production-ready data infrastructure.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Designed and implemented layered quality assurance checks (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Own end-to-end finance-ready data models and pipelines in dbt and BigQuery, used as the single source of truth by Finance Ops and Group Reporting during month-end close.",
+        "Embedded a risk-based control framework into core datasets; identified carrier billing discrepancies through code-level root cause analysis and recovered €1.6m in overcharges.",
+        "Built monitoring and observability including a redesign of invoice completeness alerting; investigated production incidents by reading pipeline code to isolate root causes.",
+        "Partnered with Finance to convert plain-language requirements into documented metrics and data models, enabling self-serve analysis and smoother change management.",
+        "Contributed to guild-wide analytics engineering initiatives, expanding shared tooling and data model access across Analytics, Data Science, and Finance teams.",
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks; authored a testing guide adopted by teammates."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Hardened data pipelines with data engineering and business teams, improving SLA attainment from 88% to 97%.",
+        "Built a centralised transformation layer in dbt and Snowflake, integrating Salesforce, Stripe, Twilio, and backend systems for finance and operational analytics.",
+        "Led finance reporting transformation using Looker, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance transformation projects across APAC listed companies, from requirements gathering to go-live.",
+        "Designed consolidation and reporting solutions with cross-functional collaboration across Finance, IT, and executives, cutting reporting cycle times by up to 50%."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Streamlined finance reporting across 300 entities in 6 business units, improving data consistency.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017)."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "Google BigQuery", "Apache Airflow", "SQL", "Python", "Snowflake", "R", "Scala"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "analytics engineering",
+    "dbt",
+    "BigQuery",
+    "data models and pipelines",
+    "quality assurance checks",
+    "reporting consistency",
+    "root cause analysis",
+    "data modeling, access, and storage",
+    "requirements gathering",
+    "monitoring and observability",
+    "documentation and code quality",
+    "cross-functional collaboration",
+    "finance data"
+  ]
+}
