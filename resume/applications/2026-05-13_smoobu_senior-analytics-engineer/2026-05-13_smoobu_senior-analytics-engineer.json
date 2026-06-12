@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "version": "2026-05-13_smoobu_senior-analytics-engineer",
+    "lastUpdated": "2026-05-13",
+    "targetRole": "Senior Analytics Engineer",
+    "targetCompany": "Smoobu (HomeToGo Group)",
+    "sourceUrl": "https://smoobu.jobs.personio.com/job/2614929?pc=2633709",
+    "behaviouralInsights": [
+      "Strong autonomous IC signal — 'oversee', 'create modeling principles', 'manage' without team context; they want someone who owns the full AE function solo",
+      "Loss aversion on pipeline reliability — 'robust alerting mechanisms' is a fear phrase; frame monitoring and alerting achievements prominently",
+      "Full-stack AE ownership — one person covering ingestion (Airbyte, Snowplow), orchestration (Airflow), transformation (dbt/Snowflake), and reverse-ETL (Hightouch)",
+      "Business-bridge requirement — 'connect engineering and business teams' is a core JD responsibility; Jeremy's cross-functional workshop is directly relevant",
+      "Warehouse cost optimisation is a formal requirement — Jeremy's 75% runtime reduction and 1.5TB/day cut are perfect matches",
+      "GDPR and data governance are explicit requirements — frame controls work as compliance and governance wins",
+      "No mentorship in responsibilities and no stakeholder management = IC builder role; no team-size mention = likely small data team",
+      "AI agents interest listed as a preferred skill — Jeremy's AI-assisted dbt test generation is directly relevant here"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with end-to-end pipeline ownership, warehouse cost optimisation, and business-bridge framing — addressing the top three JD themes in signal order",
+      "Vinted bullets reordered: cost/performance first (required skill), then robust alerting, then domain model ownership, then governance/GDPR-adjacent controls, then cross-functional bridge",
+      "Vinted alerting bullet rephrased to include 'robust alerting mechanisms' verbatim (ATS phrase)",
+      "Vinted domain model bullet rephrased to use 'domain-level data models' framing from JD",
+      "Vinted governance bullet rephrased to reference GDPR and data governance explicitly",
+      "AI test generation bullet rephrased to mention 'AI agents' to match preferred skill language",
+      "Tourlane bullets reordered: dbt+Snowflake transformation layer first (exact stack match), then SLA pipeline reliability, then autonomy/ownership, then business outcome",
+      "LucaNet trimmed to 2 bullets; Keppel trimmed to 2 bullets",
+      "Community section omitted — no relevant signal for this technical IC role",
+      "Skills reordered: Data Engineering first with dbt/Snowflake/Airflow promoted to front; Data Quality second for governance framing; AI-Assisted Development retained for AI agents signal",
+      "pillHighlights replaced with 15 ATS phrases from Layer B"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Senior Analytics Engineer with 6+ years building and owning end-to-end analytics infrastructure — ingestion pipelines, complex DAGs, and domain-level data models — across dbt, Snowflake, and Airflow. Delivered 75% pipeline runtime reduction and 1.5TB/day in warehouse cost savings through incremental model redesign; embedded robust alerting and data governance controls that reduced misstatement risk by 90% on €40m of exposure. Bridges engineering and business teams to translate plain-language requirements into production-grade, governed data models that drive marketing, finance, and operational decisions.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Optimised BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and reducing query volume by 1.5TB/day through incremental model redesign, cutting compute costs by 15% while maintaining SLAs.",
+        "Built and extended monitoring and observability including a full redesign of invoice completeness alerting, implementing robust alerting mechanisms with faster, more actionable signals for Finance.",
+        "Own end-to-end domain-level data models in dbt, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.",
+        "Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection) aligned with data governance and GDPR requirements, reducing misstatement risk by 90% on €40m of exposure.",
+        "Embedded risk-based controls into core datasets, detecting and recovering €1.6m in carrier billing discrepancies through systematic pipeline-level checks.",
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks using AI agents for test data generation; authored a reusable testing guide independently adopted by teammates."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
+        "Hardened data pipelines with engineering and business teams, improving SLA attainment from 88% to 97%.",
+        "Owned the Finance Data Products roadmap as the sole finance data analyst, aligning priorities with company OKRs and acting as product manager, data analyst, and analytics engineer.",
+        "Led finance reporting transformation using Looker, saving 5 FTE days per month in the month-end close process."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), delivering each from initial requirements gathering through to go-live.",
+        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times for 11 APAC clients."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
+        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
+        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
+        "Dean's List (AY 2016/2017).",
+        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto", "year": "May 2026" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin", "year": "Sep 2025" }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "Snowflake", "Apache Airflow", "Fivetran", "SQL", "Python", "Google BigQuery", "R", "Scala"] },
+      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] },
+      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "analytics engineering",
+    "dbt",
+    "Snowflake",
+    "Apache Airflow",
+    "Fivetran",
+    "domain-level data models",
+    "robust alerting mechanisms",
+    "data governance",
+    "GDPR",
+    "data quality controls",
+    "incremental model redesign",
+    "single source of truth",
+    "warehouse cost",
+    "ingestion pipelines",
+    "SLA attainment"
+  ]
+}
