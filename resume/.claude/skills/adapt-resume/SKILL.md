@@ -91,6 +91,29 @@ Write `applications/{base name}/jd.md`:
 
 Use full verbatim text — do not summarise or paraphrase.
 
+Append a **Layer B — Behavioural Analysis** section at the end of the file, after Benefits (or at the end if no Benefits section). Format it as:
+
+```
+## Layer B — Behavioural Analysis
+
+**Signal ordering:** {top priority interpretation}
+
+**Repetition = fear/desire:** {themes appearing 3+ times and what they signal}
+
+**Seniority signals:** {phrases and what they imply about autonomy/scope}
+
+**Loss aversion:** {compliance/reliability language and framing implication}
+
+**Culture signals:** {personality language if present; or note absence}
+
+**Absence signals:** {what the JD omits and what that implies}
+
+**ATS keywords:**
+- {verbatim phrase 1}
+- {verbatim phrase 2}
+- ...
+```
+
 ---
 
 ## Step 4 — Read the base resume and profile
