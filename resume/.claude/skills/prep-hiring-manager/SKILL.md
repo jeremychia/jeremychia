@@ -27,7 +27,7 @@ Set `{folder}` to the full folder name and `{path}` to `applications/{folder}`.
 
 - `{path}/jd.md` — role title, company, responsibilities, requirements
 - `{path}/{folder}.json` — `meta.behaviouralInsights`, `meta.adaptationNotes`, `summary`, `experience` bullets
-- `{path}/recruiter-prep.md` — if it exists, use for context on company research already done; do not repeat it verbatim
+- `{path}/recruiter-prep.md` — if it exists: (a) carry the **Suggested opening hook** from Section 4 into Section 6 of the HM prep, adapting the framing for a hiring manager audience (more technical/strategic, less pitch); (b) carry any **hard question** the recruiter flagged (Section 1) into Section 3 probes — a question a recruiter flagged is very likely to resurface; (c) do not repeat company research verbatim, but do update it if new signals emerged during the recruiter call (check `notes.md` if present)
 - `profile/motivations.md` and `profile/values.md` — concise agent-facing versions (not `profile/verbose/`)
 
 ---

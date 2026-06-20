@@ -176,21 +176,47 @@ python3 .claude/tools/check_resume_length.py \
   "applications/{base name}/{base name}.json" --verbose
 ```
 
+The checker uses pixel-accurate Georgia 9pt character widths — not a flat chars/line estimate. Each bullet's cost is `ceil(pixel_width / 731px)` physical lines. Orphans (last line < 40% full) cost +0.3 LU.
+
 | Result | Action |
 |--------|--------|
-| **TARGET** (67–69 LU) | Optimal — full page, no orphans. Render directly. |
-| **GREEN** (< 70 LU) | Safe to render; expand lightly if < 67 LU. |
-| **AMBER** (70–77 LU) | Render HTML first, verify page count, then PDF. Trim until GREEN. |
-| **RED** (> 77 LU) | Aggressive trim required before any render. |
+| **SPARSE** (< 63 LU) | Page underfilled — restore trimmed bullets or expand existing ones. |
+| **TARGET** (63–73 LU) | Optimal fill — render directly. |
+| **GREEN** (< 74 LU) | Safe to render PDF directly. |
+| **AMBER** (74–81 LU) | Render HTML first, verify page count, then PDF. Trim until GREEN. |
+| **RED** (> 81 LU) | Aggressive trim required before any render. |
 
 **Trimming / expanding strategy:**
-- Target 67–69 LU (fills the page completely, one orphan-free LU ≈ one physical line).
-- Each bullet costs `ceil(len / 110)` LU: ≤110 chars = 1 LU; 111–220 chars = 2 LU; 221–330 chars = 3 LU.
-- **Orphan zone (111–154 chars):** costs 2 LU but leaves the second line mostly empty. Fix by shortening to ≤ 110 chars OR extending to ≥ 155 chars.
-- **Bullet sweet spots:** ≤ 110 chars (1 LU, clean line) or 155–220 chars (2 LU, both lines ≥ 40% full).
-- If under 67 LU: expand short bullets by adding context, or restore trimmed bullets from the base resume.
-- If over 70 LU: trim least-relevant roles first. Prefer Vinted and Tourlane; trim Keppel/LucaNet/Community first.
-- Re-run after each change. Only render once GREEN.
+- Target 63–73 LU. The checker reports pixel widths — use those, not char counts.
+- A bullet fits on one line if its pixel width < 731px. If it wraps, it costs 2 LU; if the second line is < 40% full, it's an orphan (+0.3 LU).
+- **Orphan fix:** shorten until the bullet fits on one line (pixel width < 731px), or extend until the second line is at least 40% full (pixel width > 731 × 1.4 = 1024px).
+- If SPARSE: expand short bullets by adding context, or restore trimmed bullets from the base resume.
+- If over 74 LU: trim least-relevant roles first. Prefer Vinted and Tourlane; trim Keppel/LucaNet/Community first.
+- Re-run after each change. Only render once GREEN or TARGET.
+
+**ATS keyword verification (run after reaching GREEN/TARGET):**
+
+After the length check passes, verify that the ATS keywords from Layer B actually appear in the visible resume text (summary + bullets + skills). Run:
+
+```bash
+python3 -c "
+import json, sys
+data = json.load(open('applications/{base name}/{base name}.json'))
+keywords = data.get('meta', {}).get('pillHighlights', [])
+text = ' '.join([data.get('summary','')] +
+  [b for job in data.get('experience',[]) for b in job.get('bullets',[])] +
+  [b for edu in data.get('education',[]) for b in edu.get('bullets',[])] +
+  [i for cat in data.get('skills',{}).get('technical',[]) for i in cat.get('items',[])])
+missing = [k for k in keywords if k.lower() not in text.lower()]
+if missing:
+    print('MISSING keywords (not in visible text):')
+    for k in missing: print(f'  - {k}')
+else:
+    print('All ATS keywords present in visible text.')
+"
+```
+
+For any missing keyword: either weave it into a bullet or the summary, or remove it from `pillHighlights` if it genuinely cannot be covered without fabricating.
 
 ---
 
@@ -209,7 +235,21 @@ If PDF generation fails, tell the user to open the HTML in Chrome → File → P
 
 ---
 
-## Step 9 — Generate the cover letter
+## Step 9 — Pre-send checklist
+
+Before generating the cover letter, run this checklist and report any failures:
+
+1. **Page count:** PDF renders as exactly 1 page. (Check pdfinfo output from Step 8, or open in Preview.)
+2. **ATS keywords:** All `pillHighlights` keywords appear in visible resume text. (Verified in Step 7.)
+3. **Company/role match:** The company name and job title in the JSON `meta` match the JD.
+4. **No personal pronouns:** Summary contains none of: I, my, me, we, our.
+5. **Metrics preserved:** All quantified figures from base resume (€1.6m, 90%, 75%, 88%→97%) that were included are unchanged.
+
+Report: `✓ Pre-send checklist: N/5 passed` — list any failures with one-line fix.
+
+---
+
+## Step 10 — Generate the cover letter
 
 Write `applications/{base name}/{base name}-cover-letter.md`.
 
@@ -235,7 +275,7 @@ Write `applications/{base name}/{base name}-cover-letter.md`.
 
 ### Cover letter structure (industry roles)
 
-**P1 — Why this company:** Something specific — a product decision, growth signal, technical choice, or mission element that connects with Jeremy's values. Not "I am writing to apply for...". Tone: curious, direct, grounded.
+**P1 — Why this company:** Something specific — a product decision, growth signal, technical choice, or mission element that connects with Jeremy's values. Not "I am writing to apply for...". Tone: curious, direct, grounded. If a `recruiter-prep.md` exists in the application folder, pull the **Suggested opening hook** from Section 4 of that document and adapt it here — that research is already done. Otherwise derive the hook from the JD and Layer B analysis.
 
 **P2 — Why you fit:** 2–3 concrete capability matches, leading with the most relevant quantified achievement. Connect directly to the JD's top-listed responsibilities and Layer B repeated themes. Not a resume recap — a tight argument for fit.
 
@@ -249,7 +289,7 @@ Write `applications/{base name}/{base name}-cover-letter.md`.
 
 ---
 
-## Step 10 — Report
+## Step 11 — Report
 
 Tell the user:
 - Output folder: `applications/{base name}/`
