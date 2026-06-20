@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "version": "2026-06-20_1komma5grad_senior-analytics-engineer-growth",
+    "lastUpdated": "2026-06-20",
+    "targetRole": "Senior Analytics Engineer - Growth",
+    "targetCompany": "1KOMMA5°",
+    "sourceUrl": "https://1komma5grad.jobs.personio.de/job/2622556?display=en&language=en",
+    "alignmentSignal": "Green — autonomous IC role with full domain ownership, dbt/BigQuery stack, mentoring scope, and directness-valued culture. Minor amber note: marketing attribution (CPL, CAC, ROAS) is adjacent to Jeremy's finance analytics background, not identical.",
+    "behaviouralInsights": [
+      "Top priority: deep ownership of marketing data models — the JD asks someone who knows models 'by heart'",
+      "Ownership language repeated 3+ times — they want autonomous accountability, not collaborative execution",
+      "Pipeline stability is a fear — frame achievements as reliability wins and incident reduction",
+      "Mentoring and bus-factor reduction signal knowledge concentration risk — surface teaching and documentation",
+      "Mastery-obsessed culture: answer any question within minutes — depth over breadth",
+      "No stakeholder management or executive communication language — hands-on builder is the hire"
+    ],
+    "adaptationNotes": [
+      "Summary reframed around data model ownership and pipeline reliability rather than finance domain",
+      "Vinted first bullet rewritten to lead with end-to-end model ownership as single source of truth",
+      "Pipeline reliability and 90% misstatement risk reduction moved to second bullet — addresses stability fear",
+      "dbt unit test coverage bullet repositioned to highlight quality infrastructure ownership",
+      "Tourlane first bullet rewritten to lead with sole ownership of data products roadmap — mirrors JD ownership signal",
+      "Tourlane pipeline SLA improvement (88%→97%) highlighted as reliability win",
+      "Skills: dbt and BigQuery moved to front of Data Engineering; Looker moved forward in Analytics; added web analytics context",
+      "Volunteering omitted — no direct signal for marketing analytics IC role",
+      "pillHighlights replaced with 15 ATS keywords from Layer B analysis"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Growth and Marketing Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "90% cut in misstatement risk on €40m exposure — built through dbt and BigQuery data models owned end-to-end. Six years of analytics engineering across high-growth startups in Europe, specialising in pipeline reliability and scalable data modeling. Chartered Accountant background sharpens metric definition and attribution logic across complex, multi-source datasets.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Own end-to-end dbt and BigQuery data models — single source of truth for Finance Ops and Group Reporting at month-end close.",
+        "90% reduction in misstatement risk on €40m exposure — through dbt tests, reconciliations, and anomaly detection.",
+        "Faster incident detection — redesigned alerting and extended pipeline monitoring to cut time-to-detect data issues.",
+        "Embedded a risk-based control framework into core datasets, detecting billing discrepancies and recovering €1.6m in overcharges.",
+        "75% cut in pipeline runtimes and 1.5TB/day reduction in query volume — incremental model redesign and BigQuery storage optimisation.",
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks; authored a reusable testing guide independently adopted by teammates.",
+        "Designed and facilitated the first cross-functional data workshop across VGo DSA, Finance Operations, and Group Finance — producing shared priorities and earning praise from all three teams."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Owned the Finance Data Products roadmap as the sole analyst — setting priorities, building models, and owning delivery end-to-end.",
+        "Built a centralised transformation layer in dbt and Snowflake — ingesting from Salesforce, Stripe, Twilio, and backend systems via Fivetran — to power finance and operational analytics across the business.",
+        "Hardened data pipelines in partnership with engineering, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close.",
+        "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting and planning cycle times by up to 50%."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Built Power BI and Tableau dashboards tracking KPIs for 140 staff across 5 process areas, improving service delivery transparency.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
+    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "BigQuery", "SQL", "Python", "Snowflake", "Fivetran", "Apache Airflow", "R", "Scala"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Tableau", "Looker Studio", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "analytics engineering",
+    "dbt",
+    "BigQuery",
+    "data modeling",
+    "marketing data pipelines",
+    "marketing attribution",
+    "cross-functional data projects",
+    "Looker",
+    "data ingestion",
+    "performance-marketing",
+    "CPL",
+    "CAC",
+    "ROAS",
+    "LTV",
+    "GTM"
+  ]
+}
