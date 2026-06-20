@@ -5,7 +5,7 @@ allowed-tools: Read Write Bash WebSearch WebFetch
 argument-hint: <application-folder-name or partial match>
 ---
 
-`$ARGUMENTS` is a full or partial application folder name (e.g. `lego` or `2026-04-08_lego_senior-analytics-engineer`). Run through these steps in order.
+`$ARGUMENTS` is a full or partial application folder name (e.g. `lego` or `2026-04-08_lego_senior-analytics-engineer`). Work through these steps **in order, completing each fully before starting the next**.
 
 ---
 
@@ -22,6 +22,8 @@ Set `{folder}` to the full folder name and `{path}` to `applications/{folder}`.
 ---
 
 ## Step 2 — Read the source files
+
+Read **all** of these before proceeding to Step 3. Do not proceed until all reads are complete.
 
 - `{path}/jd.md` — role title, company, responsibilities, requirements
 - `{path}/{folder}.json` — `meta.behaviouralInsights`, `meta.adaptationNotes`, `summary`, `experience` bullets
@@ -188,10 +190,38 @@ Pick 1–2 for the call; have the others ready if the conversation opens up. Eac
 
 ---
 
+## Step 5b — Self-critique pass (MANDATORY before saving)
+
+After drafting, review the document against this checklist. Fix any failures before writing the file.
+
+**Research quality:**
+- [ ] Every specific fact in Section 4 has a source URL — or is explicitly marked as "not found"
+- [ ] The opening hook in Section 4 contains a real number or named fact — not a generic observation about their industry
+- [ ] Business model and competitive position sections contain actual claims, not hedged non-answers like "they operate in a competitive space"
+
+**STAR story prompts:**
+- [ ] Each theme is genuinely distinct — they don't all reduce to "built a data pipeline"
+- [ ] Each source bullet is the strongest match for that theme, not just the first bullet encountered
+- [ ] Each prompt ends with a reflection or learning question ("what would you do differently?")
+
+**Peak moment:**
+- [ ] The peak moment is phrased as natural speech, not a resume bullet ("I cut pipeline runtime from 6 hours to 40 minutes, which unblocked the finance team's month-end close" — not "Optimised pipeline performance by 89%")
+- [ ] It contains a quantified result
+
+**Questions:**
+- [ ] The business/strategy question references something specific from 3E or 3F — not a generic "what are your priorities" question
+- [ ] The ways-of-working question quotes or paraphrases a specific phrase from the JD
+
+**Tone:**
+- [ ] Closing statement contains no "excited", "thrilled", "passionate", or "look forward to hearing from you"
+- [ ] Opening hook leads with a fact, not a compliment ("Your Series B signals aggressive expansion" not "I'm impressed by what you've built")
+
+---
+
 ## Step 6 — Report
 
 Tell the user:
 - Output file: `{path}/recruiter-prep.md`
 - The three STAR themes identified
 - The selected Peak moment (one sentence)
-- Two or three most useful research findings
+- Two or three most useful research findings — and one finding that returned nothing (so the user knows what wasn't searchable)

@@ -7,7 +7,7 @@ argument-hint: <application-folder-name> <hiring-manager-name or LinkedIn profil
 
 `$ARGUMENTS` contains two parts: (1) a full or partial application folder name and (2) the hiring manager's name and/or LinkedIn profile URL or any biographical information the user has provided inline. Parse these from the input.
 
-Run through these steps in order.
+Work through these steps **in order, completing each fully before starting the next**.
 
 ---
 
@@ -24,6 +24,8 @@ Set `{folder}` to the full folder name and `{path}` to `applications/{folder}`.
 ---
 
 ## Step 2 — Read the source files
+
+Read **all** of these before proceeding. Do not proceed to Step 3 until all reads are complete.
 
 - `{path}/jd.md` — role title, company, responsibilities, requirements
 - `{path}/{folder}.json` — `meta.behaviouralInsights`, `meta.adaptationNotes`, `summary`, `experience` bullets
@@ -191,10 +193,37 @@ Pick 2 for the interview. The first two are highest signal.
 
 ---
 
+## Step 5b — Self-critique pass (MANDATORY before saving)
+
+After drafting the document, review it against this checklist. Fix any failures before writing the file.
+
+**Research quality:**
+- [ ] Section 1 contains at least one specific, sourced fact about the hiring manager (not just their title)
+- [ ] "What this means" in Section 1 is specific to this person — not a generic statement about business-first managers
+- [ ] The implicit fear in Section 2 names a specific failure mode, not a generic one ("someone who leaves in 12 months because they find the ambiguity frustrating" beats "someone who underperforms")
+
+**STAR stories:**
+- [ ] Each "Why this matters to {First Name}" sentence connects to what the manager personally needs right now — not just to what the JD says
+- [ ] Story prompts are adjusted for background type (business-first → outcome framing; engineering-first → decision and technical depth)
+- [ ] No two STAR themes overlap — they cover genuinely different dimensions
+
+**Questions:**
+- [ ] Each question references something specific from the research or JD (not a template)
+- [ ] The "ways of working" question quotes or paraphrases a specific phrase from the JD
+- [ ] The "their own journey" question would feel like an invitation to the interviewer, not an interrogation
+
+**Opening hook:**
+- [ ] Contains one specific fact (a number, a product decision, a growth signal) — not a generic observation
+- [ ] Does not contain "I am very interested in" or "I was thrilled to see"
+
+If the research in Step 3 returned little (LinkedIn blocked, no public presence), note that explicitly in Section 1 rather than filling with inference. Low-confidence claims must be labelled as such.
+
+---
+
 ## Step 6 — Report
 
 Tell the user:
 - Output file: `{path}/hiring-manager-prep.md`
-- The three STAR themes and which angle was used for each
-- The most important thing to know about the hiring manager (one sentence)
-- The one question from Section 5 most likely to create a memorable impression
+- The three STAR themes and which angle was used for each (business outcome / technical decision / initiative)
+- The most important thing to know about the hiring manager (one sentence — specific, not generic)
+- The one question from Section 5 most likely to create a memorable impression, and why

@@ -5,7 +5,7 @@ allowed-tools: WebFetch Read Write Bash
 argument-hint: <job-posting-url>
 ---
 
-`$ARGUMENTS` is a job posting URL. Run through these steps in order.
+`$ARGUMENTS` is a job posting URL. Work through these steps **in order, completing each fully before starting the next**. Steps marked **[BLOCKING]** require the agent to stop and wait for user input before continuing.
 
 ---
 
@@ -26,7 +26,9 @@ Fetch `$ARGUMENTS` with WebFetch. Do two layers of analysis:
 
 **Repetition = fear or desire:** Any theme appearing 3+ times signals a pain point (fear) or critical need (desire). Surface resume content that directly addresses it.
 
-**Seniority signals:** Phrases like "take ownership", "champion best practices", "translating to senior leadership" signal they want an autonomous IC. Lead the resume with outcomes and scale, not tasks.
+**Seniority signals:** Phrases like "take ownership", "champion best practices", "translating to senior leadership" signal they want an autonomous IC. Phrases like "manage stakeholders", "drive alignment", "own the roadmap" signal a manager-adjacent scope.
+- Autonomous IC signal → lead with outcomes and scale, not tasks
+- Manager-adjacent signal → lead with cross-functional influence and team multiplier effects
 
 **Loss aversion:** Compliance, governance, and reliability language signals fear of failure. Frame achievements as risk reduction and reliability wins, not just speed.
 
@@ -118,7 +120,8 @@ Append a **Layer B — Behavioural Analysis** section at the end of the file, af
 
 ## Step 4 — Read the base resume and profile
 
-Read the concise agent-facing versions (not `profile/verbose/`):
+Read **all** of these files now. Do not proceed to Step 5 until all reads are complete.
+
 - `resume-base.json` from the current directory
 - `profile/motivations.md`
 - `profile/values.md`
@@ -126,9 +129,13 @@ Read the concise agent-facing versions (not `profile/verbose/`):
 
 Use these to inform the summary rewrite and cover letter. Note the "what I'm optimising for" priorities from `motivations.md` and the green/red flags from `values.md` to judge genuine role alignment.
 
+**Alignment flag (carry into Step 5 meta):** After reading both the JD and the profile, make an honest judgement: does this role match what Jeremy is optimising for? Green = clear match. Amber = partial match with noted reservations. Red = genuine misalignment. Record this in `meta.alignmentSignal`.
+
 ---
 
 ## Step 5 — Produce the adapted JSON
+
+Re-read `resume-base.json` immediately before writing — do not rely on memory from Step 4.
 
 Write `applications/{base name}/{base name}.json`.
 
@@ -139,11 +146,17 @@ Write `applications/{base name}/{base name}.json`.
 
 ### Adapt
 
-**Summary:** Rewrite using Layer B insights. Mirror the JD's seniority and culture signals. Address the top fear or desire first. If the JD signals loss aversion, open with risk-reduction framing. If it signals ambition, open with scale and impact. Max 3 sentences. No personal pronouns.
+**Summary:** Rewrite using Layer B insights. Apply seniority framing from Step 1:
+- Autonomous IC signal → open with outcomes and scale; make the first sentence a quantified result
+- Manager-adjacent signal → open with cross-functional influence or team multiplier
+- Loss aversion signal → open with risk reduction or reliability win
+- Ambition signal → open with scale and impact
+
+Max 3 sentences. Each sentence under 20 words. No personal pronouns. No sentence lists more than two things — split if needed.
 
 **Experience bullets:** Apply primacy bias — the first bullet of each role must directly address the JD's top-listed responsibility or biggest repeated theme. Reorder all bullets by JD relevance. Lightly rephrase (word choice, emphasis) but preserve the underlying fact. Keep at least 2 bullets per role.
 
-Apply the **peak-end rule**: the last bullet of the most recent role must also be strong.
+Apply the **peak-end rule**: the last bullet of the most recent role must also be strong — a quantified result, not a process description.
 
 Apply **fluency**: short declarative sentences over long compound ones. Lead metrics first within a sentence ("90% reduction" before the explanation).
 
@@ -155,17 +168,45 @@ Apply **fluency**: short declarative sentences over long compound ones. Lead met
 
 **pillHighlights:** Replace with the 10–15 ATS phrases from Layer B.
 
-**meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"sourceUrl"`, `"behaviouralInsights"` array (Layer B findings), and `"adaptationNotes"`.
+**meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"sourceUrl"`, `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (Layer B findings), and `"adaptationNotes"`.
 
 ---
 
-## Step 6 — Probe for gaps (BEFORE rendering)
+## Step 5b — Self-critique pass (MANDATORY before proceeding)
+
+After writing the JSON, review every line of the summary and all bullets against this checklist. Fix any failures before moving to Step 6.
+
+**Summary checklist — fail any of these and rewrite:**
+- [ ] Sentence 1 contains a quantified result or a named scale signal
+- [ ] No sentence exceeds 20 words
+- [ ] No personal pronouns (I, my, me, we, our)
+- [ ] No sentence lists more than two things with commas
+- [ ] Does not open with "Experienced", "Seasoned", "Results-driven", or any other throat-clearing adjective
+
+**Bullet checklist — fail any of these and rewrite the offending bullet:**
+- [ ] No bullet opens with a gerund clause ("Leveraging...", "Working with...", "Collaborating...")
+- [ ] No bullet contains "demonstrating ability to", "showcasing expertise in", "with a track record of", "leveraging", "utilizing"
+- [ ] No bullet stacks more than one unrelated achievement — split it if so
+- [ ] No bullet ends with a gerund tail ("...delivering X while maintaining Y" → two sentences)
+- [ ] No bullet exceeds 2 lines — if it does, it is trying to do too much; split or trim
+- [ ] Every bullet in the most recent role leads with the impact, not the method
+- [ ] The first bullet of each role directly addresses the JD's top responsibility
+
+**After fixing:** Re-read the summary aloud. If any sentence takes more than one breath, shorten it. Re-read the first 3 bullets of the most recent role. If any sounds like a LinkedIn post or a ChatGPT response, rewrite it to sound like a person.
+
+---
+
+## Step 6 — Probe for gaps [BLOCKING]
+
+**Complete Step 5b before starting this step.**
 
 Identify JD requirements or themes weakly covered or absent in the base resume. For each genuine gap, ask a targeted question, e.g.:
 
 > "The JD emphasises Unity Catalog governance. Have you worked with any data catalog or governance tooling — even partially?"
 
-Limit to 3–5 questions. **Wait for the user to respond**, then update the JSON before proceeding.
+Limit to 3–5 questions. **Stop here and wait for the user to respond.** Do not render or proceed until the user answers. Then update the JSON with any new information before moving on.
+
+If the user says "no gaps" or "continue", proceed directly.
 
 ---
 
@@ -193,6 +234,8 @@ The checker uses pixel-accurate Georgia 9pt character widths — not a flat char
 - If SPARSE: expand short bullets by adding context, or restore trimmed bullets from the base resume.
 - If over 74 LU: trim least-relevant roles first. Prefer Vinted and Tourlane; trim Keppel/LucaNet/Community first.
 - Re-run after each change. Only render once GREEN or TARGET.
+
+**After any trim or expand, re-run the Step 5b bullet checklist** on any bullet you changed — trimming can introduce orphan clauses or strip the metric.
 
 **ATS keyword verification (run after reaching GREEN/TARGET):**
 
@@ -245,7 +288,7 @@ Before generating the cover letter, run this checklist and report any failures:
 4. **No personal pronouns:** Summary contains none of: I, my, me, we, our.
 5. **Metrics preserved:** All quantified figures from base resume (€1.6m, 90%, 75%, 88%→97%) that were included are unchanged.
 
-Report: `✓ Pre-send checklist: N/5 passed` — list any failures with one-line fix.
+Report: `✓ Pre-send checklist: N/5 passed` — list any failures with a one-line fix. Do not proceed to Step 10 until all 5 pass.
 
 ---
 
@@ -285,6 +328,20 @@ Write `applications/{base name}/{base name}-cover-letter.md`.
 
 ---
 
+### Cover letter self-critique (run before saving)
+
+After drafting, check every sentence against these rules. Fix before writing the file.
+
+- [ ] P1 does not open with "I am writing to apply" or "I was excited to see"
+- [ ] No sentence contains "passionate about", "excited to", "thrilled to", "look forward to hearing from you"
+- [ ] No paragraph exceeds 4 sentences
+- [ ] P2 leads with a quantified achievement, not a capability claim
+- [ ] P3 is omitted if there are no genuine gaps from Step 6
+- [ ] Total word count ≤ 350 (industry) — count and trim if over
+- [ ] Closing is `Best regards,\nJeremy Chia\n{City}, {Month} {Year}` — nothing after it
+
+---
+
 **Tone rules (both types):** European directness — confident without enthusiasm marketing. No "excited to", "passionate about", "thrilled to", "look forward to hearing from you". First person throughout. Dashes freely used. Close: `Best regards,\nJeremy Chia\n{City}, {Month} {Year}`
 
 ---
@@ -296,3 +353,4 @@ Tell the user:
 - Which files were created (JSON, HTML, PDF, cover letter)
 - Short bullet list of key adaptations (from `adaptationNotes`)
 - One sentence on main alignment and one on main gap (if any)
+- The `alignmentSignal` verdict from Step 4 — if Amber or Red, name the specific tension
