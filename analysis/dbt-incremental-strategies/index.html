@@ -1,0 +1,2847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>dbt Incremental Strategies — Interactive Visual Guide</title>
+<style>
+:root {
+  --bg:#0f1117; --surface:#1a1d27; --surface2:#222639; --surface3:#2a2e45;
+  --border:#2e3250; --text:#e2e8f0; --muted:#8892b0; --dim:#4a5568;
+  --orange:#f97316; --indigo:#818cf8; --green:#34d399; --red:#f87171;
+  --yellow:#fbbf24; --blue:#60a5fa; --purple:#c084fc; --teal:#2dd4bf;
+  --s-append:#34d399; --s-merge:#60a5fa; --s-di:#fbbf24;
+  --s-io:#c084fc; --s-mb:#f97316;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:14px}
+
+/* ── progress ── */
+#prog{height:3px;background:var(--border);position:sticky;top:0;z-index:200}
+#prog-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--indigo));width:0%;transition:width .25s}
+
+/* ── hero ── */
+.hero{padding:52px 24px 40px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(160deg,#1a1d27,#0f1117)}
+.hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-.03em;
+  background:linear-gradient(90deg,var(--orange),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+.hero p{color:var(--muted);font-size:1rem;max-width:560px;margin:0 auto}
+
+/* ── layout ── */
+.wrap{max-width:1200px;margin:0 auto;padding:40px 32px 100px}
+.sec-hd{margin-bottom:28px}
+.sec-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.sec-title{font-size:1.25rem;font-weight:700;margin-bottom:6px}
+.sec-sub{color:var(--muted);font-size:.88rem}
+section{margin-bottom:64px;padding-top:8px}
+
+/* ── cards ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:16px}
+.card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.88rem}
+
+/* ── strategy pill tabs ── */
+.strat-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0}
+.strat-tab{padding:7px 18px;border-radius:20px;border:2px solid var(--border);background:var(--surface2);
+  cursor:pointer;font-size:.82rem;font-weight:700;transition:all .15s;color:var(--muted)}
+.strat-tab:hover{border-color:var(--indigo);color:var(--text)}
+.strat-tab:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+.strat-tab.active{color:#fff}
+.strat-tab[data-s="append"].active {border-color:var(--s-append);background:#064e3b40;color:var(--s-append)}
+.strat-tab[data-s="merge"].active  {border-color:var(--s-merge);background:#1e3a5f40;color:var(--s-merge)}
+.strat-tab[data-s="di"].active     {border-color:var(--s-di);background:#451a0340;color:var(--s-di)}
+.strat-tab[data-s="io"].active     {border-color:var(--s-io);background:#3b076440;color:var(--s-io)}
+.strat-tab[data-s="mb"].active     {border-color:var(--s-mb);background:#43140740;color:var(--s-mb)}
+
+/* ── toggle switches ── */
+.toggles{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.toggle-group{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:6px 12px;font-size:.8rem}
+.toggle-group label{color:var(--muted);font-weight:600;white-space:nowrap}
+.toggle-group select{background:transparent;border:none;color:var(--text);font-size:.8rem;outline:none;cursor:pointer;padding:2px 4px}
+.toggle-group select option{background:var(--surface2)}
+.switch{position:relative;width:36px;height:20px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;inset:0;background:var(--border);border-radius:20px;cursor:pointer;transition:.2s}
+.slider::before{content:'';position:absolute;width:14px;height:14px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s}
+input:checked+.slider{background:var(--indigo)}
+input:checked+.slider::before{transform:translateX(16px)}
+
+
+/* ── simulator ── */
+.sim-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:20px}
+.sim-header{background:var(--surface2);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sim-title{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.sim-step-counter{font-size:.78rem;color:var(--muted);background:var(--surface3);border:1px solid var(--border);border-radius:6px;padding:3px 10px;white-space:nowrap}
+.sim-body{padding:24px 20px;display:grid;gap:20px}
+
+/* ── db table visual ── */
+.dbt-wrap{display:flex;flex-direction:column;gap:0}
+.dbt{border:1px solid var(--border);border-radius:8px;width:100%}
+.dbt-head{background:var(--surface2);padding:6px 12px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.dbt-cols{display:flex;background:#1a1d2780;border-bottom:1px solid var(--border)}
+.dbt-col{padding:4px 8px;font-size:.68rem;font-weight:700;color:var(--dim);flex:1;min-width:0}
+.dbt-col:nth-child(1){flex:0 0 28px}   /* id */
+.dbt-row{display:flex;border-top:1px solid var(--border);transition:all .35s;font-family:'Fira Code',monospace;font-size:.72rem}
+.dbt-row .c{padding:5px 8px;flex:1;min-width:0;white-space:nowrap}
+.dbt-row .c:nth-child(1){flex:0 0 28px;color:var(--muted)}
+.dbt-row .c:nth-child(6){color:var(--muted)}
+.dbt-row.r-new{background:#064e3b28}
+.dbt-row.r-upd{background:#1e3a5f35}
+.dbt-row.r-del{background:#7f1d1d30;opacity:.55;text-decoration:line-through}
+.dbt-row.r-dup{background:#7f1d1d28;outline:2px solid #f8717160}
+.dbt-row.r-scan{background:#fbbf2415;outline:1px solid #fbbf2440}
+.dbt-row.r-out{opacity:.25}
+.dbt-row.r-part-hit{background:#3b076430;outline:1px solid #c084fc50}
+.dbt-row.r-part-miss{opacity:.2}
+.dbt-row.r-batch{background:#43140730;outline:1px solid #f9731650}
+
+.arrow-col{display:flex;flex-direction:row;align-items:center;justify-content:center;padding:6px 0;gap:6px}
+.arrow-col .arr{font-size:1rem;color:var(--orange)}
+.arrow-col .arr-label{font-size:.62rem;color:var(--muted);white-space:nowrap}
+
+/* ── scan overlay label ── */
+.scan-zone{border:1px dashed #fbbf2470;border-radius:4px;padding:2px 6px;font-size:.68rem;color:var(--yellow);margin:4px 0;background:#fbbf2410}
+.scan-zone.hidden{display:none}
+
+/* ── step trace ── */
+.steps{display:flex;flex-direction:column;gap:0}
+.step{padding:10px 16px;border-left:2px solid var(--border);margin-left:8px;font-size:.82rem;color:var(--muted);position:relative;transition:all .25s}
+.step::before{content:'';position:absolute;left:-5px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--border);transition:background .25s}
+.step.active{color:var(--text);border-left-color:var(--orange)}
+.step.active::before{background:var(--orange)}
+.step.done{color:var(--green);border-left-color:var(--green)}
+.step.done::before{background:var(--green)}
+.step .step-sql{font-family:'Fira Code',monospace;font-size:.75rem;background:#0d1117;border:1px solid var(--border);border-radius:6px;padding:8px 12px;margin-top:6px;color:var(--blue);white-space:pre-wrap;word-break:break-word}
+.step .step-label{font-weight:600;margin-bottom:2px}
+.step .step-note{color:var(--muted);font-size:.78rem}
+
+/* ── animate btn ── */
+.run-btn{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;font-weight:700;font-size:.85rem;padding:10px 20px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s;white-space:nowrap}
+.run-btn:hover:not(:disabled){opacity:.85}
+.run-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.run-btn:disabled{opacity:.35;cursor:not-allowed}
+.run-btn.secondary{background:var(--surface2);border:1px solid var(--border);color:var(--text)}
+.run-btn.secondary:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+
+/* ── permutation grid ── */
+.perm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:16px}
+.perm-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;cursor:pointer;transition:all .2s}
+.perm-card:hover,.perm-card.active{border-color:var(--indigo);background:#2a2e45}
+.perm-card .perm-badge{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:8px}
+.perm-card .perm-title{font-size:.88rem;font-weight:700;margin-bottom:4px}
+.perm-card .perm-sub{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+/* ── predicates section ── */
+.pred-vis{display:grid;gap:16px}
+.pred-timeline{position:relative;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:16px 20px}
+.pred-timeline .tl-label{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.tl-bar{position:relative;height:36px;background:var(--surface3);border-radius:6px;overflow:hidden;margin-bottom:8px}
+.tl-segment{position:absolute;height:100%;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;white-space:nowrap;transition:all .3s}
+.tl-segment.seg-old{background:#1a1d2780;color:var(--dim);border-right:1px solid var(--border)}
+.tl-segment.seg-scan{background:#fbbf2425;border:1px solid #fbbf2460;color:var(--yellow)}
+.tl-segment.seg-new{background:#60a5fa20;color:var(--blue)}
+.tl-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.72rem;color:var(--muted)}
+.tl-dot{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:5px}
+
+/* ── predicate detail table ── */
+.pred-table{width:100%;border-collapse:collapse;font-size:.8rem}
+.pred-table th{background:var(--surface3);color:var(--muted);font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 12px;text-align:left;border-bottom:1px solid var(--border)}
+.pred-table td{padding:8px 12px;border-bottom:1px solid var(--border)}
+.pred-table tr:hover td{background:var(--surface2)}
+.pred-table .alias{font-family:'Fira Code',monospace;color:var(--orange);font-size:.75rem}
+.pred-table .desc{color:var(--muted)}
+
+/* ── code ── */
+pre{background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:14px 18px;overflow-x:auto;font-family:'Fira Code','Cascadia Code',monospace;font-size:.78rem;line-height:1.75;margin:10px 0}
+.kw{color:#c084fc} .str{color:#34d399} .cm{color:#4a5568;font-style:italic}
+.fn{color:#60a5fa} .var{color:#f97316} .hl{background:#fbbf2420;border-radius:2px;padding:0 2px}
+
+/* ── quiz ── */
+.quiz-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:20px}
+.q-prog{font-size:.75rem;color:var(--muted);margin-bottom:16px}
+.q-text{font-size:.95rem;font-weight:500;margin-bottom:14px}
+.q-opts{display:grid;gap:8px;margin-bottom:14px}
+.q-opt{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;cursor:pointer;font-size:.85rem;color:var(--text);text-align:left;transition:all .15s;width:100%}
+.q-opt:hover:not(:disabled){border-color:var(--indigo)}
+.q-opt.correct{border-color:var(--green);background:#064e3b35;color:var(--green)}
+.q-opt.wrong  {border-color:var(--red);  background:#7f1d1d35;color:var(--red)}
+.q-opt.reveal {border-color:var(--green);background:#064e3b20}
+.q-fb{font-size:.85rem;padding:10px 14px;border-radius:8px;margin-bottom:10px;display:none}
+.q-fb.show{display:block}
+.q-fb.ok{background:#064e3b35;border:1px solid var(--green);color:var(--green)}
+.q-fb.err{background:#7f1d1d35;border:1px solid var(--red);color:var(--red)}
+.q-score{text-align:center;padding:16px;display:none}
+.q-score.show{display:block}
+.score-n{font-size:2.8rem;font-weight:900;background:linear-gradient(90deg,var(--orange),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── adapter table ── */
+.adapt-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.adapt-table th{background:var(--surface2);color:var(--muted);font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 12px;border-bottom:1px solid var(--border);text-align:center}
+.adapt-table th:first-child{text-align:left}
+.adapt-table td{padding:8px 12px;border-bottom:1px solid var(--border);text-align:center;color:var(--dim)}
+.adapt-table td:first-child{text-align:left;color:var(--text);font-weight:600}
+.adapt-table tr:hover td{background:var(--surface2)}
+.chk{color:var(--green);font-size:1rem}
+.dash{color:var(--border)}
+
+/* ── nav ── */
+.sidenav{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:100}
+.snav-item{display:flex;align-items:center;gap:8px;cursor:pointer;position:relative}
+.snav-dot{width:7px;height:7px;border-radius:50%;background:var(--dim);transition:all .2s;flex-shrink:0}
+.snav-label{font-size:.68rem;color:var(--muted);white-space:nowrap;opacity:0;transform:translateX(4px);transition:all .2s;pointer-events:none;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;position:absolute;right:16px}
+.snav-item:hover .snav-label{opacity:1;transform:translateX(0)}
+.snav-item:hover .snav-dot,.snav-item.on .snav-dot{background:var(--orange);width:9px;height:9px}
+
+/* ── legend ── */
+.leg{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:.73rem;color:var(--muted)}
+.leg-item{display:flex;align-items:center;gap:5px}
+.leg-dot{width:9px;height:9px;border-radius:2px}
+.ld-new{background:#34d39950;border:1px solid var(--green)}
+.ld-upd{background:#60a5fa50;border:1px solid var(--blue)}
+.ld-del{background:#f8717150;border:1px solid var(--red)}
+.ld-scan{background:#fbbf2430;border:1px dashed var(--yellow)}
+.ld-part{background:#c084fc30;border:1px solid var(--purple)}
+.ld-out{background:#33333350;border:1px solid var(--dim)}
+.ld-dup{background:#f8717130;border:2px solid var(--red);border-radius:2px}
+
+/* ── note box ── */
+.note{background:#1a1d2780;border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:10px 14px;font-size:.8rem;color:var(--muted);margin:12px 0}
+.note strong{color:var(--indigo)}
+.note.warn{border-left-color:var(--yellow)}
+.note.warn strong{color:var(--yellow)}
+.note.danger{border-left-color:var(--red)}
+.note.danger strong{color:var(--red)}
+
+@media(max-width:700px){
+  .sim-sql-col{display:none}
+}
+@media(max-width:640px){
+  .sidenav{display:none}
+  .wrap{padding:24px 14px 80px}
+  .sim-header{flex-direction:column;align-items:flex-start;gap:10px}
+  .sim-header>div{width:100%}
+  .run-btn{flex:1;justify-content:center}
+  .strat-tabs{gap:4px}
+  .strat-tab{padding:6px 12px;font-size:.76rem}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"><div id="prog-fill"></div></div>
+
+<div class="hero">
+  <h1>dbt Incremental Strategies</h1>
+  <p>Step through every strategy, permute configurations, and see exactly what SQL dbt generates and which rows change.</p>
+</div>
+
+<nav class="sidenav" id="sidenav" aria-label="Page sections"></nav>
+<div class="wrap">
+
+<!-- ════════════════════════════════════════════════
+     SECTION 1 — Interactive Simulator
+════════════════════════════════════════════════ -->
+<section id="s-sim">
+  <div class="sec-hd">
+    <div class="sec-label">Simulator</div>
+    <div class="sec-title">What happens to your target table?</div>
+    <div class="sec-sub">Pick a strategy, adjust the config toggles, then step through the execution to see exactly which rows change.</div>
+  </div>
+
+  <!-- strategy tabs -->
+  <div class="strat-tabs" id="stratTabs" role="tablist" aria-label="Incremental strategy">
+    <div class="strat-tab active" data-s="append"  role="tab" aria-selected="true"  tabindex="0" onclick="selectStrategy('append')"  onkeydown="if(event.key==='Enter'||event.key===' ')selectStrategy('append')">append</div>
+    <div class="strat-tab"        data-s="merge"   role="tab" aria-selected="false" tabindex="0" onclick="selectStrategy('merge')"   onkeydown="if(event.key==='Enter'||event.key===' ')selectStrategy('merge')">merge</div>
+    <div class="strat-tab"        data-s="di"      role="tab" aria-selected="false" tabindex="0" onclick="selectStrategy('di')"      onkeydown="if(event.key==='Enter'||event.key===' ')selectStrategy('di')">delete+insert</div>
+    <div class="strat-tab"        data-s="io"      role="tab" aria-selected="false" tabindex="0" onclick="selectStrategy('io')"      onkeydown="if(event.key==='Enter'||event.key===' ')selectStrategy('io')">insert_overwrite</div>
+    <div class="strat-tab"        data-s="mb"      role="tab" aria-selected="false" tabindex="0" onclick="selectStrategy('mb')"      onkeydown="if(event.key==='Enter'||event.key===' ')selectStrategy('mb')">microbatch</div>
+  </div>
+
+  <!-- config toggles -->
+  <div class="toggles" id="simToggles"></div>
+
+  <!-- note area -->
+  <div id="simNote" class="note" style="display:none"></div>
+
+  <!-- two-column: simulator left, model SQL right -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
+
+    <!-- main simulator -->
+    <div class="sim-wrap" style="margin-bottom:0">
+      <div class="sim-header">
+        <span class="sim-title" id="simRunLabel">Source → Target</span>
+        <span class="sim-step-counter" id="simStepCounter" aria-live="polite"></span>
+        <div style="display:flex;gap:8px;align-items:center;margin-left:auto">
+          <button class="run-btn secondary" onclick="resetSim()" id="resetBtn" aria-label="Reset simulation">↺ Reset</button>
+          <button class="run-btn" onclick="stepSim()" id="runBtn" aria-label="Run next step">▶ Next step</button>
+          <button class="run-btn secondary" onclick="runAll()" id="allBtn" aria-label="Run all steps at once">Run all</button>
+        </div>
+      </div>
+      <div class="sim-body">
+        <div id="tableArea"></div>
+        <div id="stepArea" class="steps"></div>
+      </div>
+    </div>
+
+    <!-- dbt model: config + query together -->
+    <div class="card sim-sql-col" style="margin-bottom:0;position:sticky;top:16px">
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:8px">dbt model</div>
+      <pre id="genSQL" style="margin:0;font-size:.78rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;overflow:visible"></pre>
+    </div>
+
+  </div>
+
+  <!-- scan window indicator (predicates) -->
+  <div id="scanPanel" style="display:none;margin-top:16px"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 2 — Permutation Explorer
+════════════════════════════════════════════════ -->
+<section id="s-perm">
+  <div class="sec-hd">
+    <div class="sec-label">Scenarios</div>
+    <div class="sec-title">Common config combinations</div>
+    <div class="sec-sub">Click any scenario to load it into the simulator.</div>
+  </div>
+  <div class="perm-grid" id="permGrid"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 4 — Strategy deep-dives
+════════════════════════════════════════════════ -->
+<section id="s-deep">
+  <div class="sec-hd">
+    <div class="sec-label">Reference</div>
+    <div class="sec-title">Config options &amp; pitfalls</div>
+    <div class="sec-sub">Every config option for each strategy, with common mistakes to avoid.</div>
+  </div>
+  <div id="deepCards"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION — Risk Mitigation
+════════════════════════════════════════════════ -->
+<section id="s-risk">
+  <div class="sec-hd">
+    <div class="sec-label">Risk Mitigation</div>
+    <div class="sec-title">What can go wrong — and how to catch it</div>
+    <div class="sec-sub">Risks grouped by category. Each entry: what breaks, how to detect it before it hits production, and the fix.</div>
+  </div>
+
+  <!-- ── RISK 1: Duplicates ── -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--red)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-size:1.1rem">🔁</span>
+      <h3 style="margin:0">Duplicate rows</h3>
+      <span style="font-size:.72rem;color:var(--muted);font-weight:600">Affects: append · merge (no unique_key) · delete+insert (predicate trap)</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:8px">What breaks</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• <strong style="color:var(--text)">append without filter</strong> — every run re-inserts the full source. N runs = N copies of every row.</li>
+          <li>• <strong style="color:var(--text)">merge without unique_key</strong> — no MATCHED clause generated; behaves like append.</li>
+          <li>• <strong style="color:var(--text)">delete+insert + predicates + no filter</strong> — old rows survive the DELETE (predicate blocks it) then are re-inserted.</li>
+          <li>• <strong style="color:var(--text)">source duplicates on unique_key</strong> — BigQuery silently picks one; Snowflake errors; Spark behaviour is undefined.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);margin-bottom:8px">Detect</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Add a dbt test: <code>unique</code> on your <code>unique_key</code> column after every run.</li>
+          <li>• Monitor row count delta — a sudden 2× jump is a duplicate signal.</li>
+          <li>• dbt-expectations: <code>expect_column_values_to_be_unique</code> with alerting on failure.</li>
+        </ul>
+<pre style="font-size:.72rem;margin-top:8px"><span class="cm">-- schema.yml</span>
+models:
+  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null</pre>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:8px">Fix</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Always use <code>is_incremental()</code> filter with append and delete+insert.</li>
+          <li>• Deduplicate source before the strategy runs:</li>
+        </ul>
+<pre style="font-size:.72rem;margin-top:8px">select *
+from source
+qualify
+    row_number() over (
+        partition by order_id
+        order by updated_at desc
+    ) = 1</pre>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:5px">
+          <li>• If duplicates already exist: <code>dbt run --full-refresh</code> rebuilds clean.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RISK 2: Stale data ── -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--yellow)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-size:1.1rem">🕰️</span>
+      <h3 style="margin:0">Stale data (silent updates missed)</h3>
+      <span style="font-size:.72rem;color:var(--muted);font-weight:600">Affects: merge · delete+insert · insert_overwrite — all when predicate window is too narrow</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:8px">What breaks</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• A row changes in source but its date falls <strong style="color:var(--text)">outside the predicate window</strong> — the merge ON clause never sees it. Target retains old value forever, no error raised.</li>
+          <li>• Late-arriving events (e.g. mobile offline events syncing 48h later) miss a filter that only looks back 24h.</li>
+          <li>• insert_overwrite with a short lookback silently drops restated rows on old partitions.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);margin-bottom:8px">Detect</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Periodically compare target against source for rows within the last N days:</li>
+        </ul>
+<pre style="font-size:.72rem;margin-top:8px"><span class="cm">-- Staleness check: rows in source</span>
+<span class="cm">-- that differ from target</span>
+select s.order_id
+from source s
+join target t using (order_id)
+where s.updated_at > t.updated_at
+  and s.updated_at
+      > current_date - interval '30 days'</pre>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:5px">
+          <li>• dbt <code>source_freshness</code> checks flag when source hasn't updated recently.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:8px">Fix</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Size predicate window to your <strong style="color:var(--text)">actual late-arrival SLA</strong>, not a round number. If data can arrive 3 days late, use 4+ days.</li>
+          <li>• Filter on <code>updated_at</code>, not <code>event_date</code> — an event from last month can have a recent <code>updated_at</code> if it was corrected.</li>
+          <li>• For high-correctness requirements: run a weekly full-refresh as a safety net alongside daily incrementals.</li>
+          <li>• microbatch <code>lookback</code> config is the cleanest solution for time-series late arrivals.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RISK 3: Schema drift ── -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--orange)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-size:1.1rem">📐</span>
+      <h3 style="margin:0">Schema drift (silent column loss)</h3>
+      <span style="font-size:.72rem;color:var(--muted);font-weight:600">Affects: all strategies — controlled by <code>on_schema_change</code>, not the strategy itself</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:8px">What breaks</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Default <code>on_schema_change='ignore'</code> silently excludes new columns from the INSERT. The column exists in the model but not in the target — all values are NULL.</li>
+          <li>• Removed columns stay in the target with stale data unless <code>sync_all_columns</code> is used.</li>
+          <li>• Column type changes (e.g. INT → BIGINT) may silently cast or error depending on the warehouse.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);margin-bottom:8px">Detect</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• dbt test: <code>not_null</code> on columns that should always be populated — will catch the silent-NULL case.</li>
+          <li>• Compare <code>information_schema.columns</code> on source vs target after each run in a post-hook.</li>
+          <li>• Set <code>on_schema_change='fail'</code> in development — forces you to think about schema changes before they reach prod.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:8px">Fix</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Choose the right <code>on_schema_change</code> for your team's risk tolerance:</li>
+        </ul>
+<pre style="font-size:.72rem;margin-top:8px">{{ config(
+  materialized='incremental',
+  on_schema_change='append_new_columns'
+  <span class="cm">-- adds new cols; old cols stay</span>
+) }}</pre>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:5px">
+          <li>• For breaking changes: run <code>--full-refresh</code> to rebuild the table with the new schema.</li>
+          <li>• Document column changes in a migration log so downstream consumers know what changed and when.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RISK 4: Atomicity / partial failure ── -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--red)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-size:1.1rem">⚡</span>
+      <h3 style="margin:0">Partial failure (data loss mid-run)</h3>
+      <span style="font-size:.72rem;color:var(--muted);font-weight:600">Affects: delete+insert (non-atomic) · microbatch (batch-level failures)</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:8px">What breaks</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• <strong style="color:var(--text)">delete+insert</strong>: DELETE succeeds, INSERT fails (OOM, timeout, network). Matched rows are permanently deleted with no replacement. Table is in an incomplete state until re-run.</li>
+          <li>• <strong style="color:var(--text)">microbatch</strong>: a batch fails after deleting the target window but before re-inserting. That time window is empty in the target.</li>
+          <li>• Leftover <code>__dbt_tmp</code> tables block the next run with "relation already exists".</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);margin-bottom:8px">Detect</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Monitor row count after each run — a sudden drop (not just slower growth) signals a partial delete.</li>
+          <li>• Alert on dbt run failures immediately; don't let a partial state persist until the next scheduled run.</li>
+          <li>• Query <code>information_schema.tables</code> for orphaned <code>__dbt_tmp</code> tables as a health check.</li>
+        </ul>
+<pre style="font-size:.72rem;margin-top:8px"><span class="cm">-- Find orphaned temp tables</span>
+select table_name
+from information_schema.tables
+where table_name like '%__dbt_tmp'
+  and table_schema = 'your_schema'</pre>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:8px">Fix</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• <strong style="color:var(--text)">Prefer merge over delete+insert</strong> when the platform supports it — MERGE is a single atomic statement; failure leaves the target unchanged.</li>
+          <li>• Wrap delete+insert in an explicit transaction if your warehouse supports it (Postgres, Redshift):</li>
+        </ul>
+<pre style="font-size:.72rem;margin-top:6px"><span class="cm">-- post-hook or pre-hook approach</span>
+begin;
+  delete from {{ this }} where ...;
+  insert into {{ this }} select ...;
+commit;</pre>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:5px">
+          <li>• On failure: drop orphaned temp tables, then re-run. microbatch retries only the failed batch automatically on the next run.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RISK 5: Cost overrun ── -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--green)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-size:1.1rem">💸</span>
+      <h3 style="margin:0">Unexpected cost overrun</h3>
+      <span style="font-size:.72rem;color:var(--muted);font-weight:600">Affects: all strategies — particularly merge without predicates, microbatch with long history, full-refresh</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:8px">What breaks</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Merge without <code>incremental_predicates</code> full-scans the target on every run — expensive at 100M+ rows.</li>
+          <li>• <code>--full-refresh</code> on a microbatch model with <code>begin='2020-01-01'</code> generates 1,400+ individual SQL round-trips.</li>
+          <li>• insert_overwrite lookback set too wide rewrites far more partitions than necessary each run.</li>
+          <li>• Removing <code>is_incremental()</code> filter accidentally causes full source scan on every run.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);margin-bottom:8px">Detect</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Track bytes scanned and execution time per model in your warehouse's query history — a sudden spike on an incremental model signals a filter regression.</li>
+          <li>• Set warehouse cost alerts on query spend thresholds (Snowflake resource monitors, BigQuery budget alerts).</li>
+          <li>• Run <code>dbt compile</code> and inspect the compiled SQL before running expensive models — confirm the WHERE clause is present.</li>
+        </ul>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:12px 14px">
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:8px">Fix</div>
+        <ul style="font-size:.8rem;color:var(--muted);list-style:none;padding:0;display:flex;flex-direction:column;gap:5px">
+          <li>• Always pair large-table merge with <code>incremental_predicates</code>.</li>
+          <li>• Set <code>begin</code> on microbatch models as late as your use case permits.</li>
+          <li>• Treat <code>--full-refresh</code> as a deliberate operation, not a default fix — require team sign-off for prod models over a certain size.</li>
+          <li>• Use CI/CD to run <code>dbt compile --select model_name</code> and diff the compiled SQL against the previous version — catch accidental filter removal before it reaches prod.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Quick-reference matrix ── -->
+  <div class="card">
+    <h3 style="margin-bottom:14px">Risk quick-reference</h3>
+    <table class="adapt-table">
+      <thead>
+        <tr>
+          <th style="text-align:left">Risk</th>
+          <th>append</th>
+          <th>merge</th>
+          <th>delete+insert</th>
+          <th>insert_overwrite</th>
+          <th>microbatch</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Duplicate rows</td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--green);font-weight:700">Low</span></td>
+          <td><span style="color:var(--green);font-weight:700">Low</span></td>
+        </tr>
+        <tr>
+          <td>Stale / missed updates</td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--green);font-weight:700">Low</span></td>
+        </tr>
+        <tr>
+          <td>Schema drift (silent)</td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+        </tr>
+        <tr>
+          <td>Partial failure / data loss</td>
+          <td><span style="color:var(--green);font-weight:700">Low</span></td>
+          <td><span style="color:var(--green);font-weight:700">Low</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--green);font-weight:700">Low</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+        </tr>
+        <tr>
+          <td>Unexpected cost overrun</td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--yellow);font-weight:700">Med</span></td>
+          <td><span style="color:var(--red);font-weight:700">High</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:12px"><strong>Schema drift is High for all strategies</strong> because <code>on_schema_change</code> is independent of the strategy — it applies universally and defaults to <code>ignore</code> on every materialization.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 4c — Compiled SQL deep-dive per strategy
+════════════════════════════════════════════════ -->
+<section id="s-compiled">
+  <div class="sec-hd">
+    <div class="sec-label">Compiled SQL</div>
+    <div class="sec-title">What each strategy actually runs in the warehouse</div>
+    <div class="sec-sub">Macro → compiled SQL → edge cases. All examples use our <code>orders</code> dataset.</div>
+  </div>
+
+  <!-- APPEND -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--s-append)">
+    <h3 style="color:var(--s-append);margin-bottom:4px">append</h3>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px">Macro: <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/strategies.sql" target="_blank" style="color:var(--indigo)">get_incremental_append_sql</a> → plain INSERT</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">dbt model</div>
+<pre style="font-size:.78rem">{{ config(
+  materialized='incremental',
+  incremental_strategy='append'
+) }}
+
+SELECT id, date, name, status, amt
+FROM orders_source
+{% if is_incremental() %}
+  WHERE updated_at > (SELECT MAX(updated_at) FROM {{ this }})
+{% endif %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">compiled SQL (incremental run)</div>
+<pre style="font-size:.78rem"><span class="cm">-- Step 1: build temp table</span>
+<span class="kw">CREATE</span> <span class="kw">TABLE</span> orders__dbt_tmp <span class="kw">AS</span>
+<span class="kw">SELECT</span> id, date, name, status, amt
+<span class="kw">FROM</span> orders_source
+<span class="kw">WHERE</span> date > (<span class="kw">SELECT</span> <span class="kw">MAX</span>(date) <span class="kw">FROM</span> orders);
+
+<span class="cm">-- Step 2: append (get_incremental_append_sql)</span>
+<span class="kw">INSERT INTO</span> orders (id, date, name, status, amt)
+<span class="kw">SELECT</span> id, date, name, status, amt
+<span class="kw">FROM</span> orders__dbt_tmp;</pre>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">Edge cases</div>
+    <ul style="font-size:.8rem;color:var(--muted);padding-left:18px;display:flex;flex-direction:column;gap:6px">
+      <li><strong style="color:var(--text)">Source has a late-arriving row</strong> (e.g. order placed on Jan 8 but arrived Jan 12): if your filter is <code>WHERE date > MAX(date)</code> the late row is silently dropped forever because its date is older than the cursor. Use <code>updated_at</code> instead of event date when possible.</li>
+      <li><strong style="color:var(--text)">Restatement needed</strong>: append can't correct old rows. If order 2's status changes from pending → paid, the stale row stays. You must do a full refresh.</li>
+      <li><strong style="color:var(--text)">Filter uses same column as partition</strong> on BigQuery: <code>WHERE date > MAX(date)</code> requires a full scan of the target to compute MAX — negating partition pruning. Use a fixed lookback instead: <code>WHERE date >= DATE_SUB(CURRENT_DATE, INTERVAL 3 DAY)</code>.</li>
+      <li><strong style="color:var(--text)">No filter + append = geometric duplication</strong>: run N times → N copies of every row. Each full-refresh doubles the existing rows. Common in pipelines where <code>is_incremental()</code> block was accidentally deleted.</li>
+    </ul>
+  </div>
+
+  <!-- MERGE -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--s-merge)">
+    <h3 style="color:var(--s-merge);margin-bottom:4px">merge</h3>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px">Macro: <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/merge.sql" target="_blank" style="color:var(--indigo)">get_merge_sql</a> → MERGE INTO</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">dbt model</div>
+<pre style="font-size:.78rem">{{ config(
+  materialized='incremental',
+  unique_key='id',
+  incremental_strategy='merge'
+) }}
+
+SELECT id, date, name, status, amt
+FROM orders_source
+{% if is_incremental() %}
+  WHERE updated_at > (
+    SELECT MAX(updated_at) FROM {{ this }})
+{% endif %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">compiled SQL (incremental run)</div>
+<pre style="font-size:.78rem"><span class="cm">-- Step 1: temp table (rows 2, 5, 6)</span>
+<span class="kw">CREATE</span> <span class="kw">TABLE</span> orders__dbt_tmp <span class="kw">AS</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders_source
+<span class="kw">WHERE</span> updated_at > (<span class="kw">SELECT</span> <span class="kw">MAX</span>(updated_at)
+                    <span class="kw">FROM</span> orders);
+
+<span class="cm">-- Step 2: merge (get_merge_sql)</span>
+<span class="kw">MERGE INTO</span> orders <span class="kw">AS</span> DBT_INTERNAL_DEST
+<span class="kw">USING</span> orders__dbt_tmp <span class="kw">AS</span> DBT_INTERNAL_SOURCE
+  <span class="kw">ON</span> DBT_INTERNAL_DEST.id = DBT_INTERNAL_SOURCE.id
+<span class="kw">WHEN MATCHED THEN UPDATE SET</span>
+  name   = DBT_INTERNAL_SOURCE.name,
+  status = DBT_INTERNAL_SOURCE.status,
+  amt    = DBT_INTERNAL_SOURCE.amt,
+  date   = DBT_INTERNAL_SOURCE.date
+<span class="kw">WHEN NOT MATCHED THEN INSERT</span>
+  (id, date, name, status, amt)
+  <span class="kw">VALUES</span>
+  (DBT_INTERNAL_SOURCE.id, ...);</pre>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">With merge_update_columns: ['status','amt']</div>
+<pre style="font-size:.78rem;margin-bottom:12px"><span class="kw">WHEN MATCHED THEN UPDATE SET</span>
+  status = DBT_INTERNAL_SOURCE.status,   <span class="cm">-- only these two columns</span>
+  amt    = DBT_INTERNAL_SOURCE.amt
+  <span class="cm">-- name and date are NOT updated even if source changed them</span></pre>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">With incremental_predicates</div>
+<pre style="font-size:.78rem;margin-bottom:12px"><span class="kw">MERGE INTO</span> orders <span class="kw">AS</span> DBT_INTERNAL_DEST
+<span class="kw">USING</span> orders__dbt_tmp <span class="kw">AS</span> DBT_INTERNAL_SOURCE
+  <span class="kw">ON</span>  DBT_INTERNAL_DEST.id = DBT_INTERNAL_SOURCE.id
+  <span class="kw">AND</span> DBT_INTERNAL_DEST.date > dateadd(day,-7,current_date())
+  <span class="cm">-- rows OUTSIDE this window are never touched (not even scanned)</span></pre>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">Edge cases</div>
+    <ul style="font-size:.8rem;color:var(--muted);padding-left:18px;display:flex;flex-direction:column;gap:6px">
+      <li><strong style="color:var(--text)">unique_key on multiple columns</strong>: pass a list <code>unique_key=['order_id','line_item']</code>. dbt generates <code>ON DEST.order_id = SRC.order_id AND DEST.line_item = SRC.line_item</code>. If either column has NULLs, the ON condition is never true (SQL NULL ≠ NULL) so duplicates are inserted silently.</li>
+      <li><strong style="color:var(--text)">No unique_key</strong>: dbt omits the WHEN MATCHED clause entirely. The MERGE only inserts — identical to append. A common misconfiguration.</li>
+      <li><strong style="color:var(--text)">merge_update_columns AND merge_exclude_columns together</strong>: dbt raises a compilation error — they are mutually exclusive.</li>
+      <li><strong style="color:var(--text)">Predicate misses a changed row</strong>: if order 0 (Zara, 2024-01-01) is updated in source but the predicate window is <code>date > 2024-01-08</code>, the merge never sees row 0. The old value stays in the target forever with no error.</li>
+      <li><strong style="color:var(--text)">Full table scan without predicates</strong>: on a 100M row table, the MERGE ON clause scans all rows to find matches. Predicates reduce this to only the recent partition — often a 100× speedup.</li>
+      <li><strong style="color:var(--text)">Snowflake: merge inserts duplicate source rows</strong>: if the temp table has two rows with the same unique_key (e.g. event dedup failed upstream), Snowflake's MERGE errors with "non-deterministic MERGE". BigQuery silently picks one. Add deduplication in your model SQL.</li>
+    </ul>
+  </div>
+
+  <!-- DELETE+INSERT -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--s-di)">
+    <h3 style="color:var(--s-di);margin-bottom:4px">delete+insert</h3>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px">Macro: <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/merge.sql" target="_blank" style="color:var(--indigo)">get_delete_insert_merge_sql</a> → DELETE + INSERT (two statements)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">dbt model</div>
+<pre style="font-size:.78rem">{{ config(
+  materialized='incremental',
+  unique_key='id',
+  incremental_strategy='delete+insert'
+) }}
+
+SELECT id, date, name, status, amt
+FROM orders_source
+{% if is_incremental() %}
+  WHERE updated_at > (
+    SELECT MAX(updated_at) FROM {{ this }})
+{% endif %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">compiled SQL (two separate statements)</div>
+<pre style="font-size:.78rem"><span class="cm">-- Step 1: temp table</span>
+<span class="kw">CREATE</span> <span class="kw">TABLE</span> orders__dbt_tmp <span class="kw">AS</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders_source
+<span class="kw">WHERE</span> updated_at > (<span class="kw">SELECT</span> <span class="kw">MAX</span>(updated_at)
+                    <span class="kw">FROM</span> orders);
+
+<span class="cm">-- Step 2a: DELETE matching rows</span>
+<span class="kw">DELETE FROM</span> orders
+<span class="kw">WHERE</span> id <span class="kw">IN</span> (<span class="kw">SELECT</span> id <span class="kw">FROM</span> orders__dbt_tmp);
+
+<span class="cm">-- Step 2b: INSERT all temp rows</span>
+<span class="kw">INSERT INTO</span> orders (id, date, name, status, amt)
+<span class="kw">SELECT</span> id, date, name, status, amt
+<span class="kw">FROM</span> orders__dbt_tmp;</pre>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">With incremental_predicates — DELETE is scoped</div>
+<pre style="font-size:.78rem;margin-bottom:12px"><span class="cm">-- Step 2a becomes:</span>
+<span class="kw">DELETE FROM</span> orders
+<span class="kw">WHERE</span> id <span class="kw">IN</span> (<span class="kw">SELECT</span> id <span class="kw">FROM</span> orders__dbt_tmp)
+  <span class="kw">AND</span> date > dateadd(day,-7,current_date())
+<span class="cm">-- Step 2b still inserts ALL temp rows regardless of predicate</span>
+<span class="cm">-- → rows outside predicate window are re-inserted but never deleted → DUPLICATES</span></pre>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">Edge cases</div>
+    <ul style="font-size:.8rem;color:var(--muted);padding-left:18px;display:flex;flex-direction:column;gap:6px">
+      <li><strong style="color:var(--text)">Not atomic</strong>: DELETE and INSERT are two separate statements. A job failure between them leaves matched rows deleted with nothing in their place — data loss until re-run. Merge is atomic; delete+insert is not.</li>
+      <li><strong style="color:var(--text)">Predicate + no is_incremental filter = duplicates</strong>: without the filter, old rows appear in the temp table. The predicate blocks the DELETE for rows outside the window, but the INSERT still re-inserts them — creating two copies. Visible in the simulator above.</li>
+      <li><strong style="color:var(--text)">No unique_key</strong>: dbt errors at compile time — delete+insert needs a unique_key to know what to DELETE. Unlike merge (which silently falls back to append), this is a hard error.</li>
+      <li><strong style="color:var(--text)">unique_key is a list</strong>: generates <code>WHERE (col1, col2) IN (SELECT col1, col2 FROM tmp)</code>. Row-value constructors are not supported on all platforms — verify on your adapter first.</li>
+      <li><strong style="color:var(--text)">Slower than merge for row-level updates</strong>: every matched row is deleted then re-inserted (2 write ops). Merge updates in-place (1 write op). Delete+insert shines when the adapter doesn't support MERGE (e.g. some Redshift configurations).</li>
+    </ul>
+  </div>
+
+  <!-- INSERT_OVERWRITE -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--s-io)">
+    <h3 style="color:var(--s-io);margin-bottom:4px">insert_overwrite</h3>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px">Macro: <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/merge.sql" target="_blank" style="color:var(--indigo)">get_insert_overwrite_merge_sql</a> → INSERT OVERWRITE (partition-level replace)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">dbt model (BigQuery)</div>
+<pre style="font-size:.78rem">{{ config(
+  materialized='incremental',
+  incremental_strategy='insert_overwrite',
+  partition_by={
+    'field': 'date',
+    'data_type': 'date',
+    'granularity': 'day'
+  }
+) }}
+
+SELECT id, date, name, status, amt
+FROM orders_source
+{% if is_incremental() %}
+  WHERE date >= DATE_SUB(CURRENT_DATE, INTERVAL 3 DAY)
+{% endif %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">compiled SQL — dynamic partition mode</div>
+<pre style="font-size:.78rem"><span class="cm">-- Step 1: temp table (dates: 2024-01-09, 01-10, 01-11)</span>
+<span class="kw">CREATE</span> <span class="kw">TABLE</span> orders__dbt_tmp
+<span class="kw">PARTITION BY</span> DATE(date) <span class="kw">AS</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders_source
+<span class="kw">WHERE</span> date >= DATE_SUB(CURRENT_DATE, INTERVAL <span class="str">3</span> DAY);
+
+<span class="cm">-- Step 2: overwrite only the partitions present in temp</span>
+<span class="kw">INSERT</span> <span class="kw">INTO</span> orders
+  OVERWRITE <span class="kw">PARTITION</span> (date='2024-01-09'),
+            <span class="kw">PARTITION</span> (date='2024-01-10'),
+            <span class="kw">PARTITION</span> (date='2024-01-11')
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders__dbt_tmp;</pre>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">Static partition mode — you declare partitions explicitly</div>
+<pre style="font-size:.78rem;margin-bottom:12px">{{ config(
+  partitions=["'2024-01-10'", "'2024-01-11'"]   <span class="cm">-- hardcoded, must match data type</span>
+) }}
+
+<span class="cm">-- compiled: overwrites exactly those two dates even if temp has other dates</span>
+<span class="kw">INSERT</span> <span class="kw">INTO</span> orders OVERWRITE <span class="kw">PARTITION</span> (date=<span class="str">'2024-01-10'</span>), <span class="kw">PARTITION</span> (date=<span class="str">'2024-01-11'</span>)
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders__dbt_tmp;</pre>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">Edge cases</div>
+    <ul style="font-size:.8rem;color:var(--muted);padding-left:18px;display:flex;flex-direction:column;gap:6px">
+      <li><strong style="color:var(--text)">Source has a new row on an OLD partition date</strong>: if a late-arriving 2024-01-01 row arrives today and the filter only selects last 3 days, the row never enters the temp table → never overwrites the old partition → silently dropped. Use a longer lookback for event-time data with delays.</li>
+      <li><strong style="color:var(--text)">Dynamic mode is destructive at partition level</strong>: if the temp table selects 2024-01-10 rows, the entire 2024-01-10 partition is replaced — including rows that weren't in the source query. This is intentional but surprising when you share a partition across multiple models.</li>
+      <li><strong style="color:var(--text)">Static mode doesn't validate</strong>: if you declare <code>partitions=["'2024-01-10'"]</code> but your model selects 2024-01-11 rows too, they are overwritten (on some platforms) or silently dropped depending on partition mode. Always match your SELECT filter to your <code>partitions</code> list.</li>
+      <li><strong style="color:var(--text)">BigQuery only supports this natively</strong>: on Spark/Databricks, insert_overwrite uses <code>INSERT OVERWRITE</code> with dynamic partition mode. On Snowflake it's not supported — use merge or delete+insert instead.</li>
+      <li><strong style="color:var(--text)">No unique_key</strong>: insert_overwrite does not use unique_key at all. Within a partition, all rows from the source replace all rows in the target — no row-level dedup. If you write two rows with the same id into one partition, both will be there.</li>
+    </ul>
+  </div>
+
+  <!-- MICROBATCH -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--s-mb)">
+    <h3 style="color:var(--s-mb);margin-bottom:4px">microbatch</h3>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px">Macro: <code>get_incremental_microbatch_sql</code> — each adapter provides its own; default raises <code>not_implemented_for_adapter</code></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">dbt model</div>
+<pre style="font-size:.78rem">{{ config(
+  materialized='incremental',
+  incremental_strategy='microbatch',
+  event_time='created_at',
+  begin='2024-01-01',
+  batch_size='day',
+  lookback=1
+) }}
+
+SELECT id, created_at, name, status, amt
+FROM orders_source
+<span class="cm">-- NO is_incremental() filter needed —</span>
+<span class="cm">-- dbt injects the batch window automatically</span></pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">compiled SQL per batch (e.g. 2024-01-10)</div>
+<pre style="font-size:.78rem"><span class="cm">-- dbt generates one run per day between begin and now</span>
+<span class="cm">-- For batch date = 2024-01-10:</span>
+
+<span class="cm">-- Step 1: temp table — batch-scoped source</span>
+<span class="kw">CREATE</span> <span class="kw">TABLE</span> orders__dbt_tmp <span class="kw">AS</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders_source
+<span class="kw">WHERE</span> created_at >= <span class="str">'2024-01-10'</span>
+  <span class="kw">AND</span> created_at <  <span class="str">'2024-01-11'</span>;
+
+<span class="cm">-- Step 2: overwrite that batch window in target</span>
+<span class="kw">DELETE FROM</span> orders
+<span class="kw">WHERE</span> created_at >= <span class="str">'2024-01-10'</span>
+  <span class="kw">AND</span> created_at <  <span class="str">'2024-01-11'</span>;
+
+<span class="kw">INSERT INTO</span> orders
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> orders__dbt_tmp;</pre>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">lookback=1 in practice</div>
+<pre style="font-size:.78rem;margin-bottom:12px"><span class="cm">-- On 2024-01-12, with lookback=1 dbt reprocesses yesterday too:</span>
+<span class="cm">-- Batch 1: 2024-01-11 (yesterday — catches late-arriving rows)</span>
+<span class="cm">-- Batch 2: 2024-01-12 (today)</span>
+<span class="cm">-- Without lookback (lookback=0): only processes today</span></pre>
+    <div style="font-size:.78rem;color:var(--muted);margin-bottom:8px;font-weight:700">Edge cases</div>
+    <ul style="font-size:.8rem;color:var(--muted);padding-left:18px;display:flex;flex-direction:column;gap:6px">
+      <li><strong style="color:var(--text)">event_time must exist in the model SELECT</strong>: dbt uses it for both the temp table filter and the target DELETE. If you alias it (<code>created_at AS event_ts</code>), configure <code>event_time='event_ts'</code> — not the source column name.</li>
+      <li><strong style="color:var(--text)">begin is inclusive and permanent</strong>: on the first full run, dbt backfills from <code>begin</code> to now. With 3 years of data and <code>batch_size='day'</code> that's ~1095 individual SQL round-trips. On expensive warehouses this adds up quickly — set <code>begin</code> as recent as your use case allows.</li>
+      <li><strong style="color:var(--text)">Batch failures are independent</strong>: unlike append/merge (one run = one statement), a microbatch failure on 2024-01-10 doesn't affect 2024-01-11. dbt tracks batch status — failed batches are retried on the next run only if you enable <code>--retry-failed</code> or re-run manually.</li>
+      <li><strong style="color:var(--text)">is_incremental() always returns true inside a batch</strong>: there's no "full refresh" mode in the traditional sense — you control the window via <code>begin</code> and the run date. To re-process all history, change <code>begin</code> to an earlier date.</li>
+      <li><strong style="color:var(--text)">Not available on all adapters</strong>: BigQuery, Snowflake, Databricks, Postgres support it. Check your adapter version — microbatch was introduced in dbt 1.9.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 3 — Incremental Predicates Deep-dive
+════════════════════════════════════════════════ -->
+<section id="s-pred">
+  <div class="sec-hd">
+    <div class="sec-label">Incremental Predicates</div>
+    <div class="sec-title">Limiting the scan of the target table</div>
+    <div class="sec-sub">Without predicates, every merge scans the entire target table. With predicates, you restrict which rows dbt even looks at.</div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <h3>The problem: full table scans on merge</h3>
+    <p style="margin-bottom:12px">When dbt runs a merge, it generates SQL like:</p>
+<pre><span class="cm">-- Without predicates: scans ALL 500M rows in the target</span>
+<span class="kw">MERGE INTO</span> orders <span class="kw">AS</span> <span class="var">DBT_INTERNAL_DEST</span>
+<span class="kw">USING</span> orders__dbt_tmp <span class="kw">AS</span> <span class="var">DBT_INTERNAL_SOURCE</span>
+  <span class="kw">ON</span> <span class="var">DBT_INTERNAL_DEST</span>.order_id = <span class="var">DBT_INTERNAL_SOURCE</span>.order_id
+<span class="kw">WHEN MATCHED THEN UPDATE</span> ...
+<span class="kw">WHEN NOT MATCHED THEN INSERT</span> ...</pre>
+    <p>The <code>ON</code> clause forces the engine to join every row in the target against every row in the temp table. For a 500M-row table, that's a full scan on every incremental run.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <h3>The fix: incremental_predicates</h3>
+    <p style="margin-bottom:12px">Add a predicate that limits which rows of the <strong>target</strong> are even considered:</p>
+<pre><span class="cm">-- With incremental_predicates: only scans last 7 days in target</span>
+<span class="kw">MERGE INTO</span> orders <span class="kw">AS</span> <span class="var">DBT_INTERNAL_DEST</span>
+<span class="kw">USING</span> orders__dbt_tmp <span class="kw">AS</span> <span class="var">DBT_INTERNAL_SOURCE</span>
+  <span class="kw">ON</span>  <span class="var">DBT_INTERNAL_DEST</span>.order_id = <span class="var">DBT_INTERNAL_SOURCE</span>.order_id
+  <span class="kw">AND</span> <span class="hl"><span class="var">DBT_INTERNAL_DEST</span>.order_date &gt; <span class="fn">dateadd</span>(day, -7, <span class="fn">current_date</span>())</span>   <span class="cm">← predicate</span>
+<span class="kw">WHEN MATCHED THEN UPDATE</span> ...
+<span class="kw">WHEN NOT MATCHED THEN INSERT</span> ...</pre>
+    <div class="note warn"><strong>Important:</strong> The predicate constrains which rows in the <em>target</em> participate in the merge. Rows outside the predicate window are untouched — dbt can't update them even if the source changed. Only use this when you're confident late-arriving changes won't fall outside the window.</div>
+  </div>
+
+  <!-- interactive timeline -->
+  <div class="card">
+    <h3 style="margin-bottom:16px">Visualise the scan window</h3>
+    <div class="toggles" style="margin-bottom:16px">
+      <div class="toggle-group">
+        <label>Window</label>
+        <select id="predWindow" onchange="renderPredVis()">
+          <option value="7">Last 7 days</option>
+          <option value="30">Last 30 days</option>
+          <option value="3">Last 3 days</option>
+          <option value="0">No predicate (full scan)</option>
+        </select>
+      </div>
+      <div class="toggle-group">
+        <label>Late arrivals outside window?</label>
+        <label class="switch"><input type="checkbox" id="predLate" onchange="renderPredVis()"><span class="slider"></span></label>
+      </div>
+    </div>
+    <div id="predVis"></div>
+  </div>
+
+  <!-- alias table -->
+  <div class="card">
+    <h3 style="margin-bottom:12px">The two aliases inside a predicate</h3>
+    <table class="pred-table">
+      <thead><tr><th>Alias</th><th>What it refers to</th><th>Use it to…</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="alias">DBT_INTERNAL_DEST</span></td>
+          <td class="desc">The <strong>existing target table</strong> — all rows already materialised</td>
+          <td class="desc">Limit which rows of the target are scanned / eligible to be updated</td>
+        </tr>
+        <tr>
+          <td><span class="alias">DBT_INTERNAL_SOURCE</span></td>
+          <td class="desc">The <strong>temp table</strong> dbt built from your model SQL this run</td>
+          <td class="desc">Rarely used in predicates — more useful in custom macros to filter new data</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:12px"><strong>Tip:</strong> You can pass multiple predicates as a list — dbt ANDs them all together in the ON clause.</div>
+  </div>
+
+  <!-- predicates + is_incremental interplay -->
+  <div class="card">
+    <h3 style="margin-bottom:10px">Predicates vs. is_incremental() — two different filters</h3>
+    <p style="margin-bottom:12px;color:var(--muted)">These address different sides of the merge. Don't confuse them.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:var(--surface2);border-radius:8px;padding:14px;border-top:3px solid var(--blue)">
+        <div style="font-weight:700;margin-bottom:6px;font-size:.85rem">is_incremental() filter</div>
+        <div style="font-size:.8rem;color:var(--muted);margin-bottom:10px">Limits what goes into the <strong>source / temp table</strong>. Controls how much new data dbt even fetches.</div>
+<pre style="font-size:.72rem">{% if is_incremental() %}
+  where updated_at &gt;
+    (select max(updated_at)
+     from {{ this }})
+{% endif %}</pre>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:14px;border-top:3px solid var(--yellow)">
+        <div style="font-weight:700;margin-bottom:6px;font-size:.85rem">incremental_predicates</div>
+        <div style="font-size:.8rem;color:var(--muted);margin-bottom:10px">Limits which rows in the <strong>target table</strong> are scanned during the merge join.</div>
+<pre style="font-size:.72rem">incremental_predicates=[
+  "DBT_INTERNAL_DEST.session_start
+    &gt; dateadd(day,-7,current_date)"
+]</pre>
+      </div>
+    </div>
+    <div class="note" style="margin-top:12px"><strong>Best practice:</strong> Use both together on large tables — is_incremental() shrinks the source temp table, predicates shrink the target scan. This minimises data movement on both sides of the merge.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 4b — Custom strategies (real macros)
+════════════════════════════════════════════════ -->
+<section id="s-custom">
+  <div class="sec-hd">
+    <div class="sec-label">Under the Hood</div>
+    <div class="sec-title">How dbt-core dispatches strategies</div>
+    <div class="sec-sub">Source files in <a href="https://github.com/dbt-labs/dbt-adapters/tree/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental" target="_blank" style="color:var(--indigo)">dbt-labs/dbt-adapters · …/incremental/</a> — real macro signatures you can override.</div>
+  </div>
+
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;font-size:.78rem">
+    <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/incremental.sql" target="_blank" style="color:var(--indigo);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:5px 12px;text-decoration:none">incremental.sql</a>
+    <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/strategies.sql" target="_blank" style="color:var(--indigo);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:5px 12px;text-decoration:none">strategies.sql</a>
+    <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/merge.sql" target="_blank" style="color:var(--indigo);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:5px 12px;text-decoration:none">merge.sql</a>
+    <a href="https://github.com/dbt-labs/dbt-adapters/blob/main/dbt-adapters/src/dbt/include/global_project/macros/materializations/models/incremental/is_incremental.sql" target="_blank" style="color:var(--indigo);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:5px 12px;text-decoration:none">is_incremental.sql</a>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <h3 style="margin-bottom:10px">How dbt resolves a strategy</h3>
+    <p style="margin-bottom:12px">When dbt runs an incremental model it calls <code>adapter.get_incremental_strategy_macro()</code> to look up the macro named <code>get_incremental_&lt;strategy&gt;_sql</code>. That macro receives a single <code>arg_dict</code> dict and returns a SQL string.</p>
+<pre><span class="cm">-- incremental.sql (simplified from dbt-core)</span>
+{% <span class="kw">set</span> incremental_strategy = config.get(<span class="str">'incremental_strategy'</span>) <span class="kw">or</span> <span class="str">'default'</span> %}
+{% <span class="kw">set</span> incremental_predicates = config.get(<span class="str">'predicates'</span>, none)
+                              <span class="kw">or</span> config.get(<span class="str">'incremental_predicates'</span>, none) %}
+
+{% <span class="kw">set</span> strategy_arg_dict = {
+    <span class="str">'target_relation'</span>:      target_relation,
+    <span class="str">'temp_relation'</span>:        temp_relation,
+    <span class="str">'unique_key'</span>:           unique_key,
+    <span class="str">'dest_columns'</span>:         dest_columns,
+    <span class="str">'incremental_predicates'</span>: incremental_predicates
+} %}
+
+{% <span class="kw">set</span> strategy_sql_macro_func =
+    adapter.get_incremental_strategy_macro(context, incremental_strategy) %}
+{% <span class="kw">set</span> build_sql = strategy_sql_macro_func(strategy_arg_dict) %}</pre>
+  </div>
+
+  <!-- WHAT MOST PEOPLE MISS -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--red)">
+    <h3 style="margin-bottom:4px">What most people miss</h3>
+    <p style="font-size:.82rem;color:var(--muted);margin-bottom:16px">Five things about dbt internals that cause real production bugs — none of them obvious from the docs.</p>
+
+    <div style="display:flex;flex-direction:column;gap:0">
+
+      <div style="padding:14px 0;border-bottom:1px solid var(--border)">
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
+          <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);flex-shrink:0">1</span>
+          <span style="font-weight:700;font-size:.88rem"><code>on_schema_change</code> is completely separate from your strategy</span>
+        </div>
+        <p style="font-size:.81rem;color:var(--muted);margin-bottom:8px">Your incremental strategy controls <em>how rows are merged</em>. It knows nothing about columns. If you add a new column to your model, what happens to the target table depends entirely on <code>on_schema_change</code> — a separate config the strategy never touches.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-bottom:8px">
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem"><code style="color:var(--orange)">ignore</code> <span style="color:var(--muted)">(default)</span><br><span style="color:var(--muted);font-size:.75rem">New columns in model are silently dropped from INSERT. Your data is missing a column and you get no error.</span></div>
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem"><code style="color:var(--yellow)">fail</code><br><span style="color:var(--muted);font-size:.75rem">Run errors immediately if model and target schemas differ. Safe but requires manual intervention.</span></div>
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem"><code style="color:var(--green)">append_new_columns</code><br><span style="color:var(--muted);font-size:.75rem">Adds new columns to the target. Existing rows get NULL for the new column. Removed columns stay.</span></div>
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem"><code style="color:var(--blue)">sync_all_columns</code><br><span style="color:var(--muted);font-size:.75rem">Adds new and drops removed columns. The most aggressive option — verify before using in production.</span></div>
+        </div>
+        <div class="note danger"><strong>The silent killer:</strong> The default is <code>ignore</code>. You add a <code>revenue</code> column to your model, run dbt, no error — but every row in the target has NULL for revenue because the column was never added to the target table. You only notice on the dashboard.</div>
+      </div>
+
+      <div style="padding:14px 0;border-bottom:1px solid var(--border)">
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
+          <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);flex-shrink:0">2</span>
+          <span style="font-weight:700;font-size:.88rem">The temp table is a real warehouse table — and it can be left behind</span>
+        </div>
+        <p style="font-size:.81rem;color:var(--muted);margin-bottom:8px">dbt creates <code>orders__dbt_tmp</code> as an actual table in your warehouse before running the strategy SQL. If the run fails mid-way, this table is left behind. On the next run, dbt tries to create it again and gets a <em>"relation already exists"</em> error — which then masks the real error from the failed run.</p>
+<pre style="font-size:.76rem;margin-bottom:8px"><span class="cm">-- What dbt actually runs before your strategy SQL:</span>
+<span class="kw">CREATE</span> <span class="kw">TABLE</span> orders__dbt_tmp <span class="kw">AS</span>
+<span class="kw">SELECT</span> ... <span class="kw">FROM</span> your_model_sql;
+
+<span class="cm">-- If this step succeeds but the MERGE fails, __dbt_tmp persists.</span>
+<span class="cm">-- Next run: "RuntimeError: Relation already exists: orders__dbt_tmp"</span></pre>
+        <div class="note warn"><strong>Fix:</strong> dbt Cloud retries clean up temp tables automatically. On dbt Core, manually <code>DROP TABLE IF EXISTS orders__dbt_tmp</code> in your warehouse before retrying, or use <code>dbt run --full-refresh</code> which rebuilds from scratch.</div>
+      </div>
+
+      <div style="padding:14px 0;border-bottom:1px solid var(--border)">
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
+          <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);flex-shrink:0">3</span>
+          <span style="font-weight:700;font-size:.88rem"><code>is_incremental()</code> returns <code>false</code> on the first run — and on every full refresh</span>
+        </div>
+        <p style="font-size:.81rem;color:var(--muted);margin-bottom:8px">The macro checks whether the target relation already exists. If this is the first time you're running the model, or if you've run <code>dbt run --full-refresh</code> (which drops the table), <code>is_incremental()</code> returns <code>false</code> and your WHERE filter is skipped entirely — the model runs as a full load.</p>
+<pre style="font-size:.76rem;margin-bottom:8px"><span class="cm">-- is_incremental.sql (actual source):</span>
+{% <span class="kw">macro</span> is_incremental() %}
+  {%- <span class="kw">if</span> this in graph.nodes <span class="kw">and</span>
+      config.get(<span class="str">'materialized'</span>) == <span class="str">'incremental'</span> <span class="kw">and</span>
+      <span class="kw">not</span> flags.FULL_REFRESH -%}
+    {{ <span class="kw">return</span>(<span class="kw">True</span>) }}
+  {%- <span class="kw">else</span> -%}
+    {{ <span class="kw">return</span>(<span class="kw">False</span>) }}
+  {%- <span class="kw">endif</span> -%}
+{% <span class="kw">endmacro</span> %}</pre>
+        <div class="note"><strong>Implication:</strong> <code>--full-refresh</code> is not just a "reset" — it drops and rebuilds the whole table from scratch, scanning your entire source. On a 5-year event table this can be expensive. Use it deliberately, not as a default troubleshooting step.</div>
+      </div>
+
+      <div style="padding:14px 0;border-bottom:1px solid var(--border)">
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
+          <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);flex-shrink:0">4</span>
+          <span style="font-weight:700;font-size:.88rem">Adapters silently override built-in strategies</span>
+        </div>
+        <p style="font-size:.81rem;color:var(--muted);margin-bottom:8px">When you specify <code>incremental_strategy='merge'</code> on BigQuery, you are <em>not</em> running the global <code>get_incremental_merge_sql</code> macro. BigQuery's adapter ships its own override that adds partition-aware merge logic. The dispatch chain is: your project → installed packages → adapter → global project. The first match wins.</p>
+<pre style="font-size:.76rem;margin-bottom:8px"><span class="cm">-- Resolution order for get_incremental_merge_sql:</span>
+<span class="cm">-- 1. macros/ in your project   (your custom override, if any)</span>
+<span class="cm">-- 2. installed packages        (e.g. dbt-utils override)</span>
+<span class="cm">-- 3. adapter macro namespace   (e.g. dbt-bigquery's version)</span>
+<span class="cm">-- 4. global project            (the built-in fallback)</span>
+
+<span class="cm">-- This is why merge behaves differently on BigQuery vs Snowflake</span>
+<span class="cm">-- even with identical model config.</span></pre>
+        <div class="note"><strong>Debugging tip:</strong> Run <code>dbt compile</code> and inspect the compiled SQL in <code>target/compiled/</code>. That's the actual SQL that will execute — it removes all ambiguity about which macro won the dispatch race.</div>
+      </div>
+
+      <div style="padding:14px 0">
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
+          <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);flex-shrink:0">5</span>
+          <span style="font-weight:700;font-size:.88rem"><code>unique_key</code> is not a database constraint — duplicates in source cause silent data corruption</span>
+        </div>
+        <p style="font-size:.81rem;color:var(--muted);margin-bottom:8px">dbt uses <code>unique_key</code> purely to generate the ON clause of a MERGE statement. It does not enforce uniqueness in the source or the target. If your temp table contains two rows with the same <code>unique_key</code> value, each platform handles this differently — and only one of them tells you about it.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px">
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem;border-top:2px solid var(--red)"><strong>Snowflake</strong><br><span style="color:var(--muted);font-size:.75rem">Raises "non-deterministic MERGE" error. Safe — you know immediately.</span></div>
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem;border-top:2px solid var(--yellow)"><strong>BigQuery</strong><br><span style="color:var(--muted);font-size:.75rem">Silently picks one of the duplicate rows. Which one? Undefined. Your data is wrong and you get no error.</span></div>
+          <div style="background:var(--surface2);border-radius:6px;padding:8px 12px;font-size:.78rem;border-top:2px solid var(--yellow)"><strong>Spark / Databricks</strong><br><span style="color:var(--muted);font-size:.75rem">Default behaviour varies by config. May apply both updates sequentially, leaving the last one — or raise an error depending on <code>spark.sql.optimizer.canChangeMergeIntoConfig</code>.</span></div>
+        </div>
+        <div class="note danger"><strong>Fix:</strong> Deduplicate in your model SQL before the strategy runs: <code>SELECT * FROM source QUALIFY ROW_NUMBER() OVER (PARTITION BY id ORDER BY updated_at DESC) = 1</code>. Never rely on the warehouse to handle source duplicates gracefully.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <h3 style="margin-bottom:12px">Built-in strategy macro signatures (strategies.sql)</h3>
+    <table class="pred-table" style="width:100%">
+      <thead><tr><th>Macro</th><th>arg_dict keys used</th><th>Calls</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code style="color:var(--orange)">get_incremental_append_sql</code></td>
+          <td><code style="color:var(--muted);font-size:.75rem">target_relation, temp_relation, dest_columns</code></td>
+          <td class="desc">Generates a plain INSERT INTO … SELECT</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--orange)">get_incremental_merge_sql</code></td>
+          <td><code style="color:var(--muted);font-size:.75rem">target_relation, temp_relation, unique_key, dest_columns, incremental_predicates</code></td>
+          <td class="desc">Calls <code>get_merge_sql()</code> — supports merge_update_columns / merge_exclude_columns via config</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--orange)">get_incremental_delete_insert_sql</code></td>
+          <td><code style="color:var(--muted);font-size:.75rem">target_relation, temp_relation, unique_key, dest_columns, incremental_predicates</code></td>
+          <td class="desc">Calls <code>get_delete_insert_merge_sql()</code> — DELETE then INSERT, predicates applied to DELETE step</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--orange)">get_incremental_insert_overwrite_sql</code></td>
+          <td><code style="color:var(--muted);font-size:.75rem">target_relation, temp_relation, dest_columns, incremental_predicates</code></td>
+          <td class="desc">Calls <code>get_insert_overwrite_merge_sql()</code> — replaces partitions atomically</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--orange)">get_incremental_microbatch_sql</code></td>
+          <td><code style="color:var(--muted);font-size:.75rem">target_relation, temp_relation, unique_key, dest_columns, incremental_predicates</code></td>
+          <td class="desc">Default raises <code>not_implemented</code> — each adapter provides its own override</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--orange)">get_incremental_default_sql</code></td>
+          <td><code style="color:var(--muted);font-size:.75rem">arg_dict (passed through)</code></td>
+          <td class="desc">Delegates to <code>get_incremental_append_sql</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- WHY you'd need one -->
+  <div class="card" style="margin-bottom:14px">
+    <h3 style="margin-bottom:12px">When do you actually need a custom strategy?</h3>
+    <p style="margin-bottom:16px">The five built-in strategies cover the majority of cases. You reach for a custom strategy when a built-in assumption breaks down for your specific data, platform, or compliance requirement.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px">
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:12px 14px">
+        <div style="font-weight:700;font-size:.85rem;margin-bottom:5px">Your unique_key has NULLs</div>
+        <div style="font-size:.8rem;color:var(--muted)">SQL NULL ≠ NULL, so a standard MERGE ON key = key never matches NULL rows. A custom strategy can use <code>IS NOT DISTINCT FROM</code> (null-safe equality) in the ON clause — something the built-in merge macro doesn't expose.</div>
+      </div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:12px 14px">
+        <div style="font-weight:700;font-size:.85rem;margin-bottom:5px">You need a soft delete</div>
+        <div style="font-size:.8rem;color:var(--muted)">Built-in strategies physically delete or overwrite rows. If your compliance requirement is to keep deleted records with a <code>deleted_at</code> timestamp and <code>is_deleted=true</code> flag, no built-in strategy does this — you need a custom MERGE that sets those columns instead of deleting rows.</div>
+      </div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:12px 14px">
+        <div style="font-weight:700;font-size:.85rem;margin-bottom:5px">You need to preserve specific columns on update</div>
+        <div style="font-size:.8rem;color:var(--muted)"><code>merge_update_columns</code> and <code>merge_exclude_columns</code> are all-or-nothing whitelists/blacklists. A custom strategy can write conditional UPDATE logic: e.g. only overwrite <code>status</code> if the new value is a valid forward transition (pending → paid, never paid → pending).</div>
+      </div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:12px 14px">
+        <div style="font-weight:700;font-size:.85rem;margin-bottom:5px">Platform quirks</div>
+        <div style="font-size:.8rem;color:var(--muted)">Some platforms require non-standard syntax: Redshift's <code>MERGE</code> variant, Teradata's <code>UPSERT</code>, or Oracle's <code>MERGE ... MATCHED UPDATE WHERE</code> conditional. A custom strategy generates the exact dialect your warehouse expects.</div>
+      </div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:12px 14px">
+        <div style="font-weight:700;font-size:.85rem;margin-bottom:5px">You want to run multiple statements</div>
+        <div style="font-size:.8rem;color:var(--muted)">Built-in strategies produce a single SQL statement. A custom strategy can return a list of statements: e.g. DELETE expired rows, then MERGE new ones, then UPDATE a watermark table — all as one atomic operation under the same dbt run.</div>
+      </div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--indigo);border-radius:8px;padding:12px 14px">
+        <div style="font-weight:700;font-size:.85rem;margin-bottom:5px">Shared pattern across many models</div>
+        <div style="font-size:.8rem;color:var(--muted)">If 20 models all need the same bespoke upsert logic, copy-pasting SQL into every model is error-prone. A custom strategy encapsulates it once in a macro and lets every model reference it by name in config — a single place to maintain.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAMPLE 1: null-safe merge -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--indigo)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+      <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;background:#818cf820;color:var(--indigo);border:1px solid #818cf850">Example 1</span>
+      <h3 style="margin:0">Null-safe merge</h3>
+    </div>
+    <div style="font-size:.8rem;color:var(--muted);margin-bottom:14px">Use case: <strong style="color:var(--text)">Customer records where device_id can be NULL</strong> — a retail loyalty programme syncs customer profiles from a mobile app. Some users registered without a device (device_id is NULL). Standard MERGE skips them silently because NULL = NULL is false.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">macros/incremental_null_safe.sql</div>
+<pre>{% macro get_incremental_null_safe_sql(arg_dict) %}
+  {%- set target = arg_dict["target_relation"] -%}
+  {%- set source = arg_dict["temp_relation"] -%}
+  {%- set uk     = arg_dict["unique_key"] -%}
+
+  merge into {{ target }} as DEST
+  using {{ source }} as SRC
+    on  DEST.{{ uk }}
+        is not distinct from
+        SRC.{{ uk }}     -- NULL-safe equality
+  when matched then update set
+    email      = SRC.email,
+    tier       = SRC.tier,
+    updated_at = SRC.updated_at
+  when not matched then insert
+    ({{ uk }}, email, tier, updated_at)
+    values
+    (SRC.{{ uk }}, SRC.email, SRC.tier, SRC.updated_at)
+{% endmacro %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">models/customers.sql</div>
+<pre>{{ config(
+  materialized='incremental',
+  incremental_strategy='null_safe',
+  unique_key='device_id'
+) }}
+
+select
+    device_id,   -- can be NULL
+    email,
+    tier,
+    updated_at
+from {{ ref('raw_customers') }}
+{% if is_incremental() %}
+    where
+        updated_at
+        > (select max(updated_at) from {{ this }})
+{% endif %}</pre>
+        <div class="note" style="margin-top:10px"><strong>Why not use merge?</strong> Standard merge ON device_id = device_id evaluates to NULL (unknown) when either side is NULL — those rows are never matched and always inserted as duplicates. <code>IS NOT DISTINCT FROM</code> treats NULL = NULL as true.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAMPLE 2: soft delete -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--indigo)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+      <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;background:#818cf820;color:var(--indigo);border:1px solid #818cf850">Example 2</span>
+      <h3 style="margin:0">Soft delete (GDPR-safe audit trail)</h3>
+    </div>
+    <div style="font-size:.8rem;color:var(--muted);margin-bottom:14px">Use case: <strong style="color:var(--text)">Order management system with compliance requirements</strong> — a marketplace must retain a record of every order for 7 years but mark cancelled orders as deleted for the product team's reporting. Hard deletes violate the audit trail.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">macros/incremental_soft_delete.sql</div>
+<pre>{% macro get_incremental_soft_delete_sql(arg_dict) %}
+  {%- set target = arg_dict["target_relation"] -%}
+  {%- set source = arg_dict["temp_relation"] -%}
+
+  merge into {{ target }} as DEST
+  using {{ source }} as SRC
+    on DEST.order_id = SRC.order_id
+  when matched
+    and SRC.status = 'cancelled'
+    then update set
+      DEST.is_deleted  = true,
+      DEST.deleted_at  = SRC.updated_at,
+      DEST.status      = SRC.status
+  when matched
+    and SRC.status != 'cancelled'
+    then update set
+      DEST.status      = SRC.status,
+      DEST.updated_at  = SRC.updated_at
+  when not matched then insert
+    (order_id, status, is_deleted,
+     deleted_at, created_at, updated_at)
+    values
+    (SRC.order_id, SRC.status, false,
+     null, SRC.created_at, SRC.updated_at)
+{% endmacro %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">models/orders.sql</div>
+<pre>{{ config(
+  materialized='incremental',
+  incremental_strategy='soft_delete',
+  unique_key='order_id'
+) }}
+
+select
+    order_id,
+    status,
+    created_at,
+    updated_at
+from {{ ref('raw_orders') }}
+{% if is_incremental() %}
+    where
+        updated_at
+        > (select max(updated_at) from {{ this }})
+{% endif %}</pre>
+        <div class="note warn" style="margin-top:10px"><strong>Why not delete+insert?</strong> delete+insert physically removes the row then re-inserts it. That loses the original <code>created_at</code> and any audit columns not in the source. The soft delete strategy keeps all history intact and only flips the <code>is_deleted</code> flag.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAMPLE 3: SCD Type 2 -->
+  <div class="card" style="margin-bottom:14px;border-left:3px solid var(--indigo)">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+      <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;background:#818cf820;color:var(--indigo);border:1px solid #818cf850">Example 3</span>
+      <h3 style="margin:0">SCD Type 2 — full history tracking</h3>
+    </div>
+    <div style="font-size:.8rem;color:var(--muted);margin-bottom:14px">Use case: <strong style="color:var(--text)">Subscription pricing history for a SaaS platform</strong> — finance needs to know what price a customer was on at any point in time for revenue recognition. Standard merge overwrites the old price, losing history.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">macros/incremental_scd2.sql</div>
+<pre>{% macro get_incremental_scd2_sql(arg_dict) %}
+  {%- set target = arg_dict["target_relation"] -%}
+  {%- set source = arg_dict["temp_relation"] -%}
+
+  -- Step 1: close the current row for changed records
+  update {{ target }} as DEST
+  set
+    valid_to    = SRC.valid_from,
+    is_current  = false
+  from {{ source }} as SRC
+  where DEST.account_id = SRC.account_id
+    and DEST.is_current  = true
+    and DEST.monthly_price != SRC.monthly_price;
+
+  -- Step 2: insert new current row (changed + brand new)
+  insert into {{ target }}
+    (account_id, monthly_price,
+     valid_from, valid_to, is_current)
+  select
+    SRC.account_id,
+    SRC.monthly_price,
+    SRC.valid_from,
+    null,         -- open-ended: no end date yet
+    true
+  from {{ source }} as SRC
+  left join {{ target }} as DEST
+    on  DEST.account_id = SRC.account_id
+    and DEST.is_current = true
+  where DEST.account_id is null          -- net new accounts
+     or DEST.monthly_price
+        != SRC.monthly_price;            -- price changed
+{% endmacro %}</pre>
+      </div>
+      <div>
+        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">models/subscription_history.sql</div>
+<pre>{{ config(
+  materialized='incremental',
+  incremental_strategy='scd2',
+  unique_key='account_id'
+) }}
+
+select
+    account_id,
+    monthly_price,
+    current_timestamp() as valid_from
+from {{ ref('raw_subscriptions') }}
+{% if is_incremental() %}
+    where
+        updated_at
+        > (select max(valid_from) from {{ this }})
+{% endif %}</pre>
+        <div style="margin-top:10px;background:var(--surface2);border-radius:8px;padding:12px;font-size:.78rem">
+          <div style="font-weight:700;margin-bottom:8px;color:var(--muted)">Target table after two price changes:</div>
+          <table style="width:100%;border-collapse:collapse;font-family:'Fira Code',monospace;font-size:.72rem">
+            <tr style="color:var(--dim)"><td style="padding:3px 6px">account_id</td><td style="padding:3px 6px">price</td><td style="padding:3px 6px">valid_from</td><td style="padding:3px 6px">valid_to</td><td style="padding:3px 6px">current</td></tr>
+            <tr style="color:var(--muted)"><td style="padding:3px 6px">acct_1</td><td style="padding:3px 6px">$49</td><td style="padding:3px 6px">2024-01-01</td><td style="padding:3px 6px">2024-06-01</td><td style="padding:3px 6px">false</td></tr>
+            <tr style="color:var(--muted)"><td style="padding:3px 6px">acct_1</td><td style="padding:3px 6px">$79</td><td style="padding:3px 6px">2024-06-01</td><td style="padding:3px 6px">2024-11-01</td><td style="padding:3px 6px">false</td></tr>
+            <tr style="color:var(--green)"><td style="padding:3px 6px">acct_1</td><td style="padding:3px 6px">$99</td><td style="padding:3px 6px">2024-11-01</td><td style="padding:3px 6px">null</td><td style="padding:3px 6px">true ✓</td></tr>
+          </table>
+        </div>
+        <div class="note" style="margin-top:10px"><strong>Why not merge?</strong> Merge overwrites the single row — you'd only ever see the latest price. SCD2 keeps every historical row, closing the old one and opening a new one. Finance can query <code>WHERE valid_from &lt;= report_date AND (valid_to &gt; report_date OR valid_to IS NULL)</code> to get the price at any point in time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW to register -->
+  <div class="card" style="margin-bottom:14px">
+    <h3 style="margin-bottom:10px">How dbt finds your custom strategy</h3>
+    <p style="margin-bottom:12px">No registration needed. Name your macro <code>get_incremental_&lt;strategy_name&gt;_sql</code> and dbt resolves it by name at compile time via <code>adapter.get_incremental_strategy_macro()</code>.</p>
+<pre><span class="cm">-- macros/my_strategies.sql  (anywhere in your macros/ folder)</span>
+{% <span class="kw">macro</span> get_incremental_<span class="var">my_strategy</span>_sql(arg_dict) %}
+  <span class="cm">-- arg_dict always contains:</span>
+  <span class="cm">--   target_relation      → the existing table</span>
+  <span class="cm">--   temp_relation        → dbt's temp table this run</span>
+  <span class="cm">--   unique_key           → from model config</span>
+  <span class="cm">--   dest_columns         → list of column objects</span>
+  <span class="cm">--   incremental_predicates → list of predicate strings</span>
+  {% <span class="kw">do</span> return(<span class="fn">my_strategy_sql</span>(
+      arg_dict[<span class="str">"target_relation"</span>],
+      arg_dict[<span class="str">"temp_relation"</span>]
+  )) %}
+{% <span class="kw">endmacro</span> %}
+
+<span class="cm">-- Then in any model:</span>
+{{ config(
+    <span class="var">materialized</span>=<span class="str">'incremental'</span>,
+    <span class="var">incremental_strategy</span>=<span class="str">'my_strategy'</span>
+) }}</pre>
+    <div class="note" style="margin-top:10px"><strong>Delegating to a package:</strong> If a community package ships the strategy, re-export it with a one-liner: <code>{% macro get_incremental_null_safe_sql(arg_dict) %}{% do return(mypackage.get_incremental_null_safe_sql(arg_dict)) %}{% endmacro %}</code></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 5 — Adapter support
+════════════════════════════════════════════════ -->
+<section id="s-adapt">
+  <div class="sec-hd">
+    <div class="sec-label">Platform Support</div>
+    <div class="sec-title">Which strategies work where</div>
+    <div class="sec-sub">Check before configuring — unsupported strategies raise a runtime error.</div>
+  </div>
+  <div class="card" style="overflow-x:auto">
+    <table class="adapt-table">
+      <thead><tr><th>Adapter</th><th>append</th><th>merge</th><th>delete+insert</th><th>insert_overwrite</th><th>microbatch</th></tr></thead>
+      <tbody>
+        <tr><td>dbt-postgres</td>   <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-redshift</td>   <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-bigquery</td>   <td><span class="dash">–</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-spark</td>      <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-databricks</td> <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-snowflake</td>  <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-trino</td>      <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-fabric</td>     <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="dash">–</span></td></tr>
+        <tr><td>dbt-athena</td>     <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
+        <tr><td>dbt-teradata</td>   <td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="dash">–</span></td><td><span class="chk">✓</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SECTION 6 — Quiz
+════════════════════════════════════════════════ -->
+<section id="s-quiz">
+  <div class="sec-hd">
+    <div class="sec-label">Quiz</div>
+    <div class="sec-title">Test yourself</div>
+  </div>
+  <div class="quiz-wrap">
+    <div class="q-prog" id="qProg"></div>
+    <div id="qBody">
+      <div class="q-text" id="qText"></div>
+      <div class="q-opts" id="qOpts"></div>
+      <div class="q-fb"   id="qFb"></div>
+      <button class="run-btn" id="qNext" onclick="nextQ()" style="display:none">Next →</button>
+    </div>
+    <div class="q-score" id="qScore">
+      <div class="score-n" id="qScoreN"></div>
+      <div style="color:var(--muted);margin-top:6px" id="qScoreL"></div>
+      <button class="run-btn" onclick="restartQ()" style="margin-top:16px">Try again</button>
+    </div>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<script>
+// ══════════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════════
+
+// TARGET: what currently exists in the materialised table (3 rows)
+const TARGET_ROWS = [
+  {id:1, date:'2024-01-01', name:'Zara',  status:'paid',    amt:50,  updated_at:'2024-01-01'}, // old — outside predicate window
+  {id:2, date:'2024-01-09', name:'Bob',   status:'pending', amt:85,  updated_at:'2024-01-09'}, // will be updated
+  {id:3, date:'2024-01-10', name:'Carol', status:'paid',    amt:210, updated_at:'2024-01-10'}, // unchanged; MAX(updated_at) in target
+];
+
+// SOURCE: what the model SQL produces this run (4 rows)
+// updated_at > '2024-01-10' (MAX in target) → filter returns ids 2 and 4
+const SOURCE_ROWS = [
+  {id:1, date:'2024-01-01', name:'Zara',  status:'paid',    amt:50,  updated_at:'2024-01-01'}, // old, unchanged
+  {id:2, date:'2024-01-09', name:'Bob',   status:'paid',    amt:85,  updated_at:'2024-01-11'}, // status changed; updated_at bumped
+  {id:3, date:'2024-01-10', name:'Carol', status:'paid',    amt:210, updated_at:'2024-01-10'}, // unchanged
+  {id:4, date:'2024-01-11', name:'Eve',   status:'paid',    amt:300, updated_at:'2024-01-11'}, // new row
+];
+
+// NEW rows by id (exist in source, not in target)
+const NEW_IDS = [4];
+// CHANGED rows by id (exist in both, value differs)
+const CHANGED_IDS = [2];
+// Predicate window cutoff: rows with date <= this are OUTSIDE the window
+const PRED_CUTOFF = '2024-01-08';
+// Rows the is_incremental() filter returns (changed + new; old/unchanged excluded)
+const INC_FILTER_IDS = [2, 4];
+
+const STRATS = {
+  append: {
+    label:'append', color:'var(--s-append)',
+    toggles:[
+      {id:'ap_is_inc', type:'switch', label:'is_incremental() filter', default:true},
+    ],
+    note: null,
+    steps(cfg) {
+      const filter = cfg.ap_is_inc;
+      // With filter: only the new row (id 4). Changed row 2 and old row 1 are excluded.
+      // Without filter: all 4 source rows; ids 1,2,3 already exist → duplicated.
+      const tempIds = filter ? [4] : [1,2,3,4];
+      return [
+        {
+          label:'Build source temp table',
+          note: filter
+            ? 'is_incremental() filter selects only rows newer than the latest in target — catches new row 4 (Eve). Row 2\'s status change is invisible: append never looks for updates.'
+            : 'No filter — all 4 source rows selected every run.',
+          sql: filter
+            ? `SELECT * FROM source\nWHERE updated_at > (SELECT MAX(updated_at) FROM target)\n-- MAX(updated_at) in target = 2024-01-10\n-- Returns: row 4 (Eve, updated_at 2024-01-11)`
+            : `SELECT * FROM source\n-- Returns: all 4 rows`,
+          action:'source', tempIds,
+        },
+        {
+          label:'INSERT into target',
+          note:'All rows from temp table are appended. No match check, no deduplication.',
+          sql:`INSERT INTO target (id, date, name, status, amt)\nSELECT id, date, name, status, amt\nFROM target__dbt_tmp`,
+          action:'insert_all', isDuplicate: !filter,
+        },
+        {
+          label:'Done',
+          note: filter
+            ? 'Row 4 (Eve) inserted. Row 2\'s status change (pending→paid) was NOT applied — append never touches existing rows.'
+            : 'All 4 source rows inserted. Rows 1, 2, 3 now exist twice. Row 2 has both versions (pending and paid).',
+          sql:null, action:'done',
+        },
+      ];
+    },
+    sqlTemplate(cfg) {
+      const inc = cfg.ap_is_inc;
+      return `{{ config(
+  materialized='incremental',
+  incremental_strategy='append'
+) }}
+
+select id, date, name, status, amt
+from {{ ref('orders_source') }}
+${inc
+? `{% if is_incremental() %}
+    where
+        updated_at
+        > (select max(updated_at) from {{ this }})
+{% endif %}`
+: `-- No is_incremental() filter: selects ALL rows
+-- every run`}`;
+    },
+  },
+
+  merge: {
+    label:'merge', color:'var(--s-merge)',
+    toggles:[
+      {id:'mg_uk',      type:'switch',  label:'unique_key',             default:true},
+      {id:'mg_cols',    type:'switch',  label:'merge_update_columns',   default:false},
+      {id:'mg_excl',    type:'switch',  label:'merge_exclude_columns',  default:false},
+      {id:'mg_pred',    type:'switch',  label:'incremental_predicates', default:false},
+      {id:'mg_is_inc',  type:'switch',  label:'is_incremental() filter',default:true},
+    ],
+    note(cfg) {
+      if (cfg.mg_cols && cfg.mg_excl) return {type:'warn', text:'merge_update_columns and merge_exclude_columns are mutually exclusive. Use one or the other.'};
+      if (!cfg.mg_uk) return {type:'info', text:'Without unique_key, merge behaves like append — no MATCHED clause, rows are only inserted.'};
+      return null;
+    },
+    steps(cfg) {
+      const uk = cfg.mg_uk, pred = cfg.mg_pred, cols = cfg.mg_cols, excl = cfg.mg_excl, inc = cfg.mg_is_inc;
+      // With filter: row 2 (changed) + row 4 (new). Rows 1,3 (unchanged/old) excluded.
+      // Without filter: all 4 source rows.
+      const tempIds = inc ? [2,4] : [1,2,3,4];
+      return [
+        {
+          label:'Build source temp table',
+          note: inc
+            ? 'is_incremental() filter picks up row 2 (status changed) + row 4 (new). Rows 1 and 3 are excluded — unchanged.'
+            : 'No filter — all 4 source rows in temp, including old row 1 (Zara, 2024-01-01).',
+          sql: inc
+            ? `SELECT * FROM source\nWHERE updated_at > (SELECT MAX(updated_at) FROM target)\n-- MAX(updated_at) in target = 2024-01-10\n-- Returns: rows 2, 4 (updated_at 2024-01-11 > 2024-01-10)`
+            : `SELECT * FROM source\n-- Returns: all 4 rows`,
+          action:'source', tempIds,
+        },
+        pred ? {
+          label:'Apply incremental_predicates — restrict target scan',
+          note:`The predicate is appended to the MERGE ON clause. Only target rows with date > '${PRED_CUTOFF}' are considered for matching. Row 1 (Zara, 2024-01-01) is outside the window — invisible to the merge.`,
+          sql:`-- Added to MERGE ON clause:\nAND DBT_INTERNAL_DEST.date > '${PRED_CUTOFF}'\n-- Effect: row 1 (2024-01-01) excluded from scan`,
+          action:'scan_target',
+        } : null,
+        {
+          label: uk ? 'MERGE: match on unique_key (id)' : 'INSERT all (no unique_key — behaves like append)',
+          note: uk
+            ? (cols
+                ? 'MATCHED → only overwrite status and amt (merge_update_columns). name is preserved from target.'
+                : excl
+                  ? 'MATCHED → update all columns EXCEPT amt (merge_exclude_columns).'
+                  : 'MATCHED → overwrite all non-key columns. NOT MATCHED → insert new row.')
+            : 'No unique_key → no WHEN MATCHED clause. All temp rows inserted. Existing rows duplicated.',
+          sql: uk
+            ? `MERGE INTO target AS DBT_INTERNAL_DEST
+USING target__dbt_tmp AS DBT_INTERNAL_SOURCE
+  ON  DBT_INTERNAL_DEST.id = DBT_INTERNAL_SOURCE.id${pred ? `\n  AND DBT_INTERNAL_DEST.date > '${PRED_CUTOFF}'` : ''}
+WHEN MATCHED THEN UPDATE SET
+  ${cols
+    ? 'status = DBT_INTERNAL_SOURCE.status\n  -- amt NOT updated (not in merge_update_columns)'
+    : excl
+      ? 'name   = DBT_INTERNAL_SOURCE.name,\n  status = DBT_INTERNAL_SOURCE.status\n  -- amt excluded (merge_exclude_columns)'
+      : 'name   = DBT_INTERNAL_SOURCE.name,\n  status = DBT_INTERNAL_SOURCE.status,\n  amt    = DBT_INTERNAL_SOURCE.amt'}
+WHEN NOT MATCHED THEN INSERT (id, date, name, status, amt)
+  VALUES (DBT_INTERNAL_SOURCE.id, ...)`
+            : `-- No unique_key: only INSERT generated\nINSERT INTO target SELECT * FROM target__dbt_tmp`,
+          action: uk ? 'merge' : 'insert_all', isDuplicate: !uk,
+        },
+        {
+          label:'Done',
+          note: uk
+            ? `Row 2 updated (pending→paid). Row 4 inserted. Row 3 unchanged${inc ? ' (not in temp)' : ' (matched, no value change)'}.${pred ? ` Row 1 (Zara, 2024-01-01) was outside predicate window — not scanned.` : ''}`
+            : inc
+              ? 'No unique_key — rows 2 and 4 inserted. Row 2 now exists twice (pending + paid versions).'
+              : 'No unique_key — all 4 source rows inserted. Rows 1, 2, 3 now exist twice.',
+          sql:null, action:'done',
+        },
+      ].filter(Boolean);
+    },
+    sqlTemplate(cfg) {
+      const uk=cfg.mg_uk,cols=cfg.mg_cols,excl=cfg.mg_excl,pred=cfg.mg_pred,inc=cfg.mg_is_inc;
+      const extraCfg = [
+        cols ? `  merge_update_columns=['status', 'amt']` : '',
+        excl ? `  merge_exclude_columns=['created_at']` : '',
+        pred ? `  incremental_predicates=[\n    "DBT_INTERNAL_DEST.date > dateadd(day,-7,current_date())"\n  ]` : '',
+      ].filter(Boolean).map(s=>',\n'+s).join('');
+      return `{{ config(
+  materialized='incremental',${uk ? '' : '\n  -- no unique_key: behaves like append'}
+  unique_key='id',
+  incremental_strategy='merge'${extraCfg}
+) }}
+
+select id, date, name, status, amt
+from {{ ref('orders_source') }}
+${inc
+? `{% if is_incremental() %}
+    where
+        updated_at
+        > (select max(updated_at) from {{ this }})
+{% endif %}`
+: `-- WARNING: no is_incremental() filter
+-- selects all rows on every run`}`;
+    },
+  },
+
+  di: {
+    label:'delete+insert', color:'var(--s-di)',
+    toggles:[
+      {id:'di_uk',     type:'switch', label:'unique_key',              default:true},
+      {id:'di_pred',   type:'switch', label:'incremental_predicates',  default:false},
+      {id:'di_is_inc', type:'switch', label:'is_incremental() filter', default:true},
+    ],
+    note(cfg) {
+      if (!cfg.di_uk) return {type:'warn', text:'delete+insert requires a unique_key to know which rows to delete. Without it dbt will error.'};
+      return {type:'info', text:'delete+insert is NOT atomic on most platforms. A failure between the DELETE and INSERT leaves the table in a partial state.'};
+    },
+    steps(cfg) {
+      const pred=cfg.di_pred, inc=cfg.di_is_inc;
+      // With filter: rows 2 (changed) + 4 (new). Without filter: all 4 including old row 1.
+      const tempIds = inc ? [2,4] : [1,2,3,4];
+      return [
+        {
+          label:'Build source temp table',
+          note: inc
+            ? 'is_incremental() filter picks up row 2 (changed) + row 4 (new). Rows 1 and 3 excluded.'
+            : 'No filter — all 4 source rows, including old row 1 (Zara, 2024-01-01).',
+          sql: inc
+            ? `SELECT * FROM source\nWHERE updated_at > (SELECT MAX(updated_at) FROM target)\n-- MAX(updated_at) in target = 2024-01-10\n-- Returns: rows 2, 4 (updated_at 2024-01-11 > 2024-01-10)`
+            : `SELECT * FROM source\n-- Returns: all 4 rows`,
+          action:'source', tempIds,
+        },
+        {
+          label:'DELETE rows matching unique_key',
+          note: pred && !inc
+            ? `Predicate limits DELETE: only target rows with date > '${PRED_CUTOFF}' are eligible. Row 1 (Zara, 2024-01-01) is in temp but OUTSIDE the window — NOT deleted!`
+            : pred && inc
+              ? `Predicate window is date > '${PRED_CUTOFF}'. Temp has rows 2 (2024-01-09) and 4 (2024-01-11) — both inside the window, so all temp rows that exist in target are deleted normally.`
+              : 'No predicate — deletes ALL target rows whose id is in the temp table.',
+          sql:`DELETE FROM target\nWHERE id IN (SELECT id FROM target__dbt_tmp)${pred ? `\n  AND date > '${PRED_CUTOFF}'\n-- Row 1 (2024-01-01) NOT > '${PRED_CUTOFF}' → skipped` : ''}`,
+          action:'delete',
+        },
+        {
+          label:'INSERT all rows from temp table',
+          note: pred && !inc
+            ? 'Re-inserts all 4 temp rows — including row 1, which was never deleted. Row 1 now exists TWICE in the target.'
+            : 'Re-inserts each deleted row with its new values, plus truly new rows.',
+          sql:`INSERT INTO target (id, date, name, status, amt)\nSELECT id, date, name, status, amt FROM target__dbt_tmp`,
+          action:'insert_after_delete',
+        },
+        {
+          label:'Done',
+          note: pred && !inc
+            ? '⚠️ Row 1 (Zara) appears TWICE — predicate blocked the DELETE but INSERT still added it again. This is the predicate duplicate trap.'
+            : pred && inc
+              ? 'Row 2 replaced (pending→paid). Row 4 inserted. Row 1 untouched (not in temp). Safe — but if row 1 had changed upstream the predicate would have hidden it.'
+              : inc
+                ? 'Row 2 fully replaced (pending→paid). Row 4 inserted. Rows 1, 3 unchanged.'
+                : 'All existing target rows deleted and all 4 source rows re-inserted. Row 2 updated, row 4 new.',
+          sql:null, action:'done',
+        },
+      ];
+    },
+    sqlTemplate(cfg) {
+      const pred=cfg.di_pred, inc=cfg.di_is_inc;
+      return `{{ config(
+  materialized='incremental',
+  unique_key='id',
+  incremental_strategy='delete+insert'${pred ? `,\n  incremental_predicates=[\n    "DBT_INTERNAL_DEST.date > dateadd(day,-7,current_date())"\n  ]` : ''}
+) }}
+
+select id, date, name, status, amt
+from {{ ref('orders_source') }}
+${inc
+? `{% if is_incremental() %}
+    where
+        updated_at
+        > (select max(updated_at) from {{ this }})
+{% endif %}`
+: ''}`;
+    },
+  },
+
+  io: {
+    label:'insert_overwrite', color:'var(--s-io)',
+    toggles:[
+      {id:'io_static',  type:'select', label:'Partition type', options:['static','dynamic'], default:'dynamic'},
+      {id:'io_is_inc',  type:'switch', label:'is_incremental() filter', default:true},
+    ],
+    note(cfg) {
+      const stat = cfg.io_static==='static';
+      return stat
+        ? {type:'warn', text:'Static partition mode: you must explicitly list which partitions to overwrite. dbt will overwrite exactly those partitions, regardless of what data changed.'}
+        : {type:'info', text:'Dynamic partition mode (default): dbt infers which partitions to replace from the data in the temp table.'};
+    },
+    steps(cfg) {
+      const dynamic = cfg.io_static==='dynamic', inc=cfg.io_is_inc;
+      // With filter: rows 2,3,4 (dates 01-09,01-10,01-11). Row 1 (01-01) left untouched.
+      // Without filter: all 4 rows, all dates.
+      const tempIds = inc ? [2,3,4] : [1,2,3,4];
+      const affectedDates = inc
+        ? ['2024-01-09','2024-01-10','2024-01-11']
+        : ['2024-01-01','2024-01-09','2024-01-10','2024-01-11'];
+      const untouchedDates = inc ? ['2024-01-01'] : [];
+      const partList = affectedDates.map(d=>`'${d}'`).join(', ');
+      return [
+        {
+          label:'Build source temp table',
+          note: inc
+            ? 'Filter to recent partitions (last 3 days): rows 2, 3, 4 (2024-01-09 – 2024-01-11). Row 1 (2024-01-01) excluded.'
+            : 'No filter — all 4 source rows, covering all 4 dates.',
+          sql: inc
+            ? `SELECT * FROM source WHERE date >= dateadd(day,-3,current_date())\n-- Returns rows 2, 3, 4`
+            : `SELECT * FROM source\n-- Returns all 4 rows`,
+          action:'source_partition', tempIds,
+        },
+        {
+          label: dynamic ? 'Identify affected partitions (dynamic)' : 'Use explicitly listed partitions (static)',
+          note: dynamic
+            ? `dbt reads distinct date values from the temp table: ${affectedDates.join(', ')}. Those partitions will be replaced.`
+            : `Partitions listed in config are overwritten: ${affectedDates.join(', ')}.`,
+          sql: dynamic
+            ? `-- dbt derives from temp table:\nPARTITION (date) IN (${partList})`
+            : `-- Config: partitions=[${partList}]`,
+          action:'identify_partitions',
+        },
+        {
+          label:'OVERWRITE affected partitions',
+          note: untouchedDates.length
+            ? `Partitions ${affectedDates.join(', ')} replaced atomically. Partition ${untouchedDates.join(', ')} (row 1, Zara) untouched.`
+            : 'All partitions replaced atomically.',
+          sql:`INSERT OVERWRITE target\nPARTITION (date IN (${partList}))\nSELECT * FROM target__dbt_tmp`,
+          action:'overwrite_partition',
+        },
+        {
+          label:'Done',
+          note: inc
+            ? 'Partitions 2024-01-09, 2024-01-10, 2024-01-11 replaced. Row 1 (Zara, 2024-01-01) untouched — its partition was not in the temp table.'
+            : 'All 4 partitions replaced. Full target rewritten from source.',
+          sql:null, action:'done',
+        },
+      ];
+    },
+    sqlTemplate(cfg) {
+      const dynamic=cfg.io_static==='dynamic', inc=cfg.io_is_inc;
+      return `{{ config(
+  materialized='incremental',
+  incremental_strategy='insert_overwrite',
+  partition_by={
+    'field': 'date',
+    'data_type': 'date',
+    'granularity': 'day'
+  }${dynamic ? '' : `,\n  partitions=[\n    '2024-01-09',\n    '2024-01-10',\n    '2024-01-11'\n  ]`}
+) }}
+
+select id, date, name, status, amt
+from {{ ref('orders_source') }}
+${inc
+? `{% if is_incremental() %}
+    where date >= dateadd(day, -3, current_date())
+{% endif %}`
+: ''}`;
+    },
+  },
+
+  mb: {
+    label:'microbatch', color:'var(--s-mb)',
+    toggles:[
+      {id:'mb_size',  type:'select', label:'batch_size', options:['hour','day','week','month'], default:'day'},
+      {id:'mb_full',  type:'switch', label:'Simulate full refresh',  default:false},
+    ],
+    note(cfg) {
+      return cfg.mb_full
+        ? {type:'warn', text:'Full refresh reruns ALL batches from begin date. Expensive but guarantees correctness.'}
+        : {type:'info', text:'Incremental run: only batches since last successful run are processed. One failed batch is retried alone, not the whole table.'};
+    },
+    steps(cfg) {
+      const full=cfg.mb_full, size=cfg.mb_size;
+      const batches = full
+        ? ['2024-01-01','2024-01-09','2024-01-10','2024-01-11']
+        : ['2024-01-10','2024-01-11'];
+      return [
+        {
+          label:'Determine batch windows',
+          note: full ? `Full refresh: all ${size}ly batches from begin date` : `Incremental: ${size}ly batches since last successful run`,
+          sql:`-- dbt calculates batch windows:\n${batches.map(d=>`--   ${d} 00:00 → ${d} 23:59`).join('\n')}`,
+          action:'batch_plan', batches,
+        },
+        ...batches.map((b,i)=>({
+          label:`Execute batch: ${b}`,
+          note:`Query filters source to [${b} 00:00, ${b} 23:59]. Result overwrites that window in target.`,
+          sql:`-- Batch ${i+1}/${batches.length}\nSELECT * FROM source\nWHERE event_date >= '${b} 00:00'\n  AND event_date <  '${b} 23:59'\n\n-- Then: INSERT OVERWRITE / MERGE into target for this window`,
+          action:'exec_batch', batchDate:b,
+        })),
+        {
+          label:'Done',
+          note:`${batches.length} batch${batches.length>1?'es':''} completed. Each batch is independent — a failure retries only that batch.`,
+          sql:null, action:'done',
+        },
+      ];
+    },
+    sqlTemplate(cfg) {
+      const size=cfg.mb_size;
+      return `{{ config(
+  materialized='incremental',
+  incremental_strategy='microbatch',
+  event_time='event_date',
+  begin='2024-01-01',
+  batch_size='${size}'
+) }}
+
+-- No is_incremental() needed!
+-- dbt automatically injects the batch window
+-- filter:
+-- where event_date >= '{{ model.config.batch_start }}'
+-- and event_date <  '{{ model.config.batch_end }}'
+select id, event_date, name, status, amt
+from {{ source('raw', 'orders') }}`;
+    },
+  },
+};
+
+// ══════════════════════════════════════════════
+// PERMUTATION SCENARIOS
+// ══════════════════════════════════════════════
+const PERMS = [
+  {
+    strategy:'merge', cfg:{mg_uk:true,mg_cols:false,mg_excl:false,mg_pred:false,mg_is_inc:true},
+    badge:'merge', badgeColor:'var(--s-merge)',
+    title:'Merge — standard (most common)',
+    sub:'unique_key + is_incremental() filter. The default choice for most dimension/fact tables.',
+  },
+  {
+    strategy:'merge', cfg:{mg_uk:true,mg_cols:true,mg_excl:false,mg_pred:false,mg_is_inc:true},
+    badge:'merge', badgeColor:'var(--s-merge)',
+    title:'Merge — selective column updates',
+    sub:'merge_update_columns: only status and amt are overwritten on match. Other columns (e.g. created_at) are preserved.',
+  },
+  {
+    strategy:'merge', cfg:{mg_uk:true,mg_cols:false,mg_excl:false,mg_pred:true,mg_is_inc:true},
+    badge:'merge + predicates', badgeColor:'var(--s-merge)',
+    title:'Merge — with incremental_predicates',
+    sub:'Restricts target table scan to last 7 days. Dramatically reduces cost on large tables with clustered/sorted columns.',
+  },
+  {
+    strategy:'merge', cfg:{mg_uk:false,mg_cols:false,mg_excl:false,mg_pred:false,mg_is_inc:true},
+    badge:'merge (no key)', badgeColor:'var(--yellow)',
+    title:'Merge — without unique_key',
+    sub:'Falls back to append behaviour. No deduplication. Rows only inserted, never updated. A common mistake.',
+  },
+  {
+    strategy:'append', cfg:{ap_is_inc:true},
+    badge:'append', badgeColor:'var(--s-append)',
+    title:'Append — with is_incremental() filter',
+    sub:'Standard pattern for event logs. Only new row 4 (Eve) is inserted. Row 2\'s status change is invisible — append never updates existing rows.',
+  },
+  {
+    strategy:'append', cfg:{ap_is_inc:false},
+    badge:'append (no filter)', badgeColor:'var(--red)',
+    title:'Append — without is_incremental() filter',
+    sub:'All source rows inserted on every run. Creates duplicates for existing rows. Usually a bug.',
+  },
+  {
+    strategy:'di', cfg:{di_uk:true,di_pred:false,di_is_inc:true},
+    badge:'delete+insert', badgeColor:'var(--s-di)',
+    title:'Delete+Insert — standard',
+    sub:'Deletes rows by unique_key then re-inserts. Full row replacement. Useful when MERGE isn\'t available.',
+  },
+  {
+    strategy:'di', cfg:{di_uk:true,di_pred:true,di_is_inc:true},
+    badge:'delete+insert + predicates', badgeColor:'var(--s-di)',
+    title:'Delete+Insert — with predicates',
+    sub:'Predicate limits which target rows are eligible for deletion. Risk: stale rows outside the predicate window won\'t be cleaned up.',
+  },
+  {
+    strategy:'io', cfg:{io_static:'dynamic',io_is_inc:true},
+    badge:'insert_overwrite', badgeColor:'var(--s-io)',
+    title:'Insert Overwrite — dynamic partitions',
+    sub:'dbt detects affected partitions from the temp table and overwrites only those. Best for BigQuery/Spark large partitioned tables.',
+  },
+  {
+    strategy:'io', cfg:{io_static:'static',io_is_inc:true},
+    badge:'insert_overwrite (static)', badgeColor:'var(--s-io)',
+    title:'Insert Overwrite — static partitions',
+    sub:'You explicitly declare which partitions to overwrite. Deterministic but less flexible — wrong list = wrong partitions touched.',
+  },
+  {
+    strategy:'mb', cfg:{mb_size:'day',mb_full:false},
+    badge:'microbatch', badgeColor:'var(--s-mb)',
+    title:'Microbatch — daily batches (incremental)',
+    sub:'Processes only new daily batches since last run. Each batch independent — failures isolated.',
+  },
+  {
+    strategy:'mb', cfg:{mb_size:'day',mb_full:true},
+    badge:'microbatch (full refresh)', badgeColor:'var(--s-mb)',
+    title:'Microbatch — full refresh',
+    sub:'Reruns all daily batches from begin date. Expensive but guarantees consistency after upstream source fixes.',
+  },
+];
+
+// ══════════════════════════════════════════════
+// DEEP-DIVE DATA
+// ══════════════════════════════════════════════
+const DEEP = [
+  {
+    key:'append', color:'var(--s-append)', label:'append',
+    when:'Source is append-only (events, logs). Old records never change. Duplicates impossible or acceptable.',
+    configs:[
+      {name:'incremental_strategy', val:"'append'", desc:'Activates this strategy'},
+      {name:'is_incremental() filter', val:'WHERE updated_at > MAX(...)', desc:'Prevents re-inserting existing rows on incremental runs. Not enforced by the strategy itself — you must write this filter in your SQL.'},
+    ],
+    pitfalls:['Running without is_incremental() filter inserts all source rows every time → duplicates','Does not deduplicate — even with a filter, overlapping time windows insert dupes','No SCD support: old row values are never corrected'],
+    usecases:[
+      {domain:'E-commerce', icon:'🛒', title:'Clickstream events', detail:'Each page view, add-to-cart, and checkout click is appended once. The source (Kafka → S3) never updates past events, so append is the right fit. Filter on event_timestamp to avoid re-loading the full history hourly.'},
+      {domain:'Logistics', icon:'🚚', title:'GPS tracking pings', detail:'A delivery vehicle emits a location ping every 30 seconds. Each ping is a new row — there\'s no concept of updating a past location. Append loads the last hour of pings on each run.'},
+      {domain:'Marketing', icon:'📣', title:'Ad impression log', detail:'An ad server writes one row per impression to a data lake. Impressions are immutable. Append only pulls rows where impression_at > last run, avoiding a full reload of billions of rows.'},
+    ],
+    cost:[
+      {tip:'Always use the is_incremental() filter', detail:'Without it, every run re-scans and re-inserts the full source table. On 1B+ row event logs this can cost 100× more than a filtered incremental run.'},
+      {tip:'Filter on a partition column, not a subquery', detail:'WHERE event_date >= current_date - 1 uses partition pruning on BigQuery/Spark. WHERE updated_at > (SELECT MAX(...) FROM {{this}}) forces a full scan of the target to compute MAX — use a fixed lookback instead.'},
+      {tip:'Cluster or sort on the filter column', detail:'On Snowflake, clustering on event_timestamp makes the micro-partition pruning effective. On Redshift, SORTKEY on the timestamp column reduces bytes scanned per run.'},
+    ],
+  },
+  {
+    key:'merge', color:'var(--s-merge)', label:'merge',
+    when:'Records can be updated in source. You have a reliable unique_key. Table is small-to-medium size.',
+    configs:[
+      {name:'unique_key', val:"'id'  or  ['id','date']", desc:'Column(s) used to match rows between source and target. Can be composite.'},
+      {name:'merge_update_columns', val:"['col1','col2']", desc:'Whitelist of columns to update on MATCHED. All other columns keep their target value.'},
+      {name:'merge_exclude_columns', val:"['created_at']", desc:'Blacklist of columns to never update. Mutually exclusive with merge_update_columns.'},
+      {name:'incremental_predicates', val:'"DBT_INTERNAL_DEST.date > dateadd(day,-7,current_date())"', desc:'Appended to the ON clause of the MERGE statement. Limits target table scan.'},
+      {name:'is_incremental() filter', val:'WHERE updated_at > MAX(...)', desc:'Limits source temp table size. Reduces data scanned on both sides.'},
+    ],
+    pitfalls:['Without unique_key → behaves like append (no updates, possible duplicates)','merge_update_columns and merge_exclude_columns are mutually exclusive','incremental_predicates: rows outside window are invisible to merge — stale data risk','Full target scan on every run without predicates — expensive at 100M+ rows'],
+    usecases:[
+      {domain:'Retail', icon:'🏪', title:'Customer profile table', detail:'A CRM exports customer records nightly. Customers can change their email, address, or subscription tier. Merge on customer_id ensures each customer has exactly one row and all field updates are reflected without duplicating records.'},
+      {domain:'Finance', icon:'💳', title:'Order status updates', detail:'Orders move through states: pending → processing → shipped → delivered → refunded. Merge on order_id keeps one row per order and updates the status column as it changes, while preserving created_at and original_amount.'},
+      {domain:'SaaS', icon:'🖥️', title:'Subscription seats', detail:'A B2B SaaS platform updates seat counts when a customer upgrades or downgrades. Merge on (account_id, plan_id) keeps current seat counts accurate without history bloat, and merge_exclude_columns=[\'first_seen_at\'] preserves the original sign-up date.'},
+    ],
+    cost:[
+      {tip:'Add incremental_predicates on large tables', detail:'Without predicates, MERGE scans the entire target on every run. A 500M-row orders table with a 7-day predicate only scans ~10M rows — often a 50× cost reduction on Snowflake and BigQuery.'},
+      {tip:'Use merge_update_columns to skip unchanged columns', detail:'Updating only the columns that actually change (e.g. status, amount) reduces write amplification. On Snowflake, fewer column updates = smaller micro-partition rewrites.'},
+      {tip:'Shrink the source temp table with is_incremental()', detail:'Merging 1,000 changed rows against 500M target rows is far cheaper than merging all 500M source rows. The temp table size directly drives the MERGE join cost.'},
+    ],
+  },
+  {
+    key:'di', color:'var(--s-di)', label:'delete+insert',
+    when:'Platform lacks native MERGE. unique_key isn\'t strictly unique. You want full row replacement semantics.',
+    configs:[
+      {name:'unique_key', val:"'id'", desc:'Required. Used to identify which rows to DELETE from the target before re-inserting.'},
+      {name:'incremental_predicates', val:'"DBT_INTERNAL_DEST.date > ..."', desc:'Also applies to the DELETE step — only rows matching the predicate AND the unique_key are deleted.'},
+    ],
+    pitfalls:['Not atomic: DELETE then INSERT are separate statements. Failure between them leaves partial data.','Rows outside predicate window: matching unique_keys won\'t be deleted → stale data','Slower than merge for row-level updates because it deletes then re-inserts (2 writes per row)'],
+    usecases:[
+      {domain:'Healthcare', icon:'🏥', title:'Patient appointment records', detail:'A hospital system on Redshift (no MERGE support) syncs appointment records. Appointments can be rescheduled or cancelled. delete+insert on appointment_id replaces the full row, supporting both updates and cancellations without a native MERGE statement.'},
+      {domain:'Logistics', icon:'📦', title:'Shipment milestones', detail:'A parcel tracking system writes one row per shipment with a composite key (tracking_number, carrier). When the carrier updates the estimated delivery, delete+insert replaces the whole row, which is simpler than constructing a MERGE with a composite key on older Spark versions.'},
+      {domain:'HR', icon:'👥', title:'Payroll run corrections', detail:'Payroll records are occasionally restated when errors are found. delete+insert on (employee_id, pay_period) ensures the corrected row fully replaces the old one, including columns that a partial merge_update_columns approach might miss.'},
+    ],
+    cost:[
+      {tip:'Use is_incremental() to keep the temp table small', detail:'The DELETE step scans the target to find matching IDs from the temp table. A smaller temp table means fewer IDs to look up — directly reducing the DELETE cost, especially on columnar stores without index support.'},
+      {tip:'Scope deletes with incremental_predicates', detail:'On a 1B-row table, DELETE WHERE id IN (...) without a predicate does a full scan. Adding AND date > dateadd(day,-7,current_date()) prunes the scan to 7 days of partitions — critical on BigQuery and Databricks.'},
+      {tip:'Prefer merge over delete+insert when the platform supports it', detail:'MERGE is a single atomic statement; delete+insert is two. Two round-trips = twice the I/O overhead and double the transaction log writes on most platforms.'},
+    ],
+  },
+  {
+    key:'io', color:'var(--s-io)', label:'insert_overwrite',
+    when:'Table is partitioned by date or another key. You need to refresh recent partitions. Avoid row-level costs.',
+    configs:[
+      {name:'partition_by', val:"{field:'date', data_type:'date', granularity:'day'}", desc:'Defines the partition column and type. Required for insert_overwrite.'},
+      {name:'partitions (static)', val:"['2024-01-01','2024-01-02']", desc:'Explicitly list partitions to overwrite. Only supported on some adapters (Spark, Databricks).'},
+      {name:'is_incremental() filter', val:'WHERE date >= dateadd(day,-3,current_date())', desc:'Limits which partitions appear in the temp table, which drives which partitions get overwritten.'},
+    ],
+    pitfalls:['Partition granularity must match your data grain — wrong granularity overwrites too much or too little','Static partition mode: if you list wrong partitions, correct ones won\'t be refreshed','Not available on Redshift, Postgres, Trino, Fabric'],
+    usecases:[
+      {domain:'Marketing', icon:'📊', title:'Daily campaign performance', detail:'A marketing platform reports daily aggregates: impressions, clicks, spend, conversions per campaign. Source data can be restated up to 3 days late (e.g. attributed conversions arriving late). insert_overwrite replaces the last 3 date partitions atomically each run, correcting late data without row-level matching.'},
+      {domain:'Finance', icon:'📈', title:'Daily revenue rollup', detail:'Finance needs a daily revenue table partitioned by transaction_date. The previous 2 days are sometimes restated by the billing system. insert_overwrite with a 3-day lookback replaces exactly those partitions, ensuring the dashboard always reflects the latest numbers without scanning the full 5-year history.'},
+      {domain:'IoT', icon:'🌡️', title:'Sensor hourly aggregates', detail:'A factory floor streams sensor readings. A downstream model aggregates them by hour and device. insert_overwrite replaces the last 2 hours of aggregates each run — catching late sensor flushes without row-level deduplication overhead on a Spark cluster.'},
+    ],
+    cost:[
+      {tip:'Partition overwrite is the cheapest restatement pattern', detail:'Replacing a partition atomically (DROP + INSERT) is far cheaper than a row-level MERGE across millions of records. On BigQuery, overwriting a day partition costs the same as writing that partition once — no join overhead.'},
+      {tip:'Tune the lookback window tightly', detail:'A 30-day lookback on a 1TB daily partition table rewrites 30TB per run. A 3-day lookback rewrites 3TB. Match the lookback to your actual late-arrival SLA, not a conservative guess.'},
+      {tip:'Dynamic mode avoids hardcoding partition lists', detail:'Static partition mode requires you to update the config when the data range changes. Dynamic mode derives the list from the temp table automatically — no maintenance cost and no risk of accidentally skipping or over-writing partitions.'},
+    ],
+  },
+  {
+    key:'mb', color:'var(--s-mb)', label:'microbatch',
+    when:'Large time-series dataset with an event_time column. Resilient parallel processing at scale. dbt 1.9+.',
+    configs:[
+      {name:'event_time', val:"'event_at'", desc:'The timestamp column that defines batching. dbt injects WHERE clauses on this column automatically.'},
+      {name:'begin', val:"'2024-01-01'", desc:'Earliest batch date on full refresh. dbt won\'t process batches before this date.'},
+      {name:'batch_size', val:"'day' | 'hour' | 'week' | 'month'", desc:'The granularity of each batch window.'},
+      {name:'lookback', val:'1 (default)', desc:'How many prior batches to reprocess on each incremental run, to catch late-arriving data.'},
+    ],
+    pitfalls:['Not supported on all adapters — check your adapter version (dbt 1.9+)','is_incremental() does not apply — dbt injects the filter automatically; writing your own will double-filter','Full refresh reruns ALL batches from begin → can be very expensive on long histories'],
+    usecases:[
+      {domain:'Streaming / Events', icon:'⚡', title:'Real-time order pipeline', detail:'An e-commerce platform processes millions of orders per day. Microbatch runs hourly, processing each hour of order events as an independent unit. If the 14:00 batch fails due to a source outage, only that hour is retried — the rest of the day\'s data is unaffected.'},
+      {domain:'Telco', icon:'📡', title:'Call detail records (CDR)', detail:'A telecoms provider ingests billions of call records per day, partitioned by call_start. Microbatch processes each day\'s CDRs independently with lookback=1 to catch records that arrived late due to network buffering delays. Failed batches are automatically retried on the next run.'},
+      {domain:'Finance', icon:'🏦', title:'Intraday trade reconciliation', detail:'A trading desk reconciles executed trades against the clearing house every hour. Microbatch with batch_size=\'hour\' processes each hour window independently. A correction to the 09:00 batch can be re-run without touching 10:00–16:00 data, reducing blast radius of restatements.'},
+    ],
+    cost:[
+      {tip:'Set begin as late as your use case allows', detail:'On a full refresh, dbt generates one batch per window from begin to today. begin=\'2020-01-01\' with batch_size=\'day\' = 1,500+ SQL round-trips. begin=\'2024-01-01\' = ~365. Every extra year of history multiplies cost linearly.'},
+      {tip:'Choose the largest batch_size that fits your SLA', detail:'batch_size=\'hour\' on 3 years of data = 26,000+ batches on full refresh. batch_size=\'day\' = 1,000 batches. Use hour only if you genuinely need sub-day granularity for late arrival handling.'},
+      {tip:'Set lookback to match your actual late-arrival window', detail:'lookback=7 reprocesses the last 7 batches on every run. If your data is never more than 1 day late, lookback=1 saves 6 unnecessary batch re-executions per run.'},
+    ],
+  },
+];
+
+// ══════════════════════════════════════════════
+// QUIZ DATA
+// ══════════════════════════════════════════════
+const QUESTIONS = [
+  {q:'append without an is_incremental() filter does what on the second run?',opts:['Inserts only new rows','Inserts ALL source rows again (duplicates existing rows)','Updates changed rows','Errors — filter is required'],ans:1,exp:'Without is_incremental(), append selects the full source on every run and inserts everything — including rows already in the target, creating duplicates.'},
+  {q:'You have a 500M-row target table clustered by session_start. You want to limit how much of it dbt scans during merge. What do you add?',opts:['merge_update_columns','is_incremental() filter','incremental_predicates on DBT_INTERNAL_DEST','partition_by'],ans:2,exp:'incremental_predicates adds a condition to the merge ON clause restricting which rows of the TARGET (DBT_INTERNAL_DEST) are even scanned. is_incremental() only limits the source temp table.'},
+  {q:'merge_update_columns and merge_exclude_columns are…',opts:['Additive — you can use both','Mutually exclusive — use one or the other','Aliases for the same config','Only available on Snowflake'],ans:1,exp:'They are mutually exclusive. merge_update_columns whitelists columns to update; merge_exclude_columns blacklists them. Using both at once is invalid.'},
+  {q:'delete+insert is NOT atomic. What does that mean in practice?',opts:['It\'s slower than merge','A failure between DELETE and INSERT leaves the table with rows missing','It can\'t use a unique_key','It always creates duplicates'],ans:1,exp:'delete+insert runs two separate SQL statements. If the job fails after DELETE but before INSERT completes, matched rows are permanently deleted with no replacements — you lose data until a re-run.'},
+  {q:'You use insert_overwrite with is_incremental() filter for the last 3 days. What determines which partitions get overwritten?',opts:['The partition_by.partitions config','The partitions present in the temp table (dynamic mode)','All partitions in the target','Only partitions explicitly named in the SQL'],ans:1,exp:'In dynamic mode (default), dbt reads the distinct partition values in the source temp table and overwrites exactly those partitions. Your is_incremental() filter therefore indirectly controls which partitions are overwritten.'},
+  {q:'In microbatch, do you write an is_incremental() filter?',opts:['Yes — same as other strategies','No — dbt injects the time window filter automatically','Only for full refresh runs','Only when batch_size is "hour"'],ans:1,exp:'microbatch injects the batch window as a WHERE clause on event_time automatically. Writing your own is_incremental() filter would double-filter and could exclude valid data.'},
+  {q:'DBT_INTERNAL_DEST in an incremental_predicate refers to…',opts:['The source temp table with new records','The existing target table','The model file itself','The dbt manifest'],ans:1,exp:'DBT_INTERNAL_DEST is the alias dbt assigns to the existing target table in the MERGE statement. DBT_INTERNAL_SOURCE is the temp table with new records.'},
+  {q:'You\'re on BigQuery. Which strategy is unavailable?',opts:['merge','insert_overwrite','microbatch','delete+insert'],ans:3,exp:'BigQuery does not support delete+insert or append. It natively supports merge, insert_overwrite, and microbatch.'},
+  {q:'merge without a unique_key behaves like which strategy?',opts:['delete+insert','insert_overwrite','append','microbatch'],ans:2,exp:'Without a unique_key, dbt has no way to identify matching rows, so no WHEN MATCHED clause is generated. The merge only inserts — identical to append.'},
+  {q:'You want to protect created_at from ever being overwritten during a merge. Which config?',opts:['merge_update_columns (include all except created_at)','merge_exclude_columns=[\'created_at\']','incremental_predicates on created_at','unique_key=\'created_at\''],ans:1,exp:'merge_exclude_columns takes a list of columns that should NEVER be updated on a match. All other columns are updated as normal. It\'s cleaner than maintaining a whitelist that might miss new columns.'},
+];
+
+// ══════════════════════════════════════════════
+// SIMULATOR STATE
+// ══════════════════════════════════════════════
+let currentStrat = 'append';
+let cfg = {};
+let simSteps = [];
+let simIdx = -1;
+let simState = {}; // track what has happened to each row
+
+function getCfg() {
+  const t = STRATS[currentStrat].toggles;
+  const out = {};
+  t.forEach(tog => {
+    if (tog.type === 'switch') {
+      const el = document.getElementById(tog.id);
+      out[tog.id] = el ? el.checked : tog.default;
+    } else if (tog.type === 'select') {
+      const el = document.getElementById(tog.id);
+      out[tog.id] = el ? el.value : tog.default;
+    }
+  });
+  return out;
+}
+
+function selectStrategy(s) {
+  currentStrat = s;
+  document.querySelectorAll('.strat-tab').forEach(t => {
+    const active = t.dataset.s === s;
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+  buildToggles();
+  resetSim();
+  updateSQL();
+  updateNote();
+}
+
+function buildToggles() {
+  const wrap = document.getElementById('simToggles');
+  wrap.innerHTML = '';
+  STRATS[currentStrat].toggles.forEach(tog => {
+    const g = document.createElement('div');
+    g.className = 'toggle-group';
+    if (tog.type === 'switch') {
+      g.innerHTML = `<label>${tog.label}</label>
+        <label class="switch">
+          <input type="checkbox" id="${tog.id}" ${tog.default ? 'checked' : ''} onchange="onCfgChange()">
+          <span class="slider"></span>
+        </label>`;
+    } else if (tog.type === 'select') {
+      const opts = tog.options.map(o => `<option value="${o}" ${o===tog.default?'selected':''}>${o}</option>`).join('');
+      g.innerHTML = `<label>${tog.label}</label><select id="${tog.id}" onchange="onCfgChange()">${opts}</select>`;
+    }
+    wrap.appendChild(g);
+  });
+}
+
+function onCfgChange() {
+  resetSim();
+  updateSQL();
+  updateNote();
+}
+
+function updateNote() {
+  const noteEl = document.getElementById('simNote');
+  const s = STRATS[currentStrat];
+  const n = typeof s.note === 'function' ? s.note(getCfg()) : s.note;
+  if (!n) { noteEl.style.display='none'; return; }
+  noteEl.style.display='';
+  noteEl.className = `note ${n.type==='warn'?'warn':n.type==='danger'?'danger':''}`;
+  noteEl.innerHTML = n.text;
+}
+
+function updateSQL() {
+  const c = getCfg();
+  const raw = STRATS[currentStrat].sqlTemplate(c);
+  document.getElementById('genSQL').innerHTML = highlightSQL(raw);
+}
+
+function highlightSQL(s) {
+  return s
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/(materialized|unique_key|incremental_strategy|merge_update_columns|merge_exclude_columns|incremental_predicates|partition_by|event_time|begin|batch_size|lookback|partitions)=/g,'<span class="var">$1</span>=')
+    .replace(/'([^']+)'/g,'<span class="str">\'$1\'</span>')
+    .replace(/\b(SELECT|FROM|WHERE|AND|OR|INSERT|INTO|DELETE|MERGE|USING|ON|WHEN|MATCHED|NOT|THEN|UPDATE|SET|OVERWRITE|PARTITION|IN|select|from|where|and|or|insert|into|delete|merge|using|on|when|matched|not|then|update|set|overwrite|partition|in)\b/g,'<span class="kw">$1</span>')
+    .replace(/--[^\n]*/g,'<span class="cm">$&</span>')
+    .replace(/({%[^%]+%})/g,'<span class="fn">$1</span>');
+}
+
+// ── Row rendering ──
+function renderRows(rows, options={}) {
+  // options: {deletedIds, insertedIds, replacedIds, updatedIds, dupIds, partHit, partMiss, scanRows, outOfScope, batchDate}
+  // dupIds: ids that appear more than once in the table (second copy is the duplicate)
+  const seenIds = {};
+  return rows.map((r,i) => {
+    seenIds[r.id] = (seenIds[r.id] || 0) + 1;
+    const isSecondCopy = options.dupIds && options.dupIds.includes(r.id) && seenIds[r.id] > 1;
+    let cls = '';
+    if (isSecondCopy)                                                   cls='r-dup';
+    else if (options.deletedIds  && options.deletedIds.includes(r.id))  cls='r-del';
+    else if (options.replacedIds && options.replacedIds.includes(r.id)) cls='r-upd';
+    else if (options.insertedIds && options.insertedIds.includes(r.id)) cls='r-new';
+    else if (options.updatedIds  && options.updatedIds.includes(r.id))  cls='r-upd';
+    else if (options.partHit  && options.partHit.includes(r.date))      cls='r-part-hit';
+    else if (options.partMiss && options.partMiss.includes(r.date))     cls='r-part-miss';
+    else if (options.scanRows && options.scanRows.includes(i))          cls='r-scan';
+    else if (options.outOfScope && options.outOfScope.includes(r.id))   cls='r-out';
+    else if (options.batchDate && r.date !== options.batchDate)         cls='r-out';
+    return `<div class="dbt-row ${cls}">
+      <span class="c">${r.id}</span>
+      <span class="c">${r.date}</span>
+      <span class="c">${r.name}</span>
+      <span class="c">${r.status}</span>
+      <span class="c">$${r.amt}</span>
+      <span class="c">${r.updated_at ?? ''}</span>
+    </div>`;
+  }).join('');
+}
+
+function mkTable(title, rows, options={}, extra='') {
+  return `<div class="dbt">
+    <div class="dbt-head">${title}</div>
+    <div class="dbt-cols">
+      <span class="dbt-col">id</span>
+      <span class="dbt-col">date</span>
+      <span class="dbt-col">name</span>
+      <span class="dbt-col">status</span>
+      <span class="dbt-col">amt</span>
+      <span class="dbt-col">updated_at</span>
+    </div>
+    ${renderRows(rows, options)}
+    ${extra}
+  </div>`;
+}
+
+function mkArrow(label='') {
+  return `<div class="arrow-col"><div class="arr">↓</div>${label?`<div class="arr-label">${label}</div>`:''}</div>`;
+}
+
+// ── Simulator execution ──
+function updateStepCounter() {
+  const el = document.getElementById('simStepCounter');
+  if (!el) return;
+  const total = simSteps ? simSteps.length : 0;
+  if (simIdx < 0 || total === 0) { el.textContent = ''; return; }
+  el.textContent = `Step ${simIdx + 1} of ${total}`;
+}
+
+function resetSim() {
+  simIdx = -1;
+  simState = { targetRows: TARGET_ROWS.map(r=>({...r})) };
+  document.getElementById('stepArea').innerHTML = '';
+  document.getElementById('tableArea').innerHTML = renderInitialTables();
+  document.getElementById('runBtn').disabled = false;
+  document.getElementById('runBtn').textContent = '▶ Next step';
+  document.getElementById('allBtn').disabled = false;
+  document.getElementById('resetBtn').disabled = false;
+  document.getElementById('simRunLabel').textContent = 'Source → Target';
+  updateStepCounter();
+  buildSteps();
+}
+
+function renderInitialTables() {
+  return `
+  <div style="font-size:.78rem;color:var(--muted);margin-bottom:10px">
+    <strong style="color:var(--text)">Dataset:</strong>
+    Target has 3 rows. Row 1 (Zara, 2024-01-01) is old — outside the predicate window. Row 2 (Bob) has a changed status in source. Row 3 (Carol) is unchanged.
+    Source has 4 rows — same 3 plus row 4 (Eve), which is new.
+    Press <strong>Next step</strong> to walk through the strategy.
+  </div>
+  <div class="dbt-wrap" style="gap:8px">
+    ${mkTable('Source (upstream data this run)', SOURCE_ROWS, {updatedIds:[2], insertedIds:[4]})}
+    ${mkArrow('incremental<br>strategy')}
+    ${mkTable('Target (existing materialised table)', TARGET_ROWS)}
+  </div>
+  <div class="leg">
+    <div class="leg-item"><div class="leg-dot ld-upd"></div>row 2 changed in source (pending→paid)</div>
+    <div class="leg-item"><div class="leg-dot ld-new"></div>row 4 is new (Eve, 2024-01-11)</div>
+  </div>`;
+}
+
+function buildSteps() {
+  simSteps = STRATS[currentStrat].steps(getCfg());
+  const area = document.getElementById('stepArea');
+  area.innerHTML = simSteps.map((s,i) => `
+    <div class="step" id="step-${i}">
+      <div class="step-label">${i+1}. ${s.label}</div>
+      <div class="step-note">${s.note}</div>
+      ${s.sql ? `<div class="step-sql">${escHtml(s.sql)}</div>` : ''}
+    </div>`).join('');
+}
+
+function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
+
+function stepSim() {
+  simIdx++;
+  if (simIdx >= simSteps.length) { finishSim(); return; }
+  const step = simSteps[simIdx];
+
+  // update step highlights
+  document.querySelectorAll('.step').forEach((el,i)=>{
+    el.classList.remove('active','done');
+    if (i < simIdx) el.classList.add('done');
+    if (i === simIdx) el.classList.add('active');
+  });
+  document.getElementById(`step-${simIdx}`).scrollIntoView({behavior:'smooth',block:'nearest'});
+
+  // execute visual action
+  executeAction(step);
+
+  updateStepCounter();
+
+  if (simIdx === simSteps.length - 1) {
+    document.getElementById('runBtn').textContent = '✓ Done';
+    document.getElementById('runBtn').disabled = true;
+    document.getElementById('allBtn').disabled = true;
+    document.querySelectorAll('.step').forEach(el=>el.classList.add('done'));
+  }
+}
+
+function runAll() {
+  const run = () => {
+    if (simIdx < simSteps.length - 1) {
+      stepSim();
+      setTimeout(run, 700);
+    } else {
+      stepSim();
+    }
+  };
+  run();
+}
+
+function finishSim() {}
+
+function executeAction(step) {
+  const tableArea = document.getElementById('tableArea');
+  const c = getCfg();
+  const act = step.action;
+
+  // Helper: get temp rows from step.tempIds (ids into SOURCE_ROWS)
+  function getTempRows() {
+    if (simState.tempRows) return simState.tempRows;
+    const ids = step.tempIds || SOURCE_ROWS.map(r=>r.id);
+    return SOURCE_ROWS.filter(r => ids.includes(r.id));
+  }
+
+  if (act === 'source') {
+    const ids = step.tempIds || SOURCE_ROWS.map(r=>r.id);
+    const srcRows = SOURCE_ROWS.filter(r => ids.includes(r.id));
+    simState.tempRows = srcRows;
+    // Highlight which rows are changed vs brand-new vs unchanged
+    const changedInTemp  = srcRows.filter(r => CHANGED_IDS.includes(r.id)).map(r=>r.id);
+    const newInTemp      = srcRows.filter(r => NEW_IDS.includes(r.id)).map(r=>r.id);
+    // Rows in target that are NOT in temp table = out of scope this run
+    const skippedTargetIds = TARGET_ROWS.filter(r => !ids.includes(r.id)).map(r=>r.id);
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table (selected)', srcRows, {updatedIds: changedInTemp, insertedIds: newInTemp})}
+      ${mkArrow('')}
+      ${mkTable('Target (current state)', TARGET_ROWS, {outOfScope: skippedTargetIds})}
+    </div>
+    <div class="leg">
+      ${changedInTemp.length ? '<div class="leg-item"><div class="leg-dot ld-upd"></div>value changed vs target</div>' : ''}
+      ${newInTemp.length    ? '<div class="leg-item"><div class="leg-dot ld-new"></div>new row (not in target)</div>'  : ''}
+      ${skippedTargetIds.length ? '<div class="leg-item"><div class="leg-dot ld-out"></div>not selected by filter this run</div>' : ''}
+    </div>`;
+  }
+
+  else if (act === 'insert_all') {
+    const tmp = getTempRows();
+    const existingIds = TARGET_ROWS.map(r=>r.id);
+    const trueNewIds = tmp.filter(r=>!existingIds.includes(r.id)).map(r=>r.id);
+    const dupIds = tmp.filter(r=>existingIds.includes(r.id)).map(r=>r.id);
+    const isDup = step.isDuplicate;
+    // Duplicate mode: append all tmp rows; existing ids appear twice (second copy = dup)
+    // Normal mode: only add rows whose id doesn't exist yet
+    const finalTarget = isDup
+      ? [...TARGET_ROWS, ...tmp]
+      : [...TARGET_ROWS, ...tmp.filter(r=>trueNewIds.includes(r.id))];
+    simState.targetRows = finalTarget;
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', tmp)}
+      ${mkArrow('INSERT')}
+      ${mkTable('Target (after insert)', finalTarget, {
+        insertedIds: trueNewIds,
+        dupIds: isDup ? dupIds : [],
+      })}
+    </div>
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-new"></div>new rows inserted</div>
+      ${isDup && dupIds.length ? '<div class="leg-item"><div class="leg-dot ld-dup"></div>duplicate — id already existed in target</div>' : ''}
+    </div>`;
+  }
+
+  else if (act === 'merge') {
+    const tmp = getTempRows();
+    const pred = c.mg_pred;
+    // Rows in target eligible for matching (outside predicate window = excluded)
+    const inWindow = pred
+      ? TARGET_ROWS.filter(r => r.date > PRED_CUTOFF)
+      : TARGET_ROWS;
+    const outWindow = pred
+      ? TARGET_ROWS.filter(r => r.date <= PRED_CUTOFF)
+      : [];
+    const existIds = TARGET_ROWS.map(r=>r.id);
+    const inWindowIds = inWindow.map(r=>r.id);
+    const updIds = [], insIds = [];
+    tmp.forEach(sr => {
+      if (existIds.includes(sr.id)) {
+        if (inWindowIds.includes(sr.id)) {
+          // Only count as "updated" if the values actually differ from target
+          const tRow = TARGET_ROWS.find(t => t.id === sr.id);
+          const valuesChanged = tRow && (
+            tRow.status !== sr.status || tRow.amt !== sr.amt || tRow.name !== sr.name
+          );
+          if (valuesChanged) updIds.push(sr.id);
+          // matched but no change: merge still runs but row visually unchanged
+        }
+        // else: outside predicate window — skipped silently
+      } else {
+        insIds.push(sr.id);
+      }
+    });
+    // Build final target: update matched rows, keep unmatched target rows, insert new
+    const finalTarget = TARGET_ROWS.map(r => {
+      const src = tmp.find(x=>x.id===r.id);
+      if (!src || !inWindowIds.includes(r.id)) return {...r}; // not in temp or outside window
+      if (c.mg_cols) return {...r, status:src.status, amt:src.amt}; // whitelist only
+      return {...r, name:src.name, status:src.status, amt:src.amt}; // all cols
+    });
+    const newRows = tmp.filter(r=>insIds.includes(r.id));
+    simState.targetRows = [...finalTarget, ...newRows];
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', tmp)}
+      ${mkArrow('MERGE')}
+      ${mkTable('Target (after merge)', simState.targetRows, {
+        updatedIds: updIds,
+        insertedIds: insIds,
+        outOfScope: outWindow.map(r=>r.id),
+      })}
+    </div>
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-upd"></div>updated (matched by id)</div>
+      <div class="leg-item"><div class="leg-dot ld-new"></div>inserted (new id)</div>
+      ${outWindow.length ? '<div class="leg-item"><div class="leg-dot ld-out"></div>outside predicate window — not scanned</div>' : ''}
+    </div>`;
+  }
+
+  else if (act === 'scan_target') {
+    // Show which target rows are inside vs outside the predicate window
+    const inWindow  = TARGET_ROWS.filter(r => r.date > PRED_CUTOFF).map(r=>r.id);
+    const outWindow = TARGET_ROWS.filter(r => r.date <= PRED_CUTOFF).map(r=>r.id);
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', simState.tempRows || [])}
+      ${mkArrow('')}
+      ${mkTable('Target — predicate scan window', TARGET_ROWS, {scanRows: null, outOfScope: outWindow})}
+    </div>
+    <div class="scan-zone">📍 Predicate: date > '${PRED_CUTOFF}' — rows 2, 3, 4 in scope; row 1 (Zara, 2024-01-01) outside window (dimmed)</div>
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-scan"></div>in predicate window — eligible to be matched/updated</div>
+      <div class="leg-item"><div class="leg-dot ld-out"></div>outside window — dbt won't even read this row during merge</div>
+    </div>`;
+  }
+
+  else if (act === 'delete') {
+    const tmp = getTempRows();
+    const pred = c.di_pred;
+    // Delete target rows whose id is in temp AND (no predicate OR date is inside predicate window)
+    const delIds = tmp
+      .filter(r => TARGET_ROWS.some(t => t.id === r.id))  // exists in target
+      .filter(r => {
+        if (!pred) return true;
+        const tRow = TARGET_ROWS.find(t => t.id === r.id);
+        return tRow && tRow.date > PRED_CUTOFF; // must be strictly inside predicate window
+      })
+      .map(r => r.id);
+    simState.deletedIds = delIds;
+    // outIds = target rows whose id IS in temp but whose date puts them outside the predicate window
+    const outIds = pred
+      ? tmp.filter(r => {
+          const tRow = TARGET_ROWS.find(t => t.id === r.id);
+          return tRow && tRow.date <= PRED_CUTOFF;
+        }).map(r => r.id)
+      : [];
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', tmp)}
+      ${mkArrow('DELETE')}
+      ${mkTable('Target (after delete)', TARGET_ROWS, {deletedIds: delIds, outOfScope: outIds})}
+    </div>
+    ${outIds.length ? `<div class="scan-zone">⚠️ Row(s) ${outIds.join(',')} are in the temp table but their date ≤ '${PRED_CUTOFF}' — predicate blocks the DELETE. They will be re-inserted in the next step → DUPLICATES!</div>` : ''}
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-del"></div>deleted (id matched in temp + inside predicate window)</div>
+      ${outIds.length ? '<div class="leg-item"><div class="leg-dot ld-out"></div>in temp but outside predicate window — NOT deleted (danger!)</div>' : ''}
+    </div>`;
+  }
+
+  else if (act === 'insert_after_delete') {
+    const tmp = getTempRows();
+    const delIds = simState.deletedIds || [];
+    const remaining = TARGET_ROWS.filter(r => !delIds.includes(r.id));
+    // Rows that were deleted then re-inserted = replaced (show as blue, like an update)
+    const replacedIds = tmp.filter(r => delIds.includes(r.id)).map(r=>r.id);
+    // Rows that are brand new (not in original target at all)
+    const trueNewIds = tmp.filter(r => !TARGET_ROWS.some(t=>t.id===r.id)).map(r=>r.id);
+    // Rows in temp whose target counterpart was NOT deleted (predicate blocked it) → will duplicate
+    const notDeletedButReinserted = tmp.filter(r => TARGET_ROWS.some(t=>t.id===r.id) && !delIds.includes(r.id)).map(r=>r.id);
+    simState.targetRows = [...remaining, ...tmp];
+    const dupWarning = notDeletedButReinserted.length
+      ? `<div class="scan-zone" style="border-color:#f8717170;background:#f8717110">⚠️ DUPLICATE ROWS: id(s) ${notDeletedButReinserted.join(',')} were re-inserted but were never deleted — they now appear twice in the target!</div>`
+      : '';
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', tmp)}
+      ${mkArrow('INSERT')}
+      ${mkTable('Target (after re-insert)', simState.targetRows, {
+        replacedIds,
+        insertedIds: trueNewIds,
+        dupIds: notDeletedButReinserted,
+      })}
+    </div>
+    ${dupWarning}
+    <div class="leg">
+      ${replacedIds.length ? '<div class="leg-item"><div class="leg-dot ld-upd"></div>replaced (deleted then re-inserted with new values)</div>' : ''}
+      ${trueNewIds.length  ? '<div class="leg-item"><div class="leg-dot ld-new"></div>new rows inserted</div>' : ''}
+      ${notDeletedButReinserted.length ? '<div class="leg-item"><div class="leg-dot ld-dup"></div>duplicate — predicate blocked delete, row inserted again</div>' : ''}
+    </div>`;
+  }
+
+  else if (act === 'source_partition') {
+    const ids = step.tempIds || SOURCE_ROWS.map(r=>r.id);
+    const srcRows = SOURCE_ROWS.filter(r => ids.includes(r.id));
+    simState.tempRows = srcRows;
+    const affectedDates = [...new Set(srcRows.map(r=>r.date))];
+    simState.affectedDates = affectedDates;
+    const unaffectedDates = TARGET_ROWS.filter(r=>!affectedDates.includes(r.date)).map(r=>r.date);
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', srcRows)}
+      ${mkArrow('')}
+      ${mkTable('Target (partitioned by date)', TARGET_ROWS, {partHit: affectedDates, partMiss: unaffectedDates})}
+    </div>
+    <div class="scan-zone" style="border-color:#c084fc70;background:#c084fc10;color:var(--purple)">📦 Partitions in temp table: ${affectedDates.join(', ')} — these will be overwritten</div>
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-part"></div>partition will be overwritten</div>
+      <div class="leg-item"><div class="leg-dot ld-out"></div>partition untouched</div>
+    </div>`;
+  }
+
+  else if (act === 'identify_partitions') {
+    const aff = simState.affectedDates || [];
+    const unaff = [...new Set(TARGET_ROWS.filter(r=>!aff.includes(r.date)).map(r=>r.date))];
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', simState.tempRows || [])}
+      ${mkArrow('')}
+      ${mkTable('Target: partitions to overwrite', TARGET_ROWS, {partHit: aff, partMiss: unaff})}
+    </div>
+    <div class="scan-zone" style="border-color:#c084fc70;background:#c084fc10;color:var(--purple)">📦 Will overwrite: ${aff.join(', ')} | Will preserve: ${unaff.join(', ')}</div>`;
+  }
+
+  else if (act === 'overwrite_partition') {
+    const aff = simState.affectedDates || [];
+    const tmp = simState.tempRows || [];
+    // Keep target rows whose partition was NOT overwritten; add all temp rows
+    const kept = TARGET_ROWS.filter(r => !aff.includes(r.date));
+    simState.targetRows = [...kept, ...tmp];
+    const insIds = tmp.map(r=>r.id);
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('Source temp table', tmp)}
+      ${mkArrow('INSERT OVERWRITE')}
+      ${mkTable('Target (after overwrite)', simState.targetRows, {insertedIds: insIds})}
+    </div>
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-new"></div>rows from overwritten partitions (replaced wholesale)</div>
+    </div>`;
+  }
+
+  else if (act === 'batch_plan') {
+    const batches = step.batches || [];
+    tableArea.innerHTML = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:.8rem">
+      <div style="font-weight:700;margin-bottom:10px;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em">Batch execution plan</div>
+      <div style="display:grid;gap:6px">
+      ${batches.map((b,i) => `<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--surface);border-radius:6px;border:1px solid #f9731640">
+        <span style="font-family:monospace;font-size:.78rem;color:var(--s-mb);font-weight:700">Batch ${i+1}</span>
+        <span style="color:var(--text)">${b} 00:00 → ${b} 23:59</span>
+        <span style="margin-left:auto;font-size:.72rem;padding:2px 8px;background:#43140730;border:1px solid #f9731640;border-radius:4px;color:var(--muted)">pending</span>
+      </div>`).join('')}
+      </div>
+      <div class="note" style="margin-top:12px">Each batch is an independent query. If batch 2 fails, only batch 2 is retried on the next run.</div>
+    </div>`;
+  }
+
+  else if (act === 'exec_batch') {
+    const bd = step.batchDate;
+    const batchSrcRows = SOURCE_ROWS.filter(r => r.date === bd);
+    // Update simState.targetRows: replace rows for this batch date, keep all other dates
+    const prevRows = simState.targetRows || TARGET_ROWS.map(r=>({...r}));
+    const keptRows = prevRows.filter(r => r.date !== bd);
+    simState.targetRows = [...keptRows, ...batchSrcRows];
+    const allDates = [...new Set(simState.targetRows.map(r=>r.date))];
+    const otherDates = allDates.filter(d => d !== bd);
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable(`Source — batch window: ${bd}`, SOURCE_ROWS, {batchDate: bd})}
+      ${mkArrow('exec')}
+      ${mkTable(`Target (after batch ${bd})`, simState.targetRows, {insertedIds: batchSrcRows.map(r=>r.id), outOfScope: keptRows.map(r=>r.id)})}
+    </div>
+    <div class="scan-zone" style="border-color:#f9731670;background:#f9731610;color:var(--orange)">⚡ Processing batch: ${bd} | ${batchSrcRows.length} row(s) in this window</div>
+    <div class="leg">
+      <div class="leg-item"><div class="leg-dot ld-new"></div>rows in this batch (replaced)</div>
+      <div class="leg-item"><div class="leg-dot ld-out"></div>other dates — not touched this step</div>
+    </div>`;
+  }
+
+  else if (act === 'done') {
+    const finalRows = simState.targetRows || TARGET_ROWS;
+    const origIds = TARGET_ROWS.map(r => r.id);
+    // Inserted = ids that didn't exist in original target (deduplicated for counting)
+    const insIds = [...new Set(finalRows
+      .filter(r => !origIds.includes(r.id))
+      .map(r => r.id))];
+    // Updated = ids that existed in original target but now have different values
+    const updIds = [...new Set(finalRows.filter(r => {
+      if (!origIds.includes(r.id)) return false;
+      const orig = TARGET_ROWS.find(t => t.id === r.id);
+      return orig && (orig.status !== r.status || orig.amt !== r.amt || orig.name !== r.name);
+    }).map(r => r.id))];
+    // Duplicated = ids appearing more than once
+    const idCounts = {};
+    finalRows.forEach(r => { idCounts[r.id] = (idCounts[r.id]||0)+1; });
+    const dupIds = Object.keys(idCounts).filter(id => idCounts[id] > 1).map(Number);
+    tableArea.innerHTML = `<div class="dbt-wrap" style="gap:8px">
+      ${mkTable('✓ Final target state', finalRows, {insertedIds: insIds, updatedIds: updIds, dupIds})}
+    </div>
+    <div class="leg">
+      ${insIds.length ? `<div class="leg-item"><div class="leg-dot ld-new"></div>${insIds.length} row(s) newly inserted</div>` : ''}
+      ${updIds.length ? `<div class="leg-item"><div class="leg-dot ld-upd"></div>${updIds.length} row(s) updated</div>` : ''}
+      ${dupIds.length ? `<div class="leg-item"><div class="leg-dot ld-dup"></div>ids ${dupIds.join(',')} appear more than once — ⚠ duplicates!</div>` : ''}
+      ${!insIds.length && !updIds.length && !dupIds.length ? '<div class="leg-item" style="color:var(--muted)">No changes — target already up to date</div>' : ''}
+    </div>`;
+    document.getElementById('simRunLabel').textContent = '✓ Complete';
+  }
+}
+
+// ══════════════════════════════════════════════
+// PERMUTATION GRID
+// ══════════════════════════════════════════════
+function buildPermGrid() {
+  const grid = document.getElementById('permGrid');
+  grid.innerHTML = PERMS.map((p,i) => `
+    <div class="perm-card" onclick="loadPerm(${i})">
+      <span class="perm-badge" style="background:${p.badgeColor}20;color:${p.badgeColor};border:1px solid ${p.badgeColor}50">${p.badge}</span>
+      <div class="perm-title">${p.title}</div>
+      <div class="perm-sub">${p.sub}</div>
+    </div>`).join('');
+}
+
+function loadPerm(i) {
+  const p = PERMS[i];
+  document.querySelectorAll('.perm-card').forEach((c,j)=>c.classList.toggle('active',j===i));
+  // switch strategy
+  currentStrat = p.strategy;
+  document.querySelectorAll('.strat-tab').forEach(t=>{
+    const active = t.dataset.s===p.strategy;
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+  buildToggles();
+  // apply cfg
+  Object.entries(p.cfg).forEach(([k,v])=>{
+    const el = document.getElementById(k);
+    if (!el) return;
+    if (el.type==='checkbox') el.checked=v;
+    else el.value=v;
+  });
+  resetSim();
+  updateSQL();
+  updateNote();
+  document.getElementById('s-sim').scrollIntoView({behavior:'smooth'});
+}
+
+// ══════════════════════════════════════════════
+// DEEP DIVE CARDS
+// ══════════════════════════════════════════════
+function buildDeepCards() {
+  const area = document.getElementById('deepCards');
+  area.innerHTML = DEEP.map(d=>{
+    const cfg_rows = d.configs.map(c=>`<tr>
+      <td><code style="font-family:'Fira Code',monospace;font-size:.75rem;color:var(--orange)">${c.name}</code></td>
+      <td><code style="font-family:'Fira Code',monospace;font-size:.72rem;color:var(--green)">${c.val}</code></td>
+      <td style="color:var(--muted);font-size:.8rem">${c.desc}</td>
+    </tr>`).join('');
+    const pf_rows = d.pitfalls.map(p=>`<li style="color:var(--muted);font-size:.82rem;margin-bottom:6px;padding-left:4px">⚠ ${p}</li>`).join('');
+    const uc_cards = d.usecases.map(u=>`
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+          <span style="font-size:1.1rem">${u.icon}</span>
+          <span style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">${u.domain}</span>
+          <span style="font-size:.82rem;font-weight:700;color:var(--text)">${u.title}</span>
+        </div>
+        <div style="font-size:.8rem;color:var(--muted);line-height:1.55">${u.detail}</div>
+      </div>`).join('');
+    const cost_rows = d.cost.map(c=>`
+      <div style="display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--border)">
+        <span style="color:var(--green);font-size:.9rem;flex-shrink:0;margin-top:1px">💰</span>
+        <div>
+          <div style="font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:3px">${c.tip}</div>
+          <div style="font-size:.79rem;color:var(--muted);line-height:1.5">${c.detail}</div>
+        </div>
+      </div>`).join('');
+    return `<div class="card" style="border-left:3px solid ${d.color};margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+        <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;background:${d.color}20;color:${d.color};border:1px solid ${d.color}50">${d.label}</span>
+        <span style="font-size:.8rem;color:var(--muted)">Use when: ${d.when}</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div>
+          <div style="font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Config options</div>
+          <div style="overflow-x:auto;margin-bottom:18px">
+            <table class="pred-table" style="width:100%">
+              <thead><tr><th>Config</th><th>Example value</th><th>What it does</th></tr></thead>
+              <tbody>${cfg_rows}</tbody>
+            </table>
+          </div>
+          <div style="font-size:.68rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Common pitfalls</div>
+          <ul style="list-style:none;padding-left:0;margin:0">${pf_rows}</ul>
+        </div>
+
+        <div>
+          <div style="font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Real-world use cases</div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px">${uc_cards}</div>
+          <div style="font-size:.68rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px">Cost optimisation</div>
+          ${cost_rows}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════
+// PREDICATE VISUALISER
+// ══════════════════════════════════════════════
+function renderPredVis() {
+  const win = parseInt(document.getElementById('predWindow').value);
+  const late = document.getElementById('predLate').checked;
+  const area = document.getElementById('predVis');
+  const totalDays = 60;
+  const scanPct = win===0 ? 100 : (win/totalDays*100);
+  const oldPct = win===0 ? 0 : ((totalDays-win)/totalDays*100);
+
+  let html = `<div class="pred-timeline">
+    <div class="tl-label">Target table — 60 days of data</div>
+    <div class="tl-bar">
+      <div class="tl-segment seg-old" style="left:0;width:${oldPct}%">
+        ${win===0 ? '' : `older data (out of predicate window)`}
+      </div>
+      <div class="tl-segment seg-scan" style="left:${oldPct}%;width:${scanPct}%">
+        ${win===0 ? 'FULL SCAN (no predicate)' : `last ${win} days — scanned by merge`}
+      </div>
+    </div>
+    <div class="tl-label">Incoming new data (temp table)</div>
+    <div class="tl-bar">
+      <div class="tl-segment seg-new" style="left:${oldPct+scanPct-5}%;width:5%">today's new rows</div>
+    </div>`;
+
+  if (late) {
+    html += `<div class="note warn" style="margin-top:10px"><strong>Late arrival outside window:</strong> A source record from ${win+5} days ago was corrected. The predicate window only covers last ${win} days — this row is ${win===0?'covered (full scan)':'<strong>outside the scan window and will NOT be updated</strong>'}. The target retains stale data for that row.</div>`;
+  }
+
+  if (win > 0) {
+    html += `<div class="tl-legend" style="margin-top:10px">
+      <div class="leg-item"><div class="tl-dot" style="background:#1a1d2780;border:1px solid var(--border)"></div>Not scanned (${totalDays-win} days saved)</div>
+      <div class="leg-item"><div class="tl-dot" style="background:#fbbf2425;border:1px dashed #fbbf2460"></div>Predicate scan window (${win} days)</div>
+      <div class="leg-item"><div class="tl-dot" style="background:#60a5fa20;border:1px solid var(--blue)"></div>New data being merged in</div>
+    </div>`;
+  }
+
+  html += `</div>`;
+  area.innerHTML = html;
+}
+
+// ══════════════════════════════════════════════
+// QUIZ
+// ══════════════════════════════════════════════
+let qIdx=0, qScore=0, qAnswered=false;
+function renderQ() {
+  const q=QUESTIONS[qIdx];
+  qAnswered=false;
+  document.getElementById('qProg').textContent=`Question ${qIdx+1} of ${QUESTIONS.length}`;
+  document.getElementById('qText').textContent=q.q;
+  document.getElementById('qFb').className='q-fb';
+  document.getElementById('qNext').style.display='none';
+  document.getElementById('qOpts').innerHTML=q.opts.map((o,i)=>`<button class="q-opt" onclick="answerQ(${i})">${o}</button>`).join('');
+}
+function answerQ(i){
+  if(qAnswered) return; qAnswered=true;
+  const q=QUESTIONS[qIdx];
+  document.querySelectorAll('.q-opt').forEach(b=>b.disabled=true);
+  const fb=document.getElementById('qFb');
+  if(i===q.ans){qScore++;document.querySelectorAll('.q-opt')[i].classList.add('correct');fb.textContent='✓ '+q.exp;fb.className='q-fb show ok';}
+  else{document.querySelectorAll('.q-opt')[i].classList.add('wrong');document.querySelectorAll('.q-opt')[q.ans].classList.add('reveal');fb.textContent='✗ '+q.exp;fb.className='q-fb show err';}
+  const nb=document.getElementById('qNext');
+  nb.style.display='inline-flex';
+  nb.textContent=qIdx<QUESTIONS.length-1?'Next →':'See results';
+}
+function nextQ(){
+  qIdx++;
+  if(qIdx>=QUESTIONS.length){
+    document.getElementById('qBody').style.display='none';
+    const sc=document.getElementById('qScore'); sc.classList.add('show');
+    document.getElementById('qScoreN').textContent=`${qScore}/${QUESTIONS.length}`;
+    const p=Math.round(qScore/QUESTIONS.length*100);
+    document.getElementById('qScoreL').textContent=p===100?'Perfect — you know incremental strategies cold.':p>=75?'Strong grasp. Review any wrong answers above.':p>=50?'Decent start. Go back through the simulator.':'Work through each strategy in the simulator, then try again.';
+  } else renderQ();
+}
+function restartQ(){qIdx=0;qScore=0;document.getElementById('qBody').style.display='';document.getElementById('qScore').classList.remove('show');renderQ();}
+
+// ══════════════════════════════════════════════
+// SIDE NAV + PROGRESS
+// ══════════════════════════════════════════════
+const NAV_SECS = [
+  {id:'s-sim',      label:'Simulator'},
+  {id:'s-perm',     label:'Scenarios'},
+  {id:'s-deep',     label:'Reference'},
+  {id:'s-risk',     label:'Risk Mitigation'},
+  {id:'s-compiled', label:'Compiled SQL'},
+  {id:'s-pred',     label:'Predicates'},
+  {id:'s-custom',   label:'Under the Hood'},
+  {id:'s-adapt',    label:'Adapters'},
+  {id:'s-quiz',     label:'Quiz'},
+];
+(function buildNav(){
+  const nav=document.getElementById('sidenav');
+  NAV_SECS.forEach(s=>{
+    const item=document.createElement('div');
+    item.className='snav-item';
+    item.setAttribute('role','button');
+    item.setAttribute('tabindex','0');
+    item.setAttribute('aria-label', s.label);
+    item.onclick=()=>document.getElementById(s.id).scrollIntoView({behavior:'smooth'});
+    item.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')document.getElementById(s.id).scrollIntoView({behavior:'smooth'});};
+    const dot=document.createElement('div');
+    dot.className='snav-dot';
+    const lbl=document.createElement('div');
+    lbl.className='snav-label';
+    lbl.textContent=s.label;
+    item.appendChild(dot);
+    item.appendChild(lbl);
+    nav.appendChild(item);
+  });
+})();
+window.addEventListener('scroll',()=>{
+  const total=document.body.scrollHeight-window.innerHeight;
+  document.getElementById('prog-fill').style.width=(window.scrollY/total*100)+'%';
+  const items=document.querySelectorAll('.snav-item');
+  NAV_SECS.forEach((s,i)=>{
+    const el=document.getElementById(s.id);
+    const r=el.getBoundingClientRect();
+    items[i].classList.toggle('on',r.top<=180&&r.bottom>0);
+  });
+},{passive:true});
+
+// ══════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════
+buildToggles();
+resetSim();
+updateSQL();
+updateNote();
+buildPermGrid();
+buildDeepCards();
+renderPredVis();
+renderQ();
+</script>
+</body>
+</html>
