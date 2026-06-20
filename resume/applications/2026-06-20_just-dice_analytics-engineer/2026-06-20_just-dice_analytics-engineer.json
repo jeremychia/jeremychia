@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "version": "2026-06-20_just-dice_analytics-engineer",
+    "lastUpdated": "2026-06-20",
+    "targetRole": "Analytics Engineer",
+    "targetCompany": "justDice",
+    "sourceUrl": "https://jobs.ashbyhq.com/justDice/07c63836-8e46-4408-95bb-fcc9c30c51be",
+    "alignmentSignal": "Green — autonomous IC role, dbt/SQL/Python stack, data quality emphasis, and independent ownership all match Jeremy's top optimisation priorities",
+    "behaviouralInsights": [
+      "Data Engineering listed before Analytics — builder role first, insights second",
+      "SQL/Python/dbt trio repeated in both responsibilities and requirements — fear of hiring an analyst-only without engineering chops",
+      "Strong autonomous IC signals: 'take ownership', 'work independently', 'freedom to make an impact from day one'",
+      "Data quality and validation language signals fear of unreliable data — frame achievements as reliability wins",
+      "Culture: 'curiosity and willingness to challenge', 'ownership, honesty, collaboration' — mirror directness and pragmatism",
+      "No mentorship, no stakeholder management, no people management — pure IC collaborator role",
+      "Experimentation (plan, execute, evaluate) + KPI ownership signals they want someone who spans build and insight"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to lead with data quality/pipeline scale as autonomous IC — matches JD's opening emphasis on engineering",
+      "Vinted bullets reordered: data quality/pipeline bullet first (top JD priority), then ETL optimisation, then dbt testing",
+      "Tourlane bullets reordered: dbt/Snowflake pipeline build first, then SLA improvement",
+      "Keppel bullets: KPI dashboard bullet moved first to address JD's KPI monitoring requirement",
+      "Skills reordered: Data Engineering first, Data Quality and DevOps second (ATS match), analytics third",
+      "AWS added to skills as explicit JD requirement; GitLab surfaced in DevOps category",
+      "Volunteering omitted — no direct signal for a technical analytics engineering role",
+      "pillHighlights replaced with ATS keywords from Layer B analysis"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Data Engineering and Analytics",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "90% reduction in misstatement risk on €40m of exposure — achieved through dbt data pipelines, data quality controls, and data architecture in BigQuery. Builds ETL/ELT systems and analytics solutions that give cross-functional teams reliable KPIs and metrics. Six years of data engineering and analytics across high-growth tech companies in Europe and APAC.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Designed layered data quality controls — dbt tests, reconciliations, anomaly detection — reducing risk by 90% on €40m of exposure.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Own end-to-end data pipelines and data models in dbt and BigQuery, used as single source of truth by Finance Ops and Group Reporting.",
+        "Optimised ETL/ELT processes and BigQuery workloads: 75% faster pipeline runtimes, 1.5TB/day fewer queries, and 15% lower compute costs through incremental model redesign — without breaking SLAs.",
+        "Built and redesigned invoice completeness alerting, delivering faster, more actionable signals for Finance and cutting time-to-detect.",
+        "Partner with Finance to translate plain-language requirements into documented metrics and data models, enabling self-serve analysis.",
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks; authored a reusable testing guide that teammates independently adopted.",
+        "Presented analytics testing strategy at Forward Data Conference (Paris, Nov 2025) and Data Maker's Fest (Porto, Portugal, May 2026)."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised transformation layer in dbt and Snowflake, integrating ETL/ELT from Salesforce, Stripe, Twilio, and backend systems.",
+        "Partnered with data engineering to harden data pipelines and data quality processes, improving SLA attainment from 88% to 97%.",
+        "Owned the Finance Data Products roadmap as sole analyst — spanning product management, data modelling, and analytics engineering.",
+        "Led finance reporting transformation using Tableau dashboards and iterative delivery, saving 5 FTE days per month in month-end close.",
+        "Mentored and onboarded three new analysts to the dbt and Snowflake stack, accelerating their time-to-productivity and code quality."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting analytics solutions in Power BI, cutting reporting and planning cycle times by up to 50%.",
+        "Delivered client enablement sessions and post-go-live documentation, achieving average satisfaction scores of 4.5 / 5 across all 11 projects.",
+        "Appointed as Culture Ambassador for Singapore, leading internal initiatives that improved employee NPS by 20 points year-on-year."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Tableau dashboards to track KPIs and metrics across 5 process areas, improving service delivery transparency for 140 staff.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month for the finance team.",
+        "Coordinated Finance and Operations reporting across 300 entities, improving data consistency and timeliness across 6 business units."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
+    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["SQL", "Python", "dbt", "AWS services", "Google BigQuery", "Snowflake", "Apache Airflow", "R"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "data quality", "Elementary", "GitLab", "GitHub Actions", "Git"] },
+      { "category": "Analytics and Visualisation", "items": ["Tableau", "Looker", "Looker Studio", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt",
+    "data pipelines",
+    "data modeling",
+    "data architecture",
+    "ETL/ELT",
+    "data quality",
+    "SQL",
+    "Python",
+    "GitLab",
+    "Tableau",
+    "KPIs and metrics",
+    "AWS services",
+    "Business Intelligence",
+    "analytics solutions",
+    "experimentation"
+  ]
+}
