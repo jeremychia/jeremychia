@@ -25,8 +25,8 @@
       "startDate": "Aug 2023",
       "endDate": "Mar 2026",
       "bullets": [
-        "Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker, used as the single source of truth by Finance Ops and Group Reporting during month-end close.",
-        "Designed and implemented layered data quality controls (dbt tests, reconciliations, anomaly detection), reducing misstatement risk by 90% on €40m of exposure.",
+        "Own end-to-end finance-ready shipping cost and revenue models in dbt, BigQuery, and Looker — used as the single source of truth by Finance Ops and Group Reporting throughout month-end close.",
+        "Designed and implemented layered data quality controls — dbt tests, reconciliations, anomaly detection — reducing misstatement risk by 90% on €40m of exposure and giving Finance a reliable data foundation.",
         "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
         "Built and extended monitoring and observability including a full redesign of invoice completeness alerting, delivering faster and more actionable signals for Finance and cutting time-to-detect data issues.",
         "Optimised BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and reducing query volume by 1.5TB/day through incremental model redesign, cutting compute costs by 15% while maintaining SLAs.",
@@ -43,9 +43,9 @@
       "startDate": "Jul 2022",
       "endDate": "Aug 2023",
       "bullets": [
-        "Owned the Finance Data Products roadmap as the sole finance data analyst, aligning priorities with company OKRs and acting as product manager, data analyst, and analytics engineer.",
-        "Built a centralised data transformation layer in dbt and Snowflake, integrating data from Salesforce, Stripe, Twilio, and backend systems to power finance and operational analytics.",
-        "Led finance reporting transformation using Looker dashboards and iterative delivery, saving 5 FTE days per month in the month-end close process.",
+        "Owned the Finance Data Products roadmap as the sole finance data analyst — aligning priorities with company OKRs and acting as product manager, data analyst, and analytics engineer in one role.",
+        "Built a centralised data transformation layer in dbt and Snowflake — integrating data from Salesforce, Stripe, Twilio, and backend systems — to power finance and operational analytics across the business.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close.",
         "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
         "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity."
       ]
@@ -58,7 +58,7 @@
       "endDate": "Mar 2022",
       "bullets": [
         "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
-        "Designed consolidation and budgeting solutions using LucaNet and Power BI, achieving up to 50% reduction in reporting and planning cycle times.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting and planning cycle times by up to 50%.",
         "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5.",
         "Appointed as Culture Ambassador for Singapore, driving internal initiatives that improved employee NPS by 20 points."
       ]
@@ -70,9 +70,9 @@
       "startDate": "Jul 2019",
       "endDate": "Mar 2020",
       "bullets": [
-        "Developed Power BI and Tableau dashboards to assess performance of 140 staff across 5 process areas, improving transparency of service delivery KPIs.",
-        "Streamlined service delivery reporting across 300 entities in 6 business units by coordinating cross-functional stakeholders, improving timeliness and data consistency.",
-        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the team for higher-value analysis."
+        "Developed Power BI and Tableau dashboards to track KPIs for 140 staff across 5 process areas, improving service delivery transparency.",
+        "Streamlined service delivery reporting across 300 entities in 6 business units by coordinating cross-functional stakeholders, improving data consistency and timeliness across Finance and Operations.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month and freeing the wider team to focus on higher-value work and problem-solving."
       ]
     }
   ],
@@ -84,9 +84,8 @@
       "startDate": "Sep 2021",
       "endDate": "Dec 2022",
       "bullets": [
-        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics.",
-        "Graduated as Valedictorian; awarded French Excellence Master Scholarship (Embassy of France in Singapore).",
-        "Best Thesis Award: NLP-based topical and sentiment analysis of sustainability reports and their relationship with corporate financial performance in Singapore."
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
       ]
     },
     {
@@ -96,9 +95,8 @@
       "startDate": "Aug 2016",
       "endDate": "Jul 2019",
       "bullets": [
-        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance.",
-        "Dean's List (AY 2016/2017).",
-        "Recipient of Isetan Foundation Scholarship and Temasek Foundation International Leadership Enrichment and Regional Networking (TFI-LeaRN) Programme scholarship for exchange at the University of Hong Kong."
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
       ]
     }
   ],
@@ -135,16 +133,16 @@
       "startDate": "Mar 2023",
       "endDate": "Jun 2025",
       "bullets": [
-        "Designed and delivered Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school serving migrants and marginalised communities.",
+        "Designed and delivered a Python and Data Analytics curriculum to 60+ students across three semesters at a non-profit tech school in Berlin that supports migrants and marginalised communities.",
         "Co-created a 13-week syllabus combining instructional content and case-study projects with an eight-person teaching team.",
         "Achieved a class progression rate of 80% against the school average of 50%."
       ]
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto", "year": "May 2026" },
-    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris", "year": "Nov 2025" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin", "year": "Sep 2025" },
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
     { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
   ],
   "publications": [

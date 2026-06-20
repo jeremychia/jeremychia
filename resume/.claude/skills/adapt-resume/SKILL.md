@@ -354,3 +354,55 @@ Tell the user:
 - Short bullet list of key adaptations (from `adaptationNotes`)
 - One sentence on main alignment and one on main gap (if any)
 - The `alignmentSignal` verdict from Step 4 — if Amber or Red, name the specific tension
+
+---
+
+## Step 12 — Iterative learning (MANDATORY after every run)
+
+After the conversation ends or the user gives feedback on the output, review the full session for improvements. Update this SKILL.md and related tooling immediately — do not defer. These updates compound across future runs.
+
+**What to capture:**
+
+**Orphan and length lessons:** If you spent multiple iterations fixing orphans, note the pattern. The goal is that future runs reach GREEN with no orphans faster. Examples:
+- If many bullets in the adapted JSON land in the 731–1024px orphan zone, the base resume bullets likely need adjustment. Fix `resume-base.json` so adapted versions start cleaner.
+- If the same kind of bullet (short role, long extension) keeps causing trouble, add a note in Step 7 about that class of bullet.
+
+**Structural improvements to the render/check tooling:** If the checker missed a section (e.g. talks, publications), update `check_resume_length.py` to model it. If the renderer had a layout that wasted space (e.g. single-column skills), update `render_resume.py`. Document the change here in the notes below.
+
+**Process gaps:** If a step was ambiguous, added friction, or produced a suboptimal result, refine the step instructions. Be specific — don't just say "improve Step 7", rewrite the relevant sentence.
+
+**Permanent learnings (append below):**
+
+### Known layout constants (updated 2026-06-20)
+
+- **Skills section:** Renderer uses two-column CSS grid — pairs of tech categories share one line. Checker models this as `ceil(len(tech) / 2)` LU. With 5 tech categories: 3 LU (not 5). Certs and languages still get their own lines.
+- **Talks section:** Checker now models talks: 2.0 LU heading + 1.0 LU per talk row.
+- **Base resume orphans:** All base resume bullets were adjusted 2026-06-20 to avoid the 731–1024px orphan zone. Future adapted versions should start with fewer orphans as a result.
+
+### Education bullet standard (from 2026-06-20 session)
+
+Education bullets should follow the same density standard as the best experience bullets: single lines landing in the **680–720px** range. The default education bullets (short factual statements like "Dean's List (AY 2016/2017)." at 152px, or "Ranked 7th globally..." at 433px) are severely under-utilising their lines.
+
+**Fix pattern:** Merge related facts onto one line using a semicolon. Three thin bullets → two dense ones:
+- Combine ranking + scholarship (or ranking + distinction) onto one line
+- Combine Dean's List + two scholarship names onto one line
+- Keep the thesis award as its own line, extended to ~700px with context about scope or finding
+
+This reduces education LU from 5.3 → 4.3 per institution and produces lines that match the visual density of the experience section. Apply these merged bullets in `resume-base.json` as the permanent baseline; adapted versions inherit them without further adjustment.
+
+### Orphan-fixing strategy (from 2026-06-20 session)
+
+Fixing orphans through small wording changes is iterative and slow. The root fix is in the base resume: bullets should be written to land either cleanly under 731px (one line) or richly over 1024px (two full lines). The 731–1024px zone is a trap — avoid it at source. When adapting, if a bullet lands in the orphan zone after rephrasing, either:
+1. Trim to <731px first (often just a few words), or
+2. Extend to >1024px (add context or a secondary outcome).
+Do not try to hit 1024px exactly — the pixel model is approximate and you will oscillate. Aim for 1040px+ to give headroom.
+
+### Checker vs. renderer gap (from 2026-06-20 session)
+
+The checker consistently shows ~4–5 LU more available than the renderer actually has. Root cause: the checker does not model `margin-bottom:4px` on job divs, `ul margin:2px`, `margin:1px 0 2px` on title rows. These add up to ~80px of unmodeled padding.
+
+**Rule of thumb:** When checker shows 63–69 LU GREEN, the page is functionally full. Do not force more bullets — the visible gap is structural bottom margin, not fillable content space. Only pursue further additions if the checker shows < 63 LU (SPARSE).
+
+### Duplicate bullet risk during iteration (from 2026-06-20 session)
+
+When rewriting orphan bullets across multiple iterations, it's easy to end up with two bullets expressing the same fact under different phrasing. **After each iteration that adds or rewrites a bullet, scan all bullets in the same role for semantic duplicates.** The adapted JSON for just-dice had exactly this error (two Keppel bullets both describing cross-functional reporting across 300 entities) — caught and fixed post-session.

@@ -187,10 +187,29 @@ def _render_publications(publications: list[dict]) -> str:
 def _render_skills(skills: dict) -> str:
     parts = [_section_heading("Skills")]
 
-    for cat in skills.get("technical", []):
-        name = _esc(cat.get("category", ""))
-        items = ", ".join(_esc(i) for i in cat.get("items", []))
-        parts.append(f'<p style="margin:2px 0;font-size:9pt;"><strong>{name}:</strong> {items}</p>')
+    # Two-column layout: pair tech categories side-by-side
+    tech = skills.get("technical", [])
+    rows = []
+    for i in range(0, len(tech), 2):
+        left_cat = tech[i]
+        left_name = _esc(left_cat.get("category", ""))
+        left_items = ", ".join(_esc(x) for x in left_cat.get("items", []))
+        left_cell = f'<p style="margin:2px 0;font-size:9pt;"><strong>{left_name}:</strong> {left_items}</p>'
+
+        if i + 1 < len(tech):
+            right_cat = tech[i + 1]
+            right_name = _esc(right_cat.get("category", ""))
+            right_items = ", ".join(_esc(x) for x in right_cat.get("items", []))
+            right_cell = f'<p style="margin:2px 0;font-size:9pt;"><strong>{right_name}:</strong> {right_items}</p>'
+            row = (
+                f'<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 12px;">'
+                f'{left_cell}{right_cell}</div>'
+            )
+        else:
+            row = left_cell
+        rows.append(row)
+
+    parts.extend(rows)
 
     certs = skills.get("certifications", [])
     if certs:
