@@ -247,6 +247,13 @@ def estimate(data: dict) -> tuple[float, list[str], list[str]]:
             f"  {item.get('organisation','?')[:25]:<25} {2 + entry_lu + 0.3:.1f} LU"
         )
 
+    talks = data.get("talks", [])
+    if talks:
+        lu += 2.0
+        breakdown.append("  Talks heading:         2.0 LU")
+        lu += float(len(talks))
+        breakdown.append(f"  Talks rows:            {float(len(talks)):.1f} LU")
+
     skills = data.get("skills", {})
     tech = skills.get("technical", [])
     certs = skills.get("certifications", [])
@@ -254,7 +261,8 @@ def estimate(data: dict) -> tuple[float, list[str], list[str]]:
     if tech or certs or langs:
         lu += 2.0
         breakdown.append("  Skills heading:        2.0 LU")
-    skills_lu = float(len(tech))
+    # Skills render in two columns — pairs of categories share one line
+    skills_lu = float(math.ceil(len(tech) / 2))
     if certs:
         cert_str = " · ".join(certs)
         skills_lu += max(1.0, float(math.ceil(text_width_px(cert_str) / EFFECTIVE_WIDTH_PX)))
