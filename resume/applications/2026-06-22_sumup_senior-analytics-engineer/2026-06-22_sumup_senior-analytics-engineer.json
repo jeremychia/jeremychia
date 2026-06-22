@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "version": "2026-06-22_sumup_senior-analytics-engineer",
+    "lastUpdated": "2026-06-22",
+    "targetRole": "Senior Analytics Engineer - Run & Grow",
+    "targetCompany": "SumUp",
+    "sourceUrl": "https://www.sumup.com/careers/positions/berlin-germany/data-analytics/senior-analytics-engineer-run-grow/8529484002/?gh_jid=8529484002&gh_src=1e0ad71d2",
+    "alignmentSignal": "Green — senior IC who shapes domain strategy, enforces modelling conventions, and builds trustworthy data products. Autonomy, technical depth, and consistency signals match Jeremy's motivations directly. Snowflake and Tourlane experience covers the warehouse requirement.",
+    "behaviouralInsights": [
+      "Domain-driven design is the primary signal — 4 occurrences of 'domain'; want structured ownership not ad-hoc models",
+      "Fear of inconsistency and undiscoverable data — 'consistent' appears 3+ times; 'discoverability' in both responsibilities and qualifications",
+      "Senior IC, not manager — no mentorship, no roadmap ownership, no people leadership language",
+      "Loss aversion framing — 'data quality, trust, and discoverability'; 'building models others can rely on'; frame as risk reduction and trust",
+      "Cross-squad collaboration is first listed responsibility — but as a collaborator enforcing standards, not a project manager",
+      "No culture language — technical team; mirror with precision and directness, no enthusiasm"
+    ],
+    "adaptationNotes": [
+      "Summary opens with data quality risk reduction metric (90%) — matches loss aversion and trust signals",
+      "First bullet of Vinted role repositioned to lead with domain modelling and data contracts angle",
+      "dbt, Snowflake, incremental processing, data quality, discoverability all surfaced verbatim in bullets and skills",
+      "Volunteering omitted — no signal in a technical domain strategy role",
+      "Skills reordered: Data Engineering first with dbt and Snowflake promoted to front of items array",
+      "Keppel and LucaNet retained but trimmed to minimum; primary weight on Vinted and Tourlane",
+      "pillHighlights replaced with 15 ATS keywords from Layer B"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Data Modelling and Domain Strategy",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "90% misstatement risk reduction across €40m of exposure — delivered through layered dbt domain models and data quality controls. Builds production data systems from data contracts through to reusable KPI models and a shared data catalogue. Chartered Accountant background; six years in dbt and Snowflake.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Owned end-to-end layered data models in dbt and BigQuery — enforcing modelling conventions and output SLAs as the single source of truth for Finance Ops and Group Reporting at month-end close.",
+        "Designed layered data quality controls — dbt tests, reconciliations, anomaly detection — reducing misstatement risk by 90% on €40m of exposure and giving Finance a reliable, auditable data foundation.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Raised dbt unit test coverage from <1% to 50%+ in the finance domain in four weeks; testing guide independently adopted by teammates.",
+        "Ran the first cross-functional workshop between DSA, Finance Operations, and Group Finance on domain priorities and data definitions.",
+        "Partner with Finance to translate plain-language requirements into documented metrics and data models, enabling self-serve analysis.",
+        "Optimised BigQuery workloads via incremental model redesign — 75% faster pipelines and 15% lower compute costs."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised data transformation layer in dbt and Snowflake — integrating Salesforce, Stripe, Twilio, and backend systems — to produce reusable, well-documented data products for finance and operations.",
+        "Owned the Finance Data Products roadmap as sole finance data analyst — translating business logic into clean, durable models.",
+        "Improved SLA attainment from 88% to 97% by hardening data pipelines with engineering and business teams.",
+        "Led finance reporting transformation in Looker, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting and planning cycle times by up to 50%."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Streamlined reporting across 300 entities in 6 business units, improving data consistency and timeliness for Finance and Operations.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "Snowflake", "Apache Iceberg", "SQL", "Python", "Google BigQuery", "Apache Airflow", "R"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "analytics engineering",
+    "data contracts",
+    "modelling conventions",
+    "layered data models",
+    "data quality",
+    "dbt",
+    "Snowflake",
+    "incremental processing",
+    "business domains",
+    "data products",
+    "KPI models",
+    "data domain strategy",
+    "query optimisation",
+    "discoverability",
+    "production data systems"
+  ]
+}
