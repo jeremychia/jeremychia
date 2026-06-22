@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "version": "2026-06-22_scoot_senior-analyst-business-intelligence",
+    "lastUpdated": "2026-06-22",
+    "targetRole": "Senior Analyst, Business Intelligence",
+    "targetCompany": "Scoot",
+    "sourceUrl": "https://flyscoot.wd102.myworkdayjobs.com/ScootExternalCareers/job/Singapore-HQ/Senior-Analyst--Business-Intelligence_R0005764-1?source=LinkedIn",
+    "alignmentSignal": "Amber — autonomous IC role fits well; Singapore return context is positive. Risk: traditional BI stack (no dbt, no modern data stack) may limit technical growth. Dashboard maintenance at an LCC may be less challenging than current scope.",
+    "behaviouralInsights": [
+      "Dashboard implementation is the primary deliverable — lead with Tableau and dashboard outcomes",
+      "Data quality and reliability is the secondary fear — frame achievements as data reliability wins",
+      "Autonomous IC role — 'take ownership', 'show initiative' — lead with outcomes and scale",
+      "SQL and BigQuery are core tools — both present in experience at scale",
+      "Traditional BI shop — no dbt/Python signal — emphasise SQL depth and Tableau over analytics engineering framing",
+      "Cross-functional liaison between technical and non-technical groups is explicit — surface this capability",
+      "Conservative, execution-focused culture — no personality marketing language needed"
+    ],
+    "adaptationNotes": [
+      "Summary reframed: leads with dashboard delivery and data reliability outcomes, not dbt/engineering framing",
+      "Keppel role elevated: Tableau dashboard development at top — directly addresses JD's first requirement",
+      "Vinted bullets reordered: data quality controls and BigQuery work prioritised over dbt-specific content",
+      "Tourlane: dashboard-first framing, SLA reliability bullet elevated",
+      "LucaNet: Power BI dashboard delivery and cross-functional liaison framing surfaced",
+      "Skills reordered: Analytics and Visualisation (Tableau, BigQuery) moved to first category",
+      "Talks section omitted — no signal value for traditional BI role",
+      "Community section omitted — no direct BI/dashboard signal",
+      "Phone swapped to Singapore number per base resume instruction",
+      "ATS keywords woven into summary and bullets"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Business Intelligence Analyst - Data and Finance",
+    "location": "Singapore",
+    "contact": {
+      "phone": "+65 9129 3246",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "Delivered Tableau dashboards and BI solutions used as single source of truth across finance and operations teams. Reduced data misstatement risk by 90% through layered data quality controls on €40m of exposure. Bridges technical and non-technical teams — distilling complex data into decision-ready business insights.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Built and maintained BI solutions in BigQuery and Looker — single source of truth for Finance Ops and Group Reporting.",
+        "Designed layered data quality controls — reconciliations, anomaly detection, automated dbt tests — cutting misstatement risk by 90% on €40m of finance exposure and giving Finance a reliable data foundation.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Optimised BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and reducing query volume by 1.5TB/day through incremental model redesign, cutting compute costs by 15%.",
+        "Translated Finance requirements into documented metrics and data models; partnered with Finance Ops to enable self-serve analysis and smoother change management as business logic evolved over time.",
+        "Built and extended monitoring and observability tooling, redesigning invoice completeness alerting to deliver faster, more actionable signals for Finance — cutting time-to-detect data issues significantly.",
+        "Raised automated test coverage from <1% to 50%+ in four weeks; authored a reusable testing guide adopted across the team."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Led finance reporting transformation via Looker dashboards, saving 5 FTE days per month in month-end close.",
+        "Built a centralised data layer integrating Salesforce, Stripe, Twilio, and backend systems — powering analytics across the business.",
+        "Hardened data pipelines with data engineering, improving SLA attainment from 88% to 97%.",
+        "Owned the Finance Data Products roadmap as sole finance data analyst — acting as analyst, engineer, and product manager.",
+        "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Designed reporting dashboards in Power BI for 11 listed APAC companies (SGX, HKEX, KLSE, ASX), cutting cycle times by up to 50%.",
+        "Acted as liaison between technical teams and Finance stakeholders — distilling complex data into business insights for decision-making.",
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5.",
+        "Managed data extraction and migration activities across 11 projects, ensuring data integrity from source systems into the reporting layer."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Tableau dashboards tracking KPIs for 140 staff across 5 process areas, covering data source management and reporting.",
+        "Streamlined reporting across 300 entities in 6 business units, improving data consistency and timeliness for Finance and Operations.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month.",
+        "Supported ad hoc data extraction and analysis requests from senior Finance and Operations stakeholders across business units."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Analytics and Visualisation", "items": ["Tableau", "Looker", "Looker Studio", "Microsoft Power BI"] },
+      { "category": "Data Engineering", "items": ["SQL", "Google BigQuery", "Python", "dbt", "Snowflake", "Apache Airflow"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "Finance and Automation Tools", "items": ["SAP", "UiPath", "LucaNet"] },
+      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "business intelligence solution",
+    "dashboard implementation",
+    "advanced reporting",
+    "Google BigQuery",
+    "Microsoft SQL Server",
+    "complex SQL queries",
+    "data source management",
+    "relational database system",
+    "cross-functional teams",
+    "business insights",
+    "decision-making",
+    "subject matter expert",
+    "BI solutions",
+    "data analytics",
+    "stored procedures"
+  ]
+}
