@@ -4,6 +4,7 @@
     "lastUpdated": "2026-06-22",
     "targetRole": "Senior Analytics Engineer - Run & Grow",
     "targetCompany": "SumUp",
+    "jobLocation": "Berlin, Germany",
     "sourceUrl": "https://www.sumup.com/careers/positions/berlin-germany/data-analytics/senior-analytics-engineer-run-grow/8529484002/?gh_jid=8529484002&gh_src=1e0ad71d2",
     "alignmentSignal": "Green — senior IC who shapes domain strategy, enforces modelling conventions, and builds trustworthy data products. Autonomy, technical depth, and consistency signals match Jeremy's motivations directly. Snowflake and Tourlane experience covers the warehouse requirement.",
     "behaviouralInsights": [
@@ -31,8 +32,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "90% misstatement risk reduction across €40m of exposure — delivered through layered dbt domain models and data quality controls. Builds production data systems from data contracts through to reusable KPI models and a shared data catalogue. Chartered Accountant background; six years in dbt and Snowflake.",
@@ -114,9 +121,24 @@
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
-    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" }
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Data Maker's Fest",
+      "location": "Porto, Portugal",
+      "year": "May 2026"
+    },
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Forward Data Conference",
+      "location": "Paris, France",
+      "year": "Nov 2025"
+    },
+    {
+      "title": "Talk Moderator and Host: Cost Optimisation",
+      "event": "dbt Community Meetup, Vinted Berlin",
+      "location": "Berlin, Germany",
+      "year": "Sep 2025"
+    }
   ],
   "publications": [
     {
@@ -130,11 +152,53 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "Snowflake", "Apache Iceberg", "SQL", "Python", "Google BigQuery", "Apache Airflow", "R"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "Snowflake",
+          "Apache Iceberg",
+          "SQL",
+          "Python",
+          "Google BigQuery",
+          "Apache Airflow",
+          "R"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -142,11 +206,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
