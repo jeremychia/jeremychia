@@ -2,7 +2,10 @@
   "meta": {
     "version": "FINN Data Engineer",
     "lastUpdated": "2026-04-09",
-    "targetRole": "Data Engineer at FINN"
+    "targetRole": "Data Engineer at FINN",
+    "behaviouralInsights": [
+      "Loss aversion: fintech context implies regulatory and financial data correctness concerns. Frame pipeline reliability and data quality work as risk reduction — incorrect financial data in a car subscription platform has direct customer and compliance consequences."
+    ]
   },
   "header": {
     "name": "Jeremy Jerome Chia",
@@ -11,8 +14,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Data Engineer with 6+ years building scalable data infrastructure and pipelines for finance and fintech. Advanced expertise in BigQuery, dbt (dbt Champion), and data modeling. Proven track record at early-stage operations scaling and regulated environments. Combines technical depth in SQL, Python, and analytics engineering with financial domain knowledge to deliver reliable, self-serve data platforms.",
@@ -116,13 +125,67 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering and Transformation", "items": ["dbt (Champion)", "SQL", "Python", "Apache Spark", "Apache Airflow", "Data Modeling", "ETL/ELT"] },
-      { "category": "Data Warehousing", "items": ["Google BigQuery", "Snowflake", "Data Architecture", "Query Optimization"] },
-      { "category": "Analytics and Dashboarding", "items": ["Looker", "Looker Studio", "Data Visualization"] },
-      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary", "Monitoring", "Anomaly Detection"] },
-      { "category": "Infrastructure and DevOps", "items": ["Terraform", "GitHub Actions", "Git", "CI/CD"] },
-      { "category": "Streaming Data", "items": ["Kafka", "Event Processing"] },
-      { "category": "Finance Domain Tools", "items": ["LucaNet", "SAP"] }
+      {
+        "category": "Data Engineering and Transformation",
+        "items": [
+          "dbt (Champion)",
+          "SQL",
+          "Python",
+          "Apache Spark",
+          "Apache Airflow",
+          "Data Modeling",
+          "ETL/ELT"
+        ]
+      },
+      {
+        "category": "Data Warehousing",
+        "items": [
+          "Google BigQuery",
+          "Snowflake",
+          "Data Architecture",
+          "Query Optimization"
+        ]
+      },
+      {
+        "category": "Analytics and Dashboarding",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Data Visualization"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "Monitoring",
+          "Anomaly Detection"
+        ]
+      },
+      {
+        "category": "Infrastructure and DevOps",
+        "items": [
+          "Terraform",
+          "GitHub Actions",
+          "Git",
+          "CI/CD"
+        ]
+      },
+      {
+        "category": "Streaming Data",
+        "items": [
+          "Kafka",
+          "Event Processing"
+        ]
+      },
+      {
+        "category": "Finance Domain Tools",
+        "items": [
+          "LucaNet",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -130,11 +193,26 @@
       "dbt Certification (Champion)"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

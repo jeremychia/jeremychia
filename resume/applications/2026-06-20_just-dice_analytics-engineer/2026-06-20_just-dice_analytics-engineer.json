@@ -13,7 +13,8 @@
       "Data quality and validation language signals fear of unreliable data — frame achievements as reliability wins",
       "Culture: 'curiosity and willingness to challenge', 'ownership, honesty, collaboration' — mirror directness and pragmatism",
       "No mentorship, no stakeholder management, no people management — pure IC collaborator role",
-      "Experimentation (plan, execute, evaluate) + KPI ownership signals they want someone who spans build and insight"
+      "Experimentation (plan, execute, evaluate) + KPI ownership signals they want someone who spans build and insight",
+      "Loss aversion: 'data quality and validation processes to guarantee data accuracy and consistency' is an explicit fear signal — unreliable data has direct product and experiment consequences in a gaming/adtech context. Frame data quality achievements as risk reduction, not just engineering hygiene."
     ],
     "adaptationNotes": [
       "Summary rewritten to lead with data quality/pipeline scale as autonomous IC — matches JD's opening emphasis on engineering",
@@ -33,8 +34,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "90% reduction in misstatement risk on €40m of exposure — achieved through dbt data pipelines, data quality controls, and data architecture in BigQuery. Builds ETL/ELT systems and analytics solutions that give cross-functional teams reliable KPIs and metrics. Six years of data engineering and analytics across high-growth tech companies in Europe and APAC.",
@@ -121,18 +128,82 @@
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
-    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
-    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Data Maker's Fest",
+      "location": "Porto, Portugal",
+      "year": "May 2026"
+    },
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Forward Data Conference",
+      "location": "Paris, France",
+      "year": "Nov 2025"
+    },
+    {
+      "title": "Talk Moderator and Host: Cost Optimisation",
+      "event": "dbt Community Meetup, Vinted Berlin",
+      "location": "Berlin, Germany",
+      "year": "Sep 2025"
+    },
+    {
+      "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches",
+      "event": "MDS Fest 3.0",
+      "location": "Online",
+      "year": "May 2025"
+    }
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["SQL", "Python", "dbt", "AWS services", "Google BigQuery", "Snowflake", "Apache Airflow", "R"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "data quality", "Elementary", "GitLab", "GitHub Actions", "Git"] },
-      { "category": "Analytics and Visualisation", "items": ["Tableau", "Looker", "Looker Studio", "Microsoft Power BI"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "SQL",
+          "Python",
+          "dbt",
+          "AWS services",
+          "Google BigQuery",
+          "Snowflake",
+          "Apache Airflow",
+          "R"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "data quality",
+          "Elementary",
+          "GitLab",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Tableau",
+          "Looker",
+          "Looker Studio",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -140,11 +211,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

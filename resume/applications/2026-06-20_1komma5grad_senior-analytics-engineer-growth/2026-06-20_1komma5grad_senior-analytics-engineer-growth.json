@@ -12,7 +12,8 @@
       "Pipeline stability is a fear — frame achievements as reliability wins and incident reduction",
       "Mentoring and bus-factor reduction signal knowledge concentration risk — surface teaching and documentation",
       "Mastery-obsessed culture: answer any question within minutes — depth over breadth",
-      "No stakeholder management or executive communication language — hands-on builder is the hire"
+      "No stakeholder management or executive communication language — hands-on builder is the hire",
+      "Loss aversion: 'Pipeline stability' is explicitly named and 'first to respond to incidents and drive resolution' implies fear of marketing data outages affecting campaign decisions. Frame pipeline ownership as reliability and incident prevention, not just build."
     ],
     "adaptationNotes": [
       "Summary reframed around data model ownership and pipeline reliability rather than finance domain",
@@ -33,8 +34,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "90% cut in misstatement risk on €40m exposure — built through dbt and BigQuery data models owned end-to-end. Six years of analytics engineering across high-growth startups in Europe, specialising in pipeline reliability and scalable data modeling. Chartered Accountant background sharpens metric definition and attribution logic across complex, multi-source datasets.",
@@ -117,19 +124,89 @@
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
-    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
-    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Data Maker's Fest",
+      "location": "Porto, Portugal",
+      "year": "May 2026"
+    },
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Forward Data Conference",
+      "location": "Paris, France",
+      "year": "Nov 2025"
+    },
+    {
+      "title": "Talk Moderator and Host: Cost Optimisation",
+      "event": "dbt Community Meetup, Vinted Berlin",
+      "location": "Berlin, Germany",
+      "year": "Sep 2025"
+    },
+    {
+      "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches",
+      "event": "MDS Fest 3.0",
+      "location": "Online",
+      "year": "May 2025"
+    }
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "BigQuery", "SQL", "Python", "Snowflake", "Fivetran", "Apache Airflow", "R", "Scala"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Tableau", "Looker Studio", "Microsoft Power BI"] },
-      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "BigQuery",
+          "SQL",
+          "Python",
+          "Snowflake",
+          "Fivetran",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Tableau",
+          "Looker Studio",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Data Mining and ML Platforms",
+        "items": [
+          "Knime",
+          "Azure ML Studio",
+          "Dataiku"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -137,11 +214,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

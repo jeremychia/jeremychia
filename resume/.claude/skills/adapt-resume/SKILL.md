@@ -208,6 +208,29 @@ Limit to 3–5 questions. **Stop here and wait for the user to respond.** Do not
 
 If the user says "no gaps" or "continue", proceed directly.
 
+**After the user responds (or skips):** Write `applications/{base name}/{base name}-gaps.md` documenting the gaps identified, regardless of whether the user had answers:
+
+```markdown
+# Gaps — {Job Title} @ {Company}
+
+**Role:** {base name}
+**Date:** {today}
+
+## Gaps identified
+
+| Gap | JD requirement (verbatim or paraphrased) | User's answer / closest experience | Status |
+|-----|------------------------------------------|-------------------------------------|--------|
+| {gap name} | {what JD asked for} | {user's response, or "Not covered"} | Covered / Partial / Open |
+
+## Open gaps carried forward
+
+{Bullet list of gaps marked Open — these are genuine resume weaknesses for this role that could not be bridged by additional context. Carry these into the cover letter P3 if applicable.}
+```
+
+If there are no gaps (JD fully covered), write the file with a single line: `No material gaps identified.`
+
+This file is used by `/review-applications` and the cover letter step to track systemic weaknesses across applications.
+
 ---
 
 ## Step 7 — Check length BEFORE rendering

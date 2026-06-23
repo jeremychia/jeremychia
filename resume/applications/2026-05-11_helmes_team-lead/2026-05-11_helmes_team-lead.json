@@ -15,7 +15,8 @@
       "Culture language (caring, freedom, trust) mirrors autonomy-first, people-first values — mirror without copy-paste",
       "No deep technical tools listed — management and people focus; do not lead with engineering",
       "Seek new opportunities + support sales signals entrepreneurial commercial mindset expected",
-      "Absence of data/analytics language — this is general software development management, not analytics"
+      "Absence of data/analytics language — this is general software development management, not analytics",
+      "Loss aversion: 'Take responsibility and follow through', 'financial management at unit level', and client billing scope signal fear of delivery failure, cost overrun, or client churn. Frame leadership achievements as reliability and accountability wins — projects delivered on time, clients retained, budgets met."
     ],
     "adaptationNotes": [
       "Tagline changed from analytics engineer to team lead framing",
@@ -38,8 +39,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Autonomous leader with 6+ years managing technical delivery, cross-functional teams, and client relationships across APAC and Europe. Combines hands-on project ownership — spanning 11 enterprise client engagements and multi-team coordination — with direct financial oversight and a track record of raising team capability and improving delivery SLAs. Chartered Accountant background enables confident engagement with billing, budget management, and financial reporting at unit level.",
@@ -136,11 +143,54 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] },
-      { "category": "Data Engineering", "items": ["Python", "SQL", "dbt", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow", "R", "Scala"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] }
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      },
+      {
+        "category": "Data Engineering",
+        "items": [
+          "Python",
+          "SQL",
+          "dbt",
+          "Google BigQuery",
+          "Snowflake",
+          "Apache Spark",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -148,11 +198,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

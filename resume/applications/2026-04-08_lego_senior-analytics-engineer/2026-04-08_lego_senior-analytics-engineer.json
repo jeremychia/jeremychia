@@ -13,6 +13,9 @@
       "AI-Assisted Development category kept prominent — JD explicitly lists 'coding assistant proficiency' as a preferred skill.",
       "ReDI School teaching bullet is a soft match for JD's 'data literacy initiatives' — kept and not trimmed.",
       "pillHighlights updated to reflect JD keywords: data quality, CI/CD, Airflow, commercial analytics."
+    ],
+    "behaviouralInsights": [
+      "Loss aversion: 'data integrity', 'compliance', 'CI/CD standards', 'data quality frameworks', 'controlled compliant environment', and 'assertion checks' are all fear-of-failure signals — LEGO is protecting brand and commercial data from errors. Frame achievements as reliability wins, governance delivered, and compliance assured rather than speed."
     ]
   },
   "header": {
@@ -22,8 +25,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Analytics Engineer with 6+ years building scalable, self-service data products and pipeline infrastructure across large-scale commercial organisations. Specialises in data pipeline engineering, data quality frameworks, and CI/CD standards — using dbt, Apache Spark, Airflow, and BigQuery — to deliver reliable data products that drive quantifiable commercial value. Track record of championing data literacy, governance, and best practices in data product development across cross-functional teams.",
@@ -130,13 +139,63 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Programming and Data Engineering", "items": ["SQL", "Python", "dbt", "Apache Spark", "Apache Airflow", "Scala", "R"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
-      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "SQL",
+          "Python",
+          "dbt",
+          "Apache Spark",
+          "Apache Airflow",
+          "Scala",
+          "R"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "Elementary",
+          "dbt tests"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Databases",
+        "items": [
+          "Google BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -144,11 +203,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
