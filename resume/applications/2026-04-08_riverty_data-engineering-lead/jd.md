@@ -75,3 +75,29 @@ Working in an agile, cross-functional data product model, this role is accountab
 
 - No visa sponsorship provided; EU citizenship or valid work permit for Germany/Norway required.
 - Equal opportunity employer.
+
+---
+
+## Layer B — Behavioural Analysis
+
+**Urgency signal:** No explicit deadline or re-post language, but "build and scale a high-performing data engineering team" and "lead, mentor, and grow" signals the team is understaffed relative to ambition. The fintech context (payments, dunning, collections) implies regulatory time pressure. Frame resume for time-to-value: rapid ramp on team uplift and pipeline reliability, not a slow strategic build.
+
+**Greenfield vs. fix/scale:** Scale and improve. "Establish and continuously improve the operating model", "promote automation", "contribute to the evolution of our data-as-a-product approach" — the platform exists; this role scales and matures it. Lead with bullets that show you improved team throughput, upgraded pipeline reliability, or lifted data quality across an existing engineering function.
+
+**Velocity vs. rigour:** Rigour with an agile wrapper. "Ensure clear accountability for delivery outcomes (timeliness, quality, completeness, compliance)", "data SLAs and SLOs", "proactive data reliability engineering", "regulatory reporting" — compliance and quality are non-negotiable. "Agile" appears repeatedly but as a delivery structure, not a speed signal. Frame bullets around measurable quality and reliability outcomes delivered within agile cadences.
+
+**Internal customer:** Analytics, BI, data science, and regulatory reporting functions — plus Data Product Owners as direct internal clients. The broader business ("faster and smarter decisions") is the end beneficiary. Outcomes should reference enabling analytical teams to self-serve or reducing time-to-insight, not just pipeline construction.
+
+**Stack lock-in:** Azure is hard-required (named explicitly, including Databricks Medallion architecture). SQL and Python are hard-required. dbt and Airflow are named examples ("e.g.") — preferred but not exclusive. Spark is listed. Mirror Azure and Databricks verbatim; present dbt as the transformation layer used; foreground transferability for Airflow/Spark if not exact match.
+
+**JD authorship:** Written with technical depth consistent with a hiring manager or senior technical lead. Specific signals: "Databricks Medallion architecture", "data SLAs and SLOs", "ETL/ELT pipelines", "modern data transformation and orchestration frameworks (e.g., dbt, Airflow, Spark)", "10+ years of experience in data engineering, with at least 3–5 years in a leadership role managing multi-team delivery, with overall team size >10", and "proactive data reliability engineering." These are precise, opinionated requirements rather than generic recruiter language. Implication: pitch with technical precision — name specific tools, quantify team sizes managed, and use SLA/SLO and reliability engineering language verbatim.
+
+**Data team size and maturity:** Explicitly stated: requires experience with "overall team size >10" and "multi-team delivery." The role leads "data engineers working across multiple agile data product teams" in a "decentralized team setup." The broader data organisation includes Data Product Owners, Platform Engineering teams, Business IT teams, Data Governance, and Data Architecture as named peers — indicating a mature, multi-function data organisation already in place. This is a leadership hire into an existing structure, not a founding hire. Implication for first-90-days framing: show rapid ramp on team assessment and delivery cadence improvement; demonstrate experience inheriting and uplifting an existing multi-team engineering function, not building from zero.
+
+**Domain risk:** High. Riverty operates in "payments, dunning, invoicing, and collections" — regulated FinTech. The JD explicitly references "regulatory reporting" as a delivery requirement alongside analytics and AI. "Ensure clear accountability for delivery outcomes (timeliness, quality, completeness, compliance)" and "data SLAs and SLOs" signal that data errors carry regulatory and financial consequences. "Experience in fintech or financial services is a strong advantage" reinforces the domain sensitivity. Implication: frame every bullet as risk reduction and accuracy outcome — "ensured pipeline compliance with regulatory reporting timelines", "implemented data quality controls reducing SLA breaches" — speed framing alone is insufficient.
+
+**Collaboration width:** Wide. Named teams and functions quoted verbatim: "Data Product Owners", "BI", "data analysis", "data science", "data platform", "tech teams", "Platform Engineering teams", "Business IT teams", "Data Governance", "Data Architecture." That is 9+ distinct functions. Implication: wide (4+ teams) — lead with cross-functional coordination evidence; demonstrate experience aligning engineering delivery with governance, platform, and business stakeholders simultaneously across a decentralised agile structure.
+
+**Language gate:** Not stated in JD.
+
+**Interview process signal:** Not stated in JD.
