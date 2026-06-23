@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AE/BI Job Market — Psychological Analysis</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --surface: #f8f8f6;
+  --surface2: #f0f0ed;
+  --border: #e5e5e1;
+  --text: #111111;
+  --muted: #6b7280;
+  --accent: #1d4ed8;
+  --high: #c0392b;
+  --moderate: #d97706;
+  --low: #16a34a;
+  --w: 1100px;
+  --col: 520px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+
+/* ── SKIP LINK ──────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; top: -48px; left: 1rem;
+  background: var(--accent); color: #fff; padding: 0.5rem 1rem;
+  border-radius: 0 0 6px 6px; font-size: 0.82rem; font-weight: 600;
+  text-decoration: none; z-index: 9999; transition: top 0.1s;
+}
+.skip-link:focus { top: 0; }
+
+/* ── FOCUS RINGS ────────────────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+/* ── HERO ──────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 4rem 2rem;
+  background: #fff; border-bottom: 1px solid var(--border); position: relative;
+}
+.hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; max-width: 680px; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero-sub { font-size: 1rem; color: var(--muted); max-width: 480px; margin-bottom: 2.5rem; line-height: 1.75; }
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--accent); color: white; text-decoration: none;
+  font-size: 0.85rem; font-weight: 600; padding: 0.7rem 1.4rem;
+  border-radius: 6px; transition: opacity 0.15s;
+}
+.hero-cta:hover { opacity: 0.85; }
+.hero-cta svg { width: 14px; height: 14px; }
+.hero-scroll {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  color: var(--muted); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+}
+.hero-scroll::after { content: ''; display: block; width: 1px; height: 32px; background: linear-gradient(to bottom, var(--muted), transparent); }
+
+/* ── STICKY NAV ─────────────────────────────────────────────────── */
+.sticky-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.55rem 2rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+}
+.nav-title { font-size: 0.78rem; font-weight: 700; color: var(--accent); margin-right: 0.5rem; white-space: nowrap; }
+.nav-links { display: flex; gap: 1.25rem; flex: 1; }
+.nav-links a { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.15s; white-space: nowrap; }
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--accent); font-weight: 600; }
+.nav-filter { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; }
+.nav-filter label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.nav-filter select, .ctrl-group select {
+  font-size: 0.78rem; background: var(--surface2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px; padding: 0.25rem 0.5rem;
+}
+.count-pill { font-size: 0.7rem; background: var(--surface); border: 1px solid var(--border); color: var(--muted); border-radius: 20px; padding: 0.2rem 0.6rem; white-space: nowrap; }
+.count-pill strong { color: var(--accent); }
+
+/* ── GENERIC SECTION ────────────────────────────────────────────── */
+.section { padding: 8rem 2rem; max-width: var(--w); margin: 0 auto; }
+.section-label { font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.85rem; }
+.section-headline { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 1.25rem; }
+.section-body { font-size: 0.91rem; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 3rem; }
+
+.divider { border: none; border-top: 1px solid var(--border); max-width: var(--w); margin: 0 auto; }
+
+/* ── STATS ROW ──────────────────────────────────────────────────── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+  border-radius: 10px; overflow: hidden;
+}
+.stat-cell { background: var(--surface); padding: 2rem 1.25rem; text-align: center; }
+.stat-num { font-size: 2.2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+.stat-label { font-size: 0.7rem; color: var(--muted); font-weight: 500; }
+
+/* ── SCATTER ────────────────────────────────────────────────────── */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; }
+.card-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.35rem; }
+.card-sub { font-size: 0.74rem; color: var(--muted); margin-bottom: 1.75rem; }
+.scatter-controls { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center; }
+.ctrl-group { display: flex; align-items: center; gap: 0.4rem; }
+.ctrl-group label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; }
+.scatter-wrap { position: relative; height: 400px; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.legend-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; color: var(--muted); }
+.legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── TOOLTIP (scatter) ──────────────────────────────────────────── */
+#tooltip {
+  position: fixed; background: #1c2030; border: 1px solid #2e364f; color: #e8eaf0;
+  border-radius: 8px; padding: 1rem 1.1rem; max-width: 300px;
+  font-size: 0.75rem; line-height: 1.55; pointer-events: none;
+  opacity: 0; transition: opacity 0.12s; z-index: 1000; box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+#tooltip.visible { opacity: 1; }
+.tt-company { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.1rem; color: #fff; }
+.tt-role { color: #8892aa; margin-bottom: 0.75rem; font-size: 0.73rem; }
+.tt-field { margin-bottom: 0.45rem; }
+.tt-label { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.09em; color: #6b9ef7; margin-bottom: 0.1rem; }
+.tt-quote { font-style: italic; color: #b8c4d8; font-size: 0.73rem; }
+.tt-gate { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #2e364f; color: #f87171; font-size: 0.71rem; }
+
+/* ── FULL-SCREEN DONUT SECTIONS ─────────────────────────────────── */
+.donut-section {
+  min-height: 100vh;
+  border-top: 1px solid var(--border);
+  /* outer gutter — white space on both sides */
+  padding: 0 max(2rem, calc((100vw - 1200px) / 2));
+}
+.donut-inner {
+  display: flex; align-items: stretch;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  min-height: 100vh;
+}
+.donut-left {
+  width: 460px; flex-shrink: 0;
+  padding: 5rem 3.5rem;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; justify-content: center;
+  position: sticky; top: 44px;
+  height: calc(100vh - 44px);
+  overflow-y: auto;
+}
+.donut-right {
+  flex: 1; padding: 5rem 3.5rem;
+  overflow-y: auto;
+  max-width: 680px;
+}
+@media (max-width: 900px) {
+  .donut-section { padding: 0 1rem; }
+  .donut-inner { flex-direction: column; min-height: auto; border: none; }
+  .donut-left { width: 100%; position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
+  .donut-right { padding: 2.5rem 1.5rem; max-width: none; }
+}
+
+.donut-finding { font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+.donut-headline { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 1rem; }
+.donut-methodology {
+  font-size: 0.82rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem;
+  padding: 1rem; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);
+}
+.donut-methodology strong { color: var(--text); font-weight: 600; }
+.donut-methodology em {
+  font-style: normal;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+.donut-chart-wrap { position: relative; height: 220px; margin-bottom: 1rem; }
+.donut-hint { font-size: 0.72rem; color: var(--muted); text-align: center; }
+.donut-hint.pulse { animation: pulse-hint 1.6s ease-in-out 0.6s 2; }
+@keyframes pulse-hint { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+/* Company list (right panel) */
+.segment-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+.seg-tab {
+  font-size: 0.74rem; font-weight: 600; padding: 0.3rem 0.75rem;
+  border-radius: 20px; border: 1.5px solid var(--border); background: #fff;
+  cursor: pointer; transition: all 0.15s; color: var(--muted); white-space: nowrap;
+}
+.seg-tab.active { color: #fff; border-color: transparent; }
+.seg-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+.company-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.company-card {
+  background: #fff; border: 1px solid var(--border); border-radius: 8px;
+  padding: 0.9rem 1rem; transition: box-shadow 0.15s;
+}
+.company-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+.cc-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.3rem; }
+.cc-company { font-weight: 700; font-size: 0.88rem; }
+.cc-role { font-size: 0.74rem; color: var(--muted); }
+.cc-quote { font-size: 0.78rem; color: #374151; font-style: italic; line-height: 1.6; border-left: 3px solid var(--border); padding-left: 0.75rem; margin-top: 0.4rem; }
+.kw-highlight { background: #fef3c7; color: #92400e; font-style: normal; padding: 0.05em 0.2em; border-radius: 3px; font-weight: 500; }
+.cc-location { font-size: 0.68rem; color: var(--muted); margin-top: 0.35rem; }
+.empty-state { color: var(--muted); font-size: 0.85rem; padding: 2rem 0; text-align: center; }
+
+/* ── TOOL SECTION ───────────────────────────────────────────────── */
+#toolChart { max-height: 280px; cursor: pointer; }
+#toolCompanyPanel { margin-top: 1.75rem; display: none; }
+.tool-panel-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 1rem; }
+.tool-panel-title { font-size: 0.88rem; font-weight: 700; }
+.tool-panel-count { font-size: 0.74rem; color: var(--muted); }
+.tool-panel-hint { font-size: 0.72rem; color: var(--muted); margin-top: 0.25rem; }
+#toolCompanyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.6rem;
+}
+#toolCompanyList .company-card { padding: 0.7rem 0.85rem; }
+.company-card--muted { opacity: 0.45; }
+.tool-group-label {
+  grid-column: 1 / -1;
+  font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent);
+  padding: 0.5rem 0 0.25rem; border-top: 1px solid var(--border); margin-top: 0.25rem;
+}
+.tool-group-label:first-child { border-top: none; margin-top: 0; }
+.tool-group-label span { font-weight: 400; color: var(--muted); }
+.tool-group-label--no { color: var(--muted); }
+
+/* ── SCROLLBAR ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#findings">Skip to main content</a>
+
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero-eyebrow">37 job descriptions · psychologically decoded</div>
+  <h1>What companies <em>fear</em> tells you more than what they want</h1>
+  <p class="hero-sub">A reading of the AE/BI job market through the language of job descriptions — what they repeat, what they omit, and what that reveals about the culture behind the role.</p>
+  <a href="#findings" class="hero-cta">
+    Read the analysis
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8l5 5 5-5"/></svg>
+  </a>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" aria-label="Page sections">
+  <span class="nav-title">AE/BI Market</span>
+  <div class="nav-links" role="list">
+    <a href="#findings" role="listitem" data-section="findings">Fear index</a>
+    <a href="#stress" role="listitem" data-section="stress">Stress matrix</a>
+    <a href="#rigour-section" role="listitem" data-section="rigour-section">What they fear</a>
+    <a href="#author-section" role="listitem" data-section="author-section">Who wrote it</a>
+    <a href="#mission-section" role="listitem" data-section="mission-section">Mission type</a>
+    <a href="#maturity-section" role="listitem" data-section="maturity-section">Team maturity</a>
+    <a href="#stack" role="listitem" data-section="stack">Stack</a>
+  </div>
+  <div class="nav-filter">
+    <label for="filterRoleType">Filter roles</label>
+    <select id="filterRoleType" aria-label="Filter by role type">
+      <option value="analytics_engineering_bi">AE / BI only</option>
+      <option value="all">All roles</option>
+      <option value="data_engineering">Data Engineering</option>
+      <option value="team_lead">Team Lead</option>
+    </select>
+  </div>
+  <div class="count-pill" id="countBadge" aria-live="polite" aria-atomic="true"></div>
+</nav>
+
+<!-- SECTION 1: FEAR INDEX -->
+<section class="section" id="findings">
+  <div class="section-label">Finding 01</div>
+  <h2 class="section-headline">The market is writing from fear, not aspiration</h2>
+  <p class="section-body">Job descriptions are not wish lists. They are damage reports. Every word repeated three or more times is a scar — a past incident that burned the team. The pattern across 37 JDs is unambiguous: companies hire to prevent failure, not to enable success.</p>
+  <div class="stats-row" id="statsRow"></div>
+</section>
+
+<hr class="divider">
+
+<!-- SECTION 2: STRESS MATRIX -->
+<section class="section" id="stress">
+  <div class="section-label">Finding 02</div>
+  <h2 class="section-headline">Not all roles are equally demanding</h2>
+  <p class="section-body">Two dimensions define role pressure: how many teams you are accountable to, and what breaks if your data is wrong. Hover any dot to see the exact JD language that drove the classification.</p>
+  <div class="card">
+    <div class="card-title" id="scatterTitle">Collaboration width × Domain risk</div>
+    <p class="card-sub">Top-right = maximum pressure. Hover any dot for verbatim JD evidence.</p>
+    <div class="scatter-controls">
+      <div class="ctrl-group">
+        <label>X axis</label>
+        <select id="xAxis">
+          <option value="collaboration_width">Collaboration width</option>
+          <option value="salary_mid">Salary midpoint (EUR)</option>
+        </select>
+      </div>
+      <div class="ctrl-group">
+        <label>Colour by</label>
+        <select id="colourBy">
+          <option value="domain_risk">Domain risk</option>
+          <option value="velocity_vs_rigour">Rigour vs velocity</option>
+          <option value="jd_authorship">JD authorship</option>
+          <option value="greenfield_vs_fix">Greenfield vs fix</option>
+          <option value="data_team_maturity">Team maturity</option>
+        </select>
+      </div>
+    </div>
+    <div class="scatter-wrap"><canvas id="scatterChart" role="img" aria-label="Scatter chart: collaboration width versus domain risk for each role"></canvas></div>
+    <div class="legend" id="scatterLegend"></div>
+  </div>
+</section>
+
+<!-- DONUT SECTION 1: Rigour vs velocity -->
+<div class="donut-section" id="rigour-section">
+  <div class="donut-inner">
+    <div class="donut-left">
+      <div class="donut-finding">Finding 03a</div>
+      <h3 class="donut-headline">The market is terrified of failure</h3>
+      <div class="donut-methodology">
+        <strong>How this was classified:</strong> Each JD was read for repeated language around pace vs. correctness. "Rigour" = three or more signals of: <em>TDD, CI/CD, production-grade, mocking, performance profiling, compliance, audit, meticulous, controlled</em>. "Velocity" = <em>move fast, bias for action, agile, iterate, pragmatic</em>. "Mixed" = both present, neither dominant.
+        <br><br>
+        <strong>Why it matters:</strong> This is the single strongest signal for how to frame your resume. A rigour-first JD wants risk-reduction outcomes — "97% test coverage", "zero production incidents in 12 months". A velocity-first JD wants speed signals — "shipped in 2 weeks", "A/B tested within the sprint".
+      </div>
+      <div class="donut-chart-wrap"><canvas id="rigourChart" role="img" aria-label="Donut chart: distribution of rigour vs velocity signals across JDs"></canvas></div>
+      <p class="donut-hint pulse" id="rigourHint">Click a segment to see companies</p>
+    </div>
+    <div class="donut-right">
+      <div class="segment-tabs" id="rigourTabs"></div>
+      <div class="company-list" id="rigourList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DONUT SECTION 2: JD Authorship -->
+<div class="donut-section" id="author-section">
+  <div class="donut-inner">
+    <div class="donut-left">
+      <div class="donut-finding">Finding 03b</div>
+      <h3 class="donut-headline">Engineers write JDs. Recruiters copy templates.</h3>
+      <div class="donut-methodology">
+        <strong>How this was classified:</strong> Each JD was read for specificity of language. "Hiring manager" = named sub-tools (e.g. <em>StarRocks, SparkSQL, PySpark</em>), scale numbers (<em>~1B rows daily, multi-terabyte</em>), specific architectural patterns (<em>incremental models, Data Mesh, medallion</em>), or technical anti-patterns named explicitly. "Recruiter" = generic category language, soft-skill padding, no tool specificity. "Mixed" = technical core with recruiter boilerplate appended.
+        <br><br>
+        <strong>Why it matters:</strong> A hiring-manager JD means you are pitching to the engineer who will interview you. Match their technical vocabulary exactly. A recruiter JD means ATS optimisation matters more — use their exact phrases, not synonyms.
+      </div>
+      <div class="donut-chart-wrap"><canvas id="authorChart" role="img" aria-label="Donut chart: distribution of JD authorship types"></canvas></div>
+      <p class="donut-hint pulse">Click a segment to see companies</p>
+    </div>
+    <div class="donut-right">
+      <div class="segment-tabs" id="authorTabs"></div>
+      <div class="company-list" id="authorList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DONUT SECTION 3: Greenfield vs fix -->
+<div class="donut-section" id="mission-section">
+  <div class="donut-inner">
+    <div class="donut-left">
+      <div class="donut-finding">Finding 03c</div>
+      <h3 class="donut-headline">Senior ICs are hired to build. Leads are hired to stabilise.</h3>
+      <div class="donut-methodology">
+        <strong>How this was classified:</strong> Each JD was read for the dominant mission signal. "Greenfield" = <em>build, establish, define, create from scratch, first analytics hire, design</em>. "Fix / Scale" = <em>improve, scale, maintain, modernise, optimise, inherited, continued implementation</em>. "Mixed" = both present with no clear dominant signal.
+        <br><br>
+        <strong>Why it matters:</strong> Greenfield roles want "designed from scratch" bullets and founder energy. Fix/scale roles want "inherited X, improved it to Y" bullets with before/after metrics. Pitching greenfield energy into a fix/scale role signals you will disrupt instead of stabilise — a red flag for a team that has been burned before.
+      </div>
+      <div class="donut-chart-wrap"><canvas id="missionChart" role="img" aria-label="Donut chart: distribution of greenfield vs fix/scale missions"></canvas></div>
+      <p class="donut-hint pulse">Click a segment to see companies</p>
+    </div>
+    <div class="donut-right">
+      <div class="segment-tabs" id="missionTabs"></div>
+      <div class="company-list" id="missionList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DONUT SECTION 4: Team maturity -->
+<div class="donut-section" id="maturity-section">
+  <div class="donut-inner">
+    <div class="donut-left">
+      <div class="donut-finding">Finding 03d</div>
+      <h3 class="donut-headline">Early-stage teams are the ones panicking</h3>
+      <div class="donut-methodology">
+        <strong>How this was classified:</strong> Each JD was read for signals of the data team's stage. "Early" = first or only data hire implied, no team described, "build from zero", solo AE with no peers mentioned. "Mid" = small existing team, some structure present, "mentor junior engineers", "lead a team of 2". "Mature" = established engineering ladder implied by seniority level, multiple squads, "Staff" or "Principal" titles with cross-squad mandate.
+        <br><br>
+        <strong>Why it matters:</strong> The first 90 days look completely different depending on maturity. Early = everything is yours to build, high autonomy, high ambiguity. Mid = inherit and improve, set the standard. Mature = architectural authority within an established structure, politics matter more.
+      </div>
+      <div class="donut-chart-wrap"><canvas id="maturityChart" role="img" aria-label="Donut chart: distribution of data team maturity stages"></canvas></div>
+      <p class="donut-hint pulse">Click a segment to see companies</p>
+    </div>
+    <div class="donut-right">
+      <div class="segment-tabs" id="maturityTabs"></div>
+      <div class="company-list" id="maturityList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: STACK -->
+<hr class="divider">
+<section class="section" id="stack">
+  <div class="section-label">Finding 04</div>
+  <h2 class="section-headline">dbt + SQL is the floor. Everything else is optional.</h2>
+  <p class="section-body">The core stack is commoditised. SQL appears in 94% of AE/BI JDs; dbt in 69%. After that comes a sharp cliff. Snowflake, Airflow, and the BI tools cluster around 30%. Spark, Kafka, and Terraform are rare enough to be differentiators — not baseline requirements.</p>
+  <div class="card">
+    <div class="card-title">Tool prevalence across filtered roles</div>
+    <p class="card-sub">% of JDs mentioning each tool · colour = category</p>
+    <canvas id="toolChart"></canvas>
+    <p class="tool-panel-hint">Click a bar to see companies</p>
+    <div id="toolCompanyPanel">
+      <div class="tool-panel-header">
+        <span class="tool-panel-title" id="toolPanelTitle"></span>
+        <span class="tool-panel-count" id="toolPanelCount"></span>
+      </div>
+      <div class="company-list" id="toolCompanyList"></div>
+    </div>
+  </div>
+</section>
+
+<div id="tooltip"></div>
+
+<script>
+let ALL_DATA = [], activeData = [];
+let charts = {}, sortedTools = [];
+
+const COLOURS = {
+  domain_risk:        { high: '#c0392b', moderate: '#d97706', low: '#16a34a' },
+  velocity_vs_rigour: { rigour: '#1d4ed8', mixed: '#9ca3af', velocity: '#c0392b' },
+  jd_authorship:      { hiring_manager: '#1d4ed8', mixed: '#9ca3af', recruiter: '#c0392b' },
+  greenfield_vs_fix:  { greenfield: '#16a34a', mixed: '#9ca3af', fix_scale: '#1d4ed8' },
+  data_team_maturity: { early: '#c0392b', mid: '#d97706', mature: '#16a34a' },
+};
+const BORDERS = {
+  domain_risk:        { high: '#922b21', moderate: '#92400e', low: '#166534' },
+  velocity_vs_rigour: { rigour: '#1e3a8a', mixed: '#6b7280', velocity: '#922b21' },
+  jd_authorship:      { hiring_manager: '#1e3a8a', mixed: '#6b7280', recruiter: '#922b21' },
+  greenfield_vs_fix:  { greenfield: '#166534', mixed: '#6b7280', fix_scale: '#1e3a8a' },
+  data_team_maturity: { early: '#922b21', mid: '#92400e', mature: '#166534' },
+};
+const LABELS = {
+  domain_risk:        { high: 'High risk', moderate: 'Moderate', low: 'Low risk' },
+  velocity_vs_rigour: { rigour: 'Rigour', mixed: 'Mixed', velocity: 'Velocity' },
+  jd_authorship:      { hiring_manager: 'Hiring manager', mixed: 'Mixed', recruiter: 'Recruiter' },
+  greenfield_vs_fix:  { greenfield: 'Greenfield', mixed: 'Mixed', fix_scale: 'Fix / Scale' },
+  data_team_maturity: { early: 'Early stage', mid: 'Mid stage', mature: 'Mature' },
+};
+const KEYWORDS = {
+  velocity_vs_rigour: {
+    rigour:   ['TDD','CI/CD','production-grade','mocking','performance profiling','compliance','audit','meticulous','controlled','test coverage','regression','quality gate'],
+    velocity: ['move fast','bias for action','agile','iterate','pragmatic','ship','fast-paced','rapid'],
+  },
+  jd_authorship: {
+    hiring_manager: ['StarRocks','SparkSQL','PySpark','incremental models','Data Mesh','medallion','1B rows','multi-terabyte','dbt','Airflow','Spark','Kafka'],
+    recruiter:      ['collaborate','communication skills','team player','stakeholder','passionate','motivated','dynamic'],
+  },
+  greenfield_vs_fix: {
+    greenfield: ['build','establish','define','create from scratch','first analytics hire','design','from the ground up','greenfield','new'],
+    fix_scale:  ['improve','scale','maintain','modernise','modernize','optimise','optimize','inherited','migrate','refactor','technical debt','stabilise'],
+  },
+  data_team_maturity: {
+    early:  ['first','solo','only data','from scratch','from zero','no existing','build out'],
+    mid:    ['mentor','junior','lead a team','small team','growing team'],
+    mature: ['Staff','Principal','cross-squad','cross-functional','engineering ladder','multiple teams','architecture'],
+  },
+};
+
+function highlightKeywords(text, dataKey, segmentKey) {
+  const kws = (KEYWORDS[dataKey] || {})[segmentKey] || [];
+  if (!kws.length) return text;
+  const sorted = [...kws].sort((a, b) => b.length - a.length);
+  const regex = new RegExp(`(${sorted.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+  return text.replace(regex, '<mark class="kw-highlight">$1</mark>');
+}
+
+// Which evidence field maps to which dimension
+const EVIDENCE_KEY = {
+  velocity_vs_rigour: 'velocity_vs_rigour',
+  jd_authorship:      'jd_authorship',
+  greenfield_vs_fix:  'greenfield_vs_fix',
+  data_team_maturity: 'data_team_maturity',
+};
+
+Chart.defaults.color = '#6b7280';
+Chart.defaults.borderColor = '#e5e5e1';
+
+function destroyChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
+
+// ── Stats ───────────────────────────────────────────────────────────────────
+function buildStats(data) {
+  const n = data.length || 1;
+  const rigourPct = Math.round(data.filter(d => d.velocity_vs_rigour === 'rigour').length / n * 100);
+  const hmPct     = Math.round(data.filter(d => d.jd_authorship === 'hiring_manager').length / n * 100);
+  const highPct   = Math.round(data.filter(d => d.domain_risk === 'high').length / n * 100);
+  const dbtPct    = Math.round(data.filter(d => String(d.has_dbt).toLowerCase() === 'true').length / n * 100);
+  const hardGate  = data.filter(d => d.language_gate_type === 'hard' &&
+    (Array.isArray(d.language_gate_languages) ? d.language_gate_languages : [d.language_gate_languages||''])
+    .some(l => (l||'').toLowerCase().includes('german'))).length;
+  document.getElementById('statsRow').innerHTML = [
+    { num: rigourPct+'%', label: 'Rigour-first JDs' },
+    { num: hmPct+'%',     label: 'Engineer-authored' },
+    { num: highPct+'%',   label: 'High-stakes domain' },
+    { num: dbtPct+'%',    label: 'Require dbt' },
+    { num: hardGate,      label: 'Hard German gate' },
+  ].map(s => `<div class="stat-cell"><div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div></div>`).join('');
+}
+
+// ── Scatter ─────────────────────────────────────────────────────────────────
+function buildScatter(data) {
+  const xKey = document.getElementById('xAxis').value;
+  const colKey = document.getElementById('colourBy').value;
+  const colMap = COLOURS[colKey], labMap = LABELS[colKey], borMap = BORDERS[colKey];
+  const riskY = { high: 3, moderate: 2, low: 1 };
+  const groups = {};
+  data.forEach(d => {
+    const xVal = xKey === 'salary_mid'
+      ? (d.salary_min && d.salary_max && d.salary_currency === 'EUR'
+          ? (parseFloat(d.salary_min)+parseFloat(d.salary_max))/2 : null)
+      : parseFloat(d.collaboration_width) || null;
+    if (xVal === null) return;
+    const cat = d[colKey] || 'unknown';
+    if (!groups[cat]) groups[cat] = [];
+    groups[cat].push({ x: xVal, y: riskY[d.domain_risk]+(Math.random()-0.5)*0.16, record: d });
+  });
+  const datasets = Object.entries(groups).map(([cat, pts]) => ({
+    label: labMap[cat]||cat, data: pts,
+    backgroundColor: (colMap[cat]||'#aaa')+'bb',
+    borderColor: borMap[cat]||'#888',
+    borderWidth: 1.5, pointRadius: 8, pointHoverRadius: 11,
+  }));
+  destroyChart('scatter');
+  charts.scatter = new Chart(document.getElementById('scatterChart').getContext('2d'), {
+    type: 'scatter', data: { datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: { duration: 250 },
+      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      scales: {
+        x: { title: { display: true, text: xKey==='salary_mid' ? 'Salary midpoint (EUR)' : 'Collaboration width (named partner teams)', font:{size:11} }, grid:{color:'#f0f0ed'}, ticks:{font:{size:10}} },
+        y: { min:0.5, max:3.5, ticks:{stepSize:1, callback:v=>({1:'Low risk',2:'Moderate',3:'High risk'}[v]||''), font:{size:10}}, grid:{color:'#f0f0ed'} },
+      },
+      onHover: (e,els) => { e.native.target.style.cursor = els.length?'pointer':'default'; },
+    },
+  });
+  const canvas = document.getElementById('scatterChart');
+  const tt = document.getElementById('tooltip');
+  canvas.addEventListener('mousemove', e => {
+    const pts = charts.scatter.getElementsAtEventForMode(e,'nearest',{intersect:true},false);
+    if (!pts.length) { tt.classList.remove('visible'); return; }
+    const rec = charts.scatter.data.datasets[pts[0].datasetIndex].data[pts[0].index].record;
+    const ev  = rec.evidence || {};
+    const gateHtml = rec.language_gate_type !== 'none'
+      ? `<div class="tt-gate">⚠ Language gate: ${ev.language_gate||(Array.isArray(rec.language_gate_languages)?rec.language_gate_languages.join(', '):rec.language_gate_languages)}</div>` : '';
+    tt.innerHTML = `
+      <div class="tt-company">${rec.company}</div>
+      <div class="tt-role">${rec.role}</div>
+      <div class="tt-field"><div class="tt-label">Domain risk</div><div class="tt-quote">${ev.domain_risk||'—'}</div></div>
+      <div class="tt-field"><div class="tt-label">Rigour signal</div><div class="tt-quote">${ev.velocity_vs_rigour||'—'}</div></div>
+      <div class="tt-field"><div class="tt-label">Collaboration</div><div class="tt-quote">${ev.collaboration_width||'—'}</div></div>
+      <div class="tt-field"><div class="tt-label">JD authorship</div><div class="tt-quote">${ev.jd_authorship||'—'}</div></div>
+      ${gateHtml}`;
+    const pad=14;
+    tt.style.left=(e.clientX+pad+310>window.innerWidth?e.clientX-310-pad:e.clientX+pad)+'px';
+    tt.style.top=(e.clientY+pad+220>window.innerHeight?e.clientY-220-pad:e.clientY+pad)+'px';
+    tt.classList.add('visible');
+  });
+  canvas.addEventListener('mouseleave', () => tt.classList.remove('visible'));
+  document.getElementById('scatterLegend').innerHTML = datasets.map(ds =>
+    `<div class="legend-item"><div class="legend-dot" style="background:${ds.backgroundColor}"></div>${ds.label}</div>`
+  ).join('');
+}
+
+// ── Donut + company panel ────────────────────────────────────────────────────
+function buildDonutPanel(cfg) {
+  // cfg: { chartId, tabsId, listId, dataKey, labMap, colMap, evidenceKey }
+  const { chartId, tabsId, listId, dataKey, labMap, colMap, evidenceKey } = cfg;
+  const data = activeData;
+
+  // Count segments
+  const counts = {};
+  data.forEach(d => { const k = d[dataKey]||'unknown'; counts[k]=(counts[k]||0)+1; });
+  const keys = Object.keys(counts);
+
+  destroyChart(chartId);
+  const chart = new Chart(document.getElementById(chartId).getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: keys.map(k => labMap[k]||k),
+      datasets: [{
+        data: keys.map(k => counts[k]),
+        backgroundColor: keys.map(k => (colMap[k]||'#ccc')+'cc'),
+        borderColor: keys.map(k => colMap[k]||'#ccc'),
+        borderWidth: 2, hoverOffset: 6,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '58%',
+      animation: { duration: 250 },
+      plugins: {
+        legend: { position:'bottom', labels:{font:{size:11},boxWidth:11,padding:10} },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw} (${Math.round(ctx.raw/data.length*100)}%)` } },
+      },
+      onClick: (evt, elements) => {
+        if (!elements.length) return;
+        const key = keys[elements[0].index];
+        renderList(listId, tabsId, data, dataKey, key, evidenceKey, labMap, colMap);
+        setActiveTab(tabsId, key);
+      },
+    },
+  });
+  charts[chartId] = chart;
+
+  // Build tabs
+  renderTabs(tabsId, listId, data, dataKey, keys, evidenceKey, labMap, colMap);
+
+  // Default: show first segment
+  if (keys.length) {
+    renderList(listId, tabsId, data, dataKey, keys[0], evidenceKey, labMap, colMap);
+    setActiveTab(tabsId, keys[0]);
+  }
+}
+
+function renderTabs(tabsId, listId, data, dataKey, keys, evidenceKey, labMap, colMap) {
+  const container = document.getElementById(tabsId);
+  const counts = {};
+  data.forEach(d => { const k = d[dataKey]||'unknown'; counts[k]=(counts[k]||0)+1; });
+  container.innerHTML = keys.map(k => `
+    <button class="seg-tab" data-key="${k}" onclick="selectTab('${tabsId}','${listId}',activeData,'${dataKey}','${k}','${evidenceKey}')"
+      style="--tab-col:${colMap[k]||'#888'}">
+      ${labMap[k]||k} <span style="opacity:0.65;font-weight:400">${counts[k]||0}</span>
+    </button>
+  `).join('');
+}
+
+function selectTab(tabsId, listId, data, dataKey, key, evidenceKey) {
+  const labMap = LABELS[dataKey]||{};
+  const colMap = COLOURS[dataKey]||{};
+  renderList(listId, tabsId, data, dataKey, key, evidenceKey, labMap, colMap);
+  setActiveTab(tabsId, key);
+}
+
+function resolveColour(key) {
+  for (const dim of Object.values(COLOURS)) {
+    if (dim[key]) return dim[key];
+  }
+  return '#1d4ed8';
+}
+
+function setActiveTab(tabsId, activeKey) {
+  document.querySelectorAll(`#${tabsId} .seg-tab`).forEach(btn => {
+    const isActive = btn.dataset.key === activeKey;
+    btn.classList.toggle('active', isActive);
+    btn.style.background = isActive ? resolveColour(btn.dataset.key) : '#fff';
+  });
+}
+
+function renderList(listId, tabsId, data, dataKey, selectedKey, evidenceKey, labMap, colMap) {
+  const filtered = data.filter(d => (d[dataKey]||'unknown') === selectedKey);
+  const container = document.getElementById(listId);
+  if (!filtered.length) { container.innerHTML = '<div class="empty-state">No roles in this segment for the current filter.</div>'; return; }
+  container.innerHTML = filtered.map(d => {
+    const ev = d.evidence || {};
+    const rawQuote = ev[evidenceKey] || 'No verbatim evidence captured.';
+    const quote = highlightKeywords(rawQuote, dataKey, selectedKey);
+    return `
+      <div class="company-card">
+        <div class="cc-header">
+          <span class="cc-company">${d.company}</span>
+          <span class="cc-role">${d.role}</span>
+        </div>
+        <div class="cc-quote">${quote}</div>
+        <div class="cc-location">${d.job_location||''}</div>
+      </div>`;
+  }).join('');
+}
+
+// ── Tool chart ───────────────────────────────────────────────────────────────
+const TOOLS = [
+  {key:'has_sql',label:'SQL',group:'Core'},{key:'has_dbt',label:'dbt',group:'Core'},{key:'has_python',label:'Python',group:'Core'},
+  {key:'has_snowflake',label:'Snowflake',group:'Warehouse'},{key:'has_databricks',label:'Databricks',group:'Warehouse'},
+  {key:'has_looker',label:'Looker',group:'BI'},{key:'has_tableau',label:'Tableau',group:'BI'},{key:'has_power_bi',label:'Power BI',group:'BI'},
+  {key:'has_airflow',label:'Airflow',group:'Orchestration'},{key:'has_spark',label:'Spark',group:'Compute'},
+  {key:'has_kafka',label:'Kafka',group:'Streaming'},{key:'has_terraform',label:'Terraform',group:'Infra'},
+  {key:'has_airbyte',label:'Airbyte',group:'Ingestion'},
+];
+const GC = { Core:'#1d4ed8', Warehouse:'#16a34a', BI:'#d97706', Orchestration:'#7c3aed', Compute:'#ea580c', Streaming:'#c0392b', Infra:'#6b7280', Ingestion:'#0891b2' };
+
+function buildToolCompanyList(tool) {
+  const yes = activeData.filter(d => String(d[tool.key]).toLowerCase() === 'true');
+  const no  = activeData.filter(d => String(d[tool.key]).toLowerCase() !== 'true');
+  document.getElementById('toolPanelTitle').textContent = tool.label;
+  document.getElementById('toolPanelCount').textContent = `${yes.length} require · ${no.length} don't · ${tool.pct}%`;
+  const cardHtml = (d, muted) => `
+    <div class="company-card${muted ? ' company-card--muted' : ''}">
+      <div class="cc-header">
+        <span class="cc-company">${d.company}</span>
+        <span class="cc-role">${d.role}</span>
+      </div>
+      <div class="cc-location">${d.job_location || ''}</div>
+    </div>`;
+  document.getElementById('toolCompanyList').innerHTML = `
+    <div class="tool-group-label">Require ${tool.label} <span>(${yes.length})</span></div>
+    ${yes.length ? yes.map(d => cardHtml(d, false)).join('') : '<div class="empty-state" style="grid-column:1/-1">None in current filter.</div>'}
+    <div class="tool-group-label tool-group-label--no">Don't require <span>(${no.length})</span></div>
+    ${no.length  ? no.map(d  => cardHtml(d, true)).join('')  : '<div class="empty-state" style="grid-column:1/-1">None in current filter.</div>'}
+  `;
+  document.getElementById('toolCompanyPanel').style.display = 'block';
+}
+
+function buildToolChart(data) {
+  const n = data.length||1;
+  sortedTools = TOOLS.map(t=>({...t,pct:Math.round(data.filter(d=>String(d[t.key]).toLowerCase()==='true').length/n*100)})).sort((a,b)=>b.pct-a.pct);
+  destroyChart('tool');
+  document.getElementById('toolCompanyPanel').style.display = 'none';
+  charts.tool = new Chart(document.getElementById('toolChart').getContext('2d'), {
+    type:'bar',
+    data:{ labels:sortedTools.map(t=>t.label), datasets:[{data:sortedTools.map(t=>t.pct),backgroundColor:sortedTools.map(t=>GC[t.group]+'99'),borderColor:sortedTools.map(t=>GC[t.group]),borderWidth:1,borderRadius:4}] },
+    options:{
+      indexAxis:'y',responsive:true,animation:{duration:250},
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.raw}% of roles`}}},
+      scales:{
+        x:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#f0f0ed'}},
+        y:{ticks:{font:{size:10}},grid:{display:false}},
+      },
+      onClick:(evt,elements)=>{
+        if (!elements.length) return;
+        buildToolCompanyList(sortedTools[elements[0].index]);
+      },
+      onHover:(e,els)=>{ e.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
+    },
+  });
+}
+
+// ── Main render ──────────────────────────────────────────────────────────────
+function render() {
+  const filter = document.getElementById('filterRoleType').value;
+  activeData = filter==='all' ? ALL_DATA : ALL_DATA.filter(d=>d.role_type===filter);
+  document.getElementById('countBadge').innerHTML=`<strong>${activeData.length}</strong> / ${ALL_DATA.length} roles`;
+
+  buildStats(activeData);
+  buildScatter(activeData);
+
+  buildDonutPanel({ chartId:'rigourChart',  tabsId:'rigourTabs',  listId:'rigourList',  dataKey:'velocity_vs_rigour', labMap:LABELS.velocity_vs_rigour, colMap:COLOURS.velocity_vs_rigour, evidenceKey:'velocity_vs_rigour' });
+  buildDonutPanel({ chartId:'authorChart',  tabsId:'authorTabs',  listId:'authorList',  dataKey:'jd_authorship',      labMap:LABELS.jd_authorship,      colMap:COLOURS.jd_authorship,      evidenceKey:'jd_authorship' });
+  buildDonutPanel({ chartId:'missionChart', tabsId:'missionTabs', listId:'missionList', dataKey:'greenfield_vs_fix',  labMap:LABELS.greenfield_vs_fix,  colMap:COLOURS.greenfield_vs_fix,  evidenceKey:'greenfield_vs_fix' });
+  buildDonutPanel({ chartId:'maturityChart',tabsId:'maturityTabs',listId:'maturityList',dataKey:'data_team_maturity', labMap:LABELS.data_team_maturity, colMap:COLOURS.data_team_maturity, evidenceKey:'data_team_maturity' });
+
+  buildToolChart(activeData);
+}
+
+fetch('data.json')
+  .then(r=>r.json())
+  .then(data=>{
+    ALL_DATA=data; render();
+    ['filterRoleType','xAxis'].forEach(id=>document.getElementById(id).addEventListener('change',render));
+    document.getElementById('colourBy').addEventListener('change',()=>buildScatter(activeData));
+  })
+  .catch(err=>{
+    document.querySelector('nav').insertAdjacentHTML('afterend',
+      `<div style="text-align:center;padding:4rem;color:#c0392b">Failed to load data.json: ${err.message}<br><small>Run <code>python3 -m http.server 8765</code> from the analysis/ folder.</small></div>`);
+  });
+
+// ── Active nav on scroll ─────────────────────────────────────────────────────
+(function() {
+  const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+  const sectionIds = [...navLinks].map(a => a.dataset.section);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.toggle('active', a.dataset.section === entry.target.id));
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+  sectionIds.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+})();
+
+// ── Dismiss hint pulse after first donut click ───────────────────────────────
+document.querySelectorAll('.donut-hint').forEach(hint => {
+  hint.closest('.donut-section')?.querySelector('canvas')?.addEventListener('click', () => {
+    hint.classList.remove('pulse');
+  }, { once: true });
+});
+</script>
+</body>
+</html>
