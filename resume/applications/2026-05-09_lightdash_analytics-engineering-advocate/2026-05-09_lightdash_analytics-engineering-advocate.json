@@ -4,6 +4,7 @@
     "lastUpdated": "2026-05-09",
     "targetRole": "Analytics Engineering Advocate - Europe",
     "targetCompany": "Lightdash",
+    "jobLocation": "Europe (Remote, UTC +/- 3 hours)",
     "sourceUrl": "https://jobs.ashbyhq.com/lightdash/309706bc-1081-48b6-89dc-f769bbe17e6d",
     "behaviouralInsights": [
       "AI-forward is the #1 differentiator — 7+ mentions of AI in JD; candidate must demonstrate genuine daily AI tool usage, not just familiarity",
@@ -36,8 +37,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics engineer with 6+ years of hands-on dbt, BigQuery, and Snowflake experience helping data teams succeed through technical problem-solving and teaching. Uses AI coding assistants daily — from agentic test generation to pair-programming — sharing practices through conference talks, Meetups, and with 60+ students at ReDI School.",
@@ -81,9 +88,24 @@
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto", "year": "May 2026" },
-    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris", "year": "Nov 2025" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin", "year": "Sep 2025" }
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Data Maker's Fest",
+      "location": "Porto",
+      "year": "May 2026"
+    },
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Forward Data Conference",
+      "location": "Paris",
+      "year": "Nov 2025"
+    },
+    {
+      "title": "Talk Moderator and Host: Cost Optimisation",
+      "event": "dbt Community Meetup, Vinted Berlin",
+      "location": "Berlin",
+      "year": "Sep 2025"
+    }
   ],
   "education": [
     {
@@ -124,11 +146,54 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "SQL", "Python", "Google BigQuery", "Snowflake", "Apache Spark", "Apache Airflow", "R", "Scala"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "Git", "GitHub Actions"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "SQL",
+          "Python",
+          "Google BigQuery",
+          "Snowflake",
+          "Apache Spark",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "Git",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -136,11 +201,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

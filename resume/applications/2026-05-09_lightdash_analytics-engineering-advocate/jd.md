@@ -91,3 +91,57 @@ Develop and execute strategies to grow and engage the analytics engineering comm
 - £65,000 – £100,000 annually
 - 0.1% – 0.3% equity
 - Remote
+
+---
+
+## Layer B — Behavioural Analysis
+
+**Signal ordering:** "Obsess over user success through technical problem-solving" leads — external community and user success is the primary mandate, not internal data work. This is a customer-facing technical role that happens to require AE expertise, not an AE role that happens to communicate externally.
+
+**Repetition = fear:** "AI tools", "AI-powered workflows", "AI capabilities", "AI is transforming analytics" appear throughout — the company is investing heavily in AI integration and fears falling behind. They want someone already living this, not someone who will learn it later.
+
+**Seniority signals:** "Voice for our community", "connect user needs to product strategy", "represent Lightdash at conferences" — expects someone who shapes the external narrative and influences product direction from community signal, not just executes support tickets.
+
+**Loss aversion:** Open source product means community trust is everything — a poor support experience or wrong technical advice is public. Frame achievements as user problems definitively solved, communities grown, trust built, not just content produced.
+
+**Culture signals:** "Build in public", "bias towards impact", "80% and get it in front of users" — this is a high-velocity, high-transparency culture that values shipping and iterating over polishing. "Challenge problems, not people" signals a blame-free, collaborative environment.
+
+**Absence signals:** No mention of internal data pipeline ownership, data modelling mandates, or business stakeholder reporting — this is not an internal AE role. No people management responsibilities.
+
+**ATS keywords:**
+- analytics engineering advocacy
+- dbt
+- SQL and data modeling
+- modern data stack
+- Lightdash
+- open source BI
+- technical support and debugging
+- community building
+- tutorial and documentation creation
+- AI coding assistants
+- pair-programming
+- self-serve analytics
+- user success
+- conference and meetup representation
+
+**Urgency signal:** No "immediately" or ASAP language. Equity range (0.1%–0.3%) and remote-first setup suggest a startup that plans carefully. No re-post language detected. Implication: frame resume around sustained community impact and long-term relationship building rather than rapid crisis response — this is a considered hire for a strategic role.
+
+**Greenfield vs. fix/scale:** Greenfield — "develop and execute strategies to grow and engage the analytics engineering community", "create and deliver world-class tutorials and demos" — significant build mandate with no existing playbook implied. Lead bullets with initiatives you started from scratch: communities launched, content programmes built, user bases grown.
+
+**Velocity vs. rigour:** Velocity-leaning. "Bias towards impact", "80% and get it in front of users so we can iterate on fast feedback", "open source by default" — speed to community value is valued over polished perfection. Frame achievements as fast feedback loops and rapid iteration rather than comprehensive documentation or thorough review cycles.
+
+**Internal customer:** External users and the analytics engineering community — this is one of the rare roles where the primary customer is external, not internal. Secondary internal customers are the product team (community signal feeds into product strategy). Bullet outcomes should tie to user success rates, community growth metrics, and product feedback loops generated.
+
+**Stack lock-in:** dbt is a hard requirement (named explicitly and central to Lightdash's value proposition). SQL, git, and command line are hard requirements. AI coding assistants are an unusually hard requirement — "proficient with AI coding assistants" is in required qualifications. Lightdash itself is the primary product context — any prior Lightdash experience should be mirrored verbatim. Data visualisation tools and other modern data stack tools are contextual — foreground transferability.
+
+**JD authorship:** Written by a technical founder or senior product/engineering leader with strong practitioner depth. Evidence of depth: "Lightdash instantly turns your dbt project into a full-stack BI platform", "manage everything as code, from the comfort of their text editor and command line", "pair-programming through complex issues", "analytics engineering best practices and data modeling strategy", "contributing to our codebase", "bias towards impact — build something to 80% and get it in front of users so we can iterate on fast feedback". No vague recruiter filler detected. The "How We Work at Lightdash" section uses first-person plural ("we build in public", "we challenge problems") — written by the team, not an HR function. Implication: pitch with full technical precision and community credibility — demonstrate dbt depth, name specific debugging scenarios, and show AI tool fluency as a practitioner, not a learner.
+
+**Data team size and maturity:** Very small startup — this person IS much of the external-facing data function. Evidence: "you'll be the go-to Lightdash pro, both internally and in the community", "represent Lightdash at community events, conferences, and meetups", "develop and execute strategies to grow and engage the analytics engineering community" — no existing team playbook implied. Equity range (0.1%–0.3%) signals an early-stage company where this is a key strategic hire. No mention of a manager, team lead, or reporting structure. Implication for first-90-days framing: frame as a founder-mode contributor who builds from scratch — community programmes initiated, content created independently, user problems owned end-to-end without waiting for direction.
+
+**Domain risk:** Low in regulatory terms; high in reputational and community trust terms. Evidence: "open source product, so having shared context is important so that people can contribute", "we don't oversell and under-deliver", "a poor support experience or wrong technical advice is public" — errors are visible to the entire open source community and cannot be retracted. No financial, compliance, or safety domain language. Implication: speed and iteration framing is acceptable (consistent with "bias towards impact" and "80% and get it in front of users"), but frame community-facing outputs around trust built and problems definitively solved — not just content volume or tickets closed.
+
+**Collaboration width:** Moderate — 3 distinct groups. Named verbatim: "community members" (external analytics engineering community), "product" team (community signal feeds "product strategy and feature development"), and "users" (in shared customer Slack channels and on calls). "Conferences, and meetups" implies external ecosystem partners as a fourth group. Implication: moderate-to-wide width — lead with cross-functional coordination between community, product, and users as the core value proposition. Frame bullets around feedback loops that connected community insight to product decisions.
+
+**Language gate:** None stated.
+
+**Interview process signal:** Not stated in JD.
