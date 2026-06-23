@@ -24,6 +24,7 @@ A repository of personal content used as raw material for resumes, cover letters
 | [personality.md](personality.md) | Assessment results + commentary |
 | [working-style.md](working-style.md) | How you work best — team size, management, feedback, ambiguity |
 | [logistics.md](logistics.md) | Notice period, location, salary, visa |
+| [skills-to-learn.md](skills-to-learn.md) | Tools flagged as gaps across applications — prioritised by recurrence |
 
 ---
 
