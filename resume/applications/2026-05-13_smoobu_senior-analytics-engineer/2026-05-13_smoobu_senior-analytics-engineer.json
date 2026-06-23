@@ -4,6 +4,7 @@
     "lastUpdated": "2026-05-13",
     "targetRole": "Senior Analytics Engineer",
     "targetCompany": "Smoobu (HomeToGo Group)",
+    "jobLocation": "Berlin",
     "sourceUrl": "https://smoobu.jobs.personio.com/job/2614929?pc=2633709",
     "behaviouralInsights": [
       "Strong autonomous IC signal — 'oversee', 'create modeling principles', 'manage' without team context; they want someone who owns the full AE function solo",
@@ -36,8 +37,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Analytics Engineer with 6+ years building and owning end-to-end analytics infrastructure — ingestion pipelines, complex DAGs, and domain-level data models — across dbt, Snowflake, and Airflow. Delivered 75% pipeline runtime reduction and 1.5TB/day in warehouse cost savings through incremental model redesign; embedded robust alerting and data governance controls that reduced misstatement risk by 90% on €40m of exposure. Bridges engineering and business teams to translate plain-language requirements into production-grade, governed data models that drive marketing, finance, and operational decisions.",
@@ -109,17 +116,77 @@
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto", "year": "May 2026" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin", "year": "Sep 2025" }
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Data Maker's Fest",
+      "location": "Porto",
+      "year": "May 2026"
+    },
+    {
+      "title": "Talk Moderator and Host: Cost Optimisation",
+      "event": "dbt Community Meetup, Vinted Berlin",
+      "location": "Berlin",
+      "year": "Sep 2025"
+    }
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "Snowflake", "Apache Airflow", "Fivetran", "SQL", "Python", "Google BigQuery", "R", "Scala"] },
-      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "GitHub Actions", "Git"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] },
-      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "Snowflake",
+          "Apache Airflow",
+          "Fivetran",
+          "SQL",
+          "Python",
+          "Google BigQuery",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      },
+      {
+        "category": "Data Mining and ML Platforms",
+        "items": [
+          "Knime",
+          "Azure ML Studio",
+          "Dataiku"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -127,11 +194,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
