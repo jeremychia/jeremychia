@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Senior Analytics Engineer - Finance & Operations",
     "targetCompany": "Pergolux LLC",
+    "jobLocation": "Berlin, Germany (Full-time, on-site)",
     "sourceUrl": "https://talents.studysmarter.de/companies/pergolux-llc/senior-analytics-engineer-finance-operations-32039219/",
     "behaviouralInsights": [
       "PRIMARY FEAR: Inconsistent financial numbers — 'Finance Single Source of Truth' is their #1 headline desire. They've been burned by fragmented reporting across Finance and Operations.",
@@ -31,8 +32,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Analytics Engineer and Chartered Accountant with 6+ years building financial data infrastructure — single sources of truth for revenue, COGS, logistics costs, and EBITDA — using dbt, Snowflake, and Python across finance-led organisations. Experienced in integrating and modelling financial and operational data to power demand forecasting, profitability analysis, and executive reporting. Brings structure and rigour to ambiguous, high-growth environments, with a track record of aligning Finance and Operations on trusted metrics.",
@@ -139,13 +146,63 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Programming and Data Engineering", "items": ["SQL", "Python", "dbt", "Apache Spark", "Apache Airflow", "R", "Scala"] },
-      { "category": "Data Warehousing and Databases", "items": ["Snowflake", "Google BigQuery"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "SAP", "UiPath"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] }
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "SQL",
+          "Python",
+          "dbt",
+          "Apache Spark",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Databases",
+        "items": [
+          "Snowflake",
+          "Google BigQuery"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "SAP",
+          "UiPath"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "Elementary",
+          "dbt tests"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -153,11 +210,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
