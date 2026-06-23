@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-09",
     "targetRole": "Sustainability Data Analyst",
     "targetCompany": "Neumann Kaffee Gruppe (NKG)",
+    "jobLocation": "Hamburg, Germany (Telecommute)",
     "sourceUrl": "https://nkg.wd103.myworkdayjobs.com/en-US/nkg/job/Sustainability-Data-Analyst_JR102809-1",
     "behaviouralInsights": [
       "Data quality and reliability are paramount (loss-aversion signal); frame all achievements as risk reduction and governance",
@@ -29,8 +30,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineer with 6+ years of experience building scalable data pipelines and governance-first reporting solutions across finance and operational domains. Expert in Power BI and data modeling; proven track record designing and implementing data quality controls that reduce misstatement risk and ensure reliable, compliant analytics. Bridges business requirements and technical implementation through structured, cross-functional collaboration.",
@@ -130,12 +137,60 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Business Intelligence and Reporting", "items": ["Microsoft Power BI", "DAX", "Looker", "Looker Studio", "Tableau"] },
-      { "category": "Data Warehousing, Modeling and Pipelines", "items": ["Google BigQuery", "Snowflake", "dbt", "Microsoft Fabric", "Apache Spark", "Apache Airflow"] },
-      { "category": "Programming and Data Engineering", "items": ["Python", "SQL", "PySpark", "R", "Scala"] },
-      { "category": "Data Quality and Governance", "items": ["Elementary", "dbt tests", "Reconciliation frameworks"] },
-      { "category": "DevOps and Version Control", "items": ["GitHub Actions", "Git"] },
-      { "category": "Finance and Compliance Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Business Intelligence and Reporting",
+        "items": [
+          "Microsoft Power BI",
+          "DAX",
+          "Looker",
+          "Looker Studio",
+          "Tableau"
+        ]
+      },
+      {
+        "category": "Data Warehousing, Modeling and Pipelines",
+        "items": [
+          "Google BigQuery",
+          "Snowflake",
+          "dbt",
+          "Microsoft Fabric",
+          "Apache Spark",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "Python",
+          "SQL",
+          "PySpark",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Quality and Governance",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "Reconciliation frameworks"
+        ]
+      },
+      {
+        "category": "DevOps and Version Control",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance and Compliance Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Microsoft Certified: Data Analyst Associate",
@@ -143,11 +198,26 @@
       "LucaNet Certified Professional – Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
