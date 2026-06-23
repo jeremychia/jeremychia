@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Senior Analytics Engineer",
     "targetCompany": "Shine",
+    "jobLocation": "Berlin or Copenhagen (hybrid)",
     "sourceUrl": "https://careers.shine.co/jobs/7556260-senior-analytics-engineer",
     "behaviouralInsights": [
       "Fear signal: 'data governance, testing, and quality frameworks' listed as a core responsibility — they have suffered from unreliable or poorly tested data; frame Jeremy's 90% risk reduction and control framework bullets as the lead",
@@ -29,8 +30,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Analytics Engineer with 6+ years of experience building scalable dbt models and analytics infrastructure across fintech and finance domains. Treats data models as production software — with layered testing, governance frameworks, and observability baked in. Chartered Accountant background enables precise translation of finance requirements into reliable, documented dbt models that analysts and stakeholders can trust.",
@@ -131,12 +138,61 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Analytics Engineering", "items": ["dbt", "SQL", "Python", "Apache Spark", "Apache Airflow", "R", "Scala"] },
-      { "category": "Data Warehousing and Databases", "items": ["Snowflake", "Google BigQuery"] },
-      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary", "OpenMetadata", "Fivetran"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Omni", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "DevOps, CI/CD and AI Tools", "items": ["GitHub Copilot", "GitHub Actions", "Git", "Cursor"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Analytics Engineering",
+        "items": [
+          "dbt",
+          "SQL",
+          "Python",
+          "Apache Spark",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Databases",
+        "items": [
+          "Snowflake",
+          "Google BigQuery"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "OpenMetadata",
+          "Fivetran"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Omni",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "DevOps, CI/CD and AI Tools",
+        "items": [
+          "GitHub Copilot",
+          "GitHub Actions",
+          "Git",
+          "Cursor"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -144,11 +200,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
