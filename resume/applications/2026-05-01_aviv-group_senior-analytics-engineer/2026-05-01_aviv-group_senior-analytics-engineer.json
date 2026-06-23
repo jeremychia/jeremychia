@@ -4,6 +4,7 @@
     "lastUpdated": "2026-05-01",
     "targetRole": "Senior Analytics Engineer",
     "targetCompany": "AVIV Group",
+    "jobLocation": "Berlin, Germany",
     "sourceUrl": "https://www.linkedin.com/jobs/view/4378126108/",
     "behaviouralInsights": [
       "dbt modeling and Snowflake mastery is top priority (listed first, appears throughout)",
@@ -30,8 +31,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Analytics Engineer with 6+ years building scalable data platforms in dbt and BigQuery, specializing in data quality controls, comprehensive testing, and metrics definition that drive reliable analytics at scale. Proven ability to architect dbt models, automate testing and deployment workflows, and implement monitoring and governance frameworks that enable cross-functional teams. Deep expertise in testing strategies and reliability engineering, combining technical rigor with clear communication across analysts, data scientists, and business stakeholders.",
@@ -126,11 +133,54 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "SQL", "Snowflake", "Google BigQuery", "Python", "Apache Spark", "Apache Airflow", "R", "Scala"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Git", "GitHub Actions", "Elementary"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "SQL",
+          "Snowflake",
+          "Google BigQuery",
+          "Python",
+          "Apache Spark",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Git",
+          "GitHub Actions",
+          "Elementary"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -138,11 +188,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
