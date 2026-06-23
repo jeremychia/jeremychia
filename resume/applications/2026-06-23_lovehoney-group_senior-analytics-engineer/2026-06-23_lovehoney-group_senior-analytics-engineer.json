@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "version": "2026-06-23_lovehoney-group_senior-analytics-engineer",
+    "lastUpdated": "2026-06-23",
+    "targetRole": "Senior Analytics Engineer",
+    "targetCompany": "Lovehoney Group",
+    "jobLocation": "Berlin / Bath",
+    "sourceUrl": "https://jobs.eu.lever.co/lovehoneygroup/c5a8c4ee-4490-4e32-b25f-9a5d4afc70f4",
+    "alignmentSignal": "Green — direct stack match (BigQuery, Airflow DAG authoring, SQL, Python); governance/data quality framing maps to Vinted controls work; mentoring at Tourlane; informal architectural roadmap ownership (OpenMetadata tool evaluation and migration). Gap: Soda Core — Jeremy uses dbt tests + Elementary; noted honestly in cover letter.",
+    "behaviouralInsights": [
+      "Signal ordering: architecture first, ETL/ELT second, governance third, mentoring fourth — weight resume toward warehouse design and governance",
+      "Repetition: 'enterprise-scale', 'governance', 'architecture' each 3+ times — fear of ungoverned data at scale",
+      "Seniority: manager-adjacent IC — lead with cross-functional influence + technical multiplier",
+      "Loss aversion: data quality and governance language dominant — frame as risk reduction, not speed",
+      "Urgency: standard — trajectory and strategic framing tolerated",
+      "Greenfield vs. fix/scale: mixed, lean fix/scale — lead with 'inherited X, improved to Y' bullets",
+      "Velocity vs. rigour: strong rigour orientation — precision, controls, reliability framing",
+      "Internal customer: wider data team + downstream Finance/Marketing/Product; frame outcomes as enabling reliable data access",
+      "Stack lock-in: BigQuery preferred (not hard), Airflow functionally required, Soda Core named — mirror verbatim",
+      "JD authorship: mixed — recruiter-formatted but specific tool callouts suggest hiring manager input; pitch both layers",
+      "Data team maturity: established (4–8 engineers); first 90 days = inherit and improve, not build from scratch",
+      "Domain risk: moderate-to-high e-commerce revenue data — frame as protecting decision-quality",
+      "Collaboration width: 3–4 teams implied — cross-functional alignment is differentiating",
+      "Language gate: none stated",
+      "Interview: 4 stages including hiring team culture interview — cover letter tone matters; prepare architecture and governance examples"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to open with governance/architecture scale signal, reflecting loss aversion framing and manager-adjacent seniority",
+      "Vinted bullets reordered: governance/data quality first, then architecture, then cross-functional leadership",
+      "Controls and reliability language front-loaded on all Vinted bullets",
+      "BigQuery and Airflow moved to front of skills; Soda Core added to data quality category",
+      "pillHighlights replaced with 14 ATS keywords from Layer B",
+      "Volunteering omitted — no direct technical reinforcement for this role",
+      "Tourlane first bullet reframed to lead with architectural delivery and mentoring, both JD themes"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer - Data Warehouse Architecture and Governance",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "90% misstatement risk reduction across €40m exposure — through governance frameworks and layered data quality controls. Designs enterprise-wide data warehouse architecture in BigQuery, orchestrating ETL/ELT pipelines at scale. Mentors engineers and shapes architectural roadmaps; Chartered Accountant background adds rigour to finance data domains.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Implemented enterprise-level data quality strategies — dbt tests, reconciliations, anomaly detection — reducing misstatement risk by 90% on €40m of exposure and establishing a reliable governance foundation.",
+        "Own end-to-end data warehouse architecture for shipping cost and revenue in BigQuery — the single source of truth for Finance Ops, Group Reporting, and month-end close across Vinted's global markets.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Optimised BigQuery workloads and storage patterns — authoring Airflow DAGs for orchestration — cutting pipeline runtimes by 75%, reducing query volume by 1.5TB/day, and lowering compute costs by 15%.",
+        "Presented analytics testing strategy at Forward Data Conference (Paris, Nov 2025) and Data Maker's Fest (Porto, May 2026); moderated and hosted dbt Community Meetup at Vinted Berlin (Sep 2025).",
+        "Designed and facilitated the first cross-functional workshop between VGo DSA, VGo Finance Operations, and Group Finance, producing shared alignment on priorities and earning praise from all participants.",
+        "Raised dbt unit test coverage from <1% to 50%+ across the vgo_finance domain in four weeks using agentic AI; authored a testing guide independently adopted by teammates as the domain standard."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Designed the centralised data transformation layer in dbt and Snowflake — integrating Salesforce, Stripe, Twilio, and backend systems — and led technology evaluation for the data catalogue, driving OpenMetadata adoption.",
+        "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity.",
+        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting cycle times by up to 50%.",
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to track KPIs for 140 staff across 5 process areas, improving service delivery transparency.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
+    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["Apache Airflow", "Google BigQuery", "Python", "SQL", "dbt", "Snowflake", "R", "Scala"] },
+      { "category": "Data Quality and DevOps", "items": ["Elementary", "dbt tests", "OpenMetadata", "GitHub Actions", "Git"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "enterprise-wide data warehouse architecture",
+    "ETL/ELT pipelines",
+    "Apache Airflow",
+    "data quality strategies",
+    "governance frameworks",
+    "Google BigQuery",
+    "mentoring engineers",
+    "architectural roadmap",
+    "enterprise-scale environment",
+    "scalable platforms",
+    "data governance models",
+    "technology evaluation",
+    "high-performance data processing"
+  ]
+}
