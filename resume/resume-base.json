@@ -44,7 +44,7 @@
       "endDate": "Aug 2023",
       "bullets": [
         "Owned the Finance Data Products roadmap as the sole finance data analyst — aligning priorities with company OKRs and acting as product manager, data analyst, and analytics engineer in one role.",
-        "Built a centralised data transformation layer in dbt and Snowflake — integrating data from Salesforce, Stripe, Twilio, and backend systems — to power finance and operational analytics across the business.",
+        "Built a centralised data transformation layer in dbt and Snowflake — ingesting data via Fivetran from Salesforce, Stripe, Twilio, and backend systems — to power finance and operational analytics across the business.",
         "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close.",
         "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
         "Mentored and onboarded three new team members to the data stack, accelerating their time-to-productivity."
