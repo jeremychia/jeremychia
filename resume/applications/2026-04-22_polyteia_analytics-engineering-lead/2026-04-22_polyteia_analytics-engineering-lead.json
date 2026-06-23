@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Analytics Engineering Lead",
     "targetCompany": "Polyteia",
+    "jobLocation": "Berlin",
     "sourceUrl": "https://polyteia.jobs.personio.de/job/2478119",
     "behaviouralInsights": [
       "Domain-technical bridge: JD repeats 'domain expertise' 3x — fear signal they've had technically correct but contextually wrong solutions",
@@ -28,8 +29,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineering Lead with 6+ years bridging domain expertise and technical delivery across finance and public sector. Specialises in designing scalable dbt and data pipeline architectures that translate stakeholder requirements into reliable data products. Proven ability to guide client implementations, mentor engineers, and establish domain-centric control frameworks that reduce risk while enabling self-serve analytics.",
@@ -131,13 +138,63 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Programming and Data Engineering", "items": ["dbt", "Python", "SQL", "Apache Airflow", "Apache Spark", "Scala", "R"] },
-      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "dbt",
+          "Python",
+          "SQL",
+          "Apache Airflow",
+          "Apache Spark",
+          "Scala",
+          "R"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Databases",
+        "items": [
+          "Google BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "dbt tests",
+          "Elementary"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -145,11 +202,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
