@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "version": "2026-06-23_trade-republic_analytics-engineer",
+    "lastUpdated": "2026-06-23",
+    "targetRole": "Analytics Engineer",
+    "targetCompany": "Trade Republic",
+    "jobLocation": "Berlin, Germany",
+    "sourceUrl": "https://traderepublic.com/en-de/about?gh_jid=6589276003&gh_src=632be8e43us&jobId=6589276003",
+    "alignmentSignal": "Green — role is autonomous IC with clear ownership, high-bar culture, fintech domain with meaningful impact at scale. Matches top motivations: autonomy, technical excellence, measurable outcomes, competent collaborators. No red flags detected.",
+    "behaviouralInsights": [
+      "Strong autonomous IC signal: 'taking ownership from scoping to delivery and adoption, working autonomously' — lead with outcomes, not tasks",
+      "Fix/scale dominant: 'improving our architecture (cloud-based and always evolving)' — lead with inherited-and-improved bullet style",
+      "Velocity with rigour: 'cost reduction and speed' + 'software engineering best practices' — frame as high-impact delivery with engineering discipline",
+      "Internal customer: product and business stakeholders consuming self-serve analytics — frame outcomes as metric reliability and reduced analytical bottlenecks",
+      "Stack: S3/Snowflake/Airflow/Python/dbt listed as bonus — mirror verbatim in skills, foreground transferability in bullets",
+      "Domain risk: 100B+ assets under management in fintech — frame data accuracy as trust-critical and risk-reduction outcome",
+      "JD authorship: hiring manager (technically specific, named tools) — speak to the engineer",
+      "Narrow collaboration width (2 teams: product + business) — lead with domain expertise and data quality",
+      "Urgency: standard — trajectory framing tolerated",
+      "Language gate: none stated",
+      "Data team maturity: mid — established function with evolving architecture; first 90 days = inherit, assess, improve fast"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten to open with quantified risk-reduction result, then self-serve framing, then pipeline depth — matches IC + fix/scale + fintech signals",
+      "Vinted bullets reordered: data quality/risk controls first (matches JD's high domain risk and metric reliability theme), architecture/cost second, self-serve/metrics third",
+      "Tourlane first bullet rewritten to lead with product metrics ownership and self-serve delivery — matches JD's top responsibility",
+      "Skills reordered: dbt, Snowflake, Airflow front of Data Engineering to mirror JD stack verbatim",
+      "Volunteering omitted: technical role, no direct signal reinforcement",
+      "pillHighlights replaced with 14 ATS phrases from Layer B"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Analytics Engineer — Data Products and Pipeline Engineering",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "90% reduction in misstatement risk on €40m exposure and €1.6m recovered through controls-embedded data models. Builds dbt and Snowflake pipelines that power self-serve analytics for product and finance stakeholders. Six years across fintech and marketplace data — ingestion, transformations, and mart creation at scale.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Designed and implemented layered data quality controls — dbt tests, reconciliations, anomaly detection — reducing misstatement risk by 90% on €40m of exposure; control framework detected carrier billing discrepancies, recovering €1.6m.",
+        "Own end-to-end shipping cost and revenue data models in dbt, BigQuery, and Looker — the single source of truth for Finance Ops and Group Reporting across month-end close and executive board packs.",
+        "Partner with Finance and product stakeholders to translate requirements into documented metrics and data models, enabling self-serve analysis and reducing rework when business logic evolves.",
+        "Optimised BigQuery workloads and storage patterns, cutting pipeline runtimes by 75% and reducing query volume by 1.5TB/day through incremental model redesign — 15% compute cost reduction while maintaining SLAs.",
+        "Raised dbt unit test coverage from <1% to 50%+ in four weeks using agentic AI for test data generation; authored a reusable testing guide independently adopted by teammates across the data org."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Owned the Finance Data Products roadmap as the sole data practitioner — defined product metrics, scoped and delivered analytical products end-to-end, acting as product manager and analytics engineer in one role.",
+        "Built a centralised data transformation layer in dbt and Snowflake — ingesting data via Fivetran from Salesforce, Stripe, Twilio, and backend systems — to power self-serve reporting and analysis across the business.",
+        "Partnered with data engineering and business teams to harden data pipelines, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation using Looker dashboards, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting and planning cycle times by up to 50%."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Developed Power BI and Tableau dashboards to track KPIs for 140 staff across 5 process areas, improving service delivery transparency.",
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" }
+  ],
+  "publications": [
+    {
+      "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
+    },
+    {
+      "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
+    }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "Snowflake", "Apache Airflow", "Python", "SQL", "Google BigQuery", "R", "Scala"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "analytics engineer",
+    "data models",
+    "self-serve reporting",
+    "data pipeline",
+    "ingestion, transformations, mart creation",
+    "software engineering best practices",
+    "product metrics",
+    "Snowflake",
+    "dbt",
+    "Airflow",
+    "self-service analytics platform",
+    "product delivery team",
+    "data products",
+    "cloud-based architecture"
+  ]
+}
