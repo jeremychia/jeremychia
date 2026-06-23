@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Senior Data Engineer - Finance Tech",
     "targetCompany": "ABOUT YOU",
+    "jobLocation": "Hamburg/Berlin, Germany",
     "sourceUrl": "https://jobs.smartrecruiters.com/ABOUTYOUGmbH/744000121982295--senior-data-engineer-finance-tech-all-genders-",
     "behaviouralInsights": [
       "Platform ownership & modernization (Dagster/dbt transition) is priority #1 — lead with infrastructure and SLA-driven architecture",
@@ -29,8 +30,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Data Engineer with 6+ years building and owning business-critical data infrastructure and terabyte-scale ELT pipelines. Expert-level SQL and Python proficiency combined with strong software engineering fundamentals (CI/CD, testing, design patterns). Proven track record designing data platforms that balance pragmatic implementation with reliability and SLA attainment. Ready to drive Dagster and AWS adoption.",
@@ -110,22 +117,73 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Programming and Data Engineering", "items": ["Python", "SQL", "dbt", "Apache Airflow"] },
-      { "category": "Data Warehousing and Databases", "items": ["Google BigQuery", "Snowflake"] },
-      { "category": "Data Quality and Observability", "items": ["dbt tests", "Elementary", "Anomaly Detection", "OpenMetadata"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git", "Docker"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Tableau", "Power BI"] }
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "Python",
+          "SQL",
+          "dbt",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Databases",
+        "items": [
+          "Google BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "Anomaly Detection",
+          "OpenMetadata"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git",
+          "Docker"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Tableau",
+          "Power BI"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
       "Microsoft Certified: Data Analyst Associate"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
