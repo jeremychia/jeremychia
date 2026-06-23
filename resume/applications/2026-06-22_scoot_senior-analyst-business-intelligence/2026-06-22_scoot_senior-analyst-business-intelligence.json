@@ -4,6 +4,7 @@
     "lastUpdated": "2026-06-22",
     "targetRole": "Senior Analyst, Business Intelligence",
     "targetCompany": "Scoot",
+    "jobLocation": "Singapore HQ",
     "sourceUrl": "https://flyscoot.wd102.myworkdayjobs.com/ScootExternalCareers/job/Singapore-HQ/Senior-Analyst--Business-Intelligence_R0005764-1?source=LinkedIn",
     "alignmentSignal": "Amber — autonomous IC role fits well; Singapore return context is positive. Risk: traditional BI stack (no dbt, no modern data stack) may limit technical growth. Dashboard maintenance at an LCC may be less challenging than current scope.",
     "behaviouralInsights": [
