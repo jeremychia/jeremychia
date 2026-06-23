@@ -1,0 +1,86 @@
+[
+  {
+    "application_id": "2026-05-11_helmes_team-lead",
+    "role_type": "team_lead",
+    "evidence": {
+      "velocity_vs_rigour": "\"Monitor performance and continuously improve work methods\"; \"Manage finances (billing, reporting)\" — balanced but leans rigour with Scrum as delivery framework; no move-fast signals.",
+      "domain_risk": "\"Manage finances (billing, reporting)\" introduces financial accountability risk, but refers to project billing not data reporting. No high-stakes data accuracy mandate stated.",
+      "jd_authorship": "\"Caring work environment\", \"inspire and develop team members\", \"good communication skills\", \"willingness to take responsibility and follow through on obligations\" — vague, generic phrasing with no tool versions, scale numbers, or technical depth; written by a generalist recruiter.",
+      "greenfield_vs_fix": "\"Continuously improve work methods\", \"contribute to process and tool development\" — primarily fix/scale/improve, not zero-to-one greenfield.",
+      "data_team_maturity": "Not stated in JD. No mention of data teams, analytics functions, or data maturity; role is a software development team lead in a consultancy context.",
+      "collaboration_width": "\"Serve as primary contact for both clients and team\" — two distinct interfaces only: external clients and the internal development team.",
+      "language_gate": "\"Very good Estonian and English language skills both in speech and writing\" — Estonian is a hard gate, phrased as a required qualification.",
+      "urgency": "\"Application Deadline: 22.05.2026\" — fixed, near-term deadline; however no ASAP or urgency language in the role itself, suggesting a structured hiring cycle."
+    }
+  },
+  {
+    "application_id": "2026-05-13_smoobu_senior-analytics-engineer",
+    "role_type": "analytics_engineering_bi",
+    "evidence": {
+      "velocity_vs_rigour": "\"Robust alerting mechanisms\", \"GDPR practices\", \"data governance\", \"advanced SQL\" — no fast-iteration language anywhere; rigour-first framing throughout.",
+      "domain_risk": "\"Data governance and GDPR practices\" introduces regulatory compliance risk in a travel/property rental SaaS context; \"robust alerting mechanisms\" signals fear of silent data failures.",
+      "jd_authorship": "\"Reverse-ETL via Hightouch\", \"complex DAGs\", \"robust alerting mechanisms\", \"warehouse costs and queries optimisation\", \"GDPR practices\" — precise technical concepts with all six tools named explicitly in both responsibilities and requirements; written by a hiring manager or technical lead.",
+      "greenfield_vs_fix": "\"Oversee\" and \"maintain\" dominate — take-over-and-stabilise role; \"create modelling principles\" is the one greenfield element.",
+      "data_team_maturity": "\"High autonomy and accountability\" and \"5+ years\" suggest a small-to-mid team where this person operates independently; \"create modeling principles and domain-level data models\" implies no existing modelling standards.",
+      "collaboration_width": "\"Connect engineering and business teams\" (reverse-ETL via Hightouch); domain models named for \"marketing, sales\" — three distinct interfaces: engineering team, marketing, and sales.",
+      "language_gate": "\"Fluent in English, both written and spoken\" is the only language requirement stated; \"German classes\" listed as a benefit, implying German is not required.",
+      "urgency": "No urgency signals present. Specificity of required stack (6 named tools) suggests a replacement hire, not headcount growth."
+    }
+  },
+  {
+    "application_id": "2026-06-04_vinted_analytics-engineer-finance",
+    "role_type": "analytics_engineering_bi",
+    "evidence": {
+      "velocity_vs_rigour": "\"Strong attention to detail with documentation and code quality standards\", \"quality assurance checks to enhance reporting consistency\", \"root cause analysis\" — every signal points to controlled, thorough execution; no speed or agility language.",
+      "domain_risk": "\"Converting Finance requirements into technical solutions\", \"quality assurance checks to enhance reporting consistency\", \"managing production reliability through issue investigation\" — Finance domain carries regulatory, audit, and business credibility risk; errors in financial reporting are explicitly costly.",
+      "jd_authorship": "\"Hands-on dbt proficiency, including tested and performant model development\", \"root cause analysis\", \"BigQuery and Airflow is advantageous\" are precise technical signals; \"fluent in SQL with working experience in a programming language such as Python, Java, Scala, or similar\" and \"excellent verbal and written communication skills in English\" are recruiter hedges — mixed authorship.",
+      "greenfield_vs_fix": "\"Architect, build\" signals some greenfield, but \"maintain\", \"root cause analysis\", \"monitoring\", and \"reporting consistency\" dominate — primarily a fix/improve/stabilise mandate.",
+      "data_team_maturity": "\"Identifying opportunities to amplify Data Science and Analytics impact\" implies a separate Data Science team exists alongside this AE function, suggesting a mid-to-large data org; no team size or reporting line stated.",
+      "collaboration_width": "\"Converting Finance requirements into technical solutions\", \"amplify Data Science and Analytics impact\" — three distinct interfaces: Finance stakeholders, Data Science team, and Analytics team.",
+      "language_gate": "\"Excellent verbal and written communication skills in English\" is the only language requirement stated.",
+      "urgency": "No urgency signals present. Role is framed as an established function (\"managing production reliability\", \"optimising end-user experience\"), not a crisis hire."
+    }
+  },
+  {
+    "application_id": "2026-06-20_1komma5grad_senior-analytics-engineer-growth",
+    "role_type": "analytics_engineering_bi",
+    "evidence": {
+      "velocity_vs_rigour": "\"5–7 years of experience... ideally in a high-growth or performance-marketing environment\", \"lead and ship large cross-functional projects\" signal delivery pressure; \"stability of our marketing data pipelines — be the first to respond to incidents\" tempers this — velocity-leaning but with stability accountability.",
+      "domain_risk": "\"Marketing attribution models\", \"CPL, CAC, blended CPL, ROAS, LTV\" — errors in marketing attribution directly affect budget allocation decisions; \"stability of our marketing data pipelines — be the first to respond to incidents and drive resolution\" confirms pipeline reliability is a live concern.",
+      "jd_authorship": "\"CPL, CAC, blended CPL, ROAS, LTV, and marketing attribution models\", \"GTM, GA4\", \"Airbyte, Zoho CRM\", \"dbt or SQL Mesh\", \"Terraform and Google Cloud Platform\", \"actively reduce your bus factor: document your work, teach what you know\" — engineer's phrase with exact performance marketing unit economics; written by a technical hiring manager or senior IC.",
+      "greenfield_vs_fix": "\"Design, build, and maintain\", \"define a forward-looking vision for the marketing data stack and drive its development\" signal greenfield intent; \"stability of our marketing data pipelines\" and incident response ownership indicate existing infrastructure to maintain.",
+      "data_team_maturity": "\"Work with data analysts, engineers, software engineers, and marketing teams\", \"mentor junior data analysts and engineers\" suggest a team of at least 3–6 data practitioners; \"flat hierarchies with direct contact to managing directors\" signals a relatively small organisation.",
+      "collaboration_width": "\"Work with data analysts, engineers, software engineers, and marketing teams\", \"partner with marketers to automate and improve marketing processes\", \"educate analysts, engineers, marketers, and stakeholders\" — five distinct interfaces: data analysts, data/software engineers, marketing teams, marketers (ops), and broader stakeholders.",
+      "language_gate": "\"English fluency required; German is a strong plus\" — English is a hard gate; German is a soft gate (\"strong plus\"), not a C2 or \"fluent\" requirement.",
+      "urgency": "No urgency signals present. Role framed around ownership and vision-setting (\"define a forward-looking vision\"), implying a planned strategic hire."
+    }
+  },
+  {
+    "application_id": "2026-06-20_adsquare_staff-data-analytics-engineer",
+    "role_type": "analytics_engineering_bi",
+    "evidence": {
+      "velocity_vs_rigour": "\"TDD\", \"CI/CD\", \"production-grade\", \"mocking and performance profiling\", \"horizontally scalable\" — every signal points to engineering discipline and correctness over speed; no agility or iteration language.",
+      "domain_risk": "\"Geo-spatial data, audience attributes\", \"build data products leveraging location signals and audience attributes\", \"establish monitoring frameworks for multi-terabyte data streams\" — adtech location data underpinning advertiser targeting; errors affect advertiser campaign performance and client trust with commercial and reputational consequences.",
+      "jd_authorship": "\"Geo-spatial data, audience attributes, and time-series datasets\", \"TDD, mocking, and performance profiling\", \"Snowflake, Redshift, Athena, StarRocks, Iceberg\", \"Apache Spark, PySpark, and AWS EMR\", \"polyglot programming in compiled/strongly-typed languages (Scala, Go, Kotlin, C++, Java)\" — no generic recruiter filler; written by a technical hiring manager or senior engineer with deep domain knowledge.",
+      "greenfield_vs_fix": "\"Establish monitoring frameworks\", \"design horizontally scalable solutions\", \"handling massive datasets\" — existing infrastructure that needs scaling and hardening, not a blank-slate build.",
+      "data_team_maturity": "\"Act as technical lead for a squad\", \"driving cross-squad collaboration\", \"drive technical alignment across multiple teams\" implies multiple squads — a medium-to-large engineering org; \"Staff\" seniority level (not Senior) suggests a well-developed engineering ladder.",
+      "collaboration_width": "\"Technical lead for a squad\", \"driving cross-squad collaboration\", \"drive technical alignment across multiple teams\", \"mentor engineers through code reviews and pair programming\" — at least three distinct interfaces: own squad, other squads, and broader multi-team alignment.",
+      "language_gate": "Not stated in JD.",
+      "urgency": "No urgency signals present. Framed as a deliberate senior architectural hire (\"making architectural decisions\", \"driving cross-squad collaboration\"), not an emergency fill."
+    }
+  },
+  {
+    "application_id": "2026-06-20_almedia_analytics-engineer",
+    "role_type": "analytics_engineering_bi",
+    "evidence": {
+      "velocity_vs_rigour": "\"Push harder\", \"accelerate your career faster than anywhere else\", \"eager to innovate and continuously improve data processes\" signal speed and ambition; \"data integrity\", \"root cause analysis\", \"testing frameworks\", \"version control\" signal rigour is also required — balanced but velocity-forward.",
+      "domain_risk": "\"Community of over 70 million users\", \"marketing analytics\", \"rewarding our community for engaging with our advertisers' products\" — errors in marketing analytics affect advertiser reporting and campaign optimisation; \"proactively monitor data integrity, identify issues, and perform root cause analysis\" signals existing data quality failures have been costly.",
+      "jd_authorship": "\"Performance-optimised data models using SQL and dbt\", \"version control, testing, and continuous integration\", \"data validation, testing, and reporting processes\" are precise technical signals; \"passionate about transforming data into actionable insights\", \"a detail-oriented problem-solver who excels in a collaborative environment\", \"eager to innovate\" are personality descriptors with zero technical specificity — mixed authorship (technical lead wrote requirements; founders/marketing wrote overview and preferred skills).",
+      "greenfield_vs_fix": "\"Design, build, and maintain clean, scalable data models\", \"automate and streamline data validation\", \"train business users on the data platform\" suggest building out a maturing data function; \"self-service analytics\" as a goal (not current state) confirms mid-maturity with greenfield scope.",
+      "data_team_maturity": "\"Core member of our analytics team\", \"take ownership of data analysis for a designated domain\" suggest a small analytics team (likely 3–6 people) where each person owns a domain end-to-end; \"train business users on utilising the data platform\" implies business users are not yet self-sufficient — mid-maturity data function.",
+      "collaboration_width": "\"Collaborating closely with Product Analysts, Data Scientists, and Business Stakeholders to meet their analytical and reporting needs\", \"train business users on utilising the data platform and data visualisation tools effectively\" — four distinct interfaces: Product Analysts, Data Scientists, Business Stakeholders, and business users.",
+      "language_gate": "Not stated in JD.",
+      "urgency": "No explicit urgency language. However \"push harder\", \"accelerate faster than anywhere else\", \"Europe's #3 fastest-growing company\" signal a high-urgency culture where ramp speed is implicitly valued."
+    }
+  }
+]
