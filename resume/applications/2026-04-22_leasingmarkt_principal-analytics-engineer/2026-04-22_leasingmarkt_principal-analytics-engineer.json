@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Principal Analytics Engineer",
     "targetCompany": "LeasingMarkt.de (AutoScout24 Group)",
+    "jobLocation": "Berlin, Germany",
     "sourceUrl": "https://www.linkedin.com/jobs/view/4404307253/",
     "behaviouralInsights": [
       "Primacy focus: enterprise architecture and semantic layers—they need a systems architect, not a report builder",
@@ -30,8 +31,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Principal-track Analytics Engineer with 7+ years designing enterprise analytical models, semantic layers, and data architecture across APAC and Europe. Expertise in dimensional modeling, dbt, BigQuery, Apache Spark, and AWS (Glue, Athena, S3) to build scalable, governance-first analytics foundations. Proven track record mentoring analytics teams and driving adoption of modern modeling practices across organisations.",
@@ -136,13 +143,70 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Architecture & Modeling", "items": ["Dimensional Modeling", "dbt", "Semantic Layers", "Data Governance", "Data Quality Frameworks"] },
-      { "category": "Cloud Data Platforms", "items": ["Google BigQuery", "AWS Glue", "AWS Athena", "AWS S3", "AWS MWAA", "Snowflake"] },
-      { "category": "Programming and Data Engineering", "items": ["Python", "PySpark", "SQL", "Apache Spark", "Scala", "Apache Airflow"] },
-      { "category": "Analytics and Visualization", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "Anomaly Detection"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "Finance and Compliance", "items": ["Financial Controls", "Data Privacy", "Audit Standards"] }
+      {
+        "category": "Data Architecture & Modeling",
+        "items": [
+          "Dimensional Modeling",
+          "dbt",
+          "Semantic Layers",
+          "Data Governance",
+          "Data Quality Frameworks"
+        ]
+      },
+      {
+        "category": "Cloud Data Platforms",
+        "items": [
+          "Google BigQuery",
+          "AWS Glue",
+          "AWS Athena",
+          "AWS S3",
+          "AWS MWAA",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "Python",
+          "PySpark",
+          "SQL",
+          "Apache Spark",
+          "Scala",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "Analytics and Visualization",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "Anomaly Detection"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance and Compliance",
+        "items": [
+          "Financial Controls",
+          "Data Privacy",
+          "Audit Standards"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -150,11 +214,26 @@
       "LucaNet Certified Professional — Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
