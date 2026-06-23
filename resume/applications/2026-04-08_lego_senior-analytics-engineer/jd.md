@@ -89,3 +89,29 @@ This role is essential as we strive to build a world-class analytics organizatio
 ## Company Commitment
 
 The LEGO Group strives to create a diverse, dynamic and inclusive culture where everyone feels safe, valued and belongs. Highly committed to equal employment opportunity and equal pay, encouraging applicants from all backgrounds including sex, gender identity or expression, race/ethnicity, national origin, sexual orientation, disability, age, religion and Veteran status.
+
+---
+
+## Layer B — Behavioural Analysis
+
+**Urgency signal:** Valid through date is May 6, 2026 — a one-month window — and the role is described as "essential" to a company-wide digital transformation. Language like "entering into a new era" and "recognised by executive leadership" signals an active, time-sensitive hire. Frame resume for immediate time-to-value: lead with shipped data products and near-term impact, not long-term trajectory.
+
+**Greenfield vs. fix/scale:** Mixed, but leaning build. "Build data pipeline engineering", "Build and maintain semantic layer", "Drive Unity Catalog governance" — foundational construction language dominates. However, "entering into a new era" implies the team exists and is maturing, so it is build-within-a-scaling-structure. Lead with greenfield and foundation-building bullets; follow with scalability evidence.
+
+**Velocity vs. rigour:** Rigour dominates. "Thorough and meticulous", "assertion checks", "CI/CD standards", "data quality frameworks", "performance & cost optimization", "highly controlled compliant environment" — this is a governance-heavy, compliance-aware organisation. Frame bullets around data quality wins, governance implementation, and controlled release practices rather than speed.
+
+**Internal customer:** Markets & Channels (Commercial) data consumers and decision makers — retail execution, shopper and partner (D2C and B2B) teams, Analytics Interface, Commercial Analytics, and senior leadership. Secondary: Data Science, Marketing, Finance, Operations. Bullet outcomes should tie to commercial decision-making velocity and self-serve enablement, not raw engineering throughput.
+
+**Stack lock-in:** Databricks is the named platform (hard requirement in responsibilities); Unity Catalog is explicitly called out. CI/CD and Git are required. SQL and/or Python are required. Agile is nice-to-have. No specific orchestration tool named — foreground Databricks and Unity Catalog verbatim; present dbt, Airflow, or similar as compatible with the Databricks ecosystem.
+
+**JD authorship:** Technical depth is evident. Phrases such as "Unity Catalog governance (schemas, access, metadata tagging)", "metric view pipelines, materialization and optimization", "assertion checks", "performance & cost optimization", and "LEGO Data Platform (Databricks)" name specific platform features and quality patterns rather than generic buzzwords. Scale is implied by "cross-functional high velocity, high volume data" (nice-to-have) and "highly controlled compliant environment." Implication: this was written by or in close consultation with a hiring manager or technical lead — pitch with technical precision, name Databricks/Unity Catalog verbatim, and demonstrate depth on data quality and governance implementation.
+
+**Data team size and maturity:** The JD signals a structured, maturing team within a large organisation. References include "Analytics Engineering team", "Analytics Interface", "Commercial Analytics", "Analytics Innovation & Automation", "Data Office product teams", and "broader analytics community" — indicating multiple distinct sub-functions within A&I. The role "collaborates closely" with these teams rather than leading them, placing this as an individual contributor on an established team reporting into the Commercial A&I function. "Entering into a new era" and "recognised by executive leadership" suggest the function is scaling from an existing base, not a startup build. Implication for first-90-days framing: show early wins on data product delivery within an existing platform and governance framework, demonstrate ability to contribute to a team with established standards rather than setting them unilaterally.
+
+**Domain risk:** Moderate-to-high. The domain is commercial retail and consumer/partner digital products — not regulated finance, but "highly controlled compliant environment" and "Retail Execution Commercial pillar" signal that data errors affect commercial decisions at scale across markets. "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks" and "ensure high quality data is collected and published… to a standard fit for purpose" indicate that data correctness underpins commercial decision-making and executive reporting. Implication: frame every bullet around data accuracy, governance controls, and quality assurance outcomes — "ensured assertion coverage", "reduced pipeline failures", "implemented governance controls" — rather than speed or volume framing.
+
+**Collaboration width:** Wide. Named teams and functions quoted verbatim from the JD: "Analytics Interface", "Commercial Analytics", "business teams", "Markets & Channels", "Analytics Innovation & Automation", "Data Office product teams", "Shopper & Partner (D2C & B2B) digital product teams", and secondary potential expansion to "Data Science, Marketing, Finance, Operations." That is 8+ distinct functions. Implication: wide (4+ teams) — lead with cross-functional coordination evidence; demonstrate experience aligning multiple stakeholders on data product requirements and governance standards, not just deep technical domain expertise.
+
+**Language gate:** The JD states "Fluent English skills both verbal and written." No language requirement beyond English is stated. None stated.
+
+**Interview process signal:** Not stated in JD.
