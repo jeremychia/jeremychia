@@ -94,3 +94,25 @@
 - data ingestion
 - Airbyte
 - Looker
+
+**Urgency signal:** No "immediately" or re-post language. Role is framed around ownership and vision-setting ("define a forward-looking vision"), implying this is a planned strategic hire, not a gap-fill. Implication: frame the resume around trajectory and depth of impact, not time-to-value or emergency ramp speed.
+
+**Greenfield vs. fix/scale:** Mixed with a build-forward lean — "Design, build, and maintain", "define a forward-looking vision", "drive its development" signal greenfield intent. But "stability of our marketing data pipelines" and incident response ownership indicate existing infrastructure to maintain and fix. Lead bullets with builds and domain ownership; follow with reliability and scale wins.
+
+**Velocity vs. rigour:** Velocity-leaning but with stability accountability. "High-growth or performance-marketing environment" preferred; "lead and ship large cross-functional projects" implies delivery pressure. But "stability" and "first to respond to incidents" temper this — they want fast builders who don't break things. Frame achievements as shipped quickly and held up under load.
+
+**Internal customer:** Marketers and data analysts/engineers. "Partner with marketers to automate and improve marketing processes", "educate analysts, engineers, marketers, and stakeholders" — the primary internal customers are marketing teams and data analysts consuming the models. Bullet outcomes should tie to marketing efficiency, attribution accuracy, and self-serve capability for analysts.
+
+**Stack lock-in:** BigQuery and dbt (or SQL Mesh) are hard requirements. GTM/GA4 and Airbyte are listed as required experience. Looker, Python, Terraform, and GCP are preferred. Mirror BigQuery, dbt, GTM, GA4, and Airbyte verbatim; foreground transferability for Looker if you have an equivalent BI tool background.
+
+**JD authorship:** Written by a technical hiring manager or senior IC with genuine domain depth. Evidence of technical precision: "CPL, CAC, blended CPL, ROAS, LTV, and marketing attribution models" (exact performance marketing unit economics); "GTM, GA4", "Airbyte, Zoho CRM", "dbt or SQL Mesh", "Terraform and Google Cloud Platform" — all named with specificity. "Actively reduce your bus factor: document your work, teach what you know" is an engineer's phrase, not a recruiter's. No vague filler phrases. Implication: pitch to the engineer with technical precision — name every tool verbatim, demonstrate knowledge of marketing attribution and unit economics, use the bus factor framing to signal documentation habits.
+
+**Data team size and maturity:** Partially inferable. "Work with data analysts, engineers, software engineers, and marketing teams" and "mentor junior data analysts and engineers" suggest a team of at least 3–6 data practitioners. "Define a forward-looking vision for the marketing data stack" implies no senior ownership currently exists for this domain — either this is a new function or the previous owner left. "Flat hierarchies with direct contact to managing directors" signals a relatively small organisation. Implication for first-90-days framing: frame around rapid domain ownership — taking over an orphaned or immature marketing data stack, establishing modelling standards, and becoming the go-to person for marketing data questions within the first 60 days.
+
+**Domain risk:** Moderate-to-high in a performance marketing context. "Stability of our marketing data pipelines — be the first to respond to incidents", "marketing attribution models", "CPL, CAC, blended CPL, ROAS, LTV" — errors in marketing attribution directly affect budget allocation decisions worth potentially millions. However, this is a consumer/B2C growth company (energy transition), not a regulated financial or public sector domain. Implication: frame bullets as reliability wins and attribution accuracy outcomes — correct CPL/ROAS reporting, pipeline uptime, attribution model accuracy — but speed framing is also acceptable given the "high-growth or performance-marketing environment" preference.
+
+**Collaboration width:** Named teams/functions quoted verbatim: "data analysts", "engineers", "software engineers", "marketing teams" (work with data analysts, engineers, software engineers, and marketing teams); "marketers" (partner with marketers to automate and improve marketing processes); "stakeholders" (educate analysts, engineers, marketers, and stakeholders). Five distinct interfaces: data analysts, data/software engineers, marketing teams, marketers (ops), and broader stakeholders. Wide (4+ teams). Implication: lead with cross-functional coordination — emphasise ability to bridge technical and marketing functions, run cross-functional projects, and build alignment across a diverse set of consumers of marketing data.
+
+**Language gate:** "English fluency required; German is a strong plus" — English is a hard gate; German is a soft gate ("strong plus"). Not a C2 or "fluent" German requirement, but strong preference. Soft gate.
+
+**Interview process signal:** Not stated in JD.
