@@ -14,7 +14,8 @@
       "ATS keywords: dbt, incremental models, semantic layer, self-serve analytics, data quality standards, CI/CD, data modeling, custom macros, warehouse performance, cross-domain, metrics, fast-moving.",
       "Absence signal: No Spark, Airflow, Tableau — skip these. Looker = semantic layer match for Omni.",
       "Nice-to-have: Finance and Marketing data — Tourlane and LucaNet roles directly cover this. Surface explicitly.",
-      "Culture: Mission-driven Series B startup, remote, autonomy. Mirror 'transparent', 'fair', 'early-stage' framing subtly."
+      "Culture: Mission-driven Series B startup, remote, autonomy. Mirror 'transparent', 'fair', 'early-stage' framing subtly.",
+      "Loss aversion: 'Balance speed, accuracy, and maintainability' and 'establish data quality standards' are fear signals — a prior bad hire likely shipped fast but broke things. Frame achievements as quality and maintainability wins alongside scale."
     ],
     "adaptationNotes": [
       "Summary rewritten to lead with production dbt at scale and semantic layer — the two non-negotiables. 'Staff' IC framing: set direction, not just execute.",
@@ -34,8 +35,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Staff-level Analytics Engineer with 6+ years of production dbt experience — incremental models, custom macros, and data modeling architecture at scale — across fast-moving commercial organisations in APAC and Europe. Sets direction for analytics patterns, standards, and strategy; defines and implements metrics in semantic layers (Looker) for self-serve analytics across Finance, Marketing, and Operations. Track record of building data quality standards and CI/CD practices that teams rely on.",
@@ -138,13 +145,63 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Analytics Engineering", "items": ["dbt (incremental models, custom macros, architecture)", "SQL", "Python"] },
-      { "category": "Semantic Layer and BI", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Warehousing", "items": ["Google BigQuery", "Snowflake"] },
-      { "category": "Data Quality and CI/CD", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
-      { "category": "Other Engineering", "items": ["Apache Spark", "Apache Airflow", "Scala", "R"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Analytics Engineering",
+        "items": [
+          "dbt (incremental models, custom macros, architecture)",
+          "SQL",
+          "Python"
+        ]
+      },
+      {
+        "category": "Semantic Layer and BI",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Warehousing",
+        "items": [
+          "Google BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Data Quality and CI/CD",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Other Engineering",
+        "items": [
+          "Apache Spark",
+          "Apache Airflow",
+          "Scala",
+          "R"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -152,11 +209,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

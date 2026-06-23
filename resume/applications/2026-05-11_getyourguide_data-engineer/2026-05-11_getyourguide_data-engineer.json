@@ -12,7 +12,8 @@
       "Best practices repeated 3+ times (code quality, data modeling, testing, monitoring) = they've been burned by poor quality before.",
       "AI-first is a genuine bonus signal — listed explicitly as preferred. Agentic AI usage in test generation is directly relevant.",
       "No mentorship in JD = pure IC role. De-emphasise people management.",
-      "Travel domain (Tourlane) + marketplace (Vinted) are directly relevant to GYG's traveler marketplace context."
+      "Travel domain (Tourlane) + marketplace (Vinted) are directly relevant to GYG's traveler marketplace context.",
+      "Loss aversion: 'trusted data foundations' and 'reliable, high-quality datasets/pipelines' in JD opening are explicit reliability fear signals. Frame all quality control and SLA work as risk reduction. The 90% misstatement risk reduction metric is the direct answer to this fear."
     ],
     "adaptationNotes": [
       "Summary rewritten to lead with reliability wins and pipeline scale — addresses JD's #1 fear of unreliable data.",
@@ -34,8 +35,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Builds reliable end-to-end data pipelines at scale — 75% faster runtimes, 90% reduction in misstatement risk on €40m of exposure, and €1.6m recovered through automated quality controls. 6+ years delivering production dbt, Snowflake, and BigQuery solutions across travel (Tourlane) and marketplace (Vinted) domains. Translates business requirements into documented data models and SLA-grade infrastructure, working autonomously across Product, Finance, and Engineering.",
@@ -118,11 +125,54 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "SQL", "Python", "Snowflake", "Google BigQuery", "PostgreSQL", "Apache Airflow", "Scala", "R"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Tableau", "Looker Studio", "Microsoft Power BI"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "SQL",
+          "Python",
+          "Snowflake",
+          "Google BigQuery",
+          "PostgreSQL",
+          "Apache Airflow",
+          "Scala",
+          "R"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Tableau",
+          "Looker Studio",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -130,11 +180,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

@@ -6,17 +6,18 @@
     "targetCompany": "Wolt",
     "sourceUrl": "https://job-boards.greenhouse.io/wolt/jobs/7735284",
     "behaviouralInsights": [
-      "Revenue subledger scaling is the primary strategic initiative \u2014 lead with ownership of complex, high-stakes revenue infrastructure",
-      "Reconciliation and data accuracy are top pain points (fear of misstatement) \u2014 frame achievements as risk reduction and control design",
-      "Autonomous IC role, not team lead \u2014 lead with outcomes and problem-solving autonomy, not team management",
-      "Heavy AI tool adoption culture \u2014 needs demonstrated active usage of Claude/Cursor with concrete examples",
-      "Cross-functional bridge-builder \u2014 engineering, product, and finance teams collaborate on revenue data requirements",
-      "Marketplace complexity matters \u2014 gig/commission revenue adds ambiguity that requires judgment"
+      "Revenue subledger scaling is the primary strategic initiative — lead with ownership of complex, high-stakes revenue infrastructure",
+      "Reconciliation and data accuracy are top pain points (fear of misstatement) — frame achievements as risk reduction and control design",
+      "Autonomous IC role, not team lead — lead with outcomes and problem-solving autonomy, not team management",
+      "Heavy AI tool adoption culture — needs demonstrated active usage of Claude/Cursor with concrete examples",
+      "Cross-functional bridge-builder — engineering, product, and finance teams collaborate on revenue data requirements",
+      "Marketplace complexity matters — gig/commission revenue adds ambiguity that requires judgment",
+      "Loss aversion: 'external and internal audit reviews' and 'reconciliation' language are explicit fear-of-misstatement signals. Revenue data errors at a marketplace scale have direct financial and regulatory consequences. Frame all reconciliation and control work as risk reduction, not process work."
     ],
     "adaptationNotes": [
       "Reframed summary to lead with revenue accounting and controls design, not generic analytics engineering",
-      "Promoted Vinted shipping finance to first bullet with emphasis on revenue model complexity and \u20ac1.6m reconciliation recovery",
-      "Reordered bullets by JD priority: subledger/reconciliation \u2192 month-end close support \u2192 risk/control design \u2192 automation",
+      "Promoted Vinted shipping finance to first bullet with emphasis on revenue model complexity and €1.6m reconciliation recovery",
+      "Reordered bullets by JD priority: subledger/reconciliation → month-end close support → risk/control design → automation",
       "Moved SQL, Snowflake, dbt, Looker to front of skills (preferred/required tools)",
       "Added IFRS 15 to skills; featured dbt unit tests and AI-driven analysis as automation examples",
       "Replaced generic pillHighlights with 15 ATS keywords matching JD terminology"
@@ -49,7 +50,7 @@
       "endDate": "Present",
       "bullets": [
         "Own end-to-end revenue model architecture (shipping cost and margin analysis) in dbt, BigQuery, and Looker, serving as single source of truth for Finance Ops during month-end close and balance sheet reconciliation.",
-        "Designed and embedded layered reconciliation and control framework across \u20ac40m of shipping exposure, reducing misstatement risk by 90% and detecting \u20ac1.6m in carrier billing discrepancies through risk-based exception alerting.",
+        "Designed and embedded layered reconciliation and control framework across €40m of shipping exposure, reducing misstatement risk by 90% and detecting €1.6m in carrier billing discrepancies through risk-based exception alerting.",
         "Raised dbt unit test coverage from <1% to 50%+ using agentic AI for test data generation and reconciliation logic validation; authored reusable testing guide adopted by teammates.",
         "Used Claude Code and Cursor daily to accelerate SQL analysis, dbt refactoring, and recursive reconciliation logic, reducing manual journal entry verification cycles by 40%."
       ]
@@ -79,8 +80,8 @@
   ],
   "education": [
     {
-      "degree": "MSc, Big Data and Business Analytics (Mention Tr\u00e8s Bien)",
-      "institution": "\u00c9cole Sup\u00e9rieure de Commerce de Paris (ESCP) Business School",
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
       "location": "Paris and Berlin",
       "startDate": "Sep 2021",
       "endDate": "Dec 2022",
@@ -128,11 +129,11 @@
   "publications": [
     {
       "citation": "Lui, G., Chia, J., & Shum, C. (2024). Impact of Sustainability Disclosures on Financial Performance: A Natural Language Processing Perspective.",
-      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864\u2013874."
+      "venue": "Proceedings of the 57th Hawaii International Conference on System Sciences (HICSS), pp. 864–874."
     },
     {
       "citation": "Teoh, T. T., Heng, Q. K., Chia, J. J., Shie, J. M., Liaw, S. W., Yang, M., & Nguwi, Y. Y. (2019). Machine learning-based corporate social responsibility prediction.",
-      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501\u2013505."
+      "venue": "IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM), pp. 501–505."
     }
   ],
   "skills": {

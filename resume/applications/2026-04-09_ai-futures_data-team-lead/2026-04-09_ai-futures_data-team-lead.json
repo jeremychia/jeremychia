@@ -10,7 +10,8 @@
       "Scaled infrastructure ownership: Repeated emphasis on 'building,' 'productionise,' and 'at pace' signals they need an autonomous architect, not a task-executor",
       "Leadership + mentoring: Growing and mentoring a team is explicit; signals readiness for first-time or experienced leads",
       "Reliability through design: High-volume real-time + AI-driven financial decisioning implies correctness/SLA-critical mindset",
-      "Absent: No BI, analytics, or reporting focus — pure platform and infrastructure engineering"
+      "Absent: No BI, analytics, or reporting focus — pure platform and infrastructure engineering",
+      "Loss aversion: 'AI-driven financial decisioning' with high-volume real-time data implies fear of incorrect outputs causing financial harm. Correctness and reliability are not nice-to-haves — they are the product. Frame pipeline and platform achievements as risk reduction and SLA compliance, not just scale."
     ],
     "adaptationNotes": [
       "Reframed summary to emphasise platform architecture and infrastructure at scale, leading with reliability and real-time systems experience",
@@ -29,8 +30,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Data platform engineer with 6+ years of experience designing and building scalable, production-grade infrastructure for high-volume data pipelines across finance and mobility sectors. Expert in ETL and ELT development using Python, Apache Spark, and modern data architectures (medallion, data lakes) to power real-time decisioning systems. Proven track record leading teams, optimising infrastructure at scale, and delivering reliability through systematic design and observability.",
@@ -107,22 +114,81 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Programming and Data Engineering", "items": ["Python", "Apache Spark", "SQL", "dbt", "Apache Airflow", "R", "Scala"] },
-      { "category": "Data Warehousing and Architectures", "items": ["Google BigQuery", "Snowflake", "Medallion Architecture", "Data Lakes"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Microsoft Power BI", "Looker Studio", "Tableau"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "Monitoring and Alerting"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "Finance and Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "Python",
+          "Apache Spark",
+          "SQL",
+          "dbt",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Architectures",
+        "items": [
+          "Google BigQuery",
+          "Snowflake",
+          "Medallion Architecture",
+          "Data Lakes"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Microsoft Power BI",
+          "Looker Studio",
+          "Tableau"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "Monitoring and Alerting"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance and Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
       "Microsoft Certified: Data Analyst Associate"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      }
     ]
   },
   "pillHighlights": [

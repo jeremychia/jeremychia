@@ -13,7 +13,8 @@
       "Impact mindset: 'transform data into actionable insights' — they care about outcomes for internal and external users, not process or architecture.",
       "No mentions of: governance, compliance, data modeling, metrics layers, team leadership = pure IC culture; avoid architecture/mentorship framing.",
       "Big data stack is table-stakes: BigQuery, Kafka, Airflow mentioned explicitly; candidate should demonstrate hands-on, not theoretical, familiarity.",
-      "GCP-native environment: Git/GitLab, GCP, BigQuery stack signals Google Cloud Platform primary deployment; show GCP depth over multi-cloud generality."
+      "GCP-native environment: Git/GitLab, GCP, BigQuery stack signals Google Cloud Platform primary deployment; show GCP depth over multi-cloud generality.",
+      "Loss aversion: 'rigorous accuracy standards' in a single-day dashboard context is the clearest fear signal — they have been burned by fast-but-wrong analytics. Frame the combination of speed AND accuracy as a risk-reduction capability, not just velocity."
     ],
     "adaptationNotes": [
       "Reordered Vinted bullets: lead with Looker dashboard delivery and sprint velocity, not data modeling architecture.",
@@ -32,8 +33,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineer with 6+ years building Looker dashboards and data infrastructure for rapid delivery. Specialises in fast-paced dashboard development with unwavering accuracy, independent navigation of complex data platforms (BigQuery, Kafka, Airflow, GCP), and proposing process enhancements. Transforms data into actionable insights for internal and external users while solving problems autonomously using available tools.",
@@ -126,14 +133,76 @@
   ],
   "skills": {
     "technical": [
-      { "category": "BI Tools and Dashboarding", "items": ["Looker", "Looker calculated fields", "Looker Studio", "Tableau", "Microsoft Power BI", "Grafana"] },
-      { "category": "Cloud Data Platforms", "items": ["Google BigQuery", "Google Cloud Platform (GCP)", "Cloud Functions", "Pub/Sub", "Cloud Storage", "Snowflake"] },
-      { "category": "Big Data and Orchestration", "items": ["Apache Airflow", "Kafka", "Apache Spark"] },
-      { "category": "Programming and Scripting", "items": ["Python", "SQL", "R", "Scala"] },
-      { "category": "Data Transformation and Modeling", "items": ["dbt", "Data lineage", "ETL design"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests", "Monitoring and alerting"] },
-      { "category": "Version Control and DevOps", "items": ["Git", "GitHub"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "BI Tools and Dashboarding",
+        "items": [
+          "Looker",
+          "Looker calculated fields",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI",
+          "Grafana"
+        ]
+      },
+      {
+        "category": "Cloud Data Platforms",
+        "items": [
+          "Google BigQuery",
+          "Google Cloud Platform (GCP)",
+          "Cloud Functions",
+          "Pub/Sub",
+          "Cloud Storage",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Big Data and Orchestration",
+        "items": [
+          "Apache Airflow",
+          "Kafka",
+          "Apache Spark"
+        ]
+      },
+      {
+        "category": "Programming and Scripting",
+        "items": [
+          "Python",
+          "SQL",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Transformation and Modeling",
+        "items": [
+          "dbt",
+          "Data lineage",
+          "ETL design"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "Elementary",
+          "dbt tests",
+          "Monitoring and alerting"
+        ]
+      },
+      {
+        "category": "Version Control and DevOps",
+        "items": [
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -141,11 +210,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [

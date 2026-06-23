@@ -13,7 +13,8 @@
       "SQL and BigQuery are core tools — both present in experience at scale",
       "Traditional BI shop — no dbt/Python signal — emphasise SQL depth and Tableau over analytics engineering framing",
       "Cross-functional liaison between technical and non-technical groups is explicit — surface this capability",
-      "Conservative, execution-focused culture — no personality marketing language needed"
+      "Conservative, execution-focused culture — no personality marketing language needed",
+      "Loss aversion: 'structure, quality, and management of large volumes of data' is a governance and reliability concern — decisions made on bad data at an airline cost money and credibility. Frame data quality and reconciliation work as risk reduction and decision reliability, not just accuracy."
     ],
     "adaptationNotes": [
       "Summary reframed: leads with dashboard delivery and data reliability outcomes, not dbt/engineering framing",
@@ -35,8 +36,14 @@
     "contact": {
       "phone": "+65 9129 3246",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Delivered Tableau dashboards and BI solutions used as single source of truth across finance and operations teams. Reduced data misstatement risk by 90% through layered data quality controls on €40m of exposure. Bridges technical and non-technical teams — distilling complex data into decision-ready business insights.",
@@ -124,11 +131,51 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Analytics and Visualisation", "items": ["Tableau", "Looker", "Looker Studio", "Microsoft Power BI"] },
-      { "category": "Data Engineering", "items": ["SQL", "Google BigQuery", "Python", "dbt", "Snowflake", "Apache Airflow"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
-      { "category": "Finance and Automation Tools", "items": ["SAP", "UiPath", "LucaNet"] },
-      { "category": "Data Mining and ML Platforms", "items": ["Knime", "Azure ML Studio", "Dataiku"] }
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Tableau",
+          "Looker",
+          "Looker Studio",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Engineering",
+        "items": [
+          "SQL",
+          "Google BigQuery",
+          "Python",
+          "dbt",
+          "Snowflake",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "SAP",
+          "UiPath",
+          "LucaNet"
+        ]
+      },
+      {
+        "category": "Data Mining and ML Platforms",
+        "items": [
+          "Knime",
+          "Azure ML Studio",
+          "Dataiku"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -136,11 +183,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
