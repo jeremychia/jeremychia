@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Analytics Engineer",
     "targetCompany": "Qasa",
+    "jobLocation": "Stockholm, Sweden (Hybrid)",
     "sourceUrl": "https://careers.qasa.se/jobs/7452878-analytics-engineer-build-qasa-s-data-foundation",
     "behaviouralInsights": [
       "Primacy bias: KPI/metrics definition and unification is their top priority—lead with metrics expertise",
@@ -28,8 +29,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineer with 6+ years defining and maintaining unified KPIs, data models, and metrics across finance, product, and operations. Expert in dbt, BigQuery, and Looker to build self-serve analytics capabilities and governance frameworks that empower cross-functional teams. Chartered Accountant background provides deep business acumen across finance, reporting, and compliance domains.",
@@ -121,14 +128,73 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Modeling and Analytics", "items": ["dbt", "SQL", "Data modeling", "KPI definition", "Metric standards"] },
-      { "category": "Data Warehousing and Analytics Platforms", "items": ["Google BigQuery", "Snowflake", "Looker", "Looker Studio", "Metabase"] },
-      { "category": "Data Quality and Governance", "items": ["GDPR compliance", "Data governance", "dbt tests", "Elementary", "Access management"] },
-      { "category": "Programming Languages", "items": ["Python", "R", "Scala"] },
-      { "category": "Data Engineering", "items": ["Apache Spark", "Apache Airflow"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Tools", "items": ["LucaNet", "SAP", "UiPath"] }
+      {
+        "category": "Data Modeling and Analytics",
+        "items": [
+          "dbt",
+          "SQL",
+          "Data modeling",
+          "KPI definition",
+          "Metric standards"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Analytics Platforms",
+        "items": [
+          "Google BigQuery",
+          "Snowflake",
+          "Looker",
+          "Looker Studio",
+          "Metabase"
+        ]
+      },
+      {
+        "category": "Data Quality and Governance",
+        "items": [
+          "GDPR compliance",
+          "Data governance",
+          "dbt tests",
+          "Elementary",
+          "Access management"
+        ]
+      },
+      {
+        "category": "Programming Languages",
+        "items": [
+          "Python",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Data Engineering",
+        "items": [
+          "Apache Spark",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Tools",
+        "items": [
+          "LucaNet",
+          "SAP",
+          "UiPath"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -136,11 +202,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
