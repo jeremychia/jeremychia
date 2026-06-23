@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "version": "2026-06-23_octopus-energy-germany_analytics-engineer",
+    "lastUpdated": "2026-06-23",
+    "targetRole": "Analytics Engineer (Gross Margin & Cost Modelling)",
+    "targetCompany": "Octopus Energy Germany",
+    "jobLocation": "Germany",
+    "sourceUrl": "https://jobs.lever.co/octoenergy/2346cc3c-4de3-47b0-b0ea-6f086a06e7f5",
+    "alignmentSignal": "Amber — strong technical and domain match (dbt, Airflow, cost/margin data, autonomous IC, high-stakes financial pipelines). Genuine gap: JD explicitly requires German-English bilingualism; Jeremy is A2 in German. Role otherwise maps well to motivations: autonomous IC, high-domain-risk data products, direct collaboration with Pricing and Controlling.",
+    "behaviouralInsights": [
+      "Signal ordering: Architecture and pipeline engineering listed first — weight resume toward scalable system design and dbt/Airflow delivery",
+      "Repetition: 'skalierbar' (scalable) 5+ times, 'regulatorisch' 3+ times, 'Datenqualität' 3+ times — fear of brittle, non-compliant pipelines",
+      "Seniority: 'Ownership-Mentalität', 'Du verantwortest' — strong autonomous IC, not a team lead",
+      "Loss aversion: gross margin, pricing, regulatory cost data = P&L and compliance impact — frame every bullet as risk-reduction or reliability win",
+      "Culture: challenger/mission-driven ('Energierevolution', 'Status Quo herausforderst') — mirror with direct, outcome-focused framing",
+      "Absence: no mentoring, no team management, no ML/data science — pure AE/data engineering IC role",
+      "Urgency: 'zum nächstmöglichen Zeitpunkt' = ASAP — frame bullets with immediate delivery and ownership signals",
+      "Greenfield vs. fix/scale: mixed — lead with both 'designed from scratch' and 'inherited X, improved to Y' bullet styles",
+      "Velocity vs. rigour: tilts rigour — scalability, data quality, regulatory compliance, maintainability are core",
+      "Internal customer: Pricing, Controlling, Energy Markets — align outcomes to pricing accuracy, margin transparency, cost reliability",
+      "Stack lock-in: dbt and Apache Airflow named explicitly as production tools; SQL and Python hard requirements — mirror verbatim at front of skills",
+      "JD authorship: mixed hiring manager/recruiter — address both named tools and business outcomes framing",
+      "Data team maturity: established team ('Weiterentwicklung unseres Analytics-Teams') — first 90 days = inherit, assess, establish best practices",
+      "Domain risk: very high — gross margin and cost modelling data feeds pricing and P&L — frame accuracy as risk-reduction",
+      "Collaboration width: wide — 4+ named partner teams (Pricing, Controlling, Energy Markets, weitere Fachbereiche)",
+      "Language gate: 'Du kommunizierst klar – auf Deutsch und Englisch' — hard bilingual requirement; Jeremy is A2 German — potential disqualifier"
+    ],
+    "adaptationNotes": [
+      "Summary rewritten: opens with scalable pipeline ownership at scale, dbt/Airflow stack, cost/margin domain depth — rigour framing throughout",
+      "Vinted bullets reordered: first bullet leads with pipeline architecture and dbt (top JD priority); data quality controls bullet moved to second position; cost/margin framing emphasised",
+      "Tourlane: lead bullet rewritten to foreground dbt/Snowflake pipeline build and multi-source data integration; SLA attainment bullet retained for reliability signal",
+      "LucaNet: finance transformation framing retained; de-emphasised culture ambassador bullet",
+      "Skills reordered: Data Engineering first with dbt and Apache Airflow at front; Data Quality and DevOps promoted",
+      "Volunteering omitted: no direct signal for this technical IC role",
+      "pillHighlights replaced with ATS keywords from Layer B",
+      "Phone: EU number used (Berlin-based role)"
+    ]
+  },
+  "header": {
+    "name": "Jeremy Jerome Chia",
+    "tagline": "Senior Analytics Engineer — Cost Modelling and Finance Data",
+    "location": "Berlin, Germany",
+    "contact": {
+      "phone": "+33 6 95 92 48 39",
+      "email": "jeremyjchia@gmail.com",
+      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
+      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+    }
+  },
+  "summary": "90% misstatement risk reduction on €40m exposure — built on scalable dbt and Apache Airflow pipelines. Six years owning cost and margin data products from architecture to month-end close. Chartered Accountant background makes cost structures and margin logic native domain, not a translation exercise.",
+  "experience": [
+    {
+      "title": "Senior Analytics Engineer, Shipping Finance",
+      "company": "Vinted GmbH",
+      "location": "Berlin, Germany / Vilnius, Lithuania",
+      "startDate": "Aug 2023",
+      "endDate": "Mar 2026",
+      "bullets": [
+        "Architected and owned end-to-end cost and revenue data models in dbt, BigQuery, and Airflow — the single source of truth for Finance Ops, Group Reporting, and Pricing throughout month-end close.",
+        "Designed layered data quality controls — dbt tests and reconciliations — reducing misstatement risk by 90% on €40m of exposure.",
+        "Embedded a risk-based control framework into core datasets, detecting carrier billing discrepancies and recovering €1.6m in overcharges.",
+        "Optimised BigQuery pipelines and incremental model architecture, cutting runtimes by 75% and query volume by 1.5TB/day; compute costs down 15% with no impact on downstream SLAs or reconciliation windows.",
+        "Built and redesigned invoice completeness alerting, cutting time-to-detect data issues and delivering faster, actionable signals for Finance.",
+        "Raised dbt unit test coverage from <1% to 50%+ in the finance domain in four weeks, with a reusable testing guide adopted by teammates.",
+        "Translated Finance requirements into documented metrics and data models for Pricing, Controlling, and Group Reporting."
+      ]
+    },
+    {
+      "title": "Data Analyst, Finance Lead",
+      "company": "Tourlane GmbH",
+      "location": "Berlin, Germany",
+      "startDate": "Jul 2022",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Built a centralised dbt and Snowflake transformation layer via Fivetran integrating Salesforce, Stripe, Twilio, and backend systems — the data foundation for all finance and operational analytics.",
+        "Owned the Finance Data Products roadmap end-to-end as sole finance data analyst — product manager, analyst, and engineer in one role.",
+        "Partnered with data engineering to harden pipelines, improving SLA attainment from 88% to 97%.",
+        "Led finance reporting transformation via Looker dashboards, saving 5 FTE days per month in month-end close."
+      ]
+    },
+    {
+      "title": "Senior Finance Transformation Consultant",
+      "company": "LucaNet AG",
+      "location": "Singapore / Paris, France",
+      "startDate": "Mar 2020",
+      "endDate": "Mar 2022",
+      "bullets": [
+        "Led 11 finance digital transformation projects for listed companies across APAC (SGX, HKEX, KLSE, ASX), from requirements to go-live.",
+        "Designed consolidation and budgeting solutions in LucaNet and Power BI, cutting reporting and planning cycle times by up to 50%.",
+        "Delivered client enablement sessions and documentation, achieving average satisfaction scores of 4.5 / 5."
+      ]
+    },
+    {
+      "title": "Finance Analyst",
+      "company": "Keppel Corporation Ltd",
+      "location": "Singapore",
+      "startDate": "Jul 2019",
+      "endDate": "Mar 2020",
+      "bullets": [
+        "Automated 2 manual finance workflows using UiPath RPA integrated with SAP, saving 50 person-hours per month.",
+        "Streamlined reporting across 300 entities in 6 business units, improving data consistency and timeliness across Finance and Operations.",
+        "Built Power BI and Tableau dashboards to track KPIs for 140 staff across 5 process areas."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Big Data and Business Analytics (Mention Très Bien)",
+      "institution": "École Supérieure de Commerce de Paris (ESCP) Business School",
+      "location": "Paris and Berlin",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2022",
+      "bullets": [
+        "Ranked 7th globally in QS Business Master's Rankings 2024 for Business Analytics; awarded French Excellence Master Scholarship.",
+        "Best Thesis Award: NLP-based analysis of sustainability disclosures and their impact on corporate financial performance across markets."
+      ]
+    },
+    {
+      "degree": "Bachelor of Accountancy (Highest Distinction)",
+      "institution": "Nanyang Technological University (NTU)",
+      "location": "Singapore",
+      "startDate": "Aug 2016",
+      "endDate": "Jul 2019",
+      "bullets": [
+        "Ranked 2nd in Asia in QS World University Rankings by Subject 2023 for Accounting and Finance; graduated with Highest Distinction.",
+        "Dean's List (AY 2016/2017); Isetan Foundation Scholarship; awarded TFI-LeaRN exchange scholarship to the University of Hong Kong."
+      ]
+    }
+  ],
+  "talks": [
+    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
+    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
+    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
+    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+  ],
+  "skills": {
+    "technical": [
+      { "category": "Data Engineering", "items": ["dbt", "Apache Airflow", "Python", "SQL", "Google BigQuery", "Snowflake", "R", "Scala"] },
+      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
+      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
+      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
+      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+    ],
+    "certifications": [
+      "Chartered Global Management Accountant (CGMA)",
+      "Microsoft Certified: Data Analyst Associate",
+      "LucaNet Certified Professional - Financial Performance Management"
+    ],
+    "languages": [
+      { "language": "English", "level": "Native / C2" },
+      { "language": "Mandarin", "level": "B2" },
+      { "language": "Cantonese", "level": "B2" },
+      { "language": "German", "level": "A2" },
+      { "language": "French", "level": "A1" }
+    ]
+  },
+  "pillHighlights": [
+    "dbt",
+    "Apache Airflow",
+    "Analytics Engineer",
+    "scalable data models",
+    "Datenarchitektur",
+    "data quality controls",
+    "incremental models",
+    "Kostensteuerung",
+    "Bruttomarge",
+    "Pricing",
+    "Data Products",
+    "Best Practices Analytics Engineering",
+    "regulatorische Anforderungen"
+  ]
+}
