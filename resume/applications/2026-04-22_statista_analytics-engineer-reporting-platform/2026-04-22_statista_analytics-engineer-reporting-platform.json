@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Analytics Engineer - Reporting Platform",
     "targetCompany": "Statista",
+    "jobLocation": "Hamburg or Berlin, Germany",
     "sourceUrl": "https://jobs.ashbyhq.com/statista/daa5811c-c67e-4fdc-abf9-e96b68a5269d",
     "behaviouralInsights": [
       "Loss aversion signals (governance, documentation, trust, maintainability) — frame achievements as risk reduction and order-restoration",
@@ -28,8 +29,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineer with 6+ years building reporting platforms, data quality frameworks, and governance practices. Expertise in Power BI, dbt, Snowflake, and BigQuery establishing standards and controls in complex analytical environments. Proven track record translating data landscapes into maintainable, trusted platforms enabling self-serve analytics.",
@@ -131,13 +138,66 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Analytics and Visualisation", "items": ["Power BI", "Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Warehousing and Databases", "items": ["Snowflake", "Google BigQuery"] },
-      { "category": "Programming and Data Engineering", "items": ["SQL", "dbt", "Python", "R", "Scala", "Apache Spark", "Apache Airflow"] },
-      { "category": "Data Quality and Governance", "items": ["dbt tests", "Elementary", "reconciliations", "anomaly detection"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] },
-      { "category": "AI-Assisted Development", "items": ["Cursor", "GitHub Copilot"] }
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Power BI",
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Warehousing and Databases",
+        "items": [
+          "Snowflake",
+          "Google BigQuery"
+        ]
+      },
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "SQL",
+          "dbt",
+          "Python",
+          "R",
+          "Scala",
+          "Apache Spark",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "Data Quality and Governance",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "reconciliations",
+          "anomaly detection"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -145,11 +205,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
