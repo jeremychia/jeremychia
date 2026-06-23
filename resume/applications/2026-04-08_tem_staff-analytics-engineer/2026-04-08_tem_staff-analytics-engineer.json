@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-08",
     "targetRole": "Staff Analytics Engineer",
     "targetCompany": "tem",
+    "jobLocation": "United Kingdom (Remote)",
     "sourceUrl": "https://jobs.ashbyhq.com/tem/66b06873-4d08-4347-9d16-dc5c24ae481c",
     "behaviouralInsights": [
       "Fear signal: 'production dbt... ~1B rows daily' is unusually specific — they hired someone who couldn't handle scale. Must explicitly signal Vinted's data scale.",
