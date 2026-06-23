@@ -4,6 +4,7 @@
     "lastUpdated": "2026-06-22",
     "targetRole": "Analytics Engineer",
     "targetCompany": "FREE NOW (Freenow by Lyft)",
+    "jobLocation": "Hamburg, Berlin, or Barcelona",
     "sourceUrl": "https://job-boards.greenhouse.io/freenow/jobs/7189275?gh_src=0c92915e1us",
     "alignmentSignal": "Amber — strong IC and data quality fit; Databricks/SparkSQL is a genuine gap vs Jeremy's BigQuery/dbt stack, but pipeline and quality patterns transfer directly. Mobility domain is new.",
     "behaviouralInsights": [
@@ -30,8 +31,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "90% reduction in misstatement risk across €40m of exposure — built through layered data quality controls and data contracts. Designs and owns data pipelines across the full stack, from modelling to monitoring, in complex multi-team environments. Six years spanning finance and product analytics; deep expertise in SQL, Python, and scalable data product design.",
@@ -114,10 +121,30 @@
     }
   ],
   "talks": [
-    { "title": "Analytics Testing Strategy", "event": "Data Maker's Fest", "location": "Porto, Portugal", "year": "May 2026" },
-    { "title": "Analytics Testing Strategy", "event": "Forward Data Conference", "location": "Paris, France", "year": "Nov 2025" },
-    { "title": "Talk Moderator and Host: Cost Optimisation", "event": "dbt Community Meetup, Vinted Berlin", "location": "Berlin, Germany", "year": "Sep 2025" },
-    { "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches", "event": "MDS Fest 3.0", "location": "Online", "year": "May 2025" }
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Data Maker's Fest",
+      "location": "Porto, Portugal",
+      "year": "May 2026"
+    },
+    {
+      "title": "Analytics Testing Strategy",
+      "event": "Forward Data Conference",
+      "location": "Paris, France",
+      "year": "Nov 2025"
+    },
+    {
+      "title": "Talk Moderator and Host: Cost Optimisation",
+      "event": "dbt Community Meetup, Vinted Berlin",
+      "location": "Berlin, Germany",
+      "year": "Sep 2025"
+    },
+    {
+      "title": "Building and Analysing a Structured Dataset of Singapore's Parliamentary Speeches",
+      "event": "MDS Fest 3.0",
+      "location": "Online",
+      "year": "May 2025"
+    }
   ],
   "publications": [
     {
@@ -131,11 +158,55 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["SQL", "Python", "Apache Airflow", "Databricks", "dbt", "Google BigQuery", "Snowflake", "R", "Scala"] },
-      { "category": "Analytics and Visualisation", "items": ["Tableau", "Mixpanel", "Looker", "Looker Studio", "Microsoft Power BI"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "SQL",
+          "Python",
+          "Apache Airflow",
+          "Databricks",
+          "dbt",
+          "Google BigQuery",
+          "Snowflake",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Tableau",
+          "Mixpanel",
+          "Looker",
+          "Looker Studio",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -143,11 +214,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A2" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
