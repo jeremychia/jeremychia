@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-09",
     "targetRole": "Analytics Engineer - Finance",
     "targetCompany": "Lovable",
+    "jobLocation": "Stockholm, Sweden",
     "sourceUrl": "https://jobs.ashbyhq.com/lovable/081be99e-95bf-4992-9cf2-d16371635ac1",
     "behaviouralInsights": [
       "Loss aversion signal: 'data consistency' and 'financial accuracy' appear repeatedly—they've been burned by reconciliation failures",
@@ -28,8 +29,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineer with 6+ years of expertise building dependable financial data infrastructure for finance teams across APAC and Europe. Specialises in dimensional models using dbt (including Jinja templating frameworks) and cloud warehouses (BigQuery, Snowflake) to power revenue recognition and subscription analytics. Deep experience with payment platform integration, metric definition, data quality frameworks, and translating finance requirements into reliable, auditable data models.",
@@ -112,13 +119,61 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Transformation and Analytics Engineering", "items": ["dbt", "SQL", "Python", "Apache Spark", "Scala", "Apache Airflow", "R"] },
-      { "category": "Cloud Data Warehouses", "items": ["Google BigQuery", "Snowflake"] },
-      { "category": "Payment and Billing Platforms", "items": ["Stripe", "Salesforce"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and Observability", "items": ["Elementary", "dbt tests"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "Finance Tools", "items": ["LucaNet"] }
+      {
+        "category": "Data Transformation and Analytics Engineering",
+        "items": [
+          "dbt",
+          "SQL",
+          "Python",
+          "Apache Spark",
+          "Scala",
+          "Apache Airflow",
+          "R"
+        ]
+      },
+      {
+        "category": "Cloud Data Warehouses",
+        "items": [
+          "Google BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Payment and Billing Platforms",
+        "items": [
+          "Stripe",
+          "Salesforce"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and Observability",
+        "items": [
+          "Elementary",
+          "dbt tests"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance Tools",
+        "items": [
+          "LucaNet"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -126,11 +181,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
