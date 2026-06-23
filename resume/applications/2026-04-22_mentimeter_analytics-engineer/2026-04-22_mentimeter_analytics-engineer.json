@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-22",
     "targetRole": "Analytics Engineer",
     "targetCompany": "Mentimeter",
+    "jobLocation": "Stockholm, Sweden (Onsite/Hybrid)",
     "sourceUrl": "https://job-boards.eu.greenhouse.io/mentimeter/jobs/4839752101?gh_src=3d5665c2teu",
     "behaviouralInsights": [
       "Data modeling architecture is the core ask (primacy), not reporting or dashboards",
@@ -30,8 +31,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Analytics Engineer with 6+ years owning data modeling architecture and governance across finance and analytics. Specialises in designing layered dbt models and BigQuery architectures that become organisational single sources of truth. Builds maintainable standards and documentation to enable cross-functional stakeholder teams. Combines SQL expertise with BI tool governance (Looker, Tableau, Power BI) and GDPR-compliant data handling to reduce risk and improve reliability.",
@@ -123,13 +130,68 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Modeling and Architecture", "items": ["dbt", "SQL", "BigQuery", "Snowflake", "Data modeling patterns", "Layered architectures"] },
-      { "category": "BI Tools and Visualization", "items": ["Looker", "Looker metrics", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and Governance", "items": ["dbt tests", "Elementary", "Data reconciliation", "Anomaly detection"] },
-      { "category": "Programming and Data Engineering", "items": ["Python", "R", "Scala", "Apache Spark", "Apache Airflow"] },
-      { "category": "DevOps and Version Control", "items": ["Git", "GitHub Actions"] },
-      { "category": "AI-Assisted Development", "items": ["GitHub Copilot", "Cursor"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Modeling and Architecture",
+        "items": [
+          "dbt",
+          "SQL",
+          "BigQuery",
+          "Snowflake",
+          "Data modeling patterns",
+          "Layered architectures"
+        ]
+      },
+      {
+        "category": "BI Tools and Visualization",
+        "items": [
+          "Looker",
+          "Looker metrics",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and Governance",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "Data reconciliation",
+          "Anomaly detection"
+        ]
+      },
+      {
+        "category": "Programming and Data Engineering",
+        "items": [
+          "Python",
+          "R",
+          "Scala",
+          "Apache Spark",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "DevOps and Version Control",
+        "items": [
+          "Git",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "GitHub Copilot",
+          "Cursor"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -137,11 +199,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
