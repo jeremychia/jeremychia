@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-10",
     "targetRole": "Senior Data Analyst & Analytics Engineer - Franchise",
     "targetCompany": "Decathlon Digital FR",
+    "jobLocation": "Lille - Btwin Village, Nord, France",
     "sourceUrl": "https://job-boards.eu.greenhouse.io/decathlontechnology/jobs/4796699101?gh_src=cb30d7c2teu",
     "behaviouralInsights": [
       "Primacy bias: Business analytics (decision support for stock/supply chain/pricing) listed first — core value is actionable insights, not infrastructure",
@@ -30,8 +31,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Senior Analytics Engineer with 6+ years bridging operations and data across APAC and Europe. Specialises in translating complex business requirements into dbt-driven data models and governance-first analytics infrastructure. Expert in advanced SQL, data quality controls, and cross-functional stakeholder collaboration to deliver clear, actionable insights for decision-makers. Chartered Accountant background drives focus on audit trails, compliance, and data integrity.",
@@ -122,12 +129,58 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Analytics Engineering and Transformation", "items": ["dbt", "SQL", "Data modeling", "Star schema", "Python", "Scala", "Apache Spark", "Apache Airflow"] },
-      { "category": "Data Warehousing", "items": ["Google BigQuery", "Snowflake"] },
-      { "category": "Analytics and Business Intelligence", "items": ["Tableau", "Looker", "Looker Studio", "Microsoft Power BI"] },
-      { "category": "Data Quality and Governance", "items": ["dbt tests", "Elementary", "Data reconciliation"] },
-      { "category": "DevOps and CI/CD", "items": ["GitHub Actions", "Git"] },
-      { "category": "Finance and Compliance", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Analytics Engineering and Transformation",
+        "items": [
+          "dbt",
+          "SQL",
+          "Data modeling",
+          "Star schema",
+          "Python",
+          "Scala",
+          "Apache Spark",
+          "Apache Airflow"
+        ]
+      },
+      {
+        "category": "Data Warehousing",
+        "items": [
+          "Google BigQuery",
+          "Snowflake"
+        ]
+      },
+      {
+        "category": "Analytics and Business Intelligence",
+        "items": [
+          "Tableau",
+          "Looker",
+          "Looker Studio",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and Governance",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "Data reconciliation"
+        ]
+      },
+      {
+        "category": "DevOps and CI/CD",
+        "items": [
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "Finance and Compliance",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -135,11 +188,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "French", "level": "A1" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
