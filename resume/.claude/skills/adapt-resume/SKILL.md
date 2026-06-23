@@ -38,6 +38,28 @@ Fetch `$ARGUMENTS` with WebFetch. Do two layers of analysis:
 
 **ATS keywords:** Extract 10–15 distinctive phrases likely used as ATS filters (not generics like "SQL"). These must appear verbatim in the resume.
 
+**Urgency signal:** Look for "immediately", "ASAP", short JD validity windows (≤30 days), "essential role", "critical hire", or re-post indicators. High urgency → they need time-to-value, not trajectory. Frame resume achievements with fast onboarding and immediate delivery signals. Low urgency → trajectory and strategic framing tolerated.
+
+**Greenfield vs. fix/scale signal:** Detect whether the role is building from scratch or improving/scaling something existing. "Build", "establish", "define", "create" = greenfield (founder energy needed). "Improve", "scale", "maintain", "modernise" = scale phase (craftsperson needed). Greenfield → lead with "designed from scratch" bullets. Scale → lead with "inherited X, improved it to Y" bullets.
+
+**Velocity vs. rigour orientation:** Detect whether the culture rewards moving fast or getting it right. Velocity signals: "move fast", "bias for action", "agile", "iterate", "pragmatic". Rigour signals: "meticulous", "thorough", "compliance", "controlled", "assertion checks". Same career fact; entirely different framing emphasis required.
+
+**Internal customer:** Identify the primary consumers of the data products built in this role — data scientists, analysts, product managers, finance, executives, "the business". Align bullet outcomes to their needs: data scientists → ML-ready data; executives → decision-quality outputs; finance → auditability and controls; PMs → reliable metrics and funnels.
+
+**Stack lock-in:** Are tools listed as hard requirements or preferences? Identify mandatory platforms (e.g., "must have Databricks", "Azure required") vs. flexible mentions ("or similar"). Stack-locked roles → mirror named tools verbatim at the front of skills. Tech-agnostic roles → foreground transferability over specific tools.
+
+**JD authorship signal:** Who wrote this JD — a hiring manager with technical depth, or a generalist recruiter? Signals: highly specific technical requirements (e.g. "incremental models at scale, ~1B rows daily", exact tool versions) = hiring manager wrote it, speak to the engineer. Vague role descriptions with generic "data" language = recruiter filter, optimise for ATS keywords and broad framing. Mixed = address both layers.
+
+**Data team size and maturity:** What can you infer about the data team's size and stage? Signals: solo AE hire with no team described = very early, expect to be the only data practitioner. "Mentor junior engineers" = small team of 2–4, you set the standard. "Lead a team of N" = established function, hiring for scale. Team maturity determines what "first 90 days" looks like — solo → everything is yours to build; established → inherit and improve.
+
+**Domain risk:** What is the cost of a data error in this role? Signals: finance/revenue data = P&L impact, CFO visibility. Public sector = political and legal exposure. Consumer product = user experience degradation. Internal ops = slower decisions. High domain risk → every bullet should frame data accuracy and reliability as a risk-reduction outcome, not just a quality metric.
+
+**Collaboration width:** How many distinct teams or functions does this role interface with? Count the named partners (Finance, Marketing, Product, Engineering, Data Science, etc.). Narrow (1–2 teams) → deep domain specialisation is valued; lead with domain expertise. Wide (4+ teams) → cross-functional translation and alignment is the differentiating skill; lead with multi-team coordination and shared metric definitions.
+
+**Language gate:** Is there a hard language requirement beyond English? Quote the exact phrase (e.g. "Fluent German (C2 level)", "German proficiency is a plus"). Hard gate (C2, "required", "fluent") = Jeremy does not meet this; note in alignmentSignal if it is disqualifying. Soft gate ("plus", "nice to have") = acknowledge in cover letter P3 if relevant, do not flag as red.
+
+**Interview process signal:** Does the JD describe the interview stages? If yes, quote them verbatim and interpret: 1–2 stages = fast/pragmatic process, lean on direct credibility signals. 3–4 stages including a case study or technical test = high bar, lead with engineering precision and prepare a portfolio of concrete examples. Culture-add interview named = values alignment is explicitly evaluated; cover letter tone matters more than usual.
+
 Summarise as a short **behavioural insights** list to carry into Step 5.
 
 Derive the base name: `YYYY-MM-DD_company_job-title` using today's date.
@@ -114,6 +136,28 @@ Append a **Layer B — Behavioural Analysis** section at the end of the file, af
 - {verbatim phrase 1}
 - {verbatim phrase 2}
 - ...
+
+**Urgency signal:** {urgency indicators found; implication for resume framing}
+
+**Greenfield vs. fix/scale:** {build/establish vs. improve/scale language; which resume bullet style to lead with}
+
+**Velocity vs. rigour:** {fast/agile vs. meticulous/compliance signals; framing implication}
+
+**Internal customer:** {who the data products serve; how bullet outcomes should align}
+
+**Stack lock-in:** {mandatory vs. preferred tools; verbatim mirror vs. transferability framing}
+
+**JD authorship:** {hiring manager (technical depth, specific requirements) vs. recruiter (generic, ATS-optimised) — implication for how to pitch}
+
+**Data team size and maturity:** {inferred team size and stage from JD signals; what "first 90 days" looks like}
+
+**Domain risk:** {cost of a data error in this role — P&L, political, user-facing, operational; framing implication}
+
+**Collaboration width:** {number of named partner teams; narrow = lead with domain expertise, wide = lead with cross-functional coordination}
+
+**Language gate:** {hard language requirement verbatim, or "None stated"; alignment implication}
+
+**Interview process signal:** {stages quoted verbatim if listed, or "Not stated in JD"; implication for credibility signals and cover letter tone}
 ```
 
 ---
@@ -168,7 +212,7 @@ Apply **fluency**: short declarative sentences over long compound ones. Lead met
 
 **pillHighlights:** Replace with the 10–15 ATS phrases from Layer B.
 
-**meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"sourceUrl"`, `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (Layer B findings), and `"adaptationNotes"`.
+**meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"jobLocation"` (the role's location as listed in the JD — used for geographical analysis across applications), `"sourceUrl"`, `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (all Layer B findings including urgency, greenfield/fix-scale, velocity/rigour, internal customer, stack lock-in, and language gate), and `"adaptationNotes"`.
 
 ---
 
@@ -230,6 +274,11 @@ If the user says "no gaps" or "continue", proceed directly.
 If there are no gaps (JD fully covered), write the file with a single line: `No material gaps identified.`
 
 This file is used by `/review-applications` and the cover letter step to track systemic weaknesses across applications.
+
+**Skills-to-learn tracking (MANDATORY):** After writing the gaps file, for any gap marked **Open** that involves a specific named tool or framework, update `profile/skills-to-learn.md`:
+- If the skill is already listed, increment the "Times seen" count.
+- If it's new, add a row with the skill name, why it's a gap, today's date, and count = 1.
+- If the file doesn't exist, create it using the format in the existing file.
 
 ---
 
@@ -377,6 +426,58 @@ Tell the user:
 - Short bullet list of key adaptations (from `adaptationNotes`)
 - One sentence on main alignment and one on main gap (if any)
 - The `alignmentSignal` verdict from Step 4 — if Amber or Red, name the specific tension
+
+---
+
+## Step 11b — Write analysis record
+
+Write `analysis/records/{base name}.json` using the Layer B findings from Step 1 and the meta from Step 5. This is the structured dataset record used for cross-sectional analysis across all applications.
+
+Use the schema defined in `analysis/schema.json`. Every field must be populated; use `null` only where the JD genuinely does not provide enough information to classify.
+
+```json
+{
+  "application_id": "{base name}",
+  "company": "{company name}",
+  "role": "{job title as listed in JD}",
+  "job_location": "{location from JD header}",
+  "seniority": "{junior|mid|senior|staff|lead|manager — from role title}",
+  "salary_min": {integer or null},
+  "salary_max": {integer or null},
+  "salary_currency": "{EUR|GBP|USD|etc or null}",
+  "jd_authorship": "{hiring_manager|recruiter|mixed}",
+  "greenfield_vs_fix": "{greenfield|fix_scale|mixed}",
+  "velocity_vs_rigour": "{velocity|rigour|mixed}",
+  "domain_risk": "{high|moderate|low}",
+  "collaboration_width": {integer — count of named partner teams},
+  "data_team_maturity": "{early|mid|mature}",
+  "urgency": "{standard|urgent}",
+  "language_gate_type": "{none|soft|hard}",
+  "language_gate_languages": ["{language name}"] or [],
+  "interview_stages": {integer or null},
+  "has_dbt": true/false,
+  "has_spark": true/false,
+  "has_python": true/false,
+  "has_sql": true/false,
+  "has_airflow": true/false,
+  "has_dagster": true/false,
+  "has_prefect": true/false,
+  "has_snowflake": true/false,
+  "has_databricks": true/false,
+  "has_bigquery": true/false,
+  "has_redshift": true/false,
+  "has_duckdb": true/false,
+  "has_kafka": true/false,
+  "has_terraform": true/false,
+  "has_looker": true/false,
+  "has_tableau": true/false,
+  "has_power_bi": true/false,
+  "has_great_expectations": true/false,
+  "has_soda": true/false
+}
+```
+
+After writing the record, run `python3 analysis/build.py` to regenerate `analysis/applications_dataset.csv` with the new row included.
 
 ---
 
