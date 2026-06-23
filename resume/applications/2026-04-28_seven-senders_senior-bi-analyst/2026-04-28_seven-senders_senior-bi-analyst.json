@@ -4,6 +4,7 @@
     "lastUpdated": "2026-04-28",
     "targetRole": "Senior Business Intelligence Analyst",
     "targetCompany": "Seven Senders",
+    "jobLocation": "Berlin, Germany",
     "sourceUrl": "https://www.linkedin.com/jobs/view/4406635718",
     "behaviouralInsights": [
       "Signal ordering: dbt model expertise is the #1 priority, followed by SQL performance at scale, then autonomous ownership, then junior mentoring",
@@ -34,8 +35,14 @@
     "contact": {
       "phone": "+33 6 95 92 48 39",
       "email": "jeremyjchia@gmail.com",
-      "github": { "label": "github.com/jeremychia", "url": "https://github.com/jeremychia" },
-      "linkedin": { "label": "linkedin.com/in/jjchia", "url": "https://linkedin.com/in/jjchia" }
+      "github": {
+        "label": "github.com/jeremychia",
+        "url": "https://github.com/jeremychia"
+      },
+      "linkedin": {
+        "label": "linkedin.com/in/jjchia",
+        "url": "https://linkedin.com/in/jjchia"
+      }
     }
   },
   "summary": "Builds production-grade dbt models at scale — 75% runtime reduction, 1.5TB/day query cut, and €1.6m recovered via controls at Vinted. Independently owns the Discovery-to-Delivery cycle from scalable dbt pipelines to self-service Looker analytics. Bridges engineering and Finance: translates ambiguous requirements into documented, tested, reusable metrics.",
@@ -149,11 +156,54 @@
   ],
   "skills": {
     "technical": [
-      { "category": "Data Engineering", "items": ["dbt", "SQL", "Google BigQuery", "Snowflake", "Python", "Apache Spark", "Apache Airflow", "R", "Scala"] },
-      { "category": "Analytics and Visualisation", "items": ["Looker", "Looker Studio", "Tableau", "Microsoft Power BI"] },
-      { "category": "Data Quality and DevOps", "items": ["dbt tests", "Elementary", "GitHub Actions", "Git"] },
-      { "category": "AI-Assisted Development", "items": ["Claude", "Cursor", "GitHub Copilot"] },
-      { "category": "Finance and Automation Tools", "items": ["LucaNet", "UiPath", "SAP"] }
+      {
+        "category": "Data Engineering",
+        "items": [
+          "dbt",
+          "SQL",
+          "Google BigQuery",
+          "Snowflake",
+          "Python",
+          "Apache Spark",
+          "Apache Airflow",
+          "R",
+          "Scala"
+        ]
+      },
+      {
+        "category": "Analytics and Visualisation",
+        "items": [
+          "Looker",
+          "Looker Studio",
+          "Tableau",
+          "Microsoft Power BI"
+        ]
+      },
+      {
+        "category": "Data Quality and DevOps",
+        "items": [
+          "dbt tests",
+          "Elementary",
+          "GitHub Actions",
+          "Git"
+        ]
+      },
+      {
+        "category": "AI-Assisted Development",
+        "items": [
+          "Claude",
+          "Cursor",
+          "GitHub Copilot"
+        ]
+      },
+      {
+        "category": "Finance and Automation Tools",
+        "items": [
+          "LucaNet",
+          "UiPath",
+          "SAP"
+        ]
+      }
     ],
     "certifications": [
       "Chartered Global Management Accountant (CGMA)",
@@ -161,11 +211,26 @@
       "LucaNet Certified Professional - Financial Performance Management"
     ],
     "languages": [
-      { "language": "English", "level": "Native / C2" },
-      { "language": "Mandarin", "level": "B2" },
-      { "language": "Cantonese", "level": "B2" },
-      { "language": "German", "level": "A1" },
-      { "language": "French", "level": "A1" }
+      {
+        "language": "English",
+        "level": "Native / C2"
+      },
+      {
+        "language": "Mandarin",
+        "level": "B2"
+      },
+      {
+        "language": "Cantonese",
+        "level": "B2"
+      },
+      {
+        "language": "German",
+        "level": "A1"
+      },
+      {
+        "language": "French",
+        "level": "A1"
+      }
     ]
   },
   "pillHighlights": [
