@@ -86,3 +86,25 @@ None explicitly listed.
 - AWS services
 - Business Intelligence
 - analytics solutions
+
+**Urgency signal:** No "immediately" or "ASAP" language, but relocation support and visa sponsorship suggest they are actively hiring and prepared to move fast. "Freedom to make an impact from day one" implies they want a quick ramp — frame resume for time-to-value, not long trajectory arcs.
+
+**Greenfield vs. fix/scale:** "Design, construct, and enhance" + "Establish and implement" + "Establish the KPIs" — primarily greenfield build language. Lead with bullet style that emphasises building from scratch: pipeline creation, architecture decisions, metric frameworks stood up from zero.
+
+**Velocity vs. rigour:** "We move quickly" (culture section) + "autonomy" + "growth mindset" signals bias for action. However, "data quality and validation processes to guarantee accuracy" introduces a rigour counterbalance. Frame as fast-moving engineer who builds in quality from the start — not either/or.
+
+**Internal customer:** Tech and product teams for analytics solutions; marketing and product teams for experiments; "the business" for KPIs and monitoring. Bullet outcomes should connect to product decisions and marketing experiment results — not just pipeline SLAs.
+
+**Stack lock-in:** SQL + Python + dbt are hard requirements (appear in both responsibilities and requirements). AWS services and Tableau are hard. GitLab is named specifically but "or similar" language is absent — mirror verbatim. dbt Core vs Cloud distinction absent — basic dbt experience is sufficient.
+
+**JD authorship:** Mixed signals — leans hiring manager with some recruiter boilerplate. Technical phrases showing depth: "SQL, Python, dbt, git, and AWS services" (specific tool cluster), "data integration, ETL, and ELT processes", "GitLab or similar git-based version control systems", "validate hypotheses through data visualization". Generic/recruiter phrases: "Growth mindset and eagerness to learn new technologies and methodologies", "Strong problem-solving skills", "Bachelor's degree in STEM fields". Implication: likely hiring manager drafted the responsibilities section; a generalist added the qualifications boilerplate. Pitch with technical precision on the stack named — SQL, Python, dbt, AWS — but ensure ATS keywords from the generic qualifications section are covered.
+
+**Data team size and maturity:** Small to mid-size team at an early-to-growth stage. Signals: single Analytics Engineer hire covering both data engineering ("design, construct, and enhance data pipelines") and analytics ("establish the KPIs and metrics that will be used by the business") — breadth implies a thin team where individuals own multiple domains. "Establish the KPIs" signals that the foundational metric framework does not yet exist, pointing to an early-stage or rapidly scaling data function. No mention of reporting lines, direct reports, or team hierarchy. Implication for first-90-days framing: position yourself as someone who can build the foundations independently — metric frameworks, pipeline architecture, and quality processes — without needing a team around you.
+
+**Domain risk:** Moderate. justDice operates in mobile gaming and app-based reward advertising — a consumer product and marketing-driven domain. Domain language: "Plan, execute, and evaluate experiments with our marketing and product teams", "Establish the KPIs and metrics that will be used by the business". No financial, regulatory, or public-sector language. Cost of a data error is primarily business decision quality (bad experiments, wrong KPIs) rather than regulatory non-compliance or financial loss. Implication: speed and scale framing is broadly acceptable, but anchor key bullets with accuracy outcomes — especially around experiment evaluation and metric reliability — to signal that you build quality in, not on top.
+
+**Collaboration width:** Moderate — 2 named functions. "Tech and product teams" (analytics solutions) and "marketing and product teams" (experiments) are explicitly named. "The business" is referenced generically for KPI monitoring. Width is narrow to moderate (2–3 distinct functions). Implication: lead with domain expertise rather than cross-functional coordination. Frame collaboration as translating technical data capabilities into product and marketing decisions — not as orchestrating a broad stakeholder network.
+
+**Language gate:** No language requirement beyond English is stated in the JD. The benefits section mentions "learning German" as a supported perk ("from learning German to a relocation bonus"), implying German is not required. None stated.
+
+**Interview process signal:** Not stated in JD.
