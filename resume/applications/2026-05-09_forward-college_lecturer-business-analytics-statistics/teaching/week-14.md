@@ -31,10 +31,10 @@ The statistical inference sections (§10.5–10.6: t-tests on coefficients, F-te
 *Rationale:* the regression output table from Excel's Data Analysis ToolPak is dense. Students need to have seen it before class. Pre-work reading of §10.4 is not optional.
 
 **Videos (~20 minutes total):**
-- [Linear Regression — StatQuest](https://www.youtube.com/watch?v=nk2CQITm_eo) (12 min) — intuition for OLS
-- [R-squared explained — StatQuest](https://www.youtube.com/watch?v=2AQKmw14mHM) (7 min)
+- [Linear Regression — StatQuest](https://www.youtube.com/watch?v=nk2CQITm_eo) (12 min) — intuition for OLS. *Active watching: when StatQuest explains what "least squares" means — minimising the sum of squared residuals — pause and write in one sentence: what is a residual? This concept is what T2 tests.*
+- [R-squared explained — StatQuest](https://www.youtube.com/watch?v=2AQKmw14mHM) (7 min). *Active watching: when the video shows that R² = 0 means the model explains nothing and R² = 1 means it explains everything, pause and write: what does R² = 0.968 mean in plain language? This is the exact interpretation T1(c) asks for.*
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 > **Dataset:** 10 retail stores. X = advertising spend (€000s); Y = monthly sales (€000s).
 >
@@ -65,9 +65,25 @@ The statistical inference sections (§10.5–10.6: t-tests on coefficients, F-te
 >
 > **The important question:** does high R² prove that advertising causes sales? No. It is possible that profitable stores (which have high sales) also choose to spend more on advertising — the causality could run the other way. Or a third variable (store location, foot traffic) drives both. R² measures fit, not causation.
 
+*This worked example is marked optional for students who can already interpret a slope, an intercept, and an R² value from a fitted regression output and use the equation to make a prediction. If you answered T0 correctly before reading this, you don't need it. If any of the three interpretations (slope, intercept, R²) felt unclear after the reading, work through the example carefully.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
+
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
+*T0 — Entry question (lower floor):*
+
+Before computing anything, answer in your own words:
+
+> You are told: "We ran a regression of exam scores on study hours and got a slope of 6.2." Write two sentences: one that correctly states what this slope means, and one that states something it does NOT tell you.
+
+No formula or computation needed — just the reading. A student who completed ST104a will have seen slope interpretation before; a student who hasn't will be engaging with it for the first time. The T0 answer reveals which situation applies, so the tutorial review can adjust accordingly.
+
+This lower floor matters because Week 14 assumes the pre-work reading was done. If the reading was skimmed, T0 surfaces that immediately — before T1–T3 give the impression that the concept has landed.
+
+*Self-check for T0:* One correct sentence: "A slope of 6.2 means that each additional hour of study predicts an increase of 6.2 points in exam score, on average, holding all else constant." One example of what it does NOT tell you: it does not tell you that studying *causes* higher scores (confounds like prior ability could explain the relationship), and it does not tell you the score for a specific student — only the average predicted score.
+
 *T1 — Fitting by hand (estimation only):*
+
+*The worked example's slope interpretation ("for each additional €1,000 in advertising, predicted sales increase by €11,200") is the same structure as T1(c). The R² interpretation you wrote during the StatQuest video pause ("R² = 0.968 means 96.8% of variation is explained") applies directly to T1(a) and (the implicit question in T2).*
 > Dataset (n = 6): X = hours studied, Y = exam score.
 > X: 1, 2, 3, 4, 5, 6 | Y: 45, 52, 58, 65, 72, 78
 >
@@ -89,14 +105,94 @@ T1(d)–(e) introduce extrapolation risk — predicting outside the range of the
 
 T2 introduces residual analysis — the diagnostic tool for checking whether the linear model is appropriate. This is foundational for Week 15.
 
-*T3 — Causation vs. correlation:*
-> A researcher finds that cities with more shoe stores per capita have higher rates of university degrees. R² = 0.71.
->
-> (a) Is this a meaningful finding? What's the most likely explanation?
-> (b) A newspaper headline reads: "More shoe stores could boost education." Critique this headline using the regression framework.
-> (c) What variable would you add to "explain away" this relationship?
+*T3 — Causation vs. correlation (2025 context):*
 
-T3 is the confound question. The answer: both shoe stores and university degrees are driven by wealth / urbanisation. Adding a measure of economic development would reduce or eliminate the shoe-store relationship.
+> In 2024–2025, several major companies mandated a return to office (RTO). Amazon announced in September 2024 that employees must return to the office five days a week from January 2025, citing "strengthened collaboration and culture." JPMorgan Chase followed with a similar mandate in early 2025. Both companies cited internal data showing correlations between in-person presence and various productivity and performance metrics.
+>
+> Suppose an analyst at a large firm fits the following regression using 18 months of employee data (n = 2,400 employees):
+>
+> Productivity score = 42.0 + 3.1 × (days per week in office), R² = 0.18
+>
+> (a) Interpret the slope and R² in plain English. Is R² = 0.18 high or low for this type of study?
+>
+> (b) A manager reads the output and says: "Our data shows that each additional day in the office predicts a 3.1-point increase in productivity score. This proves that returning to the office improves performance." Identify at least two specific problems with the causal claim.
+>
+> (c) Identify the most plausible confounding variable in this regression. Describe the mechanism — how might this variable affect both office attendance and productivity score?
+>
+> (d) The analyst adds a new control variable: the employee's prior-year performance rating (measured before the RTO policy). After adding this control, the slope on days-in-office falls from 3.1 to 0.7 and is no longer statistically significant (p = 0.23). What does this reveal? What does it suggest about the original regression?
+>
+> (e) A critic argues: "Maybe the employees who come in more are the ones who were already high performers — and they come in more because they enjoy their work, not because the office makes them productive." Explain what type of bias this describes and what data you would need to rule it out.
+>
+> (f) Amazon's RTO decision also increased employee attrition, particularly among high-performing remote workers who lived far from offices. If higher-performing remote employees leave after the RTO mandate, what happens to the average productivity score of the in-office group over time — and how does this affect the regression?
+
+T3 uses a verified 2025 policy context: Amazon's five-day RTO mandate was announced September 2024 and implemented January 2025; JPMorgan's mandate was announced January 2025 (both widely reported by Reuters, WSJ, FT). The regression numbers are illustrative. This question updates T3 from a generic example to one students have likely read about, converting the correlation-causation framework into a live policy debate they can engage with from their own context. Part (d) — the control variable reducing the slope to non-significance — is the most important result: it shows how an apparent relationship can largely disappear once prior performance is accounted for.
+
+*T4 — Boundary case: what happens when the slope is zero or the intercept is misleading:*
+
+> A researcher fits a simple linear regression of annual salary (€) on age (years) for a sample of 120 employees at a large company. The output is:
+>
+> Salary = 25,000 + 800 × Age, R² = 0.08
+>
+> (a) Interpret the slope. What does it predict about the salary of a 40-year-old compared to a 39-year-old?
+> (b) Interpret the intercept. What would the model predict for a newborn child (age = 0)? Is this meaningful? What is the technical term for using a model outside the range of the training data?
+> (c) R² = 0.08 means only 8% of salary variation is explained by age. A colleague says: "This regression is useless." Another says: "The slope is still informative." Who is right? What additional context would help evaluate whether 8% is meaningful?
+> (d) A new hire, age 23, has a salary of €48,000. The model predicts €43,400. What is the residual?
+>
+> *Solution:* Residual = 48,000 − 43,400 = **€4,600.** This employee earns more than the model predicts — a positive residual.
+>
+> (e) A negative slope (salary decreasing with age) is theoretically impossible in this context. However, the model produces a negative slope when fit to a subset of employees in the technology division. What might explain a negative slope within that division, even though the overall relationship is positive?
+
+*T5 — Multi-step: build, predict, and evaluate residuals:*
+
+> A property company has the following data on apartments (n = 8): square metres (X) and monthly rent in €:
+>
+> | Apt | Size (m²) | Rent (€/month) |
+> |-----|----------|----------------|
+> | 1 | 40 | 850 |
+> | 2 | 55 | 1,050 |
+> | 3 | 62 | 1,180 |
+> | 4 | 70 | 1,400 |
+> | 5 | 48 | 920 |
+> | 6 | 85 | 1,650 |
+> | 7 | 58 | 1,100 |
+> | 8 | 77 | 1,520 |
+>
+> (a) Using Excel Data Analysis, fit rent on size. Write the regression equation and interpret the slope.
+>
+> *Solution (approximate, students compute in Excel):* Rent ≈ 256 + 16.4 × Size. Slope: each additional m² predicts approximately €16.40 more in monthly rent, on average.
+>
+> (b) What is R²? How much of the variation in rent is explained by apartment size?
+> (c) Compute the residual for Apartment 4 (70m², €1,400). Is the apartment over- or under-priced relative to the model?
+> (d) Plot the residuals against size (X). Describe what a random scatter pattern looks like and whether your residual plot shows it.
+> (e) Predict the monthly rent for a 100m² apartment. Comment on the reliability of this prediction relative to predicting rent for a 65m² apartment.
+> (f) A new apartment of 65m² is listed at €1,600/month. Using your model, is this significantly higher than predicted? What percentage above prediction is it?
+
+*T6 — Comparison: high R² versus low R² — when does it matter:*
+
+> Two regression models are presented:
+>
+> **Model 1:** Predicting tomorrow's temperature (°C) from today's temperature. n = 365 daily observations. R² = 0.78. Slope = 0.82.
+>
+> **Model 2:** Predicting annual corporate earnings growth (%) from the prior year's earnings growth. n = 200 companies. R² = 0.06. Slope = 0.14.
+>
+> (a) In Model 1, R² = 0.78. What percentage of tomorrow's temperature variation is *unexplained* by today's temperature? What explains the rest?
+> (b) A meteorologist says: "R² = 0.78 is excellent for a single-predictor model." An economist says: "R² = 0.06 is too low to be useful." Are they both right? Does the usefulness of R² depend on the domain?
+> (c) In Model 2, despite R² = 0.06, the slope is statistically significant (p = 0.003). Is it meaningful to have a statistically significant but practically weak predictor?
+> (d) Suppose you reversed the regression in Model 1 — predicting today's temperature from tomorrow's (using the future to predict the past). Would R² change? Would the slope change?
+>
+> *Answer on R²:* R² is the same regardless of which variable is called X and which Y — the correlation between X and Y is symmetric. The slope would change (slope of Y on X ≠ slope of X on Y unless r² = 1).
+>
+> (e) A business analyst proposes using Model 2 to predict a specific company's earnings growth next year. The slope is 0.14. If last year's growth was 20%, what is the model's point prediction for next year? Given R² = 0.06, what caveat would you attach to this prediction?
+
+*T7 — Causation vs. correlation: construct and dismantle a causal claim:*
+
+> An analyst at a government ministry reports: "We have found that countries with higher rates of secondary school enrolment (X) have higher GDP per capita (Y). The correlation is r = 0.82 and the regression slope is €4,200 per percentage point of enrolment. Our recommendation is to increase secondary school enrolment to drive economic growth."
+>
+> (a) Is the correlation (r = 0.82) plausible? Construct the strongest possible causal argument for the recommendation.
+> (b) Identify at least two confounding variables that could explain the relationship without secondary education causing GDP growth.
+> (c) The regression is at the country level (n = 90 countries). What type of correlation is this? Why does the ecological unit of analysis create additional problems for causal inference?
+> (d) The analyst adds a control variable: initial GDP per capita in 1990 (a measure of how wealthy countries already were). After adding this control, the slope on secondary enrolment drops from 4,200 to 850 and is no longer statistically significant. What does this reveal?
+> (e) A policy maker says: "Even if it's not proven to be causal, an r = 0.82 is strong enough to act on." Write a two-sentence response that acknowledges the pragmatic argument while stating what specific evidence would make the causal claim more credible.
 
 **Pre-class submission (on the course portal):**
 

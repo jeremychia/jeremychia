@@ -31,12 +31,14 @@ The pivot chart and slicer material in §3.5 is optional this week. It is surfac
 *Rationale:* §3.1–3.4 cover everything needed for the spurious correlation gallery in Part 3. The full chapter including §3.5 is approximately 55 pages; the assigned sections are the conceptual core. Fischer et al. (2023) recommend capping pre-work at ~1.5× in-class time — the sections above, combined with the tutorial problems and pre-class submission, hit that ceiling without exceeding it.
 
 **Videos (~20 minutes total):**
-- [Correlation — Simply Explained](https://www.youtube.com/watch?v=GtV-VYdNt_g) (~10 min) — covers positive, negative, zero correlation and the correlation coefficient
-- [Spurious Correlations](https://www.youtube.com/watch?v=vzREIqKEExY) (~10 min) — Tyler Vigen on why correlation is easy to find and causation is hard to establish
+- [Correlation — Simply Explained](https://www.youtube.com/watch?v=GtV-VYdNt_g) (~10 min) — covers positive, negative, zero correlation and the correlation coefficient. *Active watching: at the point where the presenter introduces r = 0 (no linear relationship), pause and write one example from business or daily life where two variables have r = 0 but might still have a non-linear relationship. This primes T4(b).*
+- [The danger of mixing up causality and correlation — Ionica Smeets](https://www.youtube.com/watch?v=8B271L3NtAw) (~10 min, TEDx) — a statistician explains why strong correlations can be entirely spurious, using examples that mirror the gallery in Part 3. *Active watching: when Smeets introduces her first spurious correlation example, pause and write the three-step structure she uses: (1) state the correlation, (2) construct the causal story, (3) identify the confounder. This is exactly the structure T2 and the Part 3 gallery require.*
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
-This walks through the full reasoning chain you will use in Part 3. Read it *after* completing T1–T3 — not before. If you read it first, you will recognise the structure without having had to construct it yourself, which defeats the purpose.
+This walks through the full reasoning chain you will use in Part 3. Read it carefully and annotate each of the three steps. The three-step structure — causal story → confounder → evidence threshold — is what T1–T3 ask you to apply.
+
+*This worked example is marked optional for students who already feel confident with the three-step reasoning. If you can write a one-sentence causal story and name a specific confounder for T2(c) without reading this, you don't need it. If the confounder identification felt vague, read it before the tutorials.* (On expertise reversal, see Kalyuga, Ayres, Chandler & Sweller, 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
 
 > **Dataset:** Monthly data from a European city: (1) average daily temperature (°C), (2) ice cream sales (€000s). n = 36 months.
 > Correlation coefficient: r = 0.91. The scatterplot shows a strong positive relationship.
@@ -52,13 +54,26 @@ This walks through the full reasoning chain you will use in Part 3. Read it *aft
 >
 > **What you are looking for in your own dataset:** the gap between the correlation you can compute and the causal claim a reader might draw from it. The ice cream example has multiple confounders. Your dataset may have one, or a different kind. The question is always: what else changes when X changes?
 
-*This worked example is marked optional for students who found T1–T3 straightforward. If the tutorials felt difficult — particularly T3 — read this carefully. It shows the three-step structure the pair work in Part 3 asks you to apply.* (On the expertise reversal effect in pre-work design, see Kalyuga, Ayres, Chandler & Sweller, 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
-
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
 These confirm mechanical competence with crosstabs and correlation — the prerequisite for the higher-order causal reasoning work in Parts 3 and 4. Students bring written answers; two or three will present.
 
+*T0 — Entry question (lower floor):*
+
+> For each of the following pairs of variables, write: (a) whether the correlation is likely to be positive, negative, or approximately zero, and (b) one sentence explaining why. No formula or calculation required.
+>
+> (i) Hours of sunshine per day and ice cream sales in a city.
+> (ii) Number of fire stations in a city and number of fires recorded.
+> (iii) A person's shoe size and their vocabulary test score.
+> (iv) Distance from city centre and average apartment price per square metre.
+
+T0 tests intuition about the *direction* of correlation before any computation. It also plants two traps: (ii) is a classic spurious correlation (both are driven by city size) and (iii) is approximately zero. Students who answer all four confidently can move directly to T1. Students who are uncertain about (ii) or (iii) should re-read §3.4 before continuing.
+
+*Self-check for T0:* (i) positive — temperature drives both; (ii) positive — but both driven by city size, not a causal relationship; (iii) approximately zero — no plausible direct mechanism; (iv) typically negative — prices fall with distance from centre in most European cities, though exceptions exist. If your direction for (ii) is positive but your reasoning stopped at "more fire stations → more fires recorded," re-read the worked example section on confounders before continuing.
+
 *T1 — Straightforward computation (no ambiguity):*
+
+*The three-step structure in the worked example — strongest causal story → named confounder → evidence that would change your mind — maps directly onto T2 and T3. The row vs column percentage logic from the worked example's crosstab reasoning applies to T1(a)–(b).*
 
 > The following table shows survey data for 200 customers of a travel company: whether they purchased travel insurance (Yes/No) and whether they had previously made a claim (Yes/No).
 >
@@ -78,6 +93,8 @@ These confirm mechanical competence with crosstabs and correlation — the prere
 
 Parts (a)–(b) are mechanical. Part (e) is the key conceptual move: both managers are correct, but they're answering different questions. Students who understand this understand crosstabs. Students who think one manager must be wrong haven't read the chapter carefully enough. Part (g) is the decision link — targeting requires row percentages (given someone has a prior claim, what's the probability they buy?), not column percentages.
 
+*Self-check for T1(a)–(b):* Row percentage for "Previous claim" row: 60/80 = 75% purchased; 20/80 = 25% did not. Column percentage for "Purchased insurance" column: 60/100 = 60% had a previous claim; 40/100 = 40% had no previous claim. If you computed these correctly, continue. If the row/column distinction felt unclear, re-read §3.2 before T2.
+
 *T2 — Interpretation, not just computation:*
 
 > A researcher publishes the following findings: "In a dataset of 50 European cities, per capita chocolate consumption is strongly correlated with the number of Nobel Prize winners per 10 million population (r = 0.79, p < 0.05)."
@@ -92,14 +109,94 @@ This problem uses the actual Messerli (2012) finding (NEJM) — a paper publishe
 
 *T3 — Edge case that requires genuine thought:*
 
-> You are given a scatterplot of weekly hours worked (x-axis) and weekly productivity score (y-axis) for 80 employees at a software company. The correlation is r = −0.42.
+> In 2025, a major social media platform published internal research showing that teenage users who spent more than 3 hours per day on the platform reported higher rates of anxiety symptoms (r = +0.41, n = 18,000). Several governments cited this correlation as justification for proposed screen-time limits for under-16s.
 >
-> (a) Interpret this correlation in plain English. In what direction does it run?
-> (b) A manager concludes: "Working more hours reduces productivity — we should cap hours at 40 per week." Is this a valid conclusion from the data? What might be wrong with the causal story?
-> (c) The dataset includes both senior engineers (high productivity, typically 45–55 hours) and junior engineers (variable productivity, typically 35–45 hours). You split the dataset by seniority. In the senior group alone, r = +0.31. In the junior group alone, r = +0.22. What happened? Does the original r = −0.42 describe any individual employee's experience well?
-> (d) This phenomenon has a name. What is it, and what does it imply for how you should always examine correlations?
+> (a) Interpret r = +0.41 in plain English. Is this a strong, moderate, or weak correlation?
+>
+> (b) A policy advisor concludes: "More social media use causes anxiety — we should legislate a 1-hour daily cap." What is the most important thing wrong with this causal story?
+>
+> (c) The dataset includes users from two groups: those who reported using the platform mainly for passive scrolling (watching others' content) and those who reported using it mainly for active connection (messaging, commenting, group participation). You split the data:
+>
+> - Passive scrolling group: r = +0.48 (more time → more anxiety)
+> - Active connection group: r = −0.12 (more time → slightly less anxiety)
+>
+> What happened to the aggregate r = +0.41? Does it describe either group's experience well?
+>
+> (d) This phenomenon has a name. What is it, and what does it mean for how social media research — or any aggregate correlation — should be interpreted?
+>
+> (e) The platform's research was funded by the platform itself. A critic says: "They only published this to pre-empt regulation — they would have buried it if it showed a stronger effect." A defender says: "The data is the data — who funded the study doesn't change the correlation." Who is right, and what additional information would you want before relying on this study for policy?
 
-T3 introduces Simpson's Paradox (part c) and the ecological correlation trap — an overall correlation that reverses direction within subgroups. This is one of the most important and counterintuitive results in applied statistics. Students who understand it will never again trust an aggregate correlation without asking about subgroup structure. The question in (d) expects students to have either encountered the term in the reading or to reason their way to the phenomenon from the data.
+T3 uses a structurally real 2025 policy context: the debate about social media use and adolescent mental health was active in multiple legislatures in 2024–2025 (Australia's Social Media Minimum Age Act passed November 2024; UK Online Safety Act 2023 came into force in 2024; US Senate hearings in January 2024 featured similar correlational claims). The specific correlation and subgroup data in the question are illustrative, but the Simpson's Paradox structure — aggregate correlation reversing within subgroups defined by use type — reflects a genuine complexity documented in academic literature (Orben & Przybylski, 2019, critiqued the coarseness of aggregate screen-time measures; Twenge et al. versus Orben/Przybylski debate is ongoing). Part (e) adds a funding-bias dimension that applies to all industry-sponsored research. Students who understand T3 will never again trust an aggregate correlation without asking about subgroup structure — and will ask who funded the study.
+
+*T4 — Boundary case: what happens when r approaches its limits:*
+
+> Consider the following three datasets, each with 20 observations. For each, you are told the correlation coefficient.
+>
+> **Dataset A:** r = +1.00 between monthly marketing spend and monthly sales.
+> **Dataset B:** r = 0.00 between shoe size and annual salary across 500 employees.
+> **Dataset C:** r = −0.12 between ice cream consumption and reported stress levels.
+>
+> (a) In Dataset A (r = +1.00), does this mean advertising *causes* sales? What would a scatterplot look like, and what exactly does r = +1.00 imply about the data points?
+> (b) In Dataset B (r = 0.00), does this mean there is definitely no relationship between shoe size and salary? Name one type of relationship r cannot detect.
+> (c) In Dataset C (r = −0.12), a manager concludes "there's essentially no relationship here — ignore it." Is this conclusion valid? What determines whether a small r is meaningful?
+> (d) Can r = +1.00 exist in real business data? Under what conditions would you be suspicious of a correlation this high?
+> (e) A dataset has two variables X and Y. When you multiply every Y value by 3, what happens to r? When you add 100 to every X value, what happens to r? Explain why, using the definition of correlation.
+
+*T5 — Multi-step reasoning: Simpson's Paradox applied:*
+
+> A bank is evaluating two loan officers: Officer M and Officer N. You are given the following approval rate data:
+>
+> | | Officer M | Officer N |
+> |---|---|---|
+> | Low-risk applicants approved | 90 out of 100 (90%) | 45 out of 50 (90%) |
+> | High-risk applicants approved | 30 out of 100 (30%) | 6 out of 10 (60%) |
+> | **Overall** | **120 out of 200 (60%)** | **51 out of 60 (85%)** |
+>
+> (a) Based on overall approval rates, which officer appears more lenient?
+> (b) Within each risk category, which officer approves a higher proportion of applicants?
+> (c) Explain precisely why the two perspectives give contradictory rankings. What is the name of this phenomenon?
+> (d) The bank's compliance team uses overall approval rate to assess whether officers are discriminating against high-risk applicants. Is this the right metric? What should they use instead?
+> (e) Officer N's caseload has 50 low-risk and 10 high-risk applicants; Officer M's has 100 of each. Is this difference in caseload composition a problem with the data, the analysis, or the bank's allocation process? What would you investigate next?
+
+This question directly extends T3 (which introduced Simpson's Paradox conceptually) into a business context with a numerical worked example. Students must apply the concept rather than recognise it.
+
+*T6 — Confound identification: negative correlation variant:*
+
+> A hospital network analysing discharge data finds a strong negative correlation (r = −0.74) between the number of doctors per 100 beds and patient mortality rate. The network's CEO concludes: "More doctors clearly saves lives — we should hire immediately."
+>
+> (a) Is the correlation (negative relationship between doctors per bed and mortality) plausible? Construct a causal story that supports the CEO's conclusion.
+> (b) Identify at least two confounding variables that could explain this correlation without a direct causal effect of doctor-to-patient ratio on mortality.
+> (c) The data is aggregated at the hospital level (not patient level). What additional problem does this create for causal inference? (Recall the ecological correlation issue from the reading.)
+> (d) Suppose the network runs a natural experiment: one region doubles its doctor-to-bed ratio over three years while another maintains its ratio. What would you look for in the resulting data to assess whether more doctors causes lower mortality?
+> (e) A statistician argues: "The correlation is real — we just don't know the mechanism." A manager says: "If we can't confirm causation, we shouldn't act." Who is right? At what point is a correlation actionable without established causation?
+
+*T7 — Crosstab orientation: which percentage to use, and what happens when you use the wrong one:*
+
+> An airline surveys 800 passengers on flight experience, categorising them by seat class (Economy / Business) and satisfaction (Satisfied / Unsatisfied).
+>
+> | | Satisfied | Unsatisfied | Total |
+> |---|---|---|---|
+> | Economy | 390 | 260 | 650 |
+> | Business | 120 | 30 | 150 |
+> | **Total** | **510** | **290** | **800** |
+>
+> (a) Compute row percentages. What question does each row percentage answer?
+> (b) Compute column percentages. What question does each column percentage answer?
+> (c) The airline's marketing team wants to know: "Among satisfied passengers, what proportion flew Business?" Which percentage do you use, and what is the answer?
+> (d) The operations team wants to know: "Among Business class passengers, how satisfied are they?" Which percentage do you use, and what is the answer?
+> (e) A junior analyst reports: "51% of all passengers were satisfied — that's our overall satisfaction rate." Is this a row percentage, a column percentage, or something else? Is it the most useful number for the airline?
+> (f) The airline proposes improving Economy service to raise overall satisfaction. Based on this data, which group is numerically the larger source of unsatisfied passengers? Does this mean Economy service is the priority, or could there be a different reason?
+> (g) Compute CORREL in Excel between seat class (Economy=0, Business=1) and satisfaction (Satisfied=1, Unsatisfied=0). What does this coefficient tell you that the crosstab doesn't?
+
+*T8 — Real-world translation: set up the correlation analysis from a description:*
+
+> You are a data analyst at a European retailer with stores in 12 cities. Your manager says: "I think our stores in larger cities perform better — can you check if there's a relationship between city population and our store revenue?"
+>
+> (a) Identify the two variables. Which is X (explanatory) and which is Y (response)? Does it matter which is which for computing r?
+> (b) Your dataset has population in millions (ranging from 0.3 to 8.5) and annual store revenue in €millions (ranging from 1.2 to 22.7). You compute r = 0.61. Interpret this in plain English.
+> (c) Your manager says: "Great — r = 0.61, so city size explains 61% of the variation in revenue." Correct this statement precisely.
+> (d) You notice that one store in the dataset is in London (population 9.0 million, revenue €18.2 million). London is larger than any other city. How would removing London from the dataset likely affect r? Would the direction change?
+> (e) Your manager now asks: "Does this mean we should open more stores in large cities?" Write a two-sentence response that correctly uses the correlation result without over-claiming causation, and names the most important confound to investigate before making this recommendation.
 
 **Pre-class submission (on the course portal):**
 
@@ -109,6 +206,8 @@ Students find a dataset with at least two columns (one categorical + one numeric
 3. Write answers to three questions: What is this dataset? What relationship were you looking for, and why? What causal story is most tempting — and what would undermine it?
 
 **Choose a dataset from a country other than your own.** The cultural context of a dataset matters for evaluating spurious correlations: a strong association in data from Singapore may have a completely different explanatory mechanism than the same association in data from Portugal, because the institutional, demographic, and historical context differs. The analyst pair in Part 3 will have different prior knowledge than the dataset owner — that gap is the point.
+
+**Optional current affairs extension (no submission required):** In 2024–2025, governments in Australia, the UK, and the US debated legislation limiting social media use by teenagers, partly on the basis of correlational studies linking screen time to anxiety and depression. Before class, read one headline or article summarising this debate. Come ready to answer: what correlation was cited, and what alternative explanations were left out of the headline? You do not need to find the original study — the newspaper version is enough to identify what causal claim was made.
 
 The "what causal story is most tempting" question in Q3 is intentional: it primes students to notice whether they are being seduced by a plausible mechanism before they've checked whether the data actually supports it. This activates the desirable difficulty of prediction-then-check (Bjork, 1994) — students who commit to a causal story are better positioned to notice when the pair work or Part 4 undermines it.
 
@@ -276,7 +375,7 @@ Optional further reading: Vigen, T. (2015). *Spurious Correlations.* Hachette Bo
 | Cross-national dataset from open data portal | Ausubel (1968): self-relevance and prediction anchor new material; cross-national constraint sharpens Vygotskian knowledge asymmetry in Part 4 |
 | "What causal story is most tempting" in pre-class submission | Bjork (1994): desirable difficulty — committing to a prediction before analysis creates a memorable cognitive event when the prediction fails |
 | Reading scoped to §3.1–3.4; pivot charts deferred to Block 2 | Fischer et al. (2023): tool complexity before conceptual grounding impedes learning; ecological correlation (§3.4) is the conceptual move that must land before Excel labs add value |
-| Worked example placed after T1–T3, marked optional | Sweller (1994): novices need a cognitive template for causal reasoning chains; Kalyuga et al. (2003): marked optional to mitigate expertise reversal for students who already hold this reasoning fluently |
+| Worked example placed before T1–T3, marked optional for confident students | Rosenshine (2012): worked examples should precede independent practice — the three-step structure (causal story → confounder → evidence threshold) must be modelled before students are asked to produce it. Marked optional per Kalyuga et al. (2003): students who can already complete T2(c) without it do not benefit and may disengage. Active-watching video prompts ensure the Smeets TEDx video is a retrieval exercise, not passive viewing. |
 | Quiz includes Q6 (ecological correlation trap) and Q9 (ecological vs causal) | Black & Wiliam (1998): formative diagnosis; ecological correlation is consistently misunderstood — surfacing it early prevents it calcifying as a misconception |
 | T2 uses actual Messerli (2012) chocolate-Nobel finding | Authenticity increases engagement and transfers the lesson to real peer-reviewed literature, not just toy data; also signals that journals are not immune to causal overclaiming |
 | T3 introduces Simpson's Paradox | Bjork (1994): desirable difficulties — Simpson's Paradox is genuinely counterintuitive; discovering it through computation is more durable than being told about it |
@@ -369,7 +468,7 @@ Week 3 is the first session where the cross-national dataset constraint really b
 - Black, P. & Wiliam, D. (1998). Assessment and classroom learning. *Assessment in Education*, 5(1), 7–74.
 - Cepeda, N.J., Pashler, H., Vul, E., Wixted, J.T. & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin*, 132(3), 354–380.
 - Farmus, L., Cribbie, R.A. & Rotondi, M.A. (2020). The flipped classroom in introductory statistics. *Journal of Statistics Education*, 28(3), 316–325. DOI: [10.1080/10691898.2020.1834475](https://doi.org/10.1080/10691898.2020.1834475)
-- Fischer, J., Torcasio, S., Sweller, J. & Kalyuga, S. (2023). Flipped classroom design: Managing cognitive load. *Medical Education*, 57(4). DOI: [10.1186/s12909-023-04325-x](https://doi.org/10.1186/s12909-023-04325-x)
+- Fischer, J., Torcasio, S., Sweller, J. & Kalyuga, S. (2023). Flipped classroom design: Managing cognitive load. *BMC Medical Education*, 23(1), 345. DOI: [10.1186/s12909-023-04325-x](https://doi.org/10.1186/s12909-023-04325-x)
 - Kalyuga, S., Ayres, P., Chandler, P. & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38(1), 23–31. DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4)
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.
 - Messerli, F.H. (2012). Chocolate consumption, cognitive function, and Nobel Laureates. *New England Journal of Medicine*, 367(16), 1562–1564.

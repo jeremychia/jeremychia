@@ -30,12 +30,14 @@ The case study appendix and the DecisionTools Suite introduction in Chapter 1 ar
 *Rationale:* Chapter 1 is conceptual, not computational. The reading asks students to think about what analytics is for before asking them to do any. The pre-work load is intentionally lighter this week — students are orienting to the course, not yet processing dense technical material. This is consistent with Fischer et al. (2023), who recommend calibrating pre-work volume against the cognitive complexity of the in-class task, not the number of pages available.
 
 **Videos (~20 minutes total):**
-- [Introduction to Business Analytics — What is Analytics?](https://www.youtube.com/watch?v=S4l0LoBmyZ4) (~10 min) — covers descriptive, predictive, prescriptive overview
-- [Aleatory vs Epistemic Uncertainty](https://www.youtube.com/watch?v=pTxx6bMdPJA) (~10 min) — covers the distinction between randomness and ignorance
+- [Descriptive, Predictive, & Prescriptive Analytics](https://www.youtube.com/watch?v=lxCaYg1G9fE) (~8 min) — covers the continuum of analytics types with business examples. *Active watching: at the point where the presenter distinguishes predictive from prescriptive analytics (around 4:00), pause and write in your own words: what is the key difference? Then resume. This distinction is the one students most often conflate in T1.*
+- [The Bayesian Trap](https://www.youtube.com/watch?v=R13BD8qKeTg) (~10 min, Veritasium) — covers the distinction between what we don't know (epistemic) and what is inherently random (aleatory) through the lens of updating beliefs with evidence. *Active watching: when Veritasium introduces the idea of updating beliefs with new information (around 3:00), pause and write one sentence: what changes when you get new evidence — the world, or your model of the world? This is the epistemic/aleatory distinction you need for T1(b).*
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
-This walks through the kind of reasoning the session is built around. Attempt the tutorial problems before reading this — if you read the example first, you'll recognise the reasoning without having had to produce it yourself, which is precisely what this is trying to avoid.
+This walks through the kind of reasoning the session is built around. Read it carefully and annotate it — underline the step where the model's scope is defined, and circle the step where an omission is justified. You are looking for the *structure* of the reasoning chain so you can apply it yourself in T1–T3.
+
+*This worked example is marked optional for students who already feel confident identifying model types, uncertainty types, and deliberate omissions from a business description. If you can write a sentence answering T1(a), (b), and (d) without reading the example, you don't need it. If any of those three felt unclear after the reading and videos, read this carefully before attempting the tutorials.* (On expertise reversal in pre-work design, see Kalyuga, Ayres, Chandler & Sweller, 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
 
 > **Scenario:** A European airline needs to decide how many aircraft to schedule on a new Berlin–Lisbon route for the summer season. Demand is uncertain. The airline's planning team builds a model.
 >
@@ -50,13 +52,13 @@ This walks through the kind of reasoning the session is built around. Attempt th
 >
 > **What you are looking for in your pre-class scenario:** the gap between what the model is designed to answer and what a decision-maker might ask it to answer. That gap is not a flaw in the model — it is a flaw in how the model is being used.
 
-*This worked example is marked optional for students who found T1 and T2 straightforward. If you were able to identify the model type, name the uncertainty, and articulate one specific omission, the example will not add much. If those steps felt vague, read it carefully — it shows what the in-class pair work is asking you to do.* (On expertise reversal in pre-work design, see Kalyuga, Ayres, Chandler & Sweller, 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
-
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
 These establish conceptual fluency — the prerequisite for the scenario-sorting work in Parts 3 and 4. Students bring written answers; two or three will present.
 
 *T1 — Straightforward computation (no ambiguity):*
+
+*The prescriptive vs predictive distinction you noted while watching the first video is exactly what T1(a) tests. The model-omission reasoning from the worked example maps directly onto T1(d).*
 
 > A city government is trying to decide how to allocate its road maintenance budget across 50 districts for the coming year.
 >
@@ -69,6 +71,8 @@ These establish conceptual fluency — the prerequisite for the scenario-sorting
 > (g) At what point does a model become so simplified that it is no longer useful? Who decides?
 
 Parts (a)–(d) are definitional — students either know the vocabulary or they don't, and the quiz will surface this. Part (e) is the first point of genuine difficulty: the right answer is that the critique is about how the model is being *used*, not about the model itself. The model's omission of political dynamics may be correct — political pressure is not a road condition. Part (g) is the ethical question, with no single right answer.
+
+*Self-check for T1(a)–(d):* T1(a): prescriptive — the government is deciding how to allocate, not just describing or predicting. T1(b): primarily epistemic — the government doesn't know current road condition data; with better surveys, this uncertainty shrinks. T1(c): examples include current condition scores per district, traffic volume, age of road surface. T1(d): any example of a second-order effect (political priorities, future land use changes) left out by design is correct. If your answers are roughly consistent with these, continue. If T1(a) felt unclear, re-read the worked example before attempting T2.
 
 *T2 — Interpretation, not just computation:*
 
@@ -83,15 +87,67 @@ This problem asks students to reason from the business context to the model choi
 
 *T3 — Edge case that requires genuine thought:*
 
-> A technology company is developing a model to decide which job applicants to shortlist for interviews. It trains the model on historical hiring decisions made by human interviewers over the past five years.
+> In January 2025, the Chinese AI lab DeepSeek released a model (DeepSeek-R1) that matched the performance of OpenAI's o1 on standard benchmarks, reportedly trained at a fraction of the cost. Within 24 hours, Nvidia's share price fell approximately 17%, wiping roughly $600 billion from its market capitalisation — one of the largest single-day losses in US stock market history.
 >
-> (a) What type of analytics is this? Is it purely predictive, or does it have prescriptive elements?
-> (b) What is the model's objective? Who defined it?
-> (c) The historical data reflects the choices of human interviewers, who may have had unconscious biases. What does this mean for the model's predictions?
-> (d) Suppose the model performs well on a standard accuracy metric (it correctly predicts which candidates the historical interviewers would have shortlisted, 87% of the time). Is this a good model? What is it actually optimising for?
-> (e) The company's legal team flags that the model cannot explain why it shortlisted or rejected a specific candidate. Is this a model design problem, a deployment problem, or a governance problem?
+> Several analysts had been using prescriptive models to recommend holding or buying Nvidia stock, based on projections that AI training demand would continue to require massive GPU capacity.
+>
+> (a) What type of analytics were the Nvidia buy-recommendation models performing? What was their objective?
+>
+> (b) What did the DeepSeek release change about the assumptions those models were built on?
+>
+> (c) The models' inputs included: GPU shipment forecasts, hyperscaler capital expenditure plans, and historical AI compute demand growth rates. None of these inputs directly accounted for the possibility of a competitor achieving the same model performance at dramatically lower compute cost. Is the omission of this possibility a flaw in the model design, or an acceptable scope decision? Who should have decided?
+>
+> (d) A commentator said: "The models were accurate for the world that existed before January 20th. They failed because the world changed, not because the models were wrong." Do you agree? What does this imply about how prescriptive analytics models should be communicated to decision-makers?
+>
+> (e) OpenAI's benchmark score of 88% on the ARC-AGI reasoning test was widely reported as evidence of near-human reasoning. What does a benchmark score measure — and what does it not measure? Is "88% on ARC-AGI" a descriptive, predictive, or prescriptive output?
 
-T3 is designed to surface the limits of the analytics framework before the course is a week old. The right answer to (d) is that accuracy against biased historical data is not a meaningful success metric — the model is reproducing past decisions, including past biases, at 87% fidelity. This is the expertise-reversal point: students who arrived confident that "more accurate = better model" leave with a more careful view of what accuracy means.
+T3 uses a verified 2025 event (DeepSeek-R1 release, 20 January 2025; Nvidia market cap loss reported by multiple financial outlets including Bloomberg and FT). It surfaces the limits of the analytics framework before the course is a week old: the right answer to (d) is contested — some analysts would say the models failed to account for tail risk, others that model omissions were reasonable given available information. There is no single correct answer, which is the point. Students who arrived confident that "a model is wrong if it gives a bad recommendation" leave with a more careful view of the difference between model validity and model scope.
+
+*T4 — Boundary case: model with zero data:*
+
+> A city council wants to build a model to decide where to locate a new emergency ambulance depot. The city has never had an ambulance depot before and has no historical call-out data.
+>
+> (a) What type of analytics problem is this? Can it be prescriptive without any historical data to train on?
+> (b) What inputs would the model need — and where would the numbers come from, if there is no local history?
+> (c) A consultant proposes using data from a comparable city in another country. What assumptions does this introduce? What would make those assumptions defensible or indefensible?
+> (d) The council is advised: "With no data, any model is just guesswork." Do you agree? What is the minimum information needed before a model is useful?
+> (e) Is the uncertainty here primarily aleatory or epistemic? What does your answer imply about whether more data collection would help?
+
+This question targets the edge case where models must be built without historical data — which is common in public policy, new markets, and novel products. Part (d) is the hardest: students who say "no model is better than a bad model" need to defend that claim against the alternative that no decision is also a decision, and it is made with even less information.
+
+*T5 — Comparison: two models for the same decision:*
+
+> A supermarket chain is deciding how much stock of fresh bread to order each morning. Two analysts propose different approaches:
+>
+> **Analyst A** proposes a predictive model: use the past 90 days of sales data, day-of-week effects, and weather forecasts to predict tomorrow's demand.
+>
+> **Analyst B** proposes a prescriptive model: define the objective (minimise waste + minimise stockouts, weighted by cost), model demand uncertainty, and solve for the optimal order quantity each day.
+>
+> (a) What is the fundamental difference between what the two models produce?
+> (b) Can you use Analyst A's model as an input to Analyst B's model? If so, in what order?
+> (c) Analyst A's model has R² = 0.78 on historical data. Analyst B's model optimises given a demand distribution. Which model requires more assumptions? Which model's output is more useful to the store manager — and does the answer depend on who the manager is?
+> (d) A new store manager arrives and immediately orders twice the quantity that Analyst B's model recommends, because she "knows from experience that models underestimate demand near Christmas." In what sense is she right, and in what sense might she be wrong?
+> (e) After three months, actual waste and stockout costs with Analyst B's model are lower than with the manager's manual overrides. What does this tell you about the model — and what doesn't it tell you?
+
+*T6 — Diagnostic question: find the modelling error:*
+
+> A ride-hailing company builds a model to predict surge pricing. The model's inputs are: number of ride requests in the last 5 minutes, number of available drivers in the last 5 minutes, and day of week. The model's output is a surge multiplier (1.0 = no surge, 2.0 = double price). The company reports: "Our model achieves 94% accuracy in predicting whether surge pricing will be applied."
+>
+> (a) What kind of model is this — descriptive, predictive, or prescriptive?
+> (b) The company's 94% accuracy claim is measured against historical data. Identify one reason why 94% accuracy on historical data might be misleading about the model's true usefulness.
+> (c) A driver says: "The model always predicts surge when there are fewer than 10 available drivers — it's not learning anything, it's just restating a threshold." Could this be true? How would you test it?
+> (d) The model is used to automatically set prices without human review. Is this a modelling problem, a deployment problem, or a governance problem? Explain the distinction.
+> (e) After the model is deployed, drivers start logging off the app when they see surge pricing increasing, expecting to log back on at a higher rate — which reduces the number of available drivers, causing the model to predict even higher surge. What fundamental problem does this create, and what does it imply for how the model's training data should be collected?
+
+*T7 — Real-world translation: set up the problem from a business description:*
+
+> You work for a national postal service. Management wants to reduce the cost of parcel sorting at their main distribution centre. Currently, sorting is done manually by staff who read addresses and route parcels to conveyor belts. The centre processes 50,000 parcels per day, with a 3% misrouting rate. Each misrouted parcel costs an additional €4.50 in correction costs.
+>
+> (a) Identify the decision management is actually trying to make. Is it "reduce misrouting" or something else? What is the objective?
+> (b) What type of analytics would help most — and what would it produce as an output?
+> (c) What inputs would a useful model need? List at least four. For each, state whether the input is currently available or would need to be collected.
+> (d) Calculate the expected current annual cost of misrouting (assume 250 working days). Then calculate the cost at a 1% misrouting rate. This is the upper bound on what a perfect model is worth — what is this called?
+> (e) A vendor proposes an AI-powered optical character recognition (OCR) system that promises "99% accuracy." What additional information would you ask for before accepting or rejecting this claim?
 
 **Pre-class submission (on the course portal):**
 
@@ -193,6 +249,8 @@ Each pair is assigned two scenarios from the pre-class submissions — one submi
 **Framing for the task:**
 
 > *"Read your partner's scenario. Before you classify it, ask: what decision is at stake? A model is always built in service of a decision. If you can't name the decision, you can't classify the model."*
+>
+> *"If you don't know the context of your partner's scenario — that's fine. That's the point. Name what you don't know. The scenario owner will tell you in Part 4 whether your classification survived contact with the actual context."*
 
 If pairs are stuck on classification, the instructor can offer a prompt: "What would the person who commissioned this model do with the output?" That usually resolves the ambiguity between predictive and prescriptive — a predictive model produces a forecast; a prescriptive model produces a recommendation.
 
@@ -231,6 +289,12 @@ Then one more question — addressed to the room, not requiring a full answer:
 
 This is the reflexivity question from Q9, now grounded in their own examples. Year 3 students who have studied social science or management will recognise it. Students who haven't will find it genuinely surprising. One exchange here, handled briefly, plants the question for the whole course — the relationship between models and the systems they model is not stable.
 
+**A grounding question before the bridge-forward:**
+
+> *"You've all just done something models struggle with: moved to a new city — twice now — with no historical data about yourself in that context. What did you predict about your experience before you arrived somewhere new — and what turned out to be wrong? What type of uncertainty was that?"*
+
+This takes 60–90 seconds. It grounds the epistemic/aleatory distinction in something the cohort has lived, and signals from Week 1 that this course will treat their own experience as data. Don't over-explain the connection — plant it and move on.
+
 **Then one question to leave them with — don't answer it today:**
 
 > *"All three types of analytics — descriptive, predictive, prescriptive — require data. But data is always collected in the past. What does it mean to use past data to prescribe a future decision in a changing world?"*
@@ -252,6 +316,8 @@ Students write a short reflection — posted to the LMS (Moodle or Canvas), form
 
 Other students are expected to leave at least one comment — a pushback, a follow-up question, or a connection to their own scenario. That's the consolidation mechanism. A comment that forces you to articulate why a colleague's model framing is incomplete is more cognitively demanding than writing the original post.
 
+If you encountered a version of this decision in a different country or institutional context than the scenario describes — add it. The cohort has 40+ nationalities between them. That is a richer dataset than any textbook.
+
 Optional further reading: Breiman, L. (2001). Statistical modelling: The two cultures. *Statistical Science*, 16(3), 199–215. (A short accessible read on the tension between models that explain and models that predict — relevant to Week 3 onward.)
 
 ---
@@ -262,7 +328,7 @@ Optional further reading: Breiman, L. (2001). Statistical modelling: The two cul
 |---|---|
 | Student-submitted scenarios from their own country (with one from another) | Ausubel (1968): self-relevance anchors new conceptual frameworks; cross-national constraint sharpens the Vygotskian knowledge asymmetry in Part 4 |
 | Reading scoped to §1.1–1.3 only; tools chapter deferred | Fischer et al. (2023): cap pre-work at ~1.5× in-class time; tool instruction before conceptual grounding produces mechanical fluency without understanding |
-| Worked example after T1–T3, not before | Sweller (1994): novices need a cognitive template for reasoning chains; placing it after ensures the template addresses real confusion rather than preventing it; marked optional to mitigate expertise reversal (Kalyuga et al., 2003) |
+| Worked example before T1–T3, marked optional for confident students | Rosenshine (2012): worked examples should precede independent practice — students need a model of the reasoning chain before attempting to produce it. Marked optional per Kalyuga et al. (2003) expertise reversal: students who can already complete T1(a)–(d) do not benefit from the example and may disengage from reading it. Active-watching video prompts supplement this by ensuring the videos are retrieval opportunities, not passive viewing. |
 | Quiz runs easy → hard across 9 questions; runs every week | Q1–Q6 are retrieval practice; Q7–Q9 are diagnostic. Farmus, Cribbie & Rotondi (2020): weekly in-class quizzes moderated flipped classroom advantage (g = 0.43) in introductory statistics |
 | Tutorial T1–T3 scaffold from definitional to ethical to reflexive | T1 establishes vocabulary; T2 requires context-to-model reasoning; T3 (algorithmic hiring) surfaces the feedback loop and objectivity problems before students have calcified views about "what analytics does" |
 | Pairs work on each other's scenarios, not a shared case | Vygotsky (1978): ZPD — complementary contextual knowledge produces richer critique than shared case studies; scenario owner can validate or complicate the analyst's reading |
@@ -354,7 +420,7 @@ Students are asked to bring business decisions they have "personally encountered
 - Breiman, L. (2001). Statistical modelling: The two cultures. *Statistical Science*, 16(3), 199–215.
 - Cepeda, N.J., Pashler, H., Vul, E., Wixted, J.T. & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin*, 132(3), 354–380.
 - Farmus, L., Cribbie, R.A. & Rotondi, M.A. (2020). The flipped classroom in introductory statistics: Early evidence from a systematic review and meta-analysis. *Journal of Statistics Education*, 28(3), 316–325. DOI: [10.1080/10691898.2020.1834475](https://doi.org/10.1080/10691898.2020.1834475)
-- Fischer, J., Torcasio, S., Sweller, J. & Kalyuga, S. (2023). Flipped classroom design: Managing cognitive load. *Medical Education*, 57(4). DOI: [10.1186/s12909-023-04325-x](https://doi.org/10.1186/s12909-023-04325-x)
+- Fischer, J., Torcasio, S., Sweller, J. & Kalyuga, S. (2023). Flipped classroom design: Managing cognitive load. *BMC Medical Education*, 23(1), 345. DOI: [10.1186/s12909-023-04325-x](https://doi.org/10.1186/s12909-023-04325-x)
 - Kalyuga, S., Ayres, P., Chandler, P. & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38(1), 23–31. DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4)
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.

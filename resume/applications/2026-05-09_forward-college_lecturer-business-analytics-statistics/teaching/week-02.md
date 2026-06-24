@@ -106,7 +106,7 @@ The prediction in Q2–Q3 is intentional: it primes students to notice whether t
 
 **Mini-quiz via Mentimeter (5 minutes, 9 questions)**
 
-Questions run from straightforward to genuinely difficult. The easy ones confirm vocabulary and build momentum; the hard ones find where understanding stops. Run all six — Mentimeter is fast. The spread of results across the difficulty gradient is more informative than any single question.
+Questions run from straightforward to genuinely difficult. The easy ones confirm vocabulary and build momentum; the hard ones find where understanding stops. Run all nine — Mentimeter is fast. The spread of results across the difficulty gradient is more informative than any single question.
 
 **Easy — vocabulary and recall:**
 
@@ -563,7 +563,7 @@ Instructor closes with the tool decision framework:
 
 **Structure:** 5 theory → 4 practical → 6 theory → 7 practical
 
-The outer structure (flipped classroom: pre-work → active seminar → LMS reflection) holds across all 22 weeks. What varies is the *seminar format* — the nature of the active work in the room. Retrieval checks (Mentimeter) run in theory weeks where new concepts need diagnosing; they are replaced by live tool challenges or standing questions in practical weeks. LMS reflection posts run in ~15 of 22 weeks — dropped in lab-heavy sessions where the output *is* the reflection.
+The outer structure (flipped classroom: pre-work → active seminar → LMS reflection) holds across all 22 weeks. What varies is the *seminar format* — the nature of the active work in the room. Retrieval checks (Mentimeter) run in theory weeks where new concepts need diagnosing; they are replaced by live tool challenges or standing questions in practical weeks. LMS reflection posts run in 11 of 22 weeks — dropped in lab-heavy sessions where the output *is* the reflection.
 
 ---
 

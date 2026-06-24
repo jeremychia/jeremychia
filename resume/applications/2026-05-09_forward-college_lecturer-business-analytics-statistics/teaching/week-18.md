@@ -27,8 +27,8 @@ These map to ST2187 syllabus topic 15 (Monte Carlo simulation) and complete Bloc
 Students who have @RISK installed can additionally read §15-5 Introduction to @RISK (pp. 794–811). In class, we will use Python — the concepts are identical, the tool differs.
 
 **Videos (~15 minutes total):**
-- [Monte Carlo Simulation — Investopedia](https://www.youtube.com/watch?v=7ESK5SaP-bc) (8 min) — business applications
-- [Monte Carlo in Python — Sentdex](https://www.youtube.com/watch?v=2BZVD-GJAL0) (7 min) — code walkthrough
+- [Monte Carlo Simulation — Investopedia](https://www.youtube.com/watch?v=7ESK5SaP-bc) (8 min) — business applications. *Active watching: when the video shows the output distribution of a Monte Carlo simulation, pause and write: what does the shape of this distribution tell you that a single "expected value" calculation does not? This is the core argument of T5 (simulation vs deterministic).*
+- [Monte Carlo Simulations: Data Science Basics — ritvikmath](https://www.youtube.com/watch?v=EaR3C4e600k) (7 min) — code walkthrough using numpy, directly analogous to the simulation built in Part 2. *Active watching: when ritvikmath runs the simulation and plots the results, pause and identify: what are the three numpy functions he uses to generate the random inputs? These are the same functions in the worked example — recognising them before class makes Part 2 faster.*
 
 **Worked example (read carefully — you will adapt this in class):**
 
@@ -78,12 +78,127 @@ Students who have @RISK installed can additionally read §15-5 Introduction to @
 >
 > **The GIGO question:** the simulation assumes units follow a normal distribution with mean 10,000. Where did that number come from? If it came from a market research survey with 50 respondents, it carries substantial uncertainty. If it came from comparable product launches across 500 similar markets, it is far more reliable. The output distribution is only as good as the input distributions.
 
+*The Investopedia video's output distribution is the visual version of the profit histogram in this worked example. The three numpy functions (np.random.normal, np.random.uniform, np.random.normal) from the ritvikmath video are the three lines that generate units, price, and var_cost. The tutorial tasks are direct adaptations — changing one input at a time to observe the effect on the output distribution.*
+
 **Tutorial (attempt before class):**
 
 Adapt the worked example:
 1. Change the price distribution to normal (mean €22, SD €2) instead of uniform. How does the profit distribution change?
 2. Add sensitivity analysis: run three versions of the simulation with units mean = 8,000, 10,000, 12,000. Plot all three profit distributions on the same chart.
 3. Identify the input that has the largest effect on P(loss) — change one input at a time and observe.
+
+**Additional tutorial questions (attempt after the main tutorial tasks above):**
+
+*T4 — Boundary case: what happens when you change N (number of simulations):*
+
+> Using the product launch model from the worked example, run three versions of the simulation with different numbers of iterations: N = 100, N = 1,000, and N = 10,000. For each, record: mean profit, 5th percentile profit, and P(loss).
+>
+> (a) Which output statistic is most stable across the three versions? Which is least stable? Explain why tail statistics (like the 5th percentile) are more sensitive to N than the mean.
+> (b) At N = 100, you might observe P(loss) anywhere from 6% to 16% across different runs (due to random seed variation). At N = 10,000, the estimate stabilises. What principle from probability theory explains this stabilisation?
+> (c) A risk manager requests that P(loss) be reported to one decimal place (e.g., 11.4%). What minimum N would you recommend to ensure this precision is reliable? (You may use the heuristic that for tail probabilities, N should be at least 1,000 / p, where p is the probability being estimated.)
+>
+> *Solution:* For P(loss) ≈ 11%, the heuristic gives N ≥ 1,000 / 0.11 ≈ 9,100. **N = 10,000 is appropriate.**
+>
+> (d) If you increase N from 10,000 to 1,000,000, the computational time increases 100-fold. What do you gain? What marginal benefit does the additional accuracy provide for a business decision where the 5th percentile estimate changes from −€15,200 to −€15,400?
+> (e) Set `np.random.seed(42)` vs running without a fixed seed. Why does seed-fixing matter for reporting a business result, but not for the underlying statistical validity of the simulation?
+
+*T5 — Comparison: simulation versus deterministic ("plug in the mean") approach:*
+
+> The product launch model has these input parameters:
+> - Units sold: normal(10,000, 2,500)
+> - Price: uniform(18, 26) → mean = 22
+> - Variable cost: normal(8, 1.5)
+> - Fixed cost: 60,000
+>
+> **Deterministic approach (plug in the means):**
+> Revenue = 10,000 × 22 = €220,000
+> Profit = 220,000 − (10,000 × 8) − 60,000 = 220,000 − 80,000 − 60,000 = **€80,000**
+>
+> **Simulation approach:**
+> Run the Monte Carlo model (N = 10,000). Observe mean profit and P(loss).
+>
+> (a) Why does the deterministic approach produce a different (likely higher) profit estimate than the simulation mean? (Hint: this is the "flaw of averages" from the reading. Revenue = units × price; when both are uncertain, E(units × price) ≠ E(units) × E(price) because they are multiplied together.)
+>
+> *Explanation:* E(units × price) = E(units) × E(price) only when units and price are **independent** — which they are in this model. However, the **variance** of the product is Var(units × price) = (E[units])² × Var(price) + (E[price])² × Var(units) + Var(units) × Var(price), which is nonzero. The distribution of the product is not symmetric, so the median profit differs from the mean profit.
+>
+> (b) The deterministic model says "expected profit = €80,000." The simulation says "mean profit ≈ €79,000 with P(loss) = 11%." What critical information does the deterministic model completely hide?
+> (c) A startup investor receives both reports. What additional question should they ask that the deterministic report cannot answer?
+> (d) When is the deterministic approach (plugging in mean values) acceptable, and when is it dangerously misleading? Give one example of each.
+> (e) A CFO says: "I don't need simulation — I just use our best estimate for each input." Write a two-sentence response explaining when this approach is defensible and when it is not.
+
+*T6 — Multi-step: sensitivity analysis and risk mitigation:*
+
+> The product launch model has four uncertain inputs. You run a tornado analysis, varying each input's standard deviation by ±50% while holding others at baseline, and record the resulting P(loss):
+>
+> | Scenario | P(loss) |
+> |---|---|
+> | Baseline | 11% |
+> | Units SD halved (1,250 instead of 2,500) | 5% |
+> | Price range halved (22 ± 1 instead of 18–26) | 9% |
+> | Variable cost SD halved (0.75 instead of 1.5) | 10% |
+> | Fixed cost SD added (normal 60,000, SD 8,000) | 14% |
+>
+> (a) Which input uncertainty has the largest impact on P(loss)? What does this tell the startup about which risk to prioritise?
+> (b) Reducing units SD from 2,500 to 1,250 requires better demand forecasting. A market research firm offers to conduct a study that would reduce unit demand uncertainty by 40% (not 50%) for a cost of €15,000. At the baseline P(loss), if a loss costs the startup €200,000 on average, what is the expected cost of loss, and is €15,000 worth paying for a partial uncertainty reduction?
+>
+> *Solution:* Expected loss cost = P(loss) × average loss = 0.11 × 200,000 = €22,000. Reduced P(loss) after 40% reduction in units SD would be approximately (interpolating) slightly above 5%; call it ~7%. New expected cost = 0.07 × 200,000 = €14,000. Reduction = €8,000 < €15,000 research cost. **Not worth it at these numbers.** However, this ignores the upside — a more accurate demand forecast also helps production planning.
+>
+> (c) Explain why the tornado analysis in this question varies one input at a time. What limitation does this have compared to varying inputs simultaneously?
+> (d) The fixed cost becomes uncertain (SD = €8,000) in the last scenario. What business event might cause previously fixed costs to become variable or uncertain?
+> (e) Write the risk communication paragraph (from the optional post-work task in the main lesson plan) for this analysis: "Based on our simulation, the most important risk to manage is ___ because ___. If we can reduce the uncertainty in ___, the probability of loss drops from ___% to approximately ___%. The main assumption behind this finding is ___."
+
+*T7 — GIGO diagnostic: evaluate the input assumptions:*
+
+> A property development company builds a Monte Carlo simulation to evaluate whether to develop a 50-unit apartment block. The key inputs and their assumed distributions are:
+>
+> | Input | Distribution assumed | Basis for assumption |
+> |---|---|---|
+> | Sale price per apartment | Normal(€320,000, €40,000) | Average of 3 comparable recent sales |
+> | Construction cost per m² | Normal(€2,800, €200) | Contractor quote from 6 months ago |
+> | Construction time | Normal(18 months, 2 months) | Project manager's estimate |
+> | Inflation rate over project | Fixed at 3% | "Our standard assumption" |
+> | Planning permission probability | Fixed at 100% (assumed granted) | "It always gets approved here" |
+>
+> The simulation reports: mean profit €4.2M, P(loss) = 8%.
+>
+> For each input, identify: (i) whether the distribution assumption is appropriate; (ii) one specific way it could be wrong; (iii) the likely direction of bias in the P(loss) estimate if the assumption is wrong.
+>
+> (a) Sale price: normal distribution based on 3 comparable sales.
+> (b) Construction cost: normal distribution based on a quote from 6 months ago.
+> (c) Construction time: normal distribution (implying it could theoretically be negative, or very short).
+> (d) Inflation rate: fixed at 3% (treated as certain).
+> (e) Planning permission: treated as certain (probability = 1).
+>
+> After your analysis, answer: does the P(loss) = 8% from this simulation likely underestimate or overestimate the true risk? Justify your answer with reference to at least three of the inputs above.
+
+*T8 — Real-world GIGO: US tariff uncertainty and Monte Carlo input distributions (April 2025):*
+
+> On 2 April 2025, the US government announced a sweeping set of tariffs under the name "Liberation Day," imposing import duties ranging from 10% to 145% on goods from multiple countries. The announcement introduced genuine uncertainty about input costs for businesses with US-facing supply chains: the tariff rates were announced, then partially paused (90-day pause for most countries except China announced April 9), then revised again. By late April 2025, companies running supply chain cost models faced a situation where the "right" tariff rate to use in a simulation was genuinely unknown.
+>
+> A European consumer electronics manufacturer produces headphones with the following supply chain cost structure (simplified). Its primary components come from China; it sells primarily in the US market.
+>
+> | Cost component | Previous distribution (pre-April 2025) | After April 2025 announcement |
+> |---|---|---|
+> | Component tariff rate (China imports) | Fixed at 20% | Unknown — scenarios: 20%, 54%, 145% |
+> | US demand (units sold, millions) | Normal(2.5, 0.3) | Possibly lower if tariffs raise retail prices |
+> | Retail price (USD) | Normal($149, $12) | Uncertain if tariffs must be passed on |
+> | Component cost (EUR, per unit) | Normal(€42, €5) | Already absorbed in current contracts |
+>
+> Assume the company's profit per unit = (retail price × FX rate − component cost) × (1 − tariff rate) − fixed costs of €18M.
+>
+> (a) Before April 2025, the Monte Carlo model used a fixed tariff rate of 20%. Why might this have seemed reasonable at the time? What type of "risk" was being ignored?
+>
+> (b) After April 2025, the company's analyst proposes three scenarios for the tariff rate: 20% (pause maintained), 54% (new China baseline), 145% (full tariff imposed). Rather than modelling the tariff as a continuous distribution, she assigns probabilities: 35% / 40% / 25%. How would you represent this as a discrete random variable in a simulation? Write the logic (in pseudocode or Python) that generates one random draw for the tariff rate.
+>
+> (c) Run the full simulation (N = 10,000) with this tariff uncertainty included as a random input. How does P(loss) change compared to a model that fixes the tariff at 20%? How does it change compared to fixing it at 145%?
+>
+> (d) The analyst's probability assignments (35% / 40% / 25%) came from her subjective reading of trade policy news in April 2025. Another analyst assigns 50% / 30% / 20%. Run both and compare the resulting P(loss) estimates. What does this tell you about the sensitivity of the simulation to the input probability weights?
+>
+> (e) The company's CFO says: "This simulation has too many unknowns — the output is meaningless." The analyst responds: "A simulation with explicit uncertainty is more honest than a budget that assumes tariffs stay at 20%." Who is right, and why? What should the simulation output be used for — and what should it not be used for?
+>
+> (f) The US government's 90-day pause was announced on April 9, 2025. If the model had been run on April 2 (before the pause) and again on April 10 (after the pause), the "right" probability weights would have changed within one week. What does this imply for how Monte Carlo simulations should be communicated to decision-makers — and how frequently models should be updated in a fast-moving policy environment?
+
+This question uses a verified 2025 event: the US "Liberation Day" tariff announcement (April 2, 2025) and the subsequent 90-day pause (April 9, 2025) are documented by multiple official and news sources including the White House, USTR, Reuters, and FT. The company and specific numbers are illustrative. The scenario makes concrete the session's core lesson: simulation output depends entirely on input distributions — and when input distributions cannot be reliably specified, the analyst's job is not to hide that uncertainty but to make it explicit and actionable.
 
 ---
 
@@ -115,6 +230,14 @@ Buffer: use it to extend the sensitivity analysis — change units mean from 10,
 ---
 
 ### Part 3 — Sensitivity Analysis Lab (25 minutes)
+
+**Orientation (5 minutes before pairs start):** Monte Carlo simulation is unlikely to have appeared in any prior course. Before pairs begin, the instructor places the tool in context with three sentences:
+
+> "A deterministic model gives one answer. A simulation gives a *distribution* of answers — one for every possible combination of inputs, sampled thousands of times. The question we are asking is not 'what will happen?' but 'what is the range of things that could happen, and how likely is each?'"
+
+Then one grounding question to the room: "In the worked example, why did we run 10,000 simulations rather than just plugging in the mean values for each input?" Expected answer: because using the mean ignores the spread — the 'flaw of averages' from the pre-work reading. If no one raises it, the instructor names it: `profit(mean inputs) ≠ mean(profit across all input combinations)`. This is the conceptual anchor for everything in Part 3.
+
+This is not a re-run of Part 2. It is a formulation-first frame: before pairs vary inputs, they should be able to say what they are varying and why. Students who can't articulate the flaw of averages need these 5 minutes; students who can will move through Part 3 faster.
 
 Pairs receive the same base model (product launch) with a business twist: they are advising a risk-averse investor who wants to know:
 1. What is the worst-case profit (5th percentile)?
