@@ -28,8 +28,8 @@ These map to ST2187 syllabus topic 13 (time series and forecasting) and close th
 The regression-based trend models (§12-4) and random walk model (§12-5) are optional further reading — skip them on first pass unless you want a fuller picture of trend-based approaches.
 
 **Videos (~20 minutes total):**
-- [Time Series Decomposition — StatQuest](https://www.youtube.com/watch?v=2Sw3_ALJ3GE) (10 min)
-- [Exponential Smoothing — StatQuest](https://www.youtube.com/watch?v=k4HFQCMoVrc) (10 min)
+- [Time Series Decomposition in Python](https://www.youtube.com/watch?v=sAUx8y-rr10) (10 min) — walks through trend, seasonal, and residual decomposition using statsmodels, the same library used in Part 3. *Active watching: when the video plots the three components (trend, seasonal, residual) separately, pause and write: what does the residual component represent — what is "left over" after the trend and seasonal patterns are removed? This is what the assumption statement in Part 3 asks you to be specific about.*
+- [Simple Exponential Smoothing](https://www.youtube.com/watch?v=uWCVyQ5GcBM) (10 min) — explains the weighted-average logic and the smoothing parameter α, including what happens at α = 0 and α = 1. *Active watching: when the video shows what happens at the extreme values of α (near 0 vs near 1), pause and write: what kind of series would each extreme be appropriate for — a stable, slowly-changing series or a volatile one? This is T6(d).*
 
 **Pre-work environment check:**
 Confirm that `statsmodels` is installed. Test with:
@@ -37,6 +37,8 @@ Confirm that `statsmodels` is installed. Test with:
 from statsmodels.tsa.seasonal import seasonal_decompose
 print("statsmodels OK")
 ```
+
+*The decomposition video's visual of the residual component is the intuition behind the assumption statement task in Part 3. The exponential smoothing video's α parameter explanation maps directly to T6(d). If either video felt opaque, re-read §12-6 and §12-7 before the tutorial.*
 
 **Worked example (read carefully — class will reproduce and extend this):**
 
@@ -79,6 +81,87 @@ Using the worked example dataset (shared on the course portal):
 2. Fit a Holt-Winters model and forecast the next 12 months
 3. Split the data: use months 1–36 as training, months 37–48 as test. Compute RMSE on the test set
 4. What would you tell a manager who asks "how accurate is this forecast for next month?"
+
+**Additional tutorial questions (attempt after the main tutorial tasks above):**
+
+*T5 — Boundary case: what happens when trend and seasonality interact:*
+
+> A sports equipment retailer has monthly sales data for 60 months (5 years). The series shows a strong upward trend (roughly 15% annual growth) and a clear seasonal pattern: January (new year's resolutions) and September (back-to-school/sport season) are consistently the highest months, while June–July is the lowest.
+>
+> (a) If you decompose this series using an **additive** model (trend + seasonal + residual), the seasonal component adds or subtracts a fixed number of units regardless of trend level. If the business uses a **multiplicative** model, the seasonal swings grow proportionally with the trend. For a business growing rapidly, which model is more appropriate, and why?
+> (b) In year 1, the January seasonal effect is +150 units (additive) or +1.30 (multiplicative — meaning January is 30% above trend). By year 5, the trend level has doubled. Under the multiplicative model, what is the January seasonal effect in units?
+>
+> *Solution:* If trend doubles and multiplier is 1.30, January in year 5 is 30% above a trend level that is twice the year-1 trend level. The absolute seasonal swing has doubled in size. Under the additive model, it would still be only +150 units.
+>
+> (c) Fit both an additive and multiplicative Holt-Winters model to the first 48 months of your dataset, then evaluate RMSE on months 49–60. Which model has lower RMSE? What does this tell you about which assumption is better supported by the data?
+> (d) After month 60, the company enters a price war and lowers prices by 20%. The subsequent 12 months show sharply elevated volumes. What would happen to the accuracy of a Holt-Winters forecast made before the price war, applied to the post-price-war period?
+> (e) "A forecast is a conditional projection, not a prediction." Explain what this means in the context of your answer to (d).
+
+*T6 — Comparison: moving average versus exponential smoothing:*
+
+> A manufacturer tracks weekly widget production (units) for 26 weeks. They are considering two forecasting methods:
+>
+> - **3-week moving average:** forecast for week t = average of weeks t−1, t−2, t−3
+> - **Simple exponential smoothing (α = 0.3):** Fₜ₊₁ = α × Yₜ + (1−α) × Fₜ
+>
+> The last 6 weeks of data are: Week 21: 840, Week 22: 910, Week 23: 875, Week 24: 950, Week 25: 920, Week 26: 990.
+>
+> (a) Compute the 3-week moving average forecast for week 27.
+>
+> *Solution:* F₂₇ = (950 + 920 + 990) / 3 = 2,860 / 3 ≈ **953 units**
+>
+> (b) Assume the exponential smoothing forecast for week 26 is F₂₆ = 880. Compute the SES forecast for week 27 using α = 0.3.
+>
+> *Solution:* F₂₇ = 0.3 × 990 + 0.7 × 880 = 297 + 616 = **913 units**
+>
+> (c) Which method responds more quickly to the recent spike at week 26 (990 units)? Explain why in terms of how each method weights historical data.
+> (d) For a business with volatile week-to-week demand (noise-dominated series), would a high or low α be more appropriate for exponential smoothing? What about a business with stable underlying demand?
+> (e) Neither method captures trend or seasonality. If production has a 4-week seasonal cycle (production spikes at the end of each month due to order deadlines), what would happen to the 3-week MA and the SES forecasts for week 27 if the spike has occurred in weeks 24 and 28 historically?
+
+*T7 — Interpretation: error metrics in business context:*
+
+> A demand forecasting system generates forecasts for two products. You evaluate both on a 12-month test set:
+>
+> | Product | MAE (units) | RMSE (units) | Mean actual demand |
+> |---|---|---|---|
+> | Product A (commodity) | 120 | 145 | 1,200 |
+> | Product B (perishable) | 85 | 210 | 900 |
+>
+> (a) For Product A, calculate the Mean Absolute Percentage Error (MAPE): MAPE = MAE / mean actual demand × 100%. Is 10% MAPE good or bad for a commodity product?
+> (b) For Product B, the RMSE is more than twice the MAE (210 vs 85). What does this tell you about the pattern of forecasting errors? Are the errors mostly small with a few large ones, or consistently medium-sized?
+> (c) Product B is a perishable food item. Over-forecasting leads to wastage (cost: €8 per unit over-forecast); under-forecasting leads to stockouts (cost: €15 per unit under-forecast). Which error direction is more costly? What does this imply for how the forecast should be biased?
+> (d) A manager proposes measuring forecasting performance using only RMSE. A data scientist argues MAE is better. In what business situations would you prefer each, and why?
+> (e) Neither MAE nor RMSE tells you the *direction* of errors. Explain why tracking the mean error (ME = mean of (actual − forecast)) is also important, and what a consistently positive ME tells you about the forecasting system.
+
+*T8 — Real-world translation: identify the right time series model from a business description:*
+
+> For each of the following business situations, state: (i) whether an additive or multiplicative seasonal model is more likely to be appropriate; (ii) whether simple, Holt's (trend only), or Holt-Winters (trend + seasonal) exponential smoothing should be used; (iii) one assumption that would need to hold for the chosen model to remain valid.
+>
+> (a) A UK toy retailer's monthly sales data for 8 years. Sales are flat most of the year but spike dramatically in November–December. The spike has been growing in absolute size year on year as the company expands.
+>
+> (b) A German electricity distributor's daily electricity consumption over 3 years. Consumption follows a weekly seasonal pattern (high on weekdays, low on weekends) and a longer annual pattern (high in winter). No significant trend is observed.
+>
+> (c) A technology startup's monthly subscription revenue over 18 months. The series shows strong month-on-month growth (35% year-on-year) with no seasonal pattern visible yet.
+>
+> (d) A restaurant chain's weekly covers (number of customers served) over 2 years. There is a clear weekly cycle (Friday/Saturday peak), a slight annual trend upward, and the seasonal pattern appears to scale proportionally with the growth trend.
+
+*T9 — Current affairs: when a forecast assumption breaks in real time:*
+
+> Throughout 2024–2025, OPEC+ (the alliance of oil-producing countries including Saudi Arabia and Russia) repeatedly changed its production decisions, sometimes reversing announced plans within weeks. In June 2024, OPEC+ announced plans to gradually unwind production cuts starting in Q4 2024, then in September 2024 delayed the unwinding again. In May 2025, eight OPEC+ members announced a larger-than-expected output increase, which pushed Brent crude oil prices below $60/barrel for the first time since 2021.
+>
+> An energy trading firm had a time series model for monthly Brent crude prices built on 5 years of data (January 2020 – December 2024). The model incorporated historical OPEC+ production patterns and had achieved an RMSE of $3.20/barrel on the 2023 test set. In January 2025, the firm's model forecast Brent crude at approximately $75–80/barrel for Q2 2025. Actual Q2 2025 prices fell to $58–62/barrel.
+>
+> (a) The forecasting model was trained on data from 2020–2024. What specific assumption was embedded in the model about OPEC+ production behaviour — and why did this assumption fail?
+>
+> (b) The Q2 2025 RMSE calculated after the fact was approximately $18/barrel, compared to a test-set RMSE of $3.20/barrel from 2023. Does this mean the model was badly built, or that the model was built correctly and applied to a regime it was not designed for? What is the difference?
+>
+> (c) The firm's risk manager says: "No time series model could have predicted this — it was a structural break." A data scientist responds: "We should have added scenario weights or a Bayesian update for OPEC+ policy risk." What does each person mean? Which is more useful going forward?
+>
+> (d) The Holt-Winters model you studied assumes that trend and seasonal patterns observed in the past will continue. Identify three specific features of the 2025 oil price situation that each violated a different Holt-Winters assumption.
+>
+> (e) A junior analyst proposes retraining the model every month with rolling data to "stay current." What would be the advantage and the risk of this approach in an environment where OPEC+ decisions are intermittent and unpredictable?
+
+This question uses verified events: the OPEC+ output increase announcement of May 2025 and subsequent oil price falls are documented by Reuters, the IEA, and the OPEC Secretariat. The specific firm and RMSE figures are illustrative. The question surfaces the key limitation of all time series models — assumption stability — through a live 2025 example where the assumption broke visibly.
 
 ---
 
@@ -132,6 +215,14 @@ Buffer: if the environment has issues, the buffer absorbs setup time. Also use i
 
 ### Part 3 — Forecast Critique (25 minutes)
 
+**Orientation (5 minutes before pairs start):** Time series analysis is new for most students — unlike descriptive statistics or regression, it is unlikely to have appeared in any prior course. Before pairs begin, the instructor projects a 3-point orientation:
+
+1. *The structure of a time series*: observations in sequence, where the order matters. A histogram of the same values would lose that order entirely.
+2. *What decomposition does*: separates the systematic (trend, seasonality) from the noise (residual). The forecast extrapolates only the systematic parts.
+3. *The one question to hold throughout*: "What has to stay true in the future for this extrapolation to be valid?"
+
+This is not a mini-lecture — it is framing. Two minutes, three points, then pairs begin. Students who already understood the worked example will find this fast; students for whom the code felt opaque will find it clarifying.
+
 Pairs receive a dataset (different from the worked example) and must:
 
 1. Decompose the series and describe what they see
@@ -139,7 +230,9 @@ Pairs receive a dataset (different from the worked example) and must:
 3. Evaluate on a 6-month held-out test set
 4. Write one paragraph: "This forecast assumes ___. This assumption would break if ___."
 
-The fourth task is the core. Examples of assumption statements:
+**Revised deliverable expectation:** the fourth task is the core, and it is sufficient on its own. Pairs who complete the decomposition and assumption statement but don't finish the evaluation have still done the most important work. The evaluation (RMSE on test set) is a check, not the point — the point is the assumption paragraph. Do not compress the assumption statement to finish the evaluation.
+
+Examples of assumption statements:
 - "This forecast assumes the seasonal pattern from the past 3 years will repeat. It would break if the business changed its product mix, expanded to a new market, or faced a supply shock."
 - "This forecast assumes the current growth trend continues. It would break if the market reaches saturation or a competitor enters."
 

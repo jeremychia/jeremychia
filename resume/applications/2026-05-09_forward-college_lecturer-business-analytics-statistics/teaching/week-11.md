@@ -29,13 +29,15 @@ The sampling distribution of the sample proportion (§7-4c) is important for Wee
 
 *Rationale:* the CLT is counterintuitive. The reading alone is unlikely to produce genuine understanding for most students — the in-class simulation (Part 3) is the mechanism. The pre-work establishes vocabulary and the formal statement; understanding comes in class.
 
+**A note on pre-work expectations for this week:** The CLT is counterintuitive. Many students find the formal statement in the reading clear but cannot yet see why it matters or feel confident about it — that is expected and normal. The in-class simulation (Part 3) is designed to resolve this. Your job in pre-work is to arrive knowing the vocabulary (sampling distribution, standard error, standard error formula, CLT conditions) so the simulation makes sense when you see it. If you finish the reading and still feel uncertain about the CLT itself, that is the correct outcome of Week 11 pre-work. Confidence with the CLT comes after the simulation, not before it.
+
 **Videos (~20 minutes total):**
-- [Sampling Distributions — StatQuest](https://www.youtube.com/watch?v=XLCWeSVzHUU) (12 min) — visual walkthrough of what happens when you draw repeated samples
-- [Central Limit Theorem — 3Blue1Brown](https://www.youtube.com/watch?v=zeJD6dqJ5lo) (8 min) — geometric intuition
+- [Sampling Distributions — StatQuest](https://www.youtube.com/watch?v=XLCWeSVzHUU) (12 min) — visual walkthrough of what happens when you draw repeated samples. *Active watching: watch for the moment the histogram of sample means appears. Pause and write: what happens to the shape and width of this histogram as the sample size n increases? The answer you write is the CLT in plain language. This visual is exactly what the simulation in Part 3 will produce — your T2(b) calculation is the numerical version of what you just watched.*
+- [Central Limit Theorem — 3Blue1Brown](https://www.youtube.com/watch?v=zeJD6dqJ5lo) (8 min) — geometric intuition. *Active watching: when 3Blue1Brown explains why the normal shape emerges regardless of the original distribution's shape, pause and write: what is it about repeated averaging that produces this result? The answer connects to T4(a) — what n is "large enough" for the CLT to apply.*
 
 The StatQuest video is essential. Students who watch it will arrive with the visual model of a sampling distribution that makes the simulation in Part 3 legible.
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 > **Scenario:** A factory produces bolts. The target diameter is 10mm. The production process has a mean of 10.05mm and a standard deviation of 0.8mm. The diameter distribution is slightly right-skewed.
 >
@@ -56,9 +58,29 @@ The StatQuest video is essential. Students who watch it will arrive with the vis
 >
 > **The key insight:** the standard error (0.133mm) is much smaller than the population SD (0.8mm). The sample mean is far less variable than individual measurements. This is *why* we average: averaging reduces noise.
 
+*This worked example is marked optional for students who already feel confident computing standard error (SE = σ/√n) and using the CLT to find a probability about a sample mean. If you can write the formula for SE and apply it to a new scenario without guidance, you don't need this. If the steps from "population is slightly skewed" to "CLT applies, so X̄ is approximately normal" felt unclear, work through each step carefully.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
+
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
+*T0 — Entry question (lower floor):*
+
+> A hospital records the blood pressure (systolic, in mmHg) of every patient admitted last year — 12,000 patients in total. The population mean is 128 mmHg and the population standard deviation is 18 mmHg.
+>
+> A researcher then draws a random sample of 100 patients from those records and computes the sample mean blood pressure.
+>
+> (a) Write one sentence identifying which number (128 or the sample mean) is the parameter, and which is the statistic.
+> (b) Without doing any calculation, write one sentence explaining why the sample mean is unlikely to be exactly 128 mmHg, even if the sample is randomly drawn.
+> (c) Would you expect the sample mean to be more or less variable than any individual patient's blood pressure? Write one sentence explaining why.
+>
+> No formula required. Plain language only.
+
+T0 establishes the vocabulary — parameter vs statistic, sampling variability, why averages are less variable than individuals — that T1–T3 assume. Students who cannot answer T0 have not yet understood what sampling is for. The question requires only conceptual understanding from §7-2, not any calculation.
+
+*Self-check for T0:* (a) 128 mmHg is the parameter (the true population mean); the sample mean is the statistic (an estimate from one sample). (b) Random sampling produces different samples each time; chance variation means the sample mean will rarely equal the population mean exactly. (c) The sample mean will be less variable — averaging 100 values reduces random fluctuation compared to a single observation; this is why we sample. If any of these felt uncertain, re-read §7-2 and the worked example before T1.
+
 *T1 — Vocabulary and identification:*
+
+*The StatQuest video's histogram of sample means narrowing as n increases is the visual version of what T2(b) calculates: SE = σ/√n = 18,000/√100 = 1,800. The wider the histogram, the larger the SE; the narrower, the smaller.*
 > A national survey of 2,000 adults finds that 58% prefer remote work. The true proportion in the entire working population is 61%.
 >
 > (a) Which number is the parameter? Which is the statistic?
@@ -68,14 +90,29 @@ The StatQuest video is essential. Students who watch it will arrive with the vis
 
 T1(d) is the key question: increasing sample size reduces sampling error; better design doesn't reduce random sampling error (it reduces bias). Students often conflate these.
 
-*T2 — Standard error:*
-> Household incomes in a city are distributed with mean €42,000 and standard deviation €18,000. Incomes are right-skewed.
->
-> (a) A sample of n = 9 households is taken. Can you use the CLT to find P(X̄ > €50,000)? Why or why not?
-> (b) A sample of n = 100 households is taken. Now compute P(X̄ > €50,000).
-> (c) What does your answer to (b) tell you about the probability of a single randomly chosen household having income > €50,000? (Different question — don't confuse them.)
+*Self-check for T1(a)–(b):* (a) Parameter: 61% (the true population proportion); statistic: 58% (the sample proportion). (b) Sampling error = 58% − 61% = −3 percentage points (the sample underestimates the true value). If you reversed parameter and statistic, re-read §7-2 before T2.
 
-T2(c) is the most common confusion in probability questions about means: P(X̄ > 50,000) with n = 100 is not the same as P(X > 50,000) for a single observation. The standard error for a sample mean is smaller than the population SD by √n.
+*T2 — Standard error:*
+
+> According to the UK Office for National Statistics (ONS) Family Resources Survey 2022/23, median household disposable income in the UK was approximately £35,400 per year (equivalised). The distribution of household income is substantially right-skewed — a small number of very high-income households pull the mean above the median. For this question, use the following approximate parameters for UK household disposable income:
+>
+> - Mean (μ) = £38,000 per year
+> - Standard deviation (σ) = £22,000 per year
+> - Distribution: highly right-skewed (individual household incomes cannot be modelled as normal)
+>
+> (a) A journalist samples n = 9 households in a single postcode district and computes a sample mean income of £45,000. Can she use the CLT to make probability statements about this sample mean? Why or why not?
+>
+> (b) The ONS Annual Survey of Hours and Earnings (ASHE) samples approximately n = 180,000 employees for its earnings estimates. A regional analyst takes a much smaller random sample of n = 100 households from a city. Compute the standard error of the sample mean, and calculate P(X̄ > £42,000).
+>
+> *Solution:* SE = 22,000 / √100 = 2,200. Z = (42,000 − 38,000) / 2,200 = 1.818. P(X̄ > 42,000) ≈ **3.4%**
+>
+> (c) Your answer to (b) gives the probability that the *sample mean* from 100 households exceeds £42,000. What is the probability that a *single randomly chosen household* has income above £42,000? Why are these two questions different — and why can't you calculate the second one from the parameters given?
+>
+> (d) A think tank publishes a report saying: "In a random sample of 100 UK households, we found a mean income of £44,500. This is substantially above the ONS reported mean of £38,000 — suggesting ONS figures understate actual income." Using the standard error from (b), assess whether a sample mean of £44,500 is surprising under the null hypothesis that μ = £38,000. What is the Z-score for this sample mean?
+>
+> *Solution:* Z = (44,500 − 38,000) / 2,200 = 6,500 / 2,200 ≈ 2.95. P(X̄ ≥ 44,500) ≈ 0.16% — very unlikely under H₀. But this does not mean the ONS figures are wrong; it may mean the think tank's sample was not representative (e.g., oversampled high-income areas).
+
+T2 now uses publicly available ONS data (ONS Family Resources Survey 2022/23 is accessible at ons.gov.uk). The right-skewed income distribution is a real feature of UK household income data, and the right-skew/CLT tension is the core learning point. Part (d) adds a realistic misinterpretation of sample evidence — the kind that appears in advocacy reports and policy debates — which students must evaluate using standard error logic.
 
 *T3 — Sampling bias:*
 > An online retailer surveys customer satisfaction by emailing customers immediately after purchase. 78% of respondents rate their experience as "excellent."
@@ -85,6 +122,65 @@ T2(c) is the most common confusion in probability questions about means: P(X̄ >
 > (c) How would you redesign the survey to reduce bias — while keeping it practical?
 
 T3(a): response bias (customers who respond to satisfaction emails are not random — they are likely either very satisfied or very dissatisfied) and timing bias (immediately post-purchase captures the emotional high, not the considered view). T3(c) requires practical trade-offs: random sampling from the customer database at 30 days post-delivery is better but more expensive.
+
+*T4 — Boundary case: what the CLT does and does not guarantee:*
+
+> A population of invoice payment times at a company is extremely right-skewed: most invoices are paid within 7 days, but some large corporate clients take 90–180 days to pay. The distribution has mean μ = 22 days and SD σ = 35 days.
+>
+> (a) An auditor takes a sample of n = 9 invoices. Can she use the CLT to compute probabilities about the sample mean? Explain your answer.
+> (b) The auditor increases her sample to n = 100 invoices. Now calculate P(X̄ > 28 days).
+>
+> *Solution:* SE = 35 / √100 = 3.5 days. Z = (28 − 22) / 3.5 = 1.714. P(X̄ > 28) = 1 − NORM.DIST(28, 22, 3.5, TRUE) ≈ 1 − 0.9567 ≈ **4.3%**
+>
+> (c) A colleague says: "With n = 100, the sample mean will be normally distributed and we can compute any probability we want." Is this statement fully accurate? What might limit its reliability for extreme percentiles (e.g., the 99th percentile of X̄)?
+> (d) The company's finance team wants to know: "What is the probability that a single randomly selected invoice takes more than 60 days to pay?" Can you answer this from the population parameters alone (without knowing the full distribution shape)? Explain.
+> (e) What sample size would be required to ensure the standard error is less than 2 days?
+>
+> *Solution:* SE = σ/√n < 2 → √n > 35/2 = 17.5 → n > 306.25 → **n ≥ 307**
+
+*T5 — Multi-step: effect of sample size on inference decisions:*
+
+> A public health agency estimates disease prevalence (proportion of population infected) using a random sample from a city of 2 million people. The true proportion is unknown; based on early data, they expect approximately p ≈ 0.08 (8%).
+>
+> (a) What is the standard error of the sample proportion p̂ for: (i) n = 100; (ii) n = 400; (iii) n = 1,600?
+>
+> *Solution:* SE = √(p(1−p)/n) = √(0.08 × 0.92 / n) = √(0.0736/n)
+> n=100: SE ≈ 0.0271; n=400: SE ≈ 0.0136; n=1,600: SE ≈ 0.0068
+>
+> (b) Each quadrupling of n halves the SE. If the agency is working with a fixed budget that covers n = 400, but the SE of 1.36 percentage points is considered too wide, what n would be required to halve the SE again to 0.68 percentage points?
+> (c) A researcher argues: "We sampled 400 people from a city of 2 million — that's only 0.02% of the population. Our estimate cannot possibly be representative." Is this argument valid? What matters more: the sampling fraction or the absolute sample size?
+> (d) Suppose the agency takes samples from two different cities of very different sizes: City A (population 50,000) and City B (population 2,000,000). Both samples have n = 400. Will the standard error of p̂ be the same for both cities, or will it differ? Explain.
+> (e) What assumption about the sampling process is required for the formulas in (a) to be valid? Name the sampling method and describe what would bias the estimate.
+
+*T6 — Comparison: sampling bias versus sampling variability:*
+
+> A political polling company wants to estimate the proportion of voters who support a proposed infrastructure policy. They conduct two studies:
+>
+> **Study 1 — Random telephone survey:** 600 randomly selected registered voters are contacted. Of these, 180 respond (response rate 30%), and 54% support the policy.
+>
+> **Study 2 — Online opt-in poll:** A link is shared on the company's website. 2,400 people complete the poll, and 62% support the policy.
+>
+> (a) Which study has lower sampling variability (smaller standard error)? Calculate the SE for both studies (use p̂ = 0.54 and p̂ = 0.62 respectively).
+>
+> *Solution:* SE₁ = √(0.54 × 0.46 / 600) ≈ 0.0204. But with only 180 respondents: SE₁ (effective) = √(0.54 × 0.46 / 180) ≈ 0.0372. SE₂ = √(0.62 × 0.38 / 2400) ≈ 0.0099.
+>
+> (b) Which study gives a more reliable estimate of true voter opinion, and why? (The answer is not determined by which has the larger n.)
+> (c) In Study 1, the response rate is 30%. What is this an example of, and in what direction might it bias the estimate if policy supporters are more likely to respond?
+> (d) In Study 2, only people who visit the website and choose to respond are included. Name this type of bias. Would you expect it to systematically over- or under-estimate support for an infrastructure policy?
+> (e) A manager says: "The online study has a much bigger sample, so we should use its results." Write a two-sentence response that distinguishes between sampling variability and sampling bias, and explains why larger n cannot correct for the latter.
+
+*T7 — Real-world translation: design a sampling strategy:*
+
+> A supermarket chain operates 85 stores across three regions: North (25 stores), Midlands (35 stores), South (25 stores). The company wants to estimate mean weekly revenue per store (to within ±€2,000 at 95% confidence), and also to be able to compare revenues across regions. Historical data suggests the SD of weekly revenue across all stores is approximately €18,000, though it is higher in the South (€22,000) due to more variable demand.
+>
+> (a) If the company takes a simple random sample of stores, how many stores must be sampled to achieve the desired margin of error? (Use σ = €18,000 and assume z = 1.96.)
+>
+> *Solution:* n = (z × σ / ME)² = (1.96 × 18,000 / 2,000)² = (17.64)² ≈ 311. Since there are only 85 stores total, n = 85 means a census. The required precision may need to be relaxed, or the margin of error treated as approximately achievable from the full population.
+>
+> (b) The calculation in (a) suggests the company would need to survey most or all stores. What does this tell you about the relationship between the desired precision and the population size?
+> (c) Instead of simple random sampling, the company proposes stratified sampling: sample proportional to the number of stores in each region (25/85, 35/85, 25/85). If the total sample is n = 30 stores, how many would be selected from each region?
+> (d) The company wants to compare revenues across regions as well as estimate the overall mean. For the regional comparison, would simple random or stratified sampling be more appropriate? Why?
+> (e) A store manager says: "Instead of random sampling, we should include the 30 largest stores — they account for the most revenue." What type of bias would this introduce, and how would it affect the estimate of mean revenue per store?
 
 **Pre-class submission (on the course portal):**
 

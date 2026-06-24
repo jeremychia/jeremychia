@@ -32,10 +32,10 @@ These objectives are at the **analysis and evaluation** levels of Bloom's Taxono
 *Rationale:* Chapter 11 is inference-only — it picks up exactly where Chapter 10 (estimating relationships) ended. Students who read §11-2 and §11-3 carefully will arrive able to read a full regression output table with t-statistics and p-values; the session converts that reading into active interpretation practice.
 
 **Videos (~20 minutes total):**
-- [Multiple Regression — StatQuest](https://www.youtube.com/watch?v=EkAQAi3a4js) (12 min) — adding variables and interpreting coefficients
-- [p-values and the t-test in regression — StatQuest](https://www.youtube.com/watch?v=I10q6fjPxJ0) (8 min)
+- [Multiple Regression — StatQuest](https://www.youtube.com/watch?v=EkAQAi3a4js) (12 min) — adding variables and interpreting coefficients. *Active watching: when StatQuest shows that adding a correlated predictor changes the coefficient on an existing predictor, pause and write: why does the slope on variable X change when you add variable Z? This is what T2 tests — the ad spend slope drops from 11.2 to 8.4 when store size is added.*
+- [p-values and the t-test in regression — StatQuest](https://www.youtube.com/watch?v=I10q6fjPxJ0) (8 min). *Active watching: when StatQuest states what the null hypothesis is for a coefficient t-test, pause and write it in your own words. This is T1(a) — the null that p = 0.000 on Ad spend is rejecting.*
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 > **Multiple regression output (Excel):**
 >
@@ -62,9 +62,13 @@ These objectives are at the **analysis and evaluation** levels of Bloom's Taxono
 > **What changed from simple regression (Week 14)?**
 > In Week 14 (simple regression of sales on ad spend only), the slope was 11.2. In this model it is 8.4. The difference arises because ad spend and store size are correlated — larger stores tend to spend more on advertising. The multiple regression partitions the effect, assigning part of what appeared to be "ad spend effect" to store size.
 
+*This worked example is marked optional for students who feel confident reading a regression output table — interpreting each coefficient, its t-statistic and p-value, and the F-test and adjusted R². If you answered T1(a) and (c) without the example, you don't need it. If any of the five output elements (slope, t, p, R², F) felt unclear after the reading, work through the line-by-line interpretation.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
+
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
 *T1 — Reading the output:*
+
+*The coefficient on Ad spend in the worked example (8.4, t = 7.64, p = 0.000) is the template for T1(a): the null is H₀: β_adspend = 0; rejection means ad spend has a statistically significant effect on sales, controlling for the other variables. The StatQuest video's null hypothesis statement is the exact phrasing.*
 > Using the multiple regression output in the worked example:
 >
 > (a) What is the null hypothesis for the t-test on Ad spend? What does rejection (p = 0.000) imply?
@@ -89,6 +93,81 @@ T2 is the confound/omitted variable session's payoff. The experience slope dropp
 > (c) What transformation of Y might help?
 
 T3 introduces heteroskedasticity — the most common OLS violation students will encounter in practice.
+
+*T4 — Boundary case: multicollinearity — what happens when predictors are nearly identical:*
+
+> A researcher builds a multiple regression model to predict employee productivity (units/hour) using two predictors: hours of training completed (X1) and training certification score (X2). Both predictors were collected in the same training programme — employees who spent more hours training also tend to have higher scores.
+>
+> Regression output (n = 80 employees):
+>
+> | | Coefficient | Std Error | t Stat | p-value |
+> |---|---|---|---|---|
+> | Intercept | 12.4 | 2.1 | 5.90 | 0.000 |
+> | Hours (X1) | 0.08 | 0.71 | 0.11 | 0.912 |
+> | Score (X2) | 0.12 | 0.68 | 0.18 | 0.859 |
+>
+> R² = 0.68, Adjusted R² = 0.67, F = 82.4, p(F) = 0.000
+>
+> (a) The F-test is highly significant (p < 0.001), meaning the model as a whole explains a significant amount of variance. Yet neither individual predictor is statistically significant. How can both things be true simultaneously?
+> (b) This is a classic symptom of multicollinearity. What does multicollinearity mean, and what is its likely cause in this specific example?
+> (c) If the researcher drops X2 (score) and runs a simple regression with only X1 (hours), the slope on X1 becomes 0.47 with p = 0.001. Why did the slope and its significance change so dramatically when the collinear variable was removed?
+> (d) The Variance Inflation Factor (VIF) for X1 is 18.3 (any VIF > 10 indicates serious multicollinearity). Interpret what this means for the reliability of the coefficient on X1 in the full model.
+> (e) The researcher considers three solutions: (i) drop one of the correlated predictors; (ii) create a combined score (e.g., average of normalised X1 and X2); (iii) collect more data. For each, state one advantage and one disadvantage.
+
+*T5 — Multi-step: the F-test and what it tests vs what it doesn't:*
+
+> A real estate analyst builds a model to predict apartment prices (€000s) using four predictors: size (m²), distance to city centre (km), number of bedrooms, and floor level. The regression output (n = 120 apartments) gives:
+>
+> R² = 0.74, Adjusted R² = 0.73, F-statistic = 82.4, p-value for F < 0.001
+>
+> Individual p-values: size p = 0.000; distance p = 0.003; bedrooms p = 0.312; floor p = 0.218
+>
+> (a) What is the null hypothesis of the F-test? What does rejecting it imply?
+> (b) The F-test is significant, but two individual predictors (bedrooms and floor) are not. Should the analyst remove them? What does the Adjusted R² criterion say?
+>
+> *Solution:* Compare Adjusted R² with and without the non-significant predictors. If removing them increases Adjusted R², they should be removed. In general, predictors that are not significant and do not meaningfully increase Adjusted R² should be dropped for parsimony.
+>
+> (c) After removing bedrooms and floor from the model, the researcher finds: Adjusted R² = 0.74 (same as before). What does this tell you about the contribution of bedrooms and floor to the model?
+> (d) A journalist reports: "The study found that floor level has no effect on apartment price." Critique this statement. What does a p-value of 0.218 for floor level actually mean?
+> (e) The analyst uses stepwise regression to select variables. A colleague warns: "Stepwise regression can produce models that overfit." Explain what overfitting means in the context of multiple regression, and describe one consequence of overfitting for the model's usefulness on new data.
+
+*T6 — Coefficient sign reversal: a worked example in context:*
+
+> A hospital administrator wants to understand what predicts patient length of stay (days in hospital). She runs the following regressions (n = 500 patients):
+>
+> **Model A (simple regression):** Length of stay = 3.2 + 0.8 × Age. Slope on Age: p = 0.000.
+>
+> **Model B (multiple regression):** Length of stay = 2.1 + 0.3 × Age + 2.4 × Severity. Slope on Age: p = 0.012. Slope on Severity: p = 0.000.
+>
+> **Model C (multiple regression):** Length of stay = 2.0 + 0.3 × Age + 2.3 × Severity − 0.8 × Elective (1 = elective procedure, 0 = emergency). Slope on Age: p = 0.008.
+>
+> (a) In Model A, the age slope is 0.8. In Model B, it drops to 0.3. What does this suggest about the relationship between age and disease severity?
+> (b) Is the administrator wrong to interpret Model A as meaning "older patients stay longer"? What is missing from that statement?
+> (c) In Model C, the slope on Elective is −0.8. Interpret this coefficient carefully, making sure to state what is held constant.
+> (d) The slope on Age did not change much between Models B and C (0.3 → 0.3). What does this tell you about the relationship between age and procedure type (elective vs emergency)?
+> (e) A policy recommendation based on Model A would say "reduce age to reduce length of stay" — which is obviously impossible. What can a hospital actually do with the findings from Model C to reduce mean length of stay?
+
+*T7 — Diagnostic: is this regression output trustworthy?*
+
+> A student submits the following regression output as part of their coursework:
+>
+> Dependent variable: Weekly sales (€)
+> Predictors: Number of customers, Average transaction value (€), Number of customers × Average transaction value
+>
+> | | Coefficient | Std Error | t Stat | p-value |
+> |---|---|---|---|---|
+> | Intercept | 128 | 54 | 2.37 | 0.019 |
+> | Customers | 14.2 | 89.3 | 0.16 | 0.874 |
+> | Avg transaction | 8.7 | 74.1 | 0.12 | 0.907 |
+> | Customers × Avg transaction | 1.02 | 0.003 | 340 | 0.000 |
+>
+> R² = 0.998, Adjusted R² = 0.998, F = 12,451, p < 0.001
+>
+> (a) Note that Sales = Customers × Average Transaction Value is an accounting identity, not a statistical relationship. What does this imply about the regression above?
+> (b) The interaction term (Customers × Avg transaction) has a t-statistic of 340. Is this evidence of a strong relationship, or is it revealing something else?
+> (c) The standard errors on Customers and Average transaction are very large relative to their coefficients (SE ≈ 6× the coefficient), while the interaction term's SE is tiny. What does this pattern suggest about multicollinearity?
+> (d) R² = 0.998 and F is enormous. Should the student conclude this is an excellent regression model? What fundamental modelling error has been made?
+> (e) What would you advise the student to do instead to model the relationship between customer behaviour and sales?
 
 **Pre-class submission (on the course portal):**
 

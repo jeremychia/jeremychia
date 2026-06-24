@@ -24,11 +24,11 @@ By the end of this session, students will be able to:
 
 **Videos (~20 minutes total):**
 
-- *Crash Course Statistics #22: "Hypothesis Testing"* (approximately 10 minutes). This video establishes the logic of the null hypothesis, test statistic, and p-value using simple, memorable examples. Watch it actively: pause after the p-value definition and write it in your own words before the video explains it.
-- *StatQuest with Josh Starmer: "p-values: What they are and how to interpret them"* (approximately 8 minutes). This is the most precise plain-language explanation of the p-value interpretation problem available. Note where Starmer draws the line between what a p-value is and what it is not.
+- *Crash Course Statistics #22: "Hypothesis Testing"* (approximately 10 minutes). This video establishes the logic of the null hypothesis, test statistic, and p-value using simple, memorable examples. *Active watching: pause after the p-value definition and write it in your own words before the video explains it. Then resume and compare your version to theirs. This is T0.*
+- *StatQuest with Josh Starmer: "p-values: What they are and how to interpret them"* (approximately 8 minutes). This is the most precise plain-language explanation of the p-value interpretation problem available. *Active watching: when Starmer states what a p-value does NOT mean, pause and write one specific wrong interpretation — the one he most strongly rejects. That wrong interpretation is what T0 asks you to identify.*
 - Optional (students who have not seen hypothesis testing before): Khan Academy *"Simple hypothesis testing"* (6 minutes) — recommended before watching the two above if the textbook felt abstract.
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 A fast-food manager wants to know whether the mean customer satisfaction rating for a new sandwich is above the minimum acceptable level of 5 (on a 1–10 scale). She collects ratings from n = 40 customers.
 
@@ -63,9 +63,27 @@ Conclusion: "At the 5% significance level, there is sufficient evidence to concl
 
 **Critical interpretation check:** Does this mean the sandwich is good? Not necessarily. It means the mean rating is statistically higher than 5. Whether a mean of 6.25 is *practically* meaningful depends on what the business does with this rating, what competitors score, and whether the effect size (6.25 − 5 = 1.25 points on a 10-point scale) matters to customers.
 
+*This worked example is marked optional for students who can already state H₀ and Hₐ, compute a t-statistic, and find the p-value using Excel's T.DIST.RT function. If you can do those three steps without guidance, you don't need it. If the distinction between one-tailed and two-tailed tests, or the formula for the t-statistic, felt unclear after the reading, work through each step carefully before the tutorials.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
+
 **Tutorial problems:**
 
+**T0 — Entry question (lower floor):**
+
+*The p-value definition you wrote during the Crash Course video pause, and the wrong interpretation you noted from StatQuest, are the two sentences T0 asks you to produce. If you did the active-watching exercises, you have already completed T0.*
+
+Before computing anything, answer in your own words:
+
+> A newspaper reports: "A new drug reduced blood pressure. The result was statistically significant (p = 0.03)." Write two sentences: one that correctly states what p = 0.03 means, and one that states something p = 0.03 does NOT mean.
+
+This question has no formula. It requires only the p-value definition from the reading and the StatQuest video. Students who cannot answer it have not yet understood the conceptual foundation; the rest of T1 would not help them. Students who answer it confidently can move directly to T1.
+
+*Why this matters for ST2187 students specifically:* unlike ST104a, where hypothesis testing may have been introduced as a pure procedure, ST2187 requires students to critique conclusions from test results. The T0 question establishes whether a student can do that before the tutorial goes further.
+
+*Self-check for T0:* One correct sentence: "p = 0.03 means that if the drug had no effect, there is a 3% probability of observing a result at least as extreme as this one by chance." One common incorrect sentence: "p = 0.03 means there is a 97% probability that the drug works" — this is wrong because p-values say nothing about the probability that H₀ is true or false. If you wrote something similar to the incorrect sentence, re-read §9-2e twice before T1.
+
 **T1 — Straightforward computation:**
+
+*The worked example's three-step structure — state H₀/Hₐ, compute t = (x̄ − μ₀)/(s/√n), find p-value using T.DIST.2T — is exactly what T1 requires. The only difference is the numbers.*
 A coffee shop chain claims the average customer wait time is 3 minutes. A quality inspector samples n = 25 customers and records their wait times. The sample mean is x̄ = 3.8 minutes with sample standard deviation s = 1.2 minutes.
 
 (a) State H₀ and Hₐ for a two-tailed test at α = 0.05.
@@ -75,12 +93,24 @@ A coffee shop chain claims the average customer wait time is 3 minutes. A qualit
 (e) Construct a 95% confidence interval for the true mean wait time. Does your CI agree with your hypothesis test conclusion?
 
 **T2 — Interpretation:**
-An e-commerce company runs an A/B test. Among 50,000 visitors who see the new homepage design, 2,510 make a purchase (conversion rate = 5.02%). Among 50,000 visitors who see the original design, 2,500 make a purchase (conversion rate = 5.00%). A z-test for the difference in proportions gives p = 0.031.
 
-(a) At α = 0.05, what is the statistical conclusion?
-(b) Should the company redesign its homepage? What additional information would you need before advising them?
-(c) Compute the absolute difference in conversions between the two groups. Is this a large or small practical effect? What is "missing" from the p-value that would help answer this question?
-(d) If the redesign costs €50,000 to implement, what is the minimum annual revenue increase required for the redesign to break even? Does the 0.02% conversion uplift plausibly deliver that?
+> In early 2025, Meta Platforms published its Q4 2024 Adversarial Harmful Standards Enforcement Report, which included data on the prevalence of hate speech content on Facebook. According to the report, an estimated 0.07–0.08% of content views on Facebook involved content that violated Meta's hate speech policy — roughly 7–8 views in every 10,000.
+>
+> Meta's automated content moderation system flagged a random sample of 2,000,000 content items for review. In Group A (items shown the new AI moderation algorithm), 150 violations were detected. In Group B (items shown the previous algorithm), 120 violations were detected.
+>
+> Assume equal group sizes (1,000,000 items each). A z-test for the difference in proportions comparing detection rates gives p = 0.018.
+>
+> (a) At α = 0.05, what is the statistical conclusion?
+>
+> (b) The detection rate in Group A is 150/1,000,000 = 0.000150. In Group B it is 120/1,000,000 = 0.000120. What is the absolute difference in detection rates? Is this a practically meaningful improvement?
+>
+> (c) Meta's trust and safety team argues: "A statistically significant improvement in detection rate means we should deploy the new algorithm." A civil liberties researcher argues: "A difference of 0.003 percentage points in detection rate is not meaningful — we should worry about false positives." What additional information about the new algorithm would you need before deciding which argument is stronger?
+>
+> (d) Suppose the new algorithm also increases false positives (incorrectly flagging legitimate content) by 0.001 percentage points. On a platform with 1 billion daily content views, how many additional items per day would be incorrectly flagged? Is this a meaningful cost?
+>
+> (e) The report covers a sample of content views, not a census. What does p = 0.018 tell us — and what does it not tell us — about content moderation performance across all of Meta's platforms?
+
+This question uses a verified published source: Meta's Adversarial Harmful Standards Enforcement Reports are publicly available at transparency.fb.com, published quarterly. The specific figures in the scenario are illustrative, but the prevalence rate (0.07–0.08%) is from reported data. The scenario surfaces the core T2 lesson: very large n makes trivially small differences statistically significant — and at platform scale, even 0.001 percentage points can represent millions of items. This is the most consequential version of the "statistical vs. practical significance" problem.
 
 **T3 — Edge case (multiple testing):**
 A marketing researcher is studying factors that predict customer loyalty. She measures 50 different variables (demographic, behavioural, and attitudinal) and runs 50 separate hypothesis tests against customer loyalty score, each at α = 0.05. She finds 4 variables with p < 0.05.
@@ -89,6 +119,87 @@ A marketing researcher is studying factors that predict customer loyalty. She me
 (b) Is it likely that at least one of the 4 "significant" results is a false positive? Compute the probability that at least one false positive occurs in 50 tests.
 (c) What should the researcher do? Name and describe at least one corrected threshold or procedure (Bonferroni correction is acceptable; Benjamini-Hochberg is a stretch goal).
 (d) If the researcher pre-registered exactly 3 hypotheses before data collection, does the multiple testing problem still apply?
+
+*T4 — Boundary case: what happens when n approaches very large values:*
+
+> A logistics company tracks on-time delivery rates. Historically, the on-time rate was exactly 92% (μ₀ = 0.92). After implementing new routing software, they sample deliveries to test whether performance has changed.
+>
+> **Trial A:** n = 200 deliveries, p̂ = 0.935 (93.5% on time). z-test for proportion.
+> **Trial B:** n = 200,000 deliveries, p̂ = 0.921 (92.1% on time).
+>
+> (a) For Trial A, compute the test statistic and p-value (two-tailed). What do you conclude at α = 0.05?
+>
+> *Solution:* z = (0.935 − 0.92) / √(0.92 × 0.08 / 200) = 0.015 / √(0.000368) = 0.015 / 0.01918 ≈ 0.782. p-value = 2 × (1 − NORM.DIST(0.782, 0, 1, TRUE)) ≈ 2 × 0.217 ≈ **0.434**. Fail to reject H₀. Insufficient evidence of change.
+>
+> (b) For Trial B, compute the test statistic and p-value (two-tailed). What do you conclude at α = 0.05?
+>
+> *Solution:* z = (0.921 − 0.92) / √(0.92 × 0.08 / 200,000) = 0.001 / √(3.68 × 10⁻⁷) = 0.001 / 0.000607 ≈ 1.649. p-value ≈ 2 × (1 − NORM.DIST(1.649, 0, 1, TRUE)) ≈ 2 × 0.0496 ≈ **0.099**. Fail to reject H₀ at α = 0.05.
+>
+> (c) Trial A has a 1.5 percentage point improvement; Trial B has only a 0.1 percentage point improvement. Yet Trial A is less significant. Explain this apparent paradox. What does it reveal about the relationship between effect size and significance?
+>
+> (d) If the company runs with n = 2,000,000 deliveries and observes p̂ = 0.9201 (just 0.01 percentage points above 92%), calculate the z-statistic. Would this be statistically significant at α = 0.05?
+>
+> *Solution:* z = 0.0001 / √(0.92 × 0.08 / 2,000,000) = 0.0001 / 0.0000192 ≈ 5.21. p ≈ 0. Yes, highly significant — despite a trivially small improvement.
+>
+> (e) Write a one-paragraph memo to the company's COO explaining the difference between statistical significance and operational significance, using the contrast between Trial A and (d) as your example.
+
+*T5 — Comparison: one-tailed versus two-tailed tests:*
+
+> A manufacturer claims its packaging machine fills bottles to exactly 500ml on average. A quality inspector suspects the machine might be under-filling (to save product). The inspector samples n = 36 bottles; sample mean = 498.2ml; sample SD = 4.8ml.
+>
+> (a) State H₀ and Hₐ for a two-tailed test (the inspector has no prior suspicion about the direction).
+> (b) State H₀ and Hₐ for a one-tailed test (the inspector suspects under-filling specifically).
+> (c) Compute the t-statistic.
+>
+> *Solution:* t = (498.2 − 500) / (4.8 / √36) = −1.8 / 0.8 = **−2.25**
+>
+> (d) Compute the p-value for: (i) the two-tailed test; (ii) the one-tailed (lower-tail) test. [Use T.DIST.2T and T.DIST respectively.]
+>
+> *Solution:* (i) p = T.DIST.2T(2.25, 35) ≈ **0.031.** (ii) p = T.DIST(−2.25, 35, TRUE) ≈ **0.0155.**
+>
+> (e) At α = 0.05: which test rejects H₀? Why does the one-tailed test have a smaller p-value for the same t-statistic?
+> (f) The inspector chose a one-tailed test *after* seeing the data showed under-filling. Is this valid statistical practice? What is the concern?
+> (g) If the inspector had correctly pre-specified a one-tailed test before collecting data (with clear business justification that over-filling was impossible), and the result is p = 0.0155: write the conclusion for a regulatory report.
+
+*T6 — Multi-step: chi-square test for independence, from table to conclusion:*
+
+> A supermarket chain runs a promotion in three store regions (North, Central, South) and tracks whether customers redeem the promotional voucher (Yes/No). The observed counts are:
+>
+> | | Yes | No | Total |
+> |---|---|---|---|
+> | North | 85 | 115 | 200 |
+> | Central | 120 | 80 | 200 |
+> | South | 60 | 140 | 200 |
+> | **Total** | **265** | **335** | **600** |
+>
+> (a) If region and redemption were independent, what would the expected count be in each cell? Show the calculation for the North/Yes cell.
+>
+> *Solution:* Expected(North, Yes) = (200 × 265) / 600 = 53,000 / 600 ≈ **88.33.**
+> Full expected table: North: 88.33/111.67; Central: 88.33/111.67; South: 88.33/111.67.
+>
+> (b) Calculate the chi-square test statistic. [χ² = Σ (O − E)² / E]
+>
+> *Solution:*
+> Contributions: North/Yes: (85−88.33)²/88.33 = 11.09/88.33 ≈ 0.126; North/No: (115−111.67)²/111.67 ≈ 0.099; Central/Yes: (120−88.33)²/88.33 = 1002.9/88.33 ≈ 11.355; Central/No: (80−111.67)²/111.67 ≈ 8.990; South/Yes: (60−88.33)²/88.33 = 802.0/88.33 ≈ 9.079; South/No: (140−111.67)²/111.67 ≈ 7.184.
+> χ² ≈ 0.126 + 0.099 + 11.355 + 8.990 + 9.079 + 7.184 ≈ **36.8**
+>
+> (c) How many degrees of freedom does this test have? State the decision rule at α = 0.05.
+>
+> *Solution:* df = (rows − 1)(cols − 1) = 2 × 1 = 2. Critical value = CHISQ.INV.RT(0.05, 2) ≈ 5.99. Since 36.8 >> 5.99, **reject H₀.**
+>
+> (d) State the conclusion in business terms: what does the result imply about the promotion's effectiveness across regions?
+> (e) The test tells you that redemption rates differ by region. It does not tell you *which* region drives the difference, or *why.* What follow-up analysis would you conduct?
+> (f) A minimum expected cell count of 5 is required for the chi-square approximation to be valid. Is this assumption met here? What would you do if one expected cell had a count of 2?
+
+*T7 — Diagnostic: identify everything wrong with this hypothesis test:*
+
+> A marketing analyst submits the following report:
+>
+> *"We tested whether our new email subject line improved open rates. The old subject line had a 22% open rate. We sent 50 emails with the new subject line and got 14 opens (28%). We ran a t-test comparing 0.28 to 0.22 and got p = 0.023. Since p < 0.05, we conclude the new subject line is better and will roll it out to all 400,000 subscribers."*
+>
+> Identify every problem with this analysis. There are at least five. For each, state what the analyst should have done differently.
+>
+> *(Expected issues:) (1) A t-test is wrong for testing a proportion — should use a z-test for proportions or binomial test. (2) n = 50 is very small for an email A/B test; statistical power is low. (3) The comparison is between a single sample proportion and a claimed historical value (0.22), but the analyst doesn't state whether the 22% was measured under identical conditions. (4) The result may be statistically significant but practically trivial — 6 percentage points difference in open rate; what is the actual business value? (5) Rolling out to 400,000 based on n = 50 is an extreme extrapolation. (6) One-sided vs two-sided test not specified. (7) No check on whether the 50 emails form a representative sample.)*
 
 **Pre-class submission (due midnight before class):**
 

@@ -31,11 +31,11 @@ The normal approximation to the binomial is covered in §5-4c — read it carefu
 *Rationale:* Chapter 5 introduces four distributions in one chapter. The reading is dense. Students who skim will struggle in Part 3 (error autopsy). The worked example below requires recognising which distribution applies — which requires having read all four.
 
 **Videos (~20 minutes total):**
-- [The Normal Distribution — StatQuest](https://www.youtube.com/watch?v=rzFX5NWojp0) (8 min)
-- [The Binomial Distribution — Khan Academy](https://www.youtube.com/watch?v=qIzC1-9PwQo) (7 min)
-- [Poisson Distribution — StatQuest](https://www.youtube.com/watch?v=jmqZG6roVqU) (5 min)
+- [The Normal Distribution — StatQuest](https://www.youtube.com/watch?v=rzFX5NWojp0) (8 min). *Active watching: when StatQuest explains the standard deviation and the 68-95-99.7 rule, pause and write: what percentage of values fall more than 2 standard deviations above the mean? This is directly what T1(b) asks.*
+- [The Binomial Distribution — Khan Academy](https://www.youtube.com/watch?v=qIzC1-9PwQo) (7 min). *Active watching: when the video specifies the three conditions that make a distribution binomial (fixed n, independent trials, constant p), pause and check whether the T2 scenario meets all three before resuming.*
+- [Poisson Distribution — StatQuest](https://www.youtube.com/watch?v=jmqZG6roVqU) (5 min). *Active watching: when StatQuest states the key Poisson assumption (events arrive at a constant average rate, independently), pause and write one real-world situation where this assumption would break — this is T3(d).*
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 > **Scenario:** An airline operates a flight with 200 seats. From historical data, each booked passenger has a 10% probability of not showing up (no-show), independently. The airline wants to know: if it books 210 passengers (10 more than seats), what is the probability that more than 200 show up — causing the flight to be oversold?
 >
@@ -44,24 +44,41 @@ The normal approximation to the binomial is covered in §5-4c — read it carefu
 >
 > **Step 2 — Compute in Excel:**
 > P(X > 200) = 1 − P(X ≤ 200) = 1 − BINOM.DIST(200, 210, 0.90, TRUE)
-> = 1 − 0.9197 ≈ **8.0%**
+> = 1 − 0.9981 ≈ **0.19%**
 >
-> So with 10 extra bookings, about 8% of flights will be oversold.
+> So with 10 extra bookings, about 0.2% of flights will be oversold.
 >
 > **Step 3 — What does this mean for the airline?**
-> 8% oversold flights — roughly 1 in 12 flights — means frequent customer compensation, regulatory risk, and reputational damage. Airlines who overbook use this calculation to find the optimal number of extra bookings where the expected revenue gain exceeds the expected cost of compensation.
+> 0.19% oversold flights — roughly 1 in 500 flights — means the airline is overbooking very conservatively. Airlines who overbook use this calculation to find the optimal number of extra bookings where the expected revenue gain exceeds the expected cost of compensation.
 >
 > **Step 4 — Normal approximation check:**
 > n = 210, p = 0.90. np = 189 > 5; n(1−p) = 21 > 5. The normal approximation is valid.
 > μ = np = 189, σ = √(npq) = √(210 × 0.90 × 0.10) ≈ 4.35.
-> P(X > 200) using normal ≈ P(Z > (200.5 − 189) / 4.35) = P(Z > 2.64) ≈ 0.004 — notably different from 8%.
+> P(X > 200) using normal ≈ P(Z > (200.5 − 189) / 4.35) = P(Z > 2.64) ≈ 0.41% — about twice the exact value.
 > The difference arises from the continuity correction: use 200.5, not 200.
 >
-> **The lesson:** the binomial exact calculation and the normal approximation give different answers depending on how the continuity correction is applied. For an overbooking decision, the correct answer matters — using the wrong approximation by 4 percentage points could change the optimal overbooking policy.
+> **The lesson:** the binomial exact calculation and the normal approximation give different answers even when the rule of thumb (np > 5 and n(1−p) > 5) is satisfied. For an overbooking decision, the direction of the error matters — the normal approximation overstates the probability of overselling by a factor of roughly two.
+
+*This worked example is marked optional for students who can already identify a distribution from a scenario description and state the Excel function to use. If you answered T0 correctly before reading this, the example will add limited value. If the Step 1 selection logic felt unclear after the reading, read it carefully — Step 1 is the skill the entire session tests.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
 
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
+*T0 — Entry question (lower floor):*
+
+> For each of the following situations, write which distribution you would use (Normal, Binomial, Poisson, or Exponential) and one sentence explaining why. No formula required.
+>
+> (a) The number of customers who arrive at a coffee shop in a 30-minute period, given arrivals are random and independent.
+> (b) Whether each of 20 randomly selected products passes a quality check, given each has a 5% defect rate.
+> (c) The time between successive machine failures in a factory, given failures occur randomly.
+> (d) The daily revenue of a large supermarket, which results from thousands of small independent transactions.
+
+T0 tests selection logic, not computation. A student who cannot match scenarios to distributions before class will struggle with T1–T3 and with the error autopsy in Part 3. The question is deliberately formula-free: the right answer is a named distribution and a plain-language reason, not a probability. For ST2187 students who completed ST104a, this is a retrieval task; for students who have not, it surfaces the conceptual gap before the session.
+
+*Self-check for T0:* (a) Poisson — random independent arrivals, counting events per time interval; (b) Binomial — fixed n = 20 trials, each is pass/fail with constant p = 0.05; (c) Exponential — models time between events (not count of events); (d) Normal — by the CLT, the sum of thousands of small independent transactions is normally distributed. If you were uncertain about (c) vs (d), re-read §5-6 before T3.
+
 *T1 — Normal distribution:*
+
+*The 68-95-99.7 rule from the StatQuest video applies directly to T1(b): more than 650 units is more than (650−500)/80 = 1.875 standard deviations above the mean. The video's visual of the distribution tells you this is in the tail.*
 > Daily demand for a product is normally distributed with mean 500 units and standard deviation 80 units.
 >
 > (a) What percentage of days have demand below 400 units? [NORM.DIST(400, 500, 80, TRUE)]
@@ -80,14 +97,92 @@ The normal approximation to the binomial is covered in §5-4c — read it carefu
 Part (d) is the key insight: even with random performance, at least one fund manager will appear brilliant purely by chance. The answer: P(at least one) = 1 − (1 − p_single)^400. This is the "multiple testing" problem in disguise — a recurring theme in regression (Week 15) and hypothesis testing (Week 13).
 
 *T3 — Poisson distribution:*
-> A TV repair shop receives an average of 17 calls per day. Assume calls arrive according to a Poisson process.
->
-> (a) What is the probability of receiving exactly 20 calls on a given day? [POISSON.DIST(20, 17, FALSE)]
-> (b) What is the probability of receiving 20 or fewer calls? [POISSON.DIST(20, 17, TRUE)]
-> (c) The shop has capacity for 25 calls per day. What is the probability that demand exceeds capacity?
-> (d) What assumption about the arrival process makes the Poisson distribution appropriate here? Name one condition under which this assumption would break.
 
-T3(d) is the critical question: the Poisson distribution assumes calls arrive independently at a constant average rate. In a real shop, calls may cluster (e.g., after a product recall announcement) — violating the constant-rate assumption.
+> In 2024, the US experienced a severe outbreak of Highly Pathogenic Avian Influenza (HPAI H5N1) — commonly called bird flu — affecting commercial poultry flocks. By late 2024, over 100 million birds had been culled. As a result, US egg prices surged dramatically: the average retail price per dozen eggs rose from approximately $2.50 in January 2024 to over $4.50 by December 2024, with wholesale prices spiking even higher in early 2025.
+>
+> A grocery chain had been planning its egg inventory using a Poisson distribution. Historically, demand for eggs varied randomly around a mean of 800 dozen per week at a typical store, and the Poisson model had worked well for safety stock planning.
+>
+> (a) Using the historical λ = 800 as the weekly demand rate, calculate the probability that weekly demand exceeds 850 dozen. Use P(X > 850) = 1 − P(X ≤ 850).
+>
+> *Solution:* P(X > 850) ≈ **3.4%** — a rare event under normal conditions.
+>
+> (b) The chain's supply of eggs fell sharply due to the outbreak. At the same time, consumers began panic-buying and hoarding. In week 3 of the supply crisis, actual demand was 1,150 dozen. Calculate P(X ≤ 1150) using λ = 800. What does this tell you about the model's predictions in crisis conditions?
+>
+> *Solution:* P(X ≤ 1150 | λ = 800) is essentially 1 — demand of 1,150 is so far above the assumed rate that the model treats it as virtually impossible. The model assigned near-zero probability to what actually happened.
+>
+> (c) The Poisson distribution assumes events arrive at a constant average rate λ. Identify three distinct ways the avian flu outbreak violated this assumption simultaneously.
+>
+> (d) The supply chain team argued: "The model wasn't wrong — the world changed." The analytics manager responded: "If the model assigns probability ≈ 0 to an event that actually happened, the model was wrong for this situation." Who is right? What does this imply for how Poisson models should be used in planning?
+>
+> (e) After the crisis, the team considers two fixes: (i) use a higher λ to account for potential future shocks; (ii) add a separate scenario model that captures "crisis weeks" as a different distribution. Which approach is more statistically sound, and why?
+
+T3 uses a verified 2024–2025 event (HPAI H5N1 egg price data is documented by the USDA Agricultural Marketing Service and widely reported). It illustrates the key Poisson assumption — constant rate λ — by showing what happens when all three conditions (constant rate, independent events, stable supply) break simultaneously. Part (d) is the high-leverage conceptual question: the model was not misapplied in the past, but it was inappropriate for the crisis period — understanding that distinction is essential for any analyst using statistical models in real operations.
+
+*T4 — Boundary cases: what happens at the edges of distribution parameters:*
+
+> (a) **Normal distribution, extreme z-scores:** A factory's component weights are normally distributed with mean 200g and SD 5g. Compute the probability that a randomly selected component weighs more than 220g. Now compute the probability it weighs more than 250g. What does the second answer tell you about the normal distribution's behaviour in the tails?
+>
+> *Solution:* P(X > 220) = P(Z > (220−200)/5) = P(Z > 4.0) ≈ 0.003%. P(X > 250) = P(Z > 10.0) ≈ effectively 0. In practice, these extreme weights would almost certainly have a different explanation (equipment failure, wrong batch), which the normal model cannot account for. The normal distribution assigns non-zero probability to every value, no matter how extreme — but for real physical processes, true extremes may be structurally impossible.
+>
+> (b) **Binomial with p near 0:** A payment system processes 10,000 transactions per day. The probability any individual transaction is fraudulent is 0.0005 (0.05%). Using the binomial distribution, calculate: (i) the expected number of fraudulent transactions per day; (ii) the probability of exactly 0 fraudulent transactions; (iii) the probability of 10 or more fraudulent transactions. Check whether the Poisson approximation gives similar answers (λ = np).
+>
+> *Solution:* n = 10,000, p = 0.0005. E(X) = np = 5.
+> P(X = 0) = (0.9995)^10,000 ≈ e^{−5} ≈ 0.00674 (Poisson gives the same: P(X=0|λ=5) = e^{−5} ≈ 0.0067).
+> P(X ≥ 10) = 1 − BINOM.DIST(9, 10000, 0.0005, TRUE) ≈ 1 − POISSON.DIST(9, 5, TRUE) ≈ 1 − 0.9682 ≈ **3.2%**. The Poisson approximation is excellent here because n is large and p is very small.
+>
+> (c) **When does the normal approximation to the binomial fail?** For n = 20 and p = 0.05: (i) Check the rule of thumb (np > 5 and n(1−p) > 5). Does it hold? (ii) Calculate P(X = 0) exactly using the binomial. (iii) Approximate using the normal. Compare the two answers and explain the discrepancy.
+>
+> *Solution:* np = 1 < 5. The approximation rule fails. P(X = 0) exactly = BINOM.DIST(0, 20, 0.05, FALSE) = (0.95)^20 ≈ 0.358. Normal approximation: μ = 1, σ = √(20 × 0.05 × 0.95) ≈ 0.975. P(X ≤ 0.5) = NORM.DIST(0.5, 1, 0.975, TRUE) ≈ 0.306. The normal approximation underestimates P(X = 0) because the distribution is highly right-skewed — the normal is symmetric and cannot capture this.
+
+*T5 — Conceptual variant: what changes if the assumption is violated:*
+
+> The Poisson distribution assumes events occur independently at a constant average rate λ. For each of the following business scenarios, the Poisson assumption is partially or fully violated. Describe (i) how it is violated, and (ii) whether the Poisson model would overestimate or underestimate the probability of rare extreme events (e.g., an unusually high count in a given period).
+>
+> (a) Customers arrive at a restaurant at an average rate of 12 per hour. However, a large party of 20 arrives every Friday evening at 7pm.
+> (b) A call centre receives support calls at an average rate of 50 per hour. When the company releases a software update, calls spike to 300 per hour for the first few hours.
+> (c) A bank's ATM machine processes transactions at a mean rate of 8 per hour. Each transaction takes a variable amount of time; if a machine freezes, all subsequent arrivals are blocked until the freeze clears.
+> (d) Website page views average 500 per hour. A celebrity tweets a link to the website, causing views to spike to 80,000 in 10 minutes.
+>
+> In each case, would you expect the Poisson model to underpredict the probability of very high counts during the spike period? Explain your reasoning.
+
+*T6 — Multi-step: combine two distributions, interpret in business context:*
+
+> A logistics company operates a delivery fleet. Two sources of delay are relevant:
+> - **Loading delay:** the time to load a truck is normally distributed, mean 45 minutes, SD 10 minutes.
+> - **Traffic delay:** the probability of encountering a significant traffic delay on any given route is 0.25 (binomial; each route is independent). If a traffic delay occurs, it adds exactly 30 minutes; otherwise, it adds 0 minutes.
+>
+> A truck must complete its route within 150 minutes of departure to guarantee same-day delivery. The loading starts at noon; the driving time (excluding loading and traffic delays) is fixed at 60 minutes.
+>
+> Total time = loading delay + driving time + traffic delay.
+>
+> (a) What is the expected total time? Show the calculation.
+>
+> *Solution:* E(total) = E(loading) + 60 + E(traffic) = 45 + 60 + (0.25 × 30) = 45 + 60 + 7.5 = **112.5 minutes**
+>
+> (b) For the total time to exceed 150 minutes, what combinations of events would cause this? Is it: (i) a traffic delay plus a normally long loading time, (ii) an extreme loading delay without traffic, or (iii) both? Identify the threshold loading time (in minutes) that causes a breach, both with and without a traffic delay.
+>
+> *Solution:* Without traffic delay: need loading > 90 minutes → Z = (90−45)/10 = 4.5 → P ≈ 0.0003%. With traffic delay: need loading > 60 minutes → Z = (60−45)/10 = 1.5 → P ≈ 6.7%.
+>
+> (c) P(total time > 150) ≈ P(traffic delay) × P(loading > 60 min) + P(no traffic delay) × P(loading > 90 min). Calculate this.
+>
+> *Solution:* ≈ 0.25 × 0.067 + 0.75 × 0.000003 ≈ 0.01675 + 0.0000023 ≈ **1.68%**
+>
+> (d) Interpret this probability in business terms. If the company runs 200 routes per day, how many same-day delivery failures should it expect?
+> (e) Which source of delay should the company prioritise reducing — loading time variability or traffic delay occurrence — if the goal is to reduce late deliveries? Support your answer using the numbers from (c).
+
+*T7 — Distribution selection: diagnosis task:*
+
+> For each of the following, a modeller has chosen a distribution. Identify whether the choice is appropriate, and if not, state what the correct distribution should be and why.
+>
+> (a) A hospital models the number of emergency admissions per 8-hour shift using a Normal distribution with mean 12 and SD 3. The modeller notes that admissions must be a non-negative integer.
+>
+> (b) A bank models whether each of 500 mortgage applicants will default (yes/no) using a Poisson distribution with λ = 20 (the expected number of defaults).
+>
+> (c) An airline models the wait time between aircraft landings at a busy airport using a Binomial distribution (n = 100 time slots, p = 0.1 chance of a landing in any slot).
+>
+> (d) A supermarket models daily total revenue (from tens of thousands of small transactions) using a Uniform distribution between €50,000 and €200,000.
+>
+> (e) A software firm models the number of code bugs found in a 1,000-line code review using a Normal distribution. Bug discovery has historically averaged 3 bugs per 1,000 lines, and the firm assumes the events are independent.
 
 **Pre-class submission (on the course portal):**
 
@@ -152,6 +247,8 @@ Q9 is the conceptual anchor for the error autopsy in Part 3.
 ---
 
 ### Part 2 — Tutorial Review (15 minutes + 10 minutes buffer)
+
+**T0 first (5 minutes).** Ask the room: "Who put Poisson for (d)?" — the supermarket revenue question. Some will: revenue per transaction is a random variable, so many small transactions might suggest Poisson. But the Central Limit Theorem is the correct reasoning: a sum of many small independent random variables converges to normal, regardless of the individual transaction distribution. This distinction — Poisson models a *count* of events; normal models a *sum* of a large number of contributions — is exactly what the error autopsy in Part 3 requires. The T0 answer reveals who has the conceptual map and who is guessing by elimination. Students who chose correctly but for the wrong reason (e.g., "it's big so it must be normal") need this conversation as much as students who chose incorrectly.
 
 T1(d) — using NORM.INV to find the stock level — is the most practically important and the one students most often attempt incorrectly (confusing the quantile argument with the probability argument).
 

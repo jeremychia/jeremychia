@@ -29,14 +29,14 @@ The simulation sections (§4-4–4-5) are covered in Week 18 (Monte Carlo). §4-
 *Rationale:* Chapter 4 is the conceptual core that Weeks 5, 10, 11, and 12 all depend on. The sections above cover all the material needed for this session. Reading further this week reduces the returns — the later sections require the foundation established here.
 
 **Videos (~20 minutes total):**
-- [Bayes' Theorem — 3Blue1Brown](https://www.youtube.com/watch?v=HZGCoVF3YvM) — visual intuition for Bayesian updating (12 min)
-- [Expected Value — StatQuest](https://www.youtube.com/watch?v=KLs_7b7SKi4) — discrete random variables and expected value (8 min)
+- [Bayes' Theorem — 3Blue1Brown](https://www.youtube.com/watch?v=HZGCoVF3YvM) — visual intuition for Bayesian updating (12 min). *Active watching: at the moment the video introduces the frequency tree (visualising 10,000 people rather than abstract probabilities), pause and sketch the tree on paper before the video draws it. The tree you sketch is the same structure T3 asks you to build.* This video is important — the visual frequency-tree approach produces more durable understanding of Bayes' rule than the algebraic formula alone.
+- [Expected Value — StatQuest](https://www.youtube.com/watch?v=KLs_7b7SKi4) — discrete random variables and expected value (8 min). *Active watching: when StatQuest introduces the expected value formula, pause and write: what does "weighted average" mean here — what are you weighting by? This is the calculation in T2(a).*
 
-The 3Blue1Brown video is important. Bayes' rule is algebraically simple but counterintuitive. The visual frequency-tree approach in the video is more likely to produce durable understanding than the formula alone.
+**Worked example (read this before attempting the tutorial problems):**
 
-**Worked example (attempt T1–T3 first, then read this):**
+Read this carefully and annotate the frequency tree in Step 2 — label each branch with the probability and the count. The tree structure is what T3 asks you to build from scratch, so seeing a worked one first is the preparation.
 
-Read this *after* completing the tutorial problems. It models the reasoning chain for the structured controversy in Part 3.
+*This worked example is marked optional for students who already understand the frequency tree and can build one from a probability description. If you can draw the tree for T3(a) without any template, you don't need this. If the relationship between sensitivity, specificity, and predictive value felt abstract after the reading, read this carefully before T3.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
 
 > **Scenario:** A factory produces electronic components. 2% of components are defective. A quality control test correctly identifies 90% of defective components (sensitivity = 90%) and incorrectly flags 5% of good components as defective (false positive rate = 5%).
 >
@@ -68,6 +68,8 @@ Read this *after* completing the tutorial problems. It models the reasoning chai
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
 *T1 — Basic probability rules:*
+
+*The frequency tree in the worked example is the same structure you need for T3. The expected value formula from the StatQuest video maps directly onto T2(a). If the difference between "and" and "given" probabilities felt unclear from the reading, re-read §4-2 before T1(b) and (c).*
 > A card is drawn from a standard 52-card deck.
 >
 > (a) What is the probability of drawing a heart?
@@ -77,28 +79,141 @@ Read this *after* completing the tutorial problems. It models the reasoning chai
 
 Parts (a)–(c) are mechanical. Part (d) is conceptual and requires students to correctly identify that sampling without replacement creates dependence — a common error in later inference questions.
 
-*T2 — Expected value:*
-> A business can invest in one of two projects.
->
-> **Project A:** 60% chance of earning €80,000; 40% chance of losing €20,000.
-> **Project B:** 30% chance of earning €200,000; 70% chance of breaking even (€0).
->
-> (a) Calculate the expected value of each project.
-> (b) Which project has higher expected value? Which has higher variance? (Calculate both.)
-> (c) A risk-averse investor chooses Project A. Is this irrational?
-> (d) What additional information would you want before making a real investment recommendation?
+*Self-check for T1(a)–(c):* T1(a): 13/52 = 1/4. T1(b): P(king or heart) = 4/52 + 13/52 − 1/52 = 16/52 = 4/13. T1(c): P(both hearts) = 13/52 × 12/51 = 156/2652 ≈ 0.059. If any of these differ significantly from your answer, re-read §4-2 on the addition and multiplication rules before continuing.
 
-Part (c) is the key question: expected value maximisation is not always rational — it ignores risk. Part (d) is the bridge to Week 10 (decision trees) and Week 18 (simulation): in practice, you need the full probability distribution, not just the mean.
+*T2 — Expected value:*
+
+> In April 2025, the US government announced sweeping tariff increases, including a 145% tariff on goods imported from China. A European electronics manufacturer sources key components from two suppliers and must decide on its sourcing strategy before the tariff picture stabilises.
+>
+> **Strategy A — Stick with China supplier:** If tariffs are resolved within 12 months (probability 0.55), the company avoids costly switching and earns an estimated €120,000 profit margin. If tariffs persist or escalate (probability 0.45), the company faces a €60,000 loss from higher import costs and lost contracts.
+>
+> **Strategy B — Switch to Vietnam supplier (higher cost, outside tariff scope):** Incurs a €30,000 switching cost regardless of what happens. If tariffs resolve (probability 0.55), the company has over-paid and earns €20,000 profit (net of switching cost). If tariffs persist (probability 0.45), the strategy pays off and earns €80,000 profit (net of switching cost).
+>
+> (a) Calculate the expected value of each strategy.
+>
+> (b) Which strategy has the higher expected value?
+>
+> (c) The CFO says: "Strategy A has higher expected value but Strategy B has the better downside." What does she mean, and why might a firm prefer the lower-EV option?
+>
+> (d) The probability estimates (0.55 / 0.45) were assigned by a trade policy analyst in April 2025. How sensitive is your EV calculation to this probability? At what probability of tariff resolution would the two strategies have equal expected value? (Set EV(A) = EV(B) and solve for p.)
+>
+> (e) What additional information would you want before making this decision — beyond the probability and payoff estimates given?
+
+This scenario uses a verified 2025 event (US tariff announcements April 2025, widely reported by Reuters, FT, Bloomberg) as the framing, with illustrative numbers. Part (d) is the bridge to Week 10 (decision trees) and Week 18 (simulation): in practice, you need the full probability distribution, not just the mean. Part (c) sets up the risk aversion discussion — expected value maximisation is not always rational.
 
 *T3 — Conditional probability / Bayes:*
-> A medical study finds that 1% of people in a population have a rare disease. A diagnostic test has 95% sensitivity (true positive rate) and 90% specificity (true negative rate, i.e., 10% false positive rate).
->
-> (a) Draw a frequency tree for 100,000 people.
-> (b) If a person tests positive, what is the probability they actually have the disease?
-> (c) If a person tests negative, what is the probability they are disease-free?
-> (d) A policy-maker says "the test is 95% accurate — we should use it for mass screening." Critique this statement.
 
-T3 is the high-difficulty question and the core of the structured controversy in Part 3. Students who attempt this correctly are ready for the nuanced debate. Students who don't will be brought there by the class discussion.
+> During the COVID-19 pandemic, lateral flow antigen tests (LFTs) were widely used for self-testing. A typical LFT had:
+>
+> - Sensitivity: approximately 70% (true positive rate — correctly detects COVID when present)
+> - Specificity: approximately 99% (true negative rate — correctly clears someone without COVID)
+>
+> In January 2022, during the Omicron wave in the UK, the test positivity rate in the general population was approximately 10% — meaning roughly 1 in 10 people tested actually had COVID.
+>
+> (a) Draw a frequency tree for 100,000 people tested at this 10% prevalence. Label every branch with a number.
+>
+> (b) A person tests positive on an LFT. What is the probability they actually have COVID?
+>
+> (c) A person tests negative on an LFT. What is the probability they do not have COVID?
+>
+> (d) The UK government's public health messaging said: "If you test positive on an LFT, you have COVID." Based on your calculation in (b), was this messaging accurate?
+>
+> (e) Now consider a different moment: April 2022, when UK test positivity had fallen to roughly 2%. Recalculate P(COVID | positive) at this lower prevalence. What changed, and why?
+>
+> (f) A friend says: "I tested negative twice in a row — I definitely don't have COVID." Use your answer to (c) to assess this claim. What assumption must hold for two negative tests to be informative in this way?
+
+This question uses verified data: the UK Omicron wave positivity rate of ~10% in January 2022 is documented by the UK Health Security Agency (UKHSA weekly reports); LFT sensitivity estimates of ~70% and specificity ~99% are from UKHSA validation studies (2021). Most students in the class will have personal experience using LFTs and receiving test results during the pandemic — this converts a Bayesian calculation into a retrospective explanation of something that happened to them. T3 is the high-difficulty question and the core of the structured controversy in Part 3. Students who attempt this correctly are ready for the nuanced debate. Students who don't will be brought there by the class discussion.
+
+*T4 — Boundary case: base rate near zero or one:*
+
+> Two medical screening programmes are being evaluated. In both cases the test has sensitivity 90% and specificity 95%.
+>
+> **Programme A:** screening for a condition affecting 0.1% of the population.
+> **Programme B:** screening for a condition affecting 30% of the population.
+>
+> (a) For Programme A, build a frequency tree using 100,000 people. Calculate P(disease | positive test). State your answer clearly.
+>
+> *Solution:*
+> 100,000 people. Diseased: 0.001 × 100,000 = 100. Healthy: 99,900.
+> True positives: 0.90 × 100 = 90. False negatives: 10.
+> False positives: 0.05 × 99,900 = 4,995. True negatives: 94,905.
+> Total positive tests: 90 + 4,995 = 5,085.
+> P(disease | positive) = 90 / 5,085 ≈ **1.8%**
+>
+> (b) Repeat for Programme B (disease prevalence = 30%).
+>
+> *Solution:*
+> Diseased: 0.30 × 100,000 = 30,000. Healthy: 70,000.
+> True positives: 0.90 × 30,000 = 27,000. False positives: 0.05 × 70,000 = 3,500.
+> Total positive tests: 30,500.
+> P(disease | positive) = 27,000 / 30,500 ≈ **88.5%**
+>
+> (c) The test specifications are identical in both programmes. Explain in one sentence why the predictive value differs so dramatically.
+> (d) A government official says: "Our test is 90% sensitive — that's good enough to screen the entire population." Using Programme A's numbers, explain why this statement is misleading and what the phrase "90% sensitive" does and does not mean.
+> (e) At what disease prevalence would P(disease | positive) first exceed 50%, for a test with these sensitivity and specificity values? (You may iterate or solve algebraically: set P(disease | positive) = 0.5 and solve for p.)
+>
+> *Algebraic solution:* P(D|+) = 0.9p / [0.9p + 0.05(1−p)] = 0.5. Solving: 0.9p = 0.5[0.9p + 0.05 − 0.05p] = 0.45p + 0.025 − 0.025p = 0.425p + 0.025. So 0.475p = 0.025, giving p ≈ **5.3%**. A prevalence above roughly 5.3% is needed before a positive result is more likely than not to be a true positive.
+
+*T5 — Comparison: expected value versus expected utility:*
+
+> A startup founder must choose between two financing options:
+>
+> **Option A:** Take a loan. With probability 0.70 the business succeeds and she keeps profit of €400,000; with probability 0.30 the business fails and she loses €150,000 (personal liability on the loan).
+>
+> **Option B:** Accept equity investment. With probability 0.70 the business succeeds and she keeps profit of €160,000 (investor takes 60% of upside); with probability 0.30 the business fails and she loses €0 (no personal liability).
+>
+> (a) Calculate the expected value of each option.
+>
+> *Solution:*
+> EV(A) = 0.70 × 400,000 + 0.30 × (−150,000) = 280,000 − 45,000 = **€235,000**
+> EV(B) = 0.70 × 160,000 + 0.30 × 0 = **€112,000**
+>
+> (b) Based solely on expected value, which option is better? Which option would most people choose, and why might they prefer it despite its lower expected value?
+> (c) The founder has total personal assets of €120,000. If she chooses Option A and the business fails, she loses €150,000 — more than she owns. How does this change the rational analysis of the decision?
+> (d) Option B has lower expected value because the investor takes 60% of success. Calculate the minimum probability of success at which Option A's expected value exceeds Option B's. (Hint: set EV(A) = EV(B) and solve for p.)
+>
+> *Solution:* p × 400,000 + (1−p) × (−150,000) = p × 160,000. 400,000p − 150,000 + 150,000p = 160,000p. 390,000p = 150,000. p = 150/390 ≈ **0.385**. For success probability above about 38.5%, Option A has higher expected value.
+>
+> (e) What additional information would you want before making this decision — beyond the probabilities and payoffs given?
+
+*T6 — Multi-step reasoning: sequential probability and Bayesian updating:*
+
+> An online retailer uses two independent fraud detection algorithms. Algorithm 1 has a 80% true positive rate and a 15% false positive rate. Algorithm 2 has a 70% true positive rate and a 10% false positive rate. The base rate of fraudulent transactions is 2%.
+>
+> (a) A transaction is flagged by Algorithm 1 only. Using a frequency tree (out of 100,000 transactions), compute P(fraud | flagged by Algorithm 1).
+>
+> *Solution:*
+> Fraud: 0.02 × 100,000 = 2,000. Not fraud: 98,000.
+> Algorithm 1 flags: 0.80 × 2,000 = 1,600 true positives; 0.15 × 98,000 = 14,700 false positives.
+> Total flags = 16,300.
+> P(fraud | flagged by Alg 1) = 1,600 / 16,300 ≈ **9.8%**
+>
+> (b) Among the transactions flagged by Algorithm 1, what is the new "base rate" of fraud? (Your answer from part a is the posterior from step (a).)
+> (c) Now apply Algorithm 2 to the transactions already flagged by Algorithm 1. Using the posterior from (b) as the new prior, compute P(fraud | flagged by both algorithms).
+>
+> *Solution using sequential Bayes with prior ≈ 9.8%:*
+> Per 10,000 flagged-by-Alg1 transactions: fraud = 980, not-fraud = 9,020.
+> Algorithm 2 flags: 0.70 × 980 = 686 true positives; 0.10 × 9,020 = 902 false positives.
+> Total flagged by both: 1,588.
+> P(fraud | both flag) = 686 / 1,588 ≈ **43.2%**
+>
+> (d) Interpret the progression from 2% → 9.8% → 43.2%. What is the business implication for how fraud teams should prioritise their manual review workload?
+> (e) The two algorithms are described as "independent." What would it mean in practice for them to not be independent — and what would that imply for part (c)?
+
+*T7 — Diagnostic: find the probability error:*
+
+> A regional manager presents the following analysis to the board:
+>
+> *"Last quarter, 15% of our customers churned. Our retention programme reaches 40% of customers. Among programme participants, churn rate was 8%; among non-participants, churn rate was 20%. Therefore, the programme reduces churn by 12 percentage points. We recommend expanding it."*
+>
+> (a) Check the internal consistency of the numbers. If 40% participate and 60% don't, what is the expected overall churn rate, given the stated churn rates within each group?
+>
+> *Solution:* Expected overall churn = 0.40 × 8% + 0.60 × 20% = 3.2% + 12% = 15.2% ≈ 15%. Consistent.
+>
+> (b) The manager concludes the programme "reduces churn by 12 percentage points" — the difference between 8% and 20%. Is this a valid causal interpretation? What selection bias problem might explain the difference in churn rates even without any programme effect?
+> (c) Suppose customers who are most loyal (and least likely to churn anyway) are also most likely to sign up for the retention programme. How does this affect the analysis?
+> (d) What data would you need to establish whether the 12-percentage-point difference is genuinely causal?
+> (e) Even if the programme does reduce churn by 12 percentage points, the board still needs to know whether the programme is profitable. What additional information would you request before endorsing the expansion?
 
 **Pre-class submission (on the course portal):**
 
@@ -172,26 +287,26 @@ The 10-minute buffer: use it on T2(c) if the risk aversion discussion is product
 
 ### Part 3 — Structured Controversy (25 minutes)
 
-**Setup:** the class divides into two groups of 6–7. Both groups receive the same scenario:
+**Setup:** the class divides into two groups of 6–7. Both groups receive the same scenario, which extends T3 from the pre-work:
 
-> **Scenario:** A government health department is considering rolling out a mass screening programme for a rare condition (prevalence: 0.5% of the population). The test has 95% sensitivity and 92% specificity.
+> **Scenario:** It is January 2022. The UK government is advising the public to use lateral flow tests (LFTs) to determine whether they need to self-isolate. The test has ~70% sensitivity and ~99% specificity. Test positivity in the general population is approximately 10%.
 >
-> A policy adviser says: "This test is 93.5% accurate on average. We should roll it out immediately — it will save lives."
+> A public health official says: "If you test positive on an LFT, isolate immediately. We're confident in the test."
 >
-> **Group A argues: the mass screening programme is justified.**
-> **Group B argues: the mass screening programme needs more scrutiny before rollout.**
+> **Group A argues: the LFT-based isolation policy is justified given the circumstances.**
+> **Group B argues: the policy was problematic and the public health messaging was misleading.**
 
 Each group has 10 minutes to prepare their argument. They must use at least one probability calculation to support their position.
 
 After 10 minutes, each group has 3 minutes to present. Then 5 minutes of open debate. Then 2 minutes for the instructor to name what both sides got right.
 
 **What both sides should find:**
-- The positive predictive value: P(disease | positive) = (0.95 × 0.005) / [(0.95 × 0.005) + (0.08 × 0.995)] ≈ 5.6%
-- The negative predictive value: P(no disease | negative) ≈ 99.97%
-- Group A's strongest argument: the test almost perfectly rules out the disease (high NPV) — it's excellent for reassurance
-- Group B's strongest argument: 94.4% of positive results are false positives — rollout will produce mass anxiety, unnecessary follow-up procedures, and stigma, for a condition only 0.5% of people have
+- P(COVID | positive test) at 10% prevalence: (0.70 × 0.10) / [(0.70 × 0.10) + (0.01 × 0.90)] = 0.07 / (0.07 + 0.009) ≈ **88.6%** — a positive at high prevalence is a strong signal
+- P(COVID | positive test) at 2% prevalence: (0.70 × 0.02) / [(0.70 × 0.02) + (0.01 × 0.98)] = 0.014 / (0.014 + 0.0098) ≈ **58.8%** — at lower prevalence, a positive is much weaker evidence
+- Group A's strongest argument: at 10% population positivity, a positive LFT is genuinely informative (PPV ~89%) — the policy was appropriate for that moment
+- Group B's strongest argument: the messaging "if you test positive, you have COVID" was never accurate at any prevalence; and the sensitivity of 70% means 30% of true cases received false negatives, potentially creating false reassurance
 
-The correct outcome is not "B wins" — it's that both arguments are mathematically grounded, and the policy decision depends on values (what is the cost of a false positive vs. a missed case?) as much as numbers.
+The correct outcome is not "B wins" — it's that both arguments are mathematically grounded, the policy was more defensible in January (10% prevalence) than in April (2%), and the messaging problem was separate from the testing problem. Base rate matters enormously.
 
 **Why controversy format:** structured controversy (Johnson & Johnson, 1988) consistently produces deeper understanding than lecture or individual problem-solving on material where reasonable people disagree. Probability and Bayes' rule are precisely this kind of material — the mathematics is unambiguous, but how to act on the result is genuinely contested.
 
@@ -241,8 +356,8 @@ Peer response required: one comment that engages with the probability calculatio
 
 | Design choice | Pedagogical grounding |
 |---|---|
-| Worked example uses factory defect scenario, distinct from tutorial medical scenario | Kalyuga et al. (2003): expertise reversal — different examples for pre-work and in-class prevents pattern-matching that bypasses reasoning; each domain applies the same concept differently |
-| Frequency tree approach emphasised alongside formula | 3Blue1Brown (2019) visual approach; Gigerenzen & Hoffrage (1995) showed that natural frequencies reduce Bayes' rule errors more than probability notation for non-experts; both representations required |
+| Worked example placed before tutorials, marked optional; uses factory defect scenario distinct from tutorial medical scenario | Rosenshine (2012): worked example before independent practice — students need a frequency tree template before building one from scratch in T3. Kalyuga et al. (2003): marked optional for students who can already build a frequency tree; using a different domain (factory vs medical) prevents pattern-matching that bypasses reasoning. Active-watching video prompts ensure the 3Blue1Brown frequency tree and StatQuest EV formula are retrieval moments, not passive viewing. |
+| Frequency tree approach emphasised alongside formula | 3Blue1Brown (2019) visual approach; Gigerenzer & Hoffrage (1995) showed that natural frequencies reduce Bayes' rule errors more than probability notation for non-experts; both representations required |
 | T3 held back for Part 3 structured controversy | T3(d) is a debate prompt disguised as a calculation question; surfacing it in context of structured argument produces richer engagement than a short individual answer |
 | Structured controversy format for probability/Bayes content | Johnson & Johnson (1988): structured controversy produces deeper understanding than lecture; probability and Bayes' rule are the statistics topics most likely to produce genuine disagreement even among people who've done the calculation correctly |
 | Q9 (relative vs. absolute risk reduction) as hardest quiz question | This distinction is one of the most consequential probability misrepresentations in public health and corporate communications; spotting it at Week 4 sets a standard the course maintains through Week 15 |
@@ -316,7 +431,7 @@ Risk aversion is a utility theory concept — the correct treatment requires a u
 - Black, P. & Wiliam, D. (1998). Assessment and classroom learning. *Assessment in Education*, 5(1), 7–74.
 - Cepeda, N.J., Pashler, H., Vul, E., Wixted, J.T. & Rohrer, D. (2006). Distributed practice in verbal recall tasks. *Psychological Bulletin*, 132(3), 354–380.
 - Farmus, L., Cribbie, R.A. & Rotondi, M. (2020). The flipped classroom in introductory statistics. *Journal of Statistics Education*, 28(3). DOI: [10.1080/10691898.2020.1834475](https://doi.org/10.1080/10691898.2020.1834475)
-- Gigerenzen, G. & Hoffrage, U. (1995). How to improve Bayesian reasoning without instruction. *Psychological Review*, 102(4), 684–704.
+- Gigerenzer, G. & Hoffrage, U. (1995). How to improve Bayesian reasoning without instruction. *Psychological Review*, 102(4), 684–704.
 - Johnson, D.W. & Johnson, R.T. (1988). Critical thinking through structured controversy. *Educational Leadership*, 45(8), 58–64.
 - Kalyuga, S., Ayres, P., Chandler, P. & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38(1). DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4)
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.

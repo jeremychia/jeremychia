@@ -33,10 +33,10 @@ The two-sample CI sections (§8-7 and §8-8, pp. 335–344) are in scope for the
 *Rationale:* Chapter 8 is formula-heavy. The formulas must be in place before the session, because in-class time is for interpretation and application, not transcription. Students who arrive without having computed at least T1 and T2 will lose the pair-work benefit.
 
 **Videos (~20 minutes total):**
-- [Confidence Intervals — StatQuest](https://www.youtube.com/watch?v=TqOeMYtOc1w) (12 min) — builds from CLT to CI
-- [t-Distribution vs z-Distribution — StatQuest](https://www.youtube.com/watch?v=T0xRanwAIiI) (8 min) — when to use which
+- [Confidence Intervals — StatQuest](https://www.youtube.com/watch?v=TqOeMYtOc1w) (12 min) — builds from CLT to CI. *Active watching: when StatQuest explains what "95% confident" actually means — the sampling procedure, not the probability that the true mean is inside one specific interval — pause and write the correct interpretation in your own words before the video continues. This is the single most tested concept in Week 12 and the exact question T5 asks.*
+- [t-Distribution vs z-Distribution — StatQuest](https://www.youtube.com/watch?v=T0xRanwAIiI) (8 min) — when to use which. *Active watching: when the video explains why we use t instead of z when σ is unknown and n is small, pause and note: what would go wrong if you used z anyway? This reasoning tells you when to apply T.INV.2T vs NORM.INV in T1 and T2.*
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 > **Scenario:** A courier company times 25 randomly selected deliveries. The sample mean is 43 minutes; the sample standard deviation is 8 minutes. The population distribution of delivery times is approximately normal. Construct a 95% confidence interval for the mean delivery time.
 >
@@ -57,9 +57,27 @@ The two-sample CI sections (§8-7 and §8-8, pp. 335–344) are in scope for the
 > If the company wants the margin of error to be at most 2 minutes (and they still believe σ ≈ 8), how large a sample do they need?
 > n = (z × σ / B)² = (1.96 × 8 / 2)² = (7.84)² = 61.5 → **n = 62**
 
+*This worked example is marked optional for students who feel confident constructing a t-interval from a sample mean and SD and can state the correct interpretation of a CI without prompting. If you already wrote the correct interpretation (from the StatQuest video pause exercise) before reading this, you don't need it. If the "wrong interpretation" in Step 3 surprised you — if you would have written that sentence yourself — read the worked example carefully.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
+
 **Tutorial problems (submitted before class, reviewed in Part 2):**
 
+*T0 — Entry question (lower floor):*
+
+> A polling company surveys 500 randomly selected voters and finds that 47% support a proposed policy. The company reports: "The margin of error is ±4 percentage points at 95% confidence."
+>
+> (a) Write the confidence interval in the form (lower bound, upper bound).
+> (b) Write one sentence correctly interpreting what "95% confidence" means in this context.
+> (c) A journalist reports: "There is a 95% probability that the true level of support is between 43% and 51%." Is this statement correct? If not, what is wrong with it?
+>
+> No calculation required — the numbers are provided. This is an interpretation question only.
+
+T0 establishes whether students understand confidence intervals as a property of the *method* rather than a probability statement about a fixed (unknown) parameter. This is the most persistent misconception in Week 12 and is explicitly tested in T5. Students who cannot answer T0(b) correctly have not yet understood the CI concept; the formula mechanics of T1–T3 will not help them.
+
+*Self-check for T0:* (a) (43%, 51%). (b) Correct interpretation: if this polling procedure were repeated many times, approximately 95% of the resulting intervals would contain the true proportion. (c) The journalist's statement is incorrect — the true proportion is fixed (not random), so "probability" that it falls in this specific interval is either 0 or 1; the 95% refers to the long-run reliability of the method. If you initially wrote an interpretation similar to the journalist's, re-read the "wrong interpretation" in the worked example before T1.
+
 *T1 — t-interval for mean:*
+
+*The worked example's Step 2 formula (t* × s/√n) is exactly what T1(a) requires. The StatQuest video on t vs z is the reason you use T.INV.2T, not NORM.INV, in T1(a): n = 30 and σ is unknown.*
 > Supplier A delivers machine parts. A sample of 30 parts has mean diameter 99.8mm and SD 1.2mm.
 >
 > (a) Construct a 95% CI for the population mean diameter. [T.INV.2T(0.05, 29)]
@@ -68,6 +86,8 @@ The two-sample CI sections (§8-7 and §8-8, pp. 335–344) are in scope for the
 > (d) The CIs for A and B overlap. Does that mean there's no difference between the suppliers? (Be careful.)
 
 T1(d) is the most important conceptual question: overlapping CIs do not prove the means are equal. The formal test is a two-sample t-test (Week 13). This is a preview of why Week 13 is necessary.
+
+*Self-check for T1(a):* t* = T.INV.2T(0.05, 29) ≈ 2.045. SE = 1.2/√30 ≈ 0.219. Margin of error = 2.045 × 0.219 ≈ 0.448. 95% CI: (99.8 − 0.45, 99.8 + 0.45) = **(99.35, 100.25) mm**. If your interval is substantially wider or narrower, check that you used the t-distribution (not z) and df = 29.
 
 *T2 — Proportion interval:*
 > A random sample of 200 customers shows 72 preferred the new product design (36%).
@@ -83,6 +103,82 @@ T1(d) is the most important conceptual question: overlapping CIs do not prove th
 > (b) Does the CI include 0.030mm? What does this tell you about the machine's consistency?
 
 T3 is the least intuitive of the three — the chi-square CI is asymmetric, which surprises students who expected the same symmetric interval as the t and z cases.
+
+*T4 — Boundary cases: what happens when n is very small or very large:*
+
+> (a) **Very small n:** A pharmacist measures the active ingredient concentration in n = 5 samples from a new batch. The sample mean is 98.2mg and the sample SD is 3.1mg. Construct a 95% CI for the population mean concentration.
+>
+> *Solution:* df = 4; t* = T.INV.2T(0.05, 4) = 2.776. SE = 3.1/√5 = 1.386. ME = 2.776 × 1.386 = 3.847. 95% CI: (98.2 − 3.85, 98.2 + 3.85) = **(94.4, 102.1) mg.** Note how wide the interval is for n = 5.
+>
+> (b) With n = 5, is the t-interval valid? What assumption about the population distribution is especially important when n is this small?
+>
+> (c) **Very large n:** A streaming platform measures satisfaction scores from n = 50,000 users, with sample mean 7.12 and SD 1.85 (on a 1–10 scale). Construct a 99% CI for the mean satisfaction score.
+>
+> *Solution:* For large n, t* ≈ z* = NORM.INV(0.995, 0, 1) = 2.576. SE = 1.85/√50,000 = 0.00828. ME = 2.576 × 0.00828 = 0.0213. 99% CI: **(7.099, 7.141).** The interval is extremely narrow.
+>
+> (d) The 99% CI from part (c) is (7.099, 7.141). The company's satisfaction target is 7.0. A manager says: "The CI doesn't include 7.0, so we've clearly met the target." Is this an appropriate use of the confidence interval?
+>
+> (e) With n = 50,000, the CI is so narrow that it is almost always going to exclude any specific target value. What does this imply about using CIs for decision-making at very large n?
+
+*T5 — Interpretation: the correct and incorrect statements:*
+
+> A 95% CI for the mean time (in seconds) to complete an online checkout process is (42.3, 47.1), based on a sample of n = 80 customers.
+>
+> For each of the following statements, state whether it is **correct** or **incorrect**, and explain in one sentence why.
+>
+> (a) "There is a 95% probability that the true mean checkout time is between 42.3 and 47.1 seconds."
+> (b) "If we collected 100 random samples of the same size and built 95% CIs for each, approximately 95 of those intervals would contain the true mean checkout time."
+> (c) "95% of all customers complete checkout between 42.3 and 47.1 seconds."
+> (d) "We are 95% confident that the sample mean is between 42.3 and 47.1 seconds."
+> (e) "The true mean checkout time is definitely between 42.3 and 47.1 seconds."
+> (f) "This interval is consistent with a true mean of 44 seconds."
+>
+> *Answers:* (a) Incorrect — the true mean is fixed; probability statements about fixed values are not valid in the frequentist framework. (b) Correct — this is the textbook definition of the frequentist CI. (c) Incorrect — this confuses the CI for the mean with a prediction interval for individual values. (d) Incorrect — the sample mean is a fixed number (44.7); it is not in an interval. (e) Incorrect — we cannot say "definitely"; we can only say "this method produces intervals that contain the true mean 95% of the time." (f) Correct — 44 is within (42.3, 47.1).
+
+*T6 — Multi-step: sample size determination and its trade-offs:*
+
+> A consultancy is designing a customer satisfaction survey for a European bank. The bank has approximately 800,000 retail customers. The consultancy wants to estimate the proportion satisfied with the bank's mobile app.
+>
+> (a) Using a conservative estimate p̂ = 0.50 (maximises required n) and a margin of error of ±4 percentage points at 95% confidence, what sample size is needed?
+>
+> *Solution:* n = (1.96/0.04)² × 0.50 × 0.50 = (49)² × 0.25 = 2,401 × 0.25 = **600.25 → n = 601**
+>
+> (b) A pilot study of 100 customers finds that 72% are satisfied with the mobile app. Using this estimate (p̂ = 0.72) instead of the conservative p̂ = 0.50, recalculate the required sample size. How does it compare?
+>
+> *Solution:* n = (1.96/0.04)² × 0.72 × 0.28 = 2,401 × 0.2016 = **484.2 → n = 485.** Less than with p̂ = 0.50.
+>
+> (c) The bank requests a margin of error of ±2 percentage points instead of ±4. How does halving the margin of error affect the required sample size?
+>
+> *Solution:* Halving ME quadruples n. Required n ≈ 601 × 4 = **2,404** (using conservative p̂ = 0.50).
+>
+> (d) The consultancy proposes surveying 400 customers — less than the required 601. What is the actual margin of error achieved with n = 400 at 95% confidence (using p̂ = 0.50)?
+>
+> *Solution:* ME = 1.96 × √(0.50 × 0.50 / 400) = 1.96 × 0.025 = **±4.9 percentage points.**
+>
+> (e) The bank's CEO says: "With 800,000 customers, surely we need to survey a lot more than 601." Explain why the required sample size for estimating a proportion to a given precision does not depend on the population size (for large populations), and what this means for survey design.
+
+*T7 — Comparison: three CI types side by side:*
+
+> A quality control engineer samples 40 components from a new production line. She records the diameter of each component. Results: sample mean = 50.4mm, sample SD = 1.2mm, sample proportion meeting spec = 0.82, sample variance = 1.44mm².
+>
+> (a) Construct a 95% CI for the population mean diameter using the t-distribution. [T.INV.2T(0.05, 39)]
+>
+> *Solution:* t* = 2.023. SE = 1.2/√40 = 0.190. ME = 2.023 × 0.190 = 0.384. 95% CI: **(50.02, 50.78) mm**
+>
+> (b) Construct a 95% CI for the population proportion meeting specification.
+>
+> *Solution:* z* = 1.96. SE = √(0.82 × 0.18 / 40) = √(0.00369) = 0.0607. ME = 1.96 × 0.0607 = 0.119. 95% CI: **(0.701, 0.939)**
+>
+> (c) Construct a 95% CI for the population standard deviation of diameter using the chi-square interval. [CHISQ.INV.RT(0.025, 39) and CHISQ.INV(0.025, 39)]
+>
+> *Solution:* χ²_{0.025, 39} = CHISQ.INV.RT(0.025, 39) ≈ 58.12; χ²_{0.975, 39} = CHISQ.INV(0.025, 39) ≈ 23.65.
+> Lower bound: √((39 × 1.44) / 58.12) = √(0.9664) ≈ **0.983 mm**
+> Upper bound: √((39 × 1.44) / 23.65) = √(2.374) ≈ **1.541 mm**
+> 95% CI for σ: **(0.983, 1.541) mm**
+>
+> (d) The chi-square interval in (c) is asymmetric — the lower bound is 0.417mm below the sample SD (1.2), while the upper bound is 0.341mm above it. Explain why this asymmetry occurs and why the interval is not symmetric around s = 1.2mm.
+>
+> (e) The specification requires diameter SD ≤ 1.0mm. The CI for σ is (0.983, 1.541). What does this tell you about whether the process meets the specification? Can you conclusively say it does or does not meet spec?
 
 **Pre-class submission (on the course portal):**
 

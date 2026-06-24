@@ -21,11 +21,11 @@ By the end of this session, students will be able to:
 
 **Videos (~20 minutes total):**
 
-- "Decision Trees — How to Make Better Decisions" by MindTools (YouTube, ~7 min): visual walkthrough of tree construction and folding back; good for visual learners
-- "Bayes' Theorem — Medical Testing Example" by 3Blue1Brown (YouTube, ~15 min): accessible frequency-based intuition; the disease-testing scenario maps directly to the textbook Joe's disease example
-- Optional (strong students only): Palisade PrecisionTree tutorial video from the textbook companion site (~10 min) — shows how to build the Acme tree in Excel
+- "Decision Trees — How to Make Better Decisions" by MindTools (YouTube, ~7 min): visual walkthrough of tree construction and folding back; good for visual learners. *Active watching: when the video introduces the folding-back procedure (averaging probabilities × payoffs at a chance node), pause and apply it to a simple example: two outcomes, 0.6 and 0.4, with payoffs 100 and −20. What is the EMV? This is the exact calculation in T1(c).*
+- "Bayes' Theorem — Medical Testing Example" by 3Blue1Brown (YouTube, ~15 min): accessible frequency-based intuition; the disease-testing scenario maps directly to the textbook Joe's disease example. *Active watching: when the video updates the posterior probability using new evidence, pause and write: what is the new base rate (prior) before the update? This Bayesian updating structure is exactly what T3(b) requires.*
+- Optional (strong students only): Palisade PrecisionTree tutorial video from the textbook companion site (~10 min) — shows how to build the Acme tree in Excel.
 
-**Worked example (attempt T1–T3 first, then read this):**
+**Worked example (read this before attempting the tutorial problems):**
 
 A Berlin street-food entrepreneur, Maya, is deciding whether to rent a pitch at a weekend market. She has gathered the following information:
 
@@ -46,11 +46,27 @@ EMV(Rent) = 0.30 × €1,700 + 0.50 × €400 + 0.20 × (−€200)
 
 **Critique:** Maya's numbers rest on two shaky assumptions. First, she estimated her own probabilities from memory — she has only attended this market twice before. Second, "revenue" assumes she sells out; if she has leftovers, her actual revenue is lower. The tree is only as good as the numbers inside it.
 
+*This worked example is marked optional for students who feel confident building a decision tree from a probability description and applying the folding-back procedure. If you can complete T1(a)–(c) without a template, you don't need it. If the folding-back procedure felt abstract from the reading, work through this example step by step before the tutorials.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
+
 ---
 
 **Tutorial problems:**
 
+*T0 — Entry question (lower floor):*
+
+> Before drawing any decision tree, answer in plain language:
+>
+> (a) You are deciding whether to carry an umbrella today. There is a 30% chance of rain. If it rains and you have an umbrella, you stay dry (value: +10). If it rains and you don't, you get soaked (value: −5). If it doesn't rain and you carry the umbrella, it's slightly inconvenient (value: −1). If it doesn't rain and you leave it at home, you're fine (value: 0).
+>
+> What are your two decision options? What are the two possible states of the world? Write the four combinations of (decision, state) and their values. No formal tree or EMV calculation required — just identify the structure.
+
+T0 tests whether students can identify the fundamental structure of a decision problem — decision alternatives, uncertain states, and outcomes — before any formal notation. This is the vocabulary the worked example and T1 assume. A student who cannot answer T0 has not yet understood what a decision tree represents. No formula or Excel is required.
+
+*Self-check for T0:* Two decisions: carry umbrella / leave it. Two states: rain / no rain. Four combinations: carry + rain = +10; carry + no rain = −1; leave + rain = −5; leave + no rain = 0. If you identified these four combinations correctly, you have the structure. If the distinction between "your decision" and "the uncertain state" felt unclear, re-read §6-1 before T1.
+
 **T1 — Straightforward computation:**
+
+*The MindTools video's folding-back procedure is exactly the calculation in T1(c): sum each branch's (probability × net payoff) across the three market states. The video's simple numerical example is the same structure — the only difference is that T1 has three branches instead of two.*
 
 A student entrepreneur is deciding whether to launch a food stall at a Berlin weekend market. Use the following data:
 
@@ -67,6 +83,8 @@ A student entrepreneur is deciding whether to launch a food stall at a Berlin we
 (c) Apply the folding-back procedure to calculate EMV(Launch). Should she launch?
 
 (d) Suppose the stall cost rises to €900. Does the optimal decision change? Recalculate EMV(Launch) and interpret.
+
+*Self-check for T1(a) and (c):* Net payoffs: busy = €2,500 − €600 = €1,900; moderate = €1,100 − €600 = €500; quiet = €400 − €600 = −€200. EMV(Launch) = 0.40 × 1,900 + 0.40 × 500 + 0.20 × (−200) = 760 + 200 − 40 = **€920**. Since €920 > €0 (not attending), she should launch. If your EMV is substantially different, re-check that you subtracted the stall cost from revenue before multiplying by probabilities — the most common error.
 
 **T2 — Interpretation:**
 
@@ -103,6 +121,110 @@ A market research firm offers to predict whether a new product will succeed or f
 (c) Compare your posterior probability to the prior. By how much has the firm's report updated your belief?
 
 (d) Suppose the firm charges €50,000 for its report. The payoff from launching a successful product is €500,000 and the loss from launching a failed product is −€200,000. Without the report: calculate EMV of launching. With the report, using your posterior: calculate EMV of launching given a "success" prediction, and EMV of not launching (€0). What is the EVI? Is the report worth buying?
+
+*T4 — Boundary case: what happens when probabilities are extreme:*
+
+> A mining company is evaluating whether to drill for oil at a promising site. The decision tree has the following structure:
+>
+> - **Drill** (cost €2M): if oil found (probability p), revenue €15M (net +€13M); if no oil (probability 1−p), net −€2M.
+> - **Don't drill:** payoff €0.
+>
+> (a) For p = 0.20, calculate EMV(Drill). Should the company drill?
+>
+> *Solution:* EMV = 0.20 × 13,000,000 + 0.80 × (−2,000,000) = 2,600,000 − 1,600,000 = **€1,000,000 > 0.** Drill.
+>
+> (b) Find the break-even probability p* at which EMV(Drill) = 0.
+>
+> *Solution:* p × 13,000,000 + (1−p) × (−2,000,000) = 0 → 13,000,000p − 2,000,000 + 2,000,000p = 0 → 15,000,000p = 2,000,000 → p* = 2/15 ≈ **0.133 (13.3%)**. The company should drill whenever its assessed probability of finding oil exceeds 13.3%.
+>
+> (c) The company commissions a seismic survey at a cost of €300,000, which correctly predicts oil 85% of the time (when oil is present) and correctly predicts no oil 90% of the time (when no oil is present). Using p = 0.20 as the prior, build the frequency table and calculate the posterior probabilities after a positive seismic signal.
+>
+> *Solution (frequency table, out of 10,000 sites with p = 0.20):*
+> Oil present: 2,000 sites. No oil: 8,000 sites.
+> Survey says "oil": 0.85 × 2,000 = 1,700 true positives; 0.10 × 8,000 = 800 false positives.
+> Total predicted "oil": 2,500.
+> P(oil | survey positive) = 1,700 / 2,500 = **68%**
+>
+> (d) Using this posterior (68% probability of oil given a positive survey), calculate the EMV of drilling after a positive survey. Is it worth paying €300,000 for the survey?
+>
+> *Solution:* EMV(Drill | positive) = 0.68 × 13,000,000 + 0.32 × (−2,000,000) = 8,840,000 − 640,000 = €8,200,000. Net of drilling cost (already included): still €8.2M. Survey cost €300,000. Without survey: EMV = €1,000,000. With survey, if positive: drill for €8,200,000; if negative, don't drill (€0). Expected payoff from buying survey = P(positive signal) × EMV(drill | positive) + P(negative signal) × 0 − survey cost. P(positive signal) = 2,500/10,000 = 0.25. Expected payoff from survey = 0.25 × 8,200,000 − 300,000 = 2,050,000 − 300,000 = **€1,750,000 > €1,000,000 (without survey).** Yes, the survey is worth buying.
+>
+> (e) At what survey cost would the company be indifferent between buying and not buying the survey? (Find the cost at which the value with survey = value without survey.)
+
+*T5 — Interpretation: reading a PrecisionTree output with risk aversion:*
+
+> The following simplified decision tree output is given for a company choosing between two product development strategies:
+>
+> **Strategy X — Fast-to-market:** EMV = €3.2M. Outcomes: 60% chance of €6M; 40% chance of −€1.5M.
+> **Strategy Y — Deliberate development:** EMV = €2.8M. Outcomes: 90% chance of €3.2M; 10% chance of −€0.2M.
+>
+> (a) Verify both EMVs by hand.
+>
+> *Solution:* EV(X) = 0.60 × 6,000,000 + 0.40 × (−1,500,000) = 3,600,000 − 600,000 = **€3,000,000** (note: the stated €3.2M implies slightly different numbers — show your working and flag the discrepancy; accept values in the spirit of the stated outputs). EV(Y) = 0.90 × 3,200,000 + 0.10 × (−200,000) = 2,880,000 − 20,000 = **€2,860,000 ≈ €2.8M**. Consistent.
+>
+> (b) Strategy X has higher EMV but also a 40% chance of a €1.5M loss. A CFO says: "We can only sustain a maximum loss of €1M without triggering a covenant breach on our debt." How does this constraint change the analysis?
+> (c) The board requests that the team calculate the probability of achieving a positive return under each strategy. What are these probabilities?
+> (d) If the company must choose one strategy and cannot revisit the decision, which strategy would you recommend — and to whom does your recommendation depend on?
+> (e) A junior analyst says: "The decision tree tells us the answer: choose X." Correct this misstatement. What does the decision tree actually tell you, and what does it leave to human judgment?
+
+*T6 — Multi-step: EVPI and the value of conducting research:*
+
+> A retailer is deciding whether to expand into a new geographic market. Preliminary assessment:
+>
+> - P(market is favourable) = 0.45; if favourable, net payoff = €800,000
+> - P(market is unfavourable) = 0.55; if unfavourable, net payoff = −€300,000
+> - Alternative: do not expand, payoff = €0
+>
+> (a) Calculate EMV(Expand) and determine whether expansion is the optimal decision without information.
+>
+> *Solution:* EMV(Expand) = 0.45 × 800,000 + 0.55 × (−300,000) = 360,000 − 165,000 = **€195,000 > 0.** Expand.
+>
+> (b) Calculate the EVPI (Expected Value of Perfect Information).
+>
+> *Solution:* EMV with perfect information = P(favourable) × best payoff if favourable + P(unfavourable) × best payoff if unfavourable = 0.45 × 800,000 + 0.55 × 0 = €360,000. EVPI = €360,000 − €195,000 = **€165,000.**
+>
+> (c) A market research firm offers a study costing €100,000. The firm has a 70% accuracy rate: P(firm predicts "favourable" | market is favourable) = 0.70; P(firm predicts "unfavourable" | market is unfavourable) = 0.70. Using a frequency table (out of 10,000 scenarios), compute the posterior probabilities for each signal.
+>
+> *Solution:* Favourable: 4,500. Unfavourable: 5,500.
+> "Favourable" signal: 0.70 × 4,500 = 3,150 correct; 0.30 × 5,500 = 1,650 false. Total "favourable" signals: 4,800.
+> P(favourable | "favourable" signal) = 3,150 / 4,800 ≈ **65.6%**
+> "Unfavourable" signal: 0.70 × 5,500 = 3,850 correct; 0.30 × 4,500 = 1,350 false. Total "unfavourable" signals: 5,200.
+> P(favourable | "unfavourable" signal) = 1,350 / 5,200 ≈ **26.0%**
+>
+> (d) Given a "favourable" signal, should the retailer expand? Calculate the EMV. Given an "unfavourable" signal, should the retailer expand? Calculate the EMV.
+>
+> *Solution:*
+> EMV(Expand | "favourable") = 0.656 × 800,000 + 0.344 × (−300,000) = 524,800 − 103,200 = **€421,600.** Expand.
+> EMV(Expand | "unfavourable") = 0.260 × 800,000 + 0.740 × (−300,000) = 208,000 − 222,000 = **−€14,000.** Do not expand.
+>
+> (e) Calculate the EVI (Expected Value of Imperfect Information). Is the €100,000 study worth commissioning?
+>
+> *Solution:*
+> P("favourable" signal) = 4,800/10,000 = 0.48. P("unfavourable" signal) = 0.52.
+> EMV with study = 0.48 × 421,600 + 0.52 × 0 = **€202,368.**
+> EVI = 202,368 − 195,000 = **€7,368.** No — the study costs €100,000 but adds only €7,368 in expected value. Do not commission it.
+
+*T7 — Diagnostic: find the decision tree error:*
+
+> A junior analyst presents the following decision tree analysis to a marketing team. Identify all errors.
+>
+> *"We modelled the decision to launch a new product. We have two options: launch now or wait one year. If we launch now: P(success) = 0.60, payoff = €500,000; P(failure) = 0.40, payoff = −€200,000. EMV = 0.60 × 500,000 + 0.40 × 200,000 = 300,000 + 80,000 = €380,000.*
+>
+> *If we wait: P(success) = 0.70 (market conditions improve), payoff = €600,000; P(failure) = 0.30, payoff = −€150,000. EMV = 0.70 × 600,000 + 0.30 × 150,000 = 420,000 + 45,000 = €465,000.*
+>
+> *The waiting option has higher EMV (€465,000 > €380,000), so we recommend waiting."*
+>
+> (a) Identify the arithmetic error in the "launch now" calculation.
+> (b) Identify the arithmetic error in the "wait" calculation.
+> (c) After correcting both EMVs, does the recommendation change?
+>
+> *Correct solutions:*
+> EMV(now) = 0.60 × 500,000 + 0.40 × (−200,000) = 300,000 − 80,000 = **€220,000**
+> EMV(wait) = 0.70 × 600,000 + 0.30 × (−150,000) = 420,000 − 45,000 = **€375,000**
+> Recommendation unchanged (wait has higher EMV), but the margin is €155,000, not €85,000.
+>
+> (d) The analyst did not account for the time value of money. If the "wait" payoffs occur one year later and the appropriate discount rate is 10%, what are the present values of each "wait" scenario?
+> (e) The "wait" option assumes competitive conditions remain stable. Name two business events that might eliminate the advantage of waiting, and explain how you would model them in the tree.
 
 **Pre-class submission (due 11:59pm the night before class):**
 

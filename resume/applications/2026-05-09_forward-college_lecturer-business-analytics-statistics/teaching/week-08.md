@@ -163,6 +163,21 @@ The answer the class should arrive at:
 > **Use Python when:** you're exploring, visualising, or running statistical models.
 > **In practice:** SQL to extract and prepare, Python to analyse and communicate. They are a pipeline, not alternatives.
 
+**Data provenance — 3 minutes within the debrief:**
+
+The messy dataset in Part 3 had NULLs that arose from real system behaviour (e.g., the payment column was NULL for cancelled orders — not missing at random, but missing for a specific reason). Before the session ends, ask:
+
+> *"Where did this dataset come from? Who collected it, when, and how? Does it matter?"*
+
+It does matter — and Weeks 19–22 will surface this acutely when students choose their own datasets. A dataset from a government open data portal is a snapshot at a point in time, with a specific collection methodology, for a specific administrative purpose. A dataset from a convenience sample of 50 respondents licenses different claims than one from a random sample of 5,000.
+
+Three questions that should become habitual when encountering any dataset:
+1. **How was this collected?** (Survey, transaction log, sensor, administrative record, web scrape)
+2. **Who is in it — and who isn't?** (A dataset of customers who complained is not a dataset of all customers)
+3. **What was it collected for?** (Data collected for billing purposes may behave differently when used for marketing analysis)
+
+This is not a lecture — it is a 3-minute planting. Students who encounter this question in Week 8 will recognise it again in Weeks 19–22 when it becomes a marking criterion. The SQL context makes it concrete: the NULLs in today's dataset were not random — they told you something about the system that generated them. That is data provenance in action.
+
 **Bridge forward to Week 9:**
 
 > *"Next week we connect these two tools. You'll write a SQL query, pull the results into a pandas DataFrame, then produce a chart — all in one notebook. The question is: where in that pipeline does something break?"*
