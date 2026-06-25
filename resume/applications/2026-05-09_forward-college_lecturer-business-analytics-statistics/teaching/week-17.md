@@ -203,6 +203,116 @@ This question uses a verified 2025 policy context: the CMA and CAA review of Hea
 
 ---
 
+## Answer Key
+
+### T1 — LP formulation (transportation problem)
+
+**(a)** Decision variables: Xᵢⱼ = number of pallets shipped from warehouse i to store j. Six variables: X_A1, X_A2, X_A3 (from Warehouse A), X_B1, X_B2, X_B3 (from Warehouse B).
+
+**(b)** Objective (minimise cost): Minimise 4X_A1 + 8X_A2 + 6X_A3 + 3X_B1 + 7X_B2 + 5X_B3.
+
+**(c)** Supply constraints: X_A1 + X_A2 + X_A3 ≤ 120 (Warehouse A capacity); X_B1 + X_B2 + X_B3 ≤ 80 (Warehouse B capacity).
+
+**(d)** Demand constraints: X_A1 + X_B1 = 70 (Store 1 must receive exactly 70); X_A2 + X_B2 = 90 (Store 2 must receive exactly 90); X_A3 + X_B3 = 40 (Store 3 must receive exactly 40). Non-negativity: all Xᵢⱼ ≥ 0.
+
+**(e)** This is a **transportation LP** — a special structure where each decision variable appears in exactly one supply constraint and one demand constraint. The total supply (200) equals total demand (200), making this a balanced transportation problem. It can be solved with the transportation simplex method or standard LP.
+
+---
+
+### T2 — Solver setup (bakery)
+
+**(a)** After increasing oven time to 260 minutes: Solver adjusts the optimal mix. Using shadow price as a quick estimate: 20 extra minutes × €0.35/min = €7.00 more profit → predicted new profit ≈ €103.50 + €7.00 = **€110.50.** (Verify with Solver for exact answer, which should match if 260 is within the allowable range.)
+
+**(b)** Profit increase = €110.50 − €103.50 = **€7.00 = 20 × €0.35** — yes, this matches the shadow price exactly (within the allowable range).
+
+**(c)** The shadow price for oven time is valid only within the **allowable increase** shown in Solver's sensitivity report. If the allowable increase is, say, 30 minutes: the shadow price of €0.35/min applies for oven time up to 270 minutes. Beyond that, the optimal basis changes (a different constraint becomes binding or the current binding constraints shift) and the shadow price may change. To find a new profit estimate beyond the allowable range, Solver must be rerun with the new constraint value.
+
+---
+
+### T3 — Build and break (muffin constraint update)
+
+**(a)** Adding M ≥ 30: Solver finds a new optimal. With the tighter muffin minimum, the feasible region shrinks. The new optimal will produce exactly 30 muffins (if the M ≥ 30 constraint is binding) or more (if it's not). From the original solution (M ≈ 33), M ≥ 30 is already satisfied — the constraint is **not binding** at the original optimum (the original solution produced 33 muffins, already above 30). The optimal solution and profit are **unchanged** by adding M ≥ 30 if the original optimum already has M > 30.
+
+**(b)** The original binding constraints were the oven and/or labour constraints (at the optimal corner point). These remain unchanged since the M ≥ 30 constraint is non-binding.
+
+**(c)** The new M ≥ 30 constraint is **non-binding** at the optimum — the optimal solution produces 33 muffins, which exceeds 30. A constraint is non-binding (slack) when the optimal solution satisfies it with room to spare: the constraint does not restrict the optimal solution.
+
+---
+
+### T4 — Boundary case: infeasibility
+
+**(a)** With M ≥ 40 binding: oven constraint gives C ≤ (240 − 5×40)/3 = 40/3 ≈ 13.33; labour gives C ≤ (80 − 40)/2 = 20. Binding constraint is oven. Optimal: C ≈ 13.33, M = 40. Profit ≈ 1.5 × 13.33 + 2.0 × 40 = 20 + 80 = **€100/day.** The special order costs approximately €3.50/day in lost profit relative to the unconstrained optimum (€103.50).
+
+**(b)** Feasibility check for C ≥ 30 AND M ≥ 40: oven check: 3(30) + 5(40) = 90 + 200 = 290 > 240. **Infeasible** — minimum requirements alone exceed oven capacity.
+
+**(c)** Infeasibility means there is no production plan that satisfies all constraints simultaneously. In real business terms: the bakery cannot fulfil both special orders with its current oven capacity. Options: (i) negotiate to reduce one or both order minimums; (ii) rent additional oven time; (iii) prioritise one order over the other (decide which constraint to relax); (iv) invest in additional oven capacity. Solver returns "No feasible solution" — this is the correct answer and should be communicated to the client, not suppressed.
+
+**(d)** Needs 290 − 240 = **50 additional oven minutes** to make the model feasible at the minimum requirements. Renting cost = 50 × €0.50 = **€25/day.** This is the cost of *becoming feasible* — the profit from fulfilling both orders must exceed €25/day for renting to be worthwhile.
+
+**(e)** Shadow prices are valid only within the **allowable increase/decrease range** shown in the sensitivity report. The allowable increase for oven time in the original problem (let's say it was 20 minutes at a shadow price of €0.35/min) would give a cost estimate of 20 × €0.35 = €7. But making the infeasible model feasible requires 50 additional minutes — well outside any reasonable allowable range. At 50 minutes, the binding constraints have changed completely (the minimum M ≥ 40 and C ≥ 30 constraints are now active, not the oven constraint alone), so the shadow price from the original optimal basis is no longer applicable. The model must be rerun with the new capacity.
+
+---
+
+### T5 — Shadow prices and sensitivity ranges (printing company)
+
+**(a)** Shadow price on machine hours = €18.50/hour: **for each additional machine hour available (within the allowable range of 40 hours), maximum weekly profit increases by €18.50.** This means machine hours are a binding constraint — the company is using all 120 available hours and is capacity-constrained. Each additional hour is worth €18.50 in extra contribution.
+
+**(b)** Shadow price on paper stock = €0: paper stock is a **non-binding constraint** — the company is not using all 800 kg of available paper. The slack (unused paper) means the paper constraint does not restrict the optimal solution. Adding or removing paper (within the allowable decrease of 200 kg) would not change the optimal profit.
+
+**(c)** The shadow price on the minimum brochures constraint (min 50) is **negative (−€4.20):** this means each additional unit of the minimum requirement *reduces* maximum profit by €4.20. A minimum constraint forces the model to produce something it would not otherwise produce at the optimum. The company would prefer to produce fewer than 50 brochures (brochures are less profitable than posters given machine hour limitations), but the minimum requirement forces some machine capacity toward brochures. Relaxing the minimum (reducing it) would increase profit; tightening it (increasing it) would decrease profit. Negative shadow prices on minimum (lower-bound) constraints are the norm — they reflect the opportunity cost of the forced production.
+
+**(d)** Allowable increase is 40 hours. For 40 additional hours at €18.50: Profit increase = 40 × €18.50 = **€740.** Cost = 40 × €15 = **€600.** Net gain = **€140 — worth renting.** For hours 41–50 (beyond the allowable range), the shadow price may change; cannot assume €18.50. To evaluate the full 50 hours, rerun Solver with 170 machine hours.
+
+**(e)** Adding a new product line that also uses machine hours could increase or decrease the shadow price — it depends on the new product's profit contribution per machine hour. If the new product has higher profit per machine hour than existing products, the opportunity cost of machine hours rises (shadow price increases). If lower, it competes for the binding resource less efficiently (shadow price stays the same or decreases). Crucially: you must **rerun Solver** with the new product included as a decision variable to find the new optimal and updated shadow prices. The existing sensitivity report is invalid as soon as the model structure changes.
+
+---
+
+### T6 — Transportation problem solution
+
+**(a)** Optimal Solver solution (one optimal — multiple optima may exist for transportation problems): A1=0, A2=90, A3=30, B1=70, B2=0, B3=10. Total cost = 0×4 + 90×8 + 30×6 + 70×3 + 0×7 + 10×5 = 0 + 720 + 180 + 210 + 0 + 50 = **€1,160.**
+
+**(b)** In the optimal solution: Warehouse A ships A2=90 + A3=30 = 120 pallets — all of its 120 pallets → **binding** (uses full capacity). Warehouse B ships B1=70 + B3=10 = 80 pallets — all of its 80 pallets → **binding** (uses full capacity). Both supply constraints are binding in this balanced problem (total supply = total demand = 200). A non-binding supply constraint would mean the warehouse ships fewer pallets than its capacity — it has slack capacity.
+
+**(c)** Shadow price = €7/pallet for Store 2. Store 2 requests 10 more pallets: expected cost increase = 10 × €7 = **€70.** This is valid if 10 is within the allowable increase for Store 2's demand constraint.
+
+**(d)** With Warehouse A reduced to 90: total supply = 90 + 80 = 170 pallets < total demand = 200 pallets. **Supply is insufficient** — the model is infeasible (cannot meet all demand). Solver returns "No feasible solution." Business options: (i) prioritise which stores receive partial shipment; (ii) source additional stock externally; (iii) renegotiate delivery commitments with one or more stores; (iv) switch to a partial-fulfilment model with backorders.
+
+**(e)** Solver does not update automatically — the model must be **updated** manually (change the B-to-2 cost from €7 to €6 in the cost matrix). After updating and rerunning Solver: the cheaper route from B to Store 2 may become attractive. With B2 at €6 (now equal to A3's cost), the optimal plan may shift some Store 2 supply from Warehouse A to Warehouse B. The new optimal cost will be ≤ €1,160 (since a cheaper route is now available). Exact new allocation depends on the full LP solution — run Solver to confirm.
+
+---
+
+### T7 — LP vs heuristic (nurse scheduling)
+
+**(a)** Decision variables: let M, A, N = number of nurses assigned to morning, afternoon, night shifts per day (simplified; a full model would have 7 × 3 = 21 variables for a week). Objective: minimise total overtime hours = Σ max(0, hours_worked_by_nurse − 40) per week. Constraints: M ≥ 12, A ≥ 10, N ≥ 8 (minimum cover); total nurse-shifts per week = 25 nurses × 5 shifts = 125 assignments; no nurse works more shifts than allowed. (Full formulation requires binary or integer variables for individual nurse-shift assignments.)
+
+**(b)** Whether LP is "better" depends on the definition of better. **Fewer overtime hours** is one objective, but nursing scheduling also involves: nurse preferences (impacts retention), patient safety (experienced nurses on critical shifts), fairness (equitable distribution of undesirable shifts), regulatory compliance (minimum rest periods). If "better" means minimising overtime only, LP wins. If "better" means total cost including recruitment, retention, and care quality, LP needs to incorporate those objectives explicitly — or it may produce a technically optimal schedule that is operationally impractical.
+
+**(c)** To incorporate nurse preferences: add preference scores as weighted objectives (multi-objective LP). Seniority rules: add priority constraints (e.g., senior nurse S1 must receive first choice of shifts before junior nurses). "Nurse A and B refuse consecutive night shifts": add binary constraints (if nurse A works night on Monday, they cannot work night on Tuesday). These require **integer or binary variables**, converting the LP to a Mixed Integer Program (MIP). MIP is significantly harder to solve than LP and requires specialised solvers (Excel Solver can handle small MIPs).
+
+**(d)** The critique is partially valid but misses the point: the LP is designed to minimise overtime, not to optimise every human dimension of scheduling. The correct response to "the LP doesn't understand the human side" is: "You're right — so let's add those constraints to the model." The LP is a tool that optimises what you specify; the art is specifying the right constraints and objectives. Dismissing LP because it ignores preferences is not a valid critique of LP — it is a reminder to encode more of the problem structure into the model.
+
+**(e)** The head nurse's heuristic is an implicit optimisation model: the objective function is something like "maximise nurse satisfaction and coverage quality, subject to meeting minimum staffing, seniority norms, and known preferences." The constraints are the head nurse's mental model of what is acceptable. The heuristic is faster (2 hours vs model setup time) and captures soft constraints implicitly — but it cannot guarantee optimality, scales poorly to larger hospitals, and its "objective function" may drift over time based on the head nurse's changing priorities. LP makes the objective explicit and finds the optimum systematically.
+
+---
+
+### T8 — Airport slot allocation LP (Heathrow 2025)
+
+**(a)** Decision variables: L = number of long-haul slots; E = number of short-haul European slots; D = number of domestic slots.
+Objective: Maximise 15,000L + 8,000E + 3,500D.
+Constraints: L + E + D ≤ 120 (total capacity); L ≥ 20; E ≥ 15; D ≥ 10; L_night ≤ 8 (night long-haul cap — note this is a separate constraint on a subset of L, requiring an additional variable or approximation); all variables ≥ 0.
+
+**(b)** Without the night constraint, the LP maximises revenue by maximising L (highest revenue per slot). Setting E = 15 (minimum), D = 10 (minimum): L = 120 − 15 − 10 = **95.** Revenue = 95 × €15,000 + 15 × €8,000 + 10 × €3,500 = €1,425,000 + €120,000 + €35,000 = **€1,580,000.** The optimum favours **long-haul slots** exclusively beyond the minimum requirements for E and D.
+
+**(c)** At the optimum: L = 95 (constraint was L ≥ 20 — not binding, L is 95 >> 20); E = 15 (constraint E ≥ 15 — **binding**, E is at its minimum); D = 10 (constraint D ≥ 10 — **binding**, D is at its minimum). A non-binding minimum constraint means the LP's optimal solution naturally satisfies the minimum without being constrained by it — Heathrow would allocate at least that many long-haul slots anyway for revenue reasons. The binding minimum constraints on E and D mean these are the only European and domestic slots allocated — the LP would prefer fewer if regulations allowed.
+
+**(d)** The shadow price on total capacity = €15,000/slot because at the optimum, the marginal slot is allocated to long-haul (the highest-revenue type). Adding one more slot to the 120-slot total frees space for one more long-haul flight, earning €15,000. The shadow price would be lower (a weighted average) only if the marginal slot could not all go to long-haul — for example, if a policy constraint required proportional allocation across all three types, or if the night-cap constraint were binding and prevented more long-haul flights.
+
+**(e)** With D ≥ 30 added: D = 30, E = 15 (minimums bind), L = 120 − 30 − 15 = 75. Revenue = 75 × €15,000 + 15 × €8,000 + 30 × €3,500 = €1,125,000 + €120,000 + €105,000 = **€1,350,000.** (i) Change in daily revenue: €1,350,000 − €1,580,000 = **−€230,000/day.** (ii) Shadow price per additional domestic slot mandated: each domestic slot replaces one long-haul slot (revenue difference = €15,000 − €3,500 = **€11,500 lost per slot**). The shadow price on the D ≥ 30 constraint ≈ −€11,500 per additional domestic slot required.
+
+**(f)** The most problematic limitation at real-world scale: the LP treats decision variables as **continuous** (fractional slots are allowed). At scale, slots are integer-valued (you cannot assign 0.3 of a flight) and must be assigned to specific time windows, terminals, and stands. The real problem is a Mixed Integer Programme (MIP) with discrete time slots, equipment compatibility constraints (not all aircraft fit all stands), airline-specific agreements, noise curfews at specific hours, sequencing constraints (arrival/departure separation minima), and safety regulations. An analyst would need to add binary/integer variables for individual slot assignments, time-indexed decision variables (one per slot per hour), and compatibility constraint sets for each aircraft type.
+
+---
+
 ## In-Class Session (90 minutes)
 
 ### Part 1 — Opening Challenge (10 minutes)

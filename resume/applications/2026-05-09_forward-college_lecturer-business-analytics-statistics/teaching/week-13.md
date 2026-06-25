@@ -201,6 +201,138 @@ A marketing researcher is studying factors that predict customer loyalty. She me
 >
 > *(Expected issues:) (1) A t-test is wrong for testing a proportion — should use a z-test for proportions or binomial test. (2) n = 50 is very small for an email A/B test; statistical power is low. (3) The comparison is between a single sample proportion and a claimed historical value (0.22), but the analyst doesn't state whether the 22% was measured under identical conditions. (4) The result may be statistically significant but practically trivial — 6 percentage points difference in open rate; what is the actual business value? (5) Rolling out to 400,000 based on n = 50 is an extreme extrapolation. (6) One-sided vs two-sided test not specified. (7) No check on whether the 50 emails form a representative sample.)*
 
+---
+
+## Answer Key
+
+### T0 — p-value definition and common misinterpretation
+
+**Correct statement:** "p = 0.03 means that if the drug truly had no effect on blood pressure (i.e., H₀ were true), there is a 3% probability of observing a reduction at least as large as the one measured, purely by chance."
+
+**Incorrect statement (what p = 0.03 does NOT mean):** "p = 0.03 does not mean there is a 97% probability that the drug works." The p-value says nothing about the probability that H₀ is true or false; it is a probability calculated *assuming* H₀ is true, not a probability assigned to H₀ itself.
+
+---
+
+### T1 — One-sample t-test (coffee shop wait times)
+
+**(a)** H₀: μ = 3 minutes (mean wait time equals the claimed 3 minutes). Hₐ: μ ≠ 3 minutes (mean wait time differs from 3 minutes). Two-tailed test at α = 0.05.
+
+**(b)** t = (x̄ − μ₀) / (s/√n) = (3.8 − 3.0) / (1.2/√25) = 0.8 / (1.2/5) = 0.8 / 0.24 = **3.33.** df = n − 1 = 24.
+
+**(c)** p-value = T.DIST.2T(3.33, 24) ≈ **0.003.** Since p = 0.003 < α = 0.05, we reject H₀.
+
+**(d)** "At the 5% significance level, there is strong evidence that the mean customer wait time differs from the claimed 3 minutes. The sample mean of 3.8 minutes is 3.33 standard errors above the claimed mean — this is unlikely to occur by chance if the true mean were 3 minutes. The chain should investigate whether wait times have increased."
+
+**(e)** 95% CI: t* = T.INV.2T(0.05, 24) ≈ 2.064. SE = 0.24. ME = 2.064 × 0.24 ≈ 0.495. CI: (3.8 − 0.495, 3.8 + 0.495) = **(3.31, 4.29) minutes.** Agreement: the claimed value of 3 minutes is outside this interval — consistent with rejecting H₀. The CI and the hypothesis test always agree for two-tailed tests at the same α level: if H₀ value is outside the 95% CI, the test rejects at α = 0.05.
+
+---
+
+### T2 — Statistical vs practical significance (Meta content moderation)
+
+**(a)** At α = 0.05, p = 0.018 < 0.05, so we **reject H₀** and conclude the new algorithm detects a statistically significantly higher proportion of violations than the previous algorithm.
+
+**(b)** Absolute difference in detection rates: 150/1,000,000 − 120/1,000,000 = 0.000150 − 0.000120 = **0.00003 (0.003 percentage points).** This is not practically meaningful in isolation — it is 3 additional violations detected per 100,000 content items reviewed. On a platform with billions of views, it scales to many items, but as a proportional improvement in detection rate it is tiny.
+
+**(c)** Additional information needed: (i) **False positive rate of the new algorithm** — does catching 30 more violations come at the cost of incorrectly flagging thousands of legitimate posts? (ii) **Computational cost** — does the new algorithm require significantly more compute per item? (iii) **Nature of violations** — does the new algorithm preferentially catch more severe violations (incitement to violence) or trivial ones? (iv) **User experience cost** — are false positives applied to high-reach accounts or marginal ones, and what are the consequences of wrongful removal? The civil liberties researcher's concern about false positives is analytically valid: a 0.003 percentage point improvement in true positive rate is only defensible if the false positive rate is not substantially worsened.
+
+**(d)** 0.001 percentage points = 0.00001 as a proportion. On 1 billion daily content views: 0.00001 × 1,000,000,000 = **10,000 additional items per day** incorrectly flagged. This is a meaningful operational cost — tens of thousands of content creators or posts affected daily — even though the proportion sounds negligible.
+
+**(e)** p = 0.018 tells us: if the two algorithms had identical detection rates in the underlying population, there is a 1.8% probability of observing a difference at least this large by chance. It does not tell us: whether the detected violation rate generalises across all of Meta's platforms (Facebook, Instagram, WhatsApp each have different content and user behaviour profiles); whether the effect would persist under different content compositions; or whether the difference is stable over time as adversarial actors adapt to the new algorithm.
+
+---
+
+### T3 — Multiple testing problem
+
+**(a)** Expected false positives = number of tests × α = 50 × 0.05 = **2.5.** Under the global null (all 50 variables truly have no effect), we expect on average 2.5 of the 50 tests to produce p < 0.05 purely by chance.
+
+**(b)** P(at least one false positive in 50 tests) = 1 − P(no false positives) = 1 − (1 − 0.05)^50 = 1 − (0.95)^50 ≈ 1 − 0.077 ≈ **92.3%.** It is almost certain that at least one of the 4 "significant" results is a false positive.
+
+**(c)** **Bonferroni correction:** use adjusted threshold α* = α/k = 0.05/50 = **0.001** as the per-test significance level. Only variables with p < 0.001 should be considered significant. This controls the Family-Wise Error Rate (FWER) — the probability of making at least one false positive across all tests — at 5%. **Benjamini-Hochberg (stretch goal):** rank all 50 p-values from smallest to largest. For each rank k, compare p_k to (k/50) × 0.05. The largest k for which this holds identifies which tests are significant. B-H controls the False Discovery Rate (FDR) — the expected proportion of false positives among significant results — rather than the FWER. B-H is less conservative than Bonferroni and rejects more hypotheses, making it appropriate when some false discoveries are tolerable.
+
+**(d)** **No — the multiple testing problem does not apply to pre-registered hypotheses.** If the researcher specified exactly 3 hypotheses before data collection — not after seeing which variables looked promising — then running 3 tests at α = 0.05 means the expected number of false positives is only 3 × 0.05 = 0.15, and the probability of any false positive is 1 − (0.95)³ ≈ 14.3%. Pre-registration separates confirmatory testing (few pre-specified hypotheses, standard α) from exploratory analysis (many tests, correction required). This is why pre-registration is a cornerstone of replication in science.
+
+---
+
+### T4 — Boundary case: large n and practical significance
+
+**(a)** Trial A: z = (0.935 − 0.92) / √(0.92 × 0.08/200) = 0.015 / √(0.000368) = 0.015 / 0.01918 ≈ **0.782.** p = 2 × (1 − NORM.DIST(0.782, 0, 1, TRUE)) ≈ 2 × 0.217 ≈ **0.434.** Since 0.434 > 0.05, **fail to reject H₀.** Insufficient evidence that performance has changed.
+
+**(b)** Trial B: z = (0.921 − 0.92) / √(0.92 × 0.08/200,000) = 0.001 / √(3.68 × 10⁻⁷) = 0.001 / 0.000607 ≈ **1.649.** p ≈ 2 × (1 − NORM.DIST(1.649, 0, 1, TRUE)) ≈ 2 × 0.0496 ≈ **0.099.** Since 0.099 > 0.05, **fail to reject H₀** at α = 0.05 (barely — a higher α would change this).
+
+**(c)** Trial A has a **larger effect size** (1.5 percentage points) but is less statistically significant because n = 200 is small — the standard error is large and the t-statistic is modest. Trial B has a **smaller effect size** (0.1 percentage point) but larger n, so the standard error is much smaller and the statistic is larger relative to the standard error. The apparent paradox reveals that statistical significance measures effect size relative to sampling variability, not absolute importance. With large enough n, any non-zero effect becomes significant; with small n, even meaningful effects may not reach significance.
+
+**(d)** n = 2,000,000: z = 0.0001 / √(0.92 × 0.08/2,000,000) = 0.0001 / 0.000192 ≈ **5.21.** p ≈ 0 (essentially zero). **Yes, highly significant** — despite a 0.01 percentage point improvement that is operationally meaningless. At n = 2 million, the hypothesis test will detect the slightest deviation from 92% even if that deviation has no real operational consequence.
+
+**(e)** *(Memo to COO)* "Statistical significance and operational significance are distinct concepts that are easily confused. A result is statistically significant when it is unlikely to have occurred by chance — which depends critically on sample size. With n = 200 deliveries (Trial A), our 1.5 percentage-point improvement cannot be distinguished from random fluctuation. With n = 2,000,000 deliveries (our full operational data), even a 0.01 percentage-point difference — equivalent to 200 additional on-time deliveries out of 2 million — produces a highly significant p-value. Operational significance asks a different question: does this improvement matter for our customers and our business? A 1.5 percentage-point improvement in on-time delivery is operationally meaningful (it affects thousands of customers daily); a 0.01 percentage-point improvement is not. I recommend we report both: the p-value for the statistical test, and the absolute improvement in on-time deliveries as the operational metric."
+
+---
+
+### T5 — One-tailed vs two-tailed tests
+
+**(a)** H₀: μ = 500ml (machine fills to exactly 500ml). Hₐ: μ ≠ 500ml (machine does not fill to exactly 500ml). Two-tailed test.
+
+**(b)** H₀: μ = 500ml. Hₐ: μ < 500ml (machine under-fills). One-tailed (lower-tail) test.
+
+**(c)** t = (498.2 − 500) / (4.8/√36) = −1.8 / 0.8 = **−2.25.** df = 35.
+
+**(d)** (i) Two-tailed: p = T.DIST.2T(2.25, 35) ≈ **0.031.** (ii) One-tailed (lower): p = T.DIST(−2.25, 35, TRUE) ≈ **0.0155.**
+
+**(e)** The two-tailed test rejects H₀ at α = 0.05 (p = 0.031 < 0.05). The one-tailed test also rejects (p = 0.016 < 0.05) — and its p-value is exactly half the two-tailed p-value. The one-tailed p-value is smaller because it concentrates all the rejection probability in one tail rather than splitting it across two. Both tests reject here, but the one-tailed test would also reject cases where the two-tailed test would not (when p is between 0.05 and 0.10 in the relevant tail).
+
+**(f)** Choosing a one-tailed test **after** seeing the data showed under-filling is **not valid statistical practice.** This is called p-hacking or data-driven hypothesis selection: the analyst effectively chose the test that would give a smaller p-value after observing the direction of the result. A one-tailed test is only valid if the direction of the alternative (e.g., μ < 500) was pre-specified before data collection, based on subject-matter knowledge or prior hypothesis. Post-hoc direction selection inflates the effective Type I error rate — you are no longer controlling α at 5%.
+
+**(g)** "At the 5% significance level, we reject the null hypothesis that the machine fills to 500ml on average. Based on a random sample of 36 bottles with mean fill 498.2ml and standard deviation 4.8ml, the one-tailed t-statistic is −2.25 (df = 35), giving p = 0.016. There is sufficient statistical evidence to conclude that the machine is under-filling. The business impact is an average shortfall of 1.8ml per bottle; at this scale, the manufacturer is advised to recalibrate the filling mechanism."
+
+---
+
+### T6 — Chi-square test for independence (supermarket regions)
+
+**(a)** Expected count for any cell = (Row total × Column total) / Grand total. North/Yes: (200 × 265)/600 = 53,000/600 ≈ **88.33.** All expected counts are 88.33 (Yes) and 111.67 (No) for each region — because all three regions have the same row total of 200.
+
+**(b)** χ² contributions:
+| Cell | Observed | Expected | (O−E)²/E |
+|---|---|---|---|
+| North/Yes | 85 | 88.33 | 0.126 |
+| North/No | 115 | 111.67 | 0.099 |
+| Central/Yes | 120 | 88.33 | 11.355 |
+| Central/No | 80 | 111.67 | 8.990 |
+| South/Yes | 60 | 88.33 | 9.079 |
+| South/No | 140 | 111.67 | 7.184 |
+
+χ² ≈ 0.126 + 0.099 + 11.355 + 8.990 + 9.079 + 7.184 ≈ **36.8.**
+
+**(c)** df = (3 − 1)(2 − 1) = 2. Critical value at α = 0.05: CHISQ.INV.RT(0.05, 2) ≈ 5.99. Since 36.8 >> 5.99, **reject H₀.** There is strong evidence that voucher redemption and region are not independent.
+
+**(d)** In business terms: redemption rates differ significantly across regions. The Central region has a redemption rate of 120/200 = 60%, well above the overall rate of 265/600 = 44.2%. The South is 60/200 = 30%, well below average. The North is close to average (85/200 = 42.5%). This suggests the promotion is working very differently across regions — perhaps due to different demographics, store formats, or local marketing execution. The Central region's strong performance warrants investigation to understand what can be replicated.
+
+**(e)** The chi-square test identifies that a difference exists but not which region drives it. Follow-up analysis options: (i) pairwise proportion tests (North vs Central, North vs South, Central vs South) with Bonferroni correction for multiple comparisons; (ii) analysis of what differs between regions — store format, promotional placement, customer demographics, basket size; (iii) a regression model with region as a predictor alongside other voucher characteristics to isolate the regional effect from confounders.
+
+**(f)** Minimum expected cell count ≥ 5 is required. All expected counts here are 88.33 (Yes) or 111.67 (No) — well above 5, so the assumption is **met.** If a cell had an expected count of 2, the standard chi-square approximation would be invalid. Options: (i) collapse rare categories (merge regions with similar counts); (ii) use Fisher's Exact Test, which does not require the minimum expected count assumption (available for 2×2 tables); (iii) increase the sample size.
+
+---
+
+### T7 — Diagnostic: email subject line A/B test (find all errors)
+
+There are at least seven problems:
+
+1. **Wrong test statistic.** A t-test is inappropriate for comparing two proportions. The correct test is a **z-test for proportions** (or a binomial test, since n = 50 is small). A t-test assumes a continuous outcome with approximately normal distribution; a binary open/no-open variable does not meet this assumption.
+
+2. **Tiny sample size.** n = 50 emails is far too small for an email A/B test. The standard error of a proportion at p = 0.28 with n = 50 is √(0.28 × 0.72/50) ≈ 0.063, giving a 95% CI of roughly 28% ± 12.4% — almost the entire range (15.6% to 40.4%). The result has very low statistical power and very wide uncertainty.
+
+3. **Invalid comparison to historical baseline.** The analyst compares the new subject line (tested under current conditions) to "22% open rate" without stating when and how that rate was measured. If the 22% was from a different list, different time, or different content, the comparison is invalid.
+
+4. **Statistical vs practical significance.** The 6-percentage-point difference (28% vs 22%) may or may not be practically meaningful. For an email list of 400,000 subscribers, 6% more opens = approximately 24,000 more opens. Whether that matters depends on the value of an open, the cost of the subject line change, and downstream conversion rates — none of which are discussed.
+
+5. **Dangerous extrapolation.** Rolling out to 400,000 subscribers based on a test of 50 emails is an extreme generalisation. The 50-email sample may not be representative of the full subscriber base (e.g., if the test was sent to a particular segment).
+
+6. **One-sided vs two-sided test not specified.** The analyst reports "p = 0.023" without stating whether the test was one-tailed (hypothesising improvement in advance) or two-tailed. If one-tailed was chosen after seeing the data improved, this is post-hoc hypothesis selection.
+
+7. **No representativeness check.** The 50 test emails may not be a random sample from the subscriber list — they could be a particular time-of-day batch, a specific geographic segment, or early subscribers. Without knowing how the 50 were selected, the 28% rate cannot be generalised.
+
+**What the analyst should have done:** pre-specify H₀ and Hₐ and test direction; use a z-test for proportions; determine the required sample size via a power calculation before running the test; report a confidence interval for the difference in open rates; and calculate the practical value of the improvement before recommending a full rollout.
+
+---
+
 **Pre-class submission (due midnight before class):**
 
 Using your open-data dataset from a country other than your own (data.gov.sg, daten.berlin.de, opendata.paris.fr, or dados.gov.pt), post to the LMS discussion board:

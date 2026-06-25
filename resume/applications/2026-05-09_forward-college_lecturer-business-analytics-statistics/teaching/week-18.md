@@ -202,6 +202,92 @@ This question uses a verified 2025 event: the US "Liberation Day" tariff announc
 
 ---
 
+## Answer Key
+
+### T4 — Effect of N on simulation stability
+
+**(a)** The **mean** profit is most stable across different N. By the Law of Large Numbers, the sample mean converges to the true expected value as N increases — even at N = 100, the mean is a reasonable estimate. The **5th percentile** (and other tail statistics) are least stable. Tail statistics estimate probabilities in the tails of the distribution, which are rare events by definition. At N = 100, only about 5 observations should fall below the 5th percentile — a single unusual draw can move this estimate dramatically. At N = 10,000, about 500 observations populate the tail, giving a much more stable estimate.
+
+**(b)** The **Law of Large Numbers** (LLN) explains stabilisation: as N increases, the sample statistic (mean, percentile, P(loss)) converges to its true population value. The variance of the sample mean decreases as 1/N — four times as many iterations halves the standard deviation of the estimate. For tail probabilities, the same principle applies but requires larger N because tail events are rare and each individual observation carries more weight.
+
+**(c)** For P(loss) ≈ 11%: heuristic N ≥ 1,000 / 0.11 ≈ **9,100.** Use N ≥ **10,000** to ensure the 5th percentile and P(loss) are reliable to one decimal place.
+
+**(d)** Increasing N from 10,000 to 1,000,000 narrows the 5th percentile estimate from (say) −€15,200 ± €500 to −€15,400 ± €50. The additional accuracy is 100-fold more precise. Whether this matters for the business decision: if the decision threshold is "should we launch given P(loss) ≈ 11%?" — the answer is the same whether P(loss) is 10.8% or 11.2%. The marginal benefit of 100× more computation is essentially zero for most business decisions. A good rule: run enough iterations so that repeating the simulation gives the same business conclusion, not the same decimal digit.
+
+**(e)** `np.random.seed(42)` fixes the pseudo-random number sequence so that the simulation produces identical results on every run. This matters for **reproducibility in business reporting**: a CFO asking "what was the P(loss) from yesterday's simulation?" needs the same number when the simulation is rerun. Without a fixed seed, every run gives slightly different results, which can confuse stakeholders. The underlying statistical validity is unaffected: the simulation is equally valid with or without a fixed seed — the seed only determines which specific random draw is taken, not whether the distribution from which it is drawn is correct.
+
+---
+
+### T5 — Simulation vs deterministic (flaw of averages)
+
+**(a)** The deterministic approach produces €80,000 by plugging the mean of each input into the formula. The simulation produces a slightly different mean because the **product of two random variables has a different expected value than the product of their expectations** in the presence of nonlinear interactions. In this case: Revenue = units × price. Even though units and price are independent, the product's distribution is not symmetric (it is right-skewed for positive random variables), making the median profit lower than the mean and the mean profit slightly different from the "plug in the mean" calculation. More fundamentally, the deterministic model reports only a point estimate — it cannot compute the variance, skewness, or tail risk of the output.
+
+**(b)** The deterministic model completely hides: (i) the **probability of a loss** (which the simulation reports as 11%); (ii) the **range of outcomes** — the 5th to 95th percentile spread; (iii) the **downside risk** — how bad the worst outcomes are; (iv) the **shape of the distribution** — whether profit is symmetric or right/left-skewed. The single number "€80,000" contains none of this information.
+
+**(c)** The investor should ask: "What is the probability the company loses money, and what would the loss be in the worst 10% of scenarios?" These questions require the simulation; the deterministic report cannot answer them.
+
+**(d)** The deterministic approach is acceptable when: input uncertainty is small relative to the decision threshold (e.g., a cost estimate with ±1% uncertainty when the profit margin is 40%); the relationship between inputs and output is linear (so E(output) = f(E(inputs))); the decision does not depend on tail risk. It is dangerously misleading when: input uncertainties are large and multiply together (e.g., uncertain units × uncertain price × uncertain costs = highly uncertain profit); when the decision depends on the probability of exceeding a threshold (e.g., will we exceed our €60,000 fixed cost?); or when the inputs are correlated in ways that amplify tail risk.
+
+**(e)** "Using best estimates for each input is defensible when the uncertainties are small relative to the decision margin and the relationships are approximately linear — for example, estimating headcount costs for next quarter when salary is well-known and headcount varies by ±5%. It is not defensible when multiple uncertain inputs combine multiplicatively, when tail risk matters for the decision (e.g., risk of insolvency), or when the input uncertainties are genuinely large — in those cases, plugging in mean values produces a false sense of precision while hiding the true distribution of outcomes."
+
+---
+
+### T6 — Sensitivity analysis and risk mitigation
+
+**(a)** **Units demand uncertainty** has the largest impact on P(loss): halving the units SD (from 2,500 to 1,250) cuts P(loss) from 11% to 5% — the largest reduction of any input. This tells the startup that demand forecasting accuracy is the most important risk lever. Reducing uncertainty about how many units will sell has twice the risk-reduction benefit of reducing price uncertainty and more than twice the benefit of reducing variable cost uncertainty. The startup should prioritise investment in demand research over cost certainty or price negotiation.
+
+**(b)** Baseline expected cost of loss = 0.11 × €200,000 = **€22,000.** With 40% reduction in units SD (SD drops from 2,500 to 1,500): P(loss) interpolates between 11% (baseline) and 5% (50% SD reduction) — approximately 7%. New expected cost = 0.07 × €200,000 = **€14,000.** Reduction in expected loss cost = €22,000 − €14,000 = **€8,000.** This is less than the €15,000 research cost — **not worth it at these numbers alone.** However, the analysis ignores the value of better demand information for production planning, inventory optimisation, and capital allocation — all of which benefit from reduced uncertainty beyond the direct loss probability reduction.
+
+**(c)** The tornado analysis varies one input at a time (one-way sensitivity) because it isolates the marginal effect of each individual input on P(loss). Limitation: it ignores **interaction effects** between inputs. If units sold and price are negatively correlated (lower demand pushes prices down too, amplifying losses), the joint effect on P(loss) is larger than either individual effect alone. One-at-a-time analysis would underestimate the combined risk. A full joint sensitivity analysis (varying multiple inputs simultaneously and modelling their correlations) would require a more complex simulation setup — but would give a more accurate picture of combined uncertainty.
+
+**(d)** Business events that can make previously fixed costs uncertain: (i) **Lease renegotiations or property market changes** (a fixed-term lease expiring during the project creates uncertain renewal costs); (ii) **Regulatory or compliance cost changes** (a new emissions regulation could add an unanticipated fixed compliance cost); (iii) **Currency movements** (if fixed costs are denominated in a foreign currency, they are fixed in that currency but uncertain in the reporting currency); (iv) **Insurance premium changes** (particularly post-COVID or post-flood events).
+
+**(e)** "Based on our simulation, the most important risk to manage is **demand uncertainty (units sold)**, because halving the uncertainty in unit demand reduces the probability of loss from 11% to approximately 5% — the largest reduction of any input. If we can reduce the uncertainty in **projected unit sales** (e.g., through pre-orders, pilot testing, or market research), the probability of loss drops from 11% to approximately 5–7%. The main assumption behind this finding is that unit demand uncertainty is independent of price uncertainty — if a price war simultaneously reduces both volume and price, the actual P(loss) could be higher than either input individually suggests."
+
+---
+
+### T7 — GIGO diagnostic (property development simulation)
+
+**(a)** Sale price: Normal(€320,000, €40,000) based on 3 comparable sales. (i) Distribution may be appropriate for a symmetric market but 3 sales is a very small sample — the mean and SD estimates carry high uncertainty. (ii) Property markets are often **right-skewed** (a few exceptional sales pull the mean up); a lognormal or right-skewed distribution may be more appropriate. Additionally, 3 comparables may not span the market conditions at time of sale. (iii) If the normal distribution overestimates the mean sale price (3 comparables included an exceptional sale), P(loss) is **underestimated.** If market conditions deteriorate by project completion (18+ months away), actual prices may be lower than comparable sales today suggest.
+
+**(b)** Construction cost: Normal(€2,800/m², €200) based on a quote from 6 months ago. (i) Using a 6-month-old quote as the current distribution mean is risky — construction costs have been volatile. (ii) **Inflation and supply chain disruptions** can cause construction costs to rise significantly during the project (which lasts 18 months). A normal distribution also ignores the possibility of large unexpected cost overruns (structural discoveries, labour disputes), which are better captured by a right-skewed distribution. (iii) If construction costs are underestimated (as 6-month-old quotes likely are in an inflationary environment), P(loss) is **underestimated.**
+
+**(c)** Construction time: Normal(18 months, SD 2 months). (i) A normal distribution implies a small probability of completing in 14 months (3 SD below) — theoretically possible but unrealistic. More problematically: construction projects **almost always take longer than planned** due to weather, subcontractor delays, and inspections. A right-skewed distribution (e.g., lognormal) would be more appropriate. (ii) The normal distribution assigns equal probability to finishing early and finishing late — but construction delays are far more common than early completions. (iii) If delays are underestimated, carrying costs (interest, site management) during the extended period are underestimated → P(loss) is **underestimated.**
+
+**(d)** Inflation rate: fixed at 3%. (i) Treating inflation as fixed ignores interest rate uncertainty and macro shocks. Over an 18-month project, inflation could range from 1% to 6%+ depending on macro conditions. (ii) **Stagflation or supply-driven inflation** (as experienced in 2022–2023) could spike material costs while weakening demand for new apartments. (iii) Fixing inflation at 3% rather than treating it as uncertain means the simulation underestimates the spread of possible outcomes → P(loss) is **underestimated** (the simulation looks more precise than it should).
+
+**(e)** Planning permission: treated as certain (P = 1). (i) Not appropriate — planning permission is never certain, even in "easy" jurisdictions. (ii) **Unexpected objections, environmental reviews, or political changes** can delay or deny permission. A project denied permission after €1–2M in pre-development costs could produce a large loss. (iii) Treating permission as certain completely ignores this tail risk → P(loss) is **severely underestimated.** A 5% probability of denial combined with a €2M sunk cost would shift P(loss) materially.
+
+**Overall:** the P(loss) = 8% from this simulation is almost certainly a **significant underestimate** of true risk. Four of the five inputs have assumptions that bias the simulation toward optimism: construction costs are likely understated (old quote), construction time underestimates delays (symmetric normal vs right-skewed reality), inflation is treated as certain (underestimates spread), and planning permission is assumed certain (ignores a real tail risk). A corrected simulation with realistic distributions would likely show P(loss) of 15–25% or higher.
+
+---
+
+### T8 — GIGO diagnostic: US tariff uncertainty (April 2025)
+
+**(a)** Before April 2025, fixing the tariff at 20% seemed reasonable because it was the established trade policy rate — US tariffs on Chinese electronics had been at approximately 20–25% for several years following the 2018–2019 US-China trade dispute. Using a known, stable policy rate as a fixed input is standard practice when there is no credible signal of imminent change. The "risk" being ignored was **policy risk (also called political risk or regulatory risk)** — the possibility that government policy could change discontinuously. Policy risk is structurally different from market risk (demand, price fluctuations): it is not modelled by continuous distributions because it involves discrete, hard-to-predict government decisions.
+
+**(b)** Pseudocode for a discrete tariff draw:
+```python
+import numpy as np
+rng = np.random.default_rng(42)
+tariff_scenarios = [0.20, 0.54, 1.45]   # 20%, 54%, 145%
+tariff_probs    = [0.35, 0.40, 0.25]    # probability weights
+tariff = rng.choice(tariff_scenarios, p=tariff_probs)  # one draw
+# For N=10,000 draws:
+tariffs = rng.choice(tariff_scenarios, size=10_000, p=tariff_probs)
+```
+Each of N = 10,000 simulations draws one tariff rate with the specified probabilities.
+
+**(c)** Compared to fixing tariff at 20%: including tariff uncertainty increases P(loss) because 65% of scenarios have tariff rates above 20% (40% at 54%, 25% at 145%), which compress profit margins. At 145% tariff, profit per unit is severely negative; this tail significantly raises P(loss). Compared to fixing tariff at 145%: the simulation with uncertainty shows lower P(loss), because 35% of scenarios use the 20% rate (near-baseline profitability). The simulation with uncertainty represents the analyst's honest uncertainty about which scenario will materialise.
+
+**(d)** Analyst 1 (35%/40%/25%): greater weight on the pause being maintained; lower expected tariff. Analyst 2 (50%/30%/20%): greater weight on the pause, slightly lower tariff risk. The resulting P(loss) will be lower for Analyst 2's weights (more probability mass at 20% tariff). This reveals that **simulation output is sensitive to the input probability assignments**, which are themselves subjective. A 15 percentage-point difference in the probability of the 20%-scenario (35% vs 50%) could shift P(loss) by several percentage points. This is not a flaw of simulation — it is an honest acknowledgement that the analyst's judgment about policy probabilities materially drives the result.
+
+**(e)** The analyst is right. A simulation with explicit uncertainty is more honest than a budget that assumes tariffs stay at 20% — the budget creates a false sense of precision (one specific profit figure) that hides the true decision environment. The CFO's concern about "too many unknowns" conflates simulation uncertainty with model unreliability: acknowledging uncertainty in the model does not make it meaningless; it makes it accurate. The simulation output should be used for: (i) understanding the range of possible outcomes and their probabilities; (ii) identifying which inputs drive the most risk (sensitivity analysis); (iii) informing hedging or contingency planning (e.g., how much cash buffer is needed?). The simulation should NOT be used as a precise point prediction, a basis for marketing promises, or a substitute for scenario planning that incorporates non-quantifiable strategic factors.
+
+**(f)** The rapid change in the "right" probability weights (within 7 days) implies: (i) **Monte Carlo simulations should be presented with explicit model dates and "as of" conditions** — a simulation run on April 2 is a model of the April 2 decision environment, not a durable forecast. (ii) **Models should be updated whenever a material input changes** — in fast-moving policy environments, this may mean weekly or even daily updates for time-sensitive decisions. (iii) Decision-makers should be told: "This simulation assumes probability weights as of [date] — if the tariff policy changes again, rerun the model." The output should be accompanied by a sensitivity table showing how P(loss) changes under each analyst's probability assignment, so decision-makers understand the range of defensible conclusions rather than a single "answer."
+
+---
+
 ## In-Class Session (90 minutes)
 
 ### Part 1 — Opening Challenge (10 minutes)

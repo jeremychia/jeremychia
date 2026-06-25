@@ -165,6 +165,76 @@ This question uses verified events: the OPEC+ output increase announcement of Ma
 
 ---
 
+## Answer Key
+
+### T5 — Additive vs multiplicative seasonality
+
+**(a)** For a rapidly growing business (15% annual growth), the **multiplicative model** is more appropriate. Under an additive model, the seasonal swing is a fixed absolute amount (e.g., +150 units in January every year) regardless of the trend level. But if total volume is growing, it is more realistic for the seasonal swing to scale with the level — January might be 30% above trend whether trend is 500 units or 1,000 units. The multiplicative model captures this: as the trend grows, the absolute seasonal effect grows proportionally.
+
+**(b)** Under the multiplicative model, the January seasonal multiplier is 1.30 (30% above trend). In year 5, trend has doubled vs year 1. The January seasonal effect in units = 1.30 × (2 × year-1 trend level) − (2 × year-1 trend level) = 0.30 × (2 × year-1 trend level). The absolute January spike has **doubled** in unit terms. Under the additive model, it would still be +150 units — half as large in year 5 as the multiplicative model predicts.
+
+**(c)** If the RMSE on months 49–60 is lower for the multiplicative model, the data support that seasonal swings have been scaling with trend — the multiplicative assumption is better supported. If the additive model has lower RMSE, the seasonal swings have been roughly constant in absolute size despite growth. Comparing RMSE on the held-out test set is the correct empirical method for choosing between the two structures.
+
+**(d)** The Holt-Winters model assumes the trend and seasonal pattern observed in the training data will continue. A 20% price cut causing a structural demand shift violates this assumption: the model's parameters (trend, seasonal factors, smoothing weights) were estimated from pre-price-war data and cannot anticipate the regime change. Forecasts would systematically under-predict post-price-war demand because the model does not know a structural break has occurred.
+
+**(e)** "A forecast is a conditional projection, not a prediction" means: every forecast is contingent on the assumption that the conditions underlying the model remain unchanged. The Holt-Winters forecast says: "If pricing, competitive conditions, and market behaviour continue as in the training period, then demand will be approximately X." The price war violates that condition. The forecast is not wrong in a modelling sense — it is applying the right model to the wrong regime. A prediction (in the colloquial sense) claims to state what will actually happen; a conditional projection states what would happen if specific conditions hold.
+
+---
+
+### T6 — Moving average vs exponential smoothing
+
+**(a)** 3-week moving average forecast for week 27 = (Week 24 + Week 25 + Week 26) / 3 = (950 + 920 + 990) / 3 = 2,860 / 3 ≈ **953 units.**
+
+**(b)** SES forecast for week 27: F₂₇ = 0.3 × Y₂₆ + 0.7 × F₂₆ = 0.3 × 990 + 0.7 × 880 = 297 + 616 = **913 units.**
+
+**(c)** The 3-week moving average responds more quickly to the recent spike. In the MA, week 26 (990 units) receives equal weight (1/3) as weeks 24 and 25 — the spike enters the forecast immediately at full weight. In SES with α = 0.3, week 26 receives only 30% weight; the remaining 70% is spread across all prior history via F₂₆ = 880. The SES forecast (913) is further from week 26 than the MA forecast (953) precisely because SES dampens recent observations. Higher α → more responsive to recent observations.
+
+**(d)** For **volatile demand (noise-dominated):** a **low α** is more appropriate — it averages over recent fluctuations rather than chasing noise, producing more stable forecasts. For **stable underlying demand with meaningful recent signals:** a **high α** is more appropriate — it responds quickly to genuine shifts in the level. The key judgment: is recent variation signal (a real change in demand) or noise (random fluctuation)? High α treats recent observations as signal; low α treats them as noise.
+
+**(e)** Neither the 3-week MA nor the SES model captures the 4-week seasonal cycle. If production spikes in weeks 24 and 28 historically: the 3-week MA for week 27 uses weeks 24, 25, 26 — it includes the week-24 spike (950) and the non-spike weeks (920, 990), so it averages in the spike but doesn't predict week 27 correctly if the cycle puts the spike at week 28. Both methods would produce forecasts that lag behind the seasonal pattern — consistently under-forecasting spike weeks and over-forecasting off-peak weeks. Seasonal adjustment (using Holt-Winters with a period of 4) would be needed to capture this cycle.
+
+---
+
+### T7 — Error metrics in business context
+
+**(a)** Product A MAPE = MAE / mean actual demand × 100% = 120 / 1,200 × 100% = **10%.** Whether 10% is good depends on the industry and the purpose of the forecast. For a commodity product (relatively stable demand), 10% MAPE is moderate — acceptable for strategic planning but potentially too wide for tight inventory management. Comparison with industry benchmarks or the business decision's sensitivity to forecast error is necessary.
+
+**(b)** Product B RMSE (210) is more than twice the MAE (85). RMSE penalises large errors more heavily than MAE. When RMSE >> MAE, it indicates a distribution of errors with **mostly small errors but a few very large outliers** — the average absolute error is 85 units (small), but some months have errors large enough to drive the RMSE to 210. The squared errors from those few large deviations dominate the RMSE. This pattern is often seen in demand with occasional sharp spikes that the model misses.
+
+**(c)** Under-forecasting (stockout) costs €15/unit; over-forecasting (wastage) costs €8/unit. Since stockouts are more costly, **under-forecasting is worse.** The forecast should be **biased upward** (systematically over-forecast slightly) to reduce the expected cost of stockouts. This is equivalent to building a safety stock or using a demand quantile above the median as the forecast target — the optimal bias point balances the asymmetric costs. (Formally: the newsvendor model sets the optimal stocking level at the demand quantile q = cost_of_underage / (cost_of_underage + cost_of_overage) = 15/(15+8) ≈ 65th percentile.)
+
+**(d)** RMSE is preferred when **large errors are disproportionately costly** — production schedule disruptions, emergency air freight, lost large contracts — because it squares errors and weights large deviations heavily. Use it when a few large misses are much worse than many small ones. MAE is preferred when **errors of all sizes are roughly equally costly** — steady inventory decisions, routine reordering — because it treats each unit of error the same. MAE is also more robust to outliers and easier to explain to non-technical stakeholders.
+
+**(e)** Mean Error (ME) tracks the **direction** of systematic bias. A consistently positive ME (actual > forecast) means the system is systematically under-forecasting — it is biased low. This is operationally important even if RMSE and MAE are acceptable: a biased system causes systematic stockouts (or systematic overstock if ME is negative), regardless of how small the average magnitude of errors is. RMSE and MAE tell you error size; ME tells you error direction. A good forecasting system should have ME ≈ 0 (unbiased on average) alongside low MAE/RMSE.
+
+---
+
+### T8 — Identifying the right time series model
+
+**(a)** Toy retailer (UK, 8 years, flat most of year, growing November–December spike): (i) **Multiplicative** — the spike is growing in absolute size as the company expands, consistent with the seasonal swing scaling with trend level. (ii) **Holt-Winters (trend + seasonal)** — both a growing trend and a strong seasonal cycle are present. (iii) Required assumption: the growth rate and the seasonal multiplier remain stable going forward. A change in the mix of in-store vs online sales, or a competitor entry, could change the seasonal pattern.
+
+**(b)** German electricity distributor (daily, weekly + annual seasonality, no trend): (i) **Additive** — electricity consumption has a relatively stable baseline; the weekly and annual swings are roughly constant in size rather than scaling with an absent trend. (ii) **Holt-Winters seasonal only** (or a double-seasonal Holt-Winters) — trend component is not needed; the seasonal cycle is present at two frequencies (weekly and annual). (iii) Required assumption: grid load patterns remain stable. A large-scale adoption of EVs or industrial demand shifts could change the seasonal structure.
+
+**(c)** Technology startup (monthly, 18 months, 35% YoY growth, no seasonal pattern yet): (i) Not applicable — no seasonality visible. (ii) **Holt's (trend only) exponential smoothing** — captures the exponential growth trend without seasonal adjustment. Simple SES would lag a rapidly growing series. (iii) Required assumption: the growth rate is stable. Startup revenue growth is highly uncertain; if the company saturates a market segment or faces competition, the trend assumption could break quickly.
+
+**(d)** Restaurant chain (weekly, Friday/Saturday peak, slight annual trend, proportional seasonal cycle): (i) **Multiplicative** — the seasonal pattern (Friday/Saturday vs weekday covers ratio) appears to scale with the upward trend. (ii) **Holt-Winters (trend + seasonal, multiplicative)** — both trend and scaling seasonal pattern present. (iii) Required assumption: the weekly seasonal multipliers are stable. Menu changes, pricing strategy, or a new competitor opening nearby could shift the peak/off-peak ratio.
+
+---
+
+### T9 — When a forecast assumption breaks: OPEC+ 2025
+
+**(a)** The model embedded the assumption that **OPEC+ production behaviour would follow patterns similar to 2020–2024** — specifically, that production cuts would be maintained or only gradually unwound, consistent with the group's stated coordination objectives. This assumption failed because OPEC+ members made a larger-than-expected, faster-than-expected output increase in May 2025, driven by internal disagreements (particularly members exceeding quotas), Saudi Arabia's decision to defend market share over price, and geopolitical dynamics that were not predictable from historical production patterns. The structural relationship between OPEC+ policy and oil price that the model was trained on broke.
+
+**(b)** The model was **built correctly and applied to a regime it was not designed for** — not badly built. A test-set RMSE of $3.20 on 2023 data was a legitimate performance evaluation under the conditions that prevailed during that period. The 2025 structural break (a large coordinated policy reversal driven by internal OPEC+ dynamics) is fundamentally different from the "noise" that validation RMSE measures. A bad model would have poor RMSE on the 2023 test set. The 2025 failure reveals the limits of what historical calibration can predict, not a modelling error.
+
+**(c)** The risk manager means: "A structural break is a regime change — a qualitative shift in the data-generating process — that cannot be forecast by extrapolating from prior patterns. No amount of model sophistication can predict genuinely novel policy decisions." The data scientist means: "We can incorporate model uncertainty about OPEC+ behaviour by assigning probabilities to different policy scenarios (e.g., hold cuts / gradually unwind / accelerate unwind) and weighting the forecasts accordingly. A Bayesian update would adjust these probabilities as new signals (meeting announcements, market data) arrive." The data scientist's approach is more useful going forward: it cannot predict the decision but can produce a forecast with honest uncertainty bands and contingency scenarios, which is more useful for risk management than a single-point forecast.
+
+**(d)** Three 2025 oil price features that violated different Holt-Winters assumptions: (i) **Trend assumption violated:** Holt-Winters assumes the trend is relatively stable (slow acceleration/deceleration). The shift from gradual unwinding to rapid output expansion caused a sharp downward price trend that reversed the model's prior upward or stable trend estimate. (ii) **Seasonal pattern assumption violated:** Holt-Winters assumes seasonal patterns repeat with consistent timing. The OPEC+ decision in May 2025 (an unusual month for large production shifts) created a non-seasonal shock that the model attributed to seasonal variation rather than a structural policy change. (iii) **Error term independence assumption violated:** Holt-Winters assumes residuals are random and independent. After the May announcement, oil price errors became serially correlated — the price stayed below $65/barrel consistently, not randomly — because a persistent structural cause (higher output) was driving prices down, not mean-reverting noise.
+
+**(e)** Advantage of monthly retraining: the model's parameters (trend, smoothing weights) adapt quickly to recent data, making it more responsive to genuine regime changes once they are visible in the data. In an environment where conditions actually change, a model retrained on recent data will track the new level/trend faster than one calibrated on a long historical window that dilutes recent signals. Risk: in a volatile environment where OPEC+ decisions are intermittent and unpredictable, retraining monthly may cause the model to **overfit to noise** — chasing short-term price movements that will mean-revert, rather than tracking a genuine new trend. If a policy surprise pushes prices to $58/barrel in month 1 but the "true" structural level is $68/barrel, monthly retraining may embed the temporary shock into the model's parameters, causing systematic forecast errors in subsequent months.
+
+---
+
 ## In-Class Session (90 minutes)
 
 ### Part 1 — Opening Challenge (10 minutes)

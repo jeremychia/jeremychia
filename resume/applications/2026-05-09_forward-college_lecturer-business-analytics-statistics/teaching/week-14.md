@@ -194,6 +194,126 @@ T3 uses a verified 2025 policy context: Amazon's five-day RTO mandate was announ
 > (d) The analyst adds a control variable: initial GDP per capita in 1990 (a measure of how wealthy countries already were). After adding this control, the slope on secondary enrolment drops from 4,200 to 850 and is no longer statistically significant. What does this reveal?
 > (e) A policy maker says: "Even if it's not proven to be causal, an r = 0.82 is strong enough to act on." Write a two-sentence response that acknowledges the pragmatic argument while stating what specific evidence would make the causal claim more credible.
 
+---
+
+## Answer Key
+
+### T0 — Slope interpretation (entry question)
+
+**Correct sentence:** "A slope of 6.2 means that each additional hour of study is associated with a predicted increase of 6.2 points in exam score, on average."
+
+**What it does NOT tell you:** "It does not tell you that studying *causes* higher exam scores — the relationship could be explained by a confound (e.g., motivated students both study more and have higher prior ability), and the slope does not tell you the score for any specific student, only the average prediction."
+
+---
+
+### T1 — Simple regression (hours studied vs exam score)
+
+**(a)** With X: 1, 2, 3, 4, 5, 6 and Y: 45, 52, 58, 65, 72, 78: r ≈ **0.999** — almost perfectly linear. The relationship is extremely strong.
+
+**(b)** Using Excel Data Analysis: **Score ≈ 38.6 + 6.6 × Hours.** (Exact values from OLS: intercept ≈ 38.6, slope ≈ 6.6.)
+
+**(c)** Slope = 6.6: each additional hour of study predicts an average increase of **6.6 points** in exam score. This is the expected difference in exam scores between two students who differ by one hour of studying, according to the model.
+
+**(d)** Predicted score for 7 hours: 38.6 + 6.6 × 7 = **84.8 points.** This is a modest extrapolation just beyond the data range (which goes up to 6 hours). The prediction is reasonably reliable because the relationship is very linear and 7 hours is close to the edge of the training data — but any extrapolation carries additional uncertainty since we cannot verify the model holds outside the observed range.
+
+**(e)** Predicted score for 0 hours: 38.6 + 6.6 × 0 = **38.6 points.** This prediction is of limited meaningfulness: 0 hours is outside the data range (data runs from 1 to 6 hours), and predicting what happens when someone does literally no studying may involve behaviour (e.g., no attendance, prior knowledge only) that differs qualitatively from the student population in the data. The intercept is technically "the predicted score when hours = 0" but should be treated with caution.
+
+---
+
+### T2 — R² and residuals
+
+**(a)** R² ≈ **0.998** (very close to 1, given the near-perfect linear relationship). About 0.2% of variation in exam scores is **unexplained** by study hours — a tiny residual variation.
+
+**(b)** Predicted values and residuals (using ŷ = 38.6 + 6.6x):
+| X (hours) | Y (actual) | Ŷ (predicted) | Residual (Y − Ŷ) |
+|---|---|---|---|
+| 1 | 45 | 45.2 | −0.2 |
+| 2 | 52 | 51.8 | +0.2 |
+| 3 | 58 | 58.4 | −0.4 |
+| 4 | 65 | 65.0 | 0.0 |
+| 5 | 72 | 71.6 | +0.4 |
+| 6 | 78 | 78.2 | −0.2 |
+
+**(c)** If the linear model is appropriate, residuals plotted against X should show **random scatter around zero** — no systematic pattern. Residuals should be roughly equal in magnitude at all X values (homoskedasticity) and show no trend.
+
+**(d)** A curved pattern in residuals (positive → negative → positive) indicates **non-linearity** — the true relationship is curved, not straight. The linear model is misspecified: a quadratic or other transformation of X is likely needed. This pattern is the key diagnostic: if you see it, the straight-line model is wrong regardless of the R² value.
+
+---
+
+### T3 — Causation vs correlation (RTO context)
+
+**(a)** Slope = 3.1: each additional day per week in the office predicts a 3.1-point increase in productivity score, on average. R² = 0.18 means 18% of the variation in productivity scores is explained by days in office — **low for a study of individual human behaviour**, where many factors (role complexity, tenure, team quality, motivation) affect productivity. R² = 0.18 is not high enough to support strong causal claims, but the slope may still be informative about the direction of association.
+
+**(b)** Two problems with the causal claim: (i) **Reverse causality:** high performers may be more likely to come to the office because they enjoy their work, feel socially engaged, or are in roles (e.g., leadership, sales) that benefit from in-person presence. The productivity advantage precedes office attendance, not vice versa. (ii) **Omitted variable bias:** prior performance, role type, tenure, and team composition are all plausible confounders that predict both office attendance and productivity — the regression slope on office days may be capturing the effect of these omitted variables, not office attendance itself.
+
+**(c)** The most plausible confound is **prior performance / motivation level.** High-performing, highly motivated employees are more likely to both attend the office voluntarily (they are self-directing and engaged) and to score highly on productivity metrics (they are high performers). This creates a spurious positive correlation between office attendance and productivity that would exist even if the office had zero causal effect.
+
+**(d)** The drop from 3.1 to 0.7 (and loss of significance after adding prior performance as a control) reveals **omitted variable bias** in the original regression. Prior performance is a confounder: it was positively correlated with both days in office and productivity score, inflating the apparent coefficient on office attendance. Once prior performance is controlled for, the marginal effect of office attendance shrinks dramatically. This suggests the original 3.1 coefficient was largely capturing the effect of employee quality, not office attendance.
+
+**(e)** This describes **self-selection bias** (a form of omitted variable bias / endogeneity). Employees who choose to come to the office more are systematically different from those who don't — they differ in motivation, role type, commuting distance, and team culture. To rule this out, you would need: (i) a randomised experiment assigning some employees to mandatory in-office and others to mandatory remote work; or (ii) a natural experiment using an exogenous variation in attendance (e.g., a specific team's building lost heating and they worked remotely for a quarter) to compare otherwise-similar employees.
+
+**(f)** If high-performing remote workers leave post-RTO, the in-office group increasingly consists of those who were already more willing to come in — who are not a representative cross-section of the original workforce. Over time, the average productivity score of the in-office group may **appear to rise** because low-performing reluctant commuters remain while high-performing remote-preferring employees leave. This is **attrition bias (sample selection):** the composition of the sample changes, affecting the regression. The analyst might then claim "RTO improved productivity" when in reality only a selected higher-performing subset stayed, while the true causal effect of RTO could be zero or negative.
+
+---
+
+### T4 — Slope and intercept boundary cases
+
+**(a)** Slope = 800: the model predicts that a 40-year-old earns €800 more than a 39-year-old, on average, for this sample of employees. This is the average annual salary increase associated with one additional year of age.
+
+**(b)** Intercept: the model predicts a newborn (age = 0) would earn €25,000. This is not meaningful — a child cannot work, and 0 years is far outside the data range (employees are likely aged 22–65+). The technical term for using a model outside the training data range is **extrapolation.** Extrapolation is always risky; the linear model has no guarantee of validity at X = 0.
+
+**(c)** The colleague who says "this regression is useless" overstates the case; the one who says "the slope is still informative" is more correct — but both have a point. R² = 0.08 means age alone explains very little of salary variation: most of the variation comes from factors like role, seniority, performance, and industry. However, the slope of €800/year is informative as a descriptive statistic — it quantifies the average salary-age gradient in this sample, even if age is a poor single predictor. Additional context that would help: how does R² = 0.08 compare to other single-variable models? Is the coefficient statistically significant? What is the salary range across employees?
+
+**(d)** Residual for age-23 new hire: Predicted = 25,000 + 800 × 23 = €43,400. Residual = €48,000 − €43,400 = **€4,600.** The employee earns €4,600 more than the model predicts for their age — a positive residual indicating above-model compensation.
+
+**(e)** A negative slope (salary decreasing with age) within the technology division could reflect **Simpson's Paradox** or **compositional effects.** For example: the technology division may have hired many junior employees very recently at higher market rates than senior employees hired years ago under different market conditions. Young employees hired in 2022–2024 at inflated tech-sector salaries earn more than older employees hired in 2015 at lower rates. Within the division, age and salary are negatively correlated — not because seniority is punished, but because the timing of hiring (and prevailing market rates) drives salary more than age. The overall positive correlation across divisions disappears within this subgroup.
+
+---
+
+### T5 — Build, predict, evaluate residuals (apartments)
+
+**(a)** Using Excel Data Analysis on the 8-apartment data: **Rent ≈ 256 + 16.4 × Size.** Slope: each additional m² of apartment size predicts approximately **€16.40 more in monthly rent**, on average. (Student answers may vary slightly depending on rounding in Excel output.)
+
+**(b)** R² ≈ **0.988** — approximately 98.8% of the variation in monthly rents across these 8 apartments is explained by apartment size. Very high: size is an excellent predictor of rent in this sample.
+
+**(c)** Predicted rent for Apt 4 (70m²): 256 + 16.4 × 70 = 256 + 1,148 = **€1,404.** Residual = 1,400 − 1,404 ≈ **−€4.** The apartment is priced essentially at the model's prediction — a residual of −€4 is negligible. (Apt 4 is effectively at the regression line.)
+
+**(d)** With R² ≈ 0.988, residuals should be small and show random scatter around zero with no systematic trend. A random pattern means: residuals have no visible relationship with size (no fan-shape, no curve, no clustering). Given the near-perfect fit in this dataset, the residual plot should show very small, randomly scattered points.
+
+**(e)** Predicted rent for 100m²: 256 + 16.4 × 100 = 256 + 1,640 = **€1,896.** The data ranges from 40m² to 85m², so 100m² is an extrapolation. This prediction is less reliable than predicting rent for a 65m² apartment (which is squarely within the data range). For a 65m² apartment: 256 + 16.4 × 65 = **€1,322** — the model's validity is well-established at this size.
+
+**(f)** Predicted rent for 65m²: €1,322 (from above). Listed price: €1,600. Percentage above prediction: (1,600 − 1,322)/1,322 × 100% ≈ **21% above prediction.** Whether this is "significantly" higher depends on the standard error of the estimate from the regression output. If the standard error is ~€80 (approximate, given the tight fit), €1,600 is approximately (1,600 − 1,322)/80 ≈ 3.5 standard errors above prediction — quite high. The apartment appears expensive relative to its size.
+
+---
+
+### T6 — High vs low R²: when does it matter?
+
+**(a)** R² = 0.78: **22%** of tomorrow's temperature variation is unexplained by today's temperature. This residual variance comes from chaotic weather dynamics, fronts, and atmospheric events that today's temperature alone cannot capture — these require additional meteorological variables (pressure, humidity, wind direction) for better prediction.
+
+**(b)** Both are right in context. R² = 0.78 is strong for a single-predictor physical science model where the predictor is directly related to the outcome. R² = 0.06 is very low for predicting a complex economic variable from a single prior-period value — corporate earnings are affected by macroeconomic conditions, management decisions, and industry disruptions, making single-predictor prediction inherently weak. The usefulness of R² depends entirely on the domain: in physics and meteorology, R² > 0.7 with one predictor is excellent; in economics and social science, R² < 0.3 with many predictors is common. Comparing R² across domains without context is meaningless.
+
+**(c)** Yes — a statistically significant but practically weak predictor is both possible and common. Statistical significance at p = 0.003 with n = 200 says the slope is distinguishable from zero with high confidence. Practical weakness (R² = 0.06) says the predictor explains very little of the outcome's variation. With 200 observations, even a tiny true effect can be detected with high confidence. The slope of 0.14 is real in the sense that it is non-zero — but it explains only 6% of earnings variation, meaning 94% is driven by other factors. A significant but weak predictor is useful as one of many inputs in a larger model, but not as a standalone forecasting tool.
+
+**(d)** R² is **the same** regardless of which variable is X and which is Y — R² = r², and the correlation between X and Y is symmetric (r(X,Y) = r(Y,X)). The slope **changes**: if slope of Y on X is b = r(σ_Y/σ_X), then slope of X on Y is b' = r(σ_X/σ_Y) = b × (σ_X²/σ_Y²). Unless r = ±1, the two slopes are different.
+
+**(e)** Prediction: 0.14 × 20 = **2.8% earnings growth** predicted for next year. Caveat: R² = 0.06 means the model explains only 6% of earnings variation — the remaining 94% is driven by factors outside the model (macroeconomic conditions, management quality, competitive dynamics). The 2.8% prediction carries enormous uncertainty: the 95% prediction interval would be very wide (roughly ±2 standard errors of the estimate). This model should not be used for individual company forecasts; at best it provides a weak population-level tendency.
+
+---
+
+### T7 — Education and GDP: causation claim
+
+**(a)** r = 0.82 across 90 countries is plausible — there is a well-documented association between educational attainment and economic development in cross-country data. The strongest causal argument: human capital theory (Becker, 1964) predicts that education raises worker productivity, which drives GDP per capita. More educated workforces can adopt more complex technologies, move into higher-value industries, and generate larger economic surpluses. Countries with higher secondary enrolment produce more skilled workers → higher productivity → higher GDP per capita. The correlation is consistent with this mechanism.
+
+**(b)** Two confounding variables: (i) **Institutional quality:** countries with strong property rights, rule of law, and low corruption invest more in education AND have higher economic productivity independently. Institutional quality drives both, making the education-GDP correlation partly spurious. (ii) **Historical wealth:** countries that were already wealthy in the 20th century could afford to invest in education AND grew richer independently. Wealth enables education investment; education does not necessarily cause the initial wealth accumulation.
+
+**(c)** This is **ecological correlation** — the unit of analysis is the country, not the individual. Ecological correlations cannot be used to draw individual-level inferences (the ecological fallacy). Additional problems: countries differ systematically in many ways — culture, geography, colonial history, natural resources — any of which could independently explain both educational attainment and GDP. The regression of country-level averages on country-level averages cannot identify individual-level mechanisms and may produce coefficients that do not apply at lower levels of aggregation.
+
+**(d)** The dramatic drop from 4,200 to 850 after controlling for 1990 GDP reveals severe **omitted variable bias** in the original model. Countries that were already wealthy in 1990 had both the resources to expand secondary enrolment AND the existing economic base for high GDP per capita. The original coefficient (4,200) was capturing the effect of historical wealth, not the causal effect of education. After controlling for the starting point (1990 GDP), the marginal return to secondary enrolment is much smaller and statistically indistinguishable from zero.
+
+**(e)** "The r = 0.82 association is real and worth taking seriously as a basis for policy prioritisation — governments allocating limited budgets should favour education where other evidence suggests it contributes to development. However, to make the causal claim more credible, we would need evidence from natural experiments or quasi-experimental designs: for example, countries where secondary enrolment expanded sharply due to an exogenous policy change (a school construction programme, a legal change in compulsory schooling age) and whether GDP per capita subsequently grew faster than comparable countries that did not experience the same shock. The correlation alone, while suggestive, cannot distinguish between education causing growth and wealth enabling both."
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Find a relationship that someone (a news article, a study, a company) has described as causal — "X causes Y" or "X leads to Y." Submit:

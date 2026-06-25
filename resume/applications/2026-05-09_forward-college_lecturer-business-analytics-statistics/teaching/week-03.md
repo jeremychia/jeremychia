@@ -198,6 +198,154 @@ This question directly extends T3 (which introduced Simpson's Paradox conceptual
 > (d) You notice that one store in the dataset is in London (population 9.0 million, revenue €18.2 million). London is larger than any other city. How would removing London from the dataset likely affect r? Would the direction change?
 > (e) Your manager now asks: "Does this mean we should open more stores in large cities?" Write a two-sentence response that correctly uses the correlation result without over-claiming causation, and names the most important confound to investigate before making this recommendation.
 
+---
+
+## Answer Key
+
+### T0 — Correlation direction predictions
+
+**(i)** Hours of sunshine and ice cream sales: **positive** — warm weather drives both outdoor activity and appetite for cold food.
+
+**(ii)** Fire stations and fires: **positive** — but spurious. Both are driven by city size: larger cities have more fire stations *and* more fires. This is a canonical confound example. The direction (positive) is correct; the mechanism is not causal.
+
+**(iii)** Shoe size and vocabulary: **approximately zero** in adults. Both increase with age and physical development in children, but in an adult population there is no plausible direct mechanism.
+
+**(iv)** Distance from city centre and apartment price: **typically negative** in most European cities — prices tend to fall as distance from the centre increases, though exceptions exist in cities with desirable suburban areas or specific geography.
+
+---
+
+### T1 — Travel insurance crosstab
+
+**(a)** Row percentages (within each "previous claim" group):
+- Previous claim row: 60/80 = **75% purchased**, 20/80 = 25% did not.
+- No previous claim row: 40/120 = **33% purchased**, 80/120 = 67% did not.
+Row percentages answer: *"Given someone's claims history, what proportion purchased insurance?"*
+
+**(b)** Column percentages (within each "purchased" group):
+- Purchased column: 60/100 = **60% had a previous claim**, 40/100 = 40% had none.
+- Did not purchase column: 20/100 = 20% had a previous claim, 80/100 = 80% had none.
+Column percentages answer: *"Among buyers (or non-buyers), what proportion had a previous claim?"*
+
+**(c)** Correct. The row percentages (75% vs 33%) support the claim that prior claims predict purchase. Manager 1 is answering: "Does claims history affect purchase probability?" — a row-percentage question.
+
+**(d)** Correct. The column percentage (60% of buyers had a prior claim) supports the claim that most insurance customers are repeat claimers. Manager 2 is answering: "Who are our buyers?" — a column-percentage question.
+
+**(e)** **Both are correct** — they answer different questions. Manager 1 asks about purchase behaviour conditional on claims history (row %). Manager 2 asks about the composition of the buyer pool (column %). Neither is wrong; neither tells the same story as the other.
+
+**(f)** CORREL between previous-claim (0/1) and purchased-insurance (0/1) produces a point-biserial correlation coefficient. It summarises the direction and strength of the association in a single number, rather than requiring the reader to compare two proportions. However, the crosstab is more interpretable for business audiences — the coefficient hides the asymmetry between the two percentage orientations.
+
+**(g)** For **targeting**, use row percentages. The campaign question is: "Given someone has had a prior claim, how likely are they to buy?" — that's a row-conditional probability (75%). Column percentages tell you who your existing buyers are, not who to target.
+
+---
+
+### T2 — Chocolate and Nobel Prize winners
+
+**(a)** Scatterplot: a positive-sloping cloud of points. Countries with higher per-capita chocolate consumption tend to have more Nobel Prize winners per 10 million population. The relationship is roughly linear with moderate scatter (r = 0.79).
+
+**(b)** No — the correlation coefficient tells you the direction and strength of the *association*, not causation. It is symmetric: it cannot tell you whether chocolate drives Nobel performance, Nobel culture drives chocolate taste, or whether both are driven by a third variable.
+
+**(c)** Most plausible confounder: **national wealth / GDP per capita.** Mechanism: wealthy nations have both (i) higher disposable income for consumer goods including premium chocolate, and (ii) more investment in research institutions, universities, and scientific infrastructure that produces Nobel laureates. Wealth drives both X and Y independently.
+
+**(d)** A second variable (cheese) with nearly the same correlation (r = 0.78) **weakens** the causal case for chocolate, not strengthens it. If chocolate caused cognitive enhancement, why would cheese produce the same correlation? The most parsimonious explanation is that both are proxies for the same underlying confounder (wealth). Multiple correlated proxies point toward a common cause, not multiple causal mechanisms.
+
+**(e)** For a genuine causal effect, you would need: a randomised controlled trial varying chocolate consumption while holding all else constant; or at minimum a longitudinal study that controlled for GDP, research investment, and education quality, showing that changes in chocolate consumption within countries preceded changes in Nobel output. The ecological, cross-sectional nature of Messerli (2012) cannot support causation regardless of r.
+
+---
+
+### T3 — Social media and adolescent anxiety
+
+**(a)** r = +0.41: **moderate positive** correlation. More time on platform → higher self-reported anxiety. Not weak (r > 0.3), not strong (r < 0.6) — in the middle range. Explains roughly 17% of the variance in anxiety scores (r² = 0.168).
+
+**(b)** The most important problem: **reverse causality**. Anxious teenagers may use social media *more* as a coping mechanism or avoidance behaviour — not because the platform causes anxiety but because anxiety causes elevated usage. The correlation is consistent with both causal directions.
+
+**(c)** The aggregate r = +0.41 obscures the opposite relationship in active users (r = −0.12). When data is split by use type, the two groups go in different directions. The aggregate correlation does not describe either group's experience accurately — it is a weighted average that masks the directional reversal.
+
+**(d)** This is **Simpson's Paradox** — a situation where a correlation observed in the aggregate reverses (or changes direction) within subgroups. Implication: aggregate correlations in social media research (and any research where population composition is heterogeneous) must always be examined within meaningful subgroups before drawing conclusions.
+
+**(e)** The truth is nuanced. The data is the data — who funded the study doesn't change what the correlation is. However: funding affects which findings are submitted for publication, how results are framed, and which subgroup analyses are emphasised. A platform funding research into harms it may have caused has an incentive to find smaller effects and to publish results that are defensible rather than damaging. Additional information needed: the full pre-registered analysis plan; results of independent replication; disclosure of any analyses that were run but not reported.
+
+---
+
+### T4 — Extreme correlations
+
+**(a)** r = +1.00: every data point lies exactly on the same straight line — no scatter. This does **not** imply causation. Advertising spend and sales could both be growing over time (driven by the business cycle or a third variable), producing a perfect linear relationship without any direct causal link.
+
+**(b)** r = 0.00 means no *linear* relationship. There could still be a strong **non-linear** relationship — for example, a U-shaped curve (both very large and very small shoe sizes associated with lower salaries, with medium sizes in the middle). Pearson's r cannot detect non-linear patterns.
+
+**(c)** r = −0.12 is small but not necessarily meaningless. Whether it is meaningful depends on: (i) sample size (with n = 500, even small correlations can be statistically significant); (ii) effect size in context (a 0.12 correlation in a high-stakes decision may matter more than in a casual observation); (iii) whether other variables produce larger correlations that make this one negligible by comparison.
+
+**(d)** r = +1.00 in real business data is suspicious. Possible explanations: (i) the two variables are definitionally related (e.g. revenue = price × units — regressing on a component of itself); (ii) both variables are driven by a single time trend with no noise; (iii) data entry error (one variable is a copy of the other). Genuine r = 1.00 almost never occurs in observational business data.
+
+**(e)** Multiplying Y by 3: **r does not change** — correlation is scale-invariant (standardisation removes the effect of scaling). Adding 100 to X: **r does not change** — correlation is location-invariant (shifting the mean does not affect deviations from the mean, which is what correlation measures).
+
+---
+
+### T5 — Simpson's Paradox: loan officers
+
+**(a)** Based on overall approval rates, **Officer N** (85%) appears more lenient than Officer M (60%).
+
+**(b)** Within each risk category, **Officer M** approves equally or more: both approve 90% of low-risk applicants; for high-risk applicants, Officer M approves 30% vs Officer N's 60%. Wait — here Officer N approves more high-risk applicants. So within the high-risk category, **Officer N is more lenient**; within the low-risk category, they are identical.
+
+**(c)** The contradiction arises because the two officers handle **different caseload compositions**. Officer N handled mostly low-risk applicants (50 low-risk, 10 high-risk); Officer M handled equal numbers (100 of each). Low-risk applicants have high approval rates regardless of officer. Because N's caseload is heavily weighted toward easy-to-approve cases, N's overall rate is inflated. The phenomenon is **Simpson's Paradox** — the direction of comparison can reverse when aggregated data mixes groups with different compositions.
+
+**(d)** Overall approval rate is **not the right metric** for compliance assessment. It conflates caseload composition with officer leniency. The compliance team should compare within-category approval rates, separately for low- and high-risk applicants. Using overall rates could penalise officers who are assigned more high-risk cases through no fault of their own.
+
+**(e)** The difference in caseload composition is a problem with the **bank's allocation process** — if officers are assigned systematically different risk profiles, any performance comparison based on aggregate metrics will be confounded. The bank should investigate whether caseload allocation was random or whether certain officers are systematically given different applicant types, and then adjust comparisons accordingly.
+
+---
+
+### T6 — Doctor-to-bed ratio and mortality
+
+**(a)** The correlation (more doctors per bed → lower mortality) is plausible. A causal story: more doctors means more timely diagnoses, more frequent patient monitoring, faster intervention in deteriorating cases, reduced nursing workload per case. This is biologically and clinically plausible.
+
+**(b)** Confounders: (i) **Hospital quality/resources overall** — well-funded hospitals have both more doctors and better equipment, protocols, and support staff; doctor ratio is a proxy for general resourcing. (ii) **Patient case mix** — higher-quality hospitals may attract more complex cases, producing higher measured mortality, biasing the observed correlation downward despite quality advantages. (iii) **Location and socioeconomic catchment** — hospitals in wealthier areas have better staffing and serve patients with better baseline health.
+
+**(c)** Ecological correlation problem: the unit of analysis is the hospital, not the patient. A correlation between hospital-level averages does not necessarily apply at the patient level. A hospital with more doctors may have lower *average* mortality partly because it selects different patients, not solely because individual patients benefit from higher staffing.
+
+**(d)** A natural experiment (regional policy increasing doctor-to-bed ratios in some areas but not others): look for reductions in mortality in the treatment region relative to the control region, after controlling for pre-existing trends and patient demographics. Ideally, the treatment should be as-good-as-random with respect to all other factors.
+
+**(e)** Both perspectives have merit. The statistician is correct that correlation alone does not prove causation. The manager is correct that waiting for perfect causal evidence before acting has its own costs. The pragmatic answer: a correlation is *actionable* when the causal mechanism is plausible, the magnitude of effect is large enough to matter, the cost of acting on a spurious correlation is low, and waiting for causal evidence is costly. These are value judgements that go beyond statistical evidence.
+
+---
+
+### T7 — Airline seat satisfaction crosstab
+
+**(a)** Row percentages (within each class):
+- Economy: 390/650 = **60% satisfied**, 260/650 = 40% unsatisfied.
+- Business: 120/150 = **80% satisfied**, 30/150 = 20% unsatisfied.
+Row percentages answer: *"Within each class, how satisfied are passengers?"*
+
+**(b)** Column percentages (within each satisfaction category):
+- Satisfied: 390/510 = **76% Economy**, 120/510 = 24% Business.
+- Unsatisfied: 260/290 = **90% Economy**, 30/290 = 10% Business.
+Column percentages answer: *"Among satisfied (or unsatisfied) passengers, what proportion flew each class?"*
+
+**(c)** Marketing team question — **column percentage**: among satisfied passengers, 120/510 = **24% flew Business.**
+
+**(d)** Operations team question — **row percentage**: among Business passengers, 120/150 = **80% are satisfied.**
+
+**(e)** 510/800 = 63.75% satisfied overall. This is neither purely a row nor column percentage — it is the **grand total percentage** (cell total divided by grand total). As a single summary it hides the class-by-class difference (60% vs 80%) and the very different passenger volumes (650 vs 150).
+
+**(f)** Economy is the larger source numerically: 260 unsatisfied Economy vs 30 unsatisfied Business. However, the *rate* of dissatisfaction is higher in Economy (40% vs 20%). Improving Economy service is justified by both volume and rate. Whether it is the *priority* depends on cost — improving Business satisfaction from 80% to 90% might be cheaper per passenger than reducing Economy dissatisfaction by 10 percentage points.
+
+**(g)** CORREL between class (Economy=0, Business=1) and satisfaction (Satisfied=1, Unsatisfied=0) gives a single number capturing the direction and strength of the linear association. It confirms that Business class is associated with higher satisfaction but compresses the crosstab into one value, losing information about the distribution within each cell and making it harder to communicate to a non-statistical audience.
+
+---
+
+### T8 — Retailer store size and city revenue
+
+**(a)** X = city population (explanatory); Y = store revenue (response). For computing r, **the labelling does not matter** — correlation is symmetric. However, the labelling matters for interpretation: we're asking whether population predicts revenue, not vice versa.
+
+**(b)** r = 0.61: a **moderate positive** linear relationship. Cities with larger populations tend to generate higher store revenue, on average. Roughly 37% of the variation in store revenue (r² = 0.37) is explained by city population.
+
+**(c)** Correction: r = 0.61 means **r² = 0.37**, i.e. city population explains approximately **37%** of the variation in store revenue — not 61%. This is a common and consequential misinterpretation; the manager is overstating the explanatory power.
+
+**(d)** London (pop. 9.0m, revenue €18.2m) is an influential observation. Removing it would likely **decrease r** — London is a high-leverage point pulling the regression line toward a steeper slope. With London out, the remaining cities span a narrower range and the relationship may be weaker or less defined. The direction (positive) would likely remain.
+
+**(e)** Two-sentence response: "Our data shows a moderate positive association between city population and store revenue (r = 0.61, r² = 0.37), consistent with larger cities generating more revenue. However, this correlation may reflect location quality, foot traffic, or market maturity rather than population alone — we would want to control for store format, local competition, and years of operation before recommending a large-city expansion strategy."
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Students find a dataset with at least two columns (one categorical + one numerical, or two numerical) from an open data source (e.g. [data.gov.sg](https://data.gov.sg), [Berlin Open Data](https://daten.berlin.de), [Paris Data](https://opendata.paris.fr), [dados.gov.pt](https://dados.gov.pt)) and:

@@ -215,6 +215,116 @@ This question uses verified data: the UK Omicron wave positivity rate of ~10% in
 > (d) What data would you need to establish whether the 12-percentage-point difference is genuinely causal?
 > (e) Even if the programme does reduce churn by 12 percentage points, the board still needs to know whether the programme is profitable. What additional information would you request before endorsing the expansion?
 
+---
+
+## Answer Key
+
+### T1 — Basic probability (card deck)
+
+**(a)** P(heart) = 13/52 = **1/4 = 0.25.**
+
+**(b)** P(king or heart) = P(king) + P(heart) − P(king of hearts) = 4/52 + 13/52 − 1/52 = **16/52 = 4/13 ≈ 0.308.**
+
+**(c)** P(both hearts, without replacement) = 13/52 × 12/51 = 156/2,652 ≈ **0.059.**
+
+**(d)** **Not independent.** After drawing one heart (without replacement), 12 hearts remain among 51 cards — P(second is heart | first was heart) = 12/51 ≈ 0.235, which differs from the unconditional P(heart) = 13/52 = 0.25. Knowing the first card was a heart changes the probability of the second, so the events are dependent.
+
+---
+
+### T2 — Expected value (tariff scenario)
+
+**(a)** Expected values:
+- EV(Strategy A) = 0.55 × €120,000 + 0.45 × (−€60,000) = €66,000 − €27,000 = **€39,000**
+- EV(Strategy B) = 0.55 × €20,000 + 0.45 × €80,000 = €11,000 + €36,000 = **€47,000**
+
+**(b)** Strategy B has the higher expected value (€47,000 vs €39,000).
+
+**(c)** The CFO means: Strategy A has a worst-case outcome of −€60,000 (a loss), while Strategy B's worst case is +€20,000 (still a profit). A risk-averse firm may prefer the lower-EV option because it eliminates the possibility of a loss — even though in expectation it earns less. This is rational if the downside (a €60,000 loss) would cause real harm (e.g. breach of debt covenants, layoffs) that the upside cannot compensate for.
+
+**(d)** Set EV(A) = EV(B): p × 120,000 + (1−p) × (−60,000) = p × 20,000 + (1−p) × 80,000. Expanding: 120,000p − 60,000 + 60,000p = 20,000p + 80,000 − 80,000p. Left: 180,000p − 60,000. Right: −60,000p + 80,000. So 240,000p = 140,000 → **p ≈ 0.583.** When tariff resolution probability exceeds ~58%, Strategy A has higher expected value.
+
+**(e)** Additional information needed: cash flow constraints (can the firm absorb a €60,000 loss?); whether switching costs are reversible; the time horizon for the 12-month resolution probability; the probability distribution of intermediate outcomes (partial tariff relief); and firm risk appetite more broadly.
+
+---
+
+### T3 — Conditional probability / Bayes (COVID LFT)
+
+**(a)** Frequency tree for 100,000 people at 10% prevalence:
+- Have COVID: 10% × 100,000 = **10,000**
+- Don't have COVID: **90,000**
+- True positives (sensitivity 70%): 0.70 × 10,000 = **7,000**
+- False negatives: 0.30 × 10,000 = **3,000**
+- False positives (1 − specificity = 1%): 0.01 × 90,000 = **900**
+- True negatives: 0.99 × 90,000 = **89,100**
+
+**(b)** P(COVID | positive) = true positives / all positives = 7,000 / (7,000 + 900) = 7,000 / 7,900 ≈ **88.6%.**
+
+**(c)** P(no COVID | negative) = true negatives / all negatives = 89,100 / (89,100 + 3,000) = 89,100 / 92,100 ≈ **96.7%.** A negative test provides good but not perfect assurance.
+
+**(d)** The messaging "if you test positive, you have COVID" was **approximately accurate at 10% prevalence** — PPV of 88.6% means about 9 in 10 positives truly had COVID. However, stating it as certainty rather than strong probability was technically wrong. The more honest statement: "A positive test means you very likely have COVID."
+
+**(e)** At 2% prevalence (100,000 people): COVID = 2,000; true positives = 0.70 × 2,000 = 1,400; false positives = 0.01 × 98,000 = 980. P(COVID | positive) = 1,400 / 2,380 ≈ **58.8%.** The PPV dropped dramatically because the base rate fell — now only about 3 in 5 positives truly had COVID. The same test became far less conclusive at lower prevalence.
+
+**(f)** P(no COVID | negative) ≈ 96.7% from part (c). Two independent negative tests: P(no COVID | two negatives) ≈ 1 − (1 − 0.967)² ≈ 1 − 0.001 ≈ 99.9% — extremely strong assurance. The required assumption: the two tests are independent (e.g. run at different times, not from the same batch of potentially faulty tests) and prevalence has not changed between tests.
+
+---
+
+### T4 — Boundary case: base rate near zero or one
+
+**(a)** Programme A (0.1% prevalence): 100,000 people. Diseased: 100. True positives: 0.90 × 100 = 90. False positives: 0.05 × 99,900 = 4,995. Total positive: 5,085. P(disease | positive) = 90/5,085 ≈ **1.8%.** Roughly 98 of every 100 positive tests are false alarms.
+
+**(b)** Programme B (30% prevalence): 100,000 people. Diseased: 30,000. True positives: 27,000. False positives: 0.05 × 70,000 = 3,500. Total positive: 30,500. P(disease | positive) = 27,000/30,500 ≈ **88.5%.**
+
+**(c)** The predictive value differs because **prevalence dominates**. At 0.1%, there are so many healthy people that even the tiny 5% false positive rate produces thousands of false alarms for every true positive. At 30%, the ratio reverses: true positives vastly outnumber false positives.
+
+**(d)** "90% sensitive" means the test correctly detects 90% of people who have the disease. It says nothing about what a positive result means for a tested person. At 0.1% prevalence, 90% sensitivity still yields only 1.8% PPV — the sensitivity describes the test's behaviour among the diseased, not the probability given a positive result.
+
+**(e)** Algebraic solution: p × 0.9 / [p × 0.9 + (1−p) × 0.05] = 0.5. Solving: 0.9p = 0.5(0.9p + 0.05 − 0.05p) = 0.45p + 0.025 − 0.025p = 0.425p + 0.025. So 0.475p = 0.025 → **p ≈ 5.3%.** Above roughly 5% prevalence, a positive result is more likely than not to be a true positive.
+
+---
+
+### T5 — Expected value vs expected utility (startup financing)
+
+**(a)** EV(A) = 0.70 × €400,000 + 0.30 × (−€150,000) = €280,000 − €45,000 = **€235,000.** EV(B) = 0.70 × €160,000 + 0.30 × €0 = **€112,000.**
+
+**(b)** Based purely on expected value, Option A is better (€235,000 vs €112,000). Most people would choose **Option B** despite the lower expected value, because Option B eliminates the possibility of personal loss. This reflects risk aversion: the disutility of losing €150,000 outweighs the utility gain from earning the additional expected value, especially when €150,000 represents a life-altering loss.
+
+**(c)** If the founder has only €120,000 in total assets, a €150,000 loss under Option A would push her into debt she cannot repay — a qualitatively different outcome from "losing money." This is not just risk aversion; it's the difference between a bad outcome and an irreversible catastrophe. The rational analysis changes completely: Option B now eliminates existential risk to the founder, making it the clearly preferred choice regardless of expected value.
+
+**(d)** Set EV(A) = EV(B): p × 400,000 + (1−p) × (−150,000) = p × 160,000. 400,000p − 150,000 + 150,000p = 160,000p. 390,000p = 150,000 → **p ≈ 0.385.** Above ~38.5% probability of success, Option A has higher expected value.
+
+**(e)** Additional information: the founder's personal financial situation (can she absorb a €150,000 loss?); the terms of the equity investment beyond the 60/40 split; whether there are milestone-based payments; and what the investor brings beyond capital (network, expertise). The probabilities themselves (0.70 success) deserve scrutiny — who estimated them and how.
+
+---
+
+### T6 — Sequential Bayes (fraud detection)
+
+**(a)** Frequency tree for 100,000 transactions. Fraud: 0.02 × 100,000 = 2,000. Not fraud: 98,000. Algorithm 1 flags: 0.80 × 2,000 = 1,600 true positives; 0.15 × 98,000 = 14,700 false positives. Total flagged: 16,300. P(fraud | flagged by Algorithm 1) = 1,600/16,300 ≈ **9.8%.**
+
+**(b)** The new "base rate" among Algorithm 1-flagged transactions is **9.8%** — up from 2% before any screening.
+
+**(c)** Apply Algorithm 2 to the 16,300 flagged transactions, using 9.8% as the new prior. Per 10,000 flagged: fraud = 980, not-fraud = 9,020. Algorithm 2 flags: 0.70 × 980 = 686 true positives; 0.10 × 9,020 = 902 false positives. Total flagged by both: 1,588. P(fraud | both flag) = 686/1,588 ≈ **43.2%.**
+
+**(d)** Progression: 2% → 9.8% → 43.2%. Each algorithm concentrates the fraud within a smaller pool. Business implication: transactions flagged by both algorithms should receive priority manual review — roughly 4 in 10 are genuine fraud. Transactions flagged only by Algorithm 1 (not Algorithm 2) have a much lower rate (~6%) and may not warrant the same investigation effort.
+
+**(e)** "Independent" means knowing Algorithm 1's flag provides no additional information about Algorithm 2's flag, beyond what is already captured in the fraud status. In practice, if both algorithms use similar features (transaction amount, location, device ID), they are likely correlated — both will tend to flag the same suspicious characteristics. If correlated, the combined posterior from step (c) would be overstated: the sequential update would assume more independent evidence than actually exists, making 43.2% an overestimate of the true P(fraud | both flag).
+
+---
+
+### T7 — Diagnostic: customer retention programme
+
+**(a)** Expected overall churn = 0.40 × 8% + 0.60 × 20% = 3.2% + 12% = **15.2% ≈ 15%.** The numbers are internally consistent.
+
+**(b)** Not a valid causal interpretation. The selection bias problem: customers who enrolled in the retention programme may be systematically different from those who didn't — specifically, more engaged and loyal customers may self-select into participation. If so, the 8% churn rate in the programme group would be low *because of who they are*, not because of what the programme did.
+
+**(c)** If the most loyal customers sign up and least-likely churners are overrepresented in the programme group, the observed difference (8% vs 20%) is entirely attributable to selection: the programme enrolled low-risk customers and claimed credit for their low churn. The programme may have zero causal effect on retention.
+
+**(d)** Data needed to establish causality: a randomised controlled trial (randomly assign some eligible customers to receive the programme, others to a control group), or a natural experiment (e.g. a technical rollout error that excluded some customers randomly). Alternatively, a regression discontinuity design if programme eligibility was determined by a threshold (e.g. purchase history score), comparing just-eligible vs just-ineligible customers.
+
+**(e)** Additional information for the expansion decision: the cost of delivering the programme per customer; the revenue value of a prevented churn; whether the effect (if real) justifies the cost; and whether the programme scales (marginal customers added by expansion may differ from the self-selected early adopters).
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Find a real probability claim from a news article, government health communication, or business report. Submit:

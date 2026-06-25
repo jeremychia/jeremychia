@@ -86,6 +86,50 @@ This one has no single right answer. It requires the student to reason from summ
 
 The point of T3 is that near-zero skewness does not guarantee normality — and for time series data, the mean and SD of the *raw values* may be meaningless regardless of shape (house prices trend; temperatures cycle). Students who grasp this are ready for Part 4. Students who don't will be brought there by the discussion.
 
+---
+
+## Answer Key
+
+### T1 — Salary distribution
+
+Dataset: 1200, 1400, 1350, 1250, 1300, 1450, 1200, 1380, 4800, 1290 (weekly salaries, €).
+
+**(a)** Mean = (1200+1400+1350+1250+1300+1450+1200+1380+4800+1290) / 10 = 14,620 / 10 = **€1,462.** Median: sort the 10 values → 1200, 1200, 1250, 1290, 1300, 1350, 1380, 1400, 1450, 4800. Middle two: 1300 and 1350 → Median = **€1,325.**
+
+**(b)** **Median** is the better summary of typical salary. The CEO's €4,800 pulls the mean up to €1,462 — well above what any non-CEO earns. The median (€1,325) better represents a typical worker's salary.
+
+**(c)** Mode = **€1,200** (appears twice). Useful for identifying the most common wage but ignores the distribution's spread entirely, and here adds little beyond "two workers earn the floor rate."
+
+**(d)** Sorted values: 1200, 1200, 1250, 1290, 1300, 1350, 1380, 1400, 1450, 4800. Q1 (median of lower half: 1200, 1200, 1250, 1290, 1300) = **€1,250.** Q3 (median of upper half: 1350, 1380, 1400, 1450, 4800) = **€1,400.** IQR = 1400 − 1250 = **€150.**
+
+**(e)** SD ≈ **€1,076** (dominated by the CEO outlier; compute in Excel to confirm). The SD is almost as large as the median wage — it tells you very little about the spread of the nine non-CEO salaries because a single outlier inflates it dramatically.
+
+**(f)** Mean ± 1 SD = €1,462 ± €1,076 = (€386, €2,538). This interval should contain ~68% of values if the data were normal. In fact it contains 9 of the 10 values (90%), and the lower bound (€386) is not a plausible salary — below minimum wage in most European contexts. The empirical rule does not apply here because the distribution is heavily right-skewed, not normal.
+
+**(g)** The correct answer is **not "remove it."** The right approach: run the analysis twice — once with the CEO included, once without — and report both, with an explanation. The CEO's salary is real data, not an error. Removing it silently would misrepresent the firm's compensation structure. Reporting both versions is honest: "excluding the CEO's salary, the median is €1,310; including it, the mean is €1,462." The analyst should also consider whether the CEO's salary is within the scope of the question being asked (e.g. a report on worker pay would reasonably exclude executive compensation with explanation).
+
+---
+
+### T2 — Supermarket customer spending
+
+Given: mean = €42, median = €28, SD = €35.
+
+**(a)** The histogram should be **right-skewed**: a tall bar near the left (most customers spend small amounts, clustered near the mode which is likely below €28), a long right tail extending past €42 and beyond (a small number of high-value shoppers). The mean (€42) is to the right of the median (€28), which is characteristic of right skew.
+
+**(b)** The mean (€42) is inflated by high-value customers making large purchases. Using €42 as the "typical customer" benchmark would design the loyalty programme for a customer who is rarer than the label implies — most customers spend well below €42. A programme calibrated to a €42 benchmark may either reward very few customers (if the threshold is high) or over-spend on retention of customers who were going to spend that amount anyway.
+
+**(c)** Report the **median** (€28) as the "typical customer" benchmark, alongside the mean for context. Or report percentiles (e.g. "50% of customers spend under €28; 25% spend under €X; 10% spend over €Y") to give a fuller picture of the distribution's shape relevant to loyalty programme design.
+
+---
+
+### T3 — Monthly temperatures and house prices
+
+**(a)** Temperature with mean 14°C, SD 8°C, skewness ≈ 0: the distribution looks approximately normal. The empirical rule claim — 95% of months between −2°C and 30°C — is **reasonable under the normality assumption**, which the near-zero skewness and seasonal cycle of temperatures roughly supports. Caveats: the empirical rule is only exact for a normal distribution; monthly temperatures are a time series, so the 30 years of values are not independent draws from a fixed distribution.
+
+**(b)** House prices: **do not trust the empirical rule** here, even with the same mean, SD, and near-zero skewness. House prices over 30 years have a **trend** — they compound upward over time (in most European cities). The mean and SD of the raw price levels compress the entire time dimension into two numbers. A "mean" house price averaging a 1990 price with a 2020 price is not a meaningful central tendency. The near-zero skewness of the raw levels may be an artefact of the time structure, not evidence of normality. For house prices, percentage change from period to period (the return distribution) is far more stable and interpretable than the level distribution.
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Students find a dataset with at least one numerical column from an open data source (e.g. [data.gov.sg](https://data.gov.sg), [Berlin Open Data](https://daten.berlin.de), [Paris Data](https://opendata.paris.fr), [dados.gov.pt](https://dados.gov.pt)) and submit answers to three questions:
