@@ -184,6 +184,115 @@ T3 uses a verified 2024–2025 event (HPAI H5N1 egg price data is documented by 
 >
 > (e) A software firm models the number of code bugs found in a 1,000-line code review using a Normal distribution. Bug discovery has historically averaged 3 bugs per 1,000 lines, and the firm assumes the events are independent.
 
+---
+
+## Answer Key
+
+### T0 — Distribution identification (entry question)
+
+**(a)** **Poisson.** Customers arrive randomly and independently at a constant average rate — the defining conditions for the Poisson distribution, which models the count of events per time interval.
+
+**(b)** **Binomial.** Fixed number of trials (n = 20 products), each trial is independent with a constant probability of "success" (defect) p = 0.05, and each outcome is binary (pass/fail).
+
+**(c)** **Exponential.** The exponential distribution models the *time between* events when events occur as a Poisson process (random and independent). The question is about time, not count.
+
+**(d)** **Normal.** By the Central Limit Theorem, the sum of a large number of small independent random variables (individual transactions) converges to a normal distribution, regardless of the distribution of any single transaction.
+
+---
+
+### T1 — Normal distribution
+
+**(a)** P(X < 400) = NORM.DIST(400, 500, 80, TRUE) = P(Z < (400−500)/80) = P(Z < −1.25) ≈ **10.6%** of days have demand below 400 units.
+
+**(b)** P(X > 650) = 1 − NORM.DIST(650, 500, 80, TRUE) = P(Z > (650−500)/80) = P(Z > 1.875) ≈ **3.0%.** (The 68-95-99.7 rule gives ~2.5% above 1.96 SD; 1.875 SD is slightly closer to the mean, so ~3%.)
+
+**(c)** P(X > 620) = 1 − NORM.DIST(620, 500, 80, TRUE) = P(Z > 1.5) ≈ **6.7%** of days result in a stockout.
+
+**(d)** NORM.INV(0.95, 500, 80) ≈ **632 units.** This is the 95th percentile: on 95% of days, demand falls at or below 632 units. Common error: students confuse P(X ≤ k) = 0.95 with using NORM.DIST; NORM.INV takes the probability and returns the quantity threshold.
+
+---
+
+### T2 — Binomial distribution (fund managers)
+
+**(a)** E(X) = np = 52 × 0.50 = **26 weeks.** A fund manager who is purely guessing is expected to beat the market in exactly half the weeks.
+
+**(b)** P(X = 30) = BINOM.DIST(30, 52, 0.5, FALSE) ≈ **7.2%.** Beating the market in 30 of 52 weeks has a reasonable probability even by chance.
+
+**(c)** P(X ≥ 37) = 1 − BINOM.DIST(36, 52, 0.5, TRUE) ≈ **0.159%** — fewer than 2 in 1,000 purely random managers would beat the market in 37+ of 52 weeks.
+
+**(d)** P(at least one of 400 beats market in 37+ weeks) = 1 − (1 − 0.00159)^400 ≈ 1 − 0.527 ≈ **47.3%.** Among 400 fund managers all performing at random, there is nearly a coin-flip chance that at least one will appear brilliant purely by luck. This is the multiple-testing problem: when you observe many managers, the probability that *someone* looks exceptional by chance is high — even when no one has skill.
+
+---
+
+### T3 — Poisson distribution (bird flu / egg demand)
+
+**(a)** P(X > 850 | λ = 800) = 1 − P(X ≤ 850) ≈ **3.4%.** Under normal conditions, demand exceeding 850 was a rare event (about 1 in 30 weeks).
+
+**(b)** P(X ≤ 1,150 | λ = 800) is effectively **1.000** — demand of 1,150 is so far above the Poisson rate of 800 (about 10+ standard deviations, since SD = √800 ≈ 28) that the model assigns near-zero probability to any demand that high. The model treated what actually happened as essentially impossible.
+
+**(c)** Three distinct violations of the constant-rate assumption: (i) **Supply shock:** the outbreak directly reduced supply, which may have changed purchasing patterns and accelerated panic demand. (ii) **Consumer behaviour shift:** consumers engaged in panic-buying and hoarding, so demand in any given week was no longer independent of previous weeks — those who hoarded in week 1 shifted their demand forward, violating independence of events. (iii) **Price signal:** the dramatic price increase (from $2.50 to $4.50) would normally suppress demand, but in this case, fear of shortage overrode price sensitivity — the demand rate changed qualitatively, not just in magnitude.
+
+**(d)** Both parties are partially correct, and reconciling their positions is the key analytical insight. The analytics manager is right that the model was wrong **for this situation**: if a model assigns probability ≈ 0 to an event that actually happened, it failed to capture the true data-generating process. The supply chain team is right that the model was appropriate during normal operations — it was calibrated on a period when the assumption of constant λ held. The practical implication: Poisson models (and all statistical models) should specify the conditions under which they are valid. They should not be used mechanically outside those conditions. A well-designed planning system would include a protocol for when to switch from the baseline model to a "crisis mode" scenario — which requires monitoring leading indicators (outbreak reports, supply alerts) rather than waiting for demand data to break the model.
+
+**(e)** **Option (ii) — a separate scenario model for crisis weeks — is more statistically sound.** Raising λ as a single correction in Option (i) blurs the two regimes: in normal weeks, the inflated λ would cause over-ordering and excess inventory. In crisis weeks, a single higher λ may still be too low, and more importantly, the distributional shape of crisis-week demand (highly variable, path-dependent) is fundamentally different from Poisson. A mixture model or regime-switching approach (normal Poisson in ordinary weeks; a separate crisis distribution activated by trigger conditions) is more honest about the underlying process and more useful for decision-making.
+
+---
+
+### T4 — Boundary cases
+
+**(a)** P(X > 220) = P(Z > (220−200)/5) = P(Z > 4.0) ≈ **0.003%.** P(X > 250) = P(Z > (250−200)/5) = P(Z > 10.0) ≈ effectively **0.** The normal distribution assigns non-zero probability to any value, no matter how extreme — technically, a component weighing 250g has a non-zero probability under this model, but it is so small it is indistinguishable from zero in any calculation. In practice, a component weighing 250g (ten standard deviations above the mean) would almost certainly indicate equipment failure, wrong batch, or measurement error — causes the normal distribution cannot represent. The model should never be used to claim such an observation is "impossible"; it should trigger an investigation.
+
+**(b)** n = 10,000, p = 0.0005, so E(X) = np = **5** fraudulent transactions per day. P(X = 0) = (0.9995)^10,000 ≈ e^−5 ≈ **0.674%.** P(X ≥ 10) = 1 − BINOM.DIST(9, 10000, 0.0005, TRUE) ≈ **3.2%.** Poisson with λ = 5 gives essentially identical answers (P(X = 0 | λ = 5) = e^−5 ≈ 0.0067; P(X ≥ 10 | λ = 5) ≈ 3.2%), confirming the Poisson approximation is excellent when n is large and p is very small (λ = np stays moderate).
+
+**(c)** Check rule of thumb: np = 20 × 0.05 = **1 < 5.** The approximation rule fails — the distribution is too skewed for the normal to approximate it well. Exact: P(X = 0) = BINOM.DIST(0, 20, 0.05, FALSE) = (0.95)^20 ≈ **0.358.** Normal approximation: μ = 1, σ = √(20 × 0.05 × 0.95) ≈ 0.975. P(X ≤ 0.5) = NORM.DIST(0.5, 1, 0.975, TRUE) ≈ **0.306.** The normal approximation underestimates P(X = 0) by about 15% because the binomial distribution here is strongly right-skewed — most of the probability mass is at X = 0 and X = 1. The symmetric normal cannot capture a distribution piled up near zero.
+
+---
+
+### T5 — Poisson assumption violations
+
+**(a)** A party of 20 arriving simultaneously violates the **independence** assumption: arrivals are not independent events — one "event" generates 20 arrivals. The Poisson model would **underestimate** the probability of very high counts during Friday evenings (the spike is systematic and correlated, not random), but would also underestimate variance in general.
+
+**(b)** A software update drives a correlated surge: all callers who experienced the bug are calling for the same reason at roughly the same time. This violates **independence** (arrivals are correlated — each new user discovering the bug causes a call) and **constant rate** (λ shifts dramatically). The Poisson model would vastly **underestimate** spike probabilities during update releases.
+
+**(c)** A machine freeze creates dependency between arrivals and the queue: subsequent customers are blocked (not processed), so the effective arrival rate at the machine drops to zero during a freeze. The Poisson model assumes continuous independent arrivals — the freeze creates a **non-stationary process with memory** (the machine's state affects future arrivals). The Poisson model would **mismatch** the true distribution in either direction depending on whether "arrivals" means customers wanting service or transactions processed.
+
+**(d)** A viral celebrity tweet creates a spike driven by a single external event that affects all potential visitors simultaneously. This violates **independence** (all views from that tweet are correlated) and **constant rate** (λ jumps by two orders of magnitude in minutes). The Poisson model would assign near-zero probability to 80,000 views in 10 minutes, making the model useless for capacity planning around viral events. Extreme spike probabilities would be wildly **underestimated**.
+
+In all cases: when the constant-rate and independence assumptions break, real-world processes exhibit much heavier tails (larger extreme counts) than the Poisson model predicts. The Poisson underestimates the probability of rare large counts in the presence of clustering, correlation, or regime shifts.
+
+---
+
+### T6 — Multi-distribution: logistics delivery
+
+**(a)** E(total) = E(loading) + driving + E(traffic delay) = 45 + 60 + (0.25 × 30 + 0.75 × 0) = 45 + 60 + 7.5 = **112.5 minutes.**
+
+**(b)** For total time to exceed 150 minutes (= 112.5 + 37.5 minutes above expectation):
+- **Without traffic delay:** total time = loading + 60. Breach requires loading > 90 minutes → Z = (90 − 45)/10 = 4.5 → P ≈ **0.0003%.** Essentially impossible without traffic.
+- **With traffic delay (adds 30 min):** total time = loading + 60 + 30. Breach requires loading > 60 minutes → Z = (60 − 45)/10 = 1.5 → P ≈ **6.7%.** A meaningful risk when traffic occurs.
+- Conclusion: the traffic delay is the dominant driver of late deliveries; an unusually long loading time alone will almost never cause a breach.
+
+**(c)** P(total > 150) ≈ P(traffic) × P(loading > 60) + P(no traffic) × P(loading > 90) = 0.25 × 0.067 + 0.75 × 0.000003 ≈ 0.01675 + 0.000002 ≈ **1.68%.** The no-traffic term is negligible; virtually all late deliveries occur when traffic delays coincide with above-average loading times.
+
+**(d)** With 200 routes per day: expected late deliveries = 0.0168 × 200 ≈ **3.4 routes per day.** If same-day delivery is a premium service with a penalty clause (e.g., refund or compensation), this translates directly into daily cost. A logistics planner should weigh the cost of 3–4 daily failures against the cost of the interventions in part (e).
+
+**(e)** The traffic delay is the dominant driver (it accounts for nearly 100% of the 1.68% failure probability). Reducing P(traffic delay) from 0.25 to 0.15 would cut failures by roughly 40%; reducing loading SD from 10 to 5 minutes would barely move the number (it only matters when combined with traffic, and the loading threshold in that case is already only 1.5 SD away). **Priority: reduce traffic delay** — either via route optimisation, time-of-day scheduling, or real-time rerouting.
+
+---
+
+### T7 — Distribution diagnosis
+
+**(a)** **Inappropriate — use Poisson instead.** Emergency admissions are non-negative integers (counts). The Normal distribution is continuous and can assign probability to negative values (e.g., −2 admissions), which is impossible. With mean 12 and SD 3, the normal model assigns about 0.01% probability to negative admissions — a structural error. Poisson with λ = 12 is correct: it is defined over non-negative integers, and at λ = 12 it is approximately symmetric anyway, so the Normal is also numerically close — but it is the wrong model in principle.
+
+**(b)** **Inappropriate — use Binomial instead.** Whether each of 500 applicants defaults is a binary outcome (default/no default), which fits Binomial(n=500, p=0.04). While Poisson(λ=20) is an acceptable approximation (n large, p small, λ = np = 20), it is technically the wrong generative model. The key distinction: Binomial has a hard upper bound (500 defaults maximum); Poisson is unbounded — it could theoretically assign non-zero probability to 1,000 defaults from 500 applicants, which is impossible. For exam purposes: full credit for identifying the Binomial as more appropriate; partial credit for noting Poisson is a reasonable approximation.
+
+**(c)** **Inappropriate — use Exponential instead.** The wait time between aircraft landings is a continuous waiting time between events, not a count of events in discrete slots. The Binomial models the *count* of landings in n time slots — a different question. Exponential with rate parameter λ = (1/mean interarrival time) is the correct distribution for waiting times between Poisson arrivals.
+
+**(d)** **Inappropriate — use Normal instead.** Daily total revenue from tens of thousands of transactions is a sum of many small independent contributions, which by the Central Limit Theorem converges to Normal. The Uniform distribution assigns equal probability to every value between €50,000 and €200,000 — implying a €50,001 day is as likely as a €125,000 day, which contradicts real revenue patterns. The Normal would be centred on the mean daily revenue with a standard deviation derived from historical variability.
+
+**(e)** **Inappropriate — use Poisson instead.** Bug counts are non-negative integers (counts of events) arriving at an average rate (3 per 1,000 lines), which matches the Poisson assumptions. The Normal distribution is continuous and assigns probability to negative bug counts. With λ = 3, the Poisson distribution is right-skewed (P(X = 0) ≈ 5%), which the Normal approximation would underestimate. At very small λ, the Poisson–Normal approximation is poor: np = 3 < 5, so the rule of thumb for the approximation fails.
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Find one business example — from news, your own experience, or a case study — where a company's decision was affected by uncertainty in the number of events (arrivals, failures, occurrences). Submit:

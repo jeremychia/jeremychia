@@ -226,6 +226,154 @@ A market research firm offers to predict whether a new product will succeed or f
 > (d) The analyst did not account for the time value of money. If the "wait" payoffs occur one year later and the appropriate discount rate is 10%, what are the present values of each "wait" scenario?
 > (e) The "wait" option assumes competitive conditions remain stable. Name two business events that might eliminate the advantage of waiting, and explain how you would model them in the tree.
 
+---
+
+## Answer Key
+
+### T0 — Decision tree structure (umbrella)
+
+Two decisions: **carry umbrella** / **leave umbrella at home.**
+Two states of the world: **rain** (probability 0.30) / **no rain** (probability 0.70).
+
+Four (decision, state) combinations and their values:
+| Decision | State | Value |
+|---|---|---|
+| Carry umbrella | Rain | +10 |
+| Carry umbrella | No rain | −1 |
+| Leave at home | Rain | −5 |
+| Leave at home | No rain | 0 |
+
+The umbrella decision is the decision node (your choice); rain/no rain is the probability node (outside your control). These are the two fundamentally different elements in any decision tree.
+
+---
+
+### T1 — Food stall EMV (Berlin market)
+
+**(a)** Net payoffs (revenue − €600 stall cost):
+- Busy: €2,500 − €600 = **€1,900**
+- Moderate: €1,100 − €600 = **€500**
+- Quiet: €400 − €600 = **−€200**
+
+**(b)** Decision tree: square decision node with two branches: "Launch" and "Not attend (€0)." From the "Launch" branch, a circle probability node with three branches: Busy (0.40/€1,900), Moderate (0.40/€500), Quiet (0.20/−€200).
+
+**(c)** EMV(Launch) = 0.40 × 1,900 + 0.40 × 500 + 0.20 × (−200) = 760 + 200 − 40 = **€920.** Since €920 > €0, she should launch.
+
+Common error: students subtract the stall cost from EMV rather than from each payoff first. The correct approach subtracts cost per scenario before multiplying by probabilities — because the cost is incurred whenever she launches, regardless of the outcome.
+
+**(d)** With €900 stall cost: net payoffs become Busy = €1,600, Moderate = €200, Quiet = −€500. EMV = 0.40 × 1,600 + 0.40 × 200 + 0.20 × (−500) = 640 + 80 − 100 = **€620.** Still positive, so she should still launch — but the margin above the "do not attend" option has narrowed from €920 to €620.
+
+---
+
+### T2 — Pharmaceutical licensing (PrecisionTree interpretation)
+
+**(a)** EMV(Continue trial) = 0.55 × €22M + 0.30 × €7M + 0.15 × (−€3M) = €12.1M + €2.1M − €0.45M = **€13.75M.**
+
+**(b)** EMV(Continue) − EMV(License now) = €13.75M − €8.4M = **€5.35M.** Continue trial has higher EMV by €5.35M.
+
+**(c)** The CEO is not wrong — she is making a utility-based decision rather than an EMV-based one. EMV maximisation assumes the decision-maker is risk-neutral (values money linearly). A risk-averse firm, or one in a fragile financial position, rationally prefers a certain €8.4M over a risky €13.75M in expected value if the −€3M outcome (15% probability) would cause disproportionate harm. The CEO's preference reflects utility maximisation, not irrational behaviour. The decision depends on the company's risk tolerance, current financial health, and whether this is a repeated or one-off decision.
+
+**(d)** The correct statement: "The model tells us that the strategy with the highest expected (average) monetary value is to continue the trial. It says nothing about what will actually happen in this specific trial." The model cannot predict whether this trial will succeed — it can only compute the probability-weighted average across all possible outcomes. Misreading the TRUE branch as a prediction of success confuses the optimal *strategy* with a *prediction* of outcome.
+
+---
+
+### T3 — Bayesian updating (market research firm)
+
+**(a)** Frequency table for 10,000 launches (prior: 35% succeed, 65% fail):
+
+| | Firm predicts "success" | Firm predicts "failure" | Total |
+|---|---|---|---|
+| Product succeeds | 0.75 × 3,500 = **2,625** | 0.25 × 3,500 = **875** | 3,500 |
+| Product fails | 0.20 × 6,500 = **1,300** | 0.80 × 6,500 = **5,200** | 6,500 |
+| **Total** | **3,925** | **6,075** | 10,000 |
+
+**(b)** P(success | firm predicts "success") = 2,625 / 3,925 ≈ **66.9%.** Up from the prior of 35%.
+
+**(c)** The firm's "success" prediction updates the prior from 35% to 66.9% — almost doubling the assessed probability of success. The report provides meaningful information: it more than halves the uncertainty in the "failure" direction.
+
+**(d)** Without the report:
+- EMV(Launch) = 0.35 × €500,000 + 0.65 × (−€200,000) = €175,000 − €130,000 = **€45,000.** Launch (positive EMV).
+
+With a "success" prediction (posterior = 66.9%):
+- EMV(Launch | "success") = 0.669 × €500,000 + 0.331 × (−€200,000) = €334,500 − €66,200 = **€268,300.** Launch.
+
+With a "failure" prediction (posterior from table: P(success | "failure") = 875/6,075 ≈ 14.4%):
+- EMV(Launch | "failure") = 0.144 × €500,000 + 0.856 × (−€200,000) = €72,000 − €171,200 = **−€99,200.** Do not launch.
+
+EVI = expected payoff with the report − expected payoff without the report.
+P("success" signal) = 3,925/10,000 = 0.3925. P("failure" signal) = 0.6075.
+Expected payoff with report = 0.3925 × €268,300 + 0.6075 × €0 (best action after "failure" is not to launch) = **€105,313.**
+EVI = €105,313 − €45,000 = **€60,313.** Since EVI (€60,313) > report cost (€50,000), the report is worth buying.
+
+---
+
+### T4 — Boundary case: extreme probability (oil drilling)
+
+**(a)** EMV(Drill | p = 0.20) = 0.20 × €13M + 0.80 × (−€2M) = €2.6M − €1.6M = **€1.0M > 0.** Drill.
+
+**(b)** Break-even: p × 13M + (1−p) × (−2M) = 0 → 15M × p = 2M → **p* ≈ 13.3%.** The company should drill whenever the assessed probability of finding oil exceeds 13.3%.
+
+**(c)** Frequency table (10,000 sites, p = 0.20): Oil present: 2,000. No oil: 8,000.
+Survey predicts "oil": 0.85 × 2,000 = 1,700 true positives; 0.10 × 8,000 = 800 false positives. Total: 2,500.
+P(oil | survey says "oil") = 1,700 / 2,500 = **68%.**
+
+**(d)** EMV(Drill | positive survey) = 0.68 × €13M + 0.32 × (−€2M) = €8.84M − €0.64M = **€8.2M.** P(positive signal) = 2,500/10,000 = 0.25. P(negative signal) = 0.75.
+Expected payoff from buying survey = 0.25 × €8.2M + 0.75 × €0 − €0.3M (survey cost) = €2.05M − €0.3M = **€1.75M.** Without survey: €1.0M. Survey increases expected payoff by €0.75M — yes, it is worth buying.
+
+**(e)** Indifference: 0.25 × €8.2M − survey cost = €1.0M (no survey). So survey cost = €2.05M − €1.0M = **€1.05M.** At any cost below €1.05M, the survey adds expected value and is worth commissioning.
+
+---
+
+### T5 — Risk aversion vs EMV (product strategies)
+
+**(a)** EV(X) = 0.60 × €6M + 0.40 × (−€1.5M) = €3.6M − €0.6M = **€3.0M.** EV(Y) = 0.90 × €3.2M + 0.10 × (−€0.2M) = €2.88M − €0.02M = **€2.86M.** (The stated €3.2M for X appears to use slightly different numbers — show working and note the discrepancy; the EMV difference between X and Y is approximately €0.14M.) Strategy X has higher EMV.
+
+**(b)** The covenant constraint transforms the analysis: Strategy X has a 40% probability of a −€1.5M loss, which exceeds the €1.0M maximum survivable loss. A Strategy X loss could trigger covenant breach — a qualitatively catastrophic outcome (forced asset sale, debt renegotiation, reputational damage) that is not captured in a linear EMV calculation. The CFO's constraint is not irrational: it reflects the asymmetric cost of a breach versus the marginal value of higher expected earnings.
+
+**(c)** P(positive return | X) = 60% (the 60% probability of €6M). P(positive return | Y) = 90% (the 90% probability of €3.2M). If the board wants to maximise the probability of at least breaking even (any positive payoff), Y is clearly preferable.
+
+**(d)** The recommendation depends on who is receiving it. For a risk-neutral investor making this decision repeatedly: Strategy X. For a risk-averse firm near a financial constraint, or for a single non-repeatable decision: likely Strategy Y. The answer is not universal — it depends on the firm's risk tolerance, financial position, and whether this is a recurring or one-off decision.
+
+**(e)** The decision tree computes the EMV — the probability-weighted average monetary outcome — and identifies the highest-EMV option. It leaves to human judgment: (i) whether the firm is risk-neutral or risk-averse; (ii) the relevance of non-monetary outcomes (reputational effects, strategic positioning, employee morale); (iii) whether the probabilities themselves are well-calibrated; and (iv) whether the stated payoffs capture all relevant costs. The tree is a decision support tool, not a decision-making oracle.
+
+---
+
+### T6 — EVPI and EVI (market expansion)
+
+**(a)** EMV(Expand) = 0.45 × €800,000 + 0.55 × (−€300,000) = €360,000 − €165,000 = **€195,000.** Since €195,000 > €0 (do not expand), the optimal decision without information is to expand.
+
+**(b)** EVPI = EMV with perfect information − best EMV without information.
+EMV with perfect information = 0.45 × €800,000 (expand if favourable) + 0.55 × €0 (don't expand if unfavourable) = €360,000.
+EVPI = €360,000 − €195,000 = **€165,000.** This is the maximum amount the retailer should pay for any information source. The €100,000 study charges less than this ceiling — but it's imperfect, so we need EVI.
+
+**(c)** Frequency table (10,000 scenarios): Favourable: 4,500. Unfavourable: 5,500.
+"Favourable" signal: 0.70 × 4,500 = 3,150 true; 0.30 × 5,500 = 1,650 false. Total: 4,800.
+P(favourable | "favourable" signal) = 3,150/4,800 ≈ **65.6%.**
+"Unfavourable" signal: 0.70 × 5,500 = 3,850 true; 0.30 × 4,500 = 1,350 false. Total: 5,200.
+P(favourable | "unfavourable" signal) = 1,350/5,200 ≈ **26.0%.**
+
+**(d)** EMV(Expand | "favourable") = 0.656 × €800,000 + 0.344 × (−€300,000) = €524,800 − €103,200 = **€421,600.** → Expand.
+EMV(Expand | "unfavourable") = 0.260 × €800,000 + 0.740 × (−€300,000) = €208,000 − €222,000 = **−€14,000.** → Do not expand.
+
+**(e)** P("favourable") = 4,800/10,000 = 0.48. P("unfavourable") = 0.52.
+EMV with study = 0.48 × €421,600 + 0.52 × €0 = **€202,368.**
+EVI = €202,368 − €195,000 = **€7,368.** The study costs €100,000 but adds only €7,368 in expected value. **Do not commission the study.** The 70% accuracy rate is too low to justify the price — the study barely changes the decision (expand is optimal before and after a "favourable" signal; the only case where it changes the decision is after an "unfavourable" signal, but this occurs 52% of the time at an expected saving of €14,000 per occurrence, which is not enough to cover the €100,000 fee).
+
+---
+
+### T7 — Decision tree diagnostic (find the errors)
+
+**(a)** Arithmetic error in "launch now": the analyst used +€200,000 (positive) for the failure payoff instead of −€200,000 (negative). Correct calculation: 0.60 × €500,000 + 0.40 × (−€200,000) = €300,000 − €80,000 = **€220,000**, not €380,000.
+
+**(b)** Arithmetic error in "wait": the analyst used +€150,000 (positive) for the failure payoff instead of −€150,000 (negative). Correct: 0.70 × €600,000 + 0.30 × (−€150,000) = €420,000 − €45,000 = **€375,000**, not €465,000.
+
+**(c)** Corrected recommendation: EMV(wait) = €375,000 vs EMV(now) = €220,000. The recommendation to wait is unchanged — but the margin is €155,000, not €85,000. Both errors happened to preserve the direction of the recommendation by coincidence, but reported the margin incorrectly.
+
+**(d)** Present values of "wait" payoffs at 10% discount rate (one year later): PV(success) = €600,000 / 1.10 ≈ **€545,455.** PV(failure) = −€150,000 / 1.10 ≈ **−€136,364.** Discounted EMV(wait) = 0.70 × €545,455 + 0.30 × (−€136,364) = €381,818 − €40,909 = **€340,909.** Discounted EMV(wait) (€340,909) is still higher than EMV(now) (€220,000), so the recommendation doesn't change — but the margin shrinks slightly when time value is accounted for.
+
+**(e)** Two business events that could eliminate the waiting advantage: (i) **Competitor entry:** a rival launches a comparable product during the 12-month wait, reducing the addressable market and the €600,000 upside — model this as an additional probability node after the "wait" branch: P(competitor enters) reduces the success payoff. (ii) **Technology shift:** the product becomes obsolete before launch (e.g., a new platform or regulatory change renders the product irrelevant) — model as a third outcome ("market disappears") with payoff −€0 (or a sunk cost) and a probability to estimate from industry dynamics.
+
+---
+
 **Pre-class submission (due 11:59pm the night before class):**
 
 Using your open-data dataset (from a country other than your own), identify one binary decision your dataset's context suggests (e.g., "Should the city government invest in a new cycling lane?"). Submit:

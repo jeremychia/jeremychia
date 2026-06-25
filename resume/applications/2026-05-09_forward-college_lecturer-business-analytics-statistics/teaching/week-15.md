@@ -169,6 +169,99 @@ T3 introduces heteroskedasticity — the most common OLS violation students will
 > (d) R² = 0.998 and F is enormous. Should the student conclude this is an excellent regression model? What fundamental modelling error has been made?
 > (e) What would you advise the student to do instead to model the relationship between customer behaviour and sales?
 
+---
+
+## Answer Key
+
+### T1 — Reading the regression output
+
+**(a)** The null hypothesis for the t-test on Ad spend is: **H₀: β_adspend = 0** — the coefficient on Ad spend equals zero (ad spend has no linear relationship with sales, controlling for store size and competitor count). Rejection (p = 0.000) implies that ad spend has a statistically significant positive effect on sales even after controlling for the other variables. It does not imply that ad spend *causes* sales — only that the relationship is unlikely to be zero in the population.
+
+**(b)** Yes — the F-test can be significant while some individual t-tests are not. This happens most commonly when predictors are **multicollinear** (highly correlated with each other): together they explain a significant proportion of Y's variation (F is significant), but each variable's *marginal* contribution after controlling for the others is not distinguishable from zero (individual t not significant). The pattern is: significant F + non-significant individual t-tests = multicollinearity. The predictors collectively contain information about Y, but the model cannot attribute that information cleanly to one predictor or the other.
+
+**(c)** Adjusted R² = 0.871 < R² = 0.894 because Adjusted R² **penalises for adding variables** that do not meaningfully improve fit. R² never decreases when a variable is added (it always increases or stays the same), so it cannot be used to compare models with different numbers of predictors. Adjusted R² applies a penalty: Adj R² = 1 − [(1 − R²)(n − 1) / (n − k − 1)], where k is the number of predictors. Adding a variable that improves fit by more than the penalty increases Adj R²; adding a weak variable decreases it. **Report Adjusted R²** when comparing models with different numbers of predictors — it is the appropriate criterion for model selection.
+
+---
+
+### T2 — Coefficient sign change (experience and gender)
+
+**(a)** The drop from 8,000 to 2,000 reveals that **experience and gender are correlated** in the data — specifically, men in this sample tend to have more years of experience than women (e.g., because women have shorter average tenure in the company, or career interruptions). In the simple regression, the experience coefficient was absorbing some of the gender pay gap: it was partly acting as a proxy for gender. When gender is explicitly included, the model partitions the effect correctly: experience explains €2,000/year of salary, and the remaining gap (€15,000) is attributed to gender directly.
+
+**(b)** The **multiple regression model** (with gender included) better isolates the effect of experience on salary. It controls for the confound: it compares employees with the same gender who differ in experience. The simple regression confounds the experience effect with the gender effect — it does not hold gender constant.
+
+**(c)** The manager's statement is misleading in two ways: (i) €2,000 per year of experience is still a meaningful economic effect — it is the **ceteris paribus effect** (holding gender constant), which is the relevant quantity for understanding returns to experience. (ii) "Barely affects" imports a practical significance judgment without evidence: whether €2,000/year is economically meaningful depends on the salary level, typical experience range, and what the question is. The statement confuses a smaller coefficient with an unimportant one. The correct interpretation: "Controlling for gender, each additional year of experience is associated with approximately €2,000 more in annual salary."
+
+---
+
+### T3 — Residual diagnostics (heteroskedasticity)
+
+**(a)** The pattern — residuals fanning out as X increases — is called **heteroskedasticity.** The variance of the residuals increases with X.
+
+**(b)** It violates the OLS assumption of **homoskedasticity** — the assumption that the variance of the error term is constant across all values of X. This assumption is required for the OLS standard errors (and therefore t-statistics and p-values) to be valid. With heteroskedasticity, OLS coefficient estimates are still unbiased but no longer efficient, and the standard errors are incorrect — making hypothesis tests unreliable.
+
+**(c)** A **log transformation of Y** (replacing Y with ln(Y)) often stabilises the variance. If the standard deviation of the error is proportional to Y (multiplicative rather than additive errors), a log transform converts the model from Y = a + bX + ε to ln(Y) = a + bX + ε, where the new error is more homoskedastic. Other options include: a square root transformation of Y; using robust standard errors (heteroskedasticity-consistent SEs) that correct the standard errors without transforming the model; or switching to weighted least squares.
+
+---
+
+### T4 — Multicollinearity (training hours vs score)
+
+**(a)** Both things can be true simultaneously because the **F-test and the t-tests ask different questions.** The F-test asks: "Do the predictors together explain more variation in Y than a model with no predictors?" With R² = 0.68, they clearly do — hence the significant F. The individual t-tests ask: "Does each predictor contribute *marginally*, after the other predictor has already been included?" When X1 and X2 are highly correlated, each predictor contains much of the same information as the other — so neither adds much *beyond what the other already explains*. The predictors share credit for the explained variance, and neither can be identified as the "cause" in isolation.
+
+**(b)** Multicollinearity means two or more predictors are highly correlated with each other, making it difficult to estimate their individual coefficients reliably. In this example: employees who spent more hours in training also tend to have higher certification scores — the two variables move together. The regression cannot disentangle how much of the productivity improvement is due to hours vs scores.
+
+**(c)** When X2 (score) is removed, the model now only has X1 (hours). X1 is no longer competing with a correlated partner — it absorbs all the explanatory power that was previously shared. The slope rises from 0.08 to 0.47, and the p-value drops from 0.912 to 0.001, because X1 is now picking up the variation previously "attributed" ambiguously between X1 and X2. The underlying relationship (training hours predict productivity) is real; multicollinearity just made it impossible to detect in the presence of the correlated partner.
+
+**(d)** VIF = 18.3 >> 10 means the variance of the coefficient on X1 is inflated by a factor of 18.3 relative to what it would be if X1 were uncorrelated with X2. In practice: the standard error of the X1 coefficient is √18.3 ≈ 4.3 times larger than it would be without multicollinearity. This is why the t-statistic for X1 is tiny (0.11) even if training genuinely predicts productivity — the standard error is so inflated that the coefficient cannot be distinguished from zero.
+
+**(e)**
+- **(i) Drop one predictor:** Advantage: resolves multicollinearity, produces stable coefficients. Disadvantage: loses information; if both variables have genuine independent effects (even small ones), dropping one causes omitted variable bias.
+- **(ii) Create a combined score:** Advantage: retains both variables' information while reducing collinearity; theoretically motivated if both measure "training intensity." Disadvantage: the combined variable requires an assumption about the relative weighting of hours vs score, which may be arbitrary.
+- **(iii) Collect more data:** Advantage: larger n reduces standard errors generally and may allow both coefficients to be estimated with adequate precision even with moderate correlation. Disadvantage: if X1 and X2 are structurally collinear (always measured together in this training programme), more data does not help — the correlation between them does not decrease with more observations.
+
+---
+
+### T5 — F-test and model selection
+
+**(a)** The null hypothesis of the F-test: **H₀: β₁ = β₂ = β₃ = β₄ = 0** — all slope coefficients are simultaneously zero (none of the predictors explain any variation in apartment price beyond chance). Rejecting this null (p < 0.001) means at least one predictor has a non-zero relationship with price. It does not tell you which predictor(s) are significant individually — only that the set of predictors as a whole is informative.
+
+**(b)** The analyst should not automatically remove non-significant predictors without checking the Adjusted R² criterion. The Adjusted R² criterion says: remove a predictor if doing so increases (or maintains) Adjusted R². Non-significant predictors that add no Adjusted R² improvement should be dropped for parsimony. However, if a predictor has a theoretical reason to be in the model (e.g., floor level has a known effect on real estate values in some cities), it may be retained even if not statistically significant in this sample.
+
+**(c)** Adjusted R² = 0.74 with all four predictors, and Adjusted R² = 0.74 with only two: bedrooms and floor added zero explanatory power beyond size and distance to city centre. Their omission costs nothing in fit. This confirms they should be removed — they are redundant (their effect is already captured by the other predictors), not just individually weak.
+
+**(d)** The journalist's statement is too strong. p = 0.218 means: if floor level truly had no effect on apartment price, we would observe an effect as large as the estimated coefficient 21.8% of the time by chance — this does not cross the 5% significance threshold, so we cannot conclude the effect is non-zero. But this is very different from concluding "floor level has no effect." The data are **consistent with** a null effect, but also consistent with a real but modest effect that this sample size lacked the power to detect. "No statistically significant effect" ≠ "no effect."
+
+**(e)** **Overfitting** in multiple regression means the model has been tuned too closely to the specific sample data — it captures patterns in the sample (including random noise) that do not generalise to new data. Stepwise regression, by repeatedly selecting variables that reduce in-sample residuals, can produce models with inflated R² and biased coefficients that over-represent noise. Consequence: the model predicts very well in-sample but poorly on new observations. The coefficients are also misleading for inference — the standard errors are too small because the model has been optimised to fit this particular data.
+
+---
+
+### T6 — Coefficient sign reversal (hospital length of stay)
+
+**(a)** The drop from 0.8 (Model A) to 0.3 (Model B) suggests that **age and disease severity are positively correlated** — older patients tend to have more severe conditions. In Model A, the age coefficient was absorbing some of the severity effect: it was acting as a proxy for severity because older patients were, on average, more severely ill. Model B separates the two effects, showing that conditional on severity, the age effect on length of stay is smaller (0.3 vs 0.8).
+
+**(b)** The administrator is not wrong in a descriptive sense: "older patients stay longer" accurately describes the unconditional pattern in Model A. What is missing is "controlling for other factors." The statement invites a causal interpretation (age per se causes longer stays) when the actual driver may be severity. A complete statement would be: "Older patients stay longer on average, largely because they tend to have more severe conditions — not directly because of their age."
+
+**(c)** Slope on Elective = −0.8: **holding age and severity constant**, patients undergoing elective procedures (vs emergency) stay 0.8 days fewer, on average. The "holding age and severity constant" qualifier is critical — the coefficient does not compare all elective vs all emergency patients (who differ in severity); it compares patients of the same age and severity level who differ only in whether their procedure was elective.
+
+**(d)** The near-identical slope on Age in Models B (0.3) and C (0.3) tells you that **age and procedure type (elective vs emergency) are largely uncorrelated** in this sample — adding Elective to the model did not change the age coefficient, meaning the age-length-of-stay relationship is not confounded by procedure type. Elective procedures explain additional variation in length of stay, but they don't alter the age effect because elective vs emergency is not strongly related to age in this dataset.
+
+**(e)** The hospital cannot change patients' ages, but Model C reveals two actionable insights: (i) **Severity management:** Model B shows that severity is the dominant driver of length of stay. Investments in earlier intervention, preventive care, or better management of chronic conditions to reduce severity at admission could meaningfully shorten stays. (ii) **Scheduling management:** the Elective coefficient (−0.8 days) suggests elective patients have shorter stays than emergency patients of similar age and severity. The hospital could investigate what differs about elective patient pathways (better preparation, scheduled resource allocation) and whether those practices can be extended to emergency patients where applicable.
+
+---
+
+### T7 — Regression output diagnostic (accounting identity)
+
+**(a)** Sales = Customers × Average Transaction Value is an **accounting identity** — by definition, total revenue equals the number of transactions multiplied by the average value per transaction. Regressing Sales on Customers, Average Transaction, and their interaction is regressing a variable on the components of its own definition. This is not a statistical relationship to be estimated — it is a mathematical tautology. The "regression" is not modelling anything about the world; it is just recovering an algebraic identity.
+
+**(b)** The t-statistic of 340 on the interaction term is not evidence of a strong relationship — it is evidence of a **definitional relationship.** The interaction term (Customers × Avg Transaction) is essentially Sales itself (with rounding), so the model is regressing Sales on Sales. The enormous t-statistic reflects perfect (or near-perfect) multicollinearity between the interaction term and the dependent variable, not an informative statistical finding.
+
+**(c)** The pattern — huge standard errors on Customers and Average Transaction, tiny standard error on the interaction — is the signature of extreme multicollinearity. The interaction term is a near-perfect linear combination of the other two predictors (and the outcome), making the individual coefficients on Customers and Average Transaction unidentifiable. Their enormous standard errors reflect the instability of their coefficients — the model cannot distinguish their marginal contributions from the joint contribution already captured by the interaction.
+
+**(d)** **No** — R² = 0.998 and F = 12,451 do not indicate an excellent regression model. They indicate a fundamental modelling error: the analyst has included a variable that is (nearly) a linear function of the dependent variable. This produces apparent fit without discovering any real relationship. The model is essentially predicting Sales from Sales, which trivially gives R² ≈ 1. This is not a good model; it is a tautology dressed as a model.
+
+**(e)** The student should: (i) **Separate the question from the identity.** If the goal is to understand what drives sales, the relevant model would regress Sales on genuinely independent predictors: marketing spend, store traffic, day of week, promotions, pricing — not the arithmetic components of Sales itself. (ii) **Alternatively:** if the goal is to decompose revenue changes into volume effects (customer count) and price effects (average transaction), the appropriate tool is a decomposition analysis, not a regression. Regression is for estimating relationships between conceptually distinct variables — not for recovering algebraic definitions.
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Find a regression analysis reported in a news article, investor report, or academic abstract. Submit:

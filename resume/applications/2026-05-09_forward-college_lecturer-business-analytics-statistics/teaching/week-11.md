@@ -182,6 +182,117 @@ T3(a): response bias (customers who respond to satisfaction emails are not rando
 > (d) The company wants to compare revenues across regions as well as estimate the overall mean. For the regional comparison, would simple random or stratified sampling be more appropriate? Why?
 > (e) A store manager says: "Instead of random sampling, we should include the 30 largest stores — they account for the most revenue." What type of bias would this introduce, and how would it affect the estimate of mean revenue per store?
 
+---
+
+## Answer Key
+
+### T0 — Population parameter vs sample statistic
+
+**(a)** 128 mmHg is the **parameter** — it is the true population mean, calculated from all 12,000 patients. The sample mean computed from the 100-patient sample is the **statistic** — it is an estimate derived from the sample, not the full population.
+
+**(b)** The sample mean is unlikely to equal exactly 128 mmHg because random sampling produces different samples each time. Even a perfectly designed random sample will, by chance, contain slightly different patients in different draws — their average will fluctuate randomly around the true population mean, rarely landing exactly on it.
+
+**(c)** The sample mean will be **less variable** than any individual patient's blood pressure. Averaging 100 measurements smooths out the random variation in individual readings: extreme high values in one patient are offset by lower values in another. The sample mean is a more stable quantity than any single measurement.
+
+---
+
+### T1 — Vocabulary and sampling error
+
+**(a)** Parameter: **61%** (the true proportion in the entire working population). Statistic: **58%** (the proportion found in the sample of 2,000 adults).
+
+**(b)** Sampling error = 58% − 61% = **−3 percentage points.** The sample underestimates the true proportion by 3 percentage points.
+
+**(c)** Sampling error is not zero even in a well-designed survey because random sampling involves selecting different individuals each time. By chance, the 2,000 people selected may include slightly more remote-work opponents than the underlying population — not because of bias, but because of random variation inherent in any finite sample.
+
+**(d)** What would reduce sampling error: **increasing the sample size** (a larger sample produces a smaller standard error, reducing random fluctuation). What would NOT reduce sampling error: using a telephone survey instead of an online survey; improving the question wording; increasing the response rate. These may reduce bias but do not reduce the random variation inherent in sampling. The key distinction: sampling error (random) vs bias (systematic) require different solutions.
+
+---
+
+### T2 — Standard error and CLT (UK income)
+
+**(a)** No — she **cannot** use the CLT to make probability statements about a sample of n = 9. The CLT requires approximately n ≥ 30 for a highly right-skewed distribution; household income has extreme right-skew, so n = 9 is far too small. The sampling distribution of the mean from 9 households will still be noticeably right-skewed — the CLT has not yet kicked in. Additionally, a single postcode district is not a random sample of the UK population, so any inference to the national mean would be invalid regardless of n.
+
+**(b)** SE = σ/√n = 22,000/√100 = **£2,200.** Z = (42,000 − 38,000)/2,200 = 1.818. P(X̄ > £42,000) = 1 − NORM.DIST(42,000, 38,000, 2,200, TRUE) ≈ 1 − 0.9655 ≈ **3.45%.** With n = 100 and the CLT invoked (n = 100 ≥ 30), the sample mean is approximately normally distributed even though individual incomes are right-skewed.
+
+**(c)** P(X̄ > £42,000) ≈ 3.4% is the probability that the **sample mean** from 100 households exceeds £42,000. The probability that a **single household** has income above £42,000 requires knowing the shape of the individual income distribution — which is highly right-skewed and cannot be treated as normal for a single observation. We cannot compute it from μ and σ alone without knowing the shape. The sample mean is averaging out the extreme skew; a single observation is still subject to it.
+
+**(d)** Z = (44,500 − 38,000)/2,200 = 6,500/2,200 ≈ **2.95.** P(X̄ ≥ £44,500) = 1 − NORM.DIST(44,500, 38,000, 2,200, TRUE) ≈ **0.16%.** A sample mean this high is very unlikely under the null hypothesis μ = £38,000. However, this does not mean the ONS figures are wrong. The most likely explanation is that the think tank's sample was not representative — for example, it oversampled high-income areas, used a convenience sample, or had a specific response bias. The conclusion "ONS figures understate actual income" requires establishing that the think tank's sampling method was superior to the ONS's, which the report does not do.
+
+---
+
+### T3 — Sampling bias (retailer satisfaction survey)
+
+**(a)** Two sources of bias: (i) **Response bias (self-selection):** customers who choose to respond to a satisfaction email are not a random subset. Those with very strong experiences — either very positive or very negative — are more likely to respond; indifferent customers (who may be the majority) tend not to respond. This systematically skews the sample away from the centre. (ii) **Timing bias:** surveying customers immediately after purchase captures an initial emotional response (the "purchase high"), not their considered view based on actual product use, delivery experience, or customer service over time. Customers who later experience problems were surveyed before those problems occurred.
+
+**(b)** The CEO's claim is misleading. The statistic "78% of respondents rated their experience as 'excellent'" describes satisfied survey-respondents, not all customers. The denominator is the wrong population — the meaningful comparison is all customers, not the self-selected minority who chose to respond. A defensible claim would be: "78% of customers who responded to our post-purchase satisfaction email within [X days] rated their experience as 'excellent'."
+
+**(c)** A more representative design would: (i) randomly sample from the customer database (not wait for voluntary responses) at a fixed time post-delivery (e.g., 14 days after receipt, capturing the full product experience); (ii) use a short, multi-channel survey (SMS or in-app) with a small incentive to reduce non-response bias; (iii) track the non-response rate and, if it exceeds ~30%, run a brief follow-up to the non-respondents to assess whether they differ systematically from respondents. The key trade-off: random sampling with follow-up is more expensive but more credible; the current email approach is cheap but produces a statistic the CEO cannot meaningfully use.
+
+---
+
+### T4 — Boundary cases: CLT conditions
+
+**(a)** **No** — with n = 9 and an extremely right-skewed distribution (most invoices paid in 7 days, some taking 90–180 days), the CLT does not apply. The sampling distribution of the mean from n = 9 will still be substantially right-skewed. The rule of thumb of n ≥ 30 for the CLT assumes moderate skewness; for this extreme distribution, n may need to be 100+ before the sampling distribution is approximately normal.
+
+**(b)** SE = 35/√100 = **3.5 days.** Z = (28 − 22)/3.5 = 1.714. P(X̄ > 28) = 1 − NORM.DIST(28, 22, 3.5, TRUE) ≈ **4.3%.** At n = 100, the CLT applies well enough for practical purposes even with this skewed distribution.
+
+**(c)** The statement is not fully accurate. The CLT guarantees approximate normality for the bulk of the distribution, but the approximation is less reliable in the extreme tails. For the 99th or 99.9th percentile of X̄, the normal approximation may still be inaccurate even at n = 100 when the population is very skewed. In risk management or tail-risk contexts (e.g., estimating the probability of an extreme average payment delay), this caveat matters.
+
+**(d)** **No** — this question cannot be answered from μ and σ alone. P(single invoice takes more than 60 days) requires knowing the full distributional shape of individual invoice times. With μ = 22 and σ = 35, and a highly right-skewed distribution, a single observation of 60+ days is plausible but cannot be quantified without knowing the specific shape (e.g., exponential, log-normal, or empirical). The CLT tells us about sample means, not individual observations.
+
+**(e)** SE = σ/√n < 2 → √n > 35/2 = 17.5 → n > 306.25 → **n ≥ 307** invoices.
+
+---
+
+### T5 — Effect of sample size (disease prevalence)
+
+**(a)** SE = √(p(1−p)/n) = √(0.08 × 0.92/n):
+- n = 100: SE = √(0.000736) ≈ **0.0271 (2.71 percentage points)**
+- n = 400: SE = √(0.000184) ≈ **0.0136 (1.36 percentage points)**
+- n = 1,600: SE = √(0.0000460) ≈ **0.0068 (0.68 percentage points)**
+
+**(b)** To halve SE from 1.36% to 0.68%: need to quadruple n. **n = 1,600.** Precision improves with the square root of n — halving SE requires four times the sample.
+
+**(c)** The researcher's argument is **invalid.** What matters for the precision of a sample estimate is the **absolute sample size**, not the sampling fraction (n/N). The formula SE = √(p(1−p)/n) does not involve the population size N (for large populations where the finite population correction is negligible). A sample of 400 from a population of 2 million is just as precise as a sample of 400 from a population of 50,000, as long as the sample is drawn randomly. The sampling fraction of 0.02% is irrelevant; n = 400 is n = 400.
+
+**(d)** The standard error will be **essentially the same** for both cities. SE = √(p(1−p)/n) does not depend on population size (for large populations). The only case where population size matters is when the sampling fraction exceeds ~5% (use a finite population correction factor). With n = 400 and City A's population of 50,000: sampling fraction = 0.8%, which is small — the correction is negligible. Both estimates are equally precise.
+
+**(e)** Required assumption: **simple random sampling** (every member of the population has an equal probability of being selected). What would bias the estimate: quota sampling (interviewing only people who happen to be at certain locations); telephone surveys (excluding those without phones or who don't answer); voluntary response (those who self-select to respond may differ systematically in health behaviour from the general population).
+
+---
+
+### T6 — Sampling bias vs sampling variability (political poll)
+
+**(a)** The correct effective sample size for Study 1 is the 180 respondents (not the 600 contacted). SE₁ = √(0.54 × 0.46/180) ≈ √(0.001380) ≈ **0.0372 (3.72 percentage points).** SE₂ = √(0.62 × 0.38/2,400) ≈ √(0.0000982) ≈ **0.0099 (0.99 percentage points).** Study 2 has lower sampling variability — its larger n produces a narrower spread of estimates across repeated samples.
+
+**(b)** **Study 1 gives a more reliable estimate of true voter opinion**, despite its smaller effective sample. The key is the randomness of the sampling frame. Study 1 used randomly selected registered voters — even with only 180 responses, the sample is drawn from the correct population with a known selection mechanism. Study 2 drew only from self-selected website visitors, which is not representative of all voters. Large n cannot substitute for a representative sampling frame.
+
+**(c)** The 30% response rate introduces **non-response bias.** If policy supporters are more likely to respond to phone surveys (perhaps because they're more engaged with public issues), the estimate of 54% support may overstate true support. The direction and magnitude of the bias depend on how systematically non-responders differ from responders in their policy views.
+
+**(d)** **Self-selection bias (or voluntary response bias).** Website visitors who choose to complete a poll tend to be more engaged with the company's content — potentially more likely to support infrastructure investment if the company operates in that sector, or more opinionated in either direction than the general voter. The direction of bias is context-dependent but the bias is likely systematic.
+
+**(e)** Sampling variability measures how much a statistic fluctuates across different random samples of the same size — it is reducible by increasing n. Sampling bias is a systematic distortion caused by the sampling mechanism itself — it affects every sample drawn using the same method, regardless of size. A larger biased sample gives a more precise but equally wrong estimate. No increase in n can fix a non-representative sampling frame.
+
+---
+
+### T7 — Sampling strategy design (supermarket chain)
+
+**(a)** Required n = (z × σ / ME)² = (1.96 × 18,000 / 2,000)² = (17.64)² ≈ **311 stores.** Since the chain has only 85 stores total, the required sample size exceeds the population. The precise margin of error (±€2,000) is unachievable without a census of all 85 stores — or by relaxing the margin of error requirement.
+
+**(b)** This tells you that when the population is small relative to the desired precision, the standard sample size formula can suggest a census. For a population of 85 stores: to achieve ±€2,000 precision with σ = €18,000, you would need to sample virtually all of them. The practical lesson: for small populations, the finite population correction factor reduces the required n below the formula's naïve answer. Corrected n = 311 / (1 + 310/85) ≈ **67 stores** — still most of the population.
+
+**(c)** Proportional stratified allocation across 85 stores (total n = 30):
+- North: (25/85) × 30 ≈ **8.8 → 9 stores**
+- Midlands: (35/85) × 30 ≈ **12.4 → 12 stores**
+- South: (25/85) × 30 ≈ **8.8 → 9 stores**
+(Rounding to integers while keeping total at 30: 9 + 12 + 9 = 30.)
+
+**(d)** For comparing revenues across regions, **stratified sampling with equal or near-equal allocation to each region** is more appropriate than proportional sampling. With proportional allocation, the North and South each get only 9 stores — too few for a reliable regional comparison. Equal allocation (10 per region) would allow 10 vs 10 vs 10 comparisons with equal precision, at the cost of slightly less efficient overall estimation. The choice depends on the primary goal: overall precision (proportional) vs regional comparison (equal allocation).
+
+**(e)** Selecting the 30 largest stores introduces **size-biased sampling.** The largest stores have systematically higher revenue than smaller ones — so the sample estimate of mean revenue per store would significantly **overestimate** the true mean across all 85 stores. This is not random error; it is a structural bias that cannot be corrected without knowing the selection mechanism. The store manager's intuition conflates importance (the large stores matter more to total revenue) with representativeness (the sample should reflect the distribution across all stores, not the revenue distribution).
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Find one example of a survey or study cited in news, policy, or business communications where the sampling method is described (or suspiciously absent). Submit:

@@ -149,6 +149,110 @@ This question targets the edge case where models must be built without historica
 > (d) Calculate the expected current annual cost of misrouting (assume 250 working days). Then calculate the cost at a 1% misrouting rate. This is the upper bound on what a perfect model is worth — what is this called?
 > (e) A vendor proposes an AI-powered optical character recognition (OCR) system that promises "99% accuracy." What additional information would you ask for before accepting or rejecting this claim?
 
+---
+
+## Answer Key
+
+### T1 — Road maintenance allocation
+
+**(a)** **Prescriptive.** The government is deciding *how to allocate* a budget — the output is a recommendation (an allocation), not a description of what happened or a forecast of what will happen.
+
+**(b)** **Primarily epistemic.** The government lacks reliable current condition data across all 50 districts. Better surveys would shrink this uncertainty. Aleatory uncertainty would be something irreducibly random (e.g. future weather damage) — the primary unknown here is knowledge-based and data-reducible.
+
+**(c)** Any two reasonable inputs: current condition scores per district, traffic volume, age of road surface, historical repair frequency, cost of materials by region.
+
+**(d)** Any second-order effect left out by design is acceptable — e.g. political priorities, future land-use changes, long-term population shifts. Leaving these out is acceptable because the model answers one narrow question (maintenance allocation), not the whole urban system.
+
+**(e)** This is a critique of the **decision-maker**, not the model. Political pressure is not a road condition. A model that correctly excludes political factors to focus on infrastructure need is well-scoped. The councillor's critique reveals how the model is being *used*, not a flaw in how it was *designed*.
+
+**(f)** The five-year deterioration question is **predictive**, not prescriptive. Part (a) asks "what *should* we do?" — prescriptive. The new question asks "what *will* happen?" — predictive. They are different analytics problems requiring different model types.
+
+**(g)** No single right answer — this is an ethical question. The key principle: a model becomes too simplified when it can no longer answer the question it was built for. Who decides is ultimately the decision-maker, though the modeller has an obligation to state limitations clearly.
+
+---
+
+### T2 — Retailer overstock
+
+**(a)** A predictive analytics solution forecasts demand by product/SKU — it tells the retailer what they expect to sell, supporting the decision of *how much to order*.
+
+**(b)** An optimisation model defines an objective (minimise waste + stockout cost weighted by their costs), models demand uncertainty as a distribution, and solves for the optimal order quantity. It must *assume* a demand distribution and the relative costs of over- vs under-stocking.
+
+**(c)** Yes — use both, in order. The predictive model produces the demand distribution; the prescriptive model takes that distribution as input to solve for the optimal order.
+
+**(d)** Fashion demand has a **discontinuity** — last season's items drop to near-zero demand when the new collection launches. Standard inventory models assume smooth demand trends. The optimisation model needs to account for end-of-season obsolescence, not just mean demand.
+
+---
+
+### T3 — DeepSeek / Nvidia
+
+**(a)** The Nvidia buy-recommendation models were performing **prescriptive analytics**: recommending an action (hold/buy stock) in service of an objective (maximise return). Some had a predictive layer (forecasting GPU demand), but the recommendation itself was prescriptive.
+
+**(b)** DeepSeek's release invalidated the core assumption that AI training requires massive GPU compute. If the same model performance can be achieved at a fraction of the cost, projected Nvidia GPU demand is structurally lower than the models assumed. The training-cost relationship was broken.
+
+**(c)** The omission is a **defensible scope decision** — but one that should have been communicated as a tail risk. Before January 2025 there was no public evidence of an imminent efficiency breakthrough. Who should have decided: the model builders should have included an explicit scope note — "this model does not account for structural shifts in AI compute efficiency."
+
+**(d)** The commentator is partially right. The models were not wrong for the world they described — they accurately extrapolated historical trends under stable assumptions. But prescriptive models that ignore tail risks (technology disruption, regulatory change) are incomplete. Implication: prescriptive models should be communicated with explicit assumption statements, not as point recommendations.
+
+**(e)** "88% on ARC-AGI" is a **descriptive** output — it describes performance on a defined test. A benchmark score measures performance on a specific set of problems under specific conditions. It does not measure general reasoning, real-world robustness, or capability outside the benchmark's domain.
+
+---
+
+### T4 — Ambulance depot with no data
+
+**(a)** **Prescriptive** — the council must decide *where* to locate the depot. Yes, it can be prescriptive without historical data: you can build an optimisation model on structural data (population density, road network distances) without historical call records.
+
+**(b)** Inputs needed: population density by area, road network distances and travel speeds, estimated incident locations (from demographic data), and response time targets. Numbers come from census data, mapping databases, and comparable-city studies.
+
+**(c)** Using data from a comparable city assumes call patterns, demographics, road infrastructure, and emergency response norms are similar enough to apply. Defensible if cities are genuinely comparable in size, density, and infrastructure. Indefensible if the cities differ fundamentally in health system structure, emergency density, or road network.
+
+**(d)** "No model without data is guesswork" is **false**. Even a structural optimisation model (locating a depot to minimise expected response distance given population density) is better than no process — because no decision is also a decision, made with even less structure. The minimum needed is a defensible estimate of likely demand locations and a response time objective.
+
+**(e)** Primarily **epistemic** — the council lacks call-pattern knowledge that data collection would provide. More data collection *would* help. This contrasts with aleatory uncertainty (inherently random), which data cannot reduce.
+
+---
+
+### T5 — Supermarket bread ordering
+
+**(a)** Analyst A produces a **demand forecast** (a number: expected tomorrow's demand). Analyst B produces an **optimal order quantity** (a decision). Forecast ≠ recommendation — they answer different questions.
+
+**(b)** Use Analyst A first, then B. A's model produces the demand distribution that B's optimisation takes as input. Prescriptive models require predictive inputs.
+
+**(c)** Analyst B's model requires more assumptions: a demand distribution, a cost structure (waste cost vs stockout cost), and an objective function. A's model needs only historical data and relationships. Which output is more useful depends on the manager's role: a manager making daily ordering decisions needs B's recommendation; one seeking to understand demand patterns may find A's forecast sufficient.
+
+**(d)** She may be right that models underestimate Christmas demand if the seasonal effect wasn't fully captured in 90 days of data. She may be wrong if the model already captured that seasonality and she is double-counting it.
+
+**(e)** Lower costs over three months confirm the model outperformed manual overrides in aggregate. It does **not** tell you: whether the model was correctly designed (the improvement could be partly coincidental), whether performance will hold next quarter, or how the model handles rare edge cases not yet encountered.
+
+---
+
+### T6 — Ride-hailing surge pricing
+
+**(a)** **Predictive** — the model predicts whether surge will be applied based on current conditions. It forecasts a label; it doesn't produce a recommendation.
+
+**(b)** 94% accuracy on historical data may be misleading because: (i) the historical data was itself generated by a threshold rule, so the model may simply be learning that threshold rather than a real pattern; (ii) overall accuracy masks performance on the rare cases where surge is applied — precision/recall matter more than accuracy when classes are imbalanced.
+
+**(c)** The driver may be right. To test: check whether removing all inputs except "available drivers < 10" preserves nearly the same accuracy. If so, the other inputs add nothing.
+
+**(d)** This is primarily a **governance problem**. Automated pricing without human review is a deployment and oversight decision, not a modelling error. A governance problem is a failure of the decision about how to use the model; a modelling problem would be a flaw in the model itself.
+
+**(e)** This is a **feedback loop**: the model's output changes driver behaviour, which changes the model's inputs, which changes the output — making the historical training data invalid. The training data was collected in a world where drivers did not respond to surge signals; in deployment, they do. The model needs retraining on data that reflects driver behaviour *after* surge signals exist.
+
+---
+
+### T7 — Postal service sorting
+
+**(a)** The true decision is **whether and how to automate parcel sorting** to reduce total cost. "Reduce misrouting" is a means, not the objective. The objective is cost minimisation (or equivalent margin improvement).
+
+**(b)** A combination of **descriptive** (current misrouting cost) and **prescriptive** (what automation option minimises total cost). Output: a recommendation on whether to invest in automation and which type.
+
+**(c)** Inputs: address legibility/OCR confidence by parcel type; current staff throughput and error rate by parcel category; equipment capital cost; correction cost per misrouted parcel. Most are trackable from current operations; capital cost requires vendor quotes.
+
+**(d)** Current annual cost: 50,000 × 0.03 × €4.50 × 250 = **€1,687,500/year.** At 1% misrouting: 50,000 × 0.01 × €4.50 × 250 = **€562,500/year.** The savings ceiling (perfect sorting) is €1,687,500. This is the upper bound on what any sorting improvement is worth — sometimes called the **Value of Perfect Information** in this context.
+
+**(e)** Additional questions before accepting "99% accuracy": On what test dataset — vendor-curated or independently validated? Accuracy across all parcel types and handwriting conditions, or only on clean labels? What is the false-positive and false-negative rate separately? What happens to rejected/uncertain parcels — manual re-sort? What accuracy level is required for the *overall system* misrouting rate to fall below a target?
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Students identify **three business decisions they have personally encountered or read about** — from their own country — and **one** they have encountered from a different country. For each, they answer:

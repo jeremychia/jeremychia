@@ -180,6 +180,112 @@ T3 is the least intuitive of the three — the chi-square CI is asymmetric, whic
 >
 > (e) The specification requires diameter SD ≤ 1.0mm. The CI for σ is (0.983, 1.541). What does this tell you about whether the process meets the specification? Can you conclusively say it does or does not meet spec?
 
+---
+
+## Answer Key
+
+### T0 — Interpreting a margin of error (entry question)
+
+**(a)** 95% CI: **(43%, 51%).**
+
+**(b)** Correct interpretation: "If this polling procedure were repeated many times with different random samples of 500 voters, approximately 95% of the resulting confidence intervals would contain the true proportion of voters who support the policy."
+
+**(c)** The journalist's statement is **incorrect.** "There is a 95% probability that the true level of support is between 43% and 51%" implies the true proportion is a random variable with a 95% chance of falling in this specific interval. That is not correct: the true population proportion is a fixed (unknown) number — it does not have a probability of being anywhere. Once the interval is computed, it either contains the true proportion or it doesn't. The 95% refers to the *long-run reliability of the method*, not to any probability statement about this particular interval.
+
+---
+
+### T1 — t-interval for mean (machine parts)
+
+**(a)** t* = T.INV.2T(0.05, 29) ≈ 2.045. SE = 1.2/√30 ≈ 0.219. ME = 2.045 × 0.219 ≈ 0.448. 95% CI: (99.8 − 0.45, 99.8 + 0.45) = **(99.35, 100.25) mm.**
+
+**(b)** Yes — 100mm is inside the interval (99.35, 100.25). This implies the data are consistent with the target diameter of 100mm: we cannot conclude from this sample that Supplier A's mean diameter differs significantly from 100mm at the 5% level.
+
+**(c)** t* = T.INV.2T(0.05, 29) ≈ 2.045. SE = 4.5/√30 ≈ 0.822. ME = 2.045 × 0.822 ≈ 1.681. 95% CI for Supplier B: (100.3 − 1.68, 100.3 + 1.68) = **(98.62, 101.98) mm.**
+
+**(d)** Overlapping CIs do **not** prove the means are equal. CI overlap means the data are consistent with the means being equal — but it does not formally test for a difference. Two CIs can overlap while the two-sample t-test still detects a statistically significant difference. The formal test for comparing means is the two-sample t-test (Week 13), not a visual inspection of CI overlap. Supplier A's interval is much narrower (tight supplier); Supplier B's is wide (high variability). The appropriate action is to run a formal two-sample test, not to conclude "no difference" from overlapping intervals.
+
+---
+
+### T2 — Proportion interval (product preference)
+
+**(a)** p̂ = 72/200 = 0.36. z = NORM.INV(0.95, 0, 1) ≈ 1.645 (for 90% CI, use z corresponding to 0.05 in each tail). SE = √(0.36 × 0.64/200) = √(0.001152) ≈ 0.03394. ME = 1.645 × 0.03394 ≈ 0.0558. 90% CI: (0.36 − 0.056, 0.36 + 0.056) = **(0.304, 0.416)** or approximately **(30.4%, 41.6%).**
+
+**(b)** Yes — "about a third" (33.3%) is contained within the interval (30.4%, 41.6%). The manager's claim is supported by the data at 90% confidence.
+
+**(c)** n = (z/ME)² × p̂ × (1 − p̂) = (1.96/0.03)² × 0.36 × 0.64 = (65.33)² × 0.2304 = 4,268 × 0.2304 ≈ **983.** Approximately 983 customers are needed to achieve a margin of error of ±3 percentage points at 95% confidence. (Using p̂ = 0.36 from the existing sample — if using the conservative p̂ = 0.50, the required n rises to (1.96/0.03)² × 0.25 ≈ 1,068.)
+
+---
+
+### T3 — Chi-square CI for standard deviation
+
+**(a)** χ²_{upper} = CHISQ.INV.RT(0.025, 49) ≈ 70.22; χ²_{lower} = CHISQ.INV(0.025, 49) ≈ 31.55.
+Lower bound for σ: √((49 × 0.034²)/70.22) = √((49 × 0.001156)/70.22) = √(0.000806) ≈ **0.0284 mm.**
+Upper bound for σ: √((49 × 0.001156)/31.55) = √(0.001795) ≈ **0.0424 mm.**
+95% CI for σ: **(0.0284, 0.0424) mm.**
+
+**(b)** The target of σ = 0.030mm is **inside** the interval (0.0284, 0.0424). This means the data are consistent with the machine's target consistency — we cannot conclude from this sample that the true SD differs significantly from 0.030mm. However, the interval also includes values up to 0.0424mm — substantially above target — so the data cannot rule out worse-than-target consistency either. The machine may or may not be meeting spec; a larger sample is needed to narrow this interval.
+
+---
+
+### T4 — Boundary cases (small n and large n)
+
+**(a)** df = 4; t* = T.INV.2T(0.05, 4) ≈ 2.776. SE = 3.1/√5 ≈ 1.386. ME = 2.776 × 1.386 ≈ 3.847. 95% CI: (98.2 − 3.85, 98.2 + 3.85) = **(94.35, 102.05) mg.** The interval spans nearly 8mg — very wide relative to the acceptable range for a pharmaceutical product.
+
+**(b)** With n = 5, the t-interval is technically valid if the **population distribution is approximately normal.** When n is this small, the CLT has not kicked in; the t-distribution's derivation assumes the original population is normal. If the distribution of active ingredient concentrations is skewed (e.g., due to batch contamination), the t-interval may be unreliable. For pharmaceutical quality control, n = 5 is dangerously small — regulatory bodies typically require larger validation samples.
+
+**(c)** For n = 50,000, t* ≈ z* = NORM.INV(0.995, 0, 1) ≈ 2.576. SE = 1.85/√50,000 ≈ 0.00828. ME = 2.576 × 0.00828 ≈ 0.0213. 99% CI: **(7.099, 7.141)** — a width of only 0.042 points on a 1–10 scale.
+
+**(d)** This is an **inappropriate use** of the CI. With n = 50,000, the standard error is so tiny that the interval excludes almost any specific target value — including values that are practically indistinguishable from the true mean. The CI says "7.0 is excluded" — but the difference between the interval's lower bound (7.099) and the target (7.0) is 0.099 points on a 10-point scale. Is a 0.099-point difference in satisfaction score a meaningful business achievement? Probably not. The CI tells you the estimate is precise; it does not tell you whether the estimate is practically significant.
+
+**(e)** At very large n, CIs become so narrow that they will almost always exclude any specific target value — making every business comparison "statistically significant." This renders the CI useless for decision-making if the decision threshold is a single point (e.g., "is the mean at least 7.0?"). The appropriate remedy is to combine the CI with an effect-size consideration: "Is the difference between our estimate and the target practically meaningful?" A CI from n = 50,000 tells you very precisely what the mean is; it does not tell you whether that mean is good enough.
+
+---
+
+### T5 — Correct and incorrect CI interpretations
+
+**(a)** **Incorrect.** The true mean checkout time is a fixed unknown number — it does not have a probability of being in any interval. The 95% refers to the method, not to the probability that this specific interval contains the fixed true mean.
+
+**(b)** **Correct.** This is the frequentist definition of a 95% CI: if the procedure of sampling and computing the interval were repeated many times, 95% of the resulting intervals would contain the true mean.
+
+**(c)** **Incorrect.** This confuses the CI for the **mean** with a prediction interval for **individual values.** The CI bounds where the population mean is likely to lie. The statement would require a prediction interval, which is wider — it captures where an individual observation is likely to fall, accounting for both estimation uncertainty and individual variability.
+
+**(d)** **Incorrect.** The sample mean is a single computed number — in this case, the midpoint of the interval (42.3 + 47.1)/2 = 44.7 seconds. The sample mean is not "in an interval"; it is a fixed point used to construct the interval. This statement confuses the parameter being estimated with the point estimate itself.
+
+**(e)** **Incorrect.** We cannot say "definitely" — we are 95% confident, which means this interval was constructed by a method that works 95% of the time. This particular interval may be one of the 5% that does not contain the true mean. The word "definitely" is not warranted.
+
+**(f)** **Correct.** 44 seconds lies within (42.3, 47.1), so 44 seconds is a plausible value for the true mean at this confidence level. The interval is consistent with a true mean of 44 seconds.
+
+---
+
+### T6 — Sample size determination (bank survey)
+
+**(a)** n = (1.96/0.04)² × 0.50 × 0.50 = (49)² × 0.25 = 2,401 × 0.25 = 600.25 → **n = 601.** Using the conservative estimate p̂ = 0.50 (which maximises the required sample size, providing a safety margin regardless of the true proportion).
+
+**(b)** With p̂ = 0.72: n = (1.96/0.04)² × 0.72 × 0.28 = 2,401 × 0.2016 ≈ 484.2 → **n = 485.** Lower than the conservative estimate, because the proportion is further from 0.50 — a less uncertain prior reduces the required sample.
+
+**(c)** Halving the margin of error (from 4% to 2%) **quadruples** the required sample size. Required n ≈ 601 × 4 = **2,404** (using conservative p̂ = 0.50). This is because the ME formula involves n in the denominator under a square root: to halve ME, n must increase by a factor of 4.
+
+**(d)** ME with n = 400: ME = 1.96 × √(0.50 × 0.50/400) = 1.96 × 0.025 = **±4.9 percentage points.** The consultancy's proposed n = 400 achieves only ±4.9pp precision instead of the required ±4pp.
+
+**(e)** The required sample size formula for a proportion, n = (z/ME)² × p̂(1−p̂), does not include the population size N. This is correct for large populations (when the sampling fraction n/N is small, as is the case here with n/N ≈ 601/800,000 ≈ 0.075%). The precision of an estimate depends on the **absolute sample size**, not on what fraction of the population is sampled. Intuitively: drawing 601 people from 800,000 and drawing 601 people from 8,000,000 produce equally precise estimates, as long as both samples are random. The CEO's intuition — that a larger population requires a larger sample — is a common misconception without statistical justification for large populations.
+
+---
+
+### T7 — Three CI types side by side
+
+**(a)** t* = T.INV.2T(0.05, 39) ≈ 2.023. SE = 1.2/√40 ≈ 0.190. ME = 2.023 × 0.190 ≈ 0.384. 95% CI for mean: **(50.016, 50.784) mm** ≈ **(50.02, 50.78) mm.**
+
+**(b)** z* = 1.96. SE = √(0.82 × 0.18/40) = √(0.003690) ≈ 0.0607. ME = 1.96 × 0.0607 ≈ 0.119. 95% CI for proportion: (0.82 − 0.119, 0.82 + 0.119) = **(0.701, 0.939).**
+
+**(c)** χ²_{0.025, 39} = CHISQ.INV.RT(0.025, 39) ≈ 58.12; χ²_{0.975, 39} = CHISQ.INV(0.025, 39) ≈ 23.65.
+Lower σ = √((39 × 1.44)/58.12) = √(0.9664) ≈ 0.983 mm. Upper σ = √((39 × 1.44)/23.65) = √(2.374) ≈ 1.541 mm. 95% CI for σ: **(0.983, 1.541) mm.**
+
+**(d)** The asymmetry arises because the chi-square distribution is **right-skewed**, not symmetric. The chi-square critical values at the 2.5th and 97.5th percentiles (23.65 and 58.12) are not equidistant from the mean (39). The interval for σ is constructed by dividing (n−1)s² by these two different critical values — a larger divisor (58.12) produces a smaller lower bound; a smaller divisor (23.65) produces a larger upper bound. Since 58.12 − 39 ≠ 39 − 23.65, the bounds are not symmetric around s.
+
+**(e)** The specification requires σ ≤ 1.0mm, but the 95% CI for σ is (0.983, 1.541) mm. The lower bound of 0.983mm is just below the target of 1.0mm, while the upper bound (1.541mm) is well above it. This means the data are **consistent with meeting the specification** (σ could be below 1.0mm) but also **consistent with failing it** (σ could be up to 1.541mm). We cannot conclusively say the process does or does not meet spec — the interval straddles the specification threshold. A larger sample would narrow this interval. If precision to σ ≤ 1.0mm matters for product quality, the current evidence is ambiguous and additional sampling is recommended before certifying the process as in-spec.
+
+---
+
 **Pre-class submission (on the course portal):**
 
 Find a published confidence interval — from a news article, an academic abstract, a government report, or a company investor communication. Submit:
