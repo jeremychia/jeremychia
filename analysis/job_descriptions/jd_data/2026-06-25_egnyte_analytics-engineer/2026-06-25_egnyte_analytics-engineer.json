@@ -59,7 +59,5 @@
   "jd_authorship_quote": "Develop dbt semantic layer architecture; Collaborate across departments on data strategy",
   "jd_authorship_reasoning": "Specific technical responsibilities (dbt semantic layer, transformation pipelines, CI/CD) mixed with generic boilerplate (collaborate, document).",
   "greenfield_vs_fix_quote": "Design and build data transformation pipelines; Address data quality issues",
-  "urgency_signal": "No urgency signals present",
-  "layer_b_classified": true,
-  "layer_b_source": "backfill_evidence.py"
+  "urgency_signal": "No urgency signals present"
 }

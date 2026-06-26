@@ -59,7 +59,5 @@
   "jd_authorship_quote": "Design and construct Microsoft Fabric Semantic Models using Gold-layer data; Create DAX measures, hierarchies, relationships, and semantic structures; Engage directly with stakeholders to translate requirements into technical designs",
   "jd_authorship_reasoning": "Technical specificity in Fabric/DAX/performance optimization mixed with generic stakeholder collaboration language.",
   "greenfield_vs_fix_quote": "Design and construct Microsoft Fabric Semantic Models; Develop operational dashboards; Establish naming conventions and governance standards",
-  "urgency_signal": "No urgency signals present",
-  "layer_b_classified": true,
-  "layer_b_source": "backfill_evidence.py"
+  "urgency_signal": "No urgency signals present"
 }

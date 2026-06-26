@@ -59,7 +59,5 @@
   "jd_authorship_quote": "Design, build, test, and maintain end-to-end data models within dbt-powered systems",
   "jd_authorship_reasoning": "Technical specificity (dbt, AI data agents, self-serve solutions) mixed with generic stakeholder management language.",
   "greenfield_vs_fix_quote": "shift the team from reactive support toward proactive strategy",
-  "urgency_signal": "No urgency signals present",
-  "layer_b_classified": true,
-  "layer_b_source": "backfill_evidence.py"
+  "urgency_signal": "No urgency signals present"
 }

@@ -59,7 +59,5 @@
   "jd_authorship_quote": "Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts - enabling fast learning, quick diagnosis, and confident iteration",
   "jd_authorship_reasoning": "Technically specific with named tools (dbt, Lightdash), precise methodologies (instrumentation before shipping, impact evaluation design), and company context (A-Levels, GCSEs, learner scoring).",
   "greenfield_vs_fix_quote": "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring; keep our warehouse/dbt/Lightdash stack reliable and scalable",
-  "urgency_signal": "No urgency signals present",
-  "layer_b_classified": true,
-  "layer_b_source": "backfill_evidence.py"
+  "urgency_signal": "No urgency signals present"
 }

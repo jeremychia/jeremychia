@@ -43,7 +43,6 @@
   "has_power_bi": false,
   "has_great_expectations": false,
   "has_soda": false,
-  "layer_b_classified": true,
   "evidence": {
     "velocity_vs_rigour": "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualit\u00e4t, Stabilit\u00e4t und Transparenz unserer Datenlandschaft sicher.",
     "domain_risk": "Du stellst sicher, dass fachliche und regulatorische \u00c4nderungen zeitnah in unseren Datenmodellen und Prozessen ber\u00fccksichtigt werden.",
@@ -64,6 +63,5 @@
   "jd_authorship_quote": "Du integrierst und verkn\u00fcpfst komplexe Datenquellen aus internen Systemen, Marktdaten sowie regulatorischen Quellen und stellst deren konsistente Verarbeitung sicher.",
   "jd_authorship_reasoning": "Technically specific with domain expertise (energy cost modeling, regulatory requirements, billing/consumption data); concrete tool mentions (dbt, Airflow); clear understanding of Tuesday morning work.",
   "greenfield_vs_fix_quote": "Du optimierst Datenmodelle und Pipelines hinsichtlich Performance, Skalierbarkeit und Wartbarkeit.",
-  "urgency_signal": "zum n\u00e4chstm\u00f6glichen Zeitpunkt",
-  "layer_b_source": "backfill_evidence.py"
+  "urgency_signal": "zum n\u00e4chstm\u00f6glichen Zeitpunkt"
 }
