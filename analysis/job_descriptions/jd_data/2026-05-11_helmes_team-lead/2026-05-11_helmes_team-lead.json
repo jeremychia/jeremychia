@@ -43,7 +43,6 @@
   "has_power_bi": false,
   "has_great_expectations": false,
   "has_soda": false,
-  "layer_b_classified": true,
   "evidence": {
     "velocity_vs_rigour": "Monitor performance and continuously improve work methods",
     "domain_risk": "Serve as primary contact for both clients and team",
@@ -54,7 +53,6 @@
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
   },
-  "layer_b_source": "backfill_evidence.py",
   "velocity_vs_rigour_quote": "Monitor performance and continuously improve work methods",
   "velocity_vs_rigour_reasoning": "Emphasis on process improvement and monitoring signals a rigour-oriented approach; no velocity language present.",
   "domain_risk_quote": "Serve as primary contact for both clients and team",
