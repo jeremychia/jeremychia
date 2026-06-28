@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://job-boards.eu.greenhouse.io/thequalitygroupgmbh1/jobs/4858130101?gh_src=58d2bdf2teu",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -48,6 +50,8 @@
     "collaboration_width": "Analytics Consulting; DWH team",
     "data_team_maturity": "Build and evolve data models and marts using tools like dbt for scalable analytics",
     "jd_authorship": "Build and evolve data models and marts using tools like dbt for scalable analytics",
+    "stakeholder_orientation": "Transform DWH data into business-ready datasets",
+    "autonomy_level": "Support ad-hoc analytical requests requiring data modeling",
     "greenfield_vs_fix": "Build and evolve data models and marts using tools like dbt for scalable analytics",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -61,6 +65,10 @@
   "data_team_maturity_reasoning": "Existing infrastructure (DWH, Analytics Consulting team) is being evolved with dbt rather than built from zero.",
   "jd_authorship_quote": "Build and evolve data models and marts using tools like dbt for scalable analytics",
   "jd_authorship_reasoning": "The responsibilities contain specific technical details (marts, dbt, KPI logic, DWH, modeling standards) that only someone who performs this work would include.",
+  "stakeholder_orientation_quote": "Transform DWH data into business-ready datasets",
+  "stakeholder_orientation_reasoning": "The role primarily serves the analytics function and data consumers through infrastructure and data modeling work.",
+  "autonomy_level_quote": "Support ad-hoc analytical requests requiring data modeling",
+  "autonomy_level_reasoning": "The responsibilities emphasize executing defined work and supporting assigned requests rather than setting strategic direction for analytics.",
   "greenfield_vs_fix_quote": "Build and evolve data models and marts using tools like dbt for scalable analytics",
   "urgency_signal": "No urgency signals present"
 }

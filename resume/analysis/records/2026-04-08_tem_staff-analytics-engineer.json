@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Hands-on, individual contributor position\" and \"building the analytics foundation\" confirm a solo or near-solo analytics engineering hire; the interview references a single \"Data Manager\" as interviewer.",
     "collaboration_width": "\"Partnering with Marketing, Finance, Operations, and Data Engineering teams\" — four distinct named functions.",
     "language_gate": "Not stated in JD.",
-    "urgency": "\"$75 million Series B in late 2025\" and \"fast-moving environments\" signal an immediate-hire posture for a critical foundational role."
-  }
+    "urgency": "\"$75 million Series B in late 2025\" and \"fast-moving environments\" signal an immediate-hire posture for a critical foundational role.",
+    "stakeholder_orientation": "Define and implement company metrics in Omni for self-serve analytics.",
+    "autonomy_level": "Ability to set direction for analytics patterns, standards, and strategy."
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

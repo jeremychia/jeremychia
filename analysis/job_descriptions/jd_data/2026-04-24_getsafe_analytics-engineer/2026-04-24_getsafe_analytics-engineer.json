@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://getsafe.jobs.personio.com/job/2612426?language=en",
   "jd_authorship": "recruiter",
+  "stakeholder_orientation": "mixed",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "Commercial; Operations; Engineering",
     "data_team_maturity": "Build and maintain scalable data pipelines and data marts using modern tooling",
     "jd_authorship": "Conduct analyses to uncover insights and inform strategic decisions",
+    "stakeholder_orientation": "Own and evolve core business metrics - from definition to tracking and operationalisation; Develop the data and analytics components of the AI stack to support experimentation and GenAI applications",
+    "autonomy_level": "Own and evolve core business metrics - from definition to tracking and operationalisation",
     "greenfield_vs_fix": "Build and maintain scalable data pipelines and data marts using modern tooling",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "The emphasis on maintaining and scaling existing infrastructure with named tools (dbt, Metabase) indicates a maturing team with established but evolving systems, not a greenfield build or fully mature specialized division.",
   "jd_authorship_quote": "Conduct analyses to uncover insights and inform strategic decisions",
   "jd_authorship_reasoning": "Most responsibilities use generic boilerplate action verbs that could apply to any analytics role; while AI/GenAI applications are mentioned, there are no scale numbers, specific metrics, or precise tool application contexts typical of hiring-manager authorship.",
+  "stakeholder_orientation_quote": "Own and evolve core business metrics - from definition to tracking and operationalisation; Develop the data and analytics components of the AI stack to support experimentation and GenAI applications",
+  "stakeholder_orientation_reasoning": "The first two responsibilities equally emphasize business metric ownership and product/engineering AI enablement, with no clear primary audience across the responsibilities section.",
+  "autonomy_level_quote": "Own and evolve core business metrics - from definition to tracking and operationalisation",
+  "autonomy_level_reasoning": "The verb 'own' combined with 'from definition to tracking' indicates end-to-end ownership and the autonomy to define and shape how core metrics are structured and evolved, rather than executing direction from others.",
   "greenfield_vs_fix_quote": "Build and maintain scalable data pipelines and data marts using modern tooling",
   "greenfield_vs_fix_reasoning": "Both build/design (new work) and maintain/evolve/scale (existing systems) verbs present without clear dominance.",
   "urgency_signal": "No urgency signals present"

@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://www.linkedin.com/jobs/view/4404307253/",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "data platform; engineering; analytics",
     "data_team_maturity": "Mentor analytics engineers and analysts on modeling skills and technical standards",
     "jd_authorship": "Optimise AWS cloud-native services (Glue, Athena, S3, MWAA) to support scalable analytical and AI workloads",
+    "stakeholder_orientation": "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights",
+    "autonomy_level": "Set technical direction and drive adoption of modern modeling practices across the organization",
     "greenfield_vs_fix": "Define and evolve the architecture for enterprise analytical models",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Multiple existing team members and established function indicate mid-stage team, with language like 'define and evolve' and 'lead implementation of AI-driven capabilities' showing scaling and new initiatives.",
   "jd_authorship_quote": "Optimise AWS cloud-native services (Glue, Athena, S3, MWAA) to support scalable analytical and AI workloads",
   "jd_authorship_reasoning": "Named AWS services with context, specific AI capabilities (text-to-SQL, automated insights, semantic modeling), and architectural language indicate technical hiring manager authorship.",
+  "stakeholder_orientation_quote": "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights",
+  "stakeholder_orientation_reasoning": "The primary audience is internal analytics consumers and self-serve users of the semantic layer; responsibilities centre on platform infrastructure, team enablement, and internal analytics capabilities rather than commercial, product, or finance stakeholders.",
+  "autonomy_level_quote": "Set technical direction and drive adoption of modern modeling practices across the organization",
+  "autonomy_level_reasoning": "The role is expected to set technical direction, define architecture, and lead implementation of new capabilities; the dominant verbs are 'Define', 'Set', 'Lead', and 'Drive', with no language indicating scope is set by others.",
   "greenfield_vs_fix_quote": "Define and evolve the architecture for enterprise analytical models",
   "urgency_signal": "No urgency signals present"
 }

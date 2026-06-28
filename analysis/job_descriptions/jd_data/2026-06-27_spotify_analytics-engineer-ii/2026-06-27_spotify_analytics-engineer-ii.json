@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "fix_scale",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "Data Engineers; Product; Engineering; Data Science; Platform partners",
     "data_team_maturity": "support rotation for key datasets, pipelines, and analytical products",
     "jd_authorship": "key metrics for platform health, developer productivity, and ML/AI platform adoption",
+    "stakeholder_orientation": "Help define and evolve key metrics for platform health, developer productivity, and ML/AI platform adoption",
+    "autonomy_level": "Partner with Data Engineers on upstream pipelines and collaborate with Product, Engineering, and Data Science to scope and deliver insights",
     "greenfield_vs_fix": "build and maintain analytical data models… improve data quality, performance, and cost efficiency",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"

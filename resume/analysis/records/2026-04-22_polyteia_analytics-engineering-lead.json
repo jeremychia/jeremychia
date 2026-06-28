@@ -48,6 +48,10 @@
     "data_team_maturity": "\"Leading a team of two Analytics Engineers\" is stated explicitly. Polyteia is a GovTech company building data products for public sector clients — likely a compact professional services/engineering unit.",
     "collaboration_width": "\"Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams.\" Distinct collaboration surfaces: internal customer success team, external public sector clients across \"Gesundheit, Finanzen oder Personal\" domains.",
     "language_gate": "\"Fluent German (C2 level) and secure English communication.\" Hard gate — C2 level is explicitly required, not a plus.",
-    "urgency": "No urgency language; \"multi-month implementations\" framing implies this is a steady-state leadership hire, not a crisis fill."
-  }
+    "urgency": "No urgency language; \"multi-month implementations\" framing implies this is a steady-state leadership hire, not a crisis fill.",
+    "stakeholder_orientation": "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams",
+    "autonomy_level": "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth; Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+  },
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "mixed"
 }

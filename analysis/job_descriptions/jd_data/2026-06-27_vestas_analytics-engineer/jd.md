@@ -67,6 +67,8 @@ Vestas designs, manufactures, and services wind turbines globally with more than
 
 **jd_authorship:** recruiter — The responsibilities section uses generic action verbs throughout: "Collaborate with Product Owners and Business Analysts to translate business requirements into analytics solutions" with no specific technical precision, scale numbers, or tool-specific methodology details; a reader cannot determine what this person does on a Tuesday morning.
 
+**stakeholder_orientation:** finance — The explicit organizational positioning within Finance and the "one version of the truth" mandate indicate the primary audience is financial reporting stakeholders and business performance consumers.
+**autonomy_level:** execution — Consistent use of "contribute to", "support", and "maintain" verbs demonstrates the role executes direction set by Product Owners and established architecture rather than defining strategy or direction.
 **greenfield_vs_fix:** fix_scale — Primary verbs are maintain/optimize/improve: "Maintain, optimize, and continuously improve existing data models."
 
 **urgency:** urgent — Application deadline is July 4, 2026, which is 7 days from today (2026-06-27).

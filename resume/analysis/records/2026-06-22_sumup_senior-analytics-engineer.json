@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Partner with squads across the tribe\" — tribe/squad language is a scaled Agile (Spotify model) signal implying a large data org; \"Comfort working across squads with Product Managers, Engineers, Analysts, and Data Scientists\" names four distinct roles, implying all exist in volume.",
     "collaboration_width": "Named verbatim: \"Product Managers, Engineers, Analysts, and Data Scientists\" across squads — width is wide (4+ distinct functions across multiple product teams).",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present. Breadth of domain coverage required (merchant activity, product adoption, lifecycle, risk scoring) and cross-squad emphasis suggests a considered strategic hire, not a backfill."
-  }
+    "urgency": "No urgency signals present. Breadth of domain coverage required (merchant activity, product adoption, lifecycle, risk scoring) and cross-squad emphasis suggests a considered strategic hire, not a backfill.",
+    "stakeholder_orientation": "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations",
+    "autonomy_level": "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

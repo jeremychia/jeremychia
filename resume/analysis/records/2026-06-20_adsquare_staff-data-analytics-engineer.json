@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Act as technical lead for a squad\", \"driving cross-squad collaboration\", \"drive technical alignment across multiple teams\" implies multiple squads — a medium-to-large engineering org; \"Staff\" seniority level (not Senior) suggests a well-developed engineering ladder.",
     "collaboration_width": "\"Technical lead for a squad\", \"driving cross-squad collaboration\", \"drive technical alignment across multiple teams\", \"mentor engineers through code reviews and pair programming\" — at least three distinct interfaces: own squad, other squads, and broader multi-team alignment.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present. Framed as a deliberate senior architectural hire (\"making architectural decisions\", \"driving cross-squad collaboration\"), not an emergency fill."
-  }
+    "urgency": "No urgency signals present. Framed as a deliberate senior architectural hire (\"making architectural decisions\", \"driving cross-squad collaboration\"), not an emergency fill.",
+    "stakeholder_orientation": "Act as technical lead for a squad, making architectural decisions and driving cross-squad collaboration",
+    "autonomy_level": "making architectural decisions and driving cross-squad collaboration"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

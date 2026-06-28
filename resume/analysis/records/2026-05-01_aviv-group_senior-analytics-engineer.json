@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Collaborating with analysts, data scientists, and business stakeholders\" names three distinct consumer groups — implies functional specialisation, not a small generalist function. \"Contributing to data platform architecture\" signals an existing platform team rather than solo ownership.",
     "collaboration_width": "Named verbatim: \"analysts\", \"data scientists\", \"business stakeholders\" (all named in responsibilities), plus the implied data platform / engineering team (\"contributing to data platform architecture\").",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present."
-  }
+    "urgency": "No urgency signals present.",
+    "stakeholder_orientation": "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring",
+    "autonomy_level": "Defining data contracts, metrics, and semantic models across business domains"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed"
 }

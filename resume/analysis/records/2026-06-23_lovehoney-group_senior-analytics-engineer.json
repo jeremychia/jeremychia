@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development\" — established team with multiple engineers; hiring to level up architecture",
     "collaboration_width": "\"wider data team\", \"cross-functional alignment\", \"strategic initiatives\" — data team, Finance, and business stakeholders implied; ~3 named/implied partner functions",
     "language_gate": "Not stated in JD",
-    "urgency": "No urgency signals present"
-  }
+    "urgency": "No urgency signals present",
+    "stakeholder_orientation": "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems.",
+    "autonomy_level": "leading tool selection, technology evaluation, and architectural roadmap development"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://careers.shine.co/jobs/7556260-senior-analytics-engineer",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "Data Engineering; Analytics",
     "data_team_maturity": "Build and maintain scalable dbt models on Snowflake for cross-entity analytics",
     "jd_authorship": "Build and maintain scalable dbt models on Snowflake for cross-entity analytics",
+    "stakeholder_orientation": "Enable Data Analysts to deliver insights through reliable, documented dbt models",
+    "autonomy_level": "Establish data governance, testing, and quality frameworks",
     "greenfield_vs_fix": "Build and maintain scalable dbt models; Establish data governance, testing, and quality frameworks",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Named tools (dbt, Snowflake) in responsibilities with existing Data Engineering and Analytics teams indicate established function beyond greenfield.",
   "jd_authorship_quote": "Build and maintain scalable dbt models on Snowflake for cross-entity analytics",
   "jd_authorship_reasoning": "Technically specific responsibilities naming tools with application context suggest hiring manager input, but generic boilerplate language elsewhere ('collaborate', 'establish') indicates recruiter involvement.",
+  "stakeholder_orientation_quote": "Enable Data Analysts to deliver insights through reliable, documented dbt models",
+  "stakeholder_orientation_reasoning": "The role primarily serves the analytics function through infrastructure work, not commercial, product, or finance teams.",
+  "autonomy_level_quote": "Establish data governance, testing, and quality frameworks",
+  "autonomy_level_reasoning": "The role genuinely combines strategic domain ownership (governance, standards) with execution (building models, supporting analysts).",
   "greenfield_vs_fix_quote": "Build and maintain scalable dbt models; Establish data governance, testing, and quality frameworks",
   "urgency_signal": "No urgency signals present"
 }

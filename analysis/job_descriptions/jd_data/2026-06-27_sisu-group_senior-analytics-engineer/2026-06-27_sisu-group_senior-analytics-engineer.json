@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "Marketing; Finance; Product; development teams",
     "data_team_maturity": "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform",
     "jd_authorship": "Expert-level SQL skills, with a strong grasp of performance optimization and data transformation logic",
+    "stakeholder_orientation": "Build and maintain robust data warehouse solutions and transformation pipelines",
+    "autonomy_level": "Build and maintain robust data warehouse solutions and transformation pipelines",
     "greenfield_vs_fix": "Design and build clear, compelling visualizations; Build and maintain robust data warehouse solutions",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"

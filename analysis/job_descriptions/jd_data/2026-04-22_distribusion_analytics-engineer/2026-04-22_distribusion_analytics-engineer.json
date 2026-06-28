@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://careers.distribusion.com/o/analytics-engineer-all-genders-4",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "mixed",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "None identified",
     "data_team_maturity": "Identify and propose enhancements to reporting systems for better clarity and faster creation",
     "jd_authorship": "Build new Looker dashboards from scratch within tight deadlines",
+    "stakeholder_orientation": "Identify and propose enhancements to reporting systems for better clarity and faster creation",
+    "autonomy_level": "Leverage available tools and resources to solve problems independently",
     "greenfield_vs_fix": "Build new Looker dashboards from scratch; Identify and propose enhancements to reporting systems",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "The JD references existing infrastructure and tools (data lake, Looker, BigQuery, Kafka, Airflow) and improvement work, indicating a team past initial build but actively scaling.",
   "jd_authorship_quote": "Build new Looker dashboards from scratch within tight deadlines",
   "jd_authorship_reasoning": "Specific tool mention (Looker) and clear responsibilities show technical knowledge, but most other responsibilities use generic language without operational context or methodology details.",
+  "stakeholder_orientation_quote": "Identify and propose enhancements to reporting systems for better clarity and faster creation",
+  "stakeholder_orientation_reasoning": "Responsibilities focus on building and improving analytics infrastructure and reporting systems that serve data consumers and the platform itself.",
+  "autonomy_level_quote": "Leverage available tools and resources to solve problems independently",
+  "autonomy_level_reasoning": "The role includes strategic autonomy to solve independently and anticipate long-term impacts, balanced against execution responsibilities like building dashboards and maintaining accuracy.",
   "greenfield_vs_fix_quote": "Build new Looker dashboards from scratch; Identify and propose enhancements to reporting systems",
   "urgency_signal": "No urgency signals present"
 }

@@ -97,6 +97,8 @@ If you thrive in a vibrant, purpose-driven environment that values innovation, d
 
 **jd_authorship:** hiring_manager — The responsibilities reveal precise technical context: "Own the transformation layer in dbt- design, build, and maintain modular, well-tested data models" and "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents."
 
+**stakeholder_orientation:** internal_data — The explicit focus on defining product-specific metrics like activation, engagement, and retention indicates this role primarily supports product analytics use cases.
+**autonomy_level:** strategic — The role uses strategic ownership language ('own', 'define', 'establish', 'build') indicating authority to set the direction for analytics architecture and data modeling standards.
 **greenfield_vs_fix:** mixed — Primary work is maintaining an existing transformation layer (fix_scale) while also building out a new semantic layer (greenfield).
 
 **urgency:** standard — No urgency signals present.

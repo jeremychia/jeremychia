@@ -48,6 +48,10 @@
     "data_team_maturity": "\"Early-stage opportunity to build and structure analytics capabilities\" is stated explicitly. The role covers both analyst and analytics engineer functions — a sign they need one person to span multiple responsibilities, typical of lean teams.",
     "collaboration_width": "Teams referenced verbatim: \"franchise partners\" (external), \"internal teams\" (dashboard consumers), \"other business domains\" (data source negotiation — \"Negotiate access to internal data sources\"), \"franchisees\" (KPI support).",
     "language_gate": "\"Fluent English (mandatory); French preferred\" is stated verbatim under Required Qualifications.",
-    "urgency": "No urgency language detected. \"Early-stage opportunity\" language suggests this is a new function being established rather than a critical backfill."
-  }
+    "urgency": "No urgency language detected. \"Early-stage opportunity\" language suggests this is a new function being established rather than a critical backfill.",
+    "stakeholder_orientation": "Support franchise partners' decisions regarding stock, supply chain, and pricing",
+    "autonomy_level": "Support franchise partners' decisions regarding stock, supply chain, and pricing"
+  },
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "execution"
 }

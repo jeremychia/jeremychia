@@ -93,6 +93,8 @@ Anglais : un plus.
 
 **jd_authorship:** hiring_manager — The responsibilities reveal specific technical depth: "Construire des semantic layers facilitant l'exploitation des données par les équipes" and "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting" show someone who has done this work describing it precisely.
 
+**stakeholder_orientation:** mixed — The role explicitly serves three distinct stakeholder categories—marketing (commercial), product (product), and direction (finance/leadership)—with roughly equal emphasis.
+**autonomy_level:** execution — The use of 'participate in' indicates execution within defined client project scope rather than strategic direction-setting for the analytics practice.
 **greenfield_vs_fix:** greenfield — Primary verbs throughout the responsibilities are "Concevoir", "Mettre en place", "Structurer", "Construire" applied to client data stacks from ingestion to activation.
 
 **urgency:** standard — No urgency signals; posting is 8 days old with no ASAP or critical-hire language.

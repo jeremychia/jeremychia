@@ -45,6 +45,10 @@
     "data_team_maturity": "Role covers a wide remit — dashboards, reporting, SQL querying, data management, and business liaison — all in one \"Senior Analyst\" title, suggesting a lean team. The 2-year minimum experience bar for a \"Senior\" title signals a small organisation with thin seniority layers.",
     "collaboration_width": "Named explicitly: \"end-users\" (dashboard consumers), \"technical and non-technical groups\" (liaison role) — width is narrow (1–2 functional groups named).",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present. Relatively low experience bar (\"at least 2 years\") for a Senior title may suggest a backfill or newly scoped role."
-  }
+    "urgency": "No urgency signals present. Relatively low experience bar (\"at least 2 years\") for a Senior title may suggest a backfill or newly scoped role.",
+    "stakeholder_orientation": "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions.",
+    "autonomy_level": "Execute dashboard implementation that meet end-user requirements."
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

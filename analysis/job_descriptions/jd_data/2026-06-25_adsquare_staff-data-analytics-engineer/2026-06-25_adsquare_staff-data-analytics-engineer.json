@@ -9,6 +9,8 @@
   "salary_max": 100000,
   "salary_currency": "EUR",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "",
     "data_team_maturity": "Act as principal architect for the squad",
     "jd_authorship": "Mastery of SQL, dbt, Apache Spark/PySpark",
+    "stakeholder_orientation": "Build data observability frameworks for multi-terabyte data streams",
+    "autonomy_level": "Act as principal architect for the squad, championing test-driven development practices and engineering excellence",
     "greenfield_vs_fix": "Build data observability frameworks for multi-terabyte data streams and Cross-squad collaboration solving architectural challenges",
     "language_gate": "ASAP",
     "urgency": "ASAP"
@@ -58,6 +62,10 @@
   "data_team_maturity_reasoning": "Principal architect role, multi-terabyte operating scale, and established squad structure indicate mature, specialized data function.",
   "jd_authorship_quote": "Mastery of SQL, dbt, Apache Spark/PySpark",
   "jd_authorship_reasoning": "Specific named tools, methodologies (TDD, architectural vision), domain expertise (geo-spatial, time-series), and scale metrics indicate technical author.",
+  "stakeholder_orientation_quote": "Build data observability frameworks for multi-terabyte data streams",
+  "stakeholder_orientation_reasoning": "The primary focus across responsibilities is building internal data platform capabilities—scalable solutions, observability frameworks, architectural leadership—serving data team consumers rather than commercial, product, or finance functions.",
+  "autonomy_level_quote": "Act as principal architect for the squad, championing test-driven development practices and engineering excellence",
+  "autonomy_level_reasoning": "The 'principal architect' title combined with responsibility to champion practices indicates direction-setting and standards-setting authority, not execution of work scoped by others.",
   "greenfield_vs_fix_quote": "Build data observability frameworks for multi-terabyte data streams and Cross-squad collaboration solving architectural challenges",
   "urgency_signal": "ASAP"
 }

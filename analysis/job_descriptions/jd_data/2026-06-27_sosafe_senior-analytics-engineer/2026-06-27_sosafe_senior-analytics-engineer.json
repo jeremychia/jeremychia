@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "Collaborate with Data Engineers on upstream data contracts and event schemas; ensuring consistent definitions across analytics, product, and AI use cases",
     "data_team_maturity": "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions",
     "jd_authorship": "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents.",
+    "stakeholder_orientation": "Define and implement core business metrics (e.g. activation, engagement, retention) as reusable, versioned data assets",
+    "autonomy_level": "Own the transformation layer in dbt- design, build, and maintain modular, well-tested data models that define how data is structured and consumed across the company.",
     "greenfield_vs_fix": "Own the transformation layer in dbt- design, build, and maintain modular, well-tested data models",
     "language_gate": "Fluent in English.",
     "urgency": "No urgency signals present"

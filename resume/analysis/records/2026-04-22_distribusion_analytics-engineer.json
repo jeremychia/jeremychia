@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Direct ownership and measurable company impact from day one\" implies limited team depth — there is no ramp-up buffer. \"Become proficient with the data lake, understanding data sources and processing workflows\" implies documentation and onboarding materials are limited.",
     "collaboration_width": "Named groups verbatim: \"collaborative international team environment\" (internal team), \"major clients like Booking.com and Google Maps\" (external commercial clients as implied data consumers). No named internal business functions listed.",
     "language_gate": "Not stated in JD.",
-    "urgency": "\"Within tight deadlines\", \"direct ownership and measurable company impact from day one\", \"grasp project context quickly\" are strong urgency signals."
-  }
+    "urgency": "\"Within tight deadlines\", \"direct ownership and measurable company impact from day one\", \"grasp project context quickly\" are strong urgency signals.",
+    "stakeholder_orientation": "Identify and propose enhancements to reporting systems for better clarity and faster creation",
+    "autonomy_level": "Leverage available tools and resources to solve problems independently"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

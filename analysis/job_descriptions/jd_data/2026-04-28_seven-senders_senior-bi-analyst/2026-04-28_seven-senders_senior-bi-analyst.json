@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://www.linkedin.com/jobs/view/4406635718",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "Act as translator between engineering and business stakeholders",
     "data_team_maturity": "Support the growth of junior analysts through code reviews, coaching, and documentation",
     "jd_authorship": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
+    "stakeholder_orientation": "Own the data pipeline from architecting dbt models to enabling self-serve in Looker",
+    "autonomy_level": "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks",
     "greenfield_vs_fix": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Team exists with junior members and mentoring structure, tools in place (dbt, Looker), growing rather than newly established or massive.",
   "jd_authorship_quote": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
   "jd_authorship_reasoning": "Most responsibilities are technically specific (dbt, SQL optimization, Looker, multi-billion rows) but include generic mentorship and culture bullets.",
+  "stakeholder_orientation_quote": "Own the data pipeline from architecting dbt models to enabling self-serve in Looker",
+  "stakeholder_orientation_reasoning": "The primary focus is building data infrastructure and enabling other data consumers (junior analysts, self-serve users) rather than serving commercial, product, or finance functions.",
+  "autonomy_level_quote": "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks",
+  "autonomy_level_reasoning": "The role has significant autonomy over individual projects and technical domain decisions but does not set overall analytics strategy or organizational direction.",
   "greenfield_vs_fix_quote": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
   "urgency_signal": "No urgency signals present"
 }

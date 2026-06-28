@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://nkg.wd103.myworkdayjobs.com/en-US/nkg/job/Sustainability-Data-Analyst_JR102809-1",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -50,6 +52,8 @@
     "collaboration_width": "Strong cross-functional collaboration abilities",
     "data_team_maturity": "Develop and implement a unified sustainability data platform integrating multiple sources",
     "jd_authorship": "Design and operate scalable data pipelines within Microsoft Fabric; Gather requirements and translate them into effective reporting and analytics solutions",
+    "stakeholder_orientation": "Develop and implement a unified sustainability data platform integrating multiple sources",
+    "autonomy_level": "Gather requirements and translate them into effective reporting and analytics solutions",
     "greenfield_vs_fix": "Develop and implement a unified sustainability data platform integrating multiple sources; Improve data management processes",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -63,6 +67,10 @@
   "data_team_maturity_reasoning": "The emphasis on developing and implementing a unified platform while operating within established tools (Microsoft Fabric, Power BI) signals an existing data function with infrastructure that is growing and scaling.",
   "jd_authorship_quote": "Design and operate scalable data pipelines within Microsoft Fabric; Gather requirements and translate them into effective reporting and analytics solutions",
   "jd_authorship_reasoning": "The JD combines technical specificity about platforms (Microsoft Fabric) with generic recruiter-style action verbs (gather requirements, translate solutions), indicating mixed authorship.",
+  "stakeholder_orientation_quote": "Develop and implement a unified sustainability data platform integrating multiple sources",
+  "stakeholder_orientation_reasoning": "The role focuses on building data infrastructure and dashboards for internal sustainability monitoring and decision-making rather than serving commercial, product, finance, or external audiences.",
+  "autonomy_level_quote": "Gather requirements and translate them into effective reporting and analytics solutions",
+  "autonomy_level_reasoning": "The primary verbs (gather, create, contribute, translate) indicate responsive execution of others' requirements rather than strategic direction-setting.",
   "greenfield_vs_fix_quote": "Develop and implement a unified sustainability data platform integrating multiple sources; Improve data management processes",
   "urgency_signal": "No urgency signals present"
 }

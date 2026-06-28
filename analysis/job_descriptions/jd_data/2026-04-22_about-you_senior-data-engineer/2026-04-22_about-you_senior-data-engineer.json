@@ -10,6 +10,8 @@
   "salary_currency": "EUR",
   "source_url": "https://jobs.smartrecruiters.com/ABOUTYOUGmbH/744000121982295--senior-data-engineer-finance-tech-all-genders-",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -46,6 +48,8 @@
     "collaboration_width": "other data teams",
     "data_team_maturity": "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems",
     "jd_authorship": "Oversee the company's largest data movement operations, handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance",
+    "stakeholder_orientation": "creating foundational tools and monitoring systems for other data teams",
+    "autonomy_level": "drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)",
     "greenfield_vs_fix": "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Existing operations being maintained while building new platform infrastructure and foundational tools indicates scaling rather than greenfield startup.",
   "jd_authorship_quote": "Oversee the company's largest data movement operations, handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance",
   "jd_authorship_reasoning": "Technically specific with named systems, scale metrics, and concrete daily responsibilities rather than generic boilerplate.",
+  "stakeholder_orientation_quote": "creating foundational tools and monitoring systems for other data teams",
+  "stakeholder_orientation_reasoning": "The role's primary purpose is to build and maintain data platform infrastructure for internal data team consumption, with platform work dominating two of three key responsibilities.",
+  "autonomy_level_quote": "drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)",
+  "autonomy_level_reasoning": "The role is expected to drive major platform initiatives, own critical systems, and oversee large operations—indicating significant strategic direction-setting rather than execution of externally-set priorities.",
   "greenfield_vs_fix_quote": "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems",
   "urgency_signal": "No urgency signals present"
 }

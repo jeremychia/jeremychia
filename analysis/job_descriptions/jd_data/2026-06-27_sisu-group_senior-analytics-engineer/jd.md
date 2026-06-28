@@ -56,6 +56,8 @@ Contact: Ginta Baranauskaite, TA & People Specialist
 
 **jd_authorship:** mixed — Some technically precise bullets ("Expert-level SQL skills, with a strong grasp of performance optimization and data transformation logic", "designing scalable analytical datasets and dimensional data modeling") alongside generic boilerplate ("Stay current with industry trends and emerging technologies", "configure critical data connections").
 
+**stakeholder_orientation:** internal_data — Core responsibilities emphasize building and maintaining analytical infrastructure rather than serving a specific business function directly.
+**autonomy_level:** execution — Responsibilities emphasize execution tasks (build, maintain, configure, implement) with no language about defining strategy or shaping analytical direction.
 **greenfield_vs_fix:** mixed — Primary verbs include both build ("Design and build", "Build and maintain") and maintain/configure, indicating both new build and ongoing maintenance work.
 
 **urgency:** standard — No urgency signals present; no re-post indicators, no "ASAP" or deadline language.

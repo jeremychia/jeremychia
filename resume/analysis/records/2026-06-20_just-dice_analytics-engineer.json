@@ -45,6 +45,10 @@
     "data_team_maturity": "Single Analytics Engineer hire covering both \"design, construct, and enhance data pipelines\" and \"Establish the KPIs and metrics that will be used by the business\" — breadth implies a thin team where individuals own multiple domains.",
     "collaboration_width": "\"Tech and product teams\" (analytics solutions) and \"marketing and product teams\" (experiments) are explicitly named; \"the business\" is referenced generically for KPI monitoring.",
     "language_gate": "Not stated in JD. The benefits section mentions \"from learning German to a relocation bonus\", implying German is not required.",
-    "urgency": "No urgency signals present. Relocation support and visa sponsorship suggest they are actively hiring and prepared to move fast; \"freedom to make an impact from day one\" implies a quick ramp expectation."
-  }
+    "urgency": "No urgency signals present. Relocation support and visa sponsorship suggest they are actively hiring and prepared to move fast; \"freedom to make an impact from day one\" implies a quick ramp expectation.",
+    "stakeholder_orientation": "Plan, execute, and evaluate experiments with our marketing and product teams.",
+    "autonomy_level": "Establish and implement data requirements and analytics solutions with our tech and product teams."
+  },
+  "stakeholder_orientation": "product",
+  "autonomy_level": "mixed"
 }

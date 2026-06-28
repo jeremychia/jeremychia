@@ -45,6 +45,10 @@
     "data_team_maturity": "Not stated in JD. No team size, reporting line, or organisational context is given; \"establish foundational tables\" language suggests this is among the first analytics engineering hires focused on finance.",
     "collaboration_width": "\"Collaborate with Finance to convert requirements into structured data solutions\" — only one internal function explicitly named.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present."
-  }
+    "urgency": "No urgency signals present.",
+    "stakeholder_orientation": "Collaborate with Finance to convert requirements into structured data solutions",
+    "autonomy_level": "Collaborate with Finance to convert requirements into structured data solutions"
+  },
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution"
 }

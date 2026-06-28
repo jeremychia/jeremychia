@@ -47,6 +47,10 @@
     "data_team_maturity": "\"Traveler Data Engineering\" named as the specific team in the job title — implies a named sub-team within a larger data organisation. \"Maintain balance between operational responsibilities and new development using team SLOs\" signals a team with defined SLOs, live production systems, and structured operational processes.",
     "collaboration_width": "Named verbatim: \"Product\" and \"Data teams\" (named explicitly in \"thought partner with Product and Data teams to translate business requirements\"). \"Code reviews, and knowledge sharing\" implies peer engineers as a third group.",
     "language_gate": "\"Excellent English communication skills (written and verbal)\" is stated as a required qualification — hard gate for English. No second language requirement stated.",
-    "urgency": "No urgency signals present."
-  }
+    "urgency": "No urgency signals present.",
+    "stakeholder_orientation": "Build end-to-end data solutions independently: Deliver reliable, high-quality datasets/pipelines",
+    "autonomy_level": "Serve as a thought partner with Product and Data teams to translate business requirements"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

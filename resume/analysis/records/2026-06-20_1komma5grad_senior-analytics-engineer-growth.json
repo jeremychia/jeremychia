@@ -48,6 +48,10 @@
     "data_team_maturity": "\"Work with data analysts, engineers, software engineers, and marketing teams\", \"mentor junior data analysts and engineers\" suggest a team of at least 3–6 data practitioners; \"flat hierarchies with direct contact to managing directors\" signals a relatively small organisation.",
     "collaboration_width": "\"Work with data analysts, engineers, software engineers, and marketing teams\", \"partner with marketers to automate and improve marketing processes\", \"educate analysts, engineers, marketers, and stakeholders\" — five distinct interfaces: data analysts, data/software engineers, marketing teams, marketers (ops), and broader stakeholders.",
     "language_gate": "\"English fluency required; German is a strong plus\" — English is a hard gate; German is a soft gate (\"strong plus\"), not a C2 or \"fluent\" requirement.",
-    "urgency": "No urgency signals present. Role framed around ownership and vision-setting (\"define a forward-looking vision\"), implying a planned strategic hire."
-  }
+    "urgency": "No urgency signals present. Role framed around ownership and vision-setting (\"define a forward-looking vision\"), implying a planned strategic hire.",
+    "stakeholder_orientation": "Partner with marketers to automate and improve marketing processes using data",
+    "autonomy_level": "Define a forward-looking vision for the marketing data stack and drive its development"
+  },
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "strategic"
 }

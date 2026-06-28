@@ -47,6 +47,10 @@
     "data_team_maturity": "\"Be the first point of contact for administration topics around the reporting platform\" (implying sole platform owner), \"Statista's central Data team is building the foundation for a truly data-driven organization\" (central data team exists but is still maturing). \"Reassessing our BI stack\" implies the reporting function lags company growth.",
     "collaboration_width": "\"Be the first point of contact for administration topics around the reporting platform\" serving \"the business\" broadly — no specific partner teams named by name in the JD, but scope is company-wide.",
     "language_gate": "\"German proficiency is a plus.\" Soft gate — explicitly framed as a plus, not a hard requirement. \"Excellent communication skills in English (written and spoken)\" is the hard requirement.",
-    "urgency": "No urgency language; \"modernisation\" and \"evaluating\" framing suggest a considered, strategic hire rather than a gap-fill."
-  }
+    "urgency": "No urgency language; \"modernisation\" and \"evaluating\" framing suggest a considered, strategic hire rather than a gap-fill.",
+    "stakeholder_orientation": "Support documentation and governance efforts to improve maintainability and trust in reporting assets",
+    "autonomy_level": "Improve consistency and usability of reports through establishing shared standards, templates, and best practices"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed"
 }

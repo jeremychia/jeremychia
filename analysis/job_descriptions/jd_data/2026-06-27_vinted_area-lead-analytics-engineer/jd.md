@@ -107,6 +107,8 @@ Vinted commits to inclusive hiring practices welcoming applicants regardless of 
 
 **jd_authorship:** mixed — Some technically specific bullets ("Identify cross-domain intersections and ensure consistent data modeling approaches", "Drive improvements in data product quality, documentation, and observability") alongside generic leadership language ("Translate complex challenges into clear technical direction", "Communicate architectural decisions to technical and non-technical audiences").
 
+**stakeholder_orientation:** internal_data — The role's primary mission is building and maintaining the data platform, infrastructure, and standards that serve internal analytics engineers and data consumers.
+**autonomy_level:** strategic — The core responsibility is setting technical direction and defining architectural standards rather than executing priorities set by external stakeholders.
 **greenfield_vs_fix:** mixed — Role combines building new patterns and standards ("Develop reusable patterns and shared design standards") with maintaining and improving existing systems ("Manage technical debt and enable sustainable evolution of data systems").
 
 **urgency:** standard — No urgency signals present in JD.

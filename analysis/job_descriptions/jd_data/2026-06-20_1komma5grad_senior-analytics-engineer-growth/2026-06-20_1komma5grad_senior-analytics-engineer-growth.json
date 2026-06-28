@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://1komma5grad.jobs.personio.de/job/2622556?display=en&language=en",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -48,6 +50,8 @@
     "collaboration_width": "data analysts; engineers; software engineers; marketing teams",
     "data_team_maturity": "Maintain expertise across marketing tech stack including ad platforms, Airbyte, Zoho CRM, GTM, and web analytics",
     "jd_authorship": "Design, build, and maintain our core marketing data models — you know them by heart and can answer any question with data within minutes",
+    "stakeholder_orientation": "Partner with marketers to automate and improve marketing processes using data",
+    "autonomy_level": "Define a forward-looking vision for the marketing data stack and drive its development",
     "greenfield_vs_fix": "Design, build, and maintain our core marketing data models",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -61,6 +65,10 @@
   "data_team_maturity_reasoning": "Named tools and existing infrastructure signal a growing function with established pipelines, not early-stage; no multi-team scale indicated.",
   "jd_authorship_quote": "Design, build, and maintain our core marketing data models — you know them by heart and can answer any question with data within minutes",
   "jd_authorship_reasoning": "Core responsibilities specify technical domain (BigQuery, dbt, marketing tech stack, incident response) with enough precision to understand the role's Tuesday morning.",
+  "stakeholder_orientation_quote": "Partner with marketers to automate and improve marketing processes using data",
+  "stakeholder_orientation_reasoning": "The role explicitly serves marketing teams with focus on marketing process automation and commercial metrics like CAC, ROAS, and LTV.",
+  "autonomy_level_quote": "Define a forward-looking vision for the marketing data stack and drive its development",
+  "autonomy_level_reasoning": "The 'define' verb indicates the role sets strategy and direction for the marketing data function rather than executing against predetermined priorities.",
   "greenfield_vs_fix_quote": "Design, build, and maintain our core marketing data models",
   "urgency_signal": "No urgency signals present"
 }

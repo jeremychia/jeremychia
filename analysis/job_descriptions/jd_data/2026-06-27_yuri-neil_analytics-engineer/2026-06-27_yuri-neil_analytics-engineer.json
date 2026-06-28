@@ -9,6 +9,8 @@
   "salary_max": 55000,
   "salary_currency": "EUR",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "mixed",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "greenfield",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -16,7 +18,9 @@
   "data_team_maturity": "mid",
   "urgency": "standard",
   "language_gate_type": "soft",
-  "language_gate_languages": ["English"],
+  "language_gate_languages": [
+    "English"
+  ],
   "interview_stages": null,
   "ats_platform": "welcometothejungle",
   "ats_job_id": "analytics-engineer-h-f_paris_YN_Qx8rQ8Y",
@@ -45,6 +49,8 @@
     "collaboration_width": "marketing; produit; direction",
     "data_team_maturity": "Cette structure en forte croissance accompagne des pure players issus de secteurs variés",
     "jd_authorship": "Construire des semantic layers facilitant l'exploitation des données par les équipes",
+    "stakeholder_orientation": "Participer à l'activation des données pour les équipes métiers (marketing, produit, direction…).",
+    "autonomy_level": "Tu participeras à des projets variés mêlant engineering, analytics, gouvernance et data products.",
     "greenfield_vs_fix": "Concevoir et déployer des architectures data complètes adaptées aux besoins clients",
     "language_gate": "Anglais : un plus.",
     "urgency": "No urgency signals present"
