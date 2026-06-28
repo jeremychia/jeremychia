@@ -62,7 +62,9 @@
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 0 | 0 | 0 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | hiring_manager | mixed | mixed | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | mixed | 33% | ✗ |
+| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level |  | mixed | mixed | mixed | 100% | ✗ |
 
 ---
 
@@ -74,17 +76,17 @@
 **Run 1:** `rigour` ✓
 > Quote: "Enhancing reporting and metrics quality as a whole, from understanding the needs of the business to providing easily understandable and actionable data"
 > Verified: ✓ found in JD
-> Reasoning: The lead responsibility explicitly prioritizes quality and understanding business needs rather than speed or iteration, with no signal phrases around fast-paced delivery or rapid velocity.
+> Reasoning: The first responsibility explicitly prioritizes quality enhancement with no speed or iteration language present throughout the JD.
 
 **Run 2:** `rigour` ✓
 > Quote: "Enhancing reporting and metrics quality as a whole, from understanding the needs of the business to providing easily understandable and actionable data"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality, dependency control, orchestration, and governance throughout, with no velocity-focused language present.
+> Reasoning: The responsibilities emphasise data quality, clarity, training, documentation, and orchestration control—core rigour signals—with no velocity language present.
 
 **Run 3:** `rigour` ✓
 > Quote: "Enhancing reporting and metrics quality as a whole, from understanding the needs of the business to providing easily understandable and actionable data"
 > Verified: ✓ found in JD
-> Reasoning: The opening responsibility emphasizes quality as the primary value, with no counterbalancing velocity language like fast-paced, iteration, or rapid delivery.
+> Reasoning: The JD emphasizes quality, accessibility, and understanding stakeholder needs as primary responsibilities with no mention of speed, shipping, or iteration velocity.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -92,17 +94,17 @@
 **Run 1:** `moderate` ✓
 > Quote: "Working on centrally maintained data integrations and data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Merchant analytics affects business operations and revenue relationships but contains no explicit financial reporting, compliance, or regulatory language that would indicate high risk.
+> Reasoning: Wolt is a marketplace/SaaS platform without explicit financial reporting, compliance, or regulatory language in the JD, placing it in the moderate risk tier.
 
 **Run 2:** `moderate` ✓
-> Quote: "Enhancing reporting and metrics quality as a whole, from understanding the needs of the business to providing easily understandable and actionable data"
+> Quote: "from understanding the needs of the business to providing easily understandable and actionable data"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on operational reporting and business intelligence without explicit mention of financial reporting, regulatory compliance, or other high-risk consequences.
+> Reasoning: The role supports merchant business decisions but lacks explicit financial reporting, regulatory, or compliance language that would elevate risk to high.
 
 **Run 3:** `moderate` ✓
-> Quote: "Enhancing reporting and metrics quality as a whole, from understanding the needs of the business to providing easily understandable and actionable data"
+> Quote: "Managing data integrations, pipelines, models, and dashboards using modern tools"
 > Verified: ✓ found in JD
-> Reasoning: This is business intelligence analytics for a marketplace's merchant domain, not financial reporting or regulatory compliance, placing it in the moderate risk tier typical of e-commerce platforms.
+> Reasoning: This is standard SaaS/marketplace business intelligence work affecting business decisions but not financial reporting, regulatory compliance, or mission-critical public-facing products.
 
 ### collaboration_width
 **Manual:** `3`
@@ -110,17 +112,17 @@
 **Run 1:** `0` ✗
 > Quote: ""
 > Verified: ✓ found in JD
-> Reasoning: The JD references generic 'the business' and 'the domain' without naming specific partner teams or functions such as Finance, Product, Engineering, or Sales.
+> Reasoning: No explicitly named partner teams or functions (Finance, Product, Engineering, etc.) are identified in the responsibilities.
 
 **Run 2:** `0` ✗
-> Quote: "None identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No named partner teams or functions are explicitly mentioned in the JD.
-
-**Run 3:** `0` ✗
 > Quote: "Collaborative team environment with mentorship opportunities"
 > Verified: ✓ found in JD
-> Reasoning: No specific named partner teams (Finance, Product, Engineering, etc.) are mentioned; the JD refers only generically to 'the business' and collaboration broadly.
+> Reasoning: The JD references 'the business' and internal mentorship but does not name any distinct partner functions such as Finance, Product, Engineering, or Sales.
+
+**Run 3:** `0` ✗
+> Quote: ""
+> Verified: ✓ found in JD
+> Reasoning: While the JD implies cross-functional work (understanding business needs, increasing data literacy), no specific teams like Finance, Product, Engineering, or other named functions are explicitly identified.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`0`
 
@@ -130,36 +132,76 @@
 **Run 1:** `mid` ✓
 > Quote: "Working on centrally maintained data integrations and data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The existence of centrally maintained infrastructure and the requirement to mentor junior team members indicates an established, growing data function rather than early-stage or fully mature.
+> Reasoning: The phrase 'centrally maintained' indicates existing infrastructure beyond startup phase, reinforced by multiple named tools (Snowflake, Airflow, Dagster, dbt) used in specific contexts.
 
 **Run 2:** `mid` ✓
-> Quote: "Managing data integrations, pipelines, models, and dashboards using modern tools (Snowflake, SQL, Looker, Airflow, Dagster, GitHub)"
-> Verified: ✓ found in JD
-> Reasoning: The JD references existing infrastructure and named tools in responsibilities, plus multiple team members to mentor, suggesting an established but growing data function.
+> Quote: "Develop a self-serve data modelling strategy"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The emphasis on developing and extending an existing self-serve capability, managing established tools (Snowflake, Airflow, dbt), and mentoring junior staff indicates a team with infrastructure and multiple members but still scaling.
 
 **Run 3:** `mid` ✓
-> Quote: "Develop a self-service data modelling strategy"
+> Quote: "Managing data integrations, pipelines, models, and dashboards using modern tools (Snowflake, SQL, Looker, Airflow, Dagster, GitHub)"
 > Verified: ✓ found in JD
-> Reasoning: The team has established tooling (Snowflake, Airflow, dbt, Looker) and is actively evolving it; mentoring junior members implies growth beyond early stage but not yet multiple specialized sub-teams.
+> Reasoning: Named tools with specific application context in responsibilities, a team structure with seniors mentoring juniors, and references to centrally maintained systems signal a growing mid-stage data function.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "Managing data integrations, pipelines, models, and dashboards using modern tools (Snowflake, SQL, Looker, Airflow, Dagster, GitHub)"
-> Verified: ✓ found in JD
-> Reasoning: The specific enumeration of tools paired with technical concepts like 'dependency control and orchestration' demonstrates hands-on knowledge of the actual role rather than generic boilerplate language.
-
-**Run 2:** `mixed` ✗
+**Run 1:** `mixed` ✗
 > Quote: "Design and implement complex data pipelines with dependency control and orchestration"
 > Verified: ✓ found in JD
-> Reasoning: The specific technical language around 'dependency control and orchestration' suggests hiring manager input, but generic responsibility framing indicates recruiter involvement.
+> Reasoning: Specific technical methodology and precise tool stack mixed with generic narrative language about understanding business needs.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Design and implement complex data pipelines with dependency control and orchestration"
+> Verified: ✓ found in JD
+> Reasoning: The specific technical methodology (dependency control, orchestration) and named tools with context signal someone who has done this work, not generic action verbs.
 
 **Run 3:** `mixed` ✗
 > Quote: "Design and implement complex data pipelines with dependency control and orchestration"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity around pipeline architecture and orchestration indicates hiring manager input, but other responsibilities use generic boilerplate verbs like 'enhancing quality' and 'increase data literacy' typical of recruiter writing.
+> Reasoning: Some technically specific concerns (dependency control, orchestration) and named tools demonstrate hiring manager input, but generic phrases like mentorship and business acumen suggest recruiter involvement.
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `internal_data` ✗
+> Quote: "Develop a self-service data modelling strategy"
+> Verified: ✓ found in JD
+> Reasoning: The role's core mission—building self-serve infrastructure, increasing data literacy, and managing the analytics stack—serves data consumers and the data function itself.
+
+**Run 2:** `internal_data` ✗
+> Quote: "Develop a self-serve data modelling strategy"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities prioritise building platform infrastructure, strategy, data literacy, and team development—serving analytics consumers and the data function—over serving external commercial or product teams directly.
+
+**Run 3:** `internal_data` ✗
+> Quote: "Develop a self-service data modelling strategy"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibility is building analytics infrastructure and data accessibility for internal data consumers rather than serving commercial, product, or finance teams.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `mixed` ✗
+> Quote: "Lead, mentor, and guide more junior team members"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic direction-setting (develop strategy, mentor, increase literacy) with execution responsibilities (design, implement, manage pipelines).
+
+**Run 2:** `mixed` ✗
+> Quote: "Develop a self-serve data modelling strategy"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role genuinely combines strategic direction-setting (developing strategy, mentoring junior staff, increasing data literacy) with execution of pipelines and tool management.
+
+**Run 3:** `mixed` ✗
+> Quote: "Develop a self-service data modelling strategy"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic responsibilities (developing strategy, leading and mentoring junior team members) with execution responsibilities (implementing pipelines, managing systems).
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`

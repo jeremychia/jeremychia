@@ -72,7 +72,9 @@ None explicitly listed.
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 2 | 3 | 3 | 3 | 100% | ✗ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | mixed | hiring_manager | hiring_manager | mixed | 33% | ✗ |
+| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
+| stakeholder_orientation |  | product | mixed | product | 33% | ✗ |
+| autonomy_level |  | mixed | mixed | mixed | 100% | ✗ |
 
 ---
 
@@ -84,17 +86,17 @@ None explicitly listed.
 **Run 1:** `rigour` ✗
 > Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data accuracy, consistency, and validation as core expectations, with no language signaling speed or iteration velocity.
+> Reasoning: The JD emphasizes data quality, validation, accuracy, and consistency across multiple responsibilities, dominating over any velocity or speed-related language.
 
 **Run 2:** `rigour` ✗
 > Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, accuracy, and validation as core expectations with no velocity or speed-focused language present.
+> Reasoning: The JD emphasizes data quality, validation, accuracy, and consistency as core expectations without any velocity or speed-focused language.
 
 **Run 3:** `rigour` ✗
-> Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency"
+> Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes correctness and accuracy as core expectations with no velocity signals present.
+> Reasoning: The responsibilities emphasize correctness, quality, and consistency as core expectations, with multiple rigour signals and no explicit velocity language.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
@@ -104,35 +106,35 @@ None explicitly listed.
 **Run 1:** `moderate` ✓
 > Quote: "Establish the KPIs and metrics that will be used by the business."
 > Verified: ✓ found in JD
-> Reasoning: The JD focuses on business analytics and operational reporting without explicit financial reporting, regulatory, or compliance language typical of high-risk domains.
+> Reasoning: The JD describes business decision-support analytics and experimentation without explicit financial reporting, compliance, regulatory, or audit language.
 
 **Run 2:** `moderate` ✓
-> Quote: "Plan, execute, and evaluate experiments with our marketing and product teams. Establish the KPIs and metrics that will be used by the business."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role supports business-critical decisions through experiments and KPI establishment, but the JD contains no language about regulatory compliance, financial reporting, or mission-critical systems.
+> Quote: "Establish the KPIs and metrics that will be used by the business."
+> Verified: ✓ found in JD
+> Reasoning: While working in a regulated gaming sector, the JD focuses on business analytics and decision-making without explicit financial reporting, compliance, or regulatory language.
 
 **Run 3:** `moderate` ✓
-> Quote: "Establish the KPIs and metrics that will be used by the business"
+> Quote: "Plan, execute, and evaluate experiments with our marketing and product teams."
 > Verified: ✓ found in JD
-> Reasoning: The JD frames the role around business intelligence and operational analytics without explicit financial reporting, regulatory compliance, or mission-critical language.
+> Reasoning: The JD focuses on product analytics and experimentation without mentioning financial reporting, compliance, or regulatory consequences.
 
 ### collaboration_width
 **Manual:** `2`
 
 **Run 1:** `3` ✗
-> Quote: "our tech and product teams; our marketing and product teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named teams are explicitly mentioned as collaboration partners: tech/engineering, product, and marketing.
-
-**Run 2:** `3` ✗
-> Quote: "with our tech and product teams; with our marketing and product teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named functions are identified as collaboration partners: tech teams, product teams, and marketing teams.
-
-**Run 3:** `3` ✗
 > Quote: "tech and product teams; marketing and product teams"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names three distinct partner functions: Tech, Product, and Marketing.
+> Reasoning: Three distinct named functions are explicitly mentioned: tech (engineering), product, and marketing teams.
+
+**Run 2:** `3` ✗
+> Quote: "tech and product teams; marketing and product teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD explicitly names three distinct collaborating teams: tech/engineering, product, and marketing.
+
+**Run 3:** `3` ✗
+> Quote: "our tech and product teams; our marketing and product teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Three distinct named teams are explicitly referenced: tech/engineering, product, and marketing.
 
 ⚠ **Disagreement**: manual=`2` vs LLM majority=`3`
 
@@ -142,17 +144,17 @@ None explicitly listed.
 **Run 1:** `mid` ✗
 > Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services."
 > Verified: ✓ found in JD
-> Reasoning: Named tools deployed in the responsibilities (dbt, AWS services) indicate an existing data function with infrastructure in a growth and enhancement phase, not a greenfield build.
+> Reasoning: Named tools are deployed and in active use (dbt, AWS), with responsibilities including both enhancement of existing infrastructure and new construction, indicating an established but growing team.
 
 **Run 2:** `mid` ✗
-> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services; Create and maintain data architecture and data models for various business domains."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The presence of specific established tools (dbt, AWS) and responsibility to maintain existing infrastructure indicates an established data function, while foundational work (establishing KPIs) suggests ongoing growth rather than full maturity.
+> Quote: "Create and maintain data architecture and data models for various business domains."
+> Verified: ✓ found in JD
+> Reasoning: The mention of multiple business domains and existing tools/processes indicates an established data function that is growing and expanding its scope.
 
 **Run 3:** `mid` ✗
-> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services"
+> Quote: "Establish the KPIs and metrics that will be used by the business."
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities and language of 'enhance' and 'maintain' indicate existing infrastructure requiring growth rather than greenfield setup.
+> Reasoning: The JD shows existing infrastructure in use (AWS, dbt, pipelines to enhance) while still establishing core practices like KPI definition, indicating a growing data function.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -160,20 +162,60 @@ None explicitly listed.
 **Manual:** `mixed`
 
 **Run 1:** `hiring_manager` ✗
-> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services; Create and maintain data architecture and data models for various business domains."
+> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services; Create and maintain data architecture and data models for various business domains; Implement data quality and validation processes."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities contain specific technical tools, methodologies (ETL/ELT, data modeling), and precise application context that only someone with hands-on data engineering experience would articulate.
+> Reasoning: Responsibilities contain specific technical patterns (ETL, ELT, dbt, data architecture principles) and named tools with clear application context, not generic collaboration verbs.
 
 **Run 2:** `hiring_manager` ✗
-> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services; Create and maintain data architecture and data models; Implement data quality and validation processes to guarantee data accuracy and consistency."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities specify particular tools (dbt, Python, AWS), explicit methodologies (data modeling, data architecture, ETL/ELT), and concrete business context (experiments, KPIs) that only someone with hands-on experience in the role would describe.
+> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities specify precise tools and technical methodology that could only come from someone who has actually performed this work.
 
-**Run 3:** `mixed` ✓
-> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services; Establish and implement data requirements and analytics solutions with our tech and product teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Data engineering section contains technical specificity with named tools and concepts, while analytics collaboration sections use generic stakeholder language.
+**Run 3:** `hiring_manager` ✗
+> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical details with named tools, concrete technologies, and precise methodologies that only come from hands-on experience.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `product` ✗
+> Quote: "Plan, execute, and evaluate experiments with our marketing and product teams."
+> Verified: ✓ found in JD
+> Reasoning: Core responsibility for planning and executing experiments is a product analytics function, and product teams are mentioned explicitly in multiple responsibilities.
+
+**Run 2:** `mixed` ✗
+> Quote: "with our tech and product teams; with our marketing and product teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role has substantive responsibilities for both data platform infrastructure (serving internal data consumers via the tech team) and product analytics (serving product and marketing teams).
+
+**Run 3:** `product` ✗
+> Quote: "Plan, execute, and evaluate experiments with our marketing and product teams."
+> Verified: ✓ found in JD
+> Reasoning: The primary emphasis is on product analytics—experiments, KPI establishment, and supporting growth and product teams—rather than commercial, finance, or data platform work.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`product`
+
+⚠ **LLM inconsistency**: runs gave ['product', 'mixed', 'product']
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `mixed` ✗
+> Quote: "Establish and implement data requirements and analytics solutions with our tech and product teams."
+> Verified: ✓ found in JD
+> Reasoning: The role strategically establishes what to measure, architect, and implement (strategic verbs), but does so collaboratively 'with' product and engineering teams in service of their priorities (execution framing).
+
+**Run 2:** `mixed` ✗
+> Quote: "Establish the KPIs and metrics that will be used by the business."
+> Verified: ✓ found in JD
+> Reasoning: The role has strategic responsibility for defining data architecture and analytics metrics while executing against priorities set by product and marketing teams.
+
+**Run 3:** `mixed` ✗
+> Quote: "Establish and implement data requirements and analytics solutions with our tech and product teams."
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership of the data/analytics technical domain (establishing requirements, designing architecture, defining KPIs) with execution in service of business team priorities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`

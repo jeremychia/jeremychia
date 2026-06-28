@@ -59,10 +59,12 @@
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | moderate | moderate | high | 33% | ✗ |
-| collaboration_width | 2 | 1 | 1 | 1 | 100% | ✗ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 2 | 2 | 1 | 2 | 33% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | mixed | hiring_manager | mixed | 33% | ✓ |
+| jd_authorship | mixed | mixed | mixed | hiring_manager | 33% | ✓ |
+| stakeholder_orientation |  | commercial | commercial | commercial | 100% | ✗ |
+| autonomy_level |  | mixed | mixed | mixed | 100% | ✗ |
 
 ---
 
@@ -74,59 +76,55 @@
 **Run 1:** `rigour` ✓
 > Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on guided, multi-month implementations with complete operational handover signals a rigorous approach focused on completeness and quality rather than speed.
+> Reasoning: The structured progression from initial analysis through operational handover emphasizes methodical, quality-focused delivery without velocity signals.
 
 **Run 2:** `rigour` ✓
-> Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
+> Quote: "multi-month implementations of data products, from initial analysis to operational handover"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize thorough, comprehensive implementation processes with explicit attention to quality handover rather than speed or iteration, with no velocity-related language present.
+> Reasoning: The emphasis on multi-month timelines and complete operational handover indicates a rigour-oriented approach focused on thoroughness and completeness rather than speed.
 
 **Run 3:** `rigour` ✓
 > Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
 > Verified: ✓ found in JD
-> Reasoning: The multi-month implementation process culminating in operational handover signals a methodology oriented toward delivering reliable, production-ready outcomes rather than rapid iteration, reinforced by the public sector context.
+> Reasoning: Multi-month implementation timelines, emphasis on complete handover phases, and domain expertise-driven work indicate rigorous, deliberate project delivery rather than velocity-focused iteration.
 
 ### domain_risk
 **Manual:** `high`
 
-**Run 1:** `moderate` ✗
+**Run 1:** `high` ✓
 > Quote: "Developing and maintaining data products across public sector domains including "Gesundheit, Finanzen oder Personal""
 > Verified: ✓ found in JD
-> Reasoning: While public sector Finance carries inherent compliance risk, the JD uses generic language about developing and maintaining without explicit financial reporting, audit, or regulatory language.
+> Reasoning: Public sector finance and health data inherently carry regulatory and compliance risks that create high consequences for errors.
 
-**Run 2:** `moderate` ✗
+**Run 2:** `high` ✓
 > Quote: "Developing and maintaining data products across public sector domains including "Gesundheit, Finanzen oder Personal""
 > Verified: ✓ found in JD
-> Reasoning: While the public sector context and Finance domain imply high regulatory risk, the JD uses generic language about 'data products' without explicitly invoking compliance, regulatory, or financial reporting terminology.
+> Reasoning: Public sector work, particularly in finance, carries inherent regulatory and compliance risk due to government accountability and budget oversight requirements.
 
 **Run 3:** `high` ✓
-> Quote: "Developing and maintaining data products across public sector domains including "Gesundheit, Finanzen oder Personal""
-> Verified: ✓ found in JD
-> Reasoning: Health, finance, and personnel data in the public sector are all regulatory domains where data errors directly affect compliance and public accountability.
-
-⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
-
-⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']
+> Quote: "Developing and maintaining data products across public sector domains including 'Gesundheit, Finanzen oder Personal'"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Public sector finance and personnel data carry regulatory compliance and audit requirements, creating high consequences for data errors.
 
 ### collaboration_width
 **Manual:** `2`
 
-**Run 1:** `1` ✗
-> Quote: "customer success teams"
-> Verified: ✓ found in JD
-> Reasoning: Only Customer Success is explicitly named as a collaboration partner; other references are to the role's own direct team.
+**Run 1:** `2` ✓
+> Quote: "public sector clients; customer success teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Two distinct named collaboration partners identified: customer success teams (internal function) and public sector clients (external parties explicitly named for collaboration).
 
 **Run 2:** `1` ✗
-> Quote: "customer success teams"
-> Verified: ✓ found in JD
-> Reasoning: Only one explicitly named internal partner function is mentioned in the context of collaboration.
-
-**Run 3:** `1` ✗
 > Quote: "collaborating closely with customer success teams"
 > Verified: ✓ found in JD
-> Reasoning: Only Customer Success is explicitly named as a distinct team; clients are stakeholders served rather than named collaboration partners, and the two analytics engineers are the role holder's own team.
+> Reasoning: Only one explicitly named partner team is identified in the responsibilities section.
 
-⚠ **Disagreement**: manual=`2` vs LLM majority=`1`
+**Run 3:** `2` ✓
+> Quote: "customer success teams; public sector clients"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Two distinct partner groups explicitly named: customer success teams as internal collaborators and public sector clients as external partners in implementations.
+
+⚠ **LLM inconsistency**: runs gave ['2', '1', '2']
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -134,17 +132,17 @@
 **Run 1:** `mid` ✓
 > Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: A named team already exists with multiple roles and specific tools in use, indicating an established function growing beyond initial stage but not yet mature scale.
+> Reasoning: An established team structure already exists with named tools in operational responsibilities, indicating beyond-early stage but a team of two suggests growing rather than fully mature.
 
 **Run 2:** `mid` ✓
-> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
+> Quote: "Leading a team of two Analytics Engineers"
 > Verified: ✓ found in JD
-> Reasoning: The data function is established with existing team members and products being maintained, but the small team size and specific tool mentions in responsibilities indicate a growing rather than mature operation.
+> Reasoning: An established team with named tools (dbt, Airflow) and existing data products indicates mid-stage maturity rather than greenfield build.
 
 **Run 3:** `mid` ✓
-> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: Named tools appearing in the responsibilities section combined with leadership of an existing two-person team indicates an established data function with infrastructure that is scaling up, not a greenfield build.
+> Reasoning: A small but established team exists with named tools in active use (dbt, Airflow in responsibilities); not early-stage infrastructure-building, but too small to be mature.
 
 ### jd_authorship
 **Manual:** `mixed`
@@ -152,16 +150,56 @@
 **Run 1:** `mixed` ✓
 > Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about named tools and implementation details mixes with generic HR language like 'fostering professional growth' and 'collaborating closely.'
+> Reasoning: Specific tool application and project context indicates hiring manager input, balanced against generic phrases like "serving as primary technical expert" typical of recruiter writing.
 
-**Run 2:** `hiring_manager` ✗
+**Run 2:** `mixed` ✓
 > Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical tools in precise context, specific domain knowledge (public sector Finance/Health/HR), and implementation methodology that demonstrates hands-on experience with this specific role.
+> Reasoning: Specific technical details (named tools with context, domain areas, team size) are present alongside generic collaboration language.
 
-**Run 3:** `mixed` ✓
+**Run 3:** `hiring_manager` ✗
 > Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool naming and domain knowledge (public sector health/finance/personnel) suggest hiring manager input, but lack of technical context (what scale, what specific challenges, what methodologies) and presence of generic management language indicate recruiter shaping as well.
+> Reasoning: Specific tools with application context, explicit team size, and concrete implementation methodology reflect someone who has performed this role, not generic boilerplate language.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `commercial` ✗
+> Quote: "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams"
+> Verified: ✓ found in JD
+> Reasoning: Primary responsibilities center on client-facing implementation delivery and customer success partnership, establishing commercial GTM orientation.
+
+**Run 2:** `commercial` ✗
+> Quote: "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary responsibilities center on serving external clients and supporting customer success teams, which is commercial stakeholder orientation.
+
+**Run 3:** `commercial` ✗
+> Quote: "collaborating closely with customer success teams"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary mission is client delivery and implementation success, with explicit customer success team collaboration indicating customer-facing, commercial orientation.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`commercial`
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `mixed` ✗
+> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth; Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role genuinely combines strategic team leadership and direction-setting with hands-on execution and project delivery work.
+
+**Run 2:** `mixed` ✗
+> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly combines strategic leadership (leading team, providing direction, guiding clients) with hands-on execution (actively coding), indicating mixed autonomy.
+
+**Run 3:** `mixed` ✗
+> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
+> Verified: ✓ found in JD
+> Reasoning: The role has strategic leadership responsibilities (directing the team's priorities and development) combined with execution responsibilities (guiding client implementations, hands-on coding).
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`

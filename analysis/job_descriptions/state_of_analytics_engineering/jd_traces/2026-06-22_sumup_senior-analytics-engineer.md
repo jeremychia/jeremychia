@@ -60,10 +60,12 @@ Not explicitly listed — technical requirements folded into required qualificat
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | high | high | moderate | 33% | ✓ |
+| domain_risk | high | moderate | high | high | 33% | ✓ |
 | collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | mixed | 33% | ✓ |
+| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level |  | execution | execution | execution | 100% | ✗ |
 
 ---
 
@@ -75,73 +77,73 @@ Not explicitly listed — technical requirements folded into required qualificat
 **Run 1:** `rigour` ✓
 > Quote: "keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit rigour signals (data quality, testing, consistency, governed domains, data contracts) with zero velocity language throughout the responsibilities section.
+> Reasoning: The JD emphasizes testing, consistency, and data quality throughout, with no velocity-oriented language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, testing, governance, and reliability throughout—'data contracts', 'quality-assured', 'tested', 'deep care for data quality, trust, and discoverability'—with no velocity or speed signals present.
+> Reasoning: The JD emphasizes testing, consistency, discoverability, and quality assurance throughout (tested outputs, quality-assured data products, deep care for data quality, testing and documentation), with no velocity signals present.
 
 **Run 3:** `rigour` ✓
-> Quote: "Deep care for data quality, trust, and discoverability, building models others can rely on"
+> Quote: "keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, testing, documentation, and governance throughout, with no velocity-focused language present.
+> Reasoning: Multiple explicit quality, testing, and governance signals dominate the responsibilities with no velocity language.
 
 ### domain_risk
 **Manual:** `high`
 
-**Run 1:** `high` ✓
-> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring"
+**Run 1:** `moderate` ✗
+> Quote: "risk scoring"
 > Verified: ✓ found in JD
-> Reasoning: Fintech sector inherently high-risk, and JD explicitly mentions risk scoring and merchant activity with direct financial transaction implications.
+> Reasoning: While SumUp is a fintech company and risk scoring is mentioned, the JD does not explicitly use regulatory, compliance, or financial reporting language that would elevate this to high risk.
 
 **Run 2:** `high` ✓
+> Quote: "merchant activity, product adoption, lifecycle events, and risk scoring"
+> Verified: ✓ found in JD
+> Reasoning: SumUp is fintech; errors in merchant activity modeling and risk scoring directly affect financial operations and regulatory compliance.
+
+**Run 3:** `high` ✓
 > Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring"
 > Verified: ✓ found in JD
-> Reasoning: SumUp is fintech, and the explicit mention of 'risk scoring' indicates modeling of financial/credit risk decisions that directly affect business outcomes with regulatory and financial consequences.
+> Reasoning: Risk scoring in a fintech company carries direct regulatory and financial implications for merchant approval decisions.
 
-**Run 3:** `moderate` ✗
-> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring"
-> Verified: ✓ found in JD
-> Reasoning: While SumUp operates in fintech where risk is inherent, the JD uses generic operational language (KPI models, funnels, cohorts) rather than explicit financial reporting or compliance terminology.
-
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']
 
 ### collaboration_width
 **Manual:** `4`
 
 **Run 1:** `4` ✓
-> Quote: "Product Managers; Engineers; Analysts; Data Scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions explicitly identified as collaboration partners in the required qualifications section.
+> Quote: "Product Managers, Engineers, Analysts, and Data Scientists"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names four distinct functions as collaboration partners: Product (Managers), Engineering, Analytics, and Data Science.
 
 **Run 2:** `4` ✓
-> Quote: "Product Managers; Engineers; Analysts; Data Scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names four distinct partner functions in the required qualifications section.
+> Quote: "Comfort working across squads with Product Managers, Engineers, Analysts, and Data Scientists"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions are explicitly listed as collaboration partners: Product Managers, Engineers, Analysts, and Data Scientists.
 
 **Run 3:** `4` ✓
 > Quote: "Product Managers; Engineers; Analysts; Data Scientists"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions are explicitly listed as collaboration partners in the qualifications section.
+> Reasoning: Four distinct named functions/teams are explicitly listed as collaboration partners.
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
+> Quote: "helping establish durable ownership, consistent definitions, and a shared catalogue of data products"
 > Verified: ✓ found in JD
-> Reasoning: Existing governance infrastructure, multiple established business domains, and reusable data products indicate a function beyond early stage that is scaling, not a mature multi-team operation.
+> Reasoning: The mention of 'helping establish' durable ownership and governance indicates an evolving team still building its organizational structure, rather than an early-stage greenfield or mature, fully-formed operation.
 
 **Run 2:** `mid` ✗
-> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
+> Quote: "Contribute to SumUp's broader data domain strategy, helping establish durable ownership, consistent definitions, and a shared catalogue of data products"
 > Verified: ✓ found in JD
-> Reasoning: References to maintaining existing 'governed domains', named tools already in use (dbt, Snowflake, Iceberg), and staging pipelines indicate an established data function extending existing infrastructure rather than building from zero.
+> Reasoning: Existing infrastructure is implied (Snowflake, dbt, staging pipelines, governed domains) and the role involves scaling governance and establishing shared standards across multiple business domains.
 
 **Run 3:** `mid` ✗
-> Quote: "maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
+> Quote: "Implement technical improvements including incremental processing strategies, performance optimisations, and scalable data architecture"
 > Verified: ✓ found in JD
-> Reasoning: The JD references existing infrastructure and tools (staging pipelines, dbt), indicating an established data function beyond greenfield stage.
+> Reasoning: Focus on optimizing and scaling existing infrastructure indicates functional systems and tools already in place, not greenfield building.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -149,16 +151,58 @@ Not explicitly listed — technical requirements folded into required qualificat
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
-> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical terminology (data contracts, staging pipelines, modelling conventions, incremental processing strategies) demonstrating practitioner-level domain expertise rather than generic boilerplate.
+> Reasoning: The responsibilities demonstrate technical specificity (data contracts, staging pipelines, modelling conventions, domain-driven design) and named business domains that only someone doing this job would articulate.
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring, building well-documented, quality-assured data products"
-> Verified: ✓ found in JD
-> Reasoning: The JD specifies exact domains (merchant activity, lifecycle events, risk scoring) and outputs (KPI models, funnels, cohorts, segmentations) that only someone performing this work daily would itemize, not generic boilerplate.
-
-**Run 3:** `hiring_manager` ✓
 > Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical concepts (governed domains, insights layer architecture, specific analytics artifacts) that suggest hands-on experience, not generic recruiter language.
+> Reasoning: The specific analytical constructs (KPI models, funnels, cohorts, segmentations), architectural terminology (insights layer, governed domains), and technical methodology (incremental processing strategies, modelling conventions) demonstrate direct experience from someone actively doing this work.
+
+**Run 3:** `mixed` ✗
+> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring, building well-documented, quality-assured data products"
+> Verified: ✓ found in JD
+> Reasoning: Named business domains and specific technical outputs show domain knowledge, but generic phrases like 'quality-assured data products' and 'well-documented' indicate recruiter involvement.
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `internal_data` ✗
+> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary purpose is building data infrastructure and reusable analytics tools that serve other data consumers and analysts, not directly serving commercial, product, or finance stakeholders.
+
+**Run 2:** `internal_data` ✗
+> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes building infrastructure, shared catalogues, and reusable data products for internal data consumers rather than serving a specific business function like finance or commercial teams.
+
+**Run 3:** `internal_data` ✗
+> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is building data infrastructure and governance for platform consumers rather than directly serving product, commercial, or finance teams.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `execution` ✗
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize partnership, maintenance, and application of established patterns, framing the role as executing on defined work rather than independently setting direction.
+
+**Run 2:** `execution` ✗
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
+> Verified: ✓ found in JD
+> Reasoning: The primary work verbs (maintain, apply, keep, model, build) are execution-focused; while event design involves collaboration, scope is determined by existing domain structures, business domains, and squad needs rather than self-directed strategic direction-setting.
+
+**Run 3:** `execution` ✗
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities emphasize maintaining existing systems, supporting squads, and applying established conventions, with direction set by partners rather than by the role.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`execution`

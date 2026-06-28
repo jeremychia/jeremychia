@@ -1,11 +1,16 @@
 """
 LLM-based JD classification — 3 runs per JD across 5 Layer B dimensions.
 Uses the claude CLI (already authenticated) rather than the API SDK.
-Compares against original manual classifications from applications_dataset.csv.
+Compares against manual classifications from applications_dataset.csv where available.
+
+Sources (merged, deduplicated by app_id):
+  1. resume/applications/<app_id>/jd.md          — application pipeline JDs
+  2. analysis/job_descriptions/jd_data/<app_id>/  — standalone classify-jd corpus
+     reads jd.md if present, falls back to jd_archive.md
 
 Outputs:
   llm_classifications.csv    — full results with all runs and reasoning
-  consistency_report.md      — aggregate stats + disagrement analysis
+  consistency_report.md      — aggregate stats + disagreement analysis
   jd_traces/<app_id>.md      — per-JD trace: JD text, all 3 runs, full reasoning,
                                 evidence quote verification
 
@@ -29,12 +34,24 @@ from collections import Counter, defaultdict
 # Paths
 # ---------------------------------------------------------------------------
 APPLICATIONS_DIR = Path("/Users/jeremychia/Documents/Github/jeremychia/resume/applications")
+JD_DATA_DIR = Path("/Users/jeremychia/Documents/Github/jeremychia/analysis/job_descriptions/jd_data")
 DATASET_CSV = Path("/Users/jeremychia/Documents/Github/jeremychia/resume/analysis/applications_dataset.csv")
 OUT_DIR = Path(__file__).parent
 TRACES_DIR = OUT_DIR / "jd_traces"
-CLAUDE_BIN = str(Path.home() / "Library/Application Support/Claude/claude-code/2.1.170/claude.app/Contents/MacOS/claude")
+def _find_claude_bin() -> str:
+    """Locate the claude CLI, tolerating version bumps."""
+    base = Path.home() / "Library/Application Support/Claude/claude-code"
+    if base.exists():
+        candidates = sorted(base.iterdir(), reverse=True)
+        for v in candidates:
+            p = v / "claude.app/Contents/MacOS/claude"
+            if p.exists():
+                return str(p)
+    raise FileNotFoundError(f"claude binary not found under {base}")
 
-DIMENSIONS = ["velocity_vs_rigour", "domain_risk", "collaboration_width", "data_team_maturity", "jd_authorship"]
+CLAUDE_BIN = _find_claude_bin()
+
+DIMENSIONS = ["velocity_vs_rigour", "domain_risk", "collaboration_width", "data_team_maturity", "jd_authorship", "stakeholder_orientation", "autonomy_level"]
 NUM_RUNS = 3
 
 # ---------------------------------------------------------------------------
@@ -87,6 +104,24 @@ Who wrote the responsibilities section.
 - **mixed**: Some responsibilities technically precise, others generic. Common in large companies.
 - **Tie-breaker**: Could you understand what this person does on a Tuesday morning? Yes → hiring_manager. No → recruiter. Some of both → mixed. Mostly specific with a few generic additions → hiring_manager, not mixed.
 
+### 6. stakeholder_orientation
+Who does this role primarily serve? Read the responsibilities and the framing of the role's impact.
+
+- **commercial**: Primary audience is GTM, revenue, sales, customer success, marketing, or partnerships. Signal phrases: "revenue operations", "sales teams", "GTM", "go-to-market", "customer success", "commercial stakeholders", "pipeline", "lead assignment", "win rate", "churn".
+- **product**: Primary audience is product, engineering, growth, or experimentation teams. Signal phrases: "product analytics", "experiment", "A/B test", "funnel", "feature adoption", "user behaviour", "growth team", "product teams".
+- **internal_data**: Primary audience is the data function itself — data engineers, other analysts, data scientists, or platform consumers. Signal phrases: "data platform", "self-serve analytics", "data consumers", "analytics infrastructure", "data team", "modelling layer".
+- **finance**: Primary audience is FP&A, controllership, accounting, audit, or executive reporting. Signal phrases: "financial reporting", "FP&A", "P&L", "board reporting", "forecasting", "controllership", "audit", "budget".
+- **mixed**: Two or more of the above with genuinely equal weight. Do not use mixed just because the role is described as cross-functional — assess where the responsibilities section places the emphasis.
+- **Tie-breaker**: If named stakeholder teams span categories but responsibilities emphasise one → classify as that category. Use mixed only when emphasis is genuinely split.
+
+### 7. autonomy_level
+Does the role define its own direction, or execute direction set by others?
+
+- **strategic**: The role is expected to set direction, define priorities, and shape how analytics is delivered. Signal verbs: "define", "establish", "own", "shape", "lead", "drive", "determine", "architect". Signal phrases: "you will define", "shape how analytics is delivered", "shift from reactive to proactive", "set the strategy", "build the roadmap".
+- **execution**: The role receives scoped work and delivers it. Signal verbs: "support", "assist", "deliver", "help", "contribute to", "work with". Signal phrases: "you will support the team", "assist with", "deliver against priorities". Scope is set by others.
+- **mixed**: The role genuinely combines both — strategic ownership of a technical domain AND execution in service of a business team. Apply mixed only when the responsibilities section clearly contains both patterns.
+- **Tie-breaker**: If strategic verbs appear only in a narrow technical sub-problem while overall role framing is support-oriented → execution. If the role is described as building/defining the analytics function for a domain → strategic.
+
 ## Output format
 
 Respond with ONLY a valid JSON object. No explanation, no preamble, no markdown fences.
@@ -111,7 +146,13 @@ For EACH dimension, provide:
   "data_team_maturity_reasoning": "<one sentence explaining the classification>",
   "jd_authorship": "<hiring_manager|mixed|recruiter>",
   "jd_authorship_quote": "<exact verbatim phrase from the responsibilities section copied from the JD>",
-  "jd_authorship_reasoning": "<one sentence explaining the classification>"
+  "jd_authorship_reasoning": "<one sentence explaining the classification>",
+  "stakeholder_orientation": "<commercial|product|internal_data|finance|mixed>",
+  "stakeholder_orientation_quote": "<exact verbatim phrase naming the primary audience>",
+  "stakeholder_orientation_reasoning": "<one sentence explaining the classification>",
+  "autonomy_level": "<strategic|execution|mixed>",
+  "autonomy_level_quote": "<exact verbatim verb phrase driving the classification>",
+  "autonomy_level_reasoning": "<one sentence explaining the classification>"
 }"""
 
 
@@ -128,6 +169,11 @@ def strip_layer_b(text: str) -> str:
     return text.strip()
 
 
+def strip_url_for_classifier(text: str) -> str:
+    """Remove **URL:** line before sending to classifier — prevents WebFetch attempts."""
+    return re.sub(r"\*\*URL:\*\*[^\n]*\n?", "", text).strip()
+
+
 def quote_present_in_jd(quote: str, jd_text: str) -> bool:
     """Check whether the verbatim quote appears (loosely) in the JD text.
     Uses a tolerant match: normalise whitespace + case."""
@@ -139,12 +185,12 @@ def quote_present_in_jd(quote: str, jd_text: str) -> bool:
 
 def classify_with_cli(jd_text: str) -> dict:
     """Call the claude CLI and parse JSON response."""
-    prompt = f"{SYSTEM_PROMPT}\n\nClassify this job description:\n\n{jd_text}"
+    prompt = f"{SYSTEM_PROMPT}\n\nClassify this job description:\n\n{strip_url_for_classifier(jd_text)}"
     result = subprocess.run(
         [CLAUDE_BIN, "--print", "--model", "claude-haiku-4-5-20251001", prompt],
         capture_output=True,
         text=True,
-        timeout=120,
+        timeout=240,
     )
     if result.returncode != 0:
         raise RuntimeError(f"CLI error: {result.stderr[:300]}")
@@ -163,7 +209,7 @@ def load_manual_classifications() -> dict:
         reader = csv.DictReader(f)
         for row in reader:
             aid = row["application_id"]
-            manual[aid] = {d: row[d] for d in DIMENSIONS}
+            manual[aid] = {d: row.get(d, "") for d in DIMENSIONS}
     return manual
 
 
@@ -218,7 +264,12 @@ def append_row(out_csv: Path, row: dict):
 # ---------------------------------------------------------------------------
 
 def write_trace(app_id: str, jd_text: str, runs: list[dict], manual: dict, out_dir: Path):
-    """Write a detailed markdown trace for one JD showing all runs side by side."""
+    """Write a detailed markdown trace for one JD showing all runs side by side.
+
+    manual may be empty ({}) for jd_data-only entries with no CSV row — in that
+    case the Manual column and match comparisons are omitted from the output.
+    """
+    has_manual = bool(manual)
     out_dir.mkdir(exist_ok=True)
     lines = [
         f"# Trace: {app_id}",
@@ -233,27 +284,42 @@ def write_trace(app_id: str, jd_text: str, runs: list[dict], manual: dict, out_d
         "",
         "## Classification results",
         "",
-        f"| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |",
-        f"|-----------|--------|-------|-------|-------|-----------|--------|",
     ]
+
+    if has_manual:
+        lines += [
+            "| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |",
+            "|-----------|--------|-------|-------|-------|-----------|--------|",
+        ]
+    else:
+        lines += [
+            "| Dimension | Run 1 | Run 2 | Run 3 | Agreement |",
+            "|-----------|-------|-------|-------|-----------|",
+        ]
 
     for d in DIMENSIONS:
         vals = [str(r.get(d, "")) for r in runs]
         agree = agreement_rate(vals)
-        majority = Counter(vals).most_common(1)[0][0]
-        manual_val = manual.get(d, "")
-        match = "✓" if majority == str(manual_val) else "✗"
         agree_str = f"{agree:.0%}"
-        lines.append(
-            f"| {d} | {manual_val} | {vals[0]} | {vals[1]} | {vals[2]} | {agree_str} | {match} |"
-        )
+        if has_manual:
+            manual_val = manual.get(d, "")
+            majority = Counter(vals).most_common(1)[0][0]
+            match = "✓" if majority == str(manual_val) else "✗"
+            lines.append(
+                f"| {d} | {manual_val} | {vals[0]} | {vals[1]} | {vals[2]} | {agree_str} | {match} |"
+            )
+        else:
+            lines.append(
+                f"| {d} | {vals[0]} | {vals[1]} | {vals[2]} | {agree_str} |"
+            )
 
     lines += ["", "---", "", "## Evidence per dimension", ""]
 
     for d in DIMENSIONS:
-        manual_val = manual.get(d, "")
         lines.append(f"### {d}")
-        lines.append(f"**Manual:** `{manual_val}`")
+        if has_manual:
+            manual_val = manual.get(d, "")
+            lines.append(f"**Manual:** `{manual_val}`")
         lines.append("")
         for i, run in enumerate(runs):
             val = run.get(d, "")
@@ -261,18 +327,21 @@ def write_trace(app_id: str, jd_text: str, runs: list[dict], manual: dict, out_d
             reasoning = run.get(f"{d}_reasoning", "")
             verified = quote_present_in_jd(quote, jd_text)
             verified_tag = "✓ found in JD" if verified else "⚠ NOT found verbatim"
-            match_tag = "✓" if str(val) == str(manual_val) else "✗"
-            lines.append(f"**Run {i+1}:** `{val}` {match_tag}")
+            if has_manual:
+                manual_val = manual.get(d, "")
+                match_tag = "✓" if str(val) == str(manual_val) else "✗"
+                lines.append(f"**Run {i+1}:** `{val}` {match_tag}")
+            else:
+                lines.append(f"**Run {i+1}:** `{val}`")
             lines.append(f"> Quote: \"{quote}\"")
             lines.append(f"> Verified: {verified_tag}")
             lines.append(f"> Reasoning: {reasoning}")
             lines.append("")
 
-        # Highlight if any run disagrees with manual or runs disagree with each other
         vals = [str(r.get(d, "")) for r in runs]
         majority = Counter(vals).most_common(1)[0][0]
-        if majority != str(manual_val):
-            lines.append(f"⚠ **Disagreement**: manual=`{manual_val}` vs LLM majority=`{majority}`")
+        if has_manual and majority != str(manual.get(d, "")):
+            lines.append(f"⚠ **Disagreement**: manual=`{manual.get(d, '')}` vs LLM majority=`{majority}`")
             lines.append("")
         if len(set(vals)) > 1:
             lines.append(f"⚠ **LLM inconsistency**: runs gave {vals}")
@@ -447,15 +516,33 @@ def main():
     manual = load_manual_classifications()
     print(f"Loaded {len(manual)} manual classifications from CSV")
 
-    # Collect JD paths
+    # Collect JD paths — applications/ first, then jd_data/ (no duplicates)
     seen_ids: set = set()
     jd_paths: list = []
+
     for p in sorted(APPLICATIONS_DIR.rglob("jd.md")):
         app_id = p.relative_to(APPLICATIONS_DIR).parts[0]
         if app_id not in seen_ids:
             seen_ids.add(app_id)
             jd_paths.append((app_id, p))
     print(f"Found {len(jd_paths)} JDs in {APPLICATIONS_DIR}")
+
+    n_before = len(jd_paths)
+    if JD_DATA_DIR.exists():
+        for folder in sorted(JD_DATA_DIR.iterdir()):
+            if not folder.is_dir():
+                continue
+            app_id = folder.name
+            if app_id in seen_ids:
+                continue
+            # prefer jd.md, fall back to jd_archive.md
+            jd_md = folder / "jd.md"
+            jd_archive = folder / "jd_archive.md"
+            p = jd_md if jd_md.exists() else (jd_archive if jd_archive.exists() else None)
+            if p:
+                seen_ids.add(app_id)
+                jd_paths.append((app_id, p))
+        print(f"Found {len(jd_paths) - n_before} additional JDs in {JD_DATA_DIR}")
 
     if trace_only:
         # Regenerate traces from existing CSV without re-classifying
@@ -486,7 +573,7 @@ def main():
     already_done = load_existing_results(out_csv)
     todo = [
         (app_id, p) for app_id, p in jd_paths
-        if app_id not in already_done and app_id in manual
+        if app_id not in already_done
     ]
     total = len(jd_paths)
     n_done_before = len(already_done)
@@ -550,18 +637,23 @@ def main():
         for d in DIMENSIONS:
             vals = [str(r.get(d, "")) for r in runs]
             agree_flags.append("✓" if len(set(vals)) == 1 else "~")
-        match_flags = []
-        for d in DIMENSIONS:
-            vals = [str(r.get(d, "")) for r in runs]
-            majority = Counter(vals).most_common(1)[0][0]
-            match_flags.append("✓" if majority == str(manual[app_id][d]) else "✗")
-        print(f"         agree: {''.join(agree_flags)}  vs manual: {''.join(match_flags)}"
-              f"  ({sum(f=='✓' for f in match_flags)}/{len(match_flags)} match)")
+        manual_entry = manual.get(app_id, {})
+        if manual_entry:
+            match_flags = []
+            for d in DIMENSIONS:
+                vals = [str(r.get(d, "")) for r in runs]
+                majority = Counter(vals).most_common(1)[0][0]
+                match_flags.append("✓" if majority == str(manual_entry[d]) else "✗")
+            print(f"         agree: {''.join(agree_flags)}  vs manual: {''.join(match_flags)}"
+                  f"  ({sum(f=='✓' for f in match_flags)}/{len(match_flags)} match)")
+        else:
+            print(f"         agree: {''.join(agree_flags)}  (no manual classification)")
 
         # Build CSV row
         row = {"application_id": app_id}
+        manual_entry = manual.get(app_id, {})
         for d in DIMENSIONS:
-            row[f"manual_{d}"] = manual[app_id][d]
+            row[f"manual_{d}"] = manual_entry.get(d, "")
         for i, run in enumerate(runs):
             for d in DIMENSIONS:
                 val = run.get(d, "")
@@ -577,12 +669,13 @@ def main():
             majority = Counter(vals).most_common(1)[0][0]
             row[f"llm_agreement_{d}"] = round(agreement_rate(vals), 3)
             row[f"majority_vote_{d}"] = majority
-            row[f"manual_llm_match_{d}"] = str(manual[app_id][d]) == majority
+            manual_val = manual.get(app_id, {}).get(d, "")
+            row[f"manual_llm_match_{d}"] = str(manual_val) == majority if manual_val else ""
 
         append_row(out_csv, row)
         n_classified += 1
 
-        write_trace(app_id, jd_text, runs, manual[app_id], TRACES_DIR)
+        write_trace(app_id, jd_text, runs, manual.get(app_id, {}), TRACES_DIR)
         print(f"         → saved  [{n_classified + n_done_before}/{total}]")
 
     # Final report

@@ -43,7 +43,9 @@
 | domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 3 | 0 | 0 | 0 | 100% | ✗ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | recruiter | mixed | mixed | recruiter | 33% | ✗ |
+| jd_authorship | recruiter | mixed | mixed | hiring_manager | 33% | ✗ |
+| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level |  | mixed | execution | execution | 33% | ✗ |
 
 ---
 
@@ -55,17 +57,17 @@
 **Run 1:** `mixed` ✓
 > Quote: "Maintain high accuracy through rigorous verification of all outputs"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains both velocity signals ('within tight deadlines,' 'fast-paced') and explicit rigour emphasis ('rigorous verification'), creating mixed orientation.
+> Reasoning: Multiple rigour signals (high accuracy, rigorous verification, anticipate challenges, evaluate long-term impacts) coexist with velocity signals (tight deadlines, faster creation, fast-paced environment).
 
 **Run 2:** `velocity` ✗
 > Quote: "Build new Looker dashboards from scratch within tight deadlines"
 > Verified: ✓ found in JD
-> Reasoning: The JD repeatedly emphasizes speed and pace (tight deadlines, fast-paced environment, rapid industry growth) far more than rigour signals, establishing velocity as the primary orientation despite one mention of rigorous verification.
+> Reasoning: The responsibilities emphasize speed of delivery with 'tight deadlines' and 'faster creation' appearing multiple times, while rigour signals are limited to a single mention of 'rigorous verification'.
 
 **Run 3:** `mixed` ✓
 > Quote: "Build new Looker dashboards from scratch within tight deadlines"
 > Verified: ✓ found in JD
-> Reasoning: The tight deadlines signify velocity, but this is directly balanced by 'Maintain high accuracy through rigorous verification of all outputs,' creating a mixed orientation.
+> Reasoning: The JD emphasizes speed with 'tight deadlines' and 'fast-paced work environment' while also emphasizing quality with 'Maintain high accuracy through rigorous verification of all outputs', with both dimensions genuinely present.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'velocity', 'mixed']
 
@@ -75,17 +77,17 @@
 **Run 1:** `moderate` ✗
 > Quote: "Exposure to major clients like Booking.com and Google Maps"
 > Verified: ✓ found in JD
-> Reasoning: While involving major clients, the JD lacks explicit language about financial reporting, compliance, or regulatory requirements that would indicate high risk.
+> Reasoning: Data errors affect business decisions and client relationships but no regulatory, financial reporting, or compliance language appears.
 
 **Run 2:** `moderate` ✗
-> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on business reporting and dashboards without explicit signals of financial reporting, regulatory compliance, or mission-critical impact typical of high-risk domains.
+> Reasoning: This is dashboard and BI work without explicit financial reporting, compliance, or regulatory language; it supports business decisions but not mission-critical financial or regulatory functions.
 
 **Run 3:** `moderate` ✗
-> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
+> Quote: "Direct ownership and measurable company impact from day one"
 > Verified: ✓ found in JD
-> Reasoning: The focus on dashboard reporting and clarity indicates operational analytics rather than financial reporting, compliance, or regulatory implications typical of high-risk domains.
+> Reasoning: The JD indicates business impact but lacks explicit language about financial reporting, compliance, regulatory requirements, or mission-critical systems that would signal high risk.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
@@ -93,19 +95,19 @@
 **Manual:** `3`
 
 **Run 1:** `0` ✗
-> Quote: "None identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No specific named partner teams or functions are explicitly mentioned; generic references like 'collaborative international team' do not count.
+> Quote: "Collaborative international team environment"
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions collaborative work but does not name specific departments, functions, or teams.
 
 **Run 2:** `0` ✗
-> Quote: "None"
+> Quote: "none"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: No explicitly named partner teams or functions are mentioned; generic phrases like 'collaborative team environment' do not identify specific departments or groups.
+> Reasoning: No named internal partner teams or functions are mentioned in the responsibilities; external client exposure is noted but not framed as collaboration partners.
 
 **Run 3:** `0` ✗
 > Quote: "Collaborative international team environment"
 > Verified: ✓ found in JD
-> Reasoning: While collaboration is mentioned, no explicitly named teams, functions, or collaboration partners are identified in the JD.
+> Reasoning: No distinct named partner teams, functions, or external collaborators are explicitly identified; generic phrases like 'collaborative team environment' do not count.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`0`
 
@@ -113,19 +115,19 @@
 **Manual:** `early`
 
 **Run 1:** `mid` ✗
-> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
+> Quote: "Become proficient with the data lake, understanding data sources and processing workflows"
 > Verified: ✓ found in JD
-> Reasoning: The JD references existing infrastructure and tools (data lake, Looker, BigQuery, Kafka, Airflow) and improvement work, indicating a team past initial build but actively scaling.
+> Reasoning: Named existing tools (Looker, BigQuery, Kafka, Airflow, data lake) with established workflows indicate infrastructure in place with room for growth and enhancement.
 
 **Run 2:** `mid` ✗
 > Quote: "Become proficient with the data lake, understanding data sources and processing workflows"
 > Verified: ✓ found in JD
-> Reasoning: References to an established data lake and reporting systems indicate infrastructure exists and is being actively used, but no mention of specialized sub-teams or platform scale suggests growth-stage rather than mature organization.
+> Reasoning: The JD references established infrastructure (data lake, Kafka, Airflow, BigQuery) being enhanced and expanded, indicating a functioning data function rather than greenfield startup.
 
 **Run 3:** `mid` ✗
-> Quote: "Become proficient with the data lake, understanding data sources and processing workflows"
+> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
 > Verified: ✓ found in JD
-> Reasoning: The existence of a data lake, established data sources, and processing workflows indicates a data function that has moved beyond early-stage greenfield and is now operating with basic infrastructure.
+> Reasoning: The JD references existing infrastructure (data lake, reporting systems, Looker, Kafka, Airflow) needing enhancement rather than building from zero, indicating a developing team with established but evolving capabilities.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -135,18 +137,60 @@
 **Run 1:** `mixed` ✗
 > Quote: "Build new Looker dashboards from scratch within tight deadlines"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool mention (Looker) and clear responsibilities show technical knowledge, but most other responsibilities use generic language without operational context or methodology details.
+> Reasoning: Specific tool applications (Looker, data lake, tight deadlines) suggest hiring_manager input, but generic verbs elsewhere (grasp, identify, maintain) indicate recruiter contribution.
 
 **Run 2:** `mixed` ✗
-> Quote: "Build new Looker dashboards from scratch within tight deadlines; Maintain high accuracy through rigorous verification of all outputs"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical details (Looker, data lake, workflows) show hands-on job knowledge, but generic soft-skills language (grasp context quickly, anticipate challenges) and recruiter-style behavioral framing indicate shared authorship.
-
-**Run 3:** `recruiter` ✓
-> Quote: "Leverage available tools and resources to solve problems independently"
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
 > Verified: ✓ found in JD
-> Reasoning: This classic boilerplate language, along with generic action verbs throughout ('Identify and propose,' 'Maintain accuracy,' 'Grasp context'), suggests recruiter authorship rather than someone who has done the job.
+> Reasoning: Specific technical tool mention (Looker) and concrete constraints (tight deadlines) suggest domain expertise, but generic responsibilities like 'maintain high accuracy' and 'anticipate future challenges' indicate recruiter input.
+
+**Run 3:** `hiring_manager` ✗
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical details (Looker dashboards, data lake, reporting systems) indicating the author understands the actual work, not generic boilerplate.
 
 ⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `internal_data` ✗
+> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities focus on building and improving analytics infrastructure and reporting systems that serve data consumers and the platform itself.
+
+**Run 2:** `internal_data` ✗
+> Quote: "Become proficient with the data lake, understanding data sources and processing workflows"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize working with data infrastructure and reporting systems, framing the role as serving the analytics platform and its consumers rather than specific business functions.
+
+**Run 3:** `internal_data` ✗
+> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is building and improving analytics infrastructure (dashboards, data lake, reporting systems) that serves the organization's internal data consumers and capabilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `mixed` ✗
+> Quote: "Leverage available tools and resources to solve problems independently"
+> Verified: ✓ found in JD
+> Reasoning: The role includes strategic autonomy to solve independently and anticipate long-term impacts, balanced against execution responsibilities like building dashboards and maintaining accuracy.
+
+**Run 2:** `execution` ✗
+> Quote: "Leverage available tools and resources to solve problems independently"
+> Verified: ✓ found in JD
+> Reasoning: While there is autonomy in approach ('independently'), the role is primarily framed around executing defined deliverables (building dashboards, maintaining quality) rather than setting strategy or priorities.
+
+**Run 3:** `execution` ✗
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
+> Verified: ✓ found in JD
+> Reasoning: The role focuses on executing assigned work—building dashboards, learning infrastructure, improving systems—rather than setting analytics strategy or direction.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']

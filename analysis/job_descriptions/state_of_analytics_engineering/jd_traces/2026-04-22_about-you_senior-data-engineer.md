@@ -48,10 +48,12 @@
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
-| domain_risk | high | high | high | high | 100% | ✓ |
+| domain_risk | high | moderate | high | high | 33% | ✓ |
 | collaboration_width | 3 | 0 | 1 | 0 | 33% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
 | jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation |  | internal_data | internal_data | mixed | 33% | ✗ |
+| autonomy_level |  | strategic | strategic | strategic | 100% | ✗ |
 
 ---
 
@@ -63,55 +65,57 @@
 **Run 1:** `rigour` ✗
 > Quote: "Strong software engineering fundamentals (CI/CD, testing, design patterns)"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, CI/CD, best practices, and reliability (maintaining source system performance) with zero velocity language, establishing a rigour-focused orientation.
+> Reasoning: The JD emphasizes testing, CI/CD, and engineering best practices as core expectations with no mention of speed or iteration velocity.
 
 **Run 2:** `rigour` ✗
 > Quote: "Strong software engineering fundamentals (CI/CD, testing, design patterns)"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes correctness, testing, and best practices throughout, with no velocity or shipping speed language present.
+> Reasoning: Multiple explicit rigour signals including CI/CD, testing, and design patterns in required qualifications, with no velocity-oriented language.
 
 **Run 3:** `rigour` ✗
 > Quote: "Strong software engineering fundamentals (CI/CD, testing, design patterns)"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities and qualifications emphasize CI/CD, testing, design patterns, maintaining performance, and 'data engineering best practices,' with no counterbalancing velocity language.
+> Reasoning: The required qualifications emphasize CI/CD, testing, and design patterns alongside business-critical pipeline maintenance and maintaining source system performance, indicating a rigour-first orientation.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
 **Manual:** `high`
 
-**Run 1:** `high` ✓
-> Quote: "Own the most important company reports that inform executive decisions"
+**Run 1:** `moderate` ✗
+> Quote: "Own the most important company reports that inform executive decisions and serve other departments"
 > Verified: ✓ found in JD
-> Reasoning: Fintech sector combined with ownership of critical executive reports and business-critical pipelines means data errors directly affect financial decision-making and company operations.
+> Reasoning: While the company operates in finance tech, the JD does not explicitly mention regulatory compliance, audit, or financial reporting requirements, pointing to business-critical but not regulatory-driven risk.
 
 **Run 2:** `high` ✓
 > Quote: "Own the most important company reports that inform executive decisions"
 > Verified: ✓ found in JD
-> Reasoning: The role owns reports directly informing executive decisions at a fintech company, placing data errors in the high-impact category.
+> Reasoning: In a fintech company, executive-level decision reports directly affect financial outcomes and strategic decisions, placing data errors in the high-risk category.
 
 **Run 3:** `high` ✓
 > Quote: "Own the most important company reports that inform executive decisions and serve other departments."
 > Verified: ✓ found in JD
-> Reasoning: Combined with the Finance Tech sector and emphasis on the company's most critical reports informing executive decisions, data errors would directly affect business outcomes.
+> Reasoning: The role owns critical executive reports in a finance tech context where errors directly affect business and financial decision-making.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `0` ✗
-> Quote: "other data teams"
-> Verified: ✓ found in JD
-> Reasoning: While 'other data teams' are mentioned as collaboration partners, no specific teams, departments, or functions (Finance, Product, Engineering, etc.) are explicitly named.
+> Quote: "other data teams; other departments"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references only generic partner groups without naming specific functions like Finance, Product, Engineering, or other collaboration partners.
 
 **Run 2:** `1` ✗
-> Quote: "creating foundational tools and monitoring systems for other data teams"
+> Quote: "other data teams"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named partner group is identified: other data teams.
+> Reasoning: Only one named partner group explicitly identified: data teams, to whom foundational tools and monitoring systems are provided.
 
 **Run 3:** `0` ✗
-> Quote: "No named partner teams or functions explicitly identified"
+> Quote: "other data teams; other departments"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD references 'other departments' and 'other data teams' but never names specific functions (Finance, Product, Engineering, etc.) as collaboration partners.
+> Reasoning: The JD references 'other data teams' and 'other departments' generically but does not name any specific partner functions or teams.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`0`
 
@@ -121,34 +125,76 @@
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)"
+> Quote: "This involves creating foundational tools and monitoring systems for other data teams"
 > Verified: ✓ found in JD
-> Reasoning: The need to transition to a new platform from existing MySQL infrastructure indicates an established data function requiring modernization, characteristic of mid-stage maturity.
+> Reasoning: Multiple data teams already exist and the company runs large-scale operations, but significant platform modernization is underway, indicating a team in growth rather than early or fully mature stage.
 
 **Run 2:** `mid` ✓
-> Quote: "drive the transition to our new DataPlatform"
+> Quote: "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)"
 > Verified: ✓ found in JD
-> Reasoning: The team has existing infrastructure and operations but is actively scaling and transitioning platforms, indicating mid-stage growth rather than early or fully mature.
+> Reasoning: Existing large-scale operations are being modernized with a new platform stack, indicating mid-stage maturity: past the greenfield phase but still actively transforming infrastructure.
 
 **Run 3:** `mid` ✓
 > Quote: "drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems for other data teams."
 > Verified: ✓ found in JD
-> Reasoning: The existence of named tools, existing large-scale operations, multiple data teams, and a technology transition underway indicates a growing team with established infrastructure but still evolving.
+> Reasoning: The company has large-scale existing operations and multiple data teams but is transitioning/upgrading its platform, indicating a scaling established function rather than early-stage build.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
-> Quote: "terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance"
-> Verified: ✓ found in JD
-> Reasoning: The specific technical architecture, exact scale metrics, named tools with architectural context, and operational constraints demonstrate intimate knowledge that only someone performing this job would include.
-
-**Run 2:** `hiring_manager` ✓
 > Quote: "handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance"
 > Verified: ✓ found in JD
-> Reasoning: The responsibility specifies exact source systems, target systems, volume scale, frequency, and performance constraints that only someone operating these daily would know.
+> Reasoning: The responsibilities contain precise technical context—named tools, specific scale metrics, and performance constraints—that only comes from someone who has done this job.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Oversee the company's largest data movement operations, handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance."
+> Verified: ✓ found in JD
+> Reasoning: Specific volume metrics (terabyte-scale), named systems, frequency (nightly), and operational constraints (source system performance) reflect technical knowledge only someone actively performing the work would include.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance"
+> Quote: "handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance"
 > Verified: ✓ found in JD
-> Reasoning: The specificity of technical implementation (exact scale, frequency, tool stack, performance concerns, named infrastructure) reflects hands-on expertise only someone doing this work would articulate.
+> Reasoning: The responsibilities contain precise operational context (specific tech stack, scale metrics, cadence, source/target systems) that only someone executing this work would articulate.
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `internal_data` ✗
+> Quote: "creating foundational tools and monitoring systems for other data teams"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary purpose is to build and maintain data platform infrastructure for internal data team consumption, with platform work dominating two of three key responsibilities.
+
+**Run 2:** `internal_data` ✗
+> Quote: "creating foundational tools and monitoring systems for other data teams"
+> Verified: ✓ found in JD
+> Reasoning: The primary beneficiary is the data function itself (other data teams), not commercial, product, or finance stakeholders, making this infrastructure-focused rather than business-outcome-focused.
+
+**Run 3:** `mixed` ✗
+> Quote: "Own the most important company reports that inform executive decisions; creating foundational tools and monitoring systems for other data teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role serves both finance/executive reporting (owning important reports) and internal data platform (building foundational tools for data teams) with roughly equal responsibility weight.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `strategic` ✗
+> Quote: "drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)"
+> Verified: ✓ found in JD
+> Reasoning: The role is expected to drive major platform initiatives, own critical systems, and oversee large operations—indicating significant strategic direction-setting rather than execution of externally-set priorities.
+
+**Run 2:** `strategic` ✗
+> Quote: "drive the transition to our new DataPlatform"
+> Verified: ✓ found in JD
+> Reasoning: The verb "drive" indicates responsibility for setting direction and leadership on platform modernization rather than executing a pre-defined plan.
+
+**Run 3:** `strategic` ✗
+> Quote: "drive the transition to our new DataPlatform"
+> Verified: ✓ found in JD
+> Reasoning: The role uses ownership verbs ('own', 'drive', 'oversee', 'build') indicating the person is expected to set direction for platform modernization and data operations rather than execute others' priorities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
