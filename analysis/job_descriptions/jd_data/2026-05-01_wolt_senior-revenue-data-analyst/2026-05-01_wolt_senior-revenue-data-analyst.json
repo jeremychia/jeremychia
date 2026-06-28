@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://job-boards.greenhouse.io/wolt/jobs/7735284",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "fix_scale",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -46,6 +48,8 @@
     "collaboration_width": "Collaborate with Product, Analytics, Engineering, and Accounting teams on revenue data requirements",
     "data_team_maturity": "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level",
     "jd_authorship": "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close",
+    "stakeholder_orientation": "Prepare materials for external and internal audit reviews",
+    "autonomy_level": "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level",
     "greenfield_vs_fix": "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Revenue subledger already exists and is being scaled, indicating established function growing rather than startup from zero.",
   "jd_authorship_quote": "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close",
   "jd_authorship_reasoning": "The specific accounting terminology (flux analysis, balance sheet reconciliations, month-end close) demonstrates technical knowledge that only someone actively performing revenue accounting work would use.",
+  "stakeholder_orientation_quote": "Prepare materials for external and internal audit reviews",
+  "stakeholder_orientation_reasoning": "The primary mission is revenue accounting, reconciliation, and audit compliance, making the finance and accounting function the primary stakeholder.",
+  "autonomy_level_quote": "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level",
+  "autonomy_level_reasoning": "The 'support' verb and pre-defined initiative language indicate this role executes within a scoped direction rather than setting strategic direction.",
   "greenfield_vs_fix_quote": "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level",
   "urgency_signal": "No urgency signals present"
 }

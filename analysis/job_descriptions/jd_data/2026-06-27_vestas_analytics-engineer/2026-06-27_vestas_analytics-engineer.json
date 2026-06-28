@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "recruiter",
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "fix_scale",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -45,6 +47,8 @@
     "collaboration_width": "Product Owners; Business Analysts; domain experts; governance teams",
     "data_team_maturity": "Maintain, optimize, and continuously improve existing data models",
     "jd_authorship": "Collaborate with Product Owners and Business Analysts to translate business requirements into analytics solutions",
+    "stakeholder_orientation": "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE",
+    "autonomy_level": "Contribute to analytics data architecture design and implementation",
     "greenfield_vs_fix": "Maintain, optimize, and continuously improve existing data models",
     "language_gate": "Not stated in JD",
     "urgency": "Application Deadline: July 4, 2026"

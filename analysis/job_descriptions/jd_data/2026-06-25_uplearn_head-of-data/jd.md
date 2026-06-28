@@ -78,6 +78,8 @@ Benefits
 
 **jd_authorship:** hiring_manager — Responsibilities are highly specific to Up Learn's actual situation: named stack (warehouse/dbt/Lightdash), named initiatives ("Measuring Learning" impact evaluation), concrete delivery expectations; decisive phrase: "keep our warehouse/dbt/Lightdash stack reliable and scalable - without slowing the business down"
 
+**stakeholder_orientation:** mixed — Product analytics and measurement in product development is the first responsibility in the 12-month plan, with explicit emphasis on KPIs, feature impact measurement, and embedding measurement into product processes.
+**autonomy_level:** strategic — The role explicitly owns strategy definition and OKRs for the data function, not execution of someone else's plan, positioning this as a leadership role that shapes direction.
 **greenfield_vs_fix:** mixed — Improving existing infrastructure ("continue to build on") while building new capabilities (GCSE expansion, responsible AI governance)
 
 **urgency:** standard — No urgency signals present

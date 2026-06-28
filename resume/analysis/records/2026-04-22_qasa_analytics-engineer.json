@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Establish unified KPIs and terminology\" (implies none exist yet), \"design and construct data models serving as the bridge between raw data\" (implies raw data exists but no modelling layer), \"create self-serve analytics capabilities\" (implies none currently). Likely first or only analytics hire.",
     "collaboration_width": "\"Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams.\" Five distinct teams named verbatim.",
     "language_gate": "Not stated in JD.",
-    "urgency": "Job title includes \"build Qasa's data foundation\" — this is a zero-to-one hire, which signals the role has been open or unfilled for a while and is considered foundational, likely needed to unblock multiple teams simultaneously."
-  }
+    "urgency": "Job title includes \"build Qasa's data foundation\" — this is a zero-to-one hire, which signals the role has been open or unfilled for a while and is considered foundational, likely needed to unblock multiple teams simultaneously.",
+    "stakeholder_orientation": "Create self-serve analytics capabilities that empower teams to independently answer questions",
+    "autonomy_level": "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

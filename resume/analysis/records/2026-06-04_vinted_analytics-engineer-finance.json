@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Identifying opportunities to amplify Data Science and Analytics impact\" implies a separate Data Science team exists alongside this AE function, suggesting a mid-to-large data org; no team size or reporting line stated.",
     "collaboration_width": "\"Converting Finance requirements into technical solutions\", \"amplify Data Science and Analytics impact\" — three distinct interfaces: Finance stakeholders, Data Science team, and Analytics team.",
     "language_gate": "\"Excellent verbal and written communication skills in English\" is the only language requirement stated.",
-    "urgency": "No urgency signals present. Role is framed as an established function (\"managing production reliability\", \"optimising end-user experience\"), not a crisis hire."
-  }
+    "urgency": "No urgency signals present. Role is framed as an established function (\"managing production reliability\", \"optimising end-user experience\"), not a crisis hire.",
+    "stakeholder_orientation": "Converting Finance requirements into technical solutions through requirements gathering",
+    "autonomy_level": "Converting Finance requirements into technical solutions through requirements gathering"
+  },
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution"
 }

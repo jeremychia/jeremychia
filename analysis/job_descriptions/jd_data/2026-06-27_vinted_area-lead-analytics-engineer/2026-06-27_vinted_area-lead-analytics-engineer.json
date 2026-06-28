@@ -9,6 +9,8 @@
   "salary_max": 121900,
   "salary_currency": "EUR",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "Revenue domain; Purchase domain; Orders domain; analytics engineers (cohort being mentored)",
     "data_team_maturity": "Ability influencing technical direction across multiple teams",
     "jd_authorship": "Identify cross-domain intersections and ensure consistent data modeling approaches",
+    "stakeholder_orientation": "Develop reusable patterns and shared design standards; Drive improvements in data product quality, documentation, and observability",
+    "autonomy_level": "Establish long-term technical direction for analytics engineering across specified domains",
     "greenfield_vs_fix": "Develop reusable patterns and shared design standards; Manage technical debt and enable sustainable evolution of data systems",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"

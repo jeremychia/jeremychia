@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://job-boards.eu.greenhouse.io/decathlontechnology/jobs/4796699101?gh_src=cb30d7c2teu",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -48,6 +50,8 @@
     "collaboration_width": "franchise partners; franchisees",
     "data_team_maturity": "Build data marts and business layers using dbt on Databricks",
     "jd_authorship": "Code complex business logic (royalties, taxable turnover, margins)",
+    "stakeholder_orientation": "Support franchise partners' decisions regarding stock, supply chain, and pricing",
+    "autonomy_level": "Support franchise partners' decisions regarding stock, supply chain, and pricing",
     "greenfield_vs_fix": "Build data marts and business layers using dbt on Databricks; Design and maintain dashboards; Adapt existing dashboards from other business domains",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -61,6 +65,10 @@
   "data_team_maturity_reasoning": "Named tools in responsibilities with specific application context (building data marts), combined with the ability to adapt existing dashboards, indicates an established data infrastructure at mid-stage growth rather than early-stage or mature.",
   "jd_authorship_quote": "Build data marts and business layers using dbt on Databricks; Code complex business logic (royalties, taxable turnover, margins)",
   "jd_authorship_reasoning": "Technical specificity throughout (named tools, specific business logic, precise SQL/Tableau skills) indicates hiring manager who understands the technical work required.",
+  "stakeholder_orientation_quote": "Support franchise partners' decisions regarding stock, supply chain, and pricing",
+  "stakeholder_orientation_reasoning": "The primary responsibility is serving franchise partners' operational and commercial decisions, making external franchisees the dominant stakeholder audience.",
+  "autonomy_level_quote": "Support franchise partners' decisions regarding stock, supply chain, and pricing",
+  "autonomy_level_reasoning": "While the role owns technical implementation (build, design, implement), the overarching framing emphasizes supporting franchise partner priorities rather than setting independent analytics strategy.",
   "greenfield_vs_fix_quote": "Build data marts and business layers using dbt on Databricks; Design and maintain dashboards; Adapt existing dashboards from other business domains",
   "urgency_signal": "No urgency signals present"
 }

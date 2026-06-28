@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Establishing the foundation for all financial reporting\", \"bringing structure to developing systems\", \"navigating uncertainty\" — all point to immature data infrastructure. \"Leading ERP data integration\" suggests this person is the first or most senior analytics hire.",
     "collaboration_width": "\"Collaborating with finance, operations, and leadership teams to align on metrics and embed data in decision-making.\" Three distinct functions named verbatim.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No \"ASAP\" or \"immediately\" language; role is framed as strategic and foundational (\"establishing\", \"designing\"). Implies a deliberate hire, not a panic fill."
-  }
+    "urgency": "No \"ASAP\" or \"immediately\" language; role is framed as strategic and foundational (\"establishing\", \"designing\"). Implies a deliberate hire, not a panic fill.",
+    "stakeholder_orientation": "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA",
+    "autonomy_level": "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
+  },
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "strategic"
 }

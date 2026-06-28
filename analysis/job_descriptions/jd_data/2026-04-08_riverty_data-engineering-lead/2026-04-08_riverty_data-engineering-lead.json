@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://jobsearch.createyourowncareer.com/Riverty/job/Berlin-Data-Engineering-Lead-%28mwd%29-BE-10623/284720-de_DE/",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -46,6 +48,8 @@
     "collaboration_width": "product owners; BI; data analysis; data science; data platform; tech teams; Platform Engineering teams; Business IT teams; Data Governance; Data Architecture",
     "data_team_maturity": "Partner with Platform Engineering teams to ensure smooth operation of data pipelines within the shared core data platform.",
     "jd_authorship": "Promote proactive data reliability engineering, enabling teams to detect and resolve issues early.",
+    "stakeholder_orientation": "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting.",
+    "autonomy_level": "Define and execute the data engineering vision and roadmap aligned with the overall Data, AI & Analytics strategy.",
     "greenfield_vs_fix": "Establish and continuously improve the operating model for data engineers within agile data product teams",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "The reference to an existing shared core data platform, multiple agile data product teams, and operational pipelines indicates established infrastructure being improved rather than built from zero.",
   "jd_authorship_quote": "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability.",
   "jd_authorship_reasoning": "Mix of specific technical responsibilities (ETL/ELT, data SLAs, CI/CD, observability) with generic leadership boilerplate (collaborate, champion, promote).",
+  "stakeholder_orientation_quote": "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting.",
+  "stakeholder_orientation_reasoning": "The role's primary responsibilities focus on building data infrastructure and models consumed by analytics, BI, and data science teams (internal_data audiences), with regulatory reporting as a secondary technical requirement.",
+  "autonomy_level_quote": "Define and execute the data engineering vision and roadmap aligned with the overall Data, AI & Analytics strategy.",
+  "autonomy_level_reasoning": "The role's foundational responsibility is to define the vision and roadmap for the data engineering function, indicating strategic ownership of the technical direction and organizational shape.",
   "greenfield_vs_fix_quote": "Establish and continuously improve the operating model for data engineers within agile data product teams",
   "urgency_signal": "No urgency signals present"
 }

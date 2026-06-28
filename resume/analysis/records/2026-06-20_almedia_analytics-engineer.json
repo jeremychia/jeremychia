@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Core member of our analytics team\", \"take ownership of data analysis for a designated domain\" suggest a small analytics team (likely 3–6 people) where each person owns a domain end-to-end; \"train business users on utilising the data platform\" implies business users are not yet self-sufficient — mid-maturity data function.",
     "collaboration_width": "\"Collaborating closely with Product Analysts, Data Scientists, and Business Stakeholders to meet their analytical and reporting needs\", \"train business users on utilising the data platform and data visualisation tools effectively\" — four distinct interfaces: Product Analysts, Data Scientists, Business Stakeholders, and business users.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No explicit urgency language. However \"push harder\", \"accelerate faster than anywhere else\", \"Europe's #3 fastest-growing company\" signal a high-urgency culture where ramp speed is implicitly valued."
-  }
+    "urgency": "No explicit urgency language. However \"push harder\", \"accelerate faster than anywhere else\", \"Europe's #3 fastest-growing company\" signal a high-urgency culture where ramp speed is implicitly valued.",
+    "stakeholder_orientation": "ensure our data infrastructure effectively supports self-serve analytics, insightful reporting, and business intelligence across the organisation",
+    "autonomy_level": "collaborating closely with Product Analysts, Data Scientists, and Business Stakeholders to meet their analytical and reporting needs"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

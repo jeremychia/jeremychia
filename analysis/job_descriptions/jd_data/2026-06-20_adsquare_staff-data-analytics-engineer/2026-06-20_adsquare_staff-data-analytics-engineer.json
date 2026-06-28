@@ -10,6 +10,8 @@
   "salary_currency": "EUR",
   "source_url": "https://adsquare.jobs.personio.de/job/2540423",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "cross-squad collaboration; multiple teams",
     "data_team_maturity": "Act as technical lead for a squad, making architectural decisions and driving cross-squad collaboration",
     "jd_authorship": "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets",
+    "stakeholder_orientation": "Act as technical lead for a squad, making architectural decisions and driving cross-squad collaboration",
+    "autonomy_level": "making architectural decisions and driving cross-squad collaboration",
     "greenfield_vs_fix": "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Implies existing team structure and production systems already in place, but no signals of multiple specialized sub-teams or greenfield infrastructure building.",
   "jd_authorship_quote": "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets",
   "jd_authorship_reasoning": "Mostly specific technical bullets with scale numbers (multi-terabyte, massive datasets), named methodologies (TDD, CI/CD, monitoring frameworks), and domain-specific focus.",
+  "stakeholder_orientation_quote": "Act as technical lead for a squad, making architectural decisions and driving cross-squad collaboration",
+  "stakeholder_orientation_reasoning": "Role is framed around technical leadership, mentoring engineers, and architectural governance of the data function itself rather than serving external commercial, product, or finance stakeholders.",
+  "autonomy_level_quote": "making architectural decisions and driving cross-squad collaboration",
+  "autonomy_level_reasoning": "Decision-making authority, architectural ownership, and explicit direction-setting verbs (make, drive, establish, champion) position this as a strategic role that defines technical direction rather than executing scoped work.",
   "greenfield_vs_fix_quote": "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets",
   "urgency_signal": "No urgency signals present"
 }

@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "mixed",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "mixed",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "Product;Commercial;Operations",
     "data_team_maturity": "keep our warehouse/dbt/Lightdash stack reliable and scalable - without slowing the business down",
     "jd_authorship": "Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts - enabling fast learning, quick diagnosis, and confident iteration",
+    "stakeholder_orientation": "Strengthen use of measurement in product processes: Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts - enabling fast learning, quick diagnosis, and confident iteration",
+    "autonomy_level": "set data strategy and own Data team OKRs",
     "greenfield_vs_fix": "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring; keep our warehouse/dbt/Lightdash stack reliable and scalable",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -58,6 +62,10 @@
   "data_team_maturity_reasoning": "Named tools and infrastructure (warehouse, dbt, Lightdash) exist and responsibilities emphasize scaling/improving rather than building from zero.",
   "jd_authorship_quote": "Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts - enabling fast learning, quick diagnosis, and confident iteration",
   "jd_authorship_reasoning": "Technically specific with named tools (dbt, Lightdash), precise methodologies (instrumentation before shipping, impact evaluation design), and company context (A-Levels, GCSEs, learner scoring).",
+  "stakeholder_orientation_quote": "Strengthen use of measurement in product processes: Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts - enabling fast learning, quick diagnosis, and confident iteration",
+  "stakeholder_orientation_reasoning": "Product analytics and measurement in product development is the first responsibility in the 12-month plan, with explicit emphasis on KPIs, feature impact measurement, and embedding measurement into product processes.",
+  "autonomy_level_quote": "set data strategy and own Data team OKRs",
+  "autonomy_level_reasoning": "The role explicitly owns strategy definition and OKRs for the data function, not execution of someone else's plan, positioning this as a leadership role that shapes direction.",
   "greenfield_vs_fix_quote": "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring; keep our warehouse/dbt/Lightdash stack reliable and scalable",
   "urgency_signal": "No urgency signals present"
 }

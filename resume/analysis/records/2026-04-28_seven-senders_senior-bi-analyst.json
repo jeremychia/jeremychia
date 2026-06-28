@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Support the growth of junior analysts through code reviews, coaching, and documentation\" signals at least a few junior ICs exist. \"Act as translator between engineering and business stakeholders\" implies a separate engineering team and distinct business stakeholder group — not a solo data function.",
     "collaboration_width": "Named verbatim: \"engineering\" (as a separate team requiring translation), \"business stakeholders\" (requiring explanation of complex technical concepts), \"junior analysts\" (requiring coaching and code reviews).",
     "language_gate": "\"German language courses\" appears only as a listed employee benefit, not as a language requirement for the role.",
-    "urgency": "No urgency signals present."
-  }
+    "urgency": "No urgency signals present.",
+    "stakeholder_orientation": "Own the data pipeline from architecting dbt models to enabling self-serve in Looker",
+    "autonomy_level": "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

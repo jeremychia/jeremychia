@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Own and evolve core business metrics — from definition to tracking\" (implies metrics are not yet fully defined), \"develop the data and analytics components of the AI stack\" (AI stack is being built, not maintained). \"2+ years\" experience requirement suggests a smaller team willing to develop talent — likely 2–4 people covering a wide surface.",
     "collaboration_width": "\"Drive cross-functional data initiatives with stakeholders across Commercial, Operations, and Engineering.\" Three distinct internal functions named verbatim; Data Scientists using the AI stack are an implicit fourth audience.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No explicit urgency language, but \"own and evolve core business metrics\" and \"develop the AI stack\" as the top two responsibilities suggest the company is at a critical inflection — scaling AI applications while lacking a reliable metric layer."
-  }
+    "urgency": "No explicit urgency language, but \"own and evolve core business metrics\" and \"develop the AI stack\" as the top two responsibilities suggest the company is at a critical inflection — scaling AI applications while lacking a reliable metric layer.",
+    "stakeholder_orientation": "Own and evolve core business metrics - from definition to tracking and operationalisation; Develop the data and analytics components of the AI stack to support experimentation and GenAI applications",
+    "autonomy_level": "Own and evolve core business metrics - from definition to tracking and operationalisation"
+  },
+  "stakeholder_orientation": "mixed",
+  "autonomy_level": "strategic"
 }

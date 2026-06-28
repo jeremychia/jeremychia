@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "description": "Schema for application dataset records. Each record in records/*.json must conform to this schema. Run build.py to merge into applications_dataset.csv.",
   "fields": [
     {"name": "application_id", "type": "string", "description": "Folder name of the application"},
@@ -11,6 +11,9 @@
     {"name": "salary_max", "type": "integer_or_null", "description": "Maximum salary as integer, null if not stated"},
     {"name": "salary_currency", "type": "string_or_null", "description": "Currency code (EUR, GBP, USD, etc.), null if not stated"},
     {"name": "jd_authorship", "type": "categorical", "values": ["hiring_manager", "recruiter", "mixed"], "description": "Who wrote the JD — inferred from technical specificity, scale numbers, named tools vs generic language"},
+    {"name": "stakeholder_orientation", "type": "categorical", "values": ["commercial", "product", "internal_data", "finance", "mixed"], "description": "Primary audience the role serves — commercial (GTM/sales/CS), product, internal_data (data platform/peers), finance (FP&A/audit), or mixed"},
+    {"name": "autonomy_level", "type": "categorical", "values": ["strategic", "execution", "mixed"], "description": "Whether the role sets its own direction (strategic), executes direction set by others (execution), or genuinely combines both (mixed)"},
+    {"name": "geo_region", "type": "categorical", "values": ["berlin", "hamburg", "nordics", "uk_remote", "other_europe", "global_remote", "other"], "description": "Normalised geographic region derived from job_location"},
     {"name": "greenfield_vs_fix", "type": "categorical", "values": ["greenfield", "fix_scale", "mixed"], "description": "Whether the role is building new or improving existing systems"},
     {"name": "velocity_vs_rigour", "type": "categorical", "values": ["velocity", "rigour", "mixed"], "description": "Whether the role prioritises speed or correctness"},
     {"name": "domain_risk", "type": "categorical", "values": ["high", "moderate", "low"], "description": "Cost of a data error in this role — P&L, political, user-facing, operational"},
@@ -48,7 +51,9 @@
       "data_team_maturity": "Verbatim quote(s) signalling team size and stage",
       "collaboration_width": "Verbatim quote(s) naming the partner teams",
       "language_gate": "Verbatim quote of language requirement, or Not stated in JD",
-      "urgency": "Verbatim quote(s) signalling urgency, or No urgency signals present"
+      "urgency": "Verbatim quote(s) signalling urgency, or No urgency signals present",
+      "stakeholder_orientation": "Verbatim quote naming the primary audience",
+      "autonomy_level": "Verbatim verb phrase driving the autonomy classification"
     }}
   ],
   "field_groups": {

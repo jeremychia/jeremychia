@@ -9,6 +9,8 @@
   "salary_max": 7200,
   "salary_currency": "USD",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "greenfield",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -45,6 +47,8 @@
     "collaboration_width": "Data Engineers; trading teams; risk teams; finance teams",
     "data_team_maturity": "lead the analytics and visualization components of a 26-week enterprise data warehouse implementation",
     "jd_authorship": "Design and construct Microsoft Fabric Semantic Models using Gold-layer data; Create DAX measures, hierarchies, relationships, and semantic structures; Engage directly with stakeholders to translate requirements into technical designs",
+    "stakeholder_orientation": "Trader P&L, Global Position, Risk Metrics (VaR), and Financial Consolidation reporting",
+    "autonomy_level": "Support user enablement and UAT validation",
     "greenfield_vs_fix": "Design and construct Microsoft Fabric Semantic Models; Develop operational dashboards; Establish naming conventions and governance standards",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -58,6 +62,10 @@
   "data_team_maturity_reasoning": "Specific infrastructure project with defined outputs and timeline, building analytics on existing data layers rather than establishing the data function from zero.",
   "jd_authorship_quote": "Design and construct Microsoft Fabric Semantic Models using Gold-layer data; Create DAX measures, hierarchies, relationships, and semantic structures; Engage directly with stakeholders to translate requirements into technical designs",
   "jd_authorship_reasoning": "Technical specificity in Fabric/DAX/performance optimization mixed with generic stakeholder collaboration language.",
+  "stakeholder_orientation_quote": "Trader P&L, Global Position, Risk Metrics (VaR), and Financial Consolidation reporting",
+  "stakeholder_orientation_reasoning": "All primary deliverables are financial metrics and reporting; role serves finance and trading teams in a financial reporting capacity.",
+  "autonomy_level_quote": "Support user enablement and UAT validation",
+  "autonomy_level_reasoning": "The role is scoped to a defined 26-week implementation project with support-oriented language ('support') and stakeholder-driven requirements, indicating execution within set parameters rather than strategic direction-setting.",
   "greenfield_vs_fix_quote": "Design and construct Microsoft Fabric Semantic Models; Develop operational dashboards; Establish naming conventions and governance standards",
   "urgency_signal": "No urgency signals present"
 }

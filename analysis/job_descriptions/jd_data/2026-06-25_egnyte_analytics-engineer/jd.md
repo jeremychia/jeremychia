@@ -54,6 +54,8 @@ Benefits:
 
 **jd_authorship:** recruiter — responsibilities use generic action verbs without specific technical context; decisive phrase: "Collaborate across departments on data strategy"
 
+**stakeholder_orientation:** internal_data — The bulk of responsibilities focus on building data infrastructure and semantic layers for consumption by other data consumers rather than external business or GTM stakeholders.
+**autonomy_level:** execution — The responsibilities are focused on delivering specific technical outputs and managing defined processes within scope rather than setting overall direction or strategy.
 **greenfield_vs_fix:** greenfield — primary verbs are design/build/develop applied to pipelines and architecture
 
 **urgency:** standard — no urgency signals present

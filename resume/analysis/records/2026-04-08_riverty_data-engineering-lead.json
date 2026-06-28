@@ -45,6 +45,10 @@
     "data_team_maturity": "Requires experience with \"overall team size >10\" and \"multi-team delivery\"; named peers include Data Product Owners, Platform Engineering, Business IT, Data Governance, and Data Architecture — a mature, multi-function data organisation already in place.",
     "collaboration_width": "\"Champion the adoption of modern data engineering and agile delivery practices, fostering close collaboration with product owners, BI, data analysis, data science, data platform, and tech teams\" — 9+ distinct named functions.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present."
-  }
+    "urgency": "No urgency signals present.",
+    "stakeholder_orientation": "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting.",
+    "autonomy_level": "Define and execute the data engineering vision and roadmap aligned with the overall Data, AI & Analytics strategy."
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "analysts and business partners",
     "data_team_maturity": "accelerates the migration from legacy DOMO pipelines to a modern data stack",
     "jd_authorship": "refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value",
+    "stakeholder_orientation": "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights",
+    "autonomy_level": "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales",
     "greenfield_vs_fix": "Design, build, and maintain complex, scalable dbt models; Accelerate the migration from legacy DOMO pipelines",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"

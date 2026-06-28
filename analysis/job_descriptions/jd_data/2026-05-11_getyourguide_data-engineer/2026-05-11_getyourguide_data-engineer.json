@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://www.linkedin.com/jobs/view/data-engineer-traveler-data-engineering-at-getyourguide-4383493346/",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "Product;Data teams",
     "data_team_maturity": "Maintain balance between operational responsibilities and new development using team SLOs",
     "jd_authorship": "Serve as a thought partner with Product and Data teams to translate business requirements",
+    "stakeholder_orientation": "Build end-to-end data solutions independently: Deliver reliable, high-quality datasets/pipelines",
+    "autonomy_level": "Serve as a thought partner with Product and Data teams to translate business requirements",
     "greenfield_vs_fix": "Maintain balance between operational responsibilities and new development using team SLOs",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "The team operates with established SLOs and manages both operational and development work, indicating a maturing data function beyond early-stage infrastructure.",
   "jd_authorship_quote": "Serve as a thought partner with Product and Data teams to translate business requirements",
   "jd_authorship_reasoning": "Some responsibilities show specific technical understanding (data modeling, pipeline refactoring, SLOs), but generic recruiter phrases like 'thought partner' and 'translate requirements' indicate recruiter input alongside hiring manager authorship.",
+  "stakeholder_orientation_quote": "Build end-to-end data solutions independently: Deliver reliable, high-quality datasets/pipelines",
+  "stakeholder_orientation_reasoning": "The primary mission is building and maintaining data infrastructure and pipelines that internal consumers rely on, rather than directly serving business decisions or revenue functions.",
+  "autonomy_level_quote": "Serve as a thought partner with Product and Data teams to translate business requirements",
+  "autonomy_level_reasoning": "The role receives and translates business requirements from Product, then executes solutions, rather than setting strategic direction for the analytics function.",
   "greenfield_vs_fix_quote": "Maintain balance between operational responsibilities and new development using team SLOs",
   "urgency_signal": "No urgency signals present"
 }

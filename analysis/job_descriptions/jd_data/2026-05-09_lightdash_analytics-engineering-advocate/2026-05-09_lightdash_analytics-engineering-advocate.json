@@ -10,6 +10,8 @@
   "salary_currency": "GBP",
   "source_url": "https://jobs.ashbyhq.com/lightdash/309706bc-1081-48b6-89dc-f769bbe17e6d",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "mixed",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "mixed",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "shared customer Slack channels; cultivating relationships with community members",
     "data_team_maturity": "You'll stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)",
     "jd_authorship": "Active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues",
+    "stakeholder_orientation": "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems.",
+    "autonomy_level": "You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues.",
     "greenfield_vs_fix": "Build and grow community",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Lightdash has established internal analytics using their own product, suggesting a mid-stage data function that exists and is producing something but is not yet a large, highly specialized organization.",
   "jd_authorship_quote": "Active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues",
   "jd_authorship_reasoning": "Responsibilities are specific and actionable with concrete daily activities (Slack support, pair-programming, demos) rather than generic collaboration statements.",
+  "stakeholder_orientation_quote": "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems.",
+  "stakeholder_orientation_reasoning": "The role primarily serves analytics engineers and data teams (external users of Lightdash) with technical support and community knowledge-sharing, aligning with the internal_data stakeholder category.",
+  "autonomy_level_quote": "You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues.",
+  "autonomy_level_reasoning": "The role receives scoped work (user support, community advocacy, content creation) and executes it responsively, rather than defining direction or priorities for the analytics function.",
   "greenfield_vs_fix_quote": "Build and grow community",
   "urgency_signal": "No urgency signals present"
 }

@@ -81,6 +81,8 @@ In-house 3D Printing and much more!
 
 **jd_authorship:** mixed — Technical specifics like "refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features" sit alongside generic bullets such as "Collaborate with business stakeholders to understand workflows and metrics."
 
+**stakeholder_orientation:** internal_data — The primary mission is building reliable data infrastructure and products for internal analytics consumers rather than external commercial, product, or financial stakeholders.
+**autonomy_level:** mixed — The role combines strategic direction-setting over analytics engineering standards and practices with significant hands-on execution of complex modeling and transformation work.
 **greenfield_vs_fix:** mixed — Primary verbs span both build ("Design, build, and maintain complex, scalable dbt models") and migration/scale ("Accelerate the migration from legacy DOMO pipelines to the modern data platform").
 
 **urgency:** standard — No urgency signals present.

@@ -47,6 +47,10 @@
     "data_team_maturity": "\"Growing and mentoring a data engineering team and contributing to hiring decisions\" confirms the team is not yet assembled; no current team size stated.",
     "collaboration_width": "\"Collaborating with OEM partners and external developers\" — named collaborators are primarily external; internal functions beyond the data team being built are not explicitly named.",
     "language_gate": "\"Professional-level German required.\"",
-    "urgency": "\"Productionise pipelines at pace\" and \"contributing to hiring decisions\" suggest the team is being built now and the role is open because headcount is growing."
-  }
+    "urgency": "\"Productionise pipelines at pace\" and \"contributing to hiring decisions\" suggest the team is being built now and the role is open because headcount is growing.",
+    "stakeholder_orientation": "Designing and building a modern data platform for 'high-volume, real-time vehicle and transaction data'",
+    "autonomy_level": "Owning ETL and ELT pipeline development"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

@@ -45,6 +45,10 @@
     "data_team_maturity": "References include \"Analytics Engineering team\", \"Analytics Interface\", \"Commercial Analytics\", \"Analytics Innovation & Automation\", and \"Data Office product teams\" — multiple distinct sub-functions indicate a structured, maturing team within a large organisation.",
     "collaboration_width": "\"Collaborate closely with the Analytics Interface, Commercial Analytics and business teams\" and potential expansion to \"Data Science, Marketing, Finance, Operations\" — 8+ distinct named functions.",
     "language_gate": "\"Fluent English skills both verbal and written.\"",
-    "urgency": "\"Valid Through: May 6, 2026\" — a one-month posting window — and the role is described as \"essential as we strive to build a world-class analytics organization.\""
-  }
+    "urgency": "\"Valid Through: May 6, 2026\" — a one-month posting window — and the role is described as \"essential as we strive to build a world-class analytics organization.\"",
+    "stakeholder_orientation": "enable self-service data products for Markets & Channels (Commercial) data consumers and decision makers",
+    "autonomy_level": "Build data pipeline engineering, orchestration, and monitoring to deliver high-quality data products centered around Retail Execution Commercial pillar; Drive Unity Catalog governance"
+  },
+  "stakeholder_orientation": "commercial",
+  "autonomy_level": "strategic"
 }

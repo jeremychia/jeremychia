@@ -10,6 +10,8 @@
   "salary_currency": "GBP",
   "source_url": "https://jobs.ashbyhq.com/tem/66b06873-4d08-4347-9d16-dc5c24ae481c",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "Marketing;Finance;Operations;Data Engineering",
     "data_team_maturity": "Partner with Data Engineering to diagnose issues and optimize warehouse performance.",
     "jd_authorship": "Design and maintain core dbt models representing business areas like customers, revenue, and operations.",
+    "stakeholder_orientation": "Define and implement company metrics in Omni for self-serve analytics.",
+    "autonomy_level": "Define and implement company metrics in Omni for self-serve analytics.",
     "greenfield_vs_fix": "Design and maintain core dbt models representing business areas like customers, revenue, and operations.",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Established Data Engineering team, named tools in active use (dbt, Omni), and optimization work indicate a maturing function with infrastructure in place, not greenfield startup.",
   "jd_authorship_quote": "Design and maintain core dbt models representing business areas like customers, revenue, and operations.",
   "jd_authorship_reasoning": "The responsibilities include specific technical context (named tools, business domains) suggesting hiring manager input, but also generic phrasing and boilerplate verbs (design, maintain, lead) indicating recruiter involvement.",
+  "stakeholder_orientation_quote": "Define and implement company metrics in Omni for self-serve analytics.",
+  "stakeholder_orientation_reasoning": "The primary responsibility centers on enabling self-serve analytics for internal data consumers, positioning the role as analytics platform enabler rather than serving commercial or finance teams.",
+  "autonomy_level_quote": "Define and implement company metrics in Omni for self-serve analytics.",
+  "autonomy_level_reasoning": "This responsibility demonstrates both strategic direction-setting (define metrics and standards) and hands-on execution, reinforced by 'hands-on, individual contributor' combined with 'set direction for analytics patterns' expectations.",
   "greenfield_vs_fix_quote": "Design and maintain core dbt models representing business areas like customers, revenue, and operations.",
   "urgency_signal": "No urgency signals present"
 }

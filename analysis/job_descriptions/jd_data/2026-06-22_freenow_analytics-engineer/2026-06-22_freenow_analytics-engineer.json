@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://job-boards.greenhouse.io/freenow/jobs/7189275?gh_src=0c92915e1us",
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -46,6 +48,8 @@
     "collaboration_width": "Engage with analysts and scientists to understand problems and translate them into data solutions; Work with developers on data creation aligned with business logic",
     "data_team_maturity": "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment",
     "jd_authorship": "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts",
+    "stakeholder_orientation": "Build an environment where self-service capabilities are available for analysts and data consumers",
+    "autonomy_level": "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment",
     "greenfield_vs_fix": "develop new data products within a Data Mesh environment",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "Data Mesh architecture indicates an established, sophisticated data function, while the emphasis on actively developing new products and building self-service capabilities suggests they remain in a growth/scaling phase.",
   "jd_authorship_quote": "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts",
   "jd_authorship_reasoning": "Technical specificity (data contracts, data mesh architecture, self-service capabilities) indicates hiring manager input, but generic collaboration language and boilerplate action verbs suggest significant recruiter contribution.",
+  "stakeholder_orientation_quote": "Build an environment where self-service capabilities are available for analysts and data consumers",
+  "stakeholder_orientation_reasoning": "The role serves the data platform itself and internal data consumers (analysts, scientists, developers), not external commercial, product, or finance functions.",
+  "autonomy_level_quote": "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment",
+  "autonomy_level_reasoning": "Combines strategic development and ownership of data products with collaborative execution supporting analysts and scientists in a shared environment.",
   "greenfield_vs_fix_quote": "develop new data products within a Data Mesh environment",
   "urgency_signal": "No urgency signals present"
 }

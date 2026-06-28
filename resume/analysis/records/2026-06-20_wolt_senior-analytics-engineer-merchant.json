@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Lead, mentor, and guide more junior team members\" confirms junior team members are already in place; \"centrally maintained data integrations and data pipelines\" signals an established central platform team.",
     "collaboration_width": "\"The business\" broadly, \"more junior team members\" (internal data team); \"increase data literacy across the domain\" signals collaboration with domain analysts and non-technical stakeholders.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present. Multi-city listing (Berlin, Helsinki, Stockholm) suggests broad sourcing — filling a real gap but not in crisis mode."
-  }
+    "urgency": "No urgency signals present. Multi-city listing (Berlin, Helsinki, Stockholm) suggests broad sourcing — filling a real gap but not in crisis mode.",
+    "stakeholder_orientation": "Develop a self-service data modelling strategy",
+    "autonomy_level": "Lead, mentor, and guide more junior team members"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed"
 }

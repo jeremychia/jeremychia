@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Mentor analytics engineers and analysts\" — plural, implying multiple analytics engineers and analysts. \"Partner with data platform, engineering, and analytics teams\" — at least 3 distinct data sub-teams exist; \"governance\", \"standards\", and \"adoption\" language implies the team is large enough that inconsistent practices have become a problem.",
     "collaboration_width": "Teams and functions referenced verbatim: \"data platform\" team, \"engineering\" teams, \"analytics teams\", \"analysts\" (as mentorship targets), \"analytics engineers\" (as mentorship targets), \"self-service analytics\" consumers.",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency language detected. \"Principal\" seniority and architectural scope suggest a strategic hire, not a backfill."
-  }
+    "urgency": "No urgency language detected. \"Principal\" seniority and architectural scope suggest a strategic hire, not a backfill.",
+    "stakeholder_orientation": "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights",
+    "autonomy_level": "Set technical direction and drive adoption of modern modeling practices across the organization"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

@@ -47,6 +47,10 @@
     "data_team_maturity": "\"Collaborate with Product, Analytics, Engineering, and Accounting teams\" — this person bridges at least four teams, implying a specialist within a cross-functional revenue function rather than a large centralised data team. \"Support the continued implementation of our revenue subledger\" implies a small implementation team.",
     "collaboration_width": "Named verbatim: \"Product\", \"Analytics\", \"Engineering\", and \"Accounting teams\" (all named explicitly in responsibilities), plus \"external and internal audit reviews\" implies auditors as a fifth stakeholder group.",
     "language_gate": "\"English fluency as working language\" appears under Preferred / Bonus Skills — soft gate only, applies to English, not a second language.",
-    "urgency": "\"Support the continued implementation of our revenue subledger\" signals an active, in-progress project with delivery pressure baked in — this is not a replacement hire or a future-state role, it's a live build."
-  }
+    "urgency": "\"Support the continued implementation of our revenue subledger\" signals an active, in-progress project with delivery pressure baked in — this is not a replacement hire or a future-state role, it's a live build.",
+    "stakeholder_orientation": "Prepare materials for external and internal audit reviews",
+    "autonomy_level": "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
+  },
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution"
 }

@@ -45,6 +45,10 @@
     "data_team_maturity": "\"You will join a product delivery team\" — established function; \"always evolving\" architecture signals mid-maturity with existing systems to improve",
     "collaboration_width": "\"Working closely with product and business stakeholders\" — 2 named partner functions",
     "language_gate": "Not stated in JD",
-    "urgency": "No urgency signals present"
-  }
+    "urgency": "No urgency signals present",
+    "stakeholder_orientation": "Working closely with product and business stakeholders to define and build meaningful product metrics",
+    "autonomy_level": "Taking ownership of projects from scoping to delivery and adoption, working autonomously"
+  },
+  "stakeholder_orientation": "product",
+  "autonomy_level": "mixed"
 }

@@ -9,6 +9,8 @@
   "salary_max": null,
   "salary_currency": null,
   "jd_authorship": "mixed",
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed",
   "greenfield_vs_fix": "fix_scale",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "moderate",
@@ -45,6 +47,8 @@
     "collaboration_width": "Product; Go-to-Market",
     "data_team_maturity": "Design, build, test, and maintain end-to-end data models within dbt-powered systems",
     "jd_authorship": "Design, build, test, and maintain end-to-end data models within dbt-powered systems",
+    "stakeholder_orientation": "Partner consultatively with Product, Go-to-Market, and business teams on data-driven insights",
+    "autonomy_level": "shift the team from reactive support toward proactive strategy, addressing complex data architecture while enabling organizational self-serve capabilities",
     "greenfield_vs_fix": "shift the team from reactive support toward proactive strategy",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -58,6 +62,10 @@
   "data_team_maturity_reasoning": "Established tools (dbt, Airflow, AWS stack) and infrastructure with ongoing enhancement toward self-serve capabilities.",
   "jd_authorship_quote": "Design, build, test, and maintain end-to-end data models within dbt-powered systems",
   "jd_authorship_reasoning": "Technical specificity (dbt, AI data agents, self-serve solutions) mixed with generic stakeholder management language.",
+  "stakeholder_orientation_quote": "Partner consultatively with Product, Go-to-Market, and business teams on data-driven insights",
+  "stakeholder_orientation_reasoning": "The role explicitly serves Product (product stakeholder) and Go-to-Market (commercial stakeholder), plus enables self-serve for the data team (internal_data stakeholder).",
+  "autonomy_level_quote": "shift the team from reactive support toward proactive strategy, addressing complex data architecture while enabling organizational self-serve capabilities",
+  "autonomy_level_reasoning": "The role combines strategic direction-setting ('shift toward proactive strategy', 'establish governance') with execution-focused responsibilities (design, build, maintain models).",
   "greenfield_vs_fix_quote": "shift the team from reactive support toward proactive strategy",
   "urgency_signal": "No urgency signals present"
 }

@@ -10,6 +10,8 @@
   "salary_currency": null,
   "source_url": "https://jobs.ashbyhq.com/lovable/081be99e-95bf-4992-9cf2-d16371635ac1",
   "jd_authorship": "hiring_manager",
+  "stakeholder_orientation": "finance",
+  "autonomy_level": "execution",
   "greenfield_vs_fix": "mixed",
   "velocity_vs_rigour": "rigour",
   "domain_risk": "high",
@@ -46,6 +48,8 @@
     "collaboration_width": "Finance",
     "data_team_maturity": "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics",
     "jd_authorship": "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics",
+    "stakeholder_orientation": "Collaborate with Finance to convert requirements into structured data solutions",
+    "autonomy_level": "Collaborate with Finance to convert requirements into structured data solutions",
     "greenfield_vs_fix": "Develop and sustain dimensional models",
     "language_gate": "No urgency signals present",
     "urgency": "No urgency signals present"
@@ -59,6 +63,10 @@
   "data_team_maturity_reasoning": "The use of 'sustain' indicates existing infrastructure while 'develop' shows ongoing growth, suggesting a team with established tooling building out new capabilities.",
   "jd_authorship_quote": "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics",
   "jd_authorship_reasoning": "The responsibility names a specific tool (SQLMesh) with precise business context (revenue recognition, subscription metrics) that only someone doing this job would articulate.",
+  "stakeholder_orientation_quote": "Collaborate with Finance to convert requirements into structured data solutions",
+  "stakeholder_orientation_reasoning": "Finance is explicitly named as the primary stakeholder, and the role's responsibilities center entirely on delivering financial metrics and revenue data.",
+  "autonomy_level_quote": "Collaborate with Finance to convert requirements into structured data solutions",
+  "autonomy_level_reasoning": "Finance sets the requirements (revenue recognition, churn metrics) and this role executes the technical solution to deliver against those requirements.",
   "greenfield_vs_fix_quote": "Develop and sustain dimensional models",
   "urgency_signal": "No urgency signals present"
 }

@@ -55,6 +55,8 @@ We may use artificial intelligence (AI) tools to support parts of the hiring pro
 
 **jd_authorship:** hiring_manager — Responsibilities are technically precise: "dbt (or similar SQL-based transformation frameworks) in BigQuery", "testing, observability, and CI/CD", "key metrics for platform health, developer productivity, and ML/AI platform adoption", "support rotation for key datasets" — a reader knows what this job actually involves day-to-day.
 
+**stakeholder_orientation:** internal_data — The primary focus is on metrics and data assets that support Product and Engineering teams' decisions on platform health, developer productivity, and ML/AI adoption.
+**autonomy_level:** execution — The role is framed around partnering with and supporting other teams to deliver on their priorities, with limited independent strategic direction-setting.
 **greenfield_vs_fix:** fix_scale — Primary verbs are maintain/improve/extend/contribute applied to existing models, pipelines, and metrics: "build and maintain analytical data models", "improve data quality, performance, and cost efficiency".
 
 **urgency:** standard — No urgency signals present.

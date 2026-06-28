@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Data Mesh environment\" signals a mature organisation that has deliberately adopted distributed data ownership; \"engage with analysts and scientists\" (plural, distinct roles) signals a multi-role data function.",
     "collaboration_width": "Named explicitly: \"stakeholders\" (business side), \"analysts\" (data consumers), \"scientists\" (data science team), \"developers\" (engineering/data platform) — width is wide (4+ distinct functions).",
     "language_gate": "\"Excellent English communication skills\" is required; no language requirement beyond English is stated.",
-    "urgency": "No urgency signals present. Standard job board posting; the Data Mesh transformation context suggests a considered hire, not a backfill."
-  }
+    "urgency": "No urgency signals present. Standard job board posting; the Data Mesh transformation context suggests a considered hire, not a backfill.",
+    "stakeholder_orientation": "Build an environment where self-service capabilities are available for analysts and data consumers",
+    "autonomy_level": "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "mixed"
 }

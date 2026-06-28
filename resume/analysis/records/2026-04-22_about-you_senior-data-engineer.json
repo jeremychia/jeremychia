@@ -45,6 +45,10 @@
     "data_team_maturity": "\"Creating foundational tools and monitoring systems for other data teams\" implies multiple data teams exist. \"Transition to our new DataPlatform\" implies a legacy stack is live and being replaced — suggesting the data function has been operational for several years.",
     "collaboration_width": "Functions referenced: \"other data teams\" (platform tooling consumer), executive audience (\"most important company reports that inform executive decisions\"), \"source system\" owners implied by \"maintaining source system performance\".",
     "language_gate": "Not stated in JD.",
-    "urgency": "No urgency signals present. Scope signals criticality — \"most important company reports\", \"largest data movement operations\", \"terabyte-scale transfers\" — but no overt urgency language."
-  }
+    "urgency": "No urgency signals present. Scope signals criticality — \"most important company reports\", \"largest data movement operations\", \"terabyte-scale transfers\" — but no overt urgency language.",
+    "stakeholder_orientation": "creating foundational tools and monitoring systems for other data teams",
+    "autonomy_level": "drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }

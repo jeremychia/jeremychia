@@ -47,6 +47,10 @@
     "data_team_maturity": "\"Serve as interface between stakeholders, Analytics Consulting, and the DWH team\" names three distinct functions, implying a defined team structure; \"define and enforce modeling standards\" implies those standards are not yet fully established — evolving, not founding.",
     "collaboration_width": "Named verbatim: \"Analytics Consulting\" (\"Implement and maintain KPI logic in collaboration with Analytics Consulting\"), \"DWH team\", and \"stakeholders\" (\"Clear communication with technical and non-technical stakeholders\") — width is moderate (3 distinct named functions).",
     "language_gate": "\"Excellent German and very good English skills\" — hard gate; German is listed as a required qualification, not a nice-to-have.",
-    "urgency": "No urgency signals present. Structured, formal German-company JD with standard requirements; no deadline or validity window stated."
-  }
+    "urgency": "No urgency signals present. Structured, formal German-company JD with standard requirements; no deadline or validity window stated.",
+    "stakeholder_orientation": "Transform DWH data into business-ready datasets",
+    "autonomy_level": "Support ad-hoc analytical requests requiring data modeling"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "execution"
 }

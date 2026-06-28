@@ -109,6 +109,8 @@ Best of luck !
 
 **jd_authorship:** recruiter — Responsibilities are generic boilerplate ("Interact with your data peers to advocate good practices among the practitioners", "Keep up to speed with the novelty of the sector") with no tool-specific application context, no scale numbers, and no methodology specificity. Decisive phrase: "Interact with your data peers to advocate good practices among the practitioners".
 
+**stakeholder_orientation:** internal_data — The primary emphasis is on setting standards and governance for data practitioners within the team and advancing the data platform, making the data function itself the core audience.
+**autonomy_level:** mixed — The role is framed as 'pivotal' in defining standards, setting architecture direction, and developing team members, indicating clear strategic ownership and direction-setting expectations.
 **greenfield_vs_fix:** mixed — Primary verbs span both build ("Build-up our Data Warehouse") and consolidate/extend ("consolidating existing ones", "setting up standards").
 
 **urgency:** standard — No urgency signals present in the JD.

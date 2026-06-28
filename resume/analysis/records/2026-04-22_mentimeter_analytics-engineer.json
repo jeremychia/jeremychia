@@ -47,6 +47,10 @@
     "data_team_maturity": "\"Build standards, documentation, and data catalogs for the organization\" implies these do not yet exist — early maturity signal. \"Design, own, and evolve core data models\" with no mention of peers doing the same implies this person is the primary or sole analytics engineering owner.",
     "collaboration_width": "Teams and functions referenced verbatim: \"business and technical stakeholders\" (paired group), \"sales\" analytics, \"marketing\" analytics, \"product\" analytics. \"Partner with business and technical stakeholders from problem framing to shipped artefacts\" spans multiple business functions.",
     "language_gate": "\"Communication in English with both technical and non-technical audiences\" is listed under Required Qualifications. No other language requirement stated.",
-    "urgency": "No urgency language detected. Posting reads as a planned, deliberate hire — implies they are willing to wait for the right person."
-  }
+    "urgency": "No urgency language detected. Posting reads as a planned, deliberate hire — implies they are willing to wait for the right person.",
+    "stakeholder_orientation": "Build standards, documentation, and data catalogs for the organization",
+    "autonomy_level": "Design, own, and evolve core data models and the modelling architecture"
+  },
+  "stakeholder_orientation": "internal_data",
+  "autonomy_level": "strategic"
 }
