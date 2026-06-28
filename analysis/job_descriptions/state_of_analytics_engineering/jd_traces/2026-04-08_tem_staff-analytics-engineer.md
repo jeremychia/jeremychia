@@ -86,8 +86,10 @@ Approximately 2–3 weeks total:
 | velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
 | domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
-| data_team_maturity | early | early | mid | mid | 33% | ✗ |
-| jd_authorship | hiring_manager | mixed | mixed | hiring_manager | 33% | ✗ |
+| data_team_maturity | early | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level |  | mixed | strategic | strategic | 33% | ✗ |
 
 ---
 
@@ -99,17 +101,17 @@ Approximately 2–3 weeks total:
 **Run 1:** `rigour` ✗
 > Quote: "Establish data quality standards using tests, CI/CD, and documentation."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality standards, testing infrastructure, and documentation as core professional expectations, with accuracy and maintainability repeated as explicit priorities.
+> Reasoning: Multiple rigour signals (data quality, tests, CI/CD, documentation) significantly outnumber velocity signals, establishing clear prioritization of correctness and governance.
 
 **Run 2:** `rigour` ✗
 > Quote: "Establish data quality standards using tests, CI/CD, and documentation."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes quality practices (tests, CI/CD, documentation) and data standards, with no velocity language like 'move fast' or 'ship quickly' — this is rigour-oriented.
+> Reasoning: The responsibilities section emphasises data quality standards, testing, CI/CD, and documentation as core expectations, which are rigour signals that significantly outnumber the velocity references.
 
 **Run 3:** `rigour` ✗
 > Quote: "Establish data quality standards using tests, CI/CD, and documentation."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality, testing, and CI/CD as core expectations, with speed mentioned only as one factor to balance alongside accuracy and maintainability.
+> Reasoning: Multiple rigour signals (data quality, tests, CI/CD, documentation) substantially outnumber the single velocity signal appearing in requirements.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
@@ -117,19 +119,19 @@ Approximately 2–3 weeks total:
 **Manual:** `high`
 
 **Run 1:** `moderate` ✗
-> Quote: "customers, revenue, and operations"
+> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
 > Verified: ✓ found in JD
-> Reasoning: Revenue is mentioned as a core analytics domain within an energy-trading sector, but the JD lacks explicit financial reporting, compliance, or regulatory language despite the high-risk industry context.
+> Reasoning: While revenue is involved, the JD lacks explicit regulatory, compliance, or financial reporting language; focus is analytics infrastructure rather than financial controls.
 
 **Run 2:** `moderate` ✗
 > Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
 > Verified: ✓ found in JD
-> Reasoning: Revenue is financially important but the JD frames this as analytics engineering work without explicit regulatory, compliance, or financial reporting language that would signal high risk.
+> Reasoning: Though the sector is financial (energy transactions), the JD language focuses on business analytics and self-serve analytics infrastructure rather than compliance, audit, or regulatory reporting.
 
 **Run 3:** `moderate` ✗
 > Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
 > Verified: ✓ found in JD
-> Reasoning: While revenue data is involved, the JD uses generic business language without explicit financial reporting, compliance, or regulatory requirements typical of high-risk domains.
+> Reasoning: While the energy-transactions sector carries inherent risk, the JD emphasizes business analytics without regulatory, compliance, or explicit financial reporting language.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
@@ -139,58 +141,94 @@ Approximately 2–3 weeks total:
 **Run 1:** `4` ✓
 > Quote: "partnering with Marketing, Finance, Operations, and Data Engineering teams"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named teams are explicitly listed as collaboration partners in the role description.
+> Reasoning: Four distinct named functions are explicitly listed as collaboration partners.
 
 **Run 2:** `4` ✓
-> Quote: "Marketing, Finance, Operations, and Data Engineering"
+> Quote: "Marketing, Finance, Operations, and Data Engineering teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names four distinct partner teams in the responsibilities section.
+> Reasoning: Four distinct named teams are explicitly mentioned as collaboration partners in the role description.
 
 **Run 3:** `4` ✓
 > Quote: "Marketing; Finance; Operations; Data Engineering"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Four explicitly named teams listed as collaboration partners in the partnership statement.
+> Reasoning: Four distinct named teams explicitly listed as collaboration partners in the role description.
 
 ### data_team_maturity
 **Manual:** `early`
 
-**Run 1:** `early` ✓
-> Quote: "building the analytics foundation"
+**Run 1:** `mid` ✗
+> Quote: "This hands-on, individual contributor position focuses on building the analytics foundation."
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is explicitly to establish the analytics foundation, which directly signals early-stage team status focused on foundational work.
+> Reasoning: The analytics layer is newly being built on top of existing infrastructure (dbt, Omni, established Data Engineering team), indicating mid-stage maturity.
 
 **Run 2:** `mid` ✗
-> Quote: "Partner with Data Engineering to diagnose issues and optimize warehouse performance."
-> Verified: ✓ found in JD
-> Reasoning: Established Data Engineering team, named tools in active use (dbt, Omni), and optimization work indicate a maturing function with infrastructure in place, not greenfield startup.
-
-**Run 3:** `mid` ✗
 > Quote: "building the analytics foundation"
 > Verified: ✓ found in JD
-> Reasoning: The analytics layer is being built with existing infrastructure at scale (1B rows daily, separate Data Engineering team present), indicating growth phase rather than greenfield or fully mature stage.
+> Reasoning: The role involves building the analytics layer, but with existing infrastructure (dbt, Omni, Data Engineering team) already in place and operating at scale.
+
+**Run 3:** `mid` ✗
+> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
+> Verified: ✓ found in JD
+> Reasoning: Existing named tools (dbt, Omni) are already deployed and referenced in responsibilities, indicating past infrastructure work; this IC hire is scaling/formalizing an established foundation.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
-
-⚠ **LLM inconsistency**: runs gave ['early', 'mid', 'mid']
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `mixed` ✗
-> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
+**Run 1:** `hiring_manager` ✓
+> Quote: "Production dbt experience including incremental models at scale (~1B rows daily), custom macros, optimization, and architecture."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities include specific technical context (named tools, business domains) suggesting hiring manager input, but also generic phrasing and boilerplate verbs (design, maintain, lead) indicating recruiter involvement.
+> Reasoning: Specific technical details like ~1B rows daily scale, incremental models, and custom macros indicate direct hiring manager authorship.
 
-**Run 2:** `mixed` ✗
-> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
+**Run 2:** `hiring_manager` ✓
+> Quote: "Production dbt experience including incremental models at scale (~1B rows daily), custom macros, optimization, and architecture."
 > Verified: ✓ found in JD
-> Reasoning: Tool-specific responsibilities (dbt models, Omni metrics, tests/CI/CD) show hiring manager input, but generic boilerplate like 'lead cross-domain analytics projects spanning multiple teams' indicates recruiter contribution.
+> Reasoning: The requirements contain highly specific technical details and scale metrics that only come from someone who performs this work; a recruiter would not specify incremental models at 1B rows daily.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
+> Quote: "Production dbt experience including incremental models at scale (~1B rows daily), custom macros, optimization, and architecture."
 > Verified: ✓ found in JD
-> Reasoning: The specific tools (dbt, Omni), named business areas, production scale context, and technical approaches (tests, CI/CD, warehouse optimization) indicate hiring manager authored this with deep technical knowledge.
+> Reasoning: Specific scale metrics, tool-specific technical depth (incremental models, custom macros, architecture decisions), and domain context indicate hands-on technical authorship.
 
-⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+### stakeholder_orientation
+**Manual:** ``
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+**Run 1:** `internal_data` ✗
+> Quote: "Define and implement company metrics in Omni for self-serve analytics."
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibility centers on enabling self-serve analytics for internal data consumers, positioning the role as analytics platform enabler rather than serving commercial or finance teams.
+
+**Run 2:** `internal_data` ✗
+> Quote: "Define and implement company metrics in Omni for self-serve analytics."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly emphasises self-serve analytics and building analytics infrastructure; while it partners with other teams, the primary mission is enabling internal analytics consumers.
+
+**Run 3:** `internal_data` ✗
+> Quote: "Define and implement company metrics in Omni for self-serve analytics."
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is building analytics infrastructure and enabling self-serve access for internal consumers, not serving commercial, product, or finance functions directly.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `mixed` ✗
+> Quote: "Define and implement company metrics in Omni for self-serve analytics."
+> Verified: ✓ found in JD
+> Reasoning: This responsibility demonstrates both strategic direction-setting (define metrics and standards) and hands-on execution, reinforced by 'hands-on, individual contributor' combined with 'set direction for analytics patterns' expectations.
+
+**Run 2:** `strategic` ✗
+> Quote: "Ability to set direction for analytics patterns, standards, and strategy."
+> Verified: ✓ found in JD
+> Reasoning: The requirements explicitly demand the ability to set direction for patterns, standards, and strategy, indicating the role is expected to shape how analytics is delivered rather than execute assigned work.
+
+**Run 3:** `strategic` ✗
+> Quote: "Ability to set direction for analytics patterns, standards, and strategy."
+> Verified: ✓ found in JD
+> Reasoning: Requirements explicitly expect the role to set direction and establish standards, with strategic verbs (define, establish, lead, build) driving the responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']

@@ -102,6 +102,34 @@ Focus exclusively on the **responsibilities section** (not the requirements list
 
 Quote the single most decisive phrase from the responsibilities section in the evidence field.
 
+### stakeholder_orientation
+
+Values: `commercial` | `product` | `internal_data` | `finance` | `mixed`
+
+Who does this role primarily serve? Read the responsibilities and the framing of the role's impact — not just the requirements list.
+
+- **commercial**: Primary audience is GTM, revenue, sales, customer success, marketing, or partnerships. Signal phrases: "revenue operations", "sales teams", "GTM", "go-to-market", "customer success", "commercial stakeholders", "pipeline", "lead assignment", "win rate", "churn". The work feeds the commercial engine.
+- **product**: Primary audience is product, engineering, growth, or experimentation teams. Signal phrases: "product analytics", "experiment", "A/B test", "funnel", "feature adoption", "user behaviour", "growth team", "product teams". The work informs product decisions.
+- **internal_data**: Primary audience is the data function itself — data engineers, other analysts, data scientists, or platform consumers. Signal phrases: "data platform", "self-serve analytics", "data consumers", "analytics infrastructure", "data team", "modelling layer". The role builds capability for other data practitioners.
+- **finance**: Primary audience is FP&A, controllership, accounting, audit, or executive reporting. Signal phrases: "financial reporting", "FP&A", "P&L", "board reporting", "forecasting", "controllership", "audit", "budget". The work feeds financial decision-making or compliance.
+- **mixed**: Two or more of the above with genuinely equal weight. Do not use `mixed` just because the role is described as "cross-functional" — assess where the responsibilities section places the emphasis.
+- **Tie-breaker**: If the named stakeholder teams span categories but the responsibilities section emphasises one more than others → classify as that category. Use `mixed` only when emphasis is genuinely split.
+
+Quote the named stakeholder group or framing phrase most decisive in the classification.
+
+### autonomy_level
+
+Values: `strategic` | `execution` | `mixed`
+
+Does the role define its own direction, or execute direction set by others? Read the verb choices and the framing of scope in the responsibilities section.
+
+- **strategic**: The role is expected to set direction, define priorities, and shape how analytics is delivered. Signal verbs: "define", "establish", "own", "shape", "lead", "drive", "determine", "architect", "build from scratch". Signal phrases: "you will define", "shape how analytics is delivered", "shift from reactive to proactive", "set the strategy", "build the roadmap", "decide how".
+- **execution**: The role receives scoped work and delivers it. Signal verbs: "support", "assist", "deliver", "help", "contribute to", "work with". Signal phrases: "you will support the team", "assist with", "work alongside", "contribute to the roadmap", "deliver against priorities". Scope is set by others — PM, tech lead, or senior stakeholder.
+- **mixed**: The role genuinely combines both. Common pattern: owns a defined technical domain (strategic) but is a support function to a business team (execution). E.g. "own the data model for GTM" (strategic in the technical layer) + "support the sales team's requests" (execution toward a stakeholder). Apply `mixed` only when the responsibilities section clearly contains both: strategic ownership of something AND execution in service of something else.
+- **Tie-breaker**: If strategic verbs appear but only in the context of a narrow technical sub-problem (e.g. "own the dbt model structure") while the overall role framing is support-oriented → `execution`. If the role is described as building/defining the analytics function for a domain → `strategic`.
+
+Quote the verb phrase most decisive in the classification.
+
 ---
 
 ## Step 3 — Tool and stack extraction
@@ -189,6 +217,10 @@ Write `jd_data/{base-name}/jd.md` with:
 
 **jd_authorship:** {hiring_manager|mixed|recruiter} — {one sentence explaining the classification, quoting the decisive phrase}
 
+**stakeholder_orientation:** {commercial|product|internal_data|finance|mixed} — {one sentence naming the primary audience, quoting the decisive phrase}
+
+**autonomy_level:** {strategic|execution|mixed} — {one sentence explaining the classification, quoting the decisive verb phrase}
+
 **greenfield_vs_fix:** {greenfield|fix_scale|mixed} — {one sentence}
 
 **urgency:** {urgent|standard} — {one sentence}
@@ -225,6 +257,8 @@ Write `jd_data/{base-name}/{base-name}.json` with this exact structure:
   "salary_max": {integer or null},
   "salary_currency": "{EUR|GBP|USD|etc. or null}",
   "jd_authorship": "{hiring_manager|mixed|recruiter}",
+  "stakeholder_orientation": "{commercial|product|internal_data|finance|mixed}",
+  "autonomy_level": "{strategic|execution|mixed}",
   "greenfield_vs_fix": "{greenfield|fix_scale|mixed}",
   "velocity_vs_rigour": "{velocity|rigour|mixed}",
   "domain_risk": "{high|moderate|low}",
@@ -261,6 +295,8 @@ Write `jd_data/{base-name}/{base-name}.json` with this exact structure:
     "collaboration_width": "{semicolon-separated list of named teams counted}",
     "data_team_maturity": "{verbatim quote driving the classification}",
     "jd_authorship": "{verbatim quote driving the classification}",
+    "stakeholder_orientation": "{verbatim quote naming the primary audience}",
+    "autonomy_level": "{verbatim verb phrase driving the classification}",
     "greenfield_vs_fix": "{verbatim quote driving the classification}",
     "language_gate": "{verbatim language requirement quote, or 'Not stated in JD'}",
     "urgency": "{verbatim urgency signal, or 'No urgency signals present'}"
@@ -270,7 +306,24 @@ Write `jd_data/{base-name}/{base-name}.json` with this exact structure:
 
 ---
 
-## Step 5 — Output summary to user
+## Step 5 — Run classifier to generate trace
+
+Run the classifier script to produce the LLM consistency trace for this JD:
+
+```bash
+cd analysis/job_descriptions/state_of_analytics_engineering && python3 classify_jds.py
+```
+
+The script is incremental — it reads `llm_classifications.csv` and skips already-processed IDs, so it will only classify the new JD. It writes:
+- `state_of_analytics_engineering/jd_traces/{base-name}.md` — 3-run LLM trace with evidence verification
+- `state_of_analytics_engineering/llm_classifications.csv` — appends one row
+- `state_of_analytics_engineering/consistency_report.md` — regenerated
+
+If the script fails (binary path issue, timeout), note it in the summary and continue — the three core files are already written.
+
+---
+
+## Step 6 — Output summary to user
 
 Print a short summary:
 
@@ -291,6 +344,7 @@ Files written:
 - jd_data/{base-name}/jd_archive.md
 - jd_data/{base-name}/jd.md
 - jd_data/{base-name}/{base-name}.json
+- state_of_analytics_engineering/jd_traces/{base-name}.md
 
 Files written to jd_data/{base-name}/
 ```

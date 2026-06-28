@@ -66,7 +66,9 @@
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 2 | 2 | 2 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
+| jd_authorship | mixed | mixed | recruiter | mixed | 33% | ✓ |
+| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level |  | execution | execution | mixed | 33% | ✗ |
 
 ---
 
@@ -78,17 +80,17 @@
 **Run 1:** `rigour` ✓
 > Quote: "Ensure data quality through testing, validation, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, validation, quality standards, and governance with no mention of speed, iteration, or shipping.
+> Reasoning: The responsibilities section emphasizes quality, testing, validation, and monitoring with no velocity-oriented language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Ensure data quality through testing, validation, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, testing, validation, and monitoring as core responsibilities, with no velocity-oriented language like "fast-paced" or "move fast".
+> Reasoning: The responsibilities emphasize testing, validation, monitoring, and enforcing standards with no velocity, shipping, or speed language present.
 
 **Run 3:** `rigour` ✓
 > Quote: "Ensure data quality through testing, validation, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, testing, validation, monitoring, and modeling standards with no counterbalancing velocity signals, indicating a rigour-focused orientation.
+> Reasoning: The JD emphasizes data quality, testing, validation, monitoring, standards, and best practices with no velocity language present.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -96,17 +98,17 @@
 **Run 1:** `moderate` ✓
 > Quote: "Transform DWH data into business-ready datasets"
 > Verified: ✓ found in JD
-> Reasoning: The JD signals standard business analytics and BI work without explicit financial reporting, regulatory compliance, or mission-critical language.
+> Reasoning: The JD describes business analytics and BI work without explicit financial reporting, compliance, or regulatory language that would signal high risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "Transform DWH data into business-ready datasets"
+> Quote: "Translate business requirements into clean, reusable data structures"
 > Verified: ✓ found in JD
-> Reasoning: The JD indicates business decision support through analytics without explicit financial reporting, compliance, or regulatory language that would indicate higher risk.
+> Reasoning: The JD emphasizes supporting business analytics and decision-making without explicit financial reporting, compliance, or regulatory consequences language.
 
 **Run 3:** `moderate` ✓
 > Quote: "Transform DWH data into business-ready datasets"
 > Verified: ✓ found in JD
-> Reasoning: The JD focuses on business analytics without explicit financial reporting, compliance, or regulatory language, indicating moderate domain risk typical of business intelligence roles.
+> Reasoning: The responsibilities focus on operational analytics and business intelligence rather than financial reporting, regulatory compliance, or mission-critical systems.
 
 ### collaboration_width
 **Manual:** `3`
@@ -114,17 +116,17 @@
 **Run 1:** `2` ✗
 > Quote: "Analytics Consulting; DWH team"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD names two distinct partner teams: Analytics Consulting and the DWH team.
+> Reasoning: Two named partner teams are explicitly mentioned as collaboration points in the responsibilities.
 
 **Run 2:** `2` ✗
 > Quote: "Analytics Consulting; DWH team"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Two named teams are explicitly mentioned as collaboration partners: Analytics Consulting and the DWH team.
+> Reasoning: Only two explicitly named teams are identified in the responsibilities and role description.
 
 **Run 3:** `2` ✗
 > Quote: "Analytics Consulting; DWH team"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners in the responsibilities section.
+> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners in the responsibilities.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
 
@@ -132,36 +134,78 @@
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Serve as interface between stakeholders, Analytics Consulting, and the DWH team"
-> Verified: ✓ found in JD
-> Reasoning: Multiple established data/analytics teams and named tools (dbt, DWH) indicate an operating data function that has grown beyond early stage but not massive scale.
-
-**Run 2:** `mid` ✓
 > Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
 > Verified: ✓ found in JD
-> Reasoning: Named tools with specific operational context and multiple existing data teams indicate an established but growing data function rather than early-stage or mature-scale operations.
+> Reasoning: Named tools in responsibilities with existing infrastructure and language around growth and evolution indicate a mid-stage team.
+
+**Run 2:** `mid` ✓
+> Quote: "Build and evolve data models and marts using tools like dbt"
+> Verified: ✓ found in JD
+> Reasoning: Named tool in responsibilities paired with language of evolving existing systems indicates a growing data function with established foundational infrastructure.
 
 **Run 3:** `mid` ✓
 > Quote: "Serve as interface between stakeholders, Analytics Consulting, and the DWH team"
 > Verified: ✓ found in JD
-> Reasoning: Multiple established data roles and teams are referenced with existing tooling (dbt) already in use, indicating a data function that exists and is evolving rather than greenfield or mature scale.
+> Reasoning: Multiple established data functions exist with specific roles and charters, and the position involves defining standards, indicating growth beyond early stage but not yet mature.
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `hiring_manager` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical details (marts, dbt, KPI logic, DWH, modeling standards) that only someone who performs this work would include.
+> Reasoning: Specific technical details like dbt with application context are mixed with generic action verbs like support and serve.
 
-**Run 2:** `hiring_manager` ✗
+**Run 2:** `recruiter` ✗
 > Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain named tools with precise application context (dbt for scalable analytics) and specific technical concepts (KPI logic, modeling standards, data quality testing) that indicate authorship by someone with direct job experience.
+> Reasoning: The JD mentions dbt without specific application context, scale, volume, or methodology details that would indicate hiring manager domain expertise.
 
-**Run 3:** `hiring_manager` ✗
-> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
+**Run 3:** `mixed` ✓
+> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics; Ensure data quality through testing, validation, and monitoring"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD includes specific technical context (dbt, KPI logic, modeling standards) alongside generic collaboration language.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `internal_data` ✗
+> Quote: "Transform DWH data into business-ready datasets"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical details about business logic implementation, named tools, and explicit team workflows that demonstrate direct knowledge of the actual work rather than generic recruiter language.
+> Reasoning: The role primarily serves the analytics function and data consumers through infrastructure and data modeling work.
 
-⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+**Run 2:** `internal_data` ✗
+> Quote: "Serve as interface between stakeholders, Analytics Consulting, and the DWH team"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary purpose is serving as part of the internal analytics infrastructure and data function rather than directly driving commercial, product, or finance outcomes.
+
+**Run 3:** `internal_data` ✗
+> Quote: "Transform DWH data into business-ready datasets"
+> Verified: ✓ found in JD
+> Reasoning: The role is focused on building the modeling layer and analytics infrastructure to serve internal Analytics Consulting and data consumers, not external commercial or specific business functions.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `execution` ✗
+> Quote: "Support ad-hoc analytical requests requiring data modeling"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize executing defined work and supporting assigned requests rather than setting strategic direction for analytics.
+
+**Run 2:** `execution` ✗
+> Quote: "Translate business requirements into clean, reusable data structures"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on translating externally-set requirements and supporting ad-hoc requests indicates executing direction set by others rather than setting strategic direction.
+
+**Run 3:** `mixed` ✗
+> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics; Define and enforce modeling standards and best practices; Support ad-hoc analytical requests requiring data modeling"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role combines strategic ownership of the modeling domain and governance with execution of support requests and interface responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']

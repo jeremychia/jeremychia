@@ -56,11 +56,13 @@ Our users' wins are our wins. You'll be active daily in shared customer Slack ch
 
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
-| velocity_vs_rigour | velocity | mixed | mixed | rigour | 33% | ✗ |
+| velocity_vs_rigour | velocity | mixed | rigour | mixed | 33% | ✗ |
 | domain_risk | low | moderate | moderate | moderate | 100% | ✗ |
-| collaboration_width | 3 | 0 | 2 | 0 | 33% | ✗ |
-| data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| collaboration_width | 3 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | early | mid | mature | mature | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | mixed | hiring_manager | 33% | ✗ |
+| stakeholder_orientation |  | internal_data | commercial | commercial | 33% | ✗ |
+| autonomy_level |  | execution | mixed | mixed | 33% | ✗ |
 
 ---
 
@@ -72,39 +74,39 @@ Our users' wins are our wins. You'll be active daily in shared customer Slack ch
 **Run 1:** `mixed` ✗
 > Quote: "You'll balance fast, practical solutions with thoughtful, strategic guidance on analytics architecture and process improvement."
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly frames the role as balancing speed with strategic depth, and the company values emphasize shipping at 80% while the role emphasizes teaching and best practices.
+> Reasoning: The responsibilities explicitly combine velocity (fast, practical solutions) and rigour (thoughtful guidance, architecture, process improvement) as equally important, indicating genuine mixed orientation.
 
-**Run 2:** `mixed` ✗
+**Run 2:** `rigour` ✗
 > Quote: "balance fast, practical solutions with thoughtful, strategic guidance on analytics architecture and process improvement"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly frames the role as balancing speed and strategic rigor, with velocity signals (fast, accelerate) appearing alongside rigorous language (thoughtful, best practices, maintain quality).
+> Reasoning: The role emphasizes thoughtful strategic guidance, world-class tutorials, and best practices, with 'fast' referring to responsiveness in support rather than delivery velocity.
 
-**Run 3:** `rigour` ✗
-> Quote: "thoughtful, strategic guidance on analytics architecture and process improvement"
+**Run 3:** `mixed` ✗
+> Quote: "balance fast, practical solutions with thoughtful, strategic guidance on analytics architecture and process improvement"
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals emphasize quality, expertise, and strategic thinking (world-class tutorials, best practices, process improvement, authenticity) far outweigh the single velocity signal of fast, practical solutions.
+> Reasoning: The responsibilities section explicitly combines velocity-focused language (fast, practical) with rigour-focused language (thoughtful, strategic guidance, architecture improvement).
 
 ⚠ **Disagreement**: manual=`velocity` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'rigour']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'rigour', 'mixed']
 
 ### domain_risk
 **Manual:** `low`
 
 **Run 1:** `moderate` ✗
-> Quote: "Deep understanding of business intelligence and analytics engineering workflows"
+> Quote: "help teams with everything from building dashboards and writing SQL to analytics engineering best practices and data modeling strategy."
 > Verified: ✓ found in JD
-> Reasoning: The role is in the BI/analytics domain affecting business decisions but lacks explicit financial, compliance, or regulatory risk signals that would indicate high risk.
+> Reasoning: The role supports business analytics decision-making rather than financial reporting or regulatory compliance, placing consequences in the moderate range.
 
 **Run 2:** `moderate` ✗
-> Quote: "helping teams win with data"
-> Verified: ✓ found in JD
-> Reasoning: This is a SaaS BI tool company supporting analytics work, not directly responsible for financial reporting, compliance, or regulatory requirements, placing it in the moderate risk category.
-
-**Run 3:** `moderate` ✗
 > Quote: "help teams with everything from building dashboards and writing SQL to analytics engineering best practices and data modeling strategy"
 > Verified: ✓ found in JD
-> Reasoning: The role supports general business intelligence and decision-making without explicit mention of financial reporting, regulatory compliance, or other high-risk domains.
+> Reasoning: While the role advises on data practices that affect users' business decisions, the JD doesn't invoke financial reporting, compliance, or regulatory language, and the advocate supports rather than owns their users' data risk.
+
+**Run 3:** `moderate` ✗
+> Quote: "analytics engineering best practices and data modeling strategy"
+> Verified: ✓ found in JD
+> Reasoning: The role focuses on general analytics engineering support affecting business decisions but does not explicitly address financial reporting, compliance, regulatory, or audit responsibilities.
 
 ⚠ **Disagreement**: manual=`low` vs LLM majority=`moderate`
 
@@ -112,60 +114,106 @@ Our users' wins are our wins. You'll be active daily in shared customer Slack ch
 **Manual:** `3`
 
 **Run 1:** `0` ✗
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: The JD mentions collaborating with users and community but does not explicitly name any internal partner teams or functions.
-
-**Run 2:** `2` ✗
-> Quote: "shared customer Slack channels; cultivating relationships with community members"
+> Quote: "None identified"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Two distinct collaboration partners are explicitly named: customers and community members.
+> Reasoning: The responsibilities focus on external user support and community engagement with no named internal partner functions (Finance, Product, Engineering, etc.) explicitly listed.
+
+**Run 2:** `0` ✗
+> Quote: "both internally and in the community"
+> Verified: ✓ found in JD
+> Reasoning: While the role serves customers and community members externally, no specific internal teams or functions are explicitly named as collaboration partners.
 
 **Run 3:** `0` ✗
 > Quote: ""
 > Verified: ✓ found in JD
-> Reasoning: No named internal teams or functions are explicitly identified as collaboration partners in the role responsibilities.
+> Reasoning: While the role involves community engagement and team participation, no specific named organizational functions (Product, Engineering, Marketing, Finance, etc.) are explicitly mentioned as required collaboration partners.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`0`
-
-⚠ **LLM inconsistency**: runs gave ['0', '2', '0']
 
 ### data_team_maturity
 **Manual:** `early`
 
 **Run 1:** `mid` ✗
-> Quote: "You'll stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)"
-> Verified: ✓ found in JD
-> Reasoning: Lightdash has established internal analytics using their own product, suggesting a mid-stage data function that exists and is producing something but is not yet a large, highly specialized organization.
-
-**Run 2:** `mid` ✗
 > Quote: "using Lightdash for our own analytics and demos"
 > Verified: ✓ found in JD
-> Reasoning: The company has an established internal analytics function using their product, indicating a data team that exists and is operational but without signals of enterprise-scale maturity.
+> Reasoning: Lightdash has established infrastructure and tooling in active use, with named products and capabilities, suggesting mid-stage maturity rather than early greenfield or fully mature scale.
 
-**Run 3:** `mid` ✗
-> Quote: "You'll stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)"
+**Run 2:** `mature` ✗
+> Quote: "stay current with our latest features, including our evolving AI capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The company uses its own product internally for analytics and actively develops new features, indicating an established team beyond early stage but without evidence of multiple specialized sub-teams.
+> Reasoning: Lightdash operates as an established, feature-rich product with active community and ongoing development, indicating organizational maturity.
 
-⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
+**Run 3:** `mature` ✗
+> Quote: "using Lightdash for our own analytics and demos"
+> Verified: ✓ found in JD
+> Reasoning: Lightdash is an established company with existing internal analytics operations and mature product capabilities, not building analytics infrastructure from scratch.
+
+⚠ **Disagreement**: manual=`early` vs LLM majority=`mature`
+
+⚠ **LLM inconsistency**: runs gave ['mid', 'mature', 'mature']
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `mixed` ✗
-> Quote: "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems."
+> Quote: "You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific details about day-to-day work (Slack support, pair-programming, dbt expertise) showing hiring manager insight, mixed with some generic community/growth language.
+> Reasoning: The role mixes technical specificity (pair-programming, bug triage, dbt/SQL contexts) with generic coaching language (create world-class tutorials, share knowledge), indicating mixed hiring-manager and recruiter authorship.
 
-**Run 2:** `hiring_manager` ✓
-> Quote: "You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through problems."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities contain specific technical practices and concrete daily activities that demonstrate intimate familiarity with what this job entails, rather than generic boilerplate language.
+**Run 2:** `mixed` ✗
+> Quote: "triaging bugs, and jumping on calls to pair-program through complex issues"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical responsibilities with product-specific context indicate hiring manager input, but community strategy language is more generic, suggesting mixed authorship.
 
 **Run 3:** `hiring_manager` ✓
+> Quote: "active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues"
+> Verified: ✓ found in JD
+> Reasoning: The specific, concrete daily work context (Slack interactions, triaging, pair-programming) demonstrates hiring manager familiarity with the role rather than generic boilerplate language.
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** ``
+
+**Run 1:** `internal_data` ✗
 > Quote: "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities show specific understanding of actual daily work activities and concrete technical practices (pair programming, debugging, triaging) that indicate someone with direct experience in the role wrote this, rather than generic recruiter language.
+> Reasoning: The role primarily serves analytics engineers and data teams (external users of Lightdash) with technical support and community knowledge-sharing, aligning with the internal_data stakeholder category.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
+**Run 2:** `commercial` ✗
+> Quote: "Our users' wins are our wins. You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls"
+> Verified: ✓ found in JD
+> Reasoning: The role is primarily oriented toward external customer success through direct support, technical problem-solving, and community engagement.
+
+**Run 3:** `commercial` ✗
+> Quote: "Our users' wins are our wins."
+> Verified: ✓ found in JD
+> Reasoning: The role's primary purpose is user success and customer adoption, which aligns with customer success as a commercial stakeholder goal.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`commercial`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'commercial', 'commercial']
+
+### autonomy_level
+**Manual:** ``
+
+**Run 1:** `execution` ✗
+> Quote: "You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues."
+> Verified: ✓ found in JD
+> Reasoning: The role receives scoped work (user support, community advocacy, content creation) and executes it responsively, rather than defining direction or priorities for the analytics function.
+
+**Run 2:** `mixed` ✗
+> Quote: "Develop and execute strategies to grow and engage the analytics engineering community around Lightdash"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic responsibility for community growth and strategy development with execution of user support and content creation.
+
+**Run 3:** `mixed` ✗
+> Quote: "develop and execute strategies to grow and engage the analytics engineering community"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities combine strategic direction-setting (developing growth strategies) with execution-oriented work (responding to users, creating content, pair-programming).
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'mixed']

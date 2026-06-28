@@ -392,6 +392,83 @@ The majority of JDs in this dataset are hiring-manager authored — a signal of 
 
 ---
 
+### RQ6: What is the stakeholder orientation of AE roles in this market?
+
+**Why this matters:** Who you serve shapes the daily texture of the role more than almost any other factor. A commercial-facing AE (GTM, RevOps, sales) operates in a high-frequency, high-demand environment where speed and communication with non-technical stakeholders dominate. A product-facing AE deals with experimentation and funnel logic. An internal-data AE is primarily serving other data practitioners. The mix across the market reveals whether AE is converging on a particular archetype or remaining genuinely diverse.
+
+**What the JD dataset can answer:** With `stakeholder_orientation` now a classified dimension, the distribution across commercial / product / internal_data / finance / mixed can be computed directly. The hypothesis: given that 64% of JDs in this dataset come from mid-maturity teams, and mid-maturity companies tend to be growth-stage businesses with active GTM motions, commercial orientation should dominate.
+
+---
+
+### RQ7: How much strategic autonomy do AE roles actually offer?
+
+**Why this matters:** JD language frequently implies ownership ("own the data model", "drive analytics delivery") without actually granting strategic direction-setting power. The `autonomy_level` dimension separates roles where the AE defines the roadmap from roles where they execute against one set by a product manager, data lead, or commercial team. For candidates who value independence — and for hiring managers trying to attract them — the gap between signalled and actual autonomy is a trust problem.
+
+**What the JD dataset can answer:** The distribution of `strategic` / `execution` / `mixed` across seniority levels will reveal whether senior titles reliably correspond to strategic autonomy, or whether "Senior AE" often means senior executor. Cross-tabbing `autonomy_level` against `data_team_maturity` will test whether early-stage teams genuinely offer more strategic input, or whether "greenfield" often means high ambiguity without real direction-setting authority.
+
+---
+
+## 9b. What JDs cannot tell you — and how to find out in interviews
+
+Two factors that matter most for long-term role satisfaction cannot be reliably inferred from JD text: **growth ceiling** and **management quality**. Both are partially signalled but easily faked, because JDs are marketing documents.
+
+### Growth ceiling
+
+**What JDs signal (weakly):**
+- Generic growth language ("we invest in your development", "regular performance reviews") is present in the majority of JDs and is meaningless as a differentiator — it is boilerplate.
+- Stronger signals: rotation across domains, explicit exposure to architecture decisions, named senior functions the role will partner with, and mentorship from named technical roles. These indicate the hiring manager has thought concretely about what growth looks like, not just that growth is good.
+- `jd_authorship = hiring_manager` is a mild positive proxy — a hiring manager who wrote specific responsibilities has usually also thought more concretely about the growth path than a recruiter-authored JD.
+- `data_team_maturity = mid` is the strongest structural growth signal: teams in active growth have more new domains to expand into, more scope to acquire, and more senior colleagues building things you can learn from than either early-stage (where you may be alone) or mature-stage (where specialisation has already solidified).
+
+**What to ask in the interview:**
+
+| Question | What you're really testing |
+|----------|---------------------------|
+| "What does the person who succeeds in this role do 18 months from now — do they go deeper in this domain, or do they move into something different?" | Whether growth is genuinely mapped out, or just a talking point |
+| "Can you tell me about someone on the team who grew significantly in the last two years — what did their growth actually look like?" | Concrete evidence over stated intention |
+| "What technical or domain areas does this team not currently have covered that you'd want this person to start developing?" | Whether the scope is expected to expand, or is already fixed |
+| "Who would this person learn the most from, and how often do they interact?" | Whether senior technical mentorship is structurally available or accidental |
+| "What's the highest-impact decision this role would make autonomously in the first year?" | Whether growth comes with real responsibility, or just more task volume |
+
+**Red flags in interview answers:**
+- Vague or deflected growth answers ("the sky's the limit here") — indicates the manager hasn't thought about it
+- Growth is described only as headcount management ("you could manage a team eventually") — if you don't want to manage, this is the wrong signal
+- No concrete example of a team member who grew — indicates growth language is aspirational, not organisational practice
+
+---
+
+### Management quality
+
+**What JDs signal (weakly):**
+- `jd_authorship = hiring_manager` is the single most useful proxy available from JD text. A hiring manager who authored their own JD with specific responsibilities — naming tools with precise context, identifying concrete business problems — has usually also thought clearly about how they will manage the person they hire. Recruiter-authored JDs reveal nothing about the manager.
+- A JD where scope is undefined or contradictory (e.g. "own the strategy" but "support all stakeholders across the business") suggests the manager has not yet resolved what the role is — which often predicts a difficult first year of unclear expectations.
+- The absence of any mention of how the role fits into a larger data structure (who it reports to, what team it sits in, what the data function looks like) is a weak flag — either the manager didn't write the JD, or hasn't thought about the organisational context.
+
+**What to ask in the interview:**
+
+| Question | What you're really testing |
+|----------|---------------------------|
+| "How do you typically set priorities with the people you manage — do you set the roadmap and hand it down, or do you build it together?" | Whether management style matches your preference for autonomy |
+| "What does a performance review look like here — what gets discussed, how often, and what happens if someone is underperforming?" | Whether feedback is structured and honest, or informal and avoided |
+| "What's a decision you made in the last six months that turned out to be wrong — how did you handle it?" | Whether the manager has self-awareness and psychological safety to admit errors |
+| "How do you handle it when a stakeholder comes to you directly and asks for something that bypasses this role's normal scope?" | Whether the manager will protect your time and scope, or let you be pulled in all directions |
+| "What would I need to do in the first three months to make you feel confident this hire was the right one?" | Forces the manager to articulate concrete expectations, revealing whether they exist |
+| "What's one thing people who've worked for you say they wished you did differently?" | Self-awareness test — a manager who can't answer this is a flag |
+
+**Structural signals to read during the interview process itself:**
+- Did the hiring manager arrive prepared? Disorganisation in the interview process often mirrors disorganisation in management.
+- Were the interview questions specific to this role, or generic ("tell me about a time you solved a data problem")? Generic questions indicate the manager doesn't know what they're evaluating for.
+- Did the manager make time in the process for you to ask questions, or was every slot packed? Managers who don't leave space for candidate questions often don't leave space for employee questions either.
+- Was the manager curious about you as a person (motivations, working style, what you find hard), or only about your technical outputs? The former predicts a manager who invests in people; the latter predicts a manager who treats the role as a resource problem.
+
+**Red flags in the process itself:**
+- More than three weeks between any interview stage without explanation
+- Multiple rescheduled interviews without apology
+- A hiring panel where the hiring manager is largely silent and lets others lead
+- Contradictory descriptions of the role's scope or team structure from different interviewers
+
+---
+
 ## 10. Schema extension proposals
 
 Three new boolean/categorical fields would unlock the most important research questions. These would extend the JSON schema in `jd_data/` and require backfilling existing records.
