@@ -20,7 +20,6 @@ Usage:
 import argparse
 import json
 import subprocess
-import sys
 from pathlib import Path
 
 JD_DATA_DIR = Path(__file__).parent.parent / "jd_data"
@@ -29,53 +28,56 @@ TRACES_DIR = Path(__file__).parent / "jd_traces"
 NEW_DIMS = ["ai_role", "testing_framing", "loss_aversion_framing"]
 
 CODEBOOK = """\
-You are a structured classifier. Classify three dimensions from the JD signals below.
-Output ONLY a valid JSON object — no explanation, no markdown fences, no extra text.
+Classify 3 dimensions from the JD phrases below. JSON only, no markdown.
 
-### ai_role
-`none` | `ai_user` | `ai_enabler`
+ai_role none|ai_user|ai_enabler
+  none=no AI skill expected; "AI-first mindset"/company builds AI but AE does standard work→none
+  ai_user=candidate uses AI coding tools (Copilot,Claude Code,Cursor,"AI-assisted coding","proven AI tool usage")
+  ai_enabler=candidate builds infra AI consumes ("AI-ready","semantic model for AI","GenAI" in responsibilities,text-to-SQL); both signals→ai_enabler
 
-What AI skill does the *candidate* need to demonstrate? Company product context is irrelevant.
+testing_framing responsibility|tool_listed|absent
+  responsibility=candidate owns quality practice (own/ensure/define/implement/establish + quality/testing/data contracts)
+  tool_listed=testing tool in stack without ownership verb
+  absent=no signal
 
-- **none**: no AI skill expected. Vague phrases ("AI-first mindset") → none. Company builds AI but AE role is standard modelling → none.
-- **ai_user**: candidate uses AI coding tools to accelerate their own work. Signals: "AI-assisted coding", "GitHub Copilot", "Claude Code", "Cursor", "proven usage of AI tools in daily work".
-- **ai_enabler**: candidate builds data infrastructure AI systems consume. Signals: "AI-ready data foundations", "semantic modelling for AI", "GenAI applications" in responsibilities, "text-to-SQL". If both signals present → ai_enabler.
+loss_aversion_framing none|moderate|high
+  none=delivery framing only
+  moderate=operational reliability fear (incidents,SLOs,pipeline stability)
+  high=compliance/trust dominates (regulatory,audit,"bad data reaching stakeholders",trustworthiness as primary framing)
 
-### testing_framing
-`responsibility` | `tool_listed` | `absent`
+Output (short keys, expand on write):
+{"ar":"<val>","ar_q":"<verbatim JD phrase>","ar_e":"<one sentence>","tf":"<val>","tf_q":"<verbatim JD phrase>","tf_e":"<one sentence>","laf":"<val>","laf_q":"<verbatim JD phrase>","laf_e":"<one sentence>"}
 
-- **responsibility**: testing/quality/data contracts framed as something the candidate owns. Ownership verbs: "own", "ensure", "define", "implement", "establish" applied to quality or testing practice.
-- **tool_listed**: testing tools appear in requirements/stack without ownership framing.
-- **absent**: no testing or data quality signal.
-
-### loss_aversion_framing
-`none` | `moderate` | `high`
-
-- **none**: delivery and capability framing only.
-- **moderate**: operational reliability concern secondary to delivery. Fear is outages. Signals: "first to respond to incidents", "SLOs", "pipeline stability".
-- **high**: risk/compliance/trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. Signals: "regulatory", "compliance", "audit", repeated quality/trust language in first responsibilities.
-
-Output format (JSON only):
-{
-  "ai_role": "<none|ai_user|ai_enabler>",
-  "ai_role_quote": "<verbatim phrase from JD or 'No AI skill signal.'>",
-  "ai_role_explanation": "<one sentence>",
-  "testing_framing": "<responsibility|tool_listed|absent>",
-  "testing_framing_quote": "<verbatim phrase from JD or 'No testing signal.'>",
-  "testing_framing_explanation": "<one sentence>",
-  "loss_aversion_framing": "<none|moderate|high>",
-  "loss_aversion_framing_quote": "<verbatim phrase from JD or 'No loss aversion framing.'>",
-  "loss_aversion_framing_explanation": "<one sentence>"
-}
-
-JD SIGNALS:
+JD phrases:
 """
 
 VALID_VALUES = {
-    "ai_role": {"none", "ai_user", "ai_enabler"},
-    "testing_framing": {"responsibility", "tool_listed", "absent"},
-    "loss_aversion_framing": {"none", "moderate", "high"},
+    "ar": {"none", "ai_user", "ai_enabler"},
+    "tf": {"responsibility", "tool_listed", "absent"},
+    "laf": {"none", "moderate", "high"},
 }
+
+# Map short output keys → full field names written to JSON/trace
+KEY_MAP = {
+    "ar": "ai_role", "ar_q": "ai_role_quote", "ar_e": "ai_role_explanation",
+    "tf": "testing_framing", "tf_q": "testing_framing_quote", "tf_e": "testing_framing_explanation",
+    "laf": "loss_aversion_framing", "laf_q": "loss_aversion_framing_quote", "laf_e": "loss_aversion_framing_explanation",
+}
+
+
+def _find_claude() -> str:
+    import shutil
+    if shutil.which("claude"):
+        return "claude"
+    candidates = [
+        Path.home() / ".vscode/extensions",
+        Path.home() / "Library/Application Support/Claude/claude-code",
+    ]
+    for base in candidates:
+        for p in sorted(base.glob("**/claude"), reverse=True):
+            if p.is_file() and p.stat().st_mode & 0o111:
+                return str(p)
+    raise FileNotFoundError("claude CLI not found")
 
 
 def already_classified(json_path: Path) -> bool:
@@ -87,31 +89,28 @@ def already_classified(json_path: Path) -> bool:
 
 
 def build_prompt(data: dict) -> str:
-    """Build a compact prompt from existing JSON reasoning fields — not raw JD text."""
+    """Deduplicated evidence quotes — the actual JD phrases, minimal context."""
     ev = data.get("evidence", {})
-    parts = [
-        f"role: {data.get('role', '')} at {data.get('company', '')}",
-        f"velocity_vs_rigour: {data.get('velocity_vs_rigour', '')} — {data.get('velocity_vs_rigour_reasoning', '') or ev.get('velocity_vs_rigour', '')}",
-        f"domain_risk: {data.get('domain_risk', '')} — {data.get('domain_risk_reasoning', '') or ev.get('domain_risk', '')}",
-        f"data_team_maturity: {data.get('data_team_maturity', '')} — {data.get('data_team_maturity_reasoning', '') or ev.get('data_team_maturity', '')}",
-        f"stakeholder_orientation: {data.get('stakeholder_orientation', '')} — {data.get('stakeholder_orientation_reasoning', '') or ev.get('stakeholder_orientation', '')}",
-        f"autonomy_level: {data.get('autonomy_level', '')} — {data.get('autonomy_level_reasoning', '') or ev.get('autonomy_level', '')}",
-        f"loss_aversion evidence: {ev.get('loss_aversion', '')}",
-        f"ats_keywords: {', '.join(ev.get('ats_keywords', []))}",
-    ]
-    return CODEBOOK + "\n".join(parts)
+    skip = {"language_gate", "urgency", "ats_keywords"}
+    seen = set()
+    phrases = []
+    for k, v in ev.items():
+        if k in skip or not isinstance(v, str) or not v.strip():
+            continue
+        if v not in seen:
+            seen.add(v)
+            phrases.append(v)
+    return CODEBOOK + "\n".join(f"- {p}" for p in phrases)
 
 
 def classify_jd(data: dict) -> dict | None:
     prompt = build_prompt(data)
     try:
+        claude_bin = _find_claude()
         result = subprocess.run(
-            ["claude", "-p", prompt, "--model", "claude-haiku-4-5-20251001"],
+            [claude_bin, "-p", prompt, "--model", "claude-haiku-4-5-20251001"],
             capture_output=True, text=True, timeout=60,
         )
-    except FileNotFoundError:
-        print("ERROR: `claude` CLI not found on PATH", file=sys.stderr)
-        sys.exit(1)
     except subprocess.TimeoutExpired:
         return None
 
@@ -127,11 +126,12 @@ def classify_jd(data: dict) -> dict | None:
     except json.JSONDecodeError:
         return None
 
-    for dim, valid in VALID_VALUES.items():
-        if parsed.get(dim) not in valid:
+    for short_key, valid in VALID_VALUES.items():
+        if parsed.get(short_key) not in valid:
             return None
 
-    return parsed
+    # Expand short keys to full field names before returning
+    return {KEY_MAP.get(k, k): v for k, v in parsed.items()}
 
 
 def append_to_json(json_path: Path, result: dict) -> None:

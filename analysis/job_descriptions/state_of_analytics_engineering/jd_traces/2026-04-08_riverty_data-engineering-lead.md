@@ -211,3 +211,18 @@ Working in an agile, cross-functional data product model, this role is accountab
 > Reasoning: The role is framed around setting direction for the data engineering discipline, establishing operating models, and championing practices rather than executing defined work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none`
+> Quote: "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting."
+> Reasoning: AI mentioned as a consumer of data models, not as infrastructure being built or AI tools used by the candidate.
+
+### testing_framing
+**Run 1:** `responsibility`
+> Quote: "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability."
+> Reasoning: Clear ownership verbs (define, monitor, ensure) paired with quality practices and establishing operating standards.
+
+### loss_aversion_framing
+**Run 1:** `moderate`
+> Quote: "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability."
+> Reasoning: Emphasis on operational reliability metrics (SLAs/SLOs) and proactive issue detection rather than regulatory compliance or trust dominance.
