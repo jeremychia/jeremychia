@@ -71,11 +71,11 @@
   "urgency_signal": "No urgency signals present",
   "ai_role": "none",
   "ai_role_quote": "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting.",
-  "ai_role_explanation": "AI mentioned as a consumer of data models, not as infrastructure being built or AI tools used by the candidate.",
+  "ai_role_reasoning": "Candidate explicitly builds data models to serve AI systems, indicating infrastructure enablement for AI consumption.",
   "testing_framing": "responsibility",
   "testing_framing_quote": "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability.",
-  "testing_framing_explanation": "Clear ownership verbs (define, monitor, ensure) paired with quality practices and establishing operating standards.",
+  "testing_framing_reasoning": "Candidate owns definition and monitoring of quality standards (SLAs/SLOs), demonstrating responsibility-level quality ownership.",
   "loss_aversion_framing": "moderate",
-  "loss_aversion_framing_quote": "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability.",
-  "loss_aversion_framing_explanation": "Emphasis on operational reliability metrics (SLAs/SLOs) and proactive issue detection rather than regulatory compliance or trust dominance."
+  "loss_aversion_framing_quote": "Promote proactive data reliability engineering, enabling teams to detect and resolve issues early.",
+  "loss_aversion_framing_reasoning": "Framing centers on operational reliability and incident prevention (SLOs, early detection) rather than compliance or trust primacy."
 }

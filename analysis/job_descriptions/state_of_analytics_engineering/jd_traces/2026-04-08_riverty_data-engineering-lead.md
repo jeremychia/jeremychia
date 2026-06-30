@@ -213,16 +213,44 @@ Working in an agile, cross-functional data product model, this role is accountab
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
 
 ### ai_role
-**Run 1:** `none`
+**Run 1:** `ai_enabler` ✗
 > Quote: "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting."
-> Reasoning: AI mentioned as a consumer of data models, not as infrastructure being built or AI tools used by the candidate.
+> Reasoning: Candidate explicitly builds data models to serve AI systems, indicating infrastructure enablement for AI consumption.
+
+**Run 2:** `none` ✓
+> Quote: "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting."
+> Reasoning: No AI tool usage or explicit AI-infrastructure building; AI appears only as a downstream data consumer.
+
+**Run 3:** `none` ✓
+> Quote: "Ensure that agile data product teams deliver fit-for-purpose data models that meet the needs of analytics, AI, and regulatory reporting"
+> Reasoning: Candidate ensures data models support AI consumption but doesn't build AI infrastructure or use AI tools; AI is a use case, not the core capability.
+
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'none', 'none']
 
 ### testing_framing
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✓
 > Quote: "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability."
-> Reasoning: Clear ownership verbs (define, monitor, ensure) paired with quality practices and establishing operating standards.
+> Reasoning: Candidate owns definition and monitoring of quality standards (SLAs/SLOs), demonstrating responsibility-level quality ownership.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability."
+> Reasoning: Candidate owns definition and monitoring of quality standards (SLAs/SLOs) with explicit accountability for stakeholder satisfaction.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability"
+> Reasoning: Candidate owns defining and monitoring data quality standards (SLAs/SLOs) for reliability and accuracy.
+
 
 ### loss_aversion_framing
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
+> Quote: "Promote proactive data reliability engineering, enabling teams to detect and resolve issues early."
+> Reasoning: Framing centers on operational reliability and incident prevention (SLOs, early detection) rather than compliance or trust primacy.
+
+**Run 2:** `moderate` ✓
 > Quote: "Define and monitor data SLAs and SLOs, ensuring that product teams deliver data that meets business needs in terms of timeliness, accuracy, and availability."
-> Reasoning: Emphasis on operational reliability metrics (SLAs/SLOs) and proactive issue detection rather than regulatory compliance or trust dominance.
+> Reasoning: Operational reliability dominates through SLO/SLA metrics and proactive incident detection; compliance/regulatory concerns are absent as primary drivers.
+
+**Run 3:** `moderate` ✓
+> Quote: "Promote proactive data reliability engineering, enabling teams to detect and resolve issues early"
+> Reasoning: Primary framing focuses on operational reliability and incident prevention rather than compliance or regulatory concerns.
+

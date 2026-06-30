@@ -69,13 +69,13 @@
   "autonomy_level_reasoning": "The responsibilities emphasize strategic ownership verbs (build, drive, enable, champion) for defining and shaping data platform direction, rather than executing someone else's priorities.",
   "greenfield_vs_fix_quote": "Build data pipeline engineering, orchestration, and monitoring to deliver high-quality data products; Partner with the Analytics Innovation & Automation and Data Office product teams to prototype & deliver innovative features across the Data Platform",
   "urgency_signal": "No urgency signals present",
-  "ai_role": "ai_enabler",
-  "ai_role_quote": "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance (schemas, access, metadata tagging)",
-  "ai_role_explanation": "Semantic layer and Unity Catalog governance are AI-ready infrastructure that enables AI systems to consume structured data.",
+  "ai_role": "none",
+  "ai_role_quote": "semantic layer infrastructure, Analytics Innovation & Automation",
+  "ai_role_reasoning": "No explicit AI tool usage or AI-ready infrastructure signals; standard data engineering work",
   "testing_framing": "responsibility",
-  "testing_framing_quote": "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied.",
-  "testing_framing_explanation": "Candidate owns quality practice: 'Ensure' + 'adhere to data quality frameworks' + 'include assertion checks'.",
+  "testing_framing_quote": "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks",
+  "testing_framing_reasoning": "Candidate owns quality practice through 'Ensure...adhere' ownership language with explicit data quality frameworks and assertion checks",
   "loss_aversion_framing": "high",
   "loss_aversion_framing_quote": "highly controlled compliant environment",
-  "loss_aversion_framing_explanation": "Compliance and regulatory control are positioned as primary environmental constraint, not secondary risk."
+  "loss_aversion_framing_reasoning": "Compliance concerns present as operational requirement, but commercial value and analytics maturity framed as primary drivers"
 }

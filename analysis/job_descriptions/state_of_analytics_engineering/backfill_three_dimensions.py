@@ -59,9 +59,9 @@ VALID_VALUES = {
 
 # Map short output keys → full field names written to JSON/trace
 KEY_MAP = {
-    "ar": "ai_role", "ar_q": "ai_role_quote", "ar_e": "ai_role_explanation",
-    "tf": "testing_framing", "tf_q": "testing_framing_quote", "tf_e": "testing_framing_explanation",
-    "laf": "loss_aversion_framing", "laf_q": "loss_aversion_framing_quote", "laf_e": "loss_aversion_framing_explanation",
+    "ar": "ai_role", "ar_q": "ai_role_quote", "ar_e": "ai_role_reasoning",
+    "tf": "testing_framing", "tf_q": "testing_framing_quote", "tf_e": "testing_framing_reasoning",
+    "laf": "loss_aversion_framing", "laf_q": "loss_aversion_framing_quote", "laf_e": "loss_aversion_framing_reasoning",
 }
 
 
@@ -103,10 +103,11 @@ def build_prompt(data: dict) -> str:
     return CODEBOOK + "\n".join(f"- {p}" for p in phrases)
 
 
-def classify_jd(data: dict) -> dict | None:
-    prompt = build_prompt(data)
+NUM_RUNS = 3
+
+
+def _run_once(prompt: str, claude_bin: str) -> dict | None:
     try:
-        claude_bin = _find_claude()
         result = subprocess.run(
             [claude_bin, "-p", prompt, "--model", "claude-haiku-4-5-20251001"],
             capture_output=True, text=True, timeout=60,
@@ -115,7 +116,6 @@ def classify_jd(data: dict) -> dict | None:
         return None
 
     output = result.stdout.strip()
-    # Strip markdown fences if present
     if output.startswith("```"):
         output = "\n".join(output.split("\n")[1:])
     if output.endswith("```"):
@@ -130,27 +130,51 @@ def classify_jd(data: dict) -> dict | None:
         if parsed.get(short_key) not in valid:
             return None
 
-    # Expand short keys to full field names before returning
     return {KEY_MAP.get(k, k): v for k, v in parsed.items()}
 
 
-def append_to_json(json_path: Path, result: dict) -> None:
-    """Append three new top-level fields to the JSON. All existing fields unchanged."""
+def classify_jd(data: dict) -> list[dict] | None:
+    """Run classification NUM_RUNS times. Returns list of results or None if all fail."""
+    prompt = build_prompt(data)
+    claude_bin = _find_claude()
+    runs = []
+    for _ in range(NUM_RUNS):
+        r = _run_once(prompt, claude_bin)
+        if r is not None:
+            runs.append(r)
+    return runs if runs else None
+
+
+def majority_value(runs: list[dict], dim: str) -> str:
+    from collections import Counter
+    return Counter(r[dim] for r in runs).most_common(1)[0][0]
+
+
+def append_to_json(json_path: Path, runs: list[dict]) -> None:
+    """Append majority-vote values + per-run quotes/reasonings. No existing fields touched."""
     data = json.loads(json_path.read_text())
     for dim in NEW_DIMS:
-        data[dim] = result[dim]
-        data[f"{dim}_quote"] = result.get(f"{dim}_quote", "")
-        data[f"{dim}_explanation"] = result.get(f"{dim}_explanation", "")
+        data[dim] = majority_value(runs, dim)
+        # Store run1 quote/reasoning as the primary evidence (same pattern as existing dims)
+        data[f"{dim}_quote"] = runs[0].get(f"{dim}_quote", "")
+        data[f"{dim}_reasoning"] = runs[0].get(f"{dim}_reasoning", "")
     json_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
-def append_to_trace(trace_path: Path, jd_id: str, result: dict) -> None:
-    """Append new dimension blocks to the trace in the same style as existing ones."""
+def append_to_trace(trace_path: Path, jd_id: str, runs: list[dict]) -> None:
+    """Append dimension blocks matching existing trace format (Run 1/2/3 + majority)."""
     section = ""
     for dim in NEW_DIMS:
-        quote = result.get(f"{dim}_quote", "")
-        explanation = result.get(f"{dim}_explanation", "")
-        section += f"\n### {dim}\n**Run 1:** `{result[dim]}`\n> Quote: \"{quote}\"\n> Reasoning: {explanation}\n"
+        majority = majority_value(runs, dim)
+        section += f"\n### {dim}\n"
+        for i, run in enumerate(runs, 1):
+            val = run[dim]
+            quote = run.get(f"{dim}_quote", "")
+            reasoning = run.get(f"{dim}_reasoning", "")
+            match = "✓" if val == majority else "✗"
+            section += f"**Run {i}:** `{val}` {match}\n> Quote: \"{quote}\"\n> Reasoning: {reasoning}\n\n"
+        if len(set(r[dim] for r in runs)) > 1:
+            section += f"⚠ **LLM inconsistency**: runs gave {[r[dim] for r in runs]}\n"
 
     with open(trace_path, "a") as f:
         f.write(section)
@@ -195,18 +219,19 @@ def main():
             n_ok += 1
             continue
 
-        result = classify_jd(data)
-        if result is None:
-            print(f"   FAIL: invalid or timed-out response")
+        runs = classify_jd(data)
+        if not runs:
+            print(f"   FAIL: all runs invalid or timed out")
             n_fail += 1
             continue
 
-        print(f"   ai_role={result['ai_role']}  testing_framing={result['testing_framing']}  loss_aversion_framing={result['loss_aversion_framing']}")
+        maj = {dim: majority_value(runs, dim) for dim in NEW_DIMS}
+        print(f"   ai_role={maj['ai_role']}  testing_framing={maj['testing_framing']}  loss_aversion_framing={maj['loss_aversion_framing']}  ({len(runs)}/3 runs ok)")
 
-        append_to_json(json_path, result)
+        append_to_json(json_path, runs)
 
         if trace_path.exists():
-            append_to_trace(trace_path, jd_id, result)
+            append_to_trace(trace_path, jd_id, runs)
             print(f"   json + trace appended")
         else:
             print(f"   json appended (no trace file)")

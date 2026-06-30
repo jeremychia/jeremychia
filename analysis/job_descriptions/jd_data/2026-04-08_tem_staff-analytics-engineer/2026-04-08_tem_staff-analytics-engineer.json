@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Define and implement company metrics in Omni for self-serve analytics.",
   "autonomy_level_reasoning": "This responsibility demonstrates both strategic direction-setting (define metrics and standards) and hands-on execution, reinforced by 'hands-on, individual contributor' combined with 'set direction for analytics patterns' expectations.",
   "greenfield_vs_fix_quote": "Design and maintain core dbt models representing business areas like customers, revenue, and operations.",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "No mentions across all phrases",
+  "ai_role_reasoning": "No AI tools, enablement responsibilities, or infrastructure readiness signals.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Establish data quality standards using tests, CI/CD, and documentation",
+  "testing_framing_reasoning": "Candidate owns quality standards establishment with tests as core practice.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Partner with Data Engineering to diagnose issues and optimize warehouse performance",
+  "loss_aversion_framing_reasoning": "Operational reliability concern (issue diagnosis, performance tuning) without regulatory or compliance framing."
 }

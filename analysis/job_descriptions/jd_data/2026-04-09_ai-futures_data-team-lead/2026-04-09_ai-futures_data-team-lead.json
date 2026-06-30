@@ -70,5 +70,14 @@
   "autonomy_level_quote": "Owning ETL and ELT pipeline development",
   "autonomy_level_reasoning": "The verbs 'designing', 'building', and 'owning' combined with team leadership indicate the role defines direction for the data platform domain rather than executing direction set by others.",
   "greenfield_vs_fix_quote": "Designing and building a modern data platform",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Building infrastructure that powers 'AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems'",
+  "ai_role_reasoning": "Building backend infrastructure that AI systems consume to drive pricing and financial decisions.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner",
+  "testing_framing_reasoning": "Ownership of pipeline work but no explicit testing, quality, or data contract responsibility mentioned.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Designing and building a modern data platform for 'high-volume, real-time vehicle and transaction data'",
+  "loss_aversion_framing_reasoning": "High-volume, real-time emphasis suggests operational reliability and performance concerns without explicit compliance or regulatory framing."
 }

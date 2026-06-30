@@ -232,3 +232,45 @@ Approximately 2–3 weeks total:
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "No mentions across all phrases"
+> Reasoning: No AI tools, enablement responsibilities, or infrastructure readiness signals.
+
+**Run 2:** `none` ✓
+> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations"
+> Reasoning: No AI tool usage or infrastructure signals; standard dbt-based analytics engineering work
+
+**Run 3:** `none` ✓
+> Quote: "Design and maintain core dbt models representing business areas like customers, revenue, and operations."
+> Reasoning: No AI skills or infrastructure responsibilities mentioned; standard analytics engineering work.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Establish data quality standards using tests, CI/CD, and documentation"
+> Reasoning: Candidate owns quality standards establishment with tests as core practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Establish data quality standards using tests, CI/CD, and documentation"
+> Reasoning: Candidate owns quality practice by establishing standards, implementing tests, and CI/CD processes
+
+**Run 3:** `responsibility` ✓
+> Quote: "Establish data quality standards using tests, CI/CD, and documentation."
+> Reasoning: Candidate owns data quality practice through establishing standards, tests, and CI/CD implementation.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Partner with Data Engineering to diagnose issues and optimize warehouse performance"
+> Reasoning: Operational reliability concern (issue diagnosis, performance tuning) without regulatory or compliance framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Partner with Data Engineering to diagnose issues and optimize warehouse performance"
+> Reasoning: Operational reliability concern signaled through problem diagnosis and performance optimization
+
+**Run 3:** `moderate` ✓
+> Quote: "Partner with Data Engineering to diagnose issues and optimize warehouse performance."
+> Reasoning: Framing emphasizes operational reliability and performance concerns rather than compliance or regulatory risk.
+
