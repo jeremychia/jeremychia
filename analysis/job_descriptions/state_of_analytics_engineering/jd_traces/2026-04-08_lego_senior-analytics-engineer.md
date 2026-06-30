@@ -213,3 +213,18 @@ This role is essential as we strive to build a world-class analytics organizatio
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'execution']
+
+### ai_role
+**Run 1:** `ai_enabler`
+> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance (schemas, access, metadata tagging)"
+> Reasoning: Semantic layer and Unity Catalog governance are AI-ready infrastructure that enables AI systems to consume structured data.
+
+### testing_framing
+**Run 1:** `responsibility`
+> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
+> Reasoning: Candidate owns quality practice: 'Ensure' + 'adhere to data quality frameworks' + 'include assertion checks'.
+
+### loss_aversion_framing
+**Run 1:** `high`
+> Quote: "highly controlled compliant environment"
+> Reasoning: Compliance and regulatory control are positioned as primary environmental constraint, not secondary risk.
