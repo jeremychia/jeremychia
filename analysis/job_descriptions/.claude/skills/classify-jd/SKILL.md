@@ -5,9 +5,11 @@ allowed-tools: WebFetch Read Write Bash
 argument-hint: <job-posting-url>
 ---
 
-`$ARGUMENTS` is a job posting URL. Produce a structured classification of the JD. No resume adaptation, no cover letter, no tailoring — classification only.
+`$ARGUMENTS` is one or more job posting URLs (whitespace- or newline-separated). Produce a structured classification for each JD. No resume adaptation, no cover letter, no tailoring — classification only.
 
-Work through the steps **in order**.
+**Batch mode**: process each URL one at a time, completing Steps 1–5 fully before fetching the next. Do not hold multiple JD texts in memory simultaneously — context is finite. If a URL cannot be fetched (empty response, 403, paywall, bot block, or suspiciously short content under ~200 words), stop and ask the user to paste the JD text, then proceed from Step 2 using the pasted text. Never infer or hallucinate JD content from the URL slug or company name alone. After all URLs are processed, print a batch summary (see Step 6).
+
+Work through the steps **in order** for each URL.
 
 ---
 
@@ -192,6 +194,8 @@ EOF
 
 ## Step 5 — Run classifier and rebuild data
 
+**Skip this step if processing a batch — run once after all JDs are written (see Step 6).**
+
 ```bash
 cd analysis/job_descriptions/state_of_analytics_engineering && python3 classify_jds.py
 ```
@@ -213,6 +217,8 @@ This merges the new JSON into `data.json` (loaded by `index.html`) and regenerat
 
 ## Step 6 — Output summary
 
+For each JD (printed immediately after Steps 1–5 complete for that URL):
+
 ```
 **{Company} — {Job Title}**
 Location: {location} | Seniority: {seniority} | Role type: {role_type}
@@ -231,10 +237,17 @@ Stack: {comma-separated true has_* fields}
 Files written to jd_data/{base-name}/
 ```
 
+If processing more than one URL, run Step 5 once after all JDs are written, then print a batch summary:
+
+```
+Batch complete: {n} processed, {n} skipped
+Skipped: {url} — {reason}   ← one line per skipped URL, omit section if none
+```
+
 ---
 
 ## Notes
 
 - Classification only — not an application tool. Use `adapt-resume` if applying.
-- If the URL is inaccessible, ask for pasted JD text and proceed from Step 2.
+- If a URL is inaccessible or returns suspiciously short content (<200 words), stop and ask for pasted JD text before proceeding — do not classify from the URL slug or company name alone.
 - For non-standard roles (freelance, internship), complete the classification with best-fit mapping and note anomalies in the evidence field.
