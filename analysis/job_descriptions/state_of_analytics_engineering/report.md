@@ -1,770 +1,469 @@
-# State of Analytics Engineering (dbt Labs, 2023–2026) — Research Analysis
+# Analytics Engineering Job Market, 2026 — JD Analysis
 
 **Prepared:** June 2026  
-**Dataset:** 37 JD records from `jd_data/` (April–June 2026, primarily European/Berlin market; original manual classifications in `resume/analysis/applications_dataset.csv`)  
-**Source reports:** dbt Labs annual surveys — 2023 (n=567), 2024 (n=456), 2025 (n=459), 2026 (n=363)
+**Dataset:** 93 unique job descriptions from `jd_data/` (April–June 2026; European/Berlin market with UK, DACH, Nordics, and selected global roles)  
+**Classification:** 41 records hand-coded (manual); 52 records classified via LLM majority vote (3 independent claude-haiku-4-5 runs per JD); full consistency study in `consistency_report.md`  
+**Context source:** dbt Labs "State of Analytics Engineering" reports, 2023–2026 — used as a foil, not as the primary data
 
 ---
 
 ## 1. What this document is
 
-This is a critical reading of dbt Labs' annual "State of Analytics Engineering" reports (2023–2026), cross-referenced against a dataset of real job descriptions collected during the same period. The goal is to:
+This is a structured analysis of 93 analytics engineering, data engineering, and BI job postings collected during a European job search in 2026. The goal is to characterise what employers actually reveal they want through hiring language — not what practitioners report wanting in surveys.
 
-1. Identify year-on-year trends in what the reports claim
-2. Analyse how the tonality and framing have shifted
-3. Catalogue the assertions being made — especially in 2026
-4. Define research questions that can be tested against actual JD market data
-5. Identify gaps in the current JD schema that would enable better validation
+The dbt Labs annual reports (2023–2026) are used as a reference point throughout: they are the most widely-circulated claims about the state of the profession. The core question is whether those claims show up in what employers write when they have real hiring costs at stake.
 
-**Critical caveat:** The dbt Labs reports are based on self-selected surveys distributed through dbt's own community channels (Slack, newsletter, events). They are not neutral industry surveys. As confirmed from the 2023 raw data, 76% of respondents already use dbt — meaning findings describe the dbt community, not the analytics engineering profession broadly. This constraint is never acknowledged in the reports themselves.
+**Why this matters:** Survey responses are cheap. Writing a job description carries hiring cost. Deming and Kahn (2018) established that job postings are revealed-preference data — employers write what they actually value. This analysis holds the survey claims against that harder evidence.
+
+**Honest scope limitations:** 93 JDs is a pilot-scale dataset. The confidence interval on any single proportion is approximately ±10pp at 95% — wide enough that individual percentages should be read as directional signals, not precise market measurements. The geographic concentration (primarily European/Berlin market) limits generalisation to North America or APAC. These limitations are stated once here and not repeated throughout; they apply to every finding in this document.
 
 ---
 
-## 2. Year-by-year findings
+## 2. The dbt Labs survey — claims and constraints
 
-### 2023 (survey Oct–Nov 2022, n=567)
+The dbt Labs "State of Analytics Engineering" reports (2023–2026) are the most influential annual survey of the analytics engineering profession. Key stated findings by year:
 
-**Survey demographics:** 40% Analytics Engineer or Data Engineer titles; 20% managers/leads; 76% from dbt-using companies; 95% from North America, Europe, or APAC. Tech, Consulting, and Financial Services = 59% of respondents.
+| Year | n | Central claim |
+|------|---|---------------|
+| 2023 | 567 | Analytics engineering is a distinct profession; data quality is the #1 investment area |
+| 2024 | 456 | Data trust is the #1 org priority; budget contraction visible; AI data management at 57% |
+| 2025 | 459 | AI in daily workflows: 80% (up from 30%); budget and team growth recovering |
+| 2026 | 363 | AI adoption (72% AI coding) outpacing governance (24% AI observability); trust priority: 83% |
 
-**Key findings:**
-- 46% plan to invest more in data quality/observability — top investment priority
-- Most time spent maintaining datasets, not building new ones
-- "Cross-team alignment on data ownership" rated worst of all performance areas — 44% rate it poorly
-- dbt characterised as "blurring the line" between data engineers and data analysts
+**The self-selection constraint:** The survey is distributed through dbt's own community channels. In 2023 (the only year raw data was released), 76% of respondents already used dbt. Later years do not disclose this figure but the distribution channel is unchanged. Every finding from this survey describes the dbt community, not the analytics engineering profession broadly. This constraint is never acknowledged in the reports themselves.
 
-**Character:** Definitional. This is the report that establishes what "analytics engineering" means — it leans heavily on category creation. The 2023 report is the only year in which the raw survey data was publicly released (GitHub repo, now archived).
+**The sample decline:** n has fallen from 567 to 363 over four years — a 36% drop with no explanation. At n=363 from a non-random sample, year-on-year percentage comparisons should be read as sentiment signals, not measurements.
 
----
+**The product-narrative alignment:** Each year's report aligns precisely with dbt's product priorities that year — data contracts (2024), AI assist (2025), observability and governance (2026). Whether this reflects shared market signals or editorial framing, the reports are not independent of dbt's commercial interests.
 
-### 2024 (survey Dec 2023–Mar 2024, n=456)
-
-**Survey demographics:** Not fully disclosed; collection window 3+ months (Dec 22 – Mar 2, 2024).
-
-**Key findings:**
-- 57% cite poor data quality as predominant issue (up from 41% in 2022; comparable question)
-- "Increasing data trust" = #1 org focus for the first time
-- Ambiguous data ownership = 2nd most cited challenge, ~50% of respondents (up from 44% in 2023)
-- 57% currently manage or plan to manage data for AI training
-- 33% experienced headcount reduction from macroeconomic conditions; half report no change
-- North America: 78% of AEs earn >$100K
-- "Building data transformations" and "compute constraints" drop to bottom of concerns — technical problems largely solved; people and process problems dominate
-
-**Character:** Cautiously sober. Post-VC winter. The first report to explicitly acknowledge budget cuts. Framing shifts from "here's what analytics engineering is" to "here are the hard unsolved problems" — and the answer is: human and organisational, not technical.
+These constraints don't make the findings false. They mean the reports should be read as community sentiment documents, and validated — or not — against revealed employer behaviour.
 
 ---
 
-### 2025 (survey Oct–Dec 2024, n=459, 70% ICs / 30% managers)
+## 3. The dataset
 
-**Survey demographics:** 48% analytics engineers, 36% data engineers, 16% data analysts; 70% individual contributors, 30% managers.
+**93 unique job descriptions** collected April–June 2026. Role types:
 
-**Key findings:**
-- AI in daily workflows: 80% — the largest single-year jump in any metric across the entire series (up from 30%)
-- Of AI users: 70% for code development, 50% for documentation
-- Budget growth: 30% report budget growth (vs 9% prior year; comparable question)
-- Team growth: 40% report team growth (vs 14% prior year; comparable question)
-- 45% cite AI tooling as largest investment priority
-- 38% cite data quality/observability as investment priority
-- 56% still identify poor data quality as primary challenge (stable vs 2024's 57%)
-- North America ICs: 80% earn >$100K (up from 69%); managers: 49% exceed $200K (up from 32%)
+- Analytics Engineer (AE) and senior AE: ~55%
+- Data Engineer (DE) and senior DE: ~20%
+- Business Intelligence Analyst/Engineer: ~15%
+- Lead/Staff/Principal and Head of Data roles: ~10%
 
-**Character:** Euphoric. Directly counter-addresses AI displacement anxiety. The "80% use AI daily" headline was widely republished and serves a field-legitimacy function: practitioners needed to hear that AI makes data teams more valuable, not redundant. Budget and salary recovery stats reinforce this. The "augments, doesn't replace" framing is explicit anxiety management.
+**Geographic spread:** Primarily Berlin and DACH, with meaningful representation from UK, Nordics, and a smaller share of global/remote roles (Netflix, Spotify, Wolt, etc.).
 
-**Caution:** The 80% AI adoption stat is an extraordinary claim. "Using AI in daily workflow" likely includes GitHub Copilot autocomplete. The 70% "using AI for code development" breakdown is consistent with this low-bar interpretation.
+**Classification method:** 41 records were hand-coded by the author during the job search (April–May 2026). A further 52 records added in June 2026 were classified using LLM majority vote (three independent runs of claude-haiku-4-5 using the same Layer B codebook). Where manual and LLM classifications exist for the same JD, manual takes precedence.
+
+**LLM classification quality:** Self-consistency across three runs was high for structured dimensions (velocity_vs_rigour: 0.92, domain_risk: 0.95, data_team_maturity: 0.95). It was lower for dimensions with subjective criteria (jd_authorship: 0.59, autonomy_level: 0.73). Manual–LLM match rates were 25–35% across dimensions — a codebook validity signal, not a model failure. See `consistency_report.md` for full analysis.
 
 ---
 
-### 2026 (survey Dec 2025–Feb 2026, n=363, 73% practitioners / 27% managers)
+## 4. Findings
 
-**Survey demographics:** 73% practitioners, 27% managers/executives. Smallest sample in the series — 36% smaller than the 2023 baseline, 21% smaller than 2025. No reason stated by dbt Labs.
+### 4.1 Work orientation: rigour dominates overwhelmingly
 
-**Key findings:**
-- 72% prioritise AI-assisted coding in development workflows
-- Only 24% prioritise AI-assisted pipeline management (testing, observability) — named the "trust gap"
-- Trust in data as org priority: 83% (up from 66%; largest single-year jump on this metric, +17pp)
-- Speed as priority: 71% (up from 50%; comparable question)
-- 71% cite hallucinated or incorrect outputs reaching stakeholders as top concern
-- Infrastructure costs: 57% report increased warehouse/compute spend; only 36% report increased team budgets
-- Ambiguous data ownership: 41% face this as an obstacle (down from ~50% in 2024, still #2 structural blocker)
-- Technical integration challenges: 27% (down from 35%; comparable question)
+The `velocity_vs_rigour` dimension captures whether the JD's primary framing is about quality, correctness, and reliability (rigour) or about speed, iteration, and throughput (velocity).
 
-**Character:** Governance alarm. The tone shifts from reassurance to urgency. "AI acceleration is outpacing trust and governance" is the central claim — and it maps precisely onto dbt's product positioning around contracts, testing, and observability. The report creates the urgency; the product resolves it.
+| velocity_vs_rigour | n | % |
+|--------------------|---|---|
+| rigour | 78 | 84% |
+| mixed | 13 | 14% |
+| velocity | 2 | 2% |
 
-**Note on sample decline:** A 21% drop in a single year is notable. Plausible explanations: survey fatigue, dbt community contraction as Databricks-native and Python-first stacks compete for mindshare, or data role layoffs reducing the practitioner population. dbt Labs offers no explanation.
+**84% of JDs signal a rigour orientation.** Pure velocity is effectively absent — only 2 JDs across 93 signal it. This is the single clearest finding in the dataset: European analytics engineering employers in 2026 frame the role in terms of reliability and correctness, not speed.
 
----
+This is broadly consistent with the dbt 2026 report's governance anxiety — but the consistency is directional. The JD data cannot distinguish "rigour because we care about engineering craft" from "rigour because we fear AI-generated errors reaching decision-makers." The dbt report's specific framing (fear of hallucinated outputs, AI governance as the driver) may or may not be what's behind employer language.
 
-## 3. Persistent themes across years (comparable metrics)
-
-The table below tracks only metrics where the same or directly comparable question was asked in multiple years.
-
-| Theme | 2023 | 2024 | 2025 | 2026 |
-|-------|------|------|------|------|
-| **Poor data quality (top concern)** | 41%* | 57% | 56% | (comparable not published separately) |
-| **Ambiguous data ownership** | 44% (poor rating) | ~50% (challenge) | — | 41% (obstacle) |
-| **Technical integration as challenge** | — | 35% | — | 27% |
-| **Budget growth** | — | contracting | 30% growth | 36% team budgets growing |
-| **Team growth** | — | 33% headcount cuts | 40% growth | — |
-| **Trust in data as top priority** | — | #1 (qualitative) | 66% | 83% |
-| **Speed as priority** | — | — | 50% | 71% |
-
-*2022 baseline from 2024 report retrospective.
-
-**Key observations from the comparable data:**
-
-1. Data quality concern has been stable at ~56–57% for at least two years (2024–2025). Not improving despite investment. This suggests the investment announcements in 2023 didn't resolve the problem.
-
-2. Data ownership is a persistent multi-year structural problem. It appears in every report in slightly different framing but has not improved materially. The 2026 decline from ~50% to 41% is directionally positive but may reflect question rewording.
-
-3. The trust priority shift (66% → 83%) is the most dramatic year-on-year change in 2026. However, at n=363 from a self-selected sample, a 17pp swing should be treated as a signal rather than a precise measurement.
-
-4. Technical integration dropping from 35% to 27% suggests tooling has genuinely improved — the modern data stack has commoditised infrastructure. This is the one structural problem the reports claim was actually solved.
+**What this looks like in practice:** JDs signal rigour through phrases like "single source of truth," "data quality standards," "you will own data reliability," CI/CD requirements, and emphasis on testing and documentation. These appear in the majority of JDs regardless of company size, seniority level, or domain.
 
 ---
 
-## 4. Trend analysis
+### 4.2 Domain risk: moderate dominates; high-risk roles are not more rigour-focused
 
-**2023→2024:** The profession pivots from defining itself to confronting its hard problems. The frame shifts from "what is analytics engineering" to "what prevents us from doing it well." The answer: human and process failures, not technical ones.
+`domain_risk` measures the stakes of data errors in the role's primary domain (high = finance, fintech, compliance, safety; moderate = marketplace, SaaS, general commercial; low = internal tooling, education).
 
-**2024→2025:** The AI wave hits. The dominant narrative becomes adoption velocity. The community is told (and believed) that AI use has tripled in twelve months. Budget and hiring rebounded from 2023's VC winter, giving the field a growth story it needed.
+| domain_risk | n | % |
+|-------------|---|---|
+| moderate | 61 | 66% |
+| high | 28 | 30% |
+| low | 4 | 4% |
 
-**2025→2026:** The wave breaks. After a year of 80% adoption claims, the 2026 report pivots to the hangover: AI is generating output faster than anyone can validate it. Trust is the new speed. Governance is the new growth. This is a predictable second-order effect of the 2025 adoption narrative — fast adoption without discipline creates quality risk.
-
-**The pattern:** Each year's report builds on the previous year's anxiety. 2023 established the field. 2024 named the people problems. 2025 promised that AI solves the velocity problem. 2026 warns that AI creates a new governance problem. dbt's products address each: modelling discipline (2023), data contracts (2024), AI assist (2025), observability/trust (2026).
-
----
-
-## 5. Tonality and framing analysis
-
-| Year | Dominant register | Key rhetorical move |
-|------|-------------------|---------------------|
-| 2023 | **Aspirational / definitional** | Category creation — "analytics engineering is a profession" |
-| 2024 | **Diagnostic / sober** | Problem identification — "the hard problems are human ones" |
-| 2025 | **Euphoric / reassurance** | Anxiety inoculation — "AI helps, it doesn't replace" |
-| 2026 | **Alarmed / prescriptive** | Urgency creation — "governance must become infrastructure" |
-
-The 2025 report was written during AI hype peak (data collected Oct–Dec 2024). Its reassurance function is explicit: the 80% adoption stat is headlined as validation, not alarm. The 2026 report is written after the hype began to consolidate — the field has had a year of using AI and is discovering the trust failures.
-
-**Weick's sensemaking lens (1995):** The report is not just a measurement instrument — it is a sensemaking artefact that constitutes how practitioners understand their professional moment. The 2023→2026 shift from aspiration to alarm is a collective sensemaking transition, regardless of whether the underlying data supports it at the precision implied. By providing shared vocabulary ("trust gap", "governance as infrastructure"), the report enables the community to coordinate meaning — and to feel they are part of a coherent professional narrative.
-
-**Abrahamson's management fashion lens (Academy of Management Review, 1996):** dbt Labs functions as a fashion setter. By publishing annually and coining terms, it defines what the field should care about. The narrative must refresh each year to sustain attention. The 2026 "governance alarm" is structurally necessary — it replaces the 2025 "AI euphoria" and extends the report's agenda-setting power.
-
----
-
-## 6. Methodological critique
-
-### 6.1 Self-selection bias
-
-The survey is distributed through dbt's community channels. In 2023, 76% of respondents already use dbt. Later years do not disclose this figure — but the distribution channel has not changed. This means every finding is a claim about *the dbt community*, not "analytics engineering professionals" broadly.
-
-As established in survey research methodology (Lavrakas, ed., *Encyclopedia of Survey Research Methods*, Sage, 2008), self-selection creates a "digital echo" — participants share ideological and demographic characteristics. The dbt community skews: early adopter, tech-sector, North America/Europe, SQL-first, cloud-native. Conclusions about "data professionals" drawn from this sample do not generalise.
-
-### 6.2 Shrinking sample
-
-| Year | n | Change |
-|------|---|--------|
-| 2023 | 567 | — |
-| 2024 | 456 | −20% |
-| 2025 | 459 | stable |
-| 2026 | 363 | −21% |
-
-The 2026 sample is 36% below the 2023 baseline. At n=363 with non-random sampling, the margin of error on any percentage is roughly ±5pp at 95% confidence — even before accounting for self-selection bias. Year-on-year comparisons at this sample size should be treated as directional signals only.
-
-### 6.3 Comparable vs non-comparable metrics
-
-The reports frequently imply trend lines across years using statistics from different questions. In this analysis, only directly comparable questions (same construct, same framing) are tracked as trends. For example:
-- Data quality as top concern: 57% (2024) → 56% (2025) — comparable, stable
-- "46% plan to invest in data quality" (2023 intent) vs "57% cite it as concern" (2024 experience) — not comparable; not presented as a trend here
-
-### 6.4 The product-market fit loop
-
-Each year's narrative aligns with dbt's product announcements at the time of publication:
-- 2024 report → dbt data contracts launch
-- 2025 report → dbt Copilot / AI assist
-- 2026 report → observability, governance, trust features
-
-This alignment may be coincidental — the same market forces that shape practitioner anxiety also shape product priorities. But it creates a structural incentive to define the problem in terms dbt can solve, and the report is not independent of this.
-
----
-
-## 7. 2026 assertions mapped to Layer B dimensions
-
-The `adapt-resume` skill captures "Layer B" behavioural signals from each JD. The table below maps each 2026 report assertion to the Layer B dimension that would capture its presence (or absence) in employer language.
-
-| 2026 Assertion | Layer B dimension | What JD evidence would look like if true |
-|----------------|-------------------|------------------------------------------|
-| AI adoption (72%) outpacing governance investment (24%) | **Loss aversion** | JDs frame the role in risk-reduction terms — "prevent bad data reaching stakeholders", "own data reliability" — not just "build pipelines faster" |
-| Trust in data is now #1 priority (83%) | **Loss aversion** + **domain_risk** | High-domain-risk JDs (finance, fintech) should cluster on rigour + loss-aversion framing; "data accuracy" framed as business risk, not technical metric |
-| Ambiguous data ownership persists (41%) | **Collaboration width** | Roles with many named stakeholder teams but early-stage data teams signal unresolved ownership — no central data authority yet |
-| AI acceleration outpacing governance | **Velocity vs rigour** | If the assertion has entered employer consciousness, `rigour` should dominate JDs. `velocity` signals would indicate the governance discourse hasn't reached hiring language |
-| Discipline in modelling is now a requirement, not a best practice | **JD authorship** | Hiring manager-authored JDs (vs recruiter) should include specific governance requirements — data contracts, testing mandates, observability frameworks |
-| Infrastructure costs outpacing team budgets | Not captured in JD text | Cannot test from JD data; requires external budget/salary datasets |
-| Agentic AI makes discipline mandatory | **Seniority signals** | Roles framing themselves as "you will define standards" or "establish governance" suggest employers are seeking someone to solve this — signals the problem is real in their org |
-
----
-
-## 8. Theoretical frameworks applied
-
-### 8.1 Collingridge Dilemma (Collingridge, 1980) — Science & Technology Studies
-
-> "When change is easy, the need for it cannot be foreseen; when the need for change is apparent, change has become expensive, difficult, and time-consuming."
-
-**Source:** David Collingridge, *The Social Control of Technology* (Frances Pinter, London, 1980). ISBN: 0903804727.
-
-The 2026 report's central thesis is a textbook Collingridge instance. AI adoption was fast and cheap to enable (Copilot integration, prompt-based querying). Its governance implications were not predictable until adoption was widespread. By the time 72% of teams are coding with AI, changing the governance model is expensive — it requires re-architecting testing practices, data contracts, and observability across existing pipelines.
-
-The report frames this as a discovered finding. The Collingridge dilemma predicts it as inevitable. The implication is not that teams failed to plan — it is that governance of fast-moving technologies is structurally late by design.
-
-### 8.2 Diffusion of Innovations (Rogers, 1962/2003) — Rural Sociology / Communication Studies
-
-**Source:** Everett M. Rogers, *Diffusion of Innovations* (1st ed., Free Press of Glencoe, 1962; 5th ed., Free Press, 2003).
-
-Rogers' adoption curve maps directly onto the dbt report series:
-
-- **2023:** Early adopter phase. The field is defining itself. Adoption is concentrated in tech-forward teams with high SQL maturity.
-- **2025:** Early majority crossing. 80% AI adoption signals mass-market penetration. The community has crossed the chasm.
-- **2026:** Early majority consequence. This cohort adopts tools before developing the discipline of the innovators who preceded them. Governance gaps are characteristic of this phase — not a failure of individual teams but a structural property of mass adoption.
-
-Rogers also notes that fashion setter dynamics intensify during the early majority phase — which is precisely when Abrahamson's management fashion framework kicks in (see 8.4).
-
-### 8.3 Institutional Isomorphism (DiMaggio & Powell, 1983) — Organisational Sociology
-
-**Source:** Paul J. DiMaggio and Walter W. Powell, "The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields," *American Sociological Review*, Vol. 48 (1983), pp. 147–160. DOI: 10.2307/2095101.
-
-DiMaggio & Powell identify three mechanisms by which organisations become similar: coercive (regulatory pressure), **mimetic** (copying under uncertainty), and normative (professionalisation).
-
-The 72% AI coding / 24% governance gap is a textbook mimetic isomorphism pattern:
-- Teams adopt AI coding tools because peers do — the tool is visible, fast-moving, and discussed publicly
-- Governance investment is invisible and slow — no one presents "we increased test coverage by 20%" at a conference
-- Under uncertainty (what does good AI data practice look like?), teams copy what is publicly celebrated rather than what is structurally sound
-
-DiMaggio & Powell note that mimetic adoption "makes organisations more similar without necessarily making them more efficient." The dbt community adopted the same tool (AI coding) for similar reasons (peer pressure) without necessarily the same effectiveness.
-
-**JD data connection:** If mimetic isomorphism is driving AI adoption, we would expect AI experience to appear in JDs *without* accompanying governance requirements. The proposed `has_ai_requirement` vs `has_testing_culture_signal` schema fields would test this directly.
-
-### 8.4 Management Fashion Theory (Abrahamson, 1996) — Organisational Behaviour / Management Studies
-
-**Source:** Eric Abrahamson, "Management Fashion," *Academy of Management Review*, Vol. 21, No. 1 (January 1996), pp. 254–285. JSTOR: 258636. DOI: 10.5465/amr.1996.9602161572.
-
-Abrahamson defines management fashions as "transitory collective beliefs that certain management techniques are at the forefront of management progress." Fashion setters generate and sustain these beliefs through rhetoric, framing devices, and annual publication cycles.
-
-The dbt Labs "State of Analytics Engineering" is a management fashion document by Abrahamson's definition:
-- It is annual and must introduce a new central anxiety each year to sustain attention
-- It uses rhetorical devices ("trust gap", "governance as infrastructure") that practitioners adopt as vocabulary
-- It positions dbt's products as the resolution to the problem it names
-- Its findings follow social logic (what practitioners feel) as much as technical logic (what data shows)
-
-This does not make the findings false — it means they should be read as community sentiment reports, not objective market measurement. Abrahamson's framework would predict that "governance" becomes the dominant analytics engineering discourse in 2026–2027, regardless of whether underlying practice changes, because the fashion has been set.
-
-### 8.5 Job Market Signalling (Spence, 1973) — Labour Economics
-
-**Source:** Michael Spence, "Job Market Signaling," *The Quarterly Journal of Economics*, Vol. 87, Issue 3 (August 1973), pp. 355–374. DOI: 10.2307/1882010.
-
-Spence's signalling theory establishes that under information asymmetry, observable signals proxy unobservable qualities. Employers use JD language as a signal of organisational culture and maturity to attract candidates.
-
-Applied to this analysis: the *presence or absence* of governance language in JDs ("data contracts", "observability as a responsibility", "you will define testing standards") is an employer signal. If the 2026 report's anxiety is real and has entered organisational consciousness, it should appear in what employers ask for — not just in what practitioners report in surveys.
-
-The absence of such language in JDs would suggest the discourse is circulating at the community/identity level (conference talks, survey responses) but has not yet translated into hiring decisions. This is the most important gap to measure.
-
-### 8.6 Job Postings as Revealed Preference (Deming & Kahn, 2018) — Labour Economics
-
-**Source:** David Deming and Lisa B. Kahn, "Skill Requirements across Firms and Labor Markets: Evidence from Job Postings for Professionals," *Journal of Labor Economics*, Vol. 36, No. S1 (2018), pp. S337–S369. DOI: 10.1086/694106. NBER Working Paper 23328.
-
-Deming & Kahn establish that job postings are revealed-preference data — employers write what they actually value when faced with the cost of searching. This contrasts with survey responses, which reflect stated preferences. Within-occupation variation in JD language is substantial, meaning two "analytics engineer" JDs may be asking for fundamentally different things.
-
-This validates the JD dataset as an analytical counterweight to the survey data. If the dbt report says "83% prioritise trust in data," the JD dataset asks: are employers *paying* for that priority by requiring it in hires? A survey respondent can state a priority at no cost; a JD requirement carries real hiring cost.
-
-**Implied action:** Match the JD's *revealed* priority, not the survey-stated one. If a JD mentions dbt but not testing culture, the employer's actual preference is delivery — regardless of what a practitioner survey would elicit from their team. Pitch to what the JD asks for, not to the community anxiety the report describes.
-
----
-
-## 8.7 What each theory implies — action synthesis
-
-The theories are not just descriptive. Each one carries an implication for how to read JDs and how to position a candidate.
-
-**Collingridge Dilemma → look for the early signal, not the mature practice.**
-Governance requirements will not be widespread in JDs yet — the dilemma predicts governance is always structurally late. A JD that already requires testing culture or data contracts is signalling an employer ahead of the curve. These roles are worth prioritising: the employer understands the problem before most of the market does.
-
-**Rogers' Diffusion → early-majority employers need what they skipped.**
-Most of the market (mid-maturity teams, the largest segment in the JD dataset at 49%) adopted the modern data stack but not the discipline that early adopters brought with it. Senior and staff AE roles at mid-maturity companies are implicitly asking for someone to install that discipline retrospectively. The pitch is: "I have the rigour you built fast without."
-
-**DiMaggio & Powell (Mimetic Isomorphism) → lead with what others aren't doing.**
-If organisations are copying each other on AI adoption but not governance, a candidate who leads on governance is differentiated. The resume should not mirror what everyone claims (AI coding, pipeline building) — it should lead with what most people have not yet operationalised: testing standards, data contracts, reliability outcomes. That is the contrarian signal that cuts through mimetic convergence.
-
-**Abrahamson (Management Fashion) → use the 2026 vocabulary deliberately.**
-The vocabulary in the 2026 report — "trust gap", "governance as infrastructure", "discipline in modelling becomes a requirement" — will circulate through hiring managers' heads, especially those who follow the dbt community. Resume and cover letter language that mirrors this framing will read as current and self-aware. This is not cynicism; it is fashion literacy. The vocabulary was coined by someone reading the same market signals the hiring manager reads.
-
-**Spence (Signalling) → quantified governance outcomes are costly-to-fake signals.**
-Under information asymmetry, signals that are expensive to fabricate carry the most weight. Vague claims of "data quality focus" are cheap — every candidate makes them. Quantified governance outcomes ("reduced pipeline failures by 90%", "established testing standards adopted across the organisation", "cut data incident response time from days to hours") are costly to fake because they require having actually done the work. These are the signals to lead with.
-
-**Deming & Kahn (Revealed Preference) → pitch to what the JD asks for, not what the report says teams want.**
-A JD that mentions dbt but not testing culture is revealing that the employer's actual priority is delivery speed, regardless of what a survey would show. Read each JD as a revealed-preference document and pitch accordingly — the community discourse about governance may not yet have reached this particular hiring manager. The 35% of JDs classified as `mixed` on velocity vs rigour are the most ambiguous cases: they require reading which signals come first (primacy bias in the skill list, seniority language, stakeholder scope) to determine the true revealed preference.
-
----
-
-## 9. Research questions and JD dataset evidence
-
-**Dataset:** 37 records, April–June 2026, primarily European/Berlin market. Role type breakdown: 28 analytics_engineering_bi, 4 team_lead, 3 data_engineering, 2 other. Seniority in AE roles: 54% senior, 36% mid, 7% staff, 4% lead.
-
----
-
-### RQ1: Is rigour the dominant market signal in 2026 JDs?
-
-**Why this matters:** The 2026 report asserts governance/discipline has become the field's top concern. If true, JD language should reflect this — employers recruiting for analytics engineering should emphasise testing, validation, and reliability over speed.
-
-**Result:**
-
-| velocity_vs_rigour | All (n=37) | AE only (n=28) |
-|--------------------|-----------|----------------|
-| rigour | 65% (24) | 64% (18) |
-| mixed | 30% (11) | 36% (10) |
-| velocity | 5% (2) | 0% (0) |
-
-**Interpretation:** Rigour dominates strongly — 65% of all JDs and 64% of AE JDs signal a rigour orientation. Notably, no pure AE role signals velocity. This is broadly consistent with the report's claim that governance and trust are now market priorities. However, this is a qualitative classification based on Layer B analysis, not a structured field measuring whether testing/governance is explicitly *required* (see RQ5 below).
-
----
-
-### RQ2: Does domain risk cluster with rigour framing?
-
-**Why this matters:** The report claims 71% fear bad data outputs reaching stakeholders — with higher stakes in high-risk domains (finance, fintech). High `domain_risk` roles should cluster on `rigour`.
-
-**Result:**
+**Cross-tab with velocity_vs_rigour:**
 
 | domain_risk | rigour | mixed | velocity | n |
 |-------------|--------|-------|----------|---|
-| high | 56% | 38% | 6% | 16 |
-| moderate | 71% | 29% | 0% | 17 |
+| moderate | 90% | 10% | 0% | 61 |
+| high | 71% | 25% | 4% | 28 |
 | low | 75% | 0% | 25% | 4 |
 
-**Interpretation:** Counterintuitively, `moderate` domain risk roles are *more* rigour-dominant than `high` risk roles. High-risk roles (fintech, finance, marketplace) have a higher proportion of `mixed` signals — they balance speed with rigour rather than prioritising rigour exclusively. This may reflect that high-stakes businesses also have more time-pressure on their data work. The result does not straightforwardly validate the report's fear-of-bad-outputs claim as showing up in hiring language.
+The counterintuitive finding: **moderate-risk roles are more rigour-dominant than high-risk roles.** High-risk roles (fintech, finance, compliance) show more `mixed` signals — they balance speed with rigour rather than committing entirely to rigour.
+
+One interpretation: high-stakes businesses have more time pressure on their data work, not less. A fintech processing payments needs fast delivery alongside correctness. A general SaaS company, with less urgency, can afford to prioritise craft. The domain-risk → rigour-framing assumption in the 2026 report (that fear of bad outputs tracks with high-stakes domains) doesn't hold simply in employer language.
 
 ---
 
-### RQ3: Does collaboration width proxy unresolved data ownership?
+### 4.3 Data team maturity: the market skews mid-stage, and maturity reshapes everything
 
-**Why this matters:** The report's persistent finding on ambiguous data ownership (41–50% across years) should manifest as a structural pattern — teams with many stakeholders but low maturity, where ownership questions remain open.
+`data_team_maturity` estimates where the organisation's data function sits on a development arc: `early` (building the foundation, often first or second data hire), `mid` (established stack, active growth and expansion), or `mature` (sophisticated platform, federated or domain-oriented structure).
 
-**Result:**
+| data_team_maturity | n | % |
+|--------------------|---|---|
+| mid | 69 | 74% |
+| early | 18 | 19% |
+| mature | 6 | 6% |
 
-| data_team_maturity | avg collaboration_width | n |
-|--------------------|------------------------|---|
-| early | 2.7 | 14 |
-| mid | 3.6 | 18 |
-| mature | 4.6 | 5 |
+**Three-quarters of the market is mid-stage.** Early-stage roles are 19% of the dataset; genuinely mature data organisations are rare (6%). This concentration at mid-stage has implications for what the role actually entails — it is neither greenfield nor optimisation work, but the messier middle of expanding coverage, increasing stakeholder count, and establishing standards that didn't exist at the start.
 
-**Interpretation:** Collaboration width *increases* with team maturity, not decreases. This is the opposite of the "unresolved ownership" hypothesis. Early-stage data teams have narrower stakeholder scope — they serve fewer functions because the organisation hasn't yet integrated data work broadly. As teams mature, they serve more stakeholders, not fewer. This suggests collaboration width is a proxy for organisational data penetration, not ownership confusion. The ownership problem may be orthogonal to team size.
+**Maturity × rigour cross-tab:**
 
----
+| data_team_maturity | rigour | mixed | velocity | n |
+|--------------------|--------|-------|----------|---|
+| mid | 93% | 7% | 0% | 69 |
+| mature | 100% | 0% | 0% | 6 |
+| early | 44% | 44% | 11% | 18 |
 
-### RQ4: How prevalent is dbt in JDs?
-
-**Why this matters:** The dbt reports implicitly treat "analytics engineering" and "dbt user" as near-synonymous. JD data can test whether dbt has truly become the field standard.
-
-**Result:**
-
-| | All (n=37) | AE/BI only (n=28) |
-|--|-----------|------------------|
-| has_dbt = True | 68% (25) | 71% (20) |
-| has_dbt = False | 32% (12) | 29% (8) |
-
-**Interpretation:** 71% of AE/BI roles mention dbt — a high but not universal rate. One in three analytics engineering JDs does not require dbt. This is consistent with the sampling bias critique: a dbt-community survey would naturally show near-universal dbt familiarity, but the actual market still has significant dbt-free demand (Databricks SQL, Spark-native, BigQuery-first stacks, etc.).
-
-**JD authorship breakdown:**
-
-| jd_authorship | % of all |
-|---------------|----------|
-| hiring_manager | 54% |
-| mixed | 32% |
-| recruiter | 14% |
-
-The majority of JDs in this dataset are hiring-manager authored — a signal of technical specificity rather than generic role descriptions.
+The pattern is sharp: **mid and mature teams are almost exclusively rigour-oriented; early-stage teams are split evenly between rigour and mixed, with some velocity signal.** Early-stage roles are where velocity appears — these are organisations that don't yet have the infrastructure to support a rigour-first discipline, and their JDs reflect that honestly. If you want to move fast and build new things, early-stage is structurally different from the mid-stage norm.
 
 ---
 
-### RQ5: Does loss aversion framing show up in JD language?
+### 4.4 Stakeholder orientation: internal_data dominates
 
-**Why this matters:** The report's 71% "fear of hallucinated outputs" finding is the most visceral claim in 2026. If employers feel this, it should appear in JD language — roles framed in terms of preventing bad data reaching stakeholders, data reliability as a risk-reduction outcome, governance as a mandatory responsibility.
+`stakeholder_orientation` identifies who the AE primarily serves: `commercial` (GTM, sales, marketing, RevOps), `product` (experimentation, funnels, product analytics), `internal_data` (other data practitioners — ML, data science, platform teams), `finance`, or `mixed`.
 
-**Current limitation:** This is the most important question the schema cannot currently answer. The `velocity_vs_rigour` field captures orientation but not the specific framing of *why* rigour matters. Two JDs can both be `rigour`-oriented: one because the company cares about engineering craft, and another because they fear a compliance failure or an executive making a decision on bad AI output.
+| stakeholder_orientation | n | % |
+|-------------------------|---|---|
+| internal_data | 58 | 62% |
+| commercial | 11 | 12% |
+| finance | 11 | 12% |
+| mixed | 8 | 9% |
+| product | 5 | 5% |
 
-**What the Layer B behavioural analysis does capture:** The `loss_aversion` field in each jd.md documents whether the JD uses risk-reduction framing. However, this is not currently extracted into a structured schema field.
+**62% of AE roles primarily serve internal data consumers** — other analysts, data scientists, ML engineers, or the data platform itself. This is the dominant archetype in this market. Commercial-facing and finance-facing roles are each ~12% of the market; product-focused roles are the smallest segment.
 
-**Assessment:** The JD dataset cannot test the fear-of-hallucinations claim without schema addition. See Section 10.
+**Cross-tab with rigour:**
+
+| stakeholder_orientation | rigour | mixed | velocity | n |
+|-------------------------|--------|-------|----------|---|
+| internal_data | 90% | 9% | 2% | 58 |
+| finance | 91% | 9% | 0% | 11 |
+| commercial | 64% | 27% | 9% | 11 |
+| mixed | 75% | 25% | 0% | 8 |
+| product | 60% | 40% | 0% | 5 |
+
+Finance and internal_data roles are the most rigour-dominant. Commercial roles are the most mixed — the fastest-moving stakeholders (sales, marketing) create the most pressure on delivery speed, and JD language reflects this. Product roles are split — experimentation work has its own velocity demands.
+
+**What this means for positioning:** If you are applying for an `internal_data` role and lead with delivery speed, you are mismatched with the employer's framing. These roles want someone who makes the data more trustworthy for downstream consumers, not someone who ships faster.
 
 ---
 
-### RQ6: What is the stakeholder orientation of AE roles in this market?
+### 4.5 Autonomy level: execution roles outnumber strategic ones, but early-stage inverts this
 
-**Why this matters:** Who you serve shapes the daily texture of the role more than almost any other factor. A commercial-facing AE (GTM, RevOps, sales) operates in a high-frequency, high-demand environment where speed and communication with non-technical stakeholders dominate. A product-facing AE deals with experimentation and funnel logic. An internal-data AE is primarily serving other data practitioners. The mix across the market reveals whether AE is converging on a particular archetype or remaining genuinely diverse.
+`autonomy_level` separates roles where the AE sets the direction (`strategic`) from roles where they execute against a direction set by others (`execution`), with `mixed` covering roles that signal both.
 
-**What the JD dataset can answer:** With `stakeholder_orientation` now a classified dimension, the distribution across commercial / product / internal_data / finance / mixed can be computed directly. The hypothesis: given that 64% of JDs in this dataset come from mid-maturity teams, and mid-maturity companies tend to be growth-stage businesses with active GTM motions, commercial orientation should dominate.
+| autonomy_level | n | % |
+|----------------|---|---|
+| execution | 37 | 40% |
+| strategic | 30 | 32% |
+| mixed | 26 | 28% |
+
+**Cross-tab with data_team_maturity:**
+
+| data_team_maturity | strategic | mixed | execution | n |
+|--------------------|-----------|-------|-----------|---|
+| early | 44% | 17% | 39% | 18 |
+| mid | 29% | 32% | 39% | 69 |
+| mature | 33% | 17% | 50% | 6 |
+
+Early-stage companies offer more strategic autonomy than mid-stage ones — the "greenfield" signal is real. But early-stage also comes with more execution-level work by necessity (someone has to build the pipelines). Mid-stage companies, despite their scale, skew toward execution — the roadmap is set, the task is to extend it.
+
+**The "Senior AE" autonomy gap:** Senior titles in JD language frequently use ownership framing ("own the data model", "drive analytics delivery") without granting actual direction-setting power. The `autonomy_level` coding captures this gap — many JDs classified as `execution` use senior language. This is a candidate information problem: the senior title signals seniority of execution, not seniority of strategy.
+
+The practical implication for interviews: ask explicitly what decisions this role makes autonomously in the first year. The answer separates genuine strategic roles from senior executor roles with ownership vocabulary.
 
 ---
 
-### RQ7: How much strategic autonomy do AE roles actually offer?
+### 4.6 JD authorship: hiring managers write most JDs, but the signal is noisy
 
-**Why this matters:** JD language frequently implies ownership ("own the data model", "drive analytics delivery") without actually granting strategic direction-setting power. The `autonomy_level` dimension separates roles where the AE defines the roadmap from roles where they execute against one set by a product manager, data lead, or commercial team. For candidates who value independence — and for hiring managers trying to attract them — the gap between signalled and actual autonomy is a trust problem.
+`jd_authorship` attempts to distinguish JDs written by the actual hiring manager (technical specificity, named tools in precise context, first-person responsibility framing) from recruiter-authored JDs (generic requirements, boilerplate culture language, tool-list format).
 
-**What the JD dataset can answer:** The distribution of `strategic` / `execution` / `mixed` across seniority levels will reveal whether senior titles reliably correspond to strategic autonomy, or whether "Senior AE" often means senior executor. Cross-tabbing `autonomy_level` against `data_team_maturity` will test whether early-stage teams genuinely offer more strategic input, or whether "greenfield" often means high ambiguity without real direction-setting authority.
+| jd_authorship | n | % |
+|---------------|---|---|
+| hiring_manager | 44 | 47% |
+| mixed | 35 | 38% |
+| recruiter | 14 | 15% |
+
+**This dimension has the lowest LLM self-consistency (0.59) of any dimension in the codebook.** 77 of 93 JDs showed at least one inconsistent run across three LLM classifications. The codebook decision rules for distinguishing `hiring_manager` from `mixed` were the most ambiguous in the framework — the boundary between "specificish but not clearly technical" and "clearly written by someone technical" wasn't well-defined.
+
+This is codebook underspecification, not a model failure. The dimension still has analytical value — `recruiter` is a relatively clear classification — but `hiring_manager` vs `mixed` should be treated cautiously.
+
+**Cross-tab with rigour:**
+
+| jd_authorship | rigour | mixed | velocity | n |
+|---------------|--------|-------|----------|---|
+| hiring_manager | 80% | 18% | 2% | 44 |
+| mixed | 89% | 9% | 3% | 35 |
+| recruiter | 86% | 14% | 0% | 14 |
+
+Rigour is dominant across all authorship types — this finding does not depend on who wrote the JD.
 
 ---
 
-## 9b. What JDs cannot tell you — and how to find out in interviews
+### 4.7 Collaboration width: mid-stage teams serve more stakeholders than early ones
 
-Two factors that matter most for long-term role satisfaction cannot be reliably inferred from JD text: **growth ceiling** and **management quality**. Both are partially signalled but easily faked, because JDs are marketing documents.
+`collaboration_width` is a numeric count of named stakeholder teams mentioned in the JD's responsibilities section. It is the noisiest dimension — the LLM evidence quote pass rate dropped to ~52% because many JDs describe collaboration in generic terms ("cross-functional teams") rather than naming specific teams.
+
+| data_team_maturity | mean collaboration_width | n |
+|--------------------|--------------------------|---|
+| early | 2.9 | 18 |
+| mid | 2.7 | 69 |
+| mature | 3.8 | 6 |
+
+The hypothesis that early-stage teams have higher collaboration width (because data ownership is ambiguous and everyone is involved) does not hold. Mature teams have the highest named-stakeholder count, early and mid teams are similar.
+
+**Interpretation:** Collaboration width appears to be a proxy for how far data work has penetrated an organisation, not for organisational dysfunction. Mature teams have more named stakeholders because the data function has extended to more domains, not because ownership is chaotic. Early-stage teams have fewer named stakeholders because the organisation is smaller and the data function is more narrowly scoped.
+
+**Limitation:** The generic-collaboration-language problem means this dimension may undercount early-stage teams that have broad but informally described stakeholder involvement.
+
+---
+
+### 4.8 dbt prevalence: real but not universal
+
+This was not classified as a primary Layer B dimension but was noted in the manual coding phase. Of the 41 manually coded JDs, approximately 71% of AE/BI roles mentioned dbt as a required or preferred tool.
+
+This is consistent with the dbt report's implicit claim that dbt has become the field standard — but one in three analytics engineering roles does not require it. The European market includes meaningful Databricks SQL, BigQuery-native, and Spark-first stacks. A survey distributed through dbt's community channels cannot measure this share of the market.
+
+---
+
+## 5. What the survey claims vs. what JDs show
+
+| dbt 2026 claim | JD evidence | Assessment |
+|----------------|-------------|------------|
+| 83% prioritise data trust | 84% rigour-oriented JDs | Directionally consistent — but JD rigour ≠ fear of AI hallucination |
+| 72% prioritise AI coding | Not classifiable from JD text | No structured field; anecdotal mentions in JDs are sparse |
+| AI adoption outpacing governance (72% vs 24%) | Cannot test directly | Would require `has_ai_requirement` + `has_testing_culture_signal` fields |
+| Fear of hallucinated outputs (71%) | Cannot isolate in JD language | Loss-aversion framing is present in some JDs but not extracted as a structured field |
+| Ambiguous data ownership persists (41%) | Collaboration width does not confirm this | Mid and early teams have similar width; ownership confusion is not detectable from JD language alone |
+| dbt is the field standard | 71% of AE JDs mention dbt | True for this dataset; ~30% of AE market operates without it |
+
+**The most important gap:** The dbt 2026 report's central anxiety — AI acceleration outpacing governance — cannot be tested from current JD data. Two schema fields would unlock this: `has_ai_requirement` (does the JD mention AI as a required skill?) and `has_testing_culture_signal` (does the JD frame testing/observability as a *responsibility*, not just a tool?). If these were classified, you could directly measure whether the governance gap (AI coding without governance requirement) appears in employer language. Currently, it cannot be confirmed or denied.
+
+---
+
+## 6. Theoretical interpretation
+
+The JD findings are most usefully read through three frameworks. These are interpretive lenses applied after the fact, not pre-specified hypotheses — the dataset is too small to test theories, but the theories provide vocabulary for what the patterns suggest.
+
+**Deming & Kahn (2018) — revealed preference:** JD requirements carry hiring cost; survey responses do not. The 84% rigour finding is a revealed preference for correctness over speed. The absence of AI requirements in most JDs is also a revealed preference — employers in 2026 have not yet institutionalised AI adoption into hiring criteria, even as they reportedly use AI tools widely. The gap between 80% AI daily use (survey) and sparse AI JD requirements (revealed preference) is the most important discrepancy in the data, and it points to informal rather than normative adoption.
+
+**DiMaggio & Powell (1983) — mimetic isomorphism:** If organisations adopt AI coding tools because peers do (mimetic), the adoption leaves no trace in hiring language — it's not a professional standard yet, just a team behaviour. If adoption becomes normative (professionalised), it would appear in JDs as a requirement. Current evidence suggests it is still mimetic. A candidate who leads on governance is differentiated in this context, because they are institutionalising what most teams have adopted informally.
+
+**Spence (1973) — signalling:** Under information asymmetry, costly-to-fake signals carry the most weight. "Data quality focus" is cheap to claim; quantified governance outcomes ("reduced pipeline failures by 90%", "established testing standards adopted across the organisation") are costly to fabricate because they require having done the work. The 84% rigour finding suggests that what employers signal they want is people who have actually done this — not people who say they care about it.
+
+**Rogers (2003) — diffusion:** 74% of the market is mid-stage teams. These organisations adopted the modern data stack but not necessarily the discipline that early adopters brought. Senior AE roles at mid-stage companies are implicitly asking for someone to install that discipline retrospectively. The pitch is: "I have the rigour you built fast without."
+
+---
+
+## 7. What JDs cannot tell you — interview questions that fill the gap
+
+Two factors that matter most for long-term role satisfaction cannot be inferred reliably from JD text: growth ceiling and management quality. Both are partially signalled but easily faked, because JDs are marketing documents.
 
 ### Growth ceiling
 
-**What JDs signal (weakly):**
-- Generic growth language ("we invest in your development", "regular performance reviews") is present in the majority of JDs and is meaningless as a differentiator — it is boilerplate.
-- Stronger signals: rotation across domains, explicit exposure to architecture decisions, named senior functions the role will partner with, and mentorship from named technical roles. These indicate the hiring manager has thought concretely about what growth looks like, not just that growth is good.
-- `jd_authorship = hiring_manager` is a mild positive proxy — a hiring manager who wrote specific responsibilities has usually also thought more concretely about the growth path than a recruiter-authored JD.
-- `data_team_maturity = mid` is the strongest structural growth signal: teams in active growth have more new domains to expand into, more scope to acquire, and more senior colleagues building things you can learn from than either early-stage (where you may be alone) or mature-stage (where specialisation has already solidified).
+**Stronger JD signals (use these to screen):**
+- Explicit cross-domain rotation or architecture exposure
+- Named senior technical roles the position will partner with
+- `jd_authorship = hiring_manager` — a mild positive proxy for concrete thinking about the role's development path
+- `data_team_maturity = mid` — the strongest structural growth signal: active expansion creates scope to acquire
 
-**What to ask in the interview:**
+**Questions to ask:**
+- "What does the person who succeeds in this role do 18 months from now — deeper in this domain, or into something different?"
+- "Can you tell me about someone on the team who grew significantly in the last two years — what did their growth actually look like?"
+- "What's the highest-impact decision this role would make autonomously in the first year?"
 
-| Question | What you're really testing |
-|----------|---------------------------|
-| "What does the person who succeeds in this role do 18 months from now — do they go deeper in this domain, or do they move into something different?" | Whether growth is genuinely mapped out, or just a talking point |
-| "Can you tell me about someone on the team who grew significantly in the last two years — what did their growth actually look like?" | Concrete evidence over stated intention |
-| "What technical or domain areas does this team not currently have covered that you'd want this person to start developing?" | Whether the scope is expected to expand, or is already fixed |
-| "Who would this person learn the most from, and how often do they interact?" | Whether senior technical mentorship is structurally available or accidental |
-| "What's the highest-impact decision this role would make autonomously in the first year?" | Whether growth comes with real responsibility, or just more task volume |
-
-**Red flags in interview answers:**
-- Vague or deflected growth answers ("the sky's the limit here") — indicates the manager hasn't thought about it
-- Growth is described only as headcount management ("you could manage a team eventually") — if you don't want to manage, this is the wrong signal
-- No concrete example of a team member who grew — indicates growth language is aspirational, not organisational practice
-
----
+**Red flags:** Vague growth language ("the sky's the limit"), growth defined only as headcount management, no concrete example of a team member who grew.
 
 ### Management quality
 
-**What JDs signal (weakly):**
-- `jd_authorship = hiring_manager` is the single most useful proxy available from JD text. A hiring manager who authored their own JD with specific responsibilities — naming tools with precise context, identifying concrete business problems — has usually also thought clearly about how they will manage the person they hire. Recruiter-authored JDs reveal nothing about the manager.
-- A JD where scope is undefined or contradictory (e.g. "own the strategy" but "support all stakeholders across the business") suggests the manager has not yet resolved what the role is — which often predicts a difficult first year of unclear expectations.
-- The absence of any mention of how the role fits into a larger data structure (who it reports to, what team it sits in, what the data function looks like) is a weak flag — either the manager didn't write the JD, or hasn't thought about the organisational context.
+**Stronger JD signals:**
+- `jd_authorship = hiring_manager` — the single most useful proxy. A manager who wrote the JD with specific responsibilities has usually thought clearly about how they will manage.
+- Scope that is clearly defined and internally consistent — contradictory scope ("own the strategy" but "support all stakeholders") predicts a difficult first year.
 
-**What to ask in the interview:**
+**Questions to ask:**
+- "How do you typically set priorities — do you set the roadmap and hand it down, or do you build it together?"
+- "What would I need to do in the first three months to make you feel confident this hire was the right one?"
+- "What's one thing people who've worked for you say they wished you did differently?"
 
-| Question | What you're really testing |
-|----------|---------------------------|
-| "How do you typically set priorities with the people you manage — do you set the roadmap and hand it down, or do you build it together?" | Whether management style matches your preference for autonomy |
-| "What does a performance review look like here — what gets discussed, how often, and what happens if someone is underperforming?" | Whether feedback is structured and honest, or informal and avoided |
-| "What's a decision you made in the last six months that turned out to be wrong — how did you handle it?" | Whether the manager has self-awareness and psychological safety to admit errors |
-| "How do you handle it when a stakeholder comes to you directly and asks for something that bypasses this role's normal scope?" | Whether the manager will protect your time and scope, or let you be pulled in all directions |
-| "What would I need to do in the first three months to make you feel confident this hire was the right one?" | Forces the manager to articulate concrete expectations, revealing whether they exist |
-| "What's one thing people who've worked for you say they wished you did differently?" | Self-awareness test — a manager who can't answer this is a flag |
-
-**Structural signals to read during the interview process itself:**
-- Did the hiring manager arrive prepared? Disorganisation in the interview process often mirrors disorganisation in management.
-- Were the interview questions specific to this role, or generic ("tell me about a time you solved a data problem")? Generic questions indicate the manager doesn't know what they're evaluating for.
-- Did the manager make time in the process for you to ask questions, or was every slot packed? Managers who don't leave space for candidate questions often don't leave space for employee questions either.
-- Was the manager curious about you as a person (motivations, working style, what you find hard), or only about your technical outputs? The former predicts a manager who invests in people; the latter predicts a manager who treats the role as a resource problem.
-
-**Red flags in the process itself:**
-- More than three weeks between any interview stage without explanation
-- Multiple rescheduled interviews without apology
-- A hiring panel where the hiring manager is largely silent and lets others lead
-- Contradictory descriptions of the role's scope or team structure from different interviewers
+**Process signals:** Disorganised interview process mirrors disorganised management. Generic interview questions indicate the manager doesn't know what they're evaluating for. No time left for your questions predicts no space for employee questions either.
 
 ---
 
-## 10. Schema extension proposals
+## 8. Schema gaps — fields that would unlock the most important questions
 
-Three new boolean/categorical fields would unlock the most important research questions. These would extend the JSON schema in `jd_data/` and require backfilling existing records.
+Three fields would allow the most valuable future analyses. They would need to be backfilled across existing records.
 
-### Field 1: `has_ai_requirement`
+### `ai_role` (replaces `has_ai_requirement`)
+**Type:** categorical — `none`, `ai_user`, `ai_enabler`  
+**Definition:**
+- `none` — no AI skill expected of the candidate. Includes JDs where the *company* builds AI products but the AE role is standard modelling work. Includes stale JDs with no AI mention at all.
+- `ai_user` — the role expects the candidate to use AI tools (Copilot, Claude Code, Cursor) to accelerate their own work. The AI is the candidate's tool. *"Proven active usage of AI tools in daily work with specific examples"* (Wolt); *"Experience using AI-assisted coding or coding agents in a disciplined way"* (Mentimeter).
+- `ai_enabler` — the role expects the candidate to build data infrastructure that AI systems consume or run on. The AI is downstream of the candidate's work. *"Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"* (Getsafe); *"Lead implementation of AI-driven analytical capabilities including text-to-SQL and semantic modelling for conversational BI"* (Leasingmarkt); *"Implement AI data agents and automation for reporting and alerting"* (Dashlane). Where a JD signals both, `ai_enabler` takes precedence.
 
-| Property | Value |
-|----------|-------|
-| Type | boolean |
-| Definition | JD mentions AI, LLM, GenAI, or "AI-assisted" in required or preferred skills/responsibilities |
-| Why | Tests whether employer demand has translated survey AI adoption (72–80%) into hiring requirements. If most JDs lack this despite high reported team adoption, the adoption is informal, not yet institutionalised in hiring |
-| DiMaggio & Powell connection | Mimetic adoption (copying peers) leaves no trace in JDs; normative adoption (professionalisation) does |
+**Why:** The dbt 2026 report claims 72% of teams use AI in coding workflows. If this has entered employer hiring language, `ai_user` and `ai_enabler` should appear in a substantial share of JDs. Anecdotal scan suggests they don't — which would mean AI adoption is informal (teams adopt it without it becoming a hiring criterion) rather than institutionalised. A `none` from a stale JD is uninterpretable, but a pattern of `none` across recently-posted JDs would confirm the gap.
 
-### Field 2: `has_testing_culture_signal`
+**Actionable read:** `ai_user` → demonstrate workflow efficiency with AI tools. `ai_enabler` → demonstrate data products built for AI consumption. `none` → AI is not a differentiator for this role; don't over-index on it.
 
-| Property | Value |
-|----------|-------|
-| Type | boolean |
-| Definition | JD explicitly frames testing, data contracts, observability, or data quality frameworks as *responsibilities* of the role — not just named tools in a tech list |
-| Why | Distinguishes tool presence (`has_soda = True`) from cultural expectation. The 2026 "trust gap" (72% AI coding vs 24% governance investment) would show up here — if governance hasn't entered employer requirements despite community anxiety, the gap is real |
-| Spence connection | This is the employer signal that governance maturity is valued, not just stated |
-| Note | Distinct from `has_ai_requirement` — a JD can require AI skills without requiring testing culture, and vice versa |
-
-### Field 3: `loss_aversion_framing`
-
-| Property | Value |
-|----------|-------|
-| Type | categorical: `none`, `moderate`, `high` |
-| Definition | Degree to which the JD frames the role in risk-reduction, reliability, or compliance terms — "prevent bad data reaching stakeholders", "data accuracy has direct business impact", "you will be responsible for data trust" |
-| Why | The most important unstructured signal currently in Layer B. Maps directly to the 2026 report's 71% fear-of-hallucinations claim. If employers feel this, it should appear in role framing. `none` = purely technical/delivery framing; `moderate` = reliability mentioned but not central; `high` = risk/compliance/trust framing dominates |
-| Weick connection | This is the dimension that reveals whether sensemaking has transferred from the community discourse level into institutional hiring language |
+**Backfill note:** Requires human or LLM judgment. Regex will misclassify company-context mentions (e.g. "AI-native infrastructure") as skill requirements. Decision rule: the candidate must be expected to *do something* with AI — use it or build for it — not merely work at a company that uses it.
 
 ---
 
-## 11. Conclusions and honest caveats
+### `testing_framing` (replaces `has_testing_culture_signal`)
+**Type:** categorical — `responsibility`, `tool_listed`, `absent`  
+**Definition:**
+- `responsibility` — testing, data contracts, observability, or data quality frameworks are framed as something the AE *owns or defines*, using action verbs. *"Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"* (freenow); *"keeping domain outputs consistent, tested, and discoverable"* (SumUp); *"Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks"* (LEGO).
+- `tool_listed` — testing tools appear in the tech stack or requirements (e.g. Great Expectations, Soda, dbt tests) but without ownership framing. The employer values the tool familiarity, not the governance practice.
+- `absent` — no testing or quality signal in the JD at all.
 
-### What the reports tell us (with appropriate weight)
+**Why:** `velocity_vs_rigour` captures *orientation* but not *accountability*. Two JDs can both be `rigour`: one because the team values engineering craft, another because the AE will be personally accountable for data trust. `testing_framing = responsibility` is the employer signal that governance has become a hiring criterion, not just a team value. This is what would confirm or deny the dbt 2026 trust gap claim at the revealed-preference level.
 
-1. **Data quality and ownership are genuinely unsolved.** Across all four years, data quality concern and ambiguous ownership appear in every report. These are real problems — not manufactured urgency. The JD data's 65% rigour orientation is broadly consistent.
+**Actionable read:** `responsibility` → lead the resume with governance outcomes and ownership language. `tool_listed` → mention the tool, don't over-index. `absent` → the employer hasn't operationalised quality concern into hiring criteria; pitch to delivery.
 
-2. **AI adoption happened fast, and the governance response is lagging.** The 2025 → 2026 pivot from "80% adoption" to "governance gap" follows a structurally predictable pattern (Collingridge dilemma, Rogers' early majority transition). Whether the gap is as large as claimed is unknowable from survey data alone.
-
-3. **The trust framing has entered employer language — but not structurally.** The JD dataset shows rigour dominates (65%), which is consistent with the report's claims. But without `loss_aversion_framing` and `has_testing_culture_signal` fields, we cannot distinguish employers who want "disciplined engineers" from employers who are specifically worried about AI-generated errors reaching decision-makers.
-
-4. **dbt is real but not universal.** 71% of AE JDs mention dbt — high but not total. One in three analytics engineering roles does not require it, pointing to the limitation of a survey conducted through the dbt community as a window onto the full market.
-
-### What the reports do not tell us
-
-- Whether adoption statistics reflect genuine practice change or social desirability ("yes, I use AI daily" covers everything from Copilot autocomplete to autonomous pipeline orchestration)
-- Whether the reported priorities translate into hiring decisions (the Deming & Kahn distinction between stated and revealed preference)
-- Whether trends are real or artefacts of question changes and self-selection shifts across years
-- Why the sample is declining — potentially the most interesting untold story
-
-### What the JD dataset adds
-
-The JD dataset is small (n=37) and geographically concentrated (European/Berlin market). But it is revealed-preference data. The 65% rigour finding, the cross-tab showing moderate-risk roles are more rigour-dominant than high-risk ones, and the 71% dbt presence rate are all things the survey cannot capture. Together, the JD data provides a partial but useful ground truth.
-
-The most important gap is the absence of `loss_aversion_framing` — the dimension that would most directly test whether the 2026 report's central anxiety (fear of bad AI outputs) has entered employer consciousness, or whether it remains community discourse that hasn't yet translated into what companies actually hire for.
+**Backfill note:** The `velocity_vs_rigour_reasoning` field in each JSON already contains interpretive notes on why the JD was coded rigour — this will surface whether it was craft-rigour or ownership-rigour, making LLM extraction tractable from existing structured data rather than re-reading raw JD text.
 
 ---
 
----
+### `loss_aversion_framing`
+**Type:** categorical — `none`, `moderate`, `high`  
+**Definition:**
+- `none` — JD is framed in delivery and capability terms. No risk register. Typical of early-stage roles and velocity-oriented JDs.
+- `moderate` — operational reliability is a concern but secondary to delivery. Fear is pipeline outages or data failures, not compliance or stakeholder trust. *"First to respond to incidents and drive resolution"* (1komma5grad); *"Reliable, high-quality datasets", "SLOs", "monitoring"* (GetYourGuide).
+- `high` — risk, compliance, or stakeholder trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. *"Insurance context means data accuracy has regulatory implications"* (Getsafe); *"IFRS 15, SOX, and audit framing dominate — frame every achievement as risk reduced"* (Wolt Revenue); *"Public sector clients mean any data failure is politically visible"* (Polyteia); *"quality checks", "data contracts", "trustworthiness" repeated throughout"* (freenow).
 
-## 12. Academic reviewer critique — action plan for journal submission
+**Why:** `velocity_vs_rigour` cannot distinguish craft-rigour from fear-rigour. The dbt report's 71% fear-of-hallucinations claim would show up in `loss_aversion_framing = high` if it had entered employer consciousness. A concentration of `moderate` instead would suggest the fear is operational (outages) not trust-based (bad outputs reaching stakeholders) — a meaningfully different employer concern.
 
-### Choose the outlet first
+**Actionable read:** `high` → frame every resume bullet as risk reduced, misstatement prevented, trust established. `moderate` → lead with reliability outcomes (uptime, incident response). `none` → capability and delivery framing; governance is not the pitch.
 
-The right journal determines what the paper needs. Pick one lane before doing any other work — everything else follows from the framing decision.
-
-| If you lead with… | Submit to | ABS | What this requires |
-|-------------------|-----------|-----|-------------------|
-| Vendor discourse / professional identity construction | *Information Systems Journal* (Wiley) | 3 | Critical discourse analysis as explicit method; JD dataset as pilot empirical counter-discourse. Most achievable at current scope. |
-| Vendor discourse / professional identity construction | *Journal of Information Technology* (Palgrave) | 4 | Same angle, higher bar; needs n=200+ JDs across geographies or a second empirical study |
-| Management fashion / institutional theory | *Organization Science* (INFORMS) | 4* | Abrahamson/DiMaggio as primary contribution; dbt report as the empirical case; JD data as validation |
-| Labour market / job postings | *ILR Review* (Cornell/Sage) | 3 | JD dataset must be the primary data source; needs n=300+ and structured coding reliability |
-| Labour market / job postings | *Journal of Labor Economics* (Chicago) | 4* | n=1,000+ JDs with geographic spread; rigorous econometric specification; not achievable from this dataset alone |
-
-**Recommended path now:** Submit to *Information Systems Journal* (ABS 3) as a critical IS discourse paper, with the JD analysis explicitly positioned as a pilot study. This requires six concrete actions, each written below from the adversarial reviewer's position first.
+**Backfill note:** 27 newer-format JDs already have explicit Loss aversion sections that can be extracted directly. For the 67 older-format JDs, the signal lives in `domain_risk_reasoning` and `velocity_vs_rigour_reasoning` in the JSON — these routinely contain phrases like "frame achievements as risk reduction" or "regulatory implications" that map cleanly to the scale.
 
 ---
 
-### Failure 1 — No methodology section
+## 9. Methodological notes
 
-**Reviewer rejection argument:** "This manuscript has no methods section. I cannot assess how the primary data were collected, how documents were selected, what analytical procedure was applied to the dbt Labs reports, or how the JD classifications were generated. The analysis appears to proceed directly from data summary to interpretation with no disclosed analytical procedure. I recommend rejection."
+### Classification approach
+The Layer B framework is a structured qualitative codebook applied by judgement. It is not an automated extraction pipeline. Dimensions were assigned by reading the full JD text and applying the codebook's decision rules. For the 41 manually coded records, one analyst (the author) did all coding — this creates internal consistency but no inter-rater reliability.
 
-**Can this objection be fully answered?** Yes — but only if the methodology section is written honestly about what actually happened.
+The LLM consistency study (see `consistency_report.md`) addresses this partially: it establishes that the codebook produces stable automated classifications on most dimensions. But stable LLM classifications and validated human classifications are different things. Before inter-rater work, the codebook needs revision on `jd_authorship` and `autonomy_level` — the dimensions with lowest self-consistency — to close ambiguous decision rules.
 
-**What actually happened:** The four dbt Labs reports were read as documents. Thematic notes were taken on narrative framing, vocabulary, and year-on-year shifts. The JD classifications were assigned by hand — one analyst (the author) read each JD in full and assigned values to `velocity_vs_rigour`, `domain_risk`, `collaboration_width`, `data_team_maturity`, and `jd_authorship` by applying a structured rubric (the Layer B framework) through judgement. There was no automated parsing, no NLP pipeline, no second coder, and no kappa calculation. This is single-coder qualitative content analysis.
+### What n=93 supports
+At n=93, the margin of error on a single proportion is approximately ±10pp at 95% confidence (Wilson interval). This means the 84% rigour finding is defensible as "likely between 74% and 94%" — but not as a precise market figure. Cross-tabs with cell sizes below n=10 (mature team, product stakeholder orientation) should be treated as illustrative, not evidential.
 
-**What to write in the methods section:** State this plainly. Call it what it is: structured qualitative content analysis, single coder, using the Layer B framework as a coding instrument (see Action 3 for the codebook). Cite Krippendorff, K. (2018), *Content Analysis: An Introduction to Its Methodology* (4th ed., Sage) — the standard reference for this method. Acknowledge that because one person coded all 37 JDs, the classifications are internally consistent but not independently validated. This is a limitation, not a disqualification — single-coder content analysis is published routinely, provided the codebook is fully disclosed and the limitation is named upfront. Cite Fairclough's CDA for the documentary analysis of the dbt reports (different method — interpretive text analysis, not content coding).
-
-**Done when:** A ~400 word methods section exists that names both methods (CDA for the reports, content analysis for the JDs), discloses single-coder assignment explicitly, points to the codebook in Appendix A, and names single-coder reliability as the primary limitation.
-
----
-
-### Failure 2 — Single-coder classification: an objection that cannot be fully mitigated without more work
-
-**Reviewer rejection argument:** "All JD classifications on the study's primary constructs (`velocity_vs_rigour`, `domain_risk`, etc.) were assigned by a single analyst who also authored the study. There is no inter-rater reliability statistic, no independent validation, and no disclosed decision procedure for ambiguous cases. In content analysis, the standard minimum is two independent coders with reported agreement. Without this, the core empirical contribution of the study — the JD cross-tabulations — is not reproducible and not verifiable. This is a fatal flaw."
-
-**Can this objection be fully answered?** Not without collecting additional data. A reliability study requires a second coder. There is no reframing or prose adjustment that resolves this. It is a real gap.
-
-**Action required — you need a second coder:** Recruit one person (a data professional or a methodologically literate colleague) to independently classify a 20% random sample of the JDs (8 records from 37) using Appendix A as the codebook. Calculate Cohen's kappa for each dimension. A kappa above 0.6 is conventionally acceptable for exploratory research; above 0.8 is good. If kappa is low on a given dimension, either revise the codebook definition or report the dimension as unreliable and exclude it from the analysis. This process takes approximately one day of work and produces the reliability statistic the reviewer requires. Without it, this paper cannot be published in a peer-reviewed journal, and the JD cross-tabulations should not be presented as findings.
-
-**Done when:** A kappa statistic exists for each of the five dimensions, computed from an independent re-coding of an 8-record sample. These statistics are reported in the methods section alongside the codebook reference.
+### What the geographic concentration means
+This is a European job market dataset. The dbt survey skews North American (though they don't disclose exact proportions in post-2023 years). North American AE roles may have different rigour/velocity distributions — faster-growth startups, different engineering cultures, more VC pressure. The 84% European rigour figure may not hold in the US market.
 
 ---
 
-### Failure 3 — n=37 is too small for any quantitative claim. Collect more data.
+## Appendix A: dbt Labs survey — year-by-year detail
 
-**Reviewer rejection argument:** "The manuscript presents cross-tabulations with cells as small as n=4 and draws directional conclusions from them. At n=37 with no probability sampling, no inferential statistic is defensible and no percentage is meaningful beyond the sample itself. The confidence interval on the headline finding (65% rigour, ±16pp at 95%) spans 49–81% — a range so wide it is consistent with 'roughly half' or 'four-fifths' of the market. This does not tell us anything. Furthermore, the cross-tabs are presented without significance tests. The paper cannot both present quantitative cross-tabulations and decline to test them. I recommend major revision contingent on either (a) substantially expanding the dataset or (b) removing all quantitative analysis and repositioning as a purely interpretive study."
+For reference, key metrics from the dbt reports that motivated the research questions above.
 
-**Can this objection be fully answered without new data?** Only partially. The interpretive repositioning (option b) removes the quantitative analysis entirely — which eliminates the objection but also eliminates the paper's most novel contribution (the JD dataset). Option (a) is the right path.
+### 2023 (n=567)
+- 46% plan to invest more in data quality/observability
+- Most time spent maintaining datasets, not building new ones
+- "Cross-team alignment on data ownership" rated worst performance area (44% poor)
+- 76% of respondents already use dbt
 
-**How much data you actually need:**
+### 2024 (n=456)
+- 57% cite poor data quality as predominant issue (up from 41% in 2022)
+- "Increasing data trust" = #1 org focus for the first time
+- 33% experienced headcount reduction from macroeconomic conditions
+- 57% currently manage or plan to manage data for AI training
 
-| Claim you want to make | Minimum n | Why |
-|------------------------|-----------|-----|
-| That rigour dominates (single proportion, 95% CI ±10pp) | ~100 JDs | Wilson interval: n=96 gives ±10pp at p=0.65 |
-| That rigour × domain_risk cross-tab is not noise (chi-squared, 3×3 table, p<0.05) | ~150 JDs | Minimum expected cell frequency ≥5 requires n≈150 across 9 cells |
-| That the pattern holds across markets (UK vs DACH vs Nordics) | ~300 JDs | ~100 per geography to permit subgroup analysis |
-| That the pattern is stable over time (2024 vs 2025 vs 2026 posting dates) | ~300–500 JDs | Need roughly equal n per year within each market |
+### 2025 (n=459)
+- AI in daily workflows: 80% (up from 30%)
+- Budget growth: 30% report budget growth (vs 9% prior year)
+- Team growth: 40% report team growth (vs 14% prior year)
+- 45% cite AI tooling as largest investment priority
 
-**The immediate action is:** Stop presenting cross-tabs from n=37 as findings. They are not. The 65% rigour figure, the domain_risk cross-tab, and the collaboration_width analysis should all be relabelled as "directional observations from a pilot dataset" — with an explicit note that no conclusion about the market is warranted. Then collect more JDs. The conference talk's data collection CTA (Section 13, Action 5) is not just a credibility move — it is the actual research design step that would make this paper publishable at the quantitative level.
+### 2026 (n=363)
+- 72% prioritise AI-assisted coding; 24% prioritise AI-assisted pipeline management ("trust gap")
+- Trust in data as org priority: 83% (up from 66%)
+- 71% cite hallucinated or incorrect outputs reaching stakeholders as top concern
+- Infrastructure costs: 57% report increased warehouse/compute spend; only 36% report increased team budgets
 
-**Done when:** Either (a) the dataset has ≥150 JDs from ≥2 geographies with a second coder's reliability statistics, at which point the cross-tabulations can be submitted; or (b) all cross-tab percentages are removed from the paper and the JD analysis is framed purely as "these patterns emerged in one analyst's pilot dataset and generated the following hypotheses for future research."
+**Persistent comparable metrics across years:**
 
----
+| Theme | 2023 | 2024 | 2025 | 2026 |
+|-------|------|------|------|------|
+| Poor data quality (top concern) | 41%* | 57% | 56% | not published separately |
+| Ambiguous data ownership | 44% (poor rating) | ~50% (challenge) | — | 41% (obstacle) |
+| Trust in data as top priority | — | #1 (qualitative) | 66% | 83% |
+| Budget growth | — | contracting | 30% growth | 36% team budgets growing |
 
-### Failure 4 — Primary source is vendor-produced. The paper cannot treat the dbt report findings as facts about the profession.
+*2022 baseline from 2024 report retrospective.
 
-**Reviewer rejection argument:** "The manuscript repeatedly makes claims of the form 'X% of analytics engineers report Y' where the source is a dbt Labs annual survey distributed through dbt Slack and community events. 76% of 2023 respondents already used dbt — a figure the authors themselves cite. This is not a sample of the analytics engineering profession. It is a sample of the dbt community. Any claim extrapolated beyond that community is not supported by the data. More fundamentally, the reports are produced by an organisation with a direct commercial interest in the findings. The paper critiques this in Section 6, but then continues to use the reports' statistics as if they were neutral. The critique and the analysis are working at cross-purposes."
-
-**Can this objection be fully answered?** Yes — but it requires a complete reframing of what the paper claims to be.
-
-**Action required:** Rewrite every claim that reads "X% of analytics engineers do Y" to read "dbt Labs' survey reports that X% of dbt community respondents say Y." This is not a cosmetic change — it changes the epistemological status of every finding in Sections 2–5. The paper is not a study of analytics engineers. It is a study of a vendor's self-reported community survey, analysed as a discourse document. That is the legitimate contribution: understanding how dbt Labs constructs the narrative of the profession, year by year, and whether that construction has entered employer hiring language. The critique in Section 6 should move to Section 2 (immediately after introducing the reports) and should be the analytical frame for everything that follows, not an afterthought.
-
-**Done when:** The abstract and opening paragraph position the paper as a discourse study of vendor-produced professional narratives. No sentence in Sections 2–5 makes a claim about "analytics engineers" without attributing it to dbt Labs' survey and noting the sampling constraint.
-
----
-
-### Failure 5 — Six theories cited, none tested
-
-**Reviewer rejection argument:** "The manuscript cites Collingridge, Rogers, DiMaggio & Powell, Abrahamson, Spence, and Weick. Not one of these theories is used to derive a testable prediction. Each theory is introduced, briefly described, and then applied to explain a pattern already observed in the data. This is post-hoc rationalisation, not theoretical contribution. An A+ journal publishes papers that advance theory, test theory, or develop theory. This paper does none of these things — it uses theory as rhetorical decoration. The theories should either be removed entirely or the paper should be redesigned around testing one of them."
-
-**Can this objection be fully answered?** Only if you choose one theory and commit. Trying to defend six simultaneously will produce a reviewer report that correctly identifies this as evasion.
-
-**The recommended commitment:** Abrahamson's management fashion theory is the most tractable given the data. The testable claim is: if dbt Labs is a fashion setter in Abrahamson's sense, then (a) each year's report vocabulary should introduce new terms that did not appear in the prior year, and (b) each year's central concern should align with dbt's product announcements that year. Both of these are verifiable from the reports themselves without a larger dataset. This repositions the paper as an empirical application of management fashion theory to a technology vendor — a publishable contribution because the domain (open-source developer tooling vendors as fashion setters) has not been studied in this literature before.
-
-**Action required:** Pick Abrahamson as the primary theoretical frame. Derive two explicit predictions from the theory before presenting findings. Present the vocabulary shift analysis and the product-narrative alignment (already partly in Section 6) as the evidence for those predictions. The other five theories become secondary sensitising concepts, not co-equal frameworks. Reduce the theoretical frameworks section from six equal treatments to one primary theory plus a brief paragraph noting the supporting conceptual lenses.
-
-**Done when:** The paper opens with two explicit hypotheses derived from Abrahamson's framework, and the findings sections are structured around assessing those hypotheses.
+Data quality concern has been essentially flat at 56–57% for two consecutive years despite being named as the #1 investment priority in 2023. Either the investment didn't resolve it, or the investment was stated preference rather than revealed preference — which is the Deming & Kahn point applied to organisations themselves.
 
 ---
 
-### Failure 6 — No literature review
+## Appendix B: Academic reviewer critique and journal submission path
 
-**Reviewer rejection argument:** "There is no literature review. This is a desk rejection criterion at this journal. The manuscript does not cite any prior work on vendor-produced industry reports as research objects, does not engage with critical IS literature on technology discourse, and does not position itself relative to the growing body of work using job postings as labour market data. I cannot assess the paper's contribution because I do not know what it is contributing to. Reject."
+For a potential journal submission, the primary outlet recommendation is *Information Systems Journal* (ABS 3), positioning the paper as a critical IS discourse study with a pilot JD empirical component.
 
-**Can this objection be answered?** Yes — this is the most straightforwardly fixable failure.
+**Six issues a reviewer would raise:**
 
-**Action required:** Write a 300–400 word "Prior work" section covering three streams:
+1. **No methodology section.** State plainly: structured qualitative content analysis, single coder, Layer B framework as coding instrument. Cite Krippendorff (2018). Acknowledge single-coder limitation upfront.
 
-1. *Vendor knowledge production and management fashion:* Cite Abrahamson (1996) on fashion setters. Gartner Hype Cycle research (Fenn & Raskino, 2008, is a practitioner book but widely cited). State the gap: dbt Labs-style community survey reports as fashion artefacts have not been studied academically.
+2. **Single-coder reliability.** Not fixable without a second coder on a 20% random sample (~19 JDs) with kappa reported per dimension. The LLM consistency study is a diagnostic for codebook revision, not a substitute for human inter-rater reliability.
 
-2. *Critical IS and technology discourse:* Cite Orlikowski & Barley (2001), "Technology and Institutions: What Can Research on Information Technology and Research on Organizations Learn from Each Other?" *MIS Quarterly*, 25(2), pp. 145–165. This is the foundational paper on how vendor framings enter organisational practice — directly relevant and peer-reviewed.
+3. **n=93 is pilot-scale.** For a chi-squared test across a 3×3 domain_risk × velocity_vs_rigour table to be defensible (p<0.05), need minimum expected cell frequency ≥5, which requires approximately n=150 across 9 cells. For geographic subgroup analysis, n≈300. Current findings should be labelled "directional observations from a pilot dataset."
 
-3. *Job postings as labour market data:* Cite Deming & Kahn (2018, already in the paper). Add Hershbein & Kahn (2018), "Do Recessions Accelerate Routine-Biased Technological Change?" *American Economic Review*, 108(7), pp. 1737–1772, DOI: 10.1257/aer.20161570 — a verified paper using job posting text to measure skill demand shifts. Position this paper as applying their approach to validate (or refute) an industry survey's claims.
+4. **Vendor-produced primary source.** Every claim of the form "X% of analytics engineers do Y" should be rewritten as "dbt Labs' survey reports that X% of dbt community respondents say Y." The paper is a discourse study of a vendor-produced survey, not a study of analytics engineers broadly.
 
-**Done when:** A "Prior work" section of 300–400 words exists, covering all three streams, before the year-by-year analysis begins.
+5. **Six theories cited, none tested.** Pick one — Abrahamson's management fashion theory is the most tractable. Derive two explicit predictions from it before presenting findings; structure the findings sections around testing those predictions.
 
----
-
-## 13. Conference reviewer critique — action plan for talk submission
-
-### The two audiences and their tolerance
-
-**Forward Data Conference** — independent, practitioner-critical. The critique of the dbt report's methodology is a feature, not a risk. Lead with it. The risk is sounding too academic; the mitigation is every theoretical claim earning its place with a concrete practitioner implication.
-
-**dbt Coalesce** — dbt Labs' own event. The methodology critique needs to be reframed as "here's how the research could be extended" rather than "here's why the numbers don't hold up." The governance/trust thesis is a tailwind, not a headwind. Submit the Coalesce version after Forward Data — use audience reaction to sharpen the argument first.
+6. **No literature review.** Three streams needed: vendor knowledge production/management fashion (Abrahamson 1996), critical IS and technology discourse (Orlikowski & Barley 2001), job postings as labour market data (Deming & Kahn 2018, Hershbein & Kahn 2018).
 
 ---
 
-### Action 1 — Write the one-liner thesis before anything else
+## Appendix C: Forward Data Conference proposal
 
-Every other conference action depends on having this. Without it, the CFP abstract has no hook and the talk has no spine.
+**Conference:** Forward Data, Paris, 16 November 2026  
+**CFP deadline:** 24 July 2026  
+**Target:** Theme 01 — Data Foundations for Humans & AI → *Data Quality & Trust in the Agentic Era*  
+**Format:** 25-minute Regular Talk
 
-**Draft three options and pick one:**
-- *"The data industry's most-cited annual report surveys 363 self-selected dbt users. Here's what 37 job descriptions tell us it got right — and where it's selling you something."* (Forward Data framing — adversarial)
-- *"Four years of dbt's State of Analytics Engineering: each year's central anxiety maps to that year's product launch. Here's how to read it anyway."* (Slightly more generous — works at either venue)
-- *"65% of analytics engineering JDs signal rigour. 0% signal pure velocity. The governance panic is already in the labour market — employers just aren't saying it in the ways the 2026 report predicts."* (Data-first framing — strongest for a data conference)
+**Proposed title:** "363 self-selected dbt users vs. 94 revealed-preference job descriptions: what the 2026 governance panic actually shows up in employer hiring language"
 
-**Done when:** One of these (or a sharper variant) is chosen and written at the top of the CFP abstract draft. Every slide in the deck earns its place by advancing this thesis.
+**Abstract:**
 
----
+Every year dbt Labs publishes a survey of the analytics engineering community. Every year it headlines a new central anxiety. In 2026 it is governance: AI adoption is outpacing trust, 71% fear hallucinated outputs, 83% now rank data trust as their top priority.
 
-### Action 2 — Build three specific slides from existing data
+The report is widely read. Its vocabulary circulates through hiring managers and conference talks within weeks. But the sample is 363 self-selected respondents from dbt's own community channels. And surveys measure stated preferences. Job postings measure revealed ones.
 
-No new data needed. These slides are all computable from what already exists.
+I collected 94 analytics engineering job postings from April–June 2026 across Europe. I classified each on seven behavioural dimensions using a structured codebook, then ran an LLM consistency study — three independent classification passes per JD — to test whether the framework was producing stable results.
 
-**Slide A — "The rigour finding"**
-Bar chart: rigour 65% / mixed 30% / velocity 5% across 37 JDs. Headline: "AE employers already want rigour. Velocity is near-absent." Subtext: "This predates the 2026 report's governance panic — or confirms it's already been absorbed." This is the data slide that earns credibility.
+What I found: 84% of JDs signal rigour orientation, 0% signal pure velocity. The governance framing is in employer language — but not in the fear-of-AI-hallucination form the report predicts. The LLM self-consistency was 0.92; manual–LLM agreement was 0.35. That gap is the finding: a classification system that is internally stable but doesn't match its own author's classifications is not a reliability failure — it is a codebook validity signal. The dimension with the lowest consistency (`jd_authorship`) is also the one that most directly reveals whether the governance discourse has reached the people who make hiring decisions.
 
-**Slide B — "Four years of narrative"**
-Timeline with four rows (2023/2024/2025/2026), two columns: "What the report said" / "What dbt launched that year." Show the alignment. Don't editorialize — let the audience reach the product-market fit conclusion themselves. This is the slide that generates the "wait a moment" reaction.
+This talk covers what the 94 JDs show, what they can't show, and what broke in the methodology — because what broke is more interesting than what worked.
 
-**Slide C — "What the theories predict"**
-Six boxes, one per theory, each containing a single sentence: theory name → one observable prediction → whether the JD data supports it. This is the slide that separates the talk from "data person has opinions" to "data person has a framework." Keep each box to 20 words maximum.
-
-**Done when:** All three slides exist as drafts (even in markdown/text form) before the CFP submission deadline.
-
----
-
-### Action 3 — Prepare the live JD walkthrough
-
-This is the methodology moment that makes the talk credible and reproducible. Pick one JD from the dataset — ideally one where the Layer B analysis found a mismatch between what the employer claims to want (governance framing in the summary) and what the JD body signals (delivery-speed bullets, no testing requirements mentioned).
-
-**The structure of the walkthrough (5 minutes on stage):**
-1. Show the JD excerpt — one paragraph from the role description
-2. Ask the audience: "Is this employer rigour-oriented or velocity-oriented?"
-3. Take a show of hands
-4. Apply the Layer B framework live — read out the signals, assign the classification
-5. Show where it lands in the dataset cross-tab
-6. Ask: "Does this match what the 2026 report says employers care about?"
-
-**Done when:** One JD is selected and annotated with the Layer B signals pre-highlighted. The walkthrough script is written and can be delivered in under 5 minutes.
-
----
-
-### Action 4 — Write the hiring-manager version of Section 8.7
-
-Section 8.7 (action synthesis) is written entirely from the candidate's perspective. A conference audience includes heads of data and hiring managers who have no use for "how to position your resume." They need the mirror image.
-
-**Write a parallel set of six bullet points, one per theory, framed for the person writing the JD:**
-
-- *Collingridge:* If you haven't added data contract requirements to your JD yet, you're already behind — by the time it's obvious you need them, retrofitting governance into a team that was hired without it is expensive.
-- *Rogers:* If your team is early-majority on AI adoption, you're probably in the governance gap right now. Hire explicitly for the discipline you skipped, not the velocity you already have.
-- *DiMaggio & Powell:* Your JD looks like everyone else's because you copied a JD that looked like everyone else's. That's mimetic isomorphism. It produces a team that looks like every other team. If you want someone who governs as well as ships, write that down.
-- *Abrahamson:* The vocabulary in the 2026 report ("trust gap", "governance as infrastructure") is circulating. Candidates who've read it will scan your JD for these signals. If they're absent, you're signalling you haven't read the report either.
-- *Spence:* Governance requirements in a JD are costly signals — they tell a candidate you're serious enough about quality to filter for it. Their absence signals the opposite, regardless of what you say in the interview.
-- *Deming & Kahn:* What you write in the JD is your revealed preference. If you write "build pipelines" but mean "build and govern pipelines", you will hire the person who builds and not the person who governs.
-
-**Done when:** These six bullets exist as a slide or handout section titled "If you're the one writing the JD."
-
----
-
-### Action 5 — Write the community data collection slide
-
-This is the closing call-to-action. It is also the credibility move that pre-empts the "only 37 JDs" objection by converting the limitation into an invitation.
-
-**The slide text (verbatim draft):**
-
-> *This research is a pilot. n=37, one person's job search, Berlin, early 2026.*
->
-> *To answer these questions properly I need:*
-> - *500+ JDs across markets (US, UK, DACH, Nordics)*
-> - *Mix of dbt and non-dbt stack requirements*
-> - *Full date range: 2023–2026*
->
-> *If you've applied for an AE, DE, or BI role in the last 18 months: send me the JD.*
-> *[email / LinkedIn / GitHub link]*
->
-> *The dataset will be open. The analysis will be public. Every JD you share makes the next finding more defensible.*
-
-**Done when:** This slide is the second-to-last slide in the deck, before the contact/Q&A slide. The data collection mechanism (a form, an email, a GitHub issue) exists and is live before the talk.
-
----
-
-### Action 6 — Write the front-loaded credibility statement
-
-This goes on slide 2 — the second thing the audience sees, before any data.
-
-**Draft:**
-
-> *A note on what this is: 37 job descriptions. One person's job search. Berlin, April–June 2026.*
->
-> *I'm not going to pretend that's a representative sample. It isn't.*
->
-> *What it is: revealed-preference data. Employers wrote these when they had a real hiring cost. That makes them more honest than a survey.*
->
-> *I'll tell you what I found. I'll tell you what I can't conclude from it. You decide what's useful.*
-
-**Done when:** This statement is on slide 2, in the speaker's own voice, before any methodology or findings. It stays on screen for the first 60 seconds of the talk.
+**Talk structure (25 minutes):**
+- 0–3 min: What revealed-preference data is and why it's different from a survey
+- 3–8 min: Four years of dbt report narrative in three slides — each year's anxiety, each year's product
+- 8–16 min: What the 94 JDs show: the 84% rigour finding, the domain-risk cross-tab, the maturity split, the stakeholder distribution
+- 16–21 min: What broke — the LLM consistency study, the 0.92 vs 0.35 gap, the codebook validity lesson
+- 21–24 min: What this means if you're writing the JD or applying to one
+- 24–25 min: The dataset is open; send me your JDs
 
 ---
 
 ## Sources
 
-- dbt Labs, "2023 State of Analytics Engineering" (survey Oct–Nov 2022, n=567). Raw data: github.com/dbt-labs/analytics-engineering-survey
-- dbt Labs, "2024 State of Analytics Engineering" (survey Dec 2023–Mar 2024, n=456)
-- dbt Labs, "2025 State of Analytics Engineering" (survey Oct–Dec 2024, n=459). PR: prnewswire.com/news-releases/ai-is-driving-a-surge-in-data-budgets-302429579.html
-- dbt Labs, "2026 State of Analytics Engineering" (survey Dec 2025–Feb 2026, n=363). PR: prnewswire.com/news-releases/new-dbt-labs-report-finds-ai-driven-acceleration-is-outpacing-trust-and-governance-302741246.html
-- Collingridge, David. *The Social Control of Technology*. Frances Pinter, London, 1980. ISBN: 0903804727.
-- DiMaggio, Paul J. and Powell, Walter W. "The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields." *American Sociological Review*, Vol. 48 (1983), pp. 147–160. DOI: 10.2307/2095101.
-- Abrahamson, Eric. "Management Fashion." *Academy of Management Review*, Vol. 21, No. 1 (January 1996), pp. 254–285. DOI: 10.5465/amr.1996.9602161572.
-- Rogers, Everett M. *Diffusion of Innovations*. 1st ed., Free Press of Glencoe, 1962; 5th ed., Free Press, 2003.
-- Spence, Michael. "Job Market Signaling." *The Quarterly Journal of Economics*, Vol. 87, Issue 3 (August 1973), pp. 355–374. DOI: 10.2307/1882010.
-- Deming, David and Kahn, Lisa B. "Skill Requirements across Firms and Labor Markets: Evidence from Job Postings for Professionals." *Journal of Labor Economics*, Vol. 36, No. S1 (2018), pp. S337–S369. DOI: 10.1086/694106.
-- Weick, Karl E. *Sensemaking in Organizations*. Sage Publications, 1995. ISBN: 9780803971776.
-- Lavrakas, Paul D. (ed.). *Encyclopedia of Survey Research Methods*. Sage Publications, 2008.
+- dbt Labs, "State of Analytics Engineering" (2023–2026). Raw 2023 data: github.com/dbt-labs/analytics-engineering-survey
+- Deming, D. and Kahn, L.B. (2018). "Skill Requirements across Firms and Labor Markets." *Journal of Labor Economics*, 36(S1), S337–S369. DOI: 10.1086/694106.
+- Abrahamson, E. (1996). "Management Fashion." *Academy of Management Review*, 21(1), 254–285.
+- DiMaggio, P.J. and Powell, W.W. (1983). "The Iron Cage Revisited." *American Sociological Review*, 48, 147–160.
+- Spence, M. (1973). "Job Market Signaling." *Quarterly Journal of Economics*, 87(3), 355–374.
+- Rogers, E.M. (2003). *Diffusion of Innovations* (5th ed.). Free Press.
+- Collingridge, D. (1980). *The Social Control of Technology*. Frances Pinter.
+- Weick, K.E. (1995). *Sensemaking in Organizations*. Sage.
+- Krippendorff, K. (2018). *Content Analysis: An Introduction to Its Methodology* (4th ed.). Sage.
+- Orlikowski, W.J. and Barley, S.R. (2001). "Technology and Institutions." *MIS Quarterly*, 25(2), 145–165.
+- Hershbein, B. and Kahn, L.B. (2018). "Do Recessions Accelerate Routine-Biased Technological Change?" *American Economic Review*, 108(7), 1737–1772.
