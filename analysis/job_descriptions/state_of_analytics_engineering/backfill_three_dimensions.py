@@ -145,23 +145,12 @@ def append_to_json(json_path: Path, result: dict) -> None:
 
 
 def append_to_trace(trace_path: Path, jd_id: str, result: dict) -> None:
-    """Append a new section to the end of the trace file."""
-    section = f"""
----
-
-## New dimensions — backfill ({', '.join(NEW_DIMS)})
-
-| Dimension | Value |
-|-----------|-------|
-| ai_role | {result['ai_role']} |
-| testing_framing | {result['testing_framing']} |
-| loss_aversion_framing | {result['loss_aversion_framing']} |
-
-"""
+    """Append new dimension blocks to the trace in the same style as existing ones."""
+    section = ""
     for dim in NEW_DIMS:
         quote = result.get(f"{dim}_quote", "")
         explanation = result.get(f"{dim}_explanation", "")
-        section += f"### {dim}\n**Value:** `{result[dim]}`\n> {quote}\n> {explanation}\n\n"
+        section += f"\n### {dim}\n**Run 1:** `{result[dim]}`\n> Quote: \"{quote}\"\n> Reasoning: {explanation}\n"
 
     with open(trace_path, "a") as f:
         f.write(section)
