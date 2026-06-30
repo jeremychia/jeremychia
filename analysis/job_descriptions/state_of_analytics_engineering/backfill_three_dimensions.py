@@ -1,78 +1,74 @@
 """
 Backfill ai_role, testing_framing, and loss_aversion_framing into existing JD records.
 
-Each JD is classified in a fresh subprocess (one `claude -p` call per JD) so that
-the main process context window is never loaded with JD text. Results are written
-back to the .json and jd.md files.
+Design principles:
+- Append-only: never rewrites existing fields in .json or trace files
+- Minimal context: prompt is built from existing JSON reasoning fields (compact),
+  not from the raw jd_archive.md (large)
+- One subprocess per JD: context window is flushed between JDs
+
+Writes to:
+  - {jd_id}.json       — three new fields appended via json.dumps of updated dict
+  - jd_traces/{jd_id}.md — new section appended at end of file
 
 Usage:
-    python3 backfill_three_dimensions.py              # classify all unclassified JDs
-    python3 backfill_three_dimensions.py --dry-run    # print what would run, no writes
-    python3 backfill_three_dimensions.py --limit 5    # process at most 5 JDs
-
-Requires:
-    - `claude` CLI on PATH (Anthropic Claude Code)
-    - JD data under analysis/job_descriptions/jd_data/
+    python3 backfill_three_dimensions.py              # all unclassified JDs
+    python3 backfill_three_dimensions.py --dry-run    # preview only
+    python3 backfill_three_dimensions.py --limit 5    # first N JDs only
 """
 
 import argparse
 import json
-import re
 import subprocess
 import sys
 from pathlib import Path
 
 JD_DATA_DIR = Path(__file__).parent.parent / "jd_data"
+TRACES_DIR = Path(__file__).parent / "jd_traces"
 
 NEW_DIMS = ["ai_role", "testing_framing", "loss_aversion_framing"]
 
-CODEBOOK = """
-You are a structured classifier. Read the job description below and classify three dimensions.
+CODEBOOK = """\
+You are a structured classifier. Classify three dimensions from the JD signals below.
 Output ONLY a valid JSON object — no explanation, no markdown fences, no extra text.
-
----
 
 ### ai_role
 `none` | `ai_user` | `ai_enabler`
 
-The question is what AI skill the *candidate* is expected to demonstrate. Company product context is irrelevant.
+What AI skill does the *candidate* need to demonstrate? Company product context is irrelevant.
 
-- **none**: no AI skill expected of the candidate. Vague phrases ("AI-first mindset", "interest in AI") → none. Company builds AI but AE role is standard modelling → none.
-- **ai_user**: candidate expected to use AI coding tools to accelerate their own work. Signals: "AI-assisted coding", "GitHub Copilot", "Claude Code", "Cursor", "coding agents", "proven usage of AI tools in daily work".
-- **ai_enabler**: candidate expected to build data infrastructure that AI systems consume. Signals: "AI-ready data foundations", "data for AI/ML pipelines", "text-to-SQL", "semantic modelling for AI", "GenAI applications" in responsibilities. If both ai_user and ai_enabler signals present → ai_enabler.
+- **none**: no AI skill expected. Vague phrases ("AI-first mindset") → none. Company builds AI but AE role is standard modelling → none.
+- **ai_user**: candidate uses AI coding tools to accelerate their own work. Signals: "AI-assisted coding", "GitHub Copilot", "Claude Code", "Cursor", "proven usage of AI tools in daily work".
+- **ai_enabler**: candidate builds data infrastructure AI systems consume. Signals: "AI-ready data foundations", "semantic modelling for AI", "GenAI applications" in responsibilities, "text-to-SQL". If both signals present → ai_enabler.
 
 ### testing_framing
 `responsibility` | `tool_listed` | `absent`
 
-- **responsibility**: testing/quality/data contracts framed as something the candidate *owns or defines*. Ownership verbs: "own", "ensure", "define", "implement", "establish". Example: "own the quality of data", "define testing standards", "data contracts" as a named responsibility.
-- **tool_listed**: testing tools appear in requirements/stack without ownership framing. "Experience with dbt tests" in a skill list → tool_listed.
+- **responsibility**: testing/quality/data contracts framed as something the candidate owns. Ownership verbs: "own", "ensure", "define", "implement", "establish" applied to quality or testing practice.
+- **tool_listed**: testing tools appear in requirements/stack without ownership framing.
 - **absent**: no testing or data quality signal.
 
 ### loss_aversion_framing
 `none` | `moderate` | `high`
 
-- **none**: delivery and capability framing only, no risk register.
-- **moderate**: operational reliability concern, secondary to delivery. Fear is outages or data failures. Signals: "first to respond to incidents", "SLOs", "pipeline stability", "production reliability".
-- **high**: risk/compliance/trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. Signals: "regulatory", "compliance", "audit", "data accuracy has direct business impact", "trustworthiness" as primary role framing, repeated quality/reliability language in first responsibilities.
+- **none**: delivery and capability framing only.
+- **moderate**: operational reliability concern secondary to delivery. Fear is outages. Signals: "first to respond to incidents", "SLOs", "pipeline stability".
+- **high**: risk/compliance/trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. Signals: "regulatory", "compliance", "audit", repeated quality/trust language in first responsibilities.
 
----
-
-Output format (JSON only, no markdown):
+Output format (JSON only):
 {
   "ai_role": "<none|ai_user|ai_enabler>",
-  "ai_role_quote": "<verbatim phrase from JD that drove classification, or 'No AI skill signal.'>",
+  "ai_role_quote": "<verbatim phrase from JD or 'No AI skill signal.'>",
   "ai_role_explanation": "<one sentence>",
   "testing_framing": "<responsibility|tool_listed|absent>",
-  "testing_framing_quote": "<verbatim phrase from JD, or 'No testing signal.'>",
+  "testing_framing_quote": "<verbatim phrase from JD or 'No testing signal.'>",
   "testing_framing_explanation": "<one sentence>",
   "loss_aversion_framing": "<none|moderate|high>",
-  "loss_aversion_framing_quote": "<verbatim phrase from JD, or 'No loss aversion framing.'>",
+  "loss_aversion_framing_quote": "<verbatim phrase from JD or 'No loss aversion framing.'>",
   "loss_aversion_framing_explanation": "<one sentence>"
 }
 
----
-
-JOB DESCRIPTION:
+JD SIGNALS:
 """
 
 VALID_VALUES = {
@@ -90,14 +86,28 @@ def already_classified(json_path: Path) -> bool:
         return False
 
 
-def classify_jd(jd_text: str) -> dict | None:
-    prompt = CODEBOOK + jd_text
+def build_prompt(data: dict) -> str:
+    """Build a compact prompt from existing JSON reasoning fields — not raw JD text."""
+    ev = data.get("evidence", {})
+    parts = [
+        f"role: {data.get('role', '')} at {data.get('company', '')}",
+        f"velocity_vs_rigour: {data.get('velocity_vs_rigour', '')} — {data.get('velocity_vs_rigour_reasoning', '') or ev.get('velocity_vs_rigour', '')}",
+        f"domain_risk: {data.get('domain_risk', '')} — {data.get('domain_risk_reasoning', '') or ev.get('domain_risk', '')}",
+        f"data_team_maturity: {data.get('data_team_maturity', '')} — {data.get('data_team_maturity_reasoning', '') or ev.get('data_team_maturity', '')}",
+        f"stakeholder_orientation: {data.get('stakeholder_orientation', '')} — {data.get('stakeholder_orientation_reasoning', '') or ev.get('stakeholder_orientation', '')}",
+        f"autonomy_level: {data.get('autonomy_level', '')} — {data.get('autonomy_level_reasoning', '') or ev.get('autonomy_level', '')}",
+        f"loss_aversion evidence: {ev.get('loss_aversion', '')}",
+        f"ats_keywords: {', '.join(ev.get('ats_keywords', []))}",
+    ]
+    return CODEBOOK + "\n".join(parts)
+
+
+def classify_jd(data: dict) -> dict | None:
+    prompt = build_prompt(data)
     try:
         result = subprocess.run(
             ["claude", "-p", prompt, "--model", "claude-haiku-4-5-20251001"],
-            capture_output=True,
-            text=True,
-            timeout=60,
+            capture_output=True, text=True, timeout=60,
         )
     except FileNotFoundError:
         print("ERROR: `claude` CLI not found on PATH", file=sys.stderr)
@@ -107,15 +117,16 @@ def classify_jd(jd_text: str) -> dict | None:
 
     output = result.stdout.strip()
     # Strip markdown fences if present
-    output = re.sub(r"^```(?:json)?\n?", "", output)
-    output = re.sub(r"\n?```$", "", output)
+    if output.startswith("```"):
+        output = "\n".join(output.split("\n")[1:])
+    if output.endswith("```"):
+        output = "\n".join(output.split("\n")[:-1])
 
     try:
         parsed = json.loads(output)
     except json.JSONDecodeError:
         return None
 
-    # Validate values
     for dim, valid in VALID_VALUES.items():
         if parsed.get(dim) not in valid:
             return None
@@ -123,52 +134,37 @@ def classify_jd(jd_text: str) -> dict | None:
     return parsed
 
 
-def patch_json(json_path: Path, result: dict) -> None:
+def append_to_json(json_path: Path, result: dict) -> None:
+    """Append three new top-level fields to the JSON. All existing fields unchanged."""
     data = json.loads(json_path.read_text())
-
-    # Insert new dimensions after autonomy_level in top-level object
-    new_data = {}
-    for k, v in data.items():
-        new_data[k] = v
-        if k == "autonomy_level":
-            for dim in NEW_DIMS:
-                new_data[dim] = result[dim]
-
-    # Insert quotes/explanations into evidence
-    if "evidence" in new_data and isinstance(new_data["evidence"], dict):
-        ev = dict(new_data["evidence"])
-        # Append after autonomy_level entries in evidence
-        insert_after = "autonomy_level_explanation" if "autonomy_level_explanation" in ev else "autonomy_level"
-        new_ev = {}
-        for k, v in ev.items():
-            new_ev[k] = v
-            if k == insert_after:
-                for dim in NEW_DIMS:
-                    new_ev[dim] = result.get(f"{dim}_quote", "")
-                    new_ev[f"{dim}_explanation"] = result.get(f"{dim}_explanation", "")
-        new_data["evidence"] = new_ev
-
-    json_path.write_text(json.dumps(new_data, indent=2, ensure_ascii=False) + "\n")
-
-
-def patch_jd_md(jd_md_path: Path, result: dict) -> None:
-    text = jd_md_path.read_text()
-    if "**ai_role:**" in text:
-        return
-
-    lines = []
     for dim in NEW_DIMS:
-        val = result[dim]
-        explanation = result.get(f"{dim}_explanation", "")
-        lines.append(f"\n**{dim}:** {val} — {explanation}")
+        data[dim] = result[dim]
+        data[f"{dim}_quote"] = result.get(f"{dim}_quote", "")
+        data[f"{dim}_explanation"] = result.get(f"{dim}_explanation", "")
+    json_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
-    # Insert after **autonomy_level:** block
-    pattern = r"(\*\*autonomy_level:\*\*[^\n]*(?:\n(?!\*\*)[^\n]*)*)"
-    match = re.search(pattern, text)
-    if not match:
-        return
-    new_text = text[: match.end()] + "".join(lines) + text[match.end() :]
-    jd_md_path.write_text(new_text)
+
+def append_to_trace(trace_path: Path, jd_id: str, result: dict) -> None:
+    """Append a new section to the end of the trace file."""
+    section = f"""
+---
+
+## New dimensions — backfill ({', '.join(NEW_DIMS)})
+
+| Dimension | Value |
+|-----------|-------|
+| ai_role | {result['ai_role']} |
+| testing_framing | {result['testing_framing']} |
+| loss_aversion_framing | {result['loss_aversion_framing']} |
+
+"""
+    for dim in NEW_DIMS:
+        quote = result.get(f"{dim}_quote", "")
+        explanation = result.get(f"{dim}_explanation", "")
+        section += f"### {dim}\n**Value:** `{result[dim]}`\n> {quote}\n> {explanation}\n\n"
+
+    with open(trace_path, "a") as f:
+        f.write(section)
 
 
 def main():
@@ -182,8 +178,7 @@ def main():
     todo = []
     for jd_dir in jd_dirs:
         json_path = jd_dir / f"{jd_dir.name}.json"
-        archive_path = jd_dir / "jd_archive.md"
-        if not json_path.exists() or not archive_path.exists():
+        if not json_path.exists():
             continue
         if already_classified(json_path):
             continue
@@ -200,10 +195,9 @@ def main():
     for jd_dir in todo:
         jd_id = jd_dir.name
         json_path = jd_dir / f"{jd_id}.json"
-        archive_path = jd_dir / "jd_archive.md"
-        jd_md_path = jd_dir / "jd.md"
+        trace_path = TRACES_DIR / f"{jd_id}.md"
 
-        jd_text = archive_path.read_text()
+        data = json.loads(json_path.read_text())
 
         print(f"\n── {jd_id}")
 
@@ -212,7 +206,7 @@ def main():
             n_ok += 1
             continue
 
-        result = classify_jd(jd_text)
+        result = classify_jd(data)
         if result is None:
             print(f"   FAIL: invalid or timed-out response")
             n_fail += 1
@@ -220,10 +214,14 @@ def main():
 
         print(f"   ai_role={result['ai_role']}  testing_framing={result['testing_framing']}  loss_aversion_framing={result['loss_aversion_framing']}")
 
-        patch_json(json_path, result)
-        if jd_md_path.exists():
-            patch_jd_md(jd_md_path, result)
-        print(f"   written")
+        append_to_json(json_path, result)
+
+        if trace_path.exists():
+            append_to_trace(trace_path, jd_id, result)
+            print(f"   json + trace appended")
+        else:
+            print(f"   json appended (no trace file)")
+
         n_ok += 1
 
     print(f"\n{'═'*60}")
