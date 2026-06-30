@@ -325,7 +325,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="hero" aria-label="Introduction">
   <div class="hero-eyebrow" id="heroEyebrow">JDs · psychologically decoded</div>
   <h1>What companies <em>fear</em> tells you more than what they want</h1>
-  <p class="hero-sub">61 AE/BI job descriptions decoded. 82% are rigour-first with no velocity signal whatsoever. 62% are building for internal data teams, not commercial stakeholders. Strategic autonomy and execution roles split exactly evenly — senior titles tell you nothing about who actually sets the direction.</p>
+  <p class="hero-sub">83 AE/BI job descriptions decoded. 80% are rigour-first with no velocity signal whatsoever. 60% are building for internal data teams, not commercial stakeholders. Execution roles outnumber strategic ones — senior titles tell you nothing about who actually sets the direction.</p>
   <a href="#findings" class="hero-cta">
     Read the analysis
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8l5 5 5-5"/></svg>
@@ -378,7 +378,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="section" id="findings">
   <div class="section-label">Overview</div>
   <h2 class="section-headline">The market is writing from fear, not aspiration</h2>
-  <p class="section-body">82% rigour-first. Zero pure velocity. Every finance role in the corpus sits in a high-risk domain — 100% without exception. Every mature data team is rigour-only. These are not wish lists. They are damage reports from teams that have been burned, written in the language of whatever last went wrong.</p>
+  <p class="section-body">80% rigour-first. Every finance role in the corpus sits in a high-risk domain — 100% without exception. Every mature data team is rigour-only. These are not wish lists. They are damage reports from teams that have been burned, written in the language of whatever last went wrong.</p>
   <div class="stats-row" id="statsRow"></div>
 </section>
 
@@ -434,13 +434,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 01</div>
-        <h3 class="donut-headline">82% rigour-first. Zero pure velocity roles.</h3>
+        <h3 class="donut-headline">80% rigour-first. Only 2% pure velocity roles.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for repeated language around pace vs. correctness. "Rigour" = three or more signals of: <em>TDD, CI/CD, production-grade, mocking, performance profiling, compliance, audit, meticulous, controlled</em>. "Velocity" = <em>move fast, bias for action, agile, iterate, pragmatic</em>. "Mixed" = both present, neither dominant.
           <br><br>
-          <strong>What the data shows:</strong> 82% rigour, 18% mixed, 0% pure velocity. The 18% mixed still lead with correctness — velocity is a secondary signal in all of them. Every mature data team in the corpus is rigour-only. This is the AE market's defining characteristic: it has collectively decided that speed without quality is not a trade-off worth making.
+          <strong>What the data shows:</strong> 80% rigour, 17% mixed, 2% pure velocity. The 17% mixed still lead with correctness — velocity is a secondary signal in all of them. Every mature data team in the corpus is rigour-only. This is the AE market's defining characteristic: it has collectively decided that speed without quality is not a trade-off worth making.
           <br><br>
-          <strong>Resume implication:</strong> Default to risk-reduction framing. "Zero production incidents", "97% test coverage", "reduced data quality failures by X" outperform speed bullets in 82% of applications. Velocity language only helps in early-stage roles — filter by team maturity first.
+          <strong>Resume implication:</strong> Default to risk-reduction framing. "Zero production incidents", "97% test coverage", "reduced data quality failures by X" outperform speed bullets in 80% of applications. Velocity language only helps in early-stage roles — filter by team maturity first.
         </div>
         <div class="donut-chart-wrap"><canvas id="rigourChart" role="img" aria-label="Donut chart: distribution of rigour vs velocity signals across JDs"></canvas></div>
         <p class="donut-hint pulse" id="rigourHint">Click a segment to see companies</p>
@@ -536,11 +536,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 04</div>
-        <h3 class="donut-headline">61% mid-stage. Mature teams now 23% — more than expected.</h3>
+        <h3 class="donut-headline">58% mid-stage. Mature and early teams now tied at 20% each.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for signals of the data team's stage. "Early" = first or only data hire implied, no team described, "build from zero", solo AE with no peers mentioned. "Mid" = small existing team, some structure present, "mentor junior engineers", "lead a team of 2". "Mature" = established engineering ladder implied by seniority level, multiple squads, "Staff" or "Principal" titles with cross-squad mandate.
           <br><br>
-          <strong>What the data shows:</strong> 61% mid-stage, 23% mature, 16% early. The broader corpus reveals a significant cohort of established data organisations (Spotify, Netflix, Vinted, N26) that don't appear heavily in cold-apply pipelines. All 14 mature-team roles are rigour-only without exception.
+          <strong>What the data shows:</strong> 58% mid-stage, 20% mature, 20% early. The broader corpus reveals a significant cohort of established data organisations (Spotify, Netflix, Vinted, N26) that don't appear heavily in cold-apply pipelines. All 17 mature-team roles are rigour-only without exception.
           <br><br>
           <strong>Resume implication:</strong> Mature teams want evidence of operating within standards and raising them — governance contributions, cross-squad influence, architecture decisions that outlasted you. Early-stage teams want proof you can build without a net. Mid-stage teams — the majority — want both.
         </div>
@@ -570,11 +570,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 05</div>
-        <h3 class="donut-headline">62% internal-facing. Commercial and finance split the rest.</h3>
+        <h3 class="donut-headline">60% internal-facing. Commercial and finance now tied at 12% each.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for the primary audience named in the responsibilities section. <em>Commercial</em> = sales, GTM, customer success, revenue ops, partnerships. <em>Product</em> = product teams, growth, experimentation, A/B testing. <em>Internal data</em> = data platform, self-serve analytics, other analysts/engineers. <em>Finance</em> = FP&A, audit, P&L, controllership.
           <br><br>
-          <strong>What the data shows:</strong> 62% internal data — the AE role is primarily a craft role, building infrastructure and models consumed by other data practitioners, not end-business stakeholders. Finance (13%) is 100% high-risk domain. Commercial (8%) and product (8%) are the minority. The "data-driven GTM" AE role is rarer than LinkedIn posts suggest.
+          <strong>What the data shows:</strong> 60% internal data — the AE role is primarily a craft role, building infrastructure and models consumed by other data practitioners, not end-business stakeholders. Finance (12%) is 100% high-risk domain. Commercial (12%) has grown; product (6%) remains the minority. The "data-driven GTM" AE role is rarer than LinkedIn posts suggest.
           <br><br>
           <strong>Resume implication:</strong> For internal-data roles, lead with platform thinking: self-serve enablement, modelling standards, semantic layer, data contracts. For finance roles, precision and auditability outweigh everything. Commercial roles want business impact framing — pipeline influenced, revenue attributed, churn predicted.
         </div>
@@ -604,11 +604,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 06</div>
-        <h3 class="donut-headline">Strategic and execution split exactly evenly at 34% each.</h3>
+        <h3 class="donut-headline">Execution leads at 37%. Strategic and mixed nearly tied behind it.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for the verb choices in the responsibilities section. <em>Strategic</em> = "define", "own", "shape", "establish", "lead", "drive" — the role sets direction. <em>Execution</em> = "support", "assist", "deliver", "help", "contribute to" — direction comes from elsewhere. <em>Mixed</em> = owns a technical domain but serves a business team's requests.
           <br><br>
-          <strong>What the data shows:</strong> 34% strategic, 34% execution, 31% mixed — the market does not sort neatly by seniority. "Senior Analytics Engineer" appears across all three categories. The difference is not the title but the framing: strategic roles say "you will define", execution roles say "you will support".
+          <strong>What the data shows:</strong> 37% execution, 31% strategic, 30% mixed — the market does not sort neatly by seniority. "Senior Analytics Engineer" appears across all three categories. The difference is not the title but the framing: strategic roles say "you will define", execution roles say "you will support".
           <br><br>
           <strong>Resume implication:</strong> Read the verb tense before applying. For strategic roles, your bullets must show direction-setting: "designed the modelling framework", "established the data contract standard", "shifted the team from reactive to proactive". For execution roles, impact framing matters more: "reduced dashboard load time by 60%", "delivered 8 data products in Q1". Applying with the wrong register is a reliable rejection signal.
         </div>
@@ -627,8 +627,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <hr class="divider">
 <section class="section" id="geo-section">
   <div class="section-label">Finding 07</div>
-  <h2 class="section-headline">Berlin leads at 39%, but other Europe is a real second cluster.</h2>
-  <p class="section-body">Berlin leads at 39% but is not the whole story. Other Europe — Amsterdam, Paris, Zurich, Tallinn, Budapest, Lille — forms a genuine second cluster at 26%. The Nordics (Stockholm, Copenhagen, Oslo) add 13%, skewing toward scale-ups with more mature data teams. UK roles are almost absent from this corpus. Use the region filter to isolate any market — stakeholder orientation shifts noticeably by geography.</p>
+  <h2 class="section-headline">Berlin leads at 36%, but other Europe is a real second cluster.</h2>
+  <p class="section-body">Berlin leads at 36% but is not the whole story. Other Europe — Amsterdam, Lisbon, Tallinn, Barcelona, Paris, Zurich — forms a genuine second cluster at 27%. UK roles are now 13% of the corpus, a notable presence. The Nordics (Stockholm, Copenhagen, Oslo) add 11%, skewing toward scale-ups with more mature data teams. Use the region filter to isolate any market — stakeholder orientation shifts noticeably by geography.</p>
   <div id="geoBreakdown"></div>
 </section>
 
@@ -637,7 +637,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="section" id="stack">
   <div class="section-label">Finding 08</div>
   <h2 class="section-headline">SQL and dbt are the floor. Everything else is negotiable.</h2>
-  <p class="section-body">SQL (98%) and dbt (79%) are the baseline — not knowing either disqualifies you from the vast majority of roles. Python follows at 59%, now effectively a third core requirement. After that, a genuine cliff: Snowflake (46%), Airflow (39%), Tableau (34%), Looker (31%). Power BI (28%) and Databricks (21%) are niche. Spark (11%), Kafka (5%), and Terraform (5%) appear rarely enough that listing them is a differentiator, not a gap if you lack them.</p>
+  <p class="section-body">SQL (93%) and dbt (70%) are the baseline — not knowing either disqualifies you from the vast majority of roles. Python follows at 55%, now effectively a third core requirement. After that, a genuine cliff: Power BI (31%), Snowflake (37%), Airflow (34%), Tableau (29%), Looker (27%). Databricks (20%) is niche. Spark (14%), Kafka (5%), and Terraform (5%) appear rarely enough that listing them is a differentiator, not a gap if you lack them.</p>
   <div class="card">
     <div class="card-title">Tool prevalence across filtered roles</div>
     <p class="card-sub">% of JDs mentioning each tool · colour = category</p>
@@ -972,9 +972,8 @@ const TOOLS = [
   {key:'has_looker',label:'Looker',group:'BI'},{key:'has_tableau',label:'Tableau',group:'BI'},{key:'has_power_bi',label:'Power BI',group:'BI'},
   {key:'has_airflow',label:'Airflow',group:'Orchestration'},{key:'has_spark',label:'Spark',group:'Compute'},
   {key:'has_kafka',label:'Kafka',group:'Streaming'},{key:'has_terraform',label:'Terraform',group:'Infra'},
-  {key:'has_airbyte',label:'Airbyte',group:'Ingestion'},
 ];
-const GC = { Core:'#1d4ed8', Warehouse:'#16a34a', BI:'#d97706', Orchestration:'#7c3aed', Compute:'#ea580c', Streaming:'#c0392b', Infra:'#6b7280', Ingestion:'#0891b2' };
+const GC = { Core:'#1d4ed8', Warehouse:'#16a34a', BI:'#d97706', Orchestration:'#7c3aed', Compute:'#ea580c', Streaming:'#c0392b', Infra:'#6b7280' };
 
 function buildToolCompanyList(tool) {
   const yes = activeData.filter(d => String(d[tool.key]).toLowerCase() === 'true');
