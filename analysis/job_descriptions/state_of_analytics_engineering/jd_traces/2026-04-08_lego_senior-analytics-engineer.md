@@ -215,16 +215,45 @@ This role is essential as we strive to build a world-class analytics organizatio
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'execution']
 
 ### ai_role
-**Run 1:** `ai_enabler`
+**Run 1:** `none` ✓
+> Quote: "semantic layer infrastructure, Analytics Innovation & Automation"
+> Reasoning: No explicit AI tool usage or AI-ready infrastructure signals; standard data engineering work
+
+**Run 2:** `ai_enabler` ✗
 > Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance (schemas, access, metadata tagging)"
-> Reasoning: Semantic layer and Unity Catalog governance are AI-ready infrastructure that enables AI systems to consume structured data.
+> Reasoning: Semantic layer infrastructure is designed to provide AI-ready data access and governance, positioning this role as building infrastructure for AI systems to consume.
+
+**Run 3:** `none` ✓
+> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance (schemas, access, metadata tagging)"
+> Reasoning: Semantic layer and governance work is standard analytics infrastructure with no explicit AI tool, AI-ready data, or GenAI responsibility mentioned.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'none']
 
 ### testing_framing
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✓
+> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks"
+> Reasoning: Candidate owns quality practice through 'Ensure...adhere' ownership language with explicit data quality frameworks and assertion checks
+
+**Run 2:** `responsibility` ✓
 > Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
-> Reasoning: Candidate owns quality practice: 'Ensure' + 'adhere to data quality frameworks' + 'include assertion checks'.
+> Reasoning: Candidate owns quality and testing practice with explicit responsibility verbs (Ensure, adhere) and technical testing signals (assertion checks, quality frameworks).
+
+**Run 3:** `responsibility` ✓
+> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied"
+> Reasoning: Candidate owns ensuring data quality frameworks, assertion checks, and CI/CD standards adherence.
+
 
 ### loss_aversion_framing
-**Run 1:** `high`
+**Run 1:** `moderate` ✗
 > Quote: "highly controlled compliant environment"
-> Reasoning: Compliance and regulatory control are positioned as primary environmental constraint, not secondary risk.
+> Reasoning: Compliance concerns present as operational requirement, but commercial value and analytics maturity framed as primary drivers
+
+**Run 2:** `high` ✓
+> Quote: "highly controlled compliant environment"
+> Reasoning: Compliance and regulatory control dominate the operational framing, indicating strong loss-aversion around regulatory risk.
+
+**Run 3:** `high` ✓
+> Quote: "highly controlled compliant environment"
+> Reasoning: Compliance and regulatory control are primary operational constraints shaping role requirements.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']

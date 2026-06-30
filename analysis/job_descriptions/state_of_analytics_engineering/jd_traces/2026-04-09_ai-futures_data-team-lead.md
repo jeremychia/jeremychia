@@ -217,3 +217,45 @@
 > Reasoning: The use of 'designing and building' combined with 'owning' ETL development indicates the role sets direction for platform strategy and architecture rather than executing work defined by others.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Building infrastructure that powers 'AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems'"
+> Reasoning: Building backend infrastructure that AI systems consume to drive pricing and financial decisions.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Building infrastructure that powers "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems""
+> Reasoning: Candidate builds data infrastructure that enables AI systems to make autonomous pricing and decisioning.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Building infrastructure that powers 'AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems'"
+> Reasoning: Candidate builds infrastructure that AI systems consume for pricing and decisioning capabilities.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner"
+> Reasoning: Ownership of pipeline work but no explicit testing, quality, or data contract responsibility mentioned.
+
+**Run 2:** `absent` ✓
+> Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms"
+> Reasoning: Pipeline development ownership stated, but no explicit quality/testing/data-contract responsibility signals.
+
+**Run 3:** `absent` ✓
+> Quote: "Owning ETL and ELT pipeline development"
+> Reasoning: Pipeline ownership mentioned without quality, testing responsibility, or tool references.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Designing and building a modern data platform for 'high-volume, real-time vehicle and transaction data'"
+> Reasoning: High-volume, real-time emphasis suggests operational reliability and performance concerns without explicit compliance or regulatory framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Designing and building a modern data platform for 'high-volume, real-time vehicle and transaction data'"
+> Reasoning: Operational reliability concern: candidate must ensure stable pipelines handling financial transactions at scale, but no compliance/regulatory framing present.
+
+**Run 3:** `moderate` ✓
+> Quote: "high-volume, real-time vehicle and transaction data"
+> Reasoning: Operational reliability concerns dominate (real-time processing, high-volume data) rather than compliance or trust framing.
+
