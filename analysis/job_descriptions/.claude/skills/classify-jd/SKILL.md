@@ -95,6 +95,34 @@ Focus on the **responsibilities section only**.
 - **mixed**: strategic ownership of a technical domain AND execution in service of a business team.
 - Tie-breaker: strategic verbs only in a narrow technical sub-problem while overall framing is support-oriented → `execution`.
 
+### ai_role
+`none` | `ai_user` | `ai_enabler`
+
+The question is what AI skill, if any, the role expects the *candidate* to demonstrate. Whether the company builds AI products is irrelevant.
+
+- **none**: no AI skill expected of the candidate. Includes JDs where the company builds AI products but the AE does standard modelling work, and stale JDs with no AI mention. Vague phrases ("AI-first mindset", "interest in AI") → `none`.
+- **ai_user**: the candidate is expected to use AI coding tools to accelerate their own work. The AI is the candidate's tool. Signal phrases: "AI-assisted coding", "proven usage of AI tools", "GitHub Copilot", "Claude Code", "Cursor", "coding agents in a disciplined way".
+- **ai_enabler**: the candidate is expected to build data infrastructure that AI systems consume or run on. The AI is downstream of the candidate's output. Signal phrases: "AI-ready data foundations", "data for AI/ML pipelines", "text-to-SQL", "semantic modelling for AI", "AI data agents", "GenAI applications" in responsibilities (not company description).
+- Tie-breaker: if both signals present → `ai_enabler`. Company description mentions AI but responsibilities do not → `none`.
+
+Quote the single phrase that most clearly placed the classification.
+
+### testing_framing
+`responsibility` | `tool_listed` | `absent`
+
+- **responsibility**: testing, data contracts, observability, or data quality frameworks are framed as something the candidate *owns or defines*, using action verbs. Signal patterns: "own the quality", "you will define testing standards", "data contracts" as a named responsibility, "ensure data reliability", "implement data quality frameworks". The candidate is accountable for the practice, not just familiar with the tool.
+- **tool_listed**: testing tools or practices appear in requirements or tech stack without ownership framing. Presence of Great Expectations, Soda, or "dbt tests" in a skill list without an ownership verb → `tool_listed`.
+- **absent**: no testing or data quality signal anywhere in the JD.
+- Tie-breaker: "experience with dbt testing" in a requirements list → `tool_listed`. "Own data quality through testing" in responsibilities → `responsibility`.
+
+### loss_aversion_framing
+`none` | `moderate` | `high`
+
+- **none**: JD framed in delivery and capability terms with no risk register. Typical of early-stage and velocity-oriented roles.
+- **moderate**: operational reliability is a concern but secondary to delivery. Fear is pipeline outages or data failures, not compliance or stakeholder trust. Signal phrases: "first to respond to incidents", "SLOs", "production reliability", "reduce bus factor", "pipeline stability".
+- **high**: risk, compliance, or stakeholder trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. Signal phrases: "regulatory", "compliance", "audit", "prevent bad data reaching stakeholders", "data accuracy has direct business impact", "data contracts" as a risk-control measure, "trustworthiness" as a primary role framing, repeated quality/reliability language throughout.
+- Tie-breaker: one mention of compliance in a delivery-dominated JD → `moderate`. Compliance or trust language in the first responsibility or role summary → `high`.
+
 ---
 
 ## Step 3 — Tool and stack extraction
@@ -135,6 +163,9 @@ python3 analysis/job_descriptions/write_jd.py <<'EOF'
   "jd_authorship": "{value}",
   "stakeholder_orientation": "{value}",
   "autonomy_level": "{value}",
+  "ai_role": "{none|ai_user|ai_enabler}",
+  "testing_framing": "{responsibility|tool_listed|absent}",
+  "loss_aversion_framing": "{none|moderate|high}",
   "greenfield_vs_fix": "{value}",
   "velocity_vs_rigour": "{value}",
   "domain_risk": "{value}",
@@ -179,6 +210,12 @@ python3 analysis/job_descriptions/write_jd.py <<'EOF'
     "stakeholder_orientation_explanation": "{one sentence naming the primary audience, quoting the decisive phrase}",
     "autonomy_level": "{verbatim verb phrase driving the classification}",
     "autonomy_level_explanation": "{one sentence explaining the classification, quoting the decisive verb phrase}",
+    "ai_role": "{verbatim phrase that placed the classification — or 'No AI skill signal.' if none}",
+    "ai_role_explanation": "{one sentence: what the candidate is expected to do with AI, or why none}",
+    "testing_framing": "{verbatim phrase showing ownership/tool/absence of testing practice}",
+    "testing_framing_explanation": "{one sentence explaining responsibility vs tool_listed vs absent}",
+    "loss_aversion_framing": "{verbatim phrase anchoring the risk register — or 'No loss aversion framing.' if none}",
+    "loss_aversion_framing_explanation": "{one sentence explaining the level and what fear it reflects}",
     "greenfield_vs_fix": "{verbatim quote driving the classification}",
     "greenfield_vs_fix_explanation": "{one sentence}",
     "language_gate": "{verbatim language requirement or 'Not stated in JD'}",
