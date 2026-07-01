@@ -193,3 +193,47 @@ Offer:
 > Quote: "Visión estratégica y ejecución técnica: Capacidad de alternar entre la definición de roadmaps multi-dominio y la resolución directa de problemas técnicos complejos"
 > Verified: ✓ found in JD
 > Reasoning: The role explicitly combines strategic direction-setting (defining multi-domain roadmaps, end-to-end project leadership) with hands-on technical execution (solving complex problems, managing pipelines).
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "No AI tool or platform references in JD"
+> Reasoning: No mention of AI coding tools, AI-ready infrastructure, or GenAI responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "No AI-related phrases present"
+> Reasoning: JD contains no mentions of AI tools, AI-first mindset, or AI infrastructure responsibilities.
+
+**Run 3:** `none` ✓
+> Quote: "No AI capabilities mentioned; Airflow, data governance, testing, CI/CD focus"
+> Reasoning: JD emphasizes standard data platform reliability and workflow management with zero AI/GenAI components or AI infrastructure responsibility.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✗
+> Quote: "Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas; Colaborar con otros miembros del equipo para reforzar estándares de calidad"
+> Reasoning: Quality and testing positioned as owned responsibilities; proactive monitoring and alert design indicate candidate ownership of data quality practices.
+
+**Run 2:** `tool_listed` ✓
+> Quote: "control de versiones, testing y CI/CD"
+> Reasoning: Testing appears as part of the technical stack without ownership verbs (own/ensure/define/implement).
+
+**Run 3:** `tool_listed` ✓
+> Quote: "testing y CI/CD"
+> Reasoning: Testing and CI/CD appear in technical stack; quality reinforcement framed as team collaboration without explicit ownership verbs.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'tool_listed']
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio; financial services company where data errors could affect reporting"
+> Reasoning: Financial services context with compliance-focused framing: preventing data errors from reaching stakeholders; regulatory risk and trustworthiness as primary concerns.
+
+**Run 2:** `moderate` ✗
+> Quote: "diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
+> Reasoning: Role frames around preventing operational failures and business impact through monitoring, signaling reliability-focused risk mitigation rather than compliance dominance.
+
+**Run 3:** `high` ✓
+> Quote: "diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
+> Reasoning: Financial services domain (P&L, FX, reconciliation) where data errors affect reporting; role positioned as protecting business from data failures.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']

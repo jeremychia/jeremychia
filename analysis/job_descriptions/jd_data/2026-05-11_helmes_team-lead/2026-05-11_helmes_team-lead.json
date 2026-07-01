@@ -71,5 +71,14 @@
   "autonomy_level_quote": "Lead software development teams and projects; Support sales and client acquisition",
   "autonomy_level_reasoning": "Role combines strategic leadership of team direction (lead, develop) with execution support for business-set objectives (support sales).",
   "greenfield_vs_fix_quote": "Monitor performance and continuously improve work methods; Contribute to process and tool development",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Lead software development teams and projects",
+  "ai_role_reasoning": "The role focuses on team leadership and project management without mention of AI tools or infrastructure",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Monitor performance and continuously improve work methods",
+  "testing_framing_reasoning": "Performance and methods are mentioned but no explicit ownership of testing or quality practices",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Lead software development teams and projects; Support sales and client acquisition",
+  "loss_aversion_framing_reasoning": "Responsibilities emphasize delivery and growth with no compliance, reliability, or risk-mitigation framing"
 }

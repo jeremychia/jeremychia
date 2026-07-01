@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Build, expand and maintain reusable data models and metrics in dbt",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Build, expand and maintain reusable data models and metrics in dbt",
+  "ai_role_reasoning": "Standard data modeling work with no AI skill expectations.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "ensure data integrity and efficiency across all processes",
+  "testing_framing_reasoning": "Data integrity mentioned but no explicit quality/testing ownership or data contracts responsibility.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "long-term business needs",
+  "loss_aversion_framing_reasoning": "Delivery-focused framing without compliance, regulatory, incident, or SLO-driven risk language."
 }

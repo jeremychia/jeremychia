@@ -226,3 +226,45 @@ Core Offerings:
 > Quote: "Translate business requirements into reliable, reusable data products"
 > Verified: ✓ found in JD
 > Reasoning: The role receives business requirements from stakeholders and implements them within established standards and frameworks, rather than defining analytics strategy or roadmap.
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Reasoning: Candidate builds infrastructure for AI consumption through semantic-ready data models.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Reasoning: Candidate builds infrastructure for AI consumption via semantic metadata and AI-ready schemas.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Reasoning: Candidate builds semantic infrastructure (column descriptions) explicitly designed for AI consumption and text-to-SQL applications.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Reasoning: Candidate owns quality assurance and governance implementation.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Reasoning: Candidate owns quality implementation and governance standards, not just following them.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Reasoning: Explicit ownership verb 'implement' paired with quality checks shows candidate owns validation practice.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Reasoning: Governance language signals trust and compliance concerns, balanced with operational delivery framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Reasoning: Framing centers on operational governance and data reliability as core responsibility, suggesting concern for stability.
+
+**Run 3:** `moderate` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Reasoning: Governance framing indicates operational control concerns, though lacks explicit compliance or incident-prevention language.
+

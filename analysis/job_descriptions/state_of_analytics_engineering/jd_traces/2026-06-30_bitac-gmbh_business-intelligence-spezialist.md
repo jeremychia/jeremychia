@@ -215,3 +215,45 @@ Contact: Cem Yücel, Manager
 > Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
 > Verified: ✓ found in JD
 > Reasoning: The language emphasizes implementing scenarios developed collaboratively with others rather than defining or determining direction independently, indicating execution-focused work.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Business Intelligence Lösungen im Microsoft Umfeld spezialisiert"
+> Reasoning: Standard BI specialist role with traditional data prep and visualization; no AI tools, GenAI responsibilities, or AI-ready infrastructure mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "Aufbereitung und Analyse von Daten; Bitac hat sich auf Business Intelligence Lösungen im Microsoft Umfeld spezialisiert"
+> Reasoning: Traditional BI specialist role with no AI tool usage or infrastructure-building signals, focused on standard data preparation and visualization.
+
+**Run 3:** `none` ✓
+> Quote: "Business Intelligence Spezialist für die Aufbereitung und Analyse von Daten"
+> Reasoning: Standard BI and data preparation role with no mention of AI tools or GenAI-ready infrastructure.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "The single-paragraph responsibilities section is entirely generic boilerplate — 'data preparation', 'connect data sources', 'create visualisations'"
+> Reasoning: No testing ownership, quality governance, or data contract language; execution-oriented responsibilities without methodology specifics.
+
+**Run 2:** `absent` ✓
+> Quote: "The single-paragraph responsibilities section is entirely generic boilerplate — 'data preparation', 'connect data sources', 'create visualisations'"
+> Reasoning: No testing tools mentioned and no quality or testing ownership responsibilities defined in the JD.
+
+**Run 3:** `absent` ✓
+> Quote: "verschiedenen Datenquellen anzubinden, aufzubereiten und für die Visualisierung vorzubereiten"
+> Reasoning: Role scope covers data connection and visualization without testing, quality ownership, or data contract responsibilities.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "No loss aversion framing detected"
+> Reasoning: JD emphasizes delivery for internal departments; no compliance, regulatory, SLO, incident prevention, or stakeholder risk language.
+
+**Run 2:** `none` ✓
+> Quote: "No loss aversion framing detected."
+> Reasoning: JD emphasizes delivery and execution of data scenarios with no operational reliability or compliance risk framing.
+
+**Run 3:** `none` ✓
+> Quote: "namhafte Unternehmen in unterschiedlichsten Branchen"
+> Reasoning: Generic industry-agnostic positioning with no compliance, regulatory, or operational stability framing.
+

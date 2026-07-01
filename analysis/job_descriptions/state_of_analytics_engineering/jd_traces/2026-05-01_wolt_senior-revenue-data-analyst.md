@@ -205,3 +205,46 @@ Not specified in posting
 > Reasoning: The verb 'support' and work within an existing accounting framework (IFRS 15, established subledger) indicate the role executes direction set by others rather than defining strategic direction.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
+> Reasoning: No AI tool usage or infrastructure building mentioned; traditional accounting execution focus.
+
+**Run 2:** `none` ✓
+> Quote: "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
+> Reasoning: No mention of AI tools, infrastructure, or GenAI responsibilities; pure accounting operations.
+
+**Run 3:** `none` ✓
+> Quote: "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
+> Reasoning: Standard accounting infrastructure work with no AI tools, coding automation, or GenAI infrastructure mentioned.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
+> Reasoning: Reconciliations imply data quality work but lack ownership language; no testing tools specified.
+
+**Run 2:** `absent` ✓
+> Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
+> Reasoning: Reconciliation implies accuracy verification but lacks explicit testing/quality ownership language or tool references.
+
+**Run 3:** `absent` ✓
+> Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
+> Reasoning: No testing ownership, quality practices, or data contracts mentioned; focus is technical accounting tasks.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Prepare materials for external and internal audit reviews"
+> Reasoning: Audit review preparation and external compliance focus dominates, indicating regulatory trust and compliance risk as primary framing.
+
+**Run 2:** `moderate` ✗
+> Quote: "Prepare materials for external and internal audit reviews"
+> Reasoning: Audit and compliance language signals regulatory concerns, but balanced with operational scaling and collaboration responsibilities.
+
+**Run 3:** `high` ✓
+> Quote: "Prepare materials for external and internal audit reviews"
+> Reasoning: Audit preparation and revenue accounting accuracy framed around regulatory/compliance requirements and external stakeholder trust.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']

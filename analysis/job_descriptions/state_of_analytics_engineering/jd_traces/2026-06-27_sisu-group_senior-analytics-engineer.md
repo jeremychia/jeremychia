@@ -189,3 +189,46 @@ Contact: Ginta Baranauskaite, TA & People Specialist
 > Quote: "Work with product and development teams to enhance data structures"
 > Verified: ✓ found in JD
 > Reasoning: The language emphasizes enhancing and supporting existing structures and team needs rather than defining strategy or establishing new directions.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
+> Reasoning: Standard data tools with no mention of AI user tools or AI infrastructure enablement.
+
+**Run 2:** `none` ✓
+> Quote: "No mention of AI tools or AI-ready infrastructure"
+> Reasoning: Standard data warehouse and transformation work with traditional tools (Airflow, Dataform, SQL); no AI tooling or infrastructure requirements.
+
+**Run 3:** `none` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
+> Reasoning: Lists standard analytics/data engineering tools with no AI coding tools (Copilot, Claude Code) or AI infrastructure (GenAI, text-to-SQL, AI-ready) mentioned.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Reasoning: Candidate owns validation and accuracy with ownership verbs (implement, guarantee).
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Reasoning: Candidate owns implementation of validation processes and data quality practices.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Reasoning: Candidate owns the responsibility to implement validation processes, demonstrating ownership of quality/testing practice.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✗
+> Quote: "iGaming/Revenues department; no explicit compliance, regulatory, or financial-reporting language in JD body"
+> Reasoning: Delivery-focused framing; explicitly no compliance or regulatory concerns despite iGaming context.
+
+**Run 2:** `moderate` ✓
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Reasoning: Framed around operational reliability (accuracy, reliability guarantees) without compliance, regulatory, or stakeholder-trust dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Reasoning: Operational reliability concern (data accuracy, reliability) without compliance/regulatory framing typical of high loss-aversion roles.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

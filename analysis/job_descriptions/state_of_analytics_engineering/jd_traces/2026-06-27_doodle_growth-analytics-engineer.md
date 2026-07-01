@@ -195,3 +195,46 @@ Doodle is a B2B SaaS scheduling platform with 100+ employees across multiple cou
 > Reasoning: The 'own' language indicates strategic responsibility for determining what analytics are delivered to business domains, not just executing a pre-defined roadmap.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business"
+> Reasoning: Core analytics role with no mention of AI tools, AI-assisted coding, or GenAI infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "improving data accessibility and reliability"
+> Reasoning: No AI skills, tools, or infrastructure responsibilities mentioned; standard analytics work.
+
+**Run 3:** `none` ✓
+> Quote: "improving data accessibility and reliability"
+> Reasoning: Standard analytics work with no AI/GenAI skill signals.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Define, build, and maintain the KPIs that drive business performance"
+> Reasoning: Role emphasizes KPI ownership and decision enablement without explicit testing, quality, or data contract language.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Define, build, and maintain the KPIs that drive business performance"
+> Reasoning: Ownership verbs (define, build, maintain) indicate responsibility for accuracy and correctness of key metrics.
+
+**Run 3:** `absent` ✓
+> Quote: "improving data accessibility and reliability"
+> Reasoning: No explicit testing/quality ownership verbs or tool mentions.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "data errors affect business decisions without regulatory or financial reporting consequences"
+> Reasoning: Operational reliability concern (data affecting business decisions) explicitly excludes regulatory or compliance consequences.
+
+**Run 2:** `moderate` ✓
+> Quote: "data errors affect business decisions"
+> Reasoning: Emphasizes operational business impact of data quality; explicitly excludes regulatory/compliance concerns.
+
+**Run 3:** `moderate` ✓
+> Quote: "data errors affect business decisions without regulatory or financial reporting consequences"
+> Reasoning: Operational reliability framing (decision impact) without compliance dominance signals moderate loss aversion.
+

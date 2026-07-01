@@ -219,3 +219,47 @@ Do you have what it takes?
 > Reasoning: The role combines strategic responsibility for data governance and platform building with execution in service of business requirements set by other stakeholders.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build data pipeline engineering, orchestration, and monitoring"
+> Reasoning: Standard data engineering and pipeline work with no AI skill expectations or infrastructure for AI consumption.
+
+**Run 2:** `none` ✓
+> Quote: "Build data pipeline engineering, orchestration, and monitoring to deliver high-quality data products"
+> Reasoning: No AI-specific skills or tools mentioned; focuses on traditional data engineering.
+
+**Run 3:** `none` ✓
+> Quote: "no explicit AI signals in phrases"
+> Reasoning: Standard data engineering and analytics work; no AI tool usage or AI infrastructure requirements mentioned
+
+
+### testing_framing
+**Run 1:** `tool_listed` ✗
+> Quote: "adhere to data quality frameworks; include assertion checks"
+> Reasoning: Testing techniques (assertions) are mentioned as requirements to include, but without ownership verbs (own/ensure/define/implement/establish).
+
+**Run 2:** `responsibility` ✓
+> Quote: "adhere to data quality frameworks; include assertion checks and have performance & cost optimisation applied"
+> Reasoning: Candidate expected to implement and own quality assurance practices including assertion checks.
+
+**Run 3:** `responsibility` ✓
+> Quote: "include assertion checks and have performance & cost optimisation applied"
+> Reasoning: Candidate owns implementing data quality frameworks and assertion checks as part of their work
+
+⚠ **LLM inconsistency**: runs gave ['tool_listed', 'responsibility', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "adhere to data quality frameworks; include assertion checks and have performance & cost optimisation applied"
+> Reasoning: Operational reliability concerns present through quality frameworks, assertions, and monitoring, but without explicit SLO, incidents, or compliance/regulatory dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment"
+> Reasoning: Governance and compliance emphasis signals loss aversion around regulatory/operational controls, but not the dominant role framing.
+
+**Run 3:** `high` ✗
+> Quote: "highly controlled compliant environment; Drive Unity Catalog governance"
+> Reasoning: Compliance and governance framing dominates (explicit 'compliant', regulatory alignment, data trustworthiness) alongside operational reliability concerns
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']

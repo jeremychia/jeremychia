@@ -198,3 +198,45 @@
 > Reasoning: The role uses ownership verbs ('own', 'drive', 'oversee', 'build') indicating the person is expected to set direction for platform modernization and data operations rather than execute others' priorities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems"
+> Reasoning: Standard data platform engineering without AI tool usage, AI infrastructure building, or AI-first mindset signals.
+
+**Run 2:** `none` ✓
+> Quote: "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems"
+> Reasoning: Infrastructure building for data teams, but no AI-specific, AI-enabling, or GenAI language present.
+
+**Run 3:** `none` ✓
+> Quote: "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)"
+> Reasoning: Standard data infrastructure stack with no AI/GenAI signal; role focuses on traditional data platform transition.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Strong software engineering fundamentals (CI/CD, testing, design patterns)"
+> Reasoning: Testing mentioned as foundational skill requirement, but no explicit ownership verb or testing tool specification.
+
+**Run 2:** `absent` ✓
+> Quote: "Strong software engineering fundamentals (CI/CD, testing, design patterns)"
+> Reasoning: Testing mentioned as expected skill, not as owned responsibility or with specific testing tool.
+
+**Run 3:** `absent` ✓
+> Quote: "Strong software engineering fundamentals (CI/CD, testing, design patterns)"
+> Reasoning: Testing mentioned as expected fundamental skill but no explicit responsibility or tool for candidate to own or implement.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Oversee the company's largest data movement operations, handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance"
+> Reasoning: Operational reliability and system performance emphasized; concern about breaking source systems during critical data operations, but no compliance or regulatory framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "maintaining source system performance"
+> Reasoning: Operational reliability concern (performance, monitoring, scale stability), but no compliance or trust/data quality framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Oversee the company's largest data movement operations, handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance"
+> Reasoning: Operational reliability focus (maintaining performance, scale, critical nightly operations) without explicit compliance or regulatory framing.
+

@@ -75,5 +75,14 @@
       "stakeholder engagement",
       "robust, repeatable analytics solutions"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "The responsibilities section is generic boilerplate with no named tools in context, no scale numbers, and no specific methodology",
+  "ai_role_reasoning": "No AI tools, infrastructure responsibilities, or AI-first language present.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "validation and quality checks to ensure accuracy",
+  "testing_framing_reasoning": "Ownership verb 'ensure' paired with quality and accuracy responsibilities.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "The framing is delivery-oriented with verbs like 'support', 'partner', and 'deliver'",
+  "loss_aversion_framing_reasoning": "No compliance, regulatory, or loss-aversion language; framed around delivery and scalability."
 }

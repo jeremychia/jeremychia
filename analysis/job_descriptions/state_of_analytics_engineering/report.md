@@ -233,18 +233,268 @@ This is consistent with the dbt report's implicit claim that dbt has become the 
 
 ---
 
+## 4.9 Statistical relationships across dimensions
+
+The sections above treat each dimension in isolation. This section runs exhaustive pairwise tests across all categorical and numeric fields to surface relationships that don't emerge from single-dimension inspection.
+
+### Statistical methods
+
+Three tests were used, selected by data type and cell size:
+
+**Chi-squared (χ²):** Applied to all categorical × categorical pairs with expected cell frequencies ≥5. Tests whether the two variables are independent. With n=93, the minimum detectable effect (at α=0.05, 80% power) for a 2×3 table is Cramér's V ≈ 0.30 — so findings below that threshold should be read as directional only.
+
+**Fisher's Exact:** Applied when the table is 2×2 with any expected cell frequency <5, or when any cell has fewer than 5 observations. Computationally exact rather than asymptotic; appropriate for sparse cells.
+
+**Kruskal-Wallis (KW) / Mann-Whitney U (MWU):** Applied to numeric × categorical pairs (`collaboration_width`, `salary_min`, `salary_max`). KW is the non-parametric equivalent of one-way ANOVA (k≥3 groups); MWU is the two-group equivalent. Neither assumes normality. Salary results are treated cautiously given n=21 salary records.
+
+**Cramér's V** is reported alongside all chi-squared tests as a standardised effect size (0 = no association, 1 = perfect association). Conventional thresholds: V≥0.10 small, V≥0.30 medium, V≥0.50 large.
+
+**Multiple comparison note:** Running all pairwise combinations across ~20 dimensions produces many tests. No Bonferroni correction is applied — these are exploratory findings, not confirmatory hypothesis tests. Only results with p<0.05 *and* V≥0.20 (or a clear conceptual interpretation) are reported below. At n=93, p<0.05 alone is not sufficient to treat a finding as robust.
+
+---
+
+### Finding A: Domain risk and stakeholder orientation are structurally linked (χ², p<0.001, V=0.36)
+
+| domain_risk | commercial | finance | internal_data | mixed | product | n |
+|-------------|-----------|---------|---------------|-------|---------|---|
+| high | 9% | 43% | 39% | 9% | 0% | 23 |
+| moderate | 12% | 1% | 65% | 13% | 9% | 68 |
+
+High-risk roles concentrate in finance (43%) and to a lesser extent internal_data (39%). Moderate-risk roles overwhelmingly serve internal_data (65%). Product-facing roles appear only at moderate risk — there are zero high-risk product analytics roles in this dataset.
+
+The finance-concentration in high-risk is expected (fintech, insurance, IFRS/SOX contexts). The absence of product-risk roles is less obvious: experimentation and funnel analytics aren't classified as high-stakes in hiring language even when A/B test errors have revenue consequences. Either employers don't frame product analytics as risky, or the risk is absorbed into "moderate" by the codebook's decision rules.
+
+**Theoretical read — DiMaggio & Powell (1983), normative isomorphism:** Normative isomorphism predicts that professional communities develop shared norms about what constitutes legitimate practice, and hiring language reflects those norms. Finance is a mature professional field with externally imposed risk classifications (regulatory bodies, audit standards, IFRS). The data-risk hierarchy in JD language therefore tracks an externally defined hierarchy, not just employer discretion. Product analytics has no equivalent external regulator defining what a "high-risk" A/B test looks like — so employers default to moderate. This is the theory *supported*: domain-risk employer language is shaped by the regulatory and professional norms of the stakeholder domain, not a free employer judgment about data stakes.
+
+---
+
+### Finding B: High-risk roles are more likely to require greenfield work (χ², p<0.001, V=0.29)
+
+| domain_risk | fix_scale | greenfield | mixed | n |
+|-------------|-----------|-----------|-------|---|
+| high | 43% | 26% | 30% | 23 |
+| moderate | 22% | 3% | 75% | 68 |
+
+Moderate-risk roles are overwhelmingly "mixed" (existing stack, ongoing expansion). High-risk roles split more sharply between fix_scale and greenfield — employers in high-stakes domains are more likely to be either rebuilding something broken or starting from scratch, not incrementally extending. This may reflect the compliance pressure in fintech and finance to replace legacy systems rather than iterate on them.
+
+**Theoretical read — Collingridge (1980), the control dilemma:** Collingridge's dilemma holds that technology is easiest to correct early, before dependencies lock in, and hardest to correct once it is embedded. The high-risk × fix_scale concentration suggests employers in finance and compliance have *already* hit the locked-in phase: the existing stack cannot be iteratively patched because compliance exposure is too high, so they are forced into replacement or greenfield work. Moderate-risk roles — still in the incremental "mixed" phase — haven't yet hit that ceiling. The theory predicts this pattern and the data supports it: high-stakes domains disproportionately face the costly late-stage correction that Collingridge warns about.
+
+---
+
+### Finding C: Early-stage teams post greenfield roles; mature teams don't (χ², p<0.001, V=0.29)
+
+| data_team_maturity | fix_scale | greenfield | mixed | n |
+|--------------------|-----------|-----------|-------|---|
+| early | 0% | 60% | 40% | 5 |
+| mature | 36% | 0% | 64% | 14 |
+| mid | 28% | 7% | 65% | 74 |
+
+Greenfield roles are concentrated at early-stage companies (60%) and are absent from mature teams entirely. Mid-stage teams are predominantly "mixed." Mature teams split between fix_scale and mixed — optimising and expanding, not starting fresh.
+
+This is the structural basis for a common career advice claim ("go early-stage if you want greenfield work") — it holds in employer language. The complementary finding is less often stated: mature teams have the highest fix_scale proportion (36%), meaning they're more likely to be posting roles explicitly to address debt or replace underperforming systems.
+
+**Theoretical read — Rogers (2003), diffusion S-curve:** Rogers' diffusion model predicts distinct phases: early adopters build infrastructure from scratch; early majority scale and expand; late majority inherit and optimise what others built. The maturity × greenfield_vs_fix distribution maps onto this almost exactly — greenfield at early, mixed at mid, fix_scale concentrated at mature. What the theory does not predict well is the mature fix_scale finding: Rogers treats late adoption as stabilisation, not remediation. The data suggests a *post-stabilisation regression* — mature teams rebuilding systems that were adequate when adopted but have since accumulated technical or compliance debt. That pattern is closer to Collingridge than Rogers, and suggests the two frameworks need to be read together to cover the full maturity arc.
+
+---
+
+### Finding D: Seniority predicts autonomy, but not linearly (χ², p=0.015, V=0.26)
+
+| autonomy_level | junior | lead | manager | mid | senior | staff | n |
+|----------------|--------|------|---------|-----|--------|-------|---|
+| execution | 3% | 0% | 0% | 54% | 43% | 0% | 35 |
+| mixed | 0% | 11% | 0% | 52% | 37% | 0% | 27 |
+| strategic | 0% | 10% | 3% | 19% | 55% | 13% | 31 |
+
+Senior roles span all three autonomy levels — 43% of execution roles are senior, and 55% of strategic roles are senior. "Senior" is not a reliable signal of strategic autonomy. The clearest contrast: mid-level roles cluster in execution (54%) but drop sharply in strategic (19%). Staff roles appear almost exclusively in strategic — a small cell (n=4) but directionally consistent with the expectation that staff engineers set direction.
+
+Lead and manager titles show mixed patterns. Leads appear in strategic and mixed (but not execution); managers are rare in this dataset and appear inconsistently.
+
+**Theoretical read — Spence (1973), signalling; partially contradicted:** Spence's signalling theory predicts that credentials (including job titles) serve as reliable signals of underlying quality, because they are costly to obtain. If seniority titles are good signals, "Senior AE" should reliably predict higher autonomy. The data contradicts this: "Senior" is spread almost uniformly across execution, mixed, and strategic. The signal has degraded — either because the title is cheap to award (low cost = low signal value), or because employers have disaggregated the seniority concept across multiple title ladders without standardising what it means for autonomy. The title has become a *weak* signal at best, a *misleading* one at worst. The staff title, by contrast, appears to retain signal value — its near-exclusive concentration in strategic is consistent with staff titles being genuinely more costly to award and therefore more informative. Spence's framework is supported for staff; it is contradicted for senior.
+
+---
+
+### Finding E: Finance roles are the most execution-oriented (χ², p=0.019, V=0.24)
+
+| stakeholder_orientation | execution | mixed | strategic | n |
+|-------------------------|-----------|-------|-----------|---|
+| commercial | 20% | 50% | 30% | 10 |
+| finance | 82% | 9% | 9% | 11 |
+| internal_data | 40% | 29% | 31% | 55 |
+| mixed | 9% | 27% | 64% | 11 |
+| product | 17% | 33% | 50% | 6 |
+
+82% of finance-facing roles are classified as execution — the highest concentration in the dataset. Finance stakeholders have defined reporting requirements, compliance frameworks, and audit cycles: the AE's job is to deliver correctly against them, not to set the direction. Commercial-facing roles are the most mixed (50%), which makes sense given the volatility of GTM priorities. "Mixed" stakeholder roles are the most strategic (64%) — these are likely platform or lead roles that serve multiple audiences and must set standards across them.
+
+**Theoretical read — DiMaggio & Powell (1983), coercive isomorphism; supported:** Coercive isomorphism describes how external mandate — regulation, audit requirements, legal obligation — constrains organisational behaviour regardless of internal preferences. Finance-facing AE roles are shaped by coercive forces (IFRS, SOX, GDPR, insurance regulation) that define what the output must be before any internal conversation about strategy takes place. The 82% execution concentration is therefore not an employer preference — it is the shape that external coercion imposes. The contrast with commercial roles (20% execution) is precisely the contrast between coercively defined and market-defined work: commercial GTM work has no external regulator setting the deliverable, so autonomy varies with employer context. The theory fits the pattern tightly and offers a prediction: as financial regulation becomes more prescriptive (mandatory audit trails for ML-driven decisions, for instance), finance-facing AE roles should become even more execution-dominated over time.
+
+---
+
+### Finding F: Velocity-oriented roles cluster with streaming infrastructure (χ², p<0.001, V=0.43)
+
+| velocity_vs_rigour | has_kafka: False | has_kafka: True | n |
+|--------------------|------------------|-----------------|---|
+| mixed | 86% | 14% | 7 |
+| rigour | 96% | 4% | 85 |
+| velocity | 0% | 100% | 1 |
+
+The single velocity-oriented JD in the dataset requires Kafka. Among mixed-orientation roles, 14% require Kafka vs. 4% for rigour roles. This is consistent with the hypothesis that streaming infrastructure demands a different operational posture — real-time pipelines have less tolerance for the batch-correction patterns that rigour-oriented teams rely on. The cell sizes are too small to treat this as confirmatory, but the direction is clear.
+
+Kafka also co-occurs with greenfield orientation (38% of greenfield roles require Kafka vs. 3% of mixed roles; V=0.42) and with early-stage teams (40% of early-stage vs. 4% of mid-stage; V=0.34). This forms a coherent cluster: early-stage, greenfield, streaming-infrastructure, velocity-oriented roles are the non-modal segment of the market — visible in the data, but structurally distinct from the dominant mid-stage rigour archetype.
+
+**Theoretical read — Rogers (2003), technology clusters; Weick (1995), enacted environment; both supported:** Rogers observes that innovations rarely diffuse in isolation — adopters acquire complementary technologies together because the benefits of one depend on the presence of others. The Kafka cluster (streaming + greenfield + early-stage + velocity) is exactly this: these attributes co-occur not because of independent employer choices but because they are a coherent *technology package* that makes sense as a bundle. Adopting streaming without greenfield context, or velocity orientation without the operational infrastructure to support it, is inconsistent — and the data reflects that employers who write these JDs are selecting the whole package or none of it. Weick adds that organisations do not merely adopt technology — they enact the environment in which that technology makes sense. Velocity-oriented employers are signalling not just a tool preference but a different enacted reality about what data work is for: throughput over correctness, feedback loops over audit trails. The Kafka cluster is therefore both a technology-diffusion cluster (Rogers) and an organisational sensemaking artefact (Weick). The dominant rigour cluster is its mirror: a different enacted reality, adopted by the modal employer.
+
+---
+
+### Finding G: dbt authorship signals who wrote the JD (χ², p=0.012, V=0.27)
+
+| jd_authorship | has_dbt: False | has_dbt: True | n |
+|---------------|---------------|---------------|---|
+| hiring_manager | 15% | 85% | 39 |
+| mixed | 39% | 61% | 41 |
+| recruiter | 54% | 46% | 13 |
+
+Hiring managers who write their own JDs are significantly more likely to include dbt as a requirement (85% vs. 46% for recruiter-authored). Recruiter-authored JDs include dbt at roughly coin-flip rates. One interpretation: hiring managers who use dbt daily name it specifically; recruiters pull from generic tool-list templates that may or may not include it.
+
+The practical implication for candidates: dbt absence in a recruiter-authored JD is weaker evidence that the team doesn't use dbt than dbt absence in a hiring-manager-authored JD. The JD authorship dimension serves as a signal-quality adjuster for the tool requirements.
+
+**Theoretical read — Deming & Kahn (2018), revealed preference; signal degradation:** Deming and Kahn establish that JD requirements are revealed preferences — employers write what they value because posting and screening has cost. This finding introduces a second-order complication: the signal quality of a JD requirement depends on *who wrote it*. A hiring-manager-authored dbt requirement is a high-fidelity revealed preference — the manager chose to name dbt because they use it and will screen for it. A recruiter-authored dbt requirement is lower fidelity — it may reflect a template, a prior JD, or a guess about what the role needs. The Deming-Kahn framework is not wrong, but it assumes uniform signal quality across JDs. The authorship finding shows that signal quality is itself variable and measurable. The implication for the dbt prevalence finding (71% of AE JDs mention dbt): this figure is an upper bound — recruiter-authored mentions dilute the true prevalence of teams where dbt is a working daily requirement.
+
+---
+
+### Finding H: Autonomy level predicts salary more reliably than seniority title (KW, p=0.024, n=21)
+
+| autonomy_level | salary_min median | salary_max median | n |
+|----------------|-------------------|-------------------|---|
+| execution | €48,000 | €57,500 | 7–8 |
+| mixed | €65,000 | €90,000 | 5 |
+| strategic | €90,000 | €100,000 | 9–10 |
+
+The salary gradient across autonomy levels is sharper than across seniority labels (which show less separation). Strategic roles pay roughly 85% more at the floor than execution roles. This is consistent with Spence's signalling interpretation: strategic autonomy — a costly-to-fake signal — carries a salary premium that generic seniority titles don't capture.
+
+The salary dataset is small (n=21, predominantly European) and the Kruskal-Wallis result sits at p=0.024, barely above the conventional threshold. The direction is clear; the magnitude is uncertain.
+
+**Theoretical read — Spence (1973), signalling; supported and refined:** Spence's model predicts that signals which are costly to fake command market premiums, because they convey information that cannot be cheaply mimicked. This finding tests two competing signals: seniority title (cheap — titles are awarded by employers with minimal standardisation across firms) versus autonomy level (costly — direction-setting responsibility requires demonstrated judgment and typically longer organisational tenure to be granted). If Spence is right, autonomy level should command a larger salary premium than seniority title. The data supports this: autonomy level produces a clean monotonic salary gradient (€48k → €65k → €90k) where seniority labels produce noise. The finding does not contradict Spence so much as it identifies *which* signal has retained informational value and which has been debased. A candidate negotiating salary is better served by establishing the autonomy level of the role explicitly — it is the dimension the market is actually pricing.
+
+---
+
+### Finding I: Mature teams pay more and hire differently (MWU, p=0.033, n=19)
+
+| data_team_maturity | salary_min median | n |
+|--------------------|-------------------|---|
+| mid | €60,600 | 16 |
+| mature | €90,100 | 3 |
+
+Mature teams pay roughly 50% higher floor salaries than mid-stage teams. With only 3 mature-team salary records, this is illustrative rather than evidential — but the direction is consistent with expectation. Mature teams also show the highest collaboration_width (median 3.5 named stakeholder groups vs. 2.0 for mid-stage) and the highest fix_scale proportion (36%). They are paying for experience and scoping the role more broadly.
+
+**Theoretical read — Rogers (2003), late-majority adoption characteristics; partially contradicted:** Rogers predicts that late adopters (mature organisations) are more risk-averse and cost-sensitive than early adopters, and that adoption at this stage is driven by economic necessity rather than innovation appetite. If true, mature teams should pay conservatively — they adopt when they must, not because they prize capability. The salary data contradicts this prediction: mature teams pay the highest floor salaries. A better explanation comes from labour economics rather than diffusion theory: mature data functions have *more* differentiated skill requirements because they have had longer to identify which capabilities generate value. They are paying for precision, not out of innovation drive. The salary premium is better explained by skill specificity (they know exactly what they need and price for it) than by diffusion dynamics.
+
+---
+
+### Finding J: Loss-aversion framing predicts strategic autonomy and broader collaboration (χ², p=0.039, V=0.39)
+
+*Based on 21 records with the new-format fields; treat as directional.*
+
+| loss_aversion_framing | execution | mixed | strategic | n |
+|-----------------------|-----------|-------|-----------|---|
+| high | 17% | 0% | 83% | 6 |
+| moderate | 20% | 30% | 50% | 10 |
+| none | 80% | 20% | 0% | 5 |
+
+Roles with high loss-aversion framing (dominated by compliance, regulatory exposure, or trust framing) skew heavily strategic (83%). Roles with no loss-aversion framing are overwhelmingly execution (80%). The hypothesis: when an employer fears data errors reaching decision-makers or regulators, they hire for ownership and judgment, not execution of defined tasks. Risk-consciousness and strategic autonomy are employer co-requisites.
+
+Collaboration width shows the same gradient (KW, p=0.035): high loss-aversion roles have median 3.5 named stakeholder groups vs. 2.0 for moderate and 0 for none. Employers concerned about data risk scope the role broadly — they want the AE talking to more of the organisation, presumably to catch more failure modes before they propagate.
+
+**Theoretical read — Kahneman & Tversky (1979), prospect theory; Weick (1995), sensemaking; both supported, with tension:** Prospect theory establishes that losses loom larger than equivalent gains in human decision-making — organisations will pay more to avoid a certain loss than to achieve an equivalent uncertain gain. If loss-aversion framing in JDs reflects an employer genuinely motivated by downside avoidance, the theory predicts they will invest more heavily in the hire: grant more autonomy (to ensure the person can act without bottlenecks when something goes wrong) and mandate broader stakeholder coverage (to catch failure modes earlier). The data supports this: high loss-aversion roles are 83% strategic and have the widest collaboration scope. However, Weick's sensemaking framework introduces a complicating read: employers with high loss-aversion framing may be *enacting* a risk narrative in their JD without that narrative accurately reflecting organisational reality. The JD is a sensemaking document — it constructs a version of what the role is for. A compliance-heavy JD may be authored by a legal team that has over-specified risk, producing strategic autonomy signals that are performative rather than operational. Distinguishing enacted risk from actual risk requires interview-stage data that JDs cannot supply. The finding is best read as: *high loss-aversion framing is a reliable signal that the employer has institutionalised their risk concern into hiring criteria* — whether that concern is proportionate to actual stakes is a separate question.
+
+---
+
+### Summary of significant relationships
+
+| Relationship | Test | p | V / stat | Interpretation |
+|---|---|---|---|---|
+| domain_risk × stakeholder_orientation | χ² | <0.001 | 0.36 | Finance roles cluster in high-risk; product roles only at moderate |
+| velocity_vs_rigour × has_kafka | χ² | <0.001 | 0.43 | Velocity/mixed orientation tracks with streaming infra |
+| domain_risk × greenfield_vs_fix | χ² | <0.001 | 0.29 | High-risk domains more likely greenfield or fix_scale |
+| data_team_maturity × greenfield_vs_fix | χ² | <0.001 | 0.29 | Early = greenfield; mature = fix_scale; mid = mixed |
+| jd_authorship × has_dbt | χ² | 0.012 | 0.27 | Hiring managers name dbt more reliably than recruiters |
+| autonomy_level × seniority | χ² | 0.015 | 0.26 | Senior ≠ strategic; execution roles are 43% senior-titled |
+| stakeholder_orientation × autonomy_level | χ² | 0.019 | 0.24 | Finance = execution; mixed stakeholder = strategic |
+| salary_min × autonomy_level | KW | 0.024 | — | Strategic roles pay ~85% more floor salary than execution |
+| loss_aversion_framing × autonomy_level | χ² | 0.039 | 0.39 | High loss-aversion → strategic autonomy (n=21) |
+| collaboration_width × stakeholder_orientation | KW | 0.015 | — | Commercial/finance roles name more stakeholder groups |
+
+---
+
+### 4.10 AI role: the gap between AI adoption discourse and hiring language
+
+`ai_role` classifies whether the JD expects the candidate to *use* AI tools in their own workflow, *build* infrastructure AI systems consume, or neither.
+
+| ai_role | n | % |
+|---------|---|---|
+| none | 78 | 84% |
+| ai_enabler | 14 | 15% |
+| ai_user | 1 | 1% |
+
+**84% of JDs expect no AI skill from the candidate.** The dbt 2026 report claims 72% of teams use AI in coding workflows daily. If that adoption had become normative — a professional standard, not just a team behaviour — it would appear in hiring language. It does not. Almost no employers (1 of 93) name AI coding tools as a hiring criterion. The `ai_enabler` cluster (15%) is real but concentrated in roles with an explicit GenAI product context: these employers are building AI products and need AEs to supply training data, semantic models, or text-to-SQL infrastructure. That is a product-context signal, not a general market shift.
+
+The implication for Deming & Kahn's revealed-preference framework: employers have not yet paid the hiring cost of requiring AI skills. Survey self-reports of daily AI use and revealed hiring preferences are diverging, which is consistent with DiMaggio & Powell's mimetic adoption — teams copy peers' AI tool use without it becoming a professional norm. A candidate who treats AI proficiency as a differentiator for general AE roles is pitching into a gap the employer has not opened.
+
+**Actionable read:** `ai_enabler` roles → demonstrate data products built for AI consumption specifically. `none` → AI tool fluency is not a differentiator; don't lead with it.
+
+---
+
+### 4.11 Testing framing: governance accountability is now a majority hiring criterion
+
+`testing_framing` distinguishes whether testing and data quality appear as something the candidate *owns*, as a tool listed without ownership language, or not at all.
+
+| testing_framing | n | % |
+|-----------------|---|---|
+| responsibility | 53 | 57% |
+| absent | 36 | 39% |
+| tool_listed | 4 | 4% |
+
+**57% of JDs frame testing as something the candidate owns** — using action verbs like own, ensure, define, implement, establish alongside quality, data contracts, or observability. This is the revealed-preference confirmation of dbt 2026's "trust gap" claim: governance accountability has entered hiring criteria in the majority of roles. It is no longer a nice-to-have or a team value — it is a stated hiring expectation.
+
+The distinction from `velocity_vs_rigour` matters. Two JDs can both be coded `rigour`: one because the team values engineering craft, another because the AE will be personally accountable for data trust. `testing_framing = responsibility` identifies the second kind — roles where governance has been institutionalised as a personal responsibility of the hire, not delegated to team culture.
+
+The 39% `absent` cluster is also significant. These employers have not operationalised their quality concern into hiring language, even when the role is otherwise rigour-oriented. Either the testing expectation is assumed and not stated, or it genuinely isn't a priority. Interview questions are required to distinguish the two.
+
+**Actionable read:** `responsibility` → lead with governance outcomes and ownership language; quantify. `absent` → pitch to delivery; governance is not the differentiator here.
+
+---
+
+### 4.12 Loss-aversion framing: the market fears operational failure, not AI hallucinations
+
+`loss_aversion_framing` classifies what the JD is afraid of: nothing (delivery framing only), operational failure (pipeline outages, SLOs, data freshness), or compliance and stakeholder trust failure.
+
+| loss_aversion_framing | n | % |
+|-----------------------|---|---|
+| moderate | 56 | 60% |
+| none | 23 | 25% |
+| high | 14 | 15% |
+
+**Three in four roles carry some fear signal, but the fear is operational, not compliance-driven.** The dbt 2026 report leads with a specific fear narrative: 71% of teams cite fear of hallucinated AI outputs reaching stakeholders. If that fear had entered employer hiring consciousness, it would appear as `high` loss-aversion in JD language. `high` is a minority at 15%. The dominant fear (60%) is `moderate` — pipeline reliability, SLO adherence, data freshness — concerns that long predate the AI discourse.
+
+This is a meaningful divergence from the dbt framing. The market is not predominantly afraid of AI governance failures; it is afraid of the same operational failures it has always been afraid of. The survey's emphasis on AI-specific fear may reflect the concerns of dbt's community sample (more sophisticated teams with active AI deployment) rather than the broader employer market.
+
+Finding J (section 4.9) showed that `high` loss-aversion predicts strategic autonomy (83% of high-framing roles are strategic) and wider collaboration scope — employers who fear compliance failure hire differently. The 15% `high` cluster is real and distinct, but it should not be treated as representative of the market.
+
+**Actionable read:** `high` → frame every resume bullet as risk reduced, trust established, misstatement prevented. `moderate` → lead with reliability outcomes: uptime, incident response, SLO adherence. `none` → capability and delivery framing; fear-based pitches will read as mismatched.
+
+---
+
 ## 5. What the survey claims vs. what JDs show
 
 | dbt 2026 claim | JD evidence | Assessment |
 |----------------|-------------|------------|
-| 83% prioritise data trust | 84% rigour-oriented JDs | Directionally consistent — but JD rigour ≠ fear of AI hallucination |
-| 72% prioritise AI coding | Not classifiable from JD text | No structured field; anecdotal mentions in JDs are sparse |
-| AI adoption outpacing governance (72% vs 24%) | Cannot test directly | Would require `has_ai_requirement` + `has_testing_culture_signal` fields |
-| Fear of hallucinated outputs (71%) | Cannot isolate in JD language | Loss-aversion framing is present in some JDs but not extracted as a structured field |
-| Ambiguous data ownership persists (41%) | Collaboration width does not confirm this | Mid and early teams have similar width; ownership confusion is not detectable from JD language alone |
-| dbt is the field standard | 71% of AE JDs mention dbt | True for this dataset; ~30% of AE market operates without it |
+| 83% prioritise data trust | 84% rigour-oriented JDs; 57% frame testing as owned responsibility | Confirmed at the orientation level; confirmed at the accountability level |
+| 72% use AI in coding workflows daily | 84% of JDs expect no AI skill; 1% name AI coding tools | Not reflected in hiring language — adoption is mimetic, not normative |
+| AI adoption outpacing governance (72% vs 24%) | `ai_role` + `testing_framing` now classified across n=93 | Partially contradicted: governance accountability (57%) is *ahead* of AI hiring signal (16%) |
+| Fear of hallucinated outputs (71%) | `loss_aversion_framing = high` is 15% of JDs | Not confirmed — dominant fear is operational failure, not AI trust breakdown |
+| Ambiguous data ownership persists (41%) | Collaboration width does not confirm this | Ownership confusion is not detectable from JD language alone |
+| dbt is the field standard | 68% of AE JDs mention dbt | Real but not universal — ~30% of AE roles run on stacks without it |
 
-**The most important gap:** The dbt 2026 report's central anxiety — AI acceleration outpacing governance — cannot be tested from current JD data. Two schema fields would unlock this: `has_ai_requirement` (does the JD mention AI as a required skill?) and `has_testing_culture_signal` (does the JD frame testing/observability as a *responsibility*, not just a tool?). If these were classified, you could directly measure whether the governance gap (AI coding without governance requirement) appears in employer language. Currently, it cannot be confirmed or denied.
+**The governance-vs-AI gap inverts the dbt narrative.** dbt 2026 frames the problem as AI adoption outrunning governance readiness. The JD data suggests the opposite pressure: governance accountability has become a majority hiring criterion (57% `testing_framing = responsibility`), while AI adoption has not entered hiring language at all (84% `ai_role = none`). Employers are hiring for governance faster than they are hiring for AI. Whether that reflects genuine institutional maturity or a lagging signal remains open — but the dbt framing of governance as the *deficit* is not what employer revealed preferences show.
 
 ---
 
@@ -296,52 +546,27 @@ Two factors that matter most for long-term role satisfaction cannot be inferred 
 
 ---
 
-## 8. Schema gaps — fields that would unlock the most important questions
+## 8. Schema gaps — questions this dataset cannot yet answer
 
-Three fields would allow the most valuable future analyses. They would need to be backfilled across existing records.
+The current schema answers orientation questions well. It cannot answer process, trajectory, or outcome questions. Three gaps are worth naming specifically because they would change the interpretation of existing findings if filled.
 
-### `ai_role` (replaces `has_ai_requirement`)
-**Type:** categorical — `none`, `ai_user`, `ai_enabler`  
-**Definition:**
-- `none` — no AI skill expected of the candidate. Includes JDs where the *company* builds AI products but the AE role is standard modelling work. Includes stale JDs with no AI mention at all.
-- `ai_user` — the role expects the candidate to use AI tools (Copilot, Claude Code, Cursor) to accelerate their own work. The AI is the candidate's tool. *"Proven active usage of AI tools in daily work with specific examples"* (Wolt); *"Experience using AI-assisted coding or coding agents in a disciplined way"* (Mentimeter).
-- `ai_enabler` — the role expects the candidate to build data infrastructure that AI systems consume or run on. The AI is downstream of the candidate's work. *"Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"* (Getsafe); *"Lead implementation of AI-driven analytical capabilities including text-to-SQL and semantic modelling for conversational BI"* (Leasingmarkt); *"Implement AI data agents and automation for reporting and alerting"* (Dashlane). Where a JD signals both, `ai_enabler` takes precedence.
+### What the interview process signals about team reality
 
-**Why:** The dbt 2026 report claims 72% of teams use AI in coding workflows. If this has entered employer hiring language, `ai_user` and `ai_enabler` should appear in a substantial share of JDs. Anecdotal scan suggests they don't — which would mean AI adoption is informal (teams adopt it without it becoming a hiring criterion) rather than institutionalised. A `none` from a stale JD is uninterpretable, but a pattern of `none` across recently-posted JDs would confirm the gap.
+The schema captures `interview_stages` (count) but not interview *content*. A four-stage process with a case study and a technical deep-dive signals something meaningfully different from a four-stage process that is three recruiter screens and an HR check. The count is a weak proxy for selection rigour. What would be more useful: whether a technical assessment was present, whether the hiring manager conducted at least one stage, and whether a work sample was required. These would let you test whether `jd_authorship = hiring_manager` actually predicts a more evaluative process — currently assumed but not verified.
 
-**Actionable read:** `ai_user` → demonstrate workflow efficiency with AI tools. `ai_enabler` → demonstrate data products built for AI consumption. `none` → AI is not a differentiator for this role; don't over-index on it.
+This gap matters most for the section 7 claim that a disorganised interview process mirrors disorganised management. That claim is plausible but anecdotal — the schema has no field to test it.
 
-**Backfill note:** Requires human or LLM judgment. Regex will misclassify company-context mentions (e.g. "AI-native infrastructure") as skill requirements. Decision rule: the candidate must be expected to *do something* with AI — use it or build for it — not merely work at a company that uses it.
+### Compensation coverage is too thin for salary analysis to be reliable
 
----
+21 of 93 records have salary data. The 4.7 salary analysis (strategic roles pay ~85% more floor salary than execution roles) is directionally credible but statistically fragile at n=21, especially given that salary disclosure varies by country — German and Swedish employers are more likely to disclose than UK or pan-European roles. This is a structured bias: the records with salary data are not a random sample of the corpus. Any salary finding should be treated as a German-market signal with uncertain generalisability.
 
-### `testing_framing` (replaces `has_testing_culture_signal`)
-**Type:** categorical — `responsibility`, `tool_listed`, `absent`  
-**Definition:**
-- `responsibility` — testing, data contracts, observability, or data quality frameworks are framed as something the AE *owns or defines*, using action verbs. *"Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"* (freenow); *"keeping domain outputs consistent, tested, and discoverable"* (SumUp); *"Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks"* (LEGO).
-- `tool_listed` — testing tools appear in the tech stack or requirements (e.g. Great Expectations, Soda, dbt tests) but without ownership framing. The employer values the tool familiarity, not the governance practice.
-- `absent` — no testing or quality signal in the JD at all.
+To make salary analysis robust: require salary extraction for all future records, and flag `salary_disclosed = false` explicitly so the absence is distinguishable from a missed extraction. Currently the field is simply null for both cases.
 
-**Why:** `velocity_vs_rigour` captures *orientation* but not *accountability*. Two JDs can both be `rigour`: one because the team values engineering craft, another because the AE will be personally accountable for data trust. `testing_framing = responsibility` is the employer signal that governance has become a hiring criterion, not just a team value. This is what would confirm or deny the dbt 2026 trust gap claim at the revealed-preference level.
+### Longitudinal signal is absent
 
-**Actionable read:** `responsibility` → lead the resume with governance outcomes and ownership language. `tool_listed` → mention the tool, don't over-index. `absent` → the employer hasn't operationalised quality concern into hiring criteria; pitch to delivery.
+Every JD in this corpus was collected between April and June 2026. The dataset is a cross-section, not a time series. Several findings would be meaningfully different if they could be tracked over time: Is `ai_role = ai_enabler` growing? Is `testing_framing = responsibility` a recent shift or a stable norm? Is `loss_aversion_framing = high` rising as AI deployment grows?
 
-**Backfill note:** The `velocity_vs_rigour_reasoning` field in each JSON already contains interpretive notes on why the JD was coded rigour — this will surface whether it was craft-rigour or ownership-rigour, making LLM extraction tractable from existing structured data rather than re-reading raw JD text.
-
----
-
-### `loss_aversion_framing`
-**Type:** categorical — `none`, `moderate`, `high`  
-**Definition:**
-- `none` — JD is framed in delivery and capability terms. No risk register. Typical of early-stage roles and velocity-oriented JDs.
-- `moderate` — operational reliability is a concern but secondary to delivery. Fear is pipeline outages or data failures, not compliance or stakeholder trust. *"First to respond to incidents and drive resolution"* (1komma5grad); *"Reliable, high-quality datasets", "SLOs", "monitoring"* (GetYourGuide).
-- `high` — risk, compliance, or stakeholder trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. *"Insurance context means data accuracy has regulatory implications"* (Getsafe); *"IFRS 15, SOX, and audit framing dominate — frame every achievement as risk reduced"* (Wolt Revenue); *"Public sector clients mean any data failure is politically visible"* (Polyteia); *"quality checks", "data contracts", "trustworthiness" repeated throughout"* (freenow).
-
-**Why:** `velocity_vs_rigour` cannot distinguish craft-rigour from fear-rigour. The dbt report's 71% fear-of-hallucinations claim would show up in `loss_aversion_framing = high` if it had entered employer consciousness. A concentration of `moderate` instead would suggest the fear is operational (outages) not trust-based (bad outputs reaching stakeholders) — a meaningfully different employer concern.
-
-**Actionable read:** `high` → frame every resume bullet as risk reduced, misstatement prevented, trust established. `moderate` → lead with reliability outcomes (uptime, incident response). `none` → capability and delivery framing; governance is not the pitch.
-
-**Backfill note:** 27 newer-format JDs already have explicit Loss aversion sections that can be extracted directly. For the 67 older-format JDs, the signal lives in `domain_risk_reasoning` and `velocity_vs_rigour_reasoning` in the JSON — these routinely contain phrases like "frame achievements as risk reduction" or "regulatory implications" that map cleanly to the scale.
+The corpus structure supports longitudinal extension — each record has a dated ID and an archived JD — but the analysis doesn't yet track change. A quarterly re-run classifying new JDs against the same codebook would allow trend detection. Without it, the 84% `none` for `ai_role` is a snapshot, not a trajectory, and the "AI adoption has not entered hiring language" finding could be either a stable state or a leading edge of change that isn't visible yet in a 3-month window.
 
 ---
 
@@ -464,6 +689,7 @@ This talk covers what the 94 JDs show, what they can't show, and what broke in t
 - Rogers, E.M. (2003). *Diffusion of Innovations* (5th ed.). Free Press.
 - Collingridge, D. (1980). *The Social Control of Technology*. Frances Pinter.
 - Weick, K.E. (1995). *Sensemaking in Organizations*. Sage.
+- Kahneman, D. and Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk." *Econometrica*, 47(2), 263–291. DOI: 10.2307/1914185.
 - Krippendorff, K. (2018). *Content Analysis: An Introduction to Its Methodology* (4th ed.). Sage.
 - Orlikowski, W.J. and Barley, S.R. (2001). "Technology and Institutions." *MIS Quarterly*, 25(2), 145–165.
 - Hershbein, B. and Kahn, L.B. (2018). "Do Recessions Accelerate Routine-Biased Technological Change?" *American Economic Review*, 108(7), 1737–1772.

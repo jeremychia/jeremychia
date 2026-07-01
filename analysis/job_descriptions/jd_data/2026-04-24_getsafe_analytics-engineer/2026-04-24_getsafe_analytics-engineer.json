@@ -69,5 +69,14 @@
   "autonomy_level_reasoning": "The verb 'own' combined with 'from definition to tracking' indicates end-to-end ownership and the autonomy to define and shape how core metrics are structured and evolved, rather than executing direction from others.",
   "greenfield_vs_fix_quote": "Build and maintain scalable data pipelines and data marts using modern tooling",
   "greenfield_vs_fix_reasoning": "Both build/design (new work) and maintain/evolve/scale (existing systems) verbs present without clear dominance.",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications",
+  "ai_role_reasoning": "Candidate builds data infrastructure components that AI/GenAI applications consume.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Build and maintain scalable data pipelines and data marts using modern tooling",
+  "testing_framing_reasoning": "Operational responsibilities stated without explicit testing ownership or quality practice verbs.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Design clean, reliable, and well-documented data models as a single source of truth",
+  "loss_aversion_framing_reasoning": "Reliability and trustworthiness framed as operational concerns, not compliance/regulatory dominance."
 }

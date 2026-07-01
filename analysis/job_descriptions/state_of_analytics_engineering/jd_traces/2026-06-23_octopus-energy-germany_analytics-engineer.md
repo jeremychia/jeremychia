@@ -189,3 +189,46 @@ Beide Rollen leisten einen zentralen Beitrag zur datengetriebenen Steuerung unse
 > Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
 > Verified: ✓ found in JD
 > Reasoning: The role combines strategic ownership of data architecture and engineering standards with execution against business requirements set by Pricing, Controlling, and Energy Markets teams.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
+> Reasoning: Tools mentioned are standard data engineering frameworks, not AI-related.
+
+**Run 2:** `none` ✓
+> Quote: "Mit modernen Tools wie dbt und Airflow"
+> Reasoning: Standard analytics engineering tools with no AI coding, AI-assisted, or AI infrastructure responsibilities mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
+> Reasoning: Standard analytics engineering tools mentioned (dbt, Airflow) with no AI/GenAI technologies or AI-assisted coding practices referenced.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher"
+> Reasoning: Candidate owns ensuring data quality, stability, and establishing best practices.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Du stellst eine hohe Datenqualität sicher; etablierst Best Practices"
+> Reasoning: Candidate owns ensuring data quality and establishing best practices, indicating quality practice responsibility.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
+> Reasoning: Candidate explicitly 'ensures' high data quality and stability, demonstrating ownership of quality practices beyond just tool selection.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt"
+> Reasoning: Emphasizes operational stability and regulatory compliance as responsibility areas, not trust/audit dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "Stabilität unserer Datenlandschaft; regulatorische Änderungen; zentrale Geschäftsentscheidungen"
+> Reasoning: Framing emphasizes operational reliability and stability with regulatory compliance considerations, but not as the primary driver.
+
+**Run 3:** `high` ✗
+> Quote: "Du stellst sicher, dass fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt werden."
+> Reasoning: Regulatory compliance and timely incorporation of regulatory changes are framed as primary responsibilities, indicating trust/compliance-driven role.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']

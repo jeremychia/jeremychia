@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "design and develop analytics tools and systems to create more member value via localization expansion and quality improvements",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "developing instrumentation and telemetry frameworks for algorithms",
+  "ai_role_reasoning": "Frameworks described are for algorithmic instrumentation/telemetry, not AI infrastructure, GenAI responsibilities, or AI tooling signals.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "quality improvements",
+  "testing_framing_reasoning": "Quality mentioned as outcome but lacks ownership verbs (own, ensure, define, implement, establish) and no testing tools or data contracts specified.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "create more member value via localization expansion and quality improvements",
+  "loss_aversion_framing_reasoning": "Primary framing emphasizes delivery impact and expansion, not operational reliability fears or compliance/trust concerns."
 }

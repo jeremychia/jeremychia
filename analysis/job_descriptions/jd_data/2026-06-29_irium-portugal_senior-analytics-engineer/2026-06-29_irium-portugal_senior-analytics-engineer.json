@@ -75,5 +75,14 @@
       "analytics engineering",
       "data modeling transformation"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Build and optimize ELT pipelines; Support for Data Science/BI/ML teams with reliable data infrastructure",
+  "ai_role_reasoning": "No AI coding tools or GenAI infrastructure responsibilities mentioned; standard data engineering/analytics work",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "CI/CD implementation for data workflows; data quality frameworks; quality tests; SLA management",
+  "testing_framing_reasoning": "Candidate implements CI/CD and owns quality testing infrastructure with explicit SLA management accountability",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "reliable data infrastructure; SLA management; CI/CD implementation for data workflows",
+  "loss_aversion_framing_reasoning": "Operational reliability and SLOs emphasized but no regulatory/compliance language dominates the framing"
 }

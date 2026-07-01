@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Design, standardise, and evolve our data modelling (dbt) frameworks to transform raw data into self-explanatory, performant, and reusable datasets",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Design, standardise, and evolve our data modelling (dbt) frameworks",
+  "ai_role_reasoning": "Standard data modeling work with no AI infrastructure, coding tools, or GenAI responsibilities mentioned.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "embed data quality, governance, and observability throughout our data stack",
+  "testing_framing_reasoning": "Verb 'embed' with 'data quality' establishes direct ownership of implementing quality practices.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "embed data quality, governance, and observability throughout our data stack",
+  "loss_aversion_framing_reasoning": "Observability and reliability concerns dominate (moderate framing); governance elements hint at trust but lack explicit regulatory/compliance language."
 }

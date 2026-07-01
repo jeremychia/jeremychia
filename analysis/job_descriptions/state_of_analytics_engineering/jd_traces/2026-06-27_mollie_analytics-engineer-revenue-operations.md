@@ -231,3 +231,45 @@ You'll get regular feedback and performance reviews to support your development,
 > Reasoning: The role combines strategic elements (defining success metrics, shaping analytics delivery, reducing sprawl, driving team maturation) with execution elements (maintaining dashboards and models, delivering ad hoc analysis).
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "feeds directly into how commercial teams make decisions, assign leads, and manage performance"
+> Reasoning: No AI coding tools, infrastructure, or AI-first practices mentioned; standard analytics role.
+
+**Run 2:** `none` ✓
+> Quote: "(no AI skill phrase present)"
+> Reasoning: No mentions of AI tools, AI-assisted coding, GenAI infrastructure, or AI-readiness.
+
+**Run 3:** `none` ✓
+> Quote: "No AI-related phrases detected"
+> Reasoning: No mention of AI tools, GenAI infrastructure, or AI-assisted responsibilities
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni"
+> Reasoning: Standards and consolidation framing without explicit testing ownership, quality practices, or data contracts.
+
+**Run 2:** `absent` ✓
+> Quote: "(no testing/quality ownership signal)"
+> Reasoning: Data quality is implicit in 'source of truth' but no explicit ownership verbs (own/ensure/define/implement/establish) paired with testing/quality.
+
+**Run 3:** `absent` ✓
+> Quote: "Establishing centralised, standardised reporting"
+> Reasoning: Standardization effort with no explicit testing responsibility or quality ownership verbs
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "serving as the source of truth for commercial stakeholders"
+> Reasoning: Trustworthiness and reliability matter (high stakes for business decisions), but no compliance/regulatory language or operational incident framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "serving as the source of truth for commercial stakeholders; feeds directly into how commercial teams make decisions, assign leads, and manage performance"
+> Reasoning: Operational reliability framing around data accuracy impacting business decisions, without explicit regulatory or compliance language.
+
+**Run 3:** `moderate` ✓
+> Quote: "serving as the source of truth for commercial stakeholders; feeds directly into how commercial teams make decisions, assign leads, and manage performance"
+> Reasoning: Data quality has operational consequences for business decisions, but primary framing is delivery excellence not compliance
+

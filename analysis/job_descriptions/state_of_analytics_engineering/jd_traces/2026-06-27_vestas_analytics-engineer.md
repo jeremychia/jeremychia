@@ -202,3 +202,45 @@ Vestas designs, manufactures, and services wind turbines globally with more than
 > Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
 > Verified: ✓ found in JD
 > Reasoning: The 'support' framing and emphasis on rolling out, maintaining, and improving established solutions indicates execution within a defined CoE strategy rather than strategic direction-setting.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Maintain, optimize, and continuously improve existing data models"
+> Reasoning: Standard analytics modeling and optimization without AI skill expectations or infrastructure-building responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "translate business requirements into analytics solutions"
+> Reasoning: No AI coding tools, AI-ready infrastructure, or GenAI responsibilities mentioned; standard analytics engineering work.
+
+**Run 3:** `none` ✓
+> Quote: "scalable, standardised, and high-quality analytics environment; Maintain, optimize, and continuously improve existing data models"
+> Reasoning: No AI skill expectations; standard analytics and data architecture work with no AI infrastructure or coding-assist signals.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "scalable, standardised, and high-quality analytics environment"
+> Reasoning: High-quality outputs valued but no testing ownership verbs or tools listed; quality is environmental goal, not individual responsibility.
+
+**Run 2:** `absent` ✓
+> Quote: "Maintain, optimize, and continuously improve existing data models"
+> Reasoning: No explicit testing ownership verbs (own/ensure/define/implement) or quality/testing practice responsibilities.
+
+**Run 3:** `absent` ✓
+> Quote: "high-quality analytics environment; Contribute to analytics data architecture design and implementation"
+> Reasoning: Quality mentioned as outcome goal, not as owned practice; no testing tools or data-contract ownership verbs present.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "delivers 'one version of the truth' across Vestas / governance teams"
+> Reasoning: Standardization and single-source-of-truth emphasis suggests operational reliability focus to prevent conflicting data; governance infrastructure present.
+
+**Run 2:** `moderate` ✓
+> Quote: "one version of the truth"
+> Reasoning: Standardization and organizational trust through formal governance (CoE, Finance hierarchy) signal operational reliability and accuracy concerns.
+
+**Run 3:** `moderate` ✓
+> Quote: "delivers 'one version of the truth' across Vestas; governance teams [stakeholders]"
+> Reasoning: Organizational data consistency and governance control drive the role; preventing data divergence/inconsistency is the framing, not compliance/audit.
+

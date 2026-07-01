@@ -325,7 +325,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="hero" aria-label="Introduction">
   <div class="hero-eyebrow" id="heroEyebrow">JDs · psychologically decoded</div>
   <h1>What companies <em>fear</em> tells you more than what they want</h1>
-  <p class="hero-sub">83 AE/BI job descriptions decoded. 80% are rigour-first with no velocity signal whatsoever. 60% are building for internal data teams, not commercial stakeholders. Execution roles outnumber strategic ones — senior titles tell you nothing about who actually sets the direction.</p>
+  <p class="hero-sub">93 AE/BI job descriptions decoded. 84% are rigour-first with no velocity signal whatsoever. 84% expect zero AI skill from the candidate, despite the industry's own surveys claiming AI use is near-universal. 60% are building for internal data teams, not commercial stakeholders. Execution roles outnumber strategic ones — senior titles tell you nothing about who actually sets the direction.</p>
   <a href="#findings" class="hero-cta">
     Read the analysis
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8l5 5 5-5"/></svg>
@@ -345,6 +345,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <a href="#q-maturity" role="listitem" data-section="q-maturity">Q4</a>
     <a href="#q-stakeholder" role="listitem" data-section="q-stakeholder">Q5</a>
     <a href="#q-autonomy" role="listitem" data-section="q-autonomy">Q6</a>
+    <a href="#q-ai"       role="listitem" data-section="q-ai">Q7</a>
+    <a href="#q-testing"  role="listitem" data-section="q-testing">Q8</a>
+    <a href="#q-fear"     role="listitem" data-section="q-fear">Q9</a>
     <a href="#geo-section" role="listitem" data-section="geo-section">Geo</a>
     <a href="#stack"      role="listitem" data-section="stack">Stack</a>
   </div>
@@ -410,6 +413,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
           <option value="data_team_maturity">Team maturity</option>
           <option value="stakeholder_orientation">Stakeholder audience</option>
           <option value="autonomy_level">Autonomy level</option>
+          <option value="ai_role">AI skill expected</option>
+          <option value="testing_framing">Testing framing</option>
+          <option value="loss_aversion_framing">Loss aversion</option>
           <option value="geo_region">Geography</option>
         </select>
       </div>
@@ -422,7 +428,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- DONUT: Rigour vs velocity -->
 <div class="donut-section" id="rigour-section">
   <div class="donut-question" id="q-rigour">
-    <div class="donut-q-number">Question 01 of 06</div>
+    <div class="donut-q-number">Question 01 of 09</div>
     <div class="donut-q-text">Does this market care more about speed or correctness?</div>
     <a class="donut-q-cta" href="#a-rigour">See the answer ↓</a>
     <div class="donut-q-progress">
@@ -456,7 +462,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- DONUT: JD Authorship -->
 <div class="donut-section" id="author-section">
   <div class="donut-question" id="q-author">
-    <div class="donut-q-number">Question 02 of 06</div>
+    <div class="donut-q-number">Question 02 of 09</div>
     <div class="donut-q-text">Who actually wrote this job description — and does it matter?</div>
     <a class="donut-q-cta" href="#a-author">See the answer ↓</a>
     <div class="donut-q-progress">
@@ -490,7 +496,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- DONUT: Greenfield vs fix -->
 <div class="donut-section" id="mission-section">
   <div class="donut-question" id="q-mission">
-    <div class="donut-q-number">Question 03 of 06</div>
+    <div class="donut-q-number">Question 03 of 09</div>
     <div class="donut-q-text">Are you being hired to build something new, or fix something broken?</div>
     <a class="donut-q-cta" href="#a-mission">See the answer ↓</a>
     <div class="donut-q-progress">
@@ -524,7 +530,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- DONUT: Team maturity -->
 <div class="donut-section" id="maturity-section">
   <div class="donut-question" id="q-maturity">
-    <div class="donut-q-number">Question 04 of 06</div>
+    <div class="donut-q-number">Question 04 of 09</div>
     <div class="donut-q-text">How mature is the data team you'd be joining?</div>
     <a class="donut-q-cta" href="#a-maturity">See the answer ↓</a>
     <div class="donut-q-progress">
@@ -558,7 +564,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- DONUT: Stakeholder orientation -->
 <div class="donut-section" id="stakeholder-section">
   <div class="donut-question" id="q-stakeholder">
-    <div class="donut-q-number">Question 05 of 06</div>
+    <div class="donut-q-number">Question 05 of 09</div>
     <div class="donut-q-text">Who would you actually be building for every day?</div>
     <a class="donut-q-cta" href="#a-stakeholder">See the answer ↓</a>
     <div class="donut-q-progress">
@@ -592,7 +598,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- DONUT: Autonomy level -->
 <div class="donut-section" id="autonomy-section">
   <div class="donut-question" id="q-autonomy">
-    <div class="donut-q-number">Question 06 of 06</div>
+    <div class="donut-q-number">Question 06 of 09</div>
     <div class="donut-q-text">Will you set the direction, or follow it?</div>
     <a class="donut-q-cta" href="#a-autonomy">See the answer ↓</a>
     <div class="donut-q-progress">
@@ -623,10 +629,115 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   </div>
 </div>
 
+<!-- DONUT: AI role -->
+<div class="donut-section" id="ai-section">
+  <div class="donut-question" id="q-ai">
+    <div class="donut-q-number">Question 07 of 09</div>
+    <div class="donut-q-text">Does the market actually want AI skills — or is it just saying so?</div>
+    <a class="donut-q-cta" href="#a-ai">See the answer ↓</a>
+    <div class="donut-q-progress">
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+      <div class="donut-q-dot active"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+    </div>
+  </div>
+  <div class="donut-answer" id="a-ai">
+    <div class="donut-answer-inner">
+      <div class="donut-left">
+        <div class="donut-finding">Finding 07</div>
+        <h3 class="donut-headline" id="ai-headline">84% of JDs expect no AI skill from the candidate at all.</h3>
+        <div class="donut-methodology">
+          <strong>How this was classified:</strong> The question is what the <em>candidate</em> is expected to do with AI — not what the company builds. Three categories: <em>none</em> = no AI skill expected (includes companies building AI where the AE does standard modelling); <em>ai_user</em> = candidate uses AI coding tools (Copilot, Claude Code, Cursor) to accelerate their own work; <em>ai_enabler</em> = candidate builds data infrastructure that AI systems consume ("AI-ready foundations", "semantic model for AI", "text-to-SQL", "GenAI" in responsibilities).
+          <br><br>
+          <strong>What the data shows:</strong> 84% none, 15% ai_enabler, 1% ai_user (n=93). The "AI-first" discourse has not reached the job description layer at anywhere near the rate dbt Labs' own survey reports (72% of respondents claiming daily AI coding use). Vague phrases — "AI-first mindset", "excited about AI", "we use AI internally" — were explicitly coded as <em>none</em>, because they signal culture, not skill expectation. The small <em>ai_enabler</em> cohort (1 in 7 roles) consists of roles explicitly building data infrastructure for downstream AI consumption: semantic layers, ML feature pipelines, text-to-SQL readiness. Almost no roles (1 of 93) named AI coding tools as a skill requirement — meaning even where teams use Copilot or Claude Code daily, it has not yet become a hiring criterion.
+          <br><br>
+          <strong>Resume implication:</strong> Mentioning AI tool usage is not a differentiator in most of this market — it is simply not what they are screening for. For the ai_enabler cohort, semantic modelling and ML-adjacent data infrastructure work is the signal worth surfacing. For everyone else, quality, governance, and domain expertise outweigh AI enthusiasm in application screening.
+        </div>
+        <div class="donut-chart-wrap"><canvas id="aiChart" role="img" aria-label="Donut chart: distribution of AI role expectations across JDs"></canvas></div>
+        <p class="donut-hint pulse">Click a segment to see companies</p>
+      </div>
+      <div class="donut-right">
+        <div class="segment-tabs" id="aiTabs"></div>
+        <div class="company-list" id="aiList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DONUT: Testing framing -->
+<div class="donut-section" id="testing-section">
+  <div class="donut-question" id="q-testing">
+    <div class="donut-q-number">Question 08 of 09</div>
+    <div class="donut-q-text">Who owns data quality — you, or a tool?</div>
+    <a class="donut-q-cta" href="#a-testing">See the answer ↓</a>
+    <div class="donut-q-progress">
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+      <div class="donut-q-dot"></div><div class="donut-q-dot active"></div><div class="donut-q-dot"></div>
+    </div>
+  </div>
+  <div class="donut-answer" id="a-testing">
+    <div class="donut-answer-inner">
+      <div class="donut-left">
+        <div class="donut-finding">Finding 08</div>
+        <h3 class="donut-headline" id="testing-headline">57% of JDs frame testing as something you own, not just a tool you know.</h3>
+        <div class="donut-methodology">
+          <strong>How this was classified:</strong> Three categories: <em>responsibility</em> = the candidate owns quality as a named accountability — action verbs like "own", "ensure", "define", "implement", "establish" paired with "quality", "testing", "data contracts", or "observability"; <em>tool_listed</em> = a testing tool appears in the required or preferred stack without ownership language; <em>absent</em> = no testing or quality signal anywhere in the JD.
+          <br><br>
+          <strong>What the data shows:</strong> 57% responsibility, 39% absent, 4% tool_listed (n=93). This is the closest the JD data comes to confirming dbt Labs' "trust gap" narrative directly — testing ownership has become a named hiring criterion in the majority of roles, not just a nice-to-have. It tracks closely with the 84% rigour-orientation finding (Q1): rigour-framed JDs are disproportionately the ones that also name testing as an owned responsibility, not just a stack item. The 39% absent group is concentrated in earlier-stage and velocity-leaning roles where the infrastructure to own doesn't yet exist.
+          <br><br>
+          <strong>Resume implication:</strong> For <em>responsibility</em>-framed roles, data quality ownership is a primary selection criterion — the majority case in this market. Lead with concrete accountability: "owned the data contract framework", "reduced production data incidents by X%", "defined testing standards for 40+ dbt models". For <em>tool_listed</em> roles, name the tool and the outcome — but don't over-index on quality; the JD is signalling familiarity, not mastery. For <em>absent</em> roles, don't bury the lede with quality bullets — lead with delivery and impact.
+        </div>
+        <div class="donut-chart-wrap"><canvas id="testingChart" role="img" aria-label="Donut chart: distribution of testing framing across JDs"></canvas></div>
+        <p class="donut-hint pulse">Click a segment to see companies</p>
+      </div>
+      <div class="donut-right">
+        <div class="segment-tabs" id="testingTabs"></div>
+        <div class="company-list" id="testingList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DONUT: Loss aversion framing -->
+<div class="donut-section" id="fear-section">
+  <div class="donut-question" id="q-fear">
+    <div class="donut-q-number">Question 09 of 09</div>
+    <div class="donut-q-text">What is this company actually afraid of?</div>
+    <a class="donut-q-cta" href="#a-fear">See the answer ↓</a>
+    <div class="donut-q-progress">
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
+      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot active"></div>
+    </div>
+  </div>
+  <div class="donut-answer" id="a-fear">
+    <div class="donut-answer-inner">
+      <div class="donut-left">
+        <div class="donut-finding">Finding 09</div>
+        <h3 class="donut-headline" id="fear-headline">60% fear operational failure. Only 15% are dominated by compliance fear.</h3>
+        <div class="donut-methodology">
+          <strong>How this was classified:</strong> Three levels of loss-aversion framing: <em>none</em> = JD framed in pure delivery and capability terms, no risk register; <em>moderate</em> = operational reliability is a secondary concern — fear is pipeline outages, SLOs, or data failures, not compliance; <em>high</em> = risk, compliance, or stakeholder trust framing dominates — fear is bad data reaching decision-makers or regulatory exposure.
+          <br><br>
+          <strong>What the data shows:</strong> 60% moderate, 25% none, 15% high (n=93). Pure delivery framing is the minority — three in four roles carry some fear signal. But the dominant fear is operational, not the compliance/trust framing dbt Labs' 2026 report leads with (71% citing fear of hallucinated outputs reaching stakeholders): "we can't have pipelines going down", "incidents need response", "production reliability matters". Compliance-dominated framing (high) is concentrated in finance-adjacent and regulated sectors — a narrower slice of the market than the survey's headline number implies. The <em>none</em> group is almost entirely early-stage or greenfield roles where the infrastructure does not yet exist to fail.
+          <br><br>
+          <strong>Resume implication:</strong> Read the fear register before framing your application. For <em>high</em> roles, open with risk-reduction proof: zero-incident records, audit trail implementation, compliance frameworks. For <em>moderate</em> roles — the majority case — reliability metrics ("99.X% pipeline uptime", "reduced on-call burden") resonate more than feature delivery. For <em>none</em> roles, pure delivery and impact framing — these companies aren't afraid yet.
+        </div>
+        <div class="donut-chart-wrap"><canvas id="fearChart" role="img" aria-label="Donut chart: distribution of loss aversion framing across JDs"></canvas></div>
+        <p class="donut-hint pulse">Click a segment to see companies</p>
+      </div>
+      <div class="donut-right">
+        <div class="segment-tabs" id="fearTabs"></div>
+        <div class="company-list" id="fearList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- SECTION: GEOGRAPHY -->
 <hr class="divider">
 <section class="section" id="geo-section">
-  <div class="section-label">Finding 07</div>
+  <div class="section-label">Finding 10</div>
   <h2 class="section-headline">Berlin leads at 36%, but other Europe is a real second cluster.</h2>
   <p class="section-body">Berlin leads at 36% but is not the whole story. Other Europe — Amsterdam, Lisbon, Tallinn, Barcelona, Paris, Zurich — forms a genuine second cluster at 27%. UK roles are now 13% of the corpus, a notable presence. The Nordics (Stockholm, Copenhagen, Oslo) add 11%, skewing toward scale-ups with more mature data teams. Use the region filter to isolate any market — stakeholder orientation shifts noticeably by geography.</p>
   <div id="geoBreakdown"></div>
@@ -635,9 +746,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <!-- SECTION: STACK -->
 <hr class="divider">
 <section class="section" id="stack">
-  <div class="section-label">Finding 08</div>
+  <div class="section-label">Finding 11</div>
   <h2 class="section-headline">SQL and dbt are the floor. Everything else is negotiable.</h2>
   <p class="section-body">SQL (93%) and dbt (70%) are the baseline — not knowing either disqualifies you from the vast majority of roles. Python follows at 55%, now effectively a third core requirement. After that, a genuine cliff: Power BI (31%), Snowflake (37%), Airflow (34%), Tableau (29%), Looker (27%). Databricks (20%) is niche. Spark (14%), Kafka (5%), and Terraform (5%) appear rarely enough that listing them is a differentiator, not a gap if you lack them.</p>
+  <div class="donut-methodology" style="max-width:680px;margin-bottom:2rem">
+    <strong>Worth reading against the dbt Labs survey:</strong> dbt Labs' own "State of Analytics Engineering" report treats dbt as the field standard — but its survey sample is drawn from dbt's own community channels, where 76% of respondents already used dbt before answering. This dataset isn't filtered that way: it's job postings collected independent of any tool affiliation. <strong>68% require dbt — real, but not universal.</strong> One in three analytics engineering roles in this market run on a stack without it: Databricks SQL, BigQuery-native pipelines, or Spark-first architectures. A survey distributed through dbt's own channels structurally cannot see that third of the market.
+  </div>
   <div class="card">
     <div class="card-title">Tool prevalence across filtered roles</div>
     <p class="card-sub">% of JDs mentioning each tool · colour = category</p>
@@ -668,6 +782,9 @@ const COLOURS = {
   data_team_maturity:     { early: '#c0392b', mid: '#d97706', mature: '#16a34a' },
   stakeholder_orientation:{ commercial: '#7c3aed', product: '#0891b2', internal_data: '#1d4ed8', finance: '#c0392b', mixed: '#9ca3af' },
   autonomy_level:         { strategic: '#16a34a', mixed: '#9ca3af', execution: '#d97706' },
+  ai_role:                { none: '#9ca3af', ai_user: '#0891b2', ai_enabler: '#7c3aed' },
+  testing_framing:        { responsibility: '#1d4ed8', tool_listed: '#d97706', absent: '#9ca3af' },
+  loss_aversion_framing:  { none: '#16a34a', moderate: '#d97706', high: '#c0392b' },
   geo_region:             { berlin: '#1d4ed8', hamburg: '#0891b2', nordics: '#16a34a', uk_remote: '#7c3aed', other_europe: '#d97706', global_remote: '#9ca3af', other: '#6b7280' },
 };
 const BORDERS = {
@@ -678,6 +795,9 @@ const BORDERS = {
   data_team_maturity:     { early: '#922b21', mid: '#92400e', mature: '#166534' },
   stakeholder_orientation:{ commercial: '#5b21b6', product: '#0369a1', internal_data: '#1e3a8a', finance: '#922b21', mixed: '#6b7280' },
   autonomy_level:         { strategic: '#166534', mixed: '#6b7280', execution: '#92400e' },
+  ai_role:                { none: '#6b7280', ai_user: '#0369a1', ai_enabler: '#5b21b6' },
+  testing_framing:        { responsibility: '#1e3a8a', tool_listed: '#92400e', absent: '#6b7280' },
+  loss_aversion_framing:  { none: '#166534', moderate: '#92400e', high: '#922b21' },
   geo_region:             { berlin: '#1e3a8a', hamburg: '#0369a1', nordics: '#166534', uk_remote: '#5b21b6', other_europe: '#92400e', global_remote: '#6b7280', other: '#4b5563' },
 };
 const LABELS = {
@@ -688,6 +808,9 @@ const LABELS = {
   data_team_maturity:     { early: 'Early stage', mid: 'Mid stage', mature: 'Mature' },
   stakeholder_orientation:{ commercial: 'Commercial', product: 'Product', internal_data: 'Internal data', finance: 'Finance', mixed: 'Mixed' },
   autonomy_level:         { strategic: 'Strategic', mixed: 'Mixed', execution: 'Execution' },
+  ai_role:                { none: 'No AI skill expected', ai_user: 'Uses AI tools', ai_enabler: 'Builds AI infra' },
+  testing_framing:        { responsibility: 'Owns quality', tool_listed: 'Tool listed', absent: 'Absent' },
+  loss_aversion_framing:  { none: 'No fear signal', moderate: 'Operational fear', high: 'Compliance / trust fear' },
   geo_region:             { berlin: 'Berlin', hamburg: 'Hamburg', nordics: 'Nordics', uk_remote: 'UK / Remote', other_europe: 'Other Europe', global_remote: 'Global Remote', other: 'Other' },
 };
 const KEYWORDS = {
@@ -903,7 +1026,8 @@ function renderList(listId, tabsId, data, dataKey, selectedKey, evidenceKey, lab
   if (!filtered.length) { container.innerHTML = '<div class="empty-state">No roles in this segment for the current filter.</div>'; return; }
   container.innerHTML = filtered.map(d => {
     const ev = d.evidence || {};
-    const rawQuote = ev[evidenceKey] || '';
+    // New dimensions store quote at top level as {dim}_quote; existing dims in evidence{}
+    const rawQuote = ev[evidenceKey] || d[evidenceKey + '_quote'] || '';
     const quote = rawQuote ? highlightKeywords(rawQuote, dataKey, selectedKey) : '';
     const quoteHtml = quote ? `<div class="cc-quote">${quote}</div>` : '';
     // Mini tags for key dimensions
@@ -1039,6 +1163,9 @@ function render() {
   buildDonutPanel({ chartId:'maturityChart',    tabsId:'maturityTabs',    listId:'maturityList',    dataKey:'data_team_maturity',      labMap:LABELS.data_team_maturity,      colMap:COLOURS.data_team_maturity,      evidenceKey:'data_team_maturity' });
   buildDonutPanel({ chartId:'stakeholderChart', tabsId:'stakeholderTabs', listId:'stakeholderList', dataKey:'stakeholder_orientation', labMap:LABELS.stakeholder_orientation, colMap:COLOURS.stakeholder_orientation, evidenceKey:'stakeholder_orientation' });
   buildDonutPanel({ chartId:'autonomyChart',    tabsId:'autonomyTabs',    listId:'autonomyList',    dataKey:'autonomy_level',          labMap:LABELS.autonomy_level,          colMap:COLOURS.autonomy_level,          evidenceKey:'autonomy_level' });
+  buildDonutPanel({ chartId:'aiChart',          tabsId:'aiTabs',          listId:'aiList',          dataKey:'ai_role',                 labMap:LABELS.ai_role,                 colMap:COLOURS.ai_role,                 evidenceKey:'ai_role' });
+  buildDonutPanel({ chartId:'testingChart',     tabsId:'testingTabs',     listId:'testingList',     dataKey:'testing_framing',         labMap:LABELS.testing_framing,         colMap:COLOURS.testing_framing,         evidenceKey:'testing_framing' });
+  buildDonutPanel({ chartId:'fearChart',        tabsId:'fearTabs',        listId:'fearList',        dataKey:'loss_aversion_framing',   labMap:LABELS.loss_aversion_framing,   colMap:COLOURS.loss_aversion_framing,   evidenceKey:'loss_aversion_framing' });
 
   buildGeo(activeData);
   buildToolChart(activeData);
@@ -1081,7 +1208,10 @@ fetch('data.json')
     { answer: 'a-mission',     next: 'q-maturity',    label: 'Q4 →' },
     { answer: 'a-maturity',    next: 'q-stakeholder', label: 'Q5 →' },
     { answer: 'a-stakeholder', next: 'q-autonomy',    label: 'Q6 →' },
-    { answer: 'a-autonomy',    next: 'geo-section',   label: 'Geography →' },
+    { answer: 'a-autonomy',    next: 'q-ai',          label: 'Q7 →' },
+    { answer: 'a-ai',          next: 'q-testing',     label: 'Q8 →' },
+    { answer: 'a-testing',     next: 'q-fear',        label: 'Q9 →' },
+    { answer: 'a-fear',        next: 'geo-section',   label: 'Geography →' },
   ];
 
   const observer = new IntersectionObserver(entries => {
@@ -1119,7 +1249,10 @@ fetch('data.json')
     { q: 'q-mission',     a: 'a-mission',     next: 'q-maturity',    label: 'Q4: Team maturity?' },
     { q: 'q-maturity',    a: 'a-maturity',    next: 'q-stakeholder', label: 'Q5: Who are you building for?' },
     { q: 'q-stakeholder', a: 'a-stakeholder', next: 'q-autonomy',    label: 'Q6: Direction or execution?' },
-    { q: 'q-autonomy',    a: 'a-autonomy',    next: 'geo-section',   label: 'Next: Geography →' },
+    { q: 'q-autonomy',    a: 'a-autonomy',    next: 'q-ai',          label: 'Q7: AI skills expected?' },
+    { q: 'q-ai',          a: 'a-ai',          next: 'q-testing',     label: 'Q8: Who owns quality?' },
+    { q: 'q-testing',     a: 'a-testing',     next: 'q-fear',        label: 'Q9: What does the company fear?' },
+    { q: 'q-fear',        a: 'a-fear',        next: 'geo-section',   label: 'Next: Geography →' },
   ];
   questions.forEach(({ q, a, next, label }) => {
     const panel = document.getElementById(a);

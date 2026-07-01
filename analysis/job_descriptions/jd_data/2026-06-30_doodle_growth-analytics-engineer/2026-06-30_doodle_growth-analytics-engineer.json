@@ -75,5 +75,14 @@
       "GA4",
       "self-serve analytics"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "evaluate AI effectiveness",
+  "ai_role_reasoning": "Candidate expected to assess AI tool capabilities and performance, indicating use rather than infrastructure building.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "establish trusted business metrics; own analytics",
+  "testing_framing_reasoning": "Ownership verbs 'establish' and 'own' applied to metrics and analytics practice signal candidate owns the quality discipline.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "No loss aversion framing detected",
+  "loss_aversion_framing_reasoning": "Role emphasizes growth, experimentation, and PLG velocity without regulatory, audit, or compliance-driven framing."
 }

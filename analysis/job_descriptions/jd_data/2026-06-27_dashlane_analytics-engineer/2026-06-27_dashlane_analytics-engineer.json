@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "extend existing Unified Data Model (fix_scale) while implementing AI data agents and governance foundations (greenfield)",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting",
+  "ai_role_reasoning": "Role requires building AI infrastructure foundations for automated reporting agents.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.' You will ensure models are reliable",
+  "testing_framing_reasoning": "Candidate owns testing and quality of data models, with explicit responsibility for reliability.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "You will ensure models are reliable, well-documented, and aligned with business logic",
+  "loss_aversion_framing_reasoning": "Operational reliability and model quality are primary concerns, though not framed as compliance or risk to stakeholders."
 }

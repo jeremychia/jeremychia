@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Execute dashboard implementation that meet end-user requirements.",
   "autonomy_level_reasoning": "The use of 'execute' and the framing of meeting 'end-user requirements' indicates the role executes against direction set by others rather than defining strategic direction.",
   "greenfield_vs_fix_quote": "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery",
+  "ai_role_reasoning": "Technical SQL skills but no AI tooling or GenAI responsibilities mentioned",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Responsible for the structure, quality, and management of large volumes of data from different sources within the business",
+  "testing_framing_reasoning": "Owns quality as a primary responsibility across data management",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Responsible for the structure, quality, and management of large volumes of data from different sources within the business",
+  "loss_aversion_framing_reasoning": "Management and quality accountability suggests operational reliability concerns without explicit regulatory framing"
 }

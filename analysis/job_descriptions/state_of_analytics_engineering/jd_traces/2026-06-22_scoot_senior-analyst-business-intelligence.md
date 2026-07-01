@@ -195,3 +195,46 @@ None explicitly listed.
 > Reasoning: The core verbs emphasize execution and delivery of defined work (execute, maintain, manage) rather than setting strategic direction or defining priorities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery"
+> Reasoning: Technical SQL skills but no AI tooling or GenAI responsibilities mentioned
+
+**Run 2:** `none` ✓
+> Quote: "N/A"
+> Reasoning: Traditional BI/analytics stack (SQL Server, BigQuery, dashboards) with no AI tool usage, AI-first framing, or GenAI infrastructure responsibilities.
+
+**Run 3:** `none` ✓
+> Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery"
+> Reasoning: Standard SQL/data extraction work with no AI coding tools, AI-assisted workflows, or AI infrastructure building mentioned.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
+> Reasoning: Owns quality as a primary responsibility across data management
+
+**Run 2:** `responsibility` ✓
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
+> Reasoning: Candidate owns quality and data management end-to-end; no testing tool explicitly named.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
+> Reasoning: Candidate owns quality practice with explicit 'responsible for' + 'quality' framing indicating ownership of data quality standards.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✗
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
+> Reasoning: Management and quality accountability suggests operational reliability concerns without explicit regulatory framing
+
+**Run 2:** `none` ✓
+> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
+> Reasoning: Pure delivery/execution framing focused on enabling decision-making; no operational reliability or compliance risk language.
+
+**Run 3:** `none` ✓
+> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning"
+> Reasoning: All framing centers on delivery and insights; no operational reliability fears (SLOs, incidents) or compliance/trust dominance signals present.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

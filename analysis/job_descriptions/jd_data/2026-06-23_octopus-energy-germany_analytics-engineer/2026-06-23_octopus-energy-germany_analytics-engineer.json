@@ -71,5 +71,14 @@
   "autonomy_level_quote": "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices",
   "autonomy_level_reasoning": "The role combines strategic ownership of architecture direction and best practices with execution of specific domain work for Pricing and Cost Modelling in service of business teams.",
   "greenfield_vs_fix_quote": "Du optimierst Datenmodelle und Pipelines hinsichtlich Performance, Skalierbarkeit und Wartbarkeit.",
-  "urgency_signal": "zum nächstmöglichen Zeitpunkt"
+  "urgency_signal": "zum nächstmöglichen Zeitpunkt",
+  "ai_role": "none",
+  "ai_role_quote": "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher.",
+  "ai_role_reasoning": "Tools mentioned are standard data engineering frameworks, not AI-related.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher",
+  "testing_framing_reasoning": "Candidate owns ensuring data quality, stability, and establishing best practices.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt",
+  "loss_aversion_framing_reasoning": "Emphasizes operational stability and regulatory compliance as responsibility areas, not trust/audit dominance."
 }

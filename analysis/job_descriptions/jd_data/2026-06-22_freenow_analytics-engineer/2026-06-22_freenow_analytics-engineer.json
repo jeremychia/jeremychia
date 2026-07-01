@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment",
   "autonomy_level_reasoning": "Combines strategic development and ownership of data products with collaborative execution supporting analysts and scientists in a shared environment.",
   "greenfield_vs_fix_quote": "develop new data products within a Data Mesh environment",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design solutions for KPIs and business metrics",
+  "ai_role_reasoning": "No AI signals present; role focuses on standard data engineering and product development without AI tools, infrastructure, or AI-first practices.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts",
+  "testing_framing_reasoning": "Explicit ownership responsibility verb 'own' paired with quality checks and data contracts indicates candidate owns quality practice.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Own the quality, availability, and trustworthiness of data",
+  "loss_aversion_framing_reasoning": "Operational reliability concerns (quality, availability, trustworthiness) emphasized without explicit regulatory or compliance dominance."
 }

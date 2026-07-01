@@ -55,5 +55,14 @@
     "greenfield_vs_fix": "building the semantic layer for the sports domain; maintaining and evolving existing datasets and pipelines",
     "language_gate": "Fluent English for daily communication across 60 countries",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "building the semantic layer for the sports domain",
+  "ai_role_reasoning": "Semantic layers are infrastructure that AI models and LLM applications consume for analytics and text-to-SQL use cases.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées",
+  "testing_framing_reasoning": "Ownership verbs 'defining' and 'ensuring' paired with explicit quality and reliability responsibility.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "la qualité, la fiabilité et la pertinence des données exposées",
+  "loss_aversion_framing_reasoning": "Emphasis on data reliability and quality as operational concern; no compliance or regulatory framing present."
 }

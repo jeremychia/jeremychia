@@ -179,3 +179,34 @@ Application: Submit CV in English via their careers portal. No relocation assist
 > Quote: "design data models capturing gaming KPIs"
 > Verified: ✓ found in JD
 > Reasoning: The role executes against pre-defined KPI requirements rather than setting analytics strategy or defining what should be measured.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "extract, clean, and transform data from various sources; collaborate with data scientists"
+> Reasoning: Standard data engineering responsibilities with no AI tool usage signals or AI infrastructure-building responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "extract, clean, and transform data from various sources; collaborate with data scientists to provide reliable datasets"
+> Reasoning: Phrases describe generic data engineering without AI tool or infrastructure signals.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "collaborate with data scientists to provide reliable datasets"
+> Reasoning: Quality and reliability are outcomes but no explicit testing ownership or quality practice responsibility language.
+
+**Run 2:** `absent` ✓
+> Quote: "No quality ownership verbs (own, ensure, define, implement, establish) paired with testing or data contracts"
+> Reasoning: Work framed as delivery/execution with no testing responsibility or tool stack signal.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Rigour signals dominate — accuracy, compliance, scalability, high availability, monitoring"
+> Reasoning: Operational reliability concerns (monitoring, high availability, SLOs) dominate; compliance framed around data usability, not regulatory/audit.
+
+**Run 2:** `high` ✗
+> Quote: "accuracy, compliance, scalability, and long-term usability; rigour signals dominate with zero velocity phrases"
+> Reasoning: Compliance and regulatory trustworthiness frame the role as primary constraint, not operational reliability fear.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high']

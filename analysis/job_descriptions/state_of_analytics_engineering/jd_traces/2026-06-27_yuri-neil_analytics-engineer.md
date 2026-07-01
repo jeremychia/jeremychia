@@ -226,3 +226,46 @@ Anglais : un plus.
 > Quote: "Tu participeras à l'activation des données pour les équipes métiers"
 > Verified: ⚠ NOT found verbatim
 > Reasoning: The consistent use of "participate in" rather than "define", "own", or "lead" indicates execution of client-scoped projects rather than strategic direction-setting.
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Construire des semantic layers facilitant l'exploitation des données par les équipes"
+> Reasoning: Semantic layers are data infrastructure designed to enable AI/analytics consumption by teams.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Construire des semantic layers facilitant l'exploitation des données par les équipes"
+> Reasoning: Semantic layers are AI-ready data infrastructure enabling other teams and systems to consume data.
+
+**Run 3:** `none` ✗
+> Quote: "Construire des semantic layers facilitant l'exploitation des données par les équipes"
+> Reasoning: Semantic layers for data exploitation lack explicit AI-ready, GenAI, or AI-enabled framing.
+
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'ai_enabler', 'none']
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting"
+> Reasoning: Candidate owns establishing data quality control and alerting systems.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting"
+> Reasoning: Candidate owns establishing and implementing data quality control and monitoring systems.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting"
+> Reasoning: Candidate owns implementing (mettre en place) quality control systems and alerting for data.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting"
+> Reasoning: Alerting and quality control emphasis signals concern for operational reliability and incident prevention.
+
+**Run 2:** `moderate` ✓
+> Quote: "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting"
+> Reasoning: Quality control and alerting systems signal operational reliability concerns without explicit compliance or regulatory framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting"
+> Reasoning: Quality control and alerting systems signal operational reliability concerns without compliance or trust framing.
+

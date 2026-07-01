@@ -75,5 +75,14 @@
       "data quality governance",
       "ERP Systems"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Support LDC's OneStream-based Enterprise Performance Management platform; Daily P&L, Actuals, Forecasting, Group Reporting",
+  "ai_role_reasoning": "No AI tools, methodologies, or infrastructure mentioned; work centers entirely on traditional EPM platform support and financial reporting",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Troubleshoot platform issues; Participate in testing",
+  "testing_framing_reasoning": "Testing is mentioned as a participation activity but without ownership responsibility or specific quality tools named",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "accurate, reliable, and scalable financial planning, reporting, and performance management processes",
+  "loss_aversion_framing_reasoning": "Financial reporting in a regulated context creates high compliance and stakeholder trust requirements; accuracy and governance dominate the framing"
 }

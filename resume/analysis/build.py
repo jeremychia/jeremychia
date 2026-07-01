@@ -20,6 +20,9 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "analysis/job_descriptions/state_of_analytics_engineering"))
+from dimensions import DIM_NAMES
+
 RECORDS_DIR = Path(__file__).parent / "records"
 JD_DATA_DIR = Path(__file__).parent.parent.parent / "analysis/job_descriptions/jd_data"
 SCHEMA_FILE = Path(__file__).parent / "schema.json"
@@ -78,7 +81,7 @@ def derive_geo_region(location: str) -> str:
 
 def load_records():
     records = []
-    seen_ids = set()
+    by_id = {}
 
     for path in sorted(RECORDS_DIR.glob("*.json")):
         with open(path) as f:
@@ -88,35 +91,44 @@ def load_records():
                 print(f"ERROR: {path.name} is invalid JSON — {e}", file=sys.stderr)
                 sys.exit(1)
         app_id = record.get("application_id") or path.stem
-        seen_ids.add(app_id)
-        records.append((path.name, record))
+        by_id[app_id] = (path.name, record)
 
-    n_records = len(records)
+    n_records = len(by_id)
+    n_from_jd_data = 0
 
-    # Also load jd_data/ corpus — skip any IDs already in records/
+    # Also load jd_data/ corpus — for IDs already in records/, backfill any
+    # new fields (e.g. ai_role) that only exist in the jd_data/ copy.
     if JD_DATA_DIR.exists():
         for folder in sorted(JD_DATA_DIR.iterdir()):
             if not folder.is_dir():
                 continue
             app_id = folder.name
-            if app_id in seen_ids:
-                continue
             jd_json = folder / f"{app_id}.json"
             if not jd_json.exists():
                 continue
             with open(jd_json) as f:
                 try:
-                    record = json.load(f)
+                    jd_record = json.load(f)
                 except json.JSONDecodeError as e:
                     print(f"ERROR: {jd_json.name} is invalid JSON — {e}", file=sys.stderr)
                     continue
-            # Normalise jd_id → application_id
-            if "jd_id" in record and "application_id" not in record:
-                record["application_id"] = record.pop("jd_id")
-            seen_ids.add(app_id)
-            records.append((jd_json.name, record))
+            if "jd_id" in jd_record and "application_id" not in jd_record:
+                jd_record["application_id"] = jd_record.pop("jd_id")
 
-    print(f"  {n_records} from records/, {len(records) - n_records} from jd_data/")
+            if app_id in by_id:
+                name, record = by_id[app_id]
+                for dim in DIM_NAMES:
+                    if dim in jd_record and dim not in record:
+                        record[dim] = jd_record[dim]
+                        record[f"{dim}_quote"] = jd_record.get(f"{dim}_quote")
+                        record[f"{dim}_reasoning"] = jd_record.get(f"{dim}_reasoning")
+                by_id[app_id] = (name, record)
+            else:
+                by_id[app_id] = (jd_json.name, jd_record)
+                n_from_jd_data += 1
+
+    records = list(by_id.values())
+    print(f"  {n_records} from records/, {n_from_jd_data} from jd_data/")
     return records
 
 

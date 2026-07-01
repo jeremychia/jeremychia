@@ -225,3 +225,46 @@
 > Reasoning: Multiple strategic verbs (design, own, evolve) and explicit mention of contributing strategic input indicate the role is expected to set direction and shape analytics delivery, not execute others' priorities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
+> Reasoning: Standard data modeling work with no AI-ready, semantic model, or AI infrastructure signals.
+
+**Run 2:** `none` ✓
+> Quote: "Design, own, and evolve core data models and the modelling architecture; Build standards, documentation, and data catalogs for the organization"
+> Reasoning: No mention of AI coding tools, AI-first mindset, or AI infrastructure requirements; standard data modeling and documentation work.
+
+**Run 3:** `none` ✓
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
+> Reasoning: Data modeling work lacks signals of AI tool usage (Copilot, Claude Code) or AI infrastructure building (AI-ready systems, semantic models, GenAI responsibilities).
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Build standards, documentation, and data catalogs for the organization"
+> Reasoning: Standards and documentation work do not reference testing ownership, quality practice, or data contracts.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
+> Reasoning: The verb 'own' signals responsibility ownership; core data models require ensuring data quality and model correctness.
+
+**Run 3:** `absent` ✓
+> Quote: "Build standards, documentation, and data catalogs for the organization"
+> Reasoning: Building standards and documentation doesn't include explicit testing ownership, quality assurance responsibility, or data contract definition.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Experience working with GDPR-sensitive data"
+> Reasoning: Regulatory compliance (GDPR) drives loss-aversion framing as a primary concern.
+
+**Run 2:** `high` ✓
+> Quote: "Experience working with GDPR-sensitive data"
+> Reasoning: GDPR is explicitly regulatory/compliance; handling sensitive data positions trustworthiness and regulatory adherence as primary framing.
+
+**Run 3:** `high` ✓
+> Quote: "Experience working with GDPR-sensitive data"
+> Reasoning: GDPR compliance is regulatory/trust framing that signals high loss aversion centered on legal risk and data trustworthiness.
+

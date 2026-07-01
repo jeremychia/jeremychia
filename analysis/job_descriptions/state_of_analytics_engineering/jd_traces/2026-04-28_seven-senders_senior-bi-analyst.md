@@ -207,3 +207,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
+> Reasoning: No mention of AI tools, GenAI development, or AI-ready infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
+> Reasoning: No mention of AI tools or AI infrastructure building.
+
+**Run 3:** `none` ✓
+> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
+> Reasoning: No mention of AI tools, GenAI infrastructure, or AI-assisted development; standard dbt and SQL work.
+
+
+### testing_framing
+**Run 1:** `tool_listed` ✓
+> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
+> Reasoning: Testing frameworks mentioned as part of technical toolkit but without explicit ownership of quality practice.
+
+**Run 2:** `tool_listed` ✓
+> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
+> Reasoning: Testing frameworks mentioned as part of the toolkit but without ownership verbs like own, ensure, or define.
+
+**Run 3:** `tool_listed` ✓
+> Quote: "utilizing advanced Jinja, macros, and testing frameworks"
+> Reasoning: Testing frameworks mentioned in the tech stack without explicit ownership verbs like 'own', 'ensure', or 'define'.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
+> Reasoning: Framed around performance delivery without operational reliability (SLOs, incidents) or compliance/trust concerns.
+
+**Run 2:** `none` ✓
+> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
+> Reasoning: JD focuses on delivery and capability building with no compliance, SLO, or trust-dominance framing.
+
+**Run 3:** `none` ✓
+> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
+> Reasoning: Pure delivery framing focused on task execution and performance; no language about incidents, SLOs, compliance, or data trustworthiness.
+

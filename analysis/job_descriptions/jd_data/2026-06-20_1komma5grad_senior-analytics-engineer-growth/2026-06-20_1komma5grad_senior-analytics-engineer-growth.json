@@ -70,5 +70,14 @@
   "autonomy_level_quote": "Define a forward-looking vision for the marketing data stack and drive its development",
   "autonomy_level_reasoning": "The 'define' verb indicates the role sets strategy and direction for the marketing data function rather than executing against predetermined priorities.",
   "greenfield_vs_fix_quote": "Design, build, and maintain our core marketing data models",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Maintain expertise across marketing tech stack including ad platforms, Airbyte, Zoho CRM, GTM, and web analytics",
+  "ai_role_reasoning": "Tech stack specified contains no AI tools, GenAI platforms, or AI-building infrastructure.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Take full ownership of the stability of our marketing data pipelines",
+  "testing_framing_reasoning": "Ownership framed around operational stability and incident response, not defining or implementing testing practices.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "be the first to respond to incidents and drive resolution",
+  "loss_aversion_framing_reasoning": "Operational reliability concerns dominate, with emphasis on incident response and pipeline stability."
 }

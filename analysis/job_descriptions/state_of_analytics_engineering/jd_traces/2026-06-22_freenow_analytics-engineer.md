@@ -216,3 +216,45 @@ SQL | Python | Databricks | Tableau | Mixpanel | Airflow | AWS | Kafka | Debeziu
 > Reasoning: The role combines strategic ownership of data quality and infrastructure design with execution-focused troubleshooting and collaboration responsibilities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design solutions for KPIs and business metrics"
+> Reasoning: No AI signals present; role focuses on standard data engineering and product development without AI tools, infrastructure, or AI-first practices.
+
+**Run 2:** `none` ✓
+> Quote: "develop new data products within a Data Mesh environment"
+> Reasoning: No AI tool usage or infrastructure-for-AI signals; standard data product development work without AI-specific framing.
+
+**Run 3:** `none` ✓
+> Quote: "develop new data products within a Data Mesh environment"
+> Reasoning: No mention of AI tool usage or infrastructure building; standard data engineering expected
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Reasoning: Explicit ownership responsibility verb 'own' paired with quality checks and data contracts indicates candidate owns quality practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Reasoning: Explicit ownership verb with defined mechanisms (quality checks, data contracts); candidate owns quality practice.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Reasoning: Explicit ownership verb combined with quality/data contracts shows responsibility for quality practices and data governance
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data"
+> Reasoning: Operational reliability concerns (quality, availability, trustworthiness) emphasized without explicit regulatory or compliance dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data"
+> Reasoning: Operational reliability and trustworthiness concerns present, but no compliance or regulatory language.
+
+**Run 3:** `moderate` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Reasoning: Trustworthiness and data contracts signal governance concerns; balanced with operational availability suggests operational + governance focus
+

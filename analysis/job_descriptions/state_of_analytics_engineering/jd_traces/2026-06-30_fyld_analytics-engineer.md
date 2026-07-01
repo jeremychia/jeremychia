@@ -190,3 +190,46 @@ Application: Candidates should send CVs to: sofia.neves@fyld.pt
 > Quote: "Hands-on experience with Spark and Delta Lake for transformations"
 > Verified: ✓ found in JD
 > Reasoning: The 'hands-on' language and technical skill requirements emphasize executing defined data engineering work rather than setting strategic direction.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Lakehouse and Warehouse optimization; Power BI semantic model knowledge"
+> Reasoning: Technical platform skills without explicit AI-ready infrastructure or GenAI responsibility signals.
+
+**Run 2:** `none` ✓
+> Quote: "Microsoft Fabric Lakehouse and Warehouse optimization; Power BI semantic model knowledge; dbt, Spark"
+> Reasoning: No AI coding tools, GenAI responsibilities, or semantic models for AI consumption; standard data platform optimization skills required.
+
+**Run 3:** `none` ✓
+> Quote: "Advanced SQL proficiency including CTEs, window functions, and query optimization; Microsoft Fabric Lakehouse and Warehouse optimization"
+> Reasoning: No AI coding tools (Copilot, Claude Code) or AI infrastructure (semantic models for AI, GenAI responsibilities) mentioned; traditional data platform skills focus.
+
+
+### testing_framing
+**Run 1:** `tool_listed` ✓
+> Quote: "Data quality, validation, monitoring, and observability skills"
+> Reasoning: Quality and monitoring skills listed as requirements without ownership verbs (own/ensure/define).
+
+**Run 2:** `tool_listed` ✓
+> Quote: "Data quality, validation, monitoring, and observability skills; CI/CD pipeline experience"
+> Reasoning: Quality practices and CI/CD mentioned as required skills without explicit responsibility verbs; classified as tools in stack rather than owned practice.
+
+**Run 3:** `absent` ✗
+> Quote: "Data quality, validation, monitoring, and observability skills"
+> Reasoning: Practices listed as skill requirements without explicit ownership verbs (own/ensure/establish/implement); no testing tools explicitly named.
+
+⚠ **LLM inconsistency**: runs gave ['tool_listed', 'tool_listed', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Advanced SQL proficiency including CTEs, window functions, and query optimization"
+> Reasoning: Technical proficiency framing without compliance, regulatory, or stakeholder-risk language; no operational fear signals.
+
+**Run 2:** `none` ✓
+> Quote: "No loss aversion framing detected"
+> Reasoning: Despite emphasis on quality and observability, no regulatory, compliance, or trust-centered language; framing focuses on technical rigour rather than loss prevention.
+
+**Run 3:** `none` ✓
+> Quote: "No loss aversion framing detected"
+> Reasoning: Consulting/execution context with no regulatory, compliance, or stakeholder-trust language; delivery-oriented only.
+

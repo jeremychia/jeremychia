@@ -245,3 +245,47 @@
 > Reasoning: The Fellow implements an established LSE curriculum and Forward College pedagogy rather than strategically defining how analytics is taught.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Lecturer in Business Analytics and Statistics"
+> Reasoning: Educational teaching role with no reference to AI tools, GenAI infrastructure, or AI-assisted work.
+
+**Run 2:** `none` ✓
+> Quote: "Lecturer in Business Analytics and Statistics"
+> Reasoning: Academic teaching role with no mention of AI coding tools, infrastructure, or GenAI responsibilities.
+
+**Run 3:** `none` ✓
+> Quote: "Lecturer in Business Analytics and Statistics"
+> Reasoning: Academic teaching role with no mention of AI tools, GenAI capabilities, or infrastructure work.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Design and grade four formative assessments"
+> Reasoning: Assessment refers to educational grading of student learning, not technical testing, quality ownership, or data contracts.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Design and grade four formative assessments"
+> Reasoning: Candidate owns assessment design and grading, demonstrating direct responsibility for quality evaluation practice.
+
+**Run 3:** `absent` ✓
+> Quote: "Design and grade four formative assessments; Teach 22 two-hour weekly seminars"
+> Reasoning: Formative assessments are pedagogical tools for student evaluation, not data quality/testing ownership or frameworks.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✗
+> Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.'"
+> Reasoning: Concern about analytical accuracy and avoiding poor data-driven decisions signals trust in analysis, but lacks explicit compliance or operational reliability framing.
+
+**Run 2:** `none` ✓
+> Quote: "more accurate in their statements, more selective in their use of data"
+> Reasoning: Framing emphasizes analytical accuracy and decision-making rigor in an educational context, not operational risk or compliance.
+
+**Run 3:** `none` ✓
+> Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data'"
+> Reasoning: Framing is pedagogical excellence and analytical thinking development, not operational reliability (SLOs, incidents) or compliance/regulatory concerns.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

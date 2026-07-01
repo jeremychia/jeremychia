@@ -203,3 +203,45 @@ Why Apply?
 > Quote: "Support the development of scalable data products"
 > Verified: ✓ found in JD
 > Reasoning: Primary language emphasizes supporting and delivering against defined goals rather than setting direction or strategy for the analytics function.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "The responsibilities section is generic boilerplate with no named tools in context, no scale numbers, and no specific methodology"
+> Reasoning: No AI tools, infrastructure responsibilities, or AI-first language present.
+
+**Run 2:** `none` ✓
+> Quote: "robust, repeatable analytics solutions"
+> Reasoning: No AI tools, AI-first thinking, or AI infrastructure mentioned; focus is entirely on traditional analytics delivery.
+
+**Run 3:** `none` ✓
+> Quote: "[No AI signals in JD]"
+> Reasoning: JD contains no references to AI tools, AI-assisted coding, semantic models, or AI infrastructure.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "validation and quality checks to ensure accuracy"
+> Reasoning: Ownership verb 'ensure' paired with quality and accuracy responsibilities.
+
+**Run 2:** `responsibility` ✓
+> Quote: "validation and quality checks to ensure accuracy"
+> Reasoning: Candidate owns quality/validation practices with explicit responsibility verb 'ensure' paired with quality/accuracy.
+
+**Run 3:** `responsibility` ✓
+> Quote: "validation and quality checks to ensure accuracy"
+> Reasoning: Candidate owns quality practice; 'ensure' verb paired with validation and accuracy standards signals ownership of data quality discipline.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "The framing is delivery-oriented with verbs like 'support', 'partner', and 'deliver'"
+> Reasoning: No compliance, regulatory, or loss-aversion language; framed around delivery and scalability.
+
+**Run 2:** `none` ✓
+> Quote: "moving beyond ad-hoc analysis to building robust, repeatable analytics solutions"
+> Reasoning: Framing is purely delivery-oriented (replace ad-hoc with scalable systems); no compliance, regulatory, or trust-dominance language.
+
+**Run 3:** `none` ✓
+> Quote: "The framing is delivery-oriented with verbs like 'support', 'partner', and 'deliver'"
+> Reasoning: Role emphasizes execution and scaling existing capability; no compliance, regulatory, or trust-risk framing.
+

@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Lead, mentor, and guide more junior team members",
   "autonomy_level_reasoning": "The role combines strategic direction-setting (develop strategy, mentor, increase literacy) with execution responsibilities (design, implement, manage pipelines).",
   "greenfield_vs_fix_quote": "Enhancing reporting and metrics quality as a whole, from understanding the needs of the business to providing easily understandable and actionable data",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Managing data integrations, pipelines, models, and dashboards using modern tools (Snowflake, SQL, Looker, Airflow, Dagster, GitHub)",
+  "ai_role_reasoning": "Tech stack consists entirely of traditional data tools with no AI-specific capabilities or tools mentioned.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Enhancing reporting and metrics quality as a whole",
+  "testing_framing_reasoning": "Direct ownership framing with 'enhancing' action verb paired with explicit quality accountability.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Understanding the needs of the business to providing easily understandable and actionable data",
+  "loss_aversion_framing_reasoning": "Positive value-delivery framing with no compliance, regulatory, or incident-prevention language."
 }

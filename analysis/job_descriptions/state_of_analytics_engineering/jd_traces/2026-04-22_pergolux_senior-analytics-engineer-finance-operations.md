@@ -204,3 +204,47 @@
 > Reasoning: The use of "leading" and "establishing" indicates the role sets direction for financial data infrastructure rather than executing direction set by others.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: ""
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI infrastructure responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "establishing the foundation for all financial reporting"
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI infrastructure—standard financial data warehouse work.
+
+**Run 3:** `none` ✓
+> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
+> Reasoning: Standard financial analytics work with no AI tool usage or infrastructure-building signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✗
+> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
+> Reasoning: Candidate leads data integration and establishes financial reporting foundation, indicating ownership of data quality and integrity practices.
+
+**Run 2:** `absent` ✓
+> Quote: "n/a"
+> Reasoning: No testing, quality practices, or data contract language in the phrases.
+
+**Run 3:** `absent` ✓
+> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
+> Reasoning: No testing ownership, quality practices, or testing tools mentioned in responsibilities.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
+> Reasoning: Single source of truth for critical financial metrics to leadership teams reflects regulatory/audit concerns and high business impact of data quality failures.
+
+**Run 2:** `high` ✓
+> Quote: "establishing the foundation for all financial reporting"
+> Reasoning: Financial reporting is compliance-driven; accurate data to finance/leadership teams carries regulatory and audit risk.
+
+**Run 3:** `moderate` ✗
+> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
+> Reasoning: Emphasis on reliable single source of truth for finance/leadership stakeholders signals operational reliability concern without explicit regulatory framing.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']

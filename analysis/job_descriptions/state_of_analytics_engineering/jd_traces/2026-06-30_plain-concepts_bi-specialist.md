@@ -193,3 +193,45 @@ Industry: IT Services and IT Consulting
 > Reasoning: Strategic verbs like 'define' and 'design' suggest ownership, but execution occurs collaboratively with external stakeholders rather than independently.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build and optimize ETL/ELT processes for data availability"
+> Reasoning: Standard data engineering and BI work with no AI tool usage or GenAI-enabling infrastructure responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "Collaborate with Data Engineers on quality and performance; data as a product"
+> Reasoning: No mention of AI coding tools, GenAI capabilities, or AI-ready infrastructure; focuses on traditional data modeling and governance.
+
+**Run 3:** `none` ✓
+> Quote: "No explicit AI signal"
+> Reasoning: No mentions of AI coding tools, AI-first mindset, or GenAI infrastructure in provided phrases.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Collaborate with Data Engineers on quality and performance"
+> Reasoning: Quality mentioned in collaborative context only; no ownership verb (own/ensure/define/implement) paired with testing or quality responsibility.
+
+**Run 2:** `absent` ✓
+> Quote: "Collaborate with Data Engineers on quality and performance; Support data governance and documentation"
+> Reasoning: Quality mentioned but as collaborative effort without ownership verbs (own/ensure/define/implement); no testing tools or explicit data contracts specified.
+
+**Run 3:** `absent` ✓
+> Quote: "Collaborate with Data Engineers on quality and performance"
+> Reasoning: Quality mentioned as collaborative effort, not as owned responsibility with defining/implementing/ensuring verbs.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "metrics depend on well-modeled, reliable data; data governance and documentation"
+> Reasoning: Hiring driven by operational reliability concerns (governance, quality, data stability) but no compliance or regulatory framing; moderate loss aversion rather than high trust/audit-driven.
+
+**Run 2:** `moderate` ✓
+> Quote: "metrics depend on well-modeled, reliable data; Rigour signals dominate — reliable data, data governance, quality and performance"
+> Reasoning: Operational reliability and data quality emphasized throughout; errors affect business decisions without regulatory/compliance/audit language.
+
+**Run 3:** `moderate` ✓
+> Quote: "errors affect business decisions without regulatory consequence"
+> Reasoning: Operational reliability framing centered on business impact, not compliance or regulatory constraints.
+

@@ -70,5 +70,14 @@
   "autonomy_level_quote": "Support franchise partners' decisions regarding stock, supply chain, and pricing",
   "autonomy_level_reasoning": "While the role owns technical implementation (build, design, implement), the overarching framing emphasizes supporting franchise partner priorities rather than setting independent analytics strategy.",
   "greenfield_vs_fix_quote": "Build data marts and business layers using dbt on Databricks; Design and maintain dashboards; Adapt existing dashboards from other business domains",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Build data marts and business layers using dbt on Databricks",
+  "ai_role_reasoning": "No AI tool usage, infrastructure for AI consumption, or AI-first expectations; standard analytics engineering work with dbt.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "No testing-related signal in provided phrases",
+  "testing_framing_reasoning": "No mention of testing tools, quality ownership, or data contracts.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Implement row-level security; Support franchise partners' decisions regarding stock, supply chain, and pricing",
+  "loss_aversion_framing_reasoning": "Security requirement and emphasis on data supporting critical franchise business decisions signal operational trust/reliability concerns, but lack explicit regulatory or audit framing."
 }

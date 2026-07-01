@@ -194,3 +194,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "None identified"
+> Reasoning: No AI tools, coding assistants, or AI infrastructure building mentioned in any phrase.
+
+**Run 2:** `none` ✓
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
+> Reasoning: Standard BI/analytics work with no AI tooling, AI-first mindset, or AI infrastructure responsibility mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "None identified"
+> Reasoning: No mention of AI tools, AI infrastructure, or AI-first responsibilities; standard BI/reporting work.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "None identified"
+> Reasoning: No testing tools listed and no ownership verbs (own, ensure, define, implement, establish) for quality practices.
+
+**Run 2:** `absent` ✓
+> Quote: "Identify and propose enhancements to reporting systems for better clarity and faster creation"
+> Reasoning: No quality ownership verbs, testing tools, or data contract responsibilities mentioned across phrases.
+
+**Run 3:** `absent` ✓
+> Quote: "None identified"
+> Reasoning: No signals of testing ownership, testing tools, or data quality responsibilities.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
+> Reasoning: Framing emphasizes delivery velocity and deadline pressure, not operational reliability fears or compliance/trust concerns.
+
+**Run 2:** `none` ✓
+> Quote: "Leverage available tools and resources to solve problems independently"
+> Reasoning: Delivery and capability focused; no incident, SLO, compliance, or bad-data-impact language present.
+
+**Run 3:** `none` ✓
+> Quote: "Build new Looker dashboards from scratch within tight deadlines"
+> Reasoning: Framing emphasizes delivery speed and project completion over reliability, compliance, or trustworthiness concerns.
+

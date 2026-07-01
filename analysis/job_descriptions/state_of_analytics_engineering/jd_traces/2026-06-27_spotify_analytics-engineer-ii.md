@@ -186,3 +186,46 @@ We may use artificial intelligence (AI) …[truncated]
 > Quote: "Partner with Data Engineers on upstream pipelines and collaborate with Product, Engineering, and Data Science to scope and deliver insights"
 > Verified: ✓ found in JD
 > Reasoning: The role is positioned as partnering and collaborating to deliver scoped work rather than setting overall direction or defining the analytics strategy.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "key metrics for platform health, developer productivity, and ML/AI platform adoption"
+> Reasoning: Mentions ML/AI platform adoption but focuses on metrics and tracking rather than building AI infrastructure or using AI coding tools.
+
+**Run 2:** `none` ✓
+> Quote: "Help define and evolve key metrics for platform health, developer productivity, and ML/AI platform adoption"
+> Reasoning: Role tracks ML/AI platform adoption metrics but shows no signal of building AI-ready infrastructure or using AI coding tools.
+
+**Run 3:** `none` ✓
+> Quote: "key metrics for platform health, developer productivity, and ML/AI platform adoption"
+> Reasoning: Company has ML/AI platform but AE performs standard analytics work without building AI-specific infrastructure.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "with a focus on testing, observability, and CI/CD"
+> Reasoning: Focus on testing indicates ownership of quality practices and testing discipline.
+
+**Run 2:** `absent` ✗
+> Quote: "with a focus on testing, observability, and CI/CD"
+> Reasoning: Testing is mentioned as a focus area but lacks ownership verbs (own/ensure/define/implement/establish) and no specific testing tools listed.
+
+**Run 3:** `responsibility` ✓
+> Quote: "with a focus on testing, observability, and CI/CD"
+> Reasoning: Focus on testing indicates core responsibility for quality practices and testing strategy.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "support rotation for key datasets, pipelines, and analytical products"
+> Reasoning: Support rotation signals operational reliability concerns and incident-response responsibilities rather than compliance/regulatory risk.
+
+**Run 2:** `moderate` ✓
+> Quote: "support rotation for key datasets, pipelines, and analytical products; Help define and evolve key metrics for platform health"
+> Reasoning: Framing centers on operational reliability and platform stability concerns, but no regulatory or compliance signals present.
+
+**Run 3:** `moderate` ✓
+> Quote: "support rotation for key datasets, pipelines, and analytical products"
+> Reasoning: Support rotation and on-call responsibilities signal operational reliability and incident response concerns.
+

@@ -223,3 +223,47 @@ Familiarity with data modeling best practices (dimensional modeling, slowly chan
 > Reasoning: The role is described as shaping how the company measures revenue, indicating direction-setting authority for the revenue analytics function rather than executing direction set by others.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
+> Reasoning: No AI tools, frameworks, or AI-enabled infrastructure responsibilities mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
+> Reasoning: No AI tools, GenAI infrastructure, or AI-first mindset mentioned; standard financial data modeling and reporting work.
+
+**Run 3:** `none` ✓
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
+> Reasoning: No mention of AI tools, GenAI capabilities, or AI-ready infrastructure; standard data modeling and analytics engineering work.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✗
+> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
+> Reasoning: Verb 'ensure' paired with data reconciliation ownership indicates responsibility for data quality and integrity practices.
+
+**Run 2:** `absent` ✓
+> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
+> Reasoning: Data accuracy and reconciliation focus without explicit testing, quality practice ownership, or testing tool mention.
+
+**Run 3:** `absent` ✓
+> Quote: "ensure a single source of truth for financial KPIs"
+> Reasoning: While 'ensure' signals accountability, there's no explicit testing responsibility, quality ownership, data validation practices, or data contract mention.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `high` ✗
+> Quote: "ensure a single source of truth for financial KPIs; board-ready metrics; executive-level reporting"
+> Reasoning: Board-level financial reporting and trustworthiness of critical metrics dominate the framing over delivery or reliability concerns.
+
+**Run 2:** `moderate` ✓
+> Quote: "Revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations"
+> Reasoning: Operational complexity and system stability concerns dominate, with high-stakes executive reporting raising urgency but no regulatory or compliance framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "executive-level reporting and board-ready metrics; single source of truth for financial KPIs"
+> Reasoning: Emphasis on accuracy and reliability for high-stakes financial reporting to board/C-level stakeholders, but framed as operational accuracy rather than regulatory/compliance concerns.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

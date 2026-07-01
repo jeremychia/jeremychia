@@ -204,3 +204,45 @@ Benefits:
 > Quote: "The role offers significant autonomy in developing data products from scratch"
 > Verified: ✓ found in JD
 > Reasoning: The explicit mention of significant autonomy to develop products from scratch combined with ownership of platform building indicates strategic direction-setting rather than execution of defined work.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
+> Reasoning: No AI tools, AI-first mindset, or GenAI infrastructure signals detected; stack is traditional data engineering (Kafka, Databricks, dbt).
+
+**Run 2:** `none` ✓
+> Quote: "transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
+> Reasoning: No AI tools or AI-enabler infrastructure mentioned; focus is on standard data platform work with Kafka, OpenMetadata, Databricks.
+
+**Run 3:** `none` ✓
+> Quote: "transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
+> Reasoning: Stack comprises standard data engineering tools (Kafka, OpenMetadata, Databricks, dbt, PySpark) with no AI-coding or infrastructure-building signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "implementing data quality and governance processes; reliable, well-documented data products"
+> Reasoning: JD explicitly assigns responsibility for implementing data quality and governance, using ownership verbs indicating candidate owns quality practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "implementing data quality and governance processes; reliable, well-documented data products"
+> Reasoning: Candidate owns quality and governance practice implementation through explicit ownership verbs (implementing, establishing processes).
+
+**Run 3:** `responsibility` ✓
+> Quote: "implementing data quality and governance processes; reliable, well-documented data products"
+> Reasoning: Ownership verb (implementing) paired with quality practice, indicating candidate owns quality assurance.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "building a Data Delivery Platform on Databricks; data products from scratch; addressing platform-building challenges from inception"
+> Reasoning: JD is framed around delivery and platform-building with no mention of compliance, regulatory requirements, incidents, or trust concerns.
+
+**Run 2:** `none` ✓
+> Quote: "No loss aversion framing detected"
+> Reasoning: Role focuses on data product delivery and platform building; domain context (fintech) is risk category not loss-aversion framing.
+
+**Run 3:** `none` ✓
+> Quote: "building a Data Delivery Platform on Databricks; data products from scratch; addressing platform-building challenges from inception"
+> Reasoning: Greenfield platform delivery dominates framing; no compliance, regulatory, SLO, or incident-risk language present.
+

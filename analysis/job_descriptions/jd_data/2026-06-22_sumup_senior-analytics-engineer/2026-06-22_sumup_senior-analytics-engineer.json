@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions",
   "autonomy_level_reasoning": "The responsibilities emphasize partnership, maintenance, and application of established patterns, framing the role as executing on defined work rather than independently setting direction.",
   "greenfield_vs_fix_quote": "Model key business domains...building well-documented, quality-assured data products; Implement technical improvements including incremental processing strategies",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "",
+  "ai_role_reasoning": "No AI tools, infrastructure, or GenAI responsibilities mentioned; standard analytics engineering and domain modeling work.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "building well-documented, quality-assured data products",
+  "testing_framing_reasoning": "Candidate owns building and quality assurance of data products, with explicit ownership verb paired with quality expectation.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "keeping domain outputs consistent, tested, and discoverable",
+  "loss_aversion_framing_reasoning": "Emphasis on operational consistency and discoverability suggests reliability and pipeline maintenance concerns rather than compliance/audit-primary framing."
 }

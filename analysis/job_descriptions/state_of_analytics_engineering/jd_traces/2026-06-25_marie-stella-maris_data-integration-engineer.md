@@ -197,3 +197,45 @@ Data & Integration Engineer within the Business Technology team at Marie-Stella-
 > Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
 > Verified: ✓ found in JD
 > Reasoning: The role combines strategic responsibility for designing and developing infrastructure with execution responsibility for maintaining systems and supporting analytics teams.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
+> Reasoning: Standard data platform tooling with no AI-first mindset, AI tool usage, or GenAI infrastructure signals.
+
+**Run 2:** `none` ✓
+> Quote: "No AI signals in provided phrases"
+> Reasoning: No mention of AI tools, GenAI responsibilities, or AI-ready infrastructure.
+
+**Run 3:** `none` ✓
+> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
+> Reasoning: Standard data pipeline and integration work with no mention of AI tools or GenAI infrastructure.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Ensure data quality, consistency, and availability"
+> Reasoning: Ownership verb 'Ensure' paired with quality indicates direct responsibility for quality practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Ensure data quality, consistency, and availability"
+> Reasoning: Candidate owns quality practice with 'Ensure' verb establishing standards.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Ensure data quality, consistency, and availability"
+> Reasoning: Uses ownership verb 'ensure' paired with quality, indicating candidate owns quality outcomes.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Ensure data quality, consistency, and availability; Design and maintain pipelines between core systems"
+> Reasoning: Operational reliability framing (pipeline stability, data quality) dominates; no regulatory or compliance emphasis.
+
+**Run 2:** `moderate` ✓
+> Quote: "Ensure data quality, consistency, and availability"
+> Reasoning: Operational reliability (availability, consistency) focus without compliance/regulatory framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Ensure data quality, consistency, and availability"
+> Reasoning: Operational reliability concerns (consistency, availability) dominate rather than pure delivery goals.
+

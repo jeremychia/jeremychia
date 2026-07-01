@@ -54,5 +54,14 @@
     "greenfield_vs_fix": "Concevoir et déployer des architectures data complètes adaptées aux besoins clients",
     "language_gate": "Anglais : un plus.",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Construire des semantic layers facilitant l'exploitation des données par les équipes",
+  "ai_role_reasoning": "Semantic layers are data infrastructure designed to enable AI/analytics consumption by teams.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting",
+  "testing_framing_reasoning": "Candidate owns establishing data quality control and alerting systems.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Mettre en place des dispositifs de contrôle de qualité des données et d'alerting",
+  "loss_aversion_framing_reasoning": "Alerting and quality control emphasis signals concern for operational reliability and incident prevention."
 }

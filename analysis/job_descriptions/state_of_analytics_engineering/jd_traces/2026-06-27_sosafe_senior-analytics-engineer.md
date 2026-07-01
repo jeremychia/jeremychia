@@ -224,3 +224,45 @@ Backed by leading VCs like Highland Europe and Global Founders Capital, we're ra
 > Quote: "Own the transformation layer in dbt- design, build, and maintain modular, well-tested data models that define how data is structured and consumed across the company."
 > Verified: ✓ found in JD
 > Reasoning: The role uses ownership language ('own'), direction-setting verbs ('define', 'establish and enforce'), and applies these to core responsibilities that shape the data infrastructure rather than executing predefined work.
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents."
+> Reasoning: Candidate builds semantic infrastructure that downstream AI systems (LLM agents) consume.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "supports downstream consumers, including LLM-based analytics agents"
+> Reasoning: Candidate builds semantic layer and data infrastructure specifically designed for AI/LLM systems to consume.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents."
+> Reasoning: Candidate builds semantic infrastructure that LLM-based agents consume, enabling AI capabilities downstream.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Establish and enforce best practices in testing, documentation, and data quality- making these part of the standard development lifecycle."
+> Reasoning: Candidate owns establishing and enforcing testing practices as mandatory development lifecycle requirement.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Establish and enforce best practices in testing, documentation, and data quality"
+> Reasoning: Candidate owns quality and testing practices as core responsibility with enforcement authority.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Establish and enforce best practices in testing, documentation, and data quality- making these part of the standard development lifecycle."
+> Reasoning: Candidate owns establishing and enforcing testing practices as core responsibility across the org.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents."
+> Reasoning: Emphasizes operational reliability for downstream consumers and systems, with no compliance or regulatory framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "reliable abstraction over our data... well-tested data models"
+> Reasoning: Framing emphasizes operational reliability and testing rigor rather than compliance or trust concerns.
+
+**Run 3:** `moderate` ✓
+> Quote: "Build and evolve our semantic layer- creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents."
+> Reasoning: Emphasis on reliability, consistency, and reliable downstream impact framed as operational quality practice rather than regulatory compliance.
+

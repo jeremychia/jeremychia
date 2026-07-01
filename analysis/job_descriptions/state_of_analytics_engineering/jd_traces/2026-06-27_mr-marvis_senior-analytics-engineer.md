@@ -197,3 +197,45 @@
 > Reasoning: The role has strategic ownership of the analytics platform but responsibilities are framed around executing business requirements and supporting platform users.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'mixed']
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
+> Reasoning: Candidate builds analytics infrastructure optimized for AI systems to consume.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
+> Reasoning: Explicitly framing analytics infrastructure as consumption layer for AI systems.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
+> Reasoning: Candidate builds data infrastructure optimized for AI consumption.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Reasoning: Candidate owns implementation of testing and data quality practices.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Reasoning: Ownership verb 'implement' paired with testing and data quality responsibilities.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Reasoning: Direct ownership of testing, monitoring, and data quality practices.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Reasoning: Operational reliability concerns emphasized through monitoring and quality practices.
+
+**Run 2:** `moderate` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
+> Reasoning: Emphasis on governance and trustworthiness suggests operational reliability concern without explicit compliance/regulatory language.
+
+**Run 3:** `moderate` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
+> Reasoning: Trust and governance concerns signal operational reliability and risk mitigation focus.
+

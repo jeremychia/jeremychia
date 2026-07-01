@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Design, develop, and maintain efficient and scalable workflows using tools like dbt to transform raw data loaded into our data warehouse (Snowflake) into clean, ready-to-use data models",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Design, develop, and maintain efficient and scalable workflows using tools like dbt to transform raw data loaded into our data warehouse (Snowflake) into clean, ready-to-use data models",
+  "ai_role_reasoning": "No AI coding tools, GenAI responsibilities, or text-to-SQL infrastructure mentioned; standard dbt transformation work.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Write comprehensive data quality checks, tests, and monitoring scripts to ensure the accuracy, completeness, and reliability of all transformed data assets",
+  "testing_framing_reasoning": "Candidate owns quality practice with explicit ownership verbs (write, ensure) applied to testing and monitoring outcomes.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "focusing on transforming raw data into high-quality, trustworthy, and easily consumable datasets and visualisations for business users",
+  "loss_aversion_framing_reasoning": "Reliability and trustworthiness framed as operational quality concerns, not compliance or regulatory drivers."
 }

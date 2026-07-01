@@ -75,5 +75,14 @@
       "query optimization",
       "dbt"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Lakehouse and Warehouse optimization; Power BI semantic model knowledge",
+  "ai_role_reasoning": "Technical platform skills without explicit AI-ready infrastructure or GenAI responsibility signals.",
+  "testing_framing": "tool_listed",
+  "testing_framing_quote": "Data quality, validation, monitoring, and observability skills",
+  "testing_framing_reasoning": "Quality and monitoring skills listed as requirements without ownership verbs (own/ensure/define).",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Advanced SQL proficiency including CTEs, window functions, and query optimization",
+  "loss_aversion_framing_reasoning": "Technical proficiency framing without compliance, regulatory, or stakeholder-risk language; no operational fear signals."
 }

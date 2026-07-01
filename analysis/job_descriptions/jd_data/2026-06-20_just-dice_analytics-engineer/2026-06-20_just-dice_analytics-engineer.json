@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Establish and implement data requirements and analytics solutions with our tech and product teams.",
   "autonomy_level_reasoning": "The role strategically establishes what to measure, architect, and implement (strategic verbs), but does so collaboratively 'with' product and engineering teams in service of their priorities (execution framing).",
   "greenfield_vs_fix_quote": "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services",
+  "ai_role_reasoning": "Standard data engineering tech stack with no AI tools (Copilot/Claude Code/Cursor) or GenAI infrastructure responsibilities mentioned.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Implement data quality and validation processes to guarantee data accuracy and consistency",
+  "testing_framing_reasoning": "The verb 'implement' paired with 'data quality and validation processes' signals candidate owns the quality practice, not just a tool in the stack.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Implement data quality and validation processes to guarantee data accuracy and consistency",
+  "loss_aversion_framing_reasoning": "Quality framing focuses on delivery (accuracy, consistency) without operational reliability signals (SLOs, incidents, pipeline stability) or compliance/trust signals (regulatory, audit, bad data risk)."
 }

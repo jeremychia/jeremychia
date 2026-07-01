@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Design, own, and evolve core data models and the modelling architecture; Maintain and grow how knowledge is surfaced",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Develop, own and maintain data modeling standards and the data development experience",
+  "ai_role_reasoning": "No AI tools, infrastructure, or methodology mentioned in listed responsibilities.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Develop, own and maintain data modeling standards",
+  "testing_framing_reasoning": "Ownership is stated but focused on modeling standards rather than testing or quality practices.",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance",
+  "loss_aversion_framing_reasoning": "Regulatory compliance and legal collaboration frame data quality as a compliance/trust issue rather than operational reliability."
 }

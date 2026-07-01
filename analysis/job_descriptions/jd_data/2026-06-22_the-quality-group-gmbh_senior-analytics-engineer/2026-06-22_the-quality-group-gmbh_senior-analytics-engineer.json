@@ -70,5 +70,14 @@
   "autonomy_level_quote": "Support ad-hoc analytical requests requiring data modeling",
   "autonomy_level_reasoning": "The responsibilities emphasize executing defined work and supporting assigned requests rather than setting strategic direction for analytics.",
   "greenfield_vs_fix_quote": "Build and evolve data models and marts using tools like dbt for scalable analytics",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Build and evolve data models and marts using tools like dbt for scalable analytics",
+  "ai_role_reasoning": "dbt is a standard data transformation tool, not an AI coding or infrastructure tool; no GenAI responsibilities mentioned.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Ensure data quality through testing, validation, and monitoring",
+  "testing_framing_reasoning": "Uses ownership verb 'ensure' paired with testing and validation responsibilities, indicating quality practice ownership.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Ensure data quality through testing, validation, and monitoring",
+  "loss_aversion_framing_reasoning": "Operational reliability framing centered on preventing data quality issues and incidents, not compliance or regulatory dominance."
 }

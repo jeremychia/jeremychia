@@ -218,3 +218,45 @@
 > Reasoning: The role explicitly expects the hire to set direction ('define'), shape strategy ('forward-looking vision'), and drive execution across the analytics function for the marketing domain.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Maintain expertise across marketing tech stack including ad platforms, Airbyte, Zoho CRM, GTM, and web analytics"
+> Reasoning: Tech stack specified contains no AI tools, GenAI platforms, or AI-building infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "Maintain expertise across marketing tech stack including ad platforms, Airbyte, Zoho CRM, GTM, and web analytics"
+> Reasoning: No AI tool usage or AI infrastructure requirements; standard data engineering stack.
+
+**Run 3:** `none` ✓
+> Quote: "Design, build, and maintain our core marketing data models"
+> Reasoning: No AI tools, AI-assisted coding, or AI infrastructure responsibilities mentioned.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Take full ownership of the stability of our marketing data pipelines"
+> Reasoning: Ownership framed around operational stability and incident response, not defining or implementing testing practices.
+
+**Run 2:** `absent` ✓
+> Quote: ""
+> Reasoning: No testing ownership language or testing tools mentioned.
+
+**Run 3:** `absent` ✓
+> Quote: "Design, build, and maintain our core marketing data models"
+> Reasoning: No testing frameworks, quality practices, or data contract ownership signals in the JD.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "be the first to respond to incidents and drive resolution"
+> Reasoning: Operational reliability concerns dominate, with emphasis on incident response and pipeline stability.
+
+**Run 2:** `moderate` ✓
+> Quote: "Take full ownership of the stability of our marketing data pipelines — be the first to respond to incidents and drive resolution"
+> Reasoning: Operational reliability concerns (incidents, stability) drive the framing, not compliance.
+
+**Run 3:** `moderate` ✓
+> Quote: "Take full ownership of the stability of our marketing data pipelines — be the first to respond to incidents and drive resolution"
+> Reasoning: Incidents and pipeline stability are framed as primary operational concerns.
+

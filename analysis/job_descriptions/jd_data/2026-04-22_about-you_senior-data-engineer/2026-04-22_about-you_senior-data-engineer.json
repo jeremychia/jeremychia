@@ -68,5 +68,14 @@
   "autonomy_level_quote": "drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery)",
   "autonomy_level_reasoning": "The role is expected to drive major platform initiatives, own critical systems, and oversee large operations—indicating significant strategic direction-setting rather than execution of externally-set priorities.",
   "greenfield_vs_fix_quote": "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Build, maintain, and drive the transition to our new DataPlatform (Dagster, dbt, AWS ECS, and GCP BigQuery). This involves creating foundational tools and monitoring systems",
+  "ai_role_reasoning": "Standard data platform engineering without AI tool usage, AI infrastructure building, or AI-first mindset signals.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Strong software engineering fundamentals (CI/CD, testing, design patterns)",
+  "testing_framing_reasoning": "Testing mentioned as foundational skill requirement, but no explicit ownership verb or testing tool specification.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Oversee the company's largest data movement operations, handling terabyte-scale transfers from MySQL in AWS to BigQuery nightly while maintaining source system performance",
+  "loss_aversion_framing_reasoning": "Operational reliability and system performance emphasized; concern about breaking source systems during critical data operations, but no compliance or regulatory framing."
 }

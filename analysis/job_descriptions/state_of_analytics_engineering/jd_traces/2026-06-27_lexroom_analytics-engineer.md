@@ -226,3 +226,21 @@ This is our first dedicated analytics hire. You won't inherit a legacy stack or 
 > Quote: "you'll design the analytics function from scratch with direct executive sponsorship"
 > Verified: ✓ found in JD
 > Reasoning: Explicit framing as the foundational hire responsible for designing the analytics function from scratch with executive support places this in a direction-setting, strategic role rather than execution-only.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "a modern stack (BigQuery, dbt, Pub/Sub, Python, GCP)"
+> Reasoning: Tech stack mentions traditional data tools only; no AI coding tools, AI-ready infrastructure, or GenAI responsibilities signaled.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement data quality frameworks: tests, freshness checks, anomaly detection, and clear ownership and SLAs on key datasets"
+> Reasoning: Candidate owns quality practice via 'Implement' verb paired with frameworks, tests, and SLA accountability.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "clear ownership and SLAs on key datasets; freshness checks, anomaly detection"
+> Reasoning: Operational reliability framed through SLAs and data correctness checks, not compliance or stakeholder-trust dominance.
+

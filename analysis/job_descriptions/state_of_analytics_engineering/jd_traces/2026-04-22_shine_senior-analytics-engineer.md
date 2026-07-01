@@ -213,3 +213,45 @@ Snowflake, dbt, Python, Omni, GitHub Copilot
 > Reasoning: The role combines strategic responsibility for direction-setting (establishing governance, defining standards) with execution responsibilities (building models, enabling teams).
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build and maintain scalable dbt models on Snowflake for cross-entity analytics"
+> Reasoning: No mentions of AI tools, frameworks, or GenAI-related infrastructure; represents standard analytics engineering work
+
+**Run 2:** `none` ✓
+> Quote: "Data Engineering; Analytics"
+> Reasoning: No AI skills or infrastructure building mentioned; standard data engineering and analytics work.
+
+**Run 3:** `none` ✓
+> Quote: "Data Engineering; Analytics"
+> Reasoning: Standard analytics engineering work without AI tooling or infrastructure signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Reasoning: Uses ownership verb 'establish' paired with explicit testing responsibility, indicating candidate owns quality practices
+
+**Run 2:** `responsibility` ✓
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Reasoning: Candidate explicitly owns quality practice through establishing testing and governance frameworks.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Reasoning: Candidate owns defining and establishing testing practices with explicit ownership verb.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
+> Reasoning: Emphasizes operational reliability and documentation standards, signaling concern with pipeline stability rather than regulatory/compliance dominance
+
+**Run 2:** `moderate` ✓
+> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
+> Reasoning: Emphasis on reliability and data governance indicates concern for operational stability and data quality, not compliance-driven.
+
+**Run 3:** `moderate` ✓
+> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
+> Reasoning: Word 'reliable' signals operational risk concern, though framed as delivery enablement rather than explicit incident/SLO language.
+

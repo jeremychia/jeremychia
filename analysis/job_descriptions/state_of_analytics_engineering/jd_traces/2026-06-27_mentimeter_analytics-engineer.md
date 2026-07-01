@@ -212,3 +212,46 @@ Additional notes
 > Quote: "Combine subject matter expertise and a high level business understanding to contribute to the direction and strategy"
 > Verified: ✓ found in JD
 > Reasoning: The role is explicitly expected to contribute to strategic direction rather than execute predefined work, with ownership of core architecture decisions.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Develop, own and maintain data modeling standards and the data development experience"
+> Reasoning: No AI tools, infrastructure, or methodology mentioned in listed responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
+> Reasoning: Standard data modeling work with no AI tool usage or infrastructure building signals.
+
+**Run 3:** `none` ✓
+> Quote: "Develop, own and maintain data modeling standards and the data development experience"
+> Reasoning: No signals of AI tool usage or infrastructure building; standard data modeling and engineering work.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Develop, own and maintain data modeling standards"
+> Reasoning: Ownership is stated but focused on modeling standards rather than testing or quality practices.
+
+**Run 2:** `absent` ✓
+> Quote: "Strong SQL and sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
+> Reasoning: Quality is implicit in modeling standards but no explicit testing responsibility or tool listed.
+
+**Run 3:** `absent` ✓
+> Quote: "Strong SQL and sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
+> Reasoning: Demonstrates quality mindset in modeling but no explicit testing responsibility or tool ownership.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
+> Reasoning: Regulatory compliance and legal collaboration frame data quality as a compliance/trust issue rather than operational reliability.
+
+**Run 2:** `high` ✓
+> Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
+> Reasoning: Compliance and regulatory requirements dominate the risk framing over operational reliability.
+
+**Run 3:** `moderate` ✗
+> Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
+> Reasoning: Regulatory/compliance concerns present (GDPR, legal collaboration) but not dominating the overall role framing.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']

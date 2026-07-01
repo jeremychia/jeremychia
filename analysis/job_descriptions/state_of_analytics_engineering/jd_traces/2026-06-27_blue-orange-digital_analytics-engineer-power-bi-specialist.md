@@ -196,3 +196,47 @@ Background checks may be required. Blue Orange Digital is an equal-opportunity e
 > Reasoning: The role is scoped to a 26-week project phase executing defined deliverables rather than setting overall analytics strategy or direction.
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Establish naming conventions and semantic governance standards"
+> Reasoning: Semantic governance infrastructure signals data structure built for AI systems to consume.
+
+**Run 2:** `none` ✗
+> Quote: "Establish naming conventions and semantic governance standards"
+> Reasoning: No explicit AI skill, tool, or infrastructure signal; semantic governance is governance practice, not AI-enabler infrastructure.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Establish naming conventions and semantic governance standards"
+> Reasoning: Semantic governance prepares data infrastructure for AI systems to consume and understand.
+
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'none', 'ai_enabler']
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Collaborate with Data Engineers on data product readiness"
+> Reasoning: Readiness implied but no explicit testing responsibility, tool, or quality practice ownership.
+
+**Run 2:** `absent` ✓
+> Quote: "No testing or quality ownership language across provided phrases"
+> Reasoning: Focus on dashboard development and stakeholder collaboration with no mention of testing frameworks, quality ownership, or data contracts.
+
+**Run 3:** `absent` ✓
+> Quote: "No testing ownership or tool signal in provided phrases"
+> Reasoning: No quality/testing responsibility verb or tool mentioned.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✗
+> Quote: "Develop production dashboards for Trader P&L, Global Position, VaR, and Financial Consolidation"
+> Reasoning: VaR (regulatory risk) and Financial Consolidation (compliance audit) in commodities trading dominate framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "VaR metrics, risk stakeholders, production role in commodities trading sector"
+> Reasoning: Risk management concerns (VaR calculation, multiple risk stakeholders) frame operational reliability rather than compliance or regulatory dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "Develop production dashboards for Trader P&L, Global Position, VaR, and Financial Consolidation"
+> Reasoning: Risk metrics (VaR) and trader/risk stakeholders signal operational reliability concerns in a high-stakes trading domain.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

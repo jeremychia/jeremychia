@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Design and build clear, compelling visualizations; Build and maintain robust data warehouse solutions",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform",
+  "ai_role_reasoning": "Standard data tools with no mention of AI user tools or AI infrastructure enablement.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Implement validation processes to guarantee data accuracy and reliability",
+  "testing_framing_reasoning": "Candidate owns validation and accuracy with ownership verbs (implement, guarantee).",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "iGaming/Revenues department; no explicit compliance, regulatory, or financial-reporting language in JD body",
+  "loss_aversion_framing_reasoning": "Delivery-focused framing; explicitly no compliance or regulatory concerns despite iGaming context."
 }

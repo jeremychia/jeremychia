@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Set technical direction and drive adoption of modern modeling practices across the organization",
   "autonomy_level_reasoning": "The role is expected to set technical direction, define architecture, and lead implementation of new capabilities; the dominant verbs are 'Define', 'Set', 'Lead', and 'Drive', with no language indicating scope is set by others.",
   "greenfield_vs_fix_quote": "Define and evolve the architecture for enterprise analytical models",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights",
+  "ai_role_reasoning": "Candidate builds semantic infrastructure (models, assets) that AI systems consume",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Mentor analytics engineers and analysts on modeling skills and technical standards",
+  "testing_framing_reasoning": "No mention of testing ownership, data contracts, or quality practice responsibility",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "Data privacy, security, and compliance knowledge",
+  "loss_aversion_framing_reasoning": "Compliance and regulatory trust are core role requirements, not operational secondary concerns"
 }

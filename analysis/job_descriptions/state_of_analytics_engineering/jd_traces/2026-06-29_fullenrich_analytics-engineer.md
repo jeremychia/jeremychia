@@ -210,3 +210,33 @@ Entretien final avec les Fondateurs – alignement vision et culture.
 > Quote: "Piloter et scaler la stack"
 > Verified: ✓ found in JD
 > Reasoning: Role is expected to steer direction, create the data function, conduct business-pivoting analyses, and define how analytics is delivered—not execute pre-set direction.
+
+### ai_role
+**Run 1:** `ai_user` ✓
+> Quote: "Cursor/Claude Code listed among responsibilities and tools (dbt Cloud, BigQuery, Basedash)"
+> Reasoning: JD explicitly names Claude Code and Cursor as tools for analytics automation.
+
+**Run 2:** `ai_user` ✓
+> Quote: "pousser plus loin les modèles dbt et automatiser pour que chaque équipe (Sales, Marketing, Finance, Product) soit en autonomie complète via Basedash"
+> Reasoning: Candidate will use AI tools (Cursor/Claude Code) to automate analytics development and accelerate delivery.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "rigoureux(se) sur la qualité des données, les fondations sont ultra-propres, documentées et testées"
+> Reasoning: Candidate must maintain rigorous data quality standards and clean, documented, tested foundations.
+
+**Run 2:** `responsibility` ✓
+> Quote: "les fondations sont ultra-propres, documentées et testées"
+> Reasoning: Candidate owns building and maintaining tested, documented data foundations as a core responsibility.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "calcul de l'économie unitaire/marges par fournisseur de données; générer du chiffre d'affaires, ARR, churn"
+> Reasoning: Revenue and unit economics analysis drive business decisions without compliance/regulatory dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "calcul de l'économie unitaire/marges par fournisseur de données"
+> Reasoning: Business economics and revenue metrics drive framing; operational reliability concerns outweigh regulatory risk.
+

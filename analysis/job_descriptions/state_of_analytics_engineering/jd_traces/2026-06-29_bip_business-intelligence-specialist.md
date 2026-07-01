@@ -208,3 +208,45 @@ Supporto concreto a neogenitori: integrazione al 100% per i primi 3 mesi del con
 > Quote: "Ti impegnerai nella raccolta e nella valutazione dei requisiti aziendali"
 > Verified: ✓ found in JD
 > Reasoning: The core responsibilities involve gathering requirements set by others, implementing solutions to specifications, and delivering against scoped work rather than defining analytical strategy or direction.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Looker, Google GCP, BigQuery, stored procedures"
+> Reasoning: No AI coding tools or GenAI infrastructure mentioned; traditional BI and analytics stack only.
+
+**Run 2:** `none` ✓
+> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
+> Reasoning: Role focuses on data visualization and analytics tools without AI/ML or AI-assisted coding responsibilities.
+
+**Run 3:** `none` ✓
+> Quote: ""
+> Reasoning: No AI tools (Copilot, Claude Code, Cursor) or GenAI infrastructure capabilities mentioned; listed tools are Looker, GCP, BigQuery—standard analytics platforms.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "garantendone l'accuratezza e la pertinenza"
+> Reasoning: Individual precision and accuracy emphasized, but no ownership of testing practices, quality frameworks, or data contracts.
+
+**Run 2:** `absent` ✓
+> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici"
+> Reasoning: Focus on analysis and visualization delivery; no testing ownership, practices, or tools mentioned.
+
+**Run 3:** `absent` ✓
+> Quote: "garantendone l'accuratezza e la pertinenza"
+> Reasoning: Quality required via accuracy and precision in deliverables but no testing ownership responsibility or framework implementation evident.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "No loss aversion framing detected"
+> Reasoning: Delivery and project outcome focus with no compliance, regulatory, or operational reliability risk language.
+
+**Run 2:** `none` ✓
+> Quote: "precisione e stress tolerance nel rispetto delle scadenze; garantendone l'accuratezza e la pertinenza"
+> Reasoning: JD emphasizes delivery accuracy and deadline management without compliance, regulatory, or trustworthiness dominance.
+
+**Run 3:** `none` ✓
+> Quote: "BIP is a consulting firm; the JD contains no explicit financial/regulatory/compliance language"
+> Reasoning: Role prioritizes precision and deadline delivery over compliance, audit, or data trustworthiness framing; no loss-aversion signals present.
+

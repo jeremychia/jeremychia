@@ -202,3 +202,46 @@ Le groupe Cosmo5 inscrit la diversité et la mixité durant tout son processus d
 > Reasoning: The role combines strategic elements (thought leadership, offer development, mentoring junior consultants) with core execution responsibilities (implementing datasets, maintaining pipelines).
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "No AI-related phrases in JD"
+> Reasoning: No mention of AI tools, GenAI, text-to-SQL, semantic models, or AI-assisted coding; standard analytics engineering work
+
+**Run 2:** `none` ✓
+> Quote: "Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
+> Reasoning: Traditional data infrastructure migration with no AI tooling, building, or enablement mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
+> Reasoning: Infrastructure modernization with no AI tools, enablement, or AI-first responsibilities mentioned.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
+> Reasoning: Candidate owns implementing datasets with explicit quality and reliability standards
+
+**Run 2:** `responsibility` ✓
+> Quote: "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
+> Reasoning: Candidate owns designing, modeling, documenting, and ensuring quality/reliability of datasets.
+
+**Run 3:** `absent` ✗
+> Quote: "bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
+> Reasoning: Quality/availability as dataset outcome requirement without explicit testing practice ownership or tool mention.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "fiables en termes de qualité et de disponibilité"
+> Reasoning: Operational reliability framing (availability, quality) without regulatory or compliance language
+
+**Run 2:** `moderate` ✓
+> Quote: "fiables en termes de qualité et de disponibilité"
+> Reasoning: Emphasis on reliability and availability signals operational concerns about data stability rather than purely delivery-focused or compliance-driven framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "fiables en termes de qualité et de disponibilité"
+> Reasoning: Operational reliability framing (quality and availability) without compliance or regulatory dominance.
+

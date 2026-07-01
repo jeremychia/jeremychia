@@ -77,5 +77,14 @@
       "Data Vault",
       "Microsoft BI-Stack"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Business Intelligence Lösungen im Microsoft Umfeld spezialisiert",
+  "ai_role_reasoning": "Standard BI specialist role with traditional data prep and visualization; no AI tools, GenAI responsibilities, or AI-ready infrastructure mentioned.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "The single-paragraph responsibilities section is entirely generic boilerplate — 'data preparation', 'connect data sources', 'create visualisations'",
+  "testing_framing_reasoning": "No testing ownership, quality governance, or data contract language; execution-oriented responsibilities without methodology specifics.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "No loss aversion framing detected",
+  "loss_aversion_framing_reasoning": "JD emphasizes delivery for internal departments; no compliance, regulatory, SLO, incident prevention, or stakeholder risk language."
 }

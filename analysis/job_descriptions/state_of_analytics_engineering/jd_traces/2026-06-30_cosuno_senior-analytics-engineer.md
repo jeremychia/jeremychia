@@ -229,3 +229,45 @@ Top-Notch Equipment: A new MacBook Pro to ensure you have the best tools for the
 > Reasoning: Role owns how to execute within defined scope (improve dbt models, maintain Looker, strengthen pipelines) rather than setting data strategy direction for the organization.
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "No AI tools mentioned; stack is dbt, Looker, Python, Postgres, BigQuery"
+> Reasoning: No AI tools, AI-first mindset, or AI infrastructure signals present; purely traditional data engineering stack.
+
+**Run 2:** `none` ✓
+> Quote: "Take ownership of our dbt pipeline... build custom Python scripts to automate the flows"
+> Reasoning: No AI coding tools or GenAI infrastructure mentioned; role uses traditional analytics engineering stack (dbt, Looker, BigQuery, Python).
+
+**Run 3:** `none` ✓
+> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on. Maintain and extend our Looker setup, and ship new dashboards and reports"
+> Reasoning: Traditional data stack (dbt, Looker, BigQuery, Python scripts) with no AI tool usage, AI-ready infrastructure, or GenAI responsibility signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
+> Reasoning: Role owns data quality and testing as core practices, treating models as production code requiring rigorous testing.
+
+**Run 2:** `responsibility` ✓
+> Quote: "you own your work from ingestion to dashboard... improving our data models so they're reliable, well-tested"
+> Reasoning: Candidate owns data quality and testing end-to-end with explicit 'production code' rigor and 'well-tested' models standards.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
+> Reasoning: Candidate owns data quality and testing as core responsibility with explicit ownership verb paired to reliability/testing outcomes.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "so the numbers we serve are ones we can stand behind; dashboards and reports that customers and other stakeholders depend on."
+> Reasoning: Data reliability framed around trustworthiness and stakeholder dependence, but no regulatory/compliance language; operational reliability dominates.
+
+**Run 2:** `moderate` ✓
+> Quote: "so the numbers we serve are ones we can stand behind... customers and other stakeholders depend on"
+> Reasoning: Stakeholder trust and business decision impact frame the role, but no regulatory/compliance dominance; B2B SaaS error impact is moderate, not high-risk.
+
+**Run 3:** `moderate` ✓
+> Quote: "the numbers we serve are ones we can stand behind; customers and other stakeholders depend on"
+> Reasoning: Trust and stakeholder confidence dominate, but framed as operational reliability (business decisions, stakeholder impact) rather than regulatory/compliance risk.
+

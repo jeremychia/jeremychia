@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks",
   "autonomy_level_reasoning": "The role has significant autonomy over individual projects and technical domain decisions but does not set overall analytics strategy or organizational direction.",
   "greenfield_vs_fix_quote": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
+  "ai_role_reasoning": "No mention of AI tools, GenAI development, or AI-ready infrastructure.",
+  "testing_framing": "tool_listed",
+  "testing_framing_quote": "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks",
+  "testing_framing_reasoning": "Testing frameworks mentioned as part of technical toolkit but without explicit ownership of quality practice.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets",
+  "loss_aversion_framing_reasoning": "Framed around performance delivery without operational reliability (SLOs, incidents) or compliance/trust concerns."
 }

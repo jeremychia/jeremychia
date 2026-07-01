@@ -186,3 +186,45 @@ Benefits:
 > Quote: "Collaborate across departments on data strategy"
 > Verified: ✓ found in JD
 > Reasoning: The phrasing 'collaborate on' rather than 'define' or 'own' strategy, combined with execution-focused tasks (manage, create, document, address), indicates the role executes work scoped by others rather than setting direction.
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Develop dbt semantic layer architecture"
+> Reasoning: Semantic layer infrastructure enables AI consumption (text-to-SQL, GenAI patterns).
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Develop dbt semantic layer architecture"
+> Reasoning: Semantic layer architecture provides AI-ready infrastructure for GenAI and analytics consumption.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Develop dbt semantic layer architecture"
+> Reasoning: Semantic layer is infrastructure AI consumes for natural language to SQL translation.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Create test cases for data accuracy"
+> Reasoning: Candidate owns quality practice through explicit test case creation.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Create test cases for data accuracy"
+> Reasoning: Candidate owns test creation, demonstrating responsibility for quality and data accuracy practices.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Create test cases for data accuracy"
+> Reasoning: Candidate owns test case creation as quality practice responsibility.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "secure multi-cloud platform for content security and governance"
+> Reasoning: Governance and security dominance signals compliance/trust-driven framing over operational reliability.
+
+**Run 2:** `high` ✓
+> Quote: "secure multi-cloud platform for content security and governance"
+> Reasoning: Governance and compliance framing indicates high loss aversion centered on trustworthiness and regulatory concerns.
+
+**Run 3:** `high` ✓
+> Quote: "secure multi-cloud platform for content security and governance"
+> Reasoning: Compliance and governance responsibilities indicate loss aversion centered on trust and regulatory concerns.
+

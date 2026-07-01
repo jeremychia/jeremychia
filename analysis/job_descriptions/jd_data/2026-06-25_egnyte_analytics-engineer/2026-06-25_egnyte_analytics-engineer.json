@@ -67,5 +67,14 @@
   "autonomy_level_quote": "Create test cases for data accuracy",
   "autonomy_level_reasoning": "The responsibilities are focused on delivering specific technical outputs and managing defined processes within scope rather than setting overall direction or strategy.",
   "greenfield_vs_fix_quote": "Design and build data transformation pipelines; Address data quality issues",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Develop dbt semantic layer architecture",
+  "ai_role_reasoning": "Semantic layer infrastructure enables AI consumption (text-to-SQL, GenAI patterns).",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Create test cases for data accuracy",
+  "testing_framing_reasoning": "Candidate owns quality practice through explicit test case creation.",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "secure multi-cloud platform for content security and governance",
+  "loss_aversion_framing_reasoning": "Governance and security dominance signals compliance/trust-driven framing over operational reliability."
 }

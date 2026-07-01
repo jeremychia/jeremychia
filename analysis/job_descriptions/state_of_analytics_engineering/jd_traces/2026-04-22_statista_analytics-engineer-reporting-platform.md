@@ -219,3 +219,46 @@ Statista's central Data team is building the foundation for a truly data-driven 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, develop, and deploy reports and dashboards powered by our Data Warehouse."
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI-ready infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics"
+> Reasoning: No mention of AI tools, AI-assisted coding, or GenAI infrastructure; focus is on data governance and standards.
+
+**Run 3:** `none` ✓
+> Quote: "Design, develop, and deploy reports and dashboards powered by our Data Warehouse"
+> Reasoning: No AI tools, skills, or infrastructure enablement mentioned; standard BI analytics delivery work
+
+
+### testing_framing
+**Run 1:** `absent` ✗
+> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics."
+> Reasoning: Quality is framed as a mindset and interest rather than owned responsibility for testing, data contracts, or quality assurance.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Improve consistency and usability of reports through establishing shared standards, templates, and best practices"
+> Reasoning: Ownership verb 'establish' applied to quality-related work (standards, best practices).
+
+**Run 3:** `responsibility` ✓
+> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics"
+> Reasoning: Candidate owns quality standards and governance practices, with explicit responsibility for establishing best practices and maintainability
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
+> Reasoning: Emphasis on trust, governance, and maintainability signals operational reliability concerns without explicit compliance or regulatory framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets"
+> Reasoning: Signals operational reliability concerns (maintainability, trust) without explicit compliance or regulatory framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets"
+> Reasoning: Trust and governance concerns present but balanced against delivery-focused modernization; reliability framed through standards rather than operational incidents
+

@@ -207,3 +207,46 @@ Hybrid schedule: in-office on Mondays, Tuesdays, and Thursdays. Flexible Wednesd
 > Reasoning: The repeated use of 'own' and 'owning' plus framing as a consultant who 'drives adoption' and 'establishes governance practices' indicates strategic direction-setting rather than execution of others' priorities.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'strategic']
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
+> Reasoning: Role requires building AI infrastructure foundations for automated reporting agents.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
+> Reasoning: Candidate builds infrastructure that AI systems consume, specifically implementing AI data agents and governance foundations.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
+> Reasoning: Candidate builds infrastructure for AI to consume (AI data agents, governance foundations).
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.' You will ensure models are reliable"
+> Reasoning: Candidate owns testing and quality of data models, with explicit responsibility for reliability.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Design, build, test, and own end-to-end data models; ensure models are reliable"
+> Reasoning: Candidate owns quality practice through explicit testing and ownership responsibilities with commitment to model reliability.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.' You will ensure models are reliable, well-documented, and aligned with business logic."
+> Reasoning: Candidate owns end-to-end quality and reliability of data models.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✗
+> Quote: "You will ensure models are reliable, well-documented, and aligned with business logic"
+> Reasoning: Operational reliability and model quality are primary concerns, though not framed as compliance or risk to stakeholders.
+
+**Run 2:** `none` ✓
+> Quote: "ensure models are reliable, well-documented, and aligned with business logic"
+> Reasoning: Framing focuses on delivery quality and strategic consulting value without compliance, regulatory, or trust-related loss-aversion language.
+
+**Run 3:** `none` ✓
+> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
+> Reasoning: Framing emphasizes strategic business value and delivery rather than operational risks or compliance concerns.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

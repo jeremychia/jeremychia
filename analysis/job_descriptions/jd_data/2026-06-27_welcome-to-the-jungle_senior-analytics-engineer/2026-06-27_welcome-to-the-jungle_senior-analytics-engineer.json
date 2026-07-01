@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Build-up our Data Warehouse by developing robust and efficient data pipelines and data models",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "developing robust and efficient data pipelines and data models",
+  "ai_role_reasoning": "All phrases describe standard data engineering work with no mention of AI coding tools, GenAI infrastructure, or AI-assisted development.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance",
+  "testing_framing_reasoning": "Standards and governance mentioned but no explicit testing responsibility verb or testing tools listed.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "developing robust and efficient data pipelines; applying the first levels of governance",
+  "loss_aversion_framing_reasoning": "Emphasis on 'robust' pipelines and operational governance indicates reliability concerns, though without explicit incident/SLO/stability language."
 }

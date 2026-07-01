@@ -202,3 +202,46 @@ Benefits:
 > Quote: "Support for Data Science/BI/ML teams with reliable data infrastructure"
 > Verified: ✓ found in JD
 > Reasoning: Emphasis on supporting, delivering, and implementing work rather than setting direction or defining analytics strategy.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build and optimize ELT pipelines; Support for Data Science/BI/ML teams with reliable data infrastructure"
+> Reasoning: No AI coding tools or GenAI infrastructure responsibilities mentioned; standard data engineering/analytics work
+
+**Run 2:** `none` ✓
+> Quote: "Support for Data Science/BI/ML teams with reliable data infrastructure"
+> Reasoning: Supporting ML teams with data infrastructure is operational support, not building AI-ready systems or using AI tools.
+
+**Run 3:** `none` ✓
+> Quote: "Build and optimize ELT pipelines; Support for Data Science/BI/ML teams"
+> Reasoning: No AI-specific skills, tools, or infrastructure requirements mentioned; traditional data engineering focus.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "CI/CD implementation for data workflows; data quality frameworks; quality tests; SLA management"
+> Reasoning: Candidate implements CI/CD and owns quality testing infrastructure with explicit SLA management accountability
+
+**Run 2:** `responsibility` ✓
+> Quote: "CI/CD implementation for data workflows; data quality frameworks; quality tests; SLA management"
+> Reasoning: Implementation and framework-building verbs paired with quality/tests indicate ownership of testing practices.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Build and optimize ELT pipelines and quality tests; CI/CD implementation for data workflows"
+> Reasoning: Candidate builds and implements quality tests and CI/CD pipelines with clear ownership verbs.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "reliable data infrastructure; SLA management; CI/CD implementation for data workflows"
+> Reasoning: Operational reliability and SLOs emphasized but no regulatory/compliance language dominates the framing
+
+**Run 2:** `moderate` ✓
+> Quote: "SLA management; reliable data infrastructure"
+> Reasoning: SLA and reliability language signal operational concerns, but absence of compliance/regulatory framing places this at moderate not high.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing detected"
+> Reasoning: JD emphasizes delivery and infrastructure quality without regulatory, compliance, or trust-based language.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

@@ -68,5 +68,14 @@
   "autonomy_level_quote": "You'll be active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues.",
   "autonomy_level_reasoning": "The role receives scoped work (user support, community advocacy, content creation) and executes it responsively, rather than defining direction or priorities for the analytics function.",
   "greenfield_vs_fix_quote": "Build and grow community",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "You'll stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)",
+  "ai_role_reasoning": "Company uses AI tools for its own analytics, but role doesn't require candidate to use AI coding tools or build AI infrastructure.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems.",
+  "testing_framing_reasoning": "Role emphasizes customer support and community engagement with no testing ownership, quality responsibility, or testing tools mentioned.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "You'll balance fast, practical solutions with thoughtful, strategic guidance on analytics architecture and process improvement.",
+  "loss_aversion_framing_reasoning": "Framing centers on practical delivery and architecture guidance; no operational reliability (SLOs, incidents) or compliance-driven (regulatory, audit, trustworthiness) concerns emphasized."
 }

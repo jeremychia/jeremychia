@@ -72,5 +72,14 @@
   "autonomy_level_quote": "Gather requirements and translate them into effective reporting and analytics solutions",
   "autonomy_level_reasoning": "The primary verbs (gather, create, contribute, translate) indicate responsive execution of others' requirements rather than strategic direction-setting.",
   "greenfield_vs_fix_quote": "Develop and implement a unified sustainability data platform integrating multiple sources; Improve data management processes",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design and operate scalable data pipelines within Microsoft Fabric",
+  "ai_role_reasoning": "Standard analytics engineering work (pipelines, dashboards, data platforms) with no mention of AI tools, GenAI infrastructure, or AI-assisted development.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "emphasis on data quality",
+  "testing_framing_reasoning": "Data quality is stated as a value without ownership language ('own', 'ensure', 'define', 'implement') or testing tools mentioned.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Structured and analytical manner with emphasis on data quality",
+  "loss_aversion_framing_reasoning": "Framing centers on analytical capability and quality standards without references to incidents, SLOs, compliance, regulatory concerns, or bad-data-to-stakeholder risks."
 }

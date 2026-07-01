@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Develop reusable patterns and shared design standards; Manage technical debt and enable sustainable evolution of data systems",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "No AI-related phrases present",
+  "ai_role_reasoning": "Standard data architecture and technical leadership work; no signals of AI tool usage or AI-enabled infrastructure.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Maintain architectural standards, data quality... Drive improvements in data product quality, documentation, and observability",
+  "testing_framing_reasoning": "Candidate owns quality practices through ownership verbs ('maintain', 'drive improvements') paired with quality/standards domains.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Maintain... operational excellence... Manage technical debt and enable sustainable evolution",
+  "loss_aversion_framing_reasoning": "Operational reliability framing (excellence, technical debt) present but without compliance or stakeholder-trust dominance."
 }

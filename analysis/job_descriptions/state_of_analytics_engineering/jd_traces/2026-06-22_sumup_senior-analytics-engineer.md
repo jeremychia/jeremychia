@@ -206,3 +206,45 @@ Not explicitly listed — technical requirements folded into required qualificat
 > Reasoning: Responsibilities emphasize maintaining existing systems, supporting squads, and applying established conventions, with direction set by partners rather than by the role.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: ""
+> Reasoning: No AI tools, infrastructure, or GenAI responsibilities mentioned; standard analytics engineering and domain modeling work.
+
+**Run 2:** `none` ✓
+> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring, building well-documented, quality-assured data products"
+> Reasoning: Standard analytics engineering work with no AI tooling, AI-first mindset, or GenAI infrastructure signals.
+
+**Run 3:** `none` ✓
+> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
+> Reasoning: Standard analytics engineering work without AI tool or infrastructure expectations
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "building well-documented, quality-assured data products"
+> Reasoning: Candidate owns building and quality assurance of data products, with explicit ownership verb paired with quality expectation.
+
+**Run 2:** `responsibility` ✓
+> Quote: "keeping domain outputs consistent, tested, and discoverable"
+> Reasoning: Candidate owns quality practice through direct mention of testing and consistency as deliverable responsibilities.
+
+**Run 3:** `responsibility` ✓
+> Quote: "keeping domain outputs consistent, tested, and discoverable"
+> Reasoning: Candidate owns testing and quality assurance responsibilities explicitly
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "keeping domain outputs consistent, tested, and discoverable"
+> Reasoning: Emphasis on operational consistency and discoverability suggests reliability and pipeline maintenance concerns rather than compliance/audit-primary framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
+> Reasoning: Operational reliability emphasized through data contracts and pipeline stability, but no regulatory or compliance framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "governed domains"
+> Reasoning: Data governance and quality concerns drive the role, but no explicit compliance or regulatory framing
+
