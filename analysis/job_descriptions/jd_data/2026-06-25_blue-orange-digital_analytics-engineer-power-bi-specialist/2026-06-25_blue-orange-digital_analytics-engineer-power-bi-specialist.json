@@ -67,5 +67,14 @@
   "autonomy_level_quote": "Support user enablement and UAT validation",
   "autonomy_level_reasoning": "The role is scoped to a defined 26-week implementation project with support-oriented language ('support') and stakeholder-driven requirements, indicating execution within set parameters rather than strategic direction-setting.",
   "greenfield_vs_fix_quote": "Design and construct Microsoft Fabric Semantic Models; Develop operational dashboards; Establish naming conventions and governance standards",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design and construct Microsoft Fabric Semantic Models; Develop operational dashboards; lead analytics and visualization components",
+  "ai_role_reasoning": "Standard BI/analytics work with no AI tool usage or GenAI infrastructure building requirements",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Support user enablement and UAT validation",
+  "testing_framing_reasoning": "Testing mentioned passively as support activity, not as owned quality practice or listed tool",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Trader P&L, Global Position, Risk Metrics (VaR), and Financial Consolidation reporting; Establish naming conventions and governance standards",
+  "loss_aversion_framing_reasoning": "Operational reliability focus in high-stakes financial/risk domain (VaR, trading) with governance emphasis, but no explicit compliance or regulatory framing"
 }

@@ -208,3 +208,48 @@ You are a strong cross-functional collaborator with a good business sense and ex
 > Reasoning: Explicit ownership language combined with 'sparring partner' positioning and involvement in prioritizing analytics engineering roadmaps indicates strategic ownership of the analytics engineering function.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build, expand and maintain reusable data models and metrics in dbt"
+> Reasoning: Standard data modeling work with no AI skill expectations.
+
+**Run 2:** `ai_enabler` ✗
+> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions"
+> Reasoning: Feature store and advanced solutions infrastructure indicates building systems that AI/ML models consume.
+
+**Run 3:** `none` ✓
+> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees"
+> Reasoning: No explicit AI infrastructure, tool usage, or GenAI responsibility signals.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'none']
+
+### testing_framing
+**Run 1:** `absent` ✗
+> Quote: "ensure data integrity and efficiency across all processes"
+> Reasoning: Data integrity mentioned but no explicit quality/testing ownership or data contracts responsibility.
+
+**Run 2:** `responsibility` ✓
+> Quote: "ensure data integrity and efficiency across all processes"
+> Reasoning: Ownership verb 'ensure' paired with data integrity establishes quality as primary responsibility.
+
+**Run 3:** `responsibility` ✓
+> Quote: "ensure data integrity and efficiency across all processes"
+> Reasoning: Ownership verb 'ensure' combined with 'data integrity' indicates quality practice responsibility.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `none` ✗
+> Quote: "long-term business needs"
+> Reasoning: Delivery-focused framing without compliance, regulatory, incident, or SLO-driven risk language.
+
+**Run 2:** `moderate` ✓
+> Quote: "Follow system design and architectural best practices to ensure data integrity"
+> Reasoning: Operational reliability framing (best practices, data integrity) without regulatory/compliance language.
+
+**Run 3:** `moderate` ✓
+> Quote: "ensure data integrity and efficiency across all processes"
+> Reasoning: Data integrity emphasis suggests operational reliability concern without explicit compliance or incident framing.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

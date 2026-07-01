@@ -77,5 +77,14 @@
       "data validation",
       "transformation logic"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "dbt, Dagster, Power BI",
+  "ai_role_reasoning": "Traditional data engineering stack with no AI coding tools, AI infrastructure, or generative AI mentioned.",
+  "testing_framing": "tool_listed",
+  "testing_framing_quote": "maintaining code through CI/CD pipelines",
+  "testing_framing_reasoning": "CI/CD named in responsibilities but framed as maintenance execution, not ownership of quality practice.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "data errors affect statutory benefit payments and regulatory compliance",
+  "loss_aversion_framing_reasoning": "Regulatory and compliance impact on statutory social security benefits dominates risk framing."
 }

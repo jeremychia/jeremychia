@@ -217,3 +217,47 @@ Join our team as an Analytics Engineer, where you'll ensure our data is clean, a
 > Reasoning: The role receives a pre-scoped domain and executes against analytical and reporting needs defined by collaborative stakeholders rather than setting strategic direction.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Apply software engineering practices to analytics code, including version control, testing, and continuous integration."
+> Reasoning: Lists software engineering practices without mentioning AI tools or infrastructure requirements.
+
+**Run 2:** `none` ✓
+> Quote: "No AI signal across phrases"
+> Reasoning: Standard analytics engineering work (data modeling, SQL/dbt, infrastructure) with no mention of AI coding tools, AI-first mindset, or AI-enabled infrastructure.
+
+**Run 3:** `none` ✓
+> Quote: ""
+> Reasoning: No AI tools (Copilot, Claude Code, Cursor) or AI infrastructure responsibilities mentioned in the JD.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Apply software engineering practices to analytics code, including version control, testing, and continuous integration."
+> Reasoning: Candidate owns testing as explicit software engineering practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Apply software engineering practices to analytics code, including version control, testing, and continuous integration."
+> Reasoning: Candidate expected to apply testing practices as part of software engineering responsibility for analytics code.
+
+**Run 3:** `tool_listed` ✗
+> Quote: "Apply software engineering practices to analytics code, including version control, testing, and continuous integration."
+> Reasoning: Testing is mentioned as part of SE practices to apply, but without explicit ownership verbs (own/ensure/define/implement/establish).
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'responsibility', 'tool_listed']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✗
+> Quote: "ensuring our data is clean, accessible, and ready for analysis"
+> Reasoning: Protective framing around data quality indicates operational reliability concern.
+
+**Run 2:** `none` ✓
+> Quote: "ensuring our data is clean, accessible, and ready for analysis; ensure data infrastructure effectively supports analytics"
+> Reasoning: Framing emphasizes data quality and usability to enable good analysis, not operational risk avoidance or compliance concerns.
+
+**Run 3:** `none` ✓
+> Quote: "ensuring our data is clean, accessible, and ready for analysis"
+> Reasoning: Data quality framed as enablement and readiness for analysis, not as risk prevention or compliance imperative.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

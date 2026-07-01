@@ -202,3 +202,45 @@ Not specified in the posting.
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Reasoning: SQLMesh is a data orchestration tool; no mention of AI infrastructure, GenAI, or AI-assisted coding.
+
+**Run 2:** `none` ✓
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Reasoning: No AI tools, AI-first mindset, or AI infrastructure signals; standard data modeling work.
+
+**Run 3:** `none` ✓
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Reasoning: Uses SQLMesh (data tool) but no AI coding tools, AI-first mindset, or GenAI responsibilities evident.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement quality assurance protocols for financial data"
+> Reasoning: Verb 'implement' with 'quality assurance protocols' establishes ownership of quality practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement quality assurance protocols for financial data"
+> Reasoning: Candidate owns and implements quality assurance protocols (responsibility verb + quality domain).
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement quality assurance protocols for financial data"
+> Reasoning: Direct ownership verb 'implement' paired with quality assurance as core responsibility.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Reasoning: Financial domain (revenue recognition) implies operational reliability risk without explicit compliance or regulatory framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "revenue recognition and subscription metrics"
+> Reasoning: Financial domain with regulated metrics indicates operational reliability concern, but no explicit compliance or audit framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Implement quality assurance protocols for financial data"
+> Reasoning: Financial domain quality protocols suggest operational reliability concern (preventing incorrect data impacting business) rather than compliance-driven framing.
+

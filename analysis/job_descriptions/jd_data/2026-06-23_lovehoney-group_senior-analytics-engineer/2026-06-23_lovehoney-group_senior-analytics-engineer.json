@@ -68,5 +68,14 @@
   "autonomy_level_quote": "leading tool selection, technology evaluation, and architectural roadmap development",
   "autonomy_level_reasoning": "Strategic verbs like 'lead' and 'drive,' combined with responsibilities for defining tool selection and architectural roadmap, indicate the role is expected to set direction for the data platform rather than execute direction set by others.",
   "greenfield_vs_fix_quote": "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development",
+  "ai_role_reasoning": "No mention of AI coding tools, GenAI capabilities, or AI-ready data infrastructure; role is architectural but tool-agnostic.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Implement enterprise-level data quality strategies and governance frameworks across the organisation",
+  "testing_framing_reasoning": "Uses implement + data quality indicating candidate owns quality practice and governance, not just using tools.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "enterprise-level data quality strategies and governance frameworks",
+  "loss_aversion_framing_reasoning": "Governance and data quality framing suggest operational reliability and pipeline stability concerns, but no regulatory/compliance-dominant language."
 }

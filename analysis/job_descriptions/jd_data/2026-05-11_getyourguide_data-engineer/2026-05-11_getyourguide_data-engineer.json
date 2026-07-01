@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Serve as a thought partner with Product and Data teams to translate business requirements",
   "autonomy_level_reasoning": "The role receives and translates business requirements from Product, then executes solutions, rather than setting strategic direction for the analytics function.",
   "greenfield_vs_fix_quote": "Maintain balance between operational responsibilities and new development using team SLOs",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "",
+  "ai_role_reasoning": "No mention of AI tools, AI-first mindset, or AI infrastructure responsibilities.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "best practices in code quality, data modeling, testing, and monitoring; Deliver reliable, high-quality datasets/pipelines",
+  "testing_framing_reasoning": "Testing and quality ownership implied through 'best practices' language and 'deliver reliable, high-quality' expectations; candidate owns solution quality.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Maintain balance between operational responsibilities and new development using team SLOs",
+  "loss_aversion_framing_reasoning": "SLOs signal operational reliability and incident prevention concerns, but lack compliance/regulatory or data-trust framing."
 }

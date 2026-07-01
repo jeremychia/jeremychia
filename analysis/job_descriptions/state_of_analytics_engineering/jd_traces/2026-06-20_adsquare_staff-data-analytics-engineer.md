@@ -211,3 +211,45 @@
 > Reasoning: The role emphasizes technical leadership, architectural decision-making, and establishing standards rather than executing work defined by others.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build data products leveraging location signals and audience attributes"
+> Reasoning: Data product work described without AI tools or AI-enabling infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "Build data products leveraging location signals and audience attributes; Design horizontally scalable, cost-efficient, production-grade data solutions"
+> Reasoning: No signals for AI tool usage (Copilot, Claude Code, Cursor) or building AI infrastructure; standard data engineering work.
+
+**Run 3:** `none` ✓
+> Quote: ""
+> Reasoning: No mentions of AI tools, AI-assisted coding, or AI infrastructure responsibilities
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Champion software engineering principles including TDD and CI/CD workflows"
+> Reasoning: Candidate champions TDD, indicating ownership of quality and testing practices.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Champion software engineering principles including TDD and CI/CD workflows"
+> Reasoning: Candidate owns testing practice—'Champion' verb paired with TDD indicates responsibility for establishing quality standards.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Champion software engineering principles including TDD and CI/CD workflows"
+> Reasoning: Champion verb + TDD explicitly signals direct ownership of testing and quality practices
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets"
+> Reasoning: Technical capability requirements described without operational risk, SLO, or compliance framing.
+
+**Run 2:** `none` ✓
+> Quote: "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets"
+> Reasoning: Framing emphasizes capability and architectural robustness rather than fear of incidents, compliance failures, or stakeholder-facing data issues.
+
+**Run 3:** `none` ✓
+> Quote: "Build data products leveraging location signals and audience attributes"
+> Reasoning: All phrases emphasize delivery, scalability, and technical leadership without reliability incidents or compliance concerns
+

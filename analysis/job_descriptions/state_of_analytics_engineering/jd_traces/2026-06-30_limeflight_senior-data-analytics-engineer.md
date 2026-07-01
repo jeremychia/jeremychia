@@ -222,3 +222,46 @@ Hiring Process: Four stages including recruiter screen, manager interview, techn
 > Reasoning: End-to-end ownership with responsibility for defining architecture and reducing technical debt indicates strategic autonomy to shape the platform direction rather than executing scoped work.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
+> Reasoning: Data platform infrastructure role with named tools but no AI capabilities (coding assistants, GenAI, semantic models) in scope.
+
+**Run 2:** `none` ✓
+> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
+> Reasoning: No AI tooling (Copilot, Claude Code) or GenAI infrastructure mentioned; stack is traditional data tools.
+
+**Run 3:** `none` ✓
+> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
+> Reasoning: No AI coding tools, AI-ready infrastructure, or GenAI responsibilities mentioned.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Build CI/CD, testing, and versioning for pipelines"
+> Reasoning: Candidate owns testing implementation with explicit ownership verb ('Build') for CI/CD and testing practices.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Build CI/CD, testing, and versioning for pipelines"
+> Reasoning: Ownership verb 'build' applied to testing and quality; testing is core deliverable not just tooling.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Build CI/CD, testing, and versioning for pipelines"
+> Reasoning: Candidate explicitly owns CI/CD, testing, and versioning responsibilities.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Ensure data quality, reliability, observability, and performance"
+> Reasoning: Operational reliability concerns (reliability, observability, performance) dominate without regulatory or compliance framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Ensure data quality, reliability, observability, and performance"
+> Reasoning: Operational reliability concerns (quality, observability, consistency) dominate; customer-facing BI adds business-decision risk but no regulatory/compliance language detected.
+
+**Run 3:** `none` ✗
+> Quote: "Ensure data quality, reliability, observability, and performance"
+> Reasoning: Responsibilities focus on delivery and operations without regulatory compliance or trustworthiness as primary framing.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

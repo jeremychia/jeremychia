@@ -201,3 +201,46 @@ Benefits Package
 > Quote: "Designing dimensional data models following Kimball methodology"
 > Verified: ✓ found in JD
 > Reasoning: While the role includes design autonomy within technical domains, it operates within an established framework (Kimball methodology) without explicit responsibility for defining analytics strategy or direction.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "dbt, Dagster, Power BI"
+> Reasoning: Traditional data engineering stack with no AI coding tools, AI infrastructure, or generative AI mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "Developing stratified transformation logic with dbt, focused on maintainability, performance and profitability; Implementing data orchestration via Dagster for reliable delivery; Designing dimensional data models following Kimball methodology"
+> Reasoning: No AI skills or infrastructure mentioned; standard data transformation and modeling work.
+
+**Run 3:** `none` ✓
+> Quote: "Developing stratified transformation logic with dbt, focused on maintainability, performance and profitability; Implementing data orchestration via Dagster for reliable delivery; Designing dimensional data models following Kimball methodology"
+> Reasoning: No AI/GenAI tools or capabilities mentioned; standard data platform stack uses traditional tools (dbt, Dagster, Kimball).
+
+
+### testing_framing
+**Run 1:** `tool_listed` ✓
+> Quote: "maintaining code through CI/CD pipelines"
+> Reasoning: CI/CD named in responsibilities but framed as maintenance execution, not ownership of quality practice.
+
+**Run 2:** `tool_listed` ✓
+> Quote: "maintaining code through CI/CD pipelines"
+> Reasoning: CI/CD is mentioned as part of the technical stack but without explicit ownership verbs for quality practice.
+
+**Run 3:** `tool_listed` ✓
+> Quote: "maintaining code through CI/CD pipelines"
+> Reasoning: CI/CD pipeline explicitly in responsibilities but within maintenance execution, not ownership of quality practice.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✗
+> Quote: "data errors affect statutory benefit payments and regulatory compliance"
+> Reasoning: Regulatory and compliance impact on statutory social security benefits dominates risk framing.
+
+**Run 2:** `none` ✓
+> Quote: "Responsibilities are dominated by rigour signals — 'maintainability', 'reliable delivery', 'data validation', 'CI/CD', 'quality' — with no velocity phrases present"
+> Reasoning: JD frames responsibilities around delivery and quality execution without loss-aversion language around regulatory risk or compliance failures.
+
+**Run 3:** `none` ✓
+> Quote: "focused on maintainability, performance and profitability"
+> Reasoning: Framing emphasizes delivery outcomes (maintainability, performance, profitability) without compliance/regulatory/incident-prevention risk signals.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'none', 'none']

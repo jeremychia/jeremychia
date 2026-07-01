@@ -194,3 +194,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Architect, build, and maintain efficient and reliable data models and pipelines"
+> Reasoning: No mention of AI tools, GenAI infrastructure, or AI-first approach; standard data engineering work.
+
+**Run 2:** `none` ✓
+> Quote: "Architect, build, and maintain efficient and reliable data models and pipelines"
+> Reasoning: Standard data engineering work with no AI tools, GenAI responsibilities, or AI-ready infrastructure signals.
+
+**Run 3:** `none` ✓
+> Quote: "Converting Finance requirements into technical solutions"
+> Reasoning: No mention of AI tools, infrastructure, or mindset; standard analytical/technical work.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implementing quality assurance checks to enhance reporting consistency"
+> Reasoning: Active ownership verb (implementing) paired with quality practice (assurance checks).
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implementing quality assurance checks to enhance reporting consistency"
+> Reasoning: Candidate owns QA implementation—active ownership verb 'Implementing' paired with direct quality/consistency ownership.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implementing quality assurance checks to enhance reporting consistency"
+> Reasoning: Explicit implementation ownership of QA checks indicates responsibility for quality practices.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Architect, build, and maintain efficient and reliable data models and pipelines"
+> Reasoning: Emphasizes reliability as core concern, reflecting operational stability focus without regulatory or compliance dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "Implementing quality assurance checks to enhance reporting consistency"
+> Reasoning: QA framing reflects operational reliability concern—preventing data inconsistency/quality failures rather than compliance-driven trust.
+
+**Run 3:** `moderate` ✓
+> Quote: "Architect, build, and maintain efficient and reliable data models and pipelines"
+> Reasoning: Emphasis on reliability and maintenance reflects operational concerns typical of moderate loss-aversion framing.
+

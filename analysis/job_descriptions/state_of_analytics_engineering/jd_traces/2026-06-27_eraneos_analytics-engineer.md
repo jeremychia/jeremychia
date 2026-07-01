@@ -189,3 +189,46 @@ Contact: Ekaterina Korolkova – career.de@eraneos.com – +49 40 809 081-172
 > Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
 > Verified: ✓ found in JD
 > Reasoning: Responsibilities focus on implementing and delivering data solutions (building, maintaining, implementing) rather than defining the overall analytics strategy or direction.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "begleiten unsere Kunden – vorwiegend DAX- und Fortune-500-Unternehmen – auf ihrem Weg der analytischen und KI-gestützten Transformation"
+> Reasoning: Company context is AI-first transformation, but no signal the candidate builds AI infra or uses AI coding tools.
+
+**Run 2:** `none` ✓
+> Quote: "begleiten unsere Kunden... auf ihrem Weg der analytischen und KI-gestützten Transformation"
+> Reasoning: Company context includes AI transformation, but AE responsibilities are standard data engineering (dbt pipelines, dimensional models).
+
+**Run 3:** `ai_enabler` ✗
+> Quote: "Enge Zusammenarbeit mit Analytics- und Data-Science-Teams"
+> Reasoning: Builds data models and pipelines that Data Science teams consume as infrastructure for AI work.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'none', 'ai_enabler']
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Reasoning: Reliability and performance expectations stated, but no explicit testing responsibility or tool signals.
+
+**Run 2:** `absent` ✓
+> Quote: "No explicit testing signal or ownership phrase in these responsibilities"
+> Reasoning: Data reliability mentioned but without testing tool listing or quality practice ownership verb.
+
+**Run 3:** `absent` ✓
+> Quote: ""
+> Reasoning: No testing ownership verbs (own/ensure/define/implement) or testing tools mentioned.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Reasoning: Operational reliability concerns (reliable data delivery, performance) signal SLO/pipeline stability focus without regulatory/compliance framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Reasoning: Operational reliability and performance of data delivery is primary framing concern (no compliance/audit/trust signals).
+
+**Run 3:** `moderate` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Reasoning: Operational reliability and performance optimization signal SLO/pipeline stability concerns.
+

@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Define, build, and maintain the KPIs that drive business performance",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Own analytics across Doodle's self serve Product Led Growth business",
+  "ai_role_reasoning": "Core analytics role with no mention of AI tools, AI-assisted coding, or GenAI infrastructure.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Define, build, and maintain the KPIs that drive business performance",
+  "testing_framing_reasoning": "Role emphasizes KPI ownership and decision enablement without explicit testing, quality, or data contract language.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "data errors affect business decisions without regulatory or financial reporting consequences",
+  "loss_aversion_framing_reasoning": "Operational reliability concern (data affecting business decisions) explicitly excludes regulatory or compliance consequences."
 }

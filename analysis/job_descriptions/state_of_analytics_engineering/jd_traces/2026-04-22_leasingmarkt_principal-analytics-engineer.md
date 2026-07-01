@@ -230,3 +230,47 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 > Reasoning: Repeated use of directive verbs (define, set, lead, drive) in the opening responsibilities establishes this as a principal IC role expected to set organizational technical direction and strategy, not execute direction set by others.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights"
+> Reasoning: Candidate builds semantic infrastructure (models, assets) that AI systems consume
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Optimise AWS cloud-native services (Glue, Athena, S3, MWAA) to support scalable analytical and AI workloads"
+> Reasoning: Candidate builds data platform infrastructure that AI systems consume.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights; support scalable analytical and AI workloads"
+> Reasoning: Candidate builds semantic infrastructure and cloud systems explicitly designed for AI consumption and AI-powered workflows.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Mentor analytics engineers and analysts on modeling skills and technical standards"
+> Reasoning: No mention of testing ownership, data contracts, or quality practice responsibility
+
+**Run 2:** `responsibility` ✗
+> Quote: "Set technical direction and drive adoption of modern modeling practices across the organization"
+> Reasoning: Candidate owns definition and establishment of technical practices including quality standards.
+
+**Run 3:** `absent` ✓
+> Quote: "No explicit signal"
+> Reasoning: JD mentions technical standards and modern practices but lacks responsibility verbs (own/ensure/define/implement) paired with testing/quality/data contracts.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Data privacy, security, and compliance knowledge"
+> Reasoning: Compliance and regulatory trust are core role requirements, not operational secondary concerns
+
+**Run 2:** `high` ✓
+> Quote: "Data privacy, security, and compliance knowledge"
+> Reasoning: Compliance and regulatory concerns dominate the role framing.
+
+**Run 3:** `moderate` ✗
+> Quote: "Data privacy, security, and compliance knowledge; strong focus on scalability, clarity and long-term robustness"
+> Reasoning: Compliance knowledge and robustness emphasis indicate operational/regulatory risk awareness, but primary framing remains delivery-focused architecture and practice adoption.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']

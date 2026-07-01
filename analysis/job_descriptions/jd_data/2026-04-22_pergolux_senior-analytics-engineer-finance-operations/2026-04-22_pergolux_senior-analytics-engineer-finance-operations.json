@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting",
   "autonomy_level_reasoning": "Verbs like 'leading', 'establishing', and 'designing' paired with responsibility for aligning metrics and shaping decision-making indicate strategic direction-setting rather than execution of prescribed work.",
   "greenfield_vs_fix_quote": "establishing the foundation for all financial reporting",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "",
+  "ai_role_reasoning": "No mention of AI tools, AI-assisted coding, or AI infrastructure responsibilities.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting",
+  "testing_framing_reasoning": "Candidate leads data integration and establishes financial reporting foundation, indicating ownership of data quality and integrity practices.",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA",
+  "loss_aversion_framing_reasoning": "Single source of truth for critical financial metrics to leadership teams reflects regulatory/audit concerns and high business impact of data quality failures."
 }

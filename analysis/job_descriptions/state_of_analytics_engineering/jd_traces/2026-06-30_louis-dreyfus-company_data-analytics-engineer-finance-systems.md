@@ -198,3 +198,46 @@ Bachelor's or Master's degree in Computer Science, Information Systems, Engineer
 > Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
 > Verified: ✓ found in JD
 > Reasoning: The primary responsibilities emphasize receiving and executing against requirements set by Finance teams and external experts, not setting direction or strategy for the platform.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Support LDC's OneStream-based Enterprise Performance Management platform; Daily P&L, Actuals, Forecasting, Group Reporting"
+> Reasoning: No AI tools, methodologies, or infrastructure mentioned; work centers entirely on traditional EPM platform support and financial reporting
+
+**Run 2:** `none` ✓
+> Quote: "N/A"
+> Reasoning: No explicit AI skill, tool usage, or AI-adjacent responsibility mentioned in job description.
+
+**Run 3:** `none` ✓
+> Quote: "Support LDC's OneStream-based Enterprise Performance Management platform; Support financial reporting; Troubleshoot platform issues; Participate in testing"
+> Reasoning: No AI tools, AI-first mindset, or AI infrastructure signals; standard Finance/EPM implementation and support work.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Troubleshoot platform issues; Participate in testing"
+> Reasoning: Testing is mentioned as a participation activity but without ownership responsibility or specific quality tools named
+
+**Run 2:** `absent` ✓
+> Quote: "Participate in testing"
+> Reasoning: Testing mentioned as participant activity without ownership responsibility or specific tool requirement.
+
+**Run 3:** `absent` ✓
+> Quote: "Participate in testing"
+> Reasoning: Testing mentioned as activity but without ownership verbs (own/ensure/define/implement) and no specific testing tools named.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes"
+> Reasoning: Financial reporting in a regulated context creates high compliance and stakeholder trust requirements; accuracy and governance dominate the framing
+
+**Run 2:** `moderate` ✗
+> Quote: "Optimize system performance and improve reliability of financial processes"
+> Reasoning: Risk framing emphasizes operational reliability and accuracy rather than regulatory compliance or audit-driven trust concerns.
+
+**Run 3:** `high` ✓
+> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes"
+> Reasoning: Financial reporting combined with emphasis on accuracy and reliability in regulated commodities context signals regulatory/audit risk; data trustworthiness is primary framing.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']

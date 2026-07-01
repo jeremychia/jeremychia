@@ -67,5 +67,14 @@
   "autonomy_level_quote": "Act as principal architect for the squad, championing test-driven development practices and engineering excellence",
   "autonomy_level_reasoning": "The 'principal architect' title combined with responsibility to champion practices indicates direction-setting and standards-setting authority, not execution of work scoped by others.",
   "greenfield_vs_fix_quote": "Build data observability frameworks for multi-terabyte data streams and Cross-squad collaboration solving architectural challenges",
-  "urgency_signal": "ASAP"
+  "urgency_signal": "ASAP",
+  "ai_role": "none",
+  "ai_role_quote": "",
+  "ai_role_reasoning": "No signals of AI usage, AI-first approach, or AI infrastructure building in the job description.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "championing test-driven development practices and engineering excellence",
+  "testing_framing_reasoning": "Candidate owns and champions TDD practices, indicating direct responsibility for quality and testing culture.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Build data observability frameworks for multi-terabyte data streams",
+  "loss_aversion_framing_reasoning": "Operational reliability concern through data observability infrastructure suggests moderate loss-aversion framing around pipeline stability."
 }

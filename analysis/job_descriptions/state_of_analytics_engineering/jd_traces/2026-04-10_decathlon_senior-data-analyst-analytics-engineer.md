@@ -235,3 +235,46 @@
 > Reasoning: Responsibilities emphasize supporting and executing defined analytics work (building data marts, designing dashboards) in service of franchisee needs rather than setting strategic direction.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build data marts and business layers using dbt on Databricks"
+> Reasoning: No AI tool usage, infrastructure for AI consumption, or AI-first expectations; standard analytics engineering work with dbt.
+
+**Run 2:** `none` ✓
+> Quote: "Code complex business logic (royalties, taxable turnover, margins)"
+> Reasoning: No mentions of AI tools or AI infrastructure responsibilities.
+
+**Run 3:** `none` ✓
+> Quote: "Build data marts and business layers using dbt on Databricks"
+> Reasoning: No AI tools, AI-first practices, or AI infrastructure responsibilities mentioned; dbt is standard data infrastructure.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "No testing-related signal in provided phrases"
+> Reasoning: No mention of testing tools, quality ownership, or data contracts.
+
+**Run 2:** `absent` ✓
+> Quote: "Build data marts and business layers using dbt on Databricks"
+> Reasoning: No testing tools listed and no quality ownership verbs (own/ensure/define/implement).
+
+**Run 3:** `absent` ✓
+> Quote: "Code complex business logic (royalties, taxable turnover, margins)"
+> Reasoning: Complex logic implementation is required but no testing responsibility, quality ownership, or data contract practices are explicitly stated.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Implement row-level security; Support franchise partners' decisions regarding stock, supply chain, and pricing"
+> Reasoning: Security requirement and emphasis on data supporting critical franchise business decisions signal operational trust/reliability concerns, but lack explicit regulatory or audit framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Implement row-level security"
+> Reasoning: Security requirement and support for critical franchise decisions (pricing, supply) signal operational reliability concern without compliance/regulatory framing.
+
+**Run 3:** `high` ✗
+> Quote: "Implement row-level security"
+> Reasoning: Security controls and financial data correctness (royalties, taxable turnover) frame trustworthiness and compliance as primary concerns for supporting external partner decisions.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']

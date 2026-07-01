@@ -201,3 +201,45 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 > Quote: "Provide analytical support to our Acquisition team"
 > Verified: ✓ found in JD
 > Reasoning: The role is framed as providing support and contributing to predefined projects rather than setting direction or defining analytics strategy.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "identifying key trends and helping form actionable insight on issues, opportunities and performance drivers using large datasets"
+> Reasoning: Standard analytics work with no AI tools, infrastructure, or text-to-SQL mentioned; purely traditional BI approach.
+
+**Run 2:** `none` ✓
+> Quote: "identifying key trends and helping form actionable insight on issues, opportunities and performance drivers"
+> Reasoning: No AI tools (Copilot/Claude/Cursor), AI-first mindset, or AI infrastructure mentions; pure analytics work
+
+**Run 3:** `none` ✓
+> Quote: "identifying key trends and helping form actionable insight on issues, opportunities and performance drivers using large datasets"
+> Reasoning: Role relies on traditional data analysis without requiring AI tool proficiency or infrastructure for AI consumption.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Responsibilities are generic boilerplate ('collaborate with business stakeholders', 'identify performance trends', 'present findings') with no scale numbers, named models, or tool-specific context"
+> Reasoning: No ownership verbs for quality/testing; role is ad-hoc support without defined testing responsibilities or framework.
+
+**Run 2:** `absent` ✓
+> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
+> Reasoning: Quality-focused language present but no ownership verbs (own/ensure/define/implement) and no testing tools listed
+
+**Run 3:** `absent` ✓
+> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
+> Reasoning: JD describes analytical output and delivery without mentioning testing ownership, data contracts, or quality assurance responsibilities.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "The dominant verbs are 'support', 'contribute to', and 'collaborate', placing the role in a delivery/execution orientation with no strategic ownership language."
+> Reasoning: Framing is pure delivery/execution despite regulated gambling context; no compliance, audit, or trustworthiness language dominates the JD.
+
+**Run 2:** `none` ✓
+> Quote: "revenue impacts of changes to products and processes"
+> Reasoning: Financial consequence framing (delivery impact) without compliance, regulatory, or trust-dominance language despite regulated gambling context
+
+**Run 3:** `none` ✓
+> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
+> Reasoning: Framing emphasizes delivery and support with no regulatory, compliance, or trustworthiness language despite company's regulated status.
+

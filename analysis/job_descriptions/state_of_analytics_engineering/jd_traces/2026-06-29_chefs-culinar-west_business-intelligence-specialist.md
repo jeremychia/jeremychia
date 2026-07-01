@@ -194,3 +194,45 @@ Source: https://www.meine-karriere-im-handel.de/stellenangebot/6010
 > Quote: "Implementing and optimising ETL/ELT processes for integrating various data sources"
 > Verified: ✓ found in JD
 > Reasoning: The role describes delivery of defined infrastructure tasks (implementing, optimizing) without language about setting priorities, defining strategy, or shaping organizational direction.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "developing high-performance dashboards and reports with Power BI; ETL/ELT processes"
+> Reasoning: No mention of AI coding tools (Copilot, Claude Code) or AI infrastructure responsibilities (semantic models, GenAI).
+
+**Run 2:** `none` ✓
+> Quote: "developing high-performance dashboards and reports with Power BI; ETL/ELT processes for integrating various data sources"
+> Reasoning: Standard BI and ETL tool stack with no AI/GenAI skill expectations or AI infrastructure requirements.
+
+**Run 3:** `none` ✓
+> Quote: "No AI tool or GenAI mentions across JD"
+> Reasoning: No signals for AI coding tools (Copilot, Claude Code, Cursor) or AI infrastructure building responsibilities.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "ensuring data quality and governance"
+> Reasoning: Candidate owns quality practice through the verb 'ensuring' paired with data quality and governance.
+
+**Run 2:** `responsibility` ✓
+> Quote: "ensuring data quality and governance"
+> Reasoning: Ownership verb (ensuring) explicitly ties candidate to data quality and governance practices.
+
+**Run 3:** `responsibility` ✓
+> Quote: "ensuring data quality and governance"
+> Reasoning: Ownership verb 'ensuring' + quality practice framing indicates candidate owns data quality work.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "supplier to hospitality and catering sectors; ensuring data quality and governance"
+> Reasoning: Role impacts business decisions in a supply chain context but lacks compliance or regulatory language, indicating operational reliability concern rather than high-compliance framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "ensuring data quality and governance"
+> Reasoning: Operational reliability framing (data quality affects business decisions) without explicit compliance or regulatory language.
+
+**Run 3:** `moderate` ✓
+> Quote: "ensuring data quality and governance; errors affect business decisions"
+> Reasoning: Operational reliability concern (data quality, governance) without explicit compliance, regulatory, or trust-as-primary framing.
+

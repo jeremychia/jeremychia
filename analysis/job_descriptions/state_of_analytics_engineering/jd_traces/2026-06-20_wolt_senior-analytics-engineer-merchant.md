@@ -205,3 +205,46 @@
 > Reasoning: The role combines strategic responsibilities (developing strategy, leading and mentoring junior team members) with execution responsibilities (implementing pipelines, managing systems).
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Managing data integrations, pipelines, models, and dashboards using modern tools (Snowflake, SQL, Looker, Airflow, Dagster, GitHub)"
+> Reasoning: Tech stack consists entirely of traditional data tools with no AI-specific capabilities or tools mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "None identified"
+> Reasoning: No AI tools, coding assistants, or AI infrastructure building mentioned in role requirements.
+
+**Run 3:** `none` ✓
+> Quote: "Managing data integrations, pipelines, models, and dashboards using modern tools (Snowflake, SQL, Looker, Airflow, Dagster, GitHub)"
+> Reasoning: Standard data engineering tech stack with no AI tools or infrastructure requirements.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Enhancing reporting and metrics quality as a whole"
+> Reasoning: Direct ownership framing with 'enhancing' action verb paired with explicit quality accountability.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Enhancing reporting and metrics quality as a whole"
+> Reasoning: Candidate owns quality practice through active enhancement of reporting and metrics across the organization.
+
+**Run 3:** `absent` ✗
+> Quote: "None identified"
+> Reasoning: No testing responsibility verbs, testing tools, or quality ownership language present.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Understanding the needs of the business to providing easily understandable and actionable data"
+> Reasoning: Positive value-delivery framing with no compliance, regulatory, or incident-prevention language.
+
+**Run 2:** `none` ✓
+> Quote: "Understanding the needs of the business to providing easily understandable and actionable data"
+> Reasoning: Role framed around delivery of business value and clarity, not operational reliability fears or compliance constraints.
+
+**Run 3:** `none` ✓
+> Quote: "Understanding the needs of the business to providing easily understandable and actionable data"
+> Reasoning: Framed around delivery and business value with no compliance, reliability, or risk-mitigation signals.
+

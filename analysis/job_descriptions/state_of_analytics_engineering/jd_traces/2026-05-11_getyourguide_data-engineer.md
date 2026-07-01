@@ -218,3 +218,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: ""
+> Reasoning: No mention of AI tools, AI-first mindset, or AI infrastructure responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: ""
+> Reasoning: No AI tools, GenAI responsibilities, or AI-ready infrastructure mentioned.
+
+**Run 3:** `none` ✓
+> Quote: ""
+> Reasoning: No AI tools or GenAI responsibilities mentioned; standard data engineering work.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "best practices in code quality, data modeling, testing, and monitoring; Deliver reliable, high-quality datasets/pipelines"
+> Reasoning: Testing and quality ownership implied through 'best practices' language and 'deliver reliable, high-quality' expectations; candidate owns solution quality.
+
+**Run 2:** `responsibility` ✓
+> Quote: "best practices in code quality, data modeling, testing, and monitoring; Deliver reliable, high-quality datasets/pipelines"
+> Reasoning: Testing explicitly mentioned as best practice; delivery framed around high-quality outcomes showing ownership.
+
+**Run 3:** `responsibility` ✓
+> Quote: "best practices in code quality, data modeling, testing, and monitoring"
+> Reasoning: Candidate owns testing and quality practices explicitly.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
+> Reasoning: SLOs signal operational reliability and incident prevention concerns, but lack compliance/regulatory or data-trust framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
+> Reasoning: SLO-based framing indicates concern for operational reliability and incident prevention without compliance focus.
+
+**Run 3:** `moderate` ✓
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
+> Reasoning: Operational reliability framing with SLO emphasis; pipeline stability concerns.
+

@@ -201,3 +201,48 @@ Important: We can only consider applicants who have the right to work in Germany
 > Reasoning: The role combines strategic direction-setting verbs (Own, Define, Establish) with execution-oriented responsibilities (Support, Conduct, Evaluate), indicating genuine ownership of analytics direction paired with specific supporting work.
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
+
+### ai_role
+**Run 1:** `ai_user` ✗
+> Quote: "evaluate AI effectiveness"
+> Reasoning: Candidate expected to assess AI tool capabilities and performance, indicating use rather than infrastructure building.
+
+**Run 2:** `none` ✓
+> Quote: "GA4, HubSpot, Redshift, dbt, Looker or Tableau; conduct analyses on customer cohorts"
+> Reasoning: No AI tool usage (Copilot/Claude/Cursor) or AI infrastructure building mentioned; standard analytics stack.
+
+**Run 3:** `none` ✓
+> Quote: "GA4, HubSpot, Redshift, dbt, Looker or Tableau; conduct analyses on customer cohorts; evaluate AI effectiveness"
+> Reasoning: Evaluating AI effectiveness is mentioned but no signals of using AI coding tools or building AI infrastructure.
+
+⚠ **LLM inconsistency**: runs gave ['ai_user', 'none', 'none']
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "establish trusted business metrics; own analytics"
+> Reasoning: Ownership verbs 'establish' and 'own' applied to metrics and analytics practice signal candidate owns the quality discipline.
+
+**Run 2:** `tool_listed` ✗
+> Quote: "Named tools appear in responsibilities (dbt, Redshift, Looker), multiple data roles implied"
+> Reasoning: Tools listed without ownership verbs for quality/testing; no testing responsibility signal.
+
+**Run 3:** `responsibility` ✓
+> Quote: "establish trusted business metrics"
+> Reasoning: The verb 'establish' signals ownership of quality practice applied to trusted business metrics.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing detected"
+> Reasoning: Role emphasizes growth, experimentation, and PLG velocity without regulatory, audit, or compliance-driven framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "errors affect business decisions without regulatory or financial-reporting consequence"
+> Reasoning: Operational reliability concern (business impact of errors) without compliance or regulatory dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "errors affect business decisions without regulatory or financial-reporting consequence"
+> Reasoning: Operational reliability concerns present but without regulatory drivers, indicating moderate loss aversion.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

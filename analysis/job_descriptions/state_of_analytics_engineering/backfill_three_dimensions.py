@@ -22,10 +22,10 @@ import json
 import subprocess
 from pathlib import Path
 
+from dimensions import DIM_NAMES, KEY_MAP, VALID_VALUES
+
 JD_DATA_DIR = Path(__file__).parent.parent / "jd_data"
 TRACES_DIR = Path(__file__).parent / "jd_traces"
-
-NEW_DIMS = ["ai_role", "testing_framing", "loss_aversion_framing"]
 
 CODEBOOK = """\
 Classify 3 dimensions from the JD phrases below. JSON only, no markdown.
@@ -51,19 +51,6 @@ Output (short keys, expand on write):
 JD phrases:
 """
 
-VALID_VALUES = {
-    "ar": {"none", "ai_user", "ai_enabler"},
-    "tf": {"responsibility", "tool_listed", "absent"},
-    "laf": {"none", "moderate", "high"},
-}
-
-# Map short output keys → full field names written to JSON/trace
-KEY_MAP = {
-    "ar": "ai_role", "ar_q": "ai_role_quote", "ar_e": "ai_role_reasoning",
-    "tf": "testing_framing", "tf_q": "testing_framing_quote", "tf_e": "testing_framing_reasoning",
-    "laf": "loss_aversion_framing", "laf_q": "loss_aversion_framing_quote", "laf_e": "loss_aversion_framing_reasoning",
-}
-
 
 def _find_claude() -> str:
     import shutil
@@ -83,7 +70,7 @@ def _find_claude() -> str:
 def already_classified(json_path: Path) -> bool:
     try:
         data = json.loads(json_path.read_text())
-        return all(dim in data for dim in NEW_DIMS)
+        return all(dim in data for dim in DIM_NAMES)
     except Exception:
         return False
 
@@ -126,6 +113,9 @@ def _run_once(prompt: str, claude_bin: str) -> dict | None:
     except json.JSONDecodeError:
         return None
 
+    if not isinstance(parsed, dict):
+        return None
+
     for short_key, valid in VALID_VALUES.items():
         if parsed.get(short_key) not in valid:
             return None
@@ -153,7 +143,7 @@ def majority_value(runs: list[dict], dim: str) -> str:
 def append_to_json(json_path: Path, runs: list[dict]) -> None:
     """Append majority-vote values + per-run quotes/reasonings. No existing fields touched."""
     data = json.loads(json_path.read_text())
-    for dim in NEW_DIMS:
+    for dim in DIM_NAMES:
         data[dim] = majority_value(runs, dim)
         # Store run1 quote/reasoning as the primary evidence (same pattern as existing dims)
         data[f"{dim}_quote"] = runs[0].get(f"{dim}_quote", "")
@@ -164,7 +154,7 @@ def append_to_json(json_path: Path, runs: list[dict]) -> None:
 def append_to_trace(trace_path: Path, jd_id: str, runs: list[dict]) -> None:
     """Append dimension blocks matching existing trace format (Run 1/2/3 + majority)."""
     section = ""
-    for dim in NEW_DIMS:
+    for dim in DIM_NAMES:
         majority = majority_value(runs, dim)
         section += f"\n### {dim}\n"
         for i, run in enumerate(runs, 1):
@@ -225,7 +215,7 @@ def main():
             n_fail += 1
             continue
 
-        maj = {dim: majority_value(runs, dim) for dim in NEW_DIMS}
+        maj = {dim: majority_value(runs, dim) for dim in DIM_NAMES}
         print(f"   ai_role={maj['ai_role']}  testing_framing={maj['testing_framing']}  loss_aversion_framing={maj['loss_aversion_framing']}  ({len(runs)}/3 runs ok)")
 
         append_to_json(json_path, runs)

@@ -242,3 +242,46 @@ Best of luck !
 > Reasoning: The role genuinely combines setting direction (standards, architecture, mentorship) with hands-on execution (building pipelines, models, documentation).
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "developing robust and efficient data pipelines and data models"
+> Reasoning: All phrases describe standard data engineering work with no mention of AI coding tools, GenAI infrastructure, or AI-assisted development.
+
+**Run 2:** `none` ✓
+> Quote: "developing robust and efficient data pipelines and data models"
+> Reasoning: No mention of AI tools, AI-first mindset, or AI infrastructure building.
+
+**Run 3:** `none` ✓
+> Quote: "developing robust and efficient data pipelines and data models"
+> Reasoning: Standard data engineering work with no AI tooling, infrastructure building, or AI-first mindset mentioned.
+
+
+### testing_framing
+**Run 1:** `absent` ✗
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
+> Reasoning: Standards and governance mentioned but no explicit testing responsibility verb or testing tools listed.
+
+**Run 2:** `responsibility` ✓
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
+> Reasoning: Candidate owns establishing quality standards and governance practices across the team.
+
+**Run 3:** `responsibility` ✓
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
+> Reasoning: Candidate owns quality and governance practice by establishing standards and applying governance across the data team.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "developing robust and efficient data pipelines; applying the first levels of governance"
+> Reasoning: Emphasis on 'robust' pipelines and operational governance indicates reliability concerns, though without explicit incident/SLO/stability language.
+
+**Run 2:** `moderate` ✓
+> Quote: "developing robust and efficient data pipelines and data models"
+> Reasoning: Emphasis on robust and efficient systems reflects operational reliability concerns without compliance or regulatory dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
+> Reasoning: Operational governance and data standards matter for trustworthiness, framed around reliability and proper practices rather than explicit compliance.
+

@@ -211,3 +211,45 @@ Exceptional blend of technical skills, business acumen, and compelling communica
 > Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
 > Verified: ✓ found in JD
 > Reasoning: The explicit expectation to 'strategically influence and drive company-wide data strategies' indicates the role sets direction for data infrastructure and priorities, not executing direction set by others.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
+> Reasoning: No explicit AI skill expected; personalization context present but no signal of building AI infrastructure or using AI coding tools.
+
+**Run 2:** `none` ✓
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring"
+> Reasoning: Standard AE work with no AI tool usage, enablement, or GenAI infrastructure expectations.
+
+**Run 3:** `none` ✓
+> Quote: "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem."
+> Reasoning: Standard analytics engineering work with no AI skill signals or enablement responsibilities.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
+> Reasoning: Candidate owns quality practice through 'Champion' ownership language and explicit responsibility for automated data quality monitoring.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring"
+> Reasoning: Ownership verb 'champion' combined with 'rigorous automated data quality monitoring' signals candidate-owned testing practice.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
+> Reasoning: Ownership verbs (champion, drive, own, ensure) paired with explicit quality monitoring and testing practice signals.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
+> Reasoning: Operational reliability framing dominates (data quality, reliability, cleanliness) without explicit compliance or regulatory language.
+
+**Run 2:** `moderate` ✓
+> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making"
+> Reasoning: Operational reliability concern framed around impact to business decision-making, not regulatory or compliance urgency.
+
+**Run 3:** `moderate` ✓
+> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
+> Reasoning: Operational reliability and data quality impact on decision-making emphasized, but without compliance or regulatory framing.
+

@@ -77,5 +77,14 @@
       "waterfall enrichment",
       "SaaS metrics"
     ]
-  }
+  },
+  "ai_role": "ai_user",
+  "ai_role_quote": "Cursor/Claude Code listed among responsibilities and tools (dbt Cloud, BigQuery, Basedash)",
+  "ai_role_reasoning": "JD explicitly names Claude Code and Cursor as tools for analytics automation.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "rigoureux(se) sur la qualité des données, les fondations sont ultra-propres, documentées et testées",
+  "testing_framing_reasoning": "Candidate must maintain rigorous data quality standards and clean, documented, tested foundations.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "calcul de l'économie unitaire/marges par fournisseur de données; générer du chiffre d'affaires, ARR, churn",
+  "loss_aversion_framing_reasoning": "Revenue and unit economics analysis drive business decisions without compliance/regulatory dominance."
 }

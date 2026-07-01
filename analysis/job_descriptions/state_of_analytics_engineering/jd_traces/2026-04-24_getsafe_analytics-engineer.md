@@ -216,3 +216,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
+> Reasoning: Candidate builds data infrastructure components that AI/GenAI applications consume.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
+> Reasoning: Role explicitly builds data infrastructure that AI/GenAI applications consume.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
+> Reasoning: Candidate builds infrastructure that AI/GenAI applications consume; clear enabler signal
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Build and maintain scalable data pipelines and data marts using modern tooling"
+> Reasoning: Operational responsibilities stated without explicit testing ownership or quality practice verbs.
+
+**Run 2:** `absent` ✓
+> Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
+> Reasoning: Quality mindset evident but no explicit testing ownership, framework definition, or data contract responsibility stated.
+
+**Run 3:** `absent` ✓
+> Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
+> Reasoning: Quality attributes mentioned but no explicit testing responsibility or data contract ownership stated
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
+> Reasoning: Reliability and trustworthiness framed as operational concerns, not compliance/regulatory dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
+> Reasoning: Operational reliability framed through 'reliable' and 'maintain', but no compliance, audit, or trust-dominance language.
+
+**Run 3:** `moderate` ✓
+> Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
+> Reasoning: Operationalisation and maintenance framing signals operational reliability concern without compliance drivers
+

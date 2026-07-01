@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Design, build, and maintain complex, scalable dbt models; Accelerate the migration from legacy DOMO pipelines",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "exploring, evaluating, and introducing advanced dbt features where they add clear value",
+  "ai_role_reasoning": "No AI tool usage or infrastructure-building signals; standard data engineering work.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "establishes robust modeling and testing standards",
+  "testing_framing_reasoning": "Candidate owns quality practices through establishment of testing and modeling standards.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights",
+  "loss_aversion_framing_reasoning": "Emphasis on operational reliability and stakeholder confidence in data quality, but framed around delivery and decision-making rather than compliance."
 }

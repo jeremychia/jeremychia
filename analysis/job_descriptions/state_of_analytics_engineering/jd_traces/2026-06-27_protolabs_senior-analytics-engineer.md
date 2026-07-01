@@ -186,3 +186,45 @@ Advanced SQL skills, with the ability to refactor complex queries, simplify…[t
 > Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales"
 > Verified: ✓ found in JD
 > Reasoning: The role combines strategic ownership of technical domain practices (shaping standards, guiding team growth) with execution of technical work (designing and maintaining models, supporting teams).
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "exploring, evaluating, and introducing advanced dbt features where they add clear value"
+> Reasoning: No AI tool usage or infrastructure-building signals; standard data engineering work.
+
+**Run 2:** `none` ✓
+> Quote: "support analytics and decision‑making across the organization"
+> Reasoning: No signals of AI tool usage or building AI infrastructure; standard data transformation and analytics work.
+
+**Run 3:** `none` ✓
+> Quote: "refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features"
+> Reasoning: Standard analytics engineering work around dbt and data transformation; no AI tooling, AI-assisted coding, or AI-ready infrastructure mentioned.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "establishes robust modeling and testing standards"
+> Reasoning: Candidate owns quality practices through establishment of testing and modeling standards.
+
+**Run 2:** `responsibility` ✓
+> Quote: "establishes robust modeling and testing standards"
+> Reasoning: Ownership verb 'establishes' paired with testing standards signals responsibility for quality practice.
+
+**Run 3:** `responsibility` ✓
+> Quote: "establishes robust modeling and testing standards"
+> Reasoning: Ownership verb 'establishes' paired with 'testing' indicates candidate owns the quality practice and standard-setting.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
+> Reasoning: Emphasis on operational reliability and stakeholder confidence in data quality, but framed around delivery and decision-making rather than compliance.
+
+**Run 2:** `moderate` ✓
+> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use"
+> Reasoning: Operational reliability and trustworthiness emphasized, but framed as delivery enablement rather than compliance or regulatory driver.
+
+**Run 3:** `moderate` ✓
+> Quote: "transforms complex, raw data into reliable, well-structured data products that analysts and business partners can confidently use"
+> Reasoning: Operational reliability and stakeholder confidence framing (robust, reliable, confident use) without compliance or regulatory language.
+

@@ -211,3 +211,45 @@ Data modelling: Solid understanding of data warehousing concepts, ETL/ELT princi
 > Reasoning: The responsibilities emphasize delivery and maintenance of data models within an established technical stack, rather than defining the overall analytics strategy or direction.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, develop, and maintain efficient and scalable workflows using tools like dbt to transform raw data loaded into our data warehouse (Snowflake) into clean, ready-to-use data models"
+> Reasoning: No AI coding tools, GenAI responsibilities, or text-to-SQL infrastructure mentioned; standard dbt transformation work.
+
+**Run 2:** `none` ✓
+> Quote: "(no AI signal)"
+> Reasoning: No mentions of AI tools, GenAI, or AI-adjacent responsibilities; purely traditional data transformation.
+
+**Run 3:** `none` ✓
+> Quote: "No AI-specific skill mentions across phrases"
+> Reasoning: Standard data transformation and modeling work with no AI coding tools, GenAI responsibilities, or AI infrastructure signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Write comprehensive data quality checks, tests, and monitoring scripts to ensure the accuracy, completeness, and reliability of all transformed data assets"
+> Reasoning: Candidate owns quality practice with explicit ownership verbs (write, ensure) applied to testing and monitoring outcomes.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Write comprehensive data quality checks, tests, and monitoring scripts to ensure the accuracy, completeness, and reliability of all transformed data assets."
+> Reasoning: Candidate owns quality practice with explicit responsibility verbs (write, ensure) on testing and monitoring.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Write comprehensive data quality checks, tests, and monitoring scripts to ensure the accuracy, completeness, and reliability of all transformed data assets."
+> Reasoning: Candidate explicitly owns quality practice through write/ensure verbs paired with testing, monitoring, and data quality accountability.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "focusing on transforming raw data into high-quality, trustworthy, and easily consumable datasets and visualisations for business users"
+> Reasoning: Reliability and trustworthiness framed as operational quality concerns, not compliance or regulatory drivers.
+
+**Run 2:** `moderate` ✓
+> Quote: "ensure the accuracy, completeness, and reliability of all transformed data assets"
+> Reasoning: Operational reliability framing around accuracy and preventing pipeline failures; no regulatory or compliance language.
+
+**Run 3:** `moderate` ✓
+> Quote: "ensure the accuracy, completeness, and reliability; high-quality, trustworthy, and easily consumable datasets for business users"
+> Reasoning: Operational reliability and trustworthiness frame the work without explicit regulatory/compliance language; emphasis on preventing data issues reaching stakeholders.
+

@@ -225,3 +225,45 @@ Hilo by Aktiia addresses high blood pressure, which causes 18M deaths each year.
 > Reasoning: The role combines strategic direction-setting responsibilities (defining strategy, owning platforms, establishing governance) with execution responsibilities (designing dashboards, delivering insights, collaborating with teams).
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Own and evolve Hilo's Metabase platform as the central reporting source; Partner with Data Engineering on data architecture"
+> Reasoning: Responsibilities center on BI platform management and data architecture partnership rather than AI tool usage or infrastructure building.
+
+**Run 2:** `none` ✓
+> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices; Trusted, accurate, consistent reporting"
+> Reasoning: No AI tool usage or infrastructure-building responsibility mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "No AI tool or infrastructure mentions across responsibilities"
+> Reasoning: No signals of AI coding tools usage, GenAI capabilities, or AI-ready infrastructure building.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices; Trusted, accurate, consistent reporting"
+> Reasoning: Candidate owns quality standards, governance frameworks, and reporting accuracy with explicit responsibility verbs.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices"
+> Reasoning: Candidate owns quality practice through establishment of governance frameworks and data quality standards.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices"
+> Reasoning: Candidate explicitly owns quality and governance practice through establishment and maintenance of frameworks.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Hilo by Aktiia addresses high blood pressure, which causes 18M deaths each year; Act as analytics partner to Finance, Product, Commercial, Clinical, and Leadership teams"
+> Reasoning: Regulated healthcare context with clinical partnership positions data accuracy and trustworthiness as mission-critical to outcomes.
+
+**Run 2:** `high` ✓
+> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices; Trusted, accurate, consistent reporting"
+> Reasoning: Regulated healthcare domain (clinical partnership, financial reporting) combined with explicit trust and governance language indicates high loss-aversion framing.
+
+**Run 3:** `high` ✓
+> Quote: "Trusted, accurate, consistent reporting; regulated healthcare domain (blood pressure monitoring); Clinical team partnership"
+> Reasoning: Regulated medical device context with clinical stakeholders drives high emphasis on trustworthiness, accuracy, and compliance over speed.
+

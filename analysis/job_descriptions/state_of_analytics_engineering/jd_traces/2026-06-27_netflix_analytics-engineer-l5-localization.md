@@ -180,3 +180,46 @@ We are an equal-opportunity employer and celebrate diversity, recognizing that d
 > Quote: "Drive the direction and execution of your work, which span from developing instrumentation and telemetry frameworks for algorithms to defining key metrics"
 > Verified: ✓ found in JD
 > Reasoning: The role uses 'drive' and 'defining' to signal strategic ownership of direction and priorities, reinforced by explicit autonomy signal in About You section.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "developing instrumentation and telemetry frameworks for algorithms"
+> Reasoning: Frameworks described are for algorithmic instrumentation/telemetry, not AI infrastructure, GenAI responsibilities, or AI tooling signals.
+
+**Run 2:** `none` ✓
+> Quote: "developing instrumentation and telemetry frameworks for algorithms"
+> Reasoning: No explicit AI/ML signals (AI-ready, semantic model, GenAI, text-to-SQL); frameworks for algorithms are ambiguous without confirmed AI context.
+
+**Run 3:** `none` ✓
+> Quote: "developing instrumentation and telemetry frameworks for algorithms"
+> Reasoning: No explicit AI tool usage (Copilot, Claude Code) or AI infrastructure building responsibility mentioned.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "quality improvements"
+> Reasoning: Quality mentioned as outcome but lacks ownership verbs (own, ensure, define, implement, establish) and no testing tools or data contracts specified.
+
+**Run 2:** `absent` ✓
+> Quote: "quality improvements mentioned without ownership verb"
+> Reasoning: Quality framed as outcome (member value) rather than owned responsibility with verbs like ensure/define/implement/establish.
+
+**Run 3:** `absent` ✓
+> Quote: "design and develop analytics tools and systems to create more member value via localization expansion and quality improvements"
+> Reasoning: Quality improvements stated but no ownership verb (own/ensure/define/implement) or testing tool explicitly listed.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✗
+> Quote: "create more member value via localization expansion and quality improvements"
+> Reasoning: Primary framing emphasizes delivery impact and expansion, not operational reliability fears or compliance/trust concerns.
+
+**Run 2:** `moderate` ✓
+> Quote: "developing instrumentation and telemetry frameworks for algorithms"
+> Reasoning: Telemetry and instrumentation signal operational reliability concerns (monitoring, observability) rather than compliance/regulatory dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "developing instrumentation and telemetry frameworks for algorithms"
+> Reasoning: Instrumentation and telemetry frameworks signal operational reliability/monitoring focus rather than pure delivery or compliance-audit framing.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

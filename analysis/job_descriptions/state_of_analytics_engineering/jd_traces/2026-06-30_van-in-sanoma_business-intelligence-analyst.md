@@ -209,3 +209,34 @@ Sanoma Learning is a leading K12 European learning company, operating in 12 coun
 > Reasoning: Significant autonomy in executing end-to-end analytics solutions combined with supporting business team priorities reflects both strategic ownership of delivery and execution within externally-set scopes.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT"
+> Reasoning: Stack lists traditional BI and SQL tools; no AI tooling, Copilot, Claude Code, or GenAI infrastructure mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT"
+> Reasoning: No AI tools, GenAI, or AI-assisted coding mentioned; standard data stack only.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewakt"
+> Reasoning: Quality governance emphasized but no explicit testing ownership verbs (own, ensure, define, implement, establish).
+
+**Run 2:** `responsibility` ✗
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewaakt; Meebouwt aan de verdere professionalisering van processen"
+> Reasoning: Candidate owns data quality, governance, and reliability; actively professionalizes processes.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "maatschappelijke impact; K12 European learning company"
+> Reasoning: Education sector with societal impact framing; no regulatory/compliance language and errors affect internal decisions not regulated outputs.
+
+**Run 2:** `none` ✓
+> Quote: "Education sector with societal impact framing; no financial reporting or regulatory compliance language"
+> Reasoning: Operational rigor emphasized, but no compliance, audit, or regulatory trust-dominance present.
+

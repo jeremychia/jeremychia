@@ -217,3 +217,46 @@ Our users' wins are our wins. You'll be active daily in shared customer Slack ch
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "You'll stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)"
+> Reasoning: Company uses AI tools for its own analytics, but role doesn't require candidate to use AI coding tools or build AI infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)"
+> Reasoning: Uses company's AI product for analytics/demos; no mention of building AI infrastructure or adopting personal AI coding tools.
+
+**Run 3:** `none` ✓
+> Quote: "You'll stay current with our latest features, including our evolving AI capabilities (using Lightdash for our own analytics and demos)"
+> Reasoning: Company builds AI product features, but candidate role is customer support and pair-programming without AI tool usage expectations.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems."
+> Reasoning: Role emphasizes customer support and community engagement with no testing ownership, quality responsibility, or testing tools mentioned.
+
+**Run 2:** `absent` ✓
+> Quote: "You'll spend a significant portion of your time directly helping users in Slack and on calls — diagnosing issues, answering questions, and pair-programming through problems."
+> Reasoning: Primary role is customer support and problem-solving; no ownership of testing practices or quality frameworks.
+
+**Run 3:** `absent` ✓
+> Quote: ""
+> Reasoning: No testing responsibility or tool signals in the job description.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "You'll balance fast, practical solutions with thoughtful, strategic guidance on analytics architecture and process improvement."
+> Reasoning: Framing centers on practical delivery and architecture guidance; no operational reliability (SLOs, incidents) or compliance-driven (regulatory, audit, trustworthiness) concerns emphasized.
+
+**Run 2:** `moderate` ✗
+> Quote: "Active daily in shared customer Slack channels, responding to user questions, triaging bugs, and jumping on calls to pair-program through complex issues."
+> Reasoning: Bug triage and issue diagnosis signal operational reliability concerns, but delivery/customer success dominates the framing.
+
+**Run 3:** `none` ✓
+> Quote: "balance fast, practical solutions with thoughtful, strategic guidance on analytics architecture and process improvement"
+> Reasoning: Framed as pragmatic delivery and mentoring, not risk mitigation or compliance concerns.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']

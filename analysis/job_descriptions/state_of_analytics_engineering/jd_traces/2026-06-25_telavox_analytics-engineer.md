@@ -194,3 +194,46 @@ Telavox seeks an Analytics Engineer to manage the complete lifecycle of data, fr
 > Reasoning: The role explicitly owns and designs key data infrastructure (dbt project, data marts with business logic, semantic layers) rather than executing pre-defined direction.
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Reasoning: Builds semantic infrastructure consumed by agentic (AI-driven) analytics.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Reasoning: Candidate builds semantic layers that AI agents consume for agentic analytics.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Reasoning: Semantic layers purpose-built to power agentic analytics indicates infrastructure built for AI consumption.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables"
+> Reasoning: Owns testing and documentation as part of core dbt project responsibility.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables"
+> Reasoning: Candidate owns end-to-end dbt project with explicit testing and documentation responsibility.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables"
+> Reasoning: Explicit ownership of dbt project includes tested tables as a deliverable, indicating ownership of quality practice.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✗
+> Quote: "trustworthy data and making information findable and useful throughout the organization"
+> Reasoning: Trust and data reliability dominate framing as primary organizational concern, not just delivery.
+
+**Run 2:** `moderate` ✓
+> Quote: "trustworthy data and making information findable and useful throughout the organization"
+> Reasoning: Emphasis on trustworthy data and stakeholder access frames quality as operational reliability concern.
+
+**Run 3:** `moderate` ✓
+> Quote: "trustworthy data and making information findable and useful throughout the organization"
+> Reasoning: Trustworthiness framing suggests operational reliability and data quality concern, but balanced with utility rather than compliance-dominant.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

@@ -209,3 +209,45 @@ Decathlon emphasizes inclusion as a core value and explicitly welcomes applicant
 > Quote: "Defining technical stack strategies"
 > Verified: ✓ found in JD
 > Reasoning: The role combines strategic authority (defining technical strategies) with execution responsibilities (automating, maintaining, and updating systems), making it genuinely mixed between direction-setting and delivery.
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "building the semantic layer for the sports domain"
+> Reasoning: Semantic layers are infrastructure that AI models and LLM applications consume for analytics and text-to-SQL use cases.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "building the semantic layer for the sports domain"
+> Reasoning: Candidate builds semantic infrastructure that AI models and analytics consume, positioning the role as AI enabler.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "dashboards, AI models, and analyses; building the semantic layer for the sports domain"
+> Reasoning: Candidate builds data infrastructure (semantic layer) that AI models consume, not using AI coding tools.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Reasoning: Ownership verbs 'defining' and 'ensuring' paired with explicit quality and reliability responsibility.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Reasoning: Uses 'ensuring' (ownership verb) paired with quality/reliability, indicating responsibility for data quality practices.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Reasoning: Candidate owns quality and reliability as core responsibility with explicit 'ensuring' language.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "la qualité, la fiabilité et la pertinence des données exposées"
+> Reasoning: Emphasis on data reliability and quality as operational concern; no compliance or regulatory framing present.
+
+**Run 2:** `moderate` ✓
+> Quote: "la qualité, la fiabilité et la pertinence des données exposées; no financial/compliance/regulatory language present"
+> Reasoning: Emphasis on operational reliability and data quality without regulatory framing indicates moderate loss-aversion grounded in pipeline stability.
+
+**Run 3:** `moderate` ✓
+> Quote: "la qualité, la fiabilité et la pertinence des données exposées; no financial/compliance/regulatory language present"
+> Reasoning: Operational reliability framing (quality, reliability) without compliance/trust dominance, confirming moderate loss aversion.
+

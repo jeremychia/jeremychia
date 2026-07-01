@@ -205,3 +205,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "applying software engineering best practices"
+> Reasoning: No AI skill signals; best practices framing is generic technical excellence without AI user or enabler indicators.
+
+**Run 2:** `none` ✓
+> Quote: "Developing analytical products such as data models, dashboards, reports and tooling to enable self-serve reporting and analysis for stakeholders"
+> Reasoning: No AI tools, GenAI infrastructure, or AI-specific capability mentions; standard analytics work.
+
+**Run 3:** `none` ✓
+> Quote: "Developing analytical products such as data models, dashboards, reports and tooling"
+> Reasoning: No mention of AI coding tools, GenAI infrastructure, or AI-enabled capabilities.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Taking ownership of projects from scoping to delivery and adoption"
+> Reasoning: Broad project ownership mentioned but not tied to quality/testing/data contracts as a named responsibility.
+
+**Run 2:** `absent` ✓
+> Quote: "applying software engineering best practices"
+> Reasoning: Mentions best practices generically without ownership verbs (own/ensure/define) or explicit quality/testing/data contract language.
+
+**Run 3:** `absent` ✓
+> Quote: "applying software engineering best practices"
+> Reasoning: References best practices but lacks explicit ownership verb paired with quality/testing/data contracts.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Improving our architecture based on what brings the most impact to cost reduction and speed"
+> Reasoning: Pure delivery and efficiency framing; no SLO, incident, regulatory, or trust/data-quality risk language.
+
+**Run 2:** `none` ✓
+> Quote: "Improving our architecture based on what brings the most impact to cost reduction and speed"
+> Reasoning: Pure delivery/efficiency framing; no SLOs, incidents, regulatory, audit, or data trust dominance.
+
+**Run 3:** `none` ✓
+> Quote: "Improving our architecture based on what brings the most impact to cost reduction and speed"
+> Reasoning: Delivery-focused optimization framing without operational reliability or compliance risk signals.
+

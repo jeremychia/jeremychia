@@ -217,3 +217,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Transform complex data into compelling narratives informing product strategy and financial planning"
+> Reasoning: No mention of AI tools, AI-first mindset, or AI infrastructure capabilities; standard analytics storytelling role.
+
+**Run 2:** `none` ✓
+> Quote: "Transform complex data into compelling narratives informing product strategy and financial planning"
+> Reasoning: No AI tools, coding assistants, or GenAI infrastructure responsibilities mentioned; standard analytical work.
+
+**Run 3:** `none` ✓
+> Quote: "No AI tool or GenAI infrastructure mentions across phrases"
+> Reasoning: No AI-assisted coding tools, AI-first mindset, or GenAI infrastructure responsibilities present.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
+> Reasoning: No testing tools listed and no explicit quality ownership language (own/ensure/define/implement testing).
+
+**Run 2:** `absent` ✓
+> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
+> Reasoning: Governance and standardization work with no testing ownership, quality responsibility, or testing tools.
+
+**Run 3:** `absent` ✓
+> Quote: "No testing tools or quality ownership signals; focus on governance and KPI standardization only"
+> Reasoning: Data governance and KPI establishment lack explicit testing, quality practices, or data contract ownership.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Implement data governance protocols addressing GDPR compliance and access management"
+> Reasoning: GDPR and regulatory compliance dominate framing; regulatory risk and access control trustworthiness are primary concerns.
+
+**Run 2:** `high` ✓
+> Quote: "Implement data governance protocols addressing GDPR compliance and access management"
+> Reasoning: Regulatory compliance (GDPR) and data governance are primary concerns, indicating high loss-aversion framing around trust and regulatory risk.
+
+**Run 3:** `high` ✓
+> Quote: "GDPR compliance and access management protocols"
+> Reasoning: Regulatory compliance and access governance dominate positioning; compliance/trust is primary framing rather than delivery or operational reliability.
+

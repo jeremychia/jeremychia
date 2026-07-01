@@ -67,5 +67,14 @@
   "autonomy_level_quote": "set data strategy and own Data team OKRs",
   "autonomy_level_reasoning": "The role explicitly owns strategy definition and OKRs for the data function, not execution of someone else's plan, positioning this as a leadership role that shapes direction.",
   "greenfield_vs_fix_quote": "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring; keep our warehouse/dbt/Lightdash stack reliable and scalable",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring",
+  "ai_role_reasoning": "Candidate builds governance and monitoring infrastructure that AI systems depend on to operate safely.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Become our day-to-day lead for data privacy and school-facing data assurance",
+  "testing_framing_reasoning": "Candidate owns data quality and assurance practices with direct leadership responsibility.",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "supporting data sharing agreements and DPIAs, and ensuring our practices around children's data are robust and consistently applied",
+  "loss_aversion_framing_reasoning": "Candidate operates in highly regulated domain with children's data requiring compliance frameworks (DPIAs, data agreements)."
 }

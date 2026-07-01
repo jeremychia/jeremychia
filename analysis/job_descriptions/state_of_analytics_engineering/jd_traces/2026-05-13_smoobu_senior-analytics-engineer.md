@@ -201,3 +201,46 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Create modeling principles and domain-level data models"
+> Reasoning: No mention of AI tools, AI-ready infrastructure, or GenAI responsibilities.
+
+**Run 2:** `none` ✓
+> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow"
+> Reasoning: Standard data engineering responsibilities using conventional tools with no AI skills or infrastructure signals.
+
+**Run 3:** `none` ✓
+> Quote: "Create modeling principles and domain-level data models"
+> Reasoning: No explicit AI tool usage, GenAI capabilities, or semantic modeling for AI consumption mentioned.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "robust alerting mechanisms"
+> Reasoning: No explicit testing ownership verb paired with quality/testing/data contracts; no testing tools listed.
+
+**Run 2:** `absent` ✓
+> Quote: "robust alerting mechanisms"
+> Reasoning: Operational reliability and monitoring are mentioned but no explicit testing responsibility, tool, or quality ownership is stated.
+
+**Run 3:** `absent` ✓
+> Quote: "robust alerting mechanisms"
+> Reasoning: No testing ownership verbs (own/ensure/define/implement) or quality/testing/data contract responsibilities mentioned; operations-focused rather than testing-framing.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "data governance and GDPR practices"
+> Reasoning: Regulatory compliance (GDPR) is explicitly mentioned, indicating loss-aversion driven by trust/compliance rather than delivery.
+
+**Run 2:** `high` ✓
+> Quote: "data governance and GDPR practices"
+> Reasoning: Regulatory compliance and data governance requirements frame the role around trust and compliance risk rather than operational delivery.
+
+**Run 3:** `moderate` ✗
+> Quote: "robust alerting mechanisms"
+> Reasoning: Operational reliability and pipeline stability concerns (alerting, DAGs, oversight) dominate; one GDPR mention but compliance does not frame the role as primary.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']

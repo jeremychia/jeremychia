@@ -203,3 +203,46 @@
 > Reasoning: The role has strategic leadership responsibilities (directing the team's priorities and development) combined with execution responsibilities (guiding client implementations, hands-on coding).
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+> Reasoning: No AI tools, frameworks, or infrastructure mentioned; standard analytics engineering stack only.
+
+**Run 2:** `none` ✓
+> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+> Reasoning: No AI tools (Copilot, Claude Code, Cursor) or AI-enablement (GenAI, text-to-SQL) mentioned; standard data engineering stack only.
+
+**Run 3:** `none` ✓
+> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+> Reasoning: Traditional analytics engineering stack with no AI tools, AI-first mindset, or GenAI infrastructure signals.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "N/A"
+> Reasoning: No testing ownership, quality practices, or data contracts mentioned.
+
+**Run 2:** `absent` ✓
+> Quote: "Developing and maintaining data products"
+> Reasoning: No ownership language (own, ensure, define, implement, establish) paired with testing, quality, or data contracts.
+
+**Run 3:** `absent` ✓
+> Quote: "Developing and maintaining data products"
+> Reasoning: No testing ownership verbs (ensure, define, implement, establish) and no testing tools explicitly listed.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Developing and maintaining data products"
+> Reasoning: Framing centers on delivery and team leadership without compliance, regulatory, or risk mitigation language.
+
+**Run 2:** `moderate` ✗
+> Quote: "Developing and maintaining data products across public sector domains"
+> Reasoning: Public sector context implicitly signals compliance and regulatory concerns as operational baseline, though not framed as primary trust/audit focus.
+
+**Run 3:** `none` ✓
+> Quote: "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams"
+> Reasoning: Delivery and customer success framing; no compliance, regulatory, reliability, or trustworthiness risk language.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']

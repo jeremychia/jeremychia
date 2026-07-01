@@ -68,5 +68,14 @@
   "autonomy_level_quote": "making architectural decisions and driving cross-squad collaboration",
   "autonomy_level_reasoning": "Decision-making authority, architectural ownership, and explicit direction-setting verbs (make, drive, establish, champion) position this as a strategic role that defines technical direction rather than executing scoped work.",
   "greenfield_vs_fix_quote": "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Build data products leveraging location signals and audience attributes",
+  "ai_role_reasoning": "Data product work described without AI tools or AI-enabling infrastructure.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Champion software engineering principles including TDD and CI/CD workflows",
+  "testing_framing_reasoning": "Candidate champions TDD, indicating ownership of quality and testing practices.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Design horizontally scalable, cost-efficient, production-grade data solutions for handling massive datasets",
+  "loss_aversion_framing_reasoning": "Technical capability requirements described without operational risk, SLO, or compliance framing."
 }

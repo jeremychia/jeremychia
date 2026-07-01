@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Taking ownership of projects from scoping to delivery and adoption, working autonomously",
   "autonomy_level_reasoning": "The role has strategic ownership and autonomy over project execution and metric definition, but operates within the direction and priorities set by product and business stakeholders.",
   "greenfield_vs_fix_quote": "Developing analytical products such as data models, dashboards, reports and tooling",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "applying software engineering best practices",
+  "ai_role_reasoning": "No AI skill signals; best practices framing is generic technical excellence without AI user or enabler indicators.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Taking ownership of projects from scoping to delivery and adoption",
+  "testing_framing_reasoning": "Broad project ownership mentioned but not tied to quality/testing/data contracts as a named responsibility.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Improving our architecture based on what brings the most impact to cost reduction and speed",
+  "loss_aversion_framing_reasoning": "Pure delivery and efficiency framing; no SLO, incident, regulatory, or trust/data-quality risk language."
 }

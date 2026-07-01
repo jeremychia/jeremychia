@@ -77,5 +77,14 @@
       "data infrastructuur",
       "hybride werken"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT",
+  "ai_role_reasoning": "Stack lists traditional BI and SQL tools; no AI tooling, Copilot, Claude Code, or GenAI infrastructure mentioned.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Datakwaliteit, governance en betrouwbaarheid mee bewakt",
+  "testing_framing_reasoning": "Quality governance emphasized but no explicit testing ownership verbs (own, ensure, define, implement, establish).",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "maatschappelijke impact; K12 European learning company",
+  "loss_aversion_framing_reasoning": "Education sector with societal impact framing; no regulatory/compliance language and errors affect internal decisions not regulated outputs."
 }

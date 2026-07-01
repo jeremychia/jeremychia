@@ -208,3 +208,45 @@ None listed.
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'execution']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Lead software development teams and projects"
+> Reasoning: The role focuses on team leadership and project management without mention of AI tools or infrastructure
+
+**Run 2:** `none` ✓
+> Quote: "Lead software development teams and projects"
+> Reasoning: Leadership and sales responsibilities with no AI tool usage or infrastructure building mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "Lead software development teams and projects"
+> Reasoning: No mention of AI tools, AI-first mindset, or GenAI-related infrastructure.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Monitor performance and continuously improve work methods"
+> Reasoning: Performance and methods are mentioned but no explicit ownership of testing or quality practices
+
+**Run 2:** `absent` ✓
+> Quote: "Monitor performance and continuously improve work methods"
+> Reasoning: Performance monitoring present but no explicit testing, quality ownership, or data-contract responsibility.
+
+**Run 3:** `absent` ✓
+> Quote: "Serve as primary contact for both clients and team"
+> Reasoning: No explicit testing/quality responsibility ownership, tool mentions, or quality process signals.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Lead software development teams and projects; Support sales and client acquisition"
+> Reasoning: Responsibilities emphasize delivery and growth with no compliance, reliability, or risk-mitigation framing
+
+**Run 2:** `none` ✓
+> Quote: "Monitor performance and continuously improve work methods"
+> Reasoning: Delivery and process-improvement framing with no operational reliability or compliance risk drivers.
+
+**Run 3:** `none` ✓
+> Quote: "Lead software development teams and projects; Inspire and develop team members; Provide resources (technology, skills, capacity) for success"
+> Reasoning: Positive delivery framing centered on team success and capability-building, not risk mitigation or compliance concerns.
+

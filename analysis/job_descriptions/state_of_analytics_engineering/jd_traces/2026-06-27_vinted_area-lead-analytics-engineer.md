@@ -238,3 +238,46 @@ Vinted commits to inclusive hiring practices welcoming ap…[truncated]
 > Reasoning: Role genuinely combines strategic direction-setting (establish technical direction, develop patterns) with hands-on execution (maintain standards, mentor, manage technical debt).
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "No AI-related phrases present"
+> Reasoning: Standard data architecture and technical leadership work; no signals of AI tool usage or AI-enabled infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
+> Reasoning: No mention of AI tools, GenAI capabilities, or AI-ready infrastructure; role focuses on traditional data architecture and engineering leadership.
+
+**Run 3:** `none` ✓
+> Quote: "No AI-related phrases across role responsibilities"
+> Reasoning: Role centers on data architecture, domain oversight, and technical standards with no mention of AI tools, GenAI infrastructure, or AI-assisted work.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Maintain architectural standards, data quality... Drive improvements in data product quality, documentation, and observability"
+> Reasoning: Candidate owns quality practices through ownership verbs ('maintain', 'drive improvements') paired with quality/standards domains.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Drive improvements in data product quality, documentation, and observability"
+> Reasoning: Candidate is expected to drive improvements in data product quality, indicating active ownership of quality practices and standards.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Maintain architectural standards, data quality, and operational excellence; Drive improvements in data product quality; Establish long-term technical direction"
+> Reasoning: Candidate owns quality practice via ownership verbs (Maintain, Drive, Establish) consistently paired with data quality, standards, and testing concepts.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Maintain... operational excellence... Manage technical debt and enable sustainable evolution"
+> Reasoning: Operational reliability framing (excellence, technical debt) present but without compliance or stakeholder-trust dominance.
+
+**Run 2:** `none` ✗
+> Quote: "Maintain architectural standards, data quality, and operational excellence"
+> Reasoning: Framing emphasizes achieving excellence and maintaining standards rather than preventing failures, managing compliance risk, or addressing incidents.
+
+**Run 3:** `moderate` ✓
+> Quote: "Maintain architectural standards, data quality, and operational excellence; Manage technical debt and enable sustainable evolution of data systems"
+> Reasoning: Framing emphasizes operational reliability, quality standards, and system sustainability rather than regulatory/compliance concerns, indicating moderate risk aversion.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']

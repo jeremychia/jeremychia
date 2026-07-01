@@ -196,3 +196,45 @@ Benefits:
 > Quote: "shift the team from reactive support toward proactive strategy"
 > Verified: ✓ found in JD
 > Reasoning: The role is responsible for driving strategic organizational change in analytics delivery while also executing core technical work (design, build, maintain, implement).
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, build, test, and maintain end-to-end data models within dbt-powered systems"
+> Reasoning: dbt-focused technical work with no AI tooling, AI-building, or AI-first mindset signals.
+
+**Run 2:** `none` ✓
+> Quote: "Design, build, test, and maintain end-to-end data models within dbt-powered systems"
+> Reasoning: Standard data engineering with dbt; no AI tools, coding assistance, or GenAI infrastructure mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "enabling organizational self-serve capabilities"
+> Reasoning: No AI tools, AI-first mindset, or GenAI infrastructure mentioned; self-serve is business capability independent of AI.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Establish data governance, quality testing, and mentoring for junior team members"
+> Reasoning: Establish + quality testing indicates candidate owns quality practice as core responsibility.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Establish data governance, quality testing, and mentoring for junior team members"
+> Reasoning: Candidate owns quality testing establishment; clear ownership verb and responsibility for practice.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Establish data governance, quality testing, and mentoring for junior team members"
+> Reasoning: Explicit ownership verb 'establish' paired with 'quality testing' responsibility demonstrates candidate-owned quality practice.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Establish data governance, quality testing"
+> Reasoning: Data governance and quality testing frame reliability/stability concerns, but lack explicit compliance or regulatory language.
+
+**Run 2:** `moderate` ✓
+> Quote: "shift the team from reactive support toward proactive strategy, addressing complex data architecture while enabling organizational self-serve capabilities"
+> Reasoning: Reactive-to-proactive framing signals operational reliability and incident response concerns, not compliance/regulatory dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "shift the team from reactive support toward proactive strategy, addressing complex data architecture"
+> Reasoning: Reactive-to-proactive framing signals current operational reliability and incident management burden; governance/testing reinforce data trust concerns.
+

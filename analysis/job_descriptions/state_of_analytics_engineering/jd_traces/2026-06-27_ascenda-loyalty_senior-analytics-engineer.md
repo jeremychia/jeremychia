@@ -196,3 +196,45 @@ Keeps up-to-date with emerging data and AI technologies, activel…[truncated]
 > Quote: "You will shape how our loyalty-as-a-service business models its data, metrics, and data products for enterprise clients and partners."
 > Verified: ✓ found in JD
 > Reasoning: The explicit 'you will shape' language, combined with emphasis on defining architecture, establishing best practices, and mentoring the team, indicates the role is expected to set direction and priorities rather than execute against direction from others.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks"
+> Reasoning: Standard data modeling work with no AI infrastructure, coding tools, or GenAI responsibilities mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks"
+> Reasoning: Standard dbt/data modeling work with no signals of AI usage, GenAI, or AI-ready infrastructure.
+
+**Run 3:** `none` ✓
+> Quote: "AI engineers listed as collaborator; Empower analysts, engineers, and business teams with high-quality semantic layers"
+> Reasoning: Semantic layers and AI engineers as stakeholders, but no explicit 'AI-ready', 'semantic model for AI', or 'GenAI' language in responsibilities.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "embed data quality, governance, and observability throughout our data stack"
+> Reasoning: Verb 'embed' with 'data quality' establishes direct ownership of implementing quality practices.
+
+**Run 2:** `responsibility` ✓
+> Quote: "embed data quality, governance, and observability throughout our data stack"
+> Reasoning: Ownership verb 'embed' combined with 'data quality' indicates candidate will establish and maintain quality practices.
+
+**Run 3:** `responsibility` ✓
+> Quote: "embed data quality, governance, and observability throughout our data stack"
+> Reasoning: Embed (implement/establish) signals active ownership of quality and governance practices as core responsibility.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "embed data quality, governance, and observability throughout our data stack"
+> Reasoning: Observability and reliability concerns dominate (moderate framing); governance elements hint at trust but lack explicit regulatory/compliance language.
+
+**Run 2:** `moderate` ✓
+> Quote: "embed data quality, governance, and observability throughout our data stack"
+> Reasoning: Governance and observability framing reflect operational reliability and trust concerns for enterprise clients, neither compliance-driven (high) nor pure delivery-focused (none).
+
+**Run 3:** `moderate` ✓
+> Quote: "embed data quality, governance, and observability; enterprise clients and partners; scales efficiently"
+> Reasoning: Governance framing and enterprise context suggest trust/operational concerns, but lack explicit regulatory/audit language.
+

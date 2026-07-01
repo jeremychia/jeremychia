@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Design efficient data models using techniques like star schema and snowflake schema; Develop and maintain data transformation pipelines",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Develop and maintain data transformation pipelines using dbt, SQL, and Python",
+  "ai_role_reasoning": "Stack specifies standard data tools with no mention of AI coding tools or AI-ready infrastructure.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Implement data quality checks and governance practices",
+  "testing_framing_reasoning": "The verb 'implement' paired with 'data quality checks' signals ownership of the quality practice.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Implement data quality checks and governance practices",
+  "loss_aversion_framing_reasoning": "Governance and data quality emphasis indicate operational reliability concern, but lacks explicit compliance or regulatory framing."
 }

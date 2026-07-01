@@ -185,3 +185,45 @@ You…[truncated]
 > Quote: "set data strategy and own Data team OKRs"
 > Verified: ✓ found in JD
 > Reasoning: Explicit strategic verbs (set strategy, own roadmap, define quarterly plans aligned to company goals) establish the role as responsible for defining direction and priorities for the entire data function.
+
+### ai_role
+**Run 1:** `ai_enabler` ✓
+> Quote: "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring"
+> Reasoning: Candidate builds governance and monitoring infrastructure that AI systems depend on to operate safely.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring"
+> Reasoning: Candidate builds governance and monitoring infrastructure that AI systems depend on.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Put in place pragmatic governance and monitoring for AI features that touch learner responses and scoring"
+> Reasoning: Candidate builds governance infrastructure that AI features will consume, making them an infrastructure enabler for AI systems.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Become our day-to-day lead for data privacy and school-facing data assurance"
+> Reasoning: Candidate owns data quality and assurance practices with direct leadership responsibility.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts"
+> Reasoning: Role owns establishment and implementation of measurement practices as quality gates before deployment.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Embed 'instrumentation before shipping' so every major release launches with the right KPIs, tracking, dashboards, and alerts - enabling fast learning, quick diagnosis, and confident iteration"
+> Reasoning: Candidate owns establishing measurement and instrumentation as a quality practice responsibility, not just tools in the stack.
+
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "supporting data sharing agreements and DPIAs, and ensuring our practices around children's data are robust and consistently applied"
+> Reasoning: Candidate operates in highly regulated domain with children's data requiring compliance frameworks (DPIAs, data agreements).
+
+**Run 2:** `high` ✓
+> Quote: "Become our day-to-day lead for data privacy and school-facing data assurance - supporting data sharing agreements and DPIAs, and ensuring our practices around children's data are robust"
+> Reasoning: Compliance, privacy regulation, and trustworthiness around sensitive data are framed as primary motivations, not operational reliability.
+
+**Run 3:** `high` ✓
+> Quote: "data privacy and school-facing data assurance - supporting data sharing agreements and DPIAs, and ensuring our practices around children's data are robust and consistently applied"
+> Reasoning: Regulatory compliance (DPIA), trustworthiness, and children's data protection dominate as primary framing over operational delivery.
+

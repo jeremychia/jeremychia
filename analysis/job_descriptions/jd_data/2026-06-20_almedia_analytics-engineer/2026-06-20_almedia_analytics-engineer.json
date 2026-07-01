@@ -68,5 +68,14 @@
   "autonomy_level_quote": "collaborating closely with Product Analysts, Data Scientists, and Business Stakeholders to meet their analytical and reporting needs",
   "autonomy_level_reasoning": "The role is framed around meeting defined needs of others rather than setting direction or defining analytics strategy.",
   "greenfield_vs_fix_quote": "Design, build, and maintain clean, scalable, and performance-optimised data models using SQL and dbt.",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Apply software engineering practices to analytics code, including version control, testing, and continuous integration.",
+  "ai_role_reasoning": "Lists software engineering practices without mentioning AI tools or infrastructure requirements.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Apply software engineering practices to analytics code, including version control, testing, and continuous integration.",
+  "testing_framing_reasoning": "Candidate owns testing as explicit software engineering practice.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "ensuring our data is clean, accessible, and ready for analysis",
+  "loss_aversion_framing_reasoning": "Protective framing around data quality indicates operational reliability concern."
 }

@@ -69,5 +69,14 @@
   "autonomy_level_quote": "Design and evolve data marts encoding Telavox business logic",
   "autonomy_level_reasoning": "The role designs and owns the data architecture rather than executing scoped work, with strategic responsibility for how analytics is delivered.",
   "greenfield_vs_fix_quote": "Design and evolve data marts; Build and maintain semantic layers",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Build and maintain semantic layers powering self-serve and agentic analytics",
+  "ai_role_reasoning": "Builds semantic infrastructure consumed by agentic (AI-driven) analytics.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables",
+  "testing_framing_reasoning": "Owns testing and documentation as part of core dbt project responsibility.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "trustworthy data and making information findable and useful throughout the organization",
+  "loss_aversion_framing_reasoning": "Trust and data reliability dominate framing as primary organizational concern, not just delivery."
 }

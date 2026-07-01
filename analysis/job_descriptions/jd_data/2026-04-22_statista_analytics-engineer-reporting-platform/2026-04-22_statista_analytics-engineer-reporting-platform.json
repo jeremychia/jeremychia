@@ -70,5 +70,14 @@
   "autonomy_level_quote": "Improve consistency and usability of reports through establishing shared standards, templates, and best practices",
   "autonomy_level_reasoning": "The role combines strategic ownership of platform governance and standards (establishing) with execution of reporting deliverables (designing, deploying).",
   "greenfield_vs_fix_quote": "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools.",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design, develop, and deploy reports and dashboards powered by our Data Warehouse.",
+  "ai_role_reasoning": "No mention of AI tools, AI-assisted coding, or AI-ready infrastructure.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "A structured, quality-focused mindset and genuine interest in standards and data governance topics.",
+  "testing_framing_reasoning": "Quality is framed as a mindset and interest rather than owned responsibility for testing, data contracts, or quality assurance.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Support documentation and governance efforts to improve maintainability and trust in reporting assets.",
+  "loss_aversion_framing_reasoning": "Emphasis on trust, governance, and maintainability signals operational reliability concerns without explicit compliance or regulatory framing."
 }

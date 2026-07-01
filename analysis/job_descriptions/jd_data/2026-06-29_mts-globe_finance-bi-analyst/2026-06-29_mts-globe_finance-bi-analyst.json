@@ -75,5 +75,14 @@
       "incoming company",
       "tourism industry"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "",
+  "ai_role_reasoning": "No AI-related responsibilities, tools, or capabilities mentioned in the JD",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Develop and maintain high quality reporting solutions to complex problems within the company",
+  "testing_framing_reasoning": "Candidate owns responsibility for quality and correctness in reporting solutions",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Collaborating closely with financial teams to support them in their reporting processes and daily operations",
+  "loss_aversion_framing_reasoning": "Framing emphasizes operational support and delivery rather than compliance, regulatory, or trust concerns"
 }

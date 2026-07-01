@@ -209,3 +209,45 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
+> Reasoning: dbt is a standard data transformation tool, not an AI coding or infrastructure tool; no GenAI responsibilities mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
+> Reasoning: No AI coding tools, GenAI responsibilities, or AI-ready infrastructure signals; dbt is traditional analytics tooling.
+
+**Run 3:** `none` ✓
+> Quote: "No explicit AI signals in stack or responsibilities"
+> Reasoning: Role describes standard analytics engineering work (dbt, data modeling, KPI logic) with no mention of AI coding tools, GenAI infrastructure, or AI-first approaches.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Reasoning: Uses ownership verb 'ensure' paired with testing and validation responsibilities, indicating quality practice ownership.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Reasoning: Ownership verb 'Ensure' paired with 'testing, validation, monitoring' indicates responsibility for quality practice.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Reasoning: Candidate owns quality practice with direct ownership verb (ensure) applied to testing and validation.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Reasoning: Operational reliability framing centered on preventing data quality issues and incidents, not compliance or regulatory dominance.
+
+**Run 2:** `moderate` ✓
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Reasoning: Operational reliability signal in data quality monitoring and validation focus, but lacks compliance/audit/regulatory framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Reasoning: Loss aversion centers on operational reliability (monitoring, data quality) rather than regulatory compliance or trust/governance dominance.
+

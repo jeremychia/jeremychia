@@ -75,5 +75,14 @@
       "high availability",
       "SQL proficiency"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "extract, clean, and transform data from various sources; collaborate with data scientists",
+  "ai_role_reasoning": "Standard data engineering responsibilities with no AI tool usage signals or AI infrastructure-building responsibilities.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "collaborate with data scientists to provide reliable datasets",
+  "testing_framing_reasoning": "Quality and reliability are outcomes but no explicit testing ownership or quality practice responsibility language.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Rigour signals dominate — accuracy, compliance, scalability, high availability, monitoring",
+  "loss_aversion_framing_reasoning": "Operational reliability concerns (monitoring, high availability, SLOs) dominate; compliance framed around data usability, not regulatory/audit."
 }

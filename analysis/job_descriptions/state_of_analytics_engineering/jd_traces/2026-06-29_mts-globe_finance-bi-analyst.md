@@ -206,3 +206,46 @@ Benefits:
 > Quote: "Be in constant contact with the business to understand their analytical needs and translate them into technical requirements."
 > Verified: ✓ found in JD
 > Reasoning: The role is framed as translating business-defined analytical needs into technical solutions, indicating execution of direction set by others rather than strategic direction-setting.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: ""
+> Reasoning: No AI-related responsibilities, tools, or capabilities mentioned in the JD
+
+**Run 2:** `none` ✓
+> Quote: "Develop and maintain high quality reporting solutions to complex problems within the company."
+> Reasoning: No AI tools, capabilities, or infrastructure mentioned in the role's responsibilities.
+
+**Run 3:** `none` ✓
+> Quote: "Develop and maintain high quality reporting solutions to complex problems within the company"
+> Reasoning: No AI tooling, GenAI infrastructure, or AI-first signals in responsibilities or required skills.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✗
+> Quote: "Develop and maintain high quality reporting solutions to complex problems within the company"
+> Reasoning: Candidate owns responsibility for quality and correctness in reporting solutions
+
+**Run 2:** `absent` ✓
+> Quote: "Develop and maintain high quality reporting solutions to complex problems within the company."
+> Reasoning: The phrase emphasizes quality outputs but lacks ownership verbs or testing methodology.
+
+**Run 3:** `absent` ✓
+> Quote: "Develop and maintain high quality reporting solutions"
+> Reasoning: Quality is an outcome descriptor but no explicit ownership of testing practices; no testing tools named.
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Collaborating closely with financial teams to support them in their reporting processes and daily operations"
+> Reasoning: Framing emphasizes operational support and delivery rather than compliance, regulatory, or trust concerns
+
+**Run 2:** `none` ✓
+> Quote: "No loss aversion framing detected."
+> Reasoning: Only delivery framing present; no compliance, regulatory, or operational reliability concerns mentioned.
+
+**Run 3:** `none` ✓
+> Quote: "support them in their reporting processes and daily operations"
+> Reasoning: Framing centers on business support and execution, not operational risk, compliance, or trust concerns.
+

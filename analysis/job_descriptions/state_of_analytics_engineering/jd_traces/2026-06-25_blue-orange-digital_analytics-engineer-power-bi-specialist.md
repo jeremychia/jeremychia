@@ -188,3 +188,45 @@ Blue Orange Digital seeks a Senior Analytics Engineer specialising in Power BI t
 > Reasoning: The role is positioned to define and establish how analytics is delivered through governance standards and semantic architecture design, rather than executing pre-defined work.
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design and construct Microsoft Fabric Semantic Models; Develop operational dashboards; lead analytics and visualization components"
+> Reasoning: Standard BI/analytics work with no AI tool usage or GenAI infrastructure building requirements
+
+**Run 2:** `none` ✓
+> Quote: "Design and construct Microsoft Fabric Semantic Models using Gold-layer data"
+> Reasoning: Standard analytics engineering without AI infrastructure or AI-assisted coding requirements.
+
+**Run 3:** `none` ✓
+> Quote: "Design and construct Microsoft Fabric Semantic Models using Gold-layer data; Create DAX measures, hierarchies, relationships, and semantic structures"
+> Reasoning: Standard BI/semantic modeling work with no AI tool usage, AI infrastructure signals, or AI-first mindset mentioned
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Support user enablement and UAT validation"
+> Reasoning: Testing mentioned passively as support activity, not as owned quality practice or listed tool
+
+**Run 2:** `absent` ✓
+> Quote: "Support user enablement and UAT validation"
+> Reasoning: Testing/validation mentioned only in support capacity, no ownership verb with quality/testing responsibility.
+
+**Run 3:** `absent` ✓
+> Quote: "Support user enablement and UAT validation"
+> Reasoning: Testing mentioned (UAT) but without ownership responsibility verbs; no testing tools in stack
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Trader P&L, Global Position, Risk Metrics (VaR), and Financial Consolidation reporting; Establish naming conventions and governance standards"
+> Reasoning: Operational reliability focus in high-stakes financial/risk domain (VaR, trading) with governance emphasis, but no explicit compliance or regulatory framing
+
+**Run 2:** `moderate` ✓
+> Quote: "Trader P&L, Global Position, Risk Metrics (VaR), and Financial Consolidation reporting"
+> Reasoning: Risk metrics and financial consolidation context signal operational reliability concerns, but no explicit regulatory/audit framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Establish naming conventions and governance standards; Optimize DirectQuery and Import performance for financial datasets"
+> Reasoning: Financial/risk domain with governance and performance optimization signals operational reliability concern, but framing is delivery-focused rather than compliance/regulatory-dominated
+

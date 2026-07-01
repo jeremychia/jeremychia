@@ -70,5 +70,14 @@
   "autonomy_level_quote": "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth; Actively coding in Python, dbt, and Airflow while coordinating project advancement",
   "autonomy_level_reasoning": "The role genuinely combines strategic team leadership and direction-setting with hands-on execution and project delivery work.",
   "greenfield_vs_fix_quote": "Developing and maintaining data products",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Actively coding in Python, dbt, and Airflow while coordinating project advancement",
+  "ai_role_reasoning": "No AI tools, frameworks, or infrastructure mentioned; standard analytics engineering stack only.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "N/A",
+  "testing_framing_reasoning": "No testing ownership, quality practices, or data contracts mentioned.",
+  "loss_aversion_framing": "none",
+  "loss_aversion_framing_quote": "Developing and maintaining data products",
+  "loss_aversion_framing_reasoning": "Framing centers on delivery and team leadership without compliance, regulatory, or risk mitigation language."
 }

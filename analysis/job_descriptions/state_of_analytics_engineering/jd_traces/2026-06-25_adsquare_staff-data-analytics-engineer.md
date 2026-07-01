@@ -182,3 +182,45 @@ Five-stage evaluation: 30-minute take-home technical quiz, 30-minute values inte
 > Quote: "Act as principal architect for the squad, championing test-driven development practices and engineering excellence"
 > Verified: ✓ found in JD
 > Reasoning: The principal architect role and emphasis on championing practices and defining architectural solutions indicate strategic autonomy to shape the data function's direction and standards.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: ""
+> Reasoning: No signals of AI usage, AI-first approach, or AI infrastructure building in the job description.
+
+**Run 2:** `none` ✓
+> Quote: "Mastery of SQL, dbt, Apache Spark/PySpark"
+> Reasoning: No AI skill requirement; focuses on traditional data engineering tools and languages.
+
+**Run 3:** `none` ✓
+> Quote: "Mastery of SQL, dbt, Apache Spark/PySpark"
+> Reasoning: No AI-specific skills or tools mentioned; standard data engineering technical stack
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "championing test-driven development practices and engineering excellence"
+> Reasoning: Candidate owns and champions TDD practices, indicating direct responsibility for quality and testing culture.
+
+**Run 2:** `responsibility` ✓
+> Quote: "championing test-driven development practices and engineering excellence"
+> Reasoning: Candidate owns establishment and promotion of testing practices and quality standards.
+
+**Run 3:** `responsibility` ✓
+> Quote: "championing test-driven development practices and engineering excellence"
+> Reasoning: Candidate owns/champions TDD as a practice, indicating responsibility for quality standards and testing discipline
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Build data observability frameworks for multi-terabyte data streams"
+> Reasoning: Operational reliability concern through data observability infrastructure suggests moderate loss-aversion framing around pipeline stability.
+
+**Run 2:** `moderate` ✓
+> Quote: "Build data observability frameworks for multi-terabyte data streams"
+> Reasoning: Operational reliability focus suggests moderate risk mitigation through pipeline stability monitoring.
+
+**Run 3:** `moderate` ✓
+> Quote: "Build data observability frameworks for multi-terabyte data streams"
+> Reasoning: Focus on observability for large-scale pipelines reflects concern for operational reliability and incident prevention
+

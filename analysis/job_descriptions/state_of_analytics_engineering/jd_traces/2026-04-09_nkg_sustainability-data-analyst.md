@@ -212,3 +212,46 @@ Not specified in the posting.
 > Reasoning: The language explicitly frames the role as receiving requirements from others and executing solutions, with no strategic ownership language such as 'define', 'lead', 'own', or 'drive'.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
+> Reasoning: Standard analytics engineering work (pipelines, dashboards, data platforms) with no mention of AI tools, GenAI infrastructure, or AI-assisted development.
+
+**Run 2:** `none` ✓
+> Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
+> Reasoning: No AI tool usage, AI-first mindset, or AI infrastructure building mentioned; standard data engineering.
+
+**Run 3:** `none` ✓
+> Quote: "Design and operate scalable data pipelines within Microsoft Fabric; Gather requirements and translate them into effective reporting and analytics solutions"
+> Reasoning: Standard data infrastructure and analytics work with no AI tool usage or enablement signals.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "emphasis on data quality"
+> Reasoning: Data quality is stated as a value without ownership language ('own', 'ensure', 'define', 'implement') or testing tools mentioned.
+
+**Run 2:** `absent` ✓
+> Quote: "Create Power BI dashboards and reports for monitoring and decision-making"
+> Reasoning: No testing tools, quality ownership verbs, or data contracts signaled; quality responsibility not explicitly owned.
+
+**Run 3:** `absent` ✓
+> Quote: "Structured and analytical manner with emphasis on data quality"
+> Reasoning: Data quality valued as an analytical approach but without owned testing or QA responsibility.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Structured and analytical manner with emphasis on data quality"
+> Reasoning: Framing centers on analytical capability and quality standards without references to incidents, SLOs, compliance, regulatory concerns, or bad-data-to-stakeholder risks.
+
+**Run 2:** `moderate` ✗
+> Quote: "Structured and analytical manner with emphasis on data quality"
+> Reasoning: Operational reliability concern (data quality, pipeline stability) without regulatory or trust dominance.
+
+**Run 3:** `none` ✓
+> Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
+> Reasoning: Operations and infrastructure focus on delivery and scalability without incident, SLO, or compliance risk framing.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']

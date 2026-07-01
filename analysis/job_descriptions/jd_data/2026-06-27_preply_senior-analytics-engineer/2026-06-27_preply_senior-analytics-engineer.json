@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem.",
     "language_gate": "Fluency in English (C1 level or above)",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives.",
+  "ai_role_reasoning": "No explicit AI skill expected; personalization context present but no signal of building AI infrastructure or using AI coding tools.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring.",
+  "testing_framing_reasoning": "Candidate owns quality practice through 'Champion' ownership language and explicit responsibility for automated data quality monitoring.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making.",
+  "loss_aversion_framing_reasoning": "Operational reliability framing dominates (data quality, reliability, cleanliness) without explicit compliance or regulatory language."
 }

@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams",
   "autonomy_level_reasoning": "The verb 'establish' and the responsibility to define KPIs and terminology across the organization indicates the role sets direction rather than executes direction from others.",
   "greenfield_vs_fix_quote": "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Transform complex data into compelling narratives informing product strategy and financial planning",
+  "ai_role_reasoning": "No mention of AI tools, AI-first mindset, or AI infrastructure capabilities; standard analytics storytelling role.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams",
+  "testing_framing_reasoning": "No testing tools listed and no explicit quality ownership language (own/ensure/define/implement testing).",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "Implement data governance protocols addressing GDPR compliance and access management",
+  "loss_aversion_framing_reasoning": "GDPR and regulatory compliance dominate framing; regulatory risk and access control trustworthiness are primary concerns."
 }

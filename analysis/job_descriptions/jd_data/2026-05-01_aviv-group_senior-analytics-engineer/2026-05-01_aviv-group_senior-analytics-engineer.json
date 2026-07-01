@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Defining data contracts, metrics, and semantic models across business domains",
   "autonomy_level_reasoning": "Strategic responsibility for defining data contracts and semantic models combined with execution responsibilities like developing/maintaining dbt models and contributing to architecture.",
   "greenfield_vs_fix_quote": "Developing and maintaining dbt models",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Defining data contracts, metrics, and semantic models across business domains",
+  "ai_role_reasoning": "No AI tool usage or AI-specific infrastructure mentioned; standard analytics semantic modeling.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Applying testing, documentation, and version control best practices",
+  "testing_framing_reasoning": "Actively applying testing practices demonstrates direct ownership of quality assurance.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring",
+  "loss_aversion_framing_reasoning": "Data governance and monitoring signal concerns with operational reliability and preventing pipeline incidents."
 }

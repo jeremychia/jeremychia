@@ -75,5 +75,14 @@
       "pipeline reliability",
       "infrastructure-as-code"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "No AI tools mentioned; stack is dbt, Looker, Python, Postgres, BigQuery",
+  "ai_role_reasoning": "No AI tools, AI-first mindset, or AI infrastructure signals present; purely traditional data engineering stack.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on.",
+  "testing_framing_reasoning": "Role owns data quality and testing as core practices, treating models as production code requiring rigorous testing.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "so the numbers we serve are ones we can stand behind; dashboards and reports that customers and other stakeholders depend on.",
+  "loss_aversion_framing_reasoning": "Data reliability framed around trustworthiness and stakeholder dependence, but no regulatory/compliance language; operational reliability dominates."
 }

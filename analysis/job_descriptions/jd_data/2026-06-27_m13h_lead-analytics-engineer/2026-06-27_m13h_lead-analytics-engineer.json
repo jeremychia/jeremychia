@@ -54,5 +54,14 @@
     "greenfield_vs_fix": "Construction d'une Customer Data Platform pour un grand retailer; Migration d'une large infrastructure de dashboards",
     "language_gate": "Langues parlées: Français/Anglais",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "No AI-related phrases in JD",
+  "ai_role_reasoning": "No mention of AI tools, GenAI, text-to-SQL, semantic models, or AI-assisted coding; standard analytics engineering work",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité",
+  "testing_framing_reasoning": "Candidate owns implementing datasets with explicit quality and reliability standards",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "fiables en termes de qualité et de disponibilité",
+  "loss_aversion_framing_reasoning": "Operational reliability framing (availability, quality) without regulatory or compliance language"
 }

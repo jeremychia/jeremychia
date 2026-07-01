@@ -189,3 +189,46 @@ Competitive personal development budget, work-from-home allowance, fitness membe
 > Reasoning: The use of "establish," "develop," and "improve" signals direction-setting and architectural ownership rather than execution of someone else's priorities.
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'strategic']
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Ensure model traceability and audit readiness"
+> Reasoning: No AI tool usage or GenAI infrastructure mentioned; standard risk engineering work
+
+**Run 2:** `none` ✓
+> Quote: "Implement risk models (ICAAP, capital ratios) into production Python solutions"
+> Reasoning: No AI capability signals; financial models are domain-specific regulatory tooling, not AI infrastructure or tool usage.
+
+**Run 3:** `none` ✓
+> Quote: "Implement risk models (ICAAP, capital ratios) into production Python solutions"
+> Reasoning: Standard Python engineering work with no AI tooling or AI infrastructure responsibilities mentioned.
+
+
+### testing_framing
+**Run 1:** `absent` ✓
+> Quote: "Enhance and maintain internal risk controlling tools"
+> Reasoning: No explicit testing ownership or quality responsibility verbs; no testing tools listed
+
+**Run 2:** `responsibility` ✗
+> Quote: "Ensure model traceability and audit readiness"
+> Reasoning: Ownership verb 'Ensure' applied to audit readiness, indicating responsibility for solution correctness and governance.
+
+**Run 3:** `absent` ✓
+> Quote: "Enhance and maintain internal risk controlling tools"
+> Reasoning: Functionality and compliance focus; no testing tools, quality practice ownership, or data contract language present.
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
+
+### loss_aversion_framing
+**Run 1:** `high` ✓
+> Quote: "Convert regulatory requirements into audit-proof, automated processes"
+> Reasoning: Regulatory compliance and audit-readiness dominate framing as primary concern
+
+**Run 2:** `high` ✓
+> Quote: "Convert regulatory requirements into audit-proof, automated processes"
+> Reasoning: Regulatory compliance and audit-readiness dominate framing; trust and regulatory adherence are primary concerns, not operational SLOs.
+
+**Run 3:** `high` ✓
+> Quote: "Convert regulatory requirements into audit-proof, automated processes"
+> Reasoning: Regulatory compliance and audit readiness dominate; financial risk models (ICAAP, capital ratios) reinforce regulatory risk-aversion framing.
+

@@ -75,5 +75,14 @@
       "data modeling",
       "data warehousing"
     ]
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Build and optimize ETL/ELT processes for data availability",
+  "ai_role_reasoning": "Standard data engineering and BI work with no AI tool usage or GenAI-enabling infrastructure responsibilities.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Collaborate with Data Engineers on quality and performance",
+  "testing_framing_reasoning": "Quality mentioned in collaborative context only; no ownership verb (own/ensure/define/implement) paired with testing or quality responsibility.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "metrics depend on well-modeled, reliable data; data governance and documentation",
+  "loss_aversion_framing_reasoning": "Hiring driven by operational reliability concerns (governance, quality, data stability) but no compliance or regulatory framing; moderate loss aversion rather than high trust/audit-driven."
 }

@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "feeds directly into how commercial teams make decisions, assign leads, and manage performance",
+  "ai_role_reasoning": "No AI coding tools, infrastructure, or AI-first practices mentioned; standard analytics role.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni",
+  "testing_framing_reasoning": "Standards and consolidation framing without explicit testing ownership, quality practices, or data contracts.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "serving as the source of truth for commercial stakeholders",
+  "loss_aversion_framing_reasoning": "Trustworthiness and reliability matter (high stakes for business decisions), but no compliance/regulatory language or operational incident framing."
 }

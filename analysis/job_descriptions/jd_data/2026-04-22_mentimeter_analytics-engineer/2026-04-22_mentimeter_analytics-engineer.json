@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Design, own, and evolve core data models and the modelling architecture",
   "autonomy_level_reasoning": "Responsibility to design and own data architecture indicates strategic autonomy to define technical direction rather than execute direction set by others.",
   "greenfield_vs_fix_quote": "Design, own, and evolve core data models and the modelling architecture; Build standards, documentation, and data catalogs for the organization",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Design, own, and evolve core data models and the modelling architecture",
+  "ai_role_reasoning": "Standard data modeling work with no AI-ready, semantic model, or AI infrastructure signals.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Build standards, documentation, and data catalogs for the organization",
+  "testing_framing_reasoning": "Standards and documentation work do not reference testing ownership, quality practice, or data contracts.",
+  "loss_aversion_framing": "high",
+  "loss_aversion_framing_quote": "Experience working with GDPR-sensitive data",
+  "loss_aversion_framing_reasoning": "Regulatory compliance (GDPR) drives loss-aversion framing as a primary concern."
 }

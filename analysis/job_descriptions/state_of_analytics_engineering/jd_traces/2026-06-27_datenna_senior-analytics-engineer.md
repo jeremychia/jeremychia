@@ -201,3 +201,46 @@ Note: Candidates must already reside in the Netherlands.
 > Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
 > Verified: ✓ found in JD
 > Reasoning: Responsibilities emphasize understanding externally-set requirements and delivering solutions within defined technical scope, not setting analytics strategy or priorities.
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Reasoning: Stack specifies standard data tools with no mention of AI coding tools or AI-ready infrastructure.
+
+**Run 2:** `none` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Reasoning: No AI tools or GenAI infrastructure mentioned; standard data engineering skills without AI signals.
+
+**Run 3:** `none` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Reasoning: Standard data engineering tools without AI signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement data quality checks and governance practices"
+> Reasoning: The verb 'implement' paired with 'data quality checks' signals ownership of the quality practice.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement data quality checks and governance practices"
+> Reasoning: Candidate owns quality implementation with explicit ownership verb 'implement' coupled with quality/governance practice.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement data quality checks and governance practices"
+> Reasoning: Explicit ownership of quality practice via 'implement' paired with 'data quality checks'.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Implement data quality checks and governance practices"
+> Reasoning: Governance and data quality emphasis indicate operational reliability concern, but lacks explicit compliance or regulatory framing.
+
+**Run 2:** `none` ✗
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Reasoning: Framing centers on delivery and technical maintenance, lacking regulatory/compliance or operational risk language.
+
+**Run 3:** `moderate` ✓
+> Quote: "Implement data quality checks and governance practices"
+> Reasoning: Governance practices signal operational control and reliability concerns without explicit regulatory or audit language.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']

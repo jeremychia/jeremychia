@@ -68,5 +68,14 @@
   "autonomy_level_quote": "Collaborate with Finance to convert requirements into structured data solutions",
   "autonomy_level_reasoning": "Finance sets the requirements (revenue recognition, churn metrics) and this role executes the technical solution to deliver against those requirements.",
   "greenfield_vs_fix_quote": "Develop and sustain dimensional models",
-  "urgency_signal": "No urgency signals present"
+  "urgency_signal": "No urgency signals present",
+  "ai_role": "none",
+  "ai_role_quote": "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics",
+  "ai_role_reasoning": "SQLMesh is a data orchestration tool; no mention of AI infrastructure, GenAI, or AI-assisted coding.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Implement quality assurance protocols for financial data",
+  "testing_framing_reasoning": "Verb 'implement' with 'quality assurance protocols' establishes ownership of quality practice.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics",
+  "loss_aversion_framing_reasoning": "Financial domain (revenue recognition) implies operational reliability risk without explicit compliance or regulatory framing."
 }

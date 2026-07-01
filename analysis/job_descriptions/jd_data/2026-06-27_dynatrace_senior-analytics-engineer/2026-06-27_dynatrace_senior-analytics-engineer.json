@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Follow established SQL development and dbt modeling standards",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Design data models with AI readiness in mind, including column-level descriptions",
+  "ai_role_reasoning": "Candidate builds infrastructure for AI consumption through semantic-ready data models.",
+  "testing_framing": "responsibility",
+  "testing_framing_quote": "Implement data quality checks and governance within dbt and Snowflake",
+  "testing_framing_reasoning": "Candidate owns quality assurance and governance implementation.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Implement data quality checks and governance within dbt and Snowflake",
+  "loss_aversion_framing_reasoning": "Governance language signals trust and compliance concerns, balanced with operational delivery framing."
 }

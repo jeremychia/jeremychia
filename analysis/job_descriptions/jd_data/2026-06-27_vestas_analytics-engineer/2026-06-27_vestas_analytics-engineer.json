@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "Maintain, optimize, and continuously improve existing data models",
     "language_gate": "Not stated in JD",
     "urgency": "Application Deadline: July 4, 2026"
-  }
+  },
+  "ai_role": "none",
+  "ai_role_quote": "Maintain, optimize, and continuously improve existing data models",
+  "ai_role_reasoning": "Standard analytics modeling and optimization without AI skill expectations or infrastructure-building responsibilities.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "scalable, standardised, and high-quality analytics environment",
+  "testing_framing_reasoning": "High-quality outputs valued but no testing ownership verbs or tools listed; quality is environmental goal, not individual responsibility.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "delivers 'one version of the truth' across Vestas / governance teams",
+  "loss_aversion_framing_reasoning": "Standardization and single-source-of-truth emphasis suggests operational reliability focus to prevent conflicting data; governance infrastructure present."
 }

@@ -209,3 +209,46 @@ None explicitly listed beyond the requirements above.
 > Reasoning: The role centers on leading architectural decisions and roadmap development for the data platform rather than executing pre-determined work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development"
+> Reasoning: No mention of AI coding tools, GenAI capabilities, or AI-ready data infrastructure; role is architectural but tool-agnostic.
+
+**Run 2:** `none` ✓
+> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development"
+> Reasoning: No mentions of AI tools, AI-assisted coding, or AI infrastructure requirements.
+
+**Run 3:** `none` ✓
+> Quote: "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow"
+> Reasoning: Standard data warehouse/ETL architecture with no AI tools, GenAI, or AI-ready infrastructure signals.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
+> Reasoning: Uses implement + data quality indicating candidate owns quality practice and governance, not just using tools.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
+> Reasoning: Candidate owns quality/governance implementation at enterprise level.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
+> Reasoning: Candidate owns/implements quality practices and governance, not just tools in a stack.
+
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "enterprise-level data quality strategies and governance frameworks"
+> Reasoning: Governance and data quality framing suggest operational reliability and pipeline stability concerns, but no regulatory/compliance-dominant language.
+
+**Run 2:** `none` ✗
+> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
+> Reasoning: Framing emphasizes delivery and architecture capability-building, not risk/reliability/compliance language.
+
+**Run 3:** `moderate` ✓
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
+> Reasoning: Governance and data quality suggest operational reliability concerns, but no explicit compliance/regulatory/audit language.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']

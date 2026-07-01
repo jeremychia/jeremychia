@@ -219,3 +219,46 @@ None explicitly listed.
 > Reasoning: The role combines strategic ownership of the data/analytics technical domain (establishing requirements, designing architecture, defining KPIs) with execution in service of business team priorities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+
+### ai_role
+**Run 1:** `none` ✓
+> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services"
+> Reasoning: Standard data engineering tech stack with no AI tools (Copilot/Claude Code/Cursor) or GenAI infrastructure responsibilities mentioned.
+
+**Run 2:** `none` ✓
+> Quote: "N/A"
+> Reasoning: No mentions of AI tools, GenAI infrastructure, or AI-enabled capabilities.
+
+**Run 3:** `none` ✓
+> Quote: "Design, construct, and enhance data pipelines utilizing SQL, Python, dbt, git, and AWS services"
+> Reasoning: No AI tools, frameworks, or AI-ready infrastructure mentioned across any phrase.
+
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency"
+> Reasoning: The verb 'implement' paired with 'data quality and validation processes' signals candidate owns the quality practice, not just a tool in the stack.
+
+**Run 2:** `responsibility` ✓
+> Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency"
+> Reasoning: Candidate owns quality practice with explicit implement verb paired with data quality and validation.
+
+**Run 3:** `responsibility` ✓
+> Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency"
+> Reasoning: Candidate owns data quality and validation as explicit responsibilities using implement/establish verbs.
+
+
+### loss_aversion_framing
+**Run 1:** `none` ✓
+> Quote: "Implement data quality and validation processes to guarantee data accuracy and consistency"
+> Reasoning: Quality framing focuses on delivery (accuracy, consistency) without operational reliability signals (SLOs, incidents, pipeline stability) or compliance/trust signals (regulatory, audit, bad data risk).
+
+**Run 2:** `none` ✓
+> Quote: "N/A"
+> Reasoning: Framing emphasizes delivery outcomes and business metrics without regulatory, audit, or trust signals.
+
+**Run 3:** `moderate` ✗
+> Quote: "guarantee data accuracy and consistency"
+> Reasoning: Data accuracy and quality framing indicates operational reliability concern without regulatory or audit emphasis.
+
+⚠ **LLM inconsistency**: runs gave ['none', 'none', 'moderate']

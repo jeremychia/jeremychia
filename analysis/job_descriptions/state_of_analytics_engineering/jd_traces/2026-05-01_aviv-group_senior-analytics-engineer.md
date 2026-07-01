@@ -204,3 +204,47 @@
 ⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+
+### ai_role
+**Run 1:** `none` ✗
+> Quote: "Defining data contracts, metrics, and semantic models across business domains"
+> Reasoning: No AI tool usage or AI-specific infrastructure mentioned; standard analytics semantic modeling.
+
+**Run 2:** `ai_enabler` ✓
+> Quote: "Defining data contracts, metrics, and semantic models across business domains"
+> Reasoning: Building semantic models and data infrastructure to support AI consumption, enabling AI-ready analytics systems.
+
+**Run 3:** `ai_enabler` ✓
+> Quote: "Defining data contracts, metrics, and semantic models across business domains"
+> Reasoning: Semantic models signal building infrastructure that AI systems consume
+
+⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'ai_enabler']
+
+### testing_framing
+**Run 1:** `responsibility` ✓
+> Quote: "Applying testing, documentation, and version control best practices"
+> Reasoning: Actively applying testing practices demonstrates direct ownership of quality assurance.
+
+**Run 2:** `tool_listed` ✗
+> Quote: "Applying testing, documentation, and version control best practices"
+> Reasoning: Testing mentioned as practice applied rather than candidate-owned responsibility; lacks ownership verbs (define/ensure/own).
+
+**Run 3:** `responsibility` ✓
+> Quote: "Defining data contracts, metrics, and semantic models across business domains"
+> Reasoning: Defining is an ownership verb indicating responsibility for data quality contracts
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
+
+### loss_aversion_framing
+**Run 1:** `moderate` ✓
+> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
+> Reasoning: Data governance and monitoring signal concerns with operational reliability and preventing pipeline incidents.
+
+**Run 2:** `moderate` ✓
+> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
+> Reasoning: Operational reliability signals (governance, monitoring, data contracts) present but framed around platform practices, not regulatory/compliance dominance.
+
+**Run 3:** `moderate` ✓
+> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
+> Reasoning: Monitoring and governance emphasize operational reliability and preventing data issues from reaching stakeholders
+

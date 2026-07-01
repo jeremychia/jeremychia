@@ -52,5 +52,14 @@
     "greenfield_vs_fix": "26-week enterprise data warehouse implementation role in the commodities trading sector",
     "language_gate": "Not stated in JD",
     "urgency": "No urgency signals present"
-  }
+  },
+  "ai_role": "ai_enabler",
+  "ai_role_quote": "Establish naming conventions and semantic governance standards",
+  "ai_role_reasoning": "Semantic governance infrastructure signals data structure built for AI systems to consume.",
+  "testing_framing": "absent",
+  "testing_framing_quote": "Collaborate with Data Engineers on data product readiness",
+  "testing_framing_reasoning": "Readiness implied but no explicit testing responsibility, tool, or quality practice ownership.",
+  "loss_aversion_framing": "moderate",
+  "loss_aversion_framing_quote": "Develop production dashboards for Trader P&L, Global Position, VaR, and Financial Consolidation",
+  "loss_aversion_framing_reasoning": "VaR (regulatory risk) and Financial Consolidation (compliance audit) in commodities trading dominate framing."
 }
