@@ -325,7 +325,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="hero" aria-label="Introduction">
   <div class="hero-eyebrow" id="heroEyebrow">JDs · psychologically decoded</div>
   <h1>What companies <em>fear</em> tells you more than what they want</h1>
-  <p class="hero-sub">93 AE/BI job descriptions decoded. 84% are rigour-first with no velocity signal whatsoever. 84% expect zero AI skill from the candidate, despite the industry's own surveys claiming AI use is near-universal. 60% are building for internal data teams, not commercial stakeholders. Execution roles outnumber strategic ones — senior titles tell you nothing about who actually sets the direction.</p>
+  <p class="hero-sub">115 AE/BI job descriptions decoded. 81% are rigour-first with no velocity signal whatsoever. 84% expect zero AI skill from the candidate, despite the industry's own surveys claiming AI use is near-universal. 58% are building for internal data teams, not commercial stakeholders. Strategic, execution, and mixed roles are now perfectly tied at a third each — senior titles tell you nothing about who actually sets the direction.</p>
   <a href="#findings" class="hero-cta">
     Read the analysis
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8l5 5 5-5"/></svg>
@@ -381,7 +381,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="section" id="findings">
   <div class="section-label">Overview</div>
   <h2 class="section-headline">The market is writing from fear, not aspiration</h2>
-  <p class="section-body">80% rigour-first. Every finance role in the corpus sits in a high-risk domain — 100% without exception. Every mature data team is rigour-only. These are not wish lists. They are damage reports from teams that have been burned, written in the language of whatever last went wrong.</p>
+  <p class="section-body">81% rigour-first. Every finance role in the corpus sits in a high-risk domain — 100% without exception. Every mature data team is rigour-only. These are not wish lists. They are damage reports from teams that have been burned, written in the language of whatever last went wrong.</p>
   <div class="stats-row" id="statsRow"></div>
 </section>
 
@@ -440,13 +440,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 01</div>
-        <h3 class="donut-headline">80% rigour-first. Only 2% pure velocity roles.</h3>
+        <h3 class="donut-headline">81% rigour-first. Only 2% pure velocity roles.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for repeated language around pace vs. correctness. "Rigour" = three or more signals of: <em>TDD, CI/CD, production-grade, mocking, performance profiling, compliance, audit, meticulous, controlled</em>. "Velocity" = <em>move fast, bias for action, agile, iterate, pragmatic</em>. "Mixed" = both present, neither dominant.
           <br><br>
-          <strong>What the data shows:</strong> 80% rigour, 17% mixed, 2% pure velocity. The 17% mixed still lead with correctness — velocity is a secondary signal in all of them. Every mature data team in the corpus is rigour-only. This is the AE market's defining characteristic: it has collectively decided that speed without quality is not a trade-off worth making.
+          <strong>What the data shows:</strong> 81% rigour, 17% mixed, 2% pure velocity. The 17% mixed still lead with correctness — velocity is a secondary signal in all of them. Every mature data team in the corpus is rigour-only. This is the AE market's defining characteristic: it has collectively decided that speed without quality is not a trade-off worth making.
           <br><br>
-          <strong>Resume implication:</strong> Default to risk-reduction framing. "Zero production incidents", "97% test coverage", "reduced data quality failures by X" outperform speed bullets in 80% of applications. Velocity language only helps in early-stage roles — filter by team maturity first.
+          <strong>Resume implication:</strong> Default to risk-reduction framing. "Zero production incidents", "97% test coverage", "reduced data quality failures by X" outperform speed bullets in 81% of applications. Velocity language only helps in early-stage roles — filter by team maturity first.
         </div>
         <div class="donut-chart-wrap"><canvas id="rigourChart" role="img" aria-label="Donut chart: distribution of rigour vs velocity signals across JDs"></canvas></div>
         <p class="donut-hint pulse" id="rigourHint">Click a segment to see companies</p>
@@ -474,11 +474,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 02</div>
-        <h3 class="donut-headline">48% engineer-authored. Mixed authorship is the new normal.</h3>
+        <h3 class="donut-headline">45% engineer-authored. Mixed authorship is the new normal.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for specificity of language. "Hiring manager" = named sub-tools (e.g. <em>StarRocks, SparkSQL, PySpark</em>), scale numbers (<em>~1B rows daily, multi-terabyte</em>), specific architectural patterns (<em>incremental models, Data Mesh, medallion</em>), or technical anti-patterns named explicitly. "Recruiter" = generic category language, soft-skill padding, no tool specificity. "Mixed" = technical core with recruiter boilerplate appended.
           <br><br>
-          <strong>What the data shows:</strong> 48% hiring manager, 43% mixed, only 10% pure recruiter. The majority of AE JDs were written by, or heavily influenced by, someone who has done this job. Only 10% are pure boilerplate — meaning ATS keyword optimisation is rarely the whole game.
+          <strong>What the data shows:</strong> 45% hiring manager, 37% mixed, 17% pure recruiter. The majority of AE JDs were written by, or heavily influenced by, someone who has done this job. Only 17% are pure boilerplate — meaning ATS keyword optimisation is rarely the whole game.
           <br><br>
           <strong>Resume implication:</strong> For hiring-manager JDs, mirror their exact technical vocabulary. If they wrote "dbt incremental models with snapshot strategy", your bullet should say "incremental models" — not "data transformation". For mixed JDs, lead with the technical specifics, close with the stakeholder language.
         </div>
@@ -512,7 +512,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for the dominant mission signal. "Greenfield" = <em>build, establish, define, create from scratch, first analytics hire, design</em>. "Fix / Scale" = <em>improve, scale, maintain, modernise, optimise, inherited, continued implementation</em>. "Mixed" = both present with no clear dominant signal.
           <br><br>
-          <strong>What the data shows:</strong> 43% mixed, 29% greenfield, 29% fix/scale — almost perfectly three-way split. The majority of roles ask you to do both: extend existing infrastructure while establishing new capabilities. Crucially, strategic autonomy does not predict greenfield — only 5 of 21 strategic roles are pure greenfield. Most "own the analytics function" roles are building on top of something that already exists.
+          <strong>What the data shows:</strong> 50% mixed, 32% fix/scale, 17% greenfield — the mixed middle has expanded. The majority of roles ask you to do both: extend existing infrastructure while establishing new capabilities. Crucially, strategic autonomy does not predict greenfield — most "own the analytics function" roles are building on top of something that already exists.
           <br><br>
           <strong>Resume implication:</strong> Versatility is the default expectation. Show both modes: "designed X from scratch" alongside "inherited Y, improved it to Z". Roles that want only one mode signal it clearly — and they're the minority.
         </div>
@@ -542,11 +542,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 04</div>
-        <h3 class="donut-headline">58% mid-stage. Mature and early teams now tied at 20% each.</h3>
+        <h3 class="donut-headline">59% mid-stage. Early teams edge ahead of mature at 18% vs 22%.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for signals of the data team's stage. "Early" = first or only data hire implied, no team described, "build from zero", solo AE with no peers mentioned. "Mid" = small existing team, some structure present, "mentor junior engineers", "lead a team of 2". "Mature" = established engineering ladder implied by seniority level, multiple squads, "Staff" or "Principal" titles with cross-squad mandate.
           <br><br>
-          <strong>What the data shows:</strong> 58% mid-stage, 20% mature, 20% early. The broader corpus reveals a significant cohort of established data organisations (Spotify, Netflix, Vinted, N26) that don't appear heavily in cold-apply pipelines. All 17 mature-team roles are rigour-only without exception.
+          <strong>What the data shows:</strong> 59% mid-stage, 22% mature, 18% early. The broader corpus reveals a significant cohort of established data organisations (Spotify, Netflix, Vinted, N26) that don't appear heavily in cold-apply pipelines. All mature-team roles are rigour-only without exception.
           <br><br>
           <strong>Resume implication:</strong> Mature teams want evidence of operating within standards and raising them — governance contributions, cross-squad influence, architecture decisions that outlasted you. Early-stage teams want proof you can build without a net. Mid-stage teams — the majority — want both.
         </div>
@@ -576,11 +576,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 05</div>
-        <h3 class="donut-headline">60% internal-facing. Commercial and finance now tied at 12% each.</h3>
+        <h3 class="donut-headline">58% internal-facing. Commercial and finance tied at 10% each.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for the primary audience named in the responsibilities section. <em>Commercial</em> = sales, GTM, customer success, revenue ops, partnerships. <em>Product</em> = product teams, growth, experimentation, A/B testing. <em>Internal data</em> = data platform, self-serve analytics, other analysts/engineers. <em>Finance</em> = FP&A, audit, P&L, controllership.
           <br><br>
-          <strong>What the data shows:</strong> 60% internal data — the AE role is primarily a craft role, building infrastructure and models consumed by other data practitioners, not end-business stakeholders. Finance (12%) is 100% high-risk domain. Commercial (12%) has grown; product (6%) remains the minority. The "data-driven GTM" AE role is rarer than LinkedIn posts suggest.
+          <strong>What the data shows:</strong> 58% internal data — the AE role is primarily a craft role, building infrastructure and models consumed by other data practitioners, not end-business stakeholders. Finance (10%) is 100% high-risk domain. Commercial (10%) and finance are tied; product (7%) remains the minority. The "data-driven GTM" AE role is rarer than LinkedIn posts suggest.
           <br><br>
           <strong>Resume implication:</strong> For internal-data roles, lead with platform thinking: self-serve enablement, modelling standards, semantic layer, data contracts. For finance roles, precision and auditability outweigh everything. Commercial roles want business impact framing — pipeline influenced, revenue attributed, churn predicted.
         </div>
@@ -610,11 +610,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
     <div class="donut-answer-inner">
       <div class="donut-left">
         <div class="donut-finding">Finding 06</div>
-        <h3 class="donut-headline">Execution leads at 37%. Strategic and mixed nearly tied behind it.</h3>
+        <h3 class="donut-headline">Strategic, execution, and mixed roles are now tied at a third each.</h3>
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Each JD was read for the verb choices in the responsibilities section. <em>Strategic</em> = "define", "own", "shape", "establish", "lead", "drive" — the role sets direction. <em>Execution</em> = "support", "assist", "deliver", "help", "contribute to" — direction comes from elsewhere. <em>Mixed</em> = owns a technical domain but serves a business team's requests.
           <br><br>
-          <strong>What the data shows:</strong> 37% execution, 31% strategic, 30% mixed — the market does not sort neatly by seniority. "Senior Analytics Engineer" appears across all three categories. The difference is not the title but the framing: strategic roles say "you will define", execution roles say "you will support".
+          <strong>What the data shows:</strong> 33% execution, 33% strategic, 33% mixed — the market is now a perfect three-way split. "Senior Analytics Engineer" appears across all three categories. The difference is not the title but the framing: strategic roles say "you will define", execution roles say "you will support".
           <br><br>
           <strong>Resume implication:</strong> Read the verb tense before applying. For strategic roles, your bullets must show direction-setting: "designed the modelling framework", "established the data contract standard", "shifted the team from reactive to proactive". For execution roles, impact framing matters more: "reduced dashboard load time by 60%", "delivered 8 data products in Q1". Applying with the wrong register is a reliable rejection signal.
         </div>
@@ -649,7 +649,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
         <div class="donut-methodology">
           <strong>How this was classified:</strong> The question is what the <em>candidate</em> is expected to do with AI — not what the company builds. Three categories: <em>none</em> = no AI skill expected (includes companies building AI where the AE does standard modelling); <em>ai_user</em> = candidate uses AI coding tools (Copilot, Claude Code, Cursor) to accelerate their own work; <em>ai_enabler</em> = candidate builds data infrastructure that AI systems consume ("AI-ready foundations", "semantic model for AI", "text-to-SQL", "GenAI" in responsibilities).
           <br><br>
-          <strong>What the data shows:</strong> 84% none, 15% ai_enabler, 1% ai_user (n=93). The "AI-first" discourse has not reached the job description layer at anywhere near the rate dbt Labs' own survey reports (72% of respondents claiming daily AI coding use). Vague phrases — "AI-first mindset", "excited about AI", "we use AI internally" — were explicitly coded as <em>none</em>, because they signal culture, not skill expectation. The small <em>ai_enabler</em> cohort (1 in 7 roles) consists of roles explicitly building data infrastructure for downstream AI consumption: semantic layers, ML feature pipelines, text-to-SQL readiness. Almost no roles (1 of 93) named AI coding tools as a skill requirement — meaning even where teams use Copilot or Claude Code daily, it has not yet become a hiring criterion.
+          <strong>What the data shows:</strong> 84% none, 15% ai_enabler, 1% ai_user (n=93 roles with this dimension). The "AI-first" discourse has not reached the job description layer at anywhere near the rate dbt Labs' own survey reports (72% of respondents claiming daily AI coding use). Vague phrases — "AI-first mindset", "excited about AI", "we use AI internally" — were explicitly coded as <em>none</em>, because they signal culture, not skill expectation. The small <em>ai_enabler</em> cohort (1 in 7 roles) consists of roles explicitly building data infrastructure for downstream AI consumption: semantic layers, ML feature pipelines, text-to-SQL readiness. Almost no roles (1 of 93) named AI coding tools as a skill requirement — meaning even where teams use Copilot or Claude Code daily, it has not yet become a hiring criterion.
           <br><br>
           <strong>Resume implication:</strong> Mentioning AI tool usage is not a differentiator in most of this market — it is simply not what they are screening for. For the ai_enabler cohort, semantic modelling and ML-adjacent data infrastructure work is the signal worth surfacing. For everyone else, quality, governance, and domain expertise outweigh AI enthusiasm in application screening.
         </div>
@@ -684,7 +684,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Three categories: <em>responsibility</em> = the candidate owns quality as a named accountability — action verbs like "own", "ensure", "define", "implement", "establish" paired with "quality", "testing", "data contracts", or "observability"; <em>tool_listed</em> = a testing tool appears in the required or preferred stack without ownership language; <em>absent</em> = no testing or quality signal anywhere in the JD.
           <br><br>
-          <strong>What the data shows:</strong> 57% responsibility, 39% absent, 4% tool_listed (n=93). This is the closest the JD data comes to confirming dbt Labs' "trust gap" narrative directly — testing ownership has become a named hiring criterion in the majority of roles, not just a nice-to-have. It tracks closely with the 84% rigour-orientation finding (Q1): rigour-framed JDs are disproportionately the ones that also name testing as an owned responsibility, not just a stack item. The 39% absent group is concentrated in earlier-stage and velocity-leaning roles where the infrastructure to own doesn't yet exist.
+          <strong>What the data shows:</strong> 57% responsibility, 39% absent, 4% tool_listed (n=93 roles with this dimension). This is the closest the JD data comes to confirming dbt Labs' "trust gap" narrative directly — testing ownership has become a named hiring criterion in the majority of roles, not just a nice-to-have. It tracks closely with the 81% rigour-orientation finding (Q1): rigour-framed JDs are disproportionately the ones that also name testing as an owned responsibility, not just a stack item. The 39% absent group is concentrated in earlier-stage and velocity-leaning roles where the infrastructure to own doesn't yet exist.
           <br><br>
           <strong>Resume implication:</strong> For <em>responsibility</em>-framed roles, data quality ownership is a primary selection criterion — the majority case in this market. Lead with concrete accountability: "owned the data contract framework", "reduced production data incidents by X%", "defined testing standards for 40+ dbt models". For <em>tool_listed</em> roles, name the tool and the outcome — but don't over-index on quality; the JD is signalling familiarity, not mastery. For <em>absent</em> roles, don't bury the lede with quality bullets — lead with delivery and impact.
         </div>
@@ -719,7 +719,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
         <div class="donut-methodology">
           <strong>How this was classified:</strong> Three levels of loss-aversion framing: <em>none</em> = JD framed in pure delivery and capability terms, no risk register; <em>moderate</em> = operational reliability is a secondary concern — fear is pipeline outages, SLOs, or data failures, not compliance; <em>high</em> = risk, compliance, or stakeholder trust framing dominates — fear is bad data reaching decision-makers or regulatory exposure.
           <br><br>
-          <strong>What the data shows:</strong> 60% moderate, 25% none, 15% high (n=93). Pure delivery framing is the minority — three in four roles carry some fear signal. But the dominant fear is operational, not the compliance/trust framing dbt Labs' 2026 report leads with (71% citing fear of hallucinated outputs reaching stakeholders): "we can't have pipelines going down", "incidents need response", "production reliability matters". Compliance-dominated framing (high) is concentrated in finance-adjacent and regulated sectors — a narrower slice of the market than the survey's headline number implies. The <em>none</em> group is almost entirely early-stage or greenfield roles where the infrastructure does not yet exist to fail.
+          <strong>What the data shows:</strong> 60% moderate, 25% none, 15% high (n=93 roles with this dimension). Pure delivery framing is the minority — three in four roles carry some fear signal. But the dominant fear is operational, not the compliance/trust framing dbt Labs' 2026 report leads with (71% citing fear of hallucinated outputs reaching stakeholders): "we can't have pipelines going down", "incidents need response", "production reliability matters". Compliance-dominated framing (high) is concentrated in finance-adjacent and regulated sectors — a narrower slice of the market than the survey's headline number implies. The <em>none</em> group is almost entirely early-stage or greenfield roles where the infrastructure does not yet exist to fail.
           <br><br>
           <strong>Resume implication:</strong> Read the fear register before framing your application. For <em>high</em> roles, open with risk-reduction proof: zero-incident records, audit trail implementation, compliance frameworks. For <em>moderate</em> roles — the majority case — reliability metrics ("99.X% pipeline uptime", "reduced on-call burden") resonate more than feature delivery. For <em>none</em> roles, pure delivery and impact framing — these companies aren't afraid yet.
         </div>
@@ -738,8 +738,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <hr class="divider">
 <section class="section" id="geo-section">
   <div class="section-label">Finding 10</div>
-  <h2 class="section-headline">Berlin leads at 36%, but other Europe is a real second cluster.</h2>
-  <p class="section-body">Berlin leads at 36% but is not the whole story. Other Europe — Amsterdam, Lisbon, Tallinn, Barcelona, Paris, Zurich — forms a genuine second cluster at 27%. UK roles are now 13% of the corpus, a notable presence. The Nordics (Stockholm, Copenhagen, Oslo) add 11%, skewing toward scale-ups with more mature data teams. Use the region filter to isolate any market — stakeholder orientation shifts noticeably by geography.</p>
+  <h2 class="section-headline">Berlin leads at 30%, but other Europe is a real second cluster.</h2>
+  <p class="section-body">Berlin leads at 30% but is not the whole story. Other Europe — Amsterdam, Lisbon, Tallinn, Barcelona, Paris, Zurich — forms a genuine second cluster at 26%. The Nordics (Stockholm, Copenhagen, Oslo) add 9%, skewing toward scale-ups with more mature data teams. Use the region filter to isolate any market — stakeholder orientation shifts noticeably by geography.</p>
   <div id="geoBreakdown"></div>
 </section>
 
@@ -748,9 +748,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="section" id="stack">
   <div class="section-label">Finding 11</div>
   <h2 class="section-headline">SQL and dbt are the floor. Everything else is negotiable.</h2>
-  <p class="section-body">SQL (93%) and dbt (70%) are the baseline — not knowing either disqualifies you from the vast majority of roles. Python follows at 55%, now effectively a third core requirement. After that, a genuine cliff: Power BI (31%), Snowflake (37%), Airflow (34%), Tableau (29%), Looker (27%). Databricks (20%) is niche. Spark (14%), Kafka (5%), and Terraform (5%) appear rarely enough that listing them is a differentiator, not a gap if you lack them.</p>
+  <p class="section-body">SQL (94%) and dbt (63%) are the baseline — not knowing either disqualifies you from the vast majority of roles. Python follows at 58%, now effectively a third core requirement. After that, a genuine cliff: Power BI (38%), Snowflake (35%), Tableau (31%), Airflow (27%), Looker (26%). Databricks (21%) is niche. Spark (16%), Kafka (5%), and Terraform (5%) appear rarely enough that listing them is a differentiator, not a gap if you lack them.</p>
   <div class="donut-methodology" style="max-width:680px;margin-bottom:2rem">
-    <strong>Worth reading against the dbt Labs survey:</strong> dbt Labs' own "State of Analytics Engineering" report treats dbt as the field standard — but its survey sample is drawn from dbt's own community channels, where 76% of respondents already used dbt before answering. This dataset isn't filtered that way: it's job postings collected independent of any tool affiliation. <strong>68% require dbt — real, but not universal.</strong> One in three analytics engineering roles in this market run on a stack without it: Databricks SQL, BigQuery-native pipelines, or Spark-first architectures. A survey distributed through dbt's own channels structurally cannot see that third of the market.
+    <strong>Worth reading against the dbt Labs survey:</strong> dbt Labs' own "State of Analytics Engineering" report treats dbt as the field standard — but its survey sample is drawn from dbt's own community channels, where 76% of respondents already used dbt before answering. This dataset isn't filtered that way: it's job postings collected independent of any tool affiliation. <strong>63% require dbt — real, but not universal.</strong> More than a third of analytics engineering roles in this market run on a stack without it: Databricks SQL, BigQuery-native pipelines, or Spark-first architectures. A survey distributed through dbt's own channels structurally cannot see that portion of the market.
   </div>
   <div class="card">
     <div class="card-title">Tool prevalence across filtered roles</div>

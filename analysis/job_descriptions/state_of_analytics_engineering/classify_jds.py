@@ -51,7 +51,7 @@ def _find_claude_bin() -> str:
 
 CLAUDE_BIN = _find_claude_bin()
 
-DIMENSIONS = ["velocity_vs_rigour", "domain_risk", "collaboration_width", "data_team_maturity", "jd_authorship", "stakeholder_orientation", "autonomy_level"]
+DIMENSIONS = ["velocity_vs_rigour", "domain_risk", "collaboration_width", "data_team_maturity", "jd_authorship", "stakeholder_orientation", "autonomy_level", "ai_role", "testing_framing", "loss_aversion_framing"]
 NUM_RUNS = 3
 
 # ---------------------------------------------------------------------------
@@ -122,6 +122,30 @@ Does the role define its own direction, or execute direction set by others?
 - **mixed**: The role genuinely combines both — strategic ownership of a technical domain AND execution in service of a business team. Apply mixed only when the responsibilities section clearly contains both patterns.
 - **Tie-breaker**: If strategic verbs appear only in a narrow technical sub-problem while overall role framing is support-oriented → execution. If the role is described as building/defining the analytics function for a domain → strategic.
 
+### 8. ai_role
+What AI skill, if any, the role expects the *candidate* to demonstrate. Whether the company builds AI products is irrelevant.
+
+- **none**: No AI skill expected of the candidate. Includes JDs where the company builds AI products but the candidate does standard data work, and stale JDs with no AI mention. Vague phrases ("AI-first mindset", "interest in AI") → none.
+- **ai_user**: The candidate is expected to use AI coding tools to accelerate their own work. Signal phrases: "AI-assisted coding", "proven usage of AI tools", "GitHub Copilot", "Claude Code", "Cursor", "coding agents", "agentic workflows" as a personal productivity tool.
+- **ai_enabler**: The candidate is expected to build data infrastructure that AI systems consume or run on. Signal phrases: "AI-ready data foundations", "data for AI/ML pipelines", "text-to-SQL", "semantic modelling for AI", "AI data agents", "GenAI applications" in responsibilities.
+- **Tie-breaker**: If both signals present → ai_enabler. Company description mentions AI but responsibilities do not → none.
+
+### 9. testing_framing
+How data quality, testing, or observability appears in the JD.
+
+- **responsibility**: Testing, data contracts, observability, or data quality frameworks are framed as something the candidate *owns or defines* using action verbs. Signal patterns: "own the quality", "define testing standards", "data contracts" as a named responsibility, "ensure data reliability", "implement data quality frameworks". The candidate is accountable for the practice.
+- **tool_listed**: Testing tools or practices appear in requirements or tech stack without ownership framing. Presence of Great Expectations, Soda, or "dbt tests" in a skill list without an ownership verb → tool_listed.
+- **absent**: No testing or data quality signal anywhere in the JD.
+- **Tie-breaker**: "experience with dbt testing" in a requirements list → tool_listed. "Own data quality through testing" in responsibilities → responsibility.
+
+### 10. loss_aversion_framing
+How strongly the JD frames the role around preventing bad outcomes.
+
+- **none**: JD framed in delivery and capability terms with no risk register. Typical of early-stage and velocity-oriented roles.
+- **moderate**: Operational reliability is a concern but secondary to delivery. Fear is pipeline outages or data failures, not compliance or stakeholder trust. Signal phrases: "SLOs", "production reliability", "reduce bus factor", "pipeline stability", "first to respond to incidents".
+- **high**: Risk, compliance, or stakeholder trust framing dominates. Fear is bad data reaching decision-makers or regulatory exposure. Signal phrases: "regulatory", "compliance", "audit", "prevent bad data reaching stakeholders", "data accuracy has direct business impact", "trustworthiness" as a primary role framing, repeated quality/reliability language throughout.
+- **Tie-breaker**: One mention of compliance in a delivery-dominated JD → moderate. Compliance or trust language in the first responsibility or role summary → high.
+
 ## Output format
 
 Respond with ONLY a valid JSON object. No explanation, no preamble, no markdown fences.
@@ -152,7 +176,16 @@ For EACH dimension, provide:
   "stakeholder_orientation_reasoning": "<one sentence explaining the classification>",
   "autonomy_level": "<strategic|execution|mixed>",
   "autonomy_level_quote": "<exact verbatim verb phrase driving the classification>",
-  "autonomy_level_reasoning": "<one sentence explaining the classification>"
+  "autonomy_level_reasoning": "<one sentence explaining the classification>",
+  "ai_role": "<none|ai_user|ai_enabler>",
+  "ai_role_quote": "<exact verbatim phrase that placed the classification, or 'No AI skill signal.' if none>",
+  "ai_role_reasoning": "<one sentence: what the candidate is expected to do with AI, or why none>",
+  "testing_framing": "<responsibility|tool_listed|absent>",
+  "testing_framing_quote": "<exact verbatim phrase showing ownership/tool/absence of testing practice>",
+  "testing_framing_reasoning": "<one sentence explaining responsibility vs tool_listed vs absent>",
+  "loss_aversion_framing": "<none|moderate|high>",
+  "loss_aversion_framing_quote": "<exact verbatim phrase anchoring the risk register, or 'No loss aversion framing.' if none>",
+  "loss_aversion_framing_reasoning": "<one sentence explaining the level and what fear it reflects>"
 }"""
 
 
@@ -174,13 +207,33 @@ def strip_url_for_classifier(text: str) -> str:
     return re.sub(r"\*\*URL:\*\*[^\n]*\n?", "", text).strip()
 
 
+NO_SIGNAL_SENTINELS = {
+    "no ai skill signal.", "no testing or data quality signal.",
+    "no loss aversion framing.", "not stated in jd", "n/a", "none identified",
+    "(none identified)", "none",
+}
+
+
 def quote_present_in_jd(quote: str, jd_text: str) -> bool:
     """Check whether the verbatim quote appears (loosely) in the JD text.
-    Uses a tolerant match: normalise whitespace + case."""
-    if not quote or quote.strip() in ("", "N/A", "Not stated in JD"):
-        return True  # no quote to verify
+
+    Some dimensions (collaboration_width, jd_authorship, stakeholder_orientation)
+    legitimately cite evidence spanning multiple non-adjacent bullets — the model
+    joins these with '; ' rather than fabricating a single contiguous span. Treat
+    a semicolon-joined quote as verified if every individual segment appears in
+    the JD text, even though the joined string itself does not.
+    """
     norm = lambda s: re.sub(r"\s+", " ", s).lower().strip()
-    return norm(quote) in norm(jd_text)
+    if not quote or norm(quote) in NO_SIGNAL_SENTINELS:
+        return True  # no quote to verify, or an expected "no signal" sentinel
+    jd_norm = norm(jd_text)
+    if norm(quote) in jd_norm:
+        return True
+    if ";" in quote:
+        segments = [s.strip() for s in quote.split(";") if s.strip()]
+        if segments and all(norm(seg) in jd_norm for seg in segments):
+            return True
+    return False
 
 
 def classify_with_cli(jd_text: str) -> dict:
