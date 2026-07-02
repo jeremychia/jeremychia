@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AE/BI Job Market — Psychological Analysis</title>
+<title>AE/BI Job Market — Relationship Analysis</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,8 +19,7 @@
   --high: #c0392b;
   --moderate: #d97706;
   --low: #16a34a;
-  --w: 1100px;
-  --col: 520px;
+  --w: 1120px;
 }
 
 html { scroll-behavior: smooth; }
@@ -33,34 +32,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   text-decoration: none; z-index: 9999; transition: top 0.1s;
 }
 .skip-link:focus { top: 0; }
-
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
 
 /* ── HERO ── */
 .hero {
-  min-height: 100vh;
+  min-height: 72vh;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; padding: 4rem 2rem;
-  background: #fff; border-bottom: 1px solid var(--border); position: relative;
+  text-align: center; padding: 5rem 2rem 3rem;
+  background: #fff; border-bottom: 1px solid var(--border);
 }
 .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600; }
-.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; max-width: 680px; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; max-width: 720px; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
 .hero h1 em { font-style: normal; color: var(--accent); }
-.hero-sub { font-size: 1rem; color: var(--muted); max-width: 480px; margin-bottom: 2.5rem; line-height: 1.75; }
-.hero-cta {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--accent); color: white; text-decoration: none;
-  font-size: 0.85rem; font-weight: 600; padding: 0.7rem 1.4rem;
-  border-radius: 6px; transition: opacity 0.15s;
+.hero-sub { font-size: 1rem; color: var(--muted); max-width: 560px; margin-bottom: 2rem; line-height: 1.75; }
+.hero-caveat {
+  max-width: 640px; font-size: 0.8rem; color: var(--muted); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; text-align: left; line-height: 1.7;
 }
-.hero-cta:hover { opacity: 0.85; }
-.hero-cta svg { width: 14px; height: 14px; }
-.hero-scroll {
-  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-  color: var(--muted); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
-  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
-}
-.hero-scroll::after { content: ''; display: block; width: 1px; height: 32px; background: linear-gradient(to bottom, var(--muted), transparent); }
+.hero-caveat strong { color: var(--text); }
 
 /* ── STICKY NAV ── */
 .sticky-nav {
@@ -77,42 +66,71 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .nav-filters { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; flex-wrap: wrap; }
 .nav-filter { display: flex; align-items: center; gap: 0.4rem; }
 .nav-filter label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
-.nav-filter select, .ctrl-group select {
-  font-size: 0.78rem; background: var(--surface2); color: var(--text);
-  border: 1px solid var(--border); border-radius: 4px; padding: 0.25rem 0.5rem;
-}
+.nav-filter select { font-size: 0.78rem; background: var(--surface2); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 0.25rem 0.5rem; }
 .count-pill { font-size: 0.7rem; background: var(--surface); border: 1px solid var(--border); color: var(--muted); border-radius: 20px; padding: 0.2rem 0.6rem; white-space: nowrap; }
 .count-pill strong { color: var(--accent); }
 
 /* ── SECTIONS ── */
-.section { padding: 8rem 2rem; max-width: var(--w); margin: 0 auto; }
+.section { padding: 5.5rem 2rem; max-width: var(--w); margin: 0 auto; }
+.section.tight { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 .section-label { font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.85rem; }
-.section-headline { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 1.25rem; }
-.section-body { font-size: 0.91rem; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 3rem; }
-
+.section-headline { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 1.1rem; }
+.section-body { font-size: 0.91rem; color: var(--muted); max-width: 680px; line-height: 1.8; margin-bottom: 2.5rem; }
+.section-body strong { color: var(--text); }
 .divider { border: none; border-top: 1px solid var(--border); max-width: var(--w); margin: 0 auto; }
 
-/* ── STATS ROW ── */
+/* ── STATS STRIP (single-variable summary, deliberately compact) ── */
 .stats-row {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1px; background: var(--border); border: 1px solid var(--border);
   border-radius: 10px; overflow: hidden;
 }
-.stat-cell { background: var(--surface); padding: 2rem 1.25rem; text-align: center; }
-.stat-num { font-size: 2.2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
-.stat-label { font-size: 0.7rem; color: var(--muted); font-weight: 500; }
+.stat-cell { background: var(--surface); padding: 1.5rem 1rem; text-align: center; }
+.stat-num { font-size: 1.7rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 0.35rem; }
+.stat-label { font-size: 0.65rem; color: var(--muted); font-weight: 500; }
 
-/* ── SCATTER ── */
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; }
-.card-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.35rem; }
-.card-sub { font-size: 0.74rem; color: var(--muted); margin-bottom: 1.75rem; }
-.scatter-controls { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center; }
-.ctrl-group { display: flex; align-items: center; gap: 0.4rem; }
-.ctrl-group label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; }
-.scatter-wrap { position: relative; height: 400px; }
-.legend { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
-.legend-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; color: var(--muted); }
-.legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.75rem; }
+.card-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; }
+.card-sub { font-size: 0.74rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+/* ── RELATIONSHIP GRID (primary content unit) ── */
+.rel-grid { display: flex; flex-direction: column; gap: 2.5rem; }
+.rel-panel { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; }
+.rel-head { padding: 1.5rem 1.75rem 1.25rem; border-bottom: 1px solid var(--border); }
+.rel-tag { font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 0.5rem; }
+.rel-question { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 0.5rem; line-height: 1.35; }
+.rel-stat { font-size: 0.86rem; color: var(--text); line-height: 1.6; }
+.rel-stat .n { color: var(--muted); font-weight: 500; }
+.rel-body { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; }
+@media (max-width: 900px) { .rel-body { grid-template-columns: 1fr; } }
+.rel-viz { padding: 1.5rem 1.75rem; border-right: 1px solid var(--border); }
+@media (max-width: 900px) { .rel-viz { border-right: none; border-bottom: 1px solid var(--border); } }
+.rel-read { padding: 1.5rem 1.75rem; font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+.rel-read strong { color: var(--text); }
+.rel-read .resume-tip {
+  margin-top: 1rem; padding: 0.85rem 1rem; background: var(--surface); border-radius: 8px;
+  border-left: 3px solid var(--accent); font-size: 0.82rem; color: var(--text);
+}
+.rel-read .resume-tip b { color: var(--accent); }
+
+/* stacked-bar cross-tab (two categorical variables) */
+.xtab-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem; }
+.xtab-label { width: 110px; flex-shrink: 0; font-size: 0.76rem; color: var(--text); font-weight: 600; text-align: right; }
+.xtab-n { width: 34px; flex-shrink: 0; font-size: 0.66rem; color: var(--muted); }
+.xtab-bar { flex: 1; height: 22px; border-radius: 5px; overflow: hidden; display: flex; background: var(--surface2); }
+.xtab-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.62rem; font-weight: 700; color: #fff; min-width: 0; overflow: hidden; white-space: nowrap; }
+.xtab-legend { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1rem; padding-left: 144px; }
+@media (max-width: 500px) { .xtab-legend { padding-left: 0; } }
+.xtab-legend-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; color: var(--muted); }
+.xtab-legend-dot { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; }
+
+/* numeric-by-category bar (e.g. median collaboration width per group) */
+.numbar-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem; }
+.numbar-label { width: 110px; flex-shrink: 0; font-size: 0.76rem; color: var(--text); font-weight: 600; text-align: right; }
+.numbar-track { flex: 1; background: var(--surface2); border-radius: 5px; height: 22px; position: relative; }
+.numbar-fill { height: 100%; border-radius: 5px; background: var(--accent); display: flex; align-items: center; justify-content: flex-end; padding-right: 0.5rem; }
+.numbar-fill-val { font-size: 0.66rem; font-weight: 700; color: #fff; }
+.numbar-n { width: 34px; flex-shrink: 0; font-size: 0.66rem; color: var(--muted); }
 
 /* ── TOOLTIP ── */
 #tooltip {
@@ -127,229 +145,75 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .tt-field { margin-bottom: 0.45rem; }
 .tt-label { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.09em; color: #6b9ef7; margin-bottom: 0.1rem; }
 .tt-quote { font-style: italic; color: #b8c4d8; font-size: 0.73rem; }
-.tt-gate { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #2e364f; color: #f87171; font-size: 0.71rem; }
 
-/* ── DONUT SECTIONS ── */
-/* Each question is two panels: .donut-question (full-screen prompt) + .donut-answer (the analysis) */
-.donut-section { border-top: 1px solid var(--border); }
+/* ── scatter card ── */
+.scatter-controls { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center; }
+.ctrl-group { display: flex; align-items: center; gap: 0.4rem; }
+.ctrl-group label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; }
+.ctrl-group select { font-size: 0.78rem; background: var(--surface2); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 0.25rem 0.5rem; }
+.scatter-wrap { position: relative; height: 380px; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.legend-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; color: var(--muted); }
+.legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 
-.donut-question {
-  min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; padding: 4rem 2rem;
-  position: relative;
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-}
-.donut-q-number {
-  font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--accent); font-weight: 600; margin-bottom: 1.5rem;
-}
-.donut-q-text {
-  font-size: clamp(1.5rem, 3.5vw, 2.4rem); font-weight: 700;
-  letter-spacing: -0.025em; line-height: 1.2;
-  max-width: 680px; color: var(--text); margin-bottom: 2.5rem;
-}
-.donut-q-cta {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--accent); color: #fff; text-decoration: none;
-  font-size: 0.82rem; font-weight: 600; padding: 0.65rem 1.3rem;
-  border-radius: 6px; transition: opacity 0.15s; cursor: pointer; border: none;
-}
-.donut-q-cta:hover { opacity: 0.85; }
-.donut-q-progress {
-  position: absolute; bottom: 2rem; right: 2rem;
-  display: flex; gap: 0.4rem; align-items: center;
-}
-.donut-q-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--border); transition: background 0.2s;
-}
-.donut-q-dot.active { background: var(--accent); }
-.donut-q-back {
-  position: absolute; bottom: 1.75rem; left: 50%; transform: translateX(-50%);
-  font-size: 0.68rem; color: var(--muted); text-decoration: none;
-  letter-spacing: 0.08em; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
-}
-.donut-q-back::before { content: ''; display: block; width: 1px; height: 24px; background: linear-gradient(to top, var(--muted), transparent); }
-
-.donut-answer {
-  display: flex; align-items: stretch;
-  border-bottom: 1px solid var(--border);
-  min-height: 100vh;
-  padding: 0 max(2rem, calc((100vw - 1200px) / 2));
-}
-.donut-answer-inner {
-  display: flex; align-items: stretch; width: 100%;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-  min-height: 100vh;
-}
-.donut-left {
-  width: 460px; flex-shrink: 0;
-  padding: 5rem 3.5rem;
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; justify-content: center;
-  position: sticky; top: 44px;
-  height: calc(100vh - 44px);
-  overflow-y: auto;
-}
-.donut-right {
-  flex: 1; padding: 5rem 3.5rem;
-  overflow-y: auto;
-  max-width: 680px;
-}
-@media (max-width: 900px) {
-  .donut-answer { padding: 0 1rem; }
-  .donut-answer-inner { flex-direction: column; min-height: auto; border: none; }
-  .donut-left { width: 100%; position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
-  .donut-right { padding: 2.5rem 1.5rem; max-width: none; }
-}
-
-.donut-finding { font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
-.donut-headline { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 1rem; }
-.donut-methodology {
-  font-size: 0.82rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem;
-  padding: 1rem; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);
-}
-.donut-methodology strong { color: var(--text); font-weight: 600; }
-.donut-methodology em {
-  font-style: normal;
-  background: #fef3c7;
-  color: #92400e;
-  padding: 0.05em 0.3em;
-  border-radius: 3px;
-  font-size: 0.78rem;
-  font-weight: 500;
-}
-.donut-chart-wrap { position: relative; height: 220px; margin-bottom: 1rem; }
-.donut-hint { font-size: 0.72rem; color: var(--muted); text-align: center; }
-.donut-hint.pulse { animation: pulse-hint 1.6s ease-in-out 0.6s 2; }
-@keyframes pulse-hint { 0%,100%{opacity:1} 50%{opacity:0.35} }
-
-.segment-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
-.seg-tab {
-  font-size: 0.74rem; font-weight: 600; padding: 0.3rem 0.75rem;
-  border-radius: 20px; border: 1.5px solid var(--border); background: #fff;
-  cursor: pointer; transition: all 0.15s; color: var(--muted); white-space: nowrap;
-}
-.seg-tab.active { color: #fff; border-color: transparent; }
-.seg-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
-
-/* Cap company list so it never forces scrolling past the answer panel */
-.donut-right .company-list {
-  max-height: 55vh; overflow-y: auto;
-  padding-right: 0.5rem;
-  scrollbar-width: thin;
-}
-
-.company-list { display: flex; flex-direction: column; gap: 0.75rem; }
-.company-card {
-  background: #fff; border: 1px solid var(--border); border-radius: 8px;
-  padding: 0.9rem 1rem; transition: box-shadow 0.15s;
-}
-.company-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
-.cc-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.3rem; flex-wrap: wrap; }
-.cc-company { font-weight: 700; font-size: 0.88rem; }
-.cc-role { font-size: 0.74rem; color: var(--muted); }
-.cc-quote { font-size: 0.78rem; color: #374151; font-style: italic; line-height: 1.6; border-left: 3px solid var(--border); padding-left: 0.75rem; margin-top: 0.4rem; }
+/* company drill panel, shared */
+.drill-toggle { font-size: 0.72rem; color: var(--accent); background: none; border: none; cursor: pointer; font-weight: 600; padding: 0; margin-top: 0.5rem; text-decoration: underline; }
+.company-list { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; max-height: 340px; overflow-y: auto; padding-right: 0.4rem; }
+.company-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.7rem 0.85rem; }
+.cc-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.2rem; flex-wrap: wrap; }
+.cc-company { font-weight: 700; font-size: 0.83rem; }
+.cc-role { font-size: 0.72rem; color: var(--muted); }
+.cc-quote { font-size: 0.76rem; color: #374151; font-style: italic; line-height: 1.55; border-left: 3px solid var(--border); padding-left: 0.65rem; margin-top: 0.35rem; }
 .kw-highlight { background: #fef3c7; color: #92400e; font-style: normal; padding: 0.05em 0.2em; border-radius: 3px; font-weight: 500; }
-.cc-location { font-size: 0.68rem; color: var(--muted); margin-top: 0.35rem; }
-.cc-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.4rem; }
-.cc-tag { font-size: 0.65rem; padding: 0.1em 0.45em; border-radius: 3px; font-weight: 500; }
-.empty-state { color: var(--muted); font-size: 0.85rem; padding: 2rem 0; text-align: center; }
+.empty-state { color: var(--muted); font-size: 0.85rem; padding: 1.5rem 0; text-align: center; }
 
-/* ── GEO SECTION ── */
+/* ── HONEST GEO CALLOUT ── */
+.geo-callout {
+  background: #fef3c7; border: 1px solid #fcd34d; border-radius: 10px; padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+}
+.geo-callout-title { font-size: 0.82rem; font-weight: 700; color: #92400e; margin-bottom: 0.5rem; }
+.geo-callout p { font-size: 0.85rem; color: #78350f; line-height: 1.75; }
+.geo-callout p + p { margin-top: 0.6rem; }
 .geo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1px; background: var(--border); border: 1px solid var(--border);
-  border-radius: 10px; overflow: hidden; margin-bottom: 2.5rem;
+  border-radius: 10px; overflow: hidden;
 }
-.geo-cell { background: var(--surface); padding: 1.5rem 1.25rem; }
-.geo-region-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.75rem; }
-.geo-bar-wrap { display: flex; flex-direction: column; gap: 0.45rem; }
-.geo-bar-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; }
-.geo-bar-label { width: 80px; flex-shrink: 0; color: var(--muted); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
-.geo-bar-track { flex: 1; background: var(--surface2); border-radius: 3px; height: 6px; overflow: hidden; }
-.geo-bar-fill { height: 100%; border-radius: 3px; background: var(--accent); }
-.geo-bar-count { font-size: 0.68rem; color: var(--muted); flex-shrink: 0; }
+.geo-cell { background: var(--surface); padding: 1rem; text-align: center; }
+.geo-cell-region { font-size: 0.72rem; font-weight: 600; color: var(--text); }
+.geo-cell-n { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin: 0.2rem 0; }
+.geo-cell-note { font-size: 0.63rem; color: var(--muted); }
 
-/* ── TOOL SECTION ── */
-#toolChart { max-height: 280px; cursor: pointer; }
-#toolCompanyPanel { margin-top: 1.75rem; display: none; }
-.tool-panel-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 1rem; }
-.tool-panel-title { font-size: 0.88rem; font-weight: 700; }
-.tool-panel-count { font-size: 0.74rem; color: var(--muted); }
-.tool-panel-hint { font-size: 0.72rem; color: var(--muted); margin-top: 0.25rem; }
-#toolCompanyList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 0.6rem;
-}
-#toolCompanyList .company-card { padding: 0.7rem 0.85rem; }
-.company-card--muted { opacity: 0.45; }
-.tool-group-label {
-  grid-column: 1 / -1;
-  font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--accent);
-  padding: 0.5rem 0 0.25rem; border-top: 1px solid var(--border); margin-top: 0.25rem;
-}
-.tool-group-label:first-child { border-top: none; margin-top: 0; }
-.tool-group-label span { font-weight: 400; color: var(--muted); }
-.tool-group-label--no { color: var(--muted); }
+/* ── STACK/TOOL SECTION ── */
+#toolChart { max-height: 260px; cursor: pointer; }
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
-
-/* ── FLOATING NEXT BUTTON ── */
-#floatNext {
-  position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
-  display: none; align-items: center; gap: 0.5rem;
-  background: var(--accent); color: #fff;
-  font-size: 0.82rem; font-weight: 700;
-  padding: 0.7rem 1.2rem; border-radius: 99px;
-  text-decoration: none; box-shadow: 0 4px 20px rgba(29,78,216,0.35);
-  transition: opacity 0.2s, transform 0.2s;
-  opacity: 0; transform: translateY(8px);
-}
-#floatNext.visible { opacity: 1; transform: translateY(0); display: flex; }
-#floatNext:hover { opacity: 0.88; }
 </style>
 </head>
 <body>
-<a class="skip-link" href="#findings">Skip to main content</a>
+<a class="skip-link" href="#relationships">Skip to main content</a>
 
 <!-- HERO -->
 <section class="hero" aria-label="Introduction">
-  <div class="hero-eyebrow" id="heroEyebrow">JDs · psychologically decoded</div>
-  <h1>What companies <em>fear</em> tells you more than what they want</h1>
-  <p class="hero-sub">115 AE/BI job descriptions decoded. 81% are rigour-first with no velocity signal whatsoever. 84% expect zero AI skill from the candidate, despite the industry's own surveys claiming AI use is near-universal. 58% are building for internal data teams, not commercial stakeholders. Strategic, execution, and mixed roles are now perfectly tied at a third each — senior titles tell you nothing about who actually sets the direction.</p>
-  <a href="#findings" class="hero-cta">
-    Read the analysis
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8l5 5 5-5"/></svg>
-  </a>
-  <div class="hero-scroll">Scroll</div>
+  <div class="hero-eyebrow" id="heroEyebrow">JDs · classified on behavioural dimensions</div>
+  <h1>What actually predicts what, in analytics engineering job descriptions</h1>
+  <p class="hero-sub">Single percentages ("82% rigour-oriented") are cheap and mostly uninformative on their own — every JD in a rigour-dominant market says similar things. What's useful is where two dimensions move together: does seniority predict autonomy? Does team maturity predict what kind of work you'll do? This page leads with those relationships, because that's where the market actually differentiates roles.</p>
+  <div class="hero-caveat">
+    <strong>Read before trusting any number here:</strong> this is a pilot-scale, single-market dataset (Europe-heavy, collected opportunistically during one person's job search). Confidence intervals are wide — treat percentages as directional, not precise. Geography reflects what got scraped, not the market; see the callout in that section.
+  </div>
 </section>
 
 <!-- STICKY NAV -->
 <nav class="sticky-nav" aria-label="Page sections">
   <span class="nav-title">AE/BI Market</span>
   <div class="nav-links" role="list">
-    <a href="#findings"   role="listitem" data-section="findings">Overview</a>
-    <a href="#stress"     role="listitem" data-section="stress">Explorer</a>
-    <a href="#q-rigour"   role="listitem" data-section="q-rigour">Q1</a>
-    <a href="#q-author"   role="listitem" data-section="q-author">Q2</a>
-    <a href="#q-mission"  role="listitem" data-section="q-mission">Q3</a>
-    <a href="#q-maturity" role="listitem" data-section="q-maturity">Q4</a>
-    <a href="#q-stakeholder" role="listitem" data-section="q-stakeholder">Q5</a>
-    <a href="#q-autonomy" role="listitem" data-section="q-autonomy">Q6</a>
-    <a href="#q-ai"       role="listitem" data-section="q-ai">Q7</a>
-    <a href="#q-testing"  role="listitem" data-section="q-testing">Q8</a>
-    <a href="#q-fear"     role="listitem" data-section="q-fear">Q9</a>
-    <a href="#geo-section" role="listitem" data-section="geo-section">Geo</a>
-    <a href="#stack"      role="listitem" data-section="stack">Stack</a>
+    <a href="#relationships" role="listitem" data-section="relationships">Relationships</a>
+    <a href="#explorer"      role="listitem" data-section="explorer">Explorer</a>
+    <a href="#orientation"   role="listitem" data-section="orientation">Orientation</a>
+    <a href="#geo-section"   role="listitem" data-section="geo-section">Coverage</a>
+    <a href="#stack"         role="listitem" data-section="stack">Stack</a>
   </div>
   <div class="nav-filters">
     <div class="nav-filter">
@@ -361,40 +225,38 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
         <option value="team_lead">Team Lead</option>
       </select>
     </div>
-    <div class="nav-filter">
-      <label for="filterGeo">Region</label>
-      <select id="filterGeo" aria-label="Filter by geography">
-        <option value="all">All regions</option>
-        <option value="berlin">Berlin</option>
-        <option value="hamburg">Hamburg</option>
-        <option value="nordics">Nordics</option>
-        <option value="uk_remote">UK / Remote</option>
-        <option value="other_europe">Other Europe</option>
-        <option value="global_remote">Global Remote</option>
-      </select>
-    </div>
   </div>
   <div class="count-pill" id="countBadge" aria-live="polite" aria-atomic="true"></div>
 </nav>
 
-<!-- SECTION 1: OVERVIEW -->
-<section class="section" id="findings">
-  <div class="section-label">Overview</div>
-  <h2 class="section-headline">The market is writing from fear, not aspiration</h2>
-  <p class="section-body">81% rigour-first. Every finance role in the corpus sits in a high-risk domain — 100% without exception. Every mature data team is rigour-only. These are not wish lists. They are damage reports from teams that have been burned, written in the language of whatever last went wrong.</p>
+<!-- SECTION: SINGLE-VARIABLE SUMMARY (compact, intentionally minimized) -->
+<section class="section tight" id="summary">
+  <div class="section-label">Single-variable summary</div>
+  <h2 class="section-headline">The headline numbers, for reference — not the point of this page</h2>
+  <p class="section-body">These are useful as background context, but a single percentage can't tell you which roles to target — most JDs cluster on the modal answer for every dimension individually. The relationships below are where the market actually splits into distinguishable segments.</p>
   <div class="stats-row" id="statsRow"></div>
 </section>
 
 <hr class="divider">
 
-<!-- SECTION 2: STRESS MATRIX -->
-<section class="section" id="stress">
+<!-- SECTION: RELATIONSHIPS (primary content) -->
+<section class="section" id="relationships">
+  <div class="section-label">Two-variable findings</div>
+  <h2 class="section-headline">Where dimensions move together</h2>
+  <p class="section-body">Each panel below crosses two classifications to answer a question a single-dimension stat can't: not "how many roles are strategic" but "<strong>which</strong> roles are strategic." These are the findings worth reading closely before you apply.</p>
+  <div class="rel-grid" id="relGrid"></div>
+</section>
+
+<hr class="divider">
+
+<!-- SECTION: EXPLORER (scatter, user-driven relationship exploration) -->
+<section class="section" id="explorer">
   <div class="section-label">Explorer</div>
-  <h2 class="section-headline">Not all roles are equally demanding</h2>
-  <p class="section-body">Two dimensions define role pressure: how many teams you are accountable to, and what breaks if your data is wrong. Hover any dot to see the exact JD language that drove the classification.</p>
+  <h2 class="section-headline">Build your own cross-tab</h2>
+  <p class="section-body">Collaboration width (named partner teams) against domain risk, coloured by any dimension. Hover any dot for the verbatim JD language behind that classification.</p>
   <div class="card">
     <div class="card-title" id="scatterTitle">Collaboration width × Domain risk</div>
-    <p class="card-sub">Top-right = maximum pressure. Hover any dot for verbatim JD evidence.</p>
+    <p class="card-sub">Top-right = maximum pressure (many stakeholders, high stakes). Hover any dot for evidence.</p>
     <div class="scatter-controls">
       <div class="ctrl-group">
         <label>X axis</label>
@@ -406,7 +268,36 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
       <div class="ctrl-group">
         <label>Colour by</label>
         <select id="colourBy">
-          <option value="domain_risk">Domain risk</option>
+          <option value="autonomy_level">Autonomy level</option>
+          <option value="velocity_vs_rigour">Rigour vs velocity</option>
+          <option value="jd_authorship">JD authorship</option>
+          <option value="greenfield_vs_fix">Greenfield vs fix</option>
+          <option value="data_team_maturity">Team maturity</option>
+          <option value="stakeholder_orientation">Stakeholder audience</option>
+          <option value="ai_role">AI skill expected</option>
+          <option value="testing_framing">Testing framing</option>
+          <option value="loss_aversion_framing">Loss aversion</option>
+          <option value="seniority">Seniority title</option>
+        </select>
+      </div>
+    </div>
+    <div class="scatter-wrap"><canvas id="scatterChart" role="img" aria-label="Scatter chart: collaboration width versus domain risk for each role"></canvas></div>
+    <div class="legend" id="scatterLegend"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SECTION: ORIENTATION (compact single-dim reference, tabs not full-screen chapters) -->
+<section class="section" id="orientation">
+  <div class="section-label">Reference</div>
+  <h2 class="section-headline">Individual dimension breakdowns</h2>
+  <p class="section-body">The raw distribution for each classification, for lookup. Click a segment to see the JDs behind it and the language that drove the classification.</p>
+  <div class="card">
+    <div class="scatter-controls">
+      <div class="ctrl-group">
+        <label>Dimension</label>
+        <select id="orientationDim">
           <option value="velocity_vs_rigour">Rigour vs velocity</option>
           <option value="jd_authorship">JD authorship</option>
           <option value="greenfield_vs_fix">Greenfield vs fix</option>
@@ -416,359 +307,59 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
           <option value="ai_role">AI skill expected</option>
           <option value="testing_framing">Testing framing</option>
           <option value="loss_aversion_framing">Loss aversion</option>
-          <option value="geo_region">Geography</option>
         </select>
       </div>
     </div>
-    <div class="scatter-wrap"><canvas id="scatterChart" role="img" aria-label="Scatter chart: collaboration width versus domain risk for each role"></canvas></div>
-    <div class="legend" id="scatterLegend"></div>
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:2rem;align-items:start">
+      <div>
+        <div style="position:relative;height:220px"><canvas id="orientationChart"></canvas></div>
+        <p id="orientationHeadline" style="font-size:0.8rem;color:var(--muted);margin-top:1rem;line-height:1.6"></p>
+      </div>
+      <div>
+        <div class="scatter-controls" id="orientationTabs" style="margin-bottom:0.75rem"></div>
+        <div class="company-list" id="orientationList" style="max-height:280px"></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- DONUT: Rigour vs velocity -->
-<div class="donut-section" id="rigour-section">
-  <div class="donut-question" id="q-rigour">
-    <div class="donut-q-number">Question 01 of 09</div>
-    <div class="donut-q-text">Does this market care more about speed or correctness?</div>
-    <a class="donut-q-cta" href="#a-rigour">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot active"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-rigour">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 01</div>
-        <h3 class="donut-headline">81% rigour-first. Only 2% pure velocity roles.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Each JD was read for repeated language around pace vs. correctness. "Rigour" = three or more signals of: <em>TDD, CI/CD, production-grade, mocking, performance profiling, compliance, audit, meticulous, controlled</em>. "Velocity" = <em>move fast, bias for action, agile, iterate, pragmatic</em>. "Mixed" = both present, neither dominant.
-          <br><br>
-          <strong>What the data shows:</strong> 81% rigour, 17% mixed, 2% pure velocity. The 17% mixed still lead with correctness — velocity is a secondary signal in all of them. Every mature data team in the corpus is rigour-only. This is the AE market's defining characteristic: it has collectively decided that speed without quality is not a trade-off worth making.
-          <br><br>
-          <strong>Resume implication:</strong> Default to risk-reduction framing. "Zero production incidents", "97% test coverage", "reduced data quality failures by X" outperform speed bullets in 81% of applications. Velocity language only helps in early-stage roles — filter by team maturity first.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="rigourChart" role="img" aria-label="Donut chart: distribution of rigour vs velocity signals across JDs"></canvas></div>
-        <p class="donut-hint pulse" id="rigourHint">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="rigourTabs"></div>
-        <div class="company-list" id="rigourList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: JD Authorship -->
-<div class="donut-section" id="author-section">
-  <div class="donut-question" id="q-author">
-    <div class="donut-q-number">Question 02 of 09</div>
-    <div class="donut-q-text">Who actually wrote this job description — and does it matter?</div>
-    <a class="donut-q-cta" href="#a-author">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot active"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-author">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 02</div>
-        <h3 class="donut-headline">45% engineer-authored. Mixed authorship is the new normal.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Each JD was read for specificity of language. "Hiring manager" = named sub-tools (e.g. <em>StarRocks, SparkSQL, PySpark</em>), scale numbers (<em>~1B rows daily, multi-terabyte</em>), specific architectural patterns (<em>incremental models, Data Mesh, medallion</em>), or technical anti-patterns named explicitly. "Recruiter" = generic category language, soft-skill padding, no tool specificity. "Mixed" = technical core with recruiter boilerplate appended.
-          <br><br>
-          <strong>What the data shows:</strong> 45% hiring manager, 37% mixed, 17% pure recruiter. The majority of AE JDs were written by, or heavily influenced by, someone who has done this job. Only 17% are pure boilerplate — meaning ATS keyword optimisation is rarely the whole game.
-          <br><br>
-          <strong>Resume implication:</strong> For hiring-manager JDs, mirror their exact technical vocabulary. If they wrote "dbt incremental models with snapshot strategy", your bullet should say "incremental models" — not "data transformation". For mixed JDs, lead with the technical specifics, close with the stakeholder language.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="authorChart" role="img" aria-label="Donut chart: distribution of JD authorship types"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="authorTabs"></div>
-        <div class="company-list" id="authorList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: Greenfield vs fix -->
-<div class="donut-section" id="mission-section">
-  <div class="donut-question" id="q-mission">
-    <div class="donut-q-number">Question 03 of 09</div>
-    <div class="donut-q-text">Are you being hired to build something new, or fix something broken?</div>
-    <a class="donut-q-cta" href="#a-mission">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot active"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-mission">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 03</div>
-        <h3 class="donut-headline">Build vs. fix split evenly. Most roles live in the middle.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Each JD was read for the dominant mission signal. "Greenfield" = <em>build, establish, define, create from scratch, first analytics hire, design</em>. "Fix / Scale" = <em>improve, scale, maintain, modernise, optimise, inherited, continued implementation</em>. "Mixed" = both present with no clear dominant signal.
-          <br><br>
-          <strong>What the data shows:</strong> 50% mixed, 32% fix/scale, 17% greenfield — the mixed middle has expanded. The majority of roles ask you to do both: extend existing infrastructure while establishing new capabilities. Crucially, strategic autonomy does not predict greenfield — most "own the analytics function" roles are building on top of something that already exists.
-          <br><br>
-          <strong>Resume implication:</strong> Versatility is the default expectation. Show both modes: "designed X from scratch" alongside "inherited Y, improved it to Z". Roles that want only one mode signal it clearly — and they're the minority.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="missionChart" role="img" aria-label="Donut chart: distribution of greenfield vs fix/scale missions"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="missionTabs"></div>
-        <div class="company-list" id="missionList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: Team maturity -->
-<div class="donut-section" id="maturity-section">
-  <div class="donut-question" id="q-maturity">
-    <div class="donut-q-number">Question 04 of 09</div>
-    <div class="donut-q-text">How mature is the data team you'd be joining?</div>
-    <a class="donut-q-cta" href="#a-maturity">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot active"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-maturity">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 04</div>
-        <h3 class="donut-headline">59% mid-stage. Early teams edge ahead of mature at 18% vs 22%.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Each JD was read for signals of the data team's stage. "Early" = first or only data hire implied, no team described, "build from zero", solo AE with no peers mentioned. "Mid" = small existing team, some structure present, "mentor junior engineers", "lead a team of 2". "Mature" = established engineering ladder implied by seniority level, multiple squads, "Staff" or "Principal" titles with cross-squad mandate.
-          <br><br>
-          <strong>What the data shows:</strong> 59% mid-stage, 22% mature, 18% early. The broader corpus reveals a significant cohort of established data organisations (Spotify, Netflix, Vinted, N26) that don't appear heavily in cold-apply pipelines. All mature-team roles are rigour-only without exception.
-          <br><br>
-          <strong>Resume implication:</strong> Mature teams want evidence of operating within standards and raising them — governance contributions, cross-squad influence, architecture decisions that outlasted you. Early-stage teams want proof you can build without a net. Mid-stage teams — the majority — want both.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="maturityChart" role="img" aria-label="Donut chart: distribution of data team maturity stages"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="maturityTabs"></div>
-        <div class="company-list" id="maturityList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: Stakeholder orientation -->
-<div class="donut-section" id="stakeholder-section">
-  <div class="donut-question" id="q-stakeholder">
-    <div class="donut-q-number">Question 05 of 09</div>
-    <div class="donut-q-text">Who would you actually be building for every day?</div>
-    <a class="donut-q-cta" href="#a-stakeholder">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot active"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-stakeholder">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 05</div>
-        <h3 class="donut-headline">58% internal-facing. Commercial and finance tied at 10% each.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Each JD was read for the primary audience named in the responsibilities section. <em>Commercial</em> = sales, GTM, customer success, revenue ops, partnerships. <em>Product</em> = product teams, growth, experimentation, A/B testing. <em>Internal data</em> = data platform, self-serve analytics, other analysts/engineers. <em>Finance</em> = FP&A, audit, P&L, controllership.
-          <br><br>
-          <strong>What the data shows:</strong> 58% internal data — the AE role is primarily a craft role, building infrastructure and models consumed by other data practitioners, not end-business stakeholders. Finance (10%) is 100% high-risk domain. Commercial (10%) and finance are tied; product (7%) remains the minority. The "data-driven GTM" AE role is rarer than LinkedIn posts suggest.
-          <br><br>
-          <strong>Resume implication:</strong> For internal-data roles, lead with platform thinking: self-serve enablement, modelling standards, semantic layer, data contracts. For finance roles, precision and auditability outweigh everything. Commercial roles want business impact framing — pipeline influenced, revenue attributed, churn predicted.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="stakeholderChart" role="img" aria-label="Donut chart: distribution of stakeholder orientations"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="stakeholderTabs"></div>
-        <div class="company-list" id="stakeholderList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: Autonomy level -->
-<div class="donut-section" id="autonomy-section">
-  <div class="donut-question" id="q-autonomy">
-    <div class="donut-q-number">Question 06 of 09</div>
-    <div class="donut-q-text">Will you set the direction, or follow it?</div>
-    <a class="donut-q-cta" href="#a-autonomy">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot active"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-autonomy">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 06</div>
-        <h3 class="donut-headline">Strategic, execution, and mixed roles are now tied at a third each.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Each JD was read for the verb choices in the responsibilities section. <em>Strategic</em> = "define", "own", "shape", "establish", "lead", "drive" — the role sets direction. <em>Execution</em> = "support", "assist", "deliver", "help", "contribute to" — direction comes from elsewhere. <em>Mixed</em> = owns a technical domain but serves a business team's requests.
-          <br><br>
-          <strong>What the data shows:</strong> 33% execution, 33% strategic, 33% mixed — the market is now a perfect three-way split. "Senior Analytics Engineer" appears across all three categories. The difference is not the title but the framing: strategic roles say "you will define", execution roles say "you will support".
-          <br><br>
-          <strong>Resume implication:</strong> Read the verb tense before applying. For strategic roles, your bullets must show direction-setting: "designed the modelling framework", "established the data contract standard", "shifted the team from reactive to proactive". For execution roles, impact framing matters more: "reduced dashboard load time by 60%", "delivered 8 data products in Q1". Applying with the wrong register is a reliable rejection signal.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="autonomyChart" role="img" aria-label="Donut chart: distribution of autonomy levels"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="autonomyTabs"></div>
-        <div class="company-list" id="autonomyList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: AI role -->
-<div class="donut-section" id="ai-section">
-  <div class="donut-question" id="q-ai">
-    <div class="donut-q-number">Question 07 of 09</div>
-    <div class="donut-q-text">Does the market actually want AI skills — or is it just saying so?</div>
-    <a class="donut-q-cta" href="#a-ai">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot active"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-ai">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 07</div>
-        <h3 class="donut-headline" id="ai-headline">84% of JDs expect no AI skill from the candidate at all.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> The question is what the <em>candidate</em> is expected to do with AI — not what the company builds. Three categories: <em>none</em> = no AI skill expected (includes companies building AI where the AE does standard modelling); <em>ai_user</em> = candidate uses AI coding tools (Copilot, Claude Code, Cursor) to accelerate their own work; <em>ai_enabler</em> = candidate builds data infrastructure that AI systems consume ("AI-ready foundations", "semantic model for AI", "text-to-SQL", "GenAI" in responsibilities).
-          <br><br>
-          <strong>What the data shows:</strong> 84% none, 15% ai_enabler, 1% ai_user (n=93 roles with this dimension). The "AI-first" discourse has not reached the job description layer at anywhere near the rate dbt Labs' own survey reports (72% of respondents claiming daily AI coding use). Vague phrases — "AI-first mindset", "excited about AI", "we use AI internally" — were explicitly coded as <em>none</em>, because they signal culture, not skill expectation. The small <em>ai_enabler</em> cohort (1 in 7 roles) consists of roles explicitly building data infrastructure for downstream AI consumption: semantic layers, ML feature pipelines, text-to-SQL readiness. Almost no roles (1 of 93) named AI coding tools as a skill requirement — meaning even where teams use Copilot or Claude Code daily, it has not yet become a hiring criterion.
-          <br><br>
-          <strong>Resume implication:</strong> Mentioning AI tool usage is not a differentiator in most of this market — it is simply not what they are screening for. For the ai_enabler cohort, semantic modelling and ML-adjacent data infrastructure work is the signal worth surfacing. For everyone else, quality, governance, and domain expertise outweigh AI enthusiasm in application screening.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="aiChart" role="img" aria-label="Donut chart: distribution of AI role expectations across JDs"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="aiTabs"></div>
-        <div class="company-list" id="aiList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: Testing framing -->
-<div class="donut-section" id="testing-section">
-  <div class="donut-question" id="q-testing">
-    <div class="donut-q-number">Question 08 of 09</div>
-    <div class="donut-q-text">Who owns data quality — you, or a tool?</div>
-    <a class="donut-q-cta" href="#a-testing">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot active"></div><div class="donut-q-dot"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-testing">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 08</div>
-        <h3 class="donut-headline" id="testing-headline">57% of JDs frame testing as something you own, not just a tool you know.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Three categories: <em>responsibility</em> = the candidate owns quality as a named accountability — action verbs like "own", "ensure", "define", "implement", "establish" paired with "quality", "testing", "data contracts", or "observability"; <em>tool_listed</em> = a testing tool appears in the required or preferred stack without ownership language; <em>absent</em> = no testing or quality signal anywhere in the JD.
-          <br><br>
-          <strong>What the data shows:</strong> 57% responsibility, 39% absent, 4% tool_listed (n=93 roles with this dimension). This is the closest the JD data comes to confirming dbt Labs' "trust gap" narrative directly — testing ownership has become a named hiring criterion in the majority of roles, not just a nice-to-have. It tracks closely with the 81% rigour-orientation finding (Q1): rigour-framed JDs are disproportionately the ones that also name testing as an owned responsibility, not just a stack item. The 39% absent group is concentrated in earlier-stage and velocity-leaning roles where the infrastructure to own doesn't yet exist.
-          <br><br>
-          <strong>Resume implication:</strong> For <em>responsibility</em>-framed roles, data quality ownership is a primary selection criterion — the majority case in this market. Lead with concrete accountability: "owned the data contract framework", "reduced production data incidents by X%", "defined testing standards for 40+ dbt models". For <em>tool_listed</em> roles, name the tool and the outcome — but don't over-index on quality; the JD is signalling familiarity, not mastery. For <em>absent</em> roles, don't bury the lede with quality bullets — lead with delivery and impact.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="testingChart" role="img" aria-label="Donut chart: distribution of testing framing across JDs"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="testingTabs"></div>
-        <div class="company-list" id="testingList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DONUT: Loss aversion framing -->
-<div class="donut-section" id="fear-section">
-  <div class="donut-question" id="q-fear">
-    <div class="donut-q-number">Question 09 of 09</div>
-    <div class="donut-q-text">What is this company actually afraid of?</div>
-    <a class="donut-q-cta" href="#a-fear">See the answer ↓</a>
-    <div class="donut-q-progress">
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot"></div>
-      <div class="donut-q-dot"></div><div class="donut-q-dot"></div><div class="donut-q-dot active"></div>
-    </div>
-  </div>
-  <div class="donut-answer" id="a-fear">
-    <div class="donut-answer-inner">
-      <div class="donut-left">
-        <div class="donut-finding">Finding 09</div>
-        <h3 class="donut-headline" id="fear-headline">60% fear operational failure. Only 15% are dominated by compliance fear.</h3>
-        <div class="donut-methodology">
-          <strong>How this was classified:</strong> Three levels of loss-aversion framing: <em>none</em> = JD framed in pure delivery and capability terms, no risk register; <em>moderate</em> = operational reliability is a secondary concern — fear is pipeline outages, SLOs, or data failures, not compliance; <em>high</em> = risk, compliance, or stakeholder trust framing dominates — fear is bad data reaching decision-makers or regulatory exposure.
-          <br><br>
-          <strong>What the data shows:</strong> 60% moderate, 25% none, 15% high (n=93 roles with this dimension). Pure delivery framing is the minority — three in four roles carry some fear signal. But the dominant fear is operational, not the compliance/trust framing dbt Labs' 2026 report leads with (71% citing fear of hallucinated outputs reaching stakeholders): "we can't have pipelines going down", "incidents need response", "production reliability matters". Compliance-dominated framing (high) is concentrated in finance-adjacent and regulated sectors — a narrower slice of the market than the survey's headline number implies. The <em>none</em> group is almost entirely early-stage or greenfield roles where the infrastructure does not yet exist to fail.
-          <br><br>
-          <strong>Resume implication:</strong> Read the fear register before framing your application. For <em>high</em> roles, open with risk-reduction proof: zero-incident records, audit trail implementation, compliance frameworks. For <em>moderate</em> roles — the majority case — reliability metrics ("99.X% pipeline uptime", "reduced on-call burden") resonate more than feature delivery. For <em>none</em> roles, pure delivery and impact framing — these companies aren't afraid yet.
-        </div>
-        <div class="donut-chart-wrap"><canvas id="fearChart" role="img" aria-label="Donut chart: distribution of loss aversion framing across JDs"></canvas></div>
-        <p class="donut-hint pulse">Click a segment to see companies</p>
-      </div>
-      <div class="donut-right">
-        <div class="segment-tabs" id="fearTabs"></div>
-        <div class="company-list" id="fearList"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SECTION: GEOGRAPHY -->
 <hr class="divider">
+
+<!-- SECTION: GEOGRAPHY (demoted — honest about being a scraping artifact) -->
 <section class="section" id="geo-section">
-  <div class="section-label">Finding 10</div>
-  <h2 class="section-headline">Berlin leads at 30%, but other Europe is a real second cluster.</h2>
-  <p class="section-body">Berlin leads at 30% but is not the whole story. Other Europe — Amsterdam, Lisbon, Tallinn, Barcelona, Paris, Zurich — forms a genuine second cluster at 26%. The Nordics (Stockholm, Copenhagen, Oslo) add 9%, skewing toward scale-ups with more mature data teams. Use the region filter to isolate any market — stakeholder orientation shifts noticeably by geography.</p>
-  <div id="geoBreakdown"></div>
+  <div class="section-label">Coverage, not a finding</div>
+  <h2 class="section-headline">Where these JDs came from — and why that's not a market map</h2>
+  <div class="geo-callout">
+    <div class="geo-callout-title">This is a corpus-coverage statement, not a geographic finding</div>
+    <p><strong>The regional split below reflects what got scraped, not where demand exists.</strong> It's a keyword match on free-text location strings collected opportunistically during one person's job search — sourced from whatever job boards and company pages surfaced roles worth applying to. A city appears here because a posting was found and classified, not because analytics engineering hiring is concentrated there.</p>
+    <p>Roughly a quarter of records fall into "other" — locations too ambiguous to bucket (multi-city remote listings, unstated locations, or cities outside the keyword list). Treat every number in this section as a description of the dataset's blind spots, not the labour market's shape.</p>
+    <p><strong>A concrete example of the artifact:</strong> "Global remote" postings hard-gate on language (typically German) more often than Berlin postings do in this bucketing — which is backwards from what you'd expect if the categories meant what they sound like. The likely cause: a remote role that requires German gets classified as "global remote" by the location-string matcher rather than folded into the Berlin/DACH bucket, because the matcher keys off literal city names, not the language requirement itself. Read that as a bug in the bucketing, not a claim that remote roles gate on language more than local ones.</p>
+  </div>
+  <div class="geo-grid" id="geoBreakdown"></div>
 </section>
+
+<hr class="divider">
 
 <!-- SECTION: STACK -->
-<hr class="divider">
 <section class="section" id="stack">
-  <div class="section-label">Finding 11</div>
+  <div class="section-label">Reference</div>
   <h2 class="section-headline">SQL and dbt are the floor. Everything else is negotiable.</h2>
-  <p class="section-body">SQL (94%) and dbt (63%) are the baseline — not knowing either disqualifies you from the vast majority of roles. Python follows at 58%, now effectively a third core requirement. After that, a genuine cliff: Power BI (38%), Snowflake (35%), Tableau (31%), Airflow (27%), Looker (26%). Databricks (21%) is niche. Spark (16%), Kafka (5%), and Terraform (5%) appear rarely enough that listing them is a differentiator, not a gap if you lack them.</p>
-  <div class="donut-methodology" style="max-width:680px;margin-bottom:2rem">
-    <strong>Worth reading against the dbt Labs survey:</strong> dbt Labs' own "State of Analytics Engineering" report treats dbt as the field standard — but its survey sample is drawn from dbt's own community channels, where 76% of respondents already used dbt before answering. This dataset isn't filtered that way: it's job postings collected independent of any tool affiliation. <strong>63% require dbt — real, but not universal.</strong> More than a third of analytics engineering roles in this market run on a stack without it: Databricks SQL, BigQuery-native pipelines, or Spark-first architectures. A survey distributed through dbt's own channels structurally cannot see that portion of the market.
-  </div>
+  <p class="section-body" id="stackBody">Loading…</p>
   <div class="card">
     <div class="card-title">Tool prevalence across filtered roles</div>
-    <p class="card-sub">% of JDs mentioning each tool · colour = category</p>
+    <p class="card-sub">% of JDs mentioning each tool · colour = category · click a bar for the company list</p>
     <canvas id="toolChart"></canvas>
-    <p class="tool-panel-hint">Click a bar to see companies</p>
-    <div id="toolCompanyPanel">
-      <div class="tool-panel-header">
-        <span class="tool-panel-title" id="toolPanelTitle"></span>
-        <span class="tool-panel-count" id="toolPanelCount"></span>
+    <div id="toolCompanyPanel" style="margin-top:1.5rem;display:none">
+      <div style="display:flex;align-items:baseline;gap:0.6rem;margin-bottom:0.75rem">
+        <span id="toolPanelTitle" style="font-weight:700;font-size:0.88rem"></span>
+        <span id="toolPanelCount" style="font-size:0.74rem;color:var(--muted)"></span>
       </div>
-      <div class="company-list" id="toolCompanyList"></div>
+      <div class="company-list" id="toolCompanyList" style="max-height:260px"></div>
     </div>
   </div>
 </section>
 
 <div id="tooltip"></div>
-<a id="floatNext" href="#">Next →</a>
 
 <script>
 let ALL_DATA = [], activeData = [];
@@ -785,20 +376,7 @@ const COLOURS = {
   ai_role:                { none: '#9ca3af', ai_user: '#0891b2', ai_enabler: '#7c3aed' },
   testing_framing:        { responsibility: '#1d4ed8', tool_listed: '#d97706', absent: '#9ca3af' },
   loss_aversion_framing:  { none: '#16a34a', moderate: '#d97706', high: '#c0392b' },
-  geo_region:             { berlin: '#1d4ed8', hamburg: '#0891b2', nordics: '#16a34a', uk_remote: '#7c3aed', other_europe: '#d97706', global_remote: '#9ca3af', other: '#6b7280' },
-};
-const BORDERS = {
-  domain_risk:            { high: '#922b21', moderate: '#92400e', low: '#166534' },
-  velocity_vs_rigour:     { rigour: '#1e3a8a', mixed: '#6b7280', velocity: '#922b21' },
-  jd_authorship:          { hiring_manager: '#1e3a8a', mixed: '#6b7280', recruiter: '#922b21' },
-  greenfield_vs_fix:      { greenfield: '#166534', mixed: '#6b7280', fix_scale: '#1e3a8a' },
-  data_team_maturity:     { early: '#922b21', mid: '#92400e', mature: '#166534' },
-  stakeholder_orientation:{ commercial: '#5b21b6', product: '#0369a1', internal_data: '#1e3a8a', finance: '#922b21', mixed: '#6b7280' },
-  autonomy_level:         { strategic: '#166534', mixed: '#6b7280', execution: '#92400e' },
-  ai_role:                { none: '#6b7280', ai_user: '#0369a1', ai_enabler: '#5b21b6' },
-  testing_framing:        { responsibility: '#1e3a8a', tool_listed: '#92400e', absent: '#6b7280' },
-  loss_aversion_framing:  { none: '#166534', moderate: '#92400e', high: '#922b21' },
-  geo_region:             { berlin: '#1e3a8a', hamburg: '#0369a1', nordics: '#166534', uk_remote: '#5b21b6', other_europe: '#92400e', global_remote: '#6b7280', other: '#4b5563' },
+  seniority:              { junior: '#16a34a', mid: '#0891b2', senior: '#1d4ed8', lead: '#7c3aed', staff: '#c0392b', manager: '#d97706' },
 };
 const LABELS = {
   domain_risk:            { high: 'High risk', moderate: 'Moderate', low: 'Low risk' },
@@ -811,36 +389,15 @@ const LABELS = {
   ai_role:                { none: 'No AI skill expected', ai_user: 'Uses AI tools', ai_enabler: 'Builds AI infra' },
   testing_framing:        { responsibility: 'Owns quality', tool_listed: 'Tool listed', absent: 'Absent' },
   loss_aversion_framing:  { none: 'No fear signal', moderate: 'Operational fear', high: 'Compliance / trust fear' },
-  geo_region:             { berlin: 'Berlin', hamburg: 'Hamburg', nordics: 'Nordics', uk_remote: 'UK / Remote', other_europe: 'Other Europe', global_remote: 'Global Remote', other: 'Other' },
+  seniority:              { junior: 'Junior', mid: 'Mid', senior: 'Senior', lead: 'Lead', staff: 'Staff', manager: 'Manager' },
 };
 const KEYWORDS = {
-  velocity_vs_rigour: {
-    rigour:   ['TDD','CI/CD','production-grade','mocking','performance profiling','compliance','audit','meticulous','controlled','test coverage','regression','quality gate'],
-    velocity: ['move fast','bias for action','agile','iterate','pragmatic','ship','fast-paced','rapid'],
-  },
-  jd_authorship: {
-    hiring_manager: ['StarRocks','SparkSQL','PySpark','incremental models','Data Mesh','medallion','1B rows','multi-terabyte','dbt','Airflow','Spark','Kafka'],
-    recruiter:      ['collaborate','communication skills','team player','stakeholder','passionate','motivated','dynamic'],
-  },
-  greenfield_vs_fix: {
-    greenfield: ['build','establish','define','create from scratch','first analytics hire','design','from the ground up','greenfield','new'],
-    fix_scale:  ['improve','scale','maintain','modernise','modernize','optimise','optimize','inherited','migrate','refactor','technical debt','stabilise'],
-  },
-  data_team_maturity: {
-    early:  ['first','solo','only data','from scratch','from zero','no existing','build out'],
-    mid:    ['mentor','junior','lead a team','small team','growing team'],
-    mature: ['Staff','Principal','cross-squad','cross-functional','engineering ladder','multiple teams','architecture'],
-  },
-  stakeholder_orientation: {
-    commercial: ['sales','GTM','go-to-market','revenue','customer success','commercial','partnerships','pipeline','win rate','churn'],
-    product:    ['product','experiment','A/B','funnel','feature','user behaviour','growth','activation'],
-    internal_data: ['data platform','self-serve','data consumers','analytics infrastructure','modelling layer','data team'],
-    finance:    ['FP&A','P&L','financial reporting','forecast','budget','audit','controllership','board'],
-  },
-  autonomy_level: {
-    strategic: ['define','establish','own','shape','lead','drive','determine','architect','you will define','set the strategy','build the roadmap'],
-    execution: ['support','assist','deliver','help','contribute to','work alongside','deliver against'],
-  },
+  velocity_vs_rigour: { rigour: ['TDD','CI/CD','production-grade','mocking','performance profiling','compliance','audit','meticulous','controlled','test coverage','regression','quality gate'], velocity: ['move fast','bias for action','agile','iterate','pragmatic','ship','fast-paced','rapid'] },
+  jd_authorship: { hiring_manager: ['StarRocks','SparkSQL','PySpark','incremental models','Data Mesh','medallion','1B rows','multi-terabyte','dbt','Airflow','Spark','Kafka'], recruiter: ['collaborate','communication skills','team player','stakeholder','passionate','motivated','dynamic'] },
+  greenfield_vs_fix: { greenfield: ['build','establish','define','create from scratch','first analytics hire','design','from the ground up','greenfield','new'], fix_scale: ['improve','scale','maintain','modernise','modernize','optimise','optimize','inherited','migrate','refactor','technical debt','stabilise'] },
+  data_team_maturity: { early: ['first','solo','only data','from scratch','from zero','no existing','build out'], mid: ['mentor','junior','lead a team','small team','growing team'], mature: ['Staff','Principal','cross-squad','cross-functional','engineering ladder','multiple teams','architecture'] },
+  stakeholder_orientation: { commercial: ['sales','GTM','go-to-market','revenue','customer success','commercial','partnerships','pipeline','win rate','churn'], product: ['product','experiment','A/B','funnel','feature','user behaviour','growth','activation'], internal_data: ['data platform','self-serve','data consumers','analytics infrastructure','modelling layer','data team'], finance: ['FP&A','P&L','financial reporting','forecast','budget','audit','controllership','board'] },
+  autonomy_level: { strategic: ['define','establish','own','shape','lead','drive','determine','architect','you will define','set the strategy','build the roadmap'], execution: ['support','assist','deliver','help','contribute to','work alongside','deliver against'] },
 };
 
 function highlightKeywords(text, dataKey, segmentKey) {
@@ -853,48 +410,230 @@ function highlightKeywords(text, dataKey, segmentKey) {
 
 Chart.defaults.color = '#6b7280';
 Chart.defaults.borderColor = '#e5e5e1';
-
 function destroyChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
 
-// ── Stats ──
+function wilsonMoe(successes, n) {
+  if (!n) return 0;
+  const z = 1.96, p = successes / n;
+  const denom = 1 + z * z / n;
+  const half = z * Math.sqrt((p * (1 - p) + z * z / (4 * n)) / n);
+  return Math.round((half / denom) * 100);
+}
+
+// ── Stats strip ──
 function buildStats(data) {
   const n = data.length || 1;
-  const rigourPct    = Math.round(data.filter(d => d.velocity_vs_rigour === 'rigour').length / n * 100);
-  const hmPct        = Math.round(data.filter(d => d.jd_authorship === 'hiring_manager').length / n * 100);
-  const highPct      = Math.round(data.filter(d => d.domain_risk === 'high').length / n * 100);
-  const dbtPct       = Math.round(data.filter(d => String(d.has_dbt).toLowerCase() === 'true').length / n * 100);
-  const commercialPct= Math.round(data.filter(d => d.stakeholder_orientation === 'commercial').length / n * 100);
-  const strategicPct = Math.round(data.filter(d => d.autonomy_level === 'strategic').length / n * 100);
-  const hardGate     = data.filter(d => d.language_gate_type === 'hard' &&
-    (Array.isArray(d.language_gate_languages) ? d.language_gate_languages : [d.language_gate_languages||''])
-    .some(l => (l||'').toLowerCase().includes('german'))).length;
-  document.getElementById('heroEyebrow').textContent = `${data.length} job descriptions · psychologically decoded`;
+  const rigourPct = Math.round(data.filter(d => d.velocity_vs_rigour === 'rigour').length / n * 100);
+  const hmPct     = Math.round(data.filter(d => d.jd_authorship === 'hiring_manager').length / n * 100);
+  const highPct   = Math.round(data.filter(d => d.domain_risk === 'high').length / n * 100);
+  const dbtPct    = Math.round(data.filter(d => String(d.has_dbt).toLowerCase() === 'true').length / n * 100);
+  const midPct    = Math.round(data.filter(d => d.data_team_maturity === 'mid').length / n * 100);
+  const internalPct = Math.round(data.filter(d => d.stakeholder_orientation === 'internal_data').length / n * 100);
+  document.getElementById('heroEyebrow').textContent = `${data.length} job descriptions classified`;
   document.getElementById('statsRow').innerHTML = [
-    { num: rigourPct+'%',     label: 'Rigour-first JDs' },
-    { num: hmPct+'%',         label: 'Engineer-authored' },
-    { num: highPct+'%',       label: 'High-stakes domain' },
-    { num: dbtPct+'%',        label: 'Require dbt' },
-    { num: commercialPct+'%', label: 'Commercial-facing' },
-    { num: strategicPct+'%',  label: 'Strategic autonomy' },
-    { num: hardGate,           label: 'Hard German gate' },
+    { num: rigourPct+'%',   label: 'Rigour-first JDs' },
+    { num: hmPct+'%',       label: 'Engineer-authored' },
+    { num: midPct+'%',      label: 'Mid-stage teams' },
+    { num: internalPct+'%', label: 'Serve internal data' },
+    { num: highPct+'%',     label: 'High-stakes domain' },
+    { num: dbtPct+'%',      label: 'Require dbt' },
   ].map(s => `<div class="stat-cell"><div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div></div>`).join('');
 }
 
-// ── Scatter ──
+// ── Relationship panels (stacked-bar cross-tabs) ──
+function crosstab(data, rowKey, colKey, rowOrder) {
+  const rows = {};
+  data.forEach(d => {
+    const r = d[rowKey]; const c = d[colKey];
+    if (!r || !c) return;
+    if (!rows[r]) rows[r] = {};
+    rows[r][c] = (rows[r][c] || 0) + 1;
+  });
+  const order = rowOrder || Object.keys(rows).sort((a,b) => {
+    const na = Object.values(rows[a]).reduce((x,y)=>x+y,0);
+    const nb = Object.values(rows[b]).reduce((x,y)=>x+y,0);
+    return nb - na;
+  });
+  return order.filter(r => rows[r]).map(r => {
+    const counts = rows[r];
+    const total = Object.values(counts).reduce((a,b)=>a+b,0);
+    return { row: r, total, counts };
+  });
+}
+
+function renderXtab(containerId, data, rowKey, colKey, rowOrder, colOrder) {
+  const tab = crosstab(data, rowKey, colKey, rowOrder);
+  const rowLab = LABELS[rowKey] || {};
+  const colLab = LABELS[colKey] || {};
+  const colCol = COLOURS[colKey] || {};
+  const cols = colOrder || Object.keys(colCol);
+  const rowsHtml = tab.map(({row, total, counts}) => {
+    const segs = cols.filter(c => counts[c]).map(c => {
+      const pct = Math.round(counts[c]/total*100);
+      return `<div class="xtab-seg" style="width:${pct}%;background:${colCol[c]||'#9ca3af'}" title="${colLab[c]||c}: ${pct}%">${pct>=12?pct+'%':''}</div>`;
+    }).join('');
+    return `<div class="xtab-row">
+      <div class="xtab-label">${rowLab[row]||row}</div>
+      <div class="xtab-bar">${segs}</div>
+      <div class="xtab-n">n=${total}</div>
+    </div>`;
+  }).join('');
+  const legendHtml = cols.filter(c => tab.some(t => t.counts[c])).map(c =>
+    `<div class="xtab-legend-item"><div class="xtab-legend-dot" style="background:${colCol[c]||'#9ca3af'}"></div>${colLab[c]||c}</div>`
+  ).join('');
+  document.getElementById(containerId).innerHTML = rowsHtml + `<div class="xtab-legend">${legendHtml}</div>`;
+}
+
+function renderNumBar(containerId, data, groupKey, numKey, groupOrder, maxHint) {
+  const groups = {};
+  data.forEach(d => {
+    const g = d[groupKey];
+    const v = d[numKey];
+    if (!g || v == null || v === '') return;
+    const num = parseFloat(v);
+    if (isNaN(num)) return;
+    (groups[g] = groups[g] || []).push(num);
+  });
+  const order = (groupOrder || Object.keys(groups)).filter(g => groups[g] && groups[g].length);
+  const maxVal = maxHint || Math.max(...order.map(g => median(groups[g])), 1);
+  const groupLab = LABELS[groupKey] || {};
+  document.getElementById(containerId).innerHTML = order.map(g => {
+    const m = median(groups[g]);
+    const pct = Math.min(100, Math.round(m / maxVal * 100));
+    return `<div class="numbar-row">
+      <div class="numbar-label">${groupLab[g]||g}</div>
+      <div class="numbar-track"><div class="numbar-fill" style="width:${pct}%"><span class="numbar-fill-val">${m.toFixed(1)}</span></div></div>
+      <div class="numbar-n">n=${groups[g].length}</div>
+    </div>`;
+  }).join('');
+}
+
+const REL_ORDER = {
+  data_team_maturity: ['early','mid','mature'],
+  autonomy_level: ['strategic','mixed','execution'],
+  seniority: ['junior','mid','senior','lead','staff','manager'],
+  stakeholder_orientation: ['finance','internal_data','commercial','mixed','product'],
+  domain_risk: ['low','moderate','high'],
+  testing_framing: ['responsibility','tool_listed','absent'],
+  velocity_vs_rigour: ['rigour','mixed','velocity'],
+  loss_aversion_framing: ['high','moderate','none'],
+  greenfield_vs_fix: ['greenfield','mixed','fix_scale'],
+  jd_authorship: ['hiring_manager','mixed','recruiter'],
+};
+
+function pct(data, key, filterFn) {
+  const sub = data.filter(filterFn);
+  const n = sub.length || 1;
+  return Math.round(sub.filter(d => filterFn(d)).length);
+}
+function grpPct(data, rowKey, rowVal, colKey, colVal) {
+  const sub = data.filter(d => d[rowKey] === rowVal && d[colKey]);
+  if (!sub.length) return 0;
+  return Math.round(sub.filter(d => d[colKey] === colVal).length / sub.length * 100);
+}
+function median(xs) {
+  const s = [...xs].sort((a,b)=>a-b), m = s.length;
+  if (!m) return 0;
+  return m % 2 ? s[(m-1)/2] : (s[m/2-1]+s[m/2])/2;
+}
+function medianBy(data, groupKey, groupVal, numKey) {
+  const vals = data.filter(d => d[groupKey] === groupVal && d[numKey] != null && d[numKey] !== '')
+    .map(d => parseFloat(d[numKey])).filter(v => !isNaN(v));
+  return median(vals);
+}
+
+function buildRelationships(data) {
+  const panels = [
+    {
+      id: 'rel-seniority-autonomy', rowKey: 'seniority', colKey: 'autonomy_level',
+      tag: 'Seniority × Autonomy', q: '"Senior" titles — do they actually predict who sets direction?',
+      statFn: () => `Staff titles are ${grpPct(data,'seniority','staff','autonomy_level','strategic')}% strategic; "Senior" splits roughly ${grpPct(data,'seniority','senior','autonomy_level','strategic')}% strategic / ${grpPct(data,'seniority','senior','autonomy_level','execution')}% execution / ${grpPct(data,'seniority','senior','autonomy_level','mixed')}% mixed.`,
+      read: `<strong>No.</strong> "Senior" is spread across all three autonomy levels almost evenly — the title alone tells you very little about whether you'll set direction or execute against someone else's. Staff titles are the only ones that reliably signal strategic autonomy, likely because they're rarer and more costly for an employer to hand out. Mid-level titles cluster hardest in execution and mixed.
+        <div class="resume-tip"><b>Apply this:</b> Don't trust "Senior" in the job title. Read the verbs in the responsibilities section — "define/own/shape" vs. "support/assist/deliver" tells you more than the seniority label does. Ask directly in the interview what decisions the role makes autonomously in year one.</div>`,
+    },
+    {
+      id: 'rel-maturity-autonomy', rowKey: 'data_team_maturity', colKey: 'autonomy_level',
+      tag: 'Team maturity × Autonomy', q: 'Where does "own the data model" actually mean something?',
+      statFn: () => `Early-stage teams offer strategic autonomy ${grpPct(data,'data_team_maturity','early','autonomy_level','strategic')}% of the time, vs. ${grpPct(data,'data_team_maturity','mid','autonomy_level','strategic')}% at mid-stage teams — despite mid-stage being ${Math.round(data.filter(d=>d.data_team_maturity==='mid').length/data.filter(d=>d.data_team_maturity).length*100)}% of the market.`,
+      read: `Early-stage companies are the clearest source of genuine strategic autonomy — the greenfield career-advice claim holds up in the data. But most of the market (roughly six in ten roles) is mid-stage, where the roadmap is already set and the role skews toward extending it, not defining it. Mature teams are more evenly split, but lean execution slightly more than mid-stage.
+        <div class="resume-tip"><b>Apply this:</b> If strategic ownership is what you want, filter for early-stage teams first — don't rely on title language at mid-stage companies to signal it. If you want structure and mentorship over direction-setting, mid-stage is the honest default, not a consolation prize.</div>`,
+    },
+    {
+      id: 'rel-stakeholder-autonomy', rowKey: 'stakeholder_orientation', colKey: 'autonomy_level',
+      tag: 'Stakeholder audience × Autonomy', q: 'Does who you serve determine how much say you get?',
+      statFn: () => `Finance-facing roles are ${grpPct(data,'stakeholder_orientation','finance','autonomy_level','execution')}% execution — the most execution-dominant segment in the dataset. Product-facing roles are the most strategic, at ${grpPct(data,'stakeholder_orientation','product','autonomy_level','strategic')}%.`,
+      read: `Finance-facing AE roles are shaped by externally imposed requirements — audit cycles, reporting standards, compliance frameworks — that define the deliverable before any internal conversation about direction happens. That's a structural constraint on autonomy, not an employer preference. Product and "mixed-stakeholder" roles (often platform or lead positions serving multiple audiences) show the most strategic latitude, likely because there's no external body dictating the output.
+        <div class="resume-tip"><b>Apply this:</b> If you're finance-facing, don't oversell "strategy" in your pitch — precision, auditability, and reliable delivery are what's being screened for. If you want strategic scope, mixed-stakeholder and product-facing roles are structurally more likely to offer it.</div>`,
+    },
+    {
+      id: 'rel-domain-stakeholder', rowKey: 'domain_risk', colKey: 'stakeholder_orientation',
+      tag: 'Domain risk × Stakeholder audience', q: 'Where does "high stakes" actually concentrate?',
+      statFn: () => `High-risk roles are ${grpPct(data,'domain_risk','high','stakeholder_orientation','finance')}% finance-facing — vs. ${grpPct(data,'domain_risk','moderate','stakeholder_orientation','finance')}% for moderate-risk roles. There are effectively zero high-risk product-analytics roles in this dataset.`,
+      read: `Domain risk isn't spread evenly across audiences — it concentrates almost entirely in finance, where regulation externally defines what "high stakes" means (IFRS, audit standards, SOX-adjacent controls). Product analytics is essentially never coded high-risk in JD language, even though experimentation errors can carry real revenue consequences — there's no external regulator setting a "risk bar" for A/B tests the way there is for financial reporting, so employers default to moderate.
+        <div class="resume-tip"><b>Apply this:</b> "High-stakes" framing on your resume is credible mainly if you're pointing at finance/compliance work — using it for product-analytics experience will read as inflated against how this market actually classifies risk.</div>`,
+    },
+    {
+      id: 'rel-testing-rigour', rowKey: 'testing_framing', colKey: 'velocity_vs_rigour',
+      tag: 'Testing framing × Rigour orientation', q: 'Is "quality" a team value, or your personal job?',
+      statFn: () => `${grpPct(data,'testing_framing','responsibility','velocity_vs_rigour','rigour')}% of "owns quality" roles are also rigour-oriented overall — but the reverse framing matters more: two rigour-coded JDs can mean very different things.`,
+      read: `Rigour orientation (correctness over speed) is necessary but not sufficient to tell you whether <em>you personally</em> will be accountable for data quality, or whether it's just team culture. "Testing framing = responsibility" identifies the roles where governance has been written into the job as a named, individual accountability — not delegated to "the team" or a tool in the stack. That's the more actionable signal for how your first 90 days will actually go.
+        <div class="resume-tip"><b>Apply this:</b> For "owns quality" roles, lead with concrete accountability — "owned the data contract framework," "reduced production incidents by X%." For roles where testing is merely a listed tool or absent, don't over-index on quality bullets; lead with delivery and impact instead.</div>`,
+    },
+    {
+      id: 'rel-maturity-mission', rowKey: 'data_team_maturity', colKey: 'greenfield_vs_fix',
+      tag: 'Team maturity × Greenfield vs fix', q: 'Where is the "build from scratch" work, really?',
+      statFn: () => `Greenfield work concentrates at ${grpPct(data,'data_team_maturity','early','greenfield_vs_fix','greenfield')}% of early-stage roles, vs. effectively rare at mature teams (${grpPct(data,'data_team_maturity','mature','greenfield_vs_fix','greenfield')}%). Mature teams' modal answer is "mixed" — expanding scope, not starting over.`,
+      read: `The common advice ("go early-stage for greenfield work") holds structurally. What's less obvious: mature teams have a meaningfully higher fix/scale share than mid-stage ones — they're the ones most likely posting roles explicitly to replace or repair underperforming systems, not just extend a stable stack. Mid-stage is dominated by "mixed" — the messiest, least clearly-scoped category, which also happens to be most of the market.
+        <div class="resume-tip"><b>Apply this:</b> If you want a portfolio-defining greenfield build, target early-stage specifically — don't assume a "modernise our stack" mid-stage JD will give you that. If you like fixing broken systems, mature teams with fix/scale framing are a better match than their seniority-heavy titles might suggest.</div>`,
+    },
+    {
+      id: 'rel-fear-collab', rowKey: 'loss_aversion_framing', colKey: 'collaboration_width', numeric: true,
+      tag: 'Loss-aversion framing × Collaboration width', q: 'Do fearful employers ask you to talk to more people?',
+      statFn: () => `Median named-stakeholder count: ${medianBy(data,'loss_aversion_framing','high','collaboration_width').toFixed(1)} for high-fear JDs vs. ${medianBy(data,'loss_aversion_framing','moderate','collaboration_width').toFixed(1)} for moderate and ${medianBy(data,'loss_aversion_framing','none','collaboration_width').toFixed(1)} for no-fear JDs — a clean, monotonic gradient.`,
+      read: `This is the cleanest gradient in the dataset. Employers who write compliance- or trust-failure language into the JD ("data reaching decision-makers," "regulatory exposure," "auditability") also name more stakeholder teams in the responsibilities section — nearly double the collaboration width of JDs with no fear signal at all. One reading: when an employer is afraid of a specific failure mode, they scope the role to touch more of the organisation, on the theory that more surface area catches more failure points before they propagate. The JD can't tell you whether that fear is proportionate to real risk or a legal/compliance team over-specifying — but it reliably predicts a wider-scoped role either way.
+        <div class="resume-tip"><b>Apply this:</b> If a JD reads as fearful (compliance, trust, "single source of truth" framing), expect and prepare for a role that spans more stakeholder groups than the title suggests — cross-functional communication experience is worth foregrounding here, even if it wasn't your headline skill in a lower-fear application.</div>`,
+    },
+  ];
+
+  const grid = document.getElementById('relGrid');
+  grid.innerHTML = panels.map((p, i) => `
+    <div class="rel-panel">
+      <div class="rel-head">
+        <div class="rel-tag">${p.tag}</div>
+        <div class="rel-question">${p.q}</div>
+        <div class="rel-stat" id="${p.id}-stat"></div>
+      </div>
+      <div class="rel-body">
+        <div class="rel-viz" id="${p.id}-viz"></div>
+        <div class="rel-read">${p.read}</div>
+      </div>
+    </div>
+  `).join('');
+
+  panels.forEach(p => {
+    const statEl = document.getElementById(`${p.id}-stat`);
+    if (statEl) statEl.innerHTML = p.statFn();
+    if (p.numeric) {
+      renderNumBar(`${p.id}-viz`, data, p.rowKey, p.colKey, REL_ORDER[p.rowKey]);
+    } else {
+      renderXtab(`${p.id}-viz`, data, p.rowKey, p.colKey, REL_ORDER[p.rowKey], REL_ORDER[p.colKey]);
+    }
+  });
+}
+
+// ── Scatter (explorer) ──
 function buildScatter(data) {
   const xKey   = document.getElementById('xAxis').value;
   const colKey = document.getElementById('colourBy').value;
   const colMap = COLOURS[colKey] || {};
   const labMap = LABELS[colKey]  || {};
-  const borMap = BORDERS[colKey] || {};
   const riskY  = { high: 3, moderate: 2, low: 1 };
   const groups = {};
   data.forEach(d => {
     const xVal = xKey === 'salary_mid'
-      ? (d.salary_min && d.salary_max && d.salary_currency === 'EUR'
-          ? (parseFloat(d.salary_min)+parseFloat(d.salary_max))/2 : null)
+      ? (d.salary_min && d.salary_max && d.salary_currency === 'EUR' ? (parseFloat(d.salary_min)+parseFloat(d.salary_max))/2 : null)
       : parseFloat(d.collaboration_width) || null;
-    if (xVal === null) return;
+    if (xVal === null || !riskY[d.domain_risk]) return;
     const cat = d[colKey] || 'unknown';
     if (!groups[cat]) groups[cat] = [];
     groups[cat].push({ x: xVal, y: riskY[d.domain_risk]+(Math.random()-0.5)*0.16, record: d });
@@ -902,7 +641,7 @@ function buildScatter(data) {
   const datasets = Object.entries(groups).map(([cat, pts]) => ({
     label: labMap[cat]||cat, data: pts,
     backgroundColor: (colMap[cat]||'#aaa')+'bb',
-    borderColor: borMap[cat]||'#888',
+    borderColor: colMap[cat]||'#888',
     borderWidth: 1.5, pointRadius: 8, pointHoverRadius: 11,
   }));
   destroyChart('scatter');
@@ -920,173 +659,90 @@ function buildScatter(data) {
   });
   const canvas = document.getElementById('scatterChart');
   const tt = document.getElementById('tooltip');
-  canvas.addEventListener('mousemove', e => {
+  canvas.onmousemove = e => {
     const pts = charts.scatter.getElementsAtEventForMode(e,'nearest',{intersect:true},false);
     if (!pts.length) { tt.classList.remove('visible'); return; }
     const rec = charts.scatter.data.datasets[pts[0].datasetIndex].data[pts[0].index].record;
     const ev  = rec.evidence || {};
-    const gateHtml = rec.language_gate_type !== 'none'
-      ? `<div class="tt-gate">⚠ Language gate: ${ev.language_gate||(Array.isArray(rec.language_gate_languages)?rec.language_gate_languages.join(', '):rec.language_gate_languages)}</div>` : '';
     tt.innerHTML = `
       <div class="tt-company">${rec.company}</div>
       <div class="tt-role">${rec.role}</div>
-      <div class="tt-field"><div class="tt-label">Audience</div><div class="tt-quote">${LABELS.stakeholder_orientation[rec.stakeholder_orientation]||rec.stakeholder_orientation||'—'}</div></div>
+      <div class="tt-field"><div class="tt-label">Seniority</div><div class="tt-quote">${LABELS.seniority[rec.seniority]||rec.seniority||'—'}</div></div>
       <div class="tt-field"><div class="tt-label">Autonomy</div><div class="tt-quote">${LABELS.autonomy_level[rec.autonomy_level]||rec.autonomy_level||'—'}</div></div>
       <div class="tt-field"><div class="tt-label">Domain risk</div><div class="tt-quote">${ev.domain_risk||'—'}</div></div>
-      <div class="tt-field"><div class="tt-label">Rigour signal</div><div class="tt-quote">${ev.velocity_vs_rigour||'—'}</div></div>
-      ${gateHtml}`;
+      <div class="tt-field"><div class="tt-label">Rigour signal</div><div class="tt-quote">${ev.velocity_vs_rigour||'—'}</div></div>`;
     const pad=14;
     tt.style.left=(e.clientX+pad+310>window.innerWidth?e.clientX-310-pad:e.clientX+pad)+'px';
     tt.style.top=(e.clientY+pad+250>window.innerHeight?e.clientY-250-pad:e.clientY+pad)+'px';
     tt.classList.add('visible');
-  });
-  canvas.addEventListener('mouseleave', () => tt.classList.remove('visible'));
+  };
+  canvas.onmouseleave = () => tt.classList.remove('visible');
   document.getElementById('scatterLegend').innerHTML = datasets.map(ds =>
     `<div class="legend-item"><div class="legend-dot" style="background:${ds.backgroundColor}"></div>${ds.label}</div>`
   ).join('');
 }
 
-// ── Donut + company panel ──
-function buildDonutPanel(cfg) {
-  const { chartId, tabsId, listId, dataKey, labMap, colMap, evidenceKey } = cfg;
+// ── Orientation (compact single-dim reference) ──
+function buildOrientation() {
+  const dataKey = document.getElementById('orientationDim').value;
   const data = activeData;
+  const labMap = LABELS[dataKey] || {};
+  const colMap = COLOURS[dataKey] || {};
   const counts = {};
-  data.forEach(d => { const k = d[dataKey]||'unknown'; counts[k]=(counts[k]||0)+1; });
-  const keys = Object.keys(counts);
-  destroyChart(chartId);
-  const chart = new Chart(document.getElementById(chartId).getContext('2d'), {
+  data.forEach(d => { const k = d[dataKey]; if (k) counts[k] = (counts[k]||0)+1; });
+  const order = REL_ORDER[dataKey] || Object.keys(counts);
+  const keys = order.filter(k => counts[k]);
+  const n = keys.reduce((a,k)=>a+counts[k],0);
+
+  destroyChart('orientation');
+  charts.orientation = new Chart(document.getElementById('orientationChart').getContext('2d'), {
     type: 'doughnut',
-    data: {
-      labels: keys.map(k => labMap[k]||k),
-      datasets: [{
-        data: keys.map(k => counts[k]),
-        backgroundColor: keys.map(k => (colMap[k]||'#ccc')+'cc'),
-        borderColor: keys.map(k => colMap[k]||'#ccc'),
-        borderWidth: 2, hoverOffset: 6,
-      }],
-    },
+    data: { labels: keys.map(k=>labMap[k]||k), datasets: [{ data: keys.map(k=>counts[k]), backgroundColor: keys.map(k=>(colMap[k]||'#ccc')+'cc'), borderColor: keys.map(k=>colMap[k]||'#ccc'), borderWidth: 2 }] },
     options: {
-      responsive: true, maintainAspectRatio: false, cutout: '58%',
-      animation: { duration: 250 },
-      plugins: {
-        legend: { position:'bottom', labels:{font:{size:11},boxWidth:11,padding:10} },
-        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw} (${Math.round(ctx.raw/data.length*100)}%)` } },
-      },
-      onClick: (evt, elements) => {
-        if (!elements.length) return;
-        const key = keys[elements[0].index];
-        renderList(listId, tabsId, data, dataKey, key, evidenceKey, labMap, colMap);
-        setActiveTab(tabsId, key);
-      },
+      responsive: true, maintainAspectRatio: false, cutout: '58%', animation: { duration: 250 },
+      plugins: { legend: { position:'bottom', labels:{font:{size:10},boxWidth:10,padding:8} }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw} (${Math.round(ctx.raw/n*100)}%)` } } },
+      onClick: (evt, els) => { if (!els.length) return; selectOrientation(dataKey, keys[els[0].index]); },
     },
   });
-  charts[chartId] = chart;
-  renderTabs(tabsId, listId, data, dataKey, keys, evidenceKey, labMap, colMap);
-  if (keys.length) {
-    renderList(listId, tabsId, data, dataKey, keys[0], evidenceKey, labMap, colMap);
-    setActiveTab(tabsId, keys[0]);
-  }
-}
 
-function renderTabs(tabsId, listId, data, dataKey, keys, evidenceKey, labMap, colMap) {
-  const container = document.getElementById(tabsId);
-  const counts = {};
-  data.forEach(d => { const k = d[dataKey]||'unknown'; counts[k]=(counts[k]||0)+1; });
-  container.innerHTML = keys.map(k => `
-    <button class="seg-tab" data-key="${k}" onclick="selectTab('${tabsId}','${listId}',activeData,'${dataKey}','${k}','${evidenceKey}')"
-      style="--tab-col:${colMap[k]||'#888'}">
-      ${labMap[k]||k} <span style="opacity:0.65;font-weight:400">${counts[k]||0}</span>
-    </button>
+  const moe = keys.length ? wilsonMoe(counts[keys[0]], n) : 0;
+  document.getElementById('orientationHeadline').textContent =
+    `n=${n}. Modal category: ${labMap[keys[0]]||keys[0]} at ${Math.round(counts[keys[0]]/n*100)}% (±${moe}pp, 95% CI). Click a wedge or a tab to see the JDs.`;
+
+  document.getElementById('orientationTabs').innerHTML = keys.map(k => `
+    <button class="drill-toggle" style="text-decoration:none;background:${colMap[k]||'#888'}22;color:${colMap[k]||'#333'};padding:0.3rem 0.7rem;border-radius:20px;font-weight:600" data-key="${k}" onclick="selectOrientation('${dataKey}','${k}')">${labMap[k]||k} (${counts[k]})</button>
   `).join('');
+  if (keys.length) selectOrientation(dataKey, keys[0]);
 }
 
-function selectTab(tabsId, listId, data, dataKey, key, evidenceKey) {
-  const labMap = LABELS[dataKey]||{};
-  const colMap = COLOURS[dataKey]||{};
-  renderList(listId, tabsId, data, dataKey, key, evidenceKey, labMap, colMap);
-  setActiveTab(tabsId, key);
-}
-
-function resolveColour(key) {
-  for (const dim of Object.values(COLOURS)) { if (dim[key]) return dim[key]; }
-  return '#1d4ed8';
-}
-
-function setActiveTab(tabsId, activeKey) {
-  document.querySelectorAll(`#${tabsId} .seg-tab`).forEach(btn => {
-    const isActive = btn.dataset.key === activeKey;
-    btn.classList.toggle('active', isActive);
-    btn.style.background = isActive ? resolveColour(btn.dataset.key) : '#fff';
-  });
-}
-
-function renderList(listId, tabsId, data, dataKey, selectedKey, evidenceKey, labMap, colMap) {
-  const filtered = data.filter(d => (d[dataKey]||'unknown') === selectedKey);
-  const container = document.getElementById(listId);
-  if (!filtered.length) { container.innerHTML = '<div class="empty-state">No roles in this segment for the current filter.</div>'; return; }
-  container.innerHTML = filtered.map(d => {
+function selectOrientation(dataKey, key) {
+  const data = activeData.filter(d => d[dataKey] === key);
+  const container = document.getElementById('orientationList');
+  if (!data.length) { container.innerHTML = '<div class="empty-state">No roles in this segment.</div>'; return; }
+  container.innerHTML = data.map(d => {
     const ev = d.evidence || {};
-    // New dimensions store quote at top level as {dim}_quote; existing dims in evidence{}
-    const rawQuote = ev[evidenceKey] || d[evidenceKey + '_quote'] || '';
-    const quote = rawQuote ? highlightKeywords(rawQuote, dataKey, selectedKey) : '';
-    const quoteHtml = quote ? `<div class="cc-quote">${quote}</div>` : '';
-    // Mini tags for key dimensions
-    const soLabel = LABELS.stakeholder_orientation[d.stakeholder_orientation] || '';
-    const alLabel = LABELS.autonomy_level[d.autonomy_level] || '';
-    const soCol = COLOURS.stakeholder_orientation[d.stakeholder_orientation] || '#9ca3af';
-    const alCol = COLOURS.autonomy_level[d.autonomy_level] || '#9ca3af';
-    const tagsHtml = (soLabel || alLabel) ? `
-      <div class="cc-tags">
-        ${soLabel ? `<span class="cc-tag" style="background:${soCol}22;color:${soCol}">${soLabel}</span>` : ''}
-        ${alLabel ? `<span class="cc-tag" style="background:${alCol}22;color:${alCol}">${alLabel}</span>` : ''}
-      </div>` : '';
-    return `
-      <div class="company-card">
-        <div class="cc-header">
-          <span class="cc-company">${d.company}</span>
-          <span class="cc-role">${d.role}</span>
-        </div>
-        ${quoteHtml}
-        ${tagsHtml}
-        <div class="cc-location">${d.job_location||''}</div>
-      </div>`;
-  }).join('');
-}
-
-// ── Geography breakdown ──
-function buildGeo(data) {
-  const GEO_ORDER = ['berlin','hamburg','nordics','uk_remote','other_europe','global_remote','other'];
-  const counts = {};
-  data.forEach(d => {
-    const r = d.geo_region || 'other';
-    counts[r] = (counts[r]||0)+1;
-  });
-  const max = Math.max(...Object.values(counts), 1);
-
-  // Cross-tab: for each region, show stakeholder orientation breakdown
-  const container = document.getElementById('geoBreakdown');
-  const so_keys = ['commercial','product','internal_data','finance','mixed'];
-  const regionCards = GEO_ORDER.filter(r => counts[r]).map(r => {
-    const regionData = data.filter(d => (d.geo_region||'other') === r);
-    const n = regionData.length;
-    const soCounts = {};
-    regionData.forEach(d => { const k = d.stakeholder_orientation||'unknown'; soCounts[k]=(soCounts[k]||0)+1; });
-    const soRows = so_keys.filter(k => soCounts[k]).map(k => {
-      const pct = Math.round(soCounts[k]/n*100);
-      const col = COLOURS.stakeholder_orientation[k]||'#9ca3af';
-      return `<div class="geo-bar-row">
-        <div class="geo-bar-label" title="${LABELS.stakeholder_orientation[k]||k}">${LABELS.stakeholder_orientation[k]||k}</div>
-        <div class="geo-bar-track"><div class="geo-bar-fill" style="width:${pct}%;background:${col}"></div></div>
-        <div class="geo-bar-count">${soCounts[k]}</div>
-      </div>`;
-    }).join('');
-    return `<div class="geo-cell">
-      <div class="geo-region-label">${LABELS.geo_region[r]||r} <span style="font-weight:400;color:var(--muted)">(${n})</span></div>
-      <div class="geo-bar-wrap">${soRows || '<div style="font-size:0.72rem;color:var(--muted)">No orientation data yet</div>'}</div>
+    const rawQuote = ev[dataKey] || d[dataKey+'_quote'] || '';
+    const quote = rawQuote ? highlightKeywords(rawQuote, dataKey, key) : '';
+    return `<div class="company-card">
+      <div class="cc-header"><span class="cc-company">${d.company}</span><span class="cc-role">${d.role}</span></div>
+      ${quote ? `<div class="cc-quote">${quote}</div>` : ''}
     </div>`;
   }).join('');
+}
 
-  container.innerHTML = `<div class="geo-grid">${regionCards}</div>`;
+// ── Geography (demoted, honest) ──
+function buildGeo(data) {
+  const GEO_LABELS = { berlin:'Berlin', hamburg:'Hamburg', nordics:'Nordics', uk_remote:'UK / Remote', other_europe:'Other Europe', global_remote:'Global Remote', other:'Unclassified / other' };
+  const GEO_ORDER = ['berlin','other_europe','other','global_remote','nordics','uk_remote','hamburg'];
+  const counts = {};
+  data.forEach(d => { const r = d.geo_region || 'other'; counts[r] = (counts[r]||0)+1; });
+  const n = data.length || 1;
+  document.getElementById('geoBreakdown').innerHTML = GEO_ORDER.filter(r => counts[r]).map(r => `
+    <div class="geo-cell">
+      <div class="geo-cell-region">${GEO_LABELS[r]||r}</div>
+      <div class="geo-cell-n">${counts[r]}</div>
+      <div class="geo-cell-note">${Math.round(counts[r]/n*100)}% of corpus</div>
+    </div>`).join('');
 }
 
 // ── Tool chart ──
@@ -1101,23 +757,11 @@ const GC = { Core:'#1d4ed8', Warehouse:'#16a34a', BI:'#d97706', Orchestration:'#
 
 function buildToolCompanyList(tool) {
   const yes = activeData.filter(d => String(d[tool.key]).toLowerCase() === 'true');
-  const no  = activeData.filter(d => String(d[tool.key]).toLowerCase() !== 'true');
   document.getElementById('toolPanelTitle').textContent = tool.label;
-  document.getElementById('toolPanelCount').textContent = `${yes.length} require · ${no.length} don't · ${tool.pct}%`;
-  const cardHtml = (d, muted) => `
-    <div class="company-card${muted ? ' company-card--muted' : ''}">
-      <div class="cc-header">
-        <span class="cc-company">${d.company}</span>
-        <span class="cc-role">${d.role}</span>
-      </div>
-      <div class="cc-location">${d.job_location || ''}</div>
-    </div>`;
-  document.getElementById('toolCompanyList').innerHTML = `
-    <div class="tool-group-label">Require ${tool.label} <span>(${yes.length})</span></div>
-    ${yes.length ? yes.map(d => cardHtml(d, false)).join('') : '<div class="empty-state" style="grid-column:1/-1">None in current filter.</div>'}
-    <div class="tool-group-label tool-group-label--no">Don't require <span>(${no.length})</span></div>
-    ${no.length  ? no.map(d  => cardHtml(d, true)).join('')  : '<div class="empty-state" style="grid-column:1/-1">None in current filter.</div>'}
-  `;
+  document.getElementById('toolPanelCount').textContent = `${yes.length} of ${activeData.length} roles (${tool.pct}%)`;
+  document.getElementById('toolCompanyList').innerHTML = yes.length
+    ? yes.map(d => `<div class="company-card"><div class="cc-header"><span class="cc-company">${d.company}</span><span class="cc-role">${d.role}</span></div></div>`).join('')
+    : '<div class="empty-state">None in current filter.</div>';
   document.getElementById('toolCompanyPanel').style.display = 'block';
 }
 
@@ -1126,20 +770,17 @@ function buildToolChart(data) {
   sortedTools = TOOLS.map(t=>({...t,pct:Math.round(data.filter(d=>String(d[t.key]).toLowerCase()==='true').length/n*100)})).sort((a,b)=>b.pct-a.pct);
   destroyChart('tool');
   document.getElementById('toolCompanyPanel').style.display = 'none';
+  const dbtPct = sortedTools.find(t=>t.key==='has_dbt')?.pct ?? 0;
+  document.getElementById('stackBody').innerHTML =
+    `SQL and dbt are the baseline — not knowing either rules you out of most roles. After the core stack, there's a real cliff to niche tools. <strong>${dbtPct}% require dbt — real, but not universal.</strong> A meaningful share of this market runs on Databricks SQL, BigQuery-native pipelines, or Spark-first stacks instead.`;
   charts.tool = new Chart(document.getElementById('toolChart').getContext('2d'), {
     type:'bar',
     data:{ labels:sortedTools.map(t=>t.label), datasets:[{data:sortedTools.map(t=>t.pct),backgroundColor:sortedTools.map(t=>GC[t.group]+'99'),borderColor:sortedTools.map(t=>GC[t.group]),borderWidth:1,borderRadius:4}] },
     options:{
       indexAxis:'y',responsive:true,animation:{duration:250},
       plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.raw}% of roles`}}},
-      scales:{
-        x:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#f0f0ed'}},
-        y:{ticks:{font:{size:10}},grid:{display:false}},
-      },
-      onClick:(evt,elements)=>{
-        if (!elements.length) return;
-        buildToolCompanyList(sortedTools[elements[0].index]);
-      },
+      scales:{ x:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#f0f0ed'}}, y:{ticks:{font:{size:10}},grid:{display:false}} },
+      onClick:(evt,elements)=>{ if (!elements.length) return; buildToolCompanyList(sortedTools[elements[0].index]); },
       onHover:(e,els)=>{ e.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
     },
   });
@@ -1148,25 +789,13 @@ function buildToolChart(data) {
 // ── Main render ──
 function render() {
   const roleFilter = document.getElementById('filterRoleType').value;
-  const geoFilter  = document.getElementById('filterGeo').value;
-  activeData = ALL_DATA
-    .filter(d => roleFilter === 'all' || d.role_type === roleFilter)
-    .filter(d => geoFilter  === 'all' || (d.geo_region||'other') === geoFilter);
-  document.getElementById('countBadge').innerHTML=`<strong>${activeData.length}</strong> / ${ALL_DATA.length} roles`;
+  activeData = ALL_DATA.filter(d => roleFilter === 'all' || d.role_type === roleFilter);
+  document.getElementById('countBadge').innerHTML = `<strong>${activeData.length}</strong> / ${ALL_DATA.length} roles`;
 
   buildStats(activeData);
+  buildRelationships(activeData);
   buildScatter(activeData);
-
-  buildDonutPanel({ chartId:'rigourChart',      tabsId:'rigourTabs',      listId:'rigourList',      dataKey:'velocity_vs_rigour',      labMap:LABELS.velocity_vs_rigour,      colMap:COLOURS.velocity_vs_rigour,      evidenceKey:'velocity_vs_rigour' });
-  buildDonutPanel({ chartId:'authorChart',      tabsId:'authorTabs',      listId:'authorList',      dataKey:'jd_authorship',           labMap:LABELS.jd_authorship,           colMap:COLOURS.jd_authorship,           evidenceKey:'jd_authorship' });
-  buildDonutPanel({ chartId:'missionChart',     tabsId:'missionTabs',     listId:'missionList',     dataKey:'greenfield_vs_fix',       labMap:LABELS.greenfield_vs_fix,       colMap:COLOURS.greenfield_vs_fix,       evidenceKey:'greenfield_vs_fix' });
-  buildDonutPanel({ chartId:'maturityChart',    tabsId:'maturityTabs',    listId:'maturityList',    dataKey:'data_team_maturity',      labMap:LABELS.data_team_maturity,      colMap:COLOURS.data_team_maturity,      evidenceKey:'data_team_maturity' });
-  buildDonutPanel({ chartId:'stakeholderChart', tabsId:'stakeholderTabs', listId:'stakeholderList', dataKey:'stakeholder_orientation', labMap:LABELS.stakeholder_orientation, colMap:COLOURS.stakeholder_orientation, evidenceKey:'stakeholder_orientation' });
-  buildDonutPanel({ chartId:'autonomyChart',    tabsId:'autonomyTabs',    listId:'autonomyList',    dataKey:'autonomy_level',          labMap:LABELS.autonomy_level,          colMap:COLOURS.autonomy_level,          evidenceKey:'autonomy_level' });
-  buildDonutPanel({ chartId:'aiChart',          tabsId:'aiTabs',          listId:'aiList',          dataKey:'ai_role',                 labMap:LABELS.ai_role,                 colMap:COLOURS.ai_role,                 evidenceKey:'ai_role' });
-  buildDonutPanel({ chartId:'testingChart',     tabsId:'testingTabs',     listId:'testingList',     dataKey:'testing_framing',         labMap:LABELS.testing_framing,         colMap:COLOURS.testing_framing,         evidenceKey:'testing_framing' });
-  buildDonutPanel({ chartId:'fearChart',        tabsId:'fearTabs',        listId:'fearList',        dataKey:'loss_aversion_framing',   labMap:LABELS.loss_aversion_framing,   colMap:COLOURS.loss_aversion_framing,   evidenceKey:'loss_aversion_framing' });
-
+  buildOrientation();
   buildGeo(activeData);
   buildToolChart(activeData);
 }
@@ -1175,22 +804,22 @@ fetch('data.json')
   .then(r=>r.json())
   .then(data=>{
     ALL_DATA=data; render();
-    ['filterRoleType','filterGeo','xAxis'].forEach(id=>document.getElementById(id).addEventListener('change',render));
+    document.getElementById('filterRoleType').addEventListener('change',render);
+    document.getElementById('xAxis').addEventListener('change',()=>buildScatter(activeData));
     document.getElementById('colourBy').addEventListener('change',()=>buildScatter(activeData));
+    document.getElementById('orientationDim').addEventListener('change',buildOrientation);
   })
   .catch(err=>{
     document.querySelector('nav').insertAdjacentHTML('afterend',
       `<div style="text-align:center;padding:4rem;color:#c0392b">Failed to load data.json: ${err.message}<br><small>Run <code>python3 -m http.server 8765</code> from the analysis/ folder.</small></div>`);
   });
 
-// ── Active nav on scroll — observe q-* question screens ──
+// ── Active nav on scroll ──
 (function() {
   const navLinks = document.querySelectorAll('.nav-links a[data-section]');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(a => a.classList.toggle('active', a.dataset.section === entry.target.id));
-      }
+      if (entry.isIntersecting) navLinks.forEach(a => a.classList.toggle('active', a.dataset.section === entry.target.id));
     });
   }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
   navLinks.forEach(a => {
@@ -1198,85 +827,6 @@ fetch('data.json')
     if (el) observer.observe(el);
   });
 })();
-
-// ── Floating next button ──
-(function() {
-  const btn = document.getElementById('floatNext');
-  const sequence = [
-    { answer: 'a-rigour',      next: 'q-author',      label: 'Q2 →' },
-    { answer: 'a-author',      next: 'q-mission',     label: 'Q3 →' },
-    { answer: 'a-mission',     next: 'q-maturity',    label: 'Q4 →' },
-    { answer: 'a-maturity',    next: 'q-stakeholder', label: 'Q5 →' },
-    { answer: 'a-stakeholder', next: 'q-autonomy',    label: 'Q6 →' },
-    { answer: 'a-autonomy',    next: 'q-ai',          label: 'Q7 →' },
-    { answer: 'a-ai',          next: 'q-testing',     label: 'Q8 →' },
-    { answer: 'a-testing',     next: 'q-fear',        label: 'Q9 →' },
-    { answer: 'a-fear',        next: 'geo-section',   label: 'Geography →' },
-  ];
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const match = sequence.find(s => s.answer === entry.target.id);
-      if (!match) return;
-      if (entry.isIntersecting) {
-        btn.href = '#' + match.next;
-        btn.textContent = match.label;
-        btn.classList.add('visible');
-      } else {
-        // Only hide if no other answer is intersecting
-        const anyVisible = sequence.some(s => {
-          const el = document.getElementById(s.answer);
-          if (!el) return false;
-          const r = el.getBoundingClientRect();
-          return r.top < window.innerHeight && r.bottom > 0;
-        });
-        if (!anyVisible) btn.classList.remove('visible');
-      }
-    });
-  }, { threshold: 0.05 });
-
-  sequence.forEach(s => {
-    const el = document.getElementById(s.answer);
-    if (el) observer.observe(el);
-  });
-})();
-
-// ── Inject back-to-question + next-question links into each answer right panel ──
-(function() {
-  const questions = [
-    { q: 'q-rigour',      a: 'a-rigour',      next: 'q-author',      label: 'Q2: Who wrote this JD?' },
-    { q: 'q-author',      a: 'a-author',      next: 'q-mission',     label: 'Q3: Build or fix?' },
-    { q: 'q-mission',     a: 'a-mission',     next: 'q-maturity',    label: 'Q4: Team maturity?' },
-    { q: 'q-maturity',    a: 'a-maturity',    next: 'q-stakeholder', label: 'Q5: Who are you building for?' },
-    { q: 'q-stakeholder', a: 'a-stakeholder', next: 'q-autonomy',    label: 'Q6: Direction or execution?' },
-    { q: 'q-autonomy',    a: 'a-autonomy',    next: 'q-ai',          label: 'Q7: AI skills expected?' },
-    { q: 'q-ai',          a: 'a-ai',          next: 'q-testing',     label: 'Q8: Who owns quality?' },
-    { q: 'q-testing',     a: 'a-testing',     next: 'q-fear',        label: 'Q9: What does the company fear?' },
-    { q: 'q-fear',        a: 'a-fear',        next: 'geo-section',   label: 'Next: Geography →' },
-  ];
-  questions.forEach(({ q, a, next, label }) => {
-    const panel = document.getElementById(a);
-    if (!panel) return;
-    const right = panel.querySelector('.donut-right');
-    if (!right) return;
-    const nav = document.createElement('div');
-    nav.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:2rem 0 1rem;border-top:1px solid var(--border);margin-top:2rem;gap:1rem;flex-wrap:wrap';
-    nav.innerHTML = `
-      <a href="#${q}" style="font-size:0.74rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.35rem">
-        ↑ Back to question
-      </a>
-      <a href="#${next}" style="font-size:0.78rem;font-weight:600;color:var(--accent);text-decoration:none;display:flex;align-items:center;gap:0.35rem">
-        ${label}
-      </a>`;
-    right.appendChild(nav);
-  });
-})();
-
-document.querySelectorAll('.donut-hint').forEach(hint => {
-  hint.closest('.donut-section')?.querySelector('canvas')?.addEventListener('click', () => {
-    hint.classList.remove('pulse');
-  }, { once: true });
-});
 </script>
 </body>
 </html>
