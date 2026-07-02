@@ -58,11 +58,11 @@ Required Profile
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | recruiter | recruiter | recruiter | recruiter | 100% | ✓ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| jd_authorship | recruiter | mixed | mixed | recruiter | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | mixed | 33% | ✓ |
+| autonomy_level | mixed | execution | mixed | mixed | 33% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
-| testing_framing |  | responsibility | absent | responsibility | 33% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
@@ -73,149 +73,155 @@ Required Profile
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Ensure data quality, consistency, and documentation; Participate in data governance and best practice improvements"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities emphasize quality, consistency, documentation, and governance without any velocity-oriented language like fast-paced or rapid delivery.
+> Quote: "Ensure data quality, consistency, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities section emphasizes data quality, consistency, and governance without any counterbalancing velocity or speed framing.
 
 **Run 2:** `rigour` ✓
 > Quote: "Ensure data quality, consistency, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasise data quality, consistency, documentation, and governance as core expectations with no velocity or speed-focused language.
+> Reasoning: The responsibilities emphasize reliability, consistency, quality, and governance with no velocity signals like fast-paced delivery or iteration speed.
 
 **Run 3:** `rigour` ✓
 > Quote: "Ensure data quality, consistency, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, governance, and best practices with no velocity signals such as fast-paced delivery or iteration speed present.
+> Reasoning: The responsibilities section emphasizes quality, consistency, governance, and reliability with no mention of velocity, speed, delivery pace, or iteration.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "structure, model, and leverage data used by business teams"
-> Verified: ✓ found in JD
-> Reasoning: The role supports business intelligence and decision-making at a consulting firm with no explicit financial reporting, compliance, or regulatory language present.
-
-**Run 2:** `moderate` ✓
-> Quote: "structure, model, and leverage data used by business teams"
-> Verified: ✓ found in JD
-> Reasoning: The role serves generic business teams without explicit financial reporting, regulatory, compliance, or audit framing.
-
-**Run 3:** `moderate` ✓
 > Quote: "serving as a central bridge between Data Engineering, Data Analytics, and end users to ensure reliable, consistent, and accessible data"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes data reliability for business teams in a consulting context with no explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The role serves business decision-making but lacks explicit financial reporting, regulatory, or compliance language that would indicate high risk.
+
+**Run 2:** `moderate` ✓
+> Quote: "serving as a central bridge between Data Engineering, Data Analytics, and end users to ensure reliable, consistent, and accessible data"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business decision-making and operational analytics in a consulting context, without financial reporting, regulatory, or compliance signals.
+
+**Run 3:** `moderate` ✓
+> Quote: "structure, model, and leverage data used by business teams"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business analytics without explicit financial reporting, compliance, or regulatory language, indicating standard business intelligence risk.
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `3` ✓
-> Quote: "Product, Data Engineering, and Business teams"
+> Quote: "Data Engineering; Data Analytics; Product"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named functions are explicitly listed as collaboration partners in the responsibilities section.
+> Reasoning: The JD explicitly names three distinct teams as collaboration partners: Data Engineering and Data Analytics from the bridge statement, and Product from the collaboration list.
 
 **Run 2:** `3` ✓
-> Quote: "Collaborate with Product, Data Engineering, and Business teams; serving as a central bridge between Data Engineering, Data Analytics, and end users"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named teams: Product, Data Engineering, and Data Analytics are explicitly referenced as collaboration partners.
+> Quote: "Product; Data Engineering; Data Analytics"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named functions are explicitly listed: Product and Data Engineering in the collaboration statement, and Data Analytics in the role overview.
 
 **Run 3:** `3` ✓
-> Quote: "Collaborate with Product, Data Engineering, and Business teams"
+> Quote: "Product; Data Engineering; Data Analytics"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named partner teams are explicitly listed in the collaboration responsibility.
+> Reasoning: Named partner functions are Product, Data Engineering, and Data Analytics from the opening role description; Business teams is too generic to count separately.
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
 > Quote: "Develop and optimise data transformations using ELT tools; Participate in data governance and best practice improvements"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Named tools (dbt, Snowflake, BigQuery) are deployed and operational, suggesting an established function in growth phase rather than greenfield or fully mature.
+> Verified: ✓ found in JD
+> Reasoning: The role works with named tools (ELT/dbt) in a governance context, indicating an established data function that is growing and improving.
 
 **Run 2:** `mid` ✗
-> Quote: "Participate in data governance and best practice improvements"
+> Quote: "Collaborate with Product, Data Engineering, and Business teams"
 > Verified: ✓ found in JD
-> Reasoning: Multiple existing data teams and tools are referenced with responsibilities focused on improving and optimising existing infrastructure rather than building from zero or operating at massive scale.
+> Reasoning: The JD implies existing infrastructure with multiple named data and product roles already established, indicating a growing but not yet mature data organization.
 
 **Run 3:** `mid` ✗
 > Quote: "Develop and optimise data transformations using ELT tools"
 > Verified: ✓ found in JD
-> Reasoning: Named tools already in use and multiple data roles (Data Engineering, Data Analytics) indicate an established data function beyond early-stage.
+> Reasoning: Named tools in responsibilities (dbt, Snowflake, Databricks) and language about optimizing existing infrastructure indicate an established team scaling rather than building from zero.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
 **Manual:** `recruiter`
 
-**Run 1:** `recruiter` ✓
-> Quote: "Collaborate with Product, Data Engineering, and Business teams; Optimise data model and analytical query performance; Support teams in data and decision-making tool utilisation"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities are generic boilerplate verbs without specific technical context, scale numbers, or methodology detail that would indicate hands-on authorship.
-
-**Run 2:** `recruiter` ✓
-> Quote: "Ensure data quality, consistency, and documentation"
+**Run 1:** `mixed` ✗
+> Quote: "Build business indicators and semantic models for activity management; Collaborate with Product, Data Engineering, and Business teams"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic boilerplate action verbs typical of recruiter-written JDs, with no specific problems, scale numbers, or technical context unique to this role.
+> Reasoning: The JD contains some technical specificity (semantic models, ELT tools, activity management context) alongside boilerplate collaboration language.
+
+**Run 2:** `mixed` ✗
+> Quote: "Build business indicators and semantic models for activity management"
+> Verified: ✓ found in JD
+> Reasoning: The JD combines technical specificity like semantic models and activity management with generic boilerplate responsibilities like collaboration and data governance.
 
 **Run 3:** `recruiter` ✓
-> Quote: "Collaborate with Product, Data Engineering, and Business teams"
+> Quote: "Design and maintain data models for analytical purposes"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities rely heavily on generic collaboration and support language without technical specificity about scale, methodology, or tool application context.
+> Reasoning: Responsibilities use generic boilerplate action verbs without technical specificity such as scale, volume, domain methodology, or business context.
+
+⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "serving as a central bridge between Data Engineering, Data Analytics, and end users to ensure reliable, consistent, and accessible data"
+> Quote: "Design and maintain data models for analytical purposes; Build business indicators and semantic models for activity management"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly framed as an infrastructure bridge supporting data consumers across the organization rather than serving commercial, product, or finance directly.
+> Reasoning: The role's primary focus is building the data modelling and semantic layer for internal consumption, rather than directly serving product, finance, or commercial functions.
 
 **Run 2:** `internal_data` ✓
-> Quote: "serve as a central bridge between Data Engineering, Data Analytics, and end users to ensure reliable, consistent, and accessible data"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role is framed around serving the data platform infrastructure and internal data consumers rather than commercial, product, or finance teams.
-
-**Run 3:** `internal_data` ✓
 > Quote: "serving as a central bridge between Data Engineering, Data Analytics, and end users to ensure reliable, consistent, and accessible data"
 > Verified: ✓ found in JD
-> Reasoning: The primary framing emphasizes making data reliable and accessible to data consumers and infrastructure users rather than serving commercial, product, or finance teams directly.
+> Reasoning: The role is positioned as enabling data consumption and self-serve analytics for business end users, with emphasis on accessible, reliable data infrastructure.
+
+**Run 3:** `mixed` ✗
+> Quote: "serving as a central bridge between Data Engineering, Data Analytics, and end users"
+> Verified: ✓ found in JD
+> Reasoning: The role bridges multiple stakeholder groups equally—internal data teams (internal_data orientation) and business end users (general business analytics).
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
 
 ### autonomy_level
 **Manual:** `mixed`
 
 **Run 1:** `execution` ✗
-> Quote: "Design and maintain data models for analytical purposes; Develop and optimise data transformations"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities use execution verbs (develop, optimise, maintain, support) without strategic direction-setting language like 'define strategy' or 'shape delivery'.
-
-**Run 2:** `execution` ✗
-> Quote: "Support teams in data and decision-making tool utilisation"
+> Quote: "Support teams in data and decision-making tool utilisation; Participate in data governance and best practice improvements"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasises supporting, collaborating, and participating in others' priorities rather than defining strategy or setting data direction.
+> Reasoning: The role emphasizes support and participation in others' initiatives rather than defining direction, strategy, or owning outcomes.
 
-**Run 3:** `execution` ✗
-> Quote: "Support teams in data and decision-making tool utilisation"
+**Run 2:** `mixed` ✓
+> Quote: "Design and maintain data models for analytical purposes"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use execution-oriented verbs (support, develop, ensure, optimize) indicating the role delivers scoped work rather than sets strategic direction.
+> Reasoning: The role combines strategic technical ownership over data model design and quality with an overall framing as a supporting bridge collaborating with and supporting other teams.
 
-⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
+**Run 3:** `mixed` ✓
+> Quote: "Design and maintain data models for analytical purposes; Build business indicators and semantic models for activity management"
+> Verified: ✓ found in JD
+> Reasoning: Strategic verbs like design, build, and optimize suggest ownership of technical direction, but collaborate and support language indicates execution of priorities set by others.
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'mixed']
 
 ### ai_role
 **Manual:** ``
 
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI coding tools, AI-assisted workflows, or AI data infrastructure expected of the candidate anywhere in the JD.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no requirements or expectations for the candidate to use, build, or enable AI tools or systems.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI skills, coding tools, or AI-related infrastructure anywhere in the JD.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI-ready data infrastructure as candidate skills or job expectations.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI-related tools, skills, or responsibilities either for candidate use or for building AI infrastructure.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI-assisted coding tools, agentic workflows, or AI-ready data infrastructure for the candidate.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -225,38 +231,36 @@ Required Profile
 **Run 1:** `responsibility` ✗
 > Quote: "Ensure data quality, consistency, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as a core responsibility the candidate owns rather than listed as a tool or absent from the role.
+> Reasoning: The role explicitly owns data quality using the action verb 'ensure,' framing it as a primary responsibility.
 
-**Run 2:** `absent` ✗
+**Run 2:** `responsibility` ✗
 > Quote: "Ensure data quality, consistency, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is a responsibility but there is no mention of testing frameworks, tools, data contracts, or specific quality practices.
+> Reasoning: Data quality is framed as an owned responsibility in the key responsibilities section, not as a tool requirement or incidental concern.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Ensure data quality, consistency, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'ensure' combined with 'Participate in data governance and best practice improvements' indicates the role owns data quality practices rather than simply using tools.
+> Reasoning: Data quality is framed as a core responsibility with an ownership verb (Ensure) in the responsibilities section, not merely listed as a tool or requirement.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
-
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'responsibility']
 
 ### loss_aversion_framing
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "reliable, consistent, and accessible data; Ensure data quality, consistency, and documentation"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The framing emphasizes operational reliability and data quality concerns without compliance, regulatory, or stakeholder-trust language typical of high loss-aversion roles.
+> Quote: "Ensure data quality, consistency, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: Data quality concerns are present but secondary to design and delivery responsibilities; the framing focuses on maintaining quality rather than preventing failures or regulatory exposure.
 
 **Run 2:** `moderate` ✗
 > Quote: "ensure reliable, consistent, and accessible data"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasises operational reliability and data quality but lacks the compliance, regulatory, or high-stakes risk language that would indicate high loss-aversion framing.
+> Reasoning: The JD emphasizes operational reliability and quality without compliance, regulatory, or stakeholder-trust risk framing.
 
 **Run 3:** `moderate` ✗
-> Quote: "ensure reliable, consistent, and accessible data"
+> Quote: "Ensure data quality, consistency, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data consistency are emphasized as core concerns, but without explicit framing of regulatory risk or stakeholder trust as primary drivers.
+> Reasoning: Operational reliability and governance are emphasized but no compliance, regulatory, or stakeholder trust language appears, indicating moderate risk focus on pipeline stability.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

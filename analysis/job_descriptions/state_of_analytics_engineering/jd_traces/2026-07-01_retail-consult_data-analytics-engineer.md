@@ -39,193 +39,213 @@ Application: Submit CV at www.retail-consult.com/en/work-with-us/ or jobs@retail
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 4 | 4 | 4 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | recruiter | recruiter | 100% |
-| stakeholder_orientation | mixed | mixed | internal_data | 33% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | absent | absent | absent | 100% |
-| loss_aversion_framing | none | moderate | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | recruiter | mixed | recruiter | mixed | 33% | ✗ |
+| stakeholder_orientation | mixed | mixed | mixed | mixed | 100% | ✓ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | none | none | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "scalable, reliable, and high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize reliability and quality as core expectations with no language about speed, iteration, or fast-paced delivery.
+> Reasoning: The core framing emphasizes reliability and quality without any velocity or pace language, with no signals of speed-oriented delivery.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "scalable, reliable, and high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize reliability and high-quality as core expectations without any velocity language like fast-paced or rapid delivery.
+> Reasoning: The role explicitly emphasizes reliability and quality as core expectations without any velocity-oriented language like iteration speed or rapid delivery.
 
-**Run 3:** `rigour`
-> Quote: "transform business needs into scalable, reliable, and high-quality data solutions"
+**Run 3:** `rigour` ✓
+> Quote: "scalable, reliable, and high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes reliability and high-quality standards as core values with no velocity or speed-to-market language.
+> Reasoning: The JD emphasizes quality, reliability, and scalability as core expectations with no velocity or speed language, driving the rigour classification.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
 > Verified: ✓ found in JD
-> Reasoning: While Finance is a named stakeholder, the JD contains no language about financial reporting, compliance, regulatory requirements, or audit that would elevate to high risk.
+> Reasoning: While Finance is among the stakeholder teams, the JD contains no explicit financial reporting, compliance, or regulatory language that would elevate this to high risk.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✓
+> Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs into scalable, reliable, and high-quality data solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role supports internal business decision-making across multiple functions but does not reference financial reporting, regulatory compliance, or audit requirements.
+
+**Run 3:** `moderate` ✓
 > Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
 > Verified: ✓ found in JD
-> Reasoning: Finance is mentioned but the JD lacks explicit financial reporting, regulatory, or compliance language that would signal high risk.
-
-**Run 3:** `moderate`
-> Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
-> Verified: ✓ found in JD
-> Reasoning: The role serves multiple business functions including Finance but contains no mention of financial reporting, compliance, or regulatory requirements that would indicate high risk.
+> Reasoning: Finance is named as a collaborating partner but without regulatory, compliance, or financial reporting context, suggesting data supports business decisions without immediate financial or regulatory consequence.
 
 ### collaboration_width
+**Manual:** `4`
 
-**Run 1:** `4`
+**Run 1:** `4` ✓
 > Quote: "Finance, Sales, HR, and Project Management teams"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct business functions are explicitly named as collaboration partners.
+> Reasoning: Four distinct organizational functions are explicitly named as collaboration partners.
 
-**Run 2:** `4`
+**Run 2:** `4` ✓
 > Quote: "Finance, Sales, HR, and Project Management teams"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named functions are explicitly listed as collaboration partners in the responsibilities.
+> Reasoning: Four distinct named business functions are explicitly identified as collaboration partners.
 
-**Run 3:** `4`
+**Run 3:** `4` ✓
 > Quote: "Finance, Sales, HR, and Project Management teams"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named stakeholder teams are explicitly listed in the responsibilities section.
+> Reasoning: Four distinct named functions are explicitly mentioned as collaboration partners.
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
+> Quote: "designing data architectures, optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
+> Verified: ✓ found in JD
+> Reasoning: Named tools and systems appear in core responsibilities with active optimization work, indicating an established but growing data function.
+
+**Run 2:** `mid` ✓
+> Quote: "designing data architectures, optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
+> Verified: ✓ found in JD
+> Reasoning: The role involves multiple named tools and specific responsibilities suggesting an existing data function with infrastructure in place but not yet highly specialized.
+
+**Run 3:** `mid` ✓
 > Quote: "optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Named tools and frameworks in responsibilities with optimization and management context indicates an established data function growing beyond initial setup.
-
-**Run 2:** `mid`
-> Quote: "optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
-> Verified: ✓ found in JD
-> Reasoning: Named tools and systems in responsibilities suggest an established data function being optimized and extended rather than built from scratch.
-
-**Run 3:** `mid`
-> Quote: "optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
-> Verified: ✓ found in JD
-> Reasoning: Named tools are present in actual role responsibilities indicating existing infrastructure, but no mention of scaling or established sub-teams suggests mid-stage maturity.
+> Reasoning: Named tools appear in responsibilities with optimization and management framing, indicating existing infrastructure in operation characteristic of a mid-stage data function.
 
 ### jd_authorship
+**Manual:** `recruiter`
 
-**Run 1:** `recruiter`
+**Run 1:** `mixed` ✗
 > Quote: "designing data architectures, optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Generic action verbs with tool names but no specific technical context, scale, methodology, or domain problem that would signal hands-on authorship.
+> Reasoning: Core responsibilities include specific technical systems and tools, but the opening description uses generic collaboration boilerplate, indicating mixed authorship between technical input and HR/recruiter framing.
 
-**Run 2:** `recruiter`
+**Run 2:** `recruiter` ✓
 > Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs into scalable, reliable, and high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Generic action verbs like collaborating and transform business needs without specific methodological detail, scale context, or technical depth suggest recruiter authorship.
+> Reasoning: The responsibilities use generic boilerplate verbs and standard phrases without specificity about scale, volume, methodology, or actual work context that would require hands-on experience.
 
-**Run 3:** `recruiter`
-> Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs into scalable, reliable, and high-quality data solutions"
+**Run 3:** `mixed` ✗
+> Quote: "optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities rely on generic, boilerplate phrasing ('transform business needs', 'scalable solutions') without the technical context or day-to-day detail that would come from someone doing the job.
+> Reasoning: Specific tools are named with some technical understanding, but most responsibilities use generic boilerplate verbs like 'collaborating' and 'transform' without scale, volume, or methodology detail.
+
+⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
-> Verified: ✓ found in JD
-> Reasoning: The role serves multiple distinct stakeholder categories (finance, commercial, internal operations) with equal apparent weight and no primary audience emphasis.
-
-**Run 2:** `mixed`
-> Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
-> Verified: ✓ found in JD
-> Reasoning: Multiple distinct stakeholder groups are listed with equal emphasis and no indication of which is the primary audience.
-
-**Run 3:** `internal_data`
-> Quote: "designing data architectures, optimising PostgreSQL databases, developing Power BI dashboards, and managing ETL/ELT pipelines"
-> Verified: ✓ found in JD
-> Reasoning: Core responsibilities focus on data infrastructure and platform work that serves multiple teams' data consumption needs rather than a specific business function.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'internal_data']
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs into scalable, reliable, and high-quality data solutions"
-> Verified: ✓ found in JD
-> Reasoning: The role is framed as receiving and fulfilling stakeholder needs rather than defining direction, strategy, or roadmap.
-
-**Run 2:** `execution`
+**Run 1:** `mixed` ✓
 > Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs"
 > Verified: ✓ found in JD
-> Reasoning: The framing of collaborating to transform business needs suggests the role executes against requirements defined by others rather than setting strategic direction independently.
+> Reasoning: The role is explicitly designed to serve multiple organizational functions without emphasis on any single stakeholder category.
 
-**Run 3:** `execution`
+**Run 2:** `mixed` ✓
+> Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves multiple business functions without clear emphasis on any single stakeholder type—Finance suggests internal/finance focus, Sales suggests commercial, while HR and PM reflect internal operations.
+
+**Run 3:** `mixed` ✓
+> Quote: "collaborating with Finance, Sales, HR, and Project Management teams"
+> Verified: ✓ found in JD
+> Reasoning: The role serves multiple distinct stakeholder categories spanning commercial (Sales), finance (Finance), and internal_data (HR, Project Management) with genuinely equal emphasis in the responsibilities.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `execution` ✗
+> Quote: "transform business needs into scalable, reliable, and high-quality data solutions"
+> Verified: ✓ found in JD
+> Reasoning: The framing emphasizes translating existing business needs into solutions rather than the role defining strategy or shaping analytics direction.
+
+**Run 2:** `execution` ✗
+> Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as responsive to business team requirements rather than setting independent direction or strategic priorities.
+
+**Run 3:** `execution` ✗
 > Quote: "collaborating with Finance, Sales, HR, and Project Management teams to transform business needs into scalable, reliable, and high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The role frame emphasizes collaborating with stakeholders to transform their stated needs rather than defining strategic direction independently.
+> Reasoning: The role executes scoped work in service of other teams' business needs rather than defining strategic direction or establishing priorities.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no requirement, expectation, or mention of any AI tool, AI-assisted coding, or AI infrastructure capability.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no reference to AI skills, tools, or capabilities expected of the candidate.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI coding tools, AI-ready data infrastructure, or AI skills expected of the candidate.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or building AI-ready infrastructure.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI infrastructure expectations for the candidate.
+> Verified: ✓ found in JD
+> Reasoning: No AI tools, AI-enabled coding, AI-ready infrastructure, or AI skill expectations are mentioned anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `absent`
-> Quote: "No testing or data quality signal explicitly framed as a practice."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While 'high-quality' appears as an outcome goal, no testing practice, data quality framework, or observability requirement is explicitly stated as a responsibility.
-
-**Run 2:** `absent`
+**Run 1:** `absent` ✗
 > Quote: "high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Quality is mentioned as a value but there is no reference to testing practices, data quality frameworks, observability tools, or testing ownership.
+> Reasoning: Quality is mentioned as a desired outcome but no testing frameworks, data contracts, or quality assurance practices are mentioned or owned as responsibilities.
 
-**Run 3:** `absent`
-> Quote: "No testing or data quality signal anywhere in the JD."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While 'reliable' and 'high-quality' appear as desired solution attributes, there is no mention of testing frameworks, data quality practices, or tools that the candidate would own.
-
-### loss_aversion_framing
-
-**Run 1:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD is framed entirely around capabilities and delivery (designing, optimising, managing) with no emphasis on preventing negative outcomes, compliance risk, or stakeholder trust.
-
-**Run 2:** `moderate`
-> Quote: "reliable, and high-quality data solutions"
-> Verified: ✓ found in JD
-> Reasoning: Reliability is mentioned as a capability to achieve but without explicit risk language around compliance, audit, or preventing bad data reaching stakeholders.
-
-**Run 3:** `moderate`
+**Run 2:** `absent` ✗
 > Quote: "scalable, reliable, and high-quality data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability is a concern in the language but there is no framing around preventing compliance failures or regulatory risk, typical of moderate risk aversion.
+> Reasoning: While quality is mentioned as a desired outcome, there is no reference to testing practices, data quality frameworks, observability tools, or testing ownership.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']
+**Run 3:** `absent` ✗
+> Quote: "scalable, reliable, and high-quality data solutions"
+> Verified: ✓ found in JD
+> Reasoning: Quality is aspirational language describing output characteristics rather than a testing practice, data contracts framework, or observability practice the candidate owns.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "scalable, reliable, and high-quality data solutions"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability is a concern evidenced by the word 'reliable', but the framing is about delivery of good solutions rather than loss prevention or compliance.
+
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed in positive delivery and capability terms without language about preventing failures, managing risk, or protecting stakeholder trust.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames work in delivery and capability terms with no compliance, regulatory, or risk-register language that would indicate fear-driven framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

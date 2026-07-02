@@ -49,197 +49,215 @@ Flexible work hours, subsidised transit passes, remote work options, professiona
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | recruiter | mixed | 33% |
-| stakeholder_orientation | internal_data | commercial | internal_data | 33% |
-| autonomy_level | execution | execution | strategic | 33% |
-| ai_role | none | none | none | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | moderate | none | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | moderate | moderate | high | 33% | ✗ |
+| collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | recruiter | recruiter | recruiter | recruiter | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | none | moderate | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: Testing, acceptance, and documentation are explicitly framed as core responsibilities, signaling a rigour-oriented approach rather than velocity.
+> Reasoning: Testing, acceptance, and documentation are explicitly named rigour signals with no velocity framing.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: The explicit mention of testing, acceptance, and documentation as managed responsibilities signals a rigour-oriented approach to delivering reliable metrics.
+> Reasoning: The responsibilities include explicit mention of testing, acceptance, and documentation, signaling an orientation toward process rigor and quality gates, with no velocity signals present.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: Testing, acceptance, and documentation are explicitly named as responsibilities with no velocity signals present in the JD.
+> Reasoning: The responsibilities explicitly list testing, acceptance, and documentation as core requirements, with no velocity or iteration signals present.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Develop usage metrics and operational benchmarks for customers"
 > Verified: ✓ found in JD
-> Reasoning: While operating in banking, the JD emphasizes operational metrics and customer journey optimization rather than financial reporting or regulatory compliance, indicating moderate rather than high risk.
+> Reasoning: Operational metrics and benchmarks are emphasized rather than financial reporting or regulatory compliance, despite banking sector context.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Develop usage metrics and operational benchmarks for customers"
 > Verified: ✓ found in JD
-> Reasoning: While Finanz Informatik operates in banking (typically high-risk), the JD emphasizes operational metrics without explicit financial reporting, compliance, or regulatory language that would elevate to high risk.
+> Reasoning: Though the company operates in banking (which defaults to high risk), the JD's language focuses on operational and usage metrics without explicit financial reporting, compliance, or regulatory framing.
 
-**Run 3:** `moderate`
-> Quote: "The team transforms data into actionable insights by developing metrics that enable the Sparkassen group to transparently manage processes and optimise customer journeys."
+**Run 3:** `high` ✓
+> Quote: "Finanz Informatik is one of Europe's largest banking IT service providers and digitalisation partners operating within the Sparkassen financial group"
 > Verified: ✓ found in JD
-> Reasoning: While the company operates in banking (high-risk sector), the JD language emphasizes metrics and operational benchmarks without explicit financial reporting, regulatory, or compliance language.
+> Reasoning: The role operates within a regulated banking group where metrics directly support financial operations and compliance, placing it in the high-risk fintech sector.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']
 
 ### collaboration_width
+**Manual:** `0`
 
-**Run 1:** `0`
+**Run 1:** `0` ✓
 > Quote: "collaboratively with stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions collaboration but does not name specific functions like Finance, Product, Engineering, or BI teams.
+> Reasoning: No named teams or functions are explicitly identified; only generic 'stakeholders' is mentioned.
 
-**Run 2:** `0`
+**Run 2:** `0` ✓
 > Quote: "Evaluate new metrics requirements collaboratively with stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: No distinct named partner teams are identified; 'stakeholders' and 'customers' are mentioned but lack the specificity to count as named collaborative partners.
+> Reasoning: While the JD mentions collaborating with stakeholders and customers, these are not named specific functions or teams (e.g., Finance, Product, Engineering).
 
-**Run 3:** `0`
+**Run 3:** `0` ✓
 > Quote: "Evaluate new metrics requirements collaboratively with stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams or functions are identified; 'stakeholders' is generic and does not count per classification rules.
+> Reasoning: No named partner teams or functions are explicitly identified; only generic 'stakeholders' is referenced without specificity.
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
-> Quote: "Plan and coordinate work packages for metrics development"
-> Verified: ✓ found in JD
-> Reasoning: The explicit mention of coordinating work packages suggests a structured, existing function rather than greenfield startup, with processes already in place.
-
-**Run 2:** `mid`
-> Quote: "Plan and coordinate work packages for metrics development"
-> Verified: ✓ found in JD
-> Reasoning: The explicit coordination and planning responsibilities within a named organizational unit of a large established company suggest a team that exists and has structure beyond early stage.
-
-**Run 3:** `mid`
+**Run 1:** `mid` ✗
 > Quote: "Conceptualise and implement new data flows"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on building new data capabilities within an established company structure, suggesting a mid-stage data function expanding its reach.
+> Reasoning: New data flow development indicates an existing data function that is actively expanding, not early-stage or fully mature.
+
+**Run 2:** `mid` ✗
+> Quote: "The team transforms data into actionable insights by developing metrics that enable the Sparkassen group to transparently manage processes and optimise customer journeys"
+> Verified: ✓ found in JD
+> Reasoning: The team is described as having a defined mission within an established 5,000+ person organization, with coordination around metric development, suggesting an established (not early-stage) function.
+
+**Run 3:** `mid` ✗
+> Quote: "The team transforms data into actionable insights by developing metrics"
+> Verified: ✓ found in JD
+> Reasoning: The JD describes an existing team producing metrics for the organisation, indicating an established function beyond early stage but without signals of large-scale specialisation.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `recruiter`
 
-**Run 1:** `recruiter`
-> Quote: "Develop usage metrics and operational benchmarks for customers"
+**Run 1:** `recruiter` ✓
+> Quote: "Conceptualise and implement new data flows; Develop usage metrics and operational benchmarks for customers"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs without specific tool names, scale context, or technical methodology details that would indicate hiring manager authorship.
+> Reasoning: Boilerplate action verbs with no technical specificity, tool context, or domain details that would indicate hiring manager authorship.
 
-**Run 2:** `recruiter`
-> Quote: "Develop usage metrics and operational benchmarks for customers"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs without technical specificity, named tools with context, scale numbers, or methodology details that would indicate hiring manager authorship.
-
-**Run 3:** `mixed`
-> Quote: "Develop usage metrics and operational benchmarks for customers"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities show specific business context understanding (customer-facing metrics, operational benchmarks) but also generic project management language and no specific tool mentions.
-
-⚠ **LLM inconsistency**: runs gave ['recruiter', 'recruiter', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "enable the Sparkassen group to transparently manage processes and optimise customer journeys"
-> Verified: ✓ found in JD
-> Reasoning: The role is framed as building metrics for internal organizational management and operational optimization, not serving commercial, product, or finance teams specifically.
-
-**Run 2:** `commercial`
-> Quote: "optimise customer journeys"
-> Verified: ✓ found in JD
-> Reasoning: The explicit focus on optimizing customer journeys aligns with customer success and customer operations, which are commercial functions.
-
-**Run 3:** `internal_data`
-> Quote: "The team transforms data into actionable insights by developing metrics that enable the Sparkassen group to transparently manage processes and optimise customer journeys."
-> Verified: ✓ found in JD
-> Reasoning: The role builds metrics and data flows as infrastructure for internal business teams to consume, not for revenue/sales, product experimentation, or FP&A reporting.
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'commercial', 'internal_data']
-
-### autonomy_level
-
-**Run 1:** `execution`
+**Run 2:** `recruiter` ✓
 > Quote: "Evaluate new metrics requirements collaboratively with stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around evaluating and executing on requirements set by stakeholders rather than defining strategy or owning direction.
+> Reasoning: The responsibilities section uses generic boilerplate language (collaborate with stakeholders, plan and coordinate) with no technical specificity, tool context, scale numbers, or methodology names that would indicate hands-on experience.
 
-**Run 2:** `execution`
-> Quote: "Plan and coordinate work packages for metrics development"
-> Verified: ✓ found in JD
-> Reasoning: The focus on planning and coordinating predefined work packages, rather than defining direction or strategy, indicates execution-oriented autonomy.
-
-**Run 3:** `strategic`
+**Run 3:** `recruiter` ✓
 > Quote: "Conceptualise and implement new data flows"
 > Verified: ✓ found in JD
-> Reasoning: Verbs like 'conceptualise', 'develop', and 'plan' indicate the role defines what gets built rather than executes direction set by others.
+> Reasoning: All responsibilities use generic action verbs with no technical specificity, named tools, scale context, or concrete examples of actual work.
 
-⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'strategic']
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "transforms data into actionable insights by developing metrics that enable the Sparkassen group to transparently manage processes"
+> Verified: ✓ found in JD
+> Reasoning: The role develops metrics for internal organizational use to manage processes, characteristic of internal data infrastructure rather than external commercial or product-facing analytics.
+
+**Run 2:** `internal_data` ✓
+> Quote: "develop metrics that enable the Sparkassen group to transparently manage processes and optimise customer journeys"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The primary purpose is building metrics infrastructure for the organization to manage itself, rather than serving a specific commercial, product, or finance team.
+
+**Run 3:** `internal_data` ✓
+> Quote: "enable the Sparkassen group to transparently manage processes and optimise customer journeys"
+> Verified: ✓ found in JD
+> Reasoning: The role serves the internal organisation's operational decision-making and metrics infrastructure, not external commercial or dedicated finance/product teams.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `execution` ✗
+> Quote: "Evaluate new metrics requirements collaboratively with stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: While the role has agency in implementation approach, requirements and priorities come from stakeholders, with the role executing within that collaborative frame.
+
+**Run 2:** `execution` ✗
+> Quote: "Plan and coordinate work packages for metrics development"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities focus on delivering solutions to evaluate requirements and coordinate delivery, with no language about setting strategy, defining priorities, or shaping the analytics function.
+
+**Run 3:** `execution` ✗
+> Quote: "Plan and coordinate work packages for metrics development"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities focus on executing planned work and managing process steps rather than setting strategic direction or defining overall analytics approach.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no reference to AI skills, tools, or practices for the candidate to use or enable.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI, machine learning, or AI-related tools anywhere in the JD.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no references to AI capabilities, tooling, or workflows that the candidate would be expected to deploy or build.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, coding assistants, ML pipelines, or any AI-related skills expected of the candidate.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tools, machine learning, GenAI applications, or AI-enabling data infrastructure.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted work, or AI infrastructure requirements for the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✗
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is responsible for managing testing as a core delivery activity, indicating ownership of the testing process rather than just tool familiarity.
+> Reasoning: Testing is assigned as a role responsibility that the candidate manages, not merely listed as a tool in requirements.
 
-**Run 2:** `responsibility`
+**Run 2:** `responsibility` ✗
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: Testing is framed as a managed responsibility of the role in delivering applications, indicating the candidate is accountable for testing practices.
+> Reasoning: Testing is explicitly listed in the responsibilities section as something the candidate will manage, indicating testing accountability in their project delivery work.
 
-**Run 3:** `responsibility`
+**Run 3:** `responsibility` ✗
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: 'Manage testing' shows the role is accountable for testing practices as a primary responsibility, not merely listing a testing tool.
+> Reasoning: Testing is listed as an explicit responsibility the role manages, indicating accountability for the testing process as part of metrics development delivery.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on testing, acceptance, and documentation signals operational reliability as a concern, but without explicit compliance or regulatory framing this is moderate rather than high loss-aversion.
+> Reasoning: Testing and acceptance management indicate operational reliability concerns, though no explicit risk or compliance framing is present.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role in delivery and optimization terms without explicit risk, compliance, or reliability concerns that would indicate loss-aversion motivation.
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around delivery and capability without any risk register, compliance concerns, regulatory requirements, or loss-prevention language.
 
-**Run 3:** `moderate`
+**Run 3:** `moderate` ✗
 > Quote: "Manage planning, testing, acceptance, and documentation of applications"
 > Verified: ✓ found in JD
-> Reasoning: Testing and acceptance language suggests concern with operational reliability and data quality, but without explicit risk, compliance, or regulatory framing.
+> Reasoning: Testing and documentation support operational reliability in a regulated banking context, but the JD frames the role around metrics delivery rather than risk prevention.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
 
 ⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']

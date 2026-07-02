@@ -61,201 +61,223 @@ Hybrid-flexible arrangements, team-building activities, wellness programs, volun
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 0 | 0 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | recruiter | recruiter | 33% |
-| stakeholder_orientation | internal_data | commercial | mixed | 0% |
-| autonomy_level | execution | mixed | execution | 33% |
-| ai_role | ai_enabler | ai_enabler | ai_enabler | 100% |
-| testing_framing | tool_listed | absent | absent | 33% |
-| loss_aversion_framing | none | moderate | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
+| collaboration_width | 1 | 0 | 0 | 1 | 33% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | mixed | mixed | recruiter | 33% | ✓ |
+| stakeholder_orientation | commercial | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level | mixed | execution | strategic | mixed | 0% | ✗ |
+| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| testing_framing |  | absent | responsibility | absent | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals—reliable, scalable, efficient, monitoring capabilities, continuous integration—dominate the responsibilities with no velocity framing present.
+> Reasoning: Multiple rigour signals (reliable, scalable, efficient, monitoring) present with zero velocity signals define the role.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on reliability, best practices, and continuous integration reflects a rigour-oriented approach rather than velocity-focused delivery.
+> Reasoning: The responsibilities emphasize reliability, scalability, best practices, and monitoring without any velocity or delivery speed language.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality characteristics (reliable, scalable, efficient) and best practices rather than speed or delivery pace.
+> Reasoning: The responsibilities emphasize reliability, scalability, and best practices in development and continuous integration, with no velocity or speed signals present.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
+> Quote: "translate needs into data solutions that drive business impact"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes business objectives and impact without regulatory, compliance, or financial reporting language despite Deloitte's SRT service line context.
+
+**Run 2:** `moderate` ✗
 > Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
 > Verified: ✓ found in JD
-> Reasoning: The role serves business decision-making without explicit financial reporting, regulatory, or compliance language that would signal high-risk consequences.
+> Reasoning: While the role impacts business decisions, the JD lacks explicit financial, compliance, or regulatory language that would signal high domain risk.
 
-**Run 2:** `moderate`
-> Quote: "data solutions that drive business impact"
+**Run 3:** `moderate` ✗
+> Quote: "translate needs into data solutions that drive business impact"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes business impact and stakeholder decision-making without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The role affects business decision-making without explicit financial reporting, compliance, or regulatory language, suggesting moderate rather than high risk.
 
-**Run 3:** `moderate`
-> Quote: "data solutions that drive business impact"
-> Verified: ✓ found in JD
-> Reasoning: Business-critical decisions are affected but the JD contains no explicit financial reporting, compliance, regulatory, or audit language despite the SRT context.
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
 ### collaboration_width
+**Manual:** `1`
 
-**Run 1:** `1`
+**Run 1:** `0` ✗
+> Quote: "None"
+> Verified: ✓ found in JD
+> Reasoning: No explicitly named internal partner teams or functions identified; 'business stakeholders' is too generic per the rules.
+
+**Run 2:** `0` ✗
+> Quote: "No named internal partner teams explicitly identified in responsibilities"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD mentions generic 'business stakeholders' and external 'direct client contact' but does not name specific internal functions or teams.
+
+**Run 3:** `1` ✓
 > Quote: "direct client contact to understand challenges and translate needs into data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Clients are explicitly named as collaboration partners; no other named functions or teams are identified in the JD.
+> Reasoning: Only clients are explicitly named as a collaboration partner; no distinct internal teams like Product, Finance, Engineering, or Data Science are mentioned.
 
-**Run 2:** `0`
-> Quote: "business stakeholders"
-> Verified: ✓ found in JD
-> Reasoning: The role mentions 'business stakeholders' and 'direct client contact,' but these do not meet the counting criteria: the former is generic language, the latter refers to external clients rather than named internal partner teams.
+⚠ **Disagreement**: manual=`1` vs LLM majority=`0`
 
-**Run 3:** `0`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
-> Verified: ✓ found in JD
-> Reasoning: No named functions or teams are explicitly identified; business stakeholders is generic terminology.
-
-⚠ **LLM inconsistency**: runs gave ['1', '0', '0']
+⚠ **LLM inconsistency**: runs gave ['0', '0', '1']
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
-> Quote: "Knowledge of modern data processing technologies: dbt, Spark, BigQuery, Snowflake, Databricks"
+**Run 1:** `mid` ✗
+> Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
 > Verified: ✓ found in JD
-> Reasoning: Established tools appear in the requirements list, indicating infrastructure exists, and the design/optimization focus suggests a team growing beyond initial build-out.
+> Reasoning: The responsibilities emphasize designing and productionizing solutions with existing tools (BigQuery, Snowflake, dbt) in requirements, indicating an established but expanding data practice.
 
-**Run 2:** `mid`
-> Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
+**Run 2:** `mid` ✗
+> Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on designing and optimizing data pipelines using modern technologies suggests infrastructure exists and is being actively refined.
+> Reasoning: The mention of productionizing models with monitoring and optimization suggests existing infrastructure being refined, indicating a mid-stage data function.
 
-**Run 3:** `mid`
-> Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
+**Run 3:** `mid` ✗
+> Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The existence of internal and external data sources and emphasis on productionization implies infrastructure already exists and is being extended.
+> Reasoning: The focus on productionization procedures and monitoring suggests a data function beyond greenfield but not at massive enterprise scale.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
+**Run 1:** `mixed` ✓
 > Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
 > Verified: ✓ found in JD
-> Reasoning: Some technical specificity (productionize, monitoring, continuous integration) appears alongside generic consulting language (co-create, strategic decision-making, stakeholder collaboration).
+> Reasoning: Technical vocabulary and understanding (productionize, monitoring) mixed with generic stakeholder language (client-oriented, collaborate with business stakeholders).
 
-**Run 2:** `recruiter`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
+**Run 2:** `mixed` ✓
+> Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs and boilerplate language without technical specificity about scale, challenges, or how tools are applied.
+> Reasoning: Some responsibilities show technical specificity (productionize, monitoring) while others are generic boilerplate (co-create, implement visualisation solutions).
 
-**Run 3:** `recruiter`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
+**Run 3:** `recruiter` ✗
+> Quote: "Co-create Data Products with business stakeholders for strategic decision-making; Design data models facilitating analysis and business objectives"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic boilerplate verbs (co-create, design, develop, implement) without technical specificity about what the role delivers on a Tuesday morning.
+> Reasoning: The responsibilities use generic action verbs and lack specific context about implementation, scale, or methodologies that would indicate hiring manager authorship.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
+**Manual:** `commercial`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✗
 > Quote: "design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is building data infrastructure and platforms themselves rather than serving commercial, product, or finance stakeholders directly.
+> Reasoning: Core responsibilities are designing and building data infrastructure (pipelines, models, visualizations) serving business consumers, not commercial/product/finance operations directly.
 
-**Run 2:** `commercial`
-> Quote: "direct client contact to understand challenges and translate needs into data solutions that drive business impact"
+**Run 2:** `internal_data` ✗
+> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
 > Verified: ✓ found in JD
-> Reasoning: As a consulting-based role with direct client engagement, the candidate serves clients' business stakeholder needs broadly.
+> Reasoning: The role is framed around building data platform infrastructure that internal teams consume, which is the core signal for internal_data orientation.
 
-**Run 3:** `mixed`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
+**Run 3:** `internal_data` ✗
+> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
 > Verified: ✓ found in JD
-> Reasoning: The first responsibility names business stakeholders for strategic decisions, but infrastructure responsibilities (pipelines, productionization, models) constitute half the role, creating mixed orientation between client service and internal data platform.
+> Reasoning: The role is framed around building data infrastructure and foundations that others (AI systems, dashboard users) consume rather than directly serving commercial or product teams.
 
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'commercial', 'mixed']
+⚠ **Disagreement**: manual=`commercial` vs LLM majority=`internal_data`
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `execution`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
+**Run 1:** `execution` ✗
+> Quote: "understand challenges and translate needs into data solutions that drive business impact"
 > Verified: ✓ found in JD
-> Reasoning: While the role has technical autonomy in design decisions, the overall framing of co-creation with stakeholders suggests execution within business-defined priorities rather than strategic direction-setting.
+> Reasoning: The role reacts to stakeholder-defined challenges and objectives rather than setting the data strategy or defining what problems to solve.
 
-**Run 2:** `mixed`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
+**Run 2:** `strategic` ✗
+> Quote: "This professional will design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic design of data architectures with execution in service of client-defined priorities.
+> Reasoning: The role is expected to design and architect the data infrastructure, requiring autonomous decision-making about technical direction.
 
-**Run 3:** `execution`
-> Quote: "Co-create Data Products with business stakeholders for strategic decision-making"
+**Run 3:** `mixed` ✓
+> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions; Co-create Data Products with business stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: Co-creation with stakeholders implies executing direction set by others rather than independently defining strategy or setting priorities.
+> Reasoning: The role combines strategic ownership of data architecture and modeling with collaborative execution in service of client and stakeholder needs.
 
-⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'strategic', 'mixed']
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `ai_enabler`
+**Run 1:** `ai_enabler` ✗
+> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure (pipelines and architectures) that AI systems consume and run on.
+
+**Run 2:** `ai_enabler` ✗
 > Quote: "design the pipelines and architectures of data that form the foundation for AI solutions"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems will consume and operate on, plus demonstrate MLOps experience—making them an enabler of AI systems rather than a user of AI coding tools.
+> Reasoning: The candidate is expected to build data infrastructure that AI systems consume, making them an ai_enabler rather than a direct AI tool user.
 
-**Run 2:** `ai_enabler`
-> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
+**Run 3:** `ai_enabler` ✗
+> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems consume, not to use AI tools for personal productivity.
+> Reasoning: The role's primary responsibility is designing data infrastructure and pipelines that serve as the foundation for AI solutions, requiring the candidate to enable AI/ML systems through data architecture.
 
-**Run 3:** `ai_enabler`
-> Quote: "design the pipelines and architectures of data that form the foundation for AI solutions, advanced dashboards, and interactive tools"
-> Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems depend on, and MLOps experience is explicitly required.
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `tool_listed`
-> Quote: "monitoring capabilities"
-> Verified: ✓ found in JD
-> Reasoning: Monitoring is mentioned as a practice to include in productionization but without explicit ownership verbs like 'own' or 'define' that would signal responsibility.
-
-**Run 2:** `absent`
-> Quote: "No testing or data quality signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While monitoring and continuous integration are mentioned as best practices, there is no testing responsibility, data quality framework, or data contracts outlined.
-
-**Run 3:** `absent`
+**Run 1:** `absent` ✗
 > Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
 > Verified: ✓ found in JD
-> Reasoning: Operational monitoring is mentioned but there is no mention of data quality testing, data contracts, or observability frameworks as owned responsibilities.
+> Reasoning: Monitoring is mentioned incidentally during productionization, but testing, data quality frameworks, or observability as owned responsibilities are not framed.
 
-⚠ **LLM inconsistency**: runs gave ['tool_listed', 'absent', 'absent']
+**Run 2:** `responsibility` ✗
+> Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
+> Verified: ✓ found in JD
+> Reasoning: The candidate owns developing and optimizing procedures that include monitoring and observability, indicating accountability for reliability practices.
+
+**Run 3:** `absent` ✗
+> Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources; Develop and optimise procedures to productionize models with monitoring capabilities"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes reliability and monitoring but does not explicitly own testing frameworks, data quality standards, or data contract responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD is framed entirely in delivery and capability terms with reliability as a design quality, not in terms of preventing bad outcomes, operational incidents, or risk mitigation.
-
-**Run 2:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
 > Verified: ✓ found in JD
-> Reasoning: Reliability is emphasized as a system quality, but there is no regulatory, compliance, or stakeholder-trust framing that would elevate this to high loss-aversion.
+> Reasoning: Operational reliability (prevent pipeline failures) is a concern signaled by 'reliable,' but the overall role is framed around capability delivery and business impact, not compliance or risk prevention.
 
-**Run 3:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Design reliable, scalable, efficient data pipelines from internal and external sources"
 > Verified: ✓ found in JD
-> Reasoning: Reliability is framed as an operational quality concern but there is no explicit compliance, regulatory, or risk-prevention language.
+> Reasoning: Reliability and operational monitoring are framed as technical requirements without compliance, regulatory, or stakeholder trust language.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']
+**Run 3:** `moderate` ✗
+> Quote: "Develop and optimise procedures to productionize models with monitoring capabilities"
+> Verified: ✓ found in JD
+> Reasoning: Monitoring and productionization procedures suggest operational reliability is a concern, but the JD lacks compliance or trustworthiness language indicating high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
