@@ -8,26 +8,28 @@ See [`state_of_analytics_engineering/report.md`](state_of_analytics_engineering/
 
 ## Corpus
 
-**46 records** — April to June 2026, primarily European/Berlin market.
+**132 records** — April to June 2026, primarily European/Berlin market.
 
 ### Role type breakdown
 
 | role_type | n | In scope |
 |---|---|---|
-| analytics_engineering_bi | 34 | Yes — primary cohort |
-| team_lead | 5 | Yes — governance signalling stratum |
-| data_engineering | 4 | No — excluded from main analysis |
+| analytics_engineering_bi | 116 | Yes — primary cohort |
+| team_lead | 7 | Yes — governance signalling stratum |
+| data_engineering | 6 | No — excluded from main analysis |
 | other | 3 | No — excluded from main analysis |
 
-**Analytical corpus: 39 records** (AE/BI + team_lead). DE and `other` roles are retained in `jd_data/` but excluded from cross-tabulations — they represent a different population and different discourse.
+**Analytical corpus: 123 records** (AE/BI + team_lead). DE and `other` roles are retained in `jd_data/` but excluded from cross-tabulations — they represent a different population and different discourse.
 
 Team lead roles are kept because they are the most likely to contain explicit governance-mandate language ("define testing standards", "establish data culture") — the key signal for whether the 2026 report's governance anxiety has entered hiring language at the decision-making level.
 
 ### Geographic concentration
 
-Primarily Berlin/Germany (~60%), with Nordics spillover (Stockholm, Malmö, Helsinki, Oslo, Copenhagen) and sparse representation from France, UK, Benelux, and Iberia.
+Primarily Berlin/Germany (~27% Berlin specifically, higher including wider DACH), with meaningful Nordics (15 records: Stockholm, Malmö, Helsinki, Oslo, Copenhagen) and UK (14 records) representation, and a smaller France cluster (7 records).
 
-**Known gap:** France is underrepresented (1 record: Decathlon, Lille). This is the priority geography to expand given the Forward Data Conference context.
+**Known gap:** France remains underrepresented relative to Germany/Nordics/UK. This is the priority geography to expand given the Forward Data Conference context.
+
+> **Note on geographic bucketing:** the `geo_region` field used elsewhere (e.g. the resume-site dashboard) is derived from keyword-matching the free-text `job_location` string — it reflects what got scraped and how that string parses, not real market concentration. Treat regional counts as corpus-coverage information, not a labour-market claim.
 
 ---
 
@@ -64,15 +66,17 @@ Classification is performed by `/classify-jd` skill (see `.claude/skills/classif
 
 ---
 
-## Key findings (n=39 analytical corpus)
+## Key findings (n=123 analytical corpus)
 
-| velocity_vs_rigour | All (n=46) | AE/BI (n=34) |
+| velocity_vs_rigour | All (n=131) | AE/BI (n=116) |
 |---|---|---|
-| rigour | 65% | 64% |
-| mixed | 30% | 36% |
-| velocity | 5% | 0% |
+| rigour | 87% | 89% |
+| mixed | 12% | 11% |
+| velocity | 1% | 0% |
 
-No pure AE/BI role signals velocity. This is the central empirical finding: the governance discourse identified in dbt Labs' 2026 report is already present in European employer hiring language.
+Pure velocity is effectively absent from AE/BI roles. This is the central empirical finding: the governance discourse identified in dbt Labs' 2026 report is already present in European employer hiring language.
+
+> **Note:** [`state_of_analytics_engineering/report.md`](state_of_analytics_engineering/report.md) currently cites n=93 and 84% rigour — it was written against an earlier snapshot and hasn't been re-run against the full 132-record corpus. Treat the numbers above as current; re-run the report's analysis before citing its specific percentages externally (e.g. conference submissions).
 
 ---
 
