@@ -1,3 +1,5 @@
+**URL:** https://job-boards.greenhouse.io/dashlane/jobs/7988501
+
 Analytics Engineer
 Company: Dashlane
 Location: Lisbon, Portugal (Hybrid) — in-office Mondays, Tuesdays, Thursdays; remote Wednesdays and Fridays

@@ -1,3 +1,5 @@
+**URL:** https://join.com/companies/bitac-consulting/16347826-business-intelligence-spezialist-gn?pid=e65242534431eadcb0c9
+
 Business Intelligence Spezialist (gn)
 
 Company: Bitac GmbH

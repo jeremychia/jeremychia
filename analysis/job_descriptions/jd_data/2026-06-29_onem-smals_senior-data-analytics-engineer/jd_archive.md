@@ -1,3 +1,5 @@
+**URL:** https://www.onem.be/travailler-a-l-onem/offres-d-emploi/senior-data-analytics-engineer-administration-centrale-bruxelles
+
 Senior Data Analytics Engineer - Administration centrale - Bruxelles
 
 Organization: Office national de l'emploi (ONEM), via Smals détaché

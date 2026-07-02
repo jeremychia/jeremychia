@@ -1,3 +1,5 @@
+**URL:** https://avalanchestudios.com/jobs/557484be-0668-4a31-a06b-84a52edbdd51
+
 Senior Analytics Engineer - Avalanche Studios Group
 
 Company: Avalanche Studios Group

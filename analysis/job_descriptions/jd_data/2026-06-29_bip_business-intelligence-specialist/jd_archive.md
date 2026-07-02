@@ -1,3 +1,5 @@
+**URL:** https://fa-etjb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1326
+
 Business Intelligence Specialist - Google
 Milano, Lombardia, Italy
 

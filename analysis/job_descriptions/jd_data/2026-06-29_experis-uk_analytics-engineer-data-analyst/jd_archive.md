@@ -1,3 +1,5 @@
+**URL:** https://www.experis.co.uk/job/analytics-engineer-slash-data-analyst-5941346?source=linkedin.com
+
 Analytics Engineer/Data Analyst
 Hybrid: 2 days per week in the office (London)
 Permanent

@@ -1,3 +1,5 @@
+**URL:** https://careers.mrmarvis.com/jobs/7670021-senior-analytics-engineer
+
 # Senior Analytics Engineer - MR MARVIS
 
 **Company:** MR MARVIS

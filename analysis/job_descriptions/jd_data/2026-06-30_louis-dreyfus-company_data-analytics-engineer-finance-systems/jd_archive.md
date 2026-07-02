@@ -1,3 +1,5 @@
+**URL:** https://www.ldc.com/careers/join-ldc/job-details/?id=ef073889-b345-48c9-afcc-b596cdeafbfa&trid=2d92f286-613b-4daf-9dfa-6340ffbecf73
+
 Data & Analytics Engineer - Finance Systems
 Sofia, Bulgaria
 Job Reference JR0096116

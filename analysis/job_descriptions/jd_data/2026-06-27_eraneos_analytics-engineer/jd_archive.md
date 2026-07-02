@@ -1,3 +1,5 @@
+**URL:** https://eraneos.jobs.personio.de/job/2567559?language=de&src=LinkedIn
+
 Analytics Engineer (all genders)
 
 Company: Eraneos

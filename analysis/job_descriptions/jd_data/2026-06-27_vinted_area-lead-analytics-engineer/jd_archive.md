@@ -1,3 +1,5 @@
+**URL:** https://careers.vinted.com/jobs/j/4838170101?gh_jid=4838170101&gh_src=2aee7c72teu
+
 Area Lead Analytics Engineer — Vinted
 
 Company: Vinted

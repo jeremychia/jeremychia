@@ -1,3 +1,5 @@
+**URL:** https://www.linkedin.com/jobs/view/4434494671/
+
 BI & Strategic Analytics Lead (m/f/d) - Hilo by Aktiia
 
 Company: Hilo by Aktiia

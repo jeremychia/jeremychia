@@ -1,3 +1,5 @@
+**URL:** https://www.buscojobs.pt/senior-analytics-engineers-mid-analytics-engineers-ID-26089604?source=linkedin
+
 Senior Analytics Engineers / Mid Analytics Engineers
 
 Company: Irium Portugal
