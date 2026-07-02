@@ -123,6 +123,20 @@ After editing, run `/render-resume base` to regenerate the base PDF.
 
 ---
 
+## Job market analysis dashboard
+
+Every application and classified JD feeds an interactive dashboard at `analysis/index.html`. See [`analysis/README.md`](analysis/README.md) for how to launch it and how the dataset is structured — quick start:
+
+```bash
+cd resume/analysis
+python3 -m http.server 8765
+open http://localhost:8765
+```
+
+Opening `index.html` directly (double-click / `file://`) will fail with a "Failed to fetch" error — it must be served over HTTP.
+
+---
+
 ## Prerequisites
 
 - **Chrome** must be installed at `/Applications/Google Chrome.app` for PDF generation. If not found, the skill will output the HTML and ask you to print it manually via File → Print → Save as PDF.
