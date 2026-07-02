@@ -1,3 +1,5 @@
+**URL:** https://www.welcometothejungle.com/fr/companies/yuri-neil/jobs/analytics-engineer-h-f_paris_YN_Qx8rQ8Y
+
 YURI & NEIL
 Analytics Engineer (H/F)
 

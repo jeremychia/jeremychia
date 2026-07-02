@@ -1,3 +1,5 @@
+**URL:** https://adsquare.jobs.personio.de/job/2540423
+
 Staff Data Analytics Engineer (m/f/d)
 Company: Adsquare GmbH
 Location: Berlin

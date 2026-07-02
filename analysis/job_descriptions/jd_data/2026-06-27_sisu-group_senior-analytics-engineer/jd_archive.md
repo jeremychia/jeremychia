@@ -1,3 +1,5 @@
+**URL:** https://sisugroup.teamtailor.com/jobs/6120204-senior-analytics-engineer
+
 # Senior Analytics Engineer — Sisu Group (Raw Archive)
 
 Source URL: https://sisugroup.teamtailor.com/jobs/6120204-senior-analytics-engineer

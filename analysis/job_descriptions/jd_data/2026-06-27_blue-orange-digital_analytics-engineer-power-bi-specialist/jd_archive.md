@@ -1,3 +1,5 @@
+**URL:** https://careers.blueorange.digital/jobs/623523-analytics-engineer-power-bi-specialist
+
 # Analytics Engineer (Power BI Specialist) - Blue Orange Digital
 
 **Company:** Blue Orange Digital

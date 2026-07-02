@@ -1,3 +1,5 @@
+**URL:** https://sanoma.wd3.myworkdayjobs.com/en-US/Sanoma_Learning/job/Wommelgem/Data-analyst_JR-1550?source=LinkedIn
+
 Business Intelligence Analyst
 Van In (Sanoma Learning)
 Hybrid — Wommelgem / Den Bosch

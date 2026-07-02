@@ -1,3 +1,5 @@
+**URL:** https://careers.blueorange.digital/jobs/623523-analytics-engineer-power-bi-specialist
+
 # JD Archive — Analytics Engineer (Power BI Specialist) — Blue Orange Digital
 
 **Archived:** 2026-06-25

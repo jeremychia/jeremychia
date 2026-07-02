@@ -1,3 +1,5 @@
+**URL:** https://job-boards.eu.greenhouse.io/decathlontechnology/jobs/4798519101?gh_src=cb30d7c2teu
+
 # Senior Analytics Engineer - Decathlon Digital FR
 
 **Job Title:** Senior Analytics Engineer - Decathlon

@@ -1,3 +1,5 @@
+**URL:** https://careers.doodle.com/jobs/7975504-growth-analytics-engineer
+
 # Growth Analytics Engineer - Doodle
 
 **Company:** Doodle

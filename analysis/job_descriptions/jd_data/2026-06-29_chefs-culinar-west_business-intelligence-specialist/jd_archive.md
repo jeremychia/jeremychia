@@ -1,3 +1,5 @@
+**URL:** https://www.meine-karriere-im-handel.de/stellenangebot/6010
+
 Business Intelligence Specialist (m/w/d)
 Über 9.000 Menschen freuen sich darauf, Deine Kollegen zu werden!
 

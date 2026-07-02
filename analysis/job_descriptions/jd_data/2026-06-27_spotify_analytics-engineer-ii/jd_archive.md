@@ -1,3 +1,5 @@
+**URL:** https://jobs.lever.co/spotify/08d82da1-0c72-44d1-91eb-7fa22dee3d39
+
 Analytics Engineer II
 Stockholm / LondonData and Analytics – Platform /Permanent /Hybrid
 The Platform team creates the technology that enables Spotify to learn quickly and scale easily, enabling rapid growth in our users and our business around the globe. Spanning many disciplines, we work to make the business work; creating the infrastructure, tooling, frameworks, and capabilities needed to welcome a billion customers.

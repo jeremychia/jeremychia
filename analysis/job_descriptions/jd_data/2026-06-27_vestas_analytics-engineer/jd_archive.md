@@ -1,3 +1,5 @@
+**URL:** https://careers.vestas.com/job/Copenhagen-S-Analytics-Engineer-Regi-2300/1401227733/?Codes=LinkedIn
+
 Analytics Engineer - Vestas
 
 Requisition ID: 76263

@@ -1,3 +1,5 @@
+**URL:** https://www.lego.com/en-dk/careers/job/analytics-engineer-a7101e7f80b11000c6564bebe9dc0000?cmp=SOC-INUS13OctOtherGlobalrecruitment&source=LinkedIn&locale=en-dk
+
 Analytics Engineer
 
 Management Level: Lead Professional

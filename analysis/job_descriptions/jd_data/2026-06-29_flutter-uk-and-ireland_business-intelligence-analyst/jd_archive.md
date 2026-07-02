@@ -1,3 +1,5 @@
+**URL:** https://careers.flutteruki.com/search-jobs/jr134770/business-intelligence-analyst/?source=LinkedIn
+
 Business Intelligence Analyst
 
 Company: Flutter UK & Ireland

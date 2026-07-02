@@ -1,3 +1,5 @@
+**URL:** https://www.linkedin.com/jobs/view/4431592813/
+
 BI Specialist at Plain Concepts
 
 Company: Plain Concepts

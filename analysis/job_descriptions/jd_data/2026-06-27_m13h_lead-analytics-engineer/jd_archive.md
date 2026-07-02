@@ -1,3 +1,5 @@
+**URL:** https://www.welcometothejungle.com/fr/companies/m13h/jobs/lead-analytics-engineer-h-f_lyon
+
 Lead Analytics Engineer (H-F)
 Résumé du poste
 CDI

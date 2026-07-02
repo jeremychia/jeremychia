@@ -1,3 +1,5 @@
+**URL:** https://jobs.ashbyhq.com/lexroom/9963d624-22b2-4dde-9fe0-d98dae51ff21
+
 Analytics Engineer
 Location
 Milan

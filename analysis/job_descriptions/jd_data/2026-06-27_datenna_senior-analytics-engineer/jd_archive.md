@@ -1,3 +1,5 @@
+**URL:** https://jobs.datenna.com/o/senior-analytics-engineer-3
+
 Senior Analytics Engineer at Datenna BV
 
 Position: Senior Analytics Engineer
