@@ -56,195 +56,207 @@ We are looking to recruit a Candidate:
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | execution | mixed | 33% |
-| ai_role | ai_enabler | none | ai_enabler | 33% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | high | high | high | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | mixed | mixed | mixed | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | mixed | strategic | execution | 0% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | high | high | high | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section prioritizes compliance, governance, and safety standards as core expectations, with no velocity or speed-oriented language present.
+> Reasoning: Multiple governance and compliance mentions (GMP/HSE, compliance standards, IT governance) dominate the framing with no velocity or speed language.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes compliance, governance, safety, and data reliability with no velocity language; multiple rigour signals outnumber any delivery-pace framing.
+> Reasoning: The responsibilities emphasize governance, compliance, GMP standards, and safety as core expectations throughout, with no mention of speed, iteration, or velocity priorities.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes compliance, governance, and quality standards repeatedly with no velocity signals like speed or shipping pace.
+> Reasoning: Governance, compliance, safety, and reliability dominate the delivery framing; no velocity language like fast-paced or rapid iteration appears.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
+**Run 1:** `high` ✓
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: GMP/HSE compliance in pharmaceutical manufacturing is a regulated domain where data errors directly affect drug safety and regulatory standing.
+> Reasoning: GMP compliance and HSE standards indicate pharmaceutical manufacturing with direct regulatory risk; data errors can impact quality and regulatory outcomes.
 
-**Run 2:** `high`
-> Quote: "upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
+**Run 2:** `high` ✓
+> Quote: "GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: Hovione is a pharmaceutical CDMO; explicit GMP (Good Manufacturing Practices) and regulatory compliance language indicates data errors could affect drug manufacturing and patient safety.
+> Reasoning: This pharmaceutical CDMO role explicitly references GMP (pharmaceutical regulatory compliance) and HSE standards, indicating data errors could directly affect manufacturing compliance and patient safety.
 
-**Run 3:** `high`
-> Quote: "upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
+**Run 3:** `high` ✓
+> Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: Pharmaceutical CDMO context with explicit regulatory compliance (GMP) and governance requirements indicates data errors directly affect drug manufacturing and patient safety.
+> Reasoning: Pharmaceutical CDMO manufacturing environment with explicit GMP and regulatory compliance standards means data errors directly affect regulatory standing and patient safety.
 
 ### collaboration_width
+**Manual:** `0`
 
-**Run 1:** `0`
+**Run 1:** `0` ✓
+> Quote: "cross functional teams"
+> Verified: ✓ found in JD
+> Reasoning: No distinct named partner functions are explicitly identified; references use generic language like 'stakeholders' and 'cross functional teams.'
+
+**Run 2:** `0` ✓
 > Quote: "Partner with stakeholders across functions as a data business partner"
 > Verified: ✓ found in JD
-> Reasoning: The JD uses generic collaboration language ('stakeholders', 'cross-functional teams') without naming specific functions, teams, or roles.
+> Reasoning: No explicitly named partner teams or business functions are identified; all collaboration references use generic terms like 'stakeholders' and 'cross-functional teams'.
 
-**Run 2:** `0`
-> Quote: "Partner with stakeholders across functions as a data business partner"
+**Run 3:** `0` ✓
+> Quote: "None identified"
 > Verified: ✓ found in JD
-> Reasoning: No specific named teams (Finance, Product, Marketing, etc.) are explicitly identified; 'stakeholders across functions' is a generic phrase.
-
-**Run 3:** `0`
-> Quote: "Partner with stakeholders across functions as a data business partner"
-> Verified: ✓ found in JD
-> Reasoning: No specifically named teams or functions identified; references to stakeholders and cross-functional work are generic.
+> Reasoning: No explicitly named teams or functions listed; stakeholders and cross-functional teams are mentioned generically without specific function names.
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Build, standardize, and maintain reporting and self-service analytics as part of data lake and data mesh concepts"
 > Verified: ✓ found in JD
-> Reasoning: The JD references established data architecture patterns (data lake, data mesh) and multiple named tools, indicating an existing infrastructure being scaled and improved.
+> Reasoning: Existing infrastructure (data lake) is mentioned with focus on standardization and expansion (data mesh), indicating an established but growing data function.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
 > Quote: "Build, standardize, and maintain reporting and self-service analytics as part of data lake and data mesh concepts"
 > Verified: ✓ found in JD
-> Reasoning: The JD implies existing data infrastructure (data lake and data mesh) that is being scaled and standardized rather than built from zero.
+> Reasoning: The JD references existing infrastructure (data lake, data mesh, cloud platforms) being standardized and improved, indicating an established data function scaling rather than building from zero.
 
-**Run 3:** `mid`
-> Quote: "Build, standardize, and maintain reporting and self-serve analytics as part of data lake and data mesh concepts"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Infrastructure exists (data lake, data mesh, cloud data warehouses) and is being standardized and extended, indicating a team at growth stage with established foundations.
+**Run 3:** `mid` ✓
+> Quote: "Build, standardize, and maintain reporting and self-service analytics as part of data lake and data mesh concepts"
+> Verified: ✓ found in JD
+> Reasoning: Named data architectures (data lake, data mesh) are already in place and being extended with standardization, indicating infrastructure exists but is growing and needs refinement.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
-> Verified: ✓ found in JD
-> Reasoning: Pharmaceutical regulatory knowledge (GMP/HSE specificity) suggests domain expertise, but the core analytics responsibilities use generic boilerplate language typical of recruiters.
-
-**Run 2:** `mixed`
+**Run 1:** `mixed` ✓
 > Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability"
 > Verified: ✓ found in JD
-> Reasoning: Some responsibilities show technical specificity (feature engineering, data lineage, data mesh architecture) mixed with generic phrases like 'partner with stakeholders' and 'compelling visualisations'.
+> Reasoning: Technical specificity about feature engineering and data architecture patterns coexists with generic collaboration language like 'partner with stakeholders.'
 
-**Run 3:** `recruiter`
-> Quote: "Partner with stakeholders across functions as a data business partner, identifying high impact use cases and areas for improvement"
+**Run 2:** `mixed` ✓
+> Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities are composed of generic action verbs (partner, apply, build, analyze, implement) and boilerplate phrases without specific context about actual daily work or outcomes.
+> Reasoning: The JD combines technical specificity (data lake, data mesh, feature engineering, SSIS, lifecycle management) with generic collaboration language ('partner with stakeholders', 'identify high impact use cases').
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
+**Run 3:** `mixed` ✓
+> Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability; set up monitoring, alerting, and lifecycle management"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity (feature engineering from unstructured data, lineage tracking, monitoring setup) mixes with boilerplate stakeholder collaboration language found in recruiter templates.
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Build, standardize, and maintain reporting and self-service analytics as part of data lake and data mesh concepts"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes building data infrastructure, self-serve analytics platforms, and data products that serve the data function and internal consumers.
+> Reasoning: Emphasis on building self-serve platforms and data infrastructure that other teams consume, rather than serving a specific business function.
 
-**Run 2:** `internal_data`
+**Run 2:** `internal_data` ✓
 > Quote: "Build, standardize, and maintain reporting and self-service analytics as part of data lake and data mesh concepts"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves data consumers and the data function through infrastructure and self-serve analytics, not commercial, product, or finance audiences.
+> Reasoning: The role's primary focus is building and maintaining analytics infrastructure (data lake, self-serve BI, data mesh) that data consumers and analytics teams use, rather than serving a specific business function.
 
-**Run 3:** `internal_data`
+**Run 3:** `internal_data` ✓
 > Quote: "Build, standardize, and maintain reporting and self-serve analytics as part of data lake and data mesh concepts"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Primary focus is building and maintaining data infrastructure and platforms for internal consumption rather than serving specific business functions.
+> Reasoning: The primary emphasis is building internal data infrastructure and self-serve analytics for internal data consumers rather than commercial, product, or finance stakeholders.
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
+**Run 1:** `mixed` ✓
+> Quote: "Strong autonomy to lead analytic solutions from design to deployment; and strong foundation in analytics framework and data management"
+> Verified: ✓ found in JD
+> Reasoning: Explicit language about leading solutions from design to deployment indicates strategic ownership, though implementation occurs within cross-functional teams.
+
+**Run 2:** `strategic` ✗
 > Quote: "Strong autonomy to lead analytic solutions from design to deployment"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic direction-setting ('lead', 'autonomy', 'design', 'proactively propose') with execution responsibilities ('build', 'maintain', 'implement', 'deliver').
+> Reasoning: The candidate is expected to lead analytics solutions end-to-end from design through deployment and proactively propose optimizations, indicating strategic direction-setting rather than execution of set scope.
 
-**Run 2:** `execution`
+**Run 3:** `execution` ✗
 > Quote: "Implement models and data products with cross functional teams; set up monitoring, alerting, and lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: The role executes analytics solutions within existing data architecture frameworks (data lake/mesh) rather than defining overall strategy or direction.
+> Reasoning: The role emphasizes implementing solutions and executing within cross-functional team contexts; priorities and direction appear to come from stakeholders rather than being set by this role.
 
-**Run 3:** `mixed`
-> Quote: "Strong autonomy to lead analytic solutions from design to deployment"
-> Verified: ✓ found in JD
-> Reasoning: Requirements specify autonomy to lead solutions from design to deployment, but responsibilities frame the role as a collaborative partner with stakeholders rather than a strategic direction-setter.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'execution']
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `ai_enabler`
-> Quote: "Apply database modelling and database exploration skills with data architecture strategy and design principles to support metrics, analytics, AI/machine learning, and self-service business intelligence across the company"
-> Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data architecture and infrastructure that supports AI/ML workloads, not use AI tools for personal coding productivity.
-
-**Run 2:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While the infrastructure supports AI/ML pipelines, the JD does not require the candidate to have AI coding, AI tooling, or AI enablement skills.
-
-**Run 3:** `ai_enabler`
-> Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to perform feature engineering from structured and unstructured data, a core signal of building data infrastructure for AI/ML pipelines.
+> Reasoning: While the data infrastructure should support AI/ML capabilities, the JD does not require the candidate to demonstrate AI skills, use AI tools, or build AI-specific data products.
 
-⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'none', 'ai_enabler']
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While the JD mentions supporting AI/machine learning as one of many functions, there is no specific expectation for the candidate to demonstrate AI skills (coding with AI tools) or build AI-enabled data infrastructure.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions AI/machine learning as a domain the data infrastructure supports, but does not expect the candidate to use AI coding tools, build GenAI applications, or demonstrate AI expertise.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✗
+> Quote: "set up monitoring, alerting, and lifecycle management"
+> Verified: ✓ found in JD
+> Reasoning: Ownership verbs like 'set up' and 'ensuring quality, lineage, and reliability' frame testing and monitoring as the candidate's responsibility, though no specific testing tools are named.
+
+**Run 2:** `responsibility` ✗
 > Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The candidate owns ensuring quality, lineage, and reliability as an active responsibility, reinforced by setting up monitoring and alerting.
+> Reasoning: The candidate is responsible for ensuring data quality and reliability as an ownership verb embedded in their core data engineering responsibilities, not just listed as a tool or skill.
 
-**Run 2:** `responsibility`
-> Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability"
+**Run 3:** `responsibility` ✗
+> Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability; set up monitoring, alerting, and lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is accountable for ensuring data quality and reliability as part of core feature engineering responsibilities.
+> Reasoning: Quality assurance (ensuring quality, lineage, reliability) and observability (monitoring and alerting setup) are framed as the role's direct ownership, not as tool skills.
 
-**Run 3:** `responsibility`
-> Quote: "Preprocess and engineer features from structured and unstructured data, ensuring quality, lineage, and reliability"
-> Verified: ✓ found in JD
-> Reasoning: The action verb 'ensuring' applied to quality and reliability signals the candidate owns accountability for data quality as part of their responsibilities.
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `high`
+**Run 1:** `high` ✗
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly framed around regulatory compliance, safety, and governance in a pharmaceutical context where data errors have direct regulatory and patient-safety consequences.
+> Reasoning: Risk and compliance language (GMP/HSE, safe-by-design, IT governance) appears throughout and dominates the framing of project delivery, indicating high loss-aversion focus on regulatory and safety compliance.
 
-**Run 2:** `high`
+**Run 2:** `high` ✗
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: Regulatory compliance (GMP/HSE), safety, and governance dominate the risk register; data errors in pharmaceutical manufacturing directly threaten regulatory standing and patient safety.
+> Reasoning: The JD repeatedly frames the role around preventing regulatory non-compliance and manufacturing safety failures through governance and compliance adherence, a core concern in regulated pharmaceutical manufacturing.
 
-**Run 3:** `high`
+**Run 3:** `high` ✗
 > Quote: "Deliver projects safely, on time, and cost effectively while upholding IT governance, GMP/HSE, and compliance standards (COPs, SOPs)"
 > Verified: ✓ found in JD
-> Reasoning: Repeated compliance (GMP), governance, and safe-by-design language throughout reflects pharmaceutical regulatory context where data errors have direct patient safety and regulatory consequences.
+> Reasoning: Repeated emphasis on safety, governance, and regulatory compliance (GMP, COPs, SOPs) in a pharmaceutical manufacturing context indicates high loss-aversion framing centered on preventing regulatory failure and patient safety risks.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`high`

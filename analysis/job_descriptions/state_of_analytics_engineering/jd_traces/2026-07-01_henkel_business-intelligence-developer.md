@@ -54,197 +54,217 @@ Some perks of joining Henkel:
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 3 | 4 | 0% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | product | mixed | finance | 0% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | absent | absent | absent | 100% |
-| loss_aversion_framing | moderate | none | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
+| collaboration_width | 2 | 3 | 1 | 3 | 33% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | hiring_manager | mixed | mixed | 33% | ✓ |
+| stakeholder_orientation | finance | product | product | product | 100% | ✗ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Focus on detail, precision and working transparently with managing priorities independently"
 > Verified: ✓ found in JD
-> Reasoning: The explicit emphasis on precision and detail as core expectations, combined with mastery of underlying financial processes, drives this classification with no velocity language present.
+> Reasoning: Explicit emphasis on detail and precision as key qualities reflects a rigour-oriented approach rather than velocity.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Focus on detail, precision and working transparently with managing priorities independently"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes precision, detail, and mastery over speed or agility, with no velocity or fast-paced language present.
+> Reasoning: The JD emphasizes 'detail' and 'precision' as core personal attributes, reflecting rigour orientation rather than speed or velocity.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Focus on detail, precision and working transparently with managing priorities independently"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes precision and detail over pace, with no language about speed, iteration, or rapid delivery.
+> Reasoning: The responsibilities and qualifications emphasize precision, detail, and mastery of complex financial processes with no mention of speed, iteration, or shipping velocity.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: The financial KPI focus suggests business decision support for a specific department without explicit regulatory, compliance, or formal financial reporting language that would elevate to high.
+> Reasoning: Financial KPIs for business decisions present moderate risk, lacking explicit regulatory or compliance language that would indicate high risk.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: Financial KPIs represent business-critical analysis affecting management decisions without explicit regulatory or compliance framing.
+> Reasoning: Financial KPI work for internal departmental management carries moderate risk to business decisions without regulatory or audit-level financial reporting governance.
 
-**Run 3:** `moderate`
+**Run 3:** `moderate` ✗
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: Financial KPIs for a major corporation carry moderate risk of impacting business decisions, but the JD lacks explicit compliance or regulatory language.
+> Reasoning: The role involves financial reporting but at the operational/management level for a product department within a consumer goods company, not regulatory compliance or board-level P&L reporting.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `1`
+**Run 1:** `3` ✗
+> Quote: "Product & Technology management department; financial and technical community"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams/functions identified: Product & Technology, Financial community, and Technical community.
+
+**Run 2:** `1` ✗
 > Quote: "Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named department is identified as a collaboration partner; 'worldwide Henkel financial and technical community' is too vague to count as distinct teams.
+> Reasoning: Only the Product & Technology management department is explicitly named as a collaboration partner; 'financial and technical community' is too generic to count as distinct named teams.
 
-**Run 2:** `3`
+**Run 3:** `3` ✗
 > Quote: "Product & Technology management department; financial and technical community"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct collaborative functions are explicitly named: Product & Technology management, financial community, and technical community.
+> Verified: ✓ found in JD
+> Reasoning: The JD names three distinct partner functions: Product (from 'Product & Technology management'), Finance (from 'financial community'), and Engineering/Technical (from 'technical community').
 
-**Run 3:** `4`
-> Quote: "Product & Technology management department; financial and technical community"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD names four distinct partner functions: Product, Technology, Finance, and Technical.
+⚠ **Disagreement**: manual=`2` vs LLM majority=`3`
 
-⚠ **LLM inconsistency**: runs gave ['1', '3', '4']
+⚠ **LLM inconsistency**: runs gave ['3', '1', '3']
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
-> Quote: "Identify opportunities to streamline reporting activities"
-> Verified: ✓ found in JD
-> Reasoning: The existence of reporting activities to streamline, combined with named tools (Power BI, data sources), indicates an established function rather than early-stage greenfield.
-
-**Run 2:** `mid`
+**Run 1:** `mid` ✗
 > Quote: "Play a key role in development of advanced analytical tools in Power BI"
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities and mention of advanced existing infrastructure suggests an established data function, not early-stage.
+> Reasoning: Established BI infrastructure (Power BI) is already in place, and the person plays a key role in development rather than building from zero.
 
-**Run 3:** `mid`
+**Run 2:** `mid` ✗
 > Quote: "Play a key role in development of advanced analytical tools in Power BI"
 > Verified: ✓ found in JD
-> Reasoning: Power BI is established and actively used with existing multiple data sources and reporting infrastructure, but the role is about development rather than operating a mature platform.
+> Reasoning: Named tool (Power BI) is actively being developed in responsibilities, indicating existing infrastructure at a mid-stage company developing and improving analytics capabilities.
+
+**Run 3:** `mid` ✗
+> Quote: "Utilise and combine various data sources, master understanding of the data and underlying financial processes"
+> Verified: ✓ found in JD
+> Reasoning: The existence of multiple integrated data sources and established financial processes indicates a team beyond early greenfield stage but without signals of large-scale specialization or multiple sub-teams.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
+**Run 1:** `hiring_manager` ✗
 > Quote: "Play a key role in development of advanced analytical tools in Power BI"
 > Verified: ✓ found in JD
-> Reasoning: The JD combines technical specificity (named tool Power BI, financial KPI context for a specific department) with generic action verbs and collaboration language typical of recruiter-written sections.
+> Reasoning: Specific technical context (Power BI for financial KPIs) demonstrates knowledge of the actual work that only someone with hands-on BI experience would possess.
 
-**Run 2:** `mixed`
+**Run 2:** `mixed` ✓
+> Quote: "Utilise and combine various data sources, master understanding of the data and underlying financial processes"
+> Verified: ✓ found in JD
+> Reasoning: Specific tools (Power BI, DAX, Power Query) and domain context (financial processes) suggest hiring manager input, but responsibilities use boilerplate verbs typical of recruiter writing.
+
+**Run 3:** `mixed` ✓
 > Quote: "Advanced knowledge of Power BI, DAX, Power Query M formula language and MS Excel"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool naming and business context (financial KPIs, Product & Technology department) suggest hiring manager input, but generic responsibility verbs suggest recruiter involvement.
+> Reasoning: Technical precision around Power BI, DAX, and Power Query M shows domain knowledge, but generic phrases like 'collaborate with worldwide Henkel financial and technical community' and 'translate complex business requirements' are recruiter boilerplate.
 
-**Run 3:** `recruiter`
-> Quote: "Identify opportunities to streamline reporting activities"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic boilerplate verbs like 'identify', 'provide', 'manage', and 'collaborate' without technical specificity about actual work context or scale.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `finance`
 
-**Run 1:** `product`
+**Run 1:** `product` ✗
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: The primary stakeholder explicitly named is the Product & Technology management department, making this product-oriented analytics despite the financial KPI subject matter.
+> Reasoning: The primary audience is explicitly named as Product & Technology management, which is a product function.
 
-**Run 2:** `mixed`
+**Run 2:** `product` ✗
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: The role serves Product (Product & Technology management) and Finance (financial KPIs) equally, making this mixed rather than primarily one or the other.
+> Reasoning: Primary audience is the Product & Technology management department, a product/operational function, rather than finance or commercial teams.
 
-**Run 3:** `finance`
+**Run 3:** `product` ✗
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly centers on financial KPIs and financial processes, making financial reporting the primary work domain.
+> Reasoning: The primary audience is the Product & Technology management department, making product management the principal stakeholder, even though the insights relate to financial metrics.
 
-⚠ **LLM inconsistency**: runs gave ['product', 'mixed', 'finance']
+⚠ **Disagreement**: manual=`finance` vs LLM majority=`product`
 
 ### autonomy_level
+**Manual:** `execution`
 
-**Run 1:** `execution`
-> Quote: "Manage your projects and collaborate with worldwide Henkel financial and technical community"
-> Verified: ✓ found in JD
-> Reasoning: Action verbs emphasise project delivery, collaboration, and support rather than strategic direction-setting or defining the analytics function.
-
-**Run 2:** `execution`
+**Run 1:** `execution` ✓
 > Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
 > Verified: ✓ found in JD
-> Reasoning: The role delivers against priorities set by Product & Technology management and Finance departments rather than setting strategic direction.
+> Reasoning: The primary responsibilities frame the role as delivering insights and solutions to defined stakeholders, not setting overall analytics strategy.
 
-**Run 3:** `execution`
+**Run 2:** `execution` ✓
+> Quote: "Provide overviews and analytical insights on various financial KPIs for the Product & Technology management department"
+> Verified: ✓ found in JD
+> Reasoning: Primary verb 'provide' reflects execution of requirements set by the Product & Technology department rather than strategic direction-setting.
+
+**Run 3:** `execution` ✓
 > Quote: "Manage your projects and collaborate with worldwide Henkel financial and technical community"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as execution and collaboration rather than strategic ownership, with project-level autonomy but not direction-setting authority.
+> Reasoning: While the role has project management autonomy, the overall framing is delivering Power BI tools and financial insights within a defined scope, not setting analytics strategy.
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mentions of AI tools, AI-assisted coding, agentic workflows, or AI infrastructure requirements appear anywhere in the JD.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI, machine learning, coding assistants, or AI-enabled data infrastructure in the JD.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI skills, tools, or capabilities expected of the candidate.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, agentic workflows, or AI-enabled data infrastructure; vague 'growth mindset' language does not constitute an AI skill expectation.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tooling, coding assistants, or AI infrastructure expectations.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, coding agents, AI-assisted development, or AI data infrastructure as expected candidate skills.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `absent`
+**Run 1:** `absent` ✗
 > Quote: "No testing or data quality signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of testing frameworks, data contracts, data quality practices, or observability standards.
+> Verified: ✓ found in JD
+> Reasoning: No mention of testing, data quality frameworks, data contracts, or observability practices anywhere in the JD.
 
-**Run 2:** `absent`
-> Quote: "No testing or data quality ownership signal."
+**Run 2:** `absent` ✗
+> Quote: "No testing, data quality frameworks, or data contracts mentioned."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of testing, data quality frameworks, observability, or data contracts.
+> Reasoning: Responsibilities focus on development, insights, and data combination with no mention of testing practices, data quality ownership, or observability frameworks.
 
-**Run 3:** `absent`
+**Run 3:** `absent` ✗
 > Quote: "No testing or data quality signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD does not mention testing frameworks, data quality practices, observability, or data contracts.
+> Verified: ✓ found in JD
+> Reasoning: The JD makes no mention of testing practices, data quality frameworks, data contracts, or observability as part of the role's responsibilities or requirements.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
-> Quote: "Focus on detail, precision and working transparently with managing priorities independently"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on precision and detail reflects concern for preventing data errors and operational quality without compliance, regulatory, or high-level risk language.
-
-**Run 2:** `none`
+**Run 1:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD is framed in delivery and capability terms with precision presented as a work style preference, not as a risk mitigation mechanism.
-
-**Run 3:** `moderate`
-> Quote: "Focus on detail, precision and working transparently with managing priorities independently"
 > Verified: ✓ found in JD
-> Reasoning: Operational precision is expected in financial work, but without explicit risk, compliance, or loss-aversion language, indicating moderate rather than high risk consciousness.
+> Reasoning: The JD emphasizes delivery and capability development rather than framing the role around preventing bad outcomes or managing risk.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: JD emphasizes delivery and capability building with no mention of compliance, regulatory risk, reliability SLOs, or stakeholder trust as core concerns.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed in terms of analytical capability and work style (precision, detail) rather than preventing bad outcomes, regulatory risk, or stakeholder trust.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

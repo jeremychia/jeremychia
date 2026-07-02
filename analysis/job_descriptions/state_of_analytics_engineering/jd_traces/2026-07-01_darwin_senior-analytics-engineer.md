@@ -47,193 +47,211 @@ Compensation & Benefits
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 1 | 33% |
-| data_team_maturity | early | early | early | 100% |
-| jd_authorship | mixed | recruiter | hiring_manager | 0% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | strategic | strategic | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | absent | absent | absent | 100% |
-| loss_aversion_framing | none | none | none | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 0 | 1 | 33% | ✓ |
+| data_team_maturity | early | early | early | early | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | recruiter | recruiter | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize architecture, standards, and best practices rather than speed or iteration, with no velocity language present.
+> Reasoning: The emphasis on establishing standards and best practices from the ground up signals a rigour-oriented approach to building the platform.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
+> Quote: "data modelling standards, and engineering best practices"
+> Verified: ✓ found in JD
+> Reasoning: The explicit emphasis on standards and best practices signals a quality and rigor orientation over speed.
+
+**Run 3:** `rigour` ✓
 > Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on standards and best practices signals a rigour orientation focused on correctness and engineering excellence.
-
-**Run 3:** `rigour`
-> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, standards, and best practices over speed or iteration, with no velocity signals present.
+> Reasoning: The responsibilities emphasize standards, architecture, and best practices rather than speed, iteration, or delivery pace.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Build a modern cloud-based data platform that will support the organisation's next phase of growth"
+**Run 1:** `moderate` ✓
+> Quote: "build a modern cloud-based data platform that will support the organisation's next phase of growth"
 > Verified: ✓ found in JD
-> Reasoning: The role builds general business analytics infrastructure to support organizational growth, which carries moderate risk of impacting business decisions without explicit regulatory or financial consequences.
+> Reasoning: Generic international organization with no explicit financial reporting, compliance, or regulatory signals; analytics infrastructure supports business growth rather than mission-critical decisions.
 
-**Run 2:** `moderate`
-> Quote: "Amsterdam-based international organization"
+**Run 2:** `moderate` ✓
+> Quote: "support the organisation's next phase of growth"
 > Verified: ✓ found in JD
-> Reasoning: Without explicit financial, compliance, or regulatory language, and absent sector context in the JD, domain risk defaults to moderate for a business organization building analytics.
+> Reasoning: No explicit financial, regulatory, or compliance language; generic business analytics context implies moderate risk.
 
-**Run 3:** `moderate`
-> Quote: "Build a modern cloud-based data platform that will support the organisation's next phase of growth"
+**Run 3:** `moderate` ✓
+> Quote: "will support the organisation's next phase of growth"
 > Verified: ✓ found in JD
-> Reasoning: The JD describes strategic platform infrastructure without explicit financial reporting, compliance, or regulatory language that would signal high risk.
+> Reasoning: No explicit financial reporting, compliance, or regulatory language; generic growth-oriented framing without domain-specific risk signals.
 
 ### collaboration_width
+**Manual:** `1`
 
-**Run 1:** `0`
-> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
+**Run 1:** `1` ✓
+> Quote: "Data Science or Machine Learning teams"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes individual ownership with no named partner teams identified in core responsibilities.
+> Reasoning: Only one explicitly named team partner mentioned as advantageous experience.
 
-**Run 2:** `0`
-> Quote: "None identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities section contains no explicitly named partner teams or functions.
-
-**Run 3:** `1`
-> Quote: "experience working with Data Science or Machine Learning teams"
-> Verified: ✓ found in JD
-> Reasoning: Data Science/Machine Learning teams are explicitly named as a relevant collaboration domain in the qualifications section.
-
-⚠ **LLM inconsistency**: runs gave ['0', '0', '1']
-
-### data_team_maturity
-
-**Run 1:** `early`
-> Quote: "This is a rare greenfield opportunity where you'll be the first dedicated Analytics Engineer within the business."
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly states this is a greenfield platform build with no existing infrastructure, and the candidate is the first dedicated analytics hire.
-
-**Run 2:** `early`
+**Run 2:** `0` ✗
 > Quote: "first dedicated Analytics Engineer within the business"
 > Verified: ✓ found in JD
-> Reasoning: The explicit description of being the first dedicated analytics hire clearly signals an early-stage data function.
+> Reasoning: No named collaboration partners are explicitly described in the role responsibilities.
 
-**Run 3:** `early`
+**Run 3:** `1` ✓
+> Quote: "experience working with Data Science or Machine Learning teams"
+> Verified: ✓ found in JD
+> Reasoning: One named external function (Data Science or Machine Learning teams) is identified as an explicit collaboration partner.
+
+⚠ **LLM inconsistency**: runs gave ['1', '0', '1']
+
+### data_team_maturity
+**Manual:** `early`
+
+**Run 1:** `early` ✓
+> Quote: "you'll be the first dedicated Analytics Engineer within the business"
+> Verified: ✓ found in JD
+> Reasoning: Explicit first hire building a greenfield platform from scratch indicates early-stage data function.
+
+**Run 2:** `early` ✓
+> Quote: "first dedicated Analytics Engineer within the business"
+> Verified: ✓ found in JD
+> Reasoning: Clear greenfield signal with no existing data infrastructure or team to build upon.
+
+**Run 3:** `early` ✓
 > Quote: "This is a rare greenfield opportunity where you'll be the first dedicated Analytics Engineer within the business"
 > Verified: ✓ found in JD
-> Reasoning: The explicit statement of being the first analytics engineer and greenfield opportunity clearly signals an early-stage data function being established.
+> Reasoning: Explicitly greenfield with the candidate as the first dedicated analytics hire, signaling no existing infrastructure or data function.
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `mixed`
+**Run 1:** `mixed` ✗
 > Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical domains (platform architecture, data modelling standards) mixed with generic action verbs (take ownership).
+> Reasoning: Specific tool requirements (Databricks, Snowflake, SQL, Python, Azure) suggest technical input, but responsibilities use generic architectural language rather than specific operational context.
 
-**Run 2:** `recruiter`
-> Quote: "Strong experience with Databricks and/or Snowflake"
+**Run 2:** `recruiter` ✗
+> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: Tools are listed without specific context about application, scale, or methodology, which is typical of recruiter-written JDs lacking hands-on experience.
+> Reasoning: Generic responsibilities with no specific technical context about actual tools, data flows, or concrete work.
 
-**Run 3:** `hiring_manager`
-> Quote: "Strong experience with Databricks and/or Snowflake; Knowledge of modern data modelling and semantic layer design"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities contain specific technical methodology names and platform tools with precise context that only someone performing this work would specify.
+**Run 3:** `recruiter` ✗
+> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities are written with generic action verbs lacking specific technical context about actual day-to-day work, scale, or concrete challenges.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'hiring_manager']
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`recruiter`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
-> Quote: "Build a modern cloud-based data platform"
-> Verified: ✓ found in JD
-> Reasoning: The role focuses on infrastructure and platform building for internal analytics consumption rather than serving commercial, product, finance, or other specific business functions.
-
-**Run 2:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Build a modern cloud-based data platform that will support the organisation's next phase of growth"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around building data infrastructure and platform foundations rather than serving a specific business function.
+> Reasoning: The role's primary deliverable is building data infrastructure and platform for internal data consumers rather than serving commercial, product, or finance stakeholders.
 
-**Run 3:** `internal_data`
-> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
+**Run 2:** `internal_data` ✓
+> Quote: "Build a modern cloud-based data platform that will support the organisation's next phase of growth"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on building platform architecture and semantic layer design indicates the role is establishing analytics infrastructure for internal data consumers rather than serving a specific business function.
+> Reasoning: The primary focus is establishing data infrastructure for internal consumption rather than serving a specific business function.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Build a modern cloud-based data platform that will support the organisation's next phase of growth"
+> Verified: ✓ found in JD
+> Reasoning: The focus on building platform architecture and data infrastructure from scratch indicates an internal_data orientation serving data consumers and the analytics function.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `strategic` ✓
 > Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: The use of ownership and design verbs, combined with the greenfield context, positions the role as setting the direction for analytics infrastructure rather than executing defined work.
+> Reasoning: The candidate is expected to define standards and architecture—setting direction and shaping how analytics is delivered rather than executing predefined work.
 
-**Run 2:** `strategic`
+**Run 2:** `strategic` ✓
 > Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: The ownership framing and responsibility for defining architecture and standards signals strategic autonomy in shaping the analytics platform.
+> Reasoning: The role expects the candidate to define technical direction, architecture decisions, and engineering standards from scratch.
 
-**Run 3:** `strategic`
-> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices; Design and build from scratch"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The language of 'take ownership' combined with 'design and build from scratch' indicates authority to define direction and shape the analytics platform strategy.
+**Run 3:** `strategic` ✓
+> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
+> Verified: ✓ found in JD
+> Reasoning: "Take ownership" combined with "design and build from scratch" establishes the role as defining platform direction and standards rather than executing predetermined work.
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no expectation for the candidate to use AI coding tools or build AI-ready data infrastructure.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI-assisted coding, building AI infrastructure, or using AI tools—optional collaboration with Data Science teams does not constitute expected candidate AI skill.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While Data Science team collaboration is mentioned as advantageous, there is no expectation for the candidate to use AI tools or build AI infrastructure.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-assisted development, or AI data infrastructure expectations.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no references to AI coding tools, AI-ready data infrastructure, or AI system enablement; it mentions ML teams only as advantageous prior experience.
+> Verified: ✓ found in JD
+> Reasoning: Collaboration with ML teams is mentioned but no AI-assisted coding, agentic workflows, or AI-ready data infrastructure is expected of the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `absent`
-> Quote: "No testing or data quality signal found in the JD."
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal mentioned in the JD."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD makes no mention of testing, data contracts, data quality frameworks, or observability practices.
+> Reasoning: No explicit mention of testing frameworks, data quality ownership, observability, data contracts, or SLOs anywhere in the responsibilities or requirements.
 
-**Run 2:** `absent`
-> Quote: "data modelling standards"
-> Verified: ✓ found in JD
-> Reasoning: While data modelling standards are mentioned, there is no explicit signal about testing, data quality frameworks, or observability ownership.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality framework signal."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No explicit mention of testing, data quality, data contracts, observability, or related frameworks.
 
-**Run 3:** `absent`
-> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
+**Run 3:** `absent` ✗
+> Quote: "Build a modern cloud-based data platform that will support the organisation's next phase of growth"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize engineering standards and best practices but contain no explicit mention of data quality frameworks, testing, or observability practices.
+> Reasoning: No explicit mention of testing, data quality frameworks, data contracts, or observability; testing is not framed as a responsibility or tool.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role around building capability and supporting organizational growth rather than preventing bad outcomes or managing risk.
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role around building and delivery with no mention of preventing failures, regulatory risk, compliance exposure, or stakeholder trust concerns.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role around capability and growth delivery with no language around risk, compliance, or preventing bad outcomes.
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around greenfield opportunity and capability delivery, with no risk, compliance, or reliability language.
 
-**Run 3:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role entirely around building new analytics platform capabilities and supporting organizational growth with no emphasis on risk, compliance, reliability, or preventing bad outcomes.
+**Run 3:** `none` ✗
+> Quote: "Take ownership of platform architecture, data modelling standards, and engineering best practices"
+> Verified: ✓ found in JD
+> Reasoning: The JD is entirely framed in delivery and capability terms without any risk, compliance, reliability, or stakeholder trust language.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

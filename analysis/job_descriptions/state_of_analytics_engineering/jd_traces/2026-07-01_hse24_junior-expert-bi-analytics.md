@@ -43,191 +43,219 @@ Required Qualifications
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | mixed | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | none | none | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 2 | 1 | 1 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | mixed | execution | execution | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | tool_listed | responsibility | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | none | none | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes test-driven development, CI/CD processes, structured branching strategies, and clean code—core quality and governance signals with no velocity language present.
+> Reasoning: The responsibilities emphasize test-driven development, clean code, CI/CD, and structured branching strategies as core expectations, with no velocity-oriented language.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize development practices (clean code, test-driven development), structured process (Git branching strategies, CI/CD), and consistency (KPI definitions) rather than speed or delivery pace.
+> Reasoning: Test-driven development, clean code, CI/CD processes, and structured Git branching are core responsibilities with no countervailing velocity signals.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, code quality, CI/CD processes, and structured governance (branching strategies) with zero velocity signals, making rigour the dominant orientation.
+> Reasoning: The responsibilities emphasize structured development practices, testing discipline, and code quality management with no mention of speed, iteration, or rapid delivery.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "designing, developing, and optimising modern BI and analytics solutions to enable data-driven decision-making"
-> Verified: ✓ found in JD
-> Reasoning: The role supports business decision-making in a live commerce context without explicit financial reporting, compliance, or regulatory language, placing it in moderate risk.
-
-**Run 2:** `moderate`
-> Quote: "designing, developing, and optimising modern BI and analytics solutions to enable data-driven decision-making"
-> Verified: ✓ found in JD
-> Reasoning: This is e-commerce/retail media analytics without explicit financial reporting, compliance, or regulatory language; data errors affect business decisions but lack the high-risk framing of fintech or regulated sectors.
-
-**Run 3:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "enable data-driven decision-making"
 > Verified: ✓ found in JD
-> Reasoning: Live commerce (e-commerce) role with no financial reporting, compliance, or regulatory language; data errors affect business decisions but not regulatory or financial risk.
+> Reasoning: A live commerce platform's data errors affect business decisions but not financial reporting, regulatory compliance, or public-facing product safety.
+
+**Run 2:** `moderate` ✓
+> Quote: "Home Shopping Europe GmbH is a leading live commerce provider in Europe, operating as a media platform offering entertainment-focused shopping"
+> Verified: ✓ found in JD
+> Reasoning: E-commerce and retail operations involve business decision-making but lack regulatory, compliance, or financial reporting signals that would indicate high domain risk.
+
+**Run 3:** `moderate` ✓
+> Quote: "enable data-driven decision-making"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business intelligence and internal decision-making in a retail/commerce platform with no signals of financial reporting, compliance, or regulatory exposure.
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `1`
-> Quote: "data platform teams"
+**Run 1:** `2` ✓
+> Quote: "data platform teams; business units"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named team—data platform teams—is mentioned as a collaboration partner; business units is generic.
+> Reasoning: Two distinct named partner groups are explicitly listed in the collaboration responsibility.
 
-**Run 2:** `1`
-> Quote: "data platform teams"
+**Run 2:** `1` ✗
+> Quote: "Collaborate with data platform teams and business units on optimisation"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named team function is listed; 'business units' is too generic to count as a named partner team.
+> Reasoning: Only 'data platform teams' qualifies as a named function; 'business units' is too generic to count.
 
-**Run 3:** `1`
-> Quote: "data platform teams"
+**Run 3:** `1` ✗
+> Quote: "Collaborate with data platform teams and business units on optimisation"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named team ('data platform teams') is identified as a collaboration partner; 'business units' is too generic to count as a named function.
+> Reasoning: Only 'data platform teams' counts as a named team function; 'business units' is a generic reference and does not count per classification rules.
+
+⚠ **Disagreement**: manual=`2` vs LLM majority=`1`
+
+⚠ **LLM inconsistency**: runs gave ['2', '1', '1']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
+> Quote: "Collaborate with data platform teams and business units on optimisation"
+> Verified: ✓ found in JD
+> Reasoning: The existence of a named data platform team and the responsibility to optimize existing tools (DBT, Snowflake) indicates an established function beyond early stage.
+
+**Run 2:** `mid` ✓
 > Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling"
 > Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities (DBT, Snowflake) with specific context (dimensional modelling), and the existence of a separate data platform team implies an established but still-growing data function.
+> Reasoning: Named tools (DBT, Snowflake) appear in responsibilities with specific technical methodology context, and the existence of dedicated data platform teams indicates an established function scaling.
 
-**Run 2:** `mid`
+**Run 3:** `mid` ✓
 > Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (DBT, Snowflake) appear in responsibilities with specific context, collaboration with data platform teams implies existing multi-role structure, and the focus is on scaling and optimizing existing capabilities rather than building from zero.
-
-**Run 3:** `mid`
-> Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling"
-> Verified: ✓ found in JD
-> Reasoning: Named tools (dbt, Snowflake) appear in responsibilities alongside established practices (dimensional modelling, self-serve solutions) and an existing data platform team, indicating a growing established function rather than greenfield startup.
+> Reasoning: Named tools (DBT, Snowflake) appear in responsibilities with specific methodology context, and a separate data platform team exists, indicating infrastructure is established but not at massive scale.
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `mixed`
-> Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling"
-> Verified: ✓ found in JD
-> Reasoning: The JD shows technical specificity (DBT, Snowflake, dimensional modelling, TDD, Git branching) alongside generic action verbs (conceptualise, optimise, translate), indicating both hiring manager and recruiter input.
-
-**Run 2:** `mixed`
+**Run 1:** `mixed` ✗
 > Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling; Translate business requirements into analytics deliverables"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Some responsibilities show technical specificity (DBT, Snowflake, dimensional modelling, Git strategies, CI/CD) while others use generic action verbs (translate, collaborate, support) typical of recruiter boilerplate.
-
-**Run 3:** `mixed`
-> Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity around dbt, Snowflake, and dimensional modelling indicates hiring manager input, but generic collaboration and translation language suggests recruiter contributions.
+> Reasoning: Specific technical details (DBT, Snowflake, dimensional modelling) suggest hiring manager input, but generic collaboration language (translate requirements) indicates recruiter involvement.
+
+**Run 2:** `mixed` ✗
+> Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling; Manage code via Git with structured branching strategies and support CI/CD processes"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool and methodology references (DBT, Snowflake, dimensional modelling, Git CI/CD) are mixed with generic boilerplate verbs like 'Translate business requirements' and 'Collaborate'.
+
+**Run 3:** `mixed` ✗
+> Quote: "Build and maintain data models with DBT and Snowflake using dimensional modelling; Manage code via Git with structured branching strategies and support CI/CD processes"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity appears in tool selection and process details (DBT, Snowflake, Git, CI/CD, dimensional modelling) alongside boilerplate phrasing (translate requirements, collaborate with stakeholders).
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Develop automated self-service BI solutions with consistent KPI definitions"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is building self-serve analytics infrastructure and semantic models for the data platform, targeting data consumers and the analytics function.
+> Reasoning: The emphasis on self-serve analytics and collaboration with the data platform team indicates the primary audience is data consumers and the data function itself.
 
-**Run 2:** `internal_data`
+**Run 2:** `internal_data` ✓
 > Quote: "Develop automated self-service BI solutions with consistent KPI definitions"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is building self-service analytics infrastructure for internal data consumers and supporting the data platform team, not serving GTM, product experimentation, or financial reporting stakeholders.
+> Reasoning: The primary deliverables (dashboards, KPIs, semantic models, self-serve BI infrastructure) serve internal analytics consumers and the data platform function rather than commercial, product, or finance-specific stakeholders.
 
-**Run 3:** `internal_data`
-> Quote: "Develop automated self-service BI solutions with consistent KPI definitions"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary focus is building data models and self-service analytics infrastructure for internal consumption rather than serving commercial, product, or finance stakeholders directly.
+**Run 3:** `internal_data` ✓
+> Quote: "Develop automated self-serve BI solutions with consistent KPI definitions"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The primary focus is building analytics infrastructure and self-service tooling for internal data consumers, not commercial, product, or finance-specific objectives.
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `execution`
+**Run 1:** `mixed` ✓
+> Quote: "Conceptualise and optimise BI solutions and create KPIs; Translate business requirements into analytics deliverables"
+> Verified: ✓ found in JD
+> Reasoning: Strategic language (conceptualise, optimise, create KPIs) coexists with execution framing (translate business requirements), indicating both direction-setting and delivery roles.
+
+**Run 2:** `execution` ✗
 > Quote: "Translate business requirements into analytics deliverables"
 > Verified: ✓ found in JD
-> Reasoning: The role centers on executing delivered business requirements and maintaining existing models rather than setting analytics strategy or defining the roadmap.
+> Reasoning: The role receives scoped direction (business requirements) and executes delivery against those priorities, with no strategic direction-setting or ownership language.
 
-**Run 2:** `execution`
+**Run 3:** `execution` ✗
 > Quote: "Translate business requirements into analytics deliverables"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around receiving business requirements and delivering solutions within established frameworks (applying standards, using specified tools) rather than defining direction or setting strategy.
+> Reasoning: The role emphasizes delivering against defined requirements and collaborating on direction set by others, with no signals of strategic ownership or agenda-setting.
 
-**Run 3:** `execution`
-> Quote: "Translate business requirements into analytics deliverables"
-> Verified: ✓ found in JD
-> Reasoning: The role receives business requirements and delivers against them; autonomy is limited to execution tactics within a given scope rather than defining analytics strategy or priorities.
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD lists traditional BI and data tools (Power BI, Tableau, DBT, Snowflake, SQL, Python) with no expectation of AI coding tools, AI data infrastructure, or GenAI application skills.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI-ready infrastructure anywhere in the job description.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, or AI data infrastructure expectations for the candidate.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or AI-enabled data infrastructure expectations.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI tools, AI-assisted coding, or AI-related responsibilities anywhere in the JD.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, coding assistants, generative AI capabilities, or AI-enablement responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `tool_listed` ✗
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: Test-driven development is listed as a key responsibility the candidate will apply, not merely as a tool in a skills list.
+> Reasoning: Test-driven development is mentioned as a practice to apply rather than as a testing framework or standard the candidate owns or defines.
 
-**Run 2:** `responsibility`
+**Run 2:** `responsibility` ✗
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: Test-driven development is framed as an active practice the candidate applies in their work, not merely listed as a tool requirement.
+> Reasoning: Test-driven development is framed as an applied responsibility the candidate owns, not merely a tool in a requirements list.
 
-**Run 3:** `responsibility`
+**Run 3:** `responsibility` ✗
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: Test-driven development is framed as a responsibility the candidate applies rather than a tool listed in requirements, indicating ownership of testing practice in their work.
+> Reasoning: Test-driven development is explicitly listed as a responsibility the candidate should implement, not merely as a tool in a requirements list.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+⚠ **LLM inconsistency**: runs gave ['tool_listed', 'responsibility', 'responsibility']
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role around enabling decisions and optimizing solutions, with no emphasis on compliance risk, data reliability concerns, or preventing bad outcomes.
-
-**Run 2:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD is framed entirely around delivery and capability building (optimize, develop, create) with no risk, compliance, or data-trust language that would signal loss aversion.
-
-**Run 3:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Apply modern development standards including clean code and test-driven development"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and quality are embedded through best practices (TDD, clean code, CI/CD) but without explicit risk, compliance, or stakeholder trust language, indicating reliability is valued without fear-based framing.
+> Reasoning: Quality and reliability are concerns (through TDD and CI/CD) but secondary to delivery, with no explicit risk language around compliance, bad data reaching stakeholders, or regulatory exposure.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'none', 'moderate']
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely around building and optimising analytics capabilities without mention of risk, compliance, data accuracy concerns, or preventing bad outcomes.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in terms of capability delivery and optimization with no language around risk, compliance, prevention, or stakeholder trust.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

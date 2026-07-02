@@ -51,197 +51,219 @@ Compensation & Benefits
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 1 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | recruiter | recruiter | 33% |
-| stakeholder_orientation | internal_data | commercial | internal_data | 33% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | ai_user | ai_enabler | ai_user | 33% |
-| testing_framing | absent | absent | absent | 100% |
-| loss_aversion_framing | none | none | none | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 0 | 0 | 1 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | recruiter | recruiter | mixed | recruiter | 33% | ✓ |
+| stakeholder_orientation | commercial | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | ai_user | ai_enabler | ai_enabler | 33% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✗
 > Quote: "Apply data modelling methodologies"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on 'methodologies' and 'advanced' reporting signals a systematic, quality-focused approach with no velocity language present.
+> Reasoning: The emphasis on methodological structure (data modelling methodologies) signals a rigour orientation rather than speed or delivery pace.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✗
 > Quote: "Apply data modelling methodologies"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize established methodologies and process-oriented work with no velocity language present, defaulting to rigour when neither orientation dominates.
+> Reasoning: The only process-oriented signal in the JD emphasizes applying established methodologies, with no velocity language present.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✗
 > Quote: "Apply data modelling methodologies"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on applying established methodologies signals a structured, methodical approach rather than velocity-driven delivery.
+> Reasoning: The only methodological signal present is data modelling structure, with no velocity language (fast-paced, shipping, iteration speed) appearing anywhere in the JD.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "helps organisations become more data-driven"
 > Verified: ✓ found in JD
-> Reasoning: The role involves standard business intelligence and data analytics work for client organizations without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The JD describes generic data work for external clients without explicit financial, regulatory, or compliance indicators that would elevate to high risk.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✓
+> Quote: "create real business impact"
+> Verified: ✓ found in JD
+> Reasoning: The role creates business impact but shows no explicit financial reporting, compliance, or regulatory framing.
+
+**Run 3:** `moderate` ✓
 > Quote: "helps organisations become more data-driven"
 > Verified: ✓ found in JD
-> Reasoning: The consulting context serves business decision-making without explicit financial reporting, regulatory, or compliance requirements, placing it in the moderate risk category.
-
-**Run 3:** `moderate`
-> Quote: "helps organisations become more data-driven"
-> Verified: ✓ found in JD
-> Reasoning: As a consulting firm serving various clients without explicit financial, regulatory, or compliance mandates, data errors affect business decisions without immediate legal or financial reporting consequences.
+> Reasoning: The role serves general business intelligence and operational reporting for diverse clients with no explicit financial, regulatory, or compliance language indicating high-risk consequences.
 
 ### collaboration_width
+**Manual:** `1`
 
-**Run 1:** `0`
-> Quote: ""
+**Run 1:** `0` ✗
+> Quote: "None"
 > Verified: ✓ found in JD
-> Reasoning: No named partner teams or functions are explicitly identified in the responsibilities section.
+> Reasoning: No named partner teams or functions are explicitly mentioned in the responsibilities section.
 
-**Run 2:** `0`
-> Quote: "N/A - no named partner teams identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No specific named functions (Finance, Product, Engineering, etc.) or teams are explicitly listed as collaboration partners in the responsibilities.
+**Run 2:** `0` ✗
+> Quote: "None"
+> Verified: ✓ found in JD
+> Reasoning: The JD does not explicitly name any partner teams or functions in the role responsibilities or summary.
 
-**Run 3:** `1`
+**Run 3:** `1` ✓
 > Quote: "Stakeholder/client management experience"
 > Verified: ✓ found in JD
-> Reasoning: Only clients are explicitly named as a collaboration partner; no internal team functions are specified.
+> Reasoning: Only one explicitly named external collaboration partner (clients) appears in the JD.
+
+⚠ **Disagreement**: manual=`1` vs LLM majority=`0`
 
 ⚠ **LLM inconsistency**: runs gave ['0', '0', '1']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Team of 18, growing to 24 in 2026"
 > Verified: ✓ found in JD
-> Reasoning: The company is an established, profitable organization with an existing data service offering and client base, but no signals of specialized sub-teams or large-scale specialization.
+> Reasoning: The company is established and profitable but remains relatively small, indicating mid-stage maturity without early-stage infrastructure building or mature specialization.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
+> Quote: "This is a mid-level position where engineers work at the intersection of data and AI, building both traditional data pipelines and intelligent, agentic solutions"
+> Verified: ✓ found in JD
+> Reasoning: The company is established (not greenfield) and describes a mid-level role, suggesting a functioning data operation, but the small team size (18 total) precludes a mature classification.
+
+**Run 3:** `mid` ✓
 > Quote: "Team of 18, growing to 24 in 2026"
 > Verified: ✓ found in JD
-> Reasoning: The established consulting firm with existing client base and planned growth implies a functioning but still-scaling data function, not early-stage or highly specialized.
-
-**Run 3:** `mid`
-> Quote: "building both traditional data pipelines and intelligent, agentic solutions"
-> Verified: ✓ found in JD
-> Reasoning: An established 18-person team serving 50+ clients with varied work across both traditional and advanced analytics indicates a mid-stage data function.
+> Reasoning: The company has established infrastructure (modern data stack, existing technologies), multiple role levels (mid-level position), and documented clients, indicating a functioning but still-growing data operation.
 
 ### jd_authorship
+**Manual:** `recruiter`
 
-**Run 1:** `mixed`
+**Run 1:** `recruiter` ✓
+> Quote: "Work with multiple technologies across the modern data stack"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities use generic boilerplate action verbs without specific technical context, scale numbers, or tool application details that would indicate hiring manager authorship.
+
+**Run 2:** `mixed` ✗
 > Quote: "Leverage AI tools including agentic workflows and AI coding assistants"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical knowledge about AI tools and agentic workflows combined with generic boilerplate language like 'Work with multiple technologies' indicates mixed authorship.
+> Reasoning: The specificity of 'agentic workflows' terminology suggests hiring manager input, but the absence of other technical details (named tools, scale, specific context) indicates recruiter contribution overall.
 
-**Run 2:** `recruiter`
+**Run 3:** `recruiter` ✓
 > Quote: "Work with multiple technologies across the modern data stack"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic action verbs and boilerplate language with no technical specificity about tools, scale, or domain-specific methodology details only a hiring manager would know.
+> Reasoning: Responsibilities use boilerplate generic action verbs and concepts without technical specificity about methodology, scale, or how work actually gets done.
 
-**Run 3:** `recruiter`
-> Quote: "Work with multiple technologies across the modern data stack"
-> Verified: ✓ found in JD
-> Reasoning: Generic phrasing without specific context about tools, scale, or domain problems signals recruiter-written boilerplate rather than hiring manager experience.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
+**Manual:** `commercial`
 
-**Run 1:** `internal_data`
-> Quote: "building both traditional data pipelines and intelligent, agentic solutions"
+**Run 1:** `internal_data` ✗
+> Quote: "Develop advanced data reporting and visualisations"
 > Verified: ✓ found in JD
-> Reasoning: The role is primarily focused on building data infrastructure and analytics platforms that serve the data function itself within client organizations.
+> Reasoning: The emphasis is on building data capabilities and infrastructure rather than serving specific commercial, product, or financial stakeholder outcomes.
 
-**Run 2:** `commercial`
+**Run 2:** `internal_data` ✗
 > Quote: "building both traditional data pipelines and intelligent, agentic solutions that create real business impact"
 > Verified: ✓ found in JD
-> Reasoning: The consulting context frames the role as building data solutions that serve client business needs, positioning external commercial stakeholders as the primary audience.
+> Reasoning: The role focuses on building data infrastructure and solutions without naming a specific business audience, suggesting primary service to the data function and its consumers.
 
-**Run 3:** `internal_data`
-> Quote: "building both traditional data pipelines and intelligent, agentic solutions"
-> Verified: ✓ found in JD
-> Reasoning: The role emphasizes building data infrastructure and methodologies that serve internal data consumers rather than a specific business function.
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'commercial', 'internal_data']
-
-### autonomy_level
-
-**Run 1:** `execution`
+**Run 3:** `internal_data` ✗
 > Quote: "Work with multiple technologies across the modern data stack"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'work with' and mid-level positioning indicate the engineer executes against a defined technology stack rather than setting strategic direction.
+> Reasoning: The role emphasizes building infrastructure and platforms (data pipelines, modern data stack) rather than serving specific commercial, product, or finance stakeholders.
 
-**Run 2:** `execution`
+⚠ **Disagreement**: manual=`commercial` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `execution` ✗
 > Quote: "Apply data modelling methodologies"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed to work within and apply existing methodologies and technology choices rather than define or shape how analytics is delivered.
+> Reasoning: The verb 'apply' indicates implementing established methodologies rather than defining or shaping data strategy.
 
-**Run 3:** `execution`
-> Quote: "Apply data modelling methodologies"
+**Run 2:** `execution` ✗
+> Quote: "Develop advanced data reporting and visualisations"
 > Verified: ✓ found in JD
-> Reasoning: The instruction to apply existing methodologies indicates execution of established practices rather than strategic direction-setting.
+> Reasoning: The responsibilities use delivery verbs (develop, apply, leverage) without strategic/directional language like define, establish, or own.
+
+**Run 3:** `execution` ✗
+> Quote: "Develop advanced data reporting and visualisations"
+> Verified: ✓ found in JD
+> Reasoning: All responsibility verbs (work, develop, apply, leverage) are execution-oriented delivery tasks; the mid-level position framing indicates no strategic direction-setting authority.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `ai_user`
+**Run 1:** `ai_user` ✗
 > Quote: "Professional AI tool experience, ideally including coding assistants"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to have hands-on experience using AI tools like coding assistants to accelerate their own engineering work.
+> Reasoning: The requirement explicitly expects the candidate to use AI tools, specifically coding assistants, in their own work as a core skill.
 
-**Run 2:** `ai_enabler`
+**Run 2:** `ai_enabler` ✗
 > Quote: "building both traditional data pipelines and intelligent, agentic solutions that create real business impact"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly builds agentic solutions and applies agentic workflows, expecting the candidate to construct data infrastructure and intelligent systems that enable AI.
+> Reasoning: The candidate is expected to architect and build agentic solutions, indicating ai_enabler role rather than just using coding assistants.
 
-**Run 3:** `ai_user`
-> Quote: "Leverage AI tools including agentic workflows and AI coding assistants"
+**Run 3:** `ai_enabler` ✗
+> Quote: "building both traditional data pipelines and intelligent, agentic solutions"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to use (leverage) AI tools and coding assistants as personal productivity tools to accelerate their own work.
+> Reasoning: The candidate is expected to build data solutions with agentic components embedded as part of the core deliverable, not just use AI tools for personal productivity.
 
-⚠ **LLM inconsistency**: runs gave ['ai_user', 'ai_enabler', 'ai_user']
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
+
+⚠ **LLM inconsistency**: runs gave ['ai_user', 'ai_enabler', 'ai_enabler']
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `absent`
+**Run 1:** `absent` ✗
+> Quote: "Work with multiple technologies across the modern data stack; Develop advanced data reporting and visualisations; Apply data modelling methodologies; Leverage AI tools including agentic workflows and AI coding assistants"
+> Verified: ✓ found in JD
+> Reasoning: No testing, data quality, data contracts, or observability language appears anywhere in the responsibilities or requirements sections.
+
+**Run 2:** `absent` ✗
 > Quote: "No testing signal."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities and requirements sections contain no mention of testing, data contracts, data quality frameworks, or observability practices.
+> Reasoning: The JD contains no mention of testing, data quality frameworks, data contracts, or observability as a responsibility or requirement.
 
-**Run 2:** `absent`
-> Quote: "No testing or data quality framework mentioned."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no language about testing, data quality, data contracts, observability, or reliability as either a responsibility or a required tool.
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of testing, data quality, data contracts, observability, or reliability frameworks.
 
-**Run 3:** `absent`
-> Quote: "No testing signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of testing frameworks, data quality standards, data contracts, or observability practices.
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role is framed in capability and delivery terms ('create real business impact') with no language about risk, compliance, regulatory exposure, or preventing bad outcomes.
+**Run 1:** `none` ✗
+> Quote: "engineers work at the intersection of data and AI, building both traditional data pipelines and intelligent, agentic solutions that create real business impact"
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role in terms of capability delivery and impact creation with no risk, compliance, or trust prevention language.
 
-**Run 2:** `none`
-> Quote: "No loss aversion framing."
+**Run 2:** `none` ✗
+> Quote: "No loss aversion signal."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The role is framed entirely around capability building and business impact delivery with no mention of risk, compliance, reliability, incident response, or preventing bad outcomes.
+> Reasoning: The JD frames the role in capability and delivery terms ('creating real business impact') with no risk, compliance, reliability, or trust-related language.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes building capabilities and creating business impact without mention of compliance, reliability, risk prevention, or stakeholder trust concerns.
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in capability and delivery terms with no risk register, compliance, regulatory, or reliability concerns mentioned.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

@@ -58,195 +58,217 @@ Nice to Have:
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | moderate | moderate | 33% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | recruiter | recruiter | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | high | moderate | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 2 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | recruiter | recruiter | recruiter | 100% | ✗ |
+| stakeholder_orientation | mixed | internal_data | finance | internal_data | 33% | ✗ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | high | high | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "Monitor and analyze data quality, integrity, and processing logs, identifying issues and collaborating with technical teams to resolve them."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data validation, testing, audits, quality monitoring, and governance as core expectations, with no signals of speed or rapid delivery.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Coordinate and execute data validation and acceptance testing activities, supporting migration and ongoing data pipeline releases."
 > Verified: ✓ found in JD
-> Reasoning: The opening responsibility establishes testing and validation as the core orientation, with no speed or iteration language present throughout the JD.
+> Reasoning: Responsibilities are dominated by quality, testing, validation, governance, and compliance language with zero velocity signals.
 
-**Run 3:** `rigour`
-> Quote: "Develop Data Management Plans, including governance, data flows, and controls."
+**Run 2:** `rigour` ✓
+> Quote: "Monitor and analyze data quality, integrity, and processing logs, identifying issues and collaborating with technical teams to resolve them."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, quality, testing, and controls throughout with no velocity signals.
+> Reasoning: The responsibilities section emphasizes data quality, integrity monitoring, validation, testing, and governance as core expectations with no velocity or iteration-speed signals present.
+
+**Run 3:** `rigour` ✓
+> Quote: "Coordinate and execute data validation and acceptance testing activities, supporting migration and ongoing data pipeline releases."
+> Verified: ✓ found in JD
+> Reasoning: The entire responsibility section emphasizes data quality, testing, validation, integrity, governance, and controls—rigour signals appear 6+ times with no competing velocity language.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
-> Quote: "to support inspections, audits, data validation, and the investigation of data defects"
-> Verified: ✓ found in JD
-> Reasoning: Government sector combined with explicit language around audits, inspections, and data integrity indicates regulatory compliance and risk exposure.
-
-**Run 2:** `moderate`
-> Quote: "to support inspections, audits, data validation, and the investigation of data defects"
-> Verified: ✓ found in JD
-> Reasoning: While audits and government sector suggest compliance concern, the JD frames work around operational data quality and testing rather than financial reporting or regulatory compliance.
-
-**Run 3:** `moderate`
+**Run 1:** `high` ✓
 > Quote: "supporting inspections, audits, data validation, and the investigation of data defects"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Government sector and audit references indicate regulatory concern, but explicit compliance or financial-reporting language is absent from the JD.
+> Reasoning: Government sector combined with explicit audit and governance signals indicates data errors directly affect regulatory compliance oversight.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "No named partner teams identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Only generic terms like 'technical teams', 'project teams', and 'stakeholders' appear; no specific named functions or departments are listed.
-
-**Run 2:** `0`
-> Quote: "None"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: References to 'project teams' and 'technical teams' are generic descriptors, not named functions like Finance, Product, or Engineering.
-
-**Run 3:** `0`
-> Quote: "Collaborate with project teams to deliver business and technical documentation"
-> Verified: ✓ found in JD
-> Reasoning: Collaboration references are generic ('project teams', 'technical teams', 'stakeholders') and do not name specific partner functions like Finance, Product, or Engineering.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "supporting migration and ongoing data pipeline releases"
-> Verified: ✓ found in JD
-> Reasoning: The role supports established pipelines and data governance work rather than building from zero, but language like 'supporting migration' suggests significant evolution underway.
-
-**Run 2:** `mid`
-> Quote: "Monitor and analyze data quality, integrity, and processing logs, identifying issues and collaborating with technical teams to resolve them."
-> Verified: ✓ found in JD
-> Reasoning: The JD describes supporting and monitoring existing infrastructure, data pipelines, and processes, indicating an established data function requiring operational support.
-
-**Run 3:** `mid`
-> Quote: "supporting migration and ongoing data pipeline releases"
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure and pipelines are mentioned, indicating the data function already exists and is being scaled or enhanced through migration.
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "Develop Data Management Plans, including governance, data flows, and controls"
-> Verified: ✓ found in JD
-> Reasoning: Some responsibilities show governance and modeling specificity, but generic action verbs like 'assist', 'support', and 'contribute' dominate; no named tools or technical context provided.
-
-**Run 2:** `recruiter`
+**Run 2:** `high` ✓
 > Quote: "Produce ad hoc analytical reports and data extracts to support inspections, audits, data validation, and the investigation of data defects."
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic action verbs without technical specificity—no named tools, scale metrics, or methodologies that would indicate hiring manager authorship.
+> Reasoning: Explicit focus on audits and inspections in a government sector role indicates data errors have direct regulatory and compliance consequences.
 
-**Run 3:** `recruiter`
-> Quote: "Assist in identifying, analyzing, and investigating data issues, and contribute to testing and resolution processes."
+**Run 3:** `high` ✓
+> Quote: "supporting inspections, audits, data validation, and the investigation of data defects"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Government sector combined with explicit audit and inspection requirements signals regulatory or compliance oversight where data errors have direct governance impact.
+
+### collaboration_width
+**Manual:** `2`
+
+**Run 1:** `0` ✗
+> Quote: "Collaborate with project teams; Collaborate with technical teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Only generic team references without named functions like Finance, Product, Engineering, or Operations.
+
+**Run 2:** `0` ✗
+> Quote: "None identified"
 > Verified: ✓ found in JD
-> Reasoning: Generic action verbs and absence of specific technical context—no named tools, scale numbers, or methodology details—indicate recruiter authorship.
+> Reasoning: The JD mentions generic collaboration with 'project teams' and 'technical teams' but does not name specific functions like Finance, Engineering, Product, or other named partner teams.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
+**Run 3:** `0` ✗
+> Quote: "No named teams; only generic references to 'technical teams' and 'project teams'"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references collaboration partners only in generic terms ('project teams', 'technical teams', 'stakeholders') with no named functions like Finance, Product, Engineering, or specific team labels.
 
-### stakeholder_orientation
+⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
-**Run 1:** `internal_data`
-> Quote: "Develop Data Management Plans, including governance, data flows, and controls"
+### data_team_maturity
+**Manual:** `mature`
+
+**Run 1:** `mid` ✗
+> Quote: "Analyze data across SQL and other enterprise platforms to support operational use cases."
 > Verified: ✓ found in JD
-> Reasoning: The role is focused on data platform governance, quality assurance, and data infrastructure rather than serving commercial, product, or finance stakeholders.
+> Reasoning: Named platforms indicate established infrastructure exists, but support-oriented framing suggests growth and modernization phase rather than mature scale.
 
-**Run 2:** `internal_data`
-> Quote: "Develop Data Management Plans, including governance, data flows, and controls."
-> Verified: ✓ found in JD
-> Reasoning: The role primarily serves the data function itself through data management, quality governance, and supporting internal operations rather than external commercial or product audiences.
-
-**Run 3:** `internal_data`
-> Quote: "Develop Data Management Plans, including governance, data flows, and controls."
-> Verified: ✓ found in JD
-> Reasoning: The role primarily serves the data function itself through quality assurance, governance, and data architecture rather than external business stakeholders.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Assist in identifying, analyzing, and investigating data issues, and contribute to testing and resolution processes"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize 'assist', 'support', 'contribute', and 'collaborate' rather than 'define', 'own', or 'lead', indicating delivery against scope set by others.
-
-**Run 2:** `execution`
-> Quote: "Assist in identifying, analyzing, and investigating data issues, and contribute to testing and resolution processes."
-> Verified: ✓ found in JD
-> Reasoning: The responsibility verbs—assist, contribute, support, coordinate—indicate execution within defined scopes rather than strategic direction-setting.
-
-**Run 3:** `execution`
+**Run 2:** `mid` ✗
 > Quote: "Support the design of data migration and integration processes, ensuring data quality and availability."
 > Verified: ✓ found in JD
-> Reasoning: The 'support' framing and focus on executing within a defined migration scope indicate delivery of others' direction rather than independent strategy-setting.
+> Reasoning: The role supports existing migration and data pipeline infrastructure rather than building from zero, and uses contribution and support verbs rather than defining foundational capabilities, suggesting an established function requiring coordination.
 
-### ai_role
+**Run 3:** `mid` ✗
+> Quote: "supporting migration and ongoing data pipeline releases"
+> Verified: ✓ found in JD
+> Reasoning: Existing named infrastructure (SQL, pipelines, data models) indicates established function, but focus on validation, testing, and governance suggests systems exist but require stabilization and improvement rather than mature, fully-scaled operation.
 
-**Run 1:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI coding tools, AI-enabled infrastructure, or AI skill expectations from the candidate.
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
-**Run 2:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI-assisted coding tools, GenAI, text-to-SQL, or AI/ML infrastructure expectations anywhere in the JD.
+### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 3:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no expectations for AI-assisted coding, AI-ready data infrastructure, or GenAI applications.
+**Run 1:** `recruiter` ✗
+> Quote: "Assist in identifying, analyzing, and investigating data issues, and contribute to testing and resolution processes."
+> Verified: ✓ found in JD
+> Reasoning: Generic action verbs and boilerplate phrasing lack specific context about tools, scale, or how methodologies are applied in practice.
 
-### testing_framing
+**Run 2:** `recruiter` ✗
+> Quote: "Assist in identifying, analyzing, and investigating data issues, and contribute to testing and resolution processes."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities rely on generic action verbs (assist, contribute, coordinate, support) that could apply to any data role, with no named tools beyond SQL, no scale/volume metrics, and no specific methodologies indicating hands-on authorship.
 
-**Run 1:** `responsibility`
+**Run 3:** `recruiter` ✗
+> Quote: "Coordinate and execute data validation and acceptance testing activities, supporting migration and ongoing data pipeline releases."
+> Verified: ✓ found in JD
+> Reasoning: Generic action verb structure ('Coordinate', 'Support', 'Assist', 'Contribute') and lack of concrete context about specific tools, data volumes, or domain-specific challenges indicates recruiter rather than hiring manager authorship.
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`recruiter`
+
+### stakeholder_orientation
+**Manual:** `mixed`
+
+**Run 1:** `internal_data` ✗
+> Quote: "Develop Data Management Plans, including governance, data flows, and controls."
+> Verified: ✓ found in JD
+> Reasoning: Role primarily supports data infrastructure, governance frameworks, and validation rather than serving business functions like sales, product, or finance.
+
+**Run 2:** `finance` ✗
+> Quote: "Produce ad hoc analytical reports and data extracts to support inspections, audits, data validation, and the investigation of data defects."
+> Verified: ✓ found in JD
+> Reasoning: The explicit focus on supporting audits and inspections in a government sector context indicates the primary stakeholder is the audit and compliance function.
+
+**Run 3:** `internal_data` ✗
+> Quote: "Develop Data Management Plans, including governance, data flows, and controls."
+> Verified: ✓ found in JD
+> Reasoning: The role is primarily focused on data platform reliability, governance, quality assurance, and documentation—serving data consumers and the data function rather than external commercial, product, or finance audiences.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'finance', 'internal_data']
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Support the design of data migration and integration processes, ensuring data quality and availability."
+> Verified: ✓ found in JD
+> Reasoning: "Support" framing indicates execution of scoped project work rather than strategic direction-setting or organizational priorities.
+
+**Run 2:** `execution` ✓
+> Quote: "Support the design of data migration and integration processes, ensuring data quality and availability."
+> Verified: ✓ found in JD
+> Reasoning: The role uses primarily execution verbs (support, contribute, assist, coordinate) indicating the candidate receives scoped work and delivers it rather than setting strategic direction.
+
+**Run 3:** `execution` ✓
 > Quote: "Coordinate and execute data validation and acceptance testing activities"
 > Verified: ✓ found in JD
-> Reasoning: Data validation and testing are framed as activities the candidate coordinates and executes, indicating owned rather than just tool-listed practices.
+> Reasoning: Execution verbs throughout ('execute', 'support', 'assist', 'contribute') indicate the role delivers scoped work defined by others rather than setting strategic direction.
 
-**Run 2:** `responsibility`
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: JD contains no mention of AI tools, agentic workflows, or data infrastructure for AI systems.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no reference to AI tools, skills, or capabilities the candidate should demonstrate.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, coding assistants, or data infrastructure for AI systems anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
 > Quote: "Coordinate and execute data validation and acceptance testing activities, supporting migration and ongoing data pipeline releases."
 > Verified: ✓ found in JD
-> Reasoning: Testing and validation are the opening responsibility with explicit coordination and execution verbs, establishing testing as an owned accountability even if not full strategic definition.
+> Reasoning: Testing and data quality are owned core responsibilities with action verbs indicating accountability, not tools listed in a requirements section.
 
-**Run 3:** `responsibility`
+**Run 2:** `responsibility` ✗
 > Quote: "Coordinate and execute data validation and acceptance testing activities, supporting migration and ongoing data pipeline releases."
 > Verified: ✓ found in JD
-> Reasoning: Testing and quality assurance are framed as owned responsibilities with action verbs (coordinate, execute, monitor), not as tool usage.
+> Reasoning: Data validation and testing are framed as responsibilities the candidate coordinates and executes, indicating some accountability for the practice rather than just listing testing tools.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Coordinate and execute data validation and acceptance testing activities, supporting migration and ongoing data pipeline releases."
+> Verified: ✓ found in JD
+> Reasoning: Testing and validation are actively executed and coordinated by this role—a named responsibility with action ownership rather than a tool listed in a skills matrix.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `high`
-> Quote: "to support inspections, audits, data validation, and the investigation of data defects"
+**Run 1:** `moderate` ✗
+> Quote: "supporting inspections, audits, data validation, and the investigation of data defects"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Audit and governance concerns are present in government consulting context, but role is framed as supporting compliance operations rather than preventing catastrophic business consequences.
+
+**Run 2:** `high` ✗
+> Quote: "Produce ad hoc analytical reports and data extracts to support inspections, audits, data validation, and the investigation of data defects."
 > Verified: ✓ found in JD
-> Reasoning: Government sector combined with prominent emphasis on audits, inspections, data integrity, and governance indicates regulatory compliance and risk mitigation are primary concerns.
+> Reasoning: The role is fundamentally structured around preventing data errors from reaching compliance stakeholders, with explicit framing around audits, investigations, and quality assurance in a regulatory government context.
 
-**Run 2:** `moderate`
+**Run 3:** `high` ✗
 > Quote: "Develop Data Management Plans, including governance, data flows, and controls."
 > Verified: ✓ found in JD
-> Reasoning: Governance and control language, plus audit mention, signal operational risk management, but without high-risk regulatory or compliance framing.
+> Reasoning: Government sector combined with repeated emphasis on audits, governance, integrity, and controls indicates that regulatory compliance and stakeholder trust are core concerns rather than secondary operational reliability.
 
-**Run 3:** `moderate`
-> Quote: "Develop Data Management Plans, including governance, data flows, and controls."
-> Verified: ✓ found in JD
-> Reasoning: Governance and controls language, combined with audit references, reflect operational reliability and data quality risk consciousness rather than compliance or stakeholder-trust catastrophe.
+⚠ **Disagreement**: manual=`` vs LLM majority=`high`
 
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']

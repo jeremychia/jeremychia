@@ -49,197 +49,215 @@ Candidates should demonstrate actual agentic workflows they've built, including 
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 2 | 2 | 2 | 100% |
-| data_team_maturity | mid | early | mid | 33% |
-| jd_authorship | hiring_manager | mixed | hiring_manager | 33% |
-| stakeholder_orientation | internal_data | product | product | 33% |
-| autonomy_level | strategic | strategic | mixed | 33% |
-| ai_role | ai_enabler | ai_enabler | ai_enabler | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | moderate | moderate | moderate | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 2 | 2 | 2 | 100% | ✓ |
+| data_team_maturity | early | mid | mid | early | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | product | product | product | product | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | mixed | 33% | ✓ |
+| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✗
+> Quote: "Own data correctness and investigate quality anomalies."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly emphasizes data correctness, quality anomaly investigation, and review/quality gates with no velocity signals like 'fast-paced' or 'move quickly'.
+
+**Run 2:** `rigour` ✗
 > Quote: "Review AI-generated code on critical paths before production deployment"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize code review, quality gates, data correctness verification, and preventing bad outputs from reaching production—all rigour signals with no velocity language present.
+> Reasoning: Multiple governance and quality control signals (data correctness ownership, anomaly investigation, review processes, quality gates) without any velocity or speed emphasis.
 
-**Run 2:** `rigour`
-> Quote: "Own data correctness and investigate quality anomalies"
+**Run 3:** `rigour` ✗
+> Quote: "Review AI-generated code on critical paths before production deployment"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data correctness, quality investigation, and quality gates with no velocity language such as speed, iteration, or shipping pace.
+> Reasoning: Quality assurance, oversight, validation, and review processes dominate the responsibilities, with no speed or delivery velocity language present.
 
-**Run 3:** `rigour`
-> Quote: "Own data correctness and investigate quality anomalies"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly prioritizes data correctness, quality investigation, and code review processes, emphasizing rigour over delivery velocity.
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "building analytics infrastructure for a new mobile game"
+**Run 1:** `moderate` ✓
+> Quote: "Identify opportunities and risks in gameplay data."
 > Verified: ✓ found in JD
-> Reasoning: Gaming analytics affects business decisions but lacks explicit financial reporting, regulatory compliance, or audit language that would signal high risk.
+> Reasoning: Gaming analytics affects business decisions about product design without direct regulatory, financial reporting, or compliance consequences.
 
-**Run 2:** `moderate`
-> Quote: "Product Intelligence: Identify opportunities and risks in gameplay data"
+**Run 2:** `moderate` ✓
+> Quote: "analytics infrastructure for a new mobile game"
 > Verified: ✓ found in JD
-> Reasoning: Gaming analytics affects gameplay decisions and game design but lacks financial reporting, regulatory compliance, or audit language that would indicate high risk.
+> Reasoning: Gaming analytics affects business decisions and gameplay insights, but lacks financial reporting, compliance, or regulatory signals typical of high-risk domains.
 
-**Run 3:** `moderate`
-> Quote: "Identify opportunities and risks in gameplay data"
+**Run 3:** `moderate` ✓
+> Quote: "Identify opportunities and risks in gameplay data. Support product and design teams with actionable recommendations"
 > Verified: ✓ found in JD
-> Reasoning: This is business intelligence for product decisions in gaming, not financial reporting or compliance-driven analytics.
+> Reasoning: Gameplay analytics affect product decisions but carry no regulatory, financial reporting, or compliance consequences.
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `2`
+**Run 1:** `2` ✓
 > Quote: "product and design teams"
 > Verified: ✓ found in JD
-> Reasoning: Only two distinct named partner functions—product and design—are explicitly listed as collaboration partners in the responsibilities.
+> Reasoning: Product and design are the two explicitly named teams this role collaborates with.
 
-**Run 2:** `2`
+**Run 2:** `2` ✓
+> Quote: "Support product and design teams with actionable recommendations"
+> Verified: ✓ found in JD
+> Reasoning: Only Product and Design teams are explicitly named as collaboration partners.
+
+**Run 3:** `2` ✓
 > Quote: "product and design teams"
 > Verified: ✓ found in JD
-> Reasoning: Two explicitly named collaboration partners: Product and Design teams.
-
-**Run 3:** `2`
-> Quote: "product and design teams"
-> Verified: ✓ found in JD
-> Reasoning: Two distinct named teams are explicitly listed as collaborative partners: Product and Design.
+> Reasoning: Product and Design are explicitly named as distinct partner functions requiring collaboration.
 
 ### data_team_maturity
+**Manual:** `early`
 
-**Run 1:** `mid`
-> Quote: "Help establish organisational adoption patterns for AI-assisted engineering, including review processes and quality gates"
+**Run 1:** `mid` ✗
+> Quote: "Design end-to-end gameplay analytics architecture covering tracking, storage, processing, and reporting."
 > Verified: ✓ found in JD
-> Reasoning: The role combines building new domain-specific infrastructure with helping establish organizational adoption patterns, indicating a growing data function scaling practices beyond a single domain.
+> Reasoning: The role is designing new analytics infrastructure for a specific product, suggesting a team ramping up its data capabilities rather than building from complete zero or maintaining established scale.
 
-**Run 2:** `early`
-> Quote: "This position focuses on building analytics infrastructure for a new mobile game using AI-native workflows"
+**Run 2:** `mid` ✗
+> Quote: "Help establish organisational adoption patterns for AI-assisted engineering"
 > Verified: ✓ found in JD
-> Reasoning: The primary mission is building analytics infrastructure from scratch for a new game with no mention of existing systems to scale or improve.
+> Reasoning: The organization has existing structure (implied by 'organisational adoption') but is building new analytics infrastructure for a new game product, placing this at mid-stage maturity.
 
-**Run 3:** `mid`
-> Quote: "Design end-to-end gameplay analytics architecture covering tracking, storage, processing, and reporting"
+**Run 3:** `early` ✓
+> Quote: "building analytics infrastructure for a new mobile game using AI-native workflows"
 > Verified: ✓ found in JD
-> Reasoning: The role involves designing new analytics infrastructure for a new game initiative while the company establishes AI engineering patterns, indicating growth/scaling rather than greenfield or fully mature operations.
+> Reasoning: The language emphasizes building analytics infrastructure from scratch for a new game, with no mention of existing tools, established teams, or scaling.
 
-⚠ **LLM inconsistency**: runs gave ['mid', 'early', 'mid']
+⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
+
+⚠ **LLM inconsistency**: runs gave ['mid', 'mid', 'early']
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager`
-> Quote: "Build semantic layers translating raw data into validated concepts. Develop AI-driven reporting and insight workflows. Review AI-generated code on critical paths before production deployment."
+**Run 1:** `mixed` ✗
+> Quote: "Review AI-generated code on critical paths before production deployment; Help establish organisational adoption patterns for AI-assisted engineering, including review processes and quality gates."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical methodologies—semantic layers, agentic workflows, AI-generated code oversight—that reflect deep domain knowledge of how this particular role operates.
+> Reasoning: The JD combines specific technical practices (agentic workflows, critical paths, review processes) suggesting hiring manager input with generic responsibility phrasing that suggests recruiter involvement.
 
-**Run 2:** `mixed`
+**Run 2:** `hiring_manager` ✓
 > Quote: "Concrete experience structuring prompts, managing multi-agent workflows, and reviewing AI-generated outputs"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical requirements around AI and agentic workflows indicate hiring manager input, while much of the role description uses generic data analytics action verbs.
+> Reasoning: Responsibilities contain specific technical requirements and interview guidance that only come from someone who has worked with agentic systems in production.
 
-**Run 3:** `hiring_manager`
-> Quote: "Concrete experience structuring prompts, managing multi-agent workflows, and reviewing AI-generated outputs"
+**Run 3:** `hiring_manager` ✓
+> Quote: "Demonstrated expertise using LLMs and agentic workflows in production"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains highly specific technical context about agentic workflows, prompt engineering, and AI code review that reflects actual job duties, not generic boilerplate.
+> Reasoning: Specific technical requirements (LLMs, agentic workflows, prompt structuring, multi-agent workflow management, AI-generated code review) show expertise from someone who has built or managed these systems.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
+**Manual:** `product`
 
-**Run 1:** `internal_data`
-> Quote: "Help establish organisational adoption patterns for AI-assisted engineering, including review processes and quality gates"
+**Run 1:** `product` ✓
+> Quote: "Support product and design teams with actionable recommendations derived from complex datasets."
 > Verified: ✓ found in JD
-> Reasoning: The majority of responsibilities focus on building data infrastructure and establishing standards for the data organization itself rather than serving commercial, product, or finance stakeholders.
+> Reasoning: The role explicitly supports product and design teams as primary stakeholders, with responsibilities oriented around identifying gameplay opportunities and risks for their decisions.
 
-**Run 2:** `product`
+**Run 2:** `product` ✓
 > Quote: "Support product and design teams with actionable recommendations derived from complex datasets"
 > Verified: ✓ found in JD
-> Reasoning: The primary audience and impact is the product and design teams for gameplay intelligence and game design recommendations.
+> Reasoning: The primary audience for analytics intelligence is explicitly the product and design teams, not finance, commercial, or internal data consumers.
 
-**Run 3:** `product`
-> Quote: "Support product and design teams with actionable recommendations derived from complex datasets"
+**Run 3:** `product` ✓
+> Quote: "Product Intelligence: Identify opportunities and risks in gameplay data. Support product and design teams with actionable recommendations derived from complex datasets."
 > Verified: ✓ found in JD
-> Reasoning: The primary audience for the analytics work is explicitly the product and design teams, with a section titled 'Product Intelligence' focused on their decision support.
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'product', 'product']
+> Reasoning: Primary responsibilities focus explicitly on product intelligence and serving product/design teams, not commercial, finance, or internal data infrastructure.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
-> Quote: "Design end-to-end gameplay analytics architecture covering tracking, storage, processing, and reporting. Own data correctness"
+**Run 1:** `strategic` ✓
+> Quote: "Design end-to-end gameplay analytics architecture covering tracking, storage, processing, and reporting. Own data correctness and investigate quality anomalies."
 > Verified: ✓ found in JD
-> Reasoning: The role uses strong directional verbs (Design, Own) and is framed around setting architecture and data standards rather than executing pre-scoped work.
+> Reasoning: The role is expected to design architecture, own technical practices, and establish organizational adoption patterns—strategic verbs indicating direction-setting rather than execution against externally set priorities.
 
-**Run 2:** `strategic`
+**Run 2:** `strategic` ✓
 > Quote: "Design end-to-end gameplay analytics architecture covering tracking, storage, processing, and reporting"
 > Verified: ✓ found in JD
-> Reasoning: The role uses strategic verbs (design, own, build, develop, establish) that indicate the candidate defines direction and architecture.
+> Reasoning: The role is framed around designing and owning the analytics architecture and data quality standards, not executing direction set by others.
 
-**Run 3:** `mixed`
-> Quote: "Design end-to-end gameplay analytics architecture covering tracking, storage, processing, and reporting"
+**Run 3:** `mixed` ✗
+> Quote: "Independent initiative ownership"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of analytics architecture design and data standards with execution in service of product team priorities.
+> Reasoning: The role combines strategic design and ownership of analytics architecture and AI standards with execution in support of product teams, creating both directive and service responsibilities.
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `ai_enabler`
+**Run 1:** `ai_enabler` ✗
+> Quote: "Develop AI-driven reporting and insight workflows."
+> Verified: ✓ found in JD
+> Reasoning: The role expects the candidate to build systems and workflows that incorporate AI, manage AI-generated code, and develop AI-driven capabilities—requiring enablement of AI infrastructure, not just personal AI tool usage.
+
+**Run 2:** `ai_enabler` ✗
+> Quote: "Develop AI-driven reporting and insight workflows"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure and semantic layers for AI systems to consume and operate on, not just use AI tools for personal productivity.
+
+**Run 3:** `ai_enabler` ✗
 > Quote: "Build semantic layers translating raw data into validated concepts. Develop AI-driven reporting and insight workflows."
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure and semantic models that AI systems consume and operate on, not merely use AI tools for personal coding acceleration.
+> Reasoning: The candidate must build data infrastructure and semantic models that AI systems consume and operate on, not simply use AI as a personal coding tool.
 
-**Run 2:** `ai_enabler`
-> Quote: "Build semantic layers translating raw data into validated concepts. Develop AI-driven reporting and insight workflows."
-> Verified: ✓ found in JD
-> Reasoning: The candidate builds data infrastructure (semantic layers, AI-driven workflows) that AI systems consume, requiring expertise with LLMs and agentic workflows to understand what to build for.
-
-**Run 3:** `ai_enabler`
-> Quote: "Build AI-driven reporting and insight workflows"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The candidate is expected to build analytics infrastructure with embedded AI workflows and establish organizational adoption patterns for AI systems, not just use AI tools for personal productivity.
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✗
+> Quote: "Own data correctness and investigate quality anomalies; Help establish organisational adoption patterns for AI-assisted engineering, including review processes and quality gates."
+> Verified: ✓ found in JD
+> Reasoning: Data correctness, quality anomalies, and quality gates are framed as responsibilities the candidate owns and establishes, not as tools or practices to apply.
+
+**Run 2:** `responsibility` ✗
 > Quote: "Own data correctness and investigate quality anomalies"
 > Verified: ✓ found in JD
-> Reasoning: Data correctness and quality investigation are framed with the ownership verb 'own', indicating the candidate is accountable for defining and maintaining data quality practices.
+> Reasoning: Data quality is framed as an owned responsibility with active investigation, not listed as a tool requirement.
 
-**Run 2:** `responsibility`
+**Run 3:** `responsibility` ✗
 > Quote: "Own data correctness and investigate quality anomalies"
 > Verified: ✓ found in JD
-> Reasoning: Data correctness and quality are framed as responsibilities the candidate owns using the verb "own", indicating accountability for quality practices.
+> Reasoning: Data correctness is framed as an owned accountability with explicit responsibility for quality investigation, not merely as a tool listed in skills.
 
-**Run 3:** `responsibility`
-> Quote: "Own data correctness and investigate quality anomalies"
-> Verified: ✓ found in JD
-> Reasoning: Data quality and correctness are framed as candidate's owned responsibilities requiring investigation and oversight, not as tools deployed within a testing framework.
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
+> Quote: "Own data correctness and investigate quality anomalies; Review AI-generated code on critical paths before production deployment."
+> Verified: ✓ found in JD
+> Reasoning: Data correctness and operational reliability (critical path reviews) are concerns, but without the compliance or decision-maker trust framing that would indicate high loss aversion.
+
+**Run 2:** `moderate` ✗
 > Quote: "Review AI-generated code on critical paths before production deployment"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability—preventing bad code and data anomalies in production—but frames these as delivery stability concerns rather than compliance or stakeholder trust risks.
+> Reasoning: The JD emphasizes operational reliability and preventing technical failures (bad AI code, data errors), but lacks compliance or stakeholder trust language.
 
-**Run 2:** `moderate`
+**Run 3:** `moderate` ✗
 > Quote: "Review AI-generated code on critical paths before production deployment"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability and quality gates to prevent bad code in production, but lacks regulatory or compliance language that would indicate high loss aversion.
+> Reasoning: Emphasis on preventing operational failures and maintaining reliability through review and quality gates, but no regulatory, compliance, or stakeholder-trust language.
 
-**Run 3:** `moderate`
-> Quote: "Review AI-generated code on critical paths before production deployment"
-> Verified: ✓ found in JD
-> Reasoning: Operational reliability and preventing production failures are important (code review, quality gates), but the JD lacks regulatory, compliance, or stakeholder trust framing that would indicate high loss-aversion.
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
