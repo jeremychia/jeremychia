@@ -68,15 +68,15 @@ Classification is performed by `/classify-jd` skill (see `.claude/skills/classif
 
 ## Key findings (n=123 analytical corpus)
 
-| velocity_vs_rigour | All (n=131) | AE/BI (n=116) |
+| velocity_vs_rigour | Analytical (n=123) | AE/BI only (n=116) |
 |---|---|---|
-| rigour | 87% | 89% |
-| mixed | 12% | 11% |
+| rigour | 80% | 82% |
+| mixed | 20% | 18% |
 | velocity | 1% | 0% |
 
-Pure velocity is effectively absent from AE/BI roles. This is the central empirical finding: the governance discourse identified in dbt Labs' 2026 report is already present in European employer hiring language.
+Pure velocity is effectively absent from AE/BI roles. This is the central empirical finding — but see [`state_of_analytics_engineering/report.md`](state_of_analytics_engineering/report.md) §4.0 before citing it: a pre-specified test (rigour framing vs. `domain_risk` and `has_dbt`) found this pattern is statistically flat across risk level and tool adoption, which argues for reading it as an institutionalised norm rather than a response to variable organisational stakes.
 
-> **Note:** [`state_of_analytics_engineering/report.md`](state_of_analytics_engineering/report.md) currently cites n=93 and 84% rigour — it was written against an earlier snapshot and hasn't been re-run against the full 132-record corpus. Treat the numbers above as current; re-run the report's analysis before citing its specific percentages externally (e.g. conference submissions).
+> **Note:** `state_of_analytics_engineering/report.md` was fully rewritten in July 2026 against this 131-record corpus (123 analytical cohort), with two falsifiable predictions derived from management-fashion theory stated before the findings that test them (§4.0). Its evidence-verification statistics remain a mix of pre- and post-verifier-fix records (see report §9.1) — a caveat on the QA metadata only, not on the underlying classifications.
 
 ---
 
