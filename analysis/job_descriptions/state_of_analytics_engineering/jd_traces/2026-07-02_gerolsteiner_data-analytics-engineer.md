@@ -35,191 +35,207 @@ Contact: Ann-Kathrin Lux (ann-kathrin.lux@gerolsteiner.com)
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | recruiter | hiring_manager | 0% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | absent | absent | absent | 100% |
-| loss_aversion_framing | none | none | none | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
-> Quote: "developing and maintaining data models, queries, and views in SAP environments"
+**Run 1:** `rigour` ✗
+> Quote: "creating and optimizing reports, stories, and planning content"
 > Verified: ✓ found in JD
-> Reasoning: The manufacturing/SAP context and emphasis on maintaining existing systems signal operational rigor and quality focus, with no velocity language present.
+> Reasoning: The emphasis on 'optimizing' and 'maintaining' work products, combined with complete absence of velocity language, signals a focus on quality and precision rather than speed.
 
-**Run 2:** `rigour`
-> Quote: "developing and maintaining data models, queries, and views in SAP environments"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on maintaining and optimizing existing systems in established SAP environments suggests a quality and stability-oriented approach rather than speed-driven delivery.
-
-**Run 3:** `rigour`
-> Quote: "maintaining data models, queries, and views"
-> Verified: ✓ found in JD
-> Reasoning: Maintaining existing data infrastructure prioritizes correctness and reliability over speed.
-
-### domain_risk
-
-**Run 1:** `moderate`
-> Quote: "creating and optimizing reports, stories, and planning content within SAP Analytics Cloud"
-> Verified: ✓ found in JD
-> Reasoning: Business analytics and reporting support operational decisions without explicit financial reporting, regulatory compliance, or mission-critical responsibilities.
-
-**Run 2:** `moderate`
-> Quote: "creating and optimizing reports, stories, and planning content within SAP Analytics Cloud"
-> Verified: ✓ found in JD
-> Reasoning: The role focuses on operational reporting and analytics within a manufacturing company without explicit financial reporting, compliance, or regulatory framing, indicating moderate domain risk.
-
-**Run 3:** `moderate`
-> Quote: "processing IoT and market data, unifying SAP and non-SAP system data"
-> Verified: ✓ found in JD
-> Reasoning: Data errors affect operational and business decisions without explicit regulatory or financial reporting consequences.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "None"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD describes technical responsibilities involving systems and data but names no specific partner functions like Finance, Product, Marketing, or Engineering.
-
-**Run 2:** `0`
-> Quote: "No named teams identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD describes teamwork as a required competency but does not name any specific partner teams or functions to collaborate with.
-
-**Run 3:** `0`
-> Quote: "No named teams identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD describes individual technical responsibilities without naming specific partner teams or functions.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "advancing existing Business Warehouse implementations"
-> Verified: ✓ found in JD
-> Reasoning: Focus on advancing existing implementations with named tools (SAP BW, Databricks, Power BI) indicates an established data function scaling rather than building from scratch.
-
-**Run 2:** `mid`
-> Quote: "advancing existing Business Warehouse implementations"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on advancing existing infrastructure suggests a mid-stage data team with established systems that need evolution and expansion.
-
-**Run 3:** `mid`
-> Quote: "advancing existing Business Warehouse implementations"
-> Verified: ✓ found in JD
-> Reasoning: The team is extending established infrastructure rather than building it from scratch, indicating a growing but not yet mature data function.
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "expertise includes SAP Analytics covering modules like BW, BW/4HANA, SAC, or Datasphere"
-> Verified: ✓ found in JD
-> Reasoning: Specific SAP technical knowledge is evident, but lacks the detailed business context (scale, performance requirements, success metrics) a hiring manager would provide.
-
-**Run 2:** `recruiter`
-> Quote: "developing and maintaining data models, queries, and views in SAP environments"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use technical terminology but lack specific context about business problems, scale, or methodology, suggesting a recruiter wrote them.
-
-**Run 3:** `hiring_manager`
-> Quote: "integrate new data sources via Business Data Cloud and develop analytics solutions using Azure Databricks, including Power BI reports and dashboards"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities name specific tools (Business Data Cloud, Databricks, Power BI) with precise application context that indicates hands-on experience.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'hiring_manager']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "develop analytics solutions using Azure Databricks, including Power BI reports and dashboards"
-> Verified: ✓ found in JD
-> Reasoning: The role centers on building analytics infrastructure and reporting for organizational data consumers rather than serving commercial, product, or finance stakeholders.
-
-**Run 2:** `internal_data`
-> Quote: "developing analytics solutions using Azure Databricks, including Power BI reports and dashboards"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role emphasizes building analytical infrastructure and reporting solutions without specific commercial, product, or finance stakeholder framing.
-
-**Run 3:** `internal_data`
+**Run 2:** `rigour` ✗
 > Quote: "developing and maintaining data models, queries, and views"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is on building data infrastructure and ensuring data integration rather than serving commercial, product, or financial stakeholders directly.
+> Reasoning: Emphasis on maintenance and optimization signals focus on correctness and stability over delivery speed.
 
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "supporting AI-driven analytics expansion"
+**Run 3:** `rigour` ✗
+> Quote: "creating and optimizing reports, stories, and planning content within SAP Analytics Cloud"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'supporting' frames the role as executing on organizational direction rather than defining strategy or setting analytics priorities.
+> Reasoning: The focus on optimization within an established SAP/manufacturing environment implies quality and stability rather than delivery speed.
 
-**Run 2:** `execution`
-> Quote: "supporting AI-driven analytics expansion"
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
+
+### domain_risk
+**Manual:** `moderate`
+
+**Run 1:** `moderate` ✓
+> Quote: "processing IoT and market data, unifying SAP and non-SAP system data"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'supporting' clearly indicates execution of a direction set by others rather than strategic ownership.
+> Reasoning: This operational analytics work in manufacturing affects business decisions but lacks explicit financial reporting, compliance, or regulatory signals that would elevate it to high risk.
 
-**Run 3:** `execution`
-> Quote: "supporting AI-driven analytics expansion"
+**Run 2:** `moderate` ✓
+> Quote: "creating and optimizing reports, stories, and planning content within SAP Analytics Cloud"
 > Verified: ✓ found in JD
-> Reasoning: The role executes scoped work (developing, maintaining, integrating) rather than defining strategic direction.
+> Reasoning: BI and reporting work for a manufacturing company with no financial reporting, compliance, or regulatory language present.
 
-### ai_role
-
-**Run 1:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: References to AI/ML are vague ('familiarity with artificial intelligence and machine learning concepts', 'supporting AI-driven analytics expansion') without specifying whether the candidate should use AI coding tools or build AI data infrastructure.
-
-**Run 2:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While the JD mentions 'supporting AI-driven analytics expansion,' it provides no specific expectation for what AI skills the candidate must demonstrate or how they will engage with AI systems.
-
-**Run 3:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The required AI skill is vague ('familiarity'), with no mention of AI tool usage or building AI data infrastructure.
-
-### testing_framing
-
-**Run 1:** `absent`
+**Run 3:** `moderate` ✓
 > Quote: "developing and maintaining data models, queries, and views in SAP environments"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes technical delivery (developing, maintaining, optimizing, integrating) with no mention of data quality, testing practices, data contracts, or observability frameworks.
+> Reasoning: Manufacturing context with SAP implies operational importance but lacks explicit financial, regulatory, or compliance language that signals high risk.
 
-**Run 2:** `absent`
-> Quote: "No testing or data quality signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of testing, data quality frameworks, or observability practices.
+### collaboration_width
+**Manual:** `0`
 
-**Run 3:** `absent`
-> Quote: "No testing or data quality signal anywhere in the JD."
+**Run 1:** `0` ✓
+> Quote: "No named partner teams identified"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Testing, data quality, and observability are not mentioned in responsibilities or requirements.
+> Reasoning: The JD describes work without naming specific partner functions; 'supporting AI-driven analytics expansion' is generic language without identifying Finance, Product, Operations, or other discrete teams.
+
+**Run 2:** `0` ✓
+> Quote: "No named teams or functions referenced"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities describe specific tools and data work without naming any partner teams or functions the role collaborates with.
+
+**Run 3:** `0` ✓
+> Quote: "No named partner teams explicitly identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role description lists technical responsibilities without naming specific partner teams or functions to collaborate with.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "advancing existing Business Warehouse implementations"
+> Verified: ✓ found in JD
+> Reasoning: Existing SAP infrastructure with multiple named tools in active use signal an established data function being extended and improved, rather than built from zero or operating at enterprise-wide scale.
+
+**Run 2:** `mid` ✓
+> Quote: "advancing existing Business Warehouse implementations"
+> Verified: ✓ found in JD
+> Reasoning: Multiple named tools in responsibilities combined with framing of improving existing infrastructure indicate an established mid-stage data function.
+
+**Run 3:** `mid` ✓
+> Quote: "advancing existing Business Warehouse implementations"
+> Verified: ✓ found in JD
+> Reasoning: Named established tools (SAP BW, Databricks, Power BI) being expanded and advanced indicate a mid-stage data function with existing infrastructure.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "integrate new data sources via Business Data Cloud and develop analytics solutions using Azure Databricks, including Power BI reports and dashboards"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific SAP ecosystem terminology (Business Data Cloud, Databricks integration, BW/4HANA modules) with precise application context that only someone doing this work would articulate.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "develop analytics solutions using Azure Databricks, including Power BI reports and dashboards"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool combinations (Azure Databricks with Power BI) and precise technical context indicate detail from someone actively doing this work.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "creating and optimizing reports, stories, and planning content within SAP Analytics Cloud and advancing existing Business Warehouse implementations"
+> Verified: ✓ found in JD
+> Reasoning: Specific named tools with precise context (SAP Analytics Cloud stories/planning features, Business Warehouse modules, ABAP/Python requirements) show technical knowledge only a hiring manager would possess.
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "developing and maintaining data models, queries, and views... advancing existing Business Warehouse implementations... integrate new data sources"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The emphasis is on building and maintaining analytics infrastructure and data pipelines serving the data function itself, rather than commercial, product, or finance stakeholders.
+
+**Run 2:** `internal_data` ✓
+> Quote: "developing and maintaining data models, queries, and views in SAP environments"
+> Verified: ✓ found in JD
+> Reasoning: The focus is on data infrastructure and platform work (models, data integration, unification) serving the data function itself, not external commercial, product, or finance stakeholders.
+
+**Run 3:** `internal_data` ✓
+> Quote: "unifying SAP and non-SAP system data"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on data infrastructure, system integration, warehouse advancement, and data source consolidation indicates the role serves the data platform and its consumers rather than specific business functions.
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "supporting AI-driven analytics expansion"
+> Verified: ✓ found in JD
+> Reasoning: The verb 'supporting' indicates the role executes direction set elsewhere rather than defining strategy or owning the direction of initiatives.
+
+**Run 2:** `execution` ✓
+> Quote: "supporting AI-driven analytics expansion"
+> Verified: ✓ found in JD
+> Reasoning: All responsibilities use execution verbs (develop, maintain, integrate, create, advance) with no strategic framing of defining priorities, setting roadmaps, or owning direction.
+
+**Run 3:** `execution` ✓
+> Quote: "supporting AI-driven analytics expansion"
+> Verified: ✓ found in JD
+> Reasoning: The framing of "supporting" expansion and "advancing existing" systems rather than defining strategy indicates the role executes direction set by others.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "familiarity with artificial intelligence and machine learning concepts"
+> Verified: ✓ found in JD
+> Reasoning: 'Familiarity with concepts' is too vague to establish that the candidate must use AI tools for coding or build AI-ready data infrastructure.
+
+**Run 2:** `none` ✗
+> Quote: "familiarity with artificial intelligence and machine learning concepts"
+> Verified: ✓ found in JD
+> Reasoning: The vague mention of familiarity with concepts does not indicate expected use of AI coding tools, coding agents, or building AI-specific data infrastructure.
+
+**Run 3:** `none` ✗
+> Quote: "familiarity with artificial intelligence and machine learning concepts"
+> Verified: ✓ found in JD
+> Reasoning: The vague phrase "familiarity with concepts" lacks specific expectations for AI coding tools (ai_user) or building AI data infrastructure (ai_enabler).
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "data modeling, reporting structures"
+> Verified: ✓ found in JD
+> Reasoning: Requirements list these skills but no testing frameworks, data quality practices, or observability tools are mentioned anywhere in the JD.
+
+**Run 2:** `absent` ✗
+> Quote: "The engineer will integrate new data sources via Business Data Cloud and develop analytics solutions using Azure Databricks, including Power BI reports and dashboards."
+> Verified: ✓ found in JD
+> Reasoning: Data model and infrastructure work is described without any mention of testing frameworks, data quality practices, or observability standards in responsibilities or requirements.
+
+**Run 3:** `absent` ✗
+> Quote: "The role encompasses developing and maintaining data models, queries, and views in SAP environments"
+> Verified: ✓ found in JD
+> Reasoning: No mention of testing practices, data quality frameworks, data contracts, or quality assurance appears in the responsibilities or requirements.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role entirely in technical capability and delivery terms with no emphasis on compliance, reliability, operational risk management, or preventing adverse outcomes.
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in capability and delivery terms with no mention of compliance, regulatory exposure, audit, or preventing bad data outcomes.
 
-**Run 2:** `none`
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames responsibilities in terms of capability and delivery without emphasizing risk, compliance, reliability, or preventing bad outcomes.
+**Run 2:** `none` ✗
+> Quote: "The role encompasses developing and maintaining data models, queries, and views in SAP environments."
+> Verified: ✓ found in JD
+> Reasoning: The JD is entirely framed in capability and delivery terms with no language around risk, compliance, regulatory requirements, or data accuracy as a trust concern.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role in delivery and capability terms without emphasizing risk, reliability SLOs, or compliance concerns.
+> Verified: ✓ found in JD
+> Reasoning: The role is framed in technical capability and delivery terms without emphasizing risk prevention, reliability guarantees, compliance, or stakeholder trust.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

@@ -58,195 +58,211 @@ Job no. JOB-22E63
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 2 | 2 | 2 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | hiring_manager | 33% |
-| stakeholder_orientation | finance | internal_data | internal_data | 33% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | high | moderate | moderate | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 3 | 2 | 2 | 2 | 100% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | finance | 33% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | high | moderate | moderate | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Ensure data quality through testing, monitoring, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals (testing, data quality, documentation, code reviews, governance standards) with no velocity language present.
+> Reasoning: Multiple explicit signals emphasize testing, quality, governance, and reliability with no velocity language present.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Ensure data quality through testing, monitoring, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, testing, monitoring, governance standards, and code reviews with no velocity or shipping language, marking this as clearly rigour-oriented.
+> Reasoning: The responsibilities emphasize testing, monitoring, and governance standards as core expectations with no velocity signals present.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Ensure data quality through testing, monitoring, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, testing, monitoring, documentation, CI/CD, and governance as core expectations with no countervailing speed or delivery-focused signals.
+> Reasoning: The responsibilities emphasize testing, monitoring, governance standards, and reliable workflows as core expectations with no counterbalancing velocity signals.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
+**Run 1:** `high` ✓
 > Quote: "strategic fintech project based in Copenhagen. The role involves building and scaling critical data models that support decision-making across credit, payments, and fraud/AML domains"
 > Verified: ✓ found in JD
-> Reasoning: Explicit fintech sector and fraud/AML regulatory domain directly indicate financial and compliance risk.
+> Reasoning: Fintech sector combined with credit, payments, and regulatory fraud/AML domains represent direct financial and compliance risk.
 
-**Run 2:** `high`
-> Quote: "critical data models that support decision-making across credit, payments, and fraud/AML domains"
-> Verified: ✓ found in JD
-> Reasoning: The fintech sector combined with credit, payments, and fraud/AML domains—all regulated financial and compliance areas—creates high financial and regulatory risk from data errors.
-
-**Run 3:** `high`
-> Quote: "critical data models that support decision-making across credit, payments, and fraud/AML domains"
-> Verified: ✓ found in JD
-> Reasoning: Fintech with explicit regulatory domains (AML is regulated compliance, payments and credit are financial) means data errors directly expose the organization to regulatory and financial consequences.
-
-### collaboration_width
-
-**Run 1:** `2`
-> Quote: "Data Engineers, and Analysts"
-> Verified: ✓ found in JD
-> Reasoning: Two explicitly named partner functions (Data Engineers and Analysts) identified as collaboration partners.
-
-**Run 2:** `2`
-> Quote: "Data Engineers; Analysts"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two named partner teams are identified: Data Engineers and Analysts, both explicitly listed as collaboration partners in the responsibilities section.
-
-**Run 3:** `2`
-> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
-> Verified: ✓ found in JD
-> Reasoning: Two distinct named teams are explicitly identified as collaboration partners: Data Engineers and Analysts.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Uphold analytics engineering practices including code reviews"
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (dbt, LookML, Airflow) and established practices like code reviews indicate a functioning team with infrastructure, but no evidence of multiple specialized sub-teams.
-
-**Run 2:** `mid`
-> Quote: "Build and maintain core data models using dbt for critical reporting"
-> Verified: ✓ found in JD
-> Reasoning: Multiple named tools in responsibilities (dbt, LookML, Airflow) with specific application context indicate an established data function with infrastructure in place, not a greenfield build.
-
-**Run 3:** `mid`
-> Quote: "Build and maintain core data models using dbt for critical reporting"
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (dbt, LookML, Airflow) combined with multiple team mentions indicate an established function growing and scaling, not greenfield or highly mature.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Build and maintain core data models using dbt for critical reporting"
-> Verified: ✓ found in JD
-> Reasoning: Specific technical context (dbt models, LookML, credit/payments/fraud/AML domains, semantic layer, code reviews) demonstrates hands-on understanding of the actual work.
-
-**Run 2:** `mixed`
-> Quote: "Build and maintain core data models using dbt for critical reporting; Ensure data quality through testing, monitoring, and documentation"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains specific technical context (named tools with application domains: credit/payments/fraud-AML, data quality frameworks) alongside generic phrases like 'work collaboratively across technical and non-technical teams', indicating mixed hiring manager and recruiter input.
-
-**Run 3:** `hiring_manager`
-> Quote: "Contribute to the semantic layer (LookML) for consistent reporting; Support reliable data workflows using orchestration tools like Airflow"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The specific technical context (LookML semantic layer architecture, Airflow orchestration, layered model architecture, BigQuery) reflects hands-on knowledge that only comes from someone who has done this role.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
-
-### stakeholder_orientation
-
-**Run 1:** `finance`
-> Quote: "support decision-making across credit, payments, and fraud/AML domains"
-> Verified: ✓ found in JD
-> Reasoning: The domains served (credit, payments, fraud/AML) are all finance and risk functions, indicating the primary business audience is finance and risk decision-makers.
-
-**Run 2:** `internal_data`
-> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
-> Verified: ✓ found in JD
-> Reasoning: The immediate partners are Data Engineers and Analysts, and the core work is building and maintaining the modelling layer and semantic infrastructure, making the primary audience the data function itself.
-
-**Run 3:** `internal_data`
-> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
-> Verified: ✓ found in JD
-> Reasoning: The role primarily serves internal data consumers and the data platform itself—building models and infrastructure that downstream analytics teams use—not external business functions.
-
-⚠ **LLM inconsistency**: runs gave ['finance', 'internal_data', 'internal_data']
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
-> Verified: ✓ found in JD
-> Reasoning: The verbs 'contribute to' and 'support' indicate the role executes on systems and priorities defined by stakeholders rather than setting strategic direction.
-
-**Run 2:** `execution`
-> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
-> Verified: ✓ found in JD
-> Reasoning: The verbs are 'contribute', 'partner', 'support', and 'maintain'—all reactive/execution-oriented—with no strategic direction-setting or ownership framing, indicating the role executes against established priorities.
-
-**Run 3:** `execution`
-> Quote: "Support reliable data workflows using orchestration tools like Airflow"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities are dominated by execution verbs (partner, contribute, support, uphold) rather than strategic direction-setting verbs, indicating the role delivers within established practices and defined domains.
-
-### ai_role
-
-**Run 1:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI tools, skills, or capabilities expected of the candidate anywhere in the JD.
-
-**Run 2:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD does not mention AI coding tools, agentic workflows, or any expectation for AI-assisted work; the candidate is not expected to demonstrate AI skills.
-
-**Run 3:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI coding tools, GenAI, AI-assisted workflows, or AI data infrastructure anywhere in the JD.
-
-### testing_framing
-
-**Run 1:** `responsibility`
-> Quote: "Ensure data quality through testing, monitoring, and documentation"
-> Verified: ✓ found in JD
-> Reasoning: The action verb 'Ensure' indicates the candidate owns and is accountable for testing and data quality practices, not just using tools.
-
-**Run 2:** `responsibility`
-> Quote: "Ensure data quality through testing, monitoring, and documentation"
-> Verified: ✓ found in JD
-> Reasoning: The phrase uses the ownership verb 'Ensure' with data quality as the outcome, framing testing as the candidate's responsibility for maintaining quality, not just a tool in the tech stack.
-
-**Run 3:** `responsibility`
-> Quote: "Ensure data quality through testing, monitoring, and documentation"
-> Verified: ✓ found in JD
-> Reasoning: The ownership verb 'Ensure' combined with explicit testing and data quality practices makes this a responsibility the candidate owns, not a tool listed in requirements.
-
-### loss_aversion_framing
-
-**Run 1:** `high`
-> Quote: "Strong ownership mindset for business-critical data; Comfort in high engineering/governance standard environments"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Repeated emphasis on business-critical data, fraud/AML regulatory domain, and governance standards indicate the role is framed around preventing serious data errors and compliance failures.
-
-**Run 2:** `moderate`
-> Quote: "Strong ownership mindset for business-critical data; Comfort in high engineering/governance standard environments"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role emphasizes business-criticality and governance standards reflecting concern for reliability and engineering practices, but the primary framing remains delivery-oriented ('Build and maintain', 'Support') rather than compliance or regulatory-risk dominated.
-
-**Run 3:** `moderate`
+**Run 2:** `high` ✓
 > Quote: "credit, payments, and fraud/AML domains"
 > Verified: ✓ found in JD
-> Reasoning: While the fintech sector and explicit AML (regulated) domain imply high consequences for failure, the JD frames the role around engineering excellence and data quality standards rather than regulatory compliance or risk prevention.
+> Reasoning: Fintech with explicit focus on credit risk, payment systems, and AML compliance where data errors directly affect regulatory and financial outcomes.
+
+**Run 3:** `high` ✓
+> Quote: "critical data models that support decision-making across credit, payments, and fraud/AML domains"
+> Verified: ✓ found in JD
+> Reasoning: Credit decisions, payments processing, and fraud/AML are inherently high-risk financial and regulatory domains where data errors have direct compliance and financial consequences.
+
+### collaboration_width
+**Manual:** `3`
+
+**Run 1:** `2` ✗
+> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
+> Verified: ✓ found in JD
+> Reasoning: Two named distinct partner teams identified (Data Engineers and Analysts); generic stakeholder reference does not count.
+
+**Run 2:** `2` ✗
+> Quote: "Data Engineers; Analysts"
+> Verified: ✓ found in JD
+> Reasoning: Two explicitly named teams identified as collaboration partners: Data Engineers and Analysts.
+
+**Run 3:** `2` ✗
+> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
+> Verified: ✓ found in JD
+> Reasoning: Two explicitly named partner teams are identified: Data Engineers and Analysts.
+
+⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Support reliable data workflows using orchestration tools like Airflow"
+> Verified: ✓ found in JD
+> Reasoning: Named tools in responsibilities (dbt, LookML, Airflow) indicate existing infrastructure being maintained and scaled rather than built from zero.
+
+**Run 2:** `mid` ✓
+> Quote: "Build and maintain core data models using dbt for critical reporting"
+> Verified: ✓ found in JD
+> Reasoning: References existing named tools (dbt, LookML, Airflow) requiring maintenance and multiple data roles, indicating established function growing beyond early stage.
+
+**Run 3:** `mid` ✓
+> Quote: "Build and maintain core data models using dbt for critical reporting"
+> Verified: ✓ found in JD
+> Reasoning: Named tools and infrastructure already exist (dbt, Airflow, LookML, Looker) and the role maintains/scales them rather than building from scratch, indicating a developing data function.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities contain technical specificity (dbt, LookML, Airflow, specific domains) that indicates domain expertise from someone actively doing this work.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Build and maintain core data models using dbt for critical reporting"
+> Verified: ✓ found in JD
+> Reasoning: Names specific tools with precise context about domains and infrastructure, alongside domain knowledge of credit/payments/AML workflows, indicating technical author experience.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain technical specificity about tool usage in precise contexts (semantic layer for LookML, models with dbt for reporting, Airflow orchestration) that only comes from someone doing this work.
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
+> Verified: ✓ found in JD
+> Reasoning: Role primarily serves data platform consumers (other analysts and engineers) building and maintaining analytics infrastructure.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Contribute to the semantic layer (LookML) for consistent reporting"
+> Verified: ✓ found in JD
+> Reasoning: Role emphasizes building analytics infrastructure (semantic layer, analytics engineering practices) for internal data consumers rather than serving external business stakeholders.
+
+**Run 3:** `finance` ✗
+> Quote: "decision-making across credit, payments, and fraud/AML domains"
+> Verified: ✓ found in JD
+> Reasoning: The primary audience for the role's work is financial and compliance decision-makers, as credit, payments, and fraud/AML are inherently finance and risk domains.
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'finance']
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
+> Verified: ✓ found in JD
+> Reasoning: Role receives scoped requirements from stakeholders and executes delivery; no strategic verbs like define, establish, or lead appear.
+
+**Run 2:** `execution` ✓
+> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
+> Verified: ✓ found in JD
+> Reasoning: The role receives requirements from external parties and partners to deliver within established patterns, rather than setting strategy or defining priorities.
+
+**Run 3:** `execution` ✓
+> Quote: "Partner with stakeholders, Data Engineers, and Analysts on requirements"
+> Verified: ✓ found in JD
+> Reasoning: The role partners with stakeholders to understand requirements rather than defining strategic direction, and executes against scoped work set by business domains.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: JD lists specific technical stack (dbt, SQL, BigQuery, LookML) but contains no mention of AI tools, coding assistants, or AI-ready data infrastructure.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-enabled infrastructure, or candidate AI skill expectations anywhere in the JD.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI data infrastructure appears anywhere in the job description.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Ensure data quality through testing, monitoring, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as core responsibilities the candidate owns using the action verb Ensure.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Ensure data quality through testing, monitoring, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as core responsibilities the candidate owns through the action verb 'Ensure' rather than as a tool to use.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Ensure data quality through testing, monitoring, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: Data quality through testing is framed as a core responsibility owned by the candidate via the action verb 'ensure', not merely a tool they should know.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `high` ✗
+> Quote: "Comfort in high engineering/governance standard environments"
+> Verified: ✓ found in JD
+> Reasoning: Explicit governance and compliance emphasis combined with fintech context and repeated critical framing indicates high risk aversion to regulatory failure and bad data reaching stakeholders.
+
+**Run 2:** `moderate` ✗
+> Quote: "Comfort in high engineering/governance standard environments"
+> Verified: ✓ found in JD
+> Reasoning: Governance and data criticality are emphasized multiple times, but without explicit compliance or regulatory risk language; focus is operational reliability rather than preventing regulatory exposure.
+
+**Run 3:** `moderate` ✗
+> Quote: "Comfort in high engineering/governance standard environments"
+> Verified: ✓ found in JD
+> Reasoning: Governance and operational reliability are concerns (testing, monitoring, fraud/AML domains), but the primary framing is about building and scaling critical models rather than preventing regulatory failure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
 
 ⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

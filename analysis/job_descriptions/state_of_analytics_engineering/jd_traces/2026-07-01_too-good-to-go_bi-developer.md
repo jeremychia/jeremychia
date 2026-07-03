@@ -50,14 +50,14 @@ Flexible hybrid work, enhanced parental leave, health insurance, pension plans, 
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
-| collaboration_width | 1 | 1 | 4 | 4 | 33% | ✗ |
+| collaboration_width | 1 | 4 | 4 | 4 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | hiring_manager | mixed | mixed | 33% | ✗ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | commercial | 33% | ✓ |
-| autonomy_level | strategic | strategic | mixed | strategic | 33% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | mixed | 33% | ✓ |
+| stakeholder_orientation | internal_data | mixed | mixed | mixed | 100% | ✗ |
+| autonomy_level | strategic | mixed | strategic | execution | 0% | ✗ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
-| loss_aversion_framing |  | none | moderate | none | 33% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
@@ -69,75 +69,73 @@ Flexible hybrid work, enhanced parental leave, health insurance, pension plans, 
 **Run 1:** `rigour` ✓
 > Quote: "Improve data governance through clear definitions and reusable logic"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data governance, clear definitions, and reusable logic as core responsibilities with no velocity or speed signals present.
+> Reasoning: The responsibilities emphasize governance, performance optimization, and scalable solutions without any velocity language such as 'fast-paced' or 'move quickly'.
 
 **Run 2:** `rigour` ✓
 > Quote: "Improve data governance through clear definitions and reusable logic"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize governance, clear definitions, and reusable logic as core expectations with no velocity signals like 'fast-paced' or 'ship quickly'.
+> Reasoning: The responsibilities emphasize governance, clear definitions, and scalable solutions with no velocity signals present.
 
 **Run 3:** `rigour` ✓
 > Quote: "Improve data governance through clear definitions and reusable logic"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, clear definitions, reusable logic, and performant design with no velocity or iteration language present.
+> Reasoning: The responsibilities emphasize governance, data architecture, and quality (performant models, reusable logic) with no velocity signals.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Dashboard/reporting experience for commercial, finance, or logistics teams"
+> Quote: "dashboard/reporting experience for commercial, finance, or logistics teams"
 > Verified: ✓ found in JD
-> Reasoning: The role involves operational reporting and BI infrastructure for business teams without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The role supports business operations and decisions across multiple teams without explicit regulatory, compliance, or financial reporting language that would indicate high risk.
 
 **Run 2:** `moderate` ✓
 > Quote: "Dashboard/reporting experience for commercial, finance, or logistics teams"
 > Verified: ✓ found in JD
-> Reasoning: Finance is named as an audience but the JD frames this as reporting and dashboards without signals of financial reporting, regulatory compliance, or mission-critical impact.
+> Reasoning: Finance is mentioned as an audience, but the JD lacks regulatory, compliance, or P&L consequences that would indicate high financial risk.
 
 **Run 3:** `moderate` ✓
 > Quote: "Dashboard/reporting experience for commercial, finance, or logistics teams"
 > Verified: ✓ found in JD
-> Reasoning: The role serves finance and commercial teams but contains no regulatory, compliance, or financial reporting language typical of high-risk domains.
+> Reasoning: Errors would affect business operations and finance decisions but there is no mention of regulatory compliance, audit, or financial reporting as core requirements.
 
 ### collaboration_width
 **Manual:** `1`
 
-**Run 1:** `1` ✓
-> Quote: "Partner with Data Engineering teams on data optimisation"
+**Run 1:** `4` ✗
+> Quote: "Data Engineering teams; commercial, finance, or logistics teams"
 > Verified: ✓ found in JD
-> Reasoning: Only one named team (Data Engineering) is explicitly listed as a collaboration partner in the responsibilities.
+> Reasoning: Four distinct named functions are identified: Data Engineering, Commercial, Finance, and Logistics.
 
 **Run 2:** `4` ✗
-> Quote: "Partner with Data Engineering teams on data optimisation; commercial, finance, or logistics teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct functions explicitly named: Data Engineering (collaboration partner), Commercial, Finance, and Logistics (named audiences).
+> Quote: "Partner with Data Engineering teams on data optimisation; Dashboard/reporting experience for commercial, finance, or logistics teams"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions are explicitly mentioned: Data Engineering, Commercial, Finance, and Logistics.
 
 **Run 3:** `4` ✗
-> Quote: "Data Engineering teams; commercial, finance, or logistics teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names four distinct functions: Data Engineering, Commercial, Finance, and Logistics teams.
+> Quote: "Partner with Data Engineering teams on data optimisation; commercial, finance, or logistics teams"
+> Verified: ✓ found in JD
+> Reasoning: Data Engineering teams are explicitly named as partners; Commercial, Finance, and Logistics are explicitly named as distinct functions the role serves.
 
 ⚠ **Disagreement**: manual=`1` vs LLM majority=`4`
-
-⚠ **LLM inconsistency**: runs gave ['1', '4', '4']
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "designing the reporting architecture, semantic models and data foundations to enable business scaling over 18-24 months"
+> Quote: "Replace manual reporting and Google Sheets processes with scalable solutions"
 > Verified: ✓ found in JD
-> Reasoning: The JD indicates modernization of existing processes (Google Sheets replacement) and partnership with existing data engineering teams, suggesting a maturing function rather than greenfield startup.
+> Reasoning: The team has existing tools (Looker) and established processes but is scaling and modernizing them, consistent with mid-stage maturity.
 
 **Run 2:** `mid` ✓
 > Quote: "Replace manual reporting and Google Sheets processes with scalable solutions"
 > Verified: ✓ found in JD
-> Reasoning: Existing Data Engineering teams and manual reporting processes indicate an established function needing scaling and improvement, not a greenfield build.
+> Reasoning: The JD describes modernizing existing reporting processes rather than building a data function from zero, indicating an established team in growth phase.
 
 **Run 3:** `mid` ✓
 > Quote: "Replace manual reporting and Google Sheets processes with scalable solutions"
 > Verified: ✓ found in JD
-> Reasoning: The role addresses existing manual processes and partners with established Data Engineering teams, indicating a mid-stage function scaling beyond early setup.
+> Reasoning: The data function exists with produced outputs (manual reports) but is growing and being improved, indicating a mid-stage team rather than early or mature.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
@@ -145,79 +143,79 @@ Flexible hybrid work, enhanced parental leave, health insurance, pension plans, 
 **Run 1:** `hiring_manager` ✓
 > Quote: "Design performant LookML models, Explores and dashboards"
 > Verified: ✓ found in JD
-> Reasoning: Specific naming of Looker tools (LookML, Explores) and mention of replacing Google Sheets processes indicates someone with hands-on BI experience wrote this.
+> Reasoning: The responsibilities include tool-specific application (LookML, Explores, dimensional modeling) demonstrating technical depth from someone who understands this role.
 
-**Run 2:** `mixed` ✗
+**Run 2:** `hiring_manager` ✓
 > Quote: "Design performant LookML models, Explores and dashboards"
 > Verified: ✓ found in JD
-> Reasoning: Specific LookML and Looker tool knowledge (Explores is a Looker-specific feature) suggests hiring manager input, but generic collaboration phrases like 'Partner with Data Engineering teams' suggest recruiter involvement.
+> Reasoning: The specific mention of LookML, Explores, and performance optimization indicates the writer understands the actual technical work.
 
 **Run 3:** `mixed` ✗
 > Quote: "Design performant LookML models, Explores and dashboards"
 > Verified: ✓ found in JD
-> Reasoning: The JD includes specific BI tool knowledge (LookML, Explores) alongside generic verbs like 'Own technical design,' indicating both hiring-manager and recruiter contributions.
+> Reasoning: Specific tool terminology (LookML, Explores) indicates technical authorship, but generic partnership language elsewhere suggests recruiter input.
 
-⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✓
-> Quote: "designing the reporting architecture, semantic models and data foundations to enable business scaling over 18-24 months"
+**Run 1:** `mixed` ✗
+> Quote: "dashboard/reporting experience for commercial, finance, or logistics teams"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on building data infrastructure and semantic models as its primary mission, with commercial and finance teams as secondary consumers.
+> Reasoning: The role equally serves commercial operations, financial reporting, and logistics planning without a single dominant audience.
 
-**Run 2:** `internal_data` ✓
-> Quote: "Own technical design and development of BI products and semantic models"
-> Verified: ✓ found in JD
-> Reasoning: The primary framing is building data foundations and semantic models for platform consumers (commercial, finance, logistics teams) rather than serving product or commercial teams directly.
-
-**Run 3:** `commercial` ✗
+**Run 2:** `mixed` ✗
 > Quote: "Dashboard/reporting experience for commercial, finance, or logistics teams"
 > Verified: ✓ found in JD
-> Reasoning: The Parcels Planning team's focus on reporting architecture primarily enables commercial operations and GTM functions, with finance as secondary.
+> Reasoning: The JD lists three distinct stakeholder categories with equal weight and no clear primary audience.
 
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'commercial']
+**Run 3:** `mixed` ✗
+> Quote: "Dashboard/reporting experience for commercial, finance, or logistics teams"
+> Verified: ✓ found in JD
+> Reasoning: The role serves commercial, finance, and logistics stakeholders equally, spanning multiple distinct functions without emphasis on one.
+
+⚠ **Disagreement**: manual=`internal_data` vs LLM majority=`mixed`
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `strategic` ✓
+**Run 1:** `mixed` ✗
 > Quote: "Own technical design and development of BI products and semantic models"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around owning and designing the technical architecture for BI/reporting, not executing direction set by others.
+> Reasoning: The role combines strategic technical ownership of the BI function with execution-oriented collaboration (partnering with Data Engineering) within a scoped domain.
 
-**Run 2:** `mixed` ✗
+**Run 2:** `strategic` ✓
 > Quote: "Own technical design and development of BI products and semantic models"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of BI platform architecture design with execution responsibility for building dashboards and models in service of business teams.
+> Reasoning: The word 'own' combined with responsibility for design and defining semantic models indicates strategic direction-setting in the BI domain.
 
-**Run 3:** `strategic` ✓
+**Run 3:** `execution` ✗
 > Quote: "Own technical design and development of BI products and semantic models"
 > Verified: ✓ found in JD
-> Reasoning: The 'Own' verb for technical design and architecture indicates strategic responsibility for shaping the BI direction rather than executing existing plans.
+> Reasoning: While the role owns technical design, it executes within a scoped domain (Parcels Planning) in partnership with Data Engineering rather than setting strategy.
 
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'execution']
 
 ### ai_role
 **Manual:** ``
 
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no references to AI skills, coding tools, or AI-ready data infrastructure.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, GenAI, coding agents, or AI-enabled infrastructure that would indicate candidate AI competency expectations.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI coding tools, GenAI applications, or AI-related data infrastructure expectations.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectation of AI coding tool usage, AI infrastructure building, or AI-related candidate skills.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or AI infrastructure expectations for the candidate.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, coding assistants, or AI-related infrastructure in the JD.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -225,19 +223,19 @@ Flexible hybrid work, enhanced parental leave, health insurance, pension plans, 
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "Improve data governance through clear definitions and reusable logic"
-> Verified: ✓ found in JD
-> Reasoning: Data governance is mentioned but no testing frameworks, data quality ownership, or observability practices are described.
+> Quote: "No testing or observability framework mentioned."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD does not reference testing practices, data quality frameworks, data contracts, or observability mechanisms in responsibilities or requirements.
 
 **Run 2:** `absent` ✗
-> Quote: "No testing or data quality signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While data governance is mentioned as an area to improve, no testing practices, data quality frameworks, observability, or data contracts are explicitly named.
+> Quote: "Improve data governance through clear definitions and reusable logic"
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions data governance through structure and definitions but contains no explicit reference to testing frameworks, data contracts, or observability practices.
 
 **Run 3:** `absent` ✗
-> Quote: "No testing signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While data governance is mentioned, there is no explicit reference to testing frameworks, data contracts, observability, or quality assurance practices.
+> Quote: "Improve data governance through clear definitions and reusable logic"
+> Verified: ✓ found in JD
+> Reasoning: Governance is mentioned but no explicit testing, data contracts, or data quality frameworks are named as responsibilities or tools.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
@@ -246,19 +244,17 @@ Flexible hybrid work, enhanced parental leave, health insurance, pension plans, 
 
 **Run 1:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD is framed around building better reporting infrastructure and scaling capabilities with no emphasis on risk, compliance, or preventing bad outcomes.
-
-**Run 2:** `moderate` ✗
-> Quote: "Improve data governance through clear definitions and reusable logic"
 > Verified: ✓ found in JD
-> Reasoning: Governance suggests concern for operational reliability and data trust, but this is secondary to the primary framing of enabling business scaling rather than preventing compliance failures.
+> Reasoning: The role is framed in capability and delivery terms (scaling, automation, governance improvement) without risk register language around compliance, trust, or preventing bad outcomes.
+
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around enabling business scaling and technical improvement, with no emphasis on preventing bad outcomes, compliance, or risk mitigation.
 
 **Run 3:** `none` ✗
-> Quote: "Role focuses on designing the reporting architecture, semantic models and data foundations to enable business scaling over 18-24 months"
+> Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: The primary framing emphasizes delivery and scaling capabilities rather than risk prevention, compliance, or operational reliability concerns.
+> Reasoning: The JD is framed around design and capability building rather than preventing bad outcomes or managing risk.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
-
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']

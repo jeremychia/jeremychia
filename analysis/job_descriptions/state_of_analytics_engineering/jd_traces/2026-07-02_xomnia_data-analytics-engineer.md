@@ -40,189 +40,213 @@ Contact: ezra.lammers@xomnia.com
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | recruiter | recruiter | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | absent | absent | absent | 100% |
-| loss_aversion_framing | none | none | none | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | recruiter | recruiter | mixed | 33% | ✗ |
+| stakeholder_orientation | commercial | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
-> Quote: "optimize data workflows for performance, usability, and cost efficiency"
-> Verified: ✓ found in JD
-> Reasoning: Optimization, scalability, and cost efficiency signals outnumber velocity signals (zero fast-paced or shipping language), indicating rigour emphasis.
-
-**Run 2:** `rigour`
-> Quote: "optimize data workflows for performance, usability, and cost efficiency"
-> Verified: ✓ found in JD
-> Reasoning: Emphasis on optimization and scalability signals quality and durability concerns typical of rigour framing, with no velocity language (fast-paced, ship quickly, MVP) present.
-
-**Run 3:** `rigour`
-> Quote: "optimize data workflows for performance, usability, and cost efficiency"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on optimizing for performance and building scalable solutions prioritizes correctness and reliability over delivery speed.
-
-### domain_risk
-
-**Run 1:** `moderate`
-> Quote: "work with business stakeholders to understand analytics needs"
-> Verified: ✓ found in JD
-> Reasoning: Standard business analytics scope with no financial reporting, regulatory, or compliance language indicates moderate risk domain.
-
-**Run 2:** `moderate`
-> Quote: "work with business stakeholders to understand analytics needs"
-> Verified: ✓ found in JD
-> Reasoning: Business intelligence context without regulatory, compliance, financial reporting, or mission-critical signals indicates moderate risk.
-
-**Run 3:** `moderate`
-> Quote: "work with business stakeholders to understand analytics needs"
-> Verified: ✓ found in JD
-> Reasoning: This is standard business intelligence work supporting operational decisions without explicit financial reporting or compliance signals.
-
-### collaboration_width
-
-**Run 1:** `1`
-> Quote: "collaborating with data engineers"
-> Verified: ✓ found in JD
-> Reasoning: Only data engineers is explicitly named as a distinct partner team; business stakeholders is too generic to count.
-
-**Run 2:** `1`
-> Quote: "data engineers"
-> Verified: ✓ found in JD
-> Reasoning: Only data engineers explicitly named as a partner function; business stakeholders is a generic term that does not count.
-
-**Run 3:** `1`
-> Quote: "collaborating with data engineers"
-> Verified: ✓ found in JD
-> Reasoning: Only data engineers are named as an explicit partner team; business stakeholders is generic phrasing.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "collaborating with data engineers"
-> Verified: ✓ found in JD
-> Reasoning: Established data team exists with self-serve platform development underway, indicating a growing but not yet mature or early-stage function.
-
-**Run 2:** `mid`
-> Quote: "developing self-service platforms, collaborating with data engineers"
-> Verified: ✓ found in JD
-> Reasoning: Existence of data engineers as a distinct collaborating role and focus on building self-serve platforms suggests an established data function growing and scaling beyond initial setup.
-
-**Run 3:** `mid`
-> Quote: "collaborating with data engineers"
-> Verified: ✓ found in JD
-> Reasoning: The existence of multiple specialized roles and active development of platforms indicates a team with infrastructure and growth.
-
-### jd_authorship
-
-**Run 1:** `recruiter`
-> Quote: "translating insights into dashboards, and contributing to internal knowledge sharing"
-> Verified: ✓ found in JD
-> Reasoning: Generic action verbs and boilerplate phrasing without technical specificity or context indicate recruiter authorship.
-
-**Run 2:** `recruiter`
-> Quote: "work with business stakeholders to understand analytics needs"
-> Verified: ✓ found in JD
-> Reasoning: Boilerplate collaboration and delivery verbs with no technical specificity about problems, scale, methodology, or named tools in context.
-
-**Run 3:** `recruiter`
-> Quote: "work with business stakeholders to understand analytics needs"
-> Verified: ✓ found in JD
-> Reasoning: Generic action verbs and boilerplate responsibilities lack technical specificity; tools are listed separately without application context.
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "developing self-service platforms"
-> Verified: ✓ found in JD
-> Reasoning: Self-serve platform development positions the role as building analytics infrastructure for internal data consumers.
-
-**Run 2:** `internal_data`
-> Quote: "developing self-service platforms"
-> Verified: ✓ found in JD
-> Reasoning: Emphasis on building platforms for data consumers and collaborating with data engineers prioritizes serving the analytics function and data team over external commercial or product audiences.
-
-**Run 3:** `internal_data`
-> Quote: "developing self-service platforms"
-> Verified: ✓ found in JD
-> Reasoning: Emphasis on self-serve platforms and collaboration with data engineers indicates the role enables data consumers and the data function itself.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "collaborating with data engineers, translating insights into dashboards"
-> Verified: ✓ found in JD
-> Reasoning: Collaborative execution verbs without strategic framing (no define, own, shape, or lead language) indicate the role executes within set parameters.
-
-**Run 2:** `execution`
+**Run 1:** `rigour` ✗
 > Quote: "building scalable data models and pipelines"
 > Verified: ✓ found in JD
-> Reasoning: All responsibilities use execution verbs (building, optimizing, developing, collaborating, translating, contributing) with no strategic ownership or direction-setting language.
+> Reasoning: The responsibilities emphasize architectural quality, scalability, and optimization over speed or iteration, with no velocity language present.
 
-**Run 3:** `execution`
-> Quote: "work with business stakeholders to understand analytics needs"
-> Verified: ✓ found in JD
-> Reasoning: The role receives direction from stakeholders and executes on understood needs without strategic ownership or priority-setting authority.
-
-### ai_role
-
-**Run 1:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI coding tools, agentic workflows, AI-ready infrastructure, or ML pipeline support expected of the candidate.
-
-**Run 2:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI tools, AI-assisted coding, AI-ready infrastructure, or agentic workflows anywhere in the JD.
-
-**Run 3:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI skills, coding tools, AI/ML infrastructure, or AI-related data work in the JD.
-
-### testing_framing
-
-**Run 1:** `absent`
+**Run 2:** `rigour` ✗
 > Quote: "optimize data workflows for performance, usability, and cost efficiency"
 > Verified: ✓ found in JD
-> Reasoning: JD emphasizes performance and usability but contains no testing, data quality, data contracts, or observability signals.
+> Reasoning: The JD emphasizes optimization for performance and cost efficiency, signaling operational excellence and quality rather than velocity.
 
-**Run 2:** `absent`
+**Run 3:** `rigour` ✗
+> Quote: "building scalable data models and pipelines"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize scalability and optimization for performance and cost efficiency, with no velocity-oriented language like 'fast-paced' or 'ship quickly'.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
+
+### domain_risk
+**Manual:** `moderate`
+
+**Run 1:** `moderate` ✓
+> Quote: "work with business stakeholders to understand analytics needs"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business decision-making without explicit financial reporting, compliance, or regulatory language that would signal high risk.
+
+**Run 2:** `moderate` ✓
+> Quote: "work with business stakeholders to understand analytics needs"
+> Verified: ✓ found in JD
+> Reasoning: The JD describes generic analytics and data modeling work for business stakeholders without financial reporting, regulatory, or compliance language, indicating moderate domain risk.
+
+**Run 3:** `moderate` ✓
+> Quote: "translating insights into dashboards"
+> Verified: ✓ found in JD
+> Reasoning: The focus on operational dashboards and business analytics indicates standard business intelligence work where errors affect decisions but not financial reporting or compliance.
+
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `1` ✓
+> Quote: "collaborating with data engineers"
+> Verified: ✓ found in JD
+> Reasoning: Only one named partner team (data engineers) is explicitly identified; business stakeholders is generic and does not count.
+
+**Run 2:** `1` ✓
+> Quote: "collaborating with data engineers"
+> Verified: ✓ found in JD
+> Reasoning: Only one distinct named partner team (data engineers) is explicitly identified in the responsibilities section.
+
+**Run 3:** `1` ✓
+> Quote: "collaborating with data engineers"
+> Verified: ✓ found in JD
+> Reasoning: Only 'data engineers' is an explicitly named partner team; 'business stakeholders' is too generic per the classification rules.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "developing self-service platforms"
+> Verified: ✓ found in JD
+> Reasoning: The role builds on existing data infrastructure with enhancement work (self-serve platforms) rather than establishing foundational infrastructure from zero.
+
+**Run 2:** `mid` ✓
+> Quote: "collaborating with data engineers"
+> Verified: ✓ found in JD
+> Reasoning: The JD references existing data engineers and implies a data function building self-serve infrastructure, suggesting a team at growth/mid stage rather than early-stage greenfield.
+
+**Run 3:** `mid` ✓
+> Quote: "developing self-service platforms"
+> Verified: ✓ found in JD
+> Reasoning: The presence of established tools (DBT, Snowflake, Databricks) and platform-building work suggests a team beyond early stage but not yet large-scale maturity.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `recruiter` ✗
+> Quote: "translating insights into dashboards"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use generic action verbs and boilerplate phrasing without specific technical context, scale, or methodological depth that would indicate hiring manager authorship.
+
+**Run 2:** `recruiter` ✗
+> Quote: "work with business stakeholders to understand analytics needs"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities section consists entirely of generic, boilerplate action verbs without technical specificity, scale context, or methodology that would indicate a hiring manager's input.
+
+**Run 3:** `mixed` ✓
+> Quote: "hands-on experience with DBT and cloud data warehouses (e.g. Snowflake, BigQuery, Databricks)"
+> Verified: ✓ found in JD
+> Reasoning: Some technical specificity about tools appears in requirements, but responsibilities rely heavily on generic boilerplate like 'work with business stakeholders' and 'collaborating with data engineers'.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
+
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'recruiter', 'mixed']
+
+### stakeholder_orientation
+**Manual:** `commercial`
+
+**Run 1:** `internal_data` ✗
+> Quote: "developing self-service platforms"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily builds internal analytics infrastructure and platforms for data consumers, with business stakeholder interaction as a supportive mechanism rather than primary audience.
+
+**Run 2:** `internal_data` ✗
+> Quote: "developing self-service platforms"
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is building data infrastructure and self-serve analytics platforms for analytics consumers, while business stakeholder engagement is instrumental to that mission.
+
+**Run 3:** `internal_data` ✗
+> Quote: "developing self-service platforms"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on building analytics infrastructure and platforms indicates the role serves data consumers and the analytics function, not commercial or financial stakeholders.
+
+⚠ **Disagreement**: manual=`commercial` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "work with business stakeholders to understand analytics needs"
+> Verified: ✓ found in JD
+> Reasoning: The role receives direction from business stakeholders' needs rather than setting strategic direction independently.
+
+**Run 2:** `execution` ✓
+> Quote: "collaborating with data engineers"
+> Verified: ✓ found in JD
+> Reasoning: Verbs like 'work with' and 'collaborating' indicate support and execution orientation rather than strategic direction-setting.
+
+**Run 3:** `execution` ✓
+> Quote: "work with business stakeholders to understand analytics needs"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities frame this as supporting stakeholders' existing needs rather than defining analytics strategy, direction, or priorities.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no explicit AI skill expectations for the candidate, whether as a personal productivity tool or infrastructure builder.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted development, or AI data infrastructure that would require candidate AI skills.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI infrastructure building, or any AI-related capabilities expected of the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "optimize data workflows for performance, usability, and cost efficiency"
+> Verified: ✓ found in JD
+> Reasoning: While usability is mentioned as an optimization goal, there is no explicit reference to testing frameworks, data quality practices, observability, or data contracts.
+
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality framework mentioned in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD contains no mention of testing, data quality frameworks, data contracts, or observability practices.
+
+**Run 3:** `absent` ✗
 > Quote: "No testing or data quality signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of testing, data quality frameworks, data contracts, observability, or quality ownership anywhere in the responsibilities.
+> Verified: ✓ found in JD
+> Reasoning: The JD makes no mention of testing, data quality, observability, or data reliability practices.
 
-**Run 3:** `absent`
-> Quote: "No testing practice signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of testing, data quality frameworks, data contracts, observability, or reliability practices.
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: JD frames the role in positive capability terms (building, optimizing, developing) with no risk, compliance, reliability, or prevention of bad outcomes language.
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role entirely around capability delivery and optimization without risk, compliance, reliability, or stakeholder trust language.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: JD is framed in delivery and capability terms (building, optimizing, developing) with no risk register, compliance concerns, or emphasis on trustworthiness.
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in delivery and capability terms without mention of regulatory risk, reliability concerns, or preventing bad outcomes.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD frames the role in building and delivering capabilities without explicit risk, compliance, or reliability concerns.
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role around building and optimizing platforms with no mention of risk, compliance, reliability, or preventing negative outcomes.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

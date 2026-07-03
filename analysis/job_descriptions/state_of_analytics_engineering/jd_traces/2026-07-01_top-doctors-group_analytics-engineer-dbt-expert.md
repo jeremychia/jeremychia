@@ -65,10 +65,10 @@ Benefits
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
 | jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | mixed | execution | execution | mixed | 33% | ✗ |
+| autonomy_level | mixed | execution | mixed | execution | 33% | ✗ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | none | moderate | none | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -78,37 +78,37 @@ Benefits
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Design and maintain analytical data models in dbt with focus on traceability and quality"
+> Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes quality, traceability, standardization, testing, and validation throughout with no velocity-related language.
+> Reasoning: The responsibilities emphasize testing, data validation, quality, traceability, and reliable metrics—core rigour signals—with no velocity-oriented language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize quality, testing, data validation, traceability, and standardization with no velocity signals present.
+> Reasoning: Testing and data validation are explicit core responsibilities, indicating quality and reliability as primary values over shipping speed.
 
 **Run 3:** `rigour` ✓
 > Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality, traceability, testing, and validation with no velocity signals, establishing a rigour-focused orientation.
+> Reasoning: The responsibilities emphasize quality, testing, and standardization with no velocity language; testing and data validation appear prominently as core expectations.
 
 ### domain_risk
 **Manual:** `high`
 
 **Run 1:** `moderate` ✗
-> Quote: "define reliable metrics, and ensure consistent, actionable information organisation-wide"
+> Quote: "Design and maintain analytical data models in dbt with focus on traceability and quality"
 > Verified: ✓ found in JD
-> Reasoning: Although the company operates in regulated healthcare, the JD describes standard analytics work without explicit regulatory, compliance, or financial reporting language.
+> Reasoning: Healthcare sector implies inherent risk, but the JD uses generic BI/analytics language without explicit regulatory, compliance, or financial-reporting framers.
 
 **Run 2:** `moderate` ✗
-> Quote: "define reliable metrics, and ensure consistent, actionable information organisation-wide"
+> Quote: "ensure consistent, actionable information organisation-wide"
 > Verified: ✓ found in JD
-> Reasoning: Healthcare sector implies some risk, but JD language focuses on analytical reliability and metrics rather than explicit regulatory, compliance, or financial reporting concerns.
+> Reasoning: The role emphasizes analytical reliability and business decision-support, which carries moderate risk without explicit financial reporting or regulatory compliance framing typical of high-risk domains.
 
 **Run 3:** `moderate` ✗
-> Quote: "Develop dashboards in Metabase and Tableau"
+> Quote: "serves over 1 million monthly platform users and has earned the trust of more than 10 million patients across Europe, LATAM, the United States, and the Middle East"
 > Verified: ✓ found in JD
-> Reasoning: Although in healthcare, the JD focuses on analytical models and dashboards rather than regulatory compliance or financial reporting, making this moderate-risk business intelligence work despite the sector.
+> Reasoning: While healthcare sector and patient scale imply inherent risk, the JD language is generic about analytics without explicit regulatory, compliance, or financial reporting framing.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
@@ -116,19 +116,19 @@ Benefits
 **Manual:** `2`
 
 **Run 1:** `0` ✗
-> Quote: "business teams; non-technical teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No named partner functions (Finance, Product, Marketing, etc.) are explicitly identified; only generic references to vague team groupings appear.
-
-**Run 2:** `0` ✗
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: Data Team Lead and Senior Data Engineer are colleagues within the role holder's own team (excluded per rules); 'business teams' and 'non-technical teams' are too generic to count as distinctly named functional partners.
-
-**Run 3:** `0` ✗
 > Quote: "work closely with the Data Team Lead, Senior Data Engineer, and business teams"
 > Verified: ✓ found in JD
-> Reasoning: No explicitly named cross-functional teams are listed; Data Team Lead and Senior Data Engineer are roles within the data function itself, and 'business teams' is too generic to count.
+> Reasoning: No distinct external named partner functions are explicitly identified; data team members are internal collaborators and business teams is generic.
+
+**Run 2:** `0` ✗
+> Quote: "work closely with the Data Team Lead, Senior Data Engineer, and business teams"
+> Verified: ✓ found in JD
+> Reasoning: Mentioned collaborators are members of the data team itself (which does not count per rules) and 'business teams' is too generic; no named distinct functions are identified.
+
+**Run 3:** `0` ✗
+> Quote: "No explicitly named partner functions identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: References to 'business teams' and 'non-technical teams' are too vague; no named functions like Finance, Product, or Engineering appear in the JD.
 
 ⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
@@ -136,37 +136,37 @@ Benefits
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "The Analytics Engineer will work closely with the Data Team Lead, Senior Data Engineer"
+> Quote: "work closely with the Data Team Lead, Senior Data Engineer"
 > Verified: ✓ found in JD
-> Reasoning: Multiple named data roles and specific named tools in responsibilities with clear application context (dbt for modelling, BigQuery for queries) indicate an established, functioning data team in growth phase.
+> Reasoning: Multiple named data roles and established tools (dbt, BigQuery, Metabase, Tableau) used in responsibilities indicate an existing data function being scaled/improved rather than built from zero.
 
 **Run 2:** `mid` ✓
-> Quote: "work closely with the Data Team Lead, Senior Data Engineer, and business teams to build scalable data models, define reliable metrics"
+> Quote: "work closely with the Data Team Lead, Senior Data Engineer, and business teams to build scalable data models"
 > Verified: ✓ found in JD
-> Reasoning: Multiple data roles already present (Team Lead, Senior Engineer) and existing named tools in responsibilities (dbt, BigQuery, Metabase, Tableau) indicate an established, growing data function rather than early-stage or mature scale.
+> Reasoning: Multiple named data roles and existing named tools (dbt, BigQuery, Metabase) deployed in production indicate an established data function that is scaling and evolving.
 
 **Run 3:** `mid` ✓
 > Quote: "Design and maintain analytical data models in dbt with focus on traceability and quality"
 > Verified: ✓ found in JD
-> Reasoning: Named tools and infrastructure (dbt, BigQuery) being maintained and optimized, plus multiple distinct data roles, signals a mid-stage team with established technical foundations.
+> Reasoning: Named tools deployed in responsibilities and multiple data roles (Team Lead, Senior Data Engineer) imply an established team, but no signals of enterprise-scale maturity like multiple specialized sub-teams or large team size.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
 > Quote: "Design and maintain analytical data models in dbt with focus on traceability and quality; Build and optimise complex SQL queries in BigQuery; Implement testing and data validation processes within dbt"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities contain precise technical terminology, named tools with specific application context, and clear technical practices indicating authorship by someone with direct hands-on analytics engineering experience.
+> Verified: ✓ found in JD
+> Reasoning: Specific technical responsibilities with named tools and methodologies (dbt modelling, BigQuery optimization, testing frameworks) enable understanding of actual Tuesday work; generic collaboration statement is minor.
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Design and maintain analytical data models in dbt with focus on traceability and quality; Build and optimise complex SQL queries in BigQuery; Implement testing and data validation processes within dbt"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical tools (dbt, BigQuery, Metabase, Tableau) with clear methodological context (model design, SQL optimization, testing implementation) demonstrates hiring manager technical depth; only one generic collaboration line.
-
-**Run 3:** `hiring_manager` ✓
 > Quote: "Manage table creation, views, routines, and scheduled queries"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about database objects (views, routines, scheduled queries) reflects hands-on experience from someone who performs this work.
+> Reasoning: The specificity of technical tasks (views, routines, scheduled queries) and precise tool application contexts (dbt testing, BigQuery optimization) demonstrates hands-on domain expertise.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Implement testing and data validation processes within dbt"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool names with precise methodology context throughout responsibilities (dbt models, BigQuery queries, Metabase dashboards) indicate hands-on domain knowledge in the author.
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
@@ -174,57 +174,57 @@ Benefits
 **Run 1:** `internal_data` ✓
 > Quote: "designing and evolving the analytical layer used across the organisation"
 > Verified: ✓ found in JD
-> Reasoning: The role centers on building data models, defining metrics, and creating dashboards as shared infrastructure for organizational data consumers, not serving a specific commercial, product, or finance function.
+> Reasoning: The role is framed around building/maintaining analytics infrastructure and defining standards for data consumers, not serving commercial, product, or finance functions directly.
 
 **Run 2:** `internal_data` ✓
-> Quote: "design reliable metrics, and ensure consistent, actionable information organisation-wide"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Focus on building analytical data models, defining metrics, and creating the analytics infrastructure layer signals the primary audience is analytics platform consumers, not a specific business stakeholder group.
-
-**Run 3:** `internal_data` ✓
 > Quote: "ensure consistent, actionable information organisation-wide"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily builds data infrastructure and models serving the organization's analytical needs rather than commercial, product, finance, or specific business teams.
+> Reasoning: The role's primary focus is building reliable analytical infrastructure (models, metrics, dashboards) that serves the entire organization's data needs, not a specific business function.
+
+**Run 3:** `internal_data` ✓
+> Quote: "designing and evolving the analytical layer used across the organisation"
+> Verified: ✓ found in JD
+> Reasoning: The role is focused on building and maintaining the shared analytical infrastructure that enables internal analytics consumers, not serving a specific business function.
 
 ### autonomy_level
 **Manual:** `mixed`
 
 **Run 1:** `execution` ✗
-> Quote: "Build and optimise complex SQL queries in BigQuery; Manage table creation, views, routines, and scheduled queries; Develop dashboards in Metabase and Tableau"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The dominant responsibilities use delivery-focused action verbs (build, manage, develop) indicating execution of scoped work rather than direction-setting or strategic ownership.
-
-**Run 2:** `execution` ✗
-> Quote: "work closely with the Data Team Lead, Senior Data Engineer, and business teams to build scalable data models"
+> Quote: "work closely with the Data Team Lead, Senior Data Engineer, and business teams"
 > Verified: ✓ found in JD
-> Reasoning: Collaborative framing with senior-titled team members (Team Lead, Senior Engineer) indicates execution within guided direction rather than autonomous strategic ownership.
+> Reasoning: The role is scoped to build and maintain the analytical layer through collaboration with leadership rather than setting strategic direction independently.
 
-**Run 3:** `mixed` ✓
-> Quote: "Design and maintain analytical data models in dbt; Define, standardise, and document metrics and KPIs"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic elements (design the analytical layer, define metrics) with execution elements (maintain models, develop dashboards).
+**Run 2:** `mixed` ✓
+> Quote: "focuses on designing and evolving the analytical layer"
+> Verified: ✓ found in JD
+> Reasoning: The role balances strategic ownership (designing models, defining metrics standards) with execution of specific projects (building dashboards, implementing testing frameworks).
+
+**Run 3:** `execution` ✗
+> Quote: "Collaborate with non-technical teams to translate business needs into scalable solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role is positioned as executing technical solutions within an established team structure with leadership already in place, not strategically driving analytics direction.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
-⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
 
 ### ai_role
 **Manual:** ``
 
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI coding tools, AI-assisted development, or AI/ML data infrastructure expectations for the candidate.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-enabler data infrastructure, or AI/ML pipelines anywhere in the JD.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI tools, capabilities, or AI-related work appears anywhere in the job description.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-powered infrastructure, or AI-related capabilities required of the candidate.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tools, coding assistants, agentic workflows, or AI-ready data infrastructure expectations.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI skills, tools, or methodologies expected of the candidate.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -234,38 +234,36 @@ Benefits
 **Run 1:** `responsibility` ✗
 > Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: Testing appears in responsibilities with an ownership verb (implement), indicating the candidate owns and defines testing practices, not just uses existing tools.
+> Reasoning: Testing and data validation are framed as an owned responsibility (Implement) rather than a listed tool requirement or absent entirely.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: Action verb 'implement' indicates the candidate owns and defines testing practices as a core responsibility, not merely using existing tools.
+> Reasoning: The action verb 'implement' frames testing and data validation as an owned responsibility the candidate is accountable for establishing.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'implement' frames testing and data validation as something the candidate owns and defines, not merely a required skill.
+> Reasoning: The verb 'implement' frames testing and data validation as something the candidate owns and is accountable for, not merely a tool to use.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `none` ✗
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes delivery capabilities (design, build, develop) without mentioning compliance, regulatory risk, or preventing bad outcomes; quality is framed as a capability, not a fear response.
+**Run 1:** `moderate` ✗
+> Quote: "focus on traceability and quality; Implement testing and data validation processes within dbt"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and data accuracy are emphasized through testing and quality focus, indicating operational reliability is a concern, but without explicit compliance or regulatory risk framing.
 
 **Run 2:** `moderate` ✗
-> Quote: "Design and maintain analytical data models in dbt with focus on traceability and quality"
+> Quote: "Implement testing and data validation processes within dbt"
 > Verified: ✓ found in JD
-> Reasoning: Quality and traceability are primary concerns signaling moderate loss-aversion orientation toward operational data reliability, but without explicit regulatory, compliance, or stakeholder trust risk framing.
+> Reasoning: Data quality and reliability are operational priorities (testing, validation, consistency), indicating concern for analytics stability rather than compliance or catastrophic-risk prevention.
 
-**Run 3:** `none` ✗
-> Quote: "No loss aversion framing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD is framed around building reliable, high-quality analytics and data delivery rather than preventing risks or protecting stakeholders from bad data.
+**Run 3:** `moderate` ✗
+> Quote: "ensure consistent, actionable information organisation-wide"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and consistency are mentioned as important characteristics but secondary to delivery focus, without framing around preventing regulatory or stakeholder-trust risk.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`none`
-
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
