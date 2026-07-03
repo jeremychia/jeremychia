@@ -62,191 +62,209 @@ SoSafe is one of the fastest-growing security awareness scale-ups worldwide, lev
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 2 | 3 | 0% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | strategic | strategic | 100% |
-| ai_role | ai_enabler | ai_enabler | ai_enabler | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | moderate | moderate | moderate | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 3 | 3 | 2 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize testing, data quality frameworks, documentation, and best practices as core expectations, with no velocity or speed-to-ship language.
+> Reasoning: The responsibilities section emphasizes testing, documentation, and data quality as core expectations with explicit accountability for establishing standards.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes testing, documentation, data quality, and reliability as core practices throughout, with no velocity or speed-oriented language.
+> Reasoning: The responsibilities section emphasizes testing, documentation, data quality, and best practices with no mention of speed, iteration, or rapid delivery.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, testing, quality, reliability, and documentation as core expectations throughout, with no countervailing velocity or iteration speed signals.
+> Reasoning: The responsibilities section emphasizes correctness, testing, documentation, and quality as core expectations with no velocity signals like 'fast-paced' or 'rapid delivery' present.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "Model complex SaaS data by integrating product events, CRM (Salesforce), and support data into clean, well-defined fact and dimension models"
 > Verified: ✓ found in JD
-> Reasoning: This is a SaaS analytics engineering role with no financial reporting, regulatory, or compliance language; data errors affect business decisions but not immediate regulatory or financial reporting consequences.
+> Reasoning: The JD explicitly frames this as SaaS analytics work focused on product data without compliance, regulatory, or financial reporting language.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✓
 > Quote: "Define and implement core business metrics (e.g. activation, engagement, retention) as reusable, versioned data assets"
 > Verified: ✓ found in JD
-> Reasoning: The role involves SaaS analytics and operational reporting without explicit financial reporting, regulatory compliance, or public-facing product exposure.
+> Reasoning: This is a SaaS business with revenue-impacting metrics but no explicit financial reporting, regulatory, or compliance language that would elevate risk to high.
 
-**Run 3:** `moderate`
+**Run 3:** `moderate` ✓
 > Quote: "Model complex SaaS data by integrating product events, CRM (Salesforce), and support data into clean, well-defined fact and dimension models"
 > Verified: ✓ found in JD
-> Reasoning: The role affects business intelligence and product decisions but does not involve financial reporting, regulatory compliance, or audit-level risk that would elevate it to high domain risk.
+> Reasoning: Data errors would affect business decisions (metrics, product) but the JD does not explicitly invoke financial reporting, compliance, regulatory, or audit language that would elevate risk to high.
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `1`
-> Quote: "Collaborate with Data Engineers on upstream data contracts and event schemas"
+**Run 1:** `3` ✗
+> Quote: "Data Engineers; analytics; product"
 > Verified: ✓ found in JD
-> Reasoning: Only Data Engineers are explicitly named as a collaboration partner; other functions like product and analytics are named as downstream consumers or stakeholder groups, not as active collaboration partners.
+> Reasoning: The JD explicitly names three distinct partner functions: Data Engineers (collaboration on data contracts), analytics and product (requiring consistent definitions across both).
 
-**Run 2:** `2`
-> Quote: "Data Engineers; product"
+**Run 2:** `3` ✗
+> Quote: "Data Engineers; analytics; product"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names three distinct teams: Data Engineers (collaboration partner), analytics (stakeholder across whom metrics must be consistent), and product (stakeholder).
+
+**Run 3:** `2` ✓
+> Quote: "Collaborate with Data Engineers on upstream data contracts and event schemas - ensuring consistent definitions across analytics, product, and AI use cases"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Data Engineers and Product are explicitly named as distinct collaboration partners in the responsibilities section.
+> Reasoning: Data Engineers and Product are explicitly named as distinct functions the role works with; Analytics may include the role holder's own team so is not counted separately.
 
-**Run 3:** `3`
-> Quote: "Collaborate with Data Engineers on upstream data contracts; ensuring consistent definitions across analytics, product, and AI use cases"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named teams are explicitly mentioned as collaborators or stakeholders: Data Engineers (explicit partner), Product (named stakeholder), and Analytics (named stakeholder).
+⚠ **Disagreement**: manual=`2` vs LLM majority=`3`
 
-⚠ **LLM inconsistency**: runs gave ['1', '2', '3']
+⚠ **LLM inconsistency**: runs gave ['3', '3', '2']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
-> Verified: ✓ found in JD
-> Reasoning: Dbt, data engineers, and semantic layer infrastructure already exist and are being used; the role is to evolve and scale these, indicating a team past greenfield but not yet fully mature at scale.
-
-**Run 2:** `mid`
-> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers"
-> Verified: ✓ found in JD
-> Reasoning: The JD describes evolving existing infrastructure (dbt transformation layer, semantic layer, data integration pipelines) with an established data engineering team rather than building from scratch.
-
-**Run 3:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Own the transformation layer in dbt - design, build, and maintain modular, well-tested data models"
 > Verified: ✓ found in JD
-> Reasoning: The role involves maintaining and extending existing named tools (dbt, semantic layers) rather than building from scratch, suggesting a data function beyond greenfield but still actively growing its capabilities.
+> Reasoning: The JD references existing dbt infrastructure and semantic layer that the role will maintain and evolve, indicating an established data function in growth phase.
+
+**Run 2:** `mid` ✓
+> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions"
+> Verified: ✓ found in JD
+> Reasoning: The word 'evolve' rather than 'build from scratch,' the existence of Data Engineers as a distinct team, and named tools used in specific contexts indicate a data function past early stage but still growing.
+
+**Run 3:** `mid` ✓
+> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers"
+> Verified: ✓ found in JD
+> Reasoning: The JD assumes existing infrastructure (dbt, semantic layer, Data Engineers team) and the role is to evolve and enforce practices around it rather than build from scratch.
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager`
+**Run 1:** `hiring_manager` ✓
 > Quote: "Model complex SaaS data by integrating product events, CRM (Salesforce), and support data into clean, well-defined fact and dimension models"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities contain technical specificity about SaaS integration patterns, named tool contexts (Salesforce), dimensional modeling, metrics naming (activation, engagement, retention), and semantic layer design that only comes from someone with hands-on analytics engineering experience.
+> Reasoning: The responsibilities contain specific technical concepts (SaaS data modeling, Salesforce integration, fact/dimension models) and named tools with precise application context indicating hiring manager authorship.
 
-**Run 2:** `hiring_manager`
+**Run 2:** `hiring_manager` ✓
+> Quote: "Model complex SaaS data by integrating product events, CRM (Salesforce), and support data into clean, well-defined fact and dimension models"
+> Verified: ✓ found in JD
+> Reasoning: The specificity of technical choices (dimensional modeling, named data sources, SaaS-specific architecture, semantic layers, dbt metrics) indicates someone who has done this work, not a recruiter.
+
+**Run 3:** `hiring_manager` ✓
 > Quote: "Own the transformation layer in dbt - design, build, and maintain modular, well-tested data models that define how data is structured and consumed across the company"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical details (dbt, dimensional modeling, data contracts, specific cloud DWs, MetricFlow, Cube, semantic layers) that indicate hands-on experience rather than recruiter boilerplate.
-
-**Run 3:** `hiring_manager`
-> Quote: "Collaborate with Data Engineers on upstream data contracts and event schemas - ensuring raw data is structured in a way that supports scalable, reliable analytics"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities demonstrate technical specificity (data contracts, event schemas, dimensional modeling patterns, dimensional models) that only someone actively doing this work would include.
+> Reasoning: The responsibilities contain technical specificity (transformation layer in dbt, dimensional modeling, metric design, Salesforce CRM integration, event-based data) that only comes from someone who has performed this role.
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves the data function itself—building data infrastructure, semantic layers, and metrics for analytics teams, data engineers, and AI agents to consume.
+> Reasoning: The role's primary focus is building data infrastructure and standards that internal teams and AI systems consume, rather than serving commercial or embedded product analytics teams.
 
-**Run 2:** `internal_data`
-> Quote: "supports downstream consumers, including LLM-based analytics agents"
-> Verified: ✓ found in JD
-> Reasoning: The primary framing is building reliable data infrastructure and semantic layers that serve the data function itself and its consumers, not directly serving product, commercial, or finance teams.
-
-**Run 3:** `internal_data`
+**Run 2:** `internal_data` ✓
 > Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
 > Verified: ✓ found in JD
-> Reasoning: The primary emphasis is on building and owning data infrastructure (semantic layer, transformation layer, self-serve documentation) that serves multiple downstream consumers, rather than serving a single business function.
+> Reasoning: The primary deliverables are data infrastructure components (semantic layer, metrics layer, transformation layer) that serve downstream data consumers rather than directly serving commercial, product, or finance stakeholders.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is building and maintaining data infrastructure (transformation layer, semantic layer, metrics) that serves other teams, not directly serving commercial, product, or finance functions.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `strategic` ✓
 > Quote: "Own the transformation layer in dbt - design, build, and maintain modular, well-tested data models that define how data is structured and consumed across the company"
 > Verified: ✓ found in JD
-> Reasoning: The role is expected to own, design, and define the transformation strategy, not execute scoped work set by others—these are direction-setting responsibilities.
+> Reasoning: The use of 'own' and 'define' with accountability for data structure and how analytics is delivered across the company indicates the role sets direction rather than executing direction from others.
 
-**Run 2:** `strategic`
-> Quote: "Own the transformation layer in dbt"
+**Run 2:** `strategic` ✓
+> Quote: "Define and implement core business metrics (e.g. activation, engagement, retention) as reusable, versioned data assets"
 > Verified: ✓ found in JD
-> Reasoning: The role uses ownership and direction-setting verbs (Own, Define, Build, Establish) throughout, establishing standards and shaping how data is structured and metrics are defined.
+> Reasoning: The role uses ownership verbs ('own,' 'define,' 'establish') and is responsible for shaping how analytics is delivered across the organization, not executing against predefined requirements.
 
-**Run 3:** `strategic`
-> Quote: "Own the transformation layer in dbt - design, build, and maintain modular, well-tested data models that define how data is structured and consumed across the company"
+**Run 3:** `strategic` ✓
+> Quote: "Own the transformation layer in dbt - design, build, and maintain modular, well-tested data models"
 > Verified: ✓ found in JD
-> Reasoning: The role uses repeated ownership and definition verbs (own, define, establish, build, evolve) that frame the candidate as setting direction for major components of data infrastructure.
+> Reasoning: The role emphasizes ownership ('own'), definition ('define metrics'), and establishing standards ('establish best practices'), indicating the candidate sets direction within the analytics and metrics domain.
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `ai_enabler`
-> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
-> Verified: ✓ found in JD
-> Reasoning: The candidate is explicitly expected to build data infrastructure that LLM-based analytics agents consume and understand how to structure data for AI system consumption.
-
-**Run 2:** `ai_enabler`
-> Quote: "supports downstream consumers, including LLM-based analytics agents"
-> Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that LLMs consume, explicitly mentioned in responsibilities and reinforced by the nice-to-have section on semantic layers for AI agents.
-
-**Run 3:** `ai_enabler`
+**Run 1:** `ai_enabler` ✗
 > Quote: "building data infrastructure that serves AI agents, not just BI tools"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to understand how LLMs consume structured data and to build semantic layers and data infrastructure specifically to enable AI agent consumption.
+> Reasoning: The JD explicitly expects the candidate to build semantic layers and metrics registries designed for LLM-based analytics agents to consume, making this an ai_enabler role.
+
+**Run 2:** `ai_enabler` ✗
+> Quote: "an interest in building data infrastructure that serves AI agents, not just BI tools"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure (semantic layers, metrics registries) that AI systems consume, not to use AI tools for their own productivity.
+
+**Run 3:** `ai_enabler` ✗
+> Quote: "Build and evolve our semantic layer - creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure that AI systems consume; the nice-to-have section reinforces interest in 'building data infrastructure that serves AI agents, not just BI tools'.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✗
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as owned responsibilities with action verbs 'establish and enforce,' indicating the candidate is accountable for defining and institutionalizing these practices.
+> Reasoning: The JD frames testing as something the candidate owns through 'establish and enforce' verbs, indicating accountability for defining and maintaining testing practices.
 
-**Run 2:** `responsibility`
+**Run 2:** `responsibility` ✗
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as something the candidate owns and establishes as a standard practice, not as tools they use.
+> Reasoning: Testing and data quality are framed as responsibilities the role owner establishes and enforces as standards, not as tools listed in a requirements section.
 
-**Run 3:** `responsibility`
+**Run 3:** `responsibility` ✗
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: The action verbs 'establish and enforce' indicate the candidate owns the creation and enforcement of testing and quality practices as a core responsibility.
+> Reasoning: Testing and data quality are framed as owned responsibilities with ownership verbs 'establish and enforce', not merely as tools to know or skills to have.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
-> Quote: "creating a reliable abstraction over our data that enables consistent KPI definitions and supports downstream consumers, including LLM-based analytics agents"
-> Verified: ✓ found in JD
-> Reasoning: Operational reliability and consistency are stated concerns throughout (reliable, consistent, well-tested, best practices), but there is no compliance, regulatory, or stakeholder trust framing—the fear is operational data quality issues, not catastrophic risk.
-
-**Run 2:** `moderate`
-> Quote: "strong data quality mindset (testing, validation, monitoring)"
-> Verified: ✓ found in JD
-> Reasoning: Reliability and quality are emphasized as operational standards rather than as risk mitigation against compliance, regulatory, or stakeholder-trust failure.
-
-**Run 3:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability and data quality as ongoing organizational concerns, but frames them as standard practices and excellence rather than regulatory, compliance, or stakeholder-trust risks.
+> Reasoning: Data quality and reliability are emphasized as core responsibilities but framed in operational and process terms (standard development practice) rather than preventing regulatory, compliance, or stakeholder trust issues.
+
+**Run 2:** `moderate` ✗
+> Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and operational reliability are concerns but secondary to the primary mission of building metrics and semantic layer infrastructure; there is no regulatory, compliance, or stakeholder-trust-focused language.
+
+**Run 3:** `moderate` ✗
+> Quote: "Establish and enforce best practices in testing, documentation, and data quality - making these part of the standard development lifecycle"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and data quality are central concerns, but the language emphasizes operational best practices and consistency rather than regulatory compliance or preventing catastrophic business impact.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

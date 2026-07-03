@@ -429,6 +429,7 @@ function buildStats(data) {
   const dbtPct    = Math.round(data.filter(d => String(d.has_dbt).toLowerCase() === 'true').length / n * 100);
   const midPct    = Math.round(data.filter(d => d.data_team_maturity === 'mid').length / n * 100);
   const internalPct = Math.round(data.filter(d => d.stakeholder_orientation === 'internal_data').length / n * 100);
+  const langGatePct = Math.round(data.filter(d => d.language_gate_type === 'hard').length / n * 100);
   document.getElementById('heroEyebrow').textContent = `${data.length} job descriptions classified`;
   document.getElementById('statsRow').innerHTML = [
     { num: rigourPct+'%',   label: 'Rigour-first JDs' },
@@ -437,6 +438,7 @@ function buildStats(data) {
     { num: internalPct+'%', label: 'Serve internal data' },
     { num: highPct+'%',     label: 'High-stakes domain' },
     { num: dbtPct+'%',      label: 'Require dbt' },
+    { num: langGatePct+'%', label: 'Hard language gate' },
   ].map(s => `<div class="stat-cell"><div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div></div>`).join('');
 }
 
@@ -749,6 +751,7 @@ function buildGeo(data) {
 const TOOLS = [
   {key:'has_sql',label:'SQL',group:'Core'},{key:'has_dbt',label:'dbt',group:'Core'},{key:'has_python',label:'Python',group:'Core'},
   {key:'has_snowflake',label:'Snowflake',group:'Warehouse'},{key:'has_databricks',label:'Databricks',group:'Warehouse'},
+  {key:'has_bigquery',label:'BigQuery',group:'Warehouse'},{key:'has_redshift',label:'Redshift',group:'Warehouse'},
   {key:'has_looker',label:'Looker',group:'BI'},{key:'has_tableau',label:'Tableau',group:'BI'},{key:'has_power_bi',label:'Power BI',group:'BI'},
   {key:'has_airflow',label:'Airflow',group:'Orchestration'},{key:'has_spark',label:'Spark',group:'Compute'},
   {key:'has_kafka',label:'Kafka',group:'Streaming'},{key:'has_terraform',label:'Terraform',group:'Infra'},

@@ -55,195 +55,217 @@ Interview Process & Team Structure: Not specified in posting
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 3 | 3 | 3 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | mixed | 33% |
-| stakeholder_orientation | mixed | mixed | commercial | 33% |
-| autonomy_level | execution | mixed | execution | 33% |
-| ai_role | none | none | none | 100% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | moderate | moderate | moderate | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 3 | 3 | 3 | 100% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | mixed | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | commercial | commercial | mixed | commercial | 33% | ✓ |
+| autonomy_level | mixed | execution | mixed | execution | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✗
 > Quote: "Establish monitoring and documentation protocols for data reliability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality validation, monitoring, and reliability as core expectations with no counterbalancing velocity signals.
+> Reasoning: The responsibilities emphasize data quality validation, monitoring, and documentation for reliability without any competing velocity language.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✗
 > Quote: "Establish monitoring and documentation protocols for data reliability"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality validation, monitoring, and reliability throughout with no counterbalancing velocity language.
+> Reasoning: The JD emphasizes data quality validation, monitoring, and reliability as core responsibilities with no velocity language like fast-paced or rapid delivery.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✗
 > Quote: "Establish monitoring and documentation protocols for data reliability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality validation, monitoring, documentation, and reliability as core expectations, with no velocity-oriented language about speed or iteration.
+> Reasoning: Multiple rigour signals dominate (data quality validation, monitoring, documentation, data reliability, quality assurance) with zero velocity signals like fast-paced or rapid delivery.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Build and maintain scalable data models serving both marketing and product use cases"
-> Verified: ✓ found in JD
-> Reasoning: E-commerce context with business decision support focus but no financial reporting, compliance, or regulatory language, typical of moderate-risk roles.
-
-**Run 2:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
 > Verified: ✓ found in JD
-> Reasoning: E-commerce marketing analytics where data errors affect revenue operations and customer decisions, but without explicit financial reporting, compliance, or regulatory risk language.
+> Reasoning: The role affects marketing and product business decisions but lacks regulatory, compliance, or financial reporting language that would indicate high risk.
 
-**Run 3:** `moderate`
+**Run 2:** `moderate` ✓
 > Quote: "Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
 > Verified: ✓ found in JD
-> Reasoning: The role supports marketing and product decisions in an e-commerce context without explicit financial reporting, regulatory, or compliance language, placing it at typical e-commerce/SaaS risk level.
+> Reasoning: E-commerce analytics affecting marketing and growth decisions carries moderate risk to business operations but no regulatory or financial reporting exposure.
+
+**Run 3:** `moderate` ✓
+> Quote: "Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
+> Verified: ✓ found in JD
+> Reasoning: E-commerce role affecting marketing and business decisions without explicit financial reporting or regulatory compliance consequences.
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `3`
-> Quote: "Growth; Marketing; Product"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct teams explicitly named in responsibilities: Growth, Marketing, and Product teams.
-
-**Run 2:** `3`
-> Quote: "Growth; Marketing; Product"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names three distinct teams as collaboration partners for analytics delivery and dashboards.
-
-**Run 3:** `3`
+**Run 1:** `3` ✗
 > Quote: "Design and maintain dashboards for Growth, Marketing, and Product teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names three distinct partner teams: Growth, Marketing, and Product.
+> Reasoning: The JD explicitly names three distinct partner functions that the role collaborates with.
+
+**Run 2:** `3` ✗
+> Quote: "Design and maintain dashboards for Growth, Marketing, and Product teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams are explicitly identified as collaboration partners: Growth, Marketing, and Product.
+
+**Run 3:** `3` ✗
+> Quote: "Design and maintain dashboards for Growth, Marketing, and Product teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams (Growth, Marketing, Product) are explicitly identified as collaboration partners.
+
+⚠ **Disagreement**: manual=`2` vs LLM majority=`3`
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "Build and maintain scalable data models serving both marketing and product use cases"
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure and named tools in responsibilities (BigQuery, GA4, Klaviyo, GTM) indicate an operational data function growing and scaling, not early-stage or mature enterprise.
-
-**Run 2:** `mid`
-> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation"
-> Verified: ✓ found in JD
-> Reasoning: The role involves maintaining existing infrastructure (BigQuery, GA4, dbt) and scaling it rather than establishing from zero or joining a fully mature established organization.
-
-**Run 3:** `mid`
-> Quote: "Build and maintain scalable data models serving both marketing and product use cases"
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (BigQuery, dbt/Dataform, Looker) combined with existing infrastructure and multiple named use cases indicate an established data function in growth phase.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity around how tools are applied (Klaviyo CRM integration, paid media measurement) and methodologies (attribution modeling, funnel analysis) indicates someone who does this work.
-
-**Run 2:** `hiring_manager`
+**Run 1:** `mid` ✓
 > Quote: "Integrate data from GA4, Klaviyo, marketing platforms, and backend systems into a centralized warehouse"
 > Verified: ✓ found in JD
-> Reasoning: The precise naming of specific tools with their integration context and the specific transformation targets indicates technical specificity that comes from hands-on experience.
+> Reasoning: Multiple named data sources and existing infrastructure indicate a team beyond early stage, but establishing new monitoring protocols suggests ongoing growth rather than mature scale.
 
-**Run 3:** `mixed`
-> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation"
+**Run 2:** `mid` ✓
+> Quote: "Integrate data from GA4, Klaviyo, marketing platforms, and backend systems into a centralized warehouse"
 > Verified: ✓ found in JD
-> Reasoning: The JD combines specific technical context (BigQuery, GA4, Klaviyo, GTM, Looker with precise applications) with generic support verbs (support, conduct, design) typical of recruiter-drafted text.
+> Reasoning: Named tools and platforms in responsibilities indicate established infrastructure; the role scales and maintains existing systems rather than building from zero.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
+**Run 3:** `mid` ✓
+> Quote: "Build and maintain scalable data models serving both marketing and product use cases"
+> Verified: ✓ found in JD
+> Reasoning: Named tools (BigQuery, dbt/Dataform) and infrastructure exist in responsibilities with multiple established use cases, indicating mid-stage maturity.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "Integrate data from GA4, Klaviyo, marketing platforms, and backend systems into a centralized warehouse"
+> Verified: ✓ found in JD
+> Reasoning: The specific naming of data sources and systems demonstrates technical understanding of the actual data infrastructure rather than generic boilerplate.
+
+**Run 2:** `mixed` ✗
+> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation; Support A/B testing and experimentation workflows"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity about named tools and their contexts (BigQuery pipelines, GA4, GTM) is balanced by generic support verbs and generic action phrases.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Integrate data from GA4, Klaviyo, marketing platforms, and backend systems into a centralized warehouse"
+> Verified: ✓ found in JD
+> Reasoning: Specific integration context, named data sources, technical scope, and business methodology (attribution modeling, funnel analysis) indicate someone with hands-on experience writing this.
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
+**Manual:** `commercial`
 
-**Run 1:** `mixed`
-> Quote: "Design and maintain dashboards for Growth, Marketing, and Product teams"
-> Verified: ✓ found in JD
-> Reasoning: The explicitly named teams span both commercial (Growth, Marketing) and product (Product), with additional commercial infrastructure work (CRM, paid media measurement) creating genuinely mixed emphasis.
-
-**Run 2:** `mixed`
-> Quote: "Design and maintain dashboards for Growth, Marketing, and Product teams; Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role serves Product teams with A/B testing and experimentation support and Commercial teams with attribution modeling and CRM infrastructure with comparable emphasis.
-
-**Run 3:** `commercial`
+**Run 1:** `commercial` ✓
 > Quote: "Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
 > Verified: ✓ found in JD
-> Reasoning: The prominent 'First-Party Data & Marketing Measurement' section and explicit focus on CRM, paid media, attribution modeling, and channel performance indicate commercial/marketing stakeholders are primary.
+> Reasoning: While the role supports product teams, the majority of specific responsibilities focus on marketing infrastructure and revenue operations.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'commercial']
+**Run 2:** `mixed` ✗
+> Quote: "Design and maintain dashboards for Growth, Marketing, and Product teams; Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels; Support A/B testing and experimentation workflows"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities split between commercial audiences (CRM, paid media, attribution) and product audiences (A/B testing, experimentation) with genuinely equal emphasis.
+
+**Run 3:** `commercial` ✓
+> Quote: "Build and maintain the data infrastructure that feeds CRM (Klaviyo) and paid media channels"
+> Verified: ✓ found in JD
+> Reasoning: Commercial outcomes (marketing measurement, attribution, paid media, CRM) dominate across two dedicated sections and multiple responsibilities, while product analytics is secondary.
+
+⚠ **LLM inconsistency**: runs gave ['commercial', 'mixed', 'commercial']
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `execution`
+**Run 1:** `execution` ✗
+> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation"
+> Verified: ✓ found in JD
+> Reasoning: The role has ownership and some autonomy in establishing monitoring protocols, but the primary framing is maintaining and supporting existing infrastructure rather than defining strategic direction.
+
+**Run 2:** `mixed` ✓
+> Quote: "Own and maintain BigQuery data pipelines; Establish monitoring and documentation protocols; Support A/B testing and experimentation workflows"
+> Verified: ✓ found in JD
+> Reasoning: The role owns the data infrastructure domain and establishes protocols (strategic) but supports defined business processes like A/B testing (execution).
+
+**Run 3:** `execution` ✗
 > Quote: "Support A/B testing and experimentation workflows"
 > Verified: ✓ found in JD
-> Reasoning: While the role includes ownership of technical domains (pipelines, dashboards), the strategic direction is set by pre-defined business stakeholder needs rather than by the role holder.
+> Reasoning: While technical responsibilities use strategic verbs (build, own, establish), the scope, priorities, and stakeholder teams are predefined by business teams, positioning this as execution within defined domains.
 
-**Run 2:** `mixed`
-> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation; Support A/B testing and experimentation workflows"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic ownership of data infrastructure (own, build, establish) with execution support for business teams' analytical workflows.
-
-**Run 3:** `execution`
-> Quote: "Support A/B testing and experimentation workflows"
-> Verified: ✓ found in JD
-> Reasoning: Strategic verbs (own, establish) are limited to technical sub-domains while business priorities are framed with support language, indicating the role executes against direction set by others.
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI coding tools, generative AI, machine learning, or AI-related capabilities expected of the candidate throughout the JD.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI or AI-related expectations for the candidate.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mentions of AI/ML skills, AI-assisted coding tools, or AI data infrastructure expectations.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or AI-ready data infrastructure.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No AI skill, tool, or framework is mentioned anywhere in the JD; all requirements are traditional data analytics and engineering skills.
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-first mindset, AI-ready data infrastructure, or GenAI applications in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✗
+> Quote: "Establish monitoring and documentation protocols for data reliability"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as something the candidate owns and defines, not as tools in a skill list.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation; Establish monitoring and documentation protocols for data reliability"
+> Verified: ✓ found in JD
+> Reasoning: Data quality validation and reliability are framed as responsibilities the candidate owns with action verbs, not as tools listed in a requirements section.
+
+**Run 3:** `responsibility` ✗
 > Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation"
 > Verified: ✓ found in JD
-> Reasoning: Data quality validation is framed as a core responsibility the candidate owns, not merely a tool or framework to use.
+> Reasoning: Data quality validation and monitoring are framed as owned responsibilities with action verb 'own', not as tools listed in requirements.
 
-**Run 2:** `responsibility`
-> Quote: "Establish monitoring and documentation protocols for data reliability"
-> Verified: ✓ found in JD
-> Reasoning: The ownership verb 'establish' frames data reliability practices as something the analyst owns and defines, rather than tools in a tech stack.
-
-**Run 3:** `responsibility`
-> Quote: "Establish monitoring and documentation protocols for data reliability"
-> Verified: ✓ found in JD
-> Reasoning: Data quality validation and reliability are framed as responsibilities the role owns and establishes, not as tools listed in a requirements checklist.
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Establish monitoring and documentation protocols for data reliability"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data quality are ongoing concerns, but without compliance, audit, or high-stakes trust framing that would indicate high loss aversion.
+> Reasoning: The JD emphasizes operational reliability and data quality but lacks the regulatory, compliance, or stakeholder-trust language that would indicate high loss aversion.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Establish monitoring and documentation protocols for data reliability"
 > Verified: ✓ found in JD
-> Reasoning: Data reliability and quality are named concerns with dedicated operational responsibilities, but the JD frames them as capability delivery rather than preventing bad outcomes or managing compliance risk.
+> Reasoning: Operational reliability and data quality are concerns secondary to delivery responsibilities; the fear is pipeline failures, not regulatory or stakeholder trust risk.
 
-**Run 3:** `moderate`
-> Quote: "Own and maintain BigQuery data pipelines, including scheduling, monitoring, and data quality validation"
+**Run 3:** `moderate` ✗
+> Quote: "Establish monitoring and documentation protocols for data reliability"
 > Verified: ✓ found in JD
-> Reasoning: The JD reflects concern for operational reliability and preventing data failures through monitoring and quality validation, but lacks compliance or stakeholder trust language associated with high loss-aversion.
+> Reasoning: Operational reliability is a stated concern framed as protocol establishment and maintenance, but without loss-aversion language about preventing catastrophe or regulatory risk.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

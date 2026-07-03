@@ -58,197 +58,215 @@ Competitive salary, breakfast, lunch allowance, birthday day-off, private medica
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | early | mid | early | 33% |
-| jd_authorship | hiring_manager | mixed | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | strategic | mixed | 33% |
-| ai_role | ai_user | ai_enabler | ai_enabler | 33% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | high | high | high | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
+| data_team_maturity | early | mid | early | mid | 33% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | mixed | strategic | strategic | 33% | ✓ |
+| ai_role |  | ai_enabler | ai_user | ai_user | 33% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | high | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals (unit testing, security protocols, CI/CD frameworks, PCI-DSS/SOC2 compliance) dominate with zero velocity language present.
+> Reasoning: Multiple rigour signals emphasise testing, compliance (PCI-DSS/SOC2), security protocols, and production-grade work with no corresponding velocity language.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, compliance, and operational standards throughout, with no velocity-oriented language such as 'fast-paced' or 'rapid delivery'; compliance and testing are core expectations.
+> Reasoning: Multiple rigour signals (CI/CD, testing, security protocols, PCI-DSS/SOC2 compliance, data SLAs) dominate the responsibilities with no velocity language present.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes quality, compliance (PCI-DSS/SOC2), testing, and reliability with no velocity signals like 'fast-paced' or 'ship quickly'.
+> Reasoning: The responsibilities section emphasizes compliance (PCI-DSS/SOC2), testing, CI/CD frameworks, and operational reliability over delivery speed.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
+**Run 1:** `high` ✓
 > Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs"
 > Verified: ✓ found in JD
-> Reasoning: Explicit PCI-DSS and SOC2 compliance requirements in a payments context indicate regulatory and financial risk with direct consequences for data accuracy.
+> Reasoning: Explicit regulatory compliance requirements (PCI-DSS/SOC2) signal that data errors directly affect regulatory and financial operations in a payment context.
 
-**Run 2:** `high`
+**Run 2:** `high` ✓
 > Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs"
 > Verified: ✓ found in JD
-> Reasoning: The explicit mention of PCI-DSS and SOC2 compliance standards indicates data errors directly affect financial transaction processing and regulatory exposure in a fintech payment context.
+> Reasoning: PCI-DSS and SOC2 are regulatory compliance frameworks for payment card data and security, indicating the role directly handles regulated financial data with high regulatory stakes.
 
-**Run 3:** `high`
+**Run 3:** `high` ✓
 > Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs"
 > Verified: ✓ found in JD
-> Reasoning: PCI-DSS and SOC2 compliance requirements indicate a fintech/payments company handling sensitive financial data with explicit regulatory obligations.
+> Reasoning: Explicit compliance requirements for payment card data security (PCI-DSS) and organizational security (SOC2) indicate high financial and regulatory risk.
 
 ### collaboration_width
+**Manual:** `0`
 
-**Run 1:** `0`
-> Quote: "No named partner teams or functions identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD names technical outputs (AI models, routing engines, BI tools) but does not list any explicitly named business functions or partner teams.
-
-**Run 2:** `0`
-> Quote: "No named partner teams or functions identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD references AI models, routing engines, and BI tools as consumers but does not explicitly name any partner teams such as Product, Finance, Engineering, or other functional groups.
-
-**Run 3:** `0`
-> Quote: "Build complex data models serving clean data to AI models, routing engines, and BI tools"
+**Run 1:** `0` ✓
+> Quote: "Build and scale data warehouse core and pipelines utilizing BigQuery and managed cloud services"
 > Verified: ✓ found in JD
-> Reasoning: AI models, routing engines, and BI tools are data consumers, not named partner teams; no cross-functional team collaborators are explicitly identified.
+> Reasoning: The JD emphasizes technical responsibilities and deliverables without naming specific business functions or partner teams to collaborate with.
+
+**Run 2:** `0` ✓
+> Quote: "No explicitly named partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references downstream consumers (AI models, routing engines, BI tools) but does not name specific functions or teams as collaboration partners.
+
+**Run 3:** `0` ✓
+> Quote: "No named partner teams explicitly identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD mentions systems the role serves (AI models, routing engines, BI tools) but does not name specific partner functions or teams to collaborate with.
 
 ### data_team_maturity
+**Manual:** `early`
 
-**Run 1:** `early`
-> Quote: "Build and scale data warehouse core and pipelines utilizing BigQuery and managed cloud services"
+**Run 1:** `mid` ✗
+> Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: The structured two-phase plan (Engineering Foundation Phase, Analytics Engineering Phase) and requirement for someone with track record building 'from scratch' indicate greenfield data infrastructure.
+> Reasoning: Named tools in responsibilities (BigQuery, Dataform, Looker) combined with foundational language (introduce, build, prepare) suggest growth from existing but not-yet-mature infrastructure.
 
-**Run 2:** `mid`
-> Quote: "Build and scale data warehouse core and pipelines utilizing BigQuery and managed cloud services"
-> Verified: ✓ found in JD
-> Reasoning: The JD signals both building and scaling phases with named tools already in place (BigQuery, Looker, Dataform) and existing infrastructure to enhance, indicating a team that has produced something and is growing significantly.
-
-**Run 3:** `early`
+**Run 2:** `early` ✓
 > Quote: "Proven track record building data warehouses and semantic layers from scratch"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on building 'from scratch' and 'preparing data ecosystem' indicates the data function is in early-stage establishment.
+> Reasoning: The requirement for "building from scratch" experience combined with the "Engineering Foundation Phase" structure indicates the data function is in early-stage formation.
 
-⚠ **LLM inconsistency**: runs gave ['early', 'mid', 'early']
+**Run 3:** `mid` ✗
+> Quote: "Maintain Looker and business intelligence layer with full ownership"
+> Verified: ✓ found in JD
+> Reasoning: Named existing tools (Looker, BigQuery, Dataform) and maintenance responsibilities indicate a functioning data function being scaled and matured, not greenfield.
+
+⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
+
+⚠ **LLM inconsistency**: runs gave ['mid', 'early', 'mid']
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager`
+**Run 1:** `hiring_manager` ✓
 > Quote: "Own the semantic layer, writing production-grade LookML"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities contain precise technical tool choices (Dataform, LookML, semantic layer, Cloud Composer) and specific operational context only someone hands-on in data engineering would articulate.
+> Reasoning: Technical specificity about tools, techniques (production-grade LookML), and system context (routing engines, AI models) indicates hiring manager authorship.
 
-**Run 2:** `mixed`
-> Quote: "Own the semantic layer, writing production-grade LookML; Build complex data models serving clean data to AI models, routing engines, and BI tools"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical context appears in named tools and precise responsibilities (LookML, BigQuery, Dataform, PCI-DSS compliance) alongside generic action verbs and boilerplate patterns, indicating both hiring manager and recruiter input.
-
-**Run 3:** `mixed`
+**Run 2:** `hiring_manager` ✓
 > Quote: "Own the semantic layer, writing production-grade LookML"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical knowledge (LookML, BigQuery with context) mixed with generic language ('Introduce', 'Ensure') across responsibilities indicates both hiring manager and recruiter input.
+> Reasoning: The specificity of technical output (production-grade LookML) paired with application context (serving AI models, routing engines, and BI tools) indicates domain knowledge from someone who performs this work.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+**Run 3:** `hiring_manager` ✓
+> Quote: "Implement CI/CD practices using fully managed GCP services"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical detail about GCP services, BigQuery, LookML, and two distinct implementation phases shows domain expertise from someone who understands the specific role.
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Build complex data models serving clean data to AI models, routing engines, and BI tools"
 > Verified: ✓ found in JD
-> Reasoning: The role is building the data platform (semantic layer, BI layer, data warehouse) that internal technical consumers depend on.
+> Reasoning: The primary audience is internal data consumers (AI systems, routing engines, BI tools) rather than business functions like sales, product, or finance.
 
-**Run 2:** `internal_data`
-> Quote: "Build complex data models serving clean data to AI models, routing engines, and BI tools; Own the semantic layer; Maintain Looker and business intelligence layer"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary focus is building and maintaining data infrastructure, semantic layers, and BI platforms for internal technical systems and analytics consumers rather than external commercial or finance stakeholders.
-
-**Run 3:** `internal_data`
-> Quote: "Own the semantic layer"
+**Run 2:** `internal_data` ✓
+> Quote: "Build complex data models serving clean data to AI models, routing engines, and BI tools"
 > Verified: ✓ found in JD
-> Reasoning: The role is fundamentally about building data infrastructure and semantic layers for internal platform consumption, positioning the data function itself as the primary customer.
+> Reasoning: The primary focus is building and maintaining the data infrastructure and semantic layer that internal systems and analytics consumers depend on, rather than serving commercial, product, or finance functions.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Build complex data models serving clean data to AI models, routing engines, and BI tools"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around building the data platform and semantic layer that serves internal systems and data consumers, not external commercial or finance stakeholders.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `mixed` ✗
 > Quote: "Own the semantic layer, writing production-grade LookML"
 > Verified: ✓ found in JD
-> Reasoning: Repeated strategic verbs (Own, Build, Introduce, Ensure, Prepare) throughout indicate the role defines and establishes the data function rather than executing scoped work.
+> Reasoning: The role combines strategic ownership of technical domains (semantic layer, BI layer) with execution of pre-defined engineering phases.
 
-**Run 2:** `strategic`
-> Quote: "Own the semantic layer; establish Git version control; Introduce robust CI/CD frameworks"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities use ownership and establishment verbs that require defining direction and standards for the analytics platform rather than executing pre-scoped work set by others.
-
-**Run 3:** `mixed`
-> Quote: "Own the semantic layer"
+**Run 2:** `strategic` ✓
+> Quote: "Own the semantic layer, writing production-grade LookML"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership (Own semantic layer, Build and scale, Introduce frameworks) with execution responsibilities (Maintain systems, Ensure compliance).
+> Reasoning: The verbs "own", "establish", and "introduce" combined with responsibility for defining CI/CD frameworks and testing standards indicate the role shapes the data architecture rather than executing assigned work.
 
-⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
+**Run 3:** `strategic` ✓
+> Quote: "full ownership"
+> Verified: ✓ found in JD
+> Reasoning: Repeated emphasis on ownership (semantic layer, BI layer) combined with "introduce" new frameworks and soft skills requiring "extreme ownership focus" indicates direction-setting autonomy.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `ai_user`
+**Run 1:** `ai_enabler` ✗
+> Quote: "Prepare data ecosystem for real-time AI modeling"
+> Verified: ✓ found in JD
+> Reasoning: While the role requires proficiency with AI coding assistants, the primary responsibility is building data infrastructure for AI systems to consume, making this ai_enabler.
+
+**Run 2:** `ai_user` ✗
 > Quote: "Proficiency with generative AI coding assistants"
 > Verified: ✓ found in JD
-> Reasoning: The explicit requirement for proficiency with generative AI coding assistants signals the candidate is expected to use AI tools to accelerate their own development work.
+> Reasoning: The explicit requirement for the candidate to be proficient with AI coding assistants indicates they are expected to use these tools to accelerate their own development and engineering work.
 
-**Run 2:** `ai_enabler`
-> Quote: "Prepare data ecosystem for real-time AI modeling"
+**Run 3:** `ai_user` ✗
+> Quote: "Proficiency with generative AI coding assistants"
 > Verified: ✓ found in JD
-> Reasoning: While the JD lists 'Proficiency with generative AI coding assistants' as a requirement, the primary role function is building data infrastructure that AI systems consume, making the candidate an enabler of AI capabilities.
+> Reasoning: The candidate is expected to use AI coding tools like GitHub Copilot or Claude Code to accelerate their own development work.
 
-**Run 3:** `ai_enabler`
-> Quote: "Prepare data ecosystem for real-time AI modeling"
-> Verified: ✓ found in JD
-> Reasoning: While the candidate must be proficient with generative AI coding assistants, the primary AI expectation is building data infrastructure that AI systems consume.
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
-⚠ **LLM inconsistency**: runs gave ['ai_user', 'ai_enabler', 'ai_enabler']
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'ai_user', 'ai_user']
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
+**Run 1:** `responsibility` ✗
 > Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'Introduce' paired with 'unit testing' in responsibilities shows ownership of establishing testing and quality practices.
+> Reasoning: The ownership verb introduce for unit testing indicates the candidate will define and implement testing practices rather than just use them.
 
-**Run 2:** `responsibility`
+**Run 2:** `responsibility` ✗
 > Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to establish and own testing practices and CI/CD standards, using the action verb 'Introduce' which signals accountability for defining testing frameworks.
+> Reasoning: The verb "introduce" paired with unit testing in the responsibilities section indicates the candidate is expected to define and establish testing standards as a core responsibility, not just apply existing tools.
 
-**Run 3:** `responsibility`
+**Run 3:** `responsibility` ✗
 > Quote: "Introduce robust CI/CD frameworks, unit testing, and security protocols"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'Introduce' frames testing and CI/CD as core responsibilities the candidate owns and establishes.
+> Reasoning: Testing is framed as something the candidate owns and defines using the action verb "introduce," indicating accountability for establishing these practices.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `high`
+**Run 1:** `moderate` ✗
 > Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs"
 > Verified: ✓ found in JD
-> Reasoning: Regulatory compliance and data confidentiality appear as primary responsibilities in a payments context, reflecting fear of regulatory exposure and breach liability.
+> Reasoning: Compliance and operational reliability are explicit concerns but secondary to the primary mission of building and scaling infrastructure.
 
-**Run 2:** `high`
-> Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs; Strong operational mindset regarding data SLAs and uptime"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Regulatory compliance and operational reliability are core to the role framing, with explicit emphasis on preventing data failures that would create regulatory exposure or operational outages.
-
-**Run 3:** `high`
+**Run 2:** `moderate` ✗
 > Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs"
 > Verified: ✓ found in JD
-> Reasoning: Regulatory compliance (PCI-DSS/SOC2) and security protocols dominate the framing, reflecting fear of regulatory exposure and financial/security breaches from data errors.
+> Reasoning: While compliance and operational reliability (SLAs, uptime) are explicit concerns, the responsibilities frame them as constraints alongside delivery goals rather than as the primary risk-mitigation driver of the role.
+
+**Run 3:** `high` ✗
+> Quote: "Ensure PCI-DSS/SOC2 compliance while optimizing costs"
+> Verified: ✓ found in JD
+> Reasoning: Compliance and regulatory risk dominate the role framing, with additional emphasis on operational reliability through data SLAs and uptime, reflecting fear of regulatory exposure and data reliability failures.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']

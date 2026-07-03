@@ -52,195 +52,215 @@ Interview Process & Tools: Not specified in posting.
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | mixed | recruiter | 33% |
-| stakeholder_orientation | internal_data | internal_data | mixed | 33% |
-| autonomy_level | execution | execution | execution | 100% |
-| ai_role | none | none | none | 100% |
-| testing_framing | absent | responsibility | responsibility | 33% |
-| loss_aversion_framing | moderate | moderate | moderate | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | recruiter | recruiter | recruiter | 100% | ✗ |
+| stakeholder_orientation | internal_data | mixed | internal_data | finance | 0% | ✗ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, best practices, and documentation without any velocity signals like shipping, fast-paced work, or iteration speed.
+> Reasoning: The emphasis on data integrity, documentation, and audits reflects a rigour orientation focused on quality and governance rather than speed or velocity.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data integrity, audits, and best practices without any velocity-oriented language like 'fast-paced' or 'move quickly', indicating a rigour-focused orientation.
+> Reasoning: The responsibilities emphasize data integrity and best practices development with no velocity language, indicating a rigour orientation.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Rigour signals (data integrity, best practices, documentation, audits) significantly outnumber velocity signals in the responsibilities section.
+> Reasoning: The emphasis on data integrity, best practices, and conducting deep analytical work signals a rigour-oriented role without velocity language.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Contributing to the design, implementation, and delivery of BI solutions for complex and ambiguous problems"
+**Run 1:** `moderate` ✓
+> Quote: "Conducting analytical deep dives and formulating recommendations for leadership"
 > Verified: ✓ found in JD
-> Reasoning: Warehouse operations data affects business decisions but lacks explicit regulatory, compliance, or financial reporting language that would elevate this to high risk.
+> Reasoning: The JD uses generic analytical language without explicit financial, compliance, or regulatory signals typical of high-risk domains.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✓
 > Quote: "Identifying opportunities to drive analytical reporting and business strategy"
 > Verified: ✓ found in JD
-> Reasoning: The role supports business strategy and operational decisions but the JD uses no language about financial reporting, regulatory compliance, or audit-critical impacts that would indicate high risk.
+> Reasoning: The JD emphasizes general business intelligence and strategy support without explicit financial reporting, compliance, or regulatory language that would signal high domain risk.
 
-**Run 3:** `moderate`
-> Quote: "identifying opportunities to drive analytical reporting and business strategy"
+**Run 3:** `moderate` ✓
+> Quote: "Conducting analytical deep dives and formulating recommendations for leadership"
 > Verified: ✓ found in JD
-> Reasoning: Data errors affect warehouse/logistics business decisions without explicit regulatory, compliance, or financial reporting framing, indicating moderate operational risk rather than high.
+> Reasoning: The role supports leadership decisions on warehouse operations without explicit financial, regulatory, or compliance framing, indicating moderate domain risk.
 
 ### collaboration_width
+**Manual:** `1`
 
-**Run 1:** `1`
+**Run 1:** `1` ✓
 > Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
 > Verified: ✓ found in JD
-> Reasoning: Only one named team is explicitly identified in the JD; other references like 'leadership' and 'stakeholders' are too generic to count as distinct partner functions.
+> Reasoning: Only one explicitly named team (Data Engineering) is identified as a collaboration partner.
 
-**Run 2:** `1`
-> Quote: "Data Engineering teams"
+**Run 2:** `1` ✓
+> Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named partner function (Data Engineering teams) is mentioned; 'leadership' and 'stakeholders' are generic role references, not distinct collaborating teams.
+> Reasoning: Only Data Engineering is explicitly named as a collaboration partner in the responsibilities section.
 
-**Run 3:** `1`
-> Quote: "Data Engineering teams"
+**Run 3:** `1` ✓
+> Quote: "Partnering with Data Engineering teams"
 > Verified: ✓ found in JD
-> Reasoning: Only one named partner function (Data Engineering) is explicitly identified; 'stakeholders' and 'leadership' are too generic to count.
+> Reasoning: Only Data Engineering teams is explicitly named; other references to stakeholders and leadership are generic.
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✗
 > Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
 > Verified: ✓ found in JD
-> Reasoning: Multiple data roles (Data Engineering teams exist alongside this BI Engineer) and named infrastructure tools (Redshift, Tableau) indicate a growing but not yet mature data organization.
+> Reasoning: Reference to existing Data Engineering teams and infrastructure being enhanced indicates a function that is established and growing but not yet mature at scale.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✗
 > Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
 > Verified: ✓ found in JD
-> Reasoning: The plural 'teams' and verb 'enhance' indicate infrastructure and multiple data roles already exist; the focus is on improving rather than building from zero.
+> Reasoning: The existence of named Data Engineering teams and focus on enhancing existing infrastructure signals a mid-stage data function rather than early-stage establishment or mature specialization.
 
-**Run 3:** `mid`
+**Run 3:** `mid` ✗
 > Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
 > Verified: ✓ found in JD
-> Reasoning: The plural 'teams' and expectation to enhance existing infrastructure indicate a multi-person data function in growth phase, not early-stage or fully mature.
+> Reasoning: The existence of Data Engineering teams and explicit reference to enhancing existing infrastructure indicates an established mid-stage function rather than early-stage build.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `recruiter`
+**Run 1:** `recruiter` ✗
 > Quote: "Contributing to the design, implementation, and delivery of BI solutions for complex and ambiguous problems"
 > Verified: ✓ found in JD
-> Reasoning: Generic action verbs and absence of technical specificity about how tools are applied to warehouse operations suggest recruiter authorship rather than hiring manager insight.
+> Reasoning: Boilerplate action verbs and generic responsibilities without specific tools, scale, or methodological context indicate recruiter authorship rather than hands-on domain expertise.
 
-**Run 2:** `mixed`
+**Run 2:** `recruiter` ✗
 > Quote: "Contributing to the design, implementation, and delivery of BI solutions for complex and ambiguous problems"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic boilerplate language ('contributing', 'delivering') typical of recruiter writing, while the requirements section shows technical specificity (Redshift, Tableau, AWS services) suggesting hiring manager involvement.
+> Reasoning: The responsibilities use generic action verbs without specific technical context about tools, workflows, or scale that would indicate hiring manager authorship.
 
-**Run 3:** `recruiter`
-> Quote: "Contributing to the design, implementation, and delivery of BI solutions for complex and ambiguous problems"
+**Run 3:** `recruiter` ✗
+> Quote: "Conducting analytical deep dives and formulating recommendations for leadership"
 > Verified: ✓ found in JD
-> Reasoning: Generic action verbs ('contributing', 'formulating', 'identifying opportunities') and vague problem framing lack the technical specificity and context that hiring managers provide.
+> Reasoning: Generic action verbs without specific technical context, scale metrics, or methodology names indicate recruiter boilerplate rather than hiring manager expertise.
 
-⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `mixed` ✗
+> Quote: "Conducting analytical deep dives and formulating recommendations for leadership; Partnering with Data Engineering teams to enhance data infrastructure"
+> Verified: ✓ found in JD
+> Reasoning: The role serves both executive leadership for strategic insights and the internal data function for infrastructure improvement, with roughly equal emphasis.
+
+**Run 2:** `internal_data` ✓
 > Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
 > Verified: ✓ found in JD
-> Reasoning: The explicit partnership with Data Engineering and focus on building data infrastructure position this role as serving the data platform and analytics function, not a specific commercial, product, or finance stakeholder.
+> Reasoning: The primary named partnership is with Data Engineering, and the explicit focus on enhancing data infrastructure positions the role as serving the data function and its platform consumers.
 
-**Run 2:** `internal_data`
-> Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
+**Run 3:** `finance` ✗
+> Quote: "Identifying opportunities to drive analytical reporting and business strategy"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes developing analytics infrastructure, working with data teams, and establishing best practices rather than serving commercial, product, or finance-specific audiences.
+> Reasoning: The focus on business strategy and analytical recommendations for warehouse operations, which directly impacts COGS and inventory valuation, signals finance as the primary stakeholder.
 
-**Run 3:** `mixed`
-> Quote: "formulating recommendations for leadership; Partnering with Data Engineering teams to enhance data infrastructure"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role balances business stakeholder service (leadership strategy recommendations) equally with data platform/infrastructure work, creating dual audience orientation.
+⚠ **Disagreement**: manual=`internal_data` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'finance']
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `execution`
-> Quote: "Contributing to the design, implementation, and delivery of BI solutions for complex and ambiguous problems"
-> Verified: ✓ found in JD
-> Reasoning: The use of 'contributing to' rather than 'owning' or 'defining' indicates the role executes within a team framework rather than independently setting analytical direction.
-
-**Run 2:** `execution`
-> Quote: "Partnering with Data Engineering teams to enhance data infrastructure"
-> Verified: ✓ found in JD
-> Reasoning: The role 'contributes to' and 'partners with' rather than 'leads', 'owns', or 'defines', indicating the candidate executes within existing frameworks rather than setting strategic direction.
-
-**Run 3:** `execution`
+**Run 1:** `execution` ✗
 > Quote: "Contributing to the design, implementation, and delivery of BI solutions"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'contributing' and emphasis on delivery rather than defining direction indicate the role executes scoped work rather than setting analytics strategy.
+> Reasoning: The verb 'contributing to' and focus on delivery indicate execution of priorities set by others rather than strategic ownership.
+
+**Run 2:** `execution` ✗
+> Quote: "Contributing to the design, implementation, and delivery of BI solutions"
+> Verified: ✓ found in JD
+> Reasoning: The primary framing uses 'contributing to' and execution-oriented verbs, suggesting the role executes on direction set by others rather than independently setting that direction.
+
+**Run 3:** `execution` ✗
+> Quote: "Contributing to the design, implementation, and delivery of BI solutions for complex and ambiguous problems"
+> Verified: ✓ found in JD
+> Reasoning: The verb 'contributing to' and focus on delivering solutions to defined problems indicates execution within set organizational direction rather than strategic autonomy.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
+**Manual:** ``
 
-**Run 1:** `none`
+**Run 1:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tools, machine learning, LLMs, or AI-assisted coding expected of the candidate.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no explicit or implicit expectations for AI coding tools or AI infrastructure skills from the candidate.
 
-**Run 2:** `none`
+**Run 2:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no explicit AI skill expectations; 'learning new technologies' is too vague to indicate a specific AI requirement.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no explicit mention of AI tools, skills, or infrastructure that the candidate would be expected to use or enable.
 
-**Run 3:** `none`
+**Run 3:** `none` ✗
 > Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI skills, tools, GenAI applications, or agentic workflows expected of the candidate.
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI-assisted coding tools, AI pipelines, or AI skill expectations; technology references are limited to databases and visualization tools.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `absent`
+**Run 1:** `responsibility` ✗
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Data integrity is mentioned but testing practices, data contracts, or observability frameworks are not explicitly named or framed as a responsibility.
+> Reasoning: The action verb 'developing' paired with 'best practices in data integrity' indicates the candidate is expected to own or define data integrity practices.
 
-**Run 2:** `responsibility`
+**Run 2:** `responsibility` ✗
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'developing' frames data integrity and quality as something the candidate will establish and own through best practices, not merely use existing tools.
+> Reasoning: The use of 'developing best practices' with an ownership verb indicates the candidate is expected to define and own data integrity standards, framing it as a responsibility rather than a listed tool.
 
-**Run 3:** `responsibility`
+**Run 3:** `responsibility` ✗
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'Developing' indicates the role owns and defines data integrity practices rather than using pre-existing tools.
+> Reasoning: The role explicitly owns responsibility for developing data integrity best practices, indicating accountability for quality practices even without naming specific tools.
 
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Automating reporting, audits, and other data-driven activities"
 > Verified: ✓ found in JD
-> Reasoning: Audits and data integrity practices suggest concern with operational reliability but lack regulatory or compliance language that would indicate high loss aversion.
+> Reasoning: The mention of audits indicates operational reliability is a concern, but overall framing emphasizes analytical delivery over risk prevention.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Developing best practices in data integrity and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Data quality and reliability are concerns (audits, integrity), but the JD emphasizes operational best practices rather than regulatory risk, compliance, or preventing bad data from reaching stakeholders.
+> Reasoning: While data integrity is mentioned as an ownership area, there is no explicit compliance, regulatory, or risk language that would signal high loss aversion, indicating moderate operational reliability concern.
 
-**Run 3:** `moderate`
-> Quote: "Developing best practices in data integrity and documentation"
+**Run 3:** `moderate` ✗
+> Quote: "Automating reporting, audits, and other data-driven activities"
 > Verified: ✓ found in JD
-> Reasoning: Data integrity concerns are present and suggest operational reliability matters, but the framing emphasizes building practices rather than preventing compliance violations or critical stakeholder trust failure.
+> Reasoning: Mention of audits and data integrity suggests operational reliability concerns, but lacks explicit risk, compliance, or stakeholder trust framing required for high classification.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

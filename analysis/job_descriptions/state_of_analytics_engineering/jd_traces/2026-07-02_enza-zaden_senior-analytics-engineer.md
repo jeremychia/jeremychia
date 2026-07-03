@@ -54,197 +54,219 @@ Contact: Sandra Hoeneveld, Corporate Recruiter, s.hoeneveld-blekkink@enzazaden.n
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 4 | 5 | 4 | 33% |
-| data_team_maturity | mature | mid | mid | 33% |
-| jd_authorship | mixed | mixed | mixed | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | execution | strategic | 33% |
-| ai_role | none | none | none | 100% |
-| testing_framing | tool_listed | responsibility | tool_listed | 33% |
-| loss_aversion_framing | moderate | moderate | moderate | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | low | moderate | moderate | moderate | 100% | ✗ |
+| collaboration_width | 4 | 5 | 4 | 4 | 33% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | execution | mixed | mixed | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | tool_listed | tool_listed | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "Leading complex analytics and reporting initiatives with a mid- to long-term horizon"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on long-term horizons, compliance, governance, and quality improvement signals a rigour-oriented approach without any velocity-focused language.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality, reliability, and governance as core expectations with no velocity or speed-oriented language present.
+> Reasoning: Responsibilities emphasize quality, reliability, and governance with no velocity language present; compliance and architecture standards are core expectations.
 
-**Run 3:** `rigour`
-> Quote: "Ensuring compliance with architecture, security and access standards together with IT, Architecture and Security teams"
+**Run 2:** `rigour` ✓
+> Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, compliance, reliability, data quality, and lifecycle management with no velocity language (fast-paced, move fast, rapid iteration) anywhere in the text.
+> Reasoning: The responsibilities section emphasizes quality, reliability, governance, and compliance as core expectations with no velocity or speed-oriented language present.
+
+**Run 3:** `rigour` ✓
+> Quote: "Translating business needs into scalable, well-governed data solutions"
+> Verified: ✓ found in JD
+> Reasoning: Governance, quality, and compliance are core responsibilities with no velocity-oriented language; 'well-governed' explicitly signals rigour priority.
 
 ### domain_risk
+**Manual:** `low`
 
-**Run 1:** `moderate`
-> Quote: "Translating business needs into scalable, well-governed data solutions in collaboration with stakeholders and product owners"
+**Run 1:** `moderate` ✗
+> Quote: "Ensuring compliance with architecture, security and access standards together with IT, Architecture and Security teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes business decision support and operational governance rather than financial reporting, regulatory compliance, or P&L language that would indicate high risk.
+> Reasoning: Data errors affect internal business operations and decision-making but lack explicit financial reporting, regulatory, or audit language that would signal high risk.
 
-**Run 2:** `moderate`
-> Quote: "make an impact by strengthening data-driven decision-making across Enza Zaden worldwide"
+**Run 2:** `moderate` ✗
+> Quote: "Ensuring compliance with architecture, security and access standards together with IT, Architecture and Security teams"
 > Verified: ✓ found in JD
-> Reasoning: The role supports business decision-making in a seed breeding company without explicit financial reporting or regulatory compliance framing.
+> Reasoning: The compliance mentioned is technical and IT-focused rather than financial, regulatory, or public-safety compliance; this is a business intelligence role without explicit financial reporting or regulatory impact signals.
 
-**Run 3:** `moderate`
-> Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
-> Verified: ✓ found in JD
-> Reasoning: While Enza Zaden operates in food production, the JD frames the role around internal analytics and BI decisions rather than financial reporting, regulatory compliance, or mission-critical systems.
-
-### collaboration_width
-
-**Run 1:** `4`
-> Quote: "product owners; IT specialists; Architecture and Security teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named teams are identified: product owners, IT specialists, Architecture, and Security, excluding analytics engineers as the role holder's own team.
-
-**Run 2:** `5`
-> Quote: "product owners; analytics engineers; IT specialists; Architecture; Security"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names five distinct partner teams or functions across role summary and responsibilities sections.
-
-**Run 3:** `4`
-> Quote: "product owners; IT specialists; Architecture teams; Security teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions are explicitly mentioned as collaboration partners: product owners, IT specialists, Architecture, and Security teams.
-
-⚠ **LLM inconsistency**: runs gave ['4', '5', '4']
-
-### data_team_maturity
-
-**Run 1:** `mature`
-> Quote: "global data platform"
-> Verified: ✓ found in JD
-> Reasoning: References to a global data platform with established governance frameworks, named tools (Databricks, dbt, Power BI), and multiple specialized roles indicate an organization operating at scale with mature infrastructure.
-
-**Run 2:** `mid`
-> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
-> Verified: ✓ found in JD
-> Reasoning: Specific named tools in responsibilities and emphasis on maintaining/extending advanced solutions indicate an established data function scaling its capabilities.
-
-**Run 3:** `mid`
-> Quote: "Leading complex analytics and reporting initiatives with a mid- to long-term horizon"
-> Verified: ✓ found in JD
-> Reasoning: The JD describes maintaining established tools (Databricks, dbt, Power BI) with multiple named data roles and mentions of knowledge sharing and adoption, indicating an existing but still-growing data function.
-
-⚠ **LLM inconsistency**: runs gave ['mature', 'mid', 'mid']
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
-> Verified: ✓ found in JD
-> Reasoning: Specific technical tools are named with precise context suggesting hiring manager input, but the JD also contains generic stakeholder-centric language typical of recruiter involvement.
-
-**Run 2:** `mixed`
-> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
-> Verified: ✓ found in JD
-> Reasoning: The JD contains technical specificity (named tools, Azure DP203 certification, DevOps practices for data products) alongside generic responsibility verbs like coaching and translating.
-
-**Run 3:** `mixed`
-> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
-> Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical details (named tools, lifecycle management, compliance frameworks, mid-to-long-term initiatives) alongside standard recruiter boilerplate (translate business needs, collaborate with stakeholders).
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
+**Run 3:** `moderate` ✗
 > Quote: "empower self-serve BI for teams across the organization"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The primary audience is internal data consumers and analytics platform users, not commercial, product, or finance stakeholders.
+> Reasoning: The role supports internal business decision-making and analytics without financial reporting, regulatory, or compliance-driven consequences.
 
-**Run 2:** `internal_data`
-> Quote: "empower self-service BI for teams across the organization"
+⚠ **Disagreement**: manual=`low` vs LLM majority=`moderate`
+
+### collaboration_width
+**Manual:** `4`
+
+**Run 1:** `5` ✗
+> Quote: "product owners; analytics engineers; IT specialists; IT, Architecture and Security teams"
 > Verified: ✓ found in JD
-> Reasoning: The primary audience is the data function's internal consumers who will use the self-serve BI platform, not external commercial or finance stakeholders.
+> Reasoning: Five named teams identified: Product (product owners), Analytics (analytics engineers), IT, Architecture, and Security.
 
-**Run 3:** `internal_data`
-> Quote: "You design, build and maintain scalable data models and analytics products that empower self-service BI for teams across the organization."
+**Run 2:** `4` ✓
+> Quote: "product owners; IT specialists; Architecture and Security teams"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is building analytics infrastructure and self-serve BI capabilities for internal data consumers, not commercial, product, finance, or specific business team outcomes.
+> Reasoning: Four distinct named functions are explicitly mentioned: Product, IT, Architecture, and Security.
 
-### autonomy_level
-
-**Run 1:** `strategic`
-> Quote: "Designing, developing and maintaining advanced data models and analytics products"
+**Run 3:** `4` ✓
+> Quote: "product owners; IT specialists; Architecture and Security teams"
 > Verified: ✓ found in JD
-> Reasoning: The use of 'designing' and 'leading initiatives' signals strategic/directional authority over analytics solutions, though exercised in collaboration with stakeholders.
+> Reasoning: Four distinct named functions are explicitly listed: Product, IT, Architecture, and Security.
 
-**Run 2:** `execution`
-> Quote: "Translating business needs into scalable, well-governed data solutions in collaboration with stakeholders and product owners"
-> Verified: ✓ found in JD
-> Reasoning: The role executes within priorities and requirements set by stakeholders and product owners rather than setting strategic direction.
+⚠ **LLM inconsistency**: runs gave ['5', '4', '4']
 
-**Run 3:** `strategic`
-> Quote: "Leading complex analytics and reporting initiatives with a mid- to long-term horizon"
-> Verified: ✓ found in JD
-> Reasoning: The role involves leading and designing solutions with forward-looking scope rather than executing against externally scoped work, indicating strategic direction-setting within analytics.
+### data_team_maturity
+**Manual:** `mature`
 
-⚠ **LLM inconsistency**: runs gave ['strategic', 'execution', 'strategic']
-
-### ai_role
-
-**Run 1:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of AI-assisted coding, AI infrastructure, or AI products anywhere in the JD; company is in seed breeding, not AI.
-
-**Run 2:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, AI-ready data foundations, or any AI skill expectations for the candidate.
-
-**Run 3:** `none`
-> Quote: "No AI skill signal."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no mention of AI tools, AI/ML pipelines, GenAI applications, or AI-related candidate capabilities.
-
-### testing_framing
-
-**Run 1:** `tool_listed`
-> Quote: "Experience with DevOps practices such as version control, testing and CI/CD for data products"
-> Verified: ✓ found in JD
-> Reasoning: Testing is mentioned as a required DevOps skill in requirements, but responsibilities focus on quality improvement without framing testing ownership or data quality frameworks as owned practices.
-
-**Run 2:** `responsibility`
+**Run 1:** `mid` ✗
 > Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: The role owns improving data quality and reliability as an explicit responsibility, indicating ownership of quality practices including testing frameworks.
+> Reasoning: Existing infrastructure (Databricks, dbt, Power BI) with multiple roles implies an established function scaling and improving existing systems rather than building from scratch.
 
-**Run 3:** `tool_listed`
+**Run 2:** `mid` ✗
+> Quote: "design, build and maintain scalable data models and analytics products that empower self-service BI for teams across the organization"
+> Verified: ✓ found in JD
+> Reasoning: Existing named tools in responsibilities (Databricks, dbt, Power BI), an established global data platform, and self-service BI infrastructure already deployed indicate a mid-stage data function with improvement focus rather than early-stage or fully mature scale.
+
+**Run 3:** `mid` ✗
+> Quote: "global data platform"
+> Verified: ✓ found in JD
+> Reasoning: An established global platform with multiple named roles and coaching responsibilities indicates a growing but already-operational data function.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `mixed` ✗
+> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
+> Verified: ✓ found in JD
+> Reasoning: Named tools with specific context (Databricks, dbt) in responsibilities suggests hiring manager input, but generic stakeholder management verbs ('coaching', 'knowledge sharing') indicate recruiter boilerplate.
+
+**Run 2:** `mixed` ✗
+> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific tool names and methodology context suggesting hands-on technical knowledge, but also include generic stakeholder collaboration and coaching language typical of recruiter-authored JDs.
+
+**Run 3:** `mixed` ✗
+> Quote: "Designing, developing and maintaining advanced data models and analytics products using tools like Databricks, dbt and Power BI"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool applications and governance compliance details show hiring-manager input, but generic verbs like 'coaching colleagues' indicate recruiter boilerplate.
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "empower self-serve BI for teams across the organization"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Primary framing is building and maintaining data models and analytics products for internal team consumption via self-service analytics platform.
+
+**Run 2:** `internal_data` ✓
+> Quote: "empower self-service BI for teams across the organization"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary purpose is building data infrastructure and enabling self-serve analytics for internal organizational teams rather than serving commercial, product, finance, or external audiences.
+
+**Run 3:** `internal_data` ✓
+> Quote: "empower self-serve BI for teams across the organization"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The primary purpose is building analytics infrastructure and data models for internal team consumption rather than commercial, product, or finance outcomes.
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `execution` ✗
+> Quote: "translate complex requirements into reliable solutions on the global data platform"
+> Verified: ✓ found in JD
+> Reasoning: Role receives scoped requirements from product owners and stakeholders and executes solutions; no strategic direction-setting or roadmap ownership language.
+
+**Run 2:** `mixed` ✗
+> Quote: "Leading complex analytics and reporting initiatives with a mid- to long-term horizon"
+> Verified: ✓ found in JD
+> Reasoning: The role has strategic ownership through 'leading' and 'designing' but operates within business requirements set by product owners and stakeholders, combining both strategic and execution dimensions.
+
+**Run 3:** `mixed` ✗
+> Quote: "Leading complex analytics and reporting initiatives with a mid- to long-term horizon"
+> Verified: ✓ found in JD
+> Reasoning: The role leads and designs initiatives (strategic) while maintaining solutions within an established governance framework and platform (execution).
+
+⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'mixed']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI-ready data infrastructure anywhere in the JD.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-ready data foundations, or any AI skills expected of candidates.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-assisted productivity, or AI infrastructure expectations anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `tool_listed` ✗
 > Quote: "Experience with DevOps practices such as version control, testing and CI/CD for data products"
 > Verified: ✓ found in JD
-> Reasoning: Testing appears in the requirements section as a listed skill within DevOps practices without ownership verbs or framing as a core responsibility the candidate defines.
+> Reasoning: Testing appears in requirements as a required skill area but without ownership framing; data quality is mentioned in responsibilities through 'lifecycle management' rather than testing practices.
 
-⚠ **LLM inconsistency**: runs gave ['tool_listed', 'responsibility', 'tool_listed']
+**Run 2:** `tool_listed` ✗
+> Quote: "DevOps practices such as version control, testing and CI/CD for data products"
+> Verified: ✓ found in JD
+> Reasoning: Testing appears as a listed skill in the requirements section without ownership verbs or responsibility framing in the responsibilities section.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
+> Verified: ✓ found in JD
+> Reasoning: Data quality improvement is framed as a core responsibility the role owns and improves, not merely as tools listed in requirements.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`tool_listed`
+
+⚠ **LLM inconsistency**: runs gave ['tool_listed', 'tool_listed', 'responsibility']
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
-> Quote: "Ensuring compliance with architecture, security and access standards together with IT, Architecture and Security teams"
+**Run 1:** `moderate` ✗
+> Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: Compliance and reliability are concerns in an operational/technical context, but without business risk, regulatory exposure, or stakeholder trust language that would indicate high loss aversion.
+> Reasoning: Reliability and quality are operational concerns but secondary to the primary delivery mission of building scalable solutions; no regulatory, compliance, or stakeholder trust risk register dominates the framing.
 
-**Run 2:** `moderate`
-> Quote: "Ensuring compliance with architecture, security and access standards together with IT, Architecture and Security teams"
+**Run 2:** `moderate` ✗
+> Quote: "Improving data quality, reliability, performance and cost efficiency through lifecycle management"
 > Verified: ✓ found in JD
-> Reasoning: Compliance and reliability are mentioned as concerns the role ensures, but they are secondary to the primary framing of enabling data-driven decision-making and self-serve analytics.
+> Reasoning: Reliability and compliance are stated concerns but remain secondary to the primary framing around strengthening decision-making and building scalable solutions; the fear is operational reliability rather than regulatory exposure.
 
-**Run 3:** `moderate`
-> Quote: "Ensuring compliance with architecture, security and access standards together with IT, Architecture and Security teams"
+**Run 3:** `moderate` ✗
+> Quote: "Ensuring compliance with architecture, security and access standards"
 > Verified: ✓ found in JD
-> Reasoning: Compliance, governance, and reliability are important concerns but presented as one responsibility among several; the role is not framed primarily around preventing regulatory or stakeholder-trust failures.
+> Reasoning: Compliance and operational reliability are mentioned but appear secondary to delivery; the role is not primarily framed around preventing risk or protecting stakeholders.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
