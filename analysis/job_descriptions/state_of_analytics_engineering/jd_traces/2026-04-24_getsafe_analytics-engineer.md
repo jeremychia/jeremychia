@@ -62,12 +62,15 @@
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
-| domain_risk | high | high | moderate | moderate | 33% | ✗ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | mixed | mixed | hiring_manager | 33% | ✗ |
-| stakeholder_orientation |  | mixed | mixed | mixed | 100% | ✗ |
-| autonomy_level |  | strategic | mixed | strategic | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | recruiter | mixed | 33% | ✗ |
+| stakeholder_orientation | mixed | internal_data | mixed | internal_data | 33% | ✗ |
+| autonomy_level | strategic | mixed | mixed | mixed | 100% | ✗ |
+| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | none | moderate | 33% | ✗ |
 
 ---
 
@@ -79,59 +82,57 @@
 **Run 1:** `rigour` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
 > Verified: ✓ found in JD
-> Reasoning: The JD consistently emphasizes reliability, documentation, governance, and data quality through phrases like 'clean', 'reliable', 'well-documented', 'structured, governed', and 'Attention to detail', while mentions of GenAI and experimentation are secondary to the infrastructure focus.
+> Reasoning: The responsibilities emphasize reliability, documentation, and governance (clean, reliable, well-documented, single source of truth) over speed or iteration.
 
 **Run 2:** `rigour` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, reliability, documentation standards, and governance as core expectations with no countervailing velocity language.
+> Reasoning: The emphasis on reliability, clean design, and documentation as core responsibilities signals a rigour-oriented approach rather than velocity-driven delivery.
 
 **Run 3:** `rigour` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes reliability, documentation quality, and governance as core expectations with no velocity-oriented language present.
+> Reasoning: Emphasis on reliability, documentation, and establishing a single source of truth demonstrates rigour-focused quality over delivery velocity.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
 **Manual:** `high`
 
-**Run 1:** `high` ✓
+**Run 1:** `moderate` ✗
 > Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
 > Verified: ✓ found in JD
-> Reasoning: Core business metrics in an insurance company directly impact underwriting decisions, claims processing, and regulatory compliance, making data errors costly to the business and potentially to regulatory standing.
+> Reasoning: While Getsafe operates in regulated insurance, the JD uses generic analytics language without explicit regulatory, compliance, or financial reporting emphasis.
 
 **Run 2:** `moderate` ✗
 > Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
 > Verified: ✓ found in JD
-> Reasoning: Although Getsafe operates in the high-risk insurance sector, the JD uses generic business analytics language without explicit mention of regulatory compliance, financial reporting, or audit requirements.
+> Reasoning: Although Getsafe is an insurance company (high-risk sector), the JD uses generic analytics language without explicit compliance, audit, or financial reporting language.
 
 **Run 3:** `moderate` ✗
-> Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
+> Quote: "core business metrics"
 > Verified: ✓ found in JD
-> Reasoning: While Getsafe is an insurance company, the JD language focuses on business analytics without explicit financial reporting, compliance, or regulatory requirements.
+> Reasoning: While core business metrics suggests business importance, the JD lacks explicit regulatory or compliance language typical of high-risk insurance roles.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
-
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `3` ✓
-> Quote: "Commercial; Operations; Engineering"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names three distinct functions as collaboration partners in the responsibilities section.
+> Quote: "Commercial, Operations, and Engineering"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named functions are explicitly listed as collaboration partners.
 
 **Run 2:** `3` ✓
 > Quote: "Commercial; Operations; Engineering"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named partner teams are explicitly listed in the collaboration mandate.
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named functions are explicitly listed as collaboration partners in the cross-functional initiatives responsibility.
 
 **Run 3:** `3` ✓
-> Quote: "Commercial; Operations; Engineering"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct functional teams are explicitly named as collaboration partners in the cross-functional work.
+> Quote: "stakeholders across Commercial, Operations, and Engineering"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named partner functions are explicitly listed in the responsibilities.
 
 ### data_team_maturity
 **Manual:** `early`
@@ -139,17 +140,17 @@
 **Run 1:** `mid` ✗
 > Quote: "Build and maintain scalable data pipelines and data marts using modern tooling"
 > Verified: ✓ found in JD
-> Reasoning: The use of 'maintain' alongside 'build', combined with named tools (dbt, Metabase) deployed in responsibilities, indicates an established function with existing infrastructure that is growing and being scaled, not early-stage greenfield work.
+> Reasoning: The presence of 'maintain' alongside 'build' and mention of 'modern tooling' in specific contexts suggests an established but growing data function.
 
 **Run 2:** `mid` ✗
 > Quote: "Build and maintain scalable data pipelines and data marts using modern tooling"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on maintaining existing infrastructure with modern tools (dbt, Metabase) and evolving established metrics indicates a functioning data function in a growth phase, not early-stage or fully mature.
+> Reasoning: The JD describes maintaining existing infrastructure with named tools (dbt, Metabase) and evolving it, indicating a maturing data function that is already established but growing.
 
 **Run 3:** `mid` ✗
 > Quote: "Build and maintain scalable data pipelines and data marts using modern tooling"
 > Verified: ✓ found in JD
-> Reasoning: The use of both 'build' and 'maintain' indicates established infrastructure being scaled, characteristic of a mid-stage team.
+> Reasoning: Maintaining existing infrastructure while developing new AI stack components indicates a team in active growth and evolution, not greenfield or fully mature.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -159,102 +160,122 @@
 **Run 1:** `mixed` ✗
 > Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
 > Verified: ✓ found in JD
-> Reasoning: The JD blends hiring-manager specificity (AI stack context, dbt, data marts, SSOT methodology) with recruiter boilerplate ('drive cross-functional initiatives', 'conduct analyses to uncover insights').
+> Reasoning: Mix of specific domain knowledge (AI/GenAI stack, dbt, Metabase) alongside generic boilerplate action verbs (drive initiatives, conduct analyses) suggests both hiring manager and recruiter input.
 
-**Run 2:** `mixed` ✗
-> Quote: "Drive cross-functional data initiatives with stakeholders across Commercial, Operations, and Engineering"
+**Run 2:** `recruiter` ✗
+> Quote: "Conduct analyses to uncover insights and inform strategic decisions"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities mix boilerplate action verbs with moderately specific technical concepts (metrics definition, data marts, AI stack integration), but more specificity appears in the requirements section than typical hiring manager authorship.
+> Reasoning: Responsibilities use generic boilerplate action verbs without technical specificity about scale, methodology, or precise application context.
 
-**Run 3:** `hiring_manager` ✓
+**Run 3:** `mixed` ✗
 > Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical context (AI/GenAI stack development) shows domain knowledge beyond generic boilerplate language.
+> Reasoning: Specific AI stack context and tool naming suggest hiring manager input, but generic verbs like 'drive' and 'conduct' throughout indicate recruiter involvement.
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `mixed`
 
-**Run 1:** `mixed` ✗
-> Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation; Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The first two responsibilities equally emphasize business metric ownership and product/engineering AI enablement, with no clear primary audience across the responsibilities section.
+**Run 1:** `internal_data` ✗
+> Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
+> Verified: ✓ found in JD
+> Reasoning: The role is primarily focused on building data infrastructure and platforms (pipelines, models, marts, self-serve environments) serving internal data consumers.
 
-**Run 2:** `mixed` ✗
+**Run 2:** `mixed` ✓
 > Quote: "Drive cross-functional data initiatives with stakeholders across Commercial, Operations, and Engineering"
 > Verified: ✓ found in JD
-> Reasoning: The role serves multiple equally-weighted audiences—commercial (GTM and revenue), operations, engineering/product (GenAI stack), and broader decision-makers—without a single dominant stakeholder orientation.
+> Reasoning: The role explicitly serves multiple distinct audiences (commercial/revenue, operational, and product/engineering) with roughly equal emphasis across responsibilities.
 
-**Run 3:** `mixed` ✗
-> Quote: "Drive cross-functional data initiatives with stakeholders across Commercial, Operations, and Engineering"
+**Run 3:** `internal_data` ✗
+> Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly serves multiple distinct audiences (Commercial, Operations, Engineering) without a single primary focus, splitting responsibilities between product support and data infrastructure.
+> Reasoning: Role focuses on building shared data infrastructure and models as a central resource for internal stakeholders to consume, not serving a specific GTM, product, or finance function.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `strategic`
 
-**Run 1:** `strategic` ✗
+**Run 1:** `mixed` ✗
 > Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'own' combined with 'from definition to tracking' indicates end-to-end ownership and the autonomy to define and shape how core metrics are structured and evolved, rather than executing direction from others.
+> Reasoning: The role combines strategic ownership and direction-setting for metrics and initiatives with execution-focused pipeline and analysis work.
 
 **Run 2:** `mixed` ✗
 > Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic responsibility for defining and evolving metrics within an established domain with execution-oriented work supporting predefined initiatives and cross-functional stakeholders.
+> Reasoning: The role combines strategic ownership verbs (own, evolve, drive, design) that set direction for the analytics function with execution-oriented responsibilities (build, maintain, develop, conduct analyses).
 
-**Run 3:** `strategic` ✗
-> Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
+**Run 3:** `mixed` ✗
+> Quote: "Own and evolve core business metrics"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'own' combined with 'from definition' indicates the role sets direction on metrics strategy and operationalization, not just executing predefined work.
+> Reasoning: Role expects strategic ownership of metrics definition and evolution while also executing infrastructure work like building and maintaining pipelines.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
 
 ### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
-> Reasoning: Candidate builds data infrastructure components that AI/GenAI applications consume.
+**Manual:** ``
 
-**Run 2:** `ai_enabler` ✓
+**Run 1:** `ai_enabler` ✗
 > Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
-> Reasoning: Role explicitly builds data infrastructure that AI/GenAI applications consume.
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure and foundations that enable GenAI applications, not to use AI tools for personal productivity.
 
-**Run 3:** `ai_enabler` ✓
+**Run 2:** `ai_enabler` ✗
 > Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
-> Reasoning: Candidate builds infrastructure that AI/GenAI applications consume; clear enabler signal
+> Verified: ✓ found in JD
+> Reasoning: The candidate must build data infrastructure that AI systems consume, not use AI tools for personal coding productivity.
 
+**Run 3:** `ai_enabler` ✗
+> Quote: "Develop the data and analytics components of the AI stack to support experimentation and GenAI applications"
+> Verified: ✓ found in JD
+> Reasoning: Candidate is expected to build data infrastructure specifically to enable AI/GenAI systems rather than use AI tools for their own coding productivity.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Build and maintain scalable data pipelines and data marts using modern tooling"
-> Reasoning: Operational responsibilities stated without explicit testing ownership or quality practice verbs.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
+**Run 1:** `absent` ✗
+> Quote: "Design clean, reliable, and well-documented data models"
+> Verified: ✓ found in JD
+> Reasoning: While quality is implicit in the emphasis on clean and reliable models, there is no explicit ownership of testing, data contracts, or data quality frameworks.
+
+**Run 2:** `absent` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
-> Reasoning: Quality mindset evident but no explicit testing ownership, framework definition, or data contract responsibility stated.
+> Verified: ✓ found in JD
+> Reasoning: While reliability is mentioned as a design goal, there is no explicit mention of testing frameworks, data quality ownership, data contracts, or observability practices.
 
-**Run 3:** `absent` ✓
+**Run 3:** `absent` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
-> Reasoning: Quality attributes mentioned but no explicit testing responsibility or data contract ownership stated
+> Verified: ✓ found in JD
+> Reasoning: While data reliability is valued through design quality, no specific testing practices, data quality frameworks, or observability mechanisms are mentioned.
 
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
-> Reasoning: Reliability and trustworthiness framed as operational concerns, not compliance/regulatory dominance.
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on reliability and documentation suggests concern for operational stability and trustworthiness, but without explicit regulatory or compliance language, this is secondary to delivery framing.
 
-**Run 2:** `moderate` ✓
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around building analytics capabilities and data infrastructure without emphasis on risk prevention, compliance concerns, or reliability as a risk mitigation measure.
+
+**Run 3:** `moderate` ✗
 > Quote: "Design clean, reliable, and well-documented data models as a single source of truth"
-> Reasoning: Operational reliability framed through 'reliable' and 'maintain', but no compliance, audit, or trust-dominance language.
+> Verified: ✓ found in JD
+> Reasoning: Reliability and quality are emphasized as core values but without explicit risk, compliance, or loss-prevention language typical of high loss-aversion roles.
 
-**Run 3:** `moderate` ✓
-> Quote: "Own and evolve core business metrics - from definition to tracking and operationalisation"
-> Reasoning: Operationalisation and maintenance framing signals operational reliability concern without compliance drivers
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
 
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']

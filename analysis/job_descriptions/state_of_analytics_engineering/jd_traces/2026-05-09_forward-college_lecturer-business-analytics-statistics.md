@@ -95,12 +95,15 @@
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | low | low | low | low | 100% | ✓ |
+| domain_risk | low | low | low | moderate | 33% | ✓ |
 | collaboration_width | 2 | 0 | 0 | 0 | 100% | ✗ |
-| data_team_maturity | early | mature | mature | mid | 33% | ✗ |
-| jd_authorship | hiring_manager | hiring_manager | mixed | recruiter | 0% | ✓ |
-| stakeholder_orientation |  | internal_data | mixed | internal_data | 33% | ✗ |
-| autonomy_level |  | execution | execution | execution | 100% | ✗ |
+| data_team_maturity | early | early | mature | early | 33% | ✓ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | internal_data | mixed | internal_data | mixed | 33% | ✗ |
+| autonomy_level | execution | execution | mixed | execution | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
@@ -110,19 +113,19 @@
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Design and grade four formative assessments"
+> Quote: "Seminars are NOT for content delivery — they are for tackling complex questions, debating, solving problems in teams, simulating real-life scenarios"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes structured assessment, individual feedback, and pedagogical rigor throughout, with no velocity-oriented language present.
+> Reasoning: The JD frames the seminar approach around depth, problem-solving, and learning quality rather than information delivery speed; no velocity signals present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Design and grade four formative assessments"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize assessment design, grading, and structured evaluation as core expectations, with no signals of speed or iteration.
+> Reasoning: The emphasis on structured assessment design, grading, and individual feedback signals a rigour-oriented approach prioritizing educational quality and accountability over speed.
 
 **Run 3:** `rigour` ✓
-> Quote: "Seminars are NOT for content delivery — they are for tackling complex questions, debating, solving problems in teams, simulating real-life scenarios"
+> Quote: "Design and grade four formative assessments"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly rejects speed and content delivery in favor of depth, critical thinking, and rigorous problem-solving.
+> Reasoning: The focus on structured assessments and pedagogical rigor in the assessment design indicates a quality-focused approach.
 
 ### domain_risk
 **Manual:** `low`
@@ -130,162 +133,178 @@
 **Run 1:** `low` ✓
 > Quote: "Teach 22 two-hour weekly seminars"
 > Verified: ✓ found in JD
-> Reasoning: This is an educational teaching role with student learning as the outcome; errors have no direct regulatory, compliance, or financial reporting consequences.
+> Reasoning: This is an educational institution with no financial reporting, regulatory, or compliance framing; consequences of poor teaching are educational, not financial or regulatory.
 
 **Run 2:** `low` ✓
 > Quote: "Experience in teaching Business Analytics and Statistics"
 > Verified: ✓ found in JD
-> Reasoning: This is an educational teaching role where errors are recoverable; education is explicitly listed as low-risk domain.
+> Reasoning: The role is educational delivery in an academic setting; errors affect learner outcomes rather than financial reporting, regulatory compliance, or business decisions at scale.
 
-**Run 3:** `low` ✓
-> Quote: "Lecturer in Business Analytics and Statistics (Part-Time) — Forward College"
-> Verified: ✓ found in JD
-> Reasoning: This is an educational teaching role at a business school with no financial, regulatory, or operational consequences for data errors.
+**Run 3:** `moderate` ✗
+> Quote: "Course extends and reinforces existing knowledge and introduces applications of modelling in management. Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.'"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role directly impacts manager decision-making through business analytics education, suggesting moderate business consequence without regulatory or compliance risk.
+
+⚠ **LLM inconsistency**: runs gave ['low', 'low', 'moderate']
 
 ### collaboration_width
 **Manual:** `2`
 
 **Run 1:** `0` ✗
-> Quote: "No named partner teams identified in the responsibilities section"
+> Quote: "No named organizational teams identified"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD lists no explicit named organizational teams or functions to collaborate with; the role is standalone teaching.
+> Reasoning: References to 'staff' and 'student body' are too generic; no distinct named functions like Finance, Product, or Engineering are listed as collaboration partners.
 
 **Run 2:** `0` ✗
-> Quote: "None"
+> Quote: "No named professional partner teams identified in JD"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: No named partner teams, functions, or role cohorts are explicitly identified as collaboration partners in the JD.
+> Reasoning: The JD names no specific departments or professional teams (Finance, Product, Engineering, etc.) that the lecturer collaborates with; interactions are confined to students and Forward College staff without department-level specificity.
 
 **Run 3:** `0` ✗
-> Quote: "None explicitly named"
+> Quote: "No named partner teams"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: No named partner teams, departments, or functions are mentioned as collaborators in the responsibilities or qualifications.
+> Reasoning: The role is a standalone teaching position with no explicit cross-functional team collaborations named in the responsibilities.
 
 ⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
 ### data_team_maturity
 **Manual:** `early`
 
-**Run 1:** `mature` ✗
+**Run 1:** `early` ✓
 > Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
 > Verified: ✓ found in JD
-> Reasoning: Forward College operates with established, proven pedagogical frameworks and systematic curriculum structures suggesting a mature institutional program.
+> Reasoning: No mention of data infrastructure, tools, or team structure; the role is purely educational delivery with no signals of organizational data capability.
 
 **Run 2:** `mature` ✗
+> Quote: "Class size: ~15 students per seminar (part of a 150-student cohort)"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The established curriculum, large-scale cohort, defined pedagogical infrastructure (flipped classroom, formative assessments, tutoring programs), and multiple defined roles indicate a mature educational program operating at institutional scale.
+
+**Run 3:** `early` ✓
 > Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
 > Verified: ✓ found in JD
-> Reasoning: Forward College has an established pedagogical framework, defined curriculum, structured assessment systems, and institutional infrastructure indicating a mature operation.
+> Reasoning: The role is establishing a distinct pedagogical approach rather than operating within an established organizational data function.
 
-**Run 3:** `mid` ✗
-> Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
-> Verified: ✓ found in JD
-> Reasoning: Forward College has established programs, curriculum, and institutional structure suggesting mid-stage institutional maturity rather than early-stage building.
-
-⚠ **Disagreement**: manual=`early` vs LLM majority=`mature`
-
-⚠ **LLM inconsistency**: runs gave ['mature', 'mature', 'mid']
+⚠ **LLM inconsistency**: runs gave ['early', 'mature', 'early']
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "Teach 22 two-hour weekly seminars; Provide approximately 15 hours of individual tutoring across the academic term"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The specific numbers (22 seminars, 15 hours, 4 assessments) and detailed pedagogical context indicate someone with direct knowledge of the role wrote this, not generic boilerplate.
-
-**Run 2:** `mixed` ✗
-> Quote: "Teach 22 two-hour weekly seminars; Provide approximately 15 hours of individual tutoring across the academic term"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific numbers and pedagogical methodology suggest hiring manager knowledge, but the generic teaching verbs suggest some recruiter involvement.
-
-**Run 3:** `recruiter` ✗
-> Quote: "Teach 22 two-hour weekly seminars"
+**Run 1:** `mixed` ✗
+> Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic teaching action verbs without demonstrating specific technical know-how about what actually happens in practice.
+> Reasoning: Responsibilities use generic teaching verbs, but the detailed pedagogical approach (flipped classroom, study groups, four intelligences framework) suggests hiring manager input on teaching methodology.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'recruiter']
+**Run 2:** `hiring_manager` ✓
+> Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
+> Verified: ✓ found in JD
+> Reasoning: The specific pedagogical methodology (flipped classroom), reference to LSE material, exact teaching volumes (22 seminars, 15 hours tutoring, 4 assessments), and detailed institutional pedagogy demonstrate technical knowledge only available to someone deeply familiar with this role.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material; Teach 22 two-hour weekly seminars; Provide approximately 15 hours of individual tutoring across the academic term"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities specify a detailed, non-standard pedagogical approach (flipped classroom, specific time commitments, tutorial structure) that only comes from someone designing this specific educational program.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
+**Run 1:** `mixed` ✗
 > Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.'"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The role serves to develop data literacy and analytical capability in learners who will become data-informed decision makers and consumers of analytics.
+> Reasoning: The course serves managers broadly across multiple domains (commercial, product, finance, operations), not a single stakeholder function.
 
-**Run 2:** `mixed` ✗
-> Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.'"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The course serves general business decision-making for managers across multiple domains without emphasis on a single stakeholder category.
-
-**Run 3:** `internal_data` ✗
-> Quote: "Aimed at managers who need to be "more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.""
+**Run 2:** `internal_data` ✓
+> Quote: "Organise and provide 2 series of one-on-one tutoring sessions to students"
 > Verified: ✓ found in JD
-> Reasoning: The role builds analytical capability and data literacy for managers as platform consumers within the broader organization.
+> Reasoning: The role exists to develop students as analytics practitioners and data-literate learners, positioning students as the primary stakeholder audience being empowered through analytical education.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+**Run 3:** `mixed` ✗
+> Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.'"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role prepares managers across multiple potential functions to be more data-driven decision-makers, rather than serving a single stakeholder orientation.
 
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
+⚠ **Disagreement**: manual=`internal_data` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'mixed']
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `execution`
 
-**Run 1:** `execution` ✗
+**Run 1:** `execution` ✓
 > Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
 > Verified: ✓ found in JD
-> Reasoning: While the lecturer designs seminars and assessments, the curriculum content, pedagogical framework, course structure, and volume are all pre-specified, indicating execution within defined constraints rather than strategic direction-setting.
+> Reasoning: The Fellow designs within a defined LSE curriculum and prescribed flipped classroom model; they execute pedagogical direction rather than set strategic course direction.
 
-**Run 2:** `execution` ✗
-> Quote: "adopting the flipped classroom approach based on London School of Economics material"
-> Verified: ✓ found in JD
-> Reasoning: The lecturer executes a curriculum and pedagogical approach defined by the institution rather than setting strategic direction.
-
-**Run 3:** `execution` ✗
+**Run 2:** `mixed` ✗
 > Quote: "Design and deliver seminars adopting the flipped classroom approach based on London School of Economics material"
 > Verified: ✓ found in JD
-> Reasoning: The Fellow implements an established LSE curriculum and Forward College pedagogy rather than strategically defining how analytics is taught.
+> Reasoning: The role combines strategic autonomy in designing assessments and seminar content with execution within a predefined pedagogical framework (LSE material, flipped classroom methodology), neither purely strategic nor purely execution-focused.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+**Run 3:** `execution` ✓
+> Quote: "Teach 22 two-hour weekly seminars; Provide approximately 15 hours of individual tutoring"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibilities are delivery and execution within Forward College's established flipped classroom and tutorial pedagogical structure.
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Lecturer in Business Analytics and Statistics"
-> Reasoning: Educational teaching role with no reference to AI tools, GenAI infrastructure, or AI-assisted work.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Lecturer in Business Analytics and Statistics"
-> Reasoning: Academic teaching role with no mention of AI coding tools, infrastructure, or GenAI responsibilities.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD requires teaching expertise and interpersonal skills but contains no expectation that the candidate use or build AI tools.
 
-**Run 3:** `none` ✓
-> Quote: "Lecturer in Business Analytics and Statistics"
-> Reasoning: Academic teaching role with no mention of AI tools, GenAI capabilities, or infrastructure work.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, machine learning, or AI-assisted work; the Business Analytics curriculum focuses on statistical modeling, forecasting, and decision-making, not AI/ML competencies.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectations for AI tool usage, AI infrastructure building, or AI-related skills from the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
+**Manual:** ``
+
+**Run 1:** `absent` ✗
 > Quote: "Design and grade four formative assessments"
-> Reasoning: Assessment refers to educational grading of student learning, not technical testing, quality ownership, or data contracts.
+> Verified: ✓ found in JD
+> Reasoning: Assessments mentioned are educational assessment of student learning, not data quality frameworks, testing practices, or observability tools.
 
-**Run 2:** `responsibility` ✗
-> Quote: "Design and grade four formative assessments"
-> Reasoning: Candidate owns assessment design and grading, demonstrating direct responsibility for quality evaluation practice.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal in JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD is a teaching role with no mention of data testing frameworks, data quality practices, observability, or CI/CD; formative assessments are educational evaluation tools, not data quality testing.
 
-**Run 3:** `absent` ✓
-> Quote: "Design and grade four formative assessments; Teach 22 two-hour weekly seminars"
-> Reasoning: Formative assessments are pedagogical tools for student evaluation, not data quality/testing ownership or frameworks.
+**Run 3:** `absent` ✗
+> Quote: "Teach 22 two-hour weekly seminars; Provide approximately 15 hours of individual tutoring"
+> Verified: ✓ found in JD
+> Reasoning: Data quality, testing, or observability practices are not mentioned in the role's responsibilities, which focus exclusively on teaching and assessment.
 
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✗
-> Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data, more critical of advice given to them.'"
-> Reasoning: Concern about analytical accuracy and avoiding poor data-driven decisions signals trust in analysis, but lacks explicit compliance or operational reliability framing.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "more accurate in their statements, more selective in their use of data"
-> Reasoning: Framing emphasizes analytical accuracy and decision-making rigor in an educational context, not operational risk or compliance.
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD focuses on positive pedagogical outcomes, student learning development, and engagement; no risk, reliability, or compliance framing appears.
 
-**Run 3:** `none` ✓
-> Quote: "Aimed at managers who need to be 'more inquisitive, more precise, more accurate in their statements, more selective in their use of data'"
-> Reasoning: Framing is pedagogical excellence and analytical thinking development, not operational reliability (SLOs, incidents) or compliance/regulatory concerns.
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role in terms of what the lecturer will deliver (seminar design, assessment, tutoring) rather than risks to prevent or consequences of failure.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes teaching quality and learning outcomes rather than preventing bad outcomes or managing operational risk.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

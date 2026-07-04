@@ -60,11 +60,14 @@
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | high | high | high | high | 100% | ✓ |
-| collaboration_width | 2 | 2 | 1 | 2 | 33% | ✓ |
+| collaboration_width | 2 | 1 | 1 | 1 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | mixed | mixed | hiring_manager | 33% | ✓ |
-| stakeholder_orientation |  | commercial | commercial | commercial | 100% | ✗ |
-| autonomy_level |  | mixed | mixed | mixed | 100% | ✗ |
+| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
+| stakeholder_orientation | commercial | commercial | commercial | commercial | 100% | ✓ |
+| autonomy_level | mixed | mixed | mixed | mixed | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | none | 33% | ✗ |
 
 ---
 
@@ -74,19 +77,19 @@
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
+> Quote: "Serving as the primary technical and domain expert for complex client questions"
 > Verified: ✓ found in JD
-> Reasoning: The structured progression from initial analysis through operational handover emphasizes methodical, quality-focused delivery without velocity signals.
+> Reasoning: The JD emphasises domain expertise and complex problem-solving as core expectations, with no velocity-oriented language.
 
 **Run 2:** `rigour` ✓
-> Quote: "multi-month implementations of data products, from initial analysis to operational handover"
+> Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on multi-month timelines and complete operational handover indicates a rigour-oriented approach focused on thoroughness and completeness rather than speed.
+> Reasoning: The emphasis on multi-month implementations and comprehensive lifecycle guidance suggests a rigour-oriented approach focused on deliberate execution rather than rapid iteration or shipping.
 
 **Run 3:** `rigour` ✓
 > Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
 > Verified: ✓ found in JD
-> Reasoning: Multi-month implementation timelines, emphasis on complete handover phases, and domain expertise-driven work indicate rigorous, deliberate project delivery rather than velocity-focused iteration.
+> Reasoning: The emphasis on multi-month engagements and 'operational handover' signals focus on ensuring systems work reliably and completely rather than rapid iteration or speed-to-market.
 
 ### domain_risk
 **Manual:** `high`
@@ -94,37 +97,37 @@
 **Run 1:** `high` ✓
 > Quote: "Developing and maintaining data products across public sector domains including "Gesundheit, Finanzen oder Personal""
 > Verified: ✓ found in JD
-> Reasoning: Public sector finance and health data inherently carry regulatory and compliance risks that create high consequences for errors.
+> Reasoning: The role explicitly covers Finance and Health domains in the public sector, both of which carry regulatory and compliance requirements that make data errors costly.
 
 **Run 2:** `high` ✓
 > Quote: "Developing and maintaining data products across public sector domains including "Gesundheit, Finanzen oder Personal""
 > Verified: ✓ found in JD
-> Reasoning: Public sector work, particularly in finance, carries inherent regulatory and compliance risk due to government accountability and budget oversight requirements.
+> Reasoning: The explicit mention of Finance (Finanzen) as a core domain for public sector data products indicates high regulatory and compliance risk inherent to financial data work.
 
 **Run 3:** `high` ✓
 > Quote: "Developing and maintaining data products across public sector domains including 'Gesundheit, Finanzen oder Personal'"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Public sector finance and personnel data carry regulatory compliance and audit requirements, creating high consequences for data errors.
+> Reasoning: Explicit mention of Finance (Finanzen) and Health (Gesundheit) data in public sector contexts are inherently high-risk domains with regulatory and compliance implications.
 
 ### collaboration_width
 **Manual:** `2`
 
-**Run 1:** `2` ✓
-> Quote: "public sector clients; customer success teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two distinct named collaboration partners identified: customer success teams (internal function) and public sector clients (external parties explicitly named for collaboration).
+**Run 1:** `1` ✗
+> Quote: "collaborating closely with customer success teams"
+> Verified: ✓ found in JD
+> Reasoning: Only Customer Success is explicitly named as a distinct team the role collaborates with.
 
 **Run 2:** `1` ✗
 > Quote: "collaborating closely with customer success teams"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named partner team is identified in the responsibilities section.
+> Reasoning: Only Customer Success is explicitly named as a collaboration partner; other references like stakeholders and subject matter experts are too generic to count as distinct named teams.
 
-**Run 3:** `2` ✓
-> Quote: "customer success teams; public sector clients"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two distinct partner groups explicitly named: customer success teams as internal collaborators and public sector clients as external partners in implementations.
+**Run 3:** `1` ✗
+> Quote: "collaborating closely with customer success teams"
+> Verified: ✓ found in JD
+> Reasoning: Only one named internal team partner is explicitly identified in the responsibilities section.
 
-⚠ **LLM inconsistency**: runs gave ['2', '1', '2']
+⚠ **Disagreement**: manual=`2` vs LLM majority=`1`
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -132,117 +135,132 @@
 **Run 1:** `mid` ✓
 > Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: An established team structure already exists with named tools in operational responsibilities, indicating beyond-early stage but a team of two suggests growing rather than fully mature.
+> Reasoning: The team exists with multiple members and is established enough to have formal team structures and succession planning, but is not described as a large, specialised, mature organisation.
 
 **Run 2:** `mid` ✓
-> Quote: "Leading a team of two Analytics Engineers"
+> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: An established team with named tools (dbt, Airflow) and existing data products indicates mid-stage maturity rather than greenfield build.
+> Reasoning: The existence of an established team with existing data products and named tools in active responsibilities (Python, dbt, Airflow) indicates a mid-stage function with growth, not early-stage or highly mature.
 
 **Run 3:** `mid` ✓
 > Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: A small but established team exists with named tools in active use (dbt, Airflow in responsibilities); not early-stage infrastructure-building, but too small to be mature.
+> Reasoning: The team has defined structure with multiple named roles and explicit tools (dbt, Airflow) used in responsibilities, indicating established infrastructure beyond first-hire stage.
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `mixed` ✓
+**Run 1:** `hiring_manager` ✗
 > Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool application and project context indicates hiring manager input, balanced against generic phrases like "serving as primary technical expert" typical of recruiter writing.
+> Reasoning: The JD specifies tools with precise application context (actively coding while coordinating), specific team size, and domain-specific responsibilities that only someone doing this job would describe.
 
-**Run 2:** `mixed` ✓
+**Run 2:** `hiring_manager` ✗
 > Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical details (named tools with context, domain areas, team size) are present alongside generic collaboration language.
+> Reasoning: The specific mention of named tools in an active working context, combined with domain-specific details about public sector implementations and team size, suggests someone with direct experience of this role wrote the responsibilities.
 
 **Run 3:** `hiring_manager` ✗
 > Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
 > Verified: ✓ found in JD
-> Reasoning: Specific tools with application context, explicit team size, and concrete implementation methodology reflect someone who has performed this role, not generic boilerplate language.
+> Reasoning: The specific tool context (dbt/Airflow for public sector implementations), domain specificity (Gesundheit, Finanzen, Personal), and precise team size suggest technical knowledge from someone who has done this work.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `commercial`
 
-**Run 1:** `commercial` ✗
+**Run 1:** `commercial` ✓
+> Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is serving public sector clients through implementation delivery and technical expertise, with collaboration from customer success teams, making this a client-facing commercial role.
+
+**Run 2:** `commercial` ✓
 > Quote: "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams"
 > Verified: ✓ found in JD
-> Reasoning: Primary responsibilities center on client-facing implementation delivery and customer success partnership, establishing commercial GTM orientation.
+> Reasoning: The role is primarily oriented toward external public sector clients and their customer success managers, making this client/customer-facing rather than internal data infrastructure or product analytics.
 
-**Run 2:** `commercial` ✗
-> Quote: "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams"
+**Run 3:** `commercial` ✓
+> Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary responsibilities center on serving external clients and supporting customer success teams, which is commercial stakeholder orientation.
-
-**Run 3:** `commercial` ✗
-> Quote: "collaborating closely with customer success teams"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary mission is client delivery and implementation success, with explicit customer success team collaboration indicating customer-facing, commercial orientation.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`commercial`
+> Reasoning: The primary audience is external clients served through customer success partnerships, making this a commercial-facing role.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `mixed`
 
-**Run 1:** `mixed` ✗
-> Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth; Actively coding in Python, dbt, and Airflow while coordinating project advancement"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role genuinely combines strategic team leadership and direction-setting with hands-on execution and project delivery work.
-
-**Run 2:** `mixed` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly combines strategic leadership (leading team, providing direction, guiding clients) with hands-on execution (actively coding), indicating mixed autonomy.
+> Reasoning: The role combines strategic team leadership and direction-setting with hands-on technical execution and client delivery.
 
-**Run 3:** `mixed` ✗
+**Run 2:** `mixed` ✓
 > Quote: "Leading a team of two Analytics Engineers, providing direction and fostering their professional growth"
 > Verified: ✓ found in JD
-> Reasoning: The role has strategic leadership responsibilities (directing the team's priorities and development) combined with execution responsibilities (guiding client implementations, hands-on coding).
+> Reasoning: The role combines strategic elements (leading team, providing direction, domain expertise) with execution responsibilities (actively coding, project coordination), creating genuinely mixed autonomy.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+**Run 3:** `mixed` ✓
+> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
+> Verified: ✓ found in JD
+> Reasoning: The role genuinely combines strategic responsibilities (leading team, guiding clients, coordinating projects) with hands-on execution (actively coding), shown as parallel not sequential.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
-> Reasoning: No AI tools, frameworks, or infrastructure mentioned; standard analytics engineering stack only.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
-> Reasoning: No AI tools (Copilot, Claude Code, Cursor) or AI-enablement (GenAI, text-to-SQL) mentioned; standard data engineering stack only.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: There are no references to AI skills, tools, or applications expected of the candidate anywhere in the JD.
 
-**Run 3:** `none` ✓
-> Quote: "Actively coding in Python, dbt, and Airflow while coordinating project advancement"
-> Reasoning: Traditional analytics engineering stack with no AI tools, AI-first mindset, or GenAI infrastructure signals.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no reference to AI coding tools, AI-ready infrastructure, or expectation that the candidate demonstrate AI proficiency.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI-assisted coding, AI tools, or AI-enabled data infrastructure expected of the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "N/A"
-> Reasoning: No testing ownership, quality practices, or data contracts mentioned.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "Developing and maintaining data products"
-> Reasoning: No ownership language (own, ensure, define, implement, establish) paired with testing, quality, or data contracts.
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: There are no responsibilities, tool requirements, or mentions related to data quality, testing, or observability.
 
-**Run 3:** `absent` ✓
-> Quote: "Developing and maintaining data products"
-> Reasoning: No testing ownership verbs (ensure, define, implement, establish) and no testing tools explicitly listed.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal found in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Testing, data contracts, and quality assurance are not mentioned in responsibilities, requirements, or elsewhere in the JD.
 
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality language appears in the responsibilities section."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: There is no mention of data quality frameworks, testing practices, observability, or data contracts anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "Developing and maintaining data products"
-> Reasoning: Framing centers on delivery and team leadership without compliance, regulatory, or risk mitigation language.
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "operational handover"
+> Verified: ✓ found in JD
+> Reasoning: The framing of client implementation through operational handover suggests responsibility for stable, reliable systems, but without explicit risk, compliance, or loss-prevention language.
 
 **Run 2:** `moderate` ✗
-> Quote: "Developing and maintaining data products across public sector domains"
-> Reasoning: Public sector context implicitly signals compliance and regulatory concerns as operational baseline, though not framed as primary trust/audit focus.
+> Quote: "Guiding public sector clients through multi-month implementations of data products, from initial analysis to operational handover"
+> Verified: ✓ found in JD
+> Reasoning: The mention of operational handover and public sector context imply operational reliability concerns, though compliance or trust is not explicitly emphasized as primary framing.
 
-**Run 3:** `none` ✓
-> Quote: "Serving as the primary technical and domain expert for complex client questions, collaborating closely with customer success teams"
-> Reasoning: Delivery and customer success framing; no compliance, regulatory, reliability, or trustworthiness risk language.
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around delivery capability (guiding implementations, developing products, leading teams) with no explicit risk, compliance, or stakeholder-trust language despite the regulated domain context.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

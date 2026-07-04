@@ -70,11 +70,14 @@ Snowflake, dbt, Python, Omni, GitHub Copilot
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
-| collaboration_width | 2 | 3 | 2 | 2 | 33% | ✓ |
+| collaboration_width | 2 | 2 | 2 | 3 | 33% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | hiring_manager | mixed | hiring_manager | 33% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | mixed | mixed | mixed | 100% | ✗ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | mixed | mixed | mixed | 100% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -86,17 +89,17 @@ Snowflake, dbt, Python, Omni, GitHub Copilot
 **Run 1:** `rigour` ✓
 > Quote: "Establish data governance, testing, and quality frameworks"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, testing, quality, and reliable documentation with no velocity language present.
+> Reasoning: The responsibilities emphasize governance, testing, quality frameworks, documentation, and peer review processes with no velocity language, establishing a clear rigour orientation.
 
 **Run 2:** `rigour` ✓
 > Quote: "Establish data governance, testing, and quality frameworks"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize governance, testing, quality frameworks, and peer review—all rigour signals—with no velocity language present.
+> Reasoning: Responsibilities emphasize governance, testing, quality, and reliability with no velocity language like 'fast-paced' or 'rapid delivery'.
 
 **Run 3:** `rigour` ✓
 > Quote: "Establish data governance, testing, and quality frameworks"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities explicitly mandate governance, testing, and quality as core work, with no counterbalancing velocity language.
+> Reasoning: The JD emphasises governance, testing, quality, documentation, and peer review as core responsibilities with no velocity language present.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -104,154 +107,168 @@ Snowflake, dbt, Python, Omni, GitHub Copilot
 **Run 1:** `moderate` ✓
 > Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The role is focused on analytics infrastructure and analyst enablement rather than financial reporting, compliance, or regulatory work.
+> Reasoning: The role prioritizes operational reliability and data quality without explicit financial reporting, compliance, or regulatory signals that would indicate high-risk domain impact.
 
 **Run 2:** `moderate` ✓
-> Quote: "Build and maintain scalable dbt models on Snowflake for cross-entity analytics"
+> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Although Shine is fintech (high-risk sector), the JD focuses on analytics infrastructure without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The role supports business decision-making without explicit financial reporting, regulatory, or compliance language.
 
 **Run 3:** `moderate` ✓
 > Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around supporting business analytics and decision-making rather than financial reporting or regulatory compliance, indicating moderate risk.
+> Reasoning: The role supports business intelligence delivery with no explicit financial reporting, compliance, or regulatory language, making it moderate risk rather than high.
 
 ### collaboration_width
 **Manual:** `2`
 
-**Run 1:** `3` ✗
-> Quote: "Data Analysts; Data Engineering; Analytics teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named partner teams are explicitly referenced in the responsibilities.
+**Run 1:** `2` ✓
+> Quote: "Data Analysts; Data Engineering"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names two distinct teams: Data Analysts (primary audience for models) and Data Engineering (collaboration partner on pipelines).
 
 **Run 2:** `2` ✓
-> Quote: "Enable Data Analysts to deliver insights; Collaborate with Data Engineering and Analytics teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two named teams explicitly mentioned as collaboration partners: Data Analysts and Data Engineering.
+> Quote: "Collaborate with Data Engineering and Analytics teams"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly referenced: Data Engineering and Analytics.
 
-**Run 3:** `2` ✓
-> Quote: "Enable Data Analysts to deliver insights; Collaborate with Data Engineering and Analytics teams on pipelines and requirements"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Explicitly named partner teams are Data Analysts (as consumer cohort) and Data Engineering (as collaborator).
+**Run 3:** `3` ✗
+> Quote: "Data Analysts; Data Engineering; Analytics teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams are identified: Data Analysts, Data Engineering team, and Analytics teams.
 
-⚠ **LLM inconsistency**: runs gave ['3', '2', '2']
+⚠ **LLM inconsistency**: runs gave ['2', '2', '3']
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Establish data governance, testing, and quality frameworks"
+> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (dbt, Snowflake) and multiple existing data roles imply an operational team scaling its capabilities.
+> Reasoning: The presence of existing dbt models, Snowflake infrastructure, and analysts already delivering insights indicates a mature baseline, while the need to establish governance and testing frameworks suggests the team is still growing and maturing practices.
 
 **Run 2:** `mid` ✓
-> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models; Collaborate with Data Engineering and Analytics teams on pipelines and requirements"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Multiple named data teams and named tools in responsibilities (dbt, Snowflake) signal established but growing infrastructure, not early-stage or fully mature.
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Named infrastructure exists (Snowflake, dbt, GitHub) with multiple data roles implied, and focus is on scaling governance rather than building from zero.
 
 **Run 3:** `mid` ✓
-> Quote: "Build and maintain scalable dbt models on Snowflake for cross-entity analytics"
+> Quote: "Establish data governance, testing, and quality frameworks; Collaborate with Data Engineering and Analytics teams"
 > Verified: ✓ found in JD
-> Reasoning: Existing infrastructure with multiple data roles implied and responsibility to maintain (not build from zero) indicates mid-stage maturity focused on scaling and governance.
+> Reasoning: Multiple existing data sub-teams (Data Engineering, Analytics, Analysts) indicate mid-stage maturity, while 'establish' governance frameworks suggests not fully mature.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
+**Run 1:** `mixed` ✗
 > Quote: "Drive AI-assisted workflows, including GitHub Copilot integration"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool application context and technical precision about named tools indicate someone with hands-on analytics engineering experience wrote this.
+> Reasoning: The responsibilities mix specific technical implementation details (dbt, Snowflake, GitHub Copilot, SQL styling standards) with generic action verbs (Collaborate, Enable), suggesting both hiring manager and recruiter input.
 
-**Run 2:** `mixed` ✗
-> Quote: "Build and maintain scalable dbt models on Snowflake for cross-entity analytics; Define SQL styling standards and peer review processes; Drive AI-assisted workflows, including GitHub Copilot integration"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Mix of technical specificity (named tools with use cases, GitHub Copilot integration, SQL standards) alongside generic boilerplate (establish governance, collaborate with teams).
+**Run 2:** `hiring_manager` ✓
+> Quote: "Define SQL styling standards and peer review processes"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical practices like SQL styling standards and peer review processes indicate hands-on experience rather than generic boilerplate.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Establish data governance, testing, and quality frameworks; Define SQL styling standards and peer review processes"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities contain specific technical domain knowledge (governance frameworks, SQL standards, peer review processes) that reflects actual experience with analytics engineering practices, not generic boilerplate.
+> Quote: "Build and maintain scalable dbt models on Snowflake for cross-entity analytics; Drive AI-assisted workflows, including GitHub Copilot integration; Define SQL styling standards and peer review processes"
+> Verified: ✓ found in JD
+> Reasoning: The core responsibilities contain technical specificity (dbt, Snowflake, GitHub Copilot, SQL standards, peer review) that reflects hands-on knowledge of the actual work.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
+**Run 1:** `internal_data` ✓
 > Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves the analytics function through infrastructure work, not commercial, product, or finance teams.
+> Reasoning: The role's primary purpose is building infrastructure for internal data consumers (analysts and engineers) rather than serving commercial, product, or finance functions.
 
-**Run 2:** `internal_data` ✗
-> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models; Establish data governance, testing, and quality frameworks"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Role primarily serves the data function itself—enabling analysts and building infrastructure for data consumers.
-
-**Run 3:** `internal_data` ✗
+**Run 2:** `internal_data` ✓
 > Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The role's core purpose is serving the data analytics function through infrastructure, governance, and enablement rather than commercial, product, or finance stakeholders.
+> Reasoning: The role primarily serves the data team (analysts and engineers) through infrastructure, governance, and model reliability.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+**Run 3:** `internal_data` ✓
+> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
+> Verified: ✓ found in JD
+> Reasoning: The primary audience is data analysts and the data function itself, not commercial, product, or finance teams.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `mixed`
 
-**Run 1:** `mixed` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Establish data governance, testing, and quality frameworks"
 > Verified: ✓ found in JD
-> Reasoning: The role genuinely combines strategic domain ownership (governance, standards) with execution (building models, supporting analysts).
+> Reasoning: The role includes strategic responsibilities (establishing frameworks, defining standards) alongside execution work (building and maintaining models), creating genuine autonomy over technical practice combined with delivery obligations.
 
-**Run 2:** `mixed` ✗
-> Quote: "Establish data governance, testing, and quality frameworks; Define SQL styling standards and peer review processes"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Role combines strategic elements (defining standards, establishing governance) with execution-oriented support (building models, enabling analysts).
+**Run 2:** `mixed` ✓
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Combines strategic ownership (defining standards and governance frameworks) with execution work (building and maintaining models).
 
-**Run 3:** `mixed` ✗
-> Quote: "Establish data governance, testing, and quality frameworks; Define SQL styling standards and peer review processes"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic responsibility for direction-setting (establishing governance, defining standards) with execution responsibilities (building models, enabling teams).
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+**Run 3:** `mixed` ✓
+> Quote: "Establish data governance, testing, and quality frameworks; Drive AI-assisted workflows; Enable Data Analysts to deliver insights"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic direction-setting (establish, drive, define) with execution and support responsibilities (enable, collaborate), indicating mixed autonomy.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Build and maintain scalable dbt models on Snowflake for cross-entity analytics"
-> Reasoning: No mentions of AI tools, frameworks, or GenAI-related infrastructure; represents standard analytics engineering work
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Data Engineering; Analytics"
-> Reasoning: No AI skills or infrastructure building mentioned; standard data engineering and analytics work.
+**Run 1:** `ai_user` ✗
+> Quote: "Drive AI-assisted workflows, including GitHub Copilot integration"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use GitHub Copilot as a tool to accelerate their own analytics engineering coding work, not to build infrastructure for AI systems.
 
-**Run 3:** `none` ✓
-> Quote: "Data Engineering; Analytics"
-> Reasoning: Standard analytics engineering work without AI tooling or infrastructure signals.
+**Run 2:** `ai_user` ✗
+> Quote: "Drive AI-assisted workflows, including GitHub Copilot integration"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use GitHub Copilot as a personal productivity tool to accelerate coding work.
 
+**Run 3:** `ai_user` ✗
+> Quote: "Drive AI-assisted workflows, including GitHub Copilot integration"
+> Verified: ✓ found in JD
+> Reasoning: GitHub Copilot is a personal coding tool for developers, so the candidate is expected to use AI to accelerate their own dbt and SQL development work.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Establish data governance, testing, and quality frameworks"
-> Reasoning: Uses ownership verb 'establish' paired with explicit testing responsibility, indicating candidate owns quality practices
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "Establish data governance, testing, and quality frameworks"
-> Reasoning: Candidate explicitly owns quality practice through establishing testing and governance frameworks.
+> Verified: ✓ found in JD
+> Reasoning: Testing and quality frameworks are framed as responsibilities the candidate will own through the action verb 'Establish,' indicating accountability for defining and implementing these practices.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `responsibility` ✗
 > Quote: "Establish data governance, testing, and quality frameworks"
-> Reasoning: Candidate owns defining and establishing testing practices with explicit ownership verb.
+> Verified: ✓ found in JD
+> Reasoning: Testing and quality frameworks are framed as ownership responsibilities the candidate actively establishes.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Verified: ✓ found in JD
+> Reasoning: The candidate owns data quality and testing frameworks through the action verb 'establish', not merely using tools.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
-> Reasoning: Emphasizes operational reliability and documentation standards, signaling concern with pipeline stability rather than regulatory/compliance dominance
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
+**Run 1:** `moderate` ✗
 > Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
-> Reasoning: Emphasis on reliability and data governance indicates concern for operational stability and data quality, not compliance-driven.
+> Verified: ✓ found in JD
+> Reasoning: Reliability is emphasized as an operational practice through documentation and governance, but without explicit risk language around compliance, regulatory exposure, or preventing business impact from bad data.
 
-**Run 3:** `moderate` ✓
-> Quote: "Enable Data Analysts to deliver insights through reliable, documented dbt models"
-> Reasoning: Word 'reliable' signals operational risk concern, though framed as delivery enablement rather than explicit incident/SLO language.
+**Run 2:** `moderate` ✗
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Repeated emphasis on reliability, quality, and governance indicates concern with operational failures rather than regulatory or compliance risk.
 
+**Run 3:** `moderate` ✗
+> Quote: "Establish data governance, testing, and quality frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Governance and quality frameworks signal operational reliability is a concern, but there is no compliance, regulatory, or risk-mitigation language indicating high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

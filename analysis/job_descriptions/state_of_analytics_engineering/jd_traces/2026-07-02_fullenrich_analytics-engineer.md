@@ -74,11 +74,11 @@ Culture: high-ownership, entrepreneurial approach with rapid execution, business
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 5 | 5 | 5 | 5 | 100% | ✓ |
 | data_team_maturity | early | early | early | early | 100% | ✓ |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
-| stakeholder_orientation | mixed | commercial | internal_data | mixed | 0% | ✗ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | mixed | commercial | commercial | commercial | 100% | ✗ |
 | autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
 | ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
-| testing_framing |  | tool_listed | responsibility | responsibility | 33% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
@@ -89,19 +89,19 @@ Culture: high-ownership, entrepreneurial approach with rapid execution, business
 **Manual:** `mixed`
 
 **Run 1:** `rigour` ✗
-> Quote: "Write tests and maintain documentation standards"
+> Quote: "Comfort with ambiguity and rigorous data quality standards"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, documentation, and data quality as core expectations, with velocity signals appearing only in culture description and bonus qualifications.
+> Reasoning: The responsibilities section emphasizes reliable access to metrics, testing requirements, and rigorous data quality standards, outweighing secondary references to fast-moving startup environments in the bonus section.
 
 **Run 2:** `rigour` ✗
 > Quote: "Write tests and maintain documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section explicitly names testing and documentation maintenance as owned responsibilities, establishing quality-first orientation despite the company's rapid-execution culture.
+> Reasoning: The role emphasizes testing, documentation, and rigorous data quality standards in core responsibilities, with velocity signals appearing only in bonus qualifications and culture description.
 
 **Run 3:** `rigour` ✗
 > Quote: "Write tests and maintain documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize testing, documentation, and rigorous data quality standards as core expectations, with no velocity-oriented language in the primary responsibilities.
+> Reasoning: The responsibilities section emphasizes testing, documentation standards, and rigorous data quality standards as core expectations, without corresponding velocity or shipping language in the main responsibilities.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
@@ -109,113 +109,113 @@ Culture: high-ownership, entrepreneurial approach with rapid execution, business
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Design data models ensuring reliable access to the metrics across Finance, Marketing, RevOps, Sales, and Support teams"
+> Quote: "Conduct analytical work addressing business problems including provider cost/margin analysis, activation scoring, credit consumption pattern analysis"
 > Verified: ✓ found in JD
-> Reasoning: Data errors affect business decisions and potentially P&L visibility through Finance and RevOps, but the JD contains no explicit regulatory, compliance, or financial reporting language that would elevate to high risk.
+> Reasoning: Data errors affect business operations and revenue metrics but lack explicit regulatory, compliance, or financial reporting language.
 
 **Run 2:** `moderate` ✓
 > Quote: "Design data models ensuring reliable access to the metrics across Finance, Marketing, RevOps, Sales, and Support teams"
 > Verified: ✓ found in JD
-> Reasoning: The role touches Finance and RevOps functions indicating business-decision impact, but lacks explicit financial reporting, compliance, or regulatory language typical of high-risk domains.
+> Reasoning: Data errors would affect multiple business operations and decisions but without regulatory exposure or direct financial reporting consequences.
 
 **Run 3:** `moderate` ✓
 > Quote: "Design data models ensuring reliable access to the metrics across Finance, Marketing, RevOps, Sales, and Support teams"
 > Verified: ✓ found in JD
-> Reasoning: Role serves business operations and SaaS metrics without regulatory, compliance, or mission-critical language that would indicate high financial/compliance risk.
+> Reasoning: The role serves multiple business teams for operational and commercial reporting without explicit financial reporting, compliance, or regulatory language that would indicate high risk.
 
 ### collaboration_width
 **Manual:** `5`
 
 **Run 1:** `5` ✓
-> Quote: "Finance, Marketing, RevOps, Sales, and Support teams"
+> Quote: "Finance; Marketing; RevOps; Sales; Support"
 > Verified: ✓ found in JD
-> Reasoning: Five distinct named stakeholder teams are explicitly listed as recipients of data models and metrics.
+> Reasoning: Five named teams are explicitly listed as stakeholders in the metrics design responsibility.
 
 **Run 2:** `5` ✓
-> Quote: "Finance, Marketing, RevOps, Sales, and Support teams"
+> Quote: "Finance; Marketing; RevOps; Sales; Support"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names five distinct business functions as stakeholders and metric consumers that the role serves.
+> Reasoning: Five distinct business functions are explicitly named as primary collaborators and metric consumers in the responsibilities section.
 
 **Run 3:** `5` ✓
 > Quote: "Finance; Marketing; RevOps; Sales; Support"
 > Verified: ✓ found in JD
-> Reasoning: JD explicitly names five distinct business functions as stakeholder partners requiring reliable data access.
+> Reasoning: Five distinct teams are explicitly named as primary audiences for the data models and analytical work.
 
 ### data_team_maturity
 **Manual:** `early`
 
 **Run 1:** `early` ✓
-> Quote: "This is FullEnrich's inaugural dedicated data hire"
+> Quote: "This is FullEnrich's inaugural dedicated data hire."
 > Verified: ✓ found in JD
-> Reasoning: The first dedicated data hire is the definitive early-stage signal, despite some existing ad-hoc infrastructure already in place.
+> Reasoning: The company is establishing its data function for the first time, despite having existing dbt/BigQuery infrastructure already in place.
 
 **Run 2:** `early` ✓
 > Quote: "This is FullEnrich's inaugural dedicated data hire"
 > Verified: ✓ found in JD
-> Reasoning: Despite existing technical infrastructure, the role is explicitly positioned as the first dedicated data hire responsible for building foundational systems, indicating early-stage data function establishment.
+> Reasoning: The explicit designation as the first dedicated data hire is the definitive early-stage signal despite existing infrastructure from prior ad-hoc setup.
 
 **Run 3:** `early` ✓
 > Quote: "This is FullEnrich's inaugural dedicated data hire"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly the company's first dedicated data hire, signaling early-stage data function despite existing infrastructure already in place.
+> Reasoning: The JD explicitly identifies this as the first dedicated data role tasked with building foundational systems, despite existing technology infrastructure.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "Implement reverse ETL pipelines pushing operational data to systems like Intercom and HubSpot"
+**Run 1:** `mixed` ✗
+> Quote: "Maintain and enhance the existing dbt/BigQuery data stack; Conduct analytical work addressing business problems including provider cost/margin analysis, activation scoring, credit consumption pattern analysis"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical contexts (tool names paired with specific use cases) that only someone performing this job would know to specify.
+> Reasoning: The JD combines technical specificity around named tools and analytical domains with generic action verbs like design and conduct.
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Implement reverse ETL pipelines pushing operational data to systems like Intercom and HubSpot"
+> Quote: "provider cost/margin analysis, activation scoring, credit consumption pattern analysis"
 > Verified: ✓ found in JD
-> Reasoning: The responsibility specifies precise technical application and business context (reverse ETL to particular systems) that demonstrates hands-on authorship rather than templated language.
+> Reasoning: The specific analytical domains and methodologies named show the hiring manager knows exactly what analytical work will be performed on a Tuesday, not generic boilerplate responsibilities.
 
 **Run 3:** `hiring_manager` ✓
 > Quote: "Conduct analytical work addressing business problems including provider cost/margin analysis, activation scoring, credit consumption pattern analysis"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities contain specific analytical domains and domain-specific methods only someone who has performed this work would articulate.
+> Reasoning: The responsibilities include specific named analyses and SaaS metrics (ARR, churn, activation, unit economics) that reflect someone familiar with the actual work, alongside detailed technical context.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `mixed`
 
 **Run 1:** `commercial` ✗
-> Quote: "Conduct analytical work addressing business problems including provider cost/margin analysis, activation scoring, credit consumption pattern analysis"
+> Quote: "reporting directly to Simon (RevOps)"
 > Verified: ✓ found in JD
-> Reasoning: The analytical work specified is explicitly revenue operations work (cost/margin analysis, activation scoring), with the role reporting directly to RevOps.
+> Reasoning: The role reports to RevOps with reverse ETL pipelines to commercial systems (Intercom, HubSpot), indicating primary service to revenue operations and customer-facing functions.
 
-**Run 2:** `internal_data` ✗
-> Quote: "building foundational systems for organizational growth"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary mission is establishing and maintaining the data infrastructure foundation itself, with business analytical work secondary; the infrastructure serves other teams but internal data platform building is the core mission.
-
-**Run 3:** `mixed` ✓
+**Run 2:** `commercial` ✗
 > Quote: "Design data models ensuring reliable access to the metrics across Finance, Marketing, RevOps, Sales, and Support teams"
 > Verified: ✓ found in JD
-> Reasoning: Role serves Finance, RevOps/commercial, Marketing, Sales, and operations with equal emphasis across multiple business functions rather than a single primary audience.
+> Reasoning: The role primarily serves revenue operations (RevOps, Sales, Marketing) with reverse ETL to customer-facing systems (Intercom, HubSpot), indicating commercial GTM orientation rather than FP&A or product focus.
+
+**Run 3:** `commercial` ✗
+> Quote: "Implement reverse ETL pipelines pushing operational data to systems like Intercom and HubSpot"
+> Verified: ✓ found in JD
+> Reasoning: The primary stakeholders and output targets are commercial and revenue operations functions, with reverse ETL routing to sales (HubSpot) and customer success (Intercom) platforms.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`commercial`
-
-⚠ **LLM inconsistency**: runs gave ['commercial', 'internal_data', 'mixed']
 
 ### autonomy_level
 **Manual:** `strategic`
 
 **Run 1:** `strategic` ✓
-> Quote: "owning the data layer end-to-end while building foundational systems for organizational growth"
+> Quote: "autonomous decision-making with full scope ownership"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around establishing and defining the data function as the inaugural data hire, not executing against pre-defined priorities.
+> Reasoning: The role is framed as owning the data layer end-to-end and building foundational systems with explicit emphasis on autonomous decision-making and full scope ownership.
 
 **Run 2:** `strategic` ✓
 > Quote: "owning the data layer end-to-end while building foundational systems for organizational growth"
 > Verified: ✓ found in JD
-> Reasoning: The role carries end-to-end ownership and responsibility for defining foundational systems, reinforced by the culture statement emphasizing autonomous decision-making with full scope ownership.
+> Reasoning: Responsibility for owning the entire data layer and establishing foundational systems, combined with cultural emphasis on autonomous full-scope ownership, demonstrates strategic autonomy over execution.
 
 **Run 3:** `strategic` ✓
 > Quote: "owning the data layer end-to-end while building foundational systems for organizational growth"
 > Verified: ✓ found in JD
-> Reasoning: Role is framed around ownership and building foundational systems with explicit mention of autonomous decision-making and full scope ownership in the culture section.
+> Reasoning: The role is framed as owning and building the data function for the organization, not executing against predefined priorities, with direct reporting to a business leader.
 
 ### ai_role
 **Manual:** ``
@@ -223,58 +223,56 @@ Culture: high-ownership, entrepreneurial approach with rapid execution, business
 **Run 1:** `ai_user` ✗
 > Quote: "Active use of AI tools (Cursor, Claude) for work augmentation"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly requires the candidate to use AI coding tools (Cursor, Claude) to enhance their own productivity.
+> Reasoning: The candidate is expected to actively use AI coding tools like Cursor and Claude to accelerate their own development work, not build AI infrastructure.
 
 **Run 2:** `ai_user` ✗
 > Quote: "Active use of AI tools (Cursor, Claude) for work augmentation"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is explicitly expected to use AI coding tools like Cursor and Claude as personal productivity tools to accelerate their own work.
+> Reasoning: The candidate is explicitly required to use AI coding tools to accelerate their own development work, a personal productivity enhancement rather than building AI-ready data infrastructure.
 
 **Run 3:** `ai_user` ✗
 > Quote: "Active use of AI tools (Cursor, Claude) for work augmentation"
 > Verified: ✓ found in JD
-> Reasoning: Candidate is explicitly required to actively use AI coding tools like Cursor and Claude Code to accelerate their own analytical and development work.
+> Reasoning: The candidate is explicitly expected to use AI coding tools to accelerate their own development work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
 ### testing_framing
 **Manual:** ``
 
-**Run 1:** `tool_listed` ✗
+**Run 1:** `responsibility` ✗
 > Quote: "Write tests and maintain documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Testing appears as a responsibility action but is framed as maintaining standards rather than defining or owning a testing strategy.
+> Reasoning: Testing is listed as an explicit responsibility the candidate owns in the key responsibilities section, framed as an action verb.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Write tests and maintain documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Testing and documentation are framed as responsibilities the candidate owns and executes using action verbs, not merely as tools listed in a requirements section.
+> Reasoning: Testing is framed as an owned responsibility with an action verb in the core responsibilities section, not merely listed as a tool in a skill requirement.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Write tests and maintain documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Testing is framed as an owned responsibility using an action verb, making the candidate accountable for defining and implementing test practices.
+> Reasoning: Testing is framed as an owned responsibility of the candidate with an action verb, not merely listed as a tool or skill.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
-
-⚠ **LLM inconsistency**: runs gave ['tool_listed', 'responsibility', 'responsibility']
 
 ### loss_aversion_framing
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "rigorous data quality standards"
+> Quote: "Comfort with ambiguity and rigorous data quality standards"
 > Verified: ✓ found in JD
-> Reasoning: Data quality appears as a core expectation through reliability and standards language, but the framing centers on operational reliability rather than preventing bad data reaching stakeholders or regulatory exposure.
+> Reasoning: Data quality and reliability are emphasized as operational standards to maintain, but without regulatory, compliance, or high-consequence risk language.
 
 **Run 2:** `moderate` ✗
-> Quote: "ensuring reliable access to the metrics across Finance, Marketing, RevOps, Sales, and Support teams"
+> Quote: "ensuring reliable access to the metrics"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability is a stated concern (ensuring reliable access echoes SLO thinking) but secondary to delivery of data infrastructure; no compliance, regulatory, or stakeholder-trust risk framing is present.
+> Reasoning: Operational reliability is explicitly framed as a requirement, suggesting fear of pipeline outages or data failures, but without compliance or stakeholder trust language that would indicate high-level risk framing.
 
 **Run 3:** `moderate` ✗
-> Quote: "ensuring reliable access to the metrics across Finance, Marketing, RevOps, Sales, and Support teams"
+> Quote: "rigorous data quality standards"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data quality standards are concerns, but framed around business access and SaaS execution rather than compliance, regulatory, or stakeholder trust risk.
+> Reasoning: Data quality and testing are concerns for operational reliability, but the JD lacks compliance, regulatory, or stakeholder-trust language that would indicate high loss aversion framing.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

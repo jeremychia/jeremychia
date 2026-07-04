@@ -74,9 +74,12 @@ Statista's central Data team is building the foundation for a truly data-driven 
 | domain_risk | low | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 4 | 0 | 0 | 0 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | mixed | recruiter | mixed | 33% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | mixed | mixed | execution | 33% | ✗ |
+| jd_authorship | mixed | recruiter | mixed | recruiter | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -86,37 +89,37 @@ Statista's central Data team is building the foundation for a truly data-driven 
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics"
+> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, standards, trust, and data quality as core expectations with no velocity-oriented language present.
+> Reasoning: The JD emphasizes governance, standards, trust, and quality throughout with no velocity language (fast-paced, ship quickly, iteration speed), making rigour the clear orientation.
 
 **Run 2:** `rigour` ✓
 > Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, standards, quality, and documentation with no mention of speed or velocity.
+> Reasoning: The responsibilities emphasize data governance, standards, transparency, trust, and maintainability throughout, with no velocity or shipping-oriented language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, standards, quality, documentation, and trust with no speed or velocity indicators present.
+> Reasoning: Multiple governance, standards, consistency, and trust signals dominate the responsibilities with no velocity language present.
 
 ### domain_risk
 **Manual:** `low`
 
 **Run 1:** `moderate` ✗
-> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets"
+> Quote: "Increase transparency around data sources, KPI definitions, and report ownership."
 > Verified: ✓ found in JD
-> Reasoning: Data errors affect business decisions and trust in reports, but the JD lacks explicit financial reporting, compliance, or regulatory language.
+> Reasoning: This is an internal BI role affecting business decisions and reporting accuracy, but without financial reporting, regulatory compliance, or customer-facing product responsibilities.
 
 **Run 2:** `moderate` ✗
 > Quote: "Increase transparency around data sources, KPI definitions, and report ownership."
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on internal business reporting and BI platform management without mention of regulatory compliance or financial reporting.
+> Reasoning: This is a business intelligence role focused on reporting platform administration where errors affect business decisions but not regulatory compliance or financial reporting.
 
 **Run 3:** `moderate` ✗
-> Quote: "Increase transparency around data sources, KPI definitions, and report ownership."
+> Quote: "Improve consistency and usability of reports through establishing shared standards, templates, and best practices."
 > Verified: ✓ found in JD
-> Reasoning: This is an internal reporting governance role with no explicit financial reporting, compliance, or regulatory language, affecting business decisions but not immediate regulatory consequences.
+> Reasoning: Role focuses on internal reporting operations without financial reporting, compliance, or regulatory language.
 
 ⚠ **Disagreement**: manual=`low` vs LLM majority=`moderate`
 
@@ -124,19 +127,19 @@ Statista's central Data team is building the foundation for a truly data-driven 
 **Manual:** `4`
 
 **Run 1:** `0` ✗
-> Quote: "Be the first point of contact for administration topics around the reporting platform, e.g. architecture questions, permission management and specific reporting issues"
-> Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams (Finance, Product, Engineering, etc.) are listed in the responsibilities section.
+> Quote: "No named partner teams explicitly identified in responsibilities"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities describe collaboration (first point of contact, supporting governance) but do not name specific partner teams or business functions.
 
 **Run 2:** `0` ✗
-> Quote: "None identified in responsibilities"
+> Quote: "No explicitly named partner teams identified in the responsibilities or qualifications sections."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: No named partner functions, teams, or role cohorts are explicitly referenced in the responsibilities section.
+> Reasoning: The JD describes the role's technical scope and deliverables but does not explicitly name which teams or functions this role collaborates with.
 
 **Run 3:** `0` ✗
-> Quote: "Be the first point of contact for administration topics around the reporting platform, e.g. architecture questions, permission management and specific reporting issues."
+> Quote: "None"
 > Verified: ✓ found in JD
-> Reasoning: While the role spans broad organizational support, no explicitly named partner functions or teams (Finance, Product, Engineering, etc.) are listed in the responsibilities.
+> Reasoning: No explicitly named partner teams or functions appear in the responsibilities or requirements sections.
 
 ⚠ **Disagreement**: manual=`4` vs LLM majority=`0`
 
@@ -144,121 +147,136 @@ Statista's central Data team is building the foundation for a truly data-driven 
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools"
+> Quote: "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools."
 > Verified: ✓ found in JD
-> Reasoning: The JD describes modernizing existing infrastructure (Power BI, Data Warehouse) rather than building from zero, indicating an established but evolving data function.
+> Reasoning: Named tools (Power BI, Snowflake, Redshift) and modernization efforts indicate an existing data function with infrastructure being improved, not early-stage or fully mature.
 
 **Run 2:** `mid` ✓
 > Quote: "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools."
 > Verified: ✓ found in JD
-> Reasoning: Named tools (Power BI, Data Warehouse) and modernization efforts indicate established infrastructure being actively improved, not greenfield.
+> Reasoning: The JD references an existing Power BI-based platform and established Data Warehouse, with ongoing evolution and tool evaluation characteristic of a maturing team.
 
 **Run 3:** `mid` ✓
-> Quote: "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools."
+> Quote: "Statista's central Data team is building the foundation for a truly data-driven organization. Our reporting platform is one of the key channels we use to bring data to life for the business."
 > Verified: ✓ found in JD
-> Reasoning: Existing Power BI and Data Warehouse infrastructure being modernized indicates an established team growing and improving systems, not greenfield or early stage.
+> Reasoning: Established data infrastructure exists (Power BI, Data Warehouse) and role supports modernization of an existing platform, indicating mid-stage maturity.
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `mixed` ✓
-> Quote: "Be the first point of contact for administration topics around the reporting platform, e.g. architecture questions, permission management and specific reporting issues"
-> Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical context (architecture, permission management, KPI definitions) mixed with generic support-oriented language (support, help, improve).
-
-**Run 2:** `recruiter` ✗
+**Run 1:** `recruiter` ✗
 > Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic support language without specific scale, volume, or technical context only a hiring manager would include.
+> Reasoning: Generic action verbs (support, improve, increase, establish) lack technical specificity about what the candidate actually does on a Tuesday morning; no hiring-manager detail.
 
-**Run 3:** `mixed` ✓
-> Quote: "Be the first point of contact for administration topics around the reporting platform, e.g. architecture questions, permission management and specific reporting issues; Design, develop, and deploy reports and dashboards powered by our Data Warehouse."
+**Run 2:** `mixed` ✓
+> Quote: "Hands-on experience with Power BI (or comparable BI tools). Solid SQL skills, understanding of data modeling concepts and experience working with a data warehouse (e.g. Snowflake, Redshift, …)."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Mix of technical specificity (named tools, architectural context, SQL/data modeling) alongside generic support language (administration, improvement) suggests both hiring manager and recruiter input.
+> Reasoning: The requirements list specific tools (Power BI, Snowflake, Redshift) indicating hiring manager input, but the responsibilities themselves contain generic boilerplate language about administration and support.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
+**Run 3:** `recruiter` ✗
+> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use generic governance and administrative language without technical specificity about actual day-to-day work or scale.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
+
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
-> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets"
+**Run 1:** `internal_data` ✓
+> Quote: "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools."
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves the data/analytics platform and its internal consumers through governance, standardization, and platform modernization rather than commercial, product, or finance stakeholders.
+> Reasoning: The role focuses on platform administration, governance, and infrastructure modernization serving the data function and reporting platform consumers, not commercial, product, or finance stakeholders.
 
-**Run 2:** `internal_data` ✗
-> Quote: "Design, develop, and deploy reports and dashboards powered by our Data Warehouse."
+**Run 2:** `internal_data` ✓
+> Quote: "Support the ongoing modernization of the BI stack, including evaluating and testing alternative analytics and visualization tools."
 > Verified: ✓ found in JD
-> Reasoning: The role's primary focus is building and maintaining the reporting platform and supporting the data infrastructure itself.
+> Reasoning: The role's primary focus is on reporting platform governance, standards, modernization, and infrastructure serving internal analytics consumers rather than specific business functions.
 
-**Run 3:** `internal_data` ✗
-> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
+**Run 3:** `internal_data` ✓
+> Quote: "Be the first point of contact for administration topics around the reporting platform, e.g. architecture questions, permission management and specific reporting issues."
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is on BI platform governance, standards, and infrastructure serving the data function and organizational data consumers, not commercial, product, or finance teams.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+> Reasoning: Role serves the reporting platform and its internal users, not commercial, product, or finance teams.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `mixed`
 
-**Run 1:** `mixed` ✗
-> Quote: "Improve consistency and usability of reports through establishing shared standards, templates, and best practices"
+**Run 1:** `execution` ✗
+> Quote: "Support the ongoing modernization of the BI stack"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of platform governance and standards (establishing) with execution of reporting deliverables (designing, deploying).
+> Reasoning: The 'support' verb indicates executing a direction (BI stack modernization) set by others rather than defining strategy or owning priorities independently.
 
-**Run 2:** `mixed` ✗
-> Quote: "establish shared standards, templates, and best practices"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic direction-setting (establish standards, evaluate tools) with execution-oriented support work (support governance, deploy reports).
+**Run 2:** `execution` ✗
+> Quote: "Support the ongoing modernization of the BI stack"
+> Verified: ✓ found in JD
+> Reasoning: The repeated use of 'support' indicates execution within a modernization strategy set by others, with tactical input on standards but not strategic direction-setting.
 
 **Run 3:** `execution` ✗
 > Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
 > Verified: ✓ found in JD
-> Reasoning: The repeated use of 'support' and 'help' language indicates execution of defined priorities rather than strategic direction-setting or ownership.
+> Reasoning: Role is framed around supporting existing initiatives and improving current state rather than defining strategy or direction.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'execution']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Design, develop, and deploy reports and dashboards powered by our Data Warehouse."
-> Reasoning: No mention of AI tools, AI-assisted coding, or AI-ready infrastructure.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics"
-> Reasoning: No mention of AI tools, AI-assisted coding, or GenAI infrastructure; focus is on data governance and standards.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No candidate AI skills are required in responsibilities or qualifications; Langdock is offered as a benefits perk but not as a required competency.
 
-**Run 3:** `none` ✓
-> Quote: "Design, develop, and deploy reports and dashboards powered by our Data Warehouse"
-> Reasoning: No AI tools, skills, or infrastructure enablement mentioned; standard BI analytics delivery work
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or AI-related capabilities expected of the candidate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, coding agents, or AI-ready data foundations; generic learning openness is not AI-specific.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
+
 **Run 1:** `absent` ✗
-> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics."
-> Reasoning: Quality is framed as a mindset and interest rather than owned responsibility for testing, data contracts, or quality assurance.
+> Quote: "No mention of testing, data quality, or observability frameworks."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Testing tools, data quality practices, or observability frameworks do not appear as candidate responsibilities, required skills, or technical knowledge areas.
 
-**Run 2:** `responsibility` ✓
-> Quote: "Improve consistency and usability of reports through establishing shared standards, templates, and best practices"
-> Reasoning: Ownership verb 'establish' applied to quality-related work (standards, best practices).
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality framework mentioned."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While quality and governance are valued as mindset requirements, the JD does not mention testing practices, data quality frameworks, or testing tools as responsibilities or requirements.
 
-**Run 3:** `responsibility` ✓
-> Quote: "A structured, quality-focused mindset and genuine interest in standards and data governance topics"
-> Reasoning: Candidate owns quality standards and governance practices, with explicit responsibility for establishing best practices and maintainability
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality ownership framing appears in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No mention of testing, data contracts, observability, or data quality frameworks in responsibilities or requirements.
 
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
 > Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
-> Reasoning: Emphasis on trust, governance, and maintainability signals operational reliability concerns without explicit compliance or regulatory framing.
+> Verified: ✓ found in JD
+> Reasoning: Trust, transparency, and governance language indicate concern for preventing data failures and operational reliability, but absence of regulatory, compliance, or audit language keeps this moderate rather than high.
 
-**Run 2:** `moderate` ✓
-> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets"
-> Reasoning: Signals operational reliability concerns (maintainability, trust) without explicit compliance or regulatory framing.
+**Run 2:** `moderate` ✗
+> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes trust in reporting assets and governance concerns, indicating risk aversion toward bad data reaching stakeholders, but lacks regulatory or compliance framing.
 
-**Run 3:** `moderate` ✓
-> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets"
-> Reasoning: Trust and governance concerns present but balanced against delivery-focused modernization; reliability framed through standards rather than operational incidents
+**Run 3:** `moderate` ✗
+> Quote: "Support documentation and governance efforts to improve maintainability and trust in reporting assets."
+> Verified: ✓ found in JD
+> Reasoning: Trust and governance are present but framed as practices to establish and maintain, not as risk prevention or compliance requirements.
 
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

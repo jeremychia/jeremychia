@@ -61,9 +61,12 @@
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 4 | 2 | 2 | 2 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | mixed | execution | mixed | 33% | ✗ |
+| jd_authorship | mixed | mixed | hiring_manager | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | mixed | mixed | mixed | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -73,19 +76,19 @@
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Applying testing, documentation, and version control best practices"
+> Quote: "Defining data contracts, metrics, and semantic models across business domains"
 > Verified: ✓ found in JD
-> Reasoning: Testing, documentation, governance, and reliability language dominate responsibilities with no velocity signals like 'fast-paced' or 'rapid delivery'.
+> Reasoning: Multiple rigour signals dominate (data contracts, testing, CI/CD, data governance, monitoring, reliable delivery) with no velocity language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Applying testing, documentation, and version control best practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, documentation, version control, data contracts, and governance as core expectations, with no velocity or speed-oriented language.
+> Reasoning: The responsibilities emphasize testing, documentation, data governance, and monitoring as core expectations, with no velocity-oriented language like fast-paced, shipping quickly, or iteration speed.
 
 **Run 3:** `rigour` ✓
 > Quote: "Applying testing, documentation, and version control best practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality assurance mechanisms (testing, documentation, version control) and data governance with no mention of speed or iteration velocity.
+> Reasoning: The responsibilities section emphasizes correctness, governance, and operational best practices with explicit testing and CI/CD signals throughout, with no velocity or speed-to-ship language.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -93,35 +96,35 @@
 **Run 1:** `moderate` ✓
 > Quote: "reliable data delivery"
 > Verified: ✓ found in JD
-> Reasoning: JD emphasizes reliability but contains no explicit financial reporting, regulatory, or compliance language to signal high-risk domain.
+> Reasoning: The JD emphasizes reliability and governance but lacks explicit financial reporting, compliance, or regulatory language that would indicate high risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "reliable data delivery"
+> Quote: "transforming raw data into analytics-ready datasets in Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: While the role emphasizes reliability, the JD contains no explicit mention of financial reporting, compliance, or regulatory requirements that would signal high domain risk.
+> Reasoning: The role focuses on analytics infrastructure and BI, with no explicit financial reporting, compliance, regulatory, or mission-critical language that would indicate high domain risk.
 
 **Run 3:** `moderate` ✓
-> Quote: "Contributing to data platform architecture including "bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring""
+> Quote: "Collaborating with analysts, data scientists, and business stakeholders on reliable data delivery"
 > Verified: ✓ found in JD
-> Reasoning: While data governance is mentioned, the JD contains no explicit signals of regulatory, compliance, or financial consequences that would elevate this to high risk.
+> Reasoning: The role serves multiple internal business consumers but lacks explicit financial reporting, compliance, regulatory, or mission-critical language that would elevate risk to high.
 
 ### collaboration_width
 **Manual:** `4`
 
 **Run 1:** `2` ✗
-> Quote: "analysts; data scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two named distinct partner teams identified (analysts and data scientists); 'business stakeholders' is too generic to count.
+> Quote: "Collaborating with analysts, data scientists, and business stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named functions (analysts and data scientists) are identified as collaboration partners; business stakeholders is generic and does not count.
 
 **Run 2:** `2` ✗
 > Quote: "analysts; data scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Only analysts and data scientists are explicitly named as distinct collaborative groups; 'business stakeholders' is too generic to count.
+> Verified: ✓ found in JD
+> Reasoning: Named function cohorts are 'analysts' and 'data scientists' from the statement 'Collaborating with analysts, data scientists, and business stakeholders'; 'business stakeholders' is generic stakeholder language, not a named team.
 
 **Run 3:** `2` ✗
 > Quote: "analysts; data scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names two distinct collaborative partner groups: analysts and data scientists.
+> Verified: ✓ found in JD
+> Reasoning: Two named role cohorts are identified in the collaboration statement; 'business stakeholders' does not count as a specific named function.
 
 ⚠ **Disagreement**: manual=`4` vs LLM majority=`2`
 
@@ -129,122 +132,134 @@
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Developing and maintaining dbt models transforming raw data into analytics-ready datasets in Snowflake"
-> Verified: ✓ found in JD
-> Reasoning: Named tools actively in use (dbt, Snowflake) in responsibilities with technical depth indicates mid-stage team with existing infrastructure being extended, not greenfield.
+> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Infrastructure exists with named tools (dbt, Snowflake, CI/CD) and multiple data roles present; the role contributes to rather than builds the foundational platform.
 
 **Run 2:** `mid` ✓
 > Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The named tools and architecture patterns (dbt, Snowflake, bronze/silver/gold, CI/CD) in the responsibilities indicate an existing data infrastructure in development, characteristic of mid-stage teams.
+> Reasoning: The data team already has established tooling (dbt, Snowflake, CI/CD), multiple roles (analysts, data scientists), and complex infrastructure patterns, indicating mid-stage maturity with growth and standardization.
 
 **Run 3:** `mid` ✓
-> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: References to existing named infrastructure components (bronze/silver/gold layers, CI/CD pipelines, governance) indicate an established data function scaling beyond early stage.
+> Quote: "Contributing to data platform architecture including "bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring""
+> Verified: ✓ found in JD
+> Reasoning: Named tools and architecture patterns appear in responsibilities rather than requirements alone, and multiple data roles (analysts, data scientists, data engineers) are implied as already existing.
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `hiring_manager` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Developing and maintaining dbt models transforming raw data into analytics-ready datasets in Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical knowledge (dbt, Snowflake, data contracts, bronze/silver/gold architecture, macro development) indicates writer with hands-on experience; generic collaboration phrases are minor additions.
+> Reasoning: Specific tools and application context (dbt models, Snowflake, bronze/silver/gold, data contracts) mix with generic action verbs (applying best practices, collaborating).
 
 **Run 2:** `hiring_manager` ✗
-> Quote: "Defining data contracts, metrics, and semantic models across business domains"
+> Quote: "Developing and maintaining dbt models transforming raw data into analytics-ready datasets in Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical concepts (data contracts, semantic models, bronze/silver/gold architecture) that indicate hands-on experience writing these systems.
+> Reasoning: The responsibilities contain precise technical context—named tools (dbt, Snowflake) with specific use cases, architectural patterns (bronze/silver/gold), and methodology (data contracts, semantic models)—that only someone who does analytics engineering daily would specify.
 
 **Run 3:** `hiring_manager` ✗
 > Quote: "Developing and maintaining dbt models transforming raw data into analytics-ready datasets in Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical context (dbt, Snowflake, bronze/silver/gold layers, data contracts, CI/CD) that reflects hands-on domain knowledge, not generic boilerplate.
+> Reasoning: Responsibilities contain specific technical context (tool names paired with application, specific architecture patterns) that reflects hands-on experience rather than generic boilerplate.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
 
-### stakeholder_orientation
-**Manual:** ``
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
-**Run 1:** `internal_data` ✗
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
 > Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Primary emphasis on data platform infrastructure, governance tooling, and serving the data function rather than commercial, product, or finance teams.
+> Reasoning: The role primarily serves internal data consumers (analysts, data scientists) through platform infrastructure and reliable data delivery rather than external commercial or finance stakeholders.
 
-**Run 2:** `internal_data` ✗
-> Quote: "Defining data contracts, metrics, and semantic models across business domains"
-> Verified: ✓ found in JD
-> Reasoning: The core responsibilities focus on building data infrastructure and serving other data team members through reliable data platforms and contracts.
-
-**Run 3:** `internal_data` ✗
+**Run 2:** `internal_data` ✓
 > Quote: "Collaborating with analysts, data scientists, and business stakeholders on reliable data delivery"
 > Verified: ✓ found in JD
-> Reasoning: The primary named collaborators are analysts and data scientists (data consumers); the work focuses on building data infrastructure and contracts for analytics consumption rather than external commercial, product, or finance teams.
+> Reasoning: The primary audience is the data function itself—serving analysts and data scientists with reliable analytics infrastructure, semantic models, and data contracts.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+**Run 3:** `internal_data` ✓
+> Quote: "Contributing to data platform architecture including "bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring""
+> Verified: ✓ found in JD
+> Reasoning: The role's primary focus is building and maintaining data infrastructure that serves data consumers (analysts, data scientists) within the organization.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `mixed`
 
-**Run 1:** `mixed` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Defining data contracts, metrics, and semantic models across business domains"
 > Verified: ✓ found in JD
-> Reasoning: Strategic responsibility for defining data contracts and semantic models combined with execution responsibilities like developing/maintaining dbt models and contributing to architecture.
+> Reasoning: Defining standards across domains shows strategic ownership, but overall role framing (maintaining models, contributing to architecture, collaborating) is execution-oriented.
 
-**Run 2:** `execution` ✗
-> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While the role includes defining some elements, the overall framing emphasizes 'contributing to' and supporting an existing strategy rather than owning direction-setting.
-
-**Run 3:** `mixed` ✗
+**Run 2:** `mixed` ✓
 > Quote: "Defining data contracts, metrics, and semantic models across business domains"
 > Verified: ✓ found in JD
-> Reasoning: The role has strategic ownership in defining data contracts and metrics across domains, but operates within a platform architecture framework and collaborates with other teams rather than setting overall organizational direction.
+> Reasoning: The role has strategic ownership of the semantic and metrics layer across business domains while executing on dbt development and platform maintenance.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+**Run 3:** `mixed` ✓
+> Quote: "Defining data contracts, metrics, and semantic models across business domains"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership of data standards and platform direction with execution-focused responsibilities like maintaining models and applying best practices.
 
 ### ai_role
+**Manual:** ``
+
 **Run 1:** `none` ✗
-> Quote: "Defining data contracts, metrics, and semantic models across business domains"
-> Reasoning: No AI tool usage or AI-specific infrastructure mentioned; standard analytics semantic modeling.
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, GenAI applications, coding agents, or AI infrastructure in the JD.
 
-**Run 2:** `ai_enabler` ✓
-> Quote: "Defining data contracts, metrics, and semantic models across business domains"
-> Reasoning: Building semantic models and data infrastructure to support AI consumption, enabling AI-ready analytics systems.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, GenAI applications, or AI-ready infrastructure; this is a traditional analytics engineering role.
 
-**Run 3:** `ai_enabler` ✓
-> Quote: "Defining data contracts, metrics, and semantic models across business domains"
-> Reasoning: Semantic models signal building infrastructure that AI systems consume
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI data infrastructure, or GenAI applications; this is standard data engineering work.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'ai_enabler']
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Applying testing, documentation, and version control best practices"
-> Reasoning: Actively applying testing practices demonstrates direct ownership of quality assurance.
+**Manual:** ``
 
-**Run 2:** `tool_listed` ✗
+**Run 1:** `responsibility` ✗
 > Quote: "Applying testing, documentation, and version control best practices"
-> Reasoning: Testing mentioned as practice applied rather than candidate-owned responsibility; lacks ownership verbs (define/ensure/own).
+> Verified: ✓ found in JD
+> Reasoning: Testing appears in responsibilities as a practice the candidate will actively apply and implement, not merely a listed skill requirement.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `responsibility` ✗
 > Quote: "Defining data contracts, metrics, and semantic models across business domains"
-> Reasoning: Defining is an ownership verb indicating responsibility for data quality contracts
+> Verified: ✓ found in JD
+> Reasoning: Data contracts are explicitly named as something the candidate will define and own, indicating accountability for this quality and reliability practice.
 
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
+**Run 3:** `responsibility` ✗
+> Quote: "Applying testing, documentation, and version control best practices"
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as an owned responsibility through the action verb 'Applying' rather than listed as a tool or skill requirement.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
-> Reasoning: Data governance and monitoring signal concerns with operational reliability and preventing pipeline incidents.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
-> Reasoning: Operational reliability signals (governance, monitoring, data contracts) present but framed around platform practices, not regulatory/compliance dominance.
+**Run 1:** `moderate` ✗
+> Quote: "reliable data delivery"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and governance are concerns but the framing focuses on delivery and platform stability rather than compliance, regulatory, or stakeholder trust risks.
 
-**Run 3:** `moderate` ✓
-> Quote: "Contributing to data platform architecture including bronze/silver/gold layers, CI/CD pipelines, data governance, and monitoring"
-> Reasoning: Monitoring and governance emphasize operational reliability and preventing data issues from reaching stakeholders
+**Run 2:** `moderate` ✗
+> Quote: "reliable data delivery"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and monitoring are concerns, but the framing is infrastructure-focused, not compliance or risk-focused.
 
+**Run 3:** `moderate` ✗
+> Quote: "Collaborating with analysts, data scientists, and business stakeholders on reliable data delivery"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and governance are concerns but the JD lacks compliance, audit, or existential risk language; fear is pipeline stability rather than regulatory exposure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
