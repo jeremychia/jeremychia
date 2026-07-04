@@ -57,11 +57,14 @@
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
 | domain_risk | high | high | high | high | 100% | ✓ |
-| collaboration_width | 3 | 3 | 3 | 2 | 33% | ✓ |
-| data_team_maturity | early | mid | mid | early | 33% | ✗ |
+| collaboration_width | 3 | 3 | 2 | 2 | 33% | ✗ |
+| data_team_maturity | early | mid | mid | mid | 100% | ✗ |
 | jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
-| stakeholder_orientation |  | finance | finance | finance | 100% | ✗ |
-| autonomy_level |  | strategic | strategic | strategic | 100% | ✗ |
+| stakeholder_orientation | finance | finance | finance | finance | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | none | none | 33% | ✗ |
 
 ---
 
@@ -71,19 +74,19 @@
 **Manual:** `mixed`
 
 **Run 1:** `rigour` ✗
-> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes financial accuracy, establishing foundations, and maintaining centralized data integrity with no counterbalancing velocity language about speed or iteration.
+> Quote: "building scalable, well-structured models"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes correctness, structure, and governance (Foundation for financial reporting, Single Source of Truth, scalable models) with no velocity or speed framing.
 
 **Run 2:** `rigour` ✗
-> Quote: "establishing the foundation for all financial reporting"
+> Quote: "building scalable, well-structured models"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes financial reporting accuracy, data governance, and reliable systems with zero velocity signals present.
+> Reasoning: The emphasis on scalability, structure, and establishing foundational financial infrastructure prioritizes correctness and reliability over speed.
 
 **Run 3:** `rigour` ✗
-> Quote: "Creating and maintaining a "Finance Single Source of Truth" covering revenue, COGS, logistics costs, and EBITDA"
+> Quote: "establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on maintaining a reliable single source of truth for financial data and establishing proper financial reporting foundations signals rigour as the primary orientation.
+> Reasoning: The responsibilities emphasize correctness and building a reliable foundation for financial reporting, with no velocity signals present.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
@@ -91,61 +94,61 @@
 **Manual:** `high`
 
 **Run 1:** `high` ✓
-> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
-> Verified: ✓ found in JD
-> Reasoning: Explicit focus on financial reporting with revenue, COGS, and EBITDA metrics indicates data errors directly impact financial statements and potentially regulatory compliance.
-
-**Run 2:** `high` ✓
 > Quote: "establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: Financial reporting errors directly impact compliance, P&L accuracy, regulatory obligations, and investor confidence.
+> Reasoning: Financial reporting is explicitly mentioned and directly affects regulatory compliance and financial statement accuracy.
+
+**Run 2:** `high` ✓
+> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Revenue, COGS, and EBITDA are core financial reporting metrics where errors directly affect financial statements and regulatory compliance.
 
 **Run 3:** `high` ✓
-> Quote: "Creating and maintaining a "Finance Single Source of Truth" covering revenue, COGS, logistics costs, and EBITDA"
+> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: Data errors directly impact financial reporting, P&L calculation, and business decision-making based on accurate financial metrics.
+> Reasoning: Financial reporting is explicitly the primary output and directly affects regulated financial statements.
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `3` ✓
-> Quote: "Collaborating with finance, operations, and leadership teams"
+> Quote: "finance; operations; leadership teams"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named functions are explicitly listed as collaboration partners: Finance, Operations, and Leadership.
+> Reasoning: Three distinct named teams are counted: finance, operations, and leadership are explicitly listed as collaboration partners.
 
-**Run 2:** `3` ✓
-> Quote: "finance, operations, and leadership teams"
+**Run 2:** `2` ✗
+> Quote: "finance; operations"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named functions are explicitly listed as collaboration partners in the responsibilities.
+> Reasoning: Finance and Operations are the two explicitly named distinct functions listed as collaboration partners; leadership is a stakeholder group rather than a distinct operational team.
 
 **Run 3:** `2` ✗
-> Quote: "finance; operations"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two explicitly named functional teams (finance and operations) are identified as primary collaboration partners.
+> Quote: "finance, operations, and leadership teams"
+> Verified: ✓ found in JD
+> Reasoning: Finance and Operations are explicitly named as collaboration partners; leadership is generic and does not count.
 
-⚠ **LLM inconsistency**: runs gave ['3', '3', '2']
+⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
+
+⚠ **LLM inconsistency**: runs gave ['3', '2', '2']
 
 ### data_team_maturity
 **Manual:** `early`
 
 **Run 1:** `mid` ✗
-> Quote: "Comfort navigating uncertainty and bringing structure to developing systems"
+> Quote: "proven experience with dbt building scalable, well-structured models"
 > Verified: ✓ found in JD
-> Reasoning: The JD signals existing infrastructure (Snowflake, Airbyte, dbt) but ongoing development and structuring, positioning the team beyond early-stage startup but not yet mature.
+> Reasoning: Named tools (Snowflake, Airbyte, dbt) are already in use and the role is establishing the financial reporting layer within existing infrastructure, signaling growth beyond early stage.
 
 **Run 2:** `mid` ✗
 > Quote: "establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: Modern data infrastructure (Snowflake, Airbyte) is in place but the financial analytics layer and reporting systems are being built out.
+> Reasoning: The language 'establishing the foundation' indicates building infrastructure beyond greenfield, but financial reporting systems are not yet mature.
 
-**Run 3:** `early` ✓
-> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
+**Run 3:** `mid` ✗
+> Quote: "establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: The primary mission of "establishing the foundation" for financial reporting indicates the data function for finance is in early development.
+> Reasoning: The language of establishing foundations with existing named tools (Snowflake, Airbyte, dbt) signals a mid-stage team building out capabilities rather than greenfield or mature at scale.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
-
-⚠ **LLM inconsistency**: runs gave ['mid', 'mid', 'early']
 
 ### jd_authorship
 **Manual:** `hiring_manager`
@@ -153,98 +156,112 @@
 **Run 1:** `hiring_manager` ✓
 > Quote: "Developing product profitability models by combining purchasing, operational, and financial data"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities specify precise technical context—named data sources (ERP), exact metrics (revenue recognition, COGS, EBITDA), and methodology (forecasting/profitability models)—indicating firsthand knowledge of the role.
+> Reasoning: Responsibilities include specific financial modeling concepts (demand forecasting, product profitability, revenue recognition) and precise data domain knowledge that indicate hands-on experience.
 
 **Run 2:** `hiring_manager` ✓
 > Quote: "Developing product profitability models by combining purchasing, operational, and financial data"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific financial domain knowledge (revenue recognition, profitability models, ERP integration context) only someone performing this work would know.
+> Reasoning: The specific reference to distinct data domains (purchasing, operational, financial) and profitability modeling shows domain expertise from someone who has done this work.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Designing demand and revenue forecasting models for company-wide planning; Developing product profitability models by combining purchasing, operational, and financial data"
+> Quote: "Creating and maintaining a Finance Single Source of Truth covering revenue, COGS, logistics costs, and EBITDA"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities contain specific technical context (demand forecasting, product profitability logic, data source combinations) that only someone performing financial analytics would describe with this precision.
+> Reasoning: The specificity of named financial metrics, domain knowledge of revenue recognition, and detailed business context indicate direct domain experience in authorship.
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `finance`
 
-**Run 1:** `finance` ✗
-> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Primary audience is Finance and FP&A functions; responsibilities center on financial reporting, profitability analysis, and forecasting rather than product, commercial, or platform work.
-
-**Run 2:** `finance` ✗
-> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The primary deliverables and role framing center on financial reporting, FP&A metrics, and finance team enablement.
-
-**Run 3:** `finance` ✗
+**Run 1:** `finance` ✓
 > Quote: "Creating and maintaining a "Finance Single Source of Truth" covering revenue, COGS, logistics costs, and EBITDA"
 > Verified: ✓ found in JD
-> Reasoning: The primary stakeholder is the Finance function, with explicit focus on financial reporting and FP&A-specific metrics.
+> Reasoning: The role explicitly serves financial reporting, FP&A metrics, and business financial outcomes for finance teams.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`finance`
+**Run 2:** `finance` ✓
+> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Revenue, COGS, and EBITDA are FP&A metrics, and the explicit focus on 'financial reporting' makes finance the primary audience.
+
+**Run 3:** `finance` ✓
+> Quote: "Creating and maintaining a Finance Single Source of Truth covering revenue, COGS, logistics costs, and EBITDA"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The explicit naming of a Finance Single Source of Truth and focus entirely on financial metrics places the primary audience as the finance team.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `strategic`
 
-**Run 1:** `strategic` ✗
+**Run 1:** `strategic` ✓
 > Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: Verbs like 'leading', 'establishing', and 'designing' paired with responsibility for aligning metrics and shaping decision-making indicate strategic direction-setting rather than execution of prescribed work.
+> Reasoning: The role uses strategic verbs (leading, establishing) and is responsible for defining how the financial reporting layer is built.
 
-**Run 2:** `strategic` ✗
+**Run 2:** `strategic` ✓
 > Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: The role is expected to lead and establish systems architecture, not execute pre-defined work, granting strategic direction-setting authority.
+> Reasoning: 'Leading' and 'establishing the foundation' signal strategic ownership of direction-setting rather than execution of predefined work.
 
-**Run 3:** `strategic` ✗
+**Run 3:** `strategic` ✓
 > Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: The use of "leading" and "establishing" indicates the role sets direction for financial data infrastructure rather than executing direction set by others.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+> Reasoning: Leading and establishing are strategic verbs indicating the role defines the financial data strategy and architecture rather than executing predefined work.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: ""
-> Reasoning: No mention of AI tools, AI-assisted coding, or AI infrastructure responsibilities.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "establishing the foundation for all financial reporting"
-> Reasoning: No mention of AI tools, AI-assisted coding, or AI infrastructure—standard financial data warehouse work.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, machine learning, or AI-assisted coding; it focuses on traditional data stack skills (SQL, dbt, Snowflake, Python).
 
-**Run 3:** `none` ✓
-> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
-> Reasoning: Standard financial analytics work with no AI tool usage or infrastructure-building signals.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectations for AI tool usage, AI-assisted workflows, or AI-ready data infrastructure.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding practices, or AI infrastructure capabilities expected of the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✗
-> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
-> Reasoning: Candidate leads data integration and establishes financial reporting foundation, indicating ownership of data quality and integrity practices.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "n/a"
-> Reasoning: No testing, quality practices, or data contract language in the phrases.
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal in JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD does not mention testing practices, data contracts, observability, or data quality frameworks.
 
-**Run 3:** `absent` ✓
-> Quote: "Leading ERP data integration into the data warehouse and establishing the foundation for all financial reporting"
-> Reasoning: No testing ownership, quality practices, or testing tools mentioned in responsibilities.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal anywhere in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Despite the high-risk financial domain, the JD contains no mention of testing frameworks, data contracts, or data quality assurance practices.
 
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'absent']
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of testing frameworks, data quality practices, observability tooling, or data contracts.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✓
-> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
-> Reasoning: Single source of truth for critical financial metrics to leadership teams reflects regulatory/audit concerns and high business impact of data quality failures.
+**Manual:** ``
 
-**Run 2:** `high` ✓
-> Quote: "establishing the foundation for all financial reporting"
-> Reasoning: Financial reporting is compliance-driven; accurate data to finance/leadership teams carries regulatory and audit risk.
+**Run 1:** `moderate` ✗
+> Quote: "Finance Single Source of Truth"
+> Verified: ✓ found in JD
+> Reasoning: The financial reporting domain and Single Source of Truth concept implicitly signal concern for data accuracy and preventing conflicting data reaching decision-makers, but the JD is framed around building capabilities rather than explicitly managing risk.
 
-**Run 3:** `moderate` ✗
-> Quote: "Creating and maintaining a 'Finance Single Source of Truth' covering revenue, COGS, logistics costs, and EBITDA"
-> Reasoning: Emphasis on reliable single source of truth for finance/leadership stakeholders signals operational reliability concern without explicit regulatory framing.
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role in capability and delivery terms (establishing, creating, designing) rather than risk prevention, compliance, or stakeholder trust concerns.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames all responsibilities in capability and delivery terms with no explicit mention of compliance, audit, operational reliability, or preventing data quality risks.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

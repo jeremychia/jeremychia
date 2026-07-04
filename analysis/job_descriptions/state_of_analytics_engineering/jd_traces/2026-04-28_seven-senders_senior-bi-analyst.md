@@ -62,11 +62,14 @@
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
-| collaboration_width | 3 | 2 | 1 | 1 | 33% | ✗ |
+| collaboration_width | 3 | 1 | 1 | 1 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | execution | execution | strategic | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | strategic | strategic | strategic | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | tool_listed | tool_listed | 33% | ✗ |
+| loss_aversion_framing |  | none | moderate | none | 33% | ✗ |
 
 ---
 
@@ -76,59 +79,57 @@
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes production-grade quality, performance optimization, and scaling without mentioning speed or rapid delivery.
-
-**Run 2:** `rigour` ✓
-> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
-> Verified: ✓ found in JD
-> Reasoning: Emphasis on testing frameworks, advanced technical tooling, and code quality signals rigour over velocity.
-
-**Run 3:** `rigour` ✓
 > Quote: "utilizing advanced Jinja, macros, and testing frameworks"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing frameworks, code reviews, and quality maintenance as core responsibilities with no velocity language present.
+> Reasoning: Testing frameworks, performance optimization, cost-efficiency, and complex problem-solving are emphasized throughout with no velocity signals like 'fast-paced' or 'ship quickly'.
+
+**Run 2:** `rigour` ✓
+> Quote: "utilizing advanced Jinja, macros, and testing frameworks"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes testing frameworks, production-grade SQL, and data quality culture with no velocity or shipping language, establishing rigour as the primary work orientation.
+
+**Run 3:** `rigour` ✓
+> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Testing frameworks, code reviews, optimization, and quality maintenance are central responsibilities with no velocity language like fast-paced or rapid delivery.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Own the data pipeline from architecting dbt models to enabling self-serve in Looker"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role supports business decision-making through analytics infrastructure but includes no language about financial reporting, compliance, or regulatory consequences.
+> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
+> Verified: ✓ found in JD
+> Reasoning: The role is business intelligence analytics without explicit financial reporting, compliance, or regulatory language, indicating operational decision support rather than high-risk financial contexts.
 
 **Run 2:** `moderate` ✓
-> Quote: "Own the data pipeline from architecting dbt models to enabling self-serve in Looker"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Standard BI/analytics infrastructure work without explicit financial reporting, compliance, or regulatory language indicates moderate operational risk.
+> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
+> Verified: ✓ found in JD
+> Reasoning: The role focuses on operational analytics and self-serve intelligence for a logistics platform with no financial reporting, compliance, or regulatory signals, indicating moderate business intelligence risk.
 
 **Run 3:** `moderate` ✓
-> Quote: "Own the data pipeline from architecting dbt models to enabling self-service in Looker"
+> Quote: "Act as translator between engineering and business stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on analytics infrastructure and tool enablement rather than financial reporting, compliance, or regulatory requirements, typical of moderate-risk BI roles.
+> Reasoning: The role supports operational business decision-making without explicit financial reporting, compliance, or regulatory framing.
 
 ### collaboration_width
 **Manual:** `3`
 
-**Run 1:** `2` ✗
-> Quote: "junior analysts; engineering"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD names two distinct teams: analysts as a cohort and engineering as a named function.
-
-**Run 2:** `1` ✗
-> Quote: "engineering"
-> Verified: ✓ found in JD
-> Reasoning: Only 'engineering' is explicitly named as a collaboration partner; 'business stakeholders' is generic and does not count.
-
-**Run 3:** `1` ✗
+**Run 1:** `1` ✗
 > Quote: "Act as translator between engineering and business stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: Only 'engineering' is explicitly named as a distinct collaboration partner; 'business stakeholders' is too vague per the decision rules to count.
+> Reasoning: Only 'engineering' is a named specific function; 'business stakeholders' is too vague and junior analysts are part of the role holder's own team.
+
+**Run 2:** `1` ✗
+> Quote: "Act as translator between engineering and business stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Only 'engineering' counts as a named function; 'business stakeholders' is too vague per the rules, and junior analysts are part of the role holder's own team.
+
+**Run 3:** `1` ✗
+> Quote: "engineering"
+> Verified: ✓ found in JD
+> Reasoning: Engineering is the only explicitly named partner function; business stakeholders is a generic term that does not count.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`1`
-
-⚠ **LLM inconsistency**: runs gave ['2', '1', '1']
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -136,116 +137,136 @@
 **Run 1:** `mid` ✓
 > Quote: "Support the growth of junior analysts through code reviews, coaching, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The existence of junior analysts and growth language indicates an established team in expansion phase with existing infrastructure.
+> Reasoning: Multiple junior analysts exist, dbt and Looker infrastructure are established and active, and data culture is defined—indicating an existing function with scale and growth, not early-stage or fully mature.
 
 **Run 2:** `mid` ✓
 > Quote: "Support the growth of junior analysts through code reviews, coaching, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Existing junior analysts and named tools (dbt, Looker) in responsibilities indicate established mid-stage team with infrastructure in place.
+> Reasoning: Multiple analysts exist on the team with established dbt infrastructure and Looker platforms in place, indicating an established function that is actively growing.
 
 **Run 3:** `mid` ✓
 > Quote: "Support the growth of junior analysts through code reviews, coaching, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: The presence of junior analysts and named tools in active use (dbt, Looker) indicate an established function with multiple roles, but without the scale or sub-team specialization of a mature team.
+> Reasoning: The presence of junior analysts to mentor indicates an established and growing data team beyond the early stage.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks; Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains specific technical patterns (Jinja, macros, testing frameworks, multi-billion row optimization) that indicate hiring manager domain expertise rather than generic recruiter language.
+**Run 1:** `mixed` ✗
+> Quote: "utilizing advanced Jinja, macros, and testing frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity about dbt implementation details and SQL scale coexist with generic responsibilities like mentorship and translator roles that any analytics recruiter might write.
 
 **Run 2:** `hiring_manager` ✓
 > Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical context about dbt with Jinja, macros, testing, and multi-billion row datasets indicates hands-on domain expertise in authorship.
+> Reasoning: The specific mention of Jinja, macros, testing frameworks, multi-billion row datasets, and Looker backend-to-storytelling workflows indicates technical depth only a practitioner would write.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
-> Verified: ✓ found in JD
-> Reasoning: The specificity about advanced Jinja, macros, and testing frameworks demonstrates hands-on technical understanding of what this role actually does day-to-day, not generic boilerplate.
-
-### stakeholder_orientation
-**Manual:** ``
-
-**Run 1:** `internal_data` ✗
-> Quote: "Own the data pipeline from architecting dbt models to enabling self-serve in Looker"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The primary focus is building data infrastructure and enabling other data consumers (junior analysts, self-serve users) rather than serving commercial, product, or finance functions.
-
-**Run 2:** `internal_data` ✗
-> Quote: "Own the data pipeline from architecting dbt models to enabling self-serve in Looker"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Primary emphasis on data infrastructure, self-serve analytics enablement, and serving internal data consumers indicates service to the data function.
-
-**Run 3:** `internal_data` ✗
-> Quote: "Own the data pipeline from architecting dbt models to enabling self-service in Looker"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building analytics infrastructure and self-serve capabilities for internal data consumers rather than serving GTM, product, or finance teams.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
-
-### autonomy_level
-**Manual:** ``
-
-**Run 1:** `execution` ✗
-> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
-> Verified: ✓ found in JD
-> Reasoning: The role has significant autonomy over individual projects and technical domain decisions but does not set overall analytics strategy or organizational direction.
-
-**Run 2:** `execution` ✗
 > Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
 > Verified: ✓ found in JD
-> Reasoning: While the role has independence within technical domains, 'deliver' frames it as executing on scoped analytical work rather than setting overall analytics strategy.
+> Reasoning: The specific scale metric (multi-billion rows) and performance context indicate hiring manager familiarity with the actual work scope.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Own the data pipeline from architecting dbt models to enabling self-serve in Looker"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Primary responsibilities center on building and maintaining analytics infrastructure and supporting the data team, with business stakeholder engagement framed as a translator/support role.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Own the data pipeline from architecting dbt models to enabling self-service in Looker"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibilities focus on building data infrastructure and self-serve analytics platforms, with mentoring junior analysts, indicating the role primarily serves internal analytics consumers and the data function.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Own the data pipeline from architecting dbt models to enabling self-service in Looker"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibility is building data infrastructure for internal consumption and analyst self-service, not serving external business domains.
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `strategic` ✗
+> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
+> Verified: ✓ found in JD
+> Reasoning: Strategic verbs ('independently lead', 'own', 'design', 'architect') are applied to the entire problem-solving and pipeline ownership, not narrow technical sub-problems.
+
+**Run 2:** `strategic` ✗
+> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
+> Verified: ✓ found in JD
+> Reasoning: The requirement to independently lead from requirements discovery through delivery, plus ownership of the data pipeline and mentoring, indicates the candidate sets direction for projects and shapes how analytical work is executed.
 
 **Run 3:** `strategic` ✗
 > Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
 > Verified: ✓ found in JD
-> Reasoning: The verbs 'independently lead' and 'own' indicate the role defines its own direction and architecture rather than executing against externally set priorities.
+> Reasoning: The role has primary responsibility for setting direction and owning the discovery-to-delivery cycle, not executing work defined by others.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'strategic']
+⚠ **Disagreement**: manual=`execution` vs LLM majority=`strategic`
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
-> Reasoning: No mention of AI tools, GenAI development, or AI-ready infrastructure.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
-> Reasoning: No mention of AI tools or AI infrastructure building.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, agentic workflows, AI infrastructure, or AI-related candidate skills anywhere in the JD.
 
-**Run 3:** `none` ✓
-> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
-> Reasoning: No mention of AI tools, GenAI infrastructure, or AI-assisted development; standard dbt and SQL work.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, or AI data infrastructure requirements for the candidate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, coding agents, or AI-related expectations for the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `tool_listed` ✓
-> Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
-> Reasoning: Testing frameworks mentioned as part of technical toolkit but without explicit ownership of quality practice.
+**Manual:** ``
 
-**Run 2:** `tool_listed` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "Design, build, and maintain dbt models, utilizing advanced Jinja, macros, and testing frameworks"
-> Reasoning: Testing frameworks mentioned as part of the toolkit but without ownership verbs like own, ensure, or define.
+> Verified: ✓ found in JD
+> Reasoning: Testing frameworks are embedded as core to building and maintaining dbt models, indicating the candidate owns testing practices as an integral responsibility, not a separate tool requirement.
 
-**Run 3:** `tool_listed` ✓
+**Run 2:** `tool_listed` ✗
 > Quote: "utilizing advanced Jinja, macros, and testing frameworks"
-> Reasoning: Testing frameworks mentioned in the tech stack without explicit ownership verbs like 'own', 'ensure', or 'define'.
+> Verified: ✓ found in JD
+> Reasoning: Testing frameworks are listed as tools used in dbt model design without explicit ownership verbs like 'own' or 'define', making this tool_listed rather than responsibility.
 
+**Run 3:** `tool_listed` ✗
+> Quote: "utilizing advanced Jinja, macros, and testing frameworks"
+> Verified: ✓ found in JD
+> Reasoning: Testing frameworks appear as part of the dbt toolkit the candidate uses without explicit ownership verbs like own, define, or implement.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`tool_listed`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'tool_listed']
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "Deliver high-performance, cost-optimized SQL queries designed for multi-billion row datasets"
-> Reasoning: Framed around performance delivery without operational reliability (SLOs, incidents) or compliance/trust concerns.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
-> Reasoning: JD focuses on delivery and capability building with no compliance, SLO, or trust-dominance framing.
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes capability and quality culture in positive terms, without loss-aversion language around compliance, incidents, or preventing bad data reaching stakeholders.
 
-**Run 3:** `none` ✓
-> Quote: "Independently lead the Discovery-to-Delivery cycle for medium to highly complex tasks"
-> Reasoning: Pure delivery framing focused on task execution and performance; no language about incidents, SLOs, compliance, or data trustworthiness.
+**Run 2:** `moderate` ✗
+> Quote: "maintain data culture quality"
+> Verified: ✓ found in JD
+> Reasoning: Some concern with production reliability and quality standards appears in 'production-grade SQL' and quality culture maintenance, but risk prevention is secondary to delivery and capability framing.
 
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around delivery capability and quality output, not around preventing bad outcomes, reliability concerns, or risk mitigation.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'none']

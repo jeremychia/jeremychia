@@ -54,12 +54,12 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
-| collaboration_width | 1 | 1 | 1 | 2 | 33% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
 | jd_authorship | hiring_manager | hiring_manager | mixed | hiring_manager | 33% | ✓ |
-| stakeholder_orientation | internal_data | mixed | internal_data | internal_data | 33% | ✓ |
-| autonomy_level | strategic | mixed | execution | strategic | 0% | ✗ |
-| ai_role |  | ai_enabler | ai_user | ai_enabler | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | mixed | mixed | 33% | ✗ |
+| ai_role |  | ai_enabler | ai_enabler | ai_user | 33% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
@@ -73,17 +73,17 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `rigour` ✓
 > Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, governance, and quality through explicit testing and monitoring language with no velocity or speed signals present.
+> Reasoning: The responsibilities section emphasizes quality, testing, and governance as core expectations without any velocity language.
 
 **Run 2:** `rigour` ✓
 > Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality, testing, and monitoring throughout with no countervailing velocity language.
+> Reasoning: The role emphasizes testing, monitoring, quality checks, and data governance throughout responsibilities with no corresponding velocity or speed-focused language.
 
 **Run 3:** `rigour` ✓
-> Quote: "Data Quality: Implementing testing, monitoring, and data quality checks while partnering with data engineers"
+> Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, monitoring, data quality checks, and robust modeling over speed or iteration pace.
+> Reasoning: Testing and data quality are framed as core responsibilities, not as secondary concerns, signaling a rigour-oriented role.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -91,17 +91,17 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `moderate` ✓
 > Quote: "Working with business teams to convert analytical needs into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The role supports business intelligence and operational decision-making without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: This is framed as business intelligence and analytics work without explicit financial reporting or regulatory risk language.
 
 **Run 2:** `moderate` ✓
-> Quote: "Enabling governed access to trusted data sources"
+> Quote: "enabling governed access to trusted data sources"
 > Verified: ✓ found in JD
-> Reasoning: Data quality and governance are emphasized, indicating business decisions depend on data accuracy, but without explicit financial reporting or regulatory language.
+> Reasoning: The emphasis on trusted data reflects operational reliability concerns, but without regulatory, compliance, or financial reporting language typical of high-risk domains.
 
 **Run 3:** `moderate` ✓
 > Quote: "retail/ecommerce/DTC industry background"
 > Verified: ✓ found in JD
-> Reasoning: The JD lacks explicit financial reporting, regulatory, or compliance language typical of high-risk domains, and the sector hints (retail/ecommerce) imply business decision-making without immediate regulatory consequences.
+> Reasoning: The industry context suggests business decision-making impact without explicit regulatory or financial reporting requirements in the responsibilities.
 
 ### collaboration_width
 **Manual:** `1`
@@ -109,19 +109,17 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `1` ✓
 > Quote: "data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Only 'data engineers' is explicitly named as a distinct partner team; 'business teams' is too generic to count as a specific named function.
+> Reasoning: Only one named distinct team (data engineers) is explicitly mentioned as a collaboration partner.
 
 **Run 2:** `1` ✓
-> Quote: "data engineers"
+> Quote: "partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Only data engineers are explicitly named as a collaboration partner; 'business teams' is generic and does not count as a named function.
+> Reasoning: Only one explicitly named partner team (data engineers) identified; 'business teams' is generic language that does not count as a named function.
 
-**Run 3:** `2` ✗
-> Quote: "business teams; data engineers"
+**Run 3:** `1` ✓
+> Quote: "partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Two distinct named functions are explicitly mentioned: business teams and data engineers.
-
-⚠ **LLM inconsistency**: runs gave ['1', '1', '2']
+> Reasoning: Only one named partner function (data engineers) is explicitly identified in the JD; generic references like 'business teams' do not count as named collaborators.
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -129,17 +127,17 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `mid` ✓
 > Quote: "owning the analytics layer of our data platform"
 > Verified: ✓ found in JD
-> Reasoning: The JD references an existing data platform with established tooling (dbt) and multiple data roles already in place, indicating a function with infrastructure that is scaling.
+> Reasoning: The platform and tools already exist with named technology in responsibilities, but the role is about owning a specific layer rather than joining a fully mature, specialized sub-team.
 
 **Run 2:** `mid` ✓
-> Quote: "owning the analytics layer of our data platform and bridging data engineering with business intelligence"
+> Quote: "owning the analytics layer of our data platform"
 > Verified: ✓ found in JD
-> Reasoning: Named dbt tools appear in responsibilities and multiple data functions are implied, indicating an established platform being scaled rather than early-stage.
+> Reasoning: An established analytics platform exists with deployed tools, but the focus on optimization and improvement indicates mid-stage growth rather than mature scale.
 
 **Run 3:** `mid` ✓
-> Quote: "Building robust dbt models that translate business logic into scalable solutions while optimizing for performance and cost efficiency"
+> Quote: "owning the analytics layer of our data platform and bridging data engineering with business intelligence"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (dbt) appear in responsibilities with specific technical context, and multiple data roles are implied (data engineers, business teams), indicating an established but still-growing function.
+> Reasoning: The existence of a named data platform with established roles (data engineers) and established tools (dbt) indicates a mid-stage team scaling existing capabilities.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
@@ -147,61 +145,59 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `hiring_manager` ✓
 > Quote: "Building robust dbt models that translate business logic into scalable solutions while optimizing for performance and cost efficiency"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain technical specificity about dbt application context, data modeling terminology (facts, dimensions, grains, marts), and platform optimization concerns that only come from someone who has done this role.
+> Reasoning: The responsibilities show technical specificity about dbt, performance optimization, and cost efficiency that indicates domain expertise rather than boilerplate.
 
 **Run 2:** `mixed` ✗
 > Quote: "Building robust dbt models that translate business logic into scalable solutions while optimizing for performance and cost efficiency"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool names and technical concerns (dbt, cost optimization, metric definitions) are mixed with generic collaboration language.
+> Reasoning: Technical specificity about dbt production context and performance optimization is present alongside generic collaboration language like 'working with business teams'.
 
 **Run 3:** `hiring_manager` ✓
 > Quote: "Building robust dbt models that translate business logic into scalable solutions while optimizing for performance and cost efficiency"
 > Verified: ✓ found in JD
-> Reasoning: The specific technical knowledge about how dbt engineers translate business logic and optimize for performance demonstrates hands-on expertise from someone who has done this job.
+> Reasoning: The specific mention of dbt modeling, dimensional concepts (facts, dimensions, grains, marts), and performance optimization indicates technical specificity from hands-on experience.
 
 ⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
-**Run 1:** `mixed` ✗
-> Quote: "Working with business teams to convert analytical needs into structured data solutions; Enabling governed access to trusted data sources"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize both serving business BI needs and building internal data platform infrastructure with roughly equal weight.
-
-**Run 2:** `internal_data` ✓
+**Run 1:** `internal_data` ✓
 > Quote: "owning the analytics layer of our data platform"
 > Verified: ✓ found in JD
-> Reasoning: The primary responsibility is to the analytics data platform itself with emphasis on self-serve analytics and data quality, even though business collaboration is part of execution.
+> Reasoning: The role emphasizes enabling the data platform and analytics infrastructure for internal consumers, not serving commercial, product, or finance teams primarily.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Enabling governed access to trusted data sources and optimizing the platform for AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role is primarily about enabling internal analytics platform consumers and serving internal data infrastructure needs, not commercial, product, or finance stakeholders.
 
 **Run 3:** `internal_data` ✓
 > Quote: "owning the analytics layer of our data platform and bridging data engineering with business intelligence"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is platform ownership and infrastructure, with business collaboration framed as understanding their needs rather than serving revenue, product, or finance functions.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'internal_data']
+> Reasoning: The primary emphasis is on building and maintaining the analytics platform infrastructure that serves internal data consumers, with business collaboration as the means to that end.
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `mixed` ✗
+**Run 1:** `strategic` ✓
 > Quote: "owning the analytics layer of our data platform"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around ownership of the analytics layer but the enumerated responsibilities are primarily execution-oriented (building, implementing, enabling) rather than strategic direction-setting.
+> Reasoning: The use of 'owning' indicates strategic accountability for defining and directing this function rather than executing direction set by others.
 
-**Run 2:** `execution` ✗
-> Quote: "Working with business teams to convert analytical needs into structured data solutions"
-> Verified: ✓ found in JD
-> Reasoning: The role executes on analytical needs defined by business teams within the analytics layer domain rather than setting company analytics strategy.
-
-**Run 3:** `strategic` ✓
+**Run 2:** `mixed` ✗
 > Quote: "owning the analytics layer of our data platform"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to own the analytics platform and establish metric definitions, setting direction rather than executing work assigned by others.
+> Reasoning: The role owns the analytics platform domain strategically but also converts analytical needs from business teams, combining strategic ownership with execution-oriented responsibilities.
+
+**Run 3:** `mixed` ✗
+> Quote: "owning the analytics layer of our data platform; Working with business teams to convert analytical needs into structured data solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role owns the analytics infrastructure and platform direction while also responding to business analytical needs, combining strategic platform ownership with execution in service of stated priorities.
 
 ⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'strategic']
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
 
 ### ai_role
 **Manual:** ``
@@ -209,21 +205,21 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `ai_enabler` ✗
 > Quote: "optimizing the platform for AI use cases"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure optimized for AI system consumption, with secondary signal of openness to using AI tools for personal workflow improvement.
+> Reasoning: The role expects the candidate to build data infrastructure that AI systems will consume or run on, not just use AI tools personally.
 
-**Run 2:** `ai_user` ✗
-> Quote: "Openness to using AI tools for workflow improvement"
-> Verified: ✓ found in JD
-> Reasoning: The requirement indicates the candidate should use AI coding or productivity tools to accelerate their own work.
-
-**Run 3:** `ai_enabler` ✗
+**Run 2:** `ai_enabler` ✗
 > Quote: "optimizing the platform for AI use cases"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems consume, as indicated by optimizing the platform for AI use cases.
+> Reasoning: The candidate is expected to prepare data infrastructure for AI systems to consume; while 'openness to using AI tools' suggests ai_user signal, the ai_enabler framing takes precedence per decision rules.
+
+**Run 3:** `ai_user` ✗
+> Quote: "Openness to using AI tools for workflow improvement"
+> Verified: ✓ found in JD
+> Reasoning: The requirement for openness to AI tools for personal workflow improvement indicates the candidate is expected to use AI to accelerate their own work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
-⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'ai_user', 'ai_enabler']
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'ai_enabler', 'ai_user']
 
 ### testing_framing
 **Manual:** ``
@@ -231,17 +227,17 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Run 1:** `responsibility` ✗
 > Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as practices the candidate owns and implements through action verbs, not merely listed as skills or tools.
+> Reasoning: Testing is framed as something the candidate will implement as a primary responsibility using action verbs, not as a listed tool requirement.
 
 **Run 2:** `responsibility` ✗
-> Quote: "Implementing testing, monitoring, and data quality checks"
+> Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as something the candidate implements and owns, not merely a tool or skill they possess.
+> Reasoning: Testing and quality checks are owned responsibilities using the action verb 'implementing,' indicating the candidate defines and executes these practices.
 
 **Run 3:** `responsibility` ✗
-> Quote: "Implementing testing, monitoring, and data quality checks"
+> Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Testing is listed as a core responsibility with the ownership verb 'implementing', not merely as a tool in a requirements list.
+> Reasoning: Testing is explicitly framed as an implementation responsibility owned by the candidate, not merely a tool to use.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
@@ -249,18 +245,18 @@ Warehouse optimization knowledge, semantic layer/metric governance experience, O
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "Enabling governed access to trusted data sources"
+> Quote: "Implementing testing, monitoring, and data quality checks while partnering with data engineers"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability through governance and trust is clearly a concern, but without explicit compliance, regulatory, or stakeholder-trust-crisis framing typical of high loss-aversion roles.
+> Reasoning: Operational reliability and data quality are clear concerns, but there is no regulatory, compliance, or board-level risk language that would indicate high loss aversion.
 
 **Run 2:** `moderate` ✗
-> Quote: "Enabling governed access to trusted data sources"
+> Quote: "trusted data sources"
 > Verified: ✓ found in JD
-> Reasoning: Governance and trustworthiness indicate operational reliability matters, but without regulatory, compliance, or decision-protection language, this is moderate rather than high risk aversion.
+> Reasoning: Operational reliability and data quality are genuine concerns, but the JD is primarily delivery-focused without regulatory, compliance, or risk-prevention language typical of high loss-aversion framing.
 
 **Run 3:** `moderate` ✗
 > Quote: "Enabling governed access to trusted data sources"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes trust and reliability in data infrastructure, but without compliance, regulatory, or business-impact risk language that would indicate high loss aversion.
+> Reasoning: The emphasis on trusted data and data quality checks suggests concern for operational reliability, but without explicit compliance or regulatory risk language.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
