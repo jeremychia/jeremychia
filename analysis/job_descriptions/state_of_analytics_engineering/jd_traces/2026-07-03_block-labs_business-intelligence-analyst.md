@@ -54,197 +54,221 @@ Nice-to-haves
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | high | moderate | 33% |
-| collaboration_width | 6 | 4 | 4 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | mixed | mixed | mixed | 100% |
-| autonomy_level | execution | mixed | strategic | 0% |
-| ai_role | ai_enabler | ai_enabler | ai_user | 33% |
-| testing_framing | responsibility | responsibility | responsibility | 100% |
-| loss_aversion_framing | moderate | moderate | moderate | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | moderate | moderate | high | 33% | ✗ |
+| collaboration_width | 3 | 6 | 4 | 4 | 33% | ✗ |
+| data_team_maturity | early | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | mixed | mixed | mixed | commercial | 33% | ✓ |
+| autonomy_level | strategic | strategic | mixed | strategic | 33% | ✓ |
+| ai_role |  | ai_enabler | ai_user | ai_enabler | 33% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
+> Quote: "Write production-grade SQL (CTEs, window functions, incremental models)"
+> Verified: ✓ found in JD
+> Reasoning: The explicit framing of 'production-grade' paired with specific technical methodology signals quality and correctness as core expectations throughout the JD.
+
+**Run 2:** `rigour` ✓
 > Quote: "Write production-grade SQL (CTEs, window functions, incremental models) to model clean datasets from Clickhouse and on-chain tables."
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals dominate the responsibilities section: production-grade emphasis, ensure data quality/lineage/documentation, and discipline to distinguish signal from noise; no velocity signals present.
+> Reasoning: The JD emphasises production-grade work, data quality, compliance, and governance throughout, without velocity-oriented language like 'fast-paced' or 'ship quickly'.
 
-**Run 2:** `rigour`
-> Quote: "Write production-grade SQL (CTEs, window functions, incremental models) to model clean datasets from Clickhouse and on-chain tables."
+**Run 3:** `rigour` ✓
+> Quote: "ensure data quality, lineage, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit quality and correctness signals (production-grade, clean datasets, precise SQL techniques, data quality checks, ensure lineage and documentation) with no velocity or shipping-speed emphasis.
-
-**Run 3:** `rigour`
-> Quote: "Write production-grade SQL (CTEs, window functions, incremental models) to model clean datasets from Clickhouse and on-chain tables."
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes production-grade quality, rigorous methodology, data quality ownership, statistical discipline, and compliance constraints, with no emphasis on speed or rapid iteration.
+> Reasoning: The responsibilities emphasize testing frameworks, production-grade code, data quality checks, and governance at a 6:1 ratio to velocity signals, with Great Expectations and formal data practices framing the work orientation.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `moderate`
-> Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations."
+**Run 1:** `moderate` ✗
+> Quote: "risk controls across our crypto-enabled iGaming products"
 > Verified: ✓ found in JD
-> Reasoning: Risk framing focuses on operational fraud/abuse detection rather than financial reporting, regulatory compliance, or audit exposure, placing this in moderate rather than high risk category.
+> Reasoning: Explicit mention of risk controls in a regulated gaming domain with fraud detection and compliance responsibilities indicates moderate data risk, secondary to primary growth analytics focus.
 
-**Run 2:** `high`
-> Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations."
-> Verified: ✓ found in JD
-> Reasoning: Explicit fraud investigation and financial loss impact (fraud loss rate as a key KPI) combined with regulatory compliance constraints in a regulated iGaming/crypto domain.
-
-**Run 3:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Design and analyze experiments, cohort analyses, and attribution within iGaming and regional compliance constraints."
 > Verified: ✓ found in JD
-> Reasoning: While iGaming involves regulated activities and financial transactions (GGR/NGR, fraud detection, AML patterns), the JD frames the role around insights and growth delivery rather than pure compliance or regulatory risk management.
+> Reasoning: The role has regulatory and compliance concerns (regional constraints, AML, fraud) but is primarily business analytics (growth, retention), not financial reporting or audit functions.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'moderate']
+**Run 3:** `high` ✓
+> Quote: "risk controls across our crypto-enabled iGaming products"
+> Verified: ✓ found in JD
+> Reasoning: The role operates in a heavily regulated iGaming sector with explicit responsibilities for fraud/AML investigation and compliance constraints, combined with financial KPIs (fraud loss rate, GGR/NGR) where data errors have direct business and regulatory impact.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']
 
 ### collaboration_width
+**Manual:** `3`
 
-**Run 1:** `6`
-> Quote: "Product; Marketing; CRM; Risk; Compliance; Engineering"
+**Run 1:** `6` ✗
+> Quote: "Product / CRM / Risk; Product, Marketing/CRM, Risk/Compliance, and Engineering"
 > Verified: ✓ found in JD
-> Reasoning: Six distinct named partner functions explicitly listed across the JD: Product and CRM and Risk are mentioned in partnership statements; Marketing, Risk, Compliance, and Engineering are named in collaboration language.
+> Reasoning: Six distinct named partner teams are explicitly listed: Product, CRM, Risk, Marketing, Compliance, and Engineering.
 
-**Run 2:** `4`
-> Quote: "Product; Marketing/CRM; Risk/Compliance; Engineering"
+**Run 2:** `4` ✗
+> Quote: "Partner with Product, Marketing/CRM, Risk/Compliance, and Engineering to define event schemas and tracking plans"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named partner functions explicitly listed in the collaboration requirement.
+> Reasoning: Four distinct named collaborator functions: Product, Marketing/CRM, Risk/Compliance, and Engineering.
 
-**Run 3:** `4`
-> Quote: "Product; Marketing/CRM; Risk/Compliance; Engineering"
+**Run 3:** `4` ✗
+> Quote: "Partner with Product, Marketing/CRM, Risk/Compliance, and Engineering"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named partner teams are explicitly listed in the responsibilities section.
+> Reasoning: Four distinct named teams are explicitly listed as collaboration partners in the responsibilities section.
+
+⚠ **Disagreement**: manual=`3` vs LLM majority=`4`
 
 ⚠ **LLM inconsistency**: runs gave ['6', '4', '4']
 
 ### data_team_maturity
+**Manual:** `early`
 
-**Run 1:** `mid`
-> Quote: "Write production-grade SQL (CTEs, window functions, incremental models) to model clean datasets from Clickhouse and on-chain tables."
-> Verified: ✓ found in JD
-> Reasoning: Named tools (Clickhouse, dbt, Amplitude, Tableau) in active use with specific responsibilities to maintain/iterate suggest established infrastructure beyond early-stage, but no indication of large specialized sub-teams or mature-scale governance.
-
-**Run 2:** `mid`
-> Quote: "Write production-grade SQL (CTEs, window functions, incremental models) to model clean datasets from Clickhouse and on-chain tables."
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure (Clickhouse, on-chain data systems) with production-grade expectations and named tools (DBT, Tableau, Amplitude) in use indicates established but growing data function.
-
-**Run 3:** `mid`
-> Quote: "Build, maintain, and iterate dashboards surfacing KPIs (GGR/NGR, ARPU, LTV, churn, deposit→wager conversion, fraud loss rate)."
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (Clickhouse, DBT, Tableau, Amplitude) indicate existing infrastructure beyond early stage, but no signals of a large, specialized, multi-team organization.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Work with on-chain data: parse EVM logs, token transfers (ERC-20/721), join labeled address datasets, analyze exchange/bridge flows, gas/fee dynamics, and wallet clustering."
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity about on-chain data parsing, ERC standards, and domain-specific methodologies reflects deep product knowledge only someone doing this work would possess.
-
-**Run 2:** `hiring_manager`
-> Quote: "Use Python (pandas, seaborn, sklearn, scipy) for analysis, data quality checks, lightweight ETL/backfills, API pulls (e.g., blockchain providers), and automation."
-> Verified: ✓ found in JD
-> Reasoning: Exact Python library names, specific use cases, and technical depth (blockchain provider APIs, specific protocols) indicate authorship by someone who performs this work.
-
-**Run 3:** `hiring_manager`
-> Quote: "parse EVM logs, token transfers (ERC-20/721), join labeled address datasets, analyze exchange/bridge flows, gas/fee dynamics, and wallet clustering"
-> Verified: ✓ found in JD
-> Reasoning: Highly specific on-chain technical detail (EVM logs, token standards, wallet clustering, exchange flows) and domain-specific KPIs that only someone with hands-on experience in this role could have written.
-
-### stakeholder_orientation
-
-**Run 1:** `mixed`
-> Quote: "bring actionable recommendations to Product / CRM / Risk before they have to ask."
-> Verified: ✓ found in JD
-> Reasoning: Role explicitly serves three distinct audiences (Product for growth/experiments, CRM for lifecycle/revenue metrics, Risk for fraud/compliance) with genuinely split responsibilities across all three.
-
-**Run 2:** `mixed`
-> Quote: "bring actionable recommendations to Product / CRM / Risk before they have to ask."
-> Verified: ✓ found in JD
-> Reasoning: Role explicitly serves three distinct audiences with equal emphasis: Product (experiments, funnels), Commercial/CRM (lifecycle marketing, churn, LTV), and Risk (compliance, fraud investigation).
-
-**Run 3:** `mixed`
-> Quote: "bring actionable recommendations to Product / CRM / Risk before they have to ask"
-> Verified: ✓ found in JD
-> Reasoning: The role serves multiple primary audiences with equal weight: Product (experimentation, cohort analysis), CRM (lifecycle marketing), and Risk (fraud/compliance), rather than emphasizing one.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Build, maintain, and iterate dashboards surfacing KPIs (GGR/NGR, ARPU, LTV, churn, deposit→wager conversion, fraud loss rate)."
-> Verified: ✓ found in JD
-> Reasoning: Primary framing is delivery-oriented (build dashboards, write SQL, automate reporting); while the role has autonomy in problem-framing (frame questions yourself), direction is ultimately set by partnerships with Product/CRM/Risk.
-
-**Run 2:** `mixed`
-> Quote: "own the end-to-end analytics stack for wallet funnels, wagering behavior, lifecycle marketing, and compliance"
-> Verified: ✓ found in JD
-> Reasoning: Strategic ownership of the full analytics function combined with hands-on execution responsibilities (writing SQL, building dashboards, investigating anomalies).
-
-**Run 3:** `strategic`
-> Quote: "own the end-to-end analytics stack for wallet funnels, wagering behavior, lifecycle marketing, and compliance"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly owns and shapes the analytics infrastructure and event schema definitions, setting direction for how analytics is delivered rather than executing scoped work.
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'strategic']
-
-### ai_role
-
-**Run 1:** `ai_enabler`
-> Quote: "Build and maintain AI-agent workflows that automate recurring analytics - anomaly investigation, root-cause loops etc"
-> Verified: ✓ found in JD
-> Reasoning: Candidate is expected to build data infrastructure and automation platforms that AI agents consume and run on, not just use AI tools for personal coding productivity.
-
-**Run 2:** `ai_enabler`
+**Run 1:** `mid` ✗
 > Quote: "Build and maintain AI-agent workflows that automate recurring analytics - anomaly investigation, root-cause loops etc."
 > Verified: ✓ found in JD
-> Reasoning: Candidate is expected to build and maintain AI agent systems (with ReAct loops, RAG, MCP servers mentioned in nice-to-haves) for analytics automation, not just use AI tools.
+> Reasoning: Existing named platforms (Clickhouse, Tableau, Amplitude, DBT) combined with responsibility to build new automation systems indicate infrastructure exists but is actively growing.
 
-**Run 3:** `ai_user`
+**Run 2:** `mid` ✗
+> Quote: "model clean datasets from Clickhouse and on-chain tables"
+> Verified: ✓ found in JD
+> Reasoning: Existing infrastructure and tools (Clickhouse, dbt, Tableau, Amplitude) are deployed and in use; the role builds/maintains/iterates on established systems rather than establishing them from zero.
+
+**Run 3:** `mid` ✗
+> Quote: "own the end-to-end analytics stack for wallet funnels, wagering behavior, lifecycle marketing, and compliance"
+> Verified: ✓ found in JD
+> Reasoning: Named production tools (SQL, DBT, Clickhouse, Amplitude, Tableau) and multi-domain responsibilities indicate existing infrastructure being iterated upon, not built from zero, suggesting a team that has established foundational data capabilities.
+
+⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "Work with on-chain data: parse EVM logs, token transfers (ERC-20/721), join labeled address datasets, analyze exchange/bridge flows, gas/fee dynamics, and wallet clustering."
+> Verified: ✓ found in JD
+> Reasoning: The specific blockchain domain knowledge (EVM, ERC-20/721, labeled addresses, bridge flows, wallet clustering, gas dynamics) demonstrates hands-on experience only someone who has done this work possesses.
+
+**Run 2:** `hiring_manager` ✓
 > Quote: "Solid AI-collaboration craft — prompt & context engineering, spec-driven task framing, and eval-driven iteration."
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to use AI agents effectively (via prompt engineering and evaluation techniques) to automate their own analytics workflows and investigations, not to build data infrastructure for AI systems.
+> Reasoning: The must-have section specifies highly technical, job-specific skills (prompt engineering, Tableau LODs, CTEs, on-chain data patterns) that only someone doing this work daily would write.
 
-⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'ai_enabler', 'ai_user']
+**Run 3:** `hiring_manager` ✓
+> Quote: "parse EVM logs, token transfers (ERC-20/721), join labeled address datasets, analyze exchange/bridge flows, gas/fee dynamics, and wallet clustering"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain technical specificity that requires deep domain expertise—specific blockchain transaction types, anomaly patterns (bonus abuse, wallet rings), and on-chain analysis techniques that only someone actively working in crypto analytics would articulate.
+
+### stakeholder_orientation
+**Manual:** `mixed`
+
+**Run 1:** `mixed` ✓
+> Quote: "turn blockchain and product data into crisp insights that drive growth, retention, and risk controls across our crypto-enabled iGaming products"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves three equally weighted audiences: product teams (growth, experiments), commercial/CRM teams (retention, lifecycle marketing), and risk/finance teams (compliance, fraud detection).
+
+**Run 2:** `mixed` ✓
+> Quote: "turn blockchain and product data into crisp insights that drive growth, retention, and risk controls"
+> Verified: ✓ found in JD
+> Reasoning: The role genuinely serves Product (experiments, funnels, deposit→wager conversion) and Commercial/Marketing (lifecycle marketing, ARPU, LTV, churn) with equal emphasis in responsibilities.
+
+**Run 3:** `commercial` ✗
+> Quote: "Build, maintain, and iterate dashboards surfacing KPIs (GGR/NGR, ARPU, LTV, churn, deposit→wager conversion, fraud loss rate)"
+> Verified: ✓ found in JD
+> Reasoning: The primary KPIs are revenue and customer value metrics (GGR/NGR, ARPU, LTV) that serve commercial and finance functions, while Product and Risk are secondary partners; the role is optimized for growth and retention economics.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'commercial']
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `strategic` ✓
+> Quote: "You'll own the end-to-end analytics stack for wallet funnels, wagering behavior, lifecycle marketing, and compliance"
+> Verified: ✓ found in JD
+> Reasoning: Explicit ownership language combined with responsibility to define event schemas, design experiments, and proactively frame questions demonstrates strategic direction-setting.
+
+**Run 2:** `mixed` ✗
+> Quote: "own the end-to-end analytics stack for wallet funnels, wagering behavior, lifecycle marketing, and compliance"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership ('own', 'define event schemas', 'design experiments', 'frame the right question yourself') with execution responsibilities ('write SQL', 'build dashboards', 'use Python').
+
+**Run 3:** `strategic` ✓
+> Quote: "own the end-to-end analytics stack"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as owning how analytics is delivered across multiple domains and is expected to frame questions independently before stakeholders ask, indicating strategic ownership of the analytics function rather than execution of assigned tasks.
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_enabler` ✗
+> Quote: "Build and maintain AI-agent workflows that automate recurring analytics"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build and operate AI agent systems for analytics automation (ReAct loops, RAG, MCP servers mentioned in nice-to-haves), not just use AI tools for personal productivity.
+
+**Run 2:** `ai_user` ✗
+> Quote: "Solid AI-collaboration craft — prompt & context engineering, spec-driven task framing, and eval-driven iteration."
+> Verified: ✓ found in JD
+> Reasoning: The must-have requirement expects the candidate to demonstrate skills in using AI tools effectively (prompt engineering, evaluation), signaling they should use AI agents to automate their own analytics work.
+
+**Run 3:** `ai_enabler` ✗
+> Quote: "Build and maintain AI-agent workflows that automate recurring analytics - anomaly investigation, root-cause loops etc."
+> Verified: ✓ found in JD
+> Reasoning: The candidate must build and deploy AI-agent infrastructure that runs analytics automation as a named responsibility, going beyond using AI tools personally to building infrastructure that AI systems operate within.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
+
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'ai_user', 'ai_enabler']
 
 ### testing_framing
+**Manual:** ``
 
-**Run 1:** `responsibility`
-> Quote: "ensure data quality, lineage, and documentation."
-> Verified: ✓ found in JD
-> Reasoning: Ownership verb 'ensure' frames data quality as an explicit responsibility the candidate owns, not a tool listed in requirements.
-
-**Run 2:** `responsibility`
-> Quote: "ensure data quality, lineage, and documentation."
-> Verified: ✓ found in JD
-> Reasoning: Action verb 'ensure' in responsibilities section indicates the candidate owns data quality outcomes, not just uses tools.
-
-**Run 3:** `responsibility`
+**Run 1:** `responsibility` ✗
 > Quote: "ensure data quality, lineage, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as an owned responsibility the candidate must ensure, using an active verb, not merely listed as a tool skill.
+> Reasoning: Data quality is framed as something the candidate must ensure as part of their responsibilities in the context of event schema definition, indicating ownership rather than tool experience.
+
+**Run 2:** `responsibility` ✗
+> Quote: "ensure data quality, lineage, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and lineage assurance are listed as explicit responsibilities in the event schema work, framing them as candidate accountability rather than optional tooling.
+
+**Run 3:** `responsibility` ✗
+> Quote: "ensure data quality, lineage, and documentation"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as an owned responsibility ("ensure") in partnership with engineering, not as tool experience in a requirements list.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
+> Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations"
+> Verified: ✓ found in JD
+> Reasoning: Fraud detection, compliance, and risk controls are present responsibilities, but the role framing emphasizes delivery of growth and retention analytics equally, making loss aversion secondary rather than dominant.
+
+**Run 2:** `moderate` ✗
 > Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations."
 > Verified: ✓ found in JD
-> Reasoning: Primary fear is operational risk (fraud, abuse, anomalies) and data accuracy in business decisions; regulatory/compliance concerns are present but secondary to operational reliability focus.
+> Reasoning: Risk and compliance concerns are integrated (fraud investigation, compliance constraints, compliance partners) but the role is primarily framed as driving business growth and delivering insights, not preventing bad outcomes.
 
-**Run 2:** `moderate`
-> Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations."
+**Run 3:** `moderate` ✗
+> Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations"
 > Verified: ✓ found in JD
-> Reasoning: Explicit fraud investigation and mitigation are significant responsibilities, but risk/compliance is one of four equally-weighted domains rather than the dominant framing.
+> Reasoning: Fraud and operational anomaly investigation are significant responsibilities, but the primary role framing emphasizes growth and retention; regulatory compliance is a constraint on work, not the dominant mission.
 
-**Run 3:** `moderate`
-> Quote: "Investigate anomalies (bonus abuse, botting, arbitrage, suspicious wallet rings) and recommend mitigations."
-> Verified: ✓ found in JD
-> Reasoning: Fraud prevention, AML pattern recognition, and loss investigation are significant concerns reflecting moderate risk aversion, but balanced equally with growth and retention objectives rather than dominating the role framing.
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
