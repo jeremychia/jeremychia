@@ -146,6 +146,8 @@ Also extract:
 
 Produce a single JSON object and pipe it to `write_jd.py`. The script writes all three output files (`jd_archive.md`, `jd.md`, `{base-name}.json`) in one shot. `jd_archive.md` is prefixed with a `**URL:** {source_url}` line for traceability back to the original posting. `jd.md` includes a pointer to the corresponding `jd_traces/{base-name}.md` file (written later by `classify_jds.py` in Step 5) so the 3-run LLM consistency check is discoverable from the JD record itself.
 
+**Important: When user provides pasted JD text**, store the FULL VERBATIM text in jd_archive.md — do NOT rewrite, summarize, or hallucinate. If JD text was pasted by user or appears in conversation (not fetched), copy it exactly as provided into jd_archive.md after the URL line, preserving original formatting and language. This is a historical record and must be faithful to source.
+
 ```bash
 python3 analysis/job_descriptions/write_jd.py <<'EOF'
 {

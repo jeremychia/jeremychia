@@ -58,11 +58,14 @@
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
-| collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
+| collaboration_width | 3 | 1 | 0 | 3 | 0% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
 | jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | mixed | 33% | ✗ |
-| autonomy_level |  | mixed | strategic | strategic | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | mixed | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -72,175 +75,190 @@
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Design and maintain complex DAGs, implementing robust alerting mechanisms"
+> Quote: "implementing robust alerting mechanisms"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes robust systems and modeling principles as core responsibilities, with no velocity-focused language present.
+> Reasoning: The responsibilities emphasize operational reliability, governance, and regulatory compliance (GDPR) with no speed or iteration language.
 
 **Run 2:** `rigour` ✓
 > Quote: "implementing robust alerting mechanisms"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on 'robust' and alerting mechanisms signals reliability and correctness as core values, not delivery speed.
+> Reasoning: The JD emphasizes robust system design and governance; no velocity language like fast-paced or shipping appears.
 
 **Run 3:** `rigour` ✓
 > Quote: "implementing robust alerting mechanisms"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on robust alerting and required expertise in data governance and GDPR practices signals a focus on correctness, reliability, and compliance over speed.
+> Reasoning: Multiple rigour signals (robust systems, data governance, GDPR practices) with zero velocity language throughout the JD.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Create modeling principles and domain-level data models (marketing, sales)"
+> Quote: "Knowledge of data governance and GDPR practices"
 > Verified: ✓ found in JD
-> Reasoning: The role supports business decisions in marketing and sales but does not involve financial reporting, regulatory compliance, or P&L attribution.
+> Reasoning: The marketplace context and GDPR requirement indicate data protection compliance concerns, but no explicit financial reporting or revenue attribution risk.
 
 **Run 2:** `moderate` ✓
 > Quote: "Knowledge of data governance and GDPR practices"
 > Verified: ✓ found in JD
-> Reasoning: While GDPR compliance is mentioned, the JD does not emphasize financial reporting, regulatory compliance consequences, or mission-critical impact that would indicate high domain risk.
+> Reasoning: GDPR compliance is explicitly required, positioning the role in a regulated context, but the primary framing is technical platform work rather than financial reporting or compliance enforcement.
 
 **Run 3:** `moderate` ✓
 > Quote: "Knowledge of data governance and GDPR practices"
 > Verified: ✓ found in JD
-> Reasoning: GDPR and data governance are explicitly required, indicating regulatory compliance concerns, but the role focuses on data infrastructure rather than financial reporting or regulatory filings.
+> Reasoning: GDPR compliance is mentioned but the company is a marketplace (not high-risk sector) and the role emphasizes operational data infrastructure rather than financial reporting or regulatory protection.
 
 ### collaboration_width
 **Manual:** `3`
 
-**Run 1:** `3` ✓
-> Quote: "engineering; marketing; sales"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct functions are explicitly named: engineering (in 'Connect engineering and business teams'), marketing and sales (in 'domain-level data models').
+**Run 1:** `1` ✗
+> Quote: "engineering"
+> Verified: ✓ found in JD
+> Reasoning: Only 'engineering' is explicitly named as a distinct collaboration function; 'business teams' is too generic per the exclusion rules.
 
-**Run 2:** `3` ✓
-> Quote: "Connect engineering and business teams; Create modeling principles and domain-level data models (marketing, sales)"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three named partner functions are explicitly identified as collaborators: engineering, marketing, and sales.
+**Run 2:** `0` ✗
+> Quote: "None"
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions 'engineering and business teams' generically and lists 'marketing, sales' as data modeling domains, but does not explicitly name specific teams or functions as collaboration partners.
 
 **Run 3:** `3` ✓
-> Quote: "engineering and business teams; domain-level data models (marketing, sales)"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Engineering is explicitly named as a collaboration partner, while marketing and sales are explicitly listed as domains served by the data models.
+> Quote: "Connect engineering and business teams; domain-level data models (marketing, sales)"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams explicitly referenced: engineering, marketing, and sales.
+
+⚠ **Disagreement**: manual=`3` vs LLM majority=`1`
+
+⚠ **LLM inconsistency**: runs gave ['1', '0', '3']
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking; Design and maintain complex DAGs"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Multiple named tools in responsibilities indicate established infrastructure, while emphasis on creating modeling principles suggests a growing data function.
+> Quote: "Create modeling principles and domain-level data models"
+> Verified: ✓ found in JD
+> Reasoning: The team has established infrastructure with named tools in responsibilities but is still establishing governance principles, indicating a growth phase.
 
 **Run 2:** `mid` ✓
-> Quote: "Create modeling principles and domain-level data models (marketing, sales)"
+> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking; Design and maintain complex DAGs"
 > Verified: ✓ found in JD
-> Reasoning: The role involves scaling and extending existing data infrastructure with new principles and domain models, indicating a maturing data function beyond early-stage.
+> Reasoning: Multiple named tools in responsibilities (Airbyte, Snowplow, Airflow, dbt, Snowflake, Hightouch) indicate an established data function with infrastructure in place, but no evidence of specialized sub-teams.
 
 **Run 3:** `mid` ✓
-> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking; Design and maintain complex DAGs"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The presence of existing named tools in active use combined with responsibilities to design and improve systems indicates a mid-stage team with established infrastructure.
+> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking"
+> Verified: ✓ found in JD
+> Reasoning: Multiple named tools in responsibilities signal established infrastructure; the emphasis on creating modeling principles indicates growth-stage standardization work.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
-> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking; Design and maintain complex DAGs, implementing robust alerting mechanisms; manage reverse-ETL via Hightouch"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical details including tools with use-case context (Airbyte/Snowplow for event tracking, Hightouch for reverse-ETL, DAG alerting) demonstrate hands-on technical knowledge.
+> Quote: "Design and maintain complex DAGs, implementing robust alerting mechanisms"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical methodology (DAGs, alerting mechanisms) that reflects hands-on domain knowledge rather than generic action verbs.
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking"
+> Quote: "Design and maintain complex DAGs, implementing robust alerting mechanisms"
 > Verified: ✓ found in JD
-> Reasoning: All responsibilities include specific tool names with precise application context (Airbyte and Snowplow for event tracking, Hightouch for reverse-ETL) that only someone doing this work would write.
+> Reasoning: Technical specificity about DAG design and alerting strategies with precise tool context indicates hands-on experience rather than generic template.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking; Design and maintain complex DAGs, implementing robust alerting mechanisms; manage reverse-ETL via Hightouch"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The specificity of named tools with precise applications (Snowplow for event tracking, reverse-ETL via Hightouch, alerting mechanisms in DAGs) indicates technical knowledge from direct experience with this stack.
+> Quote: "manage reverse-ETL via Hightouch"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool-application context (Hightouch for reverse-ETL) reveals someone who does this work; the stack (Airbyte, Snowplow, Airflow, dbt, Snowflake, Hightouch) shows precise technical knowledge.
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
-> Quote: "Create modeling principles and domain-level data models (marketing, sales); manage reverse-ETL via Hightouch"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role builds data infrastructure and a modeling layer that downstream consumers and systems depend on, emphasizing platform and enablement over direct business delivery.
-
-**Run 2:** `internal_data` ✗
+**Run 1:** `internal_data` ✓
 > Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking"
 > Verified: ✓ found in JD
-> Reasoning: The primary function is building and maintaining data infrastructure and platforms that internal teams consume, even though marketing and sales are mentioned as domain examples.
+> Reasoning: The role's primary focus is building and maintaining data infrastructure for internal consumption rather than serving commercial, product, or finance stakeholders directly.
 
-**Run 3:** `mixed` ✗
-> Quote: "Create modeling principles and domain-level data models (marketing, sales); Oversee data ingestion pipelines using Airbyte and Snowplow"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role genuinely balances internal data infrastructure responsibilities serving engineering teams with commercial domain modeling and reverse-ETL activation serving marketing and sales teams.
+**Run 2:** `internal_data` ✓
+> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking; Design and maintain complex DAGs"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities emphasize building and maintaining the data platform infrastructure (pipelines, DAGs, models) as the primary mission.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
+**Run 3:** `internal_data` ✓
+> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow for event tracking"
+> Verified: ✓ found in JD
+> Reasoning: Primary responsibilities center on building and maintaining data infrastructure (pipelines, DAGs, alerting, principles) rather than delivering insights to commercial, product, or financial stakeholders.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `strategic`
 
-**Run 1:** `mixed` ✗
+**Run 1:** `strategic` ✓
 > Quote: "Create modeling principles and domain-level data models"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership through modeling principles and standards while executing maintenance and operational responsibilities for pipelines and DAGs.
+> Reasoning: The candidate is expected to set direction through establishing modeling principles and governance, not execute scoped work defined by others.
 
-**Run 2:** `strategic` ✗
-> Quote: "Create modeling principles and domain-level data models (marketing, sales)"
+**Run 2:** `strategic` ✓
+> Quote: "Create modeling principles and domain-level data models"
 > Verified: ✓ found in JD
-> Reasoning: The use of 'create' for principles and the explicit requirement for 'high autonomy and accountability' indicates the role is expected to define direction and shape how analytics is delivered.
+> Reasoning: The role is expected to create (define) modeling principles and standards, coupled with explicit requirement of 'high autonomy and accountability'.
 
-**Run 3:** `strategic` ✗
-> Quote: "Create modeling principles"
+**Run 3:** `mixed` ✗
+> Quote: "Create modeling principles and domain-level data models"
 > Verified: ✓ found in JD
-> Reasoning: Creating modeling principles indicates the role is expected to establish methodological standards and shape how data architecture is designed rather than execute predefined work.
+> Reasoning: Strategic ownership of data modeling standards combined with execution/operational responsibilities (oversee, maintain, manage) creates a dual responsibility pattern.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Create modeling principles and domain-level data models"
-> Reasoning: No mention of AI tools, AI-ready infrastructure, or GenAI responsibilities.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Oversee data ingestion pipelines using Airbyte and Snowplow"
-> Reasoning: Standard data engineering responsibilities using conventional tools with no AI skills or infrastructure signals.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The preferred mention of 'interest in AI agents' is too vague and listed as bonus-level; no concrete AI-user or AI-enabler skills are required.
 
-**Run 3:** `none` ✓
-> Quote: "Create modeling principles and domain-level data models"
-> Reasoning: No explicit AI tool usage, GenAI capabilities, or semantic modeling for AI consumption mentioned.
+**Run 2:** `none` ✗
+> Quote: "Interest in AI agents within modern data analytics"
+> Verified: ✓ found in JD
+> Reasoning: The AI reference is vague and relegated to preferred/bonus skills, not a core expected competency.
 
+**Run 3:** `none` ✗
+> Quote: "Interest in AI agents within modern data analytics"
+> Verified: ✓ found in JD
+> Reasoning: The preference for interest in AI agents is vague, bonus-only, and does not indicate expected ai_user or ai_enabler skills.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "robust alerting mechanisms"
-> Reasoning: No explicit testing ownership verb paired with quality/testing/data contracts; no testing tools listed.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "robust alerting mechanisms"
-> Reasoning: Operational reliability and monitoring are mentioned but no explicit testing responsibility, tool, or quality ownership is stated.
+**Run 1:** `absent` ✗
+> Quote: "implementing robust alerting mechanisms"
+> Verified: ✓ found in JD
+> Reasoning: While alerting reflects reliability concerns, there is no explicit testing framework, data quality ownership, or named testing tools in the JD.
 
-**Run 3:** `absent` ✓
-> Quote: "robust alerting mechanisms"
-> Reasoning: No testing ownership verbs (own/ensure/define/implement) or quality/testing/data contract responsibilities mentioned; operations-focused rather than testing-framing.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of testing, data quality frameworks, data contracts, or observability as a named practice or responsibility.
 
+**Run 3:** `absent` ✗
+> Quote: "implementing robust alerting mechanisms"
+> Verified: ✓ found in JD
+> Reasoning: No mention of testing frameworks, data contracts, or data quality ownership; alerting signals operational reliability but not testing or quality assurance responsibility.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✓
-> Quote: "data governance and GDPR practices"
-> Reasoning: Regulatory compliance (GDPR) is explicitly mentioned, indicating loss-aversion driven by trust/compliance rather than delivery.
+**Manual:** ``
 
-**Run 2:** `high` ✓
-> Quote: "data governance and GDPR practices"
-> Reasoning: Regulatory compliance and data governance requirements frame the role around trust and compliance risk rather than operational delivery.
+**Run 1:** `moderate` ✗
+> Quote: "implementing robust alerting mechanisms"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on operational reliability and GDPR compliance indicates moderate concern for preventing failures, but the overall framing is capability-delivery rather than risk-prevention focused.
+
+**Run 2:** `moderate` ✗
+> Quote: "implementing robust alerting mechanisms"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability through alerting is a concern, with GDPR governance required, but the role is primarily framed around technical delivery and platform building.
 
 **Run 3:** `moderate` ✗
-> Quote: "robust alerting mechanisms"
-> Reasoning: Operational reliability and pipeline stability concerns (alerting, DAGs, oversight) dominate; one GDPR mention but compliance does not frame the role as primary.
+> Quote: "implementing robust alerting mechanisms"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and governance requirements are present but secondary to infrastructure delivery; fear is pipeline/data failures, not regulatory or stakeholder-trust catastrophe.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
