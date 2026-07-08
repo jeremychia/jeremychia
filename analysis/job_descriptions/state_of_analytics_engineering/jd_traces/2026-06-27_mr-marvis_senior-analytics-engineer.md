@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — MR MARVIS
 
+**URL:** https://careers.mrmarvis.com/jobs/7670021-senior-analytics-engineer
 **Location:** Amsterdam HQ Office
 **Date Posted:** 2026-06-27
 
@@ -61,181 +62,213 @@
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | hiring_manager | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | strategic | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | strategic | mixed | strategic | 33% | ✗ |
+| ai_role |  | ai_user | ai_enabler | ai_user | 33% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Implement testing, monitoring, and data quality checks"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit quality, testing, and governance signals dominate the responsibilities section with no velocity language present.
+> Reasoning: The JD emphasizes data quality, testing, governance, and reliability throughout with no velocity language, clearly prioritizing correctness and maintainability over shipping speed.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Implement testing, monitoring, and data quality checks"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes quality, testing, governance, and data accuracy throughout, with no velocity language present.
+> Reasoning: The responsibilities emphasize quality, governance, standards, and testing as core expectations with no velocity or speed-to-market language.
 
-**Run 3:** `rigour`
-> Quote: "Implement testing, monitoring, and data quality checks"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, monitoring, data quality, and robust/maintainable design with no counterbalancing velocity language.
-
-### domain_risk
-
-**Run 1:** `moderate`
+**Run 3:** `rigour` ✓
 > Quote: "Build trusted data products that power smarter decisions, self-serve insights and future AI use cases"
 > Verified: ✓ found in JD
-> Reasoning: This is business intelligence and operational reporting (moderate risk) with no explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The JD emphasizes trust, governance, quality, testing, monitoring, and long-term maintainability throughout with no velocity signals like 'fast-paced' or 'ship quickly'.
 
-**Run 2:** `moderate`
-> Quote: "Build trusted data products that power smarter decisions"
-> Verified: ✓ found in JD
-> Reasoning: The JD frames data as supporting business decisions without explicit financial, regulatory, or compliance language.
+### domain_risk
+**Manual:** `moderate`
 
-**Run 3:** `moderate`
-> Quote: "Retail, ecommerce, DTC, marketplace, or consumer brand background"
-> Verified: ✓ found in JD
-> Reasoning: The domain is retail/ecommerce focused, affecting business decisions but lacking explicit financial reporting, compliance, or regulatory language.
-
-### collaboration_width
-
-**Run 1:** `1`
-> Quote: "Partner with data engineers on clean ingestion and upstream design"
-> Verified: ✓ found in JD
-> Reasoning: Only one explicitly named team function (data engineers) appears; generic references like 'business stakeholders' and 'business users' do not count.
-
-**Run 2:** `1`
-> Quote: "data engineers"
-> Verified: ✓ found in JD
-> Reasoning: Only one explicitly named partner team (data engineers) appears in the JD; other references use generic terms like stakeholders.
-
-**Run 3:** `1`
-> Quote: "Partner with data engineers on clean ingestion and upstream design"
-> Verified: ✓ found in JD
-> Reasoning: Data engineers is the only explicitly named team or function; 'business stakeholders' and 'business users' are too generic to count.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
-> Verified: ✓ found in JD
-> Reasoning: References to optimizing existing infrastructure, named tools in responsibilities (dbt, BI platforms), and clear role delineation with data engineers indicate a functioning team growing from an existing base rather than building from zero or operating at scale.
-
-**Run 2:** `mid`
-> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
-> Verified: ✓ found in JD
-> Reasoning: The JD references existing infrastructure (platform, warehouse, BI tools) being optimized, indicating a data function that exists and is growing.
-
-**Run 3:** `mid`
-> Quote: "Partner with data engineers on clean ingestion and upstream design"
-> Verified: ✓ found in JD
-> Reasoning: The existence of a data engineering team and references to 'our data platform' and optimize suggest an established function in growth phase rather than early build or mature scale.
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "Optimize warehouse usage through partitioning, clustering, and incremental modeling"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity (partitioning, clustering, incremental modeling, facts/dimensions/grain) is mixed with generic collaboration boilerplate (stakeholder alignment, user support).
-
-**Run 2:** `mixed`
-> Quote: "Optimize warehouse usage through partitioning, clustering, and incremental modeling"
-> Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical methodology details alongside generic stakeholder collaboration language.
-
-**Run 3:** `hiring_manager`
-> Quote: "Optimize warehouse usage through partitioning, clustering, and incremental modeling"
-> Verified: ✓ found in JD
-> Reasoning: The JD contains technical specificity (warehouse optimization techniques, specific dbt modeling approaches, data modeling concepts) that reflects hands-on experience.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
-> Verified: ✓ found in JD
-> Reasoning: The primary framing emphasizes building platform infrastructure and data consumer enablement, not serving external GTM, product teams, or finance functions.
-
-**Run 2:** `internal_data`
-> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
-> Verified: ✓ found in JD
-> Reasoning: The primary audience is internal data consumers and the data platform function itself, not commercial, product, or finance teams.
-
-**Run 3:** `internal_data`
-> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
-> Verified: ✓ found in JD
-> Reasoning: The primary mission is building and optimizing the analytics platform for internal data consumers rather than serving commercial, product, or finance stakeholders.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Own the analytics layer at MR MARVIS"
-> Verified: ✓ found in JD
-> Reasoning: Strategic ownership of the analytics domain is combined with execution responsibilities supporting business stakeholders and partnering with data engineers.
-
-**Run 2:** `strategic`
-> Quote: "Drive alignment around consistent metric definitions and reporting standards"
-> Verified: ✓ found in JD
-> Reasoning: The role is framed as owning and defining the analytics layer, with direction-setting responsibilities rather than execution against externally set priorities.
-
-**Run 3:** `mixed`
-> Quote: "Own the analytics layer at MR MARVIS"
-> Verified: ✓ found in JD
-> Reasoning: The role has strategic ownership of the analytics platform but responsibilities are framed around executing business requirements and supporting platform users.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'mixed']
-
-### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
-> Reasoning: Candidate builds analytics infrastructure optimized for AI systems to consume.
-
-**Run 2:** `ai_enabler` ✓
-> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
-> Reasoning: Explicitly framing analytics infrastructure as consumption layer for AI systems.
-
-**Run 3:** `ai_enabler` ✓
-> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
-> Reasoning: Candidate builds data infrastructure optimized for AI consumption.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Implement testing, monitoring, and data quality checks"
-> Reasoning: Candidate owns implementation of testing and data quality practices.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Implement testing, monitoring, and data quality checks"
-> Reasoning: Ownership verb 'implement' paired with testing and data quality responsibilities.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Implement testing, monitoring, and data quality checks"
-> Reasoning: Direct ownership of testing, monitoring, and data quality practices.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "Implement testing, monitoring, and data quality checks"
-> Reasoning: Operational reliability concerns emphasized through monitoring and quality practices.
+> Quote: "Build trusted data products that power smarter decisions, self-serve insights and future AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business decision-making and analytics enablement without explicit regulatory, compliance, or financial reporting scope, typical of e-commerce/DTC data roles.
 
 **Run 2:** `moderate` ✓
-> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
-> Reasoning: Emphasis on governance and trustworthiness suggests operational reliability concern without explicit compliance/regulatory language.
+> Quote: "Build trusted data products that power smarter decisions, self-serve insights and future AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business decision-making without explicit financial reporting, compliance, or regulatory framing typical of high-risk domains.
 
 **Run 3:** `moderate` ✓
-> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
-> Reasoning: Trust and governance concerns signal operational reliability and risk mitigation focus.
+> Quote: "Build trusted data products that power smarter decisions, self-serve insights and future AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The language suggests business intelligence enabling decisions without explicit regulatory, compliance, or financial reporting signals that would indicate high risk.
 
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `1` ✓
+> Quote: "Partner with data engineers on clean ingestion and upstream design"
+> Verified: ✓ found in JD
+> Reasoning: Only data engineers are explicitly named as a distinct collaboration partner; business stakeholders and users are mentioned generically.
+
+**Run 2:** `1` ✓
+> Quote: "Partner with data engineers on clean ingestion and upstream design"
+> Verified: ✓ found in JD
+> Reasoning: Only data engineers are explicitly named as a partner function; other references are generic (stakeholders, users, business).
+
+**Run 3:** `1` ✓
+> Quote: "Partner with data engineers on clean ingestion and upstream design"
+> Verified: ✓ found in JD
+> Reasoning: Only 'data engineers' is explicitly named as a partner team; other collaboration is described generically as 'stakeholders' and 'users'.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Partner with data engineers on clean ingestion and upstream design; Optimize our data platform - especially the analytics layer - for AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: Multiple data roles are implied, named tools appear in responsibilities (dbt, warehouse optimization), and the focus is on scaling and optimizing existing infrastructure rather than building from zero.
+
+**Run 2:** `mid` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
+> Verified: ✓ found in JD
+> Reasoning: The JD references an existing data platform with governance, dbt models, and data engineers, indicating an established function being optimized rather than built from scratch.
+
+**Run 3:** `mid` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
+> Verified: ✓ found in JD
+> Reasoning: References existing infrastructure ('our data platform', 'governed' practices) with emphasis on scaling and improving an established function, not building from zero.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `hiring_manager` ✗
+> Quote: "Optimize warehouse usage through partitioning, clustering, and incremental modeling"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical knowledge of warehouse optimization techniques and dbt modeling concepts demonstrates domain expertise only a hiring manager would possess.
+
+**Run 2:** `hiring_manager` ✗
+> Quote: "Optimize warehouse usage through partitioning, clustering, and incremental modeling"
+> Verified: ✓ found in JD
+> Reasoning: The technical specificity around warehouse optimization techniques (partitioning, clustering, incremental modeling) and modeling terminology (facts, dimensions, grain) indicates authorship by someone with hands-on experience.
+
+**Run 3:** `hiring_manager` ✗
+> Quote: "Optimize warehouse usage through partitioning, clustering, and incremental modeling"
+> Verified: ✓ found in JD
+> Reasoning: This responsibility shows specific technical patterns and optimization techniques that only someone actively doing analytics engineering would enumerate.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources; Support business users in adopting best practices for data exploration"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily serves other data consumers and platform users rather than specific commercial, product, or finance functions.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
+> Verified: ✓ found in JD
+> Reasoning: The primary service is building and optimizing the data platform for internal analytics consumers, not revenue operations, product experimentation, or finance.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Enable governed self-serve analytics by simplifying access to trusted data sources"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily serves analytics platform consumers and data team infrastructure needs rather than specific business functions like Finance, Product, or Commercial.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `strategic` ✗
+> Quote: "Own the analytics layer at MR MARVIS. Build trusted data products that power smarter decisions"
+> Verified: ✓ found in JD
+> Reasoning: The role opens with explicit ownership of the analytics layer and uses strategic verbs like own, build, drive, and enable throughout.
+
+**Run 2:** `mixed` ✓
+> Quote: "Own the analytics layer at MR MARVIS"
+> Verified: ✓ found in JD
+> Reasoning: The role owns the analytics layer and drives standards (strategic) while most specific tasks focus on supporting and enabling stakeholders (execution-oriented).
+
+**Run 3:** `strategic` ✗
+> Quote: "Own the analytics layer at MR MARVIS"
+> Verified: ✓ found in JD
+> Reasoning: The opening 'own' verb combined with domain ownership framing indicates the role is expected to define direction for the analytics layer rather than execute against direction set by others.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`strategic`
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_user` ✗
+> Quote: "Curious about using AI tools to improve coding, documentation, testing and workflow efficiency"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI tools to accelerate their own work in coding, documentation, testing, and workflow optimization.
+
+**Run 2:** `ai_enabler` ✗
+> Quote: "Optimize our data platform - especially the analytics layer - for AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure optimized for AI systems to consume, with secondary signal of using AI tools for personal productivity.
+
+**Run 3:** `ai_user` ✗
+> Quote: "Curious about using AI tools to improve coding, documentation, testing and workflow efficiency"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI tools to improve their own productivity in coding and documentation, not to build AI infrastructure for the company.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
+
+⚠ **LLM inconsistency**: runs gave ['ai_user', 'ai_enabler', 'ai_user']
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as explicit responsibilities the candidate owns and implements, not just tools to know.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as owned responsibilities with clear action verbs (implement) indicating accountability for these practices.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are explicitly framed as something the candidate owns and implements as a core responsibility, not just tools they need to know about.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Build trusted data products that power smarter decisions"
+> Verified: ✓ found in JD
+> Reasoning: Trust and reliability are emphasized repeatedly through quality and governance language, but the role framing is about enabling business capabilities rather than preventing regulatory or compliance failures.
+
+**Run 2:** `moderate` ✗
+> Quote: "Build trusted data products that power smarter decisions"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes building trustworthy data products and governance, but lacks explicit compliance or regulatory risk language, suggesting operational reliability rather than high-stakes risk mitigation.
+
+**Run 3:** `moderate` ✗
+> Quote: "Implement testing, monitoring, and data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and quality monitoring are core responsibilities suggesting operational reliability is important, but without explicit compliance, regulatory, or high-stakes trust framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

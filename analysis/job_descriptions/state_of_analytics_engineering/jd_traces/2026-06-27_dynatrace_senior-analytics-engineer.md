@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Dynatrace
 
+**URL:** https://www.dynatrace.com/careers/jobs/1394626100/
 **Location:** Barcelona, Spain (Hybrid)
 **Date Posted:** 2026-06-27
 
@@ -92,179 +93,211 @@ Core Offerings:
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 2 | 2 | 2 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 2 | 2 | 2 | 100% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | hiring_manager | mixed | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "Implement data quality checks and governance within dbt and Snowflake; Maintain well-tested, documented models aligned with business definitions"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes data quality, governance, testing, and documentation as core expectations with no velocity-oriented language present.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Implement data quality checks and governance within dbt and Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals (quality, governance, well-tested, documented, standards) with no velocity language indicates a rigour-focused role.
+> Reasoning: The responsibilities emphasize data quality, testing, governance, and standards throughout, with no velocity or delivery speed language present.
 
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Implement data quality checks and governance within dbt and Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, governance, standards, testing, and documentation with no velocity signals present.
+> Reasoning: The responsibilities emphasize testing, governance, reliability, and standards compliance with no velocity or speed framing.
+
+**Run 3:** `rigour` ✓
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities section emphasizes data quality, governance, testing, and standards throughout with no velocity or speed-related language.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "The role involves designing and delivering data products for reporting, self-serve analytics, and emerging AI use cases."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: This describes internal business analytics supporting business decisions rather than financial reporting, regulatory compliance, or revenue-critical systems.
-
-**Run 2:** `moderate`
-> Quote: "data products for reporting, self-serve analytics"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Internal analytics and data platform work for business systems without explicit financial reporting, compliance, or regulatory requirements indicates moderate risk.
-
-**Run 3:** `moderate`
-> Quote: "The role involves designing and delivering data products for reporting, self-service analytics, and emerging AI use cases."
-> Verified: ✓ found in JD
-> Reasoning: The JD focuses on business analytics and reporting without explicit financial reporting, compliance, regulatory, or mission-critical language.
-
-### collaboration_width
-
-**Run 1:** `2`
-> Quote: "Partner with data engineers, platform teams, and stakeholders"
-> Verified: ✓ found in JD
-> Reasoning: Two explicitly named teams are identified: data engineers and platform teams; stakeholders is generic and does not count.
-
-**Run 2:** `2`
-> Quote: "data engineers; platform teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two explicitly named partner functions are listed in collaboration context.
-
-**Run 3:** `2`
-> Quote: "Partner with data engineers, platform teams, and stakeholders"
-> Verified: ✓ found in JD
-> Reasoning: Two distinct named teams are explicitly identified: data engineers and platform teams.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Follow established SQL development and dbt modeling standards; Support semantic layer implementation with consistent metrics"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: References to established tools, standards, and frameworks indicate an existing data function with infrastructure in place and multiple team members.
-
-**Run 2:** `mid`
-> Quote: "Follow established SQL development and dbt modeling standards"
-> Verified: ✓ found in JD
-> Reasoning: Established standards, named tools in responsibilities (dbt, Snowflake, semantic layer), and multiple implied data roles indicate an existing function at growth stage.
-
-**Run 3:** `mid`
-> Quote: "Follow established SQL development and dbt modeling standards"
-> Verified: ✓ found in JD
-> Reasoning: References to established standards and named tools in responsibilities (dbt, Snowflake, semantic layer) indicate an operating data function expanding rather than building from zero.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Design scalable analytical data models and curated datasets, conformed dimensions, and standardized metrics; Implement data quality checks and governance within dbt and Snowflake"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities contain technical specificity (conformed dimensions, dbt, Snowflake, semantic layer) that indicates someone performing this work wrote it.
-
-**Run 2:** `mixed`
-> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity (AI readiness, column-level descriptions, semantic layer, conformed dimensions) is mixed with generic boilerplate language (collaborate, partner), indicating input from multiple authors.
-
-**Run 3:** `mixed`
-> Quote: "Implement data quality checks and governance within dbt and Snowflake; Design data models with AI readiness in mind, including column-level descriptions"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Contains technical specificity about tool stacks and concepts (semantic layer, conformed dimensions, AI readiness, column-level metadata) paired with generic collaboration boilerplate.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "designing and delivering data products for reporting, self-serve analytics, and emerging AI use cases"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary purpose is building analytical infrastructure and self-serve analytics platforms for internal data consumers and analysts.
-
-**Run 2:** `internal_data`
-> Quote: "designing and delivering data products for reporting, self-serve analytics, and emerging AI use cases"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role primarily serves the data function and internal analytics consumers through self-serve infrastructure and data products.
-
-**Run 3:** `internal_data`
-> Quote: "designing and delivering data products for reporting, self-service analytics, and emerging AI use cases"
-> Verified: ✓ found in JD
-> Reasoning: The primary emphasis is building reusable data products and infrastructure for internal analytics consumers, data engineers, and platform teams.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Follow established SQL development and dbt modeling standards; Support semantic layer implementation"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role operates within established frameworks and standards while supporting other teams' initiatives rather than defining overall analytics direction.
-
-**Run 2:** `execution`
-> Quote: "Follow established SQL development and dbt modeling standards"
-> Verified: ✓ found in JD
-> Reasoning: While the role includes design responsibilities, it operates within pre-established standards and frameworks set by the organization.
-
-**Run 3:** `execution`
-> Quote: "Translate business requirements into reliable, reusable data products"
-> Verified: ✓ found in JD
-> Reasoning: The role receives business requirements from stakeholders and implements them within established standards and frameworks, rather than defining analytics strategy or roadmap.
-
-### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
-> Reasoning: Candidate builds infrastructure for AI consumption through semantic-ready data models.
-
-**Run 2:** `ai_enabler` ✓
-> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
-> Reasoning: Candidate builds infrastructure for AI consumption via semantic metadata and AI-ready schemas.
-
-**Run 3:** `ai_enabler` ✓
-> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
-> Reasoning: Candidate builds semantic infrastructure (column descriptions) explicitly designed for AI consumption and text-to-SQL applications.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Implement data quality checks and governance within dbt and Snowflake"
-> Reasoning: Candidate owns quality assurance and governance implementation.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Implement data quality checks and governance within dbt and Snowflake"
-> Reasoning: Candidate owns quality implementation and governance standards, not just following them.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Implement data quality checks and governance within dbt and Snowflake"
-> Reasoning: Explicit ownership verb 'implement' paired with quality checks shows candidate owns validation practice.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "Implement data quality checks and governance within dbt and Snowflake"
-> Reasoning: Governance language signals trust and compliance concerns, balanced with operational delivery framing.
+> Quote: "reporting, self-service analytics, and emerging AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around business intelligence and analytics without explicit financial reporting or compliance language.
 
 **Run 2:** `moderate` ✓
-> Quote: "Implement data quality checks and governance within dbt and Snowflake"
-> Reasoning: Framing centers on operational governance and data reliability as core responsibility, suggesting concern for stability.
+> Quote: "designing and delivering data products for reporting, self-service analytics, and emerging AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: While Dynatrace serves Fortune 100 companies, the JD describes generic analytics work without explicit financial reporting, compliance, or regulatory language.
 
 **Run 3:** `moderate` ✓
-> Quote: "Implement data quality checks and governance within dbt and Snowflake"
-> Reasoning: Governance framing indicates operational control concerns, though lacks explicit compliance or incident-prevention language.
+> Quote: "reporting, self-serve analytics, and emerging AI use cases"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role focuses on internal analytics and self-serve reporting rather than financial reporting or regulatory compliance, placing it in the moderate risk category.
 
+### collaboration_width
+**Manual:** `2`
+
+**Run 1:** `2` ✓
+> Quote: "data engineers; platform teams"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly listed as collaboration partners in the responsibilities.
+
+**Run 2:** `2` ✓
+> Quote: "data engineers; platform teams"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are identified in the partnership statement; stakeholders is generic and not counted.
+
+**Run 3:** `2` ✓
+> Quote: "Partner with data engineers, platform teams, and stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Two named partner functions are explicitly identified: data engineers and platform teams; stakeholders is too generic to count.
+
+### data_team_maturity
+**Manual:** `mature`
+
+**Run 1:** `mid` ✗
+> Quote: "Follow established SQL development and dbt modeling standards"
+> Verified: ✓ found in JD
+> Reasoning: References to established standards and existing named tools in responsibilities indicate a data function with existing infrastructure, rather than building from zero.
+
+**Run 2:** `mid` ✗
+> Quote: "Follow established SQL development and dbt modeling standards"
+> Verified: ✓ found in JD
+> Reasoning: Established standards, named tools (dbt, Snowflake), multiple data roles, and semantic layer implementation work indicate a maturing infrastructure.
+
+**Run 3:** `mid` ✗
+> Quote: "Follow established SQL development and dbt modeling standards"
+> Verified: ✓ found in JD
+> Reasoning: Named tools in responsibilities and established standards indicate an existing, growing data function, not early-stage or fully mature.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `hiring_manager` ✗
+> Quote: "Design scalable analytical data models and curated datasets, conformed dimensions, and standardized metrics"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical terminology (conformed dimensions, standardized metrics, Kimball methodology) and named tool contexts that indicate hands-on authorship.
+
+**Run 2:** `mixed` ✓
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity around AI-readiness and dimensional modeling coexists with recruiter boilerplate like collaborate and translate requirements.
+
+**Run 3:** `hiring_manager` ✗
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Verified: ✓ found in JD
+> Reasoning: The technical specificity about column-level descriptions for AI readiness and dimensional modeling indicates hands-on analytics engineering experience.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "designing and delivering data products for reporting, self-service analytics, and emerging AI use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around building data infrastructure and products for internal analytics consumers rather than serving commercial, product, or financial stakeholders.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Build structures supporting discoverability across analytics and AI/ML use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role focuses on building analytics infrastructure and enabling internal data consumers and AI/ML systems rather than serving commercial, product, or finance teams.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Build structures supporting discoverability across analytics and AI/ML use cases"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily serves internal analytics infrastructure and self-serve analytics consumers rather than commercial, product, or finance teams.
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Follow established SQL development and dbt modeling standards"
+> Verified: ✓ found in JD
+> Reasoning: The role operates within established standards and frameworks set by others, with responsibilities framed around support, implementation, and contribution.
+
+**Run 2:** `execution` ✓
+> Quote: "Follow established SQL development and dbt modeling standards"
+> Verified: ✓ found in JD
+> Reasoning: The role designs within constraints set by others and supports initiatives rather than setting direction or defining analytics strategy.
+
+**Run 3:** `execution` ✓
+> Quote: "Translate business requirements into reliable, reusable data products"
+> Verified: ✓ found in JD
+> Reasoning: The role executes on given business requirements within established standards rather than setting strategic direction.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_enabler` ✗
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure supporting AI/ML use cases; while ai_user signals exist (Copilot/Claude in requirements), the tie-breaker favors ai_enabler.
+
+**Run 2:** `ai_enabler` ✗
+> Quote: "Design data models with AI readiness in mind, including column-level descriptions"
+> Verified: ✓ found in JD
+> Reasoning: The candidate must build data infrastructure that AI/ML systems consume, with proven experience using AI-assisted coding tools; both signals present triggers ai_enabler.
+
+**Run 3:** `ai_enabler` ✗
+> Quote: "Build structures supporting discoverability across analytics and AI/ML use cases"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure and models designed for AI/ML system consumption, making them an enabler of AI systems.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance are framed as owned responsibilities using the action verb 'Implement' in the responsibilities section.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and testing are owned responsibilities using the action verb implement, not merely listed as required tool experience.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: Data quality implementation is framed as an active responsibility with ownership verbs, not merely a skill requirement.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance are framed as operational responsibilities suggesting institutional concern for reliability, but not as the primary role driver or compliance/trust imperative.
+
+**Run 2:** `moderate` ✗
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and quality are emphasized as standards maintenance and practice rather than regulatory risk or catastrophic failure prevention.
+
+**Run 3:** `moderate` ✗
+> Quote: "Implement data quality checks and governance within dbt and Snowflake"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational quality standards and governance practices, but frames these as process improvements rather than risk or compliance mitigation.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

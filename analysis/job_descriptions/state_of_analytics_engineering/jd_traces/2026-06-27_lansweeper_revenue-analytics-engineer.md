@@ -5,6 +5,7 @@
 ```
 # Revenue Analytics Engineer — Lansweeper
 
+**URL:** https://careers.lansweeper.com/o/revenue-analytics-engineer?source=LinkedIn
 **Location:** London, Greater London, United Kingdom (Hybrid) + 2 more
 **Date Posted:** 2026-06-27
 **Salary:** €107,000–€174,000 per year
@@ -85,185 +86,219 @@ Familiarity with data modeling best practices (dimensional modeling, slowly chan
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 4 | 4 | 2 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | mixed | finance | mixed | 33% |
-| autonomy_level | mixed | execution | strategic | 0% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 4 | 3 | 3 | 2 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | recruiter | mixed | 0% | ✗ |
+| stakeholder_orientation | mixed | finance | finance | mixed | 33% | ✗ |
+| autonomy_level | mixed | mixed | mixed | execution | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
+> Quote: "ensure a single source of truth for financial KPIs"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities emphasize correctness, accuracy, and reconciliation across systems, with no velocity-oriented language; the phrase directly signals quality and reliability as core expectations.
+
+**Run 2:** `rigour` ✓
 > Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize reconciliation, single source of truth, and financial accuracy; the only speed references describe the sales organization's pace, not the role's orientation.
+> Reasoning: The responsibilities emphasize reconciliation, data integrity, and establishing a single source of truth across multiple systems—classic rigour signals—with no velocity language like 'fast-paced' or 'rapid iteration' in the role framing.
 
-**Run 2:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Proactively improve data quality and integrity across revenue-related data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality, integrity, and accurate reconciliation as core expectations, which are rigour signals.
-
-**Run 3:** `rigour`
-> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize accuracy, reconciliation, and data integrity as core expectations, with rigour signals (single source of truth, data quality, reconciliation) substantially outweighing any velocity language.
+> Reasoning: The responsibilities section emphasizes data quality, integrity, reconciliation across systems, and ensuring a single source of truth—core rigour signals—with no velocity language in the work expectations.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
+**Run 1:** `high` ✓
 > Quote: "C-level decisions to optimize growth are based on revenue metrics and insights, as they are highly trusted facts on the evolution of the business"
 > Verified: ✓ found in JD
-> Reasoning: Data errors directly affect C-level financial decision-making and board-level reporting, placing them at high stakes.
+> Reasoning: Revenue errors directly affect board-level and executive decision-making, constituting financial reporting risk at the highest level of the organization.
 
-**Run 2:** `high`
+**Run 2:** `high` ✓
 > Quote: "C-level decisions to optimize growth are based on revenue metrics and insights, as they are highly trusted facts on the evolution of the business"
 > Verified: ✓ found in JD
-> Reasoning: Revenue data directly affects C-level and board decisions on company direction, indicating high financial and strategic consequence of errors.
+> Reasoning: Data errors directly affect C-level and board-level financial and revenue decisions, placing this squarely in high-risk domain territory.
 
-**Run 3:** `high`
+**Run 3:** `high` ✓
 > Quote: "C-level decisions to optimize growth are based on revenue metrics and insights, as they are highly trusted facts on the evolution of the business"
 > Verified: ✓ found in JD
-> Reasoning: Data errors directly affect financial reporting and executive/board decision-making, with explicit language around board-ready metrics and financial KPIs.
+> Reasoning: Errors in revenue metrics directly affect executive decisions, board-level reporting, and financial KPI reporting—all hallmarks of high-risk financial domain work.
 
 ### collaboration_width
+**Manual:** `4`
 
-**Run 1:** `4`
-> Quote: "sales operations; finance; sales; marketing"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions are explicitly listed: sales operations (partnership), finance (partnership), sales (audience), and marketing (allocation decisions).
-
-**Run 2:** `4`
-> Quote: "sales operations; finance; sales; marketing"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names four distinct collaboration partners: sales operations, finance, sales, and marketing.
-
-**Run 3:** `2`
-> Quote: "Partner with sales operations and finance"
+**Run 1:** `3` ✗
+> Quote: "Partner with sales operations and finance; dashboards and reports that translate complex revenue data into clear, actionable insights for sales, finance, and leadership"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names two distinct partner functions: Sales Operations and Finance, both mentioned as key collaborators.
+> Reasoning: Named distinct teams are sales operations, finance, and sales; leadership is generic and does not count as a named function.
 
-⚠ **LLM inconsistency**: runs gave ['4', '4', '2']
+**Run 2:** `3` ✗
+> Quote: "Partner with sales operations and finance; dashboards and reports...for sales, finance, and leadership"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role explicitly names three distinct partner functions: sales operations, finance, and sales.
+
+**Run 3:** `2` ✗
+> Quote: "Partner with sales operations and finance to understand changing business processes"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly listed for collaboration: sales operations and finance.
+
+⚠ **Disagreement**: manual=`4` vs LLM majority=`3`
+
+⚠ **LLM inconsistency**: runs gave ['3', '3', '2']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations, and data quality varies over time"
+**Run 1:** `mid` ✓
+> Quote: "Revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations, and data quality varies over time"
 > Verified: ✓ found in JD
-> Reasoning: Multiple established systems with complex legacy data and ongoing improvement needs indicate a mid-stage function—operational but growing.
+> Reasoning: Existing infrastructure and pipelines are present with named systems (CRM, billing, ERP) and operational challenges, but no mention of multiple data sub-teams or large-scale platform governance suggests a growing but not yet mature function.
 
-**Run 2:** `mid`
-> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
+**Run 2:** `mid` ✓
+> Quote: "Revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations, and data quality varies over time"
 > Verified: ✓ found in JD
-> Reasoning: The combination of building, maintaining, and improving existing models indicates a mid-stage data function that has produced something but requires scaling and refinement.
+> Reasoning: The JD describes existing infrastructure (CRM, billing, ERP systems) with accumulated complexity and quality challenges, indicating an established but still-evolving data function, not a greenfield build.
 
-**Run 3:** `mid`
-> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
+**Run 3:** `mid` ✓
+> Quote: "Revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations, and data quality varies over time"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities show existing revenue infrastructure being improved and scaled as the company grows, not starting from zero, indicating a team in the growth/scaling phase.
+> Reasoning: Multiple systems already exist (CRM, billing, ERP) with legacy complexity, but the role is to improve and standardize them rather than build from zero or manage an established platform at scale.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `hiring_manager`
-> Quote: "Experience with subscription sales processes — you are familiar with concepts like ARR, MRR, expansion, contraction, and renewal cycles"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific SaaS metrics and subscription domain knowledge embedded throughout the requirements indicate the writer has done revenue analytics work.
-
-**Run 2:** `hiring_manager`
-> Quote: "Understanding of subscription sales processes — you are familiar with concepts like ARR, MRR, expansion, contraction, and renewal cycles"
+**Run 1:** `hiring_manager` ✗
+> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
 > Verified: ✓ found in JD
-> Reasoning: This level of specificity about subscription economics and SaaS-specific concepts indicates deep technical knowledge from someone who has done the role.
+> Reasoning: The phrase demonstrates domain-specific technical knowledge of system reconciliation challenges, named tools with precise context, and methodological understanding that only comes from someone who has done this work.
 
-**Run 3:** `hiring_manager`
-> Quote: "Experience with financial metrics reporting — you know how revenue, bookings, churn, and related KPIs are defined and measured"
+**Run 2:** `recruiter` ✗
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
 > Verified: ✓ found in JD
-> Reasoning: The JD demonstrates specific technical knowledge of SaaS metrics (ARR, MRR, expansion, churn, LTV, CAC), subscription business concepts, and specific systems (CRM, billing, ERP, Snowflake, dbt), indicating deep domain knowledge from someone who performs this work.
+> Reasoning: The responsibilities section uses generic action verbs ('build', 'maintain', 'design', 'deliver') without technical specificity, scale context, or methodology detail that would indicate hands-on authorship.
+
+**Run 3:** `mixed` ✓
+> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
+> Verified: ✓ found in JD
+> Reasoning: The JD shows domain-specific knowledge (system names, financial KPI context, subscription metrics) alongside generic action verbs and no technical depth about methodology or scale.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'recruiter', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "dashboards and reports that translate complex revenue data into clear, actionable insights for sales, finance, and leadership"
+**Run 1:** `finance` ✗
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly serves finance stakeholders (C-level, board-ready metrics, financial KPIs) and commercial stakeholders (sales operations, go-to-market forecasting) with genuinely equal emphasis.
+> Reasoning: The primary responsibility is building models for executive and board reporting; while go-to-market planning is mentioned, the weighted emphasis is on C-level financial decision-making and board-level insights.
 
-**Run 2:** `finance`
-> Quote: "C-level decisions to optimize growth are based on revenue metrics and insights, as they are highly trusted facts on the evolution of the business"
+**Run 2:** `finance` ✗
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
 > Verified: ✓ found in JD
-> Reasoning: The primary success criteria emphasize building trusted revenue data for C-level and board-level decision-making, indicating finance/executive orientation.
+> Reasoning: The primary mission is building revenue models for executive and board-level financial reporting; while the role touches go-to-market and sales, the core output serves finance and C-level decision-making.
 
-**Run 3:** `mixed`
-> Quote: "Design and deliver dashboards and reports that translate complex revenue data into clear, actionable insights for sales, finance, and leadership"
+**Run 3:** `mixed` ✓
+> Quote: "A high-impact role at the intersection of data, finance, and go-to-market strategy"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed at the intersection of both Finance (executive/board reporting, financial KPIs) and Commercial (go-to-market strategy, sales operations), with both orientations genuinely weighted in responsibilities.
+> Reasoning: The role equally serves finance (board reporting, financial KPIs) and commercial/GTM audiences (sales operations, go-to-market planning), with balanced emphasis throughout responsibilities.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'finance', 'mixed']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`finance`
+
+⚠ **LLM inconsistency**: runs gave ['finance', 'finance', 'mixed']
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics; Partner with sales operations and finance to understand changing business processes and reflect them accurately"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic building and designing of analytics capabilities with reactive partnership where direction comes from stakeholder business process changes.
+**Run 1:** `mixed` ✓
+> Quote: "Design and deliver dashboards and reports"
+> Verified: ✓ found in JD
+> Reasoning: The candidate has autonomy over the design and architecture of revenue analytics deliverables, but the direction and success criteria are set by stakeholder needs (executive reporting, GTM support), making this a blend of strategic ownership within a defined scope.
 
-**Run 2:** `execution`
+**Run 2:** `mixed` ✓
+> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics; Partner with sales operations and finance to understand changing business processes and reflect them accurately in revenue analytics"
+> Verified: ✓ found in JD
+> Reasoning: The role contains both strategic elements ('build', 'design', 'develop' revenue frameworks) and execution elements ('partner with' others to reflect their processes, 'maintain').
+
+**Run 3:** `execution` ✗
 > Quote: "Partner with sales operations and finance to understand changing business processes and reflect them accurately in revenue analytics"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities indicate the role responds to business processes and requirements defined by others, executing technical delivery rather than setting strategic direction.
+> Reasoning: The role receives direction from sales operations and finance on business process changes, then executes by building and delivering analytics to serve those needs.
 
-**Run 3:** `strategic`
-> Quote: "The opportunity to shape how a growing SaaS company measures and steers its revenue"
-> Verified: ✓ found in JD
-> Reasoning: The role is described as shaping how the company measures revenue, indicating direction-setting authority for the revenue analytics function rather than executing direction set by others.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'strategic']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'execution']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
-> Reasoning: No AI tools, frameworks, or AI-enabled infrastructure responsibilities mentioned.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
-> Reasoning: No AI tools, GenAI infrastructure, or AI-first mindset mentioned; standard financial data modeling and reporting work.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or building data infrastructure for AI systems; revenue analytics here is traditional business intelligence work.
 
-**Run 3:** `none` ✓
-> Quote: "Build, maintain, and improve the revenue data models that power executive-level reporting and board-ready metrics"
-> Reasoning: No mention of AI tools, GenAI capabilities, or AI-ready infrastructure; standard data modeling and analytics engineering work.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI-assisted coding, AI tools, or GenAI infrastructure anywhere in the JD; the company focus is IT asset management, not AI products.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-assisted work, or AI infrastructure requirements in the candidate skill expectations.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
+
 **Run 1:** `responsibility` ✗
-> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
-> Reasoning: Verb 'ensure' paired with data reconciliation ownership indicates responsibility for data quality and integrity practices.
+> Quote: "Proactively improve data quality and integrity across revenue-related data pipelines"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as a candidate responsibility with an ownership verb ('proactively improve'), not merely listed as a tool or requirement.
 
-**Run 2:** `absent` ✓
-> Quote: "Reconcile revenue data across systems of record (CRM, billing, ERP) and ensure a single source of truth for financial KPIs"
-> Reasoning: Data accuracy and reconciliation focus without explicit testing, quality practice ownership, or testing tool mention.
+**Run 2:** `responsibility` ✗
+> Quote: "Proactively improve data quality and integrity across revenue-related data pipelines"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as an owned responsibility with the candidate accountable for proactive improvement, not merely as a tool listed in the tech stack.
 
-**Run 3:** `absent` ✓
-> Quote: "ensure a single source of truth for financial KPIs"
-> Reasoning: While 'ensure' signals accountability, there's no explicit testing responsibility, quality ownership, data validation practices, or data contract mention.
+**Run 3:** `responsibility` ✗
+> Quote: "Proactively improve data quality and integrity across revenue-related data pipelines"
+> Verified: ✓ found in JD
+> Reasoning: Data quality improvement is framed as an owned responsibility with action verbs, though specific testing practices, frameworks, or observability tools are not named.
 
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'absent']
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✗
-> Quote: "ensure a single source of truth for financial KPIs; board-ready metrics; executive-level reporting"
-> Reasoning: Board-level financial reporting and trustworthiness of critical metrics dominate the framing over delivery or reliability concerns.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "Revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations"
-> Reasoning: Operational complexity and system stability concerns dominate, with high-stakes executive reporting raising urgency but no regulatory or compliance framing.
+**Run 1:** `moderate` ✗
+> Quote: "highly trusted facts on the evolution of the business"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes trust and data quality to enable good decisions rather than to prevent regulatory or compliance failure, reflecting operational reliability concern without high-stakes risk framing.
 
-**Run 3:** `moderate` ✓
-> Quote: "executive-level reporting and board-ready metrics; single source of truth for financial KPIs"
-> Reasoning: Emphasis on accuracy and reliability for high-stakes financial reporting to board/C-level stakeholders, but framed as operational accuracy rather than regulatory/compliance concerns.
+**Run 2:** `moderate` ✗
+> Quote: "C-level decisions to optimize growth are based on revenue metrics and insights, as they are highly trusted facts on the evolution of the business"
+> Verified: ✓ found in JD
+> Reasoning: The fear is operational—bad data undermining business decisions for growth and go-to-market—rather than regulatory or compliance failure, placing this at moderate loss aversion.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']
+**Run 3:** `moderate` ✗
+> Quote: "Revenue metrics are sourced from multiple systems, have historic complexity due to acquisitions and system migrations, and data quality varies over time"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and trustworthiness of metrics are primary concerns (single source of truth, data quality proactive improvement), but there is no compliance, regulatory, or risk-avoidance language framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

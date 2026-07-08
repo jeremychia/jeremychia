@@ -57,178 +57,209 @@ Beide Rollen leisten einen zentralen Beitrag zur datengetriebenen Steuerung unse
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 3 | 3 | 3 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | finance | finance | finance | 100% |
-| autonomy_level | mixed | mixed | mixed | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | finance | finance | finance | finance | 100% | ✓ |
+| autonomy_level | mixed | strategic | strategic | strategic | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | tool_listed | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasises data quality, stability, transparency, and best practices throughout, with no velocity or speed-focused language.
+> Reasoning: The JD emphasizes data quality, stability, transparency, and robustness throughout, with no language about speed, iteration, or delivery velocity.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Skalierbarkeit und Wartbarkeit unserer Datenlandschaft sicher"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD emphasizes data quality, stability, and maintainability throughout with no velocity or shipping language present.
+
+**Run 3:** `rigour` ✓
 > Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, stability, transparency, and regulatory compliance as core expectations, with no velocity or speed signals present.
-
-**Run 3:** `rigour`
-> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, stability, transparency, and robust solutions as core responsibilities, with zero velocity signals like speed, shipping, or iteration pace.
+> Reasoning: Data quality, stability, transparency, maintainability, and best practices are central to the responsibilities; no velocity signals present.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
+**Run 1:** `high` ✓
 > Quote: "geschäftskritische Prozesse im Energievertrieb"
 > Verified: ✓ found in JD
-> Reasoning: The role involves financial decisions (pricing, gross margin, cost control, profitability) in a regulated energy market with explicit regulatory compliance requirements.
+> Reasoning: Energy is a regulated sector, and the role directly models gross margin, costs, and pricing—financial and compliance-sensitive work with direct P&L impact.
 
-**Run 2:** `high`
-> Quote: "geschäftskritische Prozesse im Energievertrieb"
+**Run 2:** `high` ✓
+> Quote: "geschäftskritische Prozesse im Energievertrieb unterstützen"
 > Verified: ✓ found in JD
-> Reasoning: Data errors in margin and cost modelling directly impact financial reporting, pricing decisions, and regulatory compliance in a heavily regulated industry.
+> Reasoning: The role supports business-critical processes in a regulated energy sector with explicit regulatory requirements mentioned multiple times.
 
-**Run 3:** `high`
-> Quote: "Beide Rollen leisten einen zentralen Beitrag zur datengetriebenen Steuerung unseres Energiegeschäfts und verbinden moderne Datenarchitekturen mit geschäftskritischen Entscheidungen."
-> Verified: ✓ found in JD
-> Reasoning: Energy is a regulated utility sector where data errors directly affect financial reporting, regulatory compliance, and business-critical operations; regulatory requirements are explicitly mentioned.
-
-### collaboration_width
-
-**Run 1:** `3`
-> Quote: "Stakeholdern aus Pricing, Controlling, Energy Markets"
-> Verified: ✓ found in JD
-> Reasoning: Three explicitly named partner teams/functions are identified: Pricing, Controlling, and Energy Markets.
-
-**Run 2:** `3`
-> Quote: "Pricing; Controlling; Energy Markets"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three explicitly named partner functions are identified as collaboration stakeholders in the responsibilities section.
-
-**Run 3:** `3`
-> Quote: "Du arbeitest eng mit Stakeholdern aus Pricing, Controlling, Energy Markets und weiteren Fachbereichen zusammen"
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named functions are explicitly identified as collaboration partners: Pricing, Controlling (Finance), and Energy Markets.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure (dbt, Airflow in production), multiple business domains served, and active evolution of architecture indicates an established data function in growth phase.
-
-**Run 2:** `mid`
-> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
-> Verified: ✓ found in JD
-> Reasoning: Named tools in production use (dbt, Airflow) and responsibility for advancing existing architecture indicate a team beyond startup phase but not yet mature scale.
-
-**Run 3:** `mid`
-> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
-> Verified: ✓ found in JD
-> Reasoning: The JD references dbt and Airflow already in production use and describes driving advancement and improvement of existing architecture, indicating an established team in growth phase rather than early-stage or mature scale.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Du integrierst und verknüpfst komplexe Datenquellen aus internen Systemen, Marktdaten sowie regulatorischen Quellen und stellst deren konsistente Verarbeitung sicher."
-> Verified: ✓ found in JD
-> Reasoning: Specific domain knowledge (energy market data, regulatory sources, named tools in production context, regulatory terminology like Netzentgelte and Umlagen) indicates someone with deep technical expertise wrote this.
-
-**Run 2:** `hiring_manager`
-> Quote: "Du übersetzt komplexe fachliche Anforderungen – von energiewirtschaftlichen Forecasts bis hin zu regulatorischen Rahmenbedingungen – in robuste und performante Datenlösungen."
-> Verified: ✓ found in JD
-> Reasoning: Precise domain-specific translation of energy forecasts and regulatory frameworks into technical solutions demonstrates hands-on expertise from someone doing this work.
-
-**Run 3:** `hiring_manager`
-> Quote: "Du integrierst und verknüpfst komplexe Datenquellen aus internen Systemen, Marktdaten sowie regulatorischen Quellen und stellst deren konsistente Verarbeitung sicher."
-> Verified: ✓ found in JD
-> Reasoning: The JD contains energy-industry-specific domain knowledge (regulatory sources, market data integration, regulatory requirements like Netzentgelte and Umlagen) that only someone actively working in energy utilities operations could write.
-
-### stakeholder_orientation
-
-**Run 1:** `finance`
-> Quote: "zentrale Geschäftsentscheidungen in den Bereichen Pricing, Kostensteuerung und Profitabilität"
-> Verified: ✓ found in JD
-> Reasoning: Primary focus is on pricing, cost control, and profitability decisions, which are characteristic of FP&A and finance function priorities.
-
-**Run 2:** `finance`
-> Quote: "zentrale Geschäftsentscheidungen in den Bereichen Pricing, Kostensteuerung und Profitabilität"
-> Verified: ✓ found in JD
-> Reasoning: Primary audience is the Controlling team and finance-adjacent stakeholders making decisions on margins, costs, and profitability rather than product or commercial functions.
-
-**Run 3:** `finance`
+**Run 3:** `high` ✓
 > Quote: "Du entwickelst skalierbare Data Products und analytische Modelle, die zentrale Geschäftsentscheidungen in den Bereichen Pricing, Kostensteuerung und Profitabilität unterstützen."
 > Verified: ✓ found in JD
-> Reasoning: The role targets Gross Margin and Cost Modelling—core financial metrics—and explicitly names Controlling (Germany's term for the finance/control function) as a primary stakeholder.
+> Reasoning: Role directly impacts pricing, cost control, and profitability decisions in a regulated energy sector where data errors have financial and regulatory consequences.
 
-### autonomy_level
+### collaboration_width
+**Manual:** `3`
 
-**Run 1:** `mixed`
-> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices"
+**Run 1:** `3` ✓
+> Quote: "Pricing; Controlling; Energy Markets"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of architecture direction and best practices with execution of specific domain work for Pricing and Cost Modelling in service of business teams.
+> Reasoning: Three distinct named teams are explicitly listed as collaboration partners in the responsibilities.
 
-**Run 2:** `mixed`
-> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices"
+**Run 2:** `3` ✓
+> Quote: "Pricing, Controlling, Energy Markets"
 > Verified: ✓ found in JD
-> Reasoning: The role owns the analytics engineering domain's evolution and standards while executing in service of Controlling and Pricing teams' requirements—combining strategic and execution responsibilities.
+> Reasoning: Three distinct named stakeholder teams are explicitly mentioned in the collaboration section.
 
-**Run 3:** `mixed`
+**Run 3:** `3` ✓
+> Quote: "Pricing, Controlling, Energy Markets"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams explicitly listed as collaboration partners in the JD.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
 > Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of data architecture and engineering standards with execution against business requirements set by Pricing, Controlling, and Energy Markets teams.
+> Reasoning: The data function already exists with named tools (dbt, Airflow) in production, and the role is about evolving and improving it rather than building from zero.
+
+**Run 2:** `mid` ✓
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Skalierbarkeit und Wartbarkeit unserer Datenlandschaft sicher"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Named tools (dbt, Airflow) appear in responsibilities with specific production context, indicating an established data function growing and optimizing rather than building from zero.
+
+**Run 3:** `mid` ✓
+> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
+> Verified: ✓ found in JD
+> Reasoning: Named tools (dbt, Airflow) already deployed in production, but role includes driving architectural advancement and establishing practices, indicating growth phase rather than full maturity.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "Du übersetzt komplexe fachliche Anforderungen – von energiewirtschaftlichen Forecasts bis hin zu regulatorischen Rahmenbedingungen – in robuste und performante Datenlösungen."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain domain-specific technical knowledge (energy market forecasts, regulatory requirements, cost structures) that only someone actively doing this work could specify.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Du konzipierst, entwickelst und betreibst skalierbare Datenpipelines und Datenmodelle, die geschäftskritische Prozesse im Energievertrieb unterstützen"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific domain knowledge (energy distribution processes, regulatory frameworks, German energy market terminology) that only comes from someone doing this work.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Du integrierst und verknüpfst komplexe Datenquellen aus internen Systemen, Marktdaten sowie regulatorischen Quellen und stellst deren konsistente Verarbeitung sicher."
+> Verified: ✓ found in JD
+> Reasoning: Specific technical details (named data sources, consistency requirements, energy sector domain concepts) indicate someone performing this work wrote the responsibilities, not boilerplate recruiter language.
+
+### stakeholder_orientation
+**Manual:** `finance`
+
+**Run 1:** `finance` ✓
+> Quote: "Pricing, Kostensteuerung und Profitabilität"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily supports Pricing, Controlling, and Energy Markets teams with gross margin, cost modeling, and profitability analysis—classic FP&A/finance stakeholders.
+
+**Run 2:** `finance` ✓
+> Quote: "zentrale Geschäftsentscheidungen in den Bereichen Pricing, Kostensteuerung und Profitabilität unterstützen"
+> Verified: ✓ found in JD
+> Reasoning: The role is titled 'Gross Margin & Cost Modelling' and explicitly supports financial decision-making in cost management and profitability.
+
+**Run 3:** `finance` ✓
+> Quote: "Du arbeitest eng mit Stakeholdern aus Pricing, Controlling, Energy Markets und weiteren Fachbereichen zusammen"
+> Verified: ✓ found in JD
+> Reasoning: Primary collaborators include Controlling (finance/accounting function) and role explicitly supports pricing, cost control, and profitability—hallmarks of FP&A work.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `strategic` ✗
+> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly drives architectural direction and establishes engineering standards, giving it strategic autonomy over how analytics infrastructure and practices are shaped.
+
+**Run 2:** `strategic` ✗
+> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering"
+> Verified: ✓ found in JD
+> Reasoning: The role drives architectural evolution and establishes practices, combined with ownership language, indicating strategic direction-setting authority.
+
+**Run 3:** `strategic` ✗
+> Quote: "Du treibst die Weiterentwicklung unserer Datenarchitektur voran und etablierst Best Practices im Bereich Analytics Engineering."
+> Verified: ✓ found in JD
+> Reasoning: Role owns architectural advancement and standard-setting across analytics engineering, indicating strategic direction-setting rather than execution of externally-defined priorities.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`strategic`
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
-> Reasoning: Tools mentioned are standard data engineering frameworks, not AI-related.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Mit modernen Tools wie dbt und Airflow"
-> Reasoning: Standard analytics engineering tools with no AI coding, AI-assisted, or AI infrastructure responsibilities mentioned.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or AI infrastructure requirements—zero AI expectations for the candidate.
 
-**Run 3:** `none` ✓
-> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
-> Reasoning: Standard analytics engineering tools mentioned (dbt, Airflow) with no AI/GenAI technologies or AI-assisted coding practices referenced.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI-related infrastructure expectations for the candidate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No AI coding tools, AI-ready data infrastructure, or GenAI application expectations mentioned anywhere in the JD despite the company's technology-forward positioning.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher"
-> Reasoning: Candidate owns ensuring data quality, stability, and establishing best practices.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "Du stellst eine hohe Datenqualität sicher; etablierst Best Practices"
-> Reasoning: Candidate owns ensuring data quality and establishing best practices, indicating quality practice responsibility.
-
-**Run 3:** `responsibility` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
-> Reasoning: Candidate explicitly 'ensures' high data quality and stability, demonstrating ownership of quality practices beyond just tool selection.
+> Verified: ✓ found in JD
+> Reasoning: Data quality and stability are framed as something the candidate owns and is accountable for ("stellst sicher"), even though specific testing frameworks are not explicitly named.
 
+**Run 2:** `tool_listed` ✗
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Skalierbarkeit und Wartbarkeit unserer Datenlandschaft sicher"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Data quality is mentioned as a responsibility, but framed through tool usage (dbt, Airflow) rather than owning testing practices or data quality frameworks.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Mit modernen Tools wie dbt und Airflow stellst du eine hohe Datenqualität, Stabilität und Transparenz unserer Datenlandschaft sicher."
+> Verified: ✓ found in JD
+> Reasoning: Candidate owns ensuring data quality, stability, and transparency as an explicit responsibility, with accountability for the practice rather than just listing testing tools.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt"
-> Reasoning: Emphasizes operational stability and regulatory compliance as responsibility areas, not trust/audit dominance.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "Stabilität unserer Datenlandschaft; regulatorische Änderungen; zentrale Geschäftsentscheidungen"
-> Reasoning: Framing emphasizes operational reliability and stability with regulatory compliance considerations, but not as the primary driver.
-
-**Run 3:** `high` ✗
+**Run 1:** `moderate` ✗
 > Quote: "Du stellst sicher, dass fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt werden."
-> Reasoning: Regulatory compliance and timely incorporation of regulatory changes are framed as primary responsibilities, indicating trust/compliance-driven role.
+> Verified: ✓ found in JD
+> Reasoning: Regulatory compliance and operational reliability are explicit concerns, but the role is primarily framed as a builder and engineering leader delivering value rather than as a guardian preventing bad outcomes.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']
+**Run 2:** `moderate` ✗
+> Quote: "dass fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt werden"
+> Verified: ✓ found in JD
+> Reasoning: Regulatory compliance and operational reliability are concerns, but framed as ongoing responsibilities rather than preventing bad outcomes or regulatory disaster.
+
+**Run 3:** `moderate` ✗
+> Quote: "Du stellst sicher, dass fachliche und regulatorische Änderungen zeitnah in unseren Datenmodellen und Prozessen berücksichtigt werden."
+> Verified: ✓ found in JD
+> Reasoning: Regulatory compliance is an explicit concern, but the primary role framing is capability and delivery of data products; risk prevention is secondary, not the dominant narrative.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

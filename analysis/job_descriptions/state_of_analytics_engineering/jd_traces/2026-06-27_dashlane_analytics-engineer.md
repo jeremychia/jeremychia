@@ -4,8 +4,8 @@
 
 ```
 # Analytics Engineer — Dashlane
-**URL:** https://job-boards.greenhouse.io/dashlane/jobs/7988501
 
+**URL:** https://job-boards.greenhouse.io/dashlane/jobs/7988501
 **Location:** Lisbon, Portugal (Hybrid)
 **Date Posted:** 2026-06-27
 
@@ -71,182 +71,209 @@ Hybrid schedule: in-office on Mondays, Tuesdays, and Thursdays. Flexible Wednesd
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 2 | 2 | 2 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | hiring_manager | mixed | 33% |
-| stakeholder_orientation | mixed | mixed | mixed | 100% |
-| autonomy_level | mixed | mixed | strategic | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 2 | 2 | 2 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | mixed | mixed | mixed | mixed | 100% | ✓ |
+| autonomy_level | mixed | strategic | strategic | strategic | 100% | ✗ |
+| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered "Unified Data Model." You will ensure models are reliable, well-documented, and aligned with business logic."
-> Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals (testing, reliability, documentation, quality tests, governance) with zero velocity language (no "fast-paced," "ship quickly," or "rapid") indicate rigour-focused orientation.
-
-**Run 2:** `rigour`
-> Quote: "Establish quality tests and governance practices while mentoring junior engineers in analytics engineering best practices."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, quality, governance, and best practices over speed or iteration.
-
-**Run 3:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "You will ensure models are reliable, well-documented, and aligned with business logic."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize reliability, documentation, testing, and governance as core expectations, with no velocity-oriented language present.
+> Reasoning: The responsibilities emphasize testing, documentation, reliability, and governance as core expectations with no opposing velocity signals.
 
-### domain_risk
-
-**Run 1:** `moderate`
-> Quote: "Strong understanding of B2B SaaS metrics: ARR, NRR, churn, PLG"
-> Verified: ✓ found in JD
-> Reasoning: B2B SaaS metrics are business-critical for decision-making but lack explicit financial-reporting, compliance, or regulatory language, indicating moderate domain risk.
-
-**Run 2:** `moderate`
-> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
-> Verified: ✓ found in JD
-> Reasoning: Data supports business decisions for product and GTM but lacks explicit financial reporting or regulatory compliance framing despite fintech sector.
-
-**Run 3:** `moderate`
-> Quote: "Strong understanding of B2B SaaS metrics: ARR, NRR, churn, PLG"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes SaaS revenue and customer health metrics central to business intelligence rather than regulatory or financial reporting compliance.
-
-### collaboration_width
-
-**Run 1:** `2`
-> Quote: "product and go-to-market teams"
-> Verified: ✓ found in JD
-> Reasoning: Two distinct named functions explicitly identified in the responsibilities section.
-
-**Run 2:** `2`
-> Quote: "product and go-to-market teams"
-> Verified: ✓ found in JD
-> Reasoning: Two distinct named functions identified as primary collaboration partners: Product and Go-to-market.
-
-**Run 3:** `2`
-> Quote: "partnering directly with product and go-to-market teams"
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly names product and go-to-market teams as collaboration partners, totaling two distinct named functions.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Drive adoption of self-serve solutions in Omni while mentoring stakeholders to become more data-literate and independent in their analytics workflows."
-> Verified: ✓ found in JD
-> Reasoning: Named existing infrastructure (Omni, dbt Unified Data Model) and mentoring others signals an established data function in growth phase.
-
-**Run 2:** `mid`
-> Quote: "dbt-powered 'Unified Data Model'"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Named tools with existing infrastructure, multiple engineers implied (mentoring junior engineers), and scaling adoption efforts indicate established team in growth phase.
-
-**Run 3:** `mid`
-> Quote: "Drive adoption of self-serve solutions in Omni while mentoring junior engineers to become more data-literate and independent in their analytics workflows."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The presence of named tools in responsibilities (dbt, Omni), existing data models, and the need to mentor junior engineers indicate a data function that exists and is growing significantly.
-
-### jd_authorship
-
-**Run 1:** `mixed`
+**Run 2:** `rigour` ✓
 > Quote: "Design, build, test, and own end-to-end data models within our dbt-powered "Unified Data Model." You will ensure models are reliable, well-documented, and aligned with business logic."
 > Verified: ✓ found in JD
-> Reasoning: Named tools with specific application context (dbt for unified model) demonstrate technical specificity only a practitioner would write, but consulting and mentoring language is generic.
+> Reasoning: The responsibilities repeatedly emphasize testing, reliability, documentation, and governance practices as core expectations rather than speed or iteration.
 
-**Run 2:** `hiring_manager`
-> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.'"
+**Run 3:** `rigour` ✓
+> Quote: "You will ensure models are reliable, well-documented, and aligned with business logic."
+> Verified: ✓ found in JD
+> Reasoning: Multiple rigour signals (reliable, well-documented, testing, governance, quality tests) dominate the responsibilities with zero velocity language present.
+
+### domain_risk
+**Manual:** `moderate`
+
+**Run 1:** `moderate` ✓
+> Quote: "owning the data models that power decision-making across the company"
+> Verified: ✓ found in JD
+> Reasoning: Data errors would affect business decisions but there is no explicit mention of financial reporting, regulatory compliance, audit, or revenue attribution.
+
+**Run 2:** `moderate` ✓
+> Quote: "owning the data models that power decision-making across the company"
+> Verified: ✓ found in JD
+> Reasoning: Data errors affect business decisions but the role has no explicit financial reporting, regulatory compliance, or public-facing product impact.
+
+**Run 3:** `moderate` ✓
+> Quote: "owning the data models that power decision-making across the company"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business decision-making in B2B SaaS without explicit financial reporting, compliance, or regulatory framing, indicating moderate risk.
+
+### collaboration_width
+**Manual:** `2`
+
+**Run 1:** `2` ✓
+> Quote: "product and go-to-market teams"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named partner functions are explicitly identified: product teams and go-to-market teams.
+
+**Run 2:** `2` ✓
+> Quote: "product and go-to-market teams"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names two distinct partner team categories: product and go-to-market.
+
+**Run 3:** `2` ✓
+> Quote: "product and go-to-market teams"
+> Verified: ✓ found in JD
+> Reasoning: Only two distinct named collaborative teams are explicitly identified in the responsibilities section.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "mentoring junior engineers in analytics engineering best practices"
+> Verified: ✓ found in JD
+> Reasoning: The presence of junior engineers being mentored indicates an existing team that is scaling, with established infrastructure (dbt, Omni) already in place.
+
+**Run 2:** `mid` ✓
+> Quote: "within our dbt-powered "Unified Data Model." ... mentoring junior engineers in analytics engineering best practices"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical details (dbt, Omni, B2B SaaS metrics including ARR/NRR/churn/PLG) demonstrate hiring manager-level understanding of the role.
+> Reasoning: Named tools in responsibilities (dbt, Omni, Airflow) with specific application context and a team structure including junior engineers indicate a growing but established data function.
 
-**Run 3:** `mixed`
-> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.'"
+**Run 3:** `mid` ✓
+> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered "Unified Data Model.""
+> Verified: ✓ found in JD
+> Reasoning: Named infrastructure (dbt, Unified Data Model, Omni) already in place with mentoring of junior engineers present, indicating an established but growing data function.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `mixed` ✗
+> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting, pushing the frontier of what analytics engineering looks like in an AI-first world."
+> Verified: ✓ found in JD
+> Reasoning: The JD combines specific technical methodology (AI data agents, reporting automation) with aspirational framing language, blending hiring manager specificity and recruiter genericism.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered "Unified Data Model." Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD combines technical specificity about tools (dbt, Omni) and context (Unified Data Model) with generic boilerplate language about stakeholder consulting.
+> Reasoning: Specific technical details (dbt, Unified Data Model, Omni, AI data agents with underlying foundations) indicate this was written by someone who understands the actual work.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
+**Run 3:** `hiring_manager` ✓
+> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered "Unified Data Model.""
+> Verified: ✓ found in JD
+> Reasoning: Specific technical context about internal infrastructure (dbt, Unified Data Model) and precise responsibilities indicate someone doing this work wrote this section.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
-> Verified: ✓ found in JD
-> Reasoning: Both product and go-to-market (commercial) teams are named as primary stakeholders with equal emphasis in responsibilities.
-
-**Run 2:** `mixed`
-> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
-> Verified: ✓ found in JD
-> Reasoning: Both product and commercial (GTM) teams are equally named and emphasized as primary stakeholders throughout the responsibilities.
-
-**Run 3:** `mixed`
+**Run 1:** `mixed` ✓
 > Quote: "partnering directly with product and go-to-market teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names both product and go-to-market teams as primary partners with comparable emphasis, plus required B2B SaaS metrics knowledge, indicating genuinely split stakeholder orientation.
+> Reasoning: The role explicitly serves both product and go-to-market (commercial) audiences with equal emphasis, with infrastructure building enabling both.
+
+**Run 2:** `mixed` ✓
+> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights. Drive adoption of self-serve solutions in Omni while mentoring stakeholders to become more data-literate"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role explicitly balances external stakeholder consultation (product, go-to-market teams) with internal platform building and enablement (self-serve analytics), with equal responsibility weight.
+
+**Run 3:** `mixed` ✓
+> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly names both product and commercial (GTM) stakeholders as primary partners, while other responsibilities emphasize internal data infrastructure equally.
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered "Unified Data Model." Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
+**Run 1:** `strategic` ✗
+> Quote: "owning the data models that power decision-making across the company"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes ownership of models, establishing governance practices, and mentoring junior engineers—setting direction rather than executing direction set by others.
+
+**Run 2:** `strategic` ✗
+> Quote: "Design, build, test, and own end-to-end data models ... Establish quality tests and governance practices"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Strategic ownership of data models, governance, and analytics approach shift combined with execution through consulting to business teams indicates mixed autonomy.
+> Reasoning: The role emphasizes ownership and establishment of practices and direction rather than execution of work set by others.
 
-**Run 2:** `mixed`
-> Quote: "owning the data models that power decision-making across the company"
+**Run 3:** `strategic` ✗
+> Quote: "Design, build, test, and own end-to-end data models"
 > Verified: ✓ found in JD
-> Reasoning: Role combines strategic ownership of the data domain (own, establish, drive) with execution in service of product and GTM teams (consultant, support).
+> Reasoning: The use of 'own' combined with 'drive adoption' and 'establish' governance practices indicates strategic ownership of key analytics functions, not execution of scoped work.
 
-**Run 3:** `strategic`
-> Quote: "owning the data models that power decision-making across the company"
-> Verified: ✓ found in JD
-> Reasoning: The repeated use of 'own' and 'owning' plus framing as a consultant who 'drives adoption' and 'establishes governance practices' indicates strategic direction-setting rather than execution of others' priorities.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'strategic']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`strategic`
 
 ### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
-> Reasoning: Role requires building AI infrastructure foundations for automated reporting agents.
+**Manual:** ``
 
-**Run 2:** `ai_enabler` ✓
+**Run 1:** `ai_enabler` ✗
 > Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
-> Reasoning: Candidate builds infrastructure that AI systems consume, specifically implementing AI data agents and governance foundations.
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build data infrastructure for AI systems to operate on, with Claude Code fluency as a supporting requirement for the work.
 
-**Run 3:** `ai_enabler` ✓
-> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting"
-> Reasoning: Candidate builds infrastructure for AI to consume (AI data agents, governance foundations).
+**Run 2:** `ai_enabler` ✗
+> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting, pushing the frontier of what analytics engineering looks like in an AI-first world."
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to build AI data infrastructure and enable AI systems, not just use AI tools for personal productivity.
 
+**Run 3:** `ai_enabler` ✗
+> Quote: "Implement AI data agents and the necessary underlying foundations to automate reporting and alerting, pushing the frontier of what analytics engineering looks like in an AI-first world."
+> Verified: ✓ found in JD
+> Reasoning: Both ai_user (fluency with Claude Code required) and ai_enabler signals are present; the responsibility to build AI data agent infrastructure indicates the higher-level expectation.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.' You will ensure models are reliable"
-> Reasoning: Candidate owns testing and quality of data models, with explicit responsibility for reliability.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "Design, build, test, and own end-to-end data models; ensure models are reliable"
-> Reasoning: Candidate owns quality practice through explicit testing and ownership responsibilities with commitment to model reliability.
+**Run 1:** `responsibility` ✗
+> Quote: "Establish quality tests and governance practices while mentoring junior engineers"
+> Verified: ✓ found in JD
+> Reasoning: Testing and governance are framed as core owned responsibilities using action verbs, not as tools listed in a skill matrix.
 
-**Run 3:** `responsibility` ✓
-> Quote: "Design, build, test, and own end-to-end data models within our dbt-powered 'Unified Data Model.' You will ensure models are reliable, well-documented, and aligned with business logic."
-> Reasoning: Candidate owns end-to-end quality and reliability of data models.
+**Run 2:** `responsibility` ✗
+> Quote: "Establish quality tests and governance practices while mentoring junior engineers in analytics engineering best practices."
+> Verified: ✓ found in JD
+> Reasoning: Testing and quality governance are framed as practices the candidate owns, establishes, and teaches rather than tools they use.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Design, build, test, and own end-to-end data models... Establish quality tests and governance practices"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Testing and quality frameworks are framed as core owned responsibilities with 'own' and 'establish' verbs, not merely tools in a requirements list.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
+**Manual:** ``
+
 **Run 1:** `moderate` ✗
-> Quote: "You will ensure models are reliable, well-documented, and aligned with business logic"
-> Reasoning: Operational reliability and model quality are primary concerns, though not framed as compliance or risk to stakeholders.
+> Quote: "You will ensure models are reliable, well-documented, and aligned with business logic."
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability is emphasized through testing, documentation, and governance, but there is no compliance, regulatory, or audit framing that would indicate high risk aversion.
 
-**Run 2:** `none` ✓
-> Quote: "ensure models are reliable, well-documented, and aligned with business logic"
-> Reasoning: Framing focuses on delivery quality and strategic consulting value without compliance, regulatory, or trust-related loss-aversion language.
+**Run 2:** `moderate` ✗
+> Quote: "ensure models are reliable, well-documented, and aligned with business logic. Establish quality tests and governance practices."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Operational reliability and quality are clear concerns but secondary to the primary mission of delivering strategic business value, with no compliance or regulatory risk framing.
 
-**Run 3:** `none` ✓
-> Quote: "Act as a consultant to product and go-to-market teams, moving from reactive data support to proactive strategic insights."
-> Reasoning: Framing emphasizes strategic business value and delivery rather than operational risks or compliance concerns.
+**Run 3:** `moderate` ✗
+> Quote: "You will ensure models are reliable, well-documented, and aligned with business logic."
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability (reliable models, quality tests) is expected but secondary to delivery and adoption themes, indicating moderate concern without compliance or regulatory framing.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

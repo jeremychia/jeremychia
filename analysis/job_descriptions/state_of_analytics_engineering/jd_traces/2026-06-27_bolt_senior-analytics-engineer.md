@@ -4,8 +4,8 @@
 
 ```
 # Senior Analytics Engineer — Bolt
-**URL:** https://bolt.eu/en/careers/positions/ccb51f9f-2c97-4ed7-9d1c-dbced6a7ccd2/
 
+**URL:** https://bolt.eu/en/careers/positions/ccb51f9f-2c97-4ed7-9d1c-dbced6a7ccd2/
 **Location:** Tallinn, Estonia
 **Date Posted:** 2026-06-27
 
@@ -65,191 +65,220 @@ You are proficient in SQL, Python, Spark, data modelling tools such as dbt and o
 
 You possess excellent knowledge of system design and architectural best practices with a focus on reusability, maintainability, reliability, and scalability.
 
-You are a strong cross-functional collaborator with a good business sense and excellent communication skills in verbal and written Engl…[truncated]
+You are a strong cross-functional collaborator with…[truncated]
 ```
 
 ---
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | mixed | strategic | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | mixed | mixed | mixed | 100% | ✓ |
+| stakeholder_orientation | internal_data | product | internal_data | internal_data | 33% | ✓ |
+| autonomy_level | mixed | mixed | strategic | strategic | 33% | ✗ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Follow system design and architectural best practices and closely collaborate with cross-functional stakeholders to ensure data integrity and efficiency across all processes."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes architectural best practices, data integrity, reliability, and system design rather than speed or rapid delivery.
+> Reasoning: Responsibilities emphasize architecture, design best practices, data integrity, and system reliability over speed or velocity, with no delivery-pace language in the core duties.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Follow system design and architectural best practices and closely collaborate with cross-functional stakeholders to ensure data integrity and efficiency across all processes."
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize architectural best practices, data integrity, documentation, and reliability far more than speed or shipping pace.
+> Reasoning: Multiple emphases on architectural best practices, data integrity, reliability, and scalability as core responsibilities outweigh velocity language in team framing.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Follow system design and architectural best practices and closely collaborate with cross-functional stakeholders to ensure data integrity and efficiency across all processes."
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals (system design best practices, data integrity, architectural best practices) dominate the responsibilities without equivalent velocity language.
+> Reasoning: The responsibilities prioritize architectural best practices, data integrity, and system design as core expectations rather than speed or shipping velocity.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Every step of our product development is powered by robust, scalable data infrastructure"
+**Run 1:** `moderate` ✓
+> Quote: "building the pipelines, models, and data products that empower analysts and decision-makers across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: Data errors would affect operational decisions and product development, but the JD contains no language about financial reporting, compliance, or regulatory risk.
-
-**Run 2:** `moderate`
-> Quote: "Every step of our product development is powered by robust, scalable data infrastructure"
-> Verified: ✓ found in JD
-> Reasoning: Data errors affect product development decisions and operations, but the JD contains no explicit financial reporting, regulatory, compliance, or audit language.
-
-**Run 3:** `moderate`
-> Quote: "Every step of our product development is powered by robust, scalable data infrastructure"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data infrastructure for product development and analytics support without explicit financial reporting, compliance, or regulatory language.
-
-### collaboration_width
-
-**Run 1:** `1`
-> Quote: "You're a sparring partner to our Product Analysts"
-> Verified: ✓ found in JD
-> Reasoning: Product Analysts is the only explicitly named team; other references like 'adjacent stakeholders' and 'cross-functional stakeholders' are too generic to count.
-
-**Run 2:** `1`
-> Quote: "product analysts"
-> Verified: ✓ found in JD
-> Reasoning: Only 'product analysts' is explicitly named as a partner team; other references like 'stakeholders', 'decision-makers', and 'teams you support' are generic.
-
-**Run 3:** `1`
-> Quote: "Product Analysts"
-> Verified: ✓ found in JD
-> Reasoning: Only Product Analysts are explicitly named as a distinct team; other references use generic terms like 'adjacent stakeholders' and 'cross-functional'.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Build, expand and maintain reusable data models and metrics in dbt."
-> Verified: ✓ found in JD
-> Reasoning: The language 'expand and maintain' signals an existing data infrastructure that is growing rather than being established from scratch, with multiple AE roles being hired.
-
-**Run 2:** `mid`
-> Quote: "Build, expand and maintain reusable data models and metrics in dbt."
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (dbt, Airflow, Spark) with existing infrastructure to maintain and expand, plus multiple open roles across teams, signal a growing but established data function.
-
-**Run 3:** `mid`
-> Quote: "Build, expand and maintain reusable data models and metrics in dbt"
-> Verified: ✓ found in JD
-> Reasoning: The 'expand' language combined with named tools in responsibilities (dbt, Airflow) and existing Product Analysts team indicates a data function that exists and is growing, not early-stage.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees."
-> Verified: ✓ found in JD
-> Reasoning: Specific technical concepts like segmentation feature stores and interactive metrics trees demonstrate insider knowledge of what Analytics Engineers actually build, not recruiter boilerplate.
-
-**Run 2:** `mixed`
-> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees."
-> Verified: ✓ found in JD
-> Reasoning: Specific technical details and examples (segmentation feature store, metrics trees, system design practices) suggest hiring manager input, but generic phrases like 'collaborate with stakeholders' and 'active knowledge-sharing' indicate recruiter involvement.
-
-**Run 3:** `mixed`
-> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees"
-> Verified: ✓ found in JD
-> Reasoning: Specific product examples suggest hiring-manager input, but generic collaboration language indicates recruiter involvement.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "You own everything between data producers and data consumers"
-> Verified: ✓ found in JD
-> Reasoning: The role primarily serves the internal data ecosystem and analytics infrastructure for other analysts and data consumers, not commercial, product, or finance stakeholders.
-
-**Run 2:** `internal_data`
-> Quote: "Improve the efficiency and impact of product analysts through data products, processes, collaboration and active knowledge-sharing."
-> Verified: ✓ found in JD
-> Reasoning: The role primarily serves the data function itself—enabling product analysts and building infrastructure for internal data consumers rather than direct commercial, product, or finance outcomes.
-
-**Run 3:** `internal_data`
-> Quote: "You own everything between data producers and data consumers: building the pipelines, models, and data products that empower analysts and decision-makers across the organisation."
-> Verified: ✓ found in JD
-> Reasoning: The role is fundamentally about building analytics infrastructure and data products for internal consumption by analysts and decision-makers.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Work closely with product analysts and adjacent stakeholders to prioritize and align analytics engineering roadmaps"
-> Verified: ✓ found in JD
-> Reasoning: The role owns the analytics engineering domain (strategic), but roadmap priorities and business needs are shaped by product analysts and stakeholders (execution context).
-
-**Run 2:** `mixed`
-> Quote: "You own everything between data producers and data consumers: building the pipelines, models, and data products that empower analysts and decision-makers across the organisation."
-> Verified: ✓ found in JD
-> Reasoning: The role has strategic ownership of the technical data domain ('own everything', 'set up and manage architecture', 'develop strategic data products') but executes in service of and collaboration with product analysts and business teams.
-
-**Run 3:** `strategic`
-> Quote: "You own everything between data producers and data consumers"
-> Verified: ✓ found in JD
-> Reasoning: Explicit ownership language combined with 'sparring partner' positioning and involvement in prioritizing analytics engineering roadmaps indicates strategic ownership of the analytics engineering function.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'strategic']
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Build, expand and maintain reusable data models and metrics in dbt"
-> Reasoning: Standard data modeling work with no AI skill expectations.
-
-**Run 2:** `ai_enabler` ✗
-> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions"
-> Reasoning: Feature store and advanced solutions infrastructure indicates building systems that AI/ML models consume.
-
-**Run 3:** `none` ✓
-> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees"
-> Reasoning: No explicit AI infrastructure, tool usage, or GenAI responsibility signals.
-
-⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'none']
-
-### testing_framing
-**Run 1:** `absent` ✗
-> Quote: "ensure data integrity and efficiency across all processes"
-> Reasoning: Data integrity mentioned but no explicit quality/testing ownership or data contracts responsibility.
-
-**Run 2:** `responsibility` ✓
-> Quote: "ensure data integrity and efficiency across all processes"
-> Reasoning: Ownership verb 'ensure' paired with data integrity establishes quality as primary responsibility.
-
-**Run 3:** `responsibility` ✓
-> Quote: "ensure data integrity and efficiency across all processes"
-> Reasoning: Ownership verb 'ensure' combined with 'data integrity' indicates quality practice responsibility.
-
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
-
-### loss_aversion_framing
-**Run 1:** `none` ✗
-> Quote: "long-term business needs"
-> Reasoning: Delivery-focused framing without compliance, regulatory, incident, or SLO-driven risk language.
+> Reasoning: The role supports business decisions and product development without explicit financial reporting, compliance, or regulatory language, placing it in moderate risk territory typical of operations-critical SaaS.
 
 **Run 2:** `moderate` ✓
-> Quote: "Follow system design and architectural best practices to ensure data integrity"
-> Reasoning: Operational reliability framing (best practices, data integrity) without regulatory/compliance language.
+> Quote: "Every step of our product development is powered by robust, scalable data infrastructure"
+> Verified: ✓ found in JD
+> Reasoning: Data supports product decisions and development but no mention of financial reporting, regulatory compliance, or audit requirements.
 
 **Run 3:** `moderate` ✓
-> Quote: "ensure data integrity and efficiency across all processes"
-> Reasoning: Data integrity emphasis suggests operational reliability concern without explicit compliance or incident framing.
+> Quote: "Our whole platform lives and breathes on data. Every step of our product development is powered by robust, scalable data infrastructure"
+> Verified: ✓ found in JD
+> Reasoning: The role supports product analytics and operational intelligence rather than financial reporting or regulatory compliance, suggesting data errors affect business decisions but not direct compliance exposure.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `1` ✓
+> Quote: "product analysts and adjacent stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Only Product Analysts is named as a distinct function; other collaborators are described generically as stakeholders.
+
+**Run 2:** `1` ✓
+> Quote: "Product Analysts"
+> Verified: ✓ found in JD
+> Reasoning: Only Product Analysts explicitly named as a distinct team; adjacent stakeholders and other references are too vague to count.
+
+**Run 3:** `1` ✓
+> Quote: "sparring partner to our Product Analysts and a force multiplier for the teams you support"
+> Verified: ✓ found in JD
+> Reasoning: Only product analysts are explicitly named as a collaboration partner; other stakeholders are referred to generically as 'adjacent stakeholders' or 'teams'.
+
+### data_team_maturity
+**Manual:** `mature`
+
+**Run 1:** `mid` ✗
+> Quote: "Build, expand and maintain reusable data models and metrics in dbt."
+> Verified: ✓ found in JD
+> Reasoning: The language 'expand and maintain' alongside responsibilities named across multiple product verticals suggests an established function scaling existing infrastructure rather than building from zero.
+
+**Run 2:** `mid` ✗
+> Quote: "Build, expand and maintain reusable data models and metrics in dbt."
+> Verified: ✓ found in JD
+> Reasoning: Named tools (dbt, Airflow, Looker) appearing in responsibilities and expand language indicate established infrastructure being scaled rather than early-stage.
+
+**Run 3:** `mid` ✗
+> Quote: "Build, expand and maintain reusable data models and metrics in dbt."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize expanding existing infrastructure with named tools like dbt and Airflow, indicating an established but growing data function rather than early-stage startup.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `mixed` ✓
+> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees."
+> Verified: ✓ found in JD
+> Reasoning: Specific product examples (segmentation feature store, interactive metrics trees) and dbt context show hiring-manager specificity, while generic collaboration language shows recruiter influence.
+
+**Run 2:** `mixed` ✓
+> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees."
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity in some responsibilities (feature stores, metrics trees, architecture details) mixed with generic collaboration language (sparring partner, force multiplier).
+
+**Run 3:** `mixed` ✓
+> Quote: "Develop strategic data products such as segmentation feature store or enable advanced solutions such as interactive metrics trees."
+> Verified: ✓ found in JD
+> Reasoning: Specific technical examples like segmentation feature store and interactive metrics trees suggest hiring manager input, though some responsibilities use generic stakeholder collaboration language.
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `product` ✗
+> Quote: "you work at the intersection of data engineering and product analytics."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly centers product analytics as the primary partner and product development as the end goal, with data products supporting product teams rather than data professionals.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Improve the efficiency and impact of product analysts through data products, processes, collaboration and active knowledge-sharing."
+> Verified: ✓ found in JD
+> Reasoning: Primary audience is the analytics function itself with responsibility to make Product Analysts more efficient, even though downstream impact serves product decisions.
+
+**Run 3:** `internal_data` ✓
+> Quote: "You own everything between data producers and data consumers: building the pipelines, models, and data products that empower analysts and decision-makers across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: The role primarily builds data infrastructure and platforms serving internal data consumers (analysts, data engineers) rather than specific commercial or product teams.
+
+⚠ **LLM inconsistency**: runs gave ['product', 'internal_data', 'internal_data']
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `mixed` ✓
+> Quote: "You own everything between data producers and data consumers: building the pipelines, models, and data products that empower analysts and decision-makers across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: The role owns technical architecture and infrastructure decisions, but business priorities and direction are set through collaboration with product teams rather than autonomously.
+
+**Run 2:** `strategic` ✗
+> Quote: "You own everything between data producers and data consumers: building the pipelines, models, and data products that empower analysts and decision-makers across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: Own framing and responsibility to set analytics engineering roadmaps indicates strategic direction-setting within the data domain rather than execution against externally-set priorities.
+
+**Run 3:** `strategic` ✗
+> Quote: "You own everything between data producers and data consumers"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed with ownership verbs and responsibility for defining the analytics architecture and roadmap direction rather than executing scoped work.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`strategic`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_user` ✗
+> Quote: "At Bolt, using AI daily is a baseline expectation for everyone. If there's a faster, smarter way to do your work, we expect you to find it."
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI tools to accelerate their own work and productivity, with no mention of building AI infrastructure or data for AI pipelines.
+
+**Run 2:** `ai_user` ✗
+> Quote: "At Bolt, using AI daily is a baseline expectation for everyone. If there's a faster, smarter way to do your work, we expect you to find it."
+> Verified: ✓ found in JD
+> Reasoning: Candidate is expected to use AI tools daily to accelerate their own work and productivity, not to build AI infrastructure or enable GenAI applications.
+
+**Run 3:** `ai_user` ✗
+> Quote: "At Bolt, using AI daily is a baseline expectation for everyone. If there's a faster, smarter way to do your work, we expect you to find it."
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly expects candidates to use AI tools daily to accelerate their work, indicating AI tool usage is a baseline skill expectation for the role.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "Set up and manage the architecture, documentation, and key data transformations for in-house and third-party data."
+> Verified: ✓ found in JD
+> Reasoning: No testing tools, data quality frameworks, observability practices, or data contracts are mentioned anywhere in the JD, despite responsibilities covering architecture and data transformations.
+
+**Run 2:** `absent` ✗
+> Quote: "No testing, data quality, or observability framework signal in responsibilities or requirements."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No mention of testing standards, data contracts, quality frameworks, or observability practices as owned responsibilities or required skills.
+
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality framework signal."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD emphasizes architectural best practices and data integrity but does not explicitly mention testing, data contracts, observability, or data quality frameworks as a responsibility or tool.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The role is framed entirely around building capabilities and delivering value, with no risk register, compliance concerns, or loss-aversion language.
+
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: Emphasis is on building great data infrastructure and engineering practices; no language about regulatory compliance, risk mitigation, incident response, or preventing failures.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role in terms of building capability and empowering teams rather than preventing failures, regulatory violations, or safeguarding data quality.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

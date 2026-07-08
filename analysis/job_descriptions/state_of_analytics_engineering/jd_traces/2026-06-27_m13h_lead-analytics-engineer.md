@@ -5,6 +5,7 @@
 ```
 # Lead Analytics Engineer (H/F) — M13h
 
+**URL:** https://www.welcometothejungle.com/fr/companies/m13h/jobs/lead-analytics-engineer-h-f_lyon
 **Location:** Lyon, France
 **Date Posted:** 2026-06-27
 **Salary:** 60,000–70,000 EUR
@@ -66,182 +67,217 @@ Le groupe Cosmo5 inscrit la diversité et la mixité durant tout son processus d
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 3 | 2 | 3 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | execution | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 3 | 2 | 3 | 2 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | mixed | hiring_manager | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | commercial | internal_data | 33% | ✓ |
+| autonomy_level | mixed | mixed | execution | mixed | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes documentation, reliability, quality, and availability as core dataset properties, with no mention of speed, iteration, or rapid delivery.
+> Reasoning: The role emphasizes data quality, reliability, documentation, and testing as core expectations with no velocity language present.
 
-**Run 2:** `rigour`
-> Quote: "bien modélisés, documentés, fiables en termes de qualité et de disponibilité, répondant aux besoins des usages ultérieurs"
+**Run 2:** `rigour` ✓
+> Quote: "bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around creating well-structured, reliable, documented datasets with explicit quality and availability guarantees, with no mention of speed or rapid iteration.
+> Reasoning: The responsibilities emphasize data quality, reliability, documentation, and testing with no velocity language—this is a rigour-focused role.
 
-**Run 3:** `rigour`
-> Quote: "mise en place d'alertes & tests de qualité de données"
+**Run 3:** `rigour` ✓
+> Quote: "bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality testing, documentation, and reliability as core expectations, with no velocity-oriented language present.
+> Reasoning: Multiple explicit signals emphasizing quality, documentation, reliability, and testing with no velocity language present.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
+> Quote: "datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité, répondant aux besoins des usages ultérieurs"
+> Verified: ✓ found in JD
+> Reasoning: The role focuses on business intelligence and operational analytics for retail and SaaS clients without explicit financial reporting or regulatory compliance signals.
+
+**Run 2:** `moderate` ✓
 > Quote: "Construction d'une Customer Data Platform pour un grand retailer (8 marques / 30+ pays)"
 > Verified: ✓ found in JD
-> Reasoning: The mission examples cover general business analytics and SaaS work for retail and startups without explicit financial reporting, regulatory compliance, or mission-critical language.
+> Reasoning: The role involves business analytics projects without explicit financial reporting, compliance, or regulatory language—data errors affect business decisions but not regulatory/financial risk.
 
-**Run 2:** `moderate`
-> Quote: "datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
+**Run 3:** `moderate` ✓
+> Quote: "datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité, répondant aux besoins des usages ultérieurs"
 > Verified: ✓ found in JD
-> Reasoning: While data quality is emphasized, the JD lacks explicit financial reporting, compliance, or regulatory language that would signal high domain risk in a consulting context.
-
-**Run 3:** `moderate`
-> Quote: "Construction d'une Customer Data Platform pour un grand retailer (8 marques / 30+ pays)"
-> Verified: ✓ found in JD
-> Reasoning: The work affects business decisions across multiple markets and functions but lacks explicit financial, compliance, or regulatory language that would indicate high risk.
+> Reasoning: The role involves business intelligence and operational dashboards that affect business decisions but lacks explicit financial reporting, regulatory, or compliance language indicating high risk.
 
 ### collaboration_width
+**Manual:** `3`
 
-**Run 1:** `3`
-> Quote: "les utilisateurs business, data analysts et dataviz engineers"
+**Run 1:** `2` ✗
+> Quote: "data analysts et dataviz engineers"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named collaborating teams are identified: business users, data analysts, and dataviz engineers.
+> Reasoning: Two distinct named role cohorts (data analysts and dataviz engineers) are identified as collaboration partners in the responsibilities.
 
-**Run 2:** `2`
-> Quote: "data analysts; dataviz engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two distinct named functions are explicitly listed as collaboration partners in the main responsibilities section.
-
-**Run 3:** `3`
+**Run 2:** `3` ✓
 > Quote: "utilisateurs business; data analysts; dataviz engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named partner functions are explicitly listed in the collaboration requirements.
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named partner functions are explicitly listed as collaboration partners in the responsibilities section.
 
-⚠ **LLM inconsistency**: runs gave ['3', '2', '3']
+**Run 3:** `2` ✗
+> Quote: "data analysts; dataviz engineers"
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners: data analysts and dataviz engineers.
+
+⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
+
+⚠ **LLM inconsistency**: runs gave ['2', '3', '2']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "mise en place des flux et modèles de données, en se basant sur des stacks data modernes (SQL, DBT, outils ELTs, GCP/Azure/AWS/Snowflake, …)"
-> Verified: ✓ found in JD
-> Reasoning: Modern data tools are embedded in current responsibilities and the lead role mentoring junior consultants suggests an established but growing consulting practice.
-
-**Run 2:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Mise en place des flux et modèles de données, en se basant sur des stacks data modernes (SQL, DBT, outils ELTs, GCP/Azure/AWS/Snowflake, …)"
 > Verified: ✓ found in JD
-> Reasoning: Multiple named data tools are mentioned in operational contexts (responsibilities, not just requirements), indicating an established function with operational maturity.
+> Reasoning: Named tools in responsibilities with specific application context, evidence of established infrastructure through completed large-scale projects, and mentoring responsibilities indicate a mid-stage team.
 
-**Run 3:** `mid`
-> Quote: "tu as le souhait d'accompagner et faire progresser des consultant·e·s plus jeunes sur ton expertise et sur les stacks data modernes"
+**Run 2:** `mid` ✓
+> Quote: "Packaging d'outils internes sur l'attribution custom"
 > Verified: ✓ found in JD
-> Reasoning: The presence of junior consultants to mentor and established tooling (DBT, Snowflake, GCP/Azure/AWS, Airflow) indicates a growing data function with defined practices.
+> Reasoning: The reference to packaging internal tools, multiple named tools in active use (DBT, Airflow, Snowflake), and the mentoring of junior consultants indicate an established, functioning data practice that is scaling.
+
+**Run 3:** `mid` ✓
+> Quote: "Maintenance des pipelines et mise en place d'alertes & tests de qualité de données"
+> Verified: ✓ found in JD
+> Reasoning: Named tools appear in responsibilities and projects show established scale, but the consulting firm structure with project-based work suggests mid rather than mature enterprise platform maturity.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `hiring_manager`
-> Quote: "Construction d'une Customer Data Platform pour un grand retailer (8 marques / 30+ pays)"
+**Run 1:** `mixed` ✓
+> Quote: "Mise en place des flux et modèles de données, en se basant sur des stacks data modernes (SQL, DBT, outils ELTs, GCP/Azure/AWS/Snowflake, …)"
 > Verified: ✓ found in JD
-> Reasoning: Mission examples contain specific tool stacks, business scale details, and real technical challenges that indicate authorship by someone with hands-on technical experience.
+> Reasoning: Technical specificity with named tools, scale examples, and concrete project work suggests hiring manager input, but generic collaboration language and abstract leadership framing indicate recruiter contributions.
 
-**Run 2:** `hiring_manager`
-> Quote: "Construction d'une Customer Data Platform pour un grand retailer (8 marques / 30+ pays); Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific project examples with scale and tool context (Supermetrics, Adverity, BigQuery) reflect hands-on experience rather than generic recruiter language.
-
-**Run 3:** `hiring_manager`
+**Run 2:** `hiring_manager` ✗
 > Quote: "Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool applications in concrete project contexts and detailed technical examples indicate authorship by someone with hands-on data engineering experience.
+> Reasoning: The specificity of the Supermetrics-to-Adverity+BigQuery migration, precise scale metrics (8 brands / 30+ countries), and context-rich tool usage indicate someone with hands-on project experience wrote this.
+
+**Run 3:** `hiring_manager` ✗
+> Quote: "Construction d'une Customer Data Platform pour un grand retailer (8 marques / 30+ pays); Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
+> Verified: ✓ found in JD
+> Reasoning: Specific project examples with real technical details and business context demonstrate hiring-manager knowledge of actual work done rather than recruiter boilerplate.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
-> Quote: "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
+**Run 1:** `internal_data` ✓
+> Quote: "en collaboration avec les utilisateurs business, data analysts et dataviz engineers"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is building reliable, well-documented datasets and data infrastructure that serve data consumers and other analytics practitioners.
+> Reasoning: The role primarily serves the data function and internal data consumers by building infrastructure and datasets rather than serving commercial, product, or finance stakeholders directly.
 
-**Run 2:** `internal_data`
-> Quote: "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
+**Run 2:** `commercial` ✗
+> Quote: "Construction d'une Customer Data Platform pour un grand retailer (8 marques / 30+ pays)"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is creating and maintaining high-quality data infrastructure and datasets that serve the data ecosystem, not a specific business function.
+> Reasoning: The example projects (Customer Data Platforms, attribution tools, steering metrics) are all commercial/marketing use cases, and the role explicitly collaborates with business users to translate their needs into data structures.
 
-**Run 3:** `internal_data`
-> Quote: "mettre en place pour nos clients ou nos besoins internes des datasets pertinents"
+**Run 3:** `internal_data` ✓
+> Quote: "datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité, répondant aux besoins des usages ultérieurs"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is to build and maintain data infrastructure and datasets for consumption by other analysts, BI engineers, and platform consumers.
+> Reasoning: The primary focus is building and maintaining data infrastructure for downstream consumers rather than serving commercial, product, or finance functions directly.
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'commercial', 'internal_data']
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
+**Run 1:** `mixed` ✓
 > Quote: "tu portes une expertise et la fait rayonner au sein du cabinet et à l'extérieur et participe à la formalisation d'offres sur la base de ton expertise"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic leadership (defining offerings, establishing expertise) with execution across specific scoped projects and client engagements.
+> Reasoning: The role combines strategic ownership of technical expertise and offering development with execution-oriented delivery of client and internal data projects.
 
-**Run 2:** `execution`
-> Quote: "tu interviens à différents stades des projets"
+**Run 2:** `execution` ✗
+> Quote: "tu sais travailler en autonomie sur tes missions et tu as le souhait d'accompagner et faire progresser des consultant·e·s plus jeunes"
 > Verified: ✓ found in JD
-> Reasoning: The role is primarily framed around implementing and maintaining solutions within scoped projects, with autonomy within those projects rather than defining the firm's overall analytics direction.
+> Reasoning: While the role includes mentoring and autonomy in project execution, the core framing is about delivering scoped consulting engagements, not defining the direction of analytics strategy.
 
-**Run 3:** `mixed`
-> Quote: "tu portes une expertise et la fait rayonner au sein du cabinet et à l'extérieur et participe à la formalisation d'offres sur la base de ton expertise"
+**Run 3:** `mixed` ✓
+> Quote: "tu sais travailler en autonomie sur tes missions et tu as le souhait d'accompagner et faire progresser des consultant·e·s plus jeunes"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic elements (thought leadership, offer development, mentoring junior consultants) with core execution responsibilities (implementing datasets, maintaining pipelines).
+> Reasoning: The role combines execution responsibilities (implementing, maintaining pipelines) with strategic elements (leading through mentoring and participating in service offering decisions).
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "No AI-related phrases in JD"
-> Reasoning: No mention of AI tools, GenAI, text-to-SQL, semantic models, or AI-assisted coding; standard analytics engineering work
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
-> Reasoning: Traditional data infrastructure migration with no AI tooling, building, or enablement mentioned.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted work, or AI infrastructure; it focuses on traditional data engineering and analytics infrastructure.
 
-**Run 3:** `none` ✓
-> Quote: "Migration d'une large infrastructure de dashboards basés sur un stack Supermetrics vers un stack Adverity+BigQuery"
-> Reasoning: Infrastructure modernization with no AI tools, enablement, or AI-first responsibilities mentioned.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, GenAI, coding agents, or AI-assisted workflows expected of the candidate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: There is no mention of AI tools, machine learning pipelines, or AI-enabled work expected from the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
-> Reasoning: Candidate owns implementing datasets with explicit quality and reliability standards
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "ton rôle est de mettre en place pour nos clients ou nos besoins internes des datasets pertinents : bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
-> Reasoning: Candidate owns designing, modeling, documenting, and ensuring quality/reliability of datasets.
+**Run 1:** `responsibility` ✗
+> Quote: "Maintenance des pipelines et mise en place d'alertes & tests de qualité de données"
+> Verified: ✓ found in JD
+> Reasoning: The action verb 'mise en place' (implementation) indicates the candidate owns setting up data quality tests and alerts as a core responsibility.
 
-**Run 3:** `absent` ✗
-> Quote: "bien modélisés, documentés, fiables en termes de qualité et de disponibilité"
-> Reasoning: Quality/availability as dataset outcome requirement without explicit testing practice ownership or tool mention.
+**Run 2:** `responsibility` ✗
+> Quote: "mise en place d'alertes & tests de qualité de données"
+> Verified: ✓ found in JD
+> Reasoning: Data quality testing and alerts are framed as a responsibility the candidate implements and owns, not merely a tool to use.
 
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'responsibility', 'absent']
+**Run 3:** `responsibility` ✗
+> Quote: "mise en place d'alertes & tests de qualité de données"
+> Verified: ✓ found in JD
+> Reasoning: Data quality testing is framed as an owned responsibility to implement rather than just a listed tool or skill.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "fiables en termes de qualité et de disponibilité"
-> Reasoning: Operational reliability framing (availability, quality) without regulatory or compliance language
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "fiables en termes de qualité et de disponibilité"
-> Reasoning: Emphasis on reliability and availability signals operational concerns about data stability rather than purely delivery-focused or compliance-driven framing.
+**Run 1:** `moderate` ✗
+> Quote: "fiables en termes de qualité et de disponibilité, répondant aux besoins des usages ultérieurs"
+> Verified: ✓ found in JD
+> Reasoning: Data reliability and quality are emphasized as operational standards for ongoing pipeline maintenance and availability, reflecting moderate concern about operational failures rather than regulatory or stakeholder-trust risk.
 
-**Run 3:** `moderate` ✓
+**Run 2:** `moderate` ✗
 > Quote: "fiables en termes de qualité et de disponibilité"
-> Reasoning: Operational reliability framing (quality and availability) without compliance or regulatory dominance.
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and quality are concerns, but framed as professional standards and pipeline stability rather than regulatory, compliance, or stakeholder-trust risk.
 
+**Run 3:** `moderate` ✗
+> Quote: "fiables en termes de qualité et de disponibilité"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and quality are concerns but are not framed around compliance, regulatory risk, or stakeholder trust that would indicate high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

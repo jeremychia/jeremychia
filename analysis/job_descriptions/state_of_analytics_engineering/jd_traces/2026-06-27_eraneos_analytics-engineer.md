@@ -5,6 +5,7 @@
 ```
 # Analytics Engineer (all genders) — Eraneos
 
+**URL:** https://eraneos.jobs.personio.de/job/2567559?language=de&src=LinkedIn
 **Location:** Hamburg, München, Düsseldorf, remote
 **Date Posted:** 2026-06-27
 
@@ -55,180 +56,211 @@ Contact: Ekaterina Korolkova – career.de@eraneos.com – +49 40 809 081-172
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 2 | 2 | 2 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 2 | 2 | 2 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | hiring_manager | mixed | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | mixed | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes reliability and performance of analytical data as core responsibilities, which are rigour-oriented signals, with no mention of velocity, iteration speed, or shipping pace.
+> Reasoning: The responsibilities emphasize reliability, performance, quality checks, and testing with no mention of speed, iteration, or fast-paced delivery.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Implementierung von Datenqualitätsprüfungen und -tests"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality checks, testing, and reliable delivery with no corresponding speed or iteration language.
+> Reasoning: The responsibilities emphasize data quality, testing, and reliability as core expectations with no velocity or rapid delivery language.
 
-**Run 3:** `rigour`
-> Quote: "Implementierung von Datenqualitätsprüfungen und -tests"
+**Run 3:** `rigour` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality checks, testing, and reliable delivery as core expectations, with no velocity-oriented language about speed or iteration.
+> Reasoning: The responsibilities emphasize reliability, quality checks, and performance as core expectations with no velocity language present.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "vorwiegend DAX- und Fortune-500-Unternehmen"
-> Verified: ✓ found in JD
-> Reasoning: The role serves large enterprises where data quality matters significantly, but the JD lacks explicit financial reporting, compliance, or regulatory language indicating high risk.
-
-**Run 2:** `moderate`
-> Quote: "Konzeption und Implementierung von Datenmodellen in modernen Data Warehouses und Lakehouses"
-> Verified: ✓ found in JD
-> Reasoning: The role describes generic data engineering work without explicit financial, regulatory, or compliance language despite the company's Fortune-500 client base.
-
-**Run 3:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
 > Verified: ✓ found in JD
-> Reasoning: While serving large enterprises (DAX/Fortune 500), the JD emphasizes reliable analytical data delivery without explicit mention of financial reporting, compliance, or regulatory requirements.
+> Reasoning: While serving Fortune 500 and DAX companies implies high-risk clients, the JD uses generic analytics language without explicit financial reporting, compliance, or regulatory framing.
+
+**Run 2:** `moderate` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Verified: ✓ found in JD
+> Reasoning: While working with Fortune-500 companies, the JD uses generic data quality language without explicit financial reporting, compliance, or regulatory framing.
+
+**Run 3:** `moderate` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Verified: ✓ found in JD
+> Reasoning: The role supports analytics decisions at Fortune 500 companies but lacks explicit financial reporting, compliance, or regulatory language that would signal high risk.
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `2`
+**Run 1:** `2` ✓
 > Quote: "Analytics- und Data-Science-Teams"
 > Verified: ✓ found in JD
-> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners: Analytics teams and Data Science teams.
+> Reasoning: Two distinct named teams are explicitly identified in the responsibilities: Analytics team and Data Science team.
 
-**Run 2:** `2`
+**Run 2:** `2` ✓
 > Quote: "Analytics- und Data-Science-Teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names two distinct partner functions: Analytics teams and Data Science teams.
+> Reasoning: Two named partner teams are explicitly mentioned: Analytics teams and Data Science teams.
 
-**Run 3:** `2`
+**Run 3:** `2` ✓
 > Quote: "Analytics- und Data-Science-Teams"
 > Verified: ✓ found in JD
-> Reasoning: Two distinct internal teams are explicitly named: Analytics team (1) and Data Science team (1).
+> Reasoning: Two distinct named teams are explicitly listed as collaboration partners.
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
 > Verified: ✓ found in JD
-> Reasoning: The JD names specific tools (dbt) in responsibilities with implementation context, indicating established data infrastructure being built and extended rather than greenfield setup.
+> Reasoning: Named tools appear in responsibilities, multiple data roles already exist, and existing infrastructure is being maintained rather than created from scratch.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
+> Quote: "Enge Zusammenarbeit mit Analytics- und Data-Science-Teams"
+> Verified: ✓ found in JD
+> Reasoning: Multiple established data roles and collaboration patterns indicate an existing, growing data function rather than early-stage or fully mature.
+
+**Run 3:** `mid` ✓
 > Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
 > Verified: ✓ found in JD
-> Reasoning: The JD references existing tools (dbt, Snowflake, Databricks) and multiple established data roles (Analytics and Data Science teams), indicating infrastructure at the scaling stage rather than greenfield.
-
-**Run 3:** `mid`
-> Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
-> Verified: ✓ found in JD
-> Reasoning: Named tools (dbt, Snowflake, Databricks) appear in responsibilities combined with references to multiple data roles, indicating an existing but growing data function rather than greenfield startup.
+> Reasoning: Named tools in responsibilities (dbt, Iceberg, Delta) and the existence of multiple established teams signal a functioning, growing data function.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `hiring_manager`
+**Run 1:** `hiring_manager` ✗
+> Quote: "Entwicklung dimensionaler Datenmodelle (Star Schema, Snowflake Schema, Data Vault)"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities specify exact dimensional modelling approaches by name, precise tools with context (dbt, Iceberg, Delta), and technical depth that only someone doing this work would include.
+
+**Run 2:** `hiring_manager` ✗
+> Quote: "Entwicklung dimensionaler Datenmodelle (Star Schema, Snowflake Schema, Data Vault)"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical methodology names and tool contexts (Star Schema, Snowflake Schema, Data Vault) demonstrate hands-on subject matter expertise.
+
+**Run 3:** `mixed` ✓
 > Quote: "Optimierung der Datenbankperformance durch den Einsatz moderner Tabellenformate (z. B. Iceberg, Delta)"
 > Verified: ✓ found in JD
-> Reasoning: This phrase demonstrates technical specificity about performance optimization with concrete technology examples that only someone who has done this work would write.
+> Reasoning: Technical specificity about table formats reflects hands-on knowledge, but generic phrases like 'Übernahme von Projektverantwortung' indicate recruiter contributions.
 
-**Run 2:** `hiring_manager`
-> Quote: "Entwicklung dimensionaler Datenmodelle (Star Schema, Snowflake Schema, Data Vault)"
-> Verified: ✓ found in JD
-> Reasoning: The specific naming of dimensional modeling patterns and optimization techniques (Iceberg, Delta) demonstrates technical depth that only someone with hands-on experience would include.
-
-**Run 3:** `mixed`
-> Quote: "Entwicklung dimensionaler Datenmodelle (Star Schema, Snowflake Schema, Data Vault)"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity in named methodologies (Star Schema, Snowflake Schema, Data Vault) and tool-specific responsibilities indicate hiring manager input, though generic project and collaboration language is also present.
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
 
 ⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Enge Zusammenarbeit mit Analytics- und Data-Science-Teams"
 > Verified: ✓ found in JD
-> Reasoning: The primary collaboration and audience described in the JD is other data and analytics teams within the organization, indicating the role serves the internal data function.
+> Reasoning: The primary audience is the Analytics and Data Science teams; the role's core mission is building data infrastructure for internal analytics consumers.
 
-**Run 2:** `internal_data`
+**Run 2:** `internal_data` ✓
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary mission is building reliable data infrastructure for internal analytics and data science teams, not serving commercial, product, or finance stakeholders.
+
+**Run 3:** `internal_data` ✓
 > Quote: "Enge Zusammenarbeit mit Analytics- und Data-Science-Teams"
 > Verified: ✓ found in JD
-> Reasoning: The primary collaborators are internal Analytics and Data Science teams, and the role exists to provide reliable analytical data to support the data function itself.
-
-**Run 3:** `internal_data`
-> Quote: "Enge Zusammenarbeit mit Analytics- und Data-Science-Teams"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building data infrastructure and transformation pipelines for internal analytics and data science teams.
+> Reasoning: The role's primary audience is the internal data function itself; focus is building reliable infrastructure for analysts and data scientists.
 
 ### autonomy_level
+**Manual:** `execution`
 
-**Run 1:** `execution`
+**Run 1:** `execution` ✓
+> Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
+> Verified: ✓ found in JD
+> Reasoning: While design elements appear, dominant verbs emphasize building and maintaining infrastructure within defined modelling frameworks, with execution as the primary orientation.
+
+**Run 2:** `execution` ✓
 > Quote: "Übernahme von Projektverantwortung und Steuerung von Teilprojekten"
 > Verified: ✓ found in JD
-> Reasoning: The role assumes responsibility for executing projects and sub-projects, indicating the role delivers against defined project scopes rather than setting overall analytics direction.
+> Reasoning: While the role includes project ownership within defined scopes, the majority of responsibilities focus on implementation and execution rather than setting strategic direction.
 
-**Run 2:** `execution`
-> Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
+**Run 3:** `mixed` ✗
+> Quote: "Konzeption und Implementierung von Datenmodellen"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities focus on building, maintaining, and implementing systems within a defined technical scope rather than setting strategic direction for the analytics function.
+> Reasoning: The role combines strategic elements (conceiving approaches, steering projects) with execution (implementing and maintaining).
 
-**Run 3:** `execution`
-> Quote: "Aufbau und Pflege von Datentransformations-Pipelines mit dbt"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities focus on implementing and delivering data solutions (building, maintaining, implementing) rather than defining the overall analytics strategy or direction.
+⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "begleiten unsere Kunden – vorwiegend DAX- und Fortune-500-Unternehmen – auf ihrem Weg der analytischen und KI-gestützten Transformation"
-> Reasoning: Company context is AI-first transformation, but no signal the candidate builds AI infra or uses AI coding tools.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "begleiten unsere Kunden... auf ihrem Weg der analytischen und KI-gestützten Transformation"
-> Reasoning: Company context includes AI transformation, but AE responsibilities are standard data engineering (dbt pipelines, dimensional models).
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions the company delivers AI-supported transformation but makes no expectations of the candidate to use AI tools, build AI infrastructure, or enable AI systems.
 
-**Run 3:** `ai_enabler` ✗
-> Quote: "Enge Zusammenarbeit mit Analytics- und Data-Science-Teams"
-> Reasoning: Builds data models and pipelines that Data Science teams consume as infrastructure for AI work.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: Although the company works on AI-driven transformation, the candidate is not expected to demonstrate AI skills or build AI infrastructure.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'none', 'ai_enabler']
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The company mentions AI-supported transformation, but no AI skill is required of the candidate in responsibilities or requirements.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
-> Reasoning: Reliability and performance expectations stated, but no explicit testing responsibility or tool signals.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "No explicit testing signal or ownership phrase in these responsibilities"
-> Reasoning: Data reliability mentioned but without testing tool listing or quality practice ownership verb.
+**Run 1:** `responsibility` ✗
+> Quote: "Implementierung von Datenqualitätsprüfungen und -tests"
+> Verified: ✓ found in JD
+> Reasoning: Data quality testing is framed as an active responsibility the candidate will implement and own using the action verb Implementierung.
 
-**Run 3:** `absent` ✓
-> Quote: ""
-> Reasoning: No testing ownership verbs (own/ensure/define/implement) or testing tools mentioned.
+**Run 2:** `responsibility` ✗
+> Quote: "Implementierung von Datenqualitätsprüfungen und -tests"
+> Verified: ✓ found in JD
+> Reasoning: Data quality testing is framed as an ownership responsibility using the action verb 'Implementierung' (implementation), not merely listed as a tool requirement.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Implementierung von Datenqualitätsprüfungen und -tests"
+> Verified: ✓ found in JD
+> Reasoning: Data quality testing is framed as a responsibility the candidate will implement and own, not merely a tool listed.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
-> Reasoning: Operational reliability concerns (reliable data delivery, performance) signal SLO/pipeline stability focus without regulatory/compliance framing.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
+**Run 1:** `moderate` ✗
 > Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
-> Reasoning: Operational reliability and performance of data delivery is primary framing concern (no compliance/audit/trust signals).
+> Verified: ✓ found in JD
+> Reasoning: Reliability and performance are emphasized as operational concerns, but without regulatory, compliance, or stakeholder-trust language that would indicate high loss aversion.
 
-**Run 3:** `moderate` ✓
+**Run 2:** `moderate` ✗
 > Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
-> Reasoning: Operational reliability and performance optimization signal SLO/pipeline stability concerns.
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are concerns but the framing emphasizes delivery capability rather than regulatory or stakeholder trust risk.
 
+**Run 3:** `moderate` ✗
+> Quote: "Sicherstellung, dass analytische Daten zuverlässig und performant bereitgestellt werden"
+> Verified: ✓ found in JD
+> Reasoning: Reliability is a core operational concern but framed without regulatory, compliance, or trust-preservation language.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

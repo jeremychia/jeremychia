@@ -4,11 +4,11 @@
 
 ```
 # Analytics Engineer — Telavox
-**URL:** https://career.telavox.com/jobs/7661845-analytics-engineer
 
 **Company:** Telavox
 **Location:** Malmö
 **Salary:** Not stated
+**URL:** https://career.telavox.com/jobs/7661845-analytics-engineer
 **Date saved:** 2026-06-25
 
 ---
@@ -60,180 +60,213 @@ Telavox seeks an Analytics Engineer to manage the complete lifecycle of data, fr
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | mixed | strategic | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | mixed | execution | mixed | 33% | ✗ |
+| ai_role |  | none | ai_enabler | ai_enabler | 33% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | high | moderate | moderate | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "The role emphasises trustworthy data and making information findable and useful throughout the organisation."
+**Run 1:** `rigour` ✓
+> Quote: "The role emphasises trustworthy data and making information findable and useful throughout the organisation"
 > Verified: ✓ found in JD
-> Reasoning: The role summary explicitly prioritizes trustworthy data and the responsibilities detail documented, tested tables and durable data products—strong rigour signals with no velocity language present.
+> Reasoning: The role explicitly emphasizes trustworthy data, documentation, and testing as core values, with no velocity or speed language present.
 
-**Run 2:** `rigour`
-> Quote: "documented, and tested tables"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on documentation and testing reflects rigour-focused values with no velocity-oriented language present.
-
-**Run 3:** `rigour`
-> Quote: "transforming raw data into staged, modelled, documented, and tested tables"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize documented, tested, and durable data products with no velocity signals present.
-
-### domain_risk
-
-**Run 1:** `moderate`
-> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role supports internal business intelligence and analytics decision-making rather than regulatory compliance or financial reporting, indicating moderate risk.
-
-**Run 2:** `moderate`
-> Quote: "executive dashboards"
-> Verified: ✓ found in JD
-> Reasoning: Executive dashboards indicate business decision-making impact, but the JD lacks explicit financial, compliance, or regulatory language typical of high-risk domains.
-
-**Run 3:** `moderate`
-> Quote: "manage the complete lifecycle of data, from raw backend events to executive dashboards"
-> Verified: ✓ found in JD
-> Reasoning: Data affects executive-level business decisions but the JD contains no financial reporting, compliance, or regulatory language.
-
-### collaboration_width
-
-**Run 1:** `1`
-> Quote: "analysts"
-> Verified: ✓ found in JD
-> Reasoning: Only analysts are named as a distinct collaborative partner group; stakeholders and other generic references do not count.
-
-**Run 2:** `1`
-> Quote: "analysts"
-> Verified: ✓ found in JD
-> Reasoning: Only 'analysts' is a named partner team; 'stakeholders' is generic language and does not count.
-
-**Run 3:** `1`
-> Quote: "analysts"
-> Verified: ✓ found in JD
-> Reasoning: Only 'analysts' counts as a named role cohort; 'stakeholders' is generic and does not meet the counting criteria.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
-> Verified: ✓ found in JD
-> Reasoning: Named tools deployed in operations (dbt, BigQuery, CDC, semantic layers) indicate an established data function scaling and evolving, not early-stage or fully mature.
-
-**Run 2:** `mid`
-> Quote: "Design and evolve data marts encoding Telavox business logic"
-> Verified: ✓ found in JD
-> Reasoning: The word 'evolve' indicates an existing data function with established infrastructure being improved rather than built from scratch.
-
-**Run 3:** `mid`
-> Quote: "Operate CDC pipelines, monitor health, manage failures, and optimise BigQuery costs and performance"
-> Verified: ✓ found in JD
-> Reasoning: The JD describes operating established tools (dbt, CDC, BigQuery, semantic layers) in an existing function, not a greenfield build or highly mature multi-team structure.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
-> Verified: ✓ found in JD
-> Reasoning: The bronze/silver/gold medallion architecture pattern and specific operational details (CDC pipelines, BigQuery optimization, dimensional models) reflect hands-on data engineering expertise.
-
-**Run 2:** `hiring_manager`
+**Run 2:** `rigour` ✓
 > Quote: "transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
 > Verified: ✓ found in JD
-> Reasoning: Specific data modeling methodology (bronze/silver/gold medallion pattern) and precise tool context demonstrate domain expertise only found in hiring managers.
+> Reasoning: The emphasis on documentation, testing, and structured layered architecture signals a rigour-oriented approach to data work.
 
-**Run 3:** `hiring_manager`
-> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
+**Run 3:** `rigour` ✓
+> Quote: "The role emphasises trustworthy data and making information findable and useful throughout the organisation."
 > Verified: ✓ found in JD
-> Reasoning: The specific mention of dbt methodology, bronze/silver/gold layers, CDC pipeline operations, and BigQuery optimization indicates hands-on domain knowledge from someone who does this work.
+> Reasoning: The role summary prioritizes trustworthiness and all responsibilities emphasize tested, documented, durable outputs with reliability concerns (monitor health, manage failures), with no velocity or shipping language.
 
-### stakeholder_orientation
+### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `internal_data`
-> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary focus is building data infrastructure and platforms for internal analytics consumers, not commercial, product, or finance stakeholders.
-
-**Run 2:** `internal_data`
-> Quote: "Build and maintain semantic layers powering self-service and agentic analytics"
+**Run 1:** `moderate` ✓
+> Quote: "manage the complete lifecycle of data, from raw backend events to executive dashboards"
 > Verified: ✓ found in JD
-> Reasoning: The explicit focus on self-service analytics infrastructure and semantic layers positions this role as serving data consumers and the data function itself.
-
-**Run 3:** `internal_data`
-> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary purpose is building analytics infrastructure (dbt models, data marts, semantic layers) that serves internal data consumers (analysts, data engineers).
-
-### autonomy_level
-
-**Run 1:** `strategic`
-> Quote: "Design and evolve data marts encoding Telavox business logic"
-> Verified: ✓ found in JD
-> Reasoning: The role designs and owns the data architecture rather than executing scoped work, with strategic responsibility for how analytics is delivered.
-
-**Run 2:** `mixed`
-> Quote: "Own the dbt project"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of the data platform (own, design, evolve) with operational execution responsibilities (operate, monitor, maintain).
-
-**Run 3:** `strategic`
-> Quote: "Own the dbt project"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly owns and designs key data infrastructure (dbt project, data marts with business logic, semantic layers) rather than executing pre-defined direction.
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
-
-### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
-> Reasoning: Builds semantic infrastructure consumed by agentic (AI-driven) analytics.
-
-**Run 2:** `ai_enabler` ✓
-> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
-> Reasoning: Candidate builds semantic layers that AI agents consume for agentic analytics.
-
-**Run 3:** `ai_enabler` ✓
-> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
-> Reasoning: Semantic layers purpose-built to power agentic analytics indicates infrastructure built for AI consumption.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables"
-> Reasoning: Owns testing and documentation as part of core dbt project responsibility.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables"
-> Reasoning: Candidate owns end-to-end dbt project with explicit testing and documentation responsibility.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Own the dbt project, transforming raw data into staged, modeled, documented, and tested tables"
-> Reasoning: Explicit ownership of dbt project includes tested tables as a deliverable, indicating ownership of quality practice.
-
-
-### loss_aversion_framing
-**Run 1:** `high` ✗
-> Quote: "trustworthy data and making information findable and useful throughout the organization"
-> Reasoning: Trust and data reliability dominate framing as primary organizational concern, not just delivery.
+> Reasoning: The role impacts executive decision-making through dashboards but lacks financial, regulatory, or compliance language associated with high domain risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "trustworthy data and making information findable and useful throughout the organization"
-> Reasoning: Emphasis on trustworthy data and stakeholder access frames quality as operational reliability concern.
+> Quote: "emphasises trustworthy data and making information findable and useful throughout the organisation"
+> Verified: ✓ found in JD
+> Reasoning: While trustworthiness matters, the JD frames this as organizational accessibility and usefulness rather than financial reporting or regulatory compliance.
 
 **Run 3:** `moderate` ✓
-> Quote: "trustworthy data and making information findable and useful throughout the organization"
-> Reasoning: Trustworthiness framing suggests operational reliability and data quality concern, but balanced with utility rather than compliance-dominant.
+> Quote: "manage the complete lifecycle of data, from raw backend events to executive dashboards"
+> Verified: ✓ found in JD
+> Reasoning: The role supports executive decision-making but contains no explicit financial reporting, compliance, or regulatory language that would elevate it to high risk.
+
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `1` ✓
+> Quote: "Partner with analysts and stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Only 'analysts' is explicitly named as a partner team; 'stakeholders' is too vague to count per the classification rules.
+
+**Run 2:** `1` ✓
+> Quote: "Partner with analysts and stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Only 'analysts' is explicitly named as a distinct partner team; 'stakeholders' is generic and does not count.
+
+**Run 3:** `1` ✓
+> Quote: "analysts"
+> Verified: ✓ found in JD
+> Reasoning: Only 'analysts' is named as a distinct team in 'Partner with analysts and stakeholders'; 'stakeholders' is a generic descriptor.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
+> Verified: ✓ found in JD
+> Reasoning: The JD references established infrastructure (dbt, BigQuery, medallion architecture, CDC pipelines) being operated and evolved rather than built from zero.
+
+**Run 2:** `mid` ✓
+> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
+> Verified: ✓ found in JD
+> Reasoning: The existence of an established dbt project with structured layers indicates a mid-stage data function with working infrastructure that needs evolution.
+
+**Run 3:** `mid` ✓
+> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
+> Verified: ✓ found in JD
+> Reasoning: The JD describes existing, mature infrastructure (dbt with medallion architecture, CDC pipelines, BigQuery, semantic layers) being operated and evolved, not built from scratch.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "Operate CDC pipelines, monitor health, manage failures, and optimise BigQuery costs and performance"
+> Verified: ✓ found in JD
+> Reasoning: The responsibility specifies technical concepts (CDC, BigQuery optimization) and operational concerns that only come from someone doing this work.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Operate CDC pipelines, monitor health, manage failures, and optimise BigQuery costs and performance"
+> Verified: ✓ found in JD
+> Reasoning: This level of technical specificity about CDC operational concerns and BigQuery optimization demonstrates hands-on knowledge only a hiring manager would include.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Operate CDC pipelines, monitor health, manage failures, and optimise BigQuery costs and performance"
+> Verified: ✓ found in JD
+> Reasoning: The specificity of operational concerns (CDC concepts, pipeline health monitoring, BigQuery cost optimization) indicates hands-on technical knowledge only a hiring manager would possess.
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The primary focus is building data infrastructure that serves internal analytics consumers and systems rather than commercial, product, or finance teams.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The emphasis on self-serve analytics and semantic layers indicates the primary audience is internal analytics consumers.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role's primary function is building and operating the analytics platform infrastructure that serves analysts, self-serve users, and AI agents, not external commercial or finance stakeholders.
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `mixed` ✗
+> Quote: "Own the dbt project"
+> Verified: ✓ found in JD
+> Reasoning: The role has strategic ownership of technical domains (dbt, data mart design) combined with operational execution responsibilities (operate pipelines, maintain infrastructure).
+
+**Run 2:** `execution` ✗
+> Quote: "Design and evolve data marts encoding Telavox business logic"
+> Verified: ✓ found in JD
+> Reasoning: The responsibility to encode existing business logic indicates the role executes against requirements defined elsewhere.
+
+**Run 3:** `mixed` ✗
+> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership (Own, Design, Build) of the technical data architecture with execution responsibility (transforming, operating, maintaining) within a defined scope.
+
+⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While agentic analytics is mentioned, the JD does not explicitly require the candidate to build AI infrastructure or demonstrate AI expertise.
+
+**Run 2:** `ai_enabler` ✗
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Building semantic layers to power agentic analytics indicates the candidate constructs data infrastructure that AI systems consume.
+
+**Run 3:** `ai_enabler` ✗
+> Quote: "Build and maintain semantic layers powering self-serve and agentic analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The candidate is expected to build semantic layers that enable agentic (AI) analytics systems to function, making them responsible for AI-ready data infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
+
+⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'ai_enabler']
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Own the dbt project, transforming raw data into staged, modelled, documented, and tested tables across bronze, silver, and gold layers"
+> Verified: ✓ found in JD
+> Reasoning: The candidate owns the dbt project and is responsible for delivering tested tables, indicating ownership of testing practice rather than just demonstrating skill.
+
+**Run 2:** `responsibility` ✗
+> Quote: "transforming raw data into staged, modelled, documented, and tested tables"
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as an integral responsibility within core dbt project ownership, not as a listed tool.
+
+**Run 3:** `responsibility` ✗
+> Quote: "transforming raw data into staged, modelled, documented, and tested tables"
+> Verified: ✓ found in JD
+> Reasoning: By owning the dbt project and being accountable for producing tested tables as a core output, the candidate owns data quality through testing as a fundamental responsibility.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `high` ✗
+> Quote: "The role emphasises trustworthy data and making information findable and useful throughout the organisation"
+> Verified: ✓ found in JD
+> Reasoning: Trust language appears in the role summary as a primary framing, indicating strong focus on preventing untrustworthy data from reaching decision-makers.
+
+**Run 2:** `moderate` ✗
+> Quote: "emphasises trustworthy data and making information findable and useful throughout the organisation"
+> Verified: ✓ found in JD
+> Reasoning: While trustworthiness and durability are concerns, the framing centers on organizational usefulness rather than preventing regulatory exposure or bad data reaching decision-makers.
+
+**Run 3:** `moderate` ✗
+> Quote: "monitor health, manage failures, and optimise BigQuery costs and performance"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes operational reliability and failure management, but lacks explicit compliance, regulatory, or stakeholder-trust risk framing that would constitute high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
 
 ⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

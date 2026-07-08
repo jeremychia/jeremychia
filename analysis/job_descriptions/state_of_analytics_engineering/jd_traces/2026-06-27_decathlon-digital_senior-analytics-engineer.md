@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Decathlon Digital FR
 
+**URL:** https://job-boards.eu.greenhouse.io/decathlontechnology/jobs/4798519101?gh_src=cb30d7c2teu
 **Location:** Lille (Btwin Village), Nord, France; Paris, France
 **Date Posted:** 2026-06-27
 
@@ -73,181 +74,213 @@ Decathlon emphasizes inclusion as a core value and explicitly welcomes applicant
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 2 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | mixed | mixed | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | recruiter | mixed | 0% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | strategic | mixed | mixed | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities explicitly emphasize quality, reliability, and relevance as core expectations with structured engineering practices (dbt, great_expectations, CI/CD), with no velocity-oriented language present.
+> Reasoning: The responsibilities consistently emphasize data quality, reliability, and relevance without any velocity signals like fast-paced iteration or rapid delivery.
 
-**Run 2:** `rigour`
-> Quote: "ensuring quality, reliability, and relevance of exposed data"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes data quality, reliability, and relevance as core expectations with no corresponding velocity signals like 'fast-paced' or 'rapid delivery.'
-
-**Run 3:** `rigour`
-> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
+**Run 2:** `rigour` ✓
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality, reliability, and relevance of exposed data with explicit strategy focus and deployment of great_expectations (quality testing), with no mention of speed, velocity, or pace-oriented delivery.
+> Reasoning: The JD emphasizes quality, reliability, and data accuracy throughout; no velocity phrases like 'fast-paced', 'move fast', or 'ship quickly' appear.
+
+**Run 3:** `rigour` ✓
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes data quality, reliability, and relevance as core responsibilities with no velocity or speed signals present.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "automating data transformation pipelines for dashboards, AI models, and analyses"
-> Verified: ✓ found in JD
-> Reasoning: Data serves business intelligence and decision-making across a major digital platform, but without explicit financial reporting, regulatory, audit, or compliance language indicating high-risk consequences.
-
-**Run 2:** `moderate`
-> Quote: "creating la plus vaste plateforme sportive numérique (the largest digital sports platform)"
-> Verified: ✓ found in JD
-> Reasoning: This is an e-commerce/sports platform where data errors affect business decisions and analytics, but the JD contains no financial reporting, regulatory, or compliance language that would elevate risk to high.
-
-**Run 3:** `moderate`
-> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
-> Verified: ✓ found in JD
-> Reasoning: While data quality is emphasized, the role is in sports/e-commerce without explicit financial reporting, compliance, or regulatory language, placing it in moderate risk where data errors affect business operations but not regulatory/financial consequences.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "Contributing to the internal analytics and data engineering community"
-> Verified: ✓ found in JD
-> Reasoning: While the JD mentions analytics and data engineering communities, these appear to be the role holder's own peer groups rather than distinct external collaboration partners.
-
-**Run 2:** `0`
-> Quote: "n/a"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The only collaboration mention is 'contributing to the internal analytics and data engineering community,' which describes the role holder's own data domain rather than named external partner teams.
-
-**Run 3:** `2`
-> Quote: "internal analytics and data engineering community"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly lists two distinct named professional functions—Analytics and Data Engineering—as communities the person collaborates with.
-
-⚠ **LLM inconsistency**: runs gave ['0', '0', '2']
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "building the semantic layer for the sports domain"
-> Verified: ✓ found in JD
-> Reasoning: Named tools deployed in responsibilities (Airflow, dbt, great_expectations) and specific domain-focused building work indicate established mid-stage infrastructure, not early-stage greenfield or mature platform governance at scale.
-
-**Run 2:** `mid`
-> Quote: "Updating datasets and pipelines to support expanding use cases"
-> Verified: ✓ found in JD
-> Reasoning: The JD signals growth and evolution of existing infrastructure with established tooling (dbt, Airflow, Databricks), not building from scratch or maintaining a mature stable platform.
-
-**Run 3:** `mid`
-> Quote: "Updating datasets and pipelines to support expanding use cases"
-> Verified: ✓ found in JD
-> Reasoning: References to maintaining existing datasets and pipelines alongside sophisticated deployed tooling (dbt, Airflow, great_expectations) indicate an established data function in scaling phase rather than early-stage or fully mature.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "building the semantic layer for the sports domain"
-> Verified: ✓ found in JD
-> Reasoning: Domain-specific technical context (semantic layer for sports, specific platform context) demonstrates knowledge that only comes from understanding the actual technical work, not generic boilerplate.
-
-**Run 2:** `mixed`
-> Quote: "Contributing to the internal analytics and data engineering community"
-> Verified: ✓ found in JD
-> Reasoning: The JD mixes technical specificity (semantic layer for sports domain, transformation pipelines for dashboards/AI models) with generic boilerplate responsibilities that could apply to any analytics role.
-
-**Run 3:** `mixed`
-> Quote: "Automatiser et industrialiser les pipelines de transformation de données (automating data transformation pipelines for dashboards, AI models, and analyses), including building the semantic layer for the sports domain"
-> Verified: ✓ found in JD
-> Reasoning: Contains domain-specific technical concepts (semantic layer, sports domain, specific use cases) indicating technical expertise, but overall responsibilities use somewhat generic action verbs and lack precise tool-specific application details.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Contributing to the internal analytics and data engineering community"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize building and maintaining data infrastructure (semantic layer, pipelines, quality) and serving internal analytics/data engineering consumers, not external commercial, product, or finance stakeholders.
-
-**Run 2:** `internal_data`
-> Quote: "Defining technical stack strategies and ensuring quality, reliability, and relevance of exposed data"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's core mission is building and maintaining data infrastructure and a semantic layer for internal data consumers rather than serving commercial, product, or finance stakeholders.
-
-**Run 3:** `internal_data`
-> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
-> Verified: ✓ found in JD
-> Reasoning: The role focuses on building data infrastructure, quality assurance, and platform capabilities that serve other analysts and data consumers within the data function, with no commercial, product, or finance audience emphasis.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
-> Verified: ✓ found in JD
-> Reasoning: The role sets technical direction through strategy definition and quality ownership, but also executes in response to business priorities (updating pipelines to support expanding use cases defined by others).
-
-**Run 2:** `mixed`
-> Quote: "Defining technical stack strategies"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of technical decisions with execution-oriented responsibilities like maintaining pipelines and supporting expanding use cases.
-
-**Run 3:** `mixed`
-> Quote: "Defining technical stack strategies"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic authority (defining technical strategies) with execution responsibilities (automating, maintaining, and updating systems), making it genuinely mixed between direction-setting and delivery.
-
-### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "building the semantic layer for the sports domain"
-> Reasoning: Semantic layers are infrastructure that AI models and LLM applications consume for analytics and text-to-SQL use cases.
-
-**Run 2:** `ai_enabler` ✓
-> Quote: "building the semantic layer for the sports domain"
-> Reasoning: Candidate builds semantic infrastructure that AI models and analytics consume, positioning the role as AI enabler.
-
-**Run 3:** `ai_enabler` ✓
-> Quote: "dashboards, AI models, and analyses; building the semantic layer for the sports domain"
-> Reasoning: Candidate builds data infrastructure (semantic layer) that AI models consume, not using AI coding tools.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
-> Reasoning: Ownership verbs 'defining' and 'ensuring' paired with explicit quality and reliability responsibility.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
-> Reasoning: Uses 'ensuring' (ownership verb) paired with quality/reliability, indicating responsibility for data quality practices.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Defining technical stack strategies and ensuring la qualité, la fiabilité et la pertinence des données exposées"
-> Reasoning: Candidate owns quality and reliability as core responsibility with explicit 'ensuring' language.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "la qualité, la fiabilité et la pertinence des données exposées"
-> Reasoning: Emphasis on data reliability and quality as operational concern; no compliance or regulatory framing present.
+> Quote: "Automatiser et industrialiser les pipelines de transformation de données (automating data transformation pipelines for dashboards, AI models, and analyses)"
+> Verified: ✓ found in JD
+> Reasoning: The JD frames data work as supporting dashboards and analyses without financial, regulatory, or compliance language, indicating moderate business impact rather than high-risk financial or compliance consequences.
 
 **Run 2:** `moderate` ✓
-> Quote: "la qualité, la fiabilité et la pertinence des données exposées; no financial/compliance/regulatory language present"
-> Reasoning: Emphasis on operational reliability and data quality without regulatory framing indicates moderate loss-aversion grounded in pipeline stability.
+> Quote: "creating la plus vaste plateforme sportive numérique (the largest digital sports platform)"
+> Verified: ✓ found in JD
+> Reasoning: E-commerce/digital platform role with no financial reporting, compliance, or regulatory language; typical SaaS/marketplace domain risk.
 
 **Run 3:** `moderate` ✓
-> Quote: "la qualité, la fiabilité et la pertinence des données exposées; no financial/compliance/regulatory language present"
-> Reasoning: Operational reliability framing (quality, reliability) without compliance/trust dominance, confirming moderate loss aversion.
+> Quote: "automating data transformation pipelines for dashboards, AI models, and analyses"
+> Verified: ✓ found in JD
+> Reasoning: Decathlon is a digital sports platform with no explicit financial, compliance, or regulatory risk language, indicating moderate business intelligence impact rather than high-stakes regulatory exposure.
 
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `0` ✗
+> Quote: "Contributing to the internal analytics and data engineering community"
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions analytics and data engineering communities only in the context of contributing to the role holder's own function, not as named cross-functional partners.
+
+**Run 2:** `0` ✗
+> Quote: ""
+> Verified: ✓ found in JD
+> Reasoning: No distinct named partner teams are explicitly listed as collaboration stakeholders in the responsibilities section.
+
+**Run 3:** `0` ✗
+> Quote: "None identified"
+> Verified: ✓ found in JD
+> Reasoning: No explicitly named external partner teams or functions are listed; the role contributes to the analytics and data engineering community but does not enumerate distinct collaboration partners.
+
+⚠ **Disagreement**: manual=`1` vs LLM majority=`0`
+
+### data_team_maturity
+**Manual:** `mature`
+
+**Run 1:** `mid` ✗
+> Quote: "Automatiser et industrialiser les pipelines de transformation de données (automating data transformation pipelines for dashboards, AI models, and analyses), including building the semantic layer for the sports domain."
+> Verified: ✓ found in JD
+> Reasoning: Named tools in responsibilities (dbt, great_expectations, Airflow) and the scaling/industrialization mission indicate an established data function growing and maturing its infrastructure.
+
+**Run 2:** `mid` ✗
+> Quote: "Updating datasets and pipelines to support expanding use cases"
+> Verified: ✓ found in JD
+> Reasoning: Existing infrastructure and named tools (dbt, Airflow, great_expectations) are being evolved and extended, indicating a growing but established data function.
+
+**Run 3:** `mid` ✗
+> Quote: "Updating datasets and pipelines to support expanding use cases"
+> Verified: ✓ found in JD
+> Reasoning: The JD references existing named tools in active use (AWS, Databricks, dbt, great_expectations, Airflow) and infrastructure supporting expanding workloads, indicating scaling rather than greenfield build.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "building the semantic layer for the sports domain"
+> Verified: ✓ found in JD
+> Reasoning: The specific mention of domain-specific semantic layer construction and the precise framing of data infrastructure goals indicate technical knowledge from someone performing this role.
+
+**Run 2:** `recruiter` ✗
+> Quote: "Updating datasets and pipelines to support expanding use cases"
+> Verified: ✓ found in JD
+> Reasoning: Generic action verbs with minimal technical specificity; lacks precise context about what actually happens on a typical day.
+
+**Run 3:** `mixed` ✗
+> Quote: "building the semantic layer for the sports domain"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical references like the sports domain semantic layer and precise tool integration suggest hiring manager input, but generic responsibilities like 'updating datasets' and 'contributing to community' indicate recruiter-templated content.
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'recruiter', 'mixed']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "building the semantic layer for the sports domain"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on building infrastructure, data industrialization, and quality frameworks for internal analytics consumers rather than serving external stakeholders indicates internal-data platform focus.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Contributing to the internal analytics and data engineering community"
+> Verified: ✓ found in JD
+> Reasoning: Primary focus is building and maintaining data infrastructure for internal data consumers and the data team itself, not external GTM, product, or financial teams.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Contributing to the internal analytics and data engineering community"
+> Verified: ✓ found in JD
+> Reasoning: The role prioritizes building data infrastructure and supporting the data function itself rather than serving commercial, product, or finance stakeholders explicitly.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `strategic` ✗
+> Quote: "Defining technical stack strategies"
+> Verified: ✓ found in JD
+> Reasoning: The explicit verb 'Defining' applied to technical strategies combined with ownership of quality/reliability standards indicates autonomy in setting technical direction.
+
+**Run 2:** `mixed` ✓
+> Quote: "Defining technical stack strategies"
+> Verified: ✓ found in JD
+> Reasoning: The role has strategic responsibility for technical direction-setting ('defining strategies') but also executes on automation, maintenance, and community contribution.
+
+**Run 3:** `mixed` ✓
+> Quote: "Defining technical stack strategies"
+> Verified: ✓ found in JD
+> Reasoning: The role includes strategic ownership of technical stack decisions but also execution responsibilities for maintaining and updating existing pipelines.
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While the data supports AI models, there is no expectation that the candidate demonstrates AI user tools or AI enabler capabilities; the role is infrastructure support for AI systems built elsewhere.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: AI is mentioned only as part of what the data pipelines support ('AI models'), not as a skill the candidate is expected to demonstrate or tools they will use.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While pipelines support AI models as outputs, the JD does not expect the candidate to use AI tools or build AI-specific data infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: The explicit ownership verb 'ensuring' applied to quality and reliability, combined with great_expectations in the tech stack, indicates the candidate owns data quality and testing practices.
+
+**Run 2:** `responsibility` ✗
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: Quality and reliability are explicitly framed as responsibilities the role is accountable for through the verb 'ensuring'; great_expectations appears as a tool in the stack.
+
+**Run 3:** `responsibility` ✗
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: The role owns data quality and reliability as explicit responsibilities, with great_expectations present in the technical stack to support this practice.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: Quality and reliability are framed as core operational responsibilities but without risk/compliance language or explicit framing around preventing bad outcomes reaching stakeholders.
+
+**Run 2:** `moderate` ✗
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and quality are emphasized as operational concerns, but without regulatory, compliance, or stakeholder-trust framing; this aligns with production stability over catastrophic risk prevention.
+
+**Run 3:** `moderate` ✗
+> Quote: "ensuring la qualité, la fiabilité et la pertinence des données exposées"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are priorities but framed as delivery capability rather than risk prevention or compliance concerns.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

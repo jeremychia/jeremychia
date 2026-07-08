@@ -5,6 +5,7 @@
 ```
 # Growth Analytics Engineer — Doodle
 
+**URL:** https://careers.doodle.com/jobs/7975504-growth-analytics-engineer
 **Location:** Berlin, London (Hybrid)
 **Date Posted:** 2026-06-27
 
@@ -57,184 +58,213 @@ Doodle is a B2B SaaS scheduling platform with 100+ employees across multiple cou
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | velocity | rigour | 33% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 4 | 4 | 4 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | hiring_manager | recruiter | 33% |
-| stakeholder_orientation | mixed | mixed | mixed | 100% |
-| autonomy_level | mixed | strategic | strategic | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | mixed | 33% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | recruiter | mixed | mixed | 33% | ✓ |
+| stakeholder_orientation | mixed | commercial | mixed | mixed | 33% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
-> Quote: "improving data accessibility and reliability"
-> Verified: ✓ found in JD
-> Reasoning: Reliability is explicitly emphasized as a core expectation in the responsibilities, signaling rigorous system building over velocity-oriented delivery.
-
-**Run 2:** `velocity`
-> Quote: "Design scalable dashboards enabling faster organizational decision-making"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on 'faster' organizational decision-making combined with the company culture description of 'quick implementation of ideas without bureaucratic delays' signals velocity as the primary orientation over rigour or governance.
-
-**Run 3:** `rigour`
-> Quote: "improving data accessibility and reliability"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize reliability and data quality as core expectations rather than speed or shipping velocity.
-
-⚠ **LLM inconsistency**: runs gave ['rigour', 'velocity', 'rigour']
-
-### domain_risk
-
-**Run 1:** `moderate`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue."
-> Verified: ✓ found in JD
-> Reasoning: This is B2B SaaS growth analytics affecting business decisions without the regulatory, compliance, or financial reporting implications that would elevate to high-risk.
-
-**Run 2:** `moderate`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue"
-> Verified: ✓ found in JD
-> Reasoning: B2B SaaS growth and revenue operations where data errors affect business decisions, but without regulatory compliance, financial reporting, or direct revenue recording responsibilities that would elevate risk to high.
-
-**Run 3:** `moderate`
-> Quote: "Conduct deep analyses on cohorts, lifecycle behavior, churn drivers, and pricing opportunities, translating findings into actionable recommendations."
-> Verified: ✓ found in JD
-> Reasoning: Data errors would affect business decisions (churn, pricing) in a SaaS company but lack explicit regulatory or financial reporting consequences.
-
-### collaboration_width
-
-**Run 1:** `4`
-> Quote: "Growth; Product; Revenue; Operations"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions are explicitly identified as partner teams in the opening statement.
-
-**Run 2:** `4`
-> Quote: "Growth; Product; Revenue; Operations"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named teams explicitly identified in the opening statement as partners for enabling data-driven decisions.
-
-**Run 3:** `4`
-> Quote: "Growth; Product; Revenue; Operations"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct business functions are explicitly named in 'across Growth, Product, Revenue, and Operations teams.'
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Define, build, and maintain the KPIs that drive business performance. Design scalable dashboards enabling faster organizational decision-making."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize evolving and scaling existing metrics and systems rather than establishing a data function from zero, indicating a team that has produced something and is growing.
-
-**Run 2:** `mid`
+**Run 1:** `rigour` ✗
 > Quote: "Build reusable datasets and reporting models eliminating manual work while improving data accessibility and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The focus on systematizing existing manual work and establishing reusable infrastructure indicates a data function that exists but is actively growing and maturing, not building from zero.
+> Reasoning: The role prioritizes building sustainable, reusable infrastructure and scalable dashboards as core responsibilities; speed is framed as a secondary benefit of eliminating manual work, not the primary value orientation.
 
-**Run 3:** `mid`
-> Quote: "Define, build, and maintain the KPIs that drive business performance."
+**Run 2:** `rigour` ✗
+> Quote: "improving data accessibility and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The role involves both defining new KPIs and maintaining existing ones, indicating an established analytics function in growth phase rather than greenfield.
+> Reasoning: The responsibilities emphasize defining and maintaining KPIs, building reliable reusable datasets, and conducting deep analysis—prioritizing correctness and data integrity over speed as the primary orientation.
 
-### jd_authorship
-
-**Run 1:** `recruiter`
-> Quote: "Define, build, and maintain the KPIs that drive business performance. Design scalable dashboards enabling faster organizational decision-making."
+**Run 3:** `mixed` ✓
+> Quote: "Build reusable datasets and reporting models eliminating manual work while improving data accessibility and reliability"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic action verbs and boilerplate concepts without technical specificity about systems, scale, volumes, or methodology that would indicate hands-on domain experience.
+> Reasoning: The role emphasizes both speed (eliminating manual work, faster decision-making) and reliability (improving data accessibility and reliability, deep analyses), with company context reinforcing quick implementation, creating a mixed orientation.
 
-**Run 2:** `hiring_manager`
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
+
+⚠ **LLM inconsistency**: runs gave ['rigour', 'rigour', 'mixed']
+
+### domain_risk
+**Manual:** `moderate`
+
+**Run 1:** `moderate` ✓
 > Quote: "Develop insights into acquisition, activation, monetization, retention, and customer behavior patterns"
 > Verified: ✓ found in JD
-> Reasoning: The explicit use of the AARRR growth analytics framework combined with specific metric types (cohorts, lifecycle behavior, churn drivers, pricing opportunities) indicates technical depth from someone with direct growth analytics experience.
-
-**Run 3:** `recruiter`
-> Quote: "Design scalable dashboards enabling faster organizational decision-making."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs and lack the technical specificity (named tools with application context, scale numbers, methodology) that would indicate hiring manager authorship.
-
-⚠ **LLM inconsistency**: runs gave ['recruiter', 'hiring_manager', 'recruiter']
-
-### stakeholder_orientation
-
-**Run 1:** `mixed`
-> Quote: "enabling data-driven decisions across Growth, Product, Revenue, and Operations teams"
-> Verified: ✓ found in JD
-> Reasoning: The role genuinely emphasizes both product-oriented stakeholders (Growth, Product, experimentation) and commercial-oriented stakeholders (Revenue, pricing) with roughly equal weight in the responsibilities.
-
-**Run 2:** `mixed`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue"
-> Verified: ✓ found in JD
-> Reasoning: The role genuinely balances product/growth orientation (experimentation, activation, retention) with commercial/revenue orientation (Enterprise Revenue, churn drivers, pricing opportunities) across equally weighted business models.
-
-**Run 3:** `mixed`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue."
-> Verified: ✓ found in JD
-> Reasoning: The role has equal responsibility for commercial audiences (Enterprise Revenue, churn, pricing) and product audiences (PLG, experiments, AI effectiveness).
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Define, build, and maintain the KPIs that drive business performance"
-> Verified: ✓ found in JD
-> Reasoning: The role has strategic autonomy to define what gets measured (strategic ownership of analytics) while executing against priorities set by Growth and Revenue teams (execution in service of business).
-
-**Run 2:** `strategic`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue"
-> Verified: ✓ found in JD
-> Reasoning: 'Own' signals domain ownership and direction-setting authority over analytics for Growth and Revenue functions, not execution of pre-defined work.
-
-**Run 3:** `strategic`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue."
-> Verified: ✓ found in JD
-> Reasoning: The 'own' language indicates strategic responsibility for determining what analytics are delivered to business domains, not just executing a pre-defined roadmap.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business"
-> Reasoning: Core analytics role with no mention of AI tools, AI-assisted coding, or GenAI infrastructure.
-
-**Run 2:** `none` ✓
-> Quote: "improving data accessibility and reliability"
-> Reasoning: No AI skills, tools, or infrastructure responsibilities mentioned; standard analytics work.
-
-**Run 3:** `none` ✓
-> Quote: "improving data accessibility and reliability"
-> Reasoning: Standard analytics work with no AI/GenAI skill signals.
-
-
-### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Define, build, and maintain the KPIs that drive business performance"
-> Reasoning: Role emphasizes KPI ownership and decision enablement without explicit testing, quality, or data contract language.
-
-**Run 2:** `responsibility` ✗
-> Quote: "Define, build, and maintain the KPIs that drive business performance"
-> Reasoning: Ownership verbs (define, build, maintain) indicate responsibility for accuracy and correctness of key metrics.
-
-**Run 3:** `absent` ✓
-> Quote: "improving data accessibility and reliability"
-> Reasoning: No explicit testing/quality ownership verbs or tool mentions.
-
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
-
-### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "data errors affect business decisions without regulatory or financial reporting consequences"
-> Reasoning: Operational reliability concern (data affecting business decisions) explicitly excludes regulatory or compliance consequences.
+> Reasoning: Revenue and retention decisions carry business impact but lack financial reporting, regulatory compliance, or audit language typical of high-risk SaaS roles.
 
 **Run 2:** `moderate` ✓
-> Quote: "data errors affect business decisions"
-> Reasoning: Emphasizes operational business impact of data quality; explicitly excludes regulatory/compliance concerns.
+> Quote: "Develop insights into acquisition, activation, monetization, retention, and customer behavior patterns"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business decision-making in a B2B SaaS context without explicit financial reporting, compliance, or regulatory responsibilities.
 
 **Run 3:** `moderate` ✓
-> Quote: "data errors affect business decisions without regulatory or financial reporting consequences"
-> Reasoning: Operational reliability framing (decision impact) without compliance dominance signals moderate loss aversion.
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue"
+> Verified: ✓ found in JD
+> Reasoning: The role involves revenue tracking and business decision support but lacks explicit financial reporting, regulatory compliance, or audit framing typical of high-risk sectors.
 
+### collaboration_width
+**Manual:** `4`
+
+**Run 1:** `4` ✓
+> Quote: "enabling data-driven decisions across Growth, Product, Revenue, and Operations teams"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions explicitly listed as collaboration partners: Growth, Product, Revenue, Operations.
+
+**Run 2:** `4` ✓
+> Quote: "Growth; Product; Revenue; Operations"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct teams are explicitly named in the intro as primary stakeholders for this role's analytics work.
+
+**Run 3:** `4` ✓
+> Quote: "Growth; Product; Revenue; Operations"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions are explicitly listed as primary collaboration partners in the opening description.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Build reusable datasets and reporting models eliminating manual work while improving data accessibility and reliability"
+> Verified: ✓ found in JD
+> Reasoning: The role builds new data products and scales existing infrastructure with named tools (dbt, Redshift, Looker) already in place, indicating an established function growing beyond single-person setup.
+
+**Run 2:** `mid` ✓
+> Quote: "Build reusable datasets and reporting models eliminating manual work while improving data accessibility and reliability"
+> Verified: ✓ found in JD
+> Reasoning: The role involves maintaining and enhancing existing data products and frameworks rather than building from zero, indicating a mid-stage team with established infrastructure.
+
+**Run 3:** `mid` ✓
+> Quote: "Build reusable datasets and reporting models eliminating manual work while improving data accessibility and reliability"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on building reusable infrastructure and improving existing systems indicates an established data function undergoing growth and scaling, characteristic of mid-maturity teams.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `recruiter` ✗
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue. Develop insights into acquisition, activation, monetization, retention, and customer behavior patterns."
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use generic action verbs (Own, Develop insights) and domain terminology without technical specificity: no scale numbers, named technical challenges, or methodologies that would indicate hiring manager insight.
+
+**Run 2:** `mixed` ✓
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities include business-model specificity (PLG vs. Enterprise distinction) suggesting hiring manager input, but technical responsibilities lack the detailed scale, methodology, or challenge context typical of hiring managers writing alone.
+
+**Run 3:** `mixed` ✓
+> Quote: "Conduct deep analyses on cohorts, lifecycle behavior, churn drivers, and pricing opportunities, translating findings into actionable recommendations"
+> Verified: ✓ found in JD
+> Reasoning: The JD demonstrates specific business context awareness (PLG, Enterprise Revenue, cohort analysis, churn drivers) alongside generic action verbs and no quantified scale details, indicating mixed authorship.
+
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'mixed']
+
+### stakeholder_orientation
+**Manual:** `mixed`
+
+**Run 1:** `commercial` ✗
+> Quote: "Conduct deep analyses on cohorts, lifecycle behavior, churn drivers, and pricing opportunities, translating findings into actionable recommendations"
+> Verified: ✓ found in JD
+> Reasoning: The dominant focus is on revenue outcomes (churn, pricing, monetization) and commercial decision-making for Growth and Revenue teams rather than product experimentation or internal data infrastructure.
+
+**Run 2:** `mixed` ✓
+> Quote: "enabling data-driven decisions across Growth, Product, Revenue, and Operations teams"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves four distinct stakeholder categories with equal emphasis: Growth/Product, commercial/Revenue, and internal data/Operations.
+
+**Run 3:** `mixed` ✓
+> Quote: "Conduct deep analyses on cohorts, lifecycle behavior, churn drivers, and pricing opportunities"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities span both product analytics (cohorts, lifecycle, experimentation) and commercial focus (churn drivers, pricing, monetization), equally weighted across growth product and revenue audiences.
+
+⚠ **LLM inconsistency**: runs gave ['commercial', 'mixed', 'mixed']
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `strategic` ✓
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around owning and defining the analytics function for specific business domains (Growth PLG, Enterprise Revenue) with verbs like Define, Design, and Build, indicating strategic direction-setting rather than execution within pre-defined scope.
+
+**Run 2:** `strategic` ✓
+> Quote: "Define, build, and maintain the KPIs that drive business performance"
+> Verified: ✓ found in JD
+> Reasoning: The role includes the strategic responsibility to define KPIs, which sets how business performance is measured rather than executing against pre-set metrics.
+
+**Run 3:** `strategic` ✓
+> Quote: "Define, build, and maintain the KPIs that drive business performance"
+> Verified: ✓ found in JD
+> Reasoning: The responsibility to 'define' KPIs, design dashboards, and build analytics infrastructure indicates ownership of metrics strategy and analytical direction rather than execution of assigned work.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The only AI mention—'evaluating AI initiative effectiveness'—concerns measuring business impact of AI initiatives rather than expecting the candidate to use AI tools or build AI-ready infrastructure.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions evaluating AI initiative effectiveness but does not expect the candidate to demonstrate AI coding skills, build AI infrastructure, or use AI tools in their work.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions evaluating AI initiative effectiveness but does not require the candidate to use AI tools for productivity or build AI-ready data infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "improving data accessibility and reliability"
+> Verified: ✓ found in JD
+> Reasoning: Reliability is mentioned as a goal but no testing frameworks, data contracts, or data quality ownership practices are named or framed as responsibilities.
+
+**Run 2:** `absent` ✗
+> Quote: "improving data accessibility and reliability"
+> Verified: ✓ found in JD
+> Reasoning: Data reliability is mentioned as an outcome of good dataset design, but testing practices, data contracts, or quality frameworks are not framed as owned responsibilities or listed as tool requirements.
+
+**Run 3:** `absent` ✗
+> Quote: "improving data accessibility and reliability"
+> Verified: ✓ found in JD
+> Reasoning: While reliability is mentioned as a design attribute, no testing frameworks, data contracts, quality ownership, or observability practices are explicitly described as responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "valuing diverse perspectives and quick implementation of ideas without bureaucratic delays"
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role entirely around delivery capability and business impact with no mention of risk, compliance, regulatory concerns, or data trustworthiness; company culture emphasizes speed over governance.
+
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in delivery and capability terms with no emphasis on preventing bad outcomes, compliance, regulatory exposure, or stakeholder trust.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around delivery, speed, and business insights with no explicit emphasis on preventing bad outcomes, compliance risks, or stakeholder trust concerns.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

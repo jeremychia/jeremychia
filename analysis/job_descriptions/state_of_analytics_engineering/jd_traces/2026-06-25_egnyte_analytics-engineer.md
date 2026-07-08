@@ -4,8 +4,8 @@
 
 ```
 # Analytics Engineer — Egnyte
-**URL:** https://jobs.jobvite.com/egnyte/job/oNOlzfwf
 
+**URL:** https://jobs.jobvite.com/egnyte/job/oNOlzfwf
 **Location:** Poznań, Poland (Remote option available)
 **Date:** 2026-06-25
 
@@ -52,179 +52,211 @@ Benefits:
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | mixed | mixed | recruiter | 33% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | mixed | mixed | execution | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Create test cases for data accuracy"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, CI/CD management, documentation, and data quality—core rigour signals with no velocity language present.
+> Reasoning: The responsibilities emphasize testing, CI/CD processes, and data quality as core expectations, with no velocity or shipping language present.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
+> Quote: "Create test cases for data accuracy; Manage CI/CD processes"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes testing, CI/CD management, documentation, and data quality assurance with zero velocity language, indicating a rigour-focused orientation.
+
+**Run 3:** `rigour` ✓
 > Quote: "Create test cases for data accuracy"
 > Verified: ✓ found in JD
-> Reasoning: The explicit emphasis on testing, CI/CD management, and data quality signals a rigour-focused orientation with no competing velocity language.
-
-**Run 3:** `rigour`
-> Quote: "Create test cases for data accuracy"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, CI/CD processes, data documentation, and quality, with no signals of speed or iteration velocity.
+> Reasoning: Multiple rigour signals (testing, CI/CD, documentation, quality assurance) dominate the responsibilities with no velocity language present.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Address data quality issues"
+**Run 1:** `moderate` ✓
+> Quote: "Design and build data transformation pipelines"
 > Verified: ✓ found in JD
-> Reasoning: As a SaaS analytics role without explicit financial or regulatory context, data errors affect business decisions and operations rather than compliance or P&L.
+> Reasoning: This is a standard SaaS analytics infrastructure role with no explicit financial reporting, compliance, or regulatory language in the responsibilities.
 
-**Run 2:** `moderate`
-> Quote: "Address data quality issues"
+**Run 2:** `moderate` ✓
+> Quote: "secure multi-cloud platform for content security and governance"
 > Verified: ✓ found in JD
-> Reasoning: While Egnyte operates in a regulated security sector, the JD focuses on internal analytics infrastructure without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: The company operates in governance and security but the JD contains no explicit financial, regulatory, or compliance language, indicating moderate rather than high risk.
 
-**Run 3:** `moderate`
-> Quote: "Address data quality issues"
+**Run 3:** `moderate` ✓
+> Quote: "secure multi-cloud platform for content security and governance"
 > Verified: ✓ found in JD
-> Reasoning: The JD indicates data accuracy matters for business operations but does not reference financial reporting, compliance, or regulatory stakes that would elevate it to high-risk.
+> Reasoning: While the company operates in security and governance, the JD responsibilities lack explicit financial reporting, regulatory compliance, or audit language that would indicate high domain risk.
 
 ### collaboration_width
+**Manual:** `0`
 
-**Run 1:** `0`
+**Run 1:** `0` ✓
 > Quote: "Collaborate across departments on data strategy"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions cross-functional collaboration generically but does not name specific teams, functions, or partner groups.
+> Reasoning: The JD mentions cross-functional collaboration but does not name any specific teams, functions, or partner groups.
 
-**Run 2:** `0`
+**Run 2:** `0` ✓
 > Quote: "Collaborate across departments on data strategy"
 > Verified: ✓ found in JD
-> Reasoning: Departments are mentioned generically without naming specific functions, teams, or partner groups.
+> Reasoning: The JD mentions generic collaboration language but does not identify any named partner teams such as Finance, Product, Engineering, or Data Science.
 
-**Run 3:** `0`
+**Run 3:** `0` ✓
 > Quote: "Collaborate across departments on data strategy"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions cross-departmental collaboration but does not name any specific functions, teams, or roles.
+> Reasoning: Collaboration is described generically as 'across departments' without naming specific functions such as Finance, Product, or Engineering.
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (dbt) and CI/CD management indicate an established data function that is growing and evolving its analytics capabilities.
+> Reasoning: The role develops new semantic layer capabilities on top of existing named tools (dbt, BigQuery, CI/CD), indicating an established data team in growth phase.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
 > Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (dbt, BigQuery, CI/CD) indicate an established data function with existing infrastructure being developed and extended.
+> Reasoning: The JD names specific tools (dbt, BigQuery, Terraform) in responsibilities rather than just requirements, indicating existing infrastructure that the role will develop and extend.
 
-**Run 3:** `mid`
+**Run 3:** `mid` ✓
 > Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: The JD assumes existing tools and infrastructure (dbt, BigQuery, CI/CD) are already in place, with the role focused on developing and improving them rather than building from zero or managing a large established structure.
+> Reasoning: The presence of named tools in responsibilities (dbt, BigQuery, CI/CD) applied in context indicates an established data function extending and improving existing infrastructure rather than building from zero.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "Develop dbt semantic layer architecture; Collaborate across departments on data strategy"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Some responsibilities are technically specific (dbt semantic layer, BigQuery, Terraform), while others use generic boilerplate (collaborate, document, address issues).
-
-**Run 2:** `mixed`
-> Quote: "Develop dbt semantic layer architecture; Collaborate across departments on data strategy"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The semantic layer architecture responsibility shows technical specificity, while most other responsibilities use generic boilerplate verbs indicating dual authorship.
-
-**Run 3:** `recruiter`
-> Quote: "Collaborate across departments on data strategy"
+**Run 1:** `mixed` ✓
+> Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities rely on generic boilerplate verbs (collaborate, manage, create, document, address) without specific technical context, scale, or methodology details that would indicate hiring manager authorship.
+> Reasoning: Specific technical language (dbt semantic layers, BigQuery, CI/CD) indicates hiring manager input, while generic phrases like "Collaborate across departments" and "Agile team collaboration" indicate recruiter involvement.
+
+**Run 2:** `mixed` ✓
+> Quote: "Develop dbt semantic layer architecture; Create test cases for data accuracy"
+> Verified: ✓ found in JD
+> Reasoning: The JD contains technical specificity (dbt semantic layer architecture, CI/CD processes) alongside generic action verbs, suggesting input from both hiring manager and recruiter.
+
+**Run 3:** `recruiter` ✗
+> Quote: "Collaborate across departments on data strategy; Manage CI/CD processes; Address data quality issues"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities rely on generic action verbs and boilerplate language without the specific technical context (scale, volumes, methodology application) that only a hiring manager would know.
 
 ⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: The bulk of responsibilities focus on building data infrastructure and semantic layers for consumption by other data consumers rather than external business or GTM stakeholders.
+> Reasoning: The role focuses on building data infrastructure (transformation pipelines, semantic layers, models) for internal data consumers rather than external commercial or business stakeholders.
 
-**Run 2:** `internal_data`
+**Run 2:** `internal_data` ✓
 > Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is building and maintaining data infrastructure and the semantic layer that serves internal analytics consumers.
+> Reasoning: The responsibilities focus on data infrastructure, semantic modeling, documentation, and data quality testing—all serving internal data consumers rather than commercial or business stakeholders.
 
-**Run 3:** `internal_data`
+**Run 3:** `internal_data` ✓
 > Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on dbt semantic layer development and data model documentation indicates the primary audience is internal data consumers enabling self-serve analytics rather than commercial, product, or finance stakeholders.
+> Reasoning: The role focuses on building data infrastructure and self-serve analytics foundations for internal data consumers and the analytics platform itself.
 
 ### autonomy_level
+**Manual:** `execution`
 
-**Run 1:** `execution`
-> Quote: "Create test cases for data accuracy"
+**Run 1:** `mixed` ✗
+> Quote: "Design and build data transformation pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities are focused on delivering specific technical outputs and managing defined processes within scope rather than setting overall direction or strategy.
+> Reasoning: Strategic ownership of technical direction (designing and building pipelines, developing architecture) is balanced by "Collaborate across departments on data strategy," indicating decisions happen within a collaborative framework.
 
-**Run 2:** `execution`
-> Quote: "Manage CI/CD processes"
+**Run 2:** `mixed` ✗
+> Quote: "Develop dbt semantic layer architecture"
 > Verified: ✓ found in JD
-> Reasoning: Most responsibilities are execution-oriented (managing processes, creating tests, documenting) with design responsibilities narrowly scoped to technical components rather than broader strategy.
+> Reasoning: The role includes strategic ownership of the semantic layer architecture combined with operational execution tasks (managing CI/CD, creating tests, documenting models).
 
-**Run 3:** `execution`
-> Quote: "Collaborate across departments on data strategy"
+**Run 3:** `execution` ✓
+> Quote: "Design and build data transformation pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The phrasing 'collaborate on' rather than 'define' or 'own' strategy, combined with execution-focused tasks (manage, create, document, address), indicates the role executes work scoped by others rather than setting direction.
+> Reasoning: While the role includes design tasks, the overall framing is execution-oriented: delivering against predefined responsibilities rather than setting strategic direction or shaping analytics delivery.
+
+⚠ **Disagreement**: manual=`execution` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'execution']
 
 ### ai_role
-**Run 1:** `ai_enabler` ✓
-> Quote: "Develop dbt semantic layer architecture"
-> Reasoning: Semantic layer infrastructure enables AI consumption (text-to-SQL, GenAI patterns).
+**Manual:** ``
 
-**Run 2:** `ai_enabler` ✓
-> Quote: "Develop dbt semantic layer architecture"
-> Reasoning: Semantic layer architecture provides AI-ready infrastructure for GenAI and analytics consumption.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no requirements for candidate AI skills, AI coding tools, or AI-enabled data work.
 
-**Run 3:** `ai_enabler` ✓
-> Quote: "Develop dbt semantic layer architecture"
-> Reasoning: Semantic layer is infrastructure AI consumes for natural language to SQL translation.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or AI-ready data infrastructure.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, LLMs, agentic workflows, or AI-enabled infrastructure; no AI skill is expected of the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Create test cases for data accuracy"
-> Reasoning: Candidate owns quality practice through explicit test case creation.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "Create test cases for data accuracy"
-> Reasoning: Candidate owns test creation, demonstrating responsibility for quality and data accuracy practices.
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as a core responsibility the candidate owns ("Create test cases") rather than as a tool requirement.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `responsibility` ✗
 > Quote: "Create test cases for data accuracy"
-> Reasoning: Candidate owns test case creation as quality practice responsibility.
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as a responsibility the candidate owns ('Create test cases'), not merely as a tool to be familiar with.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Create test cases for data accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as an owned responsibility with the action verb 'create', indicating the candidate is accountable for defining and implementing the testing practice.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✓
-> Quote: "secure multi-cloud platform for content security and governance"
-> Reasoning: Governance and security dominance signals compliance/trust-driven framing over operational reliability.
+**Manual:** ``
 
-**Run 2:** `high` ✓
-> Quote: "secure multi-cloud platform for content security and governance"
-> Reasoning: Governance and compliance framing indicates high loss aversion centered on trustworthiness and regulatory concerns.
+**Run 1:** `moderate` ✗
+> Quote: "Create test cases for data accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are explicit concerns through testing and CI/CD management, but the primary role framing is delivery and capability building rather than compliance or catastrophic risk prevention.
 
-**Run 3:** `high` ✓
-> Quote: "secure multi-cloud platform for content security and governance"
-> Reasoning: Compliance and governance responsibilities indicate loss aversion centered on trust and regulatory concerns.
+**Run 2:** `moderate` ✗
+> Quote: "Create test cases for data accuracy; Address data quality issues"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability and data accuracy concerns but lacks compliance, regulatory, or stakeholder-trust language that would indicate high loss aversion.
 
+**Run 3:** `moderate` ✗
+> Quote: "Create test cases for data accuracy; Address data quality issues"
+> Verified: ✓ found in JD
+> Reasoning: Data accuracy and quality appear as operational reliability concerns secondary to delivery, without regulatory, compliance, or stakeholder-trust language that would elevate to high loss aversion framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

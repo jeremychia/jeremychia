@@ -4,8 +4,8 @@
 
 ```
 # Senior Analytics Engineer — Ascenda Loyalty
-**URL:** https://jobs.gem.com/ascenda-loyalty/am9icG9zdDofWVA0wxcjbbNzBTyR7eUG
 
+**URL:** https://jobs.gem.com/ascenda-loyalty/am9icG9zdDofWVA0wxcjbbNzBTyR7eUG
 **Location:** Singapore • Ho Chi Minh, Vietnam
 **Date Posted:** 2026-06-27
 
@@ -50,191 +50,218 @@ Strong SQL and Python skills, with a performance-driven mindset and production-r
 Strong analytical and problem-solving skills, with the ability to draw insights and make data-driven recommendations.
 Excellent business acumen — able to translate product and business stakeholder needs into scalable data models and semantic layers.
 Outstanding communicator who can articulate architectural trade-offs and influence both technical and non-technical audiences.
-Collaborative, proactive, and self-motivated, with a commitment to continuous learning and improvement.
-Keeps up-to-date with emerging data and AI technologies, activel…[truncated]
+Collaborative, proactive, and self-motivated, with a commitment to continuous learning an…[truncated]
 ```
 
 ---
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | moderate | 33% |
-| collaboration_width | 6 | 6 | 6 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | hiring_manager | hiring_manager | 33% |
-| stakeholder_orientation | internal_data | mixed | internal_data | 33% |
-| autonomy_level | strategic | strategic | strategic | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 6 | 7 | 8 | 5 | 0% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | high | moderate | moderate | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "Mentor analytics engineers, define best practices, and embed data quality, governance, and observability throughout our data stack"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality, governance, observability, testing, and reliability across multiple paragraphs, vastly outweighing the single mention of a 'fast-moving environment'.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "designing, building, and governing our data medallion architecture to deliver reliable, scalable, and high-trust data products"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, governance, observability, testing, and standardization throughout, with no velocity signals driving the core responsibilities.
+> Reasoning: The role emphasizes governance, reliability, trust, and architectural standardization as core expectations, with no velocity or speed signals present.
 
-**Run 3:** `rigour`
-> Quote: "design, building, and governing our data medallion architecture to deliver reliable, scalable, and high-trust data products"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities emphasize reliability, governance, data quality, and observability with explicit mentions of testing practices and CI/CD—rigour signals outnumber velocity mentions by more than 2:1 despite references to a 'fast-moving environment'.
+**Run 2:** `rigour` ✓
+> Quote: "embed data quality, governance, and observability throughout our data stack"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities section consistently emphasizes data quality, governance, best practices, and reliability rather than speed or delivery pace, with no velocity-oriented language in core duties.
+
+**Run 3:** `rigour` ✓
+> Quote: "data quality, governance, and observability throughout our data stack"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize governance, quality, and observability as core practices the candidate will embed, not speed or iteration.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
-> Quote: "reliable, scalable, and high-trust data products — serving both internal and external stakeholders"
-> Verified: ✓ found in JD
-> Reasoning: The role operates in fintech serving major financial institutions (American Express, HSBC, Capital One), with explicitly stated 'high-trust data products' affecting public-facing loyalty program analytics at enterprise scale.
-
-**Run 2:** `high`
+**Run 1:** `high` ✓
 > Quote: "We are behind the world-class rewards propositions of major banks and fintechs around the globe"
 > Verified: ✓ found in JD
-> Reasoning: The role operates within fintech/banking serving regulated financial institutions, where data errors directly impact financial operations and compliance.
+> Reasoning: The role serves fintech and banking clients whose customer-facing rewards programs and financial operations depend on accurate data, placing errors in the high-impact financial domain.
 
-**Run 3:** `moderate`
-> Quote: "loyalty-as-a-service business models its data, metrics, and data products for enterprise clients and partners"
+**Run 2:** `high` ✓
+> Quote: "delivering reliable, scalable, and high-trust data products — serving both internal and external stakeholders"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role serves major financial institutions and fintechs (American Express, HSBC, Brex, etc.) where data errors directly impact financial decision-making in a regulated industry.
+
+**Run 3:** `high` ✓
+> Quote: "high-trust data products — serving both internal and external stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: While the fintech/banking sector inherently implies high financial risk, the JD uses generic data quality and architecture language rather than explicit financial reporting, regulatory, or compliance terminology.
-
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+> Reasoning: The explicit 'high-trust' framing combined with fintech sector (banks, fintechs) and external enterprise clients indicates financial/operational data affecting critical decisions.
 
 ### collaboration_width
+**Manual:** `6`
 
-**Run 1:** `6`
-> Quote: "product managers; commercial account managers; engineers; data scientists; data engineers; analytics engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD names six distinct functions explicitly: Product (product managers), Commercial (commercial account managers), Engineering (engineers), Data Science (data scientists), Data Engineering (data engineers), and Analytics (analytics engineers).
+**Run 1:** `7` ✗
+> Quote: "product managers, commercial account managers, engineers, and data scientists; analysts; data engineers; AI engineers"
+> Verified: ✓ found in JD
+> Reasoning: Seven distinct named partner functions are explicitly mentioned across the collaboration and impact sections of the role.
 
-**Run 2:** `6`
-> Quote: "product managers; commercial account managers; engineers; data scientists; data engineers; AI engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names six distinct partner functions across product, commercial, software engineering, data, and AI domains.
+**Run 2:** `8` ✗
+> Quote: "product managers; commercial account managers; engineers; data scientists; data engineers; AI engineers; analytics engineers; global partners"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names eight distinct partner functions and external parties across product, commercial, engineering, data science, data engineering, AI/ML, analytics, and external enterprise partners.
 
-**Run 3:** `6`
-> Quote: "product managers; commercial account managers; engineers; data scientists; data engineers; AI engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Six distinct named teams appear across responsibilities: Product (product managers), Commercial (commercial account managers), Engineering (engineers), Data Science (data scientists), Data Engineering (data engineers), and AI/ML (AI engineers).
+**Run 3:** `5` ✗
+> Quote: "product managers, commercial account managers, engineers, and data scientists; AI engineers"
+> Verified: ✓ found in JD
+> Reasoning: Five distinct named functions identified: product, commercial, engineering, data science, and AI/ML teams.
+
+⚠ **Disagreement**: manual=`6` vs LLM majority=`7`
+
+⚠ **LLM inconsistency**: runs gave ['7', '8', '5']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks to transform raw data into self-explanatory, performant, and reusable datasets for analytics and reporting"
 > Verified: ✓ found in JD
-> Reasoning: The JD references existing infrastructure, tools, and frameworks (dbt, Redshift, Airflow, medallion architecture) being standardized and evolved, plus existing analytics engineers being mentored, indicating a growing team rather than greenfield or fully mature scale.
+> Reasoning: Named tools (dbt frameworks) appear in responsibilities with clear application context, and the role involves maturing and scaling existing infrastructure rather than building from zero.
 
-**Run 2:** `mid`
-> Quote: "Mentor analytics engineers, define best practices, and embed data quality, governance, and observability throughout our data stack."
+**Run 2:** `mid` ✓
+> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks to transform raw data into self-explanatory, performant, and reusable datasets for analytics and reporting"
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (AWS Redshift, dbt, Airflow), multiple analytics engineers already present, but best practices still being defined indicates a growing team.
+> Reasoning: The JD names established tools and infrastructure (dbt, Redshift, Airflow, Meltano) being evolved, implies multiple analytics engineer roles to mentor, and describes scaling an existing practice rather than building from zero.
 
-**Run 3:** `mid`
-> Quote: "Mentor analytics engineers, define best practices, and embed data quality, governance, and observability throughout our data stack."
+**Run 3:** `mid` ✓
+> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks to transform raw data"
 > Verified: ✓ found in JD
-> Reasoning: The mention of an existing analytics engineering team to mentor, combined with named tools in responsibilities (dbt, Airflow, Redshift) and focus on evolving rather than building from zero, indicates mid-stage maturity with growth trajectory.
+> Reasoning: The data function has existing tools and frameworks in place, and the role scales them rather than building from zero, indicating mid-stage maturity.
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `mixed`
-> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks to transform raw data into self-explanatory, performant, and reusable datasets for analytics and reporting"
+**Run 1:** `hiring_manager` ✓
+> Quote: "Champion dimensional modelling principles, ensuring our medallion architecture scales efficiently with increasing data volume, variety, and complexity"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities combine specific technical details (named tools with context: dbt, medallion architecture, dimensional modelling, Kimball/Inmon/Data Vault methodologies, CI/CD practices) alongside generic phrases like 'collaborate closely' and 'work with teams'.
+> Reasoning: The responsibilities combine specific architectural patterns (medallion architecture, dimensional modelling) with scale context (data volume, variety, complexity) that only someone who has implemented these architectures would specify.
 
-**Run 2:** `hiring_manager`
-> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks to transform raw data into self-explanatory, performant, and reusable datasets for analytics and reporting"
+**Run 2:** `hiring_manager` ✓
+> Quote: "Champion dimensional modelling principles, ensuring our medallion architecture scales efficiently with increasing data volume, variety, and complexity"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical architecture patterns (medallion, semantic layers), named tools with context (dbt frameworks, macros), and methodology references (Kimball, Inmon, Data Vault) that only come from hands-on experience.
+> Reasoning: The responsibilities use specific architectural methodologies (medallion, Kimball, Inmon, Data Vault), named tools with technical context, and scale-aware language that only someone doing the work would naturally articulate.
 
-**Run 3:** `hiring_manager`
-> Quote: "Deep hands-on expertise with dbt, applying best practices in modular design, macros, reusable patterns, and unit testing."
+**Run 3:** `hiring_manager` ✓
+> Quote: "Champion dimensional modelling principles, ensuring our medallion architecture scales efficiently with increasing data volume, variety, and complexity"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains technical specificity about dbt patterns, data vault methodologies, medallion architecture, and specific tool implementations that goes well beyond generic recruiter language, indicating authorship by someone with hands-on experience in this role.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
+> Reasoning: The specific reference to dimensional modelling and medallion architecture demonstrates hands-on technical knowledge of the exact work.
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
+> Quote: "Architect the data foundations that enable both internal teams and global partners to turn raw data into trusted insights powering real business decisions"
+> Verified: ✓ found in JD
+> Reasoning: The primary impact is building and governing the data platform and semantic layers that internal analysts, engineers, and data consumers depend on, rather than directly serving commercial, product, or finance functions.
+
+**Run 2:** `internal_data` ✓
 > Quote: "Empower analysts, engineers, and business teams with high-quality semantic layers and data models that serve as a single source of truth across Ascenda and our partner ecosystem"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary impact is enabling data team members and analytics consumers through infrastructure, platforms, and data models; external clients consume the data products these internal foundations enable.
+> Reasoning: The core responsibilities focus on building data infrastructure and architecture for internal and external data consumers, with primary emphasis on the data function itself rather than commercial, product, or financial stakeholder alignment.
 
-**Run 2:** `mixed`
-> Quote: "You will shape how our loyalty-as-a-service business models its data, metrics, and data products for enterprise clients and partners"
+**Run 3:** `internal_data` ✓
+> Quote: "Empower analysts, engineers, and business teams with high-quality semantic layers and data models that serve as a single source of truth"
 > Verified: ✓ found in JD
-> Reasoning: The role serves both external commercial stakeholders (enterprise clients and partners) and internal data/engineering teams, with genuine emphasis on both.
-
-**Run 3:** `internal_data`
-> Quote: "Empower analysts, engineers, and business teams with high-quality semantic layers and data models that serve as a single source of truth across Ascenda and our partner ecosystem."
-> Verified: ✓ found in JD
-> Reasoning: The role's primary impact is designing and maintaining data infrastructure and models for internal and partner data consumers rather than serving a specific external business function like finance, product, or commercial teams.
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
+> Reasoning: The core impact is building a data platform that internal teams consume as a single source of truth for analytics infrastructure.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `strategic` ✓
 > Quote: "You will shape how our loyalty-as-a-service business models its data, metrics, and data products for enterprise clients and partners"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly framed as 'technical leader' and 'Data Architect' with a mandate to define standards, mentor others, architect foundations, and champion modelling principles—all strategic verbs—rather than executing against others' priorities.
+> Reasoning: The role is explicitly framed around setting direction and defining standards for data modelling across the business, not executing priorities defined by others.
 
-**Run 2:** `strategic`
-> Quote: "act as a Data Architect and technical leader, designing, building, and governing our data medallion architecture"
+**Run 2:** `strategic` ✓
+> Quote: "You will act as a Data Architect and technical leader, designing, building, and governing our data medallion architecture"
 > Verified: ✓ found in JD
-> Reasoning: The JD positions this as a leadership role that architects, shapes, champions, and defines the data strategy rather than executing direction from others.
+> Reasoning: The role is framed around owning and shaping data architecture strategy, defining governance standards, and mentoring practitioners rather than executing direction set by other teams.
 
-**Run 3:** `strategic`
-> Quote: "You will shape how our loyalty-as-a-service business models its data, metrics, and data products for enterprise clients and partners."
+**Run 3:** `strategic` ✓
+> Quote: "you will shape how our loyalty-as-a-service business models its data, metrics, and data products"
 > Verified: ✓ found in JD
-> Reasoning: The explicit 'you will shape' language, combined with emphasis on defining architecture, establishing best practices, and mentoring the team, indicates the role is expected to set direction and priorities rather than execute against direction from others.
+> Reasoning: The explicit 'shape how' signal, combined with 'architect', 'define standards', and 'design and evolve' demonstrates strategic ownership of the data platform direction.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks"
-> Reasoning: Standard data modeling work with no AI infrastructure, coding tools, or GenAI responsibilities mentioned.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Design, standardise, and evolve our data modelling (dbt) frameworks"
-> Reasoning: Standard dbt/data modeling work with no signals of AI usage, GenAI, or AI-ready infrastructure.
+**Run 1:** `none` ✗
+> Quote: "Keeps up-to-date with emerging data and AI technologies, actively exploring innovative applications such as GenAI for analytics and data automation"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to be aware of AI trends and explore applications, but there is no specific expectation to use AI coding tools for personal productivity or build AI-ready data infrastructure.
 
-**Run 3:** `none` ✓
-> Quote: "AI engineers listed as collaborator; Empower analysts, engineers, and business teams with high-quality semantic layers"
-> Reasoning: Semantic layers and AI engineers as stakeholders, but no explicit 'AI-ready', 'semantic model for AI', or 'GenAI' language in responsibilities.
+**Run 2:** `none` ✗
+> Quote: "Keeps up-to-date with emerging data and AI technologies, actively exploring innovative applications such as GenAI for analytics and data automation"
+> Verified: ✓ found in JD
+> Reasoning: The AI expectation is framed as exploratory awareness and continuous learning rather than a demonstrated skill requirement; no expectation to use AI coding tools or architect AI-specific data infrastructure.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions AI only in terms of staying informed about trends and working with AI engineers on their projects, not requiring the candidate to use or enable AI.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "embed data quality, governance, and observability throughout our data stack"
-> Reasoning: Verb 'embed' with 'data quality' establishes direct ownership of implementing quality practices.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "embed data quality, governance, and observability throughout our data stack"
-> Reasoning: Ownership verb 'embed' combined with 'data quality' indicates candidate will establish and maintain quality practices.
+**Run 1:** `responsibility` ✗
+> Quote: "define best practices, and embed data quality, governance, and observability throughout our data stack"
+> Verified: ✓ found in JD
+> Reasoning: The role owns defining and embedding data quality and observability practices organization-wide, making testing and quality assurance an owned responsibility rather than a tool to be used.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `responsibility` ✗
 > Quote: "embed data quality, governance, and observability throughout our data stack"
-> Reasoning: Embed (implement/establish) signals active ownership of quality and governance practices as core responsibility.
+> Verified: ✓ found in JD
+> Reasoning: Data quality and observability are framed with ownership verbs as core responsibilities to embed across the entire stack, not listed as tools or secondary competencies.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Mentor analytics engineers, define best practices, and embed data quality, governance, and observability throughout our data stack"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and testing are framed as something the candidate defines and embeds, showing clear ownership and accountability.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "embed data quality, governance, and observability throughout our data stack"
-> Reasoning: Observability and reliability concerns dominate (moderate framing); governance elements hint at trust but lack explicit regulatory/compliance language.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "embed data quality, governance, and observability throughout our data stack"
-> Reasoning: Governance and observability framing reflect operational reliability and trust concerns for enterprise clients, neither compliance-driven (high) nor pure delivery-focused (none).
+**Run 1:** `high` ✗
+> Quote: "designing, building, and governing our data medallion architecture to deliver reliable, scalable, and high-trust data products — serving both internal and external stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Trust in data products is framed as a primary concern in the role summary, with repeated emphasis on reliability and trustworthiness to prevent bad data reaching internal teams and external partners making business decisions.
 
-**Run 3:** `moderate` ✓
-> Quote: "embed data quality, governance, and observability; enterprise clients and partners; scales efficiently"
-> Reasoning: Governance framing and enterprise context suggest trust/operational concerns, but lack explicit regulatory/audit language.
+**Run 2:** `moderate` ✗
+> Quote: "delivering reliable, scalable, and high-trust data products"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD emphasizes operational reliability and data trust as primary concerns but lacks explicit regulatory or compliance language; the fear is operational failure and stakeholder loss of confidence rather than regulatory exposure.
 
+**Run 3:** `moderate` ✗
+> Quote: "reliable, scalable, and high-trust data products — serving both internal and external stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on 'high-trust' and serving external enterprise clients indicates concern about stakeholder trust and data reliability, but without compliance language typical of high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

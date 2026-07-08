@@ -5,6 +5,7 @@
 ```
 # Analytics Engineer — Mentimeter
 
+**URL:** https://job-boards.eu.greenhouse.io/mentimeter/jobs/4839752101?gh_src=3d5665c2teu
 **Location:** Stockholm (onsite/hybrid)
 **Date Posted:** 2026-06-27
 
@@ -80,178 +81,219 @@ Additional notes
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 4 | 4 | 4 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | mixed | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | strategic | strategic | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | high | high | 33% | ✗ |
+| collaboration_width | 4 | 3 | 4 | 0 | 0% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | mixed | strategic | 33% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes careful data modeling practices, governance standards, and compliance with no mentions of speed or iteration, indicating a rigour-oriented role.
-
-**Run 2:** `rigour`
-> Quote: "sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data modeling quality, standards governance, and compliance with no velocity signals like 'fast-paced' or 'ship quickly'.
-
-**Run 3:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Develop, own and maintain data modeling standards and the data development experience"
 > Verified: ✓ found in JD
-> Reasoning: Emphasis on modeling standards, development experience, and governance indicates rigour-oriented focus with no velocity signals present.
+> Reasoning: Responsibilities emphasize governance, standards, quality, and maintainability with zero velocity language.
+
+**Run 2:** `rigour` ✓
+> Quote: "Develop, own and maintain data modeling standards and the data development experience"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes governance, standards, compliance, and sound judgment, with no velocity signals present.
+
+**Run 3:** `rigour` ✓
+> Quote: "Sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes correctness, maintainability, and standards-driven modeling with explicit GDPR/compliance framing, vastly outweighing a single mention of 'AI-assisted engineering.'
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
+> Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
+> Verified: ✓ found in JD
+> Reasoning: GDPR compliance is a requirement for a SaaS engagement platform, but this is not financial reporting, regulatory operations, or mission-critical business systems.
+
+**Run 2:** `high` ✗
 > Quote: "GDPR-sensitive data handling experience required"
 > Verified: ✓ found in JD
-> Reasoning: While GDPR compliance is required, the role is at a SaaS company without explicit financial reporting or regulatory filing responsibilities, making this moderate rather than high risk.
+> Reasoning: Explicit regulatory/compliance requirement signals high domain risk around data privacy and legal exposure.
 
-**Run 2:** `moderate`
-> Quote: "Empower the organization to use and interpret data"
+**Run 3:** `high` ✗
+> Quote: "collaborating with legal experts on compliance"
 > Verified: ✓ found in JD
-> Reasoning: This is internal analytics for a SaaS product company; data errors affect business decisions but not financial reporting or regulatory compliance.
+> Reasoning: Explicit regulatory and compliance framing combined with mandatory GDPR-sensitive data handling experience signals direct regulatory consequences of data errors.
 
-**Run 3:** `moderate`
-> Quote: "Strong business acumen with an understanding of sales, marketing, and product analytics"
-> Verified: ✓ found in JD
-> Reasoning: The role supports product and commercial business functions in a SaaS product company, affecting business decisions without financial reporting or regulatory compliance consequences.
+⚠ **Disagreement**: manual=`moderate` vs LLM majority=`high`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']
 
 ### collaboration_width
+**Manual:** `4`
 
-**Run 1:** `4`
+**Run 1:** `3` ✗
+> Quote: "Strong business acumen with an understanding of sales, marketing, and product analytics"
+> Verified: ✓ found in JD
+> Reasoning: Three named business functions are explicitly listed that the candidate must understand: sales, marketing, and product.
+
+**Run 2:** `4` ✓
 > Quote: "sales, marketing, and product analytics; legal experts"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Sales, Marketing, and Product are named in the requirement for business acumen understanding, and Legal is explicitly named for compliance collaboration.
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names Sales, Marketing, Product, and Legal as collaboration partners.
 
-**Run 2:** `4`
-> Quote: "sales, marketing, and product analytics; legal experts"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names four distinct functions as collaboration partners: Sales, Marketing, Product (from business acumen requirements), and Legal (compliance collaboration).
+**Run 3:** `0` ✗
+> Quote: "Partner with business and technical stakeholders from problem framing to shipped artefacts"
+> Verified: ✓ found in JD
+> Reasoning: The primary collaboration statement uses generic 'stakeholders' language without naming specific teams, functions, or roles as distinct collaboration partners.
 
-**Run 3:** `4`
-> Quote: "understanding of sales, marketing, and product analytics; collaborating with legal experts on compliance"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Sales, Marketing, Product, and Legal are explicitly named as required collaboration partners.
+⚠ **Disagreement**: manual=`4` vs LLM majority=`3`
+
+⚠ **LLM inconsistency**: runs gave ['3', '4', '0']
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
-> Quote: "join our Analytics Foundation team"
+**Run 1:** `mid` ✗
+> Quote: "Develop, own and maintain data modeling standards and the data development experience"
 > Verified: ✓ found in JD
-> Reasoning: The team is already established and growing, with named tools and existing standards in place, but not described as a large specialized organization with multiple sub-teams.
+> Reasoning: The team has established infrastructure and practices (semantic models, data catalogs, comprehensive tech stack) and is growing, indicated by evolution focus and 4-7 year experience expectation.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✗
+> Quote: "Improve how we work at scale: thoughtful automation and AI-assisted engineering"
+> Verified: ✓ found in JD
+> Reasoning: The phrase "at scale" and focus on improving existing processes suggests an established data function beyond early-stage.
+
+**Run 3:** `mid` ✗
 > Quote: "Design, own, and evolve core data models and the modelling architecture"
 > Verified: ✓ found in JD
-> Reasoning: The use of 'evolve' and 'maintain' alongside references to an existing Analytics Foundation team indicates a data function that exists and is growing, not establishing from zero.
+> Reasoning: The verb 'evolve' indicates existing infrastructure rather than greenfield; combined with named tools (Snowflake, dbt, etc.) and references to multiple data professionals, this signals an established but growing analytics function.
 
-**Run 3:** `mid`
-> Quote: "Design, own, and evolve core data models and the modelling architecture"
-> Verified: ✓ found in JD
-> Reasoning: Language about evolving existing core systems, improving at scale, and maintaining established standards indicates a team with functioning infrastructure that is growing.
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `mixed`
+**Run 1:** `mixed` ✗
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
+> Verified: ✓ found in JD
+> Reasoning: Some technical specificity (modeling architecture, semantic models, data catalog) is present, but lacks context about specific pain points, scale numbers, or what problems these solve.
+
+**Run 2:** `mixed` ✗
 > Quote: "sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains highly specific technical language about data modeling grain and metric behavior indicating hiring manager input, combined with generic collaboration phrasing suggesting recruiter involvement.
+> Reasoning: Technical specificity about methodology appears alongside generic boilerplate like "partner with stakeholders" suggesting both hiring manager and recruiter input.
 
-**Run 2:** `mixed`
-> Quote: "sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
+**Run 3:** `mixed` ✗
+> Quote: "Sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
 > Verified: ✓ found in JD
-> Reasoning: The JD combines technical specificity in data modeling concepts with generic action verbs like 'partner' and 'empower' that reflect both hiring-manager and recruiter input.
+> Reasoning: Technical specificity about modeling concepts and infrastructure (semantic models, data catalog, dbt, named tech stack) mixes with recruiter boilerplate ('empower the organization', 'collaborate with stakeholders').
 
-**Run 3:** `mixed`
-> Quote: "Maintain and grow how knowledge is surfaced, e.g in semantic models, a data catalog, or documentation"
-> Verified: ✓ found in JD
-> Reasoning: Technical concepts like semantic models and data catalogs show domain knowledge, while generic collaboration language throughout indicates both hiring manager and recruiter input.
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Empower the organization to use and interpret data"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is enabling internal data consumers through infrastructure, standards, and documentation rather than serving revenue, product, or finance teams.
+> Reasoning: Primary focus is building data infrastructure and platforms that enable organizational access to data, not serving specific business functions like sales or finance.
 
-**Run 2:** `internal_data`
-> Quote: "Design, own, and evolve core data models and the modelling architecture"
-> Verified: ✓ found in JD
-> Reasoning: The core responsibilities focus on building and maintaining data infrastructure (models, standards, catalog, semantic models) to enable the organization's data consumers.
-
-**Run 3:** `internal_data`
+**Run 2:** `internal_data` ✓
 > Quote: "Develop, own and maintain data modeling standards and the data development experience"
 > Verified: ✓ found in JD
-> Reasoning: Primary focus is on building data infrastructure, standards, and modeling layers for other analysts and data consumers within the organization.
+> Reasoning: The primary responsibilities focus on building and maintaining data infrastructure (standards, models, catalogs) for internal data team use.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Maintain and grow how knowledge is surfaced, e.g in semantic models, a data catalog, or documentation"
+> Verified: ✓ found in JD
+> Reasoning: The role focuses on building and maintaining analytics infrastructure (modeling standards, semantic models, data catalog) for internal analytics consumers, not serving commercial, product, or finance teams directly.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `strategic` ✓
 > Quote: "Design, own, and evolve core data models and the modelling architecture"
 > Verified: ✓ found in JD
-> Reasoning: The language of designing, owning, and evolving architecture, plus contributing to strategy and developing standards, indicates the role sets direction rather than executing others' plans.
+> Reasoning: Strategic ownership verbs (own, design, develop) and explicit language about contributing to direction and strategy indicate the role defines approach rather than executes assigned work.
 
-**Run 2:** `strategic`
-> Quote: "Combine subject matter expertise and a high level business understanding to contribute to the direction and strategy"
+**Run 2:** `mixed` ✗
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly tasked with contributing to direction and strategy, not executing against priorities set by others; language centers on design, ownership, and developing standards.
+> Reasoning: The role has strategic ownership of data modeling and standards while also being collaborative/execution-oriented in partnerships with broader org.
 
-**Run 3:** `strategic`
-> Quote: "Combine subject matter expertise and a high level business understanding to contribute to the direction and strategy"
+**Run 3:** `strategic` ✓
+> Quote: "Design, own, and evolve core data models and the modelling architecture"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly expected to contribute to strategic direction rather than execute predefined work, with ownership of core architecture decisions.
+> Reasoning: Ownership and design verbs indicate the role is expected to define data architecture direction and shape how analytics is delivered, not execute strategy set by others.
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Develop, own and maintain data modeling standards and the data development experience"
-> Reasoning: No AI tools, infrastructure, or methodology mentioned in listed responsibilities.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Design, own, and evolve core data models and the modelling architecture"
-> Reasoning: Standard data modeling work with no AI tool usage or infrastructure building signals.
+**Run 1:** `ai_user` ✗
+> Quote: "Experience with AI-assisted coding used with disciplined practices"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI coding tools as a personal productivity practice within disciplined practices, not to build AI-consuming data systems.
 
-**Run 3:** `none` ✓
-> Quote: "Develop, own and maintain data modeling standards and the data development experience"
-> Reasoning: No signals of AI tool usage or infrastructure building; standard data modeling and engineering work.
+**Run 2:** `ai_user` ✗
+> Quote: "Experience with AI-assisted coding used with disciplined practices"
+> Verified: ✓ found in JD
+> Reasoning: The JD expects candidates to use AI-assisted coding tools for their own productivity, not to build AI data infrastructure.
 
+**Run 3:** `ai_user` ✗
+> Quote: "Improve how we work at scale: thoughtful automation and AI-assisted engineering"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly involves 'AI-assisted engineering' practices, and the bonus section specifies 'Experience with AI-assisted coding used with disciplined practices,' indicating the candidate should use AI tools to improve engineering productivity.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Develop, own and maintain data modeling standards"
-> Reasoning: Ownership is stated but focused on modeling standards rather than testing or quality practices.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "Strong SQL and sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
-> Reasoning: Quality is implicit in modeling standards but no explicit testing responsibility or tool listed.
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality framework mentioned."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD contains no mention of testing practices, data contracts, data quality frameworks, or observability tools.
 
-**Run 3:** `absent` ✓
-> Quote: "Strong SQL and sound judgment in data modelling (grain, reusability, naming, and how metrics should behave)"
-> Reasoning: Demonstrates quality mindset in modeling but no explicit testing responsibility or tool ownership.
+**Run 2:** `absent` ✗
+> Quote: "Our tech stack includes: Snowflake, dbt core, Hex, Prefect, Fivetran, and Hightouch"
+> Verified: ✓ found in JD
+> Reasoning: No testing tools or data quality frameworks are mentioned in the JD, despite mentioning specific technical stack.
 
+**Run 3:** `absent` ✗
+> Quote: "Develop, own and maintain data modeling standards and the data development experience"
+> Verified: ✓ found in JD
+> Reasoning: While data modeling standards are mentioned, no testing practice, data quality framework, dbt tests, data contracts, or observability approach is explicitly described as a responsibility or tool.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✓
-> Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
-> Reasoning: Regulatory compliance and legal collaboration frame data quality as a compliance/trust issue rather than operational reliability.
+**Manual:** ``
 
-**Run 2:** `high` ✓
+**Run 1:** `moderate` ✗
 > Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
-> Reasoning: Compliance and regulatory requirements dominate the risk framing over operational reliability.
+> Verified: ✓ found in JD
+> Reasoning: Compliance is a stated requirement but does not dominate the role framing, which emphasizes capability and ownership over risk prevention.
+
+**Run 2:** `moderate` ✗
+> Quote: "GDPR-sensitive data handling experience required"
+> Verified: ✓ found in JD
+> Reasoning: Regulatory compliance is a concern mentioned twice, but the role is primarily framed around data modeling delivery and capability, not around preventing bad outcomes.
 
 **Run 3:** `moderate` ✗
-> Quote: "Experience working with GDPR-sensitive data and collaborating with legal experts on compliance"
-> Reasoning: Regulatory/compliance concerns present (GDPR, legal collaboration) but not dominating the overall role framing.
+> Quote: "GDPR-sensitive data handling experience required"
+> Verified: ✓ found in JD
+> Reasoning: Compliance and legal collaboration signal risk awareness, but the role is primarily framed around building analytics infrastructure rather than preventing regulatory failures or managing trust as a dominant theme.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
