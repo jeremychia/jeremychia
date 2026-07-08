@@ -21,9 +21,9 @@ These objectives operate at the **application and evaluation** levels of Bloom's
 ## Before Class (Student Pre-Work)
 
 **Reading:** Albright & Winston, *Business Analytics*, Chapter 5 — read the following sections only:
-- §5-2 The normal distribution — density function, z-values, standardisation (pp. 168–178)
+- §5-2 The normal distribution — density function, z-values, standardisation (pp. 168–178); note §5-2f (Empirical Rules Revisited — the formal version of the rule used informally in Week 2) and §5-2g (weighted sums of normal random variables — the theory behind T6)
 - §5-3 Applications of the normal distribution (pp. 178–190)
-- §5-4 The binomial distribution (pp. 190–207)
+- §5-4–5-5 The binomial distribution and its applications (pp. 190–207)
 - §5-6 The Poisson and exponential distributions (pp. 207–212)
 
 The normal approximation to the binomial is covered in §5-4c — read it carefully. The rule of thumb (valid when np > 5 and n(1−p) > 5) appears in the chapter and will appear in the quiz.
@@ -104,7 +104,7 @@ Part (d) is the key insight: even with random performance, at least one fund man
 >
 > (a) Using the historical λ = 800 as the weekly demand rate, calculate the probability that weekly demand exceeds 850 dozen. Use P(X > 850) = 1 − P(X ≤ 850).
 >
-> *Solution:* P(X > 850) ≈ **3.4%** — a rare event under normal conditions.
+> *Solution:* P(X > 850) = 1 − POISSON.DIST(850, 800, TRUE) ≈ **3.7%** — a rare event under normal conditions.
 >
 > (b) The chain's supply of eggs fell sharply due to the outbreak. At the same time, consumers began panic-buying and hoarding. In week 3 of the supply crisis, actual demand was 1,150 dozen. Calculate P(X ≤ 1150) using λ = 800. What does this tell you about the model's predictions in crisis conditions?
 >
@@ -216,7 +216,7 @@ T3 uses a verified 2024–2025 event (HPAI H5N1 egg price data is documented by 
 
 **(a)** E(X) = np = 52 × 0.50 = **26 weeks.** A fund manager who is purely guessing is expected to beat the market in exactly half the weeks.
 
-**(b)** P(X = 30) = BINOM.DIST(30, 52, 0.5, FALSE) ≈ **7.2%.** Beating the market in 30 of 52 weeks has a reasonable probability even by chance.
+**(b)** P(X = 30) = BINOM.DIST(30, 52, 0.5, FALSE) ≈ **6.0%.** Beating the market in 30 of 52 weeks has a reasonable probability even by chance.
 
 **(c)** P(X ≥ 37) = 1 − BINOM.DIST(36, 52, 0.5, TRUE) ≈ **0.159%** — fewer than 2 in 1,000 purely random managers would beat the market in 37+ of 52 weeks.
 
@@ -226,7 +226,7 @@ T3 uses a verified 2024–2025 event (HPAI H5N1 egg price data is documented by 
 
 ### T3 — Poisson distribution (bird flu / egg demand)
 
-**(a)** P(X > 850 | λ = 800) = 1 − P(X ≤ 850) ≈ **3.4%.** Under normal conditions, demand exceeding 850 was a rare event (about 1 in 30 weeks).
+**(a)** P(X > 850 | λ = 800) = 1 − P(X ≤ 850) = 1 − POISSON.DIST(850, 800, TRUE) ≈ **3.7%.** Under normal conditions, demand exceeding 850 was a rare event (roughly 1 in 27 weeks). (The normal approximation with continuity correction, Z = (850.5 − 800)/√800 ≈ 1.79, gives the same value.)
 
 **(b)** P(X ≤ 1,150 | λ = 800) is effectively **1.000** — demand of 1,150 is so far above the Poisson rate of 800 (about 10+ standard deviations, since SD = √800 ≈ 28) that the model assigns near-zero probability to any demand that high. The model treated what actually happened as essentially impossible.
 
@@ -375,9 +375,9 @@ The format: the instructor presents 3 brief published business failures caused b
 
 **Case 1 — Airline overbooking with seasonal clustering**
 
-> An airline uses a binomial model (n = 250 bookings, p = 0.10 no-show) to calibrate its overbooking policy. The model works well 40 weeks of the year, but consistently underestimates no-show rates in the December holiday period.
+> An airline uses a binomial model (n = 250 bookings, p = 0.10 no-show) to calibrate its overbooking policy. The model works well 40 weeks of the year, but consistently overestimates no-show rates in the December holiday period — and the airline oversells seats exactly when flights are fullest.
 
-**What went wrong:** the binomial assumes p is constant. In December, business travellers (who no-show at 15%) shift to leisure travellers (who no-show at 3%). The mixture produces a bimodal distribution, not a single binomial. The airline's model used the annual average p — which was wrong for the period when it mattered most.
+**What went wrong:** the binomial assumes p is constant. In December, the passenger mix shifts from business travellers (who no-show at 15%) to leisure travellers (who no-show at 3%), so the true December no-show rate falls far below the annual average. The changing mix also makes the counts overdispersed — no single binomial fits the whole year. The airline's model used the annual average p — far too high for December — so it kept selling extra tickets to passengers who all showed up.
 
 **Case 2 — Inventory system assuming Poisson demand**
 
@@ -512,3 +512,76 @@ Students need to arrive at Week 6 (Python) with the distributional vocabulary to
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Taleb, N.N. (2007). *The Black Swan: The Impact of the Highly Improbable.* Random House.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 5
+
+**Coverage check: strong alignment; section labels need one correction and two high-value subsections are unused.**
+
+- The cited "§5-4 The binomial distribution (pp. 190–207)" actually spans **two** sections: 5-4 The Binomial Distribution (190–195, incl. 5-4c the normal approximation) *and* 5-5 Applications of the Binomial Distribution (195–207). Relabel as "§5-4–5-5" — students told to "read §5-4" who stop at the section boundary will miss the applications material the tutorials draw on.
+- **5-2f "Empirical Rules Revisited" (p. 177) closes the loop that Week 2 planted.** Week 2's T1(f) and T3 used the empirical rule with a promissory note that it would be formalised here. Add one line to the reading list flagging 5-2f explicitly, and one sentence in Part 2 ("remember the salary data where the empirical rule failed? Now you know what it assumes").
+- **5-2g "Weighted Sums of Normal Random Variables" (p. 177) is exactly the theory behind T6** (total time = loading + fixed + traffic), and it's the foundation for portfolio examples in Week 17. It's two pages; add it to the reading rather than letting T6 rest on intuition.
+- The exponential distribution (5-6b) is assigned reading and quizzed (Q8) but never practised — see critique point 4.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Exponential distribution and memorylessness (fills the Q8 gap):**
+
+> A server component fails on average once every 200 days; time between failures is exponential.
+>
+> (a) Compute P(failure within 100 days).
+> (b) The component has already survived 300 days. What is the probability it fails in the *next* 100 days? What property is this?
+> (c) A maintenance manager says: "It's overdue — it's more likely to fail now." Under the exponential model, is she right? Name a real physical reason the exponential model might be wrong here.
+>
+> **Answers:** (a) λ = 1/200; P(X ≤ 100) = 1 − e^(−100/200) = 1 − e^(−0.5) ≈ **39.3%.** (b) Identical: **39.3%** — the exponential is **memoryless**; survival so far tells you nothing about the future under this model. (c) Under the model she is wrong; in reality, components *wear out* (hazard rate increases with age), which the exponential cannot represent — a Weibull with increasing hazard would fit better. The point mirrors the week's theme: the model's convenience (memorylessness) is an assumption about the process, not a fact.
+
+**T9 — Two-sided specification limits (bridges to quality control):**
+
+> A bottling machine fills bottles with volume ~ Normal(μ = 500 ml, σ = 4 ml). Regulation requires 492–508 ml.
+>
+> (a) What proportion of bottles violates the spec?
+> (b) The firm can either re-centre the machine (μ stays 500, this is already centred) or upgrade it to σ = 2 ml. What does the violation rate become after the upgrade?
+> (c) Why does halving σ reduce violations by far more than half? Connect to the shape of the normal tails.
+>
+> **Answers:** (a) Spec is ±8 ml = ±2σ; violations = 2 × P(Z > 2) ≈ 2 × 2.28% = **4.55%.** (b) ±8 ml is now ±4σ; violations = 2 × P(Z > 4) ≈ 2 × 0.0032% = **0.006%** — roughly a 700-fold reduction. (c) Normal tail probability decays super-exponentially in z, so pushing the spec limit from 2σ to 4σ collapses the tail mass — this non-linearity is why quality programmes obsess over variance reduction (and the intuition behind "six sigma").
+
+**T10 — CLT in reverse (conceptual):**
+
+> T0(d) used the CLT to justify a normal model for supermarket daily revenue. For each modification, say whether the normal model survives and why: (i) The store adds a lottery counter where one transaction in 10,000 is a €50,000 jackpot payout. (ii) Revenue is recorded per *customer* rather than per day. (iii) The store has only ~30 transactions per day.
+>
+> **Answers:** (i) No — the CLT needs many *small* independent contributions; one dominant heavy-tailed component (rare €50k payouts) makes the daily total mixture-distributed with a spike — the normal will badly understate tail risk (Q9's fat-tails point, arrived at constructively). (ii) No — individual transaction values are typically right-skewed (many small, few large); the CLT applies to sums/averages of many, not to single draws. (iii) Weakened — 30 skewed transactions may not be enough for the sum to look normal; check the skew before trusting normal-based stockout maths.
+
+*Additional quiz questions:*
+
+- Q10: For a Poisson distribution, the variance equals: *(a) λ² (b) λ (c) √λ (d) nλ)* — **Answer: (b)**; the mean-equals-variance property is also the standard test for whether count data is genuinely Poisson (overdispersion check — used in Activity C below).
+- Q11: A component has survived 500 hours. Under an exponential lifetime model, its probability of failing in the next hour, compared with a brand-new component's, is: *(a) higher (b) lower (c) the same (d) undefined)* — **Answer: (c)** (memorylessness).
+- Q12: Which quantity does NORM.INV(0.99, μ, σ) return? *(a) the probability of exceeding μ (b) the value below which 99% of the distribution lies (c) the 99% confidence interval (d) P(X ≤ 0.99))* — **Answer: (b)** — rehearses the T1(d) confusion in reverse.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Dice CLT build (10 min, energiser before Part 3).** Every student rolls five dice, sums them, posts the sum to Mentimeter; repeat three times. Plot the histogram of sums live — a bell shape emerges from uniform ingredients in front of them. Sixty seconds of debrief: "That's the only reason T0(d) is 'normal'." Cheap, physical, and makes the CLT an *event* rather than an acronym.
+
+**B. Distribution decision tree, built by the room (15 min, alternative Part 2 use).** Pairs get 90 seconds to draft a flowchart ("Is the variable a count / binary trial / waiting time / sum of many small things?"). Instructor consolidates one class flowchart on the board, then stress-tests it with five rapid scenarios (including one that genuinely doesn't fit — e.g. customer satisfaction scores — to establish that "none of the four" is a legal answer). The artefact can be photographed and pinned in the LMS as the course's selection heuristic.
+
+**C. Overdispersion hunt on real data (20 min, alternative Part 3).** Give pairs a real hourly count series (Berlin bike-counter data or café transactions). Task: compute mean and variance of the counts; a Poisson process requires them equal. Every real dataset will be overdispersed — pairs must propose *why* (clustering, weather regimes, weekday mixture). This is the error-autopsy insight discovered in data rather than narrated in a vignette, and it directly rehearses the λ-stability theme of T3.
+
+**D. Overbooking tournament (20 min, alternative Part 3/4).** Teams choose how many tickets to sell for a 100-seat flight (no-show p = 0.10, ticket revenue and bump-compensation costs given). Instructor simulates 20 flights per team with a pre-built spreadsheet; profit leaderboard on the board. Teams that overbooked aggressively occasionally get destroyed by a low no-show draw — variance made visceral. Directly extends the worked example into a decision, previewing Weeks 10 and 18.
+
+**E. Fat-tail forensic (10 min, Part 3 Case 3 upgrade).** Show 10 years of daily returns for a real index next to a simulated normal series with identical mean and SD. Task: count |z| > 3 days in each. Real data: dozens; normal simulation: ~7 expected. The Taleb point becomes a counting exercise, not an anecdote.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** T0 as a selection-logic gate; T2(d)'s multiple-testing plant for Week 13 (genuinely elegant); the T3 bird-flu case with its regime-change lesson; the "distribution follows from the process, not the data" debrief line; the deliberate deferral of the exponential.
+
+**Problems, reasons, and fixes:**
+
+1. **T2(b) answer is wrong.** P(X = 30 | n = 52, p = 0.5) ≈ **6.0%**, not 7.2% (normal check: mean 26, SD √13 ≈ 3.61; continuity band 29.5–30.5 gives Φ(1.25) − Φ(0.97) ≈ 0.060; Excel `BINOM.DIST(30,52,0.5,FALSE)` confirms ≈ 0.0598). *Fix:* correct the key.
+2. **T3(a)'s value should be re-verified.** P(X > 850 | λ = 800): normal approximation with continuity correction gives Z = (850.5 − 800)/√800 ≈ 1.79 → ≈ **3.7%**, not 3.4%. Run `1-POISSON.DIST(850,800,TRUE)` once and print the exact value — for a question students submit, the key must match Excel's output to the decimal they'll see.
+3. **Inline solutions inside submitted problems, again.** T3(a)–(b), all of T4, and T6(a)–(c) print full solutions inside the question text. Same defect as Week 4, same fix: strip to the Answer Key, issue a student version. (By Week 5 this is systematic — fixing it across the whole 22-week set should be one editing pass, not per-week patches.)
+4. **The exponential is quizzed but never practised — and the plan says that's deliberate while still putting it in the learning objectives.** Objective 1 includes identifying the exponential; Design Challenge 3 says the tutorial "does not include an exponential problem" by intention; Q8 then demands a *computation* (1 − e^(−λt)) that nothing in the pre-work rehearses beyond a 5-minute video. Either add T8 above (10 minutes of pre-work) or downgrade Q8 to a selection question and keep the computation for the buffer. Testing unpractised computation contradicts the plan's own retrieval-practice logic.
+5. **Error-autopsy Case 1 is internally reversed.** The vignette says the model "consistently underestimates no-show rates in the December holiday period," but the explanation says December shifts toward leisure travellers who no-show at **3%** — i.e. actual December no-shows are *lower* than the modelled 10%, so the model **over**estimates no-shows and the airline oversells seats. *Fix:* flip the vignette's verb (and note the operational consequence — bumped passengers at Christmas — which makes the story stronger). Also soften "the mixture produces a bimodal distribution": a two-p binomial mixture is overdispersed but rarely visibly bimodal; "overdispersed — fatter-tailed than any single binomial" is the accurate claim.
+6. **Part 4 arithmetic again: 90 seconds × 12–15 students = 18–22.5 minutes in a 20-minute slot.** Same fix as Week 4: instructor pre-selects 5–6 submissions spanning domains; remainder get LMS feedback. This is the third week running with this issue — worth fixing structurally in the template.
+7. **The four-distribution week carries hidden prerequisite risk from the Week 4 gap.** T9/T4 use variance fluently, but Week 4's variance objective was unpractised (see Week 4 supplement §1.3). If Week 4's T9 (variance via SUMPRODUCT) isn't adopted, students meet σ = √(npq) in the worked example with no prior computation of a distribution variance anywhere in the course. Sequencing fix, zero content cost.

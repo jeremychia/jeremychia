@@ -21,12 +21,12 @@ These objectives operate at the **analysis and evaluation** levels of Bloom's Ta
 ## Before Class (Student Pre-Work)
 
 **Reading:** Albright & Winston, *Business Analytics*, Chapter 3 — read the following sections only:
-- §3.1 Introduction to relationships (pp. 79–82)
-- §3.2 Relationships among categorical variables — crosstabs (pp. 82–92)
-- §3.3 Relationships between categorical and numerical variables (pp. 92–98)
-- §3.4 Relationships between two numerical variables (pp. 98–112)
+- §3-1 Introduction (pp. 80–82)
+- §3-2 Relationships among categorical variables — crosstabs (pp. 82–86)
+- §3-3 Relationships between categorical and numerical variables (pp. 86–95)
+- §3-4 Relationships between two numerical variables — scatterplots, correlation and covariance (pp. 95–108)
 
-The pivot chart and slicer material in §3.5 is optional this week. It is surfaced in Block 2 (Tableau and Excel practical sessions). Reading it now adds tool complexity before the conceptual groundwork is secure.
+Note: ecological correlation and Simpson's Paradox go beyond this chapter — they are covered by the videos and a two-page handout on the LMS; the quiz and tutorials draw on both. The pivot table material in §3-5 (pp. 108–131) is optional this week. It is surfaced in Block 2 (the Tableau practical session). Reading it now adds tool complexity before the conceptual groundwork is secure.
 
 *Rationale:* §3.1–3.4 cover everything needed for the spurious correlation gallery in Part 3. The full chapter including §3.5 is approximately 55 pages; the assigned sections are the conceptual core. Fischer et al. (2023) recommend capping pre-work at ~1.5× in-class time — the sections above, combined with the tutorial problems and pre-class submission, hit that ceiling without exceeding it.
 
@@ -148,15 +148,15 @@ T3 uses a structurally real 2025 policy context: the debate about social media u
 >
 > | | Officer M | Officer N |
 > |---|---|---|
-> | Low-risk applicants approved | 90 out of 100 (90%) | 45 out of 50 (90%) |
-> | High-risk applicants approved | 30 out of 100 (30%) | 6 out of 10 (60%) |
-> | **Overall** | **120 out of 200 (60%)** | **51 out of 60 (85%)** |
+> | Low-risk applicants approved | 93 out of 95 (97.9%) | 48 out of 50 (96.0%) |
+> | High-risk applicants approved | 55 out of 105 (52.4%) | 4 out of 10 (40.0%) |
+> | **Overall** | **148 out of 200 (74.0%)** | **52 out of 60 (86.7%)** |
 >
 > (a) Based on overall approval rates, which officer appears more lenient?
 > (b) Within each risk category, which officer approves a higher proportion of applicants?
 > (c) Explain precisely why the two perspectives give contradictory rankings. What is the name of this phenomenon?
 > (d) The bank's compliance team uses overall approval rate to assess whether officers are discriminating against high-risk applicants. Is this the right metric? What should they use instead?
-> (e) Officer N's caseload has 50 low-risk and 10 high-risk applicants; Officer M's has 100 of each. Is this difference in caseload composition a problem with the data, the analysis, or the bank's allocation process? What would you investigate next?
+> (e) Officer N's caseload has 50 low-risk and 10 high-risk applicants; Officer M's has 95 low-risk and 105 high-risk. Is this difference in caseload composition a problem with the data, the analysis, or the bank's allocation process? What would you investigate next?
 
 This question directly extends T3 (which introduced Simpson's Paradox conceptually) into a business context with a numerical worked example. Students must apply the concept rather than recognise it.
 
@@ -193,7 +193,7 @@ This question directly extends T3 (which introduced Simpson's Paradox conceptual
 > You are a data analyst at a European retailer with stores in 12 cities. Your manager says: "I think our stores in larger cities perform better — can you check if there's a relationship between city population and our store revenue?"
 >
 > (a) Identify the two variables. Which is X (explanatory) and which is Y (response)? Does it matter which is which for computing r?
-> (b) Your dataset has population in millions (ranging from 0.3 to 8.5) and annual store revenue in €millions (ranging from 1.2 to 22.7). You compute r = 0.61. Interpret this in plain English.
+> (b) Your dataset has population in millions (ranging from 0.3 to 9.0) and annual store revenue in €millions (ranging from 1.2 to 22.7). You compute r = 0.61. Interpret this in plain English.
 > (c) Your manager says: "Great — r = 0.61, so city size explains 61% of the variation in revenue." Correct this statement precisely.
 > (d) You notice that one store in the dataset is in London (population 9.0 million, revenue €18.2 million). London is larger than any other city. How would removing London from the dataset likely affect r? Would the direction change?
 > (e) Your manager now asks: "Does this mean we should open more stores in large cities?" Write a two-sentence response that correctly uses the correlation result without over-claiming causation, and names the most important confound to investigate before making this recommendation.
@@ -282,11 +282,11 @@ Column percentages answer: *"Among buyers (or non-buyers), what proportion had a
 
 ### T5 — Simpson's Paradox: loan officers
 
-**(a)** Based on overall approval rates, **Officer N** (85%) appears more lenient than Officer M (60%).
+**(a)** Based on overall approval rates, **Officer N** (86.7%) appears more lenient than Officer M (74.0%).
 
-**(b)** Within each risk category, **Officer M** approves equally or more: both approve 90% of low-risk applicants; for high-risk applicants, Officer M approves 30% vs Officer N's 60%. Wait — here Officer N approves more high-risk applicants. So within the high-risk category, **Officer N is more lenient**; within the low-risk category, they are identical.
+**(b)** Within each risk category, **Officer M** approves a higher proportion: low-risk 97.9% vs 96.0%, and high-risk 52.4% vs 40.0%. In every like-for-like comparison, M is the more lenient officer — the opposite of the overall ranking in (a).
 
-**(c)** The contradiction arises because the two officers handle **different caseload compositions**. Officer N handled mostly low-risk applicants (50 low-risk, 10 high-risk); Officer M handled equal numbers (100 of each). Low-risk applicants have high approval rates regardless of officer. Because N's caseload is heavily weighted toward easy-to-approve cases, N's overall rate is inflated. The phenomenon is **Simpson's Paradox** — the direction of comparison can reverse when aggregated data mixes groups with different compositions.
+**(c)** The two rankings genuinely reverse because the officers handle **different caseload compositions**. Officer N's caseload is dominated by easy-to-approve low-risk applicants (50 of 60), while a majority of Officer M's caseload is high-risk (105 of 200). Low-risk applicants are approved at very high rates by both officers, so N's low-risk-heavy mix inflates N's overall rate above M's — even though M approves more *within every category*. The phenomenon is **Simpson's Paradox** — the direction of a comparison reverses when aggregated data mixes groups with different compositions.
 
 **(d)** Overall approval rate is **not the right metric** for compliance assessment. It conflates caseload composition with officer leniency. The compliance team should compare within-category approval rates, separately for low- and high-risk applicants. Using overall rates could penalise officers who are assigned more high-risk cases through no fault of their own.
 
@@ -389,7 +389,7 @@ Questions run from straightforward to genuinely difficult. Easy questions confir
 - Q6: Which of the following is an example of ecological correlation?
   *(a) Correlation between two individuals' heights and weights  (b) Correlation between country-level average income and country-level life expectancy  (c) Correlation between a company's revenue and its number of employees  (d) Correlation between two products' weekly sales)*
 
-Q6 is the trap question. Ecological correlation uses aggregate data (country-level, city-level, district-level averages) rather than individual-level data. The distinction matters because ecological correlations can be misleadingly strong — averages suppress variance, and the correlation between averages is not the same as the correlation between individuals. Students who haven't read §3.4 carefully may guess (c) or (d) as "business-sounding" answers.
+Q6 is the trap question. Ecological correlation uses aggregate data (country-level, city-level, district-level averages) rather than individual-level data. The distinction matters because ecological correlations can be misleadingly strong — averages suppress variance, and the correlation between averages is not the same as the correlation between individuals. Students who skipped the ecological-correlation handout may guess (c) or (d) as "business-sounding" answers.
 
 **Medium — application:**
 
@@ -432,7 +432,7 @@ Students are doing retrieval practice on crosstab mechanics and correlation comp
 
 ### Part 3 — Pair Work (25 minutes)
 
-Each pair is assigned one of two tasks — the **spurious correlation gallery** format — drawing on both the pre-class datasets and a set of provided "gallery" examples.
+Each pair works on the **spurious correlation gallery** task — drawing on both the pre-class datasets and a set of provided "gallery" examples.
 
 **Gallery examples (instructor prepares in advance — 4–5 famous spurious correlations):**
 - Per capita cheese consumption and death by bedsheet tangling (Tyler Vigen dataset)
@@ -623,3 +623,94 @@ Week 3 is the first session where the cross-national dataset constraint really b
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vigen, T. (2015). *Spurious Correlations.* Hachette Books.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 3
+
+**Coverage check: the crosstab and correlation material is well covered; two of the session's key concepts are not in the textbook at all, and the reading references are slightly off.**
+
+Actual 6th-edition structure vs the cited sections:
+
+| Actual section | Pages | Note |
+|---|---|---|
+| 3-1 Introduction | 80–82 | matches cited §3.1 |
+| 3-2 Relationships among Categorical Variables | 82–86 | cited as pp. 82–92 — actually ends at 86 |
+| 3-3 Categorical ↔ Numerical (3-3a stacked/unstacked formats) | 86–95 | cited as pp. 92–98 |
+| 3-4 Numerical ↔ Numerical (3-4a scatterplots; 3-4b correlation **and covariance**) | 95–108 | cited as pp. 98–112 |
+| 3-5 Pivot Tables | 108–131 | cited as "pivot chart and slicer material" — it is the full Pivot Tables treatment, ~23 pages |
+
+Three substantive points:
+
+1. **Ecological correlation and Simpson's Paradox are not in Chapter 3.** The quiz commentary says students who miss Q6 "haven't read §3.4 carefully" — but A&W's 3-4 covers scatterplots, correlation, and covariance only. Neither ecological correlation nor Simpson's Paradox appears in the chapter's section structure. Both are excellent additions, but they need a source: add a two-page instructor handout (or cite a short open reading, e.g. the relevant section of an OpenIntro chapter) and reword the Q6 rationale so students aren't blamed for not finding material that isn't there.
+2. **§3.3 is assigned but never used.** The reading includes categorical↔numerical relationships (side-by-side/stacked comparisons), yet no tutorial problem, quiz question, or activity touches comparing a numerical variable across groups (e.g. box plots by category). Either drop it from the required reading or add T9 below — the concept is exam-relevant and one question fixes the orphan.
+3. **Covariance (3-4b) gets one quiz slot (Q5) but no practice.** T10 below closes that with a five-minute computation that also explains *why* correlation is preferred — currently Q5's answer is asserted, not derived.
+
+## 2. Extended Question Bank (with answers)
+
+**T9 — Categorical ↔ numerical (fills the §3.3 gap):**
+
+> A delivery platform records delivery time (minutes) by vehicle type. Summary: Bicycle — median 24, IQR 10, n = 310; Scooter — median 22, IQR 9, n = 520; Car — median 29, IQR 18, n = 170.
+>
+> (a) What chart compares these three distributions properly, and why is a bar chart of the three means not it?
+> (b) Cars have the highest median *and* the widest IQR. Give one operational explanation for each.
+> (c) The platform concludes: "Scooters are fastest — phase out cars." Name the variable this comparison ignores that could reverse the decision.
+
+**Answers:** (a) Side-by-side box plots (or overlaid density plots): they show centre, spread, and outliers per group; a bar chart of means shows one number per group and hides spread — with an IQR of 18, "the average car delivery" is barely representative. (b) Higher median: cars are assigned longer-distance orders; parking/traffic overhead. Wider IQR: car deliveries mix short trips (fast) and long hauls (slow), and traffic variability affects cars more than two-wheelers. (c) **Distance (or order size)** — vehicle type is confounded with assignment: cars get the deliveries bicycles can't do. Within the same distance band, cars might be fastest. This is the session's confounding theme appearing in a categorical↔numerical setting.
+
+**T10 — Covariance vs correlation (fills the 3-4b gap):**
+
+> Five months of data: advertising spend X (€000s): 2, 3, 5, 6, 9 (mean 5); sales Y (€000s): 20, 25, 35, 45, 50 (mean 35).
+>
+> (a) Compute the sample covariance.
+> (b) The analyst re-expresses advertising in euros instead of thousands. What happens to the covariance? What happens to r?
+> (c) In one sentence: why does A&W's chapter bother introducing covariance at all if correlation is what everyone reports?
+
+**Answers:** (a) Deviations X: −3, −2, 0, 1, 4; Y: −15, −10, 0, 10, 15. Products: 45, 20, 0, 10, 60; sum = 135; sample covariance = 135/4 = **33.75** (€000s²). (b) Covariance is multiplied by 1,000 (units change to € × €000); **r is unchanged** — it is the covariance standardised by both SDs, hence unit-free. That unit-dependence is exactly why covariance is unreportable across contexts. (c) Covariance is the building block: correlation is defined from it, and it reappears in portfolio variance (Week 17 optimisation / finance examples) where the *units* matter.
+
+**T11 — Correlation over time (lurking trend):**
+
+> An analyst finds r = 0.94 between annual company revenue and the annual number of data breaches worldwide, 2010–2024.
+>
+> (a) Why do two unrelated growing quantities correlate strongly over time?
+> (b) What simple transformation would you apply to both series before computing the correlation again, and what result would you expect?
+> (c) Connect this to the Week 2 debrief question about summarising 65 years of crime rates.
+
+**Answers:** (a) Both share an upward time trend; time is the confounder — any two trending series correlate regardless of any real link. (b) Difference them (year-on-year changes or % growth) and correlate the *changes*; expect r near 0 if the link is spurious. (c) Same lesson: raw levels of time-structured data mislead — Week 2 showed summary statistics destroy the time dimension; here correlation *manufactures* a relationship out of it. Both preview the time-series weeks.
+
+*Additional quiz questions:*
+
+- Q10: If every X value is doubled and every Y value has 50 added, r: *(a) doubles (b) halves (c) is unchanged (d) becomes 0)* — **Answer: (c)** (scale- and location-invariant; reinforces T4(e)).
+- Q11: Two managers compute r between satisfaction (1–5) and spend. Manager A uses the 1–5 codes; Manager B recodes to 20/40/60/80/100. Their r values will be: *(a) identical (b) B's larger (c) A's larger (d) impossible to say)* — **Answer: (a)** — linear recoding preserves r; also plants the seed that treating ordinal data as numeric is itself an assumption.
+- Q12: A correlation computed from 12 city-level *averages* will typically be ______ the correlation computed from the underlying individuals: *(a) equal to (b) weaker than (c) stronger than (d) the negative of)* — **Answer: (c)** — averaging suppresses within-city variance; this is why ecological correlations look impressive.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Guess-the-correlation calibration game (10 min, Part 1 alternative or addition).** Project 8 scatterplots; students write down estimated r for each; reveal answers; track each student's mean absolute error. Rerun a variant in Week 14 before regression — the improvement is visible and motivating. Trains the eye that the gallery work assumes students already have.
+
+**B. Draw-the-arrows (DAG-lite) exercise (15 min, insert into Part 3).** For each gallery correlation, pairs must draw one of three diagrams: X→Y, Y→X, or X←Z→Y with Z named. No arrow, no claim. Forces the confounder to be *structural* rather than rhetorical, and gives the course a reusable visual grammar for Weeks 14–15 (omitted variable bias becomes "the Z you didn't draw").
+
+**C. Live Simpson's Paradox with cohort data (15 min, replaces the debrief plant).** Collect two quick Mentimeter numbers from students (e.g. hours of pre-work, self-rated confidence) plus their programme/track. Show the pooled scatterplot, then split by track. Even if no reversal appears, the *hunt* for one teaches the subgroup reflex; if one appears, it's unforgettable. (Requires 5 minutes of instructor spreadsheet prep and a fallback pre-built example.)
+
+**D. Headline rewrite sprint (10 min, alternative Part 5 close).** Each pair gets one real causal headline ("Chocolate makes you smarter, study finds"). Task: rewrite it so it is accurate but still publishable — max 12 words. Read the winners aloud. Directly rehearses the LinkedIn-post post-work and the professional communication bar set by Forward's external collaborators.
+
+**E. Transposed-table trap (10 min, Part 2 extension).** Give pairs the T1 insurance table *transposed* (insurance status as rows) and ask the same targeting question. Pairs that memorised "row percentages for targeting" now get it wrong; pairs that reason from the question ("conditional on claims history…") survive. This is the structural fix for Design Challenge 4, turned into an exercise instead of an instructor exhortation.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** T0 as a low-floor entry point with self-check; the advocate/sceptic structure with swap; the evidence-threshold third deliverable (the genuinely hard output); the dataset-screening protocol in Design Challenge 1; T2's use of the real Messerli paper.
+
+**Problems, reasons, and fixes:**
+
+1. **T5 is not a Simpson's Paradox — the data contains no reversal.** As given: low-risk approval is 90% for *both* officers; high-risk approval is 30% (M) vs 60% (N); overall 60% (M) vs 85% (N). Officer N is more lenient overall **and** weakly more lenient within every category — the two perspectives never contradict, so questions (c) and (d) are unanswerable as posed. The answer key audibly trips over this ("Wait — here Officer N approves more high-risk applicants"). *Reason it matters:* this is the week's flagship concept, submitted for marks, and the strongest students are exactly the ones who will discover the question is broken. *Fix — replacement table that genuinely reverses:*
+   - Officer M: low-risk 93/95 (97.9%), high-risk 55/105 (52.4%), overall 148/200 (74.0%)
+   - Officer N: low-risk 48/50 (96.0%), high-risk 4/10 (40.0%), overall 52/60 (86.7%)
+   Now M is *stricter overall* but *more lenient within both categories* — N's overall rate is inflated purely by a low-risk-heavy caseload. Questions (a)–(e) and the answer key then work as intended, and the answer key's (b) needs rewriting to match.
+2. **Two of the session's assessed concepts have no assigned source (see §1.1).** Ecological correlation and Simpson's Paradox are instructor additions presented as chapter content. *Fix:* handout plus honest labelling — "this goes beyond A&W" is a feature for a Year 3 cohort, not a weakness.
+3. **Pre-work volume has ballooned past the plan's own cap.** T0–T8 total roughly 40 sub-questions, on top of reading, two videos with pause-tasks, a dataset hunt with analysis, and an optional current-affairs task — while the rationale still claims the Fischer et al. ~1.5× ceiling is respected. This is now a pattern (Weeks 1–3) and it compounds: students triage, and the instructor loses the signal of *which* skipped work indicates struggle. *Fix:* required core = T0, T1, T2 + submission; T3–T8 labelled as stretch/tutorial-session material; state the expected time budget (e.g. "core pre-work ≈ 2.5 hours").
+4. **Part 3's opening line promises "one of two tasks" but only one task is described.** This looks like an editing leftover; either describe the second task (presumably analysing the partner's dataset, which currently appears as an afterthought prompt) or fix the sentence.
+5. **T8 contains an internal contradiction.** The dataset is described as populations "ranging from 0.3 to 8.5 million," then part (d) introduces London at 9.0 million *in the dataset*. *Fix:* set the range to 0.3–9.0, or make (d) a what-if ("suppose you now add London").
+6. **The organic-food/autism gallery example sits uneasily next to Design Challenge 1.** The plan's own screening rule excludes correlations touching sensitive health/demographic outcomes, then the instructor-provided gallery includes autism diagnoses. A student or observer can reasonably ask why the rule binds students but not the instructor. *Fix:* swap for an innocuous Vigen pair (e.g. "per-capita mozzarella consumption and civil engineering doctorates").
+7. **Deliverable asks for exactly three outputs, Part 4 asks pairs to present four.** Part 3's deliverable list has three items; Part 4's presentation list has four bullets (adds "their assigned correlation"). Trivial, but the constrained-deliverable rationale (Lovett & Greenhouse) is cited in every week — the counts should match. *Fix:* present "the correlation" as context, not a deliverable, or fold it into output 1.

@@ -469,3 +469,74 @@ In the tutorial worked example, there are 12 numbers in the regression table (4 
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Sweller, J. (1994). Cognitive load theory, learning difficulty, and instructional design. *Learning and Instruction*, 4(4), 295–312.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapters 10–11
+
+The §11-1 to §11-7 references are accurate (the best-cited week alongside 11 and 13). But the session *uses* material from three unassigned sections:
+
+1. **T3 tests §11-8a (Nonconstant Error Variance, p. 517) — which is not in the reading.** Heteroskedasticity, its assumption violation, and remedies are exactly 11-8's content. *Fix:* extend the reading to §11-8 (pp. 517–521). Bonus: **11-8c (Autocorrelated Residuals) is the natural bridge to Week 16's time series** — one sentence in the debrief ("when the data has a time order, residuals violate independence in a special way — that's next week") converts an unassigned section into the bridge-forward.
+2. **T2 and T6 hinge on dummy variables (Female, Elective) and T7 on an interaction term — §10-6a/10-6b, which no week ever assigns** (Week 14's supplement flags that 10-5/10-6 are unhomed). Students are being examined on encoding conventions they've never read: why Female = 1 vs 0, what the reference category is, why a 3-category variable needs 2 dummies. *Fix:* add §10-5 and §10-6a–b (pp. 443–460) to this week's reading — the worked example is already a multiple regression, so the content belongs here anyway.
+3. **§11-9 (Prediction, pp. 521–527)** would close the loop with Week 12's CI-vs-prediction-interval distinction; optional but cheap.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Dummy variables done properly (fills the §10-6a gap):**
+
+> A salary model uses `Region` with three values (North, Central, South). An analyst creates three dummies (N, C, S) and includes all three plus an intercept. Excel returns an error / drops one automatically.
+>
+> (a) Why can't all three dummies enter the model?
+> (b) With South as the reference category, the fitted model is Salary = 41,000 + 3,200·N + 5,100·C. Interpret both coefficients.
+> (c) A colleague re-runs the model with North as the reference and gets different coefficients. Has the model changed?
+>
+> **Answers:** (a) N + C + S = 1 for every row — a perfect linear combination of the intercept (the "dummy variable trap"); the model is unidentifiable, so one category must be omitted as the baseline. (b) *Relative to South*, Northern employees earn €3,200 more and Central €5,100 more, holding nothing else constant (no other predictors here). Coefficients on dummies are always *comparisons against the reference*, not absolute effects. (c) No — same fitted values, same R², same predictions; only the *parameterisation* changed (each coefficient now compares against North). Reading dummy coefficients without asking "reference category?" is the most common exam error on this topic.
+
+**T9 — The F-statistic from R² (demystifies the output table):**
+
+> Verify the T4 output's internal consistency: with R² = 0.68, n = 80, k = 2, compute F = (R²/k)/((1−R²)/(n−k−1)).
+>
+> **Answer:** F = (0.68/2)/(0.32/77) = 0.34/0.004156 ≈ **81.8 ≈ the printed 82.4** (rounding in R²). Two payoffs: students see F is not new information but R² rescaled by sample size and model size — which *explains* T4(a): high R² forces a big F regardless of what individual t-tests do; and they acquire a checksum for any output table (the same check confirms T5: (0.74/4)/(0.26/115) ≈ 81.8 ≈ 82.4 ✓).
+
+**T10 — Residuals with a time order (bridges to Week 16 via §11-8c):**
+
+> A regression of monthly sales on advertising is fit to 36 months of data. The residuals, plotted *in time order*, are positive for months 1–14, negative for 15–27, positive for 28–36.
+>
+> (a) Which OLS assumption is violated, and why doesn't the standard residual-vs-X plot catch it?
+> (b) What is the practical consequence for the reported standard errors?
+> (c) What structural feature of the data is the model probably missing?
+>
+> **Answers:** (a) Independence of errors — the residuals are **autocorrelated** (each one resembles its neighbour). A residual-vs-X plot destroys the time ordering, so the runs are invisible; only a residual-vs-time plot reveals them. (b) SEs are typically *understated* with positive autocorrelation — t-statistics too big, p-values too small, overconfident inference. (c) A trend, seasonality, or an omitted slowly-moving variable (e.g. market growth) — exactly what Week 16's decomposition handles. This question makes the Week 15 → 16 hand-off explicit.
+
+*Additional quiz questions:*
+
+- Q10: A model includes a categorical predictor with 4 levels. How many dummy variables should enter (with an intercept)? *(a) 4 (b) 3 (c) 1 (d) 2)* — **Answer: (b).**
+- Q11: A VIF of 25 on a predictor means its coefficient's standard error is inflated by a factor of: *(a) 25 (b) 5 (c) √5 (d) 625)* — **Answer: (b)** (√25) — T4(d) as retrieval.
+- Q12: For a given x₀, the 95% *prediction interval* for a new observation, compared to the 95% CI for the mean response, is: *(a) narrower (b) identical (c) wider (d) undefined)* — **Answer: (c)** — Week 12's T10 distinction, now inside regression (§11-9).
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. RAND() predictor demo (5 min, structured version of Design Challenge 1's suggestion).** Everyone adds `=RAND()` as a fifth predictor to their Part 3 model and refits: R² rises for all, Adjusted R² falls for most, and the noise column sometimes shows p < 0.05 for someone in the room — which is the Week 13 multiple-testing lesson materialising in regression. Two birds, five minutes, zero prep.
+
+**B. Coefficient betting slips (runs inside Part 3).** Before each model step, pairs write a prediction: "adding X3 will move the unemployment slope [up/down/sign-flip] because ___." Commit, run, compare. Converts the confound hunt from observation into hypothesis-test-your-intuition — and the wrong bets are the teachable moments (Bjork's generation effect, already cited in Week 14's rationale).
+
+**C. Specification number-line (10 min, Part 4 alternative).** Every pair posts their preferred model's unemployment coefficient on one axis drawn on the whiteboard, labelled with its specification. The class sees one dataset produce a *range* of "the effect of unemployment" — the analyst-degrees-of-freedom point from Week 13's forking paths, now in regression clothing. Then the ethical question ("which would you report?") has a visual anchor.
+
+**D. Train/test overfitting demo (10 min, answers Design Challenge 1 properly).** Split the crime dataset 60/40. Fit the kitchen-sink model and the two-predictor model on the training rows; compute prediction errors on the held-out rows. The kitchen-sink model wins in-sample and loses out-of-sample. This is achievable in Excel (INDEX ranges) or five lines of Python, and it converts "overfitting" from a warning into an observed event — also planting A&W §10-7 (Validation) for the full-analysis weeks.
+
+**E. Output-table relay (8 min, Part 2 alternative).** Project the worked-example table; students in sequence each take one number (a coefficient, an SE, a t, a p, R², Adj R², F) and must say its one-sentence meaning aloud, no repeats. Fourteen sentences later the whole table has been verbalised — directly attacks Design Challenge 4's "too many numbers" problem.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the sequential four-model confound hunt (the strongest single activity in the course — the coefficient-instability *experience* is what multiple regression pedagogy usually lacks); T7's accounting-identity diagnostic (superb, and rare in textbooks); the "which model is most honest?" ethical turn with its Forward-College framing; T4/T5's internally consistent output tables (they check out against the F-from-R² formula — most fabricated outputs don't).
+
+**Problems, reasons, and fixes:**
+
+1. **The session examines three topics its reading never assigns (see §1):** heteroskedasticity (§11-8a) in T3, dummy variables (§10-6a) in T2/T6, interactions (§10-6b) in T7. The flipped-classroom contract — pre-work covers the concepts, class applies them — breaks in the week with the heaviest conceptual load. *Fix:* extend the reading as in §1; total added pages ≈ 25, offset by making §11-6 (stepwise) skim-only since it gets one question part.
+2. **The Part 3 dataset doesn't exist yet.** The activity requires a 25-city dataset engineered so that (i) the unemployment slope drops materially when income enters, and (ii) police force size carries a reverse-causality signature. That takes deliberate construction (generate income correlated ~−0.7 with unemployment, both driving crime; make police size a *function* of crime plus noise) and pre-testing — the same "non-negotiable prep" standard Week 8's Design Challenge 2 set for its messy dataset. *Fix:* an instructor-notes spec with the generating equations and the expected coefficient path, so the "what the class should find" paragraph is guaranteed rather than hoped for.
+3. **The n = 25 cities choice undercuts the inference theme.** With four predictors and 25 observations, every SE is huge and *nothing* will be significant — which muddies the "watch the coefficient change" story with "and also everything is insignificant." *Fix:* 60–80 cities keeps the confounding phenomenon while leaving enough power for the t-test discussion to make sense. (Alternatively, keep 25 and make small-n fragility an explicit fifth question — but choose deliberately.)
+4. **Toolchain still undecided mid-sentence** ("provided as an Excel file or loaded via Python"). By Week 15 this should be a settled convention (see Weeks 12/14 supplements): Excel primary for exam alignment, a mirrored notebook available. One line fixes it.
+5. **The multiple-testing thread from Week 13 is left implicit.** Part 3 runs four models × four coefficients ≈ 16 implicit tests, and the bridge question in Week 13 explicitly promised this concern would be "revisited directly in Week 15" — but no part of this session names it. *Fix:* Activity A above, or one debrief line: "you just ran ~16 coefficient tests; at α = 0.05, roughly one significant-looking coefficient in this room is noise."
+6. **T5(b) prints its solution inside the question** — the only leakage this week; move to the key. (Notably, this week is otherwise the cleanest on answer separation — its structure should be the template for retro-fixing Weeks 4, 5, 11, 12, 13.)

@@ -21,7 +21,7 @@ These objectives operate at the **application and evaluation** levels of Bloom's
 ## Before Class (Student Pre-Work)
 
 **Reading:** Albright & Winston, *Business Analytics*, Chapter 4 — read the following sections only:
-- §4-2 Probability essentials — rules, notation, conditional probability and Bayes' rule (pp. 142–150)
+- §4-2 Probability essentials — rules, notation, conditional probability and the multiplication rule (pp. 142–150). Note: A&W's formal treatment of Bayes' rule comes later, in §6-5 (Week 10); this week's Bayesian work is carried by the videos, the worked example, and the frequency-tree method — §4-2c gives you the conditional-probability foundation it builds on.
 - §4-3 Probability distribution of a single random variable (pp. 150–160)
 
 The simulation sections (§4-4–4-5) are covered in Week 18 (Monte Carlo). §4-4 is optional this week if students want a preview, but should not replace the reading above.
@@ -85,7 +85,7 @@ Parts (a)–(c) are mechanical. Part (d) is conceptual and requires students to 
 
 > In April 2025, the US government announced sweeping tariff increases, including a 145% tariff on goods imported from China. A European electronics manufacturer sources key components from two suppliers and must decide on its sourcing strategy before the tariff picture stabilises.
 >
-> **Strategy A — Stick with China supplier:** If tariffs are resolved within 12 months (probability 0.55), the company avoids costly switching and earns an estimated €120,000 profit margin. If tariffs persist or escalate (probability 0.45), the company faces a €60,000 loss from higher import costs and lost contracts.
+> **Strategy A — Stick with China supplier:** If tariffs are resolved within 12 months (probability 0.55), the company avoids costly switching and earns an estimated €150,000 profit margin. If tariffs persist or escalate (probability 0.45), the company faces a €60,000 loss from higher import costs and lost contracts.
 >
 > **Strategy B — Switch to Vietnam supplier (higher cost, outside tariff scope):** Incurs a €30,000 switching cost regardless of what happens. If tariffs resolve (probability 0.55), the company has over-paid and earns €20,000 profit (net of switching cost). If tariffs persist (probability 0.45), the strategy pays off and earns €80,000 profit (net of switching cost).
 >
@@ -234,14 +234,14 @@ This question uses verified data: the UK Omicron wave positivity rate of ~10% in
 ### T2 — Expected value (tariff scenario)
 
 **(a)** Expected values:
-- EV(Strategy A) = 0.55 × €120,000 + 0.45 × (−€60,000) = €66,000 − €27,000 = **€39,000**
+- EV(Strategy A) = 0.55 × €150,000 + 0.45 × (−€60,000) = €82,500 − €27,000 = **€55,500**
 - EV(Strategy B) = 0.55 × €20,000 + 0.45 × €80,000 = €11,000 + €36,000 = **€47,000**
 
-**(b)** Strategy B has the higher expected value (€47,000 vs €39,000).
+**(b)** Strategy A has the higher expected value (€55,500 vs €47,000) — which is exactly the CFO's premise in (c): A wins on EV, B wins on downside.
 
 **(c)** The CFO means: Strategy A has a worst-case outcome of −€60,000 (a loss), while Strategy B's worst case is +€20,000 (still a profit). A risk-averse firm may prefer the lower-EV option because it eliminates the possibility of a loss — even though in expectation it earns less. This is rational if the downside (a €60,000 loss) would cause real harm (e.g. breach of debt covenants, layoffs) that the upside cannot compensate for.
 
-**(d)** Set EV(A) = EV(B): p × 120,000 + (1−p) × (−60,000) = p × 20,000 + (1−p) × 80,000. Expanding: 120,000p − 60,000 + 60,000p = 20,000p + 80,000 − 80,000p. Left: 180,000p − 60,000. Right: −60,000p + 80,000. So 240,000p = 140,000 → **p ≈ 0.583.** When tariff resolution probability exceeds ~58%, Strategy A has higher expected value.
+**(d)** Set EV(A) = EV(B): p × 150,000 + (1−p) × (−60,000) = p × 20,000 + (1−p) × 80,000. Left: 210,000p − 60,000. Right: −60,000p + 80,000. So 270,000p = 140,000 → **p ≈ 0.519.** When the tariff-resolution probability exceeds ~52%, Strategy A has the higher expected value; below it, Strategy B wins on EV as well as on downside.
 
 **(e)** Additional information needed: cash flow constraints (can the firm absorb a €60,000 loss?); whether switching costs are reversible; the time horizon for the 12-month resolution probability; the probability distribution of intermediate outcomes (partial tariff relief); and firm risk appetite more broadly.
 
@@ -265,7 +265,7 @@ This question uses verified data: the UK Omicron wave positivity rate of ~10% in
 
 **(e)** At 2% prevalence (100,000 people): COVID = 2,000; true positives = 0.70 × 2,000 = 1,400; false positives = 0.01 × 98,000 = 980. P(COVID | positive) = 1,400 / 2,380 ≈ **58.8%.** The PPV dropped dramatically because the base rate fell — now only about 3 in 5 positives truly had COVID. The same test became far less conclusive at lower prevalence.
 
-**(f)** P(no COVID | negative) ≈ 96.7% from part (c). Two independent negative tests: P(no COVID | two negatives) ≈ 1 − (1 − 0.967)² ≈ 1 − 0.001 ≈ 99.9% — extremely strong assurance. The required assumption: the two tests are independent (e.g. run at different times, not from the same batch of potentially faulty tests) and prevalence has not changed between tests.
+**(f)** The second test must update from the *posterior* after the first negative, not from the original 10% prevalence. After one negative: P(COVID | negative) = 3,000/92,100 ≈ 3.3%. Using that as the new prior for the second test: P(COVID | two negatives) = (0.30 × 0.033) / (0.30 × 0.033 + 0.99 × 0.967) ≈ 0.0098/0.9673 ≈ 1.0%, so P(no COVID | two negatives) ≈ **99.0%** — strong but not absolute assurance. (A common error is to compute 1 − (1 − 0.967)² ≈ 99.9%, which squares the posterior and double-counts the prior; each test updates sequentially, exactly as in T6.) The required assumption: the two tests are independent (e.g. run at different times, not from the same batch of potentially faulty tests) and prevalence has not changed between tests.
 
 ---
 
@@ -387,7 +387,7 @@ Q1–Q6 are retrieval practice. If Q6 (independence multiplication) fails broadl
 
 T1(d) — independence and sampling without replacement — is the most important to review. If pairs are being used for other analysis tasks later, they need to understand dependence.
 
-T2(c) — whether choosing Project A is irrational — opens the question of risk aversion that will recur in Weeks 10 and 18. The instructor should ask: "Is there a situation where choosing B would be obviously wrong even if it has higher expected value?" (Yes: if losing is catastrophic — a small company choosing B might face bankruptcy in the loss scenario.)
+T2(c) — why a firm might rationally prefer Strategy B despite its lower expected value — opens the question of risk aversion that will recur in Weeks 10 and 18. The instructor should ask: "Is there a situation where choosing A would be obviously wrong even though it has the higher expected value?" (Yes: if the −€60,000 loss is catastrophic — a small firm might breach debt covenants or fail — the downside dominates the EV advantage.)
 
 T3 is held back for Part 3. Volunteers can present parts (a) and (b); part (d) is the debate prompt.
 
@@ -472,7 +472,7 @@ Peer response required: one comment that engages with the probability calculatio
 | Structured controversy format for probability/Bayes content | Johnson & Johnson (1988): structured controversy produces deeper understanding than lecture; probability and Bayes' rule are the statistics topics most likely to produce genuine disagreement even among people who've done the calculation correctly |
 | Q9 (relative vs. absolute risk reduction) as hardest quiz question | This distinction is one of the most consequential probability misrepresentations in public health and corporate communications; spotting it at Week 4 sets a standard the course maintains through Week 15 |
 | Pre-submission: find a real probability claim | Ausubel (1968): self-relevance anchors learning; students who bring their own example have a personal stake in the question; 40+ nationalities produces a gallery of claims no instructor could curate alone |
-| Expected value taught with two projects of equal EV but different variance | Bridge to Week 10 (decision trees with risk aversion) and Week 18 (Monte Carlo with distribution sensitivity); the variance insight is the conceptual prerequisite for understanding why EMV alone is insufficient |
+| Expected value taught with two strategies where the higher-EV option carries the worse downside | Bridge to Week 10 (decision trees with risk aversion) and Week 18 (Monte Carlo with distribution sensitivity); the downside-risk insight is the conceptual prerequisite for understanding why EMV alone is insufficient |
 | Weekly Mentimeter quiz | Farmus, Cribbie & Rotondi (2020): weekly in-class quizzes significantly moderated flipped classroom advantage (g=0.43) |
 | Three-touchpoint structure | Cepeda et al. (2006): spacing effect |
 
@@ -547,3 +547,82 @@ Risk aversion is a utility theory concept — the correct treatment requires a u
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 4
+
+**Coverage check: the section references are accurate this week (4-2 pp. 142–150; 4-3 pp. 150–156; 4-4 simulation deferred to Week 18 matches the book's structure). Two sourcing gaps and one unused topic:**
+
+1. **Bayes' rule may not actually be in §4-2.** The chapter's section structure is 4-2a Rule of Complements, 4-2b Addition Rule, 4-2c Conditional Probability and the Multiplication Rule, 4-2d Probabilistic Independence, 4-2e Equally Likely Events, 4-2f Subjective vs Objective Probabilities. There is no Bayes' rule section; A&W's formal treatment of posterior revision arrives in Chapter 6 (multistage decision problems). Verify 4-2c's actual coverage before promising students "conditional probability *and Bayes' rule* (pp. 142–150)" — if the book stops at the multiplication rule, the session's central concept rests entirely on the 3Blue1Brown video and the worked example. Same fix as Week 3: a short handout, plus an honest note that sensitivity/specificity/PPV vocabulary comes from the medical-decision-making literature (Gigerenzer), not the textbook.
+2. **§4-2f (Subjective vs Objective Probabilities) is assigned but unused — and it's the section this session most needs.** T2's tariff probabilities (0.55/0.45 "assigned by a trade policy analyst") are subjective probabilities; T2(e) and the controversy both turn on where such numbers come from. One tutorial part or quiz question naming the distinction (T10 below) connects the reading to the session's real theme.
+3. **§4-3a promises summary measures including variance — the objectives promise it too — but nothing practises it.** The learning objectives say students will "compute expected value *and variance* for a discrete random variable *using SUMPRODUCT*," yet no tutorial computes a variance and no task touches Excel. Add T9 below, or trim the objective.
+4. §4-3b (conditional mean and variance) is fairly skipped; note it as available stretch material for strong students.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Law of total probability (the missing middle step):**
+
+> An airline's flights are short-haul (60%), medium-haul (30%), or long-haul (10%). Delay probabilities: short 15%, medium 25%, long 40%.
+>
+> (a) What is the overall probability a randomly chosen flight is delayed?
+> (b) A flight is delayed. What is the probability it was long-haul?
+> (c) Long-haul is only 10% of flights but a manager says "most of our delay problem is long-haul." Use (b) to assess this.
+
+**Answers:** (a) P(delay) = 0.60×0.15 + 0.30×0.25 + 0.10×0.40 = 0.09 + 0.075 + 0.04 = **0.205.** (b) P(long | delay) = 0.04/0.205 ≈ **19.5%** (Bayes with three branches — the same tree structure as T3 but with a three-way split). (c) The manager is wrong: long-haul contributes about a fifth of delays; short-haul contributes 0.09/0.205 ≈ 44% — the *rate* is highest for long-haul but the *volume* is dominated by short-haul. This is the frequency-vs-rate distinction that recurs in Week 3's T7(f) and here in probability form.
+
+**T9 — Variance of a discrete random variable with SUMPRODUCT (fills the objectives gap):**
+
+> A consultancy bids for projects. Next quarter's number of projects won, X, has distribution: P(X=0)=0.15, P(X=1)=0.35, P(X=2)=0.30, P(X=3)=0.20.
+>
+> (a) Compute E(X) — in Excel, `=SUMPRODUCT(x_range, p_range)`.
+> (b) Compute Var(X) = Σp·(x−μ)² and the standard deviation — in Excel, `=SUMPRODUCT((x_range−mu)^2, p_range)` entered against the computed mean.
+> (c) A second business line has the same E(X) but SD twice as large. Which do you staff for, and what does "staff for the mean" get wrong?
+
+**Answers:** (a) E(X) = 0×0.15 + 1×0.35 + 2×0.30 + 3×0.20 = **1.55.** (b) Deviations²: (0−1.55)²=2.4025, (1−1.55)²=0.3025, (2−1.55)²=0.2025, (3−1.55)²=2.1025. Var = 0.15×2.4025 + 0.35×0.3025 + 0.30×0.2025 + 0.20×2.1025 = 0.36038 + 0.10588 + 0.06075 + 0.42050 = **0.9475**; SD ≈ **0.973.** (c) Staffing to the mean (≈1.55 → 2 teams) ignores that the high-SD line will regularly need 0 or 3+ teams; the cost of idle staff vs turned-away work is asymmetric, so the *distribution*, not the mean, drives the staffing decision. This is the Week 15/18 "flaw of averages" planted early — A&W make it the centrepiece of Chapter 15 (15-3, "Simulation and the Flaw of Averages").
+
+**T10 — Subjective vs objective probability (uses §4-2f):**
+
+> Classify each probability as objective (relative-frequency-based) or subjective (degree of belief), and say what would make you revise it: (i) "There is a 1/52 chance the top card is the ace of spades." (ii) "There is a 55% chance the tariffs are resolved within 12 months." (iii) "There is a 70% chance this startup succeeds." (iv) "There is a 10% chance a person tested in January 2022 had COVID."
+>
+> **Answers:** (i) Objective — symmetry of a known process; revised only if the deck is rigged. (ii) Subjective — an analyst's belief; revised with any new political information; two competent analysts can legitimately disagree. (iii) Subjective — no repeatable trial exists for a one-off venture; base rates of comparable startups can *inform* it. (iv) Objective-ish — estimated from population testing data (a measured frequency), though measurement issues (who gets tested) push it toward a modelled estimate. The point: T2 and T5's EV calculations inherit the softness of their subjective inputs — which is exactly what T2(e) and T5(e) are fishing for.
+
+*Additional quiz questions:*
+
+- Q10: P(A|B) = P(B|A) is true: *(a) always (b) only when P(A) = P(B) (c) only when A and B are independent (d) never)* — **Answer: (b)** — confusing the two directions is the inverse fallacy the whole session attacks (prosecutor's fallacy).
+- Q11: A risky project has E(profit) = €50k. This means: *(a) the most likely profit is €50k (b) profit will be between €0 and €100k (c) the probability-weighted average of outcomes is €50k; the actual outcome may never equal it (d) half of the time profit exceeds €50k)* — **Answer: (c)** — also kills the mean/median/mode conflation carried over from Week 2.
+- Q12: Which change *increases* the PPV of a test? *(a) higher prevalence (b) lower sensitivity (c) lower specificity (d) testing more people)* — **Answer: (a)** — one-line retrieval of the session's core result.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Monty Hall with physical cards (15 min, buffer or Part 3 warm-up).** Run 20 rapid trials in pairs (three cards, one "prize"): half the room always switches, half always stays; tally wins on the board. The empirical 2/3 vs 1/3 split lands before any derivation. Then connect: conditioning on the host's reveal is the same "update on evidence" move as T3. High energy, zero tech.
+
+**B. PPV curve construction (15 min, alternative to Part 2 buffer).** Each pair computes P(disease | positive) for one assigned prevalence (0.1%, 0.5%, 1%, 2%, 5%, 10%, 20%, 30%) with sensitivity 90%/specificity 95%; results plotted live on one shared chart. The class *builds* the curve that T4(e) solves algebraically — the 5.3% crossover becomes a visible point rather than an algebra exercise.
+
+**C. Calibration ledger, opened this week (10 min now; 5 min in Weeks 8 and 13).** Students write probability estimates for ten verifiable near-term events (course-related, sport, weather, tech news). Store them. Revisit in Week 8 (confidence intervals) and Week 13 (do their "70% confident" claims come true ~70% of the time?). Turns subjective probability (§4-2f) into a personal, longitudinal experiment — very Forward College (self-awareness meets statistics).
+
+**D. Prosecutor's fallacy mini-trial (20 min, alternative Part 3).** A mock courtroom: "the DNA match probability is 1 in a million, therefore the defendant is guilty with probability 999,999/1,000,000." Prosecution and defence teams each get 7 minutes to prepare; the class votes before and after. Same Bayes structure as the LFT debate but with sharper stakes and a documented real-world failure mode (Sally Clark case as instructor debrief material).
+
+**E. Frequency-tree relay (10 min, Part 2 alternative).** Teams of three at the whiteboard: person 1 draws the population split, person 2 the test branches, person 3 computes the conditional — for a scenario they haven't seen (T8's airline). Each person may only add to the tree, not erase. Tests whether the tree is a shared tool or one student's private skill — directly addresses the free-riding risk in six-person controversy groups.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the frequency-tree-first approach with Gigerenzer & Hoffrage cited (this is the evidence-based way to teach Bayes); the two-prevalence structure of T3/controversy (January vs April) making base rate a *moving* quantity; deliberate group allocation in Design Challenge 3; the honest treatment of Q7's Bayesian nuance.
+
+**Problems, reasons, and fixes:**
+
+1. **T3(f)'s answer is mathematically wrong.** The key computes P(no COVID | two negatives) as 1 − (1 − 0.967)² ≈ 99.9%. Squaring (1 − NPV) double-counts the prior: the second test must update from the *posterior* after the first negative, not from the original 10% prevalence. Correct sequential update: after one negative, P(COVID | neg) = 3,000/92,100 ≈ 3.26%; after a second independent negative, P(COVID | 2 neg) = (0.30 × 0.0326)/(0.30 × 0.0326 + 0.99 × 0.9674) ≈ 0.0098/0.9675 ≈ **1.0%, so P(no COVID | 2 negatives) ≈ 99.0%**, not 99.9%. *Reason it matters:* T6 teaches precisely this sequential-update logic correctly (2% → 9.8% → 43.2%); the T3(f) key contradicts the method the same document teaches two problems later, and strong students will spot it. *Fix:* rewrite the key with the sequential tree; the conclusion ("two negatives are strong but not absolute assurance") survives with the corrected number.
+
+2. **T2's scenario contradicts its own answer key.** The CFO in (c) says "Strategy A has higher expected value" — but the key computes EV(A) = €39,000 < EV(B) = €47,000. As the numbers stand, B has higher EV *and* the better downside, so it dominates outright and the risk-aversion discussion the question exists to provoke has nothing to bite on. *Fix:* raise Strategy A's success payoff from €120,000 to €150,000. Then EV(A) = 0.55×150,000 − 0.45×60,000 = **€55,500 > €47,000 = EV(B)**, the CFO's statement becomes true, and (d)'s indifference point becomes 150,000p − 60,000(1−p) = 20,000p + 80,000(1−p) → 270,000p = 140,000 → **p ≈ 0.519** (update the key accordingly).
+
+3. **Worked solutions are printed inside the questions students must submit.** T4(a), (b), (e), T5(a), (d), T6(a), (c), and T7(a) contain full inline solutions within the problem statements — for work that is "submitted before class." *Reason:* this converts the pre-work from retrieval practice into transcription, and unlike Weeks 1–3 (where the key was at least in a separate section), here the answers sit mid-question where they cannot be unseen. *Fix:* strip all inline solutions into the Answer Key section and issue a student version without it; the split-document fix flagged in Week 1 is now urgent because the leakage is worsening week over week.
+
+4. **Stale text from an earlier version of T2 survives in two places.** Part 2 discusses "whether choosing Project A is irrational" and warns "a small company choosing B might face bankruptcy in the loss scenario" — but current-T2's Strategy B has *no* loss scenario (worst case +€20,000); and the Design Rationale row claims EV is "taught with two projects of equal EV but different variance," which matches neither T2 nor T5. *Fix:* rewrite the Part 2 paragraph around the corrected T2 (the catastrophic-downside example belongs to Strategy A) and update the rationale row.
+
+5. **Part 4's arithmetic is optimistic.** "~90 sec per student" × 12–15 students = 18–22.5 minutes of pure presentation in a 20-minute slot, before the instructor identifies the "star case." *Fix:* triage — the instructor (who has read the submissions) pre-selects 5–6 claims spanning domains; the rest get written feedback in the LMS thread. This also strengthens the star-case mechanism: it's chosen deliberately, not from whoever happened to speak last.
+
+6. **Q8 is under-specified.** "The test is 90% accurate" doesn't distinguish sensitivity from specificity, so the "correct" intuition (c) can't actually be computed — which is defensible for a gut-check question, but the debrief should name the ambiguity ("what would you need to know before calculating?") rather than treat (c) as complete. It's an opportunity: the ambiguity *is* the lesson of the week.
+
+7. **Controversy groups of 6–7 invite free-riding during the 10-minute prep.** The plan solves allocation (Design Challenge 3) but not internal structure. *Fix:* within each group, assign sub-roles — two students own the calculation, two own the strongest opposing rebuttal they must pre-empt, two own the 3-minute delivery. (Activity E above is the lighter-weight version of the same fix.)

@@ -401,3 +401,70 @@ Students in a statistics session may resist being asked to write a paragraph. Th
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 12
+
+Assigned sections are correctly cited (12-1, 12-2, 12-6, 12-7, 12-8 — including 12-2e's MAE/RMSE/MAPE coverage). Two omissions matter:
+
+1. **§12-5 (The Random Walk Model, pp. 562–565) should be required, not optional — because of T9.** Oil prices are the textbook example of a near-random-walk series: the honest benchmark forecast for next month's Brent is (approximately) this month's price, and *no* trend/seasonal smoother should be expected to beat it. T9's trading-firm scenario becomes far sharper with 12-5 in hand: the firm's deepest error wasn't a missed structural break, it was applying a trend-extrapolating model to a price series at all. One added reading, and T9 gains its correct textbook frame.
+2. **§12-3 (Testing for Randomness — runs test, autocorrelation, pp. 548–556)** is the formal version of Week 15's T10 bridge (autocorrelated residuals) and the tool that justifies decomposition in the first place ("is there structure to extract?"). Worth at least a skim assignment; the autocorrelation function also pre-loads the vocabulary students will meet in any further forecasting course.
+
+## 2. Extended Question Bank (with answers)
+
+**T10 — The naive benchmark (uses §12-5; the discipline the session lacks):**
+
+> For the coffee-shop dataset, three forecasts are proposed for each month of the 12-month test set: (i) Holt-Winters; (ii) **naive**: forecast = last observed value; (iii) **seasonal naive**: forecast = value from the same month last year.
+>
+> (a) Before computing: which do you expect to win on RMSE, and why?
+> (b) The results come back: HW RMSE = 41, naive RMSE = 96, seasonal-naive RMSE = 55. What does each comparison tell you?
+> (c) A colleague's fancy model beats *neither* naive benchmark on a different dataset. What should they conclude?
+>
+> **Answers:** (a) For a series with genuine trend + stable seasonality, HW should beat both; seasonal naive should beat plain naive because the dominant structure is seasonal. (b) HW < seasonal naive: the trend component and smoothing add real value beyond "copy last year" (41 vs 55); seasonal naive ≪ naive: most of the forecastable structure is seasonality (55 vs 96) — i.e. roughly half the model's advantage comes from something a one-line rule captures. Reporting model skill *relative to the naive benchmarks* is the professional norm (this is the idea behind the MASE metric). (c) Their model is adding complexity without skill — for that series the process may be near-random-walk (§12-5), and the naive forecast *is* the defensible model. "Sophisticated" is not a synonym for "better."
+
+**T11 — Is there anything to forecast? (uses §12-3):**
+
+> A hedge-fund intern decomposes daily Bitcoin returns (not prices) and proudly reports a fitted Holt-Winters model.
+>
+> (a) What does §12-3's randomness testing (runs test / autocorrelations near zero) likely show for daily returns?
+> (b) Why can a seasonal_decompose call still produce nice-looking trend and seasonal curves on pure noise?
+> (c) What is the correct first step before fitting any forecasting model?
+>
+> **Answers:** (a) Returns are close to random — autocorrelations ≈ 0, runs test consistent with randomness; there is (almost) no extractable structure. (b) Decomposition is arithmetic, not inference: a centred moving average of noise still draws a wiggly "trend," and averaging by month manufactures a "seasonal" pattern from sampling noise — the algorithm never checks whether components are *real*. (c) Test for randomness / inspect the autocorrelation function first; only fit structure where structure exists. This inoculates against the most seductive failure in forecasting: beautiful decompositions of nothing.
+
+**T12 — Choose the origin and horizon (business framing drill):**
+
+> An airline needs: (i) tomorrow's meal-count forecast per flight; (ii) a 12-month cabin-crew hiring plan; (iii) a 5-year fleet-purchase business case.
+>
+> For each: which method from this week (or which *non*-time-series approach) fits, and what dominates the error at that horizon?
+>
+> **Answers:** (i) Seasonal naive/short-horizon smoothing on booking data — at 1 day, noise dominates; near-real-time booking counts beat any model of history. (ii) Holt-Winters on monthly passenger volumes — trend+seasonality dominate at 12 months; assumption statement about route network required. (iii) No extrapolation is credible at 5 years — scenario analysis and judgement (Week 18's simulation, Week 10's decision trees) replace time-series methods; the dominant "error" is structural change, which no smoother models. The drill's point: the *horizon* selects the tool, and the course's other tools take over where extrapolation dies.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Beat-the-naive tournament (runs inside Part 3).** Every pair must report three RMSEs — their model, naive, seasonal naive — and the board shows model *skill* (% improvement over the better naive) rather than raw RMSE. Any pair whose model loses to a one-line rule must say so aloud and diagnose why. Installs the benchmark habit permanently and converts T10 into practice.
+
+**B. Hand-cranked decomposition (10 min, before the code).** On a printed 24-month series, each pair computes one centred 12-month moving-average point and one seasonal ratio by hand, then the class assembles the full curve on the board. `seasonal_decompose` stops being a black box — students have *been* the algorithm for one data point (the same demystification move as Week 11's bag-of-chips activity).
+
+**C. Regime-break gallery (15 min, Part 4 alternative).** Four real charts: European retail sales through COVID-19, Brent crude through May 2025 (T9's case), European gas prices through 2022, and a stable series (German electricity demand). Pairs mark where (if anywhere) a structural break occurs and state which Holt-Winters assumption died first. The stable series is the control — teams that "find" a break in it learn the opposite lesson (apophenia).
+
+**D. Forecast futures market (5 min now, 5 min in Week 19).** Each student submits a point forecast + interval for a verifiable number (e.g. next month's Berlin bike-counter total). Log them. Score in Week 19 by interval coverage and error. Continues the Week 4 calibration ledger thread and makes the "uncertainty band" habit personal.
+
+**E. α/β/γ slider exploration (8 min, Part 2 extension).** Wrap the Holt-Winters fit in `ipywidgets.interact` over the smoothing parameters and watch the fitted curve morph from "rigid average" to "noise-chaser." T6(d)'s signal-vs-noise judgement becomes a visible dial, mirroring Week 11's n-slider.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the assumption-statement deliverable with the explicit "it's sufficient on its own" priority call (the best deliverable design in Block 4); T9's OPEC+ case with the regime-vs-model distinction in (b); T7's asymmetric-cost question quietly smuggling in the newsvendor logic that Week 18 will need; the Week 2 callback finally paying off the course's longest-planted hook.
+
+**Problems, reasons, and fixes:**
+
+1. **The timing table sums to 95 minutes** (10+20+10+25+20+10), the same arithmetic slip as Week 9. *Fix:* Part 4 to 15 minutes (two pairs at 5 min each + 5 min discussion is exactly 15 anyway — the printed 20 was slack).
+2. **Design Challenge 1's code suggestion is not a real API.** `fit.forecast(12, confidence_intervals=0.95)` does not exist for `ExponentialSmoothing`. Actual options: use `statsmodels.tsa.exponential_smoothing.ets.ETSModel` (`fit.get_prediction(...).summary_frame()` gives intervals), or `fit.simulate(12, repetitions=1000)` and take percentiles from the simulated paths. *Reason it matters:* an instructor following their own notes live will hit a TypeError in front of the class. *Fix:* pre-test the interval code and print the working version in the plan; the simulate-and-take-percentiles route is also pedagogically nicer (it previews Week 18's Monte Carlo logic).
+3. **`sklearn` is used but never installed.** Part 2 imports `sklearn.metrics`, which is absent from this week's environment check (statsmodels only) and from Week 6's package list. *Fix:* either add scikit-learn to the pre-check or — simpler — compute the metrics in numpy (`np.mean(np.abs(test-pred))`, `np.sqrt(np.mean((test-pred)**2))`), which is one line each and shows students the formulas they just learned.
+4. **Datasets exist only by name.** `coffee_sales.csv` (worked example + main tutorial) and the unnamed Part 3 pair dataset both need generation scripts with known components (so the instructor knows the *true* trend/seasonality students should recover) — same dataset-provisioning gap as Weeks 8, 9, and 15. The main tutorial tasks 1–4 also have **no reference answers**; with a scripted dataset, the instructor can print the expected decomposition parameters and test-set RMSE.
+5. **No naive benchmark anywhere (fixed by T10/Activity A).** As designed, students evaluate Holt-Winters only against itself; a model that loses to "copy last year" would still look successful. This is the single most important professional habit missing from the session.
+6. **Numbering confusion:** the main tutorial has four unnumbered tasks, then "additional" questions begin at T5 — so T1–T4 don't exist. Renumber (main tasks = T1–T4) so the answer key and in-class references can cite them.
+7. **Small fixes:** T6(e)'s spike weeks ("24 and 28" in a 26-week dataset) should read "weeks 20 and 24, next expected at 28"; T7(a)'s formula is the aggregate-MAPE shortcut (MAE/mean) — fine, but label it as such since true MAPE averages per-period percentage errors and differs when demand varies; the pre-work check should also verify the student can *load a CSV with a DatetimeIndex*, which is where Part 3 actually stalls in practice (`parse_dates` + frequency inference), not the statsmodels import.
