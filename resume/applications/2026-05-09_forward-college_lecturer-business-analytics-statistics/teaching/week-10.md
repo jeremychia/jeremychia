@@ -17,7 +17,7 @@ By the end of this session, students will be able to:
 
 ## Before Class (Student Pre-Work)
 
-**Reading:** Albright & Winston, Chapter 6 — Sections 6-1 through 6-6 only (pp. 222–264). Skip Section 6-7 (simulation approach — covered in Week 14). Focus especially on the Acme new product example (§6-3, pp. 232–236) and the Bayes' rule worked example (§6-5, pp. 239–257).
+**Reading:** Albright & Winston, Chapter 6 — Sections 6-1 through 6-6 (pp. 222–264; §6-7 is a one-page conclusion). Focus especially on the Acme new product example (§6-3, pp. 232–236) and the Bayes' rule treatment within §6-5 (pp. 239–257) — this is the textbook's formal home for the Bayesian machinery used informally in Week 4. Simulation-based approaches to decision problems come in Week 18.
 
 **Videos (~20 minutes total):**
 
@@ -155,14 +155,14 @@ A market research firm offers to predict whether a new product will succeed or f
 
 > The following simplified decision tree output is given for a company choosing between two product development strategies:
 >
-> **Strategy X — Fast-to-market:** EMV = €3.2M. Outcomes: 60% chance of €6M; 40% chance of −€1.5M.
+> **Strategy X — Fast-to-market:** EMV = €3.2M. Outcomes: 60% chance of €6M; 40% chance of −€1.0M.
 > **Strategy Y — Deliberate development:** EMV = €2.8M. Outcomes: 90% chance of €3.2M; 10% chance of −€0.2M.
 >
 > (a) Verify both EMVs by hand.
 >
-> *Solution:* EV(X) = 0.60 × 6,000,000 + 0.40 × (−1,500,000) = 3,600,000 − 600,000 = **€3,000,000** (note: the stated €3.2M implies slightly different numbers — show your working and flag the discrepancy; accept values in the spirit of the stated outputs). EV(Y) = 0.90 × 3,200,000 + 0.10 × (−200,000) = 2,880,000 − 20,000 = **€2,860,000 ≈ €2.8M**. Consistent.
+> *Solution:* EV(X) = 0.60 × 6,000,000 + 0.40 × (−1,000,000) = 3,600,000 − 400,000 = **€3,200,000.** EV(Y) = 0.90 × 3,200,000 + 0.10 × (−200,000) = 2,880,000 − 20,000 = **€2,860,000 ≈ €2.9M.** Both match the stated outputs.
 >
-> (b) Strategy X has higher EMV but also a 40% chance of a €1.5M loss. A CFO says: "We can only sustain a maximum loss of €1M without triggering a covenant breach on our debt." How does this constraint change the analysis?
+> (b) Strategy X has higher EMV but also a 40% chance of a €1.0M loss. A CFO says: "We can only sustain a maximum loss of €0.8M without triggering a covenant breach on our debt." How does this constraint change the analysis?
 > (c) The board requests that the team calculate the probability of achieving a positive return under each strategy. What are these probabilities?
 > (d) If the company must choose one strategy and cannot revisit the decision, which strategy would you recommend — and to whom does your recommendation depend on?
 > (e) A junior analyst says: "The decision tree tells us the answer: choose X." Correct this misstatement. What does the decision tree actually tell you, and what does it leave to human judgment?
@@ -325,9 +325,9 @@ Expected payoff from buying survey = 0.25 × €8.2M + 0.75 × €0 − €0.3M 
 
 ### T5 — Risk aversion vs EMV (product strategies)
 
-**(a)** EV(X) = 0.60 × €6M + 0.40 × (−€1.5M) = €3.6M − €0.6M = **€3.0M.** EV(Y) = 0.90 × €3.2M + 0.10 × (−€0.2M) = €2.88M − €0.02M = **€2.86M.** (The stated €3.2M for X appears to use slightly different numbers — show working and note the discrepancy; the EMV difference between X and Y is approximately €0.14M.) Strategy X has higher EMV.
+**(a)** EV(X) = 0.60 × €6M + 0.40 × (−€1.0M) = €3.6M − €0.4M = **€3.2M.** EV(Y) = 0.90 × €3.2M + 0.10 × (−€0.2M) = €2.88M − €0.02M = **€2.86M.** Strategy X has higher EMV by ≈ €0.34M.
 
-**(b)** The covenant constraint transforms the analysis: Strategy X has a 40% probability of a −€1.5M loss, which exceeds the €1.0M maximum survivable loss. A Strategy X loss could trigger covenant breach — a qualitatively catastrophic outcome (forced asset sale, debt renegotiation, reputational damage) that is not captured in a linear EMV calculation. The CFO's constraint is not irrational: it reflects the asymmetric cost of a breach versus the marginal value of higher expected earnings.
+**(b)** The covenant constraint transforms the analysis: Strategy X has a 40% probability of a −€1.0M loss, which exceeds the €0.8M maximum survivable loss. A Strategy X loss could trigger covenant breach — a qualitatively catastrophic outcome (forced asset sale, debt renegotiation, reputational damage) that is not captured in a linear EMV calculation. The CFO's constraint is not irrational: it reflects the asymmetric cost of a breach versus the marginal value of higher expected earnings.
 
 **(c)** P(positive return | X) = 60% (the 60% probability of €6M). P(positive return | Y) = 90% (the 90% probability of €3.2M). If the board wants to maximise the probability of at least breaking even (any positive payoff), Y is clearly preferable.
 
@@ -452,17 +452,14 @@ D) Exact Value of Predicted Intervals
 
 ---
 
-**Q7 (Medium — application).** A decision tree has two branches: "Launch" (EMV = €200K) and "Wait" (certain payoff = €150K). With perfect information, you would earn €400K if the market is good (p=0.60) and €0 if bad (p=0.40). What is the EVPI?
+**Q7 (Medium — application).** A decision tree has two branches: "Launch" (EMV = €200K) and "Wait" (certain payoff = €150K). With perfect information you would Launch when the market is good (p = 0.60, payoff €400K) and Wait when it is bad (p = 0.40, payoff €150K). What is the EVPI?
 
 A) €400K
-B) €90K ← correct (EVPI = 0.60×400K + 0.40×0 − 200K = 240K − 200K = 40K... wait: recalculate: 0.60×400K=240K, 0.40×0=0, EMV with perfect info=240K; best without info=200K; EVPI=40K)
-
-*Instructor note: Correct answer is €40K. Reconstruct if needed.*
-
-A) €400K
-B) €40K ← correct
+B) €100K ← correct
 C) €240K
-D) €200K
+D) €40K
+
+*Instructor note: EMV with perfect information = 0.60 × 400K + 0.40 × 150K = €300K; best EMV without information = €200K (Launch); EVPI = €300K − €200K = €100K. Distractor (d) €40K is the classic error — forgetting that in the bad state the best action under perfect information is still the certain €150K Wait, not €0.*
 
 ---
 
@@ -664,3 +661,76 @@ Lovett, M. C., & Greenhouse, J. B. (2000). Applying cognitive theory to statisti
 Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. *Psychological Science, 17*(3), 249–255.
 
 Vygotsky, L. S. (1978). *Mind in society: The development of higher psychological processes*. Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 6
+
+- **The "skip §6-7 (simulation approach)" instruction is wrong on both counts.** Chapter 6's sections are: 6-1 Introduction, 6-2 Elements of Decision Analysis, 6-3 One-Stage Decision Problems (p. 232), 6-4 The PrecisionTree Add-In (p. 236), 6-5 Multistage Decision Problems (p. 239), 6-6 The Role of Risk Aversion (p. 257), 6-7 **Conclusion** (p. 264). There is no simulation section to skip — and simulation is Week 18 in the arc, not "Week 14" (regression). Fix the note to: "read 6-1 through 6-6; 6-4 (PrecisionTree) may be skimmed — see software note below."
+- The reading correctly lands on 6-5 for Bayes' rule — worth noting this is where A&W formally treat Bayesian revision (Week 4's supplement flagged that Chapter 4 doesn't), so this session is the textbook's actual Bayes anchor. Frame it as such: "the formula you used informally in Week 4 gets its full treatment here."
+- **§6-6 is read but under-used.** Risk aversion carries T2(c) and all of T5, yet utility functions, exponential utility, and certainty equivalents (6-6a–c) never get a computation. T8 below fixes this with one question — and certainty equivalents give T5(d) a *quantitative* answer instead of a rhetorical one.
+- **The PrecisionTree dependency needs a decision.** T2 interprets PrecisionTree output (fine — interpretation needs no licence), but the optional video and Design Challenge 5's promised "computer lab sessions" assume Palisade software the course never schedules and Forward may not licence. *Options:* (a) commit to spreadsheet-built trees (a data table gives one-way sensitivity — A&W's own SolverTable idea from Ch13); (b) a 20-line Python folding-back function in Week 18's lab; (c) drop the references. Any is fine; a dangling dependency isn't.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Certainty equivalent (uses §6-6, closes the T2(c) loop):**
+
+> Return to T2. Model the firm's risk aversion with exponential utility U(x) = 1 − e^(−x/R), risk tolerance R = €10M.
+>
+> (a) Compute the certainty equivalent (CE) of "Continue trial" (outcomes €22M / €7M / −€3M with p = 0.55/0.30/0.15). Use CE = −R·ln(E[e^(−x/R)]).
+> (b) The partner offers a certain €8.4M. Given (a), does a firm with R = €10M license or continue?
+> (c) The CEO chooses the certain €8.4M anyway. What does that reveal about her implied risk tolerance?
+>
+> **Answers:** (a) E[e^(−x/R)] = 0.55e^(−2.2) + 0.30e^(−0.7) + 0.15e^(0.3) = 0.55(0.1108) + 0.30(0.4966) + 0.15(1.3499) = 0.0609 + 0.1490 + 0.2025 = 0.4124. CE = −10·ln(0.4124) ≈ **€8.86M.** (b) CE (8.86) > 8.4 → still continue the trial, but the €13.75M EMV gap has shrunk to €0.46M of *certainty-equivalent* advantage — risk aversion nearly erases it. (c) Her implied R is just below €10M (solving CE = 8.4 gives R ≈ €9M): she behaves like a firm that can absorb roughly €9M of risk. The payoff of this question: "risk-averse" stops being a vibe and becomes a measurable parameter — exactly what 6-6 is for.
+
+**T9 — Risk profiles and dominance (deepens T5):**
+
+> Using T5's two strategies, plot each strategy's risk profile (cumulative probability vs payoff).
+>
+> (a) Does either strategy first-order stochastically dominate the other?
+> (b) A colleague says "Y is safer, so any risk-averse decision-maker prefers Y." Is that guaranteed?
+>
+> **Answers:** (a) No. X has the higher maximum (€6M vs €3.2M) but the worse minimum (−€1.5M vs −€0.2M); their cumulative curves cross, so neither dominates — which is *why* the choice requires a risk attitude at all. (b) Not guaranteed — "risk-averse" is a family of utility functions, not one; a mildly risk-averse decision-maker can still prefer X (per T8's machinery, a large-R firm does). Only if Y dominated first-order would *every* rational decision-maker prefer it. This kills the common student shortcut "risk-averse ⇒ pick the safe one."
+
+**T10 — When information is worthless:**
+
+> A firm faces a decision where "launch" has EMV €50k > 0 under the prior, and running the proposed market study cannot produce any posterior under which "don't launch" becomes optimal (even the worst signal leaves EMV(launch) > 0).
+>
+> (a) What is the EVI of this study, before doing any arithmetic? Why?
+> (b) State the general principle connecting information value to decisions.
+>
+> **Answers:** (a) **Zero.** Information has value only if some possible signal would *change the optimal action*; if you'd launch regardless, the study buys nothing (except perhaps confidence — which EMV doesn't price). (b) EVI = expected gain from *acting differently* on some signals; no action change on any signal ⇒ EVI = 0; and always 0 ≤ EVI ≤ EVPI. This is the conceptual backbone behind T6's €7,368 — the study there *barely* changes any action, so its value is barely above zero.
+
+*Additional quiz questions:*
+
+- Q10: Which is always true? *(a) EVI > EVPI (b) EVI ≤ EVPI (c) EVI = EVPI when information is expensive (d) EVPI < 0 for risky decisions)* — **Answer: (b)** — imperfect information can never beat perfect information.
+- Q11: If the same action is optimal in every state of the world, EVPI equals: *(a) the best payoff (b) the EMV (c) zero (d) cannot be determined)* — **Answer: (c)** — T10's principle in one line.
+- Q12: A decision-maker's certainty equivalent for a gamble is below its EMV. They are: *(a) risk-seeking (b) risk-neutral (c) risk-averse (d) irrational)* — **Answer: (c).**
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Calibration challenge (15 min, opener alternative).** Students write 90%-confidence intervals for ten estimable quantities (Berlin's population, the year the University of London was founded, Singapore-to-Lisbon distance…). Score how many of each student's intervals contain the truth: typically 4–6 of 10, not 9. Debrief: "these are the same brains that will supply the probabilities in your decision trees." The single most direct answer to Design Challenge 1 (calibration is a skill), and it feeds the Part 5 reflective question with personal evidence.
+
+**B. Information auction (15 min, between Parts 3 and 4).** Run T4's oil case live: teams start with the prior, and the instructor auctions a sealed envelope containing the survey result. Teams bid real (points) currency; after the sale, reveal and let everyone re-decide. Teams that bid above the EVI overpaid by construction — the debrief computes what the envelope was actually worth. EVI stops being a formula and becomes a price they got wrong.
+
+**C. Sensitivity tornado by hand (15 min, Part 3 extension).** Each pair takes T1 and varies one input ±25% (stall cost, P(busy), busy revenue), recording the EMV swing on a shared board sorted longest-bar-first — a handmade tornado chart. Connects to A&W's SolverTable idea (Ch13) and previews Week 18's sensitivity analysis; also answers Case B's "how should sensitivity analysis have been used?" with a method, not a moral.
+ 
+**D. Build-the-tree relay (10 min, Part 2 alternative).** Groups of three at the whiteboard: person 1 may draw only nodes and branches, person 2 only probabilities/payoffs, person 3 only the folding-back numbers — for a scenario none has seen (a variant of T0's umbrella with a paid weather forecast, which sneaks in EVI). Same relay logic as Week 4's activity E; tests whether tree grammar is shared or private.
+
+**E. Two-envelope regret debrief (5 min, Part 5 add-on).** After the reflective question, one quick provocation: "You chose Launch and the market was quiet — did you make a bad decision?" Establish the decision-vs-outcome distinction explicitly (good decision ≠ good outcome under uncertainty). It's the week's deepest transferable idea and currently only implicit in T2(d).
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** T0's structure-before-notation entry; the EVPI→EVI arc across T4/T6 with a study that *isn't* worth buying (most textbooks rig it the other way); Q9 held unresolved until Part 4 (excellent use of the desirable-difficulty pattern); T7's find-the-error format; the explicit response protocol per quiz band.
+
+**Problems, reasons, and fixes:**
+
+1. **Q7 is broken twice and must be rewritten.** (i) The document still contains the drafting accident — the first option list with the author's mid-stream self-correction ("wait: recalculate…") sits above the corrected list. (ii) The "correct" €40K is itself wrong: with perfect information, when the market is bad the best action is the *certain €150K wait*, not €0. EVPI = [0.6 × 400K + 0.4 × 150K] − 200K = 300K − 200K = **€100K**. The €40K answer silently deletes the Wait option from the perfect-information world. *Fix:* clean the duplicate block; either re-key the answer to €100K, or (if €40K is wanted for simplicity) remove the Wait branch from the question.
+2. **T5's problem statement ships a known-wrong number and asks students to absorb the inconsistency.** Stated EMV(X) = €3.2M; the outcomes given produce €3.0M, and the answer key instructs assessors to "accept values in the spirit of the stated outputs." *Fix:* set Strategy X's loss to −€1.0M — then 0.6 × 6M + 0.4 × (−1M) = **€3.2M exactly** — and nudge the covenant threshold in (b) to €0.8M so X's loss still breaches it. Two-number edit, restores a clean key.
+3. **The reading note misdescribes the chapter (see §1).** No §6-7 simulation exists; the pointer says Week 14 where it means Week 18.
+4. **Only two autopsy cases for six-plus pairs.** Part 4 will hear the same two corrections three times each, and by the third telling the room is done listening. *Fix:* keep A and B but issue each pair different parameters (prevalence 0.5%/1%/2% for Case A; flood probability 0.05/0.08/0.12 for Case B) — same structure, different numbers, and Part 4 becomes a sensitivity analysis across pairs for free (pairs see how the *same error's cost* scales with the base rate).
+5. **Week 4 overlap is unacknowledged.** T3, T4(c), and Case A re-run the Week 4 frequency-table machinery almost verbatim. Spaced retrieval is good design, but only if named — otherwise students experience it as the course repeating itself. *Fix:* one sentence in the pre-work ("you built these tables in Week 4 for tests and fraud; this week they price *decisions*") and push the new difficulty into EVI, which genuinely is new.
+6. **Part 4 arithmetic, fourth week running:** 6–7 pairs × 2.5 min + the Q9 revisit > 20 min. With fix 4 (parameter variants) presentations can compress to one number per pair on a shared board plus discussion — 12 minutes total, leaving room for the Q9 moment.
+7. **LinkedIn post prompt asks for "a major business decision that failed because of a wrong probability" but neither taught case is a published real event** (the insurance case is stylised, medical case generic). Students will invent or hand-wave examples. *Fix:* attach two genuinely documented anchors to choose from (e.g. the 1986 Challenger launch-risk estimates, or UK PPI/flood-repricing coverage), or explicitly permit the in-class cases as the subject.

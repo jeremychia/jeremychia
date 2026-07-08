@@ -191,16 +191,16 @@ If more than three students are stuck on the same issue, pause the class and fix
 
 ---
 
-### Part 4 — Pipeline Critique (20 minutes)
+### Part 4 — Pipeline Critique (15 minutes)
 
-Two students project their notebooks. The class answers three questions for each:
+One student projects their notebook; the instructor's prepared silent-failure notebook (see Design Challenge 4) is the second exhibit. The class answers three questions for each:
 
 1. **Does the chart answer the business question?** (Is what's visualised actually what was asked?)
 2. **Where could this pipeline silently fail?** (What change to the data would break it without an error?)
 3. **What would you change — SQL side? Python side?**
 
 The "silently fail" question is the hardest and most important. Examples of silent failure:
-- A new category added to the data appears in the chart without a label (string column not in ORDER BY)
+- A hard-coded filter (`WHERE category IN ('A', 'B', 'C')`) silently drops a newly introduced category 'D' — the chart looks complete, the total is wrong, and nothing errors
 - A NULL in `unit_price` causes `SUM(quantity * unit_price)` to silently exclude some rows (NULL arithmetic propagates)
 - `strftime` format changes from `'%Y-%m'` to `'%m-%Y'` in a report template, breaking the sort order
 
@@ -249,7 +249,7 @@ No separate LMS post. The notebook from Part 3 is the artefact. Students who wan
 | Live coding pipeline | 20 min | 5 stages: connect, query, check, chart, close |
 | Buffer (explicit) | 10 min | Connection debugging; extend checkpoint stage if needed |
 | Independent pipeline | 25 min | Student's own pre-work question → notebook with 5 required elements |
-| Pipeline critique | 20 min | Two projected notebooks; three questions; "silent failure" emphasis |
+| Pipeline critique | 15 min | One projected notebook + instructor's prepared silent-failure example; three questions |
 | Debrief | 10 min | Tool decision framework; bridge to Block 3 |
 | **Total** | **90 min** | |
 
@@ -299,3 +299,54 @@ Naming silent failure modes in the abstract doesn't land the same way as seeing 
 - Rosenshine, B. (2012). Principles of instruction. *American Educator*, Spring 2012. ERIC EJ971753.
 - Sweller, J. (1994). Cognitive load theory, learning difficulty, and instructional design. *Learning and Instruction*, 4(4), 295–312.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Exercises, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed.
+
+"No textbook reading" is fine for a lab, but one pointer earns its place: **Chapter 18 (bonus online), "Importing Data into Excel"** — especially 18-3 (Importing Text Data) and 18-4d (SQL Statements) — is A&W's version of exactly this week's pipeline, with Excel in the place of pandas. One sentence in the pre-work ("the textbook builds this same query→load→analyse pipeline into Excel; we build it into Python — compare if curious") positions the course's toolchain as a deliberate modernisation rather than a departure, which matters when students notice the book never mentions pandas.
+
+## 2. Extended Exercise Bank (with answers)
+
+**E1 — Why aggregate in the database? (quantify the opening question).** The 10-million-row table has ~100 bytes per row. Estimate the data transferred if you (a) load all rows then aggregate in pandas, vs (b) aggregate in SQL and load the result. What besides memory does (a) cost?
+**Answer:** (a) ≈ 1 GB into RAM (plus parse time, plus the risk of the laptop swapping); (b) 24 rows ≈ 2 KB. Also costs: network transfer time, and *reproducibility drift* — with (b), the aggregation logic is one auditable query; with (a), it's scattered across notebook cells that may run out of order. The architecture principle with numbers attached.
+
+**E2 — Predict the dtype.** After `df = pd.read_sql(query, conn)` with `strftime('%Y-%m', order_date) AS month`, what dtype is `df['month']`, and why does the chart still come out in correct time order? When would the same pattern silently produce a wrong order?
+**Answer:** `object` (string). Order is correct only because the SQL has `ORDER BY month` *and* `'%Y-%m'` strings sort lexicographically in time order. With `'%m-%Y'` the lexicographic order is wrong (Part 4's third example) — and matplotlib plots categories in row order, so the chart lies without erroring. Robust fix: `df['month'] = pd.to_datetime(df['month'])`.
+
+**E3 — Parameterised queries.** A student builds their query with an f-string: `f"SELECT ... WHERE category = '{cat}'"`. Give the two reasons this is bad practice and the correct one-line replacement.
+**Answer:** (1) SQL injection / quoting bugs — a category like `O'Brien Foods` breaks the query; (2) type handling — dates and numbers get silently string-coerced. Correct: `pd.read_sql("SELECT ... WHERE category = ?", conn, params=[cat])` (SQLite) or `%(cat)s` with a dict (psycopg2). One line, professional norm.
+
+**E4 — Division of labour drill.** For each task, name the right stage — SQL or pandas — and justify in one clause: (i) join `orders` to `customers`; (ii) strip inconsistent casing from category names before grouping; (iii) compute a 7-day rolling average of revenue; (iv) compute the median order value; (v) pivot months into columns for a report.
+**Answer:** (i) SQL — joins are its native operation and keep transferred data small. (ii) Defensible either way: `LOWER(category)` in SQL is one function; complex regex cleanup belongs in pandas — the rule is *simple canonicalisation early, complex cleaning where it's testable*. (iii) pandas `.rolling(7).mean()` — window-frame SQL exists but the pandas expression is clearer for analysis. (iv) Either: `PERCENTILE_CONT(0.5)` (PostgreSQL) or `df['value'].median()` — but *not* SQLite, which lacks a native median: a genuine dialect gotcha worth naming. (v) pandas `.pivot()` — presentation-shaping is analysis-side work.
+
+**E5 — Connection hygiene.** What does `with sqlite3.connect('orders.db') as conn:` fix compared with the demo's Stage 1/Stage 5 pattern, and what does it *not* fix in SQLite specifically?
+**Answer:** It guarantees cleanup even when a mid-notebook exception skips `conn.close()` — the "stale connection on second run" failure the demo warns about. Caveat: in `sqlite3` the context manager commits/rolls back the *transaction* but does not close the connection — so for notebooks, `try/finally conn.close()` or `contextlib.closing()` is the fully correct pattern. (Worth 60 seconds: the tool's idiom differs from the intuition.)
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Pipeline relay (25 min, Part 3 alternative).** Teams of three; each owns one stage — SQL author, checker (dtypes/nulls/row counts), visualiser — and stages are passed via a written "contract" (expected columns, dtypes, row count). The visualiser may not look at the SQL; if the contract is wrong, the chart is wrong. Teaches interface thinking — the reason real pipelines document their intermediate schemas — and makes Stage 3 (the checkpoint) a *role* rather than a habit to remember.
+
+**B. Same question, two architectures (20 min, evidence for the opening principle).** Half the room answers the monthly-revenue question aggregating in SQL; half loads `SELECT *` and aggregates in pandas. Compare wall-clock time, memory, and lines of code on the board. On the class dataset the difference may be small — which is itself the discussion: the architecture principle is about *scaling behaviour*, not this dataset. (Then show E1's arithmetic.)
+
+**C. Silent-failure bingo (20 min, Part 4 alternative).** The instructor's prepared notebook contains five planted silent failures (NULL-excluded category, `%m-%Y` sort, hard-coded `WHERE category IN (...)` missing a new category, duplicated rows inflating a SUM, dtype-object revenue column plotting alphabetically). Pairs get a card listing failure *types*; first to locate all five wins. Converts Design Challenge 4's single prepared example into systematic practice.
+
+**D. Fix the chart from hell (15 min, fast-finisher channel).** A working pipeline produces a deliberately awful chart: unordered months, unlabelled axes, scientific-notation ticks, a legend covering the data. Task: minimum number of changes to make it presentation-ready, each justified in a comment. Rehearses Week 7's design vocabulary inside the Python toolchain — the cross-tool transfer this block claims to build.
+
+**E. Stakeholder round-trip (10 min, debrief extension).** Each student trades charts with a partner who plays the manager and asks one follow-up question ("why did March dip?"). The student must say which pipeline stage answers it — new SQL, new pandas step, or new chart. Makes the debrief's "the question drives the tool" claim operational.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the architecture-principle opener (worst way/right way); the mandatory Stage 3 checkpoint; "this chart shows ___ / doesn't show ___" closing the Week 2 thread; the pre-planted silent failure in Design Challenge 4; the honest decision to keep Tableau out (Design Challenge 3).
+
+**Problems, reasons, and fixes:**
+
+1. **The timing table sums to 95 minutes, not 90.** 10 + 20 + 10 + 25 + 20 + 10 = 95. *Fix:* cut Part 4 to 15 minutes (one projected notebook plus the instructor's planted-failure example, rather than two student notebooks) — the critique questions are strong enough that one deep pass beats two rushed ones.
+2. **The database file has no provisioning plan.** Every stage assumes `orders.db` exists on every laptop, but nothing says how it gets there — Week 8's dataset was "a CSV or SQL dump." *Fix:* ship a `build_db.py` (10 lines: read CSV → `df.to_sql('orders', conn)`) as pre-work step 4, which is itself a pipeline lesson; keep a USB/LMS copy of the finished `.db` as the lifeboat.
+3. **Dialect flip-flop across Weeks 8–9.** Week 8's environment is "PostgreSQL or SQLite — confirm with instructor"; Week 9's demo is SQLite (`strftime`), with psycopg2 as an aside. Students who did Week 8 in PostgreSQL will have every date expression break this week. *Fix:* one decision for the block (SQLite is defensible for zero-install teaching, PostgreSQL for realism — but pick), and a half-page dialect cheat-sheet (`strftime` ↔ `TO_CHAR`, median availability, `INTERVAL` syntax) as a permanent LMS artefact.
+4. **Students write their pre-work SQL against a schema they can't see.** The pre-work question requires a query over the Week 8 dataset, but no schema card exists — students who didn't memorise column names will invent them and arrive with unrunnable queries, burning Part 3 time. *Fix:* include the `orders` (and, per the Week 8 supplement, `customers`) schema with column types and 3 sample rows in the pre-work.
+5. **Part 4's first silent-failure example is garbled.** "A new category appears in the chart without a label (string column not in ORDER BY)" doesn't describe a real failure mode as written. *Fix:* replace with the sharper, realistic version: a query with a hard-coded `WHERE category IN ('A','B','C')` silently drops a newly introduced category 'D' — chart looks complete, total is wrong, no error.
+6. **Parameterised queries are absent (see E3).** One line of professional practice, and the only place in the course where security-adjacent data handling can be mentioned at all. *Fix:* show the `params=` form in Stage 2, 30 seconds.
+7. **Block 2 ends with three ungraded artefacts and still no rubric.** Weeks 6, 7, and 9 each produce a submitted artefact; none has assessment criteria (flagged in both prior supplements). Week 9, as the block's capstone, is where a single-page Block 2 rubric naturally belongs — and its five required elements in Part 3 are already 80% of one: runs end-to-end / question stated / checkpoint present / labelled chart / "shows-and-hides" sentence. Publish that list *as* the rubric.

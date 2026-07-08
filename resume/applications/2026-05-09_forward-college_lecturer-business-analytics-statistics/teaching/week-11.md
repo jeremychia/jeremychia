@@ -25,7 +25,7 @@ These objectives operate at the **application and analysis** levels of Bloom's T
 - §7-3 Methods for selecting random samples — simple random, stratified, cluster (pp. 282–292)
 - §7-4 Introduction to estimation: sampling distribution of the sample mean and the Central Limit Theorem (pp. 292–307)
 
-The sampling distribution of the sample proportion (§7-4c) is important for Week 12 — read it if time allows, but it is not the focus of this session.
+Note: §7-4c is the Sampling Distribution of the *Sample Mean* — the core of this session, not optional. Chapter 7 has no sample-proportion section; the proportion analogue used in T5–T6 follows the same σ/√n logic with σ = √(p(1−p)) and is treated formally in §8-5 (Week 12). §7-4a (Sources of Estimation Error, p. 292) is the textbook's own treatment of this week's central distinction between sampling error and bias.
 
 *Rationale:* the CLT is counterintuitive. The reading alone is unlikely to produce genuine understanding for most students — the in-class simulation (Part 3) is the mechanism. The pre-work establishes vocabulary and the formal statement; understanding comes in class.
 
@@ -355,7 +355,7 @@ Q3 (standard error formula) and Q7 (calculation) are the mechanical baseline —
 
 T1(d) is the key point: increasing sample size reduces sampling error; changing the survey design reduces bias; these are different problems with different solutions.
 
-T2(b) vs (c) is the comparison that matters: P(X̄ > 50,000 | n=100) ≈ 0.1% vs P(X > 50,000 | single household) ≈ 33%. The mean of 100 incomes has a standard error of €1,800 — a value of €50,000 is 4.4 standard errors above the mean. A single income of €50,000 is only (50,000 − 42,000)/18,000 = 0.44 standard deviations above the mean — far more likely.
+T2(b) vs (c) is the comparison that matters: P(X̄ > £42,000 | n = 100) ≈ 3.4% — the sample mean has standard error £2,200, so £42,000 sits 1.8 standard errors above the mean — whereas a single household at £42,000 is only (42,000 − 38,000)/22,000 ≈ 0.18 standard deviations above the mean, entirely unremarkable. And per T2(c), the exact single-household probability cannot be computed at all without knowing the shape of the (highly skewed) income distribution.
 
 T3 is held for Part 3.
 
@@ -532,3 +532,74 @@ Q7 and Q8 test this directly. Many students will compute P(X̄ > 52) using σ = 
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 7
+
+The main section references are correct (7-2 pp. 280–282, 7-3 pp. 282–292, 7-4 pp. 292–307) — the most accurate reading list so far. Three refinements:
+
+1. **The §7-4c note is mislabelled.** 7-4c is "Sampling Distribution of the *Sample Mean*" (p. 295) — the very heart of this session, not optional material for Week 12. There is no sample-proportion section in Chapter 7; **proportions live in Chapter 8 (§8-5)**. Consequence: T5 and T6 use SE(p̂) = √(p(1−p)/n), a formula the assigned reading never introduces. *Fix:* correct the label, and either add a two-line derivation-by-analogy in the pre-work ("a proportion is the mean of 0/1 data, so the same σ/√n logic applies with σ = √(p(1−p))") or preview §8-5 explicitly.
+2. **§7-4a "Sources of Estimation Error" (p. 292) deserves explicit emphasis** — it is the textbook's own treatment of the sampling-error-vs-bias distinction that T1(d), T3, and T6 all hinge on. Cite it in the T1(d) commentary so the week's central distinction has a page number.
+3. **§7-4e "Sample Size Selection" (p. 304) backs T7** and the finite-population issue that T7(b) hits; a pointer helps students who want the formula's provenance.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Finite population correction (closes T7's loop with a computation):**
+
+> The supermarket chain samples n = 30 of its N = 85 stores.
+>
+> (a) Compute the finite population correction factor √((N−n)/(N−1)) and the corrected SE, given σ = €18,000.
+> (b) At what sampling fraction is the FPC conventionally ignored, and why was it ignorable in T5(d) but not here?
+>
+> **Answers:** (a) FPC = √(55/84) ≈ **0.809**. Uncorrected SE = 18,000/√30 ≈ €3,286; corrected SE ≈ 0.809 × 3,286 ≈ **€2,659** — sampling a third of the population buys ~19% more precision than the naive formula suggests. (b) Rule of thumb: ignore when n/N < ~5%. In T5(d), 400/50,000 = 0.8% — negligible; here 30/85 = 35% — material. The general lesson: population size is irrelevant to precision *except* when the sample is a large slice of it.
+
+**T9 — Design identification drill (uses §7-3, currently under-tested):**
+
+> Name each sampling design and its main risk: (i) A bank audits every 50th transaction in the ledger. (ii) A hotel chain randomly picks 6 of its 40 hotels and surveys *every* guest in those 6. (iii) A regulator groups firms by size band (small/medium/large) and randomly samples within each band. (iv) A researcher surveys whoever is in the university cafeteria at noon.
+>
+> **Answers:** (i) **Systematic sampling** — risk: periodicity in the ledger (e.g. batch postings every 50 entries) aligns with the interval, producing a badly unrepresentative sample. (ii) **Cluster sampling** — risk: guests within a hotel resemble each other, so the effective sample size is far below the guest count (intra-cluster correlation); cheap per response but statistically expensive. (iii) **Stratified sampling** — risk: essentially none for the estimate if strata weights are right; wrong weights ⇒ bias; it *improves* precision vs SRS when strata differ (the T7(d) logic). (iv) **Convenience sampling** — not a probability design at all; no SE formula applies, and no n fixes it (the T6(e) principle).
+
+**T10 — The CLT is about means, not everything:**
+
+> Using the Part 3 simulation population (exponential, scale 10), a student modifies the code to compute the sample **maximum** (instead of the mean) for 1,000 samples of n = 30.
+>
+> (a) Will the histogram of sample maxima be approximately normal? What will its shape be?
+> (b) Will the sample **median**'s histogram be approximately normal? Does σ/√n give its standard error?
+> (c) State precisely which statistics the CLT covers.
+>
+> **Answers:** (a) **No** — sample maxima follow extreme-value behaviour: right-skewed, drifting further right as n grows; averaging logic never applies to a max. (b) The median's sampling distribution *is* approximately normal for large n (medians have their own CLT-like result) but its standard error is **not** σ/√n — it is ≈ 1/(2f(m)√n), generally larger than the mean's SE for the same data. (c) The classical CLT covers **sums and means** of independent observations (and functions of them like proportions); it is not a blanket licence to treat any statistic as normal. One code edit in Part 3 makes this a live demonstration — recommended as discussion question 4.
+
+*Additional quiz questions:*
+
+- Q10: The standard error of a sample proportion p̂ is: *(a) p(1−p)/n (b) √(p(1−p)/n) (c) √(p(1−p))/n (d) p/√n)* — **Answer: (b)** (needed before T5; see §1.1).
+- Q11: Quadrupling the sample size changes the SE by a factor of: *(a) ¼ (b) ½ (c) 2 (d) it depends on σ)* — **Answer: (b)** — the √n law in one line.
+- Q12: A biased sampling method is used with n = 10,000 instead of n = 100. The estimate becomes: *(a) unbiased (b) more precise but still biased (c) less biased but less precise (d) both unbiased and precise)* — **Answer: (b)** — T6(e) as retrieval.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Random Rectangles / word-length sampling (15 min, no-code Part 3 alternative or opener).** Give students a news article; ask them to *choose* 5 "representative" words and compute mean word length, then draw 5 words using random numbers. Human-chosen samples run reliably long (salience bias); random samples centre on the truth. Plot both sets of means on the board. This classic activity demonstrates *both* of the week's ideas — bias (human selection) and sampling variability (spread of random-sample means) — with zero technology, and de-risks the Python dependency in Design Challenge 2.
+
+**B. Class-built sampling distribution with dice or a bag (12 min, before the code).** Each student draws 5 chips from a bag whose values are right-skewed (many 1s and 2s, a few 20s), computes the mean, posts it to Mentimeter; the histogram builds live, then repeat with n = 10. The code in Part 3 then *replicates what the room just did physically* — the simulation stops being a black box.
+
+**C. n-slider widget (5 min, Part 3 extension).** Wrap the simulation in `ipywidgets.interact(n=(2, 200))` so students drag n and watch the histogram morph continuously from skewed to normal. The "at what n does it kick in?" question (discussion Q3) becomes something they answer empirically per distribution — and heavy-tail distributions visibly need larger n.
+
+**D. Poll postmortem (15 min, Part 4 alternative).** Present two real polls of the same event with different methods and different misses (e.g. a 2016/2020 US state poll vs exit-adjusted results, or a German election poll). Class votes which method they'd trust *before* seeing outcomes, then reveal. Discussion: was the miss variance or bias? Connects T6 to documented history rather than hypotheticals.
+
+**E. German tank problem teaser (10 min, stretch/fast-finisher).** From 5 "captured serial numbers," teams estimate the total number of taxis in a city. Reveals that *estimator design* is a choice (max + gap correction beats 2×mean), planting the idea that statistics beyond the mean have sampling distributions too — pairs neatly with T10.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the explicit "confusion after pre-work is the correct outcome" note (the most honest pre-work framing in the 22 weeks — it should be the template); the simulation as the teaching mechanism with parameters-not-syntax framing; T6's variance-vs-bias contrast (Study 1 vs Study 2 is exam-grade); the unanswered "95% confident" bridge.
+
+**Problems, reasons, and fixes:**
+
+1. **Part 2's tutorial-review guidance describes a different T2 than the one in the document.** It cites "P(X̄ > 50,000 | n=100) ≈ 0.1%", "standard error of €1,800", "(50,000 − 42,000)/18,000 = 0.44 SD" — i.e. a mean of 42,000, SD of 18,000, in **euros** — while the actual T2 uses mean £38,000, SD £22,000, SE £2,200, thresholds £42,000/£44,500, in **pounds**. This is stale text from a pre-revision draft, and it's the guidance the instructor will have open while teaching. *Fix:* rewrite the paragraph around the current numbers — the (b)-vs-(c) contrast survives: P(X̄ > 42,000) ≈ 3.4% (Z = 1.82 on SE £2,200) vs a single household at Z = (42,000 − 38,000)/22,000 = 0.18 above the mean, which is common — and the *shape* caveat from T2(c) still blocks an exact single-household number.
+2. **The proportion formula is examined before it's taught (see §1.1).** T5/T6 and Week 12's CIs all need SE(p̂); the reading note points at a section that doesn't cover it. Fix per §1.
+3. **Inline solutions inside submitted problems, again** — T2(b)(d), T4(b)(e), T5(a), T6(a), T7(a). Same systematic fix as Weeks 4–5: student version without keys.
+4. **Q6 canonises "n ≥ 30" one question before the course complicates it.** T4(a)/(c) correctly teach that extreme skew pushes the requirement to 100+, but the quiz scores n ≥ 30 as *the* answer. *Fix:* reword Q6 to "for a moderately skewed population, the usual rule of thumb is…" — keeps the retrieval value without hard-coding the exception students just read about.
+5. **Part 4's per-student arithmetic fails again** (90 s × 12–15 students = 18–22.5 min before any tallying/discussion). Same structural fix as Weeks 4–5: instructor pre-selects 5–6 diverse submissions; the bias-type tally can still cover *all* submissions since it needs only the classification, not the presentation.
+6. **The simulation's discussion question 2 deserves the T10 twist.** "Try a uniform population" produces the same happy convergence — a *confirming* variation. Adding "now compute the sample maximum instead" (one-line edit) gives a *disconfirming* variation, which is what protects students from over-generalising the CLT. Recommended as the stretch task for fast finishers.
+7. **Mixed currencies inside T2.** The scenario is UK/ONS (£) but downstream summaries relapse into € (see point 1). Trivial, but a document that teaches attention to units should model it.

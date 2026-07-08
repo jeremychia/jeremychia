@@ -36,8 +36,8 @@ Required: Python 3.10+, pandas >= 1.5, matplotlib >= 3.6, seaborn >= 0.12. Recom
 
 **Reading:**
 
-- Albright & Winston, Chapter 2: "Describing the Distribution of a Single Variable" — focus on pp. 33–58 (measures of centre, spread, shape; percentiles; outlier detection). Skip the StatTools walkthrough sections; those are for the Excel lab.
-- Albright & Winston, Chapter 3: "Finding Relationships among Variables" — pp. 75–82 only (scatter plots, correlation coefficient). We will return to correlation in Week 10.
+- Albright & Winston, Chapter 2: "Describing the Distribution of a Single Variable" — focus on §2-4, pp. 30–54 (measures of centre, spread, shape; charts), plus §2-6, pp. 61–63 (outliers and missing values — directly behind Tasks 3 and 5). Skip the StatTools walkthroughs: this course replaces the book's Excel/StatTools toolchain with Python — the statistics transfer, the keystrokes don't.
+- Albright & Winston, Chapter 3: revisit §3-4, pp. 95–108 (scatter plots, correlation coefficient — first assigned in Week 3). Regression returns properly in Weeks 14–15.
 - Optional: Python for Data Analysis (McKinney), Chapter 5: "Getting Started with pandas" — pp. 130–155 for students who have not used pandas before.
 
 **Pre-work task:**
@@ -144,7 +144,7 @@ print("Kurtosis:", salaries.kurt())     # Excess kurtosis (normal = 0)
 # Ask: what does positive skewness mean for this salary distribution?
 ```
 
-**Step 3: The `.describe()` shortcut vs the full picture (5 minutes)**
+**Step 3: The `.describe()` shortcut vs the full picture (2 minutes)**
 
 ```python
 # Show the full picture first, then the shortcut
@@ -158,7 +158,7 @@ print(salaries.describe())
 print("Mode:", salaries.mode()[0])  # returns a Series — take first element
 ```
 
-**Step 4: Loading a CSV and handling real data (8 minutes)**
+**Step 4: Loading a CSV and handling real data (6 minutes)**
 
 ```python
 # Load from CSV — this is how real work begins
@@ -251,8 +251,8 @@ Task 5. Produce a box plot. Identify any outliers. Are they genuine extreme valu
         or likely data errors?
 
 Task 6 (stretch). Overlay a KDE (kernel density estimate) on your histogram:
-        salaries.plot(kind='hist', density=True)
-        df['salary'].plot(kind='kde')  — on the same axes. What does the KDE add?
+        ax = df['salary'].plot(kind='hist', density=True)
+        df['salary'].plot(kind='kde', ax=ax)  — same column, same axes. What does the KDE add?
 ```
 
 **Common errors to watch for (instructor circulates):**
@@ -260,7 +260,7 @@ Task 6 (stretch). Overlay a KDE (kernel density estimate) on your histogram:
 | Error | Cause | Fix |
 |---|---|---|
 | `UnicodeDecodeError` on `read_csv` | Non-UTF-8 file (common with Berlin open data) | Add `encoding='latin-1'` or `encoding='cp1252'` |
-| Column dtype is `object` instead of `float` | Thousands separator (1.234,56 European format) or currency symbol | Use `df['col'].str.replace(',', '.').astype(float)` |
+| Column dtype is `object` instead of `float` | Thousands separator (1.234,56 European format) or currency symbol | Reload with `pd.read_csv(..., decimal=',', thousands='.')` — a bare `str.replace(',', '.')` breaks on values with both separators |
 | `KeyError` on column name | Trailing space in header | Use `df.columns.str.strip()` after loading |
 | `.mean()` returns `NaN` | Column contains NaN values | Use `.mean(skipna=True)` (default) or `dropna()` first |
 | Histogram shows only one bar | Integer column with low cardinality | Cast to float or use more bins |
@@ -398,3 +398,62 @@ McKinney, W. (2022). *Python for data analysis: Data wrangling with pandas, NumP
 Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. *Psychological Science, 17*(3), 249–255. https://doi.org/10.1111/j.1467-9280.2006.01693.x
 
 Vygotsky, L. S. (1978). *Mind in society: The development of higher psychological processes*. Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Exercises, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed.
+
+- **Chapter 2 reference is close but should be pp. 30–54** (2-4 Descriptive Measures for Numerical Variables, incl. 2-4a summary measures and 2-4d charts). The cited pp. 33–58 straddles the section boundaries. Also add **2-6 Outliers and Missing Values (pp. 61–63)** — Tasks 3 and 5 (dropna/fillna decisions, outlier judgement) are exactly this section's content, and it's currently unassigned in the week that most needs it.
+- **The Chapter 3 reference is wrong twice.** Scatterplots and correlation are at **3-4, pp. 95–108**, not pp. 75–82 (p. 79 is the chapter's first page). And this exact material was already the *required* reading in Week 3 — re-assigning it here as new is redundant; label it "revisit" instead. Separately, "we will return to correlation in Week 10" contradicts the course arc, where Week 10 is decision trees and correlation/regression returns in **Weeks 14–15**. Fix the pointer.
+- The "skip the StatTools walkthrough sections; those are for the Excel lab" note refers to a lab that doesn't exist in the 22-week arc (Block 2 is Python/Tableau/SQL). Either delete the clause or say plainly: "the course replaces the book's StatTools/Excel toolchain with Python — the statistics transfer, the keystrokes don't." That sentence also pre-empts student confusion every time the book says "use StatTools" for the rest of the course.
+
+## 2. Extended Exercise Bank (with answers) — predict-the-output and debugging drills
+
+Lab weeks need a question bank too; these are printable warm-ups or homework, answers inline for the instructor version.
+
+**E1 — ddof by hand.** For `s = pd.Series([2, 4, 6])`, what do `s.std()` and `s.std(ddof=0)` return?
+**Answer:** sample SD = √(((−2)²+0²+2²)/2) = √4 = **2.0**; population SD = √(8/3) ≈ **1.633**. The Week 2 salary answer-key ambiguity (sample vs population SD) is this exact issue — worth saying aloud.
+
+**E2 — Quantile interpolation.** For `s = pd.Series([1, 2, 3, 4])`, what is `s.quantile(0.25)` with default interpolation, and with `interpolation='lower'`?
+**Answer:** default (linear): position = 0.25×(4−1) = 0.75 → 1 + 0.75×(2−1) = **1.75**; `'lower'` → **1**. There is no single "correct" Q1 — the Design Challenge 3 framing, made computable.
+
+**E3 — Whisker rule applied.** Using the salary data (Q1 = 1250, Q3 = 1400), compute the box-plot fences and state which points are flagged.
+**Answer:** IQR = 150; upper fence = 1400 + 1.5×150 = **1625**; lower fence = 1250 − 225 = **1025**. Only 4800 is outside → the CEO is the single flagged outlier. (Connects the seaborn default to the Week 2 T1(g) debate — flagged ≠ removed.)
+
+**E4 — fillna and variance.** A column has 20% missing values. You `fillna(median)`. What happens, mechanically, to the column's standard deviation, and why does the demo call this "artificially compressing variance"?
+**Answer:** SD falls: every imputed value sits exactly at the centre, adding zero-deviation observations while increasing n — deviations are diluted. Any subsequent inference understates uncertainty. (Dropna instead reduces n but leaves spread honest — the trade-off Task 3 asks students to argue.)
+
+**E5 — Debugging drill.** `pd.read_csv('data.csv')` loads a salary column as `object`, and values look like `"1.234,56"`. Write the two-line fix and explain each step.
+**Answer:** European formatting — `df['salary'] = df['salary'].str.replace('.', '', regex=False).str.replace(',', '.', regex=False).astype(float)`: remove thousands separators first, then convert the decimal comma, then cast. (The common-errors table's one-liner `str.replace(',', '.')` is **incomplete for values with both separators** — see critique point 4.)
+
+**E6 — describe() blind spots.** Name three statistics this week's session computed that `df.describe()` does not report, and one decision each affects.
+**Answer:** skewness (mean-vs-median choice), kurtosis/tail weight (risk of extreme values; Week 5's Q9), mode (typical category/floor wage). Optionally missing-value count (describe reports non-null count only indirectly).
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Driver–navigator pair programming (swap at 12 min, Part 3 alternative).** One types, one instructs; the navigator holds the task list and the driver may not act without instruction. Directly addresses the mixed-ability problem the Design Challenges name but don't structurally solve — the expert navigating a novice driver is forced to verbalise, the novice driver gets hands-on time.
+
+**B. Broken-notebook relay (20 min, Part 3 alternative).** Distribute a notebook with six planted defects (encoding error, dtype trap, silent NaN mean, misleading bin count, mislabelled axis, fillna-before-describe). Pairs fix as many as they can; each fix requires a one-line markdown note of *what the bug would have done to a business conclusion*. Converts the common-errors table from reference material into the game itself.
+
+**C. Chart-crime contest (15 min, Part 4 alternative).** Each student makes the *most misleading honest-data histogram* they can from their dataset (bin abuse, axis truncation, cherry-picked subset), posts it; class votes on the most deceptive; winners explain their technique, then everyone fixes their own. Teaching deception inoculates against it — and it lands the "every visualisation is an argument" point harder than critique of good-faith charts.
+
+**D. Reproduce-the-figure (15 min, stretch replacement for Task 6).** Post a target PNG (histogram with specific bins, titles, annotated outlier). Task: reproduce it exactly from the raw data. Pixel-matching forces engagement with every parameter the demo touched, and gives fast finishers a concrete finish line instead of open-ended exploration.
+
+**E. Colab lifeboat protocol (0 min in class — logistics).** Publish a Google Colab link with the fallback dataset pre-loaded. Anyone whose environment fails in the first 5 minutes of Part 1 switches to Colab immediately, no debugging in class; the local-install fix moves to the forum/tutorial. Caps the single biggest downside risk of the whole session.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the tool challenge *before* instruction (correctly applied productive-failure design); returning to the Week 2 salary data so discrepancies are meaningful; the ddof and quantile-interpolation moments (the week's real intellectual content); the common-errors table; "the notebook IS the reflection."
+
+**Problems, reasons, and fixes:**
+
+1. **Wrong and contradictory Chapter 3 reference (see §1).** Pages point at the wrong section; the Week 10 pointer contradicts the arc. Fix both.
+2. **Part 2's step timings don't add up.** Steps 1–6 total 5+7+5+8+5+5 = **35 minutes in a 30-minute slot** — with students typing along, live coding always runs over, never under. *Fix:* cut Step 3 (`describe()` shortcut) to 2 minutes or fold it into Step 2, and pre-load the CSV for Step 4 rather than typing the load live.
+3. **No assessment criteria for the deliverable.** The notebook is the week's only output and is submitted, but students have no rubric — and the plan's own philosophy (Week 22's "criteria made explicit, not secret") argues against that. *Fix:* a four-line rubric: runs top-to-bottom without errors / every task has a markdown decision note / charts are titled and labelled / the discrepancy reflection names a specific cause. Pass–revise, not graded.
+4. **The common-errors table's European-decimal fix is itself buggy.** `str.replace(',', '.')` breaks on values like `1.234,56` (yields `1.234.56` → `astype(float)` raises). Given that the table exists to save lab time, its one wrong entry costs more than it saves. *Fix:* two-step replacement as in E5, or `pd.read_csv(..., decimal=',', thousands='.')` — which is the cleaner teaching point anyway.
+5. **Task 6's KDE snippet mixes two objects.** It overlays `salaries` (the demo Series) and `df['salary']` (the student's own data) on "the same axes" — as written it either errors or plots unrelated data together. *Fix:* one consistent object: `ax = df['salary'].plot(kind='hist', density=True); df['salary'].plot(kind='kde', ax=ax)`.
+6. **Slack/Teams is invoked for the first time with no decision made.** Weeks 1–5 use Mentimeter + LMS; Part 1 and Part 3 here depend on a chat channel that has never been introduced. *Fix:* pick the stack once (e.g. "LMS forum + Mentimeter + class Slack") and name it in Week 1's logistics; mid-course tool sprawl is a real friction cost for a 22-week arc.
+7. **The mixed-ability plan stops at diagnosis.** Design Challenge 2 describes the novice/expert tension well, but the only structural response is Tasks 5–6 as stretch. Activities A (driver–navigator) and D (reproduce-the-figure) above are concrete mechanisms; adopting either converts the challenge section from commentary into design.
+8. **Dependency on Week 2's fix.** Task 2 assumes every student has manual Week 2 statistics for their dataset. If Week 2 ran as originally written (Jupyter-based Part 3 — see Week 2 supplement critique 2), some students' "manual" numbers are pandas numbers, and the discrepancy exercise collapses. If Week 2 moves to Excel/by-hand, this week works as designed — the two plans need to be revised together.

@@ -471,3 +471,83 @@ Students who compute "each additional minute of oven time adds €0.35, so 200 m
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Sweller, J. (1994). Cognitive load theory, learning difficulty, and instructional design. *Learning and Instruction*, 4(4), 295–312.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Corrections + Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapters 13–14
+
+Chapter 13 references are accurate (13-2 through 13-5, correct pages). But **three of the tutorials teach Chapter 14 content with only Chapter 13 assigned:**
+
+- T1/T6 (transportation problem) = **§14-4a Transportation Models (p. 677)**
+- T7 (nurse scheduling) = **§14-2 Employee Scheduling Models (p. 663)**
+- T7(c)'s binary-constraints answer and T8(f)'s MIP discussion = **§14-7 Integer Optimization Models (p. 714)**
+
+*Fix:* add §14-4a as required reading and cite 14-2/14-7 as "the textbook's fuller versions" in the relevant answer keys. Also: §13-6 (Infeasibility and Unboundedness, p. 629) is *exactly* the topic of T4 and Part 3's "break" task, and it's two pages — assign it. Finally, the pre-work's "DecisionTools Suite setup" is a mislabel: Solver is native Excel; DecisionTools is the Palisade add-in suite (PrecisionTree/@RISK, relevant Weeks 10/18). Correct the name so students don't hunt for the wrong installer.
+
+## 2. Corrections to the Worked Example (must fix before use) + Extended Questions
+
+**The worked example's printed solution is infeasible, and its business conclusion is backwards.**
+
+- The claimed optimum C = 25, M = 33 violates the labour constraint: 2(25) + 33 = **83 > 80**.
+- The true continuous optimum is at the oven∩labour intersection: 3C + 5M = 240 and 2C + M = 80 give **C ≈ 22.86, M ≈ 34.29, profit ≈ €102.86** (not €103.50).
+- Solving the dual at that corner: **oven shadow price ≈ €0.357/min; labour shadow price ≈ €0.214/min** — not €0.35 and €0.55. So the punchline "labour is more valuable than oven time" is **reversed**: oven time is the scarcer resource. The hiring example becomes: one more baker (60 min) adds 60 × 0.214 ≈ **€12.86/day**, not €33 — and the sharper question is what the bakery would pay for more *oven* time.
+- Cascades to fix: T2(a) new profit at 260 oven minutes = **€110.00** (102.86 + 20 × 0.357; Solver gives C = 20, M = 40 exactly); T2(c)'s allowable increase for the oven RHS runs to 330 minutes (where C hits its 10-unit floor); T4(a)'s "cost of the special order" = 102.86 − 100 = **€2.86/day**, not €3.50.
+
+*Why this matters more than any other error in the 22 weeks:* every tutorial (T2, T3, T4) and the live demo rebuild this exact model, and students will watch Solver contradict the handout in the session's first ten minutes. Re-run once in Excel and reprint all dependent numbers.
+
+**T9 — Unboundedness (completes the trio the objectives promise):**
+
+> A junior analyst formulates the bakery model but forgets both capacity constraints, keeping only C ≥ 10, M ≥ 10.
+>
+> (a) What does Solver report, and what does it mean?
+> (b) Infeasibility says "the plan is impossible." What does unboundedness say about the *model* (not the world)?
+> (c) Give the one-line diagnostic habit for each of Solver's three outcomes (optimal / infeasible / unbounded).
+>
+> **Answers:** (a) "Objective Cell values do not converge" — profit can grow without limit because nothing restricts production. (b) Unboundedness is always a *modelling* error in business problems: the real world has capacity somewhere, so an unbounded LP means a real constraint was left out (infeasibility can be real; unboundedness never is). (c) Optimal → check the solution against common sense (fractional staff? negative production?); infeasible → ask which constraint to relax and at what price (T4(d)); unbounded → hunt for the missing constraint.
+
+**T10 — Rounding trap (grounds Design Challenge 2 in a computation):**
+
+> A continuous LP returns x₁ = 3.6, x₂ = 4.8 with constraint 5x₁ + 4x₂ ≤ 37.2 binding.
+>
+> (a) The analyst rounds to (4, 5). Feasible?
+> (b) The analyst rounds down to (3, 4). Feasible but is it optimal among integer points?
+> (c) What does this imply about "just round the LP answer"?
+>
+> **Answers:** (a) 5(4) + 4(5) = 40 > 37.2 — **infeasible**; rounding up broke the binding constraint. (b) Feasible (31 ≤ 37.2) but leaves slack 6.2 — likely dominated by, e.g., (3, 5): 35 ≤ 37.2, higher objective. (c) Rounding can break feasibility *or* discard profit; near-binding constraints make naive rounding unsafe, which is precisely why integer programming (branch and bound, §14-7) exists. For loose constraints, rounding is fine — the skill is knowing which regime you're in.
+
+**T11 — Blending mini-problem (one more Ch14 structure, 10 minutes):**
+
+> A feed producer blends two ingredients (A: €0.30/kg, 12% protein; B: €0.50/kg, 28% protein) into 1,000 kg of feed that must average ≥ 20% protein.
+>
+> (a) Formulate and solve by hand.
+> (b) The shadow price on the protein constraint has what units, and what business decision does it price?
+>
+> **Answers:** (a) A + B = 1,000; 0.12A + 0.28B ≥ 200 → binding: 0.12A + 0.28(1000−A) ≥ 200 → 280 − 0.16A ≥ 200 → A ≤ 500. Cost-minimising: A = 500, B = 500, cost = 150 + 250 = **€400**. (b) €/percentage-point of required protein (per 1,000 kg): it prices the *specification itself* — exactly what a customer asks when negotiating quality standards ("what would you charge me for 21% instead of 20%?"). Blending (A&W §14-3) is the classic LP family the session otherwise skips.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Graphical solve on paper first (10 min, before the Solver demo).** Pairs shade the bakery's feasible region on printed axes and slide a ruler (the iso-profit line) until it leaves the region. The corner-point principle — the optimum is always at a vertex — is *seen* rather than asserted, and students immediately understand why Solver's answer lands where it does. (This is §13-3's graphical method, assigned in the reading but currently absent from class.)
+
+**B. Oven-minute auction (15 min, the shadow-price activity).** Each team runs the corrected bakery model; the instructor auctions bundles of 10 extra oven minutes to the highest bidder over several rounds. Rational teams bid up to ~€3.57 per bundle-minute... and the market price converges on the shadow price — *before* anyone has named the concept. Then reveal the sensitivity report. Shadow prices as market prices for scarce capacity is the deepest idea in the week, and an auction teaches it in a way a report never will.
+
+**C. Spot-the-missing-constraint gallery (10 min, Part 4 warm-up).** Three projected "optimal solutions" from deliberately under-constrained models: hire 2.7 nurses; produce −40 posters; run the machine 187 hours/week. Pairs name the missing constraint in each. Rehearses Part 4's standing question with guaranteed material, rather than hoping student models contain instructive gaps.
+
+**D. Python mirror (optional handout).** The bakery model in `scipy.optimize.linprog` (or PuLP) is ~10 lines; shadow prices appear as the dual values (`result.ineqlin.marginals`). One handout keeps the Python thread alive through the Excel-native weeks and shows students the tool they'd actually use at scale.
+
+**E. Constraint bingo during presentations (Part 4).** The audience holds cards listing constraint types (capacity, minimum-service, non-negativity, integrality, policy/regulatory, logical). As each pair presents, listeners mark which types appear — and which are *suspiciously absent*. Converts passive audience time into the "constraint you missed" hunt the plan wants.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the formulation-first opening challenge with the net-vs-gross revenue trap; build-and-break as the core activity (infeasibility as information, not error); T5's negative-shadow-price question (most students never see one); T8's Heathrow LP (real values, real policy, and (e)'s "cost of policy" framing is exactly how LP earns its keep in public debate); the three-assumptions debrief.
+
+**Problems, reasons, and fixes:**
+
+1. **The worked example is infeasible and its conclusion reversed (see §2).** Highest-priority fix in the entire 22-week set: it anchors the demo, T2, T3, and T4, and Solver will publicly contradict it.
+2. **T6(c) is ill-posed in a balanced transportation problem.** Total supply = total demand = 200, so increasing Store 2's demand by 10 makes the model **infeasible** — the allowable increase on that constraint is zero, and "10 × €7 = €70" extrapolates a shadow price across a range that doesn't exist. *Fix:* either give Warehouse A 130 pallets (slack of 10 makes the marginal-pallet question meaningful, shadow price = €8 via A) or keep the balance and make the question "what is the allowable increase, and why?" — where "zero" *is* the lesson, and a neat echo of T4(e).
+3. **The timing table sums to 95 minutes** (10+20+10+25+20+10) — third occurrence of this arithmetic slip (Weeks 9, 16). *Fix here:* Part 4 to 15 minutes; with Activity E the audience stays engaged at the shorter length. Worth one template-level fix across all Block 4 files.
+4. **Chapter 14 content taught without Chapter 14 reading (see §1).** Transportation, scheduling, and integer constraints all appear in tutorials; assign 14-4a and cite 14-2/14-7.
+5. **Unboundedness is promised but never delivered.** Part 3 lists "infeasible, unbounded, or dramatically changes" as break targets, yet no example, tutorial, or answer key covers the unbounded case, and it *will* happen accidentally to at least one pair (delete a ≤ constraint and Solver's error message is cryptic). T9 closes this; without it, the instructor is improvising the explanation live.
+6. **Part 3's scenario cards don't exist yet.** Staff scheduling / portfolio / product mix scenarios need actual numbers engineered so that (i) a feasible optimum exists, (ii) an achievable single change produces infeasibility, and (iii) another change flips a binding constraint — the same tested-dataset standard as Weeks 8/15/16. The portfolio scenario needs care: "risk constraints" in linear form (max % per asset) — anything variance-based is nonlinear and quietly breaks the "this is an LP" premise.
+7. **T5(d)'s arithmetic quietly answers a different question.** The offer is 50 hours at €15; the key evaluates renting 40 (€740 gain vs €600 cost). Fine if partial rental is allowed — but then say so; if it's 50-or-nothing, the decision needs the re-run the key itself recommends. One clarifying sentence either way.

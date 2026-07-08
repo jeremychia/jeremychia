@@ -445,3 +445,76 @@ Students may spend most of Part 3 running models and not enough time interpretin
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Taleb, N.N. (2007). *The Black Swan: The Impact of the Highly Improbable.* Random House.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Corrections + Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapters 15–16
+
+Chapter 15 references are accurate (15-1 through 15-5, correct pages; @RISK correctly made optional with the Python substitution noted). Additions:
+
+- **§15-6 (Effects of Input Distributions on Results, pp. 811–820)** is precisely Part 3's sensitivity lab and the Part 4 GIGO debrief — including 15-6b (Effect of Correlated Input Variables), which the session raises in T6(c) but never demonstrates. Assign it.
+- **Chapter 16 (Simulation Models)** is where A&W apply this machinery to real business structures — 16-2 operations (bidding, warranty), 16-3 financial models, 16-4 marketing/churn. One pre-work sentence ("skim Chapter 16's contents; in Weeks 19–22 you may want one of these model templates for your own analysis") turns an unused chapter into a Block 4 resource library.
+
+## 2. Corrections + Extended Questions
+
+**Correction 1 — T5's "flaw of averages" example doesn't contain a flaw of averages.** With independent inputs and profit = units×price − units×cost − fixed (all linear in each variable), expectation distributes: E(profit) = 10,000×22 − 10,000×8 − 60,000 = **exactly €80,000**. The plug-in-the-means answer is *unbiased* here; the "simulation says ≈ €79,000" difference is Monte Carlo noise, not a systematic effect. The question's hint ("E(units × price) ≠ E(units) × E(price) because they are multiplied") is false under independence — and the answer key half-notices, conceding independence and then gesturing at variance and medians. What the deterministic model genuinely hides is the *distribution* (spread, P(loss), tails) — parts (b)–(e) are correct and should survive. *Fix that makes (a) true:* add a capacity constraint — `units_sold = np.minimum(units_demand, 12_000)`. Then f is concave and Jensen's inequality bites: E[min(D, 12,000)] ≈ 10,000×Φ(0.8) − 2,500×φ(0.8) + 12,000×(1−Φ(0.8)) ≈ **9,700 units**, so true expected revenue is ~3% below the plug-in-means figure — a genuine, computable flaw of averages, and exactly the structure A&W's own §15-3 example uses. Rewrite T5(a) around the capped model (see T9 below for the ready-made replacement).
+
+**Correction 2 — T8's tariff algebra is wrong.** "Profit per unit = (retail price × FX − component cost) × (1 − tariff) − fixed costs of €18M" both (i) applies the tariff to the *entire margin* — tariffs are import duties on the component, not a tax on profit — and (ii) subtracts a total fixed cost inside a per-unit expression. *Fix:* unit margin = retail × FX − component_cost × (1 + tariff); total profit = units × unit margin − €18M. At 145%, the component cost becomes €42 × 2.45 ≈ €102.9/unit — which is what actually makes the 145% scenario catastrophic, and now for the economically correct reason. (Minor: the same question's code mixes `np.random.seed` with the `default_rng` API — use `rng = np.random.default_rng(42)` throughout.)
+
+**T9 — The flaw of averages, done right (replacement/extension for T5(a)):**
+
+> The startup's contract manufacturer caps production at 12,000 units. Demand D ~ Normal(10,000, 2,500); units sold = min(D, 12,000).
+>
+> (a) The deterministic analyst plugs in the mean: min(10,000, 12,000) = 10,000 units. Simulate: what is E[units sold]?
+> (b) Why does the cap reduce the expectation even though the mean demand is *below* the cap?
+> (c) State the general principle, and name one other business structure with the same shape.
+>
+> **Answers:** (a) ≈ **9,700 units** (simulation; analytically μΦ(z) − σφ(z) + c(1−Φ(z)) with z = 0.8). (b) The cap truncates the upside (demand above 12,000 sells only 12,000) while the downside is untouched — averaging an asymmetric outcome pulls the mean down; the plug-in-means calculation never sees the asymmetry because the *mean* demand isn't clipped. (c) E[f(X)] ≠ f(E[X]) whenever f is nonlinear (Jensen's inequality) — the flaw of averages. Same shape: overtime kicking in above a labour threshold, penalty clauses above a delivery date, option payoffs, progressive taxes, stockouts (Week 16's newsvendor logic).
+
+**T10 — Correlated inputs (demonstrates §15-6b and T6(c)'s warning):**
+
+> Realistically, price and demand are negatively related (higher price → fewer units). Model this with correlation ρ = −0.6 between the demand and price draws.
+>
+> (a) Before running: will P(loss) rise or fall vs the independent model? Reason it out.
+> (b) One implementation: `cov = [[2500**2, -0.6*2500*2.31], [-0.6*2500*2.31, 2.31**2]]; draws = rng.multivariate_normal([10000, 22], cov, N)` (2.31 ≈ SD of Uniform(18,26)). Run and compare P(loss).
+> (c) Why did the tornado analysis in T6 systematically understate risk if correlations exist?
+>
+> **Answers:** (a) With ρ < 0 between price and demand, revenue draws are *compressed* toward the middle (high demand comes with low price and vice versa) — Var(revenue) falls, and P(loss) typically **falls** relative to independence; the important lesson is that students must reason about which correlation *raises* risk: cost–demand *positive* correlation (busy market → expensive components) fattens the loss tail. (b) Expect P(loss) to move by several points; direction per (a). (c) One-at-a-time variation holds everything else fixed, so it cannot see interactions — the answer T6(c) gives verbally, now demonstrated numerically. Correlation assumptions belong on the GIGO checklist alongside distribution shapes.
+
+**T11 — Choose the decision, not just the risk (newsvendor by simulation):**
+
+> The startup must commit a production quantity Q before demand is known (unit cost €8, price €22, unsold units salvage €3).
+>
+> (a) For Q ∈ {8,000, 10,000, 12,000, 14,000}, simulate expected profit and P(loss).
+> (b) Why is the profit-maximising Q above mean demand here?
+> (c) Connect to Week 16 T7(c) and Week 17: what kind of tool have you just built?
+>
+> **Answers:** (a) Simulation gives an interior optimum (near the newsvendor quantile: underage cost 14, overage cost 5 → optimal service level 14/19 ≈ 74th percentile of demand ≈ 10,000 + 0.64×2,500 ≈ **11,600**). (b) Losing a €14 margin on a stockout hurts more than eating €5 on an unsold unit, so you deliberately overshoot the mean. (c) Simulation-based *optimisation* — using Week 18's engine to answer Week 17's "what should we do?" question when inputs are random. This is the precise hand-off Block 4's arc promises, currently only gestured at in the bridge.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Dice-and-cards Monte Carlo (12 min, before the code).** Teams run 15 hand trials of a mini profit model: a die roll sets the demand tier, a coin sets price high/low, a second die sets cost. Pool all trials into one board histogram, count losses. Then Part 2's code does the same thing 10,000 times. Like Week 11's bag-of-chips activity, the physical version inoculates against "the computer said 11%" magic — students *were* the simulation.
+
+**B. Elicitation role-play (15 min, answers "where do inputs come from?").** Pairs: one plays product manager (given a private fact sheet), one plays analyst who may ask five questions to elicit a min / most-likely / max for demand, then builds a triangular distribution from the answers (A&W §15-2's distribution gallery includes triangular precisely for this). The GIGO debrief then has teeth: every pair can answer "where did your distribution come from?" with "we elicited it — here's the trail." This is the single most professionally realistic activity available for this week.
+
+**C. Seed ensemble (8 min, extends T4).** Run the identical model under 20 different seeds; plot the 20 P(loss) values as a dot strip at N = 100, then N = 10,000. The Monte Carlo *standard error* becomes a picture: the spread collapses as N grows. Follow with the one-liner: "simulation estimates have confidence intervals too — Week 12 applies to Week 18."
+
+**D. Correlation switch demo (5 min, pairs with T10).** One projected cell toggles ρ between 0 and −0.6/+0.6; the profit histogram and P(loss) update live. The fastest possible demonstration that dependence assumptions are inputs of the same rank as distributions.
+
+**E. Risk memo speed-round (10 min, closes Part 4).** Every pair completes the post-work fill-in paragraph ("the most important risk is ___ because ___…") in five minutes, swaps with another pair, and grades it against three checks: names a specific input, quantifies the P(loss) change, states the load-bearing assumption. Converts the optional post-work into a peer-checked in-class artefact — and it's a rehearsal for the Week 20–22 limitation statements.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the P(loss)-first opening challenge ("what does it *not* mean?"); T4's treatment of Monte Carlo error and seeds (rarely taught, professionally essential); T7's input-by-input GIGO audit with directional bias reasoning (the best question of the week); T8(f)'s model-dating point; the Block 4 close ("all three tools assume the future resembles the past").
+
+**Problems, reasons, and fixes:**
+
+1. **T5's flaw-of-averages demonstration doesn't demonstrate it (Correction 1).** The week's central contrast rests on a linear model where plug-in-means is provably unbiased; strong students will simulate, get €80,000 ± noise, and correctly conclude the question is wrong. Adopt the capacity cap (T9) — it is one `np.minimum` line and makes the claim true.
+2. **T8's tariff formula is economically wrong (Correction 2)** — and this is the question explicitly built for realism, sourced to real April 2025 events. Fix the algebra before students who follow trade news fix it for you.
+3. **The timing table sums to 95 minutes** — fourth occurrence (Weeks 9, 16, 17). At this point the fix is structural: the Block 4 template's Part 4 should be 15 minutes, and all four files corrected in one pass.
+4. **The model criticises a practice it also commits.** T7(c) rightly attacks Normal(18, 2) construction time for permitting impossible negative values — but the worked example draws units and variable cost from unbounded normals too (negative-probability mass is negligible here, ~3×10⁻⁵, but the *principle* is identical). One line in Part 2 ("check: how many draws were negative? what would you do if it mattered?" → `np.maximum(units, 0)` or a lognormal) makes the session practise its own audit standard.
+5. **§15-2 is assigned but distribution *choice* is never exercised.** Every distribution in the session is handed to students pre-chosen; the reading's catalogue (uniform vs triangular vs normal vs discrete) never becomes a decision anyone makes. Activity B closes this — and it's the skill Weeks 19–22 will actually demand, since students' own analyses will have no one to hand them distributions.
+6. **Small consistency slips:** Part 3 says "4-row results table" but specifies five model versions (baseline + four variants); T6's table is the same five rows — make it five. And the tornado lab's fixed-cost variant (SD €10,000) differs from T6's printed scenario (SD €8,000) — harmonise so the in-class table can be checked against the tutorial's.
+7. **The decision layer is missing until the bridge.** The session measures risk (P(loss)) but never *chooses* anything with it — yet Week 17 was optimisation and Weeks 19–22 demand recommendations. T11 (newsvendor-by-simulation) adds the missing "so what should we do?" step in ~15 lines of code, and directly discharges the Week 16 T7(c) newsvendor promissory note.

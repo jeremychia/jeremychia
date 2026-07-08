@@ -189,3 +189,59 @@ Students who have just completed a collaborative arc may experience the individu
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Rosenshine, B. (2012). Principles of instruction. *American Educator*, Spring 2012. ERIC EJ971753.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Materials, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed.
+
+**Appendix A-3 ("Examples of Statistical Reports," pp. A-7–A-18)** is the reference model for what groups are presenting — complete analyses with stated methods, results, and caveats. Circulate one example with the pre-work as the calibration artefact ("your 10 minutes should sound like this reads"). Combined with A-2's clear/concise/precise standards (assigned in Weeks 19–21 per those supplements), the capstone block then has a textbook spine even though it introduces no new methods — which also answers a question an interview panel might ask about these four weeks ("where's the book in your capstone?").
+
+## 2. Extended Materials
+
+**E1 — Q&A question bank (arm the audience; with what strong answers sound like).** Five question archetypes for the open-Q&A segment, so class questions rise above "how did you find the dataset?":
+
+1. *Assumption probe:* "Which single assumption, if wrong, would most change your conclusion?" — Strong answer names one (not "several"), states the direction of the error, and says what was done to check it. Weak: "our data was quite clean."
+2. *Alternative-method probe:* "Why this method and not [obvious alternative]?" — Strong: names the trade-off ("regression let us control for size; a t-test on binned groups would discard that"). Weak: "it's the one we knew."
+3. *Generalisation probe:* "Would this hold in [other city/year/population]?" — Strong: identifies which feature of the data is local and which mechanism might travel. Weak: unqualified yes.
+4. *Decision probe:* "You're advising the responsible manager — what exactly should they do differently on Monday?" — Strong: one concrete action plus the confidence caveat. Weak: "they should look into it further."
+5. *Effect-size probe:* "Is the effect big enough to matter, and compared to what?" — Strong: restates the effect in decision units (€, minutes, percentage points) against a benchmark. Weak: re-quotes the p-value.
+
+**E2 — Anchored rubric for the five criteria (the table currently lists criteria without levels).** One line per criterion at three levels, publishable in advance per the plan's own criteria-not-secret philosophy:
+
+| Criterion | Developing | Solid | Exemplary |
+|---|---|---|---|
+| Question specificity | topic, not question | testable question | testable + the decision it informs stated |
+| Method appropriateness | method named | method justified vs an alternative | + assumptions checked and shown |
+| Result honesty | point estimate only | estimate with uncertainty | + effect size in decision units |
+| Limitation | generic ("more data") | specific, named mechanism | + its direction of bias on the conclusion |
+| Response to challenge | defends everything | accept/dispute/qualify used | + revises the claim live when warranted |
+
+**E3 — The closing-question follow-up tree.** The non-negotiable question ("what would you do differently…") has a scripted escalation when the answer is generic: generic answer ("more data") → "more data *on what variable*, and what would it change?" → still generic → "your Week 21 log named [X] as the unaddressed limitation — how would you attack that?" The Week 21 log entries are the instructor's ammunition; this is why they exist.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. One-slide abstract gallery (5 min, replaces part of the opening).** Every group's Week 21 3–4 sentence narrative goes up as a single slide, side by side, before any presentation. The room sees the four claims at once — and the reflective close ("what does a model give up?") lands harder against four concrete, differently-shaped answers. Also functions as the session's insurance: if tech fails mid-presentation, the abstract slide plus talk survives.
+
+**B. Audience criterion cards (0 min, converts spectating into judging).** Each audience member holds one of the five criteria and scores every presentation on it (E2 anchors). After the final Q&A, one sentence per criterion-holder in the reflective close: "the strongest limitation statement today was ___ because ___." Distributes the evaluative work of the missing external evaluator across the room — and it is itself assessment literacy practice for the individual coursework.
+
+**C. Cold-open Q&A swap (variation).** Reverse the printed Q&A order once per session: instructor's closing question *first* for one group. Groups uniformly script their opening minute and improvise the ending; reversing once tests whether the "what would you do differently" answer is genuinely held or queued. Use on the strongest group (per Week 20–21 evidence), not the weakest.
+ 
+**D. Course-arc retrieval finale (10 min, optional, in the reflective close).** Ten rapid Mentimeter questions spanning the 22 weeks (one per block theme: what a model omits; median vs mean; confound; base rate; distribution choice; CI meaning; p-value meaning; coefficient conditionality; forecast assumption; GIGO). Ungraded, anonymous. It closes the weekly-quiz thread the course itself justified with Farmus et al., gives students a private signal of exam readiness, and ends the course inside its own pedagogy.
+
+**E. Letter to next year's cohort (alternative individual reflection).** Same 10 minutes, same three questions, but addressed to a Week 1 student of next year's course. Same content, warmer register — and it produces an artefact the instructor can actually use next year (with permission), which honours Forward's reflective-practice emphasis beyond ritual.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the non-negotiable closing question wired to the Week 21 logs (Design Challenge 2's specific-follow-up move is exactly right); the pre-class limitation check with advance warning; not grading the session (correctly reasoned in the rationale); the reflective close reaching back to Week 1's question — the longest arc in the course, deliberately closed; the individual reflection separating personal learning from the group product.
+
+**Problems, reasons, and fixes:**
+
+1. **The session's arithmetic doesn't reconcile with itself.** The structure table gives Opening 5 + Presentations 45–60 + Reflective close 10–15 + Individual reflection 10 (= 70–90), but the adjustment bullets say "3 groups: 15 min per group + 15 min close = 60 min total," silently dropping the opening and the individual reflection. Full schedules: **3 groups** = 5 + 45 + 15 + 10 = 75 min (spare 15 → extend Q&A to 7–8 min per group, as the bullet half-suggests: 5 + 54 + 15 + 10 = 84 ✓); **4 groups** = 5 + 60 + 10 + 10 = 85 ✓. Print those two lines and delete the broken bullets.
+2. **The external evaluator promised in Weeks 19, 20, and 21 does not exist in this plan.** This is the terminal file of that dangling thread (Week 21 even ships the unresolved bracket). *Fix:* decide and align all four files. If a guest is invited: add a one-paragraph guest brief (the five criteria + E1's question archetypes + "ask the generalisation probe"), slot their question into the Q&A's middle segment, and warn groups in Week 21. If not: Activity B's criterion cards are the honest substitute — say so in Weeks 19–20.
+3. **Criteria without anchors.** The evaluation table defines each criterion in one clause but gives no levels, so groups can't self-locate and the class can't calibrate its Q&A judgements. E2 fixes this at one table's cost — and publishing it *is* the plan's own stated philosophy.
+4. **The pre-class submission has no deadline.** "Submit the final presentation before class" gives the instructor no time to run the completeness check and send the missing-limitation note the plan promises. *Fix:* 48 hours before class, with the note sent within 24 — otherwise the safety net is decorative.
+5. **The individual reflections go nowhere.** They are collected and never used — yet Forward's weekly one-on-one tutorials (unused across all 22 plans; flagged in the Week 1 supplement) are the natural venue: the final tutorial of term discusses the student's own three answers. One sentence connects the course's ending to the institution's most distinctive teaching structure.
+6. **No failure contingencies for a terminal session.** A missing group member, a corrupted notebook, or a projector failure has no fallback in the one week that can't be re-run. *Fix:* require the exported slide PDF *and* the one-slide abstract (Activity A) in the pre-class submission; designate every member able to present any section (state this in Week 21 so groups rehearse for it).
+7. **The course ends without pointing at the exam.** ST2187 is ultimately examined by the University of London; Week 22 closes the teaching arc but says nothing about the revision phase. One closing paragraph — "the weekly quiz bank, the tutorial questions T0–T8 across Weeks 1–15, and the answer keys are your revision set; the exam tests exactly the interpretation skills the Q&A just rehearsed" — converts 22 weeks of materials into the revision resource they already are. (Minor: "forward College" → "Forward College" in the After the Course section.)

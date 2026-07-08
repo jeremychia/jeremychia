@@ -21,14 +21,14 @@ These objectives operate at the **application and analysis** levels of Bloom's T
 ## Before Class (Student Pre-Work)
 
 **Reading:** Albright & Winston, *Business Analytics*, Chapter 10 — read the following sections only:
-- §10.1 Overview of regression analysis (pp. 508–514)
-- §10.2 Simple linear regression — model and estimation (pp. 514–526)
-- §10.3 Measuring goodness of fit — R² and standard error of estimate (pp. 526–533)
-- §10.4 Regression in Excel (pp. 533–540)
+- §10-1 Introduction (pp. 418–421)
+- §10-2 Scatterplots: graphing relationships (pp. 421–428) — including §10-2b (outliers) and §10-2c (unequal variance), the visual diagnostics behind T2
+- §10-3 Correlations (pp. 428–430) — a brief revisit of Week 3
+- §10-4 Simple linear regression (pp. 430–443) — least squares (10-4a), standard error of estimate (10-4b), and R² (10-4c); the Excel mechanics are embedded in this section's worked examples
 
-The statistical inference sections (§10.5–10.6: t-tests on coefficients, F-test) are the topic of Week 15. This week is estimation; next week is inference. The division is deliberate — students who try to interpret p-values before understanding what the coefficients mean confuse both.
+Statistical inference on regression (Chapter 11) is the topic of Week 15, along with multiple regression and modelling possibilities (§10-5–10-6). This week is estimation; next week is inference. The division is deliberate — students who try to interpret p-values before understanding what the coefficients mean confuse both.
 
-*Rationale:* the regression output table from Excel's Data Analysis ToolPak is dense. Students need to have seen it before class. Pre-work reading of §10.4 is not optional.
+*Rationale:* the regression output table from Excel's Data Analysis ToolPak is dense. Students need to have seen it before class. The worked examples inside §10-4 are not optional.
 
 **Videos (~20 minutes total):**
 - [Linear Regression — StatQuest](https://www.youtube.com/watch?v=nk2CQITm_eo) (12 min) — intuition for OLS. *Active watching: when StatQuest explains what "least squares" means — minimising the sum of squared residuals — pause and write in one sentence: what is a residual? This concept is what T2 tests.*
@@ -159,7 +159,7 @@ T3 uses a verified 2025 policy context: Amazon's five-day RTO mandate was announ
 >
 > (a) Using Excel Data Analysis, fit rent on size. Write the regression equation and interpret the slope.
 >
-> *Solution (approximate, students compute in Excel):* Rent ≈ 256 + 16.4 × Size. Slope: each additional m² predicts approximately €16.40 more in monthly rent, on average.
+> *Solution (students compute in Excel):* Rent ≈ 27.9 + 19.1 × Size. Slope: each additional m² predicts approximately €19.10 more in monthly rent, on average.
 >
 > (b) What is R²? How much of the variation in rent is explained by apartment size?
 > (c) Compute the residual for Apartment 4 (70m², €1,400). Is the apartment over- or under-priced relative to the model?
@@ -272,17 +272,17 @@ T3 uses a verified 2025 policy context: Amazon's five-day RTO mandate was announ
 
 ### T5 — Build, predict, evaluate residuals (apartments)
 
-**(a)** Using Excel Data Analysis on the 8-apartment data: **Rent ≈ 256 + 16.4 × Size.** Slope: each additional m² of apartment size predicts approximately **€16.40 more in monthly rent**, on average. (Student answers may vary slightly depending on rounding in Excel output.)
+**(a)** Using Excel Data Analysis on the 8-apartment data: **Rent ≈ 27.9 + 19.09 × Size.** Slope: each additional m² of apartment size predicts approximately **€19.10 more in monthly rent**, on average. (Student answers may vary slightly depending on rounding in Excel output.)
 
-**(b)** R² ≈ **0.988** — approximately 98.8% of the variation in monthly rents across these 8 apartments is explained by apartment size. Very high: size is an excellent predictor of rent in this sample.
+**(b)** R² ≈ **0.985** — approximately 98.5% of the variation in monthly rents across these 8 apartments is explained by apartment size. Very high: size is an excellent predictor of rent in this sample.
 
-**(c)** Predicted rent for Apt 4 (70m²): 256 + 16.4 × 70 = 256 + 1,148 = **€1,404.** Residual = 1,400 − 1,404 ≈ **−€4.** The apartment is priced essentially at the model's prediction — a residual of −€4 is negligible. (Apt 4 is effectively at the regression line.)
+**(c)** Predicted rent for Apt 4 (70m²): 27.9 + 19.09 × 70 ≈ **€1,364.** Residual = 1,400 − 1,364 ≈ **+€36.** The apartment is priced modestly above the model's prediction — a small positive residual.
 
 **(d)** With R² ≈ 0.988, residuals should be small and show random scatter around zero with no systematic trend. A random pattern means: residuals have no visible relationship with size (no fan-shape, no curve, no clustering). Given the near-perfect fit in this dataset, the residual plot should show very small, randomly scattered points.
 
-**(e)** Predicted rent for 100m²: 256 + 16.4 × 100 = 256 + 1,640 = **€1,896.** The data ranges from 40m² to 85m², so 100m² is an extrapolation. This prediction is less reliable than predicting rent for a 65m² apartment (which is squarely within the data range). For a 65m² apartment: 256 + 16.4 × 65 = **€1,322** — the model's validity is well-established at this size.
+**(e)** Predicted rent for 100m²: 27.9 + 19.09 × 100 ≈ **€1,937.** The data ranges from 40m² to 85m², so 100m² is an extrapolation. This prediction is less reliable than predicting rent for a 65m² apartment (which is squarely within the data range). For a 65m² apartment: 27.9 + 19.09 × 65 ≈ **€1,269** — the model's validity is well-established at this size.
 
-**(f)** Predicted rent for 65m²: €1,322 (from above). Listed price: €1,600. Percentage above prediction: (1,600 − 1,322)/1,322 × 100% ≈ **21% above prediction.** Whether this is "significantly" higher depends on the standard error of the estimate from the regression output. If the standard error is ~€80 (approximate, given the tight fit), €1,600 is approximately (1,600 − 1,322)/80 ≈ 3.5 standard errors above prediction — quite high. The apartment appears expensive relative to its size.
+**(f)** Predicted rent for 65m²: €1,269 (from above). Listed price: €1,600. Percentage above prediction: (1,600 − 1,269)/1,269 × 100% ≈ **26% above prediction.** Whether this is "significantly" higher depends on the standard error of the estimate from the regression output: here s_e ≈ €38, so €1,600 is roughly (1,600 − 1,269)/38 ≈ 8–9 standard errors above prediction — far outside the model's normal spread. The apartment appears very expensive relative to its size.
 
 ---
 
@@ -514,3 +514,87 @@ Some pairs will propose mediators (variables on the causal path between X and Y)
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Sweller, J. (1994). Cognitive load theory, learning difficulty, and instructional design. *Learning and Instruction*, 4(4), 295–312.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 10
+
+**All four reading references are wrong — the cited pages (508–540) belong to Chapter 11.** Chapter 10 runs pp. 417–481, and there is no section called "Regression in Excel." Correct mapping for this week:
+
+| Cited | Actual 6th-ed. location |
+|---|---|
+| "§10.1 Overview (508–514)" | **10-1 Introduction (p. 418)** |
+| "§10.2 Simple linear regression (514–526)" | **10-2 Scatterplots: Graphing Relationships (421–428)** + **10-4 Simple Linear Regression (430–443), incl. 10-4a Least Squares** |
+| "§10.3 Goodness of fit (526–533)" | **10-4b Standard Error of Estimate (438)** + **10-4c R-Square (440)** |
+| "§10.4 Regression in Excel (533–540)" | no such section — Excel mechanics are embedded in 10-4's examples |
+| "§10.5–10.6 inference → Week 15" | inference is **Chapter 11**, not late Chapter 10 |
+
+Two structural consequences:
+
+1. **10-2b/c (Outliers; Unequal Variance) should be explicitly assigned** — they are the textbook's own treatment of the residual-diagnostics material T2 introduces, and 10-2's scatterplot-first discipline is precisely the prediction game's logic.
+2. **10-5 (Multiple Regression) and 10-6 (Dummy Variables, Interactions, Nonlinear Transformations) currently have no home in the course.** T3(d) and T7(d) already *use* control variables, Week 15 (per its title) covers Chapter 11 inference, and no week claims 10-5/10-6 — yet dummies and transformations are core ST2187 exam material. *Fix:* either fold 10-5/10-6 into Week 15's reading or add them to Week 16's practical. This is a syllabus-coverage gap, not just a citation typo. Also worth one line: **10-7 (Validation of the Fit)** is the textbook's bridge to train/test thinking — a natural stretch reading before the full-analysis block.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Standard error of estimate (10-4b, assigned in spirit but never used):**
+
+> The T1 regression (Score ≈ 38.5 + 6.63 × Hours) has residuals of roughly ±0.4 points.
+>
+> (a) Estimate the standard error of estimate s_e = √(SSE/(n−2)) from the T2 residuals.
+> (b) Interpret s_e in one sentence a student would care about.
+> (c) Why is s_e more useful than R² when the question is "how far off will my prediction of one student be?"
+>
+> **Answers:** (a) SSE ≈ (−0.2)² + 0.2² + (−0.4)² + 0² + 0.4² + (−0.2)² = 0.44; s_e = √(0.44/4) ≈ **0.33 points.** (b) A typical prediction misses the actual exam score by about a third of a point — the model's "plus-or-minus" in the units of Y. (c) R² is a proportion of variance (unitless, sample-relative); s_e is in exam points and directly scales the prediction interval — the T6(e) caveat made quantitative.
+
+**T9 — Regression to the mean (the concept hiding inside T6's slope of 0.82):**
+
+> A sales team's 200 reps are ranked by Q1 performance. The top 20 average 2.1 SDs above the mean in Q1 but only 1.3 SDs above in Q2 — despite no change in effort or conditions. Management concludes the team "got complacent after being praised."
+>
+> (a) Give the statistical explanation.
+> (b) Connect it to the slope in T6 Model 1 (0.82 < 1): what does a slope below 1 in a Y-on-X regression of the *same variable across time* imply?
+> (c) Name one business practice this fallacy corrupts.
+>
+> **Answers:** (a) Q1's top 20 got there partly through luck; luck doesn't persist, so their Q2 scores regress toward the mean — no complacency needed. (b) A slope < 1 on standardised repeat measurements *is* regression to the mean: extreme values predict less-extreme follow-ups; only r = 1 would preserve extremity. (c) Performance reviews ("praise causes decline, criticism causes improvement" — Kahneman's flight-instructor example), bonus schemes rewarding one-period extremes, "turnaround" attributions after bad quarters. This is a standard exam trap and currently absent from the course.
+
+**T10 — When the line should curve (previews 10-6c):**
+
+> A dataset of 50 firms shows advertising (X, €k) vs sales (Y, €k). The residual plot from a linear fit shows the T2(d) curved pattern: positive, then negative, then positive.
+>
+> (a) Name two standard remedies within regression.
+> (b) The analyst fits log(Y) = a + b·log(X) and gets b = 0.4. Interpret b without the word "log."
+>
+> **Answers:** (a) Add a quadratic term (X²) or transform variables (log X, log Y) — A&W 10-6c. (b) b is an **elasticity**: a 1% increase in advertising is associated with ≈ 0.4% higher sales — diminishing returns, which is exactly what the curved residuals were signalling. Plants the interpretation students need if 10-6 lands in Week 15/16 (see §1.2).
+
+*Additional quiz questions:*
+
+- Q10: Salaries are re-expressed from € to €000s (Y/1000), X unchanged. The slope: *(a) unchanged (b) divided by 1000 (c) multiplied by 1000 (d) R² changes)* — **Answer: (b)** — slopes carry units; R² doesn't.
+- Q11: In simple regression, the slope b equals: *(a) r (b) r·(s_y/s_x) (c) r² (d) s_y/s_x)* — **Answer: (b)** — makes Q4's r-vs-r² confusion impossible to sustain.
+- Q12: Two models on the same data: Model A has R² = 0.85 with a clearly curved residual plot; Model B has R² = 0.80 with random residuals. Which do you trust for prediction within range? *(a) A — higher R² (b) B — valid form beats higher fit (c) both equally (d) neither)* — **Answer: (b)** — T2(d)'s lesson as retrieval.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Anscombe live (10 min, Part 2 extension).** Fit all four Anscombe quartet datasets: identical slope, intercept, and R² — then show the four residual plots. This is the Week 2 Datasaurus lesson upgraded to regression, and the single fastest way to make T2's "residual plot beats R²" point unforgettable. (One prepared spreadsheet; two minutes per gasp.)
+
+**B. Spaghetti least-squares (10 min, Part 3A alternative).** Printed scatterplots, one strand of dry spaghetti per pair as the candidate line; pairs compute their line's SSE from five marked points, post it, then the OLS SSE is revealed as the unbeatable benchmark. "Least squares" becomes a competition they lost fairly, not a definition.
+
+**C. Leverage playground (8 min, after Part 3A).** In Desmos/GeoGebra with the fitted line live, drag one point far from the cloud and watch the line chase it. Vocabulary drop: leverage vs influence. Directly answers the prediction game's "is there an observation pulling the line?" and pre-loads Week 15's outlier diagnostics (A&W 11-7).
+
+**D. Regression-to-the-mean dice game (12 min, pairs with T9).** Each student's "performance" = fixed skill card (1–6) + two dice (luck). Rank round 1, then re-roll luck for round 2: the leaderboard compresses before their eyes. Debrief with the sales-team scenario. No simulation code needed.
+
+**E. Two-way prediction race (10 min, fast-finisher).** Using T1's data, predict Y from X = 4.5, then X from Y = 70 — students discover the two regression lines differ (T6(d) made physical). Winner explains *why* the X-on-Y line isn't the algebraic inverse.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the estimation/inference split across Weeks 14–15 with its stated rationale; T3's RTO case (current, well-sourced, and (d)/(f) are genuinely sophisticated — attrition bias rarely appears in intro courses); the by-eye prediction game; the confound-vs-mediator planting in Part 4.
+
+**Problems, reasons, and fixes:**
+
+1. **Every reading reference is wrong (see §1).** Pages 508–540 are in Chapter 11; students following the citations will read stepwise regression and outlier diagnostics a week early and miss scatterplots and least squares entirely. This is the most consequential citation failure in the 22 weeks because the plan itself declares "§10.4 is not optional."
+2. **T5's answer key does not contain the least-squares fit.** Computing OLS on the printed 8 apartments gives **Rent ≈ 27.9 + 19.09 × Size, R² ≈ 0.985** — not "Rent ≈ 256 + 16.4 × Size, R² ≈ 0.988." Downstream corrections: (c) Apt 4 predicted ≈ €1,364, residual ≈ **+€36** (slightly *above* model, not "essentially at the line"); (e) 100m² ≈ **€1,937**, 65m² ≈ **€1,269**; (f) €1,600 is ≈ **26%** above prediction. *Reason it matters:* students run this in Excel and will get 27.9/19.09 to four decimals; a key that disagrees with the tool teaches them to distrust either the tool or the course. *Fix:* re-run and reprint (or adjust the data to match the intended coefficients).
+3. **Design Challenge 3 diagnoses T1's weakness and then doesn't fix it.** It correctly notes the intercept (≈38.5) is plausible, so the extrapolation lesson in T1(e) has no bite — and proposes the right fix (a dataset whose intercept is absurd) without applying it. *Fix:* change T1 to, e.g., weekly sales on number of staffed tills (intercept = sales with zero tills open), or simply subtract 40 from all Y values.
+4. **Objectives promise "Excel and Python"; the session delivers Excel only.** Same toolchain whiplash as Week 12. *Fix:* a six-line parallel cell in the pre-work (`import statsmodels.formula.api as smf; smf.ols('score ~ hours', df).fit().summary()`) — it costs nothing, honours the Block 2 investment, and produces the exact output students must read in Weeks 16–22.
+5. **Slope wording in T0/T1 answers alternates between "predicts an increase" and "is associated with."** In the week whose entire second half attacks causal overreach, the answer key should model the careful phrasing consistently: "is associated with a difference of," reserving "increase" for genuinely causal designs. One editing pass.
+6. **Part 4 timing** (~6–7 pairs × 2.5 min + submitter responses in 20 min) — same recurring arithmetic; the Week 13 triad structure is the proven fix.
+7. **The mediator planting needs one canned example in the instructor notes.** E.g., X = training hours, Y = sales, Z = product knowledge: Z is a *mediator* (on the path), while Z' = tenure is a *confound* (drives both). Without a ready example the distinction lands as terminology rather than structure.

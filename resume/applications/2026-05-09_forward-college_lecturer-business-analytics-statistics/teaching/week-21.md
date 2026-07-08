@@ -160,3 +160,54 @@ With 3 groups, the round takes 45 minutes; with 4 groups, it takes 60 minutes.
 - Piaget, J. (1952). *The Origins of Intelligence in Children.* International Universities Press.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Materials, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed.
+
+**Appendix A-2c/d/e (Be Clear / Be Concise / Be Precise) is the editing standard for Part 3's 3–4 sentence narrative** — the Design Challenge 4 template ("We asked… We found… This is limited because…") is exactly what A-2e's precision guidance produces. Assign these three pages as the pre-work's only reading; groups then edit their narrative against a published standard instead of instructor taste. The A-3 example reports remain the Week 22 reference models (per the Week 19 supplement).
+
+## 2. Extended Materials (with model answers)
+
+**E1 — Challenge quality ladder (the missing rubric for the challenge brief).** Show three versions of the same challenge; the brief must reach level 3:
+
+- *Level 1 (vague — inadmissible):* "Your p-value might be wrong."
+- *Level 2 (specific):* "Your t-test assumes independent observations, but your rents cluster by neighbourhood."
+- *Level 3 (specific + standard of satisfaction):* "Your t-test assumes independence, but rents cluster by neighbourhood, which understates your standard error. A satisfactory response shows the conclusion survives when tested at the neighbourhood level (or with clustered SEs); an unsatisfactory response re-asserts the original p-value."
+
+The level-3 shape ("problem + mechanism + what would satisfy us") is already mandated in the pre-work; the ladder makes the gap between levels visible and gives the instructor a one-word vocabulary for feedback on the briefs ("this one's a level 2 — add the satisfaction standard").
+
+**E2 — Accept / dispute / qualify, worked micro-cases:**
+
+1. Challenge: "Your 3 comparable sales can't support a Normal(320k, 40k) price distribution." Model **accept**: "Correct — we've re-run with a wider SD and a lognormal alternative; P(loss) rises from 8% to 14–19%, and our narrative now reports the range." (Acceptance = revision + changed claim, not apology.)
+2. Challenge: "Your significant result is just multiple testing — you ran six tests." Model **dispute**: "We pre-specified this single hypothesis in our Week 19 contract — the other five tests were exploratory and labelled as such in the brief; the Week 13 pre-registration logic applies." (Dispute = citing evidence, here the documented question contract.)
+3. Challenge: "Observational data — you can't claim the bike lane reduced accidents." Model **qualify**: "Agreed for causality — our claim is the association, stated with the time-confound limitation; a causal answer would need the before/after comparison across matched streets we list as the next step." (Qualify = conceding scope while defending the narrower claim.)
+
+**E3 — Revision vs limitation decision rule (Part 3, step 1–2 currently gives no criterion).** A challenge becomes a **revision** if it can be executed with the data in hand before Week 22 (add a control, correct a test, report an effect size, run the robustness check). It becomes a **limitation** if fixing it requires data, time, or design you don't have (non-random sample, unmeasured confound, single year of data) — in which case it must appear *verbatim* in the final narrative's limitation clause. The failure mode to name: treating an executable fix as a "limitation" because the group is tired — the instructor's note-taking during Part 2 should flag any challenge that was accepted-as-limitation but is actually a 20-minute fix.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Steelman gate (add to Part 2, costs ~30 s per cycle).** Before responding, the presenting group must restate the challenge in their own words until the challengers confirm "that's our point." Defensive responses usually attack a misheard version of the challenge; the restatement rule makes that impossible, and it is the single cheapest de-escalation device for Design Challenge 2's defensiveness risk.
+
+**B. Silent minute (add between challenge and response).** The presenting group writes for 60 seconds before speaking — deciding accept/dispute/qualify per challenge on paper. First spoken reactions are the most defensive ones; a written beat produces the analytical response the framework wants.
+
+**C. Best-challenge ballot (5 min, in the debrief — delivers Week 20's promise).** Week 20's preview committed: "the group whose challenge is most incisive… will be named." Nothing in this session delivers that. Run a one-minute class vote (not for the harshest — for the challenge that most changed the target group's final narrative, which the log entries record). Naming the winner anchors the incentive for challenge quality that Week 20 created.
+
+**D. Spectator role cards (Part 2).** The two groups not in the current cycle each get a job: one tracks the response framework (did each response actually accept/dispute/qualify, or evade?), the other drafts the "class challenge" for the 2-minute slot. Fifteen-minute cycles × 4 means up to 45 minutes of spectating per student otherwise; roles convert watching into scoring.
+
+**E. Narrative red-pen swap (Part 3, final 5 min).** Groups exchange draft narratives and underline every word a stranger couldn't verify from the analysis ("clearly," "strong," "significant" without a number). Returned with underlines only — no discussion needed. Enforces A-2e precision at zero instructor cost.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the written challenge brief with satisfaction standards (the block's best pre-work artefact); accept/dispute/qualify as a response grammar; the instructor's deliberate silence during Part 2 (correctly reasoned in the rationale); "the claim narrowed — that's progress" as the week's metric; Design Challenge 4's narrative template.
+
+**Problems, reasons, and fixes:**
+
+1. **An unresolved placeholder is printed in the student-facing text.** The Week 22 preview reads "[an external evaluator / the cohort / a panel — specify based on course administration]" — the third file to defer this decision (Weeks 19 and 20 assert the evaluator exists). *Fix:* decide once, then update Weeks 19, 20, 21, and 22 together. Recommendation: invite one external guest (a Berlin practitioner — squarely within Forward's Year 3 professional-exposure model and the Beta House precedent in the student-voice research); if impossible, the fallback is the instructor playing a briefed external role, which should then be *said*, not left bracketed.
+2. **Week 20's "most incisive challenge will be named" promise has no mechanism here.** Activity C is the two-minute fix; without it, a stated incentive silently evaporates — the exact pattern (promise in week N, no delivery in week N+1) this review has flagged between Weeks 3→7 and 8→9.
+3. **The plan never says whether presenting groups see the challenge briefs in advance.** Briefs are "submitted before class," but to whom is undefined — and the two designs teach different things (surprise tests thinking-on-feet; advance disclosure tests depth of revision). *Fix:* state it. Recommended: briefs go to the instructor only, but the challenge *archetypes* are public (per the Week 20 supplement) — groups can prepare for the type, not the instance, which matches how real review works.
+4. **The revised Week 20 brief is submitted but nothing consumes it.** The instructor is note-taker only in Part 2, so the revised brief has no feedback channel this week. *Fix:* written margin comments returned within 48 hours as Week 22 preparation input — otherwise the submission is ritual.
+5. **No criterion for the revision-vs-limitation split** that Part 3 hinges on (E3 supplies one). Without it, tired groups will misfile fixable problems as limitations, and Week 22's "honest limitation" standard gets quietly diluted.
+6. **Spectator load.** Up to 45 minutes of watching per student across the four cycles (see Activity D). The 2-minute class slot presumes attention the format doesn't otherwise sustain.

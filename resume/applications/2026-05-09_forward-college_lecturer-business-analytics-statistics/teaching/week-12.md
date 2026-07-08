@@ -23,7 +23,8 @@ These objectives operate at the **application and evaluation** levels of Bloom's
 **Reading:** Albright & Winston, *Business Analytics*, Chapter 8 — read the following sections only:
 - §8-1 Introduction to confidence intervals (pp. 312–314)
 - §8-2 Sampling distributions — the t distribution and others (pp. 314–317)
-- §8-3 Confidence interval for a mean (pp. 317–326)
+- §8-3 Confidence interval for a mean (pp. 317–324)
+- §8-4 Confidence interval for a total (pp. 324–326) — brief; the business-specific interval (audit error totals, inventory valuation)
 - §8-5 Confidence interval for a proportion (pp. 326–331)
 - §8-6 Confidence interval for a standard deviation — chi-square interval (pp. 331–335)
 - §8-9 Sample size selection (pp. 344–352)
@@ -176,7 +177,7 @@ T3 is the least intuitive of the three — the chi-square CI is asymmetric, whic
 > Upper bound: √((39 × 1.44) / 23.65) = √(2.374) ≈ **1.541 mm**
 > 95% CI for σ: **(0.983, 1.541) mm**
 >
-> (d) The chi-square interval in (c) is asymmetric — the lower bound is 0.417mm below the sample SD (1.2), while the upper bound is 0.341mm above it. Explain why this asymmetry occurs and why the interval is not symmetric around s = 1.2mm.
+> (d) The chi-square interval in (c) is asymmetric — the lower bound is 0.217mm below the sample SD (1.2mm) while the upper bound is 0.341mm above it, so the interval extends further above s than below. Explain why this asymmetry occurs and why the interval is not symmetric around s = 1.2mm.
 >
 > (e) The specification requires diameter SD ≤ 1.0mm. The CI for σ is (0.983, 1.541). What does this tell you about whether the process meets the specification? Can you conclusively say it does or does not meet spec?
 
@@ -212,7 +213,7 @@ T3 is the least intuitive of the three — the chi-square CI is asymmetric, whic
 
 **(b)** Yes — "about a third" (33.3%) is contained within the interval (30.4%, 41.6%). The manager's claim is supported by the data at 90% confidence.
 
-**(c)** n = (z/ME)² × p̂ × (1 − p̂) = (1.96/0.03)² × 0.36 × 0.64 = (65.33)² × 0.2304 = 4,268 × 0.2304 ≈ **983.** Approximately 983 customers are needed to achieve a margin of error of ±3 percentage points at 95% confidence. (Using p̂ = 0.36 from the existing sample — if using the conservative p̂ = 0.50, the required n rises to (1.96/0.03)² × 0.25 ≈ 1,068.)
+**(c)** n = (z/ME)² × p̂ × (1 − p̂) = (1.96/0.03)² × 0.36 × 0.64 = 4,268.4 × 0.2304 ≈ 983.4 → **984** (sample sizes always round *up*, or the margin-of-error target is missed). Approximately 984 customers are needed to achieve a margin of error of ±3 percentage points at 95% confidence. (Using p̂ = 0.36 from the existing sample — if using the conservative p̂ = 0.50, the required n rises to (1.96/0.03)² × 0.25 ≈ 1,068.)
 
 ---
 
@@ -502,3 +503,77 @@ To find n for a proportion CI, you need to plug in p̂ — but you don't have p�
 - Lovett, M. & Greenhouse, J. (2000). Applying cognitive theory to statistics instruction. *The American Statistician*, 54(3), 196–206.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 8
+
+Section references are essentially correct. Two adjustments:
+
+1. **§8-4 "Confidence Interval for a Total" (pp. 324–326) is silently swallowed.** The reading list assigns "§8-3 (pp. 317–326)", but 8-3 ends at 324 and 8-4 occupies 324–326 — so students are told to read the pages without being told the topic exists. CI-for-a-total is genuinely useful in business analytics (audit error totals, inventory valuation) and takes one worked question to teach. Either name it in the reading and add T8 below, or exclude the pages explicitly.
+2. The 8-7/8-8 deferral note ("read before Week 13") is correct and well-placed — Week 13's two-sample tests will lean on them. Keep.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — CI for a total (fills the §8-4 gap; audit context):**
+
+> An auditor samples n = 100 invoices from a population of N = 10,000 and measures the overbilling error per invoice: sample mean €12, sample SD €40.
+>
+> (a) Construct a 95% CI for the mean error per invoice.
+> (b) Convert it to a 95% CI for the **total** overbilling across all 10,000 invoices.
+> (c) The client's materiality threshold is €150,000. What do you report?
+>
+> **Answers:** (a) t* = T.INV.2T(0.05, 99) ≈ 1.984; SE = 40/√100 = 4; ME = 7.94; CI ≈ **(€4.06, €19.94)** per invoice. (b) Multiply by N: **(€40,600, €199,400)**, point estimate €120,000. (c) The interval *straddles* the €150,000 threshold — the evidence cannot rule material misstatement in or out; the auditor must extend the sample (precisely T7(e)'s logic in a context where the consequence is a qualified audit opinion). Bonus discussion: the sample SD (€40) being much larger than the mean (€12) hints at a highly skewed error distribution — many zero-error invoices, a few large errors — so the normality caveat from T4(b) applies.
+
+**T9 — Coverage, verified by simulation (the missing demo as a question):**
+
+> Using Week 11's simulation skills: draw 100 samples of n = 30 from a known population (exponential, mean 10), build a 95% t-interval from each, and count how many contain the true mean.
+>
+> (a) Before running: how many of the 100 intervals do you expect to miss?
+> (b) You observe 93 hits. Is the method broken?
+> (c) A classmate points at interval #17, which contains the true mean, and says "this interval has a 95% chance of containing μ." Use the simulation output to explain why that's wrong.
+>
+> **Answers:** (a) About 5 misses — that's the *definition* of 95% coverage (slightly more here, since the population is skewed and n = 30 is borderline). (b) No — 93/100 is well within binomial noise around 95 (SE of the hit count ≈ √(100×0.95×0.05) ≈ 2.2). (c) Interval #17 either contains μ or doesn't — in the simulation you can *see* which; the 95% was a property of the machine that generated all 100 intervals, not of any single one. The simulation makes T0(c)'s abstract point checkable by eye.
+
+**T10 — Confidence interval vs prediction interval (gives T5(c) numbers):**
+
+> Using T1's Supplier A data (n = 30, x̄ = 99.8, s = 1.2):
+>
+> (a) Compute the 95% **prediction interval** for the diameter of the *next single part*: x̄ ± t*·s·√(1 + 1/n).
+> (b) Compare with the CI from T1(a). Why is the PI barely affected by growing n while the CI shrinks to nothing?
+>
+> **Answers:** (a) ME = 2.045 × 1.2 × √(1 + 1/30) = 2.045 × 1.2 × 1.0165 ≈ 2.49; PI ≈ **(97.31, 102.29) mm** — more than five times wider than the CI (99.35, 100.25). (b) The CI's uncertainty is only about *where the mean is* (→ 0 as n → ∞); the PI must additionally cover the *irreducible spread of individual parts* (the s·√1 term), which no sample size removes. This is T5(c)'s error made quantitative — and the distinction the engineer in T7(e) actually needs.
+
+*Additional quiz questions:*
+
+- Q10: Which interval is always wider for the same data and confidence level? *(a) confidence interval for the mean (b) prediction interval for a single observation (c) they are equal (d) depends on n)* — **Answer: (b).**
+- Q11: Moving from 95% to 99% confidence while keeping the margin of error fixed requires n to: *(a) stay the same (b) increase by (2.576/1.96)² ≈ 1.73× (c) double (d) decrease)* — **Answer: (b)** — confidence costs observations, quantifiably.
+- Q12: As df → ∞, the t critical value: *(a) grows without bound (b) approaches the z critical value (c) approaches 0 (d) equals df)* — **Answer: (b)** — the T4(c) large-n shortcut, as retrieval.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Live coverage simulation (10 min, strongly recommended opener for Part 3).** Run T9's simulation projected: 100 intervals drawn as horizontal bars, the ~5 that miss the true mean coloured red, with the true mean as a vertical line. This is the canonical demonstration of what "95% confident" means, it is *the* corrective for Q7's misconception, and the course already built every required skill in Week 11's lab — its absence here is the week's biggest missed opportunity. (Pre-write the notebook; students only run and re-run.)
+
+**B. Human confidence intervals (15 min, Part 3 alternative).** Each student gets a different random sample of n = 10 from a shared dataset with a known mean (e.g. all Berlin rents from Week 2's chapter example — finally putting it to sanctioned use); each computes a 90% interval and draws it on the whiteboard on a common axis. Count captures: with 12–15 intervals, typically 1–2 miss. The class *is* the sampling distribution. Then ask the owner of a missing interval: "did you do anything wrong?" (No — that's the point.)
+
+**C. Headline rewrite sprint (10 min, Part 4 close).** Take the three worst misinterpretations collected on the board and rewrite each in ≤ 15 words, accurate but publishable. Same format as Week 3's activity D — by re-using the format the course builds a recurring "honest communication" muscle rather than a one-off exercise.
+
+**D. Price the confidence level (10 min, debrief extension).** "A client will pay €10k for an estimate with ±4pp at 95%. What would you charge for ±2pp at 95%? For ±4pp at 99%?" Teams quote prices using T6's arithmetic (4× the sample for half the ME; 1.73× for 99%). Converts the n-formulas into consulting economics — very Berlin-Year-3.
+
+**E. Which-interval triage (10 min, fast-finisher drill).** Ten one-line scenarios; students mark each CI-mean / CI-proportion / CI-sigma / prediction interval / CI-total (e.g. "range for next month's single largest order" → PI; "range for total warranty liability across the fleet" → total). Selection, not computation — the skill T7 builds implicitly, drilled explicitly.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** T5's correct/incorrect statement battery (exam-perfect format); the three-case Part 3 with real-genre sources; T4's small-n/large-n bracketing with the practical-significance payoff in (d)–(e); the "professionals get this wrong too" punchline; the CI→hypothesis-test bridge using the same numbers.
+
+**Problems, reasons, and fixes:**
+
+1. **T7(d) misstates its own numbers and reverses the asymmetry.** The lower gap is 1.2 − 0.983 = **0.217** (not "0.417"), the upper gap 0.341 — so the interval extends *further above* s than below, which is what the right-skewed chi-square logic in the answer key correctly predicts. As printed, the question's premise contradicts the answer's explanation. *Fix:* correct 0.417 → 0.217 and rewrite the clause so the longer side is the upper one.
+2. **T2(c) rounds a sample size down.** 4,268.4 × 0.2304 = 983.4 → the required n is **984**, not 983 — sample sizes always round *up* or the ME target is missed. Same convention should be stated once (the worked example and T6 do round up correctly, so this is an isolated slip that undercuts a taught rule).
+3. **The coverage simulation is missing (see Activity A).** The week's entire conceptual battle is Q7/T0(c)/T5(a), fought four times rhetorically — yet the one demonstration that makes the point *visible* is absent, in the only week of the course where it would be trivially cheap (Week 11 built the exact skills, the code is 15 lines).
+4. **Inline solutions inside submitted problems** — T4(a)(c), T5, T6(a)–(d), T7(a)–(c). Recurring defect; same fix (student version).
+5. **Toolchain whiplash is unexplained.** Weeks 6–9 and 11 built Python muscle; Week 12 reverts to Excel formulas (T.INV.2T, CHISQ.INV) with no comment. There's a good reason — the ST2187 exam is Excel-oriented — but it needs saying, plus a two-line margin note mapping the functions (`scipy.stats.t.ppf(0.975, 29)`, `chi2.ppf`, `norm.ppf`) so the toolchains reinforce rather than compete. Otherwise students conclude the Python weeks were a detour.
+6. **§8-4 swallowed silently (see §1.1).**
+7. **Part 4's per-student arithmetic again** (90 s × 12–15 > 20 min with discussion). Same fix as prior weeks: pre-select 5–6 submissions; tally the rest on the board by misinterpretation type only.

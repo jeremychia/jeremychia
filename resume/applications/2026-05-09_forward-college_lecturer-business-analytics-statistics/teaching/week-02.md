@@ -20,11 +20,12 @@ These objectives operate at the **analysis and evaluation** levels of Bloom's Ta
 ## Before Class (Student Pre-Work)
 
 **Reading:** Albright & Winston, *Business Analytics*, Chapter 2 — read the following sections only:
-- §2.1 Types of data (pp. 19–27)
-- §2.3 Describing numerical variables — central tendency, spread, shape (pp. 35–58)
-- §2.4 Charts for numerical variables — histograms and box plots (pp. 58–68)
+- §2-2 Basic concepts, especially §2-2c Types of data (pp. 22–26)
+- §2-3 Descriptive measures for categorical variables (pp. 26–30) — brief, and it appears in the quiz
+- §2-4 Descriptive measures for numerical variables — summary measures and charts (pp. 30–54)
+- §2-6a Outliers (pp. 61–63) — two pages, and directly behind T1(g)
 
-The time series section (§2.5, pp. 68–75) and missing data section (§2.6) are optional this week. §2.5 is surfaced at the end of the seminar as an unanswered question; you will encounter it properly in Week 13.
+The time series section (§2-5, pp. 54–61) and the missing-values material (§2-6b) are optional this week. §2-5 is surfaced at the end of the seminar as an unanswered question; you will encounter it properly in Week 16.
 
 *Rationale:* the full chapter is 61 pages. The sections above cover everything needed for Parts 1–4 of this seminar. Reading the full chapter in addition to completing the tutorial problems and worked example below would exceed what is useful preparation time for a 90-minute session (Fischer et al., 2023 — see pedagogical critique).
 
@@ -102,11 +103,11 @@ Dataset: 1200, 1400, 1350, 1250, 1300, 1450, 1200, 1380, 4800, 1290 (weekly sala
 
 **(d)** Sorted values: 1200, 1200, 1250, 1290, 1300, 1350, 1380, 1400, 1450, 4800. Q1 (median of lower half: 1200, 1200, 1250, 1290, 1300) = **€1,250.** Q3 (median of upper half: 1350, 1380, 1400, 1450, 4800) = **€1,400.** IQR = 1400 − 1250 = **€150.**
 
-**(e)** SD ≈ **€1,076** (dominated by the CEO outlier; compute in Excel to confirm). The SD is almost as large as the median wage — it tells you very little about the spread of the nine non-CEO salaries because a single outlier inflates it dramatically.
+**(e)** SD ≈ **€1,126** (sample SD, Excel `STDEV.S`; the population SD, `STDEV.P`, is ≈ €1,068 — state which you are using; this course reports the sample SD). The SD is dominated by the CEO outlier and is almost as large as the median wage — it tells you very little about the spread of the nine non-CEO salaries because a single outlier inflates it dramatically.
 
-**(f)** Mean ± 1 SD = €1,462 ± €1,076 = (€386, €2,538). This interval should contain ~68% of values if the data were normal. In fact it contains 9 of the 10 values (90%), and the lower bound (€386) is not a plausible salary — below minimum wage in most European contexts. The empirical rule does not apply here because the distribution is heavily right-skewed, not normal.
+**(f)** Mean ± 1 SD = €1,462 ± €1,126 = (€336, €2,588). This interval should contain ~68% of values if the data were normal. In fact it contains 9 of the 10 values (90%), and the lower bound (€336) is not a plausible salary — below minimum wage in most European contexts. The empirical rule does not apply here because the distribution is heavily right-skewed, not normal.
 
-**(g)** The correct answer is **not "remove it."** The right approach: run the analysis twice — once with the CEO included, once without — and report both, with an explanation. The CEO's salary is real data, not an error. Removing it silently would misrepresent the firm's compensation structure. Reporting both versions is honest: "excluding the CEO's salary, the median is €1,310; including it, the mean is €1,462." The analyst should also consider whether the CEO's salary is within the scope of the question being asked (e.g. a report on worker pay would reasonably exclude executive compensation with explanation).
+**(g)** The correct answer is **not "remove it."** The right approach: run the analysis twice — once with the CEO included, once without — and report both, with an explanation. The CEO's salary is real data, not an error. Removing it silently would misrepresent the firm's compensation structure. Reporting both versions is honest: "excluding the CEO's salary, the median is €1,300; including it, the mean is €1,462." The analyst should also consider whether the CEO's salary is within the scope of the question being asked (e.g. a report on worker pay would reasonably exclude executive compensation with explanation).
 
 ---
 
@@ -277,7 +278,7 @@ This consolidation step is grounded in **constructivist learning theory** (Piage
 
 > *"What if your variable has a time dimension? If I gave you 65 years of monthly crime rates and asked you to summarise them — mean, median, SD — would that be meaningful?"*
 
-The answer is no, and it's not obvious why until you think about it. A mean of 60 years of Dow Jones prices tells you nothing useful about where the market is now or where it's going. But the percentage change from month to month — that distribution is stable, interpretable, and follows the empirical rules. This plants the question for Week 13 (time series and forecasting), where it returns properly.
+The answer is no, and it's not obvious why until you think about it. A mean of 60 years of Dow Jones prices tells you nothing useful about where the market is now or where it's going. But the percentage change from month to month — that distribution is stable, interpretable, and follows the empirical rules. This plants the question for Week 16 (time series and forecasting), where it returns properly.
 
 One question. Not three. Working memory is depleted at the end of a 90-minute session — opening multiple threads produces noise, not retention. The time-series question is the sharpest and most counterintuitive; it is the one that will still be turning over in students' heads when they leave.
 
@@ -712,3 +713,100 @@ The outer structure (flipped classroom: pre-work → active seminar → LMS refl
 - Piaget, J. (1952). *The Origins of Intelligence in Children.* International Universities Press.
 - Roediger, H.L. & Karpicke, J.D. (2006). Test-enhanced learning. *Psychological Science*, 17(3), 249–255.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 2
+
+**Coverage check: conceptually sufficient for numerical variables; section references need correcting and categorical variables are a genuine gap.**
+
+The pre-work cites "§2.1 Types of data (pp. 19–27), §2.3 Describing numerical variables (pp. 35–58), §2.4 Charts (pp. 58–68), §2.5 time series (pp. 68–75)". The actual 6th-edition structure:
+
+| Actual section | Pages | Content |
+|---|---|---|
+| 2-2 Basic Concepts (incl. 2-2c Types of Data) | 22–26 | Populations/samples, variables, data types |
+| 2-3 Descriptive Measures for **Categorical** Variables | 26–30 | Counts, percentages, bar charts |
+| 2-4 Descriptive Measures for Numerical Variables | 30–54 | 2-4a summary measures; 2-4d charts (histograms, box plots) |
+| 2-5 Time Series Data | 54–61 | The "unanswered question" for Week 13 |
+| 2-6 Outliers and Missing Values | 61–63 | Directly supports T1(g) |
+| 2-7 Excel Tables | 63–71 | Filtering/sorting — course uses Python/SQL instead |
+
+Corrections and additions:
+
+1. **Fix references to 2-2c, 2-4, and (optional) 2-5/2-6.** The cited section numbers, titles, and page ranges don't match the book.
+2. **Assign 2-6a (Outliers, 2 pages).** The plan leans hard on T1(g) and the Part 3 outlier prompt, and asserts "the chapter's position on this is clear" — but 2-6 is currently listed as optional. Make the outlier subsection required; it's short.
+3. **Categorical variables (2-3) are quizzed but never taught or practised.** Quiz Q2 and Q6 test categorical typing, and student-sourced open datasets will frequently have categorical columns — yet no tutorial problem, no deliverable, and no reading emphasis covers how to *summarise* them (counts, percentages, bar chart vs histogram). Add 2-3 to the reading and one tutorial problem (T4 below); otherwise pairs assigned a mostly-categorical dataset in Part 3 have no tools.
+4. **Say explicitly that 2-7 (Excel Tables) is skipped because the course's tool track is Python/SQL** — same rationale discipline as Week 1's deferral note.
+
+## 2. Extended Question Bank (with answers)
+
+**T4 — Categorical summaries (fills the gap above):**
+
+> A dataset of 400 customer support tickets has a `category` column: Billing (168), Technical (112), Account (80), Other (40).
+>
+> (a) Which descriptive measures apply to this variable — and which from T1 (mean, median, SD) do not? Why?
+> (b) Express the distribution as percentages. What is the mode?
+> (c) A manager plots these four counts as a histogram with connected bars and reads a "downward trend" from Billing to Other. Name both mistakes.
+> (d) The company adds a `priority` column: Low / Medium / High. How does this variable differ in type from `category`, and what extra summary does that difference permit?
+
+**Answers:** (a) Counts, proportions/percentages, and the mode apply. Mean, median, SD do not — arithmetic and ordering on nominal labels are meaningless. (b) Billing 42%, Technical 28%, Account 20%, Other 10%; mode = Billing. (c) First, a histogram is for numerical variables — this needs a bar chart with separated bars; second, "trend" implies ordering, but nominal category order is arbitrary (sorted by count here), so a "downward trend" is an artefact of the sort. (d) `priority` is **ordinal** — categories have a meaningful order, so cumulative statements ("70% of tickets are Medium or below") and a median category become meaningful; means still don't (the gap Low→Medium need not equal Medium→High).
+
+**T5 — Trimmed mean and robustness:**
+
+> Return to the T1 salary data. A consultant proposes reporting the 10% trimmed mean (drop the lowest and highest value, average the rest).
+>
+> (a) Compute it.
+> (b) Compare it with the mean (€1,462) and median (€1,325). What does its position tell you?
+> (c) When is a trimmed mean better than a median? When is it worse than reporting both analyses (per T1(g))?
+
+**Answers:** (a) Drop 1200 and 4800; remaining eight sum to 8,620... (1200+1250+1290+1300+1350+1380+1400+1450 = 10,620); trimmed mean = 10,620/8 = **€1,327.50.** (b) It lands almost exactly on the median — confirming that the mean–median gap was driven by the single outlier, not general skew across the distribution. (c) A trimmed mean is useful when outliers are frequent but individually uninteresting (sensor noise, per-transaction data) and you still want to use more of the data than the median does. It is worse than the run-twice-and-report-both approach when the outlier is *substantively meaningful* (the CEO's pay is real information about the firm) — trimming silently deletes the story.
+
+**T6 — Coefficient of variation (comparing spreads across scales):**
+
+> Store A: mean daily revenue €2,000, SD €300. Store B: mean daily revenue €40,000, SD €3,200.
+>
+> (a) Which store has more *absolute* variability? Which has more *relative* variability? Compute CV = SD/mean for both.
+> (b) A regional manager says: "Store B is riskier — its SD is ten times larger." Correct or misleading?
+> (c) Why was CV never needed in T1, and when does it become essential?
+
+**Answers:** (a) Absolute: B (€3,200 > €300). Relative: A — CV_A = 300/2000 = **15%**; CV_B = 3200/40000 = **8%**. (b) Misleading — B's revenue base is 20× larger; per euro of revenue, B is *more* stable. (c) T1 compared values within one variable at one scale. CV matters when comparing variability across different units or magnitudes (revenue vs footfall; stores of different sizes).
+
+*Additional quiz questions (append to the Mentimeter set):*
+
+- Q10: A distribution has mean well below its median. Its skewness is most likely: *(a) positive (b) negative (c) zero (d) undefined)* — **Answer: (b)**, left skew: low outliers drag the mean down.
+- Q11: Which pair of measures is most robust to a single extreme outlier? *(a) mean and SD (b) median and IQR (c) mean and range (d) mode and range)* — **Answer: (b).**
+- Q12: A bar chart of ticket categories and a histogram of ticket resolution times differ fundamentally because: *(a) one is vertical (b) histograms require ordered numerical bins; bar charts show discrete categories (c) bar charts cannot show counts (d) there is no fundamental difference)* — **Answer: (b).**
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Datasaurus reveal (10 min, insert at the top of Part 3).** Show summary statistics for four datasets — identical means, SDs, and correlations — collect guesses about their shapes, then reveal the Datasaurus Dozen / Anscombe's quartet plots (dinosaur included). This is the single most memorable demonstration of "summary statistics hide things" in existence, it costs ten minutes, and it perfectly frames the pair-work task. Its absence from this session is the biggest missed opportunity in the plan.
+
+**B. Bin-width tribunal (15 min, alternative Part 3 warm-up).** Same dataset, four pre-made histograms with 3 / 8 / 20 / 100 bins. Groups defend one each: "our binning is the honest one." Debrief: bin choice is an editorial decision, not a default. (This mirrors the supplementary lab's `bins` exercise but works without code, resolving the Week 2 Jupyter problem — see critique point 2.)
+
+**C. Human box plot (10 min, energiser before Part 3).** Students line up by commute time (or months since arriving in Berlin); the class physically locates median, quartiles, and any outlier, who explains themselves — "am I an error or a story?" Kinesthetic, fast, and turns T1(g) into a running in-joke for the course.
+
+**D. Press-release autopsy (25 min, full alternative to Part 3).** Instructor supplies three real press releases / headlines that summarise data with a single average (city air quality, "average graduate salary" claims, average rent figures). Pairs reverse-engineer: what distribution shape would make this claim technically true but misleading? What statistic would they demand instead? Same learning objective as Part 3 but robust to weak student-submitted datasets in early weeks.
+
+**E. Guess-then-compute prediction round (5 min, before Part 3).** Before opening their assigned dataset, pairs write predicted mean, median, and shape on a sticky note (the owner already predicted in pre-work — now the analyst does too). After analysis, compare all three: owner's prediction, analyst's prediction, reality. Prediction error is the hook (Bjork's desirable difficulties, already cited in the rationale — this operationalises it in-session).
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** worked example placed *after* T1–T3 attempts (better than Week 1's placement); the instruction not to reuse the Berlin rent example; T1(f) turning computation into a conceptual failure of the empirical rule; the Year 3 "did you actually change your mind?" debrief question; honest treatment of the Mentimeter anonymity problem.
+
+**Problems, reasons, and fixes:**
+
+1. **Answer key errors.** (i) T1(e): the SD of the salary data is **€1,126 (sample, Excel `STDEV.S`) or €1,068 (population)** — not "≈ €1,076," which matches neither. Worse, the sample-vs-population distinction is unaddressed, and it's precisely the discrepancy students will hit when Excel/pandas disagree with a hand formula (the supplementary lab even invites this comparison). (ii) T1(g): excluding the CEO, the median of the remaining nine salaries is **€1,300**, not "€1,310." *Reason it matters:* the plan's credibility rests on the answer keys being right — a student who computes correctly and gets "corrected" by a wrong key is the worst outcome a flipped classroom can produce. *Fix:* correct both; add one sentence to T1(e) distinguishing `STDEV.S`/`STDEV.P` and say which the course uses.
+
+2. **Part 3 requires Jupyter in Week 2, but Python is taught in Week 6.** The deliverable says "histogram and summary statistics table *in Jupyter Notebook*," yet the course arc in this same document declares Block 1 (Weeks 1–5) "theory-only to let the statistical concepts land before students are asked to operate software." *Reason:* students without prior Python will spend the 25 minutes fighting the tool, not interpreting data — exactly the failure mode the arc's sequencing was designed to avoid. *Fix:* in Week 2, allow Excel/Google Sheets (or supply a pre-built notebook where students only run cells), and state that code-from-scratch starts in Week 6. Alternatively swap Part 3's tool to activity B or D above, which need no computer.
+
+3. **Analyst/sceptic roles exist only in the appendices.** The Timing Summary says "Analyst/sceptic roles; swap at 12 min" and Design Challenge 3 defines them well — but Part 3's actual instructions never mention roles. *Reason:* an instructor teaching from Part 3 as written will run unstructured pair work, and the plan's own Design Challenge 3 explains why that collapses into one student typing while the other nods. *Fix:* move the two-lever role structure (analyst/sceptic, attributed two-voice deliverable) into the Part 3 body.
+
+4. **No constraints on the pre-class dataset.** Students may bring 500,000-row exports, PDFs, all-categorical tables, or datasets needing heavy cleaning. *Reason:* Part 3 gives 25 minutes; data wrangling is not this week's objective and Week 2 students can't do it yet. *Fix:* constrain the submission — CSV, ≤5,000 rows, at least one numerical column with ≥50 observations, no more than ~10 columns — and have the instructor screen submissions the day before, with one backup dataset ready per pair.
+
+5. **Categorical data has no home (see §1.3).** *Fix:* add reading 2-3 and tutorial T4.
+
+6. **The document is doing three jobs.** Lesson plan + supplementary Python/SQL lab + full 22-week course arc in one file makes the Week 2 plan itself hard to teach from, and the arc will drift out of date as weeks are revised (its Week 13 label "hypothesis testing" already conflicts with the debrief's "Week 13 time series" reference — the bridge-forward question points at time series, but the arc table places time series in Week 16). *Reason:* internal cross-references are already inconsistent, and an interview panel reading this file will notice. *Fix:* split the arc into its own `course-arc.md`; reconcile the week numbering (the debrief and §2.5 rationale should point at Week 16, or the arc renumbered).
+
+7. **Empirical-rule reliance without its textbook anchor.** T1(f) and T3 use "the empirical rule," which A&W introduce properly in Chapter 5 (5-2f "Empirical Rules Revisited") — Chapter 2 only previews it. *Fix:* keep the questions (they're good) but add a forward-pointer: "we formalise this rule in Week 5 with the normal distribution" — it converts an unexplained rule into a planted hook, matching the course's own bridge-forward pattern.

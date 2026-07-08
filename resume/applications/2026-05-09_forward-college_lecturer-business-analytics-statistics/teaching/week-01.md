@@ -20,12 +20,11 @@ These objectives operate at the **analysis and evaluation** levels of Bloom's Ta
 
 ## Before Class (Student Pre-Work)
 
-**Reading:** Albright & Winston, *Business Analytics*, Chapter 1 — read the following sections only:
-- §1.1 Introduction to business analytics (pp. 1–5)
-- §1.2 The three types of analytics (pp. 5–10)
-- §1.3 Uncertainty and the modelling process (pp. 10–18)
+**Reading:** Albright & Winston, *Business Analytics*, Chapter 1 in full (pp. 1–15) — it is short and conceptual. Focus especially on:
+- §1-2 Overview of the Book (pp. 4–9) — the methods and the software
+- §1-3 Modeling and Models (pp. 10–15) — graphical, algebraic, and spreadsheet models, and §1-3d's Seven-Step Modeling Process, which is the skeleton of the worked example below
 
-The case study appendix and the DecisionTools Suite introduction in Chapter 1 are optional this week. The tools are introduced properly in Weeks 6–9; reading tool instructions before you understand what problems they solve wastes preparation time.
+Note: the descriptive/predictive/prescriptive trichotomy and the aleatory/epistemic distinction used in this session go beyond the textbook — they are carried by the videos below and a one-page handout on the LMS. A&W frame the same territory as *data analysis* versus *decision making under uncertainty* (§1-2a). §1-2b (The Software) explains the book's tool choices; this course's Python/SQL track replaces them — the concepts transfer, the keystrokes don't. The tools are introduced properly in Weeks 6–9; reading tool instructions before you understand what problems they solve wastes preparation time.
 
 *Rationale:* Chapter 1 is conceptual, not computational. The reading asks students to think about what analytics is for before asking them to do any. The pre-work load is intentionally lighter this week — students are orienting to the course, not yet processing dense technical material. This is consistent with Fischer et al. (2023), who recommend calibrating pre-work volume against the cognitive complexity of the in-class task, not the number of pages available.
 
@@ -434,7 +433,7 @@ Optional further reading: Breiman, L. (2001). Statistical modelling: The two cul
 | Reading scoped to §1.1–1.3 only; tools chapter deferred | Fischer et al. (2023): cap pre-work at ~1.5× in-class time; tool instruction before conceptual grounding produces mechanical fluency without understanding |
 | Worked example before T1–T3, marked optional for confident students | Rosenshine (2012): worked examples should precede independent practice — students need a model of the reasoning chain before attempting to produce it. Marked optional per Kalyuga et al. (2003) expertise reversal: students who can already complete T1(a)–(d) do not benefit from the example and may disengage from reading it. Active-watching video prompts supplement this by ensuring the videos are retrieval opportunities, not passive viewing. |
 | Quiz runs easy → hard across 9 questions; runs every week | Q1–Q6 are retrieval practice; Q7–Q9 are diagnostic. Farmus, Cribbie & Rotondi (2020): weekly in-class quizzes moderated flipped classroom advantage (g = 0.43) in introductory statistics |
-| Tutorial T1–T3 scaffold from definitional to ethical to reflexive | T1 establishes vocabulary; T2 requires context-to-model reasoning; T3 (algorithmic hiring) surfaces the feedback loop and objectivity problems before students have calcified views about "what analytics does" |
+| Tutorial T1–T3 scaffold from definitional to contextual to reflexive | T1 establishes vocabulary; T2 requires context-to-model reasoning; T3 (DeepSeek/Nvidia) surfaces the model-scope and tail-risk problems before students have calcified views about "what analytics does" |
 | Pairs work on each other's scenarios, not a shared case | Vygotsky (1978): ZPD — complementary contextual knowledge produces richer critique than shared case studies; scenario owner can validate or complicate the analyst's reading |
 | Analyst/challenger roles with swap at 12 min | Bjork (1994): desirable difficulties — being forced to argue the position you're uncertain about strengthens understanding; role swap prevents free-riding on the more confident partner |
 | Constrained deliverable (3 outputs) | Lovett & Greenhouse (2000): tight scope preserves cognitive capacity for higher-order classification work |
@@ -485,13 +484,13 @@ The core intellectual move of this session — classifying a business decision b
 
 ---
 
-### 3. The ethical dimension of T3 (algorithmic hiring) risks derailing the session.
+### 3. The contested dimension of T3 (DeepSeek/Nvidia) risks derailing the session.
 
-T3 introduces a genuinely contested domain — algorithmic hiring — in a cohort where at least some students are themselves recent applicants, and where views on bias, automation, and fairness are likely to be strong. The tutorial problem is designed to surface the conceptual issue (the model is optimising for the wrong objective) without requiring a normative verdict on algorithmic hiring generally.
+T3 introduces a genuinely contested domain — US–China technology competition and an AI market shock — in a cohort where some students will hold strong views about AI hype, markets, or the countries involved. The tutorial problem is designed to surface the conceptual issue (the recommendation models' scope excluded a structural break) without requiring a verdict on the geopolitics or on AI itself.
 
-**The risk:** students who feel strongly about the topic may treat Part 3 as an opportunity to rehearse an argument they already hold, rather than to analyse the specific modelling problem. The question "is algorithmic hiring ethical?" is not what T3 is asking. T3 is asking: *given this model's structure, what is it actually doing?*
+**The risk:** students who feel strongly about the topic may treat the discussion as an opportunity to rehearse an argument they already hold, rather than to analyse the specific modelling problem. "Was the market right about DeepSeek?" is not what T3 is asking. T3 is asking: *given these models' inputs, was the omission a design flaw or a scope decision — and who owned that decision?*
 
-**Design implication:** if T3 becomes contested in Part 4, the instructor should redirect with a specific question: "Set aside whether this is fair — what is the model being *asked* to predict? And is the training data a valid basis for that prediction?" This keeps the discussion analytical rather than normative. The ethical question is real and worth raising in a later session (Week 10, decision trees, is a natural home for it) — but not as the first conceptual move of the course.
+**Design implication:** if T3 becomes contested in Part 4, the instructor should redirect with a specific question: "Set aside whose view of the AI market is right — what did these models assume, and how should that assumption have been communicated?" This keeps the discussion analytical rather than partisan. The same screening logic applies to student-submitted scenarios touching sensitive demographic or political material (Week 3 formalises a screening protocol).
 
 ---
 
@@ -531,3 +530,106 @@ Students are asked to bring business decisions they have "personally encountered
 - Rosenshine, B. (2012). Principles of instruction: Research-based strategies that all teachers should know. *American Educator*, Spring 2012. ERIC EJ971753.
 - Sweller, J. (1994). Cognitive load theory, learning difficulty, and instructional design. *Learning and Instruction*, 4(4), 295–312.
 - Vygotsky, L.S. (1978). *Mind in Society.* Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 1
+
+**Coverage check: mostly sufficient, but the reading references do not match the actual book.**
+
+The pre-work cites "§1.1 Introduction to business analytics (pp. 1–5), §1.2 The three types of analytics (pp. 5–10), §1.3 Uncertainty and the modelling process (pp. 10–18)". The 6th edition's Chapter 1 is actually structured:
+
+| Actual section | Pages | Content |
+|---|---|---|
+| 1-1 Introduction | 3 | What business analytics is |
+| 1-2 Overview of the Book | 4–9 | 1-2a The Methods; 1-2b The Software |
+| 1-3 Modeling and Models | 10–15 | 1-3a Graphical; 1-3b Algebraic; 1-3c Spreadsheet models; 1-3d A Seven-Step Modeling Process |
+| 1-4 Conclusion | 15 | — |
+
+Two consequences:
+
+1. **Fix the section references** to "Chapter 1 in full (pp. 1–15), with emphasis on 1-3 Modeling and Models." Students who self-select for flipped classrooms check the reading against the seminar (student-voice point 2); a mismatched reference in Week 1 undermines the pre-work contract before it's established.
+2. **The descriptive/predictive/prescriptive trichotomy and the aleatory/epistemic distinction are not in Albright & Winston.** A&W frame the book as *data analysis* vs *decision making under uncertainty* (1-2a); they never use "prescriptive" as a category or "aleatory/epistemic" at all. Both frameworks are pedagogically sound, but they currently rest entirely on two YouTube videos. Provide a one-page instructor handout defining both frameworks and mapping them onto A&W's structure (descriptive ≈ Part 1 Exploring Data; predictive ≈ Parts 3–4; prescriptive ≈ Part 5 Optimization/Simulation). Otherwise students hunting for "epistemic" in Chapter 1 will conclude they read the wrong book.
+
+**Topics from Chapter 1 worth incorporating (currently unused):**
+
+- **The Seven-Step Modeling Process (1-3d)** — the strongest omission. It is exactly the session's theme (problem definition → model scope → what gets left out), and it gives the airline worked example a formal skeleton. Add it to the pre-reading emphasis and have pairs in Part 3 locate which of the seven steps their scenario's model is stuck at.
+- **Graphical vs algebraic vs spreadsheet models (1-3a–c)** — one quiz question's worth of vocabulary that pays off in Weeks 6–9 when spreadsheet models arrive; costs nothing now.
+- **1-2b The Software** — reinforces the plan's own advice that tool chapters are deferred; cite it so students know the deferral is deliberate.
+
+## 2. Extended Question Bank (with answers)
+
+*Additional tutorial problems — continue numbering from T7:*
+
+**T8 — The seven-step process (definitional → applied):**
+
+> Albright & Winston describe a seven-step modeling process: (1) define the problem, (2) collect and summarise data, (3) develop a model, (4) verify the model, (5) select one or more suitable decisions, (6) present the results to the organisation, (7) implement and evaluate.
+>
+> (a) The airline worked example (Berlin–Lisbon scheduling) shows steps 1–3. Which step would reveal that the model ignores competitor pricing responses — and is that a problem for *verification* (step 4) or *problem definition* (step 1)?
+> (b) A data analyst spends three months perfecting step 3 and skips step 6 because "the model speaks for itself." Using the DeepSeek/Nvidia case (T3), explain what step 6 should have contained.
+> (c) At which step does the reflexivity problem (quiz Q9 — the model changing the system) become visible? Why can't it be caught earlier?
+
+**Answers:** (a) Verification (step 4) tests whether the model behaves sensibly *given its scope*; the omission of competitor pricing was set at step 1 (problem definition). If the omission is wrong, it's a step-1 error, not a step-4 error — the model can verify perfectly and still answer the wrong question. (b) Step 6 should have contained explicit assumption statements: "this recommendation assumes AI compute demand follows historical trends; it does not price structural efficiency breakthroughs." Presentation is where scope limits get communicated to decision-makers. (c) Step 7 (implement and evaluate) — only after implementation does the system respond to the model's output. It can't be caught earlier by *observation*, only anticipated by *reasoning* (which is why the debrief question matters).
+
+**T9 — Model representations:**
+
+> A&W distinguish graphical, algebraic, and spreadsheet models. A café owner wants to decide how many croissants to bake daily.
+>
+> (a) Sketch (in words) what a graphical model of this decision looks like. What does it communicate that an equation doesn't?
+> (b) Write the algebraic model: define the decision variable, the objective, and at least one constraint.
+> (c) Why might a spreadsheet model be preferred over the algebraic one for this owner — and what is lost in the translation?
+
+**Answers:** (a) E.g. a diagram of inputs (demand, price, cost, waste) flowing into the order decision and out to profit — it communicates *structure and dependencies* at a glance, accessible to non-quantitative stakeholders. (b) Decision variable: q = croissants baked. Objective: maximise expected profit = p·E[min(q, D)] − c·q, where D is random demand, p price, c unit cost. Constraint: q ≥ 0 (and perhaps oven capacity q ≤ K). (c) A spreadsheet makes the model manipulable without algebra — the owner can try values, see sensitivity. What's lost: generality and transparency of assumptions; a formula cell hides its logic more than an equation on paper does.
+
+**T10 — Rapid classification set (retrieval volume):**
+
+Classify each as descriptive (D), predictive (P), or prescriptive (Pr), one line of justification:
+
+> (i) A dashboard showing last quarter's sales by region.
+> (ii) A churn score for each current subscriber.
+> (iii) A staffing roster generated to minimise overtime subject to shift-coverage rules.
+> (iv) An A/B test report showing conversion rates in each arm.
+> (v) A credit limit assigned automatically to each new customer.
+> (vi) A weather forecast used to decide whether to cancel an outdoor event.
+
+**Answers:** (i) D — summarises what happened. (ii) P — forecasts a future behaviour per customer. (iii) Pr — an optimisation output; produces a decision. (iv) D — describes observed outcomes (the *decision* to roll out a variant would be a further prescriptive step). (v) Pr — an automated decision, though built on a predictive score; good answer notes the pipeline P → Pr. (vi) The forecast itself is P; the cancel/don't-cancel rule applied to it is Pr. (iv)–(vi) reward students who see analytics types as stages in a pipeline rather than exclusive labels.
+
+*Additional quiz questions (append to the Mentimeter set):*
+
+- Q10: In A&W's seven-step modeling process, which step comes immediately before developing the model? *(a) Verify the model (b) Collect and summarise data (c) Present results (d) Select decisions)* — **Answer: (b).**
+- Q11: A spreadsheet model differs from an algebraic model primarily in: *(a) accuracy (b) the type of uncertainty it can handle (c) how the logic is represented and manipulated (d) whether it can be prescriptive)* — **Answer: (c).**
+- Q12: A churn-prediction score is fed into a rule that automatically offers discounts to high-risk customers. The end-to-end system is best described as: *(a) descriptive (b) predictive (c) prescriptive (d) diagnostic)* — **Answer: (c)** — the system's output is an action; the predictive score is an input. Good discriminator between students who label components and students who see the pipeline.
+
+## 3. Alternative In-Class Activities (additional options — choose to swap for Part 3 or 4)
+
+**A. Model autopsy gallery walk (25 min, replaces Part 3).** Post three one-paragraph model-failure vignettes around the room (e.g. Google Flu Trends; the 2016 US election forecasts; a rules-based ambulance dispatch failure). Pairs rotate every 7 minutes and must write on each poster: *was this a scope failure, a data failure, or a use failure?* Debrief maps answers onto the three failure types. Strength: uses real cases, no dependency on the quality of student-submitted scenarios in Week 1 (a genuine risk — see critique). Weakness: loses the cross-national student-owned material.
+
+**B. Structured controversy: "No model is better than a bad model" (20 min, replaces Part 4).** Johnson & Johnson (1988) format: pairs are assigned a side, argue it for 5 minutes, then *swap sides* and argue the opposite, then drop roles and write a joint position. Directly develops T4(d). Fits Forward's debate-centred seminar culture and forces students off their initial intuition.
+
+**C. Uncertainty sort with physical cards (15 min, insert before Part 3).** 12 pre-printed cards with uncertainty sources (flight demand variance, unknown competitor costs, coin flips, a new virus's severity, exchange rates next year, sensor measurement noise…). Small groups sort into aleatory / epistemic / genuinely contested. The contested pile is the point — several cards (exchange rates, virus severity) are defensibly both, which pre-empts the false binary. Low-stakes, fast, kinesthetic — good for a Week 1 cohort still forming.
+
+**D. "Commission the model" role-play (25 min, replaces Part 3).** One student is the executive, one the analyst. The executive has a business problem (from the pre-class submissions); the analyst may ask only five questions before proposing a model type and scope. The class scores whether the five questions found the decision, the uncertainty, and the acceptable omissions. Trains exactly the consulting behaviour Forward's external partners praised (student-voice point 10).
+
+**E. One-minute paper + live re-poll (5 min, alternative Part 5 close).** Students write for 60 seconds: "the most useful distinction I learned today, and one thing still fuzzy." Instructor re-runs quiz Q6 and Q9 live — visible score movement closes the retrieval loop and gives the instructor a written diagnostic for tutorial follow-ups (supports the "know all the names, all the voices" expectation).
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** explicit buffer time; constrained three-output deliverable; answer keys written to first-class standard; the reflexivity thread planted rather than resolved; cross-national scenario constraint that genuinely exploits the 40+-nationality cohort; the Design Challenges section shows unusual reflective honesty.
+
+**Problems, reasons, and fixes:**
+
+1. **Reading references are wrong (see §1 above).** *Reason it matters:* Forward students self-select for the flipped model and check pre-work against class; a broken reference in Week 1 damages the pre-work contract the whole course depends on. *Fix:* correct to 1-1–1-3 and add the framework handout for aleatory/epistemic.
+
+2. **Internal inconsistency: the plan describes T3 as "algorithmic hiring" in two places (Design Rationale table row 5; Design Challenge 3) but T3 as written is DeepSeek/Nvidia.** *Reason:* an earlier revision was partially applied; anyone reading the plan closely (a course leader, an interview panel) will spot it. *Fix:* either restore an algorithmic-hiring tutorial as T8-equivalent or rewrite the two stale references.
+
+3. **Pre-work volume contradicts the plan's own principle.** The plan claims Week 1 pre-work is "intentionally lighter" and cites Fischer et al.'s ~1.5× cap, but assigns: a chapter, two videos with pause-tasks, a worked example, T1–T7 (≈35 sub-questions), and a four-scenario submission. That is 4–6 hours against a 90-minute seminar. *Reason:* overload in Week 1 causes corner-cutting that then looks like non-compliance; the plan would punish what it caused. *Fix:* require T1–T3 + submission; label T4–T7 explicitly as a stretch bank / tutorial-session material. (The extended bank in §2 above should likewise be marked optional or used for the weekly one-on-one tutorials.)
+
+4. **The answer key sits in the same document as the questions.** *Reason:* if this file is distributed, the self-check instruction for T1 becomes answer-copying for T2–T7, killing the testing effect the plan cites (Roediger & Karpicke). *Fix:* split into a student version and an instructor version; release answers after submission.
+
+5. **Part 4 arithmetic is fragile.** 12–15 students = 6–7 pairs × 2.5 min presenting + owner responses ≈ 20–25 min before any discussion. *Reason:* the highest-value exchange (owner responds) is the first thing squeezed. *Fix:* each pair presents only their *more complex* scenario; the second is submitted in writing to the LMS thread.
+
+6. **No contingency for the tech stack.** Mentimeter + LMS submission + projected slides, Week 1, new cohort norms. *Fix:* paper fallback for the quiz (hold up 1–4 fingers or coloured cards) and a stated grace policy for the first submission.
+
+7. **Missed alignment with the one-on-one tutorial system.** Forward's weekly 60–90-minute tutorials (pedagogy doc) are the natural home for the T4–T7 stretch problems and for following up quiz diagnostics — the plan never mentions them. *Fix:* one line in After Class routing: "quiz misconceptions and stretch problems T4–T7 are tutorial material this week."

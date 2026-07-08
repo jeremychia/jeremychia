@@ -28,8 +28,9 @@ Minimum: Tableau version 2022.x or later. Students on Linux: Tableau does not ru
 
 **Reading:**
 
-- Albright & Winston, Chapter 3 pp. 75–95: "Finding Relationships among Variables" — focus on visual representations of bivariate data, scatter plots, and the distinction between correlation and causation.
-- Albright & Winston, Chapter 2 pp. 58–68: "Data Exploration" — the brief section on visualisation types and when to use them.
+- Albright & Winston, Chapter 3, §3-4 (pp. 95–108): scatter plots and correlation — the bivariate visual material behind Chart 3. (Tableau's text tables with dimensions on rows are the pivot tables of §3-5, for those who skimmed it in Week 3.)
+- Albright & Winston, Chapter 2, §2-4d (pp. 45–54): charts for numerical variables; and §2-5 (pp. 54–61): time series data — the logic behind Chart 2's line chart.
+- Albright & Winston, Chapter 17, §17-2b and §17-2d (pp. 901–904 and 911–912): OLAP and visualization software — the textbook's own discussion of dashboard/BI tools of exactly this week's kind.
 - Optional but strongly recommended: Knaflic, C. N. (2015), *Storytelling with Data*, Chapter 2: "Choosing an Effective Visual" (PDF excerpt on LMS, 18 pages).
 
 **Pre-work task:**
@@ -76,9 +77,8 @@ The instructor builds from scratch in Tableau, projected on screen. Students fol
 Open Tableau → Connect → Text File → `berlin_air_quality_monthly_2022.csv`.
 
 In the Data Source pane, point out:
-- Blue pill fields = Dimensions (categorical — treated as row labels, grouping variables)
-- Green pill fields = Measures (numeric — aggregated when dragged to a shelf)
-- The distinction is Tableau's interpretation, not absolute truth: `Month` may be imported as a number (1–12) rather than a date — show how to change it (right-click → Change Data Type → Date)
+- Blue pills = **discrete** fields (create headers); green pills = **continuous** fields (create axes). Dimensions are *usually* discrete and measures *usually* continuous — but the colour encodes discrete vs continuous, not dimension vs measure: Step 3's continuous date is a green *dimension*
+- Whether a field is a dimension or a measure is shown by which pane it sits in — and that classification is Tableau's interpretation, not absolute truth: `Month` may be imported as a number (1–12) rather than a date — show how to change it (right-click → Change Data Type → Date)
 
 Key teaching moment: "If Month is a number and I drag it to Columns, Tableau will SUM it. January through December becomes 78. That is technically correct and completely meaningless."
 
@@ -125,8 +125,8 @@ Key insight: "When you put 12 series on a line chart, you are not communicating 
 New worksheet.
 Drag: PM25_avg → Columns (Measure → Average)
 Drag: NO2_avg → Rows (Measure → Average)
-Drag: Station_name → Detail on Marks shelf (one dot per station)
-Drag: Month → Color (to show seasonal pattern)
+Drag: Station_name → Detail on Marks shelf (one dot per station — 12 marks)
+Drag: Month → Color (watch the mark count jump from 12 to 144: adding a dimension to any Marks slot changes the level of aggregation, not just the styling — each station splits into 12 month-marks, which is what reveals the seasonal pattern)
 Add trend line: Analytics pane → Drag Trend Line → Linear
 ```
 
@@ -338,3 +338,62 @@ Tufte, E. R. (2001). *The visual display of quantitative information* (2nd ed.).
 Vygotsky, L. S. (1978). *Mind in society: The development of higher psychological processes*. Harvard University Press.
 
 Ware, C. (2004). *Information visualization: Perception for design* (2nd ed.). Morgan Kaufmann.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Exercises, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed.
+
+**Both assigned references are wrong, and the chapter that actually covers this week's topic is unused.**
+
+- "Chapter 3 pp. 75–95" — Chapter 3 begins at p. 79, and scatterplots/correlation sit at **pp. 95–108 (3-4)**. As cited, students would read the crosstab material they already covered in Week 3 and stop just before the scatterplot section this session uses.
+- "Chapter 2 pp. 58–68: 'Data Exploration'" — no section of that name exists in Chapter 2. The visualisation material is **2-4d Charts for Numerical Variables (pp. 45–54)** and **2-5 Time Series Data (pp. 54–61)**, which covers the line-chart-for-time-series logic of Chart 2.
+- **The real textbook anchor for this week is Chapter 17, §17-2 "Data Exploration and Visualization" (pp. 900–912)** — including 17-2b OLAP (the slice/filter mental model behind dashboard actions) and **17-2d Visualization Software (p. 911), where A&W explicitly discuss Tableau-class tools.** Assign 17-2b + 17-2d (~6 pages): it gives the session textbook legitimacy and pre-loads vocabulary (drill-down, slicing) that Week 8's SQL GROUP BY will formalise.
+- **Close the Week 3 promissory note.** Week 3 deferred A&W §3-5 (Pivot Tables, pp. 108–131) "to Block 2 (Tableau and Excel practical sessions)". This is that week — yet pivot tables never appear. One sentence in Part 2 ("what Tableau calls a text table with dimensions on rows *is* the pivot table from §3-5") plus an optional skim reference discharges the promise; otherwise the deferral was a quiet drop.
+
+## 2. Extended Exercise Bank (with answers)
+
+**E1 — When is SUM actually right?** For each, say whether the default SUM aggregation is correct or a bug: (i) monthly PM2.5 readings by station; (ii) transaction revenue by store; (iii) satisfaction scores (1–5) by branch; (iv) population by district on a choropleth.
+**Answer:** (i) bug — averaging (or a proper time-weighted mean) is meant; summing monthly averages is meaningless. (ii) correct — revenue is additive. (iii) bug — scores aren't additive; AVG (with caveats about ordinal data, per Week 3's Q11). (iv) correct — population is additive over districts. The rule: *SUM is right only when the quantity is additive over the dimension shown.*
+
+**E2 — Blue vs green pills.** True or false: "Blue pills are dimensions, green pills are measures."
+**Answer:** **False — and the demo's own Step 3 proves it.** Blue = **discrete** (creates headers), green = **continuous** (creates axes). Dimensions are *usually* discrete and measures *usually* continuous, but Month treated as a continuous date is a **green dimension** (that's exactly what Step 3 requires for an unbroken line), and a binned/discrete measure shows blue. Teaching pill colour as dimension/measure creates a misconception that breaks the first time a student needs a continuous date axis. (See critique point 1.)
+
+**E3 — Chart selection drill.** Choose a chart type and defend it in one sentence: (i) market share of 4 competitors today; (ii) market share of 4 competitors over 10 years; (iii) delivery time vs distance for 300 orders; (iv) sales by 16 German states; (v) survey responses on a 5-point scale across 3 cohorts.
+**Answer:** (i) sorted bar (or pie at only 4 slices — defensible, weak angle encoding); (ii) line chart, one line per competitor — trend question; (iii) scatter plot — relationship between two numerics; (iv) map only if geography is the question, otherwise sorted bar — "geographic data" ≠ "geographic question"; (v) stacked or grouped bar (diverging stacked bar for Likert if taught) — distribution comparison across groups.
+
+**E4 — Aggregation granularity.** A scatter has AVG(PM25) vs AVG(NO2) and nothing on Detail. How many marks appear? What changes when Station goes on Detail? When Month is *also* added to Colour?
+**Answer:** One mark (grand averages); 12 marks (one per station); **144 marks** (station × month) — adding any dimension to any Marks card slot changes the level of aggregation, not just the styling. This is the invisible-computation trap of Design Challenge 1 in concrete form.
+
+**E5 — Calculated field.** `PM_ratio = [PM25_avg]/[PM10_avg]`. What range must this ratio physically lie in, and what does a value near 1.0 vs near 0.3 indicate?
+**Answer:** PM2.5 is a subset of PM10, so 0 < ratio ≤ 1 (a value > 1 signals a data error — worth telling students to *check for*). Near 1.0: particulate load dominated by fine combustion particles (traffic, heating); near 0.3: coarse particles dominate (dust, construction). A domain-meaningful derived metric — and a built-in data-quality assertion.
+
+**E6 — Data-ink audit.** List four default chart elements that usually fail Tufte's data-ink test, and one case where gridlines earn their ink.
+**Answer:** Gridlines, chart borders, redundant axis titles ("PM25_avg" when the chart title says it), legend boxes duplicating direct labels. Gridlines earn their keep when readers must *read values off* the chart (reference use) rather than compare shapes (analytic use) — the test is the reader's task, not aesthetics.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. Same data, opposite stories (25 min, Part 3 alternative).** Half the room builds a dashboard arguing "Berlin's air quality is a serious problem"; the other half argues "Berlin's air is fine and improving" — same CSV, no fabrication allowed. Gallery review: identify each dashboard's rhetorical moves (axis ranges, station selection, month windows, colour temperature). The "every design choice is an argument" thesis, experienced from the inside. Pairs naturally with the post-work limitation statement.
+
+**B. Cleveland–McGill mini-replication (10 min, opener).** Show the same four values encoded as bar lengths, pie angles, bubble areas, and colour intensities; students estimate the ratio between two marked values in each; collect estimates via Mentimeter and plot error by encoding. The class *generates* the perceptual-channel ranking the debrief table asserts. Ten minutes, and the chart-type table stops being folklore.
+
+**C. Redesign a real dashboard (15 min, Part 4 alternative).** Project a screenshot of a genuinely cluttered public dashboard (many government COVID or air-quality dashboards qualify). Pairs list three specific changes with justifications tied to today's vocabulary (aggregation, channel overload, sort order). Critique skills sharpen faster on strangers' work than on classmates' — no politeness tax.
+
+**D. Dashboard speed-dating (15 min, Part 4 alternative).** Dashboards open on every screen; students rotate seats every 3 minutes and leave a sticky note answering critique question 1 only ("the argument this makes is ___"). Authors return to 4–5 independent readings of their dashboard — the fastest possible test of whether the intended argument survives contact with readers.
+
+**E. Show Me forensics (10 min, stretch replacement for Task 6).** Students pick any Show Me chart type they've never used, build it, then answer: what did Tableau put on which shelf, and what level of aggregation resulted? Reverse-engineering Show Me converts the "magic button" into an inspection exercise — the drag-and-drop abstraction problem (Design Challenge 1) turned into practice.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the SUM-vs-AVG productive failure in Part 1 (the single most important Tableau lesson, correctly placed first); decisions narrated aloud in the demo; the argument-first critique protocol; the reflection embedded in the artefact; the honest Tableau Public data-governance note.
+
+**Problems, reasons, and fixes:**
+
+1. **The blue/green pill explanation is factually wrong.** Blue/green encodes **discrete vs continuous**, not dimension vs measure — and Step 3's own instruction ("ensure Month is treated as continuous Date") produces a green *dimension*, contradicting the rule taught 15 minutes earlier. *Reason it matters:* this is the misconception most Tableau-experienced interviewers and students will catch, and the wrong rule fails precisely at the week's central demo moment. *Fix:* teach "blue = discrete (headers), green = continuous (axis); dimension/measure is a separate property shown by which pane the field lives in."
+2. **Both reading references are broken and the right chapter is missing (see §1).** Fix pages; add 17-2b/17-2d; close the §3-5 pivot-table promise from Week 3.
+3. **Step 4 contradicts itself on granularity.** "Drag Station_name → Detail (one dot per station)" followed by "Drag Month → Color (to show seasonal pattern)" yields **144 marks**, not 12 — adding a dimension to Colour changes the aggregation level. As written, the instructor will narrate "one dot per station" while the screen shows twelve dots per station. *Fix:* either present the 12-dot version (drop Month) and add Month-colour as a deliberate "watch the granularity change" moment, or fix the narration. Done intentionally, it's the perfect demonstration of E4/Design Challenge 1.
+4. **The 14-day trial creates a timing bomb.** Installed at Week 6–7 as instructed, Tableau Desktop trials expire around Week 9 — before the full-analysis weeks (19–22) where students may want dashboards for their final presentations. *Fix:* confirm Tableau for Teaching licences (1-year) before the course starts, not "before Week 5"; make Tableau Public the explicit default otherwise, with the governance caveat already noted.
+5. **Design Challenge 2 references a "rubric for Block 2 assessment" that doesn't exist anywhere in the materials.** Same gap as Week 6's notebook (see that supplement, point 3). *Fix:* one shared Block 2 rubric covering both artefacts (notebook, dashboard): analytical correctness of the claim > justification of design choices > reproducibility/labelling > visual polish, in that order — publishing the weighting is itself the pedagogy.
+6. **No categorical-encoding guidance despite a 12-category dataset.** The demo diagnoses the 12-line/12-colour failure but the only sanctioned fixes are filtering to 3–4 stations or dashboard actions. Add the third standard fix: grey-out-and-highlight (all stations in light grey, one or two focal stations in colour) — it preserves context without channel overload, is two clicks in Tableau, and is the pattern students will need for their final presentations.
+7. **Pre-work asks Forward College to sort licensing "before Week 5" inside a Week 7 document.** Logistics instructions to the institution shouldn't live inside student-facing pre-work; move to an instructor-notes block (several weeks mix audience voices — a full-set editing pass should separate student text from instructor text, the same pass that splits answer keys out).

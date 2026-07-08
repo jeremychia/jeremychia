@@ -94,15 +94,15 @@ A coffee shop chain claims the average customer wait time is 3 minutes. A qualit
 
 **T2 — Interpretation:**
 
-> In early 2025, Meta Platforms published its Q4 2024 Adversarial Harmful Standards Enforcement Report, which included data on the prevalence of hate speech content on Facebook. According to the report, an estimated 0.07–0.08% of content views on Facebook involved content that violated Meta's hate speech policy — roughly 7–8 views in every 10,000.
+> In early 2025, Meta Platforms published its Q4 2024 Community Standards Enforcement Report, which included data on the prevalence of hate speech content on Facebook. According to the report, an estimated 0.07–0.08% of content views on Facebook involved content that violated Meta's hate speech policy — roughly 7–8 views in every 10,000.
 >
-> Meta's automated content moderation system flagged a random sample of 2,000,000 content items for review. In Group A (items shown the new AI moderation algorithm), 150 violations were detected. In Group B (items shown the previous algorithm), 120 violations were detected.
+> Meta's automated content moderation system flagged a random sample of 2,000,000 content items for review. In Group A (items shown the new AI moderation algorithm), 160 violations were detected. In Group B (items shown the previous algorithm), 120 violations were detected.
 >
 > Assume equal group sizes (1,000,000 items each). A z-test for the difference in proportions comparing detection rates gives p = 0.018.
 >
 > (a) At α = 0.05, what is the statistical conclusion?
 >
-> (b) The detection rate in Group A is 150/1,000,000 = 0.000150. In Group B it is 120/1,000,000 = 0.000120. What is the absolute difference in detection rates? Is this a practically meaningful improvement?
+> (b) The detection rate in Group A is 160/1,000,000 = 0.000160. In Group B it is 120/1,000,000 = 0.000120. What is the absolute difference in detection rates? Is this a practically meaningful improvement?
 >
 > (c) Meta's trust and safety team argues: "A statistically significant improvement in detection rate means we should deploy the new algorithm." A civil liberties researcher argues: "A difference of 0.003 percentage points in detection rate is not meaningful — we should worry about false positives." What additional information about the new algorithm would you need before deciding which argument is stronger?
 >
@@ -110,7 +110,7 @@ A coffee shop chain claims the average customer wait time is 3 minutes. A qualit
 >
 > (e) The report covers a sample of content views, not a census. What does p = 0.018 tell us — and what does it not tell us — about content moderation performance across all of Meta's platforms?
 
-This question uses a verified published source: Meta's Adversarial Harmful Standards Enforcement Reports are publicly available at transparency.fb.com, published quarterly. The specific figures in the scenario are illustrative, but the prevalence rate (0.07–0.08%) is from reported data. The scenario surfaces the core T2 lesson: very large n makes trivially small differences statistically significant — and at platform scale, even 0.001 percentage points can represent millions of items. This is the most consequential version of the "statistical vs. practical significance" problem.
+This question uses a verified published source: Meta's Community Standards Enforcement Reports are publicly available at transparency.fb.com, published quarterly. The specific figures in the scenario are illustrative, but the prevalence rate (0.07–0.08%) is from reported data. The scenario surfaces the core T2 lesson: very large n makes trivially small differences statistically significant — and at platform scale, even 0.001 percentage points can represent millions of items. This is the most consequential version of the "statistical vs. practical significance" problem.
 
 **T3 — Edge case (multiple testing):**
 A marketing researcher is studying factors that predict customer loyalty. She measures 50 different variables (demographic, behavioural, and attitudinal) and runs 50 separate hypothesis tests against customer loyalty score, each at α = 0.05. She finds 4 variables with p < 0.05.
@@ -137,9 +137,9 @@ A marketing researcher is studying factors that predict customer loyalty. She me
 >
 > (c) Trial A has a 1.5 percentage point improvement; Trial B has only a 0.1 percentage point improvement. Yet Trial A is less significant. Explain this apparent paradox. What does it reveal about the relationship between effect size and significance?
 >
-> (d) If the company runs with n = 2,000,000 deliveries and observes p̂ = 0.9201 (just 0.01 percentage points above 92%), calculate the z-statistic. Would this be statistically significant at α = 0.05?
+> (d) If the company runs with n = 2,000,000 deliveries and observes p̂ = 0.921 (the same 0.1 percentage-point improvement as Trial B), calculate the z-statistic. Would this be statistically significant at α = 0.05?
 >
-> *Solution:* z = 0.0001 / √(0.92 × 0.08 / 2,000,000) = 0.0001 / 0.0000192 ≈ 5.21. p ≈ 0. Yes, highly significant — despite a trivially small improvement.
+> *Solution:* z = 0.001 / √(0.92 × 0.08 / 2,000,000) = 0.001 / 0.000192 ≈ 5.21. p ≈ 0. Yes, highly significant — the same small improvement that could not be distinguished from noise at n = 200,000 (p = 0.099) becomes overwhelming with ten times the data.
 >
 > (e) Write a one-paragraph memo to the company's COO explaining the difference between statistical significance and operational significance, using the contrast between Trial A and (d) as your example.
 
@@ -231,9 +231,9 @@ A marketing researcher is studying factors that predict customer loyalty. She me
 
 **(a)** At α = 0.05, p = 0.018 < 0.05, so we **reject H₀** and conclude the new algorithm detects a statistically significantly higher proportion of violations than the previous algorithm.
 
-**(b)** Absolute difference in detection rates: 150/1,000,000 − 120/1,000,000 = 0.000150 − 0.000120 = **0.00003 (0.003 percentage points).** This is not practically meaningful in isolation — it is 3 additional violations detected per 100,000 content items reviewed. On a platform with billions of views, it scales to many items, but as a proportional improvement in detection rate it is tiny.
+**(b)** Absolute difference in detection rates: 160/1,000,000 − 120/1,000,000 = 0.000160 − 0.000120 = **0.00004 (0.004 percentage points).** This is not practically meaningful in isolation — it is 4 additional violations detected per 100,000 content items reviewed. On a platform with billions of views, it scales to many items, but as a proportional improvement in detection rate it is tiny.
 
-**(c)** Additional information needed: (i) **False positive rate of the new algorithm** — does catching 30 more violations come at the cost of incorrectly flagging thousands of legitimate posts? (ii) **Computational cost** — does the new algorithm require significantly more compute per item? (iii) **Nature of violations** — does the new algorithm preferentially catch more severe violations (incitement to violence) or trivial ones? (iv) **User experience cost** — are false positives applied to high-reach accounts or marginal ones, and what are the consequences of wrongful removal? The civil liberties researcher's concern about false positives is analytically valid: a 0.003 percentage point improvement in true positive rate is only defensible if the false positive rate is not substantially worsened.
+**(c)** Additional information needed: (i) **False positive rate of the new algorithm** — does catching 30 more violations come at the cost of incorrectly flagging thousands of legitimate posts? (ii) **Computational cost** — does the new algorithm require significantly more compute per item? (iii) **Nature of violations** — does the new algorithm preferentially catch more severe violations (incitement to violence) or trivial ones? (iv) **User experience cost** — are false positives applied to high-reach accounts or marginal ones, and what are the consequences of wrongful removal? The civil liberties researcher's concern about false positives is analytically valid: a 0.004 percentage point improvement in true positive rate is only defensible if the false positive rate is not substantially worsened.
 
 **(d)** 0.001 percentage points = 0.00001 as a proportion. On 1 billion daily content views: 0.00001 × 1,000,000,000 = **10,000 additional items per day** incorrectly flagged. This is a meaningful operational cost — tens of thousands of content creators or posts affected daily — even though the proportion sounds negligible.
 
@@ -261,9 +261,9 @@ A marketing researcher is studying factors that predict customer loyalty. She me
 
 **(c)** Trial A has a **larger effect size** (1.5 percentage points) but is less statistically significant because n = 200 is small — the standard error is large and the t-statistic is modest. Trial B has a **smaller effect size** (0.1 percentage point) but larger n, so the standard error is much smaller and the statistic is larger relative to the standard error. The apparent paradox reveals that statistical significance measures effect size relative to sampling variability, not absolute importance. With large enough n, any non-zero effect becomes significant; with small n, even meaningful effects may not reach significance.
 
-**(d)** n = 2,000,000: z = 0.0001 / √(0.92 × 0.08/2,000,000) = 0.0001 / 0.000192 ≈ **5.21.** p ≈ 0 (essentially zero). **Yes, highly significant** — despite a 0.01 percentage point improvement that is operationally meaningless. At n = 2 million, the hypothesis test will detect the slightest deviation from 92% even if that deviation has no real operational consequence.
+**(d)** n = 2,000,000: z = 0.001 / √(0.92 × 0.08/2,000,000) = 0.001 / 0.000192 ≈ **5.21.** p ≈ 0 (essentially zero). **Yes, highly significant** — for a 0.1 percentage-point improvement (2,000 deliveries in 2 million) that was statistically invisible at n = 200,000. At n = 2 million, the hypothesis test detects even operationally marginal deviations from 92%.
 
-**(e)** *(Memo to COO)* "Statistical significance and operational significance are distinct concepts that are easily confused. A result is statistically significant when it is unlikely to have occurred by chance — which depends critically on sample size. With n = 200 deliveries (Trial A), our 1.5 percentage-point improvement cannot be distinguished from random fluctuation. With n = 2,000,000 deliveries (our full operational data), even a 0.01 percentage-point difference — equivalent to 200 additional on-time deliveries out of 2 million — produces a highly significant p-value. Operational significance asks a different question: does this improvement matter for our customers and our business? A 1.5 percentage-point improvement in on-time delivery is operationally meaningful (it affects thousands of customers daily); a 0.01 percentage-point improvement is not. I recommend we report both: the p-value for the statistical test, and the absolute improvement in on-time deliveries as the operational metric."
+**(e)** *(Memo to COO)* "Statistical significance and operational significance are distinct concepts that are easily confused. A result is statistically significant when it is unlikely to have occurred by chance — which depends critically on sample size. With n = 200 deliveries (Trial A), our 1.5 percentage-point improvement cannot be distinguished from random fluctuation. With n = 2,000,000 deliveries (our full operational data), even a 0.1 percentage-point difference — equivalent to 2,000 additional on-time deliveries out of 2 million — produces a highly significant p-value. Operational significance asks a different question: does this improvement matter for our customers and our business? A 1.5 percentage-point improvement in on-time delivery is operationally meaningful (it affects thousands of customers daily); a 0.1 percentage-point improvement is marginal. I recommend we report both: the p-value for the statistical test, and the absolute improvement in on-time deliveries as the operational metric."
 
 ---
 
@@ -462,11 +462,11 @@ Put the coffee shop scenario on screen. Ask a volunteer to state H₀ and Hₐ a
 
 **T2 walkthrough (5 minutes):**
 
-Do not compute anything new — T2 is about interpretation. Put the A/B test numbers on screen:
-- 50,000 visitors each; 10 additional conversions in the treatment group
-- p = 0.031; absolute difference = 0.02 percentage points
+Do not compute anything new — T2 is about interpretation. Put the Meta numbers on screen:
+- 1,000,000 items per group; 160 vs 120 violations detected
+- p = 0.018; absolute difference = 0.004 percentage points
 
-Ask the class: "Would you recommend this company redesign its homepage?" Let students respond without guidance first. Then surface the missing information: cost of redesign, lifetime value of each converted customer, the fact that with n = 100,000 even a trivially small difference will have a small p-value. Introduce the concept of effect size: Cohen's d, or in this case, the simple number of additional conversions (10 per 50,000 visitors). State the core principle explicitly: **statistical significance is a function of sample size; practical significance is a function of effect size.**
+Ask the class: "Would you recommend deploying the new algorithm?" Let students respond without guidance first. Then surface the missing information: the false-positive rate, the compute cost, the severity mix of what is caught, and the fact that with n = 2,000,000 even a trivially small difference produces a small p-value. Introduce the concept of effect size: here, the absolute difference in detection rates (40 extra detections per million items). State the core principle explicitly: **statistical significance is a function of sample size; practical significance is a function of effect size.**
 
 **T3 walkthrough (5 minutes):**
 
@@ -484,7 +484,7 @@ Multiple testing: 50 tests × 0.05 = 2.5 expected false positives under the glob
 
 The instructor projects the following result on screen and posts it to the class channel:
 
-> A Berlin city authority tests whether the mean monthly rent per square metre in Prenzlauer Berg differs from the city-wide mean of €14.50/m². A random sample of n = 120 listings gives x̄ = €14.78/m², s = €2.10/m². The t-statistic is 1.46, df = 119, p = 0.147 (two-tailed). A separate analysis on the full administrative dataset of n = 48,000 listings gives t = 12.3, p < 0.001.
+> A Berlin city authority tests whether the mean monthly rent per square metre in Prenzlauer Berg differs from the city-wide mean of €14.50/m². A random sample of n = 120 listings gives x̄ = €14.78/m², s = €2.10/m². The t-statistic is 1.46, df = 119, p = 0.147 (two-tailed). A separate analysis on the full administrative dataset of n = 48,000 listings (where s = €5.00/m² — the administrative data covers a far more heterogeneous housing stock) gives t = 12.3, p < 0.001.
 
 The instructor assigns pairs. In each pair, Student A holds the "statistically significant / reject H₀" brief; Student B holds the "practically meaningless / fail to act" brief.
 
@@ -615,7 +615,7 @@ This post counts as formative participation. Exemplary posts will be anonymised 
 
 **1. The p-value misconception is deep and persistent**
 
-Research consistently shows (Haller & Krauss, 2002; Gigerenzer, 2004) that even trained researchers misinterpret p-values — most commonly, believing that p = 0.04 means there is a 4% probability that H₀ is true. This misconception is resistant to correction because it is logically appealing: it maps onto how people naturally reason about probability. In a seminar setting, the instructor cannot simply state the correct definition and move on. The structured controversy in Part 3 is designed to force students to encounter the p-value in a context where the misconception leads to an obviously wrong business recommendation (recommending a €50,000 homepage redesign for 10 additional conversions per 50,000 visitors). The visceral wrongness of the recommendation is more corrective than a definitional restatement. However, the instructor must be prepared for students who, even after the structured controversy, continue to conflate "p < 0.05" with "the effect is real" — and must have a ready counter-example (the n = 48,000 Berlin rent case, where the same difference flips from non-significant to highly significant) to revisit the point.
+Research consistently shows (Haller & Krauss, 2002; Gigerenzer, 2004) that even trained researchers misinterpret p-values — most commonly, believing that p = 0.04 means there is a 4% probability that H₀ is true. This misconception is resistant to correction because it is logically appealing: it maps onto how people naturally reason about probability. In a seminar setting, the instructor cannot simply state the correct definition and move on. The structured controversy in Part 3 is designed to force students to encounter the p-value in a context where the misconception leads to an obviously wrong business recommendation (deploying a platform-wide algorithm change on the strength of p = 0.018 and 40 extra detections per million items, without asking about false positives). The visceral wrongness of the recommendation is more corrective than a definitional restatement. However, the instructor must be prepared for students who, even after the structured controversy, continue to conflate "p < 0.05" with "the effect is real" — and must have a ready counter-example (the n = 48,000 Berlin rent case, where the same difference flips from non-significant to highly significant) to revisit the point.
 
 **2. The practical significance problem has no formula — and students want one**
 
@@ -664,3 +664,76 @@ Lovett, M. C., & Greenhouse, J. B. (2000). Applying cognitive theory to statisti
 Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. *Psychological Science, 17*(3), 249–255. https://doi.org/10.1111/j.1467-9280.2006.01693.x
 
 Vygotsky, L. S. (1978). *Mind in society: The development of higher psychological processes*. Harvard University Press.
+
+---
+
+# Supplement (2026-07-06): Textbook Cross-Reference, Extended Questions, Alternative Activities, Critique
+
+## 1. Textbook Cross-Reference — Albright & Winston, 6th ed., Chapter 9
+
+Reading references are accurate (pp. 363–406; 9-2e, 9-3, 9-4b, 9-5, 9-6 all correctly located). Two alignment issues:
+
+1. **§9-5 (Tests for Normality) gets "pay particular attention" and then zero use.** No tutorial, quiz question, or activity checks normality before running a t-test — even though the instructor response protocol explicitly plans a "Week 14 assumption-checking discussion." Either add T10 below or soften the reading emphasis; assigning emphatic reading with no retrieval contradicts the course's own testing-effect logic.
+2. **§9-4d (differences between proportions, p. 388) is doing heavy lifting** — T2 and T4 are both two-proportion/one-proportion z-tests — but it isn't on the "pay particular attention" list. Swap it in.
+
+## 2. Extended Question Bank (with answers)
+
+**T8 — Paired t-test (in the learning objectives, currently practised nowhere):**
+
+> A retailer trials a new shelf layout in 10 stores. Weekly sales (€000s) are recorded for each store before and after the change. The differences (after − before) have mean d̄ = 4.2 and SD s_d = 6.0.
+>
+> (a) Why is a paired t-test correct here and a two-sample t-test wrong?
+> (b) Compute the test statistic and two-tailed p-value.
+> (c) The result sits just above α = 0.05. A manager says "so the layout doesn't work." Give the two reasons this conclusion overreaches.
+>
+> **Answers:** (a) The same stores are measured twice; store-level differences (location, size, clientele) are enormous but *cancel within each pair*. A two-sample test would pour all that between-store variance into the SE and destroy the signal — pairing is a variance-reduction design, not a formality. (b) t = 4.2/(6.0/√10) = 4.2/1.897 ≈ **2.21**, df = 9; p = T.DIST.2T(2.21, 9) ≈ **0.054**. (c) First, failing to reject ≠ evidence of no effect — with n = 10 the power is low, and the point estimate (+€4,200/week/store) is commercially large; second, 0.054 vs 0.050 is not a cliff — the CI for the mean difference, (−0.09, +8.49), shows the data are consistent with anything from nil to a very large gain. Decision: extend the trial, don't kill it. (This is the best available antidote to α-as-bright-line thinking.)
+
+**T9 — Power and sample size (gives Q6 something to do):**
+
+> Before the shelf-layout trial, the retailer asks: "How many stores do we need to detect a true mean uplift of €4,000/week (SD of differences ≈ €6,000) with 80% power at α = 0.05 (two-tailed)?"
+>
+> (a) Use the planning approximation n ≈ ((z_{α/2} + z_{β})·s_d/δ)².
+> (b) The trial above used 10 stores. Roughly what power did it have — and what does that mean for interpreting its p = 0.054?
+>
+> **Answers:** (a) n ≈ ((1.96 + 0.84) × 6/4)² = (2.8 × 1.5)² = 4.2² ≈ **18 stores**. (b) With n = 10, power ≈ 50% (the observed effect equals the design effect but n is barely half of what 80% power needs): the trial was a coin flip to detect a real €4k effect. A non-significant result from an underpowered design is close to uninformative — which is exactly why T8(c)'s manager is wrong, now with a number attached.
+
+**T10 — Check before you test (fills the §9-5 gap):**
+
+> A colleague hands you n = 12 daily revenue figures from a new store and asks for a one-sample t-test against a €10,000 target. A histogram shows one day at €85,000 (a corporate bulk order) and the rest between €6,000 and €14,000.
+>
+> (a) What assumption of the t-test is threatened, and why does n = 12 make it worse?
+> (b) Name two defensible responses.
+>
+> **Answers:** (a) With small n, the t-test leans on approximate normality of the population; a single extreme outlier in 12 observations makes the sample mean and SD unstable and the t-statistic unreliable (the CLT hasn't rescued anything at n = 12 — the Week 11 T4 lesson recurring). (b) (i) Investigate the outlier's provenance — if it's a structurally different event (bulk order), analyse it separately and test the remaining regular-trade days, *reporting both* (Week 2's T1(g) rule); (ii) use a test that doesn't need normality (sign test / Wilcoxon on the median vs €10,000 — name-drop level, per the course's B-H precedent); (iii) collect more data. Running §9-5's normality checks (or just looking at the histogram) *before* testing is the professional habit this question installs.
+
+*Additional quiz questions:*
+
+- Q10: Two groups of different customers vs the same customers measured twice — which needs the paired test, and what does pairing buy? *(a) first; smaller α (b) second; removes between-subject variance from the SE (c) second; increases df (d) either; identical results)* — **Answer: (b).**
+- Q11: If H₀ is true and the test assumptions hold, the p-value is distributed: *(a) around 0.05 (b) uniformly between 0 and 1 (c) normally (d) near 1)* — **Answer: (b)** — the fact that makes the multiple-testing arithmetic (T3) work, and the punchline of Activity A below.
+- Q12: A study reports p = 0.20 with n = 15 and concludes "the treatment has no effect." The best critique: *(a) α was too high (b) absence of evidence ≠ evidence of absence, especially with low power (c) they should have used a one-tailed test (d) p should have been Bonferroni-corrected)* — **Answer: (b)** — T8(c)/T9(b) as retrieval.
+
+## 3. Alternative In-Class Activities (additional options)
+
+**A. p-value factory (15 min, Part 3 alternative or opener).** Using Week 11's simulation skills: draw 1,000 pairs of samples from the *same* population, run a t-test on each, plot the 1,000 p-values. The histogram is flat, and ~50 fall below 0.05 with H₀ true by construction. Then plant a real difference and re-run — the distribution piles up near zero. One notebook, both core ideas of the week (false positives are guaranteed at scale; power moves mass toward zero), discovered rather than asserted.
+
+**B. Green jelly beans opener (3 min).** Project the xkcd "Significant" cartoon (jelly beans and acne, 20 colours, one p < 0.05, headline follows). It is T3 in comic form, takes three minutes, and gives the class a shared shorthand ("that's a jelly-bean result") for the rest of the course.
+
+**C. The garden of forking paths (20 min, Part 4 alternative).** All teams get the same messy dataset and the same vague brief: "test whether weekday affects sales." Each team makes its own choices (which days to group, outliers in or out, one- or two-tailed, mean or median) and reports its p-value. The board fills with different p-values from identical data. Debrief: none of these teams cheated — that's what researcher degrees of freedom means, and why T5(f)'s pre-specification rule exists.
+
+**D. Significance court (15 min, Part 3 alternative).** A p = 0.049 result (from a small-n trial) is "on trial": prosecution argues for the budget reallocation, defence argues against, jury (rest of class) must issue a verdict *and* name what evidence would have settled it (bigger n, effect size, replication). Rehearses the after-class LinkedIn prompt live.
+
+**E. Assumption triage drill (10 min, fast-finisher).** Eight one-line scenarios; students pick the right test (one-sample t / two-sample t / paired t / z-proportion / chi-square / "none of these — data violate assumptions"). The sixth option is the point: knowing when *not* to test is objective 2's missing half.
+
+## 4. Critique of the Lesson Plan
+
+**What works (keep):** the two-sample-size Berlin rent controversy (the cleanest statistical-vs-practical design in the 22 weeks); T5(f) on post-hoc one-tailing; T3(d) on pre-registration; the five-principles whiteboard list; Part 4's individual-then-triads structure (which finally solves the per-student timing problem the earlier weeks kept hitting — reuse this pattern in Weeks 4, 5, 11, 12).
+
+**Problems, reasons, and fixes:**
+
+1. **T4(d) is mathematically wrong — the flagship example fails.** With n = 2,000,000, SE = √(0.92 × 0.08/2,000,000) = **0.000192**, not 0.0000192 (the key dropped a factor of √100). So z = 0.0001/0.000192 ≈ **0.52, p ≈ 0.60 — not remotely significant**, and the intended lesson ("trivially small improvement, highly significant") collapses. *Fix:* keep n = 2,000,000 but use p̂ = 0.921 (the same 0.1pp effect as Trial B): z = 0.001/0.000192 ≈ **5.21** — a clean escalation of Trial B (same effect, 10× data, p ≈ 0 instead of 0.099). Then update the (e) memo: 0.1pp on 2M deliveries = 2,000 deliveries, not "0.01pp / 200."
+2. **T2's given p-value contradicts its own data.** 150 vs 120 violations per 1,000,000: pooled p̂ = 0.000135, SE ≈ 1.64 × 10⁻⁵, z ≈ 1.83, two-tailed p ≈ **0.068** — not 0.018. Any student who checks (and T7 trains them to check) finds the question wrong. *Fix:* change Group A to 160 detections (z ≈ 2.39, p ≈ 0.017 ≈ the stated 0.018), and update (b)'s difference to 0.004pp. Also: Meta's report is the **Community Standards Enforcement Report** (the "Adversarial Threat Report" is a different publication) — correct the name of a source students are invited to look up.
+3. **Part 2's T2 walkthrough and Design Challenge 1 describe a T2 that no longer exists.** Both discuss "50,000 visitors each; 10 additional conversions; p = 0.031; €50,000 homepage redesign" — an A/B-test scenario from an earlier draft, replaced by the Meta case. This is the third week (with 4 and 11) where instructor-facing guidance describes superseded questions; a systematic consistency pass across all 22 files is now clearly warranted. *Fix:* rewrite both passages around the Meta numbers (the corrected ones from point 2).
+4. **Part 3's n = 48,000 t-statistic doesn't follow from the stated inputs.** With x̄ = 14.78, μ₀ = 14.50, s = 2.10: t = 0.28/(2.10/√48,000) ≈ **29**, not 12.3. *Fix:* either state that the administrative dataset has s ≈ €5.00 (plausible — administrative data is more heterogeneous, and saying so is itself instructive) or change the printed t to ≈29. The pedagogy survives either way; the arithmetic must cohere because students are explicitly prompted to ask "why do the two datasets differ?"
+5. **The paired t-test appears in objective 2 and nowhere else.** No tutorial, quiz item, or activity touches it, yet it's exam-relevant (A&W §8-7b/9-4b territory). *Fix:* adopt T8/Q10; it also carries the week's best power discussion (T8(c)–T9).
+6. **§9-5 emphasised, never used (see §1.1).** Adopt T10 or soften.
+7. **Inline solutions still printed inside submitted problems** (T4, T5, T6). Recurring defect, same fix — and this week it's sharpest: T4's inline "solution" is the *wrong* one (point 1), which students would have transcribed as their submission.
