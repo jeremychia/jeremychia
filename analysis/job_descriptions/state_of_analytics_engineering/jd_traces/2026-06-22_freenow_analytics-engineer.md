@@ -70,10 +70,13 @@ SQL | Python | Databricks | Tableau | Mixpanel | Airflow | AWS | Kafka | Debeziu
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 4 | 3 | 3 | 3 | 100% | ✗ |
-| data_team_maturity | mature | mid | mature | mid | 33% | ✗ |
-| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | mixed | mixed | mixed | 100% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | mixed | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | mixed | mixed | mixed | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -85,17 +88,17 @@ SQL | Python | Databricks | Tableau | Mixpanel | Airflow | AWS | Kafka | Debeziu
 **Run 1:** `rigour` ✓
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit rigour signals (quality, trustworthiness, data contracts) with no competing velocity language like speed or iteration.
+> Reasoning: Responsibilities emphasize quality assurance, data contracts, trustworthiness, and availability with no velocity language, indicating a rigour-focused orientation.
 
 **Run 2:** `rigour` ✓
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, trustworthiness, data contracts, attention to detail, and expert-level skills throughout the responsibilities, with no velocity language present.
+> Reasoning: The responsibilities emphasize quality, trustworthiness, data contracts, and quality checks as core expectations with no corresponding velocity signals.
 
 **Run 3:** `rigour` ✓
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly prioritizes data quality, trustworthiness, and data contracts as core expectations with no counterbalancing velocity language.
+> Reasoning: The responsibilities emphasize data quality, trustworthiness, and quality assurance frameworks with no velocity-oriented language.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -103,35 +106,35 @@ SQL | Python | Databricks | Tableau | Mixpanel | Airflow | AWS | Kafka | Debeziu
 **Run 1:** `moderate` ✓
 > Quote: "Design solutions for KPIs and business metrics"
 > Verified: ✓ found in JD
-> Reasoning: Business metrics suggest decision-making impact, but no explicit financial reporting, compliance, or regulatory language that would elevate to high risk.
+> Reasoning: A mobility/marketplace platform role focused on business metrics without explicit financial reporting, compliance, or regulatory language suggests moderate risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "Own the quality, availability, and trustworthiness of data"
+> Quote: "Design solutions for KPIs and business metrics"
 > Verified: ✓ found in JD
-> Reasoning: While data errors impact business operations in a ride-hailing platform, the JD lacks explicit financial reporting, compliance, or regulatory language that would indicate high risk.
+> Reasoning: The JD frames data work around business intelligence and operational metrics rather than financial reporting or regulatory compliance.
 
 **Run 3:** `moderate` ✓
 > Quote: "Design solutions for KPIs and business metrics"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational metrics and business decision support rather than financial reporting, regulatory compliance, or mission-critical consequences.
+> Reasoning: The role affects business decision-making through KPIs and metrics but contains no language about financial reporting, compliance, or regulatory impact.
 
 ### collaboration_width
 **Manual:** `4`
 
 **Run 1:** `3` ✗
-> Quote: "Engage with analysts and scientists to understand problems and translate them into data solutions; Work with developers on data creation"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Explicitly names three distinct groups: analysts, data scientists, and developers/engineers.
+> Quote: "analysts; scientists; developers"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names three distinct partner teams: analysts, scientists (data scientists), and developers.
 
 **Run 2:** `3` ✗
-> Quote: "analysts and scientists; developers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names three distinct collaboration partners: analysts, scientists (data scientists), and developers.
+> Quote: "Engage with analysts and scientists to understand problems and translate them into data solutions; Work with developers on data creation"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names three distinct partner functions: analysts, data scientists, and developers.
 
 **Run 3:** `3` ✗
-> Quote: "analysts and scientists; developers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD names three distinct role cohorts as collaboration partners: analysts, data scientists (referred to as scientists), and developers.
+> Quote: "Engage with analysts and scientists; Work with developers on data creation"
+> Verified: ✓ found in JD
+> Reasoning: Analysts, data scientists, and developers are each named as distinct collaboration partners.
 
 ⚠ **Disagreement**: manual=`4` vs LLM majority=`3`
 
@@ -139,23 +142,21 @@ SQL | Python | Databricks | Tableau | Mixpanel | Airflow | AWS | Kafka | Debeziu
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "develop new data products within a Data Mesh environment"
+> Quote: "within a Data Mesh environment"
 > Verified: ✓ found in JD
-> Reasoning: A Data Mesh architecture indicates an established, distributed data function with existing infrastructure and multiple teams, beyond early-stage but not at massive scale.
+> Reasoning: The Data Mesh environment and named tools (Databricks, Kafka, Debezium, Airflow) in responsibilities signal an established data function with sophisticated infrastructure, but no "20+ team" or "join established team" language.
 
-**Run 2:** `mature` ✓
+**Run 2:** `mid` ✗
 > Quote: "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment"
 > Verified: ✓ found in JD
-> Reasoning: The Data Mesh architecture is an advanced pattern deployed at scale, combined with a sophisticated tech stack (Databricks, Airflow, Kafka, Debezium), indicating an established mature data organization.
+> Reasoning: The Data Mesh architecture and references to building self-serve infrastructure for existing analysts and data scientists signal an established team scaling its practices.
 
 **Run 3:** `mid` ✗
 > Quote: "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment"
 > Verified: ✓ found in JD
-> Reasoning: The mention of an existing Data Mesh architecture indicates an established organizational pattern, but focus on developing new data products suggests active growth rather than full maturity.
+> Reasoning: Data Mesh is an established architectural pattern with multiple named tools in use, and explicit focus on self-serve analytics infrastructure indicates a maturing data function.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
-
-⚠ **LLM inconsistency**: runs gave ['mid', 'mature', 'mid']
 
 ### jd_authorship
 **Manual:** `hiring_manager`
@@ -163,98 +164,114 @@ SQL | Python | Databricks | Tableau | Mixpanel | Airflow | AWS | Kafka | Debeziu
 **Run 1:** `mixed` ✗
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
 > Verified: ✓ found in JD
-> Reasoning: Data contracts and quality methodology reflect specific practitioner knowledge, but balanced with generic collaboration verbs like "engage" and "translate" elsewhere.
+> Reasoning: Technical specificity around data contracts and Data Mesh is mixed with generic collaboration verbs like 'engage', 'collaborate', and 'provide expertise'.
 
-**Run 2:** `mixed` ✗
-> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts; Design solutions for KPIs and business metrics"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains specific technical concepts (Data Mesh, data contracts, SparkSQL) alongside generic action verbs like engage and collaborate, indicating input from both hiring manager and recruiter.
+**Run 2:** `hiring_manager` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Verified: ✓ found in JD
+> Reasoning: The specificity of 'data contracts' as a named methodology and Data Mesh architecture shows hands-on domain expertise, not recruiter boilerplate.
 
 **Run 3:** `mixed` ✗
-> Quote: "Expert level of SQL (especially SparkSQL) and experience in building data pipelines; Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD combines specific technical expectations (SQL/SparkSQL proficiency, data pipelines, data contracts) with generic stakeholder collaboration boilerplate.
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical concepts (data contracts, Data Mesh) alongside generic collaboration verbs, indicating both hiring manager and recruiter contributions.
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
-### stakeholder_orientation
-**Manual:** ``
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
 
-**Run 1:** `internal_data` ✗
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
 > Quote: "Build an environment where self-service capabilities are available for analysts and data consumers"
 > Verified: ✓ found in JD
-> Reasoning: The role serves the data platform itself and internal data consumers (analysts, scientists, developers), not external commercial, product, or finance functions.
+> Reasoning: The role's primary focus is building data infrastructure and self-serve platforms for internal data users (analysts, scientists, developers), not external GTM or business teams.
 
-**Run 2:** `internal_data` ✗
+**Run 2:** `internal_data` ✓
 > Quote: "Build an environment where self-serve capabilities are available for analysts and data consumers"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The role primarily serves the data function itself—building data products, infrastructure, and self-serve capabilities for analysts and data professionals rather than external commercial, product, or finance teams.
+> Reasoning: The role's primary responsibility is serving the data function and infrastructure through self-serve analytics and data products.
 
-**Run 3:** `internal_data` ✗
-> Quote: "Build an environment where self-service capabilities are available for analysts and data consumers"
-> Verified: ✓ found in JD
-> Reasoning: The role primarily serves internal data consumers and analysts through platform and infrastructure work rather than commercial, product, or finance audiences.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+**Run 3:** `internal_data` ✓
+> Quote: "Build an environment where self-serve capabilities are available for analysts and data consumers"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role explicitly states its primary audience is internal data professionals (analysts, data consumers), serving the data platform and infrastructure layer.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `mixed`
 
-**Run 1:** `mixed` ✗
-> Quote: "Provide expertise and collaborate with stakeholders to develop new data products within a Data Mesh environment"
-> Verified: ✓ found in JD
-> Reasoning: Combines strategic development and ownership of data products with collaborative execution supporting analysts and scientists in a shared environment.
-
-**Run 2:** `mixed` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
 > Verified: ✓ found in JD
-> Reasoning: The role has strategic ownership of data quality and design decisions while also executing in service of the data function by engaging with teams to translate their problems into solutions.
+> Reasoning: The role combines strategic ownership of technical domains (quality/contracts, KPI solutions, self-serve platforms) with execution responsibilities (collaborating with and supporting analysts, scientists, developers).
 
-**Run 3:** `mixed` ✗
-> Quote: "Own the quality, availability, and trustworthiness of data; Design solutions for KPIs and business metrics; Build an environment where self-service capabilities are available"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic ownership of data quality and infrastructure design with execution-focused troubleshooting and collaboration responsibilities.
+**Run 2:** `mixed` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts; Design solutions for KPIs and business metrics"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership of data quality practices and solution design with execution on specific analytical problems from analysts and scientists.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`mixed`
+**Run 3:** `mixed` ✓
+> Quote: "Own the quality, availability, and trustworthiness of data; Design solutions for KPIs and business metrics"
+> Verified: ✓ found in JD
+> Reasoning: The role owns quality and design decisions but executes within problems and business logic defined by stakeholders, combining strategic ownership with execution constraints.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Design solutions for KPIs and business metrics"
-> Reasoning: No AI signals present; role focuses on standard data engineering and product development without AI tools, infrastructure, or AI-first practices.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "develop new data products within a Data Mesh environment"
-> Reasoning: No AI tool usage or infrastructure-for-AI signals; standard data product development work without AI-specific framing.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI-assisted coding, AI tools, or AI-ready data infrastructure as a candidate skill expectation.
 
-**Run 3:** `none` ✓
-> Quote: "develop new data products within a Data Mesh environment"
-> Reasoning: No mention of AI tool usage or infrastructure building; standard data engineering expected
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or building AI infrastructure for the candidate to use or develop.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD lists no expectation for AI-assisted coding, AI-ready data infrastructure, or any AI capability from the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
-> Reasoning: Explicit ownership responsibility verb 'own' paired with quality checks and data contracts indicates candidate owns quality practice.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
-> Reasoning: Explicit ownership verb with defined mechanisms (quality checks, data contracts); candidate owns quality practice.
+> Verified: ✓ found in JD
+> Reasoning: Data quality and testing are framed as candidate ownership and definition using the verb 'own', not listed as tools in requirements.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `responsibility` ✗
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
-> Reasoning: Explicit ownership verb combined with quality/data contracts shows responsibility for quality practices and data governance
+> Verified: ✓ found in JD
+> Reasoning: The JD frames data quality and contracts as something the candidate owns and is accountable for, making it a core responsibility, not just a required tool.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is explicitly expected to own quality checks and data contracts as core practices, framing testing as a primary responsibility.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Own the quality, availability, and trustworthiness of data"
-> Reasoning: Operational reliability concerns (quality, availability, trustworthiness) emphasized without explicit regulatory or compliance dominance.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
+**Run 1:** `moderate` ✗
 > Quote: "Own the quality, availability, and trustworthiness of data"
-> Reasoning: Operational reliability and trustworthiness concerns present, but no compliance or regulatory language.
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability concerns (quality, availability, trustworthiness) are present alongside troubleshooting, but there is no regulatory, compliance, or stakeholder-trust language.
 
-**Run 3:** `moderate` ✓
+**Run 2:** `moderate` ✗
 > Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
-> Reasoning: Trustworthiness and data contracts signal governance concerns; balanced with operational availability suggests operational + governance focus
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on data trustworthiness and contracts indicates concern for preventing bad data reaching stakeholders, but without regulatory or compliance language.
 
+**Run 3:** `moderate` ✗
+> Quote: "Own the quality, availability, and trustworthiness of data — through quality checks and data contracts"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability and data quality but lacks compliance or regulatory language; fear is data failures and pipeline outages, not regulatory exposure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

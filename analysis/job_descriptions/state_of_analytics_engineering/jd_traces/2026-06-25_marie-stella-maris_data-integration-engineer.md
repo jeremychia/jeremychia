@@ -4,11 +4,11 @@
 
 ```
 # Data & Integration Engineer — Marie-Stella-Maris
-**URL:** https://careers.marie-stella-maris.com/jobs/7053032-data-integration-engineer
 
 **Company:** Marie-Stella-Maris
 **Location:** Amsterdam
 **Salary:** Not stated
+**URL:** https://careers.marie-stella-maris.com/jobs/7053032-data-integration-engineer
 **ATS Job ID:** 7053032
 
 ---
@@ -63,179 +63,213 @@ Data & Integration Engineer within the Business Technology team at Marie-Stella-
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 3 | 3 | 3 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | hiring_manager | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | mixed | mixed | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | mixed | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | execution | execution | mixed | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Ensure data quality, consistency, and availability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, consistency, standards, and best practices with no velocity language like speed or rapid iteration.
+> Reasoning: The responsibilities emphasize data quality, consistency, and establishing standards—core rigour signals with no velocity language.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Ensure data quality, consistency, and availability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasise data quality and consistency as core expectations, with no velocity-related language present.
+> Reasoning: The responsibilities section emphasizes data quality, consistency, availability, and establishing standards—core rigour indicators with no counterbalancing velocity language.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Ensure data quality, consistency, and availability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, consistency, and standards-setting with no mention of speed, velocity, or shipping pace.
+> Reasoning: Multiple rigour signals (data quality, consistency, standards, best practices) dominate the responsibilities with no velocity language.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
-> Verified: ✓ found in JD
-> Reasoning: E-commerce and retail operations systems are business-critical but lack regulatory compliance, financial reporting, or audit obligations that would elevate to high risk.
-
-**Run 2:** `moderate`
-> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
-> Verified: ✓ found in JD
-> Reasoning: Operational retail and e-commerce data systems present business risk without explicit regulatory or financial reporting compliance requirements.
-
-**Run 3:** `moderate`
-> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
-> Verified: ✓ found in JD
-> Reasoning: Data errors affect business operations and decisions but lack explicit regulatory, compliance, or financial reporting language typical of high-risk roles.
-
-### collaboration_width
-
-**Run 1:** `3`
-> Quote: "Data Analysts; Product Owners; operations teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named teams are identified as collaboration partners in the responsibilities section.
-
-**Run 2:** `3`
-> Quote: "Work with Data Analysts, Product Owners, and operations teams"
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named teams are identified: Data Analysts, Product Owners (Product function), and operations teams.
-
-**Run 3:** `3`
-> Quote: "Work with Data Analysts, Product Owners, and operations teams"
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named teams are explicitly identified as collaboration partners.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
-> Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities indicating established infrastructure that is being actively developed and scaled.
-
-**Run 2:** `mid`
-> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
-> Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities with specific application context, and collaboration with existing Data Analysts signals a growing but established data function.
-
-**Run 3:** `mid`
-> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
-> Verified: ✓ found in JD
-> Reasoning: Named tools with specific application context combined with both maintenance of existing flows and building new infrastructure indicate a scaling, not early-stage, data function.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Build integrations using APIs and Celigo middleware"
-> Verified: ✓ found in JD
-> Reasoning: The specific naming of Celigo middleware with its application context, combined with precise system names (POS, ERP, OMS), indicates technical specificity only someone performing the role would articulate.
-
-**Run 2:** `mixed`
-> Quote: "Build integrations using APIs and Celigo middleware"
-> Verified: ✓ found in JD
-> Reasoning: Specific tool application context (Celigo as middleware) and named system dependencies coexist with generic boilerplate phrases, indicating hiring manager detail mixed with recruiter language.
-
-**Run 3:** `hiring_manager`
-> Quote: "Build integrations using APIs and Celigo middleware"
-> Verified: ✓ found in JD
-> Reasoning: Specific tool names with application context and named systems indicate technical depth only a hiring manager implementing these systems would include.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
-> Verified: ✓ found in JD
-> Reasoning: The primary mission is building data infrastructure (data lake, pipelines, BI environments) for consumption by internal data consumers and analytics teams.
-
-**Run 2:** `internal_data`
-> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary focus is building internal data infrastructure and platforms that serve various teams, not serving commercial, product, or finance audiences specifically.
-
-**Run 3:** `internal_data`
-> Quote: "Develop data lake and BI environments"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary output is data infrastructure and platforms serving internal data consumers and analytics teams, not external revenue or product decisions.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Establish standards and best practices"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership via infrastructure development and standard-setting with execution of business requirements translated from Product Owners.
-
-**Run 2:** `mixed`
-> Quote: "Establish standards and best practices"
-> Verified: ✓ found in JD
-> Reasoning: The role establishes technical standards and owns data platform development decisions, but operates fundamentally in execution service to analytics and business stakeholder needs.
-
-**Run 3:** `mixed`
-> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic responsibility for designing and developing infrastructure with execution responsibility for maintaining systems and supporting analytics teams.
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
-> Reasoning: Standard data platform tooling with no AI-first mindset, AI tool usage, or GenAI infrastructure signals.
-
-**Run 2:** `none` ✓
-> Quote: "No AI signals in provided phrases"
-> Reasoning: No mention of AI tools, GenAI responsibilities, or AI-ready infrastructure.
-
-**Run 3:** `none` ✓
-> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
-> Reasoning: Standard data pipeline and integration work with no mention of AI tools or GenAI infrastructure.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Ensure data quality, consistency, and availability"
-> Reasoning: Ownership verb 'Ensure' paired with quality indicates direct responsibility for quality practice.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Ensure data quality, consistency, and availability"
-> Reasoning: Candidate owns quality practice with 'Ensure' verb establishing standards.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Ensure data quality, consistency, and availability"
-> Reasoning: Uses ownership verb 'ensure' paired with quality, indicating candidate owns quality outcomes.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "Ensure data quality, consistency, and availability; Design and maintain pipelines between core systems"
-> Reasoning: Operational reliability framing (pipeline stability, data quality) dominates; no regulatory or compliance emphasis.
+> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
+> Verified: ✓ found in JD
+> Reasoning: The operational data scope (retail, e-commerce, back-office) affects business decisions but shows no financial reporting or compliance signals.
 
 **Run 2:** `moderate` ✓
-> Quote: "Ensure data quality, consistency, and availability"
-> Reasoning: Operational reliability (availability, consistency) focus without compliance/regulatory framing.
+> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
+> Verified: ✓ found in JD
+> Reasoning: Retail/e-commerce systems where data errors affect business operations and analytics but lack explicit financial reporting, compliance, or regulatory risk language.
 
 **Run 3:** `moderate` ✓
-> Quote: "Ensure data quality, consistency, and availability"
-> Reasoning: Operational reliability concerns (consistency, availability) dominate rather than pure delivery goals.
+> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
+> Verified: ✓ found in JD
+> Reasoning: E-commerce retail operations where data errors affect business decisions without regulatory or financial reporting consequences.
 
+### collaboration_width
+**Manual:** `3`
+
+**Run 1:** `3` ✓
+> Quote: "Work with Data Analysts, Product Owners, and operations teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams are explicitly mentioned as collaboration partners.
+
+**Run 2:** `3` ✓
+> Quote: "Work with Data Analysts, Product Owners, and operations teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams explicitly listed in the collaboration statement.
+
+**Run 3:** `3` ✓
+> Quote: "Data Analysts; Product Owners; operations teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named functions identified as collaboration partners.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "building out data lake and BI environments alongside maintaining existing flows"
+> Verified: ✓ found in JD
+> Reasoning: The mixed language of building new infrastructure while maintaining existing flows, combined with named tools in responsibilities (Fivetran, Databricks, dbt), indicates a growing data function at mid-maturity.
+
+**Run 2:** `mid` ✓
+> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
+> Verified: ✓ found in JD
+> Reasoning: Existing infrastructure to maintain alongside development of new environments, with specific named tools in responsibilities suggesting an active, scaling data function.
+
+**Run 3:** `mid` ✓
+> Quote: "involves building out data lake and BI environments alongside maintaining existing flows"
+> Verified: ✓ found in JD
+> Reasoning: Combination of maintaining existing pipelines while developing new infrastructure indicates growth-stage maturity.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `mixed` ✗
+> Quote: "Build integrations using APIs and Celigo middleware"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical context (Celigo middleware for integration work) mixed with generic boilerplate verbs like 'translate business requirements' suggests both hiring manager and recruiter involvement.
+
+**Run 2:** `mixed` ✗
+> Quote: "Design and maintain pipelines between core systems (POS, e-commerce, ERP, OMS, CRM, BI)"
+> Verified: ✓ found in JD
+> Reasoning: Mixes technical specificity (named systems and tools with implementation context) with generic action verbs like support and translate business requirements.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Build integrations using APIs and Celigo middleware"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool choice (Celigo as middleware) and named system integrations reflect hands-on technical knowledge of integration patterns.
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Develop data lake and BI environments"
+> Verified: ✓ found in JD
+> Reasoning: The core responsibilities focus on building data infrastructure and platforms that internal analysts and operations teams consume, rather than serving external customers or revenue functions.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Develop data lake and BI environments"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary mission is building and maintaining data infrastructure for internal data consumers and analytics.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Develop data lake and BI environments (Fivetran, Databricks, dbt)"
+> Verified: ✓ found in JD
+> Reasoning: Primary responsibility is building data infrastructure for analytics consumption rather than serving external stakeholders.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `execution` ✗
+> Quote: "Translate business requirements into technical solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role executes requirements from Product Owners and stakeholders, with technical design authority in implementation rather than strategic direction-setting.
+
+**Run 2:** `execution` ✗
+> Quote: "Support data analytics models"
+> Verified: ✓ found in JD
+> Reasoning: While the role includes design and development responsibilities, they are scoped to defined systems and serve defined analytics needs rather than setting overall direction.
+
+**Run 3:** `mixed` ✓
+> Quote: "Establish standards and best practices"
+> Verified: ✓ found in JD
+> Reasoning: Role owns technical direction (design, standards) but executes in service of analytics and operations functions.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No AI, ML, or AI-assisted coding is mentioned in the responsibilities, requirements, or tech stack.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI infrastructure expectations.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, coding agents, or AI infrastructure for the candidate to use or build.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Ensure data quality, consistency, and availability"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as a responsibility the candidate owns through the action verb 'ensure', not as a tool-based practice.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Ensure data quality, consistency, and availability"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is accountable for data quality as a core responsibility, framed with an ownership verb (ensure).
+
+**Run 3:** `responsibility` ✗
+> Quote: "Ensure data quality, consistency, and availability"
+> Verified: ✓ found in JD
+> Reasoning: Candidate is accountable for data quality as a core responsibility, indicating ownership of quality practices.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Ensure data quality, consistency, and availability"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability (availability, quality) is a concern, but there is no regulatory, compliance, or stakeholder trust framing characteristic of high loss aversion.
+
+**Run 2:** `moderate` ✗
+> Quote: "Ensure data quality, consistency, and availability"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are core concerns but lack explicit regulatory, compliance, or stakeholder-trust risk language.
+
+**Run 3:** `moderate` ✗
+> Quote: "Ensure data quality, consistency, and availability"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability is a concern (quality, availability) but framed as operational excellence rather than risk or compliance prevention.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

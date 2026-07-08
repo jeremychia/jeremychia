@@ -66,9 +66,12 @@ None explicitly listed beyond the requirements above.
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 0 | 0 | 0 | 100% | ✗ |
 | data_team_maturity | mid | mid | mature | mid | 33% | ✓ |
-| jd_authorship | mixed | hiring_manager | mixed | mixed | 33% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | strategic | strategic | strategic | 100% | ✗ |
+| jd_authorship | mixed | hiring_manager | mixed | recruiter | 0% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -80,53 +83,53 @@ None explicitly listed beyond the requirements above.
 **Run 1:** `rigour` ✓
 > Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality strategies, governance frameworks, and enterprise-level implementation with no velocity signals present.
+> Reasoning: Governance, data quality, and enterprise-level frameworks dominate the responsibilities with no velocity or speed-oriented language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes governance and data quality as core expectations with no counterbalancing velocity language like 'fast-paced', 'ship quickly', or 'iteration speed'.
+> Reasoning: The responsibilities emphasize governance, data quality, and enterprise-scale reliability with no velocity signals like 'move fast', 'iteration', or 'MVP'.
 
 **Run 3:** `rigour` ✓
 > Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, governance frameworks, and enterprise-scale reliability with no velocity language like fast-paced, rapid delivery, or iteration speed.
+> Reasoning: The responsibilities emphasize data quality, governance, and architectural rigor throughout with no velocity or shipping language present.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: While the role manages enterprise-scale infrastructure, there are no signals of financial reporting, regulatory compliance, or mission-critical revenue operations that would indicate high-risk domain.
+> Reasoning: While data quality and governance are priorities, there is no explicit mention of financial reporting, compliance, regulatory impact, or revenue attribution.
 
 **Run 2:** `moderate` ✓
-> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: While the role manages critical data infrastructure for an e-commerce retailer, the JD contains no explicit financial reporting, compliance, regulatory, or audit language that would signal high risk.
+> Reasoning: Lovehoney is an e-commerce company; the JD emphasizes operational governance and quality but lacks regulatory, compliance, or financial reporting language typical of high-risk domains.
 
 **Run 3:** `moderate` ✓
-> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes enterprise-wide impact and data quality governance but lacks explicit financial, compliance, or regulatory language typical of high-risk domains.
+> Reasoning: Data errors affect operational reliability in an e-commerce context without explicit financial reporting, regulatory, or compliance consequences.
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `0` ✗
-> Quote: "cross-functional alignment"
-> Verified: ✓ found in JD
-> Reasoning: While the role involves cross-functional work, no specific partner teams or functions (Finance, Product, Marketing, Sales, etc.) are explicitly named in the JD.
-
-**Run 2:** `0` ✗
 > Quote: "Represent data engineering in strategic initiatives, helping influence long-term planning and cross-functional alignment."
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions cross-functional work but does not explicitly name any partner teams (Finance, Product, Marketing, Operations, etc.) from the collaboration schema.
+> Reasoning: The JD describes cross-functional collaboration but does not explicitly name specific partner teams or business functions.
 
-**Run 3:** `0` ✗
+**Run 2:** `0` ✗
 > Quote: "cross-functional alignment"
 > Verified: ✓ found in JD
-> Reasoning: The JD lacks explicitly named partner teams (Finance, Product, Marketing, etc.); only generic language like "cross-functional alignment" appears, which does not count per the rules.
+> Reasoning: No named partner teams or functions (Finance, Product, Marketing, etc.) are explicitly listed; collaboration is mentioned generically.
+
+**Run 3:** `0` ✗
+> Quote: "No named partner teams identified; mentions mentoring own engineers and cross-functional alignment without naming specific functions."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references mentoring engineers and cross-functional work but does not explicitly name any specific partner teams or business functions.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`0`
 
@@ -136,17 +139,17 @@ None explicitly listed beyond the requirements above.
 **Run 1:** `mid` ✓
 > Quote: "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow."
 > Verified: ✓ found in JD
-> Reasoning: The mention of platform evolution with named tools (Airflow) in specific context indicates an existing data infrastructure being improved rather than built from zero.
+> Reasoning: Named tools in responsibilities (Airflow) and multiple engineers to mentor indicate established infrastructure being evolved rather than built from zero.
 
 **Run 2:** `mature` ✗
-> Quote: "orchestrating them via Airflow"
+> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development."
 > Verified: ✓ found in JD
-> Reasoning: Airflow is named as a specific tool already deployed and used in responsibilities; combined with mentoring multiple engineers and enterprise-scale architecture focus, this indicates an established, mature data function.
+> Reasoning: The role requires mentoring multiple engineers and defining strategic direction for an established enterprise data function, implying a team of significant size already operating.
 
 **Run 3:** `mid` ✓
-> Quote: "orchestrating them via Airflow"
+> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development."
 > Verified: ✓ found in JD
-> Reasoning: Airflow is mentioned in the responsibilities section (not just requirements) and the expectation to mentor multiple engineers indicates an established but evolving data team.
+> Reasoning: Multiple engineers exist to mentor and the role involves evolving an existing platform, indicating an established team in active growth rather than fully mature operations.
 
 ⚠ **LLM inconsistency**: runs gave ['mid', 'mature', 'mid']
 
@@ -156,99 +159,114 @@ None explicitly listed beyond the requirements above.
 **Run 1:** `hiring_manager` ✗
 > Quote: "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow."
 > Verified: ✓ found in JD
-> Reasoning: The specific mention of Airflow with application context and other technical details (ETL/ELT, BigQuery, Soda Core) demonstrate technical knowledge that only someone who has performed this work would include.
+> Reasoning: Most responsibilities contain technical specificity (Airflow orchestration, enterprise data warehouse architecture, tool evaluation) that reflects hands-on practitioner experience.
 
 **Run 2:** `mixed` ✓
-> Quote: "designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow"
-> Verified: ✓ found in JD
-> Reasoning: The JD includes technically specific details (Airflow, ETL/ELT pipeline design) that suggest hiring manager input, alongside generic strategic phrases ('drive platform evolution', 'cross-functional alignment') typical of recruiter language.
-
-**Run 3:** `mixed` ✓
-> Quote: "designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow"
-> Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical language (ETL/ELT pipelines, Airflow orchestration) indicating hiring manager input, alongside generic boilerplate (governance frameworks, mentoring, strategic alignment) indicating recruiter involvement.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
-
-### stakeholder_orientation
-**Manual:** ``
-
-**Run 1:** `internal_data` ✗
-> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities focus entirely on building and maintaining the data infrastructure platform that serves internal organizational needs, not on serving commercial, product, or finance stakeholders directly.
-
-**Run 2:** `internal_data` ✗
-> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities focus on building data infrastructure, governance, and quality for internal data consumers (other engineers, analytics teams) rather than serving commercial, product, finance, or external stakeholders.
-
-**Run 3:** `internal_data` ✗
 > Quote: "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize building and maintaining data infrastructure (warehouse architecture, ETL/ELT pipelines, data quality frameworks) primarily serving the data team and internal data consumers.
+> Reasoning: Named tools with operational context (Airflow for orchestration) signal hiring manager input, but strategic verbs like 'lead' and 'drive' without specific scale or methodology details suggest recruiter framing mixed in.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+**Run 3:** `recruiter` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: Generic action verbs and boilerplate language throughout with no specific technical context, scale numbers, or named systems the candidate will actually maintain.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'recruiter']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development."
+> Verified: ✓ found in JD
+> Reasoning: The role serves the data engineering team and data infrastructure itself, not external business functions like sales, product, or finance.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development."
+> Verified: ✓ found in JD
+> Reasoning: The core responsibilities focus on the data platform, data quality infrastructure, and data team capability rather than serving specific business functions like commercial, product, or finance.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is on building and evolving the data platform itself, serving data consumers and engineers rather than a specific business function.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `strategic`
 
-**Run 1:** `strategic` ✗
-> Quote: "leading tool selection, technology evaluation, and architectural roadmap development"
+**Run 1:** `strategic` ✓
+> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
 > Verified: ✓ found in JD
-> Reasoning: Strategic verbs like 'lead' and 'drive,' combined with responsibilities for defining tool selection and architectural roadmap, indicate the role is expected to set direction for the data platform rather than execute direction set by others.
+> Reasoning: The 'Lead' verb combined with architectural scope and responsibilities for setting technology direction indicate expected strategic direction-setting authority.
 
-**Run 2:** `strategic` ✗
-> Quote: "leading tool selection, technology evaluation, and architectural roadmap development"
+**Run 2:** `strategic` ✓
+> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
 > Verified: ✓ found in JD
-> Reasoning: The role uses strategic verbs throughout ('lead', 'drive', 'influence') and explicitly owns architecture decisions and roadmap development rather than executing pre-scoped work set by others.
+> Reasoning: Action verbs throughout—'lead', 'drive', 'influence', 'implement'—frame the role as setting direction and defining strategic priorities for the data function rather than executing direction from others.
 
-**Run 3:** `strategic` ✗
-> Quote: "leading tool selection, technology evaluation, and architectural roadmap development"
+**Run 3:** `strategic` ✓
+> Quote: "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow."
 > Verified: ✓ found in JD
-> Reasoning: The role centers on leading architectural decisions and roadmap development for the data platform rather than executing pre-determined work.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`strategic`
+> Reasoning: The repeated use of 'drive', 'lead', and 'influence technology direction' indicates the role shapes strategic direction rather than executing pre-set plans.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development"
-> Reasoning: No mention of AI coding tools, GenAI capabilities, or AI-ready data infrastructure; role is architectural but tool-agnostic.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Mentor other engineers while leading tool selection, technology evaluation, and architectural roadmap development"
-> Reasoning: No mentions of AI tools, AI-assisted coding, or AI infrastructure requirements.
-
-**Run 3:** `none` ✓
-> Quote: "Drive platform evolution by designing sophisticated ETL/ELT pipelines and orchestrating them via Airflow"
-> Reasoning: Standard data warehouse/ETL architecture with no AI tools, GenAI, or AI-ready infrastructure signals.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
-> Reasoning: Uses implement + data quality indicating candidate owns quality practice and governance, not just using tools.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
-> Reasoning: Candidate owns quality/governance implementation at enterprise level.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
-> Reasoning: Candidate owns/implements quality practices and governance, not just tools in a stack.
-
-
-### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "enterprise-level data quality strategies and governance frameworks"
-> Reasoning: Governance and data quality framing suggest operational reliability and pipeline stability concerns, but no regulatory/compliance-dominant language.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-ready data foundations, GenAI applications, or any AI skills expected of the candidate.
 
 **Run 2:** `none` ✗
-> Quote: "Lead enterprise-wide data warehouse architecture and implement high-performance data processing systems."
-> Reasoning: Framing emphasizes delivery and architecture capability-building, not risk/reliability/compliance language.
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no reference to AI coding tools, AI-ready data foundations, or candidate expectations to work with AI; the company's domain is irrelevant to candidate skill requirements.
 
-**Run 3:** `moderate` ✓
-> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation"
-> Reasoning: Governance and data quality suggest operational reliability concerns, but no explicit compliance/regulatory/audit language.
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectation for the candidate to use AI coding tools, build AI infrastructure, or work with AI/ML systems.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: The 'Implement' action verb frames data quality as an owned responsibility, not merely a skill or tool to know.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: The action verb 'implement' in the responsibilities section frames data quality as something the candidate owns and defines, not a tool to use from a list.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as something the candidate owns and implements, not merely as a tool in their skillset.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance signal that operational reliability is a concern, but the overall framing emphasises architecture and leadership over risk prevention or compliance.
+
+**Run 2:** `moderate` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are core concerns, but the JD lacks regulatory, compliance, or audit language that would signal high loss aversion.
+
+**Run 3:** `moderate` ✗
+> Quote: "Implement enterprise-level data quality strategies and governance frameworks across the organisation."
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance emphasis indicates concern for operational reliability but lacks explicit compliance, regulatory, or risk-prevention language.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

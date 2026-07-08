@@ -5,6 +5,7 @@
 ```
 # Analytics Engineer (L5) - Localization — Netflix
 
+**URL:** https://explore.jobs.netflix.net/careers/job/790315651282?microsite=netflix.com&domain=netflix.com
 **Location:** Amsterdam, Netherlands
 **Date Posted:** 2026-06-27
 
@@ -44,182 +45,215 @@ We are an equal-opportunity employer and celebrate diversity, recognizing that d
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 5 | 4 | 4 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | mixed | 100% |
-| stakeholder_orientation | mixed | product | product | 33% |
-| autonomy_level | strategic | strategic | strategic | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | velocity | 33% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 5 | 4 | 4 | 33% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | recruiter | mixed | mixed | 33% | ✓ |
+| stakeholder_orientation | product | product | product | product | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | absent | absent | 33% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "improve foundational data models and accelerate productization of data insights"
+**Run 1:** `rigour` ✓
+> Quote: "improve foundational data models"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize designing, developing, and improving foundational data models with technical rigour, with only one velocity signal (accelerate productization) amid multiple rigour-oriented technical framing.
+> Reasoning: The JD emphasizes engineering practices like observability (instrumentation, telemetry frameworks), modular design, and foundational improvements (3 rigour signals) more than speed or delivery pace (1 velocity signal in 'accelerate productization').
 
-**Run 2:** `rigour`
-> Quote: "design and develop analytics tools and systems to create more member value via localization expansion and quality improvements"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize designing scalable systems, improving foundational models, and quality improvements—hallmarks of rigour-oriented work—with no signals of speed or velocity emphasis.
-
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "developing instrumentation and telemetry frameworks for algorithms to defining key metrics"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize technical rigor through specific framework design and metric definition with no language about speed, iteration pace, or rapid delivery.
+> Reasoning: The responsibilities emphasize designing frameworks, defining metrics, and improving foundational models, which reflect a structured, architecture-focused orientation rather than speed or iteration pace.
+
+**Run 3:** `velocity` ✗
+> Quote: "accelerate productization of data insights"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize speed of delivery with 'accelerate productization' as a core framing and no signals for data quality, testing, governance, compliance, or reliability.
+
+⚠ **LLM inconsistency**: runs gave ['rigour', 'rigour', 'velocity']
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "design and develop analytics tools and systems to create more member value via localization expansion and quality improvements"
-> Verified: ✓ found in JD
-> Reasoning: The role impacts member experience and product localization features rather than financial reporting, compliance, or regulatory requirements.
-
-**Run 2:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "create more member value via localization expansion and quality improvements"
 > Verified: ✓ found in JD
-> Reasoning: Netflix is an entertainment/streaming business where data errors affect user experience and product decisions, but lack the regulatory or financial reporting stakes of high-risk sectors.
+> Reasoning: The role affects business strategy and member experience through localization decisions but does not involve financial reporting, regulatory compliance, or direct P&L responsibility.
 
-**Run 3:** `moderate`
+**Run 2:** `moderate` ✓
 > Quote: "create more member value via localization expansion and quality improvements"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on analytics for member experience and localization strategy without regulatory, financial reporting, or compliance language typical of high-risk roles.
+> Reasoning: Data errors affect localization strategy decisions but lack explicit financial reporting, compliance, or regulatory language that would indicate high-risk scenarios.
+
+**Run 3:** `moderate` ✓
+> Quote: "enhance business strategies with automated data solutions"
+> Verified: ✓ found in JD
+> Reasoning: Data errors affect localization business strategy and decisions without direct financial reporting, regulatory, or compliance risk exposure.
 
 ### collaboration_width
+**Manual:** `4`
 
-**Run 1:** `5`
-> Quote: "team of engineers, scientists, product managers, and domain experts; other engineers, data engineers, and scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Five distinct named collaborator functions: product/software engineers, data engineers, data scientists, product managers, and domain experts.
+**Run 1:** `5` ✗
+> Quote: "engineers; data engineers; scientists; product managers; domain experts"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names five distinct partner functions: engineers, data engineers, scientists (from 'other engineers, data engineers, and scientists'), product managers, and domain experts.
 
-**Run 2:** `4`
-> Quote: "engineers, scientists, product managers; data engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named teams are identified: Product Managers, Engineers, Data Engineers, and Scientists (Data Scientists).
-
-**Run 3:** `4`
+**Run 2:** `4` ✓
 > Quote: "engineers; scientists; product managers; data engineers"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names four distinct partner functions: engineers, scientists, product managers, and data engineers.
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names four distinct partner functions across two passages: engineers, scientists, product managers, and data engineers.
+
+**Run 3:** `4` ✓
+> Quote: "engineers; scientists; product managers; data engineers"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions explicitly mentioned as collaboration partners: Engineers, Data Scientists, Product Managers, and Data Engineers.
 
 ⚠ **LLM inconsistency**: runs gave ['5', '4', '4']
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✗
 > Quote: "join our growing EMEA team"
 > Verified: ✓ found in JD
-> Reasoning: The team is explicitly described as 'growing' and foundations exist (foundational data models to improve), indicating a scaling mid-stage team rather than early-stage build or mature established function.
+> Reasoning: The JD describes an existing team that is expanding with no signals of greenfield infrastructure building or established scale, indicating a team in growth phase.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✗
 > Quote: "improve foundational data models and accelerate productization of data insights"
 > Verified: ✓ found in JD
-> Reasoning: The team is growing and has existing infrastructure to improve rather than building from scratch, indicating a mid-stage team with established analytics functions.
+> Reasoning: The team is established and growing with named tools and processes being improved and productized, indicating mid-stage maturity rather than early-stage building or mature scale.
 
-**Run 3:** `mid`
-> Quote: "join our growing EMEA team"
+**Run 3:** `mid` ✗
+> Quote: "improve foundational data models and accelerate productization of data insights"
 > Verified: ✓ found in JD
-> Reasoning: The team is explicitly described as growing with foundational models already in place, indicating mid-stage development past greenfield but not yet a large mature organization.
+> Reasoning: References to existing foundational data models and productization work indicate an established team growing and improving, not in early-stage build phase.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "Drive the direction and execution of your work, which span from developing instrumentation and telemetry frameworks for algorithms to defining key metrics to leveraging insights to drive strategy"
+**Run 1:** `recruiter` ✗
+> Quote: "Act as strategic partner for stakeholders and cross-functional collaborators to identify business opportunities and enhance business strategies with automated data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section mixes specific technical context (instrumentation frameworks, telemetry, defining key metrics) that signals hiring manager input with generic boilerplate phrases elsewhere.
+> Reasoning: The responsibilities section uses generic action verbs and strategic phrasing typical of recruiter-written JDs, lacking the technical specificity about daily work that comes from hiring managers.
 
-**Run 2:** `mixed`
+**Run 2:** `mixed` ✓
+> Quote: "developing instrumentation and telemetry frameworks for algorithms to defining key metrics"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity appears ('telemetry frameworks for algorithms', 'foundational data models') alongside generic language ('Act as strategic partner', 'Share your innovation'), indicating mixed authorship.
+
+**Run 3:** `mixed` ✓
 > Quote: "developing instrumentation and telemetry frameworks for algorithms to defining key metrics to leveraging insights to drive strategy"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about instrumentation, telemetry, and metrics is balanced against generic language like 'act as strategic partner' and 'enhance business strategies.'
+> Reasoning: Mix of technical specificity (instrumentation frameworks, key metrics definition, data model improvements) alongside generic partnership language suggests both hiring manager and recruiter input.
 
-**Run 3:** `mixed`
-> Quote: "Drive the direction and execution of your work, which span from developing instrumentation and telemetry frameworks for algorithms to defining key metrics to leveraging insights to drive strategy"
-> Verified: ✓ found in JD
-> Reasoning: Specific technical details like instrumentation frameworks and algorithm context indicate hiring manager input, but generic framing of driving direction and leveraging insights suggests recruiter involvement.
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `product`
 
-**Run 1:** `mixed`
-> Quote: "design and develop analytics tools and systems to create more member value via localization expansion and quality improvements; improve foundational data models and accelerate productization of data insights"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role genuinely serves both product audiences (member value through localization features) and internal data infrastructure audiences (improving foundational data models) with roughly equal emphasis.
-
-**Run 2:** `product`
-> Quote: "partner with a talented cross-functional team of engineers, scientists, product managers, and domain experts to shape localization strategy"
-> Verified: ✓ found in JD
-> Reasoning: The primary audience is the product and engineering teams working on localization, with emphasis on shaping product strategy through analytics tools and systems.
-
-**Run 3:** `product`
+**Run 1:** `product` ✓
 > Quote: "create more member value via localization expansion and quality improvements"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary impact is improving member experience through localization analytics with product managers as key partners, indicating product-focused orientation.
+> Reasoning: The role's primary framing emphasizes delivering member value and shaping localization strategy, serving product and localization teams rather than financial, data platform, or internal-data audiences.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'product', 'product']
+**Run 2:** `product` ✓
+> Quote: "shape localization strategy and deliver impact"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes shaping localization product strategy and partnering with product managers, indicating product-team orientation rather than commercial or financial stakeholders.
+
+**Run 3:** `product` ✓
+> Quote: "create more member value via localization expansion and quality improvements"
+> Verified: ✓ found in JD
+> Reasoning: Primary focus is member experience and product impact through localization features rather than commercial GTM, finance, or internal data infrastructure.
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `strategic` ✓
 > Quote: "Drive the direction and execution of your work"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly expects direction-setting (drive direction, shape strategy) with high autonomy to navigate ambiguity, not execution of others' priorities.
+> Reasoning: The JD explicitly states the role should 'drive the direction' and emphasizes 'a high degree of autonomy,' indicating the candidate is expected to set direction and shape strategy.
 
-**Run 2:** `strategic`
+**Run 2:** `strategic` ✓
 > Quote: "Drive the direction and execution of your work"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly drives direction and execution with high autonomy to set strategy and metrics, rather than executing work set by others.
+> Reasoning: The role explicitly uses strategic verbs ('drive direction', 'design and develop', 'shape') and references 'high degree of autonomy' in defining priorities and direction.
 
-**Run 3:** `strategic`
-> Quote: "Drive the direction and execution of your work, which span from developing instrumentation and telemetry frameworks for algorithms to defining key metrics"
+**Run 3:** `strategic` ✓
+> Quote: "Drive the direction and execution of your work"
 > Verified: ✓ found in JD
-> Reasoning: The role uses 'drive' and 'defining' to signal strategic ownership of direction and priorities, reinforced by explicit autonomy signal in About You section.
+> Reasoning: The role explicitly owns direction-setting, operates as a strategic partner with high autonomy for informed decision-making, rather than executing others' priorities.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "developing instrumentation and telemetry frameworks for algorithms"
-> Reasoning: Frameworks described are for algorithmic instrumentation/telemetry, not AI infrastructure, GenAI responsibilities, or AI tooling signals.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "developing instrumentation and telemetry frameworks for algorithms"
-> Reasoning: No explicit AI/ML signals (AI-ready, semantic model, GenAI, text-to-SQL); frameworks for algorithms are ambiguous without confirmed AI context.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI infrastructure expected of the candidate.
 
-**Run 3:** `none` ✓
-> Quote: "developing instrumentation and telemetry frameworks for algorithms"
-> Reasoning: No explicit AI tool usage (Copilot, Claude Code) or AI infrastructure building responsibility mentioned.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, or AI-powered data infrastructure that candidates would need to demonstrate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While the JD mentions algorithms in the context of instrumentation frameworks, it contains no signals for AI tool usage or building AI data infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "quality improvements"
-> Reasoning: Quality mentioned as outcome but lacks ownership verbs (own, ensure, define, implement, establish) and no testing tools or data contracts specified.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "quality improvements mentioned without ownership verb"
-> Reasoning: Quality framed as outcome (member value) rather than owned responsibility with verbs like ensure/define/implement/establish.
+**Run 1:** `responsibility` ✗
+> Quote: "developing instrumentation and telemetry frameworks for algorithms"
+> Verified: ✓ found in JD
+> Reasoning: Instrumentation and telemetry (observability) are framed as something the candidate develops and owns via an action verb, indicating responsibility-level ownership rather than a tool requirement.
 
-**Run 3:** `absent` ✓
-> Quote: "design and develop analytics tools and systems to create more member value via localization expansion and quality improvements"
-> Reasoning: Quality improvements stated but no ownership verb (own/ensure/define/implement) or testing tool explicitly listed.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: While 'quality improvements' appear as a goal in the context, testing, data contracts, observability, or data quality frameworks are not assigned as candidate responsibilities.
 
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality signal in responsibilities section."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No mention of testing frameworks, data contracts, observability, data quality practices, SLOs, or reliability metrics anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'absent']
 
 ### loss_aversion_framing
+**Manual:** ``
+
 **Run 1:** `none` ✗
-> Quote: "create more member value via localization expansion and quality improvements"
-> Reasoning: Primary framing emphasizes delivery impact and expansion, not operational reliability fears or compliance/trust concerns.
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in terms of delivering member value and impact through expansion and improvements, with no language about preventing bad outcomes, reliability, compliance, or risk management.
 
-**Run 2:** `moderate` ✓
-> Quote: "developing instrumentation and telemetry frameworks for algorithms"
-> Reasoning: Telemetry and instrumentation signal operational reliability concerns (monitoring, observability) rather than compliance/regulatory dominance.
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role around creating member value and delivering impact rather than preventing failures or managing compliance and regulatory risk.
 
-**Run 3:** `moderate` ✓
-> Quote: "developing instrumentation and telemetry frameworks for algorithms"
-> Reasoning: Instrumentation and telemetry frameworks signal operational reliability/monitoring focus rather than pure delivery or compliance-audit framing.
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role around building and delivering analytics tools with no emphasis on preventing bad outcomes, compliance exposure, or stakeholder trust.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

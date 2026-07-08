@@ -5,6 +5,7 @@
 ```
 # Analytics Engineer - Revenue Operations — Mollie
 
+**URL:** https://jobs.ashbyhq.com/mollie/06baf630-1c65-4b77-b7fa-35c65b43447d
 **Location:** Amsterdam; Milan
 **Date Posted:** 2026-06-27
 
@@ -86,190 +87,218 @@ Grow your way
 
 At Mollie, growth is personal. We believe everyone should have the chance to develop their skills, explore new challenges and shape their career on their own terms.
 
-You'll get regular feedback and performance reviews to support your development, with fair and transparent salary reviews along the way. Many Mollies move into new roles or take on new projects to stretch themselves, and we actively hire from within to help …[truncated]
+You'll get regular feedback and performance reviews to support your development, with fair and transparent salary reviews along the way. Many Mollies move into new roles or take on…[truncated]
 ```
 
 ---
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | mixed | rigour | rigour | 33% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 4 | 4 | 4 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | mixed | 33% |
-| stakeholder_orientation | commercial | commercial | commercial | 100% |
-| autonomy_level | mixed | strategic | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | velocity | rigour | 33% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | mixed | mixed | 33% | ✓ |
+| stakeholder_orientation | commercial | commercial | commercial | commercial | 100% | ✓ |
+| autonomy_level | mixed | strategic | strategic | strategic | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `mixed`
-> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests. Over time, the expectation is that the team shifts from reactive to proactive, and this role is central to making that happen."
+**Run 1:** `rigour` ✓
+> Quote: "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes both velocity signals (shift from reactive to proactive, fast-moving environment, priorities shift) and rigour signals (standardised reporting, source of truth, maintaining models), creating a genuine combination of both orientations.
+> Reasoning: The responsibilities emphasise standardisation, data models, and systematic improvement rather than speed of delivery.
 
-**Run 2:** `rigour`
-> Quote: "apply basic engineering best practices in your work"
+**Run 2:** `velocity` ✗
+> Quote: "Comfort working in a fast-moving, commercially oriented environment where priorities shift and ambiguity is part of the job"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize standardization and best practices over speed; the single velocity signal ('fast-moving, commercially oriented environment') is outweighed by multiple rigour signals including data modelling concepts, engineering practices, and centralised reporting standards.
+> Reasoning: The JD emphasizes speed and commercial pace as core working conditions with explicit velocity language ('fast-moving', 'priorities shift', 'ambiguity'), while rigour signals like data models and standardization are outputs rather than core methodological expectations.
 
-**Run 3:** `rigour`
-> Quote: "A working understanding of data modelling concepts, with the ability to apply basic engineering best practices in your work"
+**Run 3:** `rigour` ✓
+> Quote: "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize maintaining data models, establishing standardized reporting, and serving as a source of truth—core data quality and engineering best practices—while fast-paced work environment is mentioned as a comfort requirement rather than a primary orientation.
+> Reasoning: The responsibilities emphasize standardization, governance, and establishing best practices rather than shipping speed or iteration pace.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'rigour', 'rigour']
+⚠ **LLM inconsistency**: runs gave ['rigour', 'velocity', 'rigour']
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance."
-> Verified: ✓ found in JD
-> Reasoning: The role impacts operational and commercial decisions without involving financial reporting, regulatory compliance, or public-facing risk, placing it at moderate risk.
-
-**Run 2:** `moderate`
-> Quote: "feeds directly into how commercial teams make decisions, assign leads, and manage performance"
-> Verified: ✓ found in JD
-> Reasoning: Data errors affect business and commercial operations decisions but not regulatory reporting or financial compliance; Revenue Operations serves GTM/sales outcomes rather than financial or regulatory processes.
-
-**Run 3:** `moderate`
-> Quote: "The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance."
-> Verified: ✓ found in JD
-> Reasoning: While Mollie is a fintech company, this particular role focuses on commercial decision-making (GTM, sales, customer success) rather than financial reporting, compliance, or regulatory concerns.
-
-### collaboration_width
-
-**Run 1:** `4`
-> Quote: "serves around 200 internal stakeholders across sales, customer success, marketing, and partnerships"
-> Verified: ✓ found in JD
-> Reasoning: Four distinct external collaboration partners are explicitly named: sales, customer success, marketing, and partnerships.
-
-**Run 2:** `4`
-> Quote: "across sales, customer success, marketing, and partnerships"
-> Verified: ✓ found in JD
-> Reasoning: Four explicitly named partner functions are listed as primary stakeholders Revenue Operations serves.
-
-**Run 3:** `4`
-> Quote: "sales, customer success, marketing, and partnerships"
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly names four distinct partner functions that Revenue Operations serves: sales, customer success, marketing, and partnerships.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "RevOps has recently adopted a full domain model and is being rebuilt as a proper product and engineering function. The domain is actively growing and maturing."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The data function exists with named tools in responsibilities (HubSpot models, Omni dashboards) and is actively restructuring, indicating mid-stage maturity rather than early-stage greenfield or mature-stage stability.
-
-**Run 2:** `mid`
-> Quote: "The domain is actively growing and maturing. RevOps has recently adopted a full domain model and is being rebuilt as a proper product and engineering function."
-> Verified: ✓ found in JD
-> Reasoning: Infrastructure exists (HubSpot, Omni, BI tools) and is being actively scaled and restructured; the team has moved beyond early-stage but is not yet described as established at scale.
-
-**Run 3:** `mid`
-> Quote: "RevOps has recently adopted a full domain model and is being rebuilt as a proper product and engineering function."
-> Verified: ✓ found in JD
-> Reasoning: Named tools appear in the responsibilities section (HubSpot, Omni), and the JD indicates active growth and maturation of the RevOps function with real opportunities to shape direction.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni"
-> Verified: ✓ found in JD
-> Reasoning: The precise articulation of a specific operational problem (dashboard sprawl), named solution (Omni consolidation), and domain context reflects hands-on experience with RevOps analytics work rather than generic boilerplate.
-
-**Run 2:** `hiring_manager`
-> Quote: "Own and maintain HubSpot data models"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities contain tool-specific context and domain expertise (HubSpot models, GTM domains, Merchant Sales, Omni) that indicates authorship by someone performing this work, not generic recruiter language.
-
-**Run 3:** `mixed`
-> Quote: "Own and maintain HubSpot data models"
-> Verified: ✓ found in JD
-> Reasoning: Specific tool and domain context (HubSpot, Omni, CSM, Merchant Sales) indicates hiring manager input, but generic boilerplate phrases in the requirements section suggest recruiter contributions.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `commercial`
-> Quote: "feeds directly into how commercial teams make decisions, assign leads, and manage performance"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary audience and impact is explicitly framed around commercial team decision-making, GTM enablement, and sales/customer success operations rather than product, finance, or internal platform work.
-
-**Run 2:** `commercial`
+**Run 1:** `moderate` ✓
 > Quote: "Revenue Operations at Mollie serves around 200 internal stakeholders across sales, customer success, marketing, and partnerships. The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance."
 > Verified: ✓ found in JD
-> Reasoning: Primary audience is explicitly GTM and commercial functions (sales, CSM, marketing, partnerships); role purpose is to enable commercial decision-making and pipeline management.
-
-**Run 3:** `commercial`
-> Quote: "The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance."
-> Verified: ✓ found in JD
-> Reasoning: Revenue Operations explicitly serves sales, customer success, marketing, and partnerships to support GTM motion and commercial decision-making.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests."
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership (defining how analytics is delivered, establishing standardised reporting, defining success metrics) with execution (maintain dashboards, deliver ad hoc analysis), making it genuinely mixed rather than purely strategic or execution-focused.
-
-**Run 2:** `strategic`
-> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests."
-> Verified: ✓ found in JD
-> Reasoning: Role is explicitly positioned to define direction and shape analytics delivery, not merely execute on assigned work; includes 'define success metrics' and ownership of domain reporting direction.
-
-**Run 3:** `mixed`
-> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests."
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic elements (defining success metrics, shaping analytics delivery, reducing sprawl, driving team maturation) with execution elements (maintaining dashboards and models, delivering ad hoc analysis).
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'mixed']
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "feeds directly into how commercial teams make decisions, assign leads, and manage performance"
-> Reasoning: No AI coding tools, infrastructure, or AI-first practices mentioned; standard analytics role.
-
-**Run 2:** `none` ✓
-> Quote: "(no AI skill phrase present)"
-> Reasoning: No mentions of AI tools, AI-assisted coding, GenAI infrastructure, or AI-readiness.
-
-**Run 3:** `none` ✓
-> Quote: "No AI-related phrases detected"
-> Reasoning: No mention of AI tools, GenAI infrastructure, or AI-assisted responsibilities
-
-
-### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni"
-> Reasoning: Standards and consolidation framing without explicit testing ownership, quality practices, or data contracts.
-
-**Run 2:** `absent` ✓
-> Quote: "(no testing/quality ownership signal)"
-> Reasoning: Data quality is implicit in 'source of truth' but no explicit ownership verbs (own/ensure/define/implement/establish) paired with testing/quality.
-
-**Run 3:** `absent` ✓
-> Quote: "Establishing centralised, standardised reporting"
-> Reasoning: Standardization effort with no explicit testing responsibility or quality ownership verbs
-
-
-### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "serving as the source of truth for commercial stakeholders"
-> Reasoning: Trustworthiness and reliability matter (high stakes for business decisions), but no compliance/regulatory language or operational incident framing.
+> Reasoning: While Mollie is a fintech company, this role supports commercial operations decisions without explicit financial reporting, compliance, or regulatory responsibilities, placing it at moderate risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "serving as the source of truth for commercial stakeholders; feeds directly into how commercial teams make decisions, assign leads, and manage performance"
-> Reasoning: Operational reliability framing around data accuracy impacting business decisions, without explicit regulatory or compliance language.
+> Quote: "The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance"
+> Verified: ✓ found in JD
+> Reasoning: Data errors affect commercial decision-making (GTM, sales, customer success) without directly impacting financial reporting, regulatory compliance, or public-facing products, placing this in the moderate risk category.
 
 **Run 3:** `moderate` ✓
-> Quote: "serving as the source of truth for commercial stakeholders; feeds directly into how commercial teams make decisions, assign leads, and manage performance"
-> Reasoning: Data quality has operational consequences for business decisions, but primary framing is delivery excellence not compliance
+> Quote: "The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance."
+> Verified: ✓ found in JD
+> Reasoning: Data errors affect business and commercial decisions without regulatory, compliance, or direct financial reporting consequences typical of high-risk domains.
 
+### collaboration_width
+**Manual:** `4`
+
+**Run 1:** `4` ✓
+> Quote: "sales; customer success; marketing; partnerships"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves four distinct named functions: sales, customer success, marketing, and partnerships.
+
+**Run 2:** `4` ✓
+> Quote: "sales, customer success, marketing, and partnerships"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named partner functions are explicitly listed as the primary stakeholders served by Revenue Operations.
+
+**Run 3:** `4` ✓
+> Quote: "sales; customer success; marketing; partnerships"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names four distinct functions as primary stakeholders.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "RevOps has recently adopted a full domain model and is being rebuilt as a proper product and engineering function. The domain is actively growing and maturing."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The team has existing infrastructure (HubSpot models, dashboards) being formalised and expanded, with space to shape future direction, indicating mid-stage maturity.
+
+**Run 2:** `mid` ✓
+> Quote: "RevOps has recently adopted a full domain model and is being rebuilt as a proper product and engineering function"
+> Verified: ✓ found in JD
+> Reasoning: The function exists and has been formally rebuilt with named tools and domain models, but is still actively growing and shifting from reactive to proactive, indicating mid-stage maturity.
+
+**Run 3:** `mid` ✓
+> Quote: "RevOps has recently adopted a full domain model and is being rebuilt as a proper product and engineering function."
+> Verified: ✓ found in JD
+> Reasoning: The team has existing infrastructure and tooling but is actively rebuilding and maturing, indicating mid-stage growth rather than early establishment or full maturity.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `hiring_manager` ✗
+> Quote: "Reduce dashboard sprawl by establishing centralised, standardised reporting in Omni"
+> Verified: ✓ found in JD
+> Reasoning: The responsibility identifies a specific operational problem (dashboard sprawl) and company-specific solution (Omni), requiring insider domain knowledge rather than generic boilerplate.
+
+**Run 2:** `mixed` ✓
+> Quote: "Own and maintain HubSpot data models"
+> Verified: ✓ found in JD
+> Reasoning: Specific technical context (HubSpot models, Omni, named GTM domains like CSM and Merchant Sales) appears alongside generic action verbs ('deliver', 'support'), suggesting dual authorship.
+
+**Run 3:** `mixed` ✓
+> Quote: "Own and maintain HubSpot data models"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities contain specific technical problems and named tools with context, mixed with generic boilerplate language in the requirements section.
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+
+### stakeholder_orientation
+**Manual:** `commercial`
+
+**Run 1:** `commercial` ✓
+> Quote: "Revenue Operations at Mollie serves around 200 internal stakeholders across sales, customer success, marketing, and partnerships."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves commercial functions (sales, customer success, marketing) to support GTM decisions and performance management.
+
+**Run 2:** `commercial` ✓
+> Quote: "The analytics work done here feeds directly into how commercial teams make decisions, assign leads, and manage performance"
+> Verified: ✓ found in JD
+> Reasoning: Primary responsibilities center on serving GTM, sales, customer success, and commercial teams making go-to-market decisions, with revenue operations explicitly in the role title.
+
+**Run 3:** `commercial` ✓
+> Quote: "Revenue Operations at Mollie serves around 200 internal stakeholders across sales, customer success, marketing, and partnerships."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves GTM-related functions in support of commercial operations, revenue decision-making, and lead management.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `strategic` ✗
+> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests. Over time, the expectation is that the team shifts from reactive to proactive, and this role is central to making that happen."
+> Verified: ✓ found in JD
+> Reasoning: The role is explicitly framed as shaping analytics delivery and driving the team from reactive to proactive, which are core strategic responsibilities.
+
+**Run 2:** `strategic` ✗
+> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around defining direction ('shape', 'own', 'define success metrics') and shifting the function from reactive to proactive, beyond executing assigned work.
+
+**Run 3:** `strategic` ✗
+> Quote: "There is real space here to shape how analytics is delivered to commercial stakeholders, not just execute on requests."
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as setting direction and defining how analytics is delivered, not executing against pre-defined scope.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`strategic`
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions company-level AI philosophy but makes no specific demands on the candidate's AI skills, tool usage, or for building AI infrastructure.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While the company philosophy mentions AI, the JD contains no specific expectations for the candidate to use AI tools, build AI-ready infrastructure, or demonstrate AI skills.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The AI section describes company philosophy and culture, not expected candidate skills; no signals like AI-assisted coding, tool usage, or AI infrastructure work appear in role expectations.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal anywhere in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: There is no mention of testing frameworks, data quality, data contracts, observability, or related practices in the responsibilities or requirements.
+
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal appears in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD does not mention testing frameworks, data contracts, data quality tools, or observability practices as part of the role's responsibilities.
+
+**Run 3:** `absent` ✗
+> Quote: "No testing practice mentioned."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD contains no explicit mentions of testing frameworks, data quality ownership, data contracts, or observability practices.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames the role around delivering analytics for commercial operations without explicit risk, compliance, or trust-building language.
+
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around delivery capability and commercial impact rather than risk prevention, compliance, or safeguarding stakeholder trust.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The role is framed in terms of capability and delivery to commercial stakeholders, not in terms of preventing bad outcomes or managing risk.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

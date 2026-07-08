@@ -60,12 +60,15 @@ Not explicitly listed — technical requirements folded into required qualificat
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | moderate | high | high | 33% | ✓ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | mixed | 33% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | execution | execution | execution | 100% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | mixed | execution | mixed | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | tool_listed | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -75,75 +78,75 @@ Not explicitly listed — technical requirements folded into required qualificat
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "keeping domain outputs consistent, tested, and discoverable"
+> Quote: "well-documented, quality-assured data products"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, consistency, and data quality throughout, with no velocity-oriented language present.
+> Reasoning: The JD emphasizes quality assurance, testing, documentation, consistency, and data contracts throughout, with no velocity language like 'fast-paced', 'ship quickly', or 'iteration speed'.
 
 **Run 2:** `rigour` ✓
-> Quote: "keeping domain outputs consistent, tested, and discoverable"
+> Quote: "Deep care for data quality, trust, and discoverability, building models others can rely on"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, consistency, discoverability, and quality assurance throughout (tested outputs, quality-assured data products, deep care for data quality, testing and documentation), with no velocity signals present.
+> Reasoning: Multiple explicit signals around testing, documentation, quality assurance, and consistency dominate the JD with no velocity language present.
 
 **Run 3:** `rigour` ✓
 > Quote: "keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit quality, testing, and governance signals dominate the responsibilities with no velocity language.
+> Reasoning: The JD emphasizes testing, consistency, and discoverability as core expectations with no competing velocity signals.
 
 ### domain_risk
 **Manual:** `high`
 
 **Run 1:** `moderate` ✗
-> Quote: "risk scoring"
-> Verified: ✓ found in JD
-> Reasoning: While SumUp is a fintech company and risk scoring is mentioned, the JD does not explicitly use regulatory, compliance, or financial reporting language that would elevate this to high risk.
-
-**Run 2:** `high` ✓
-> Quote: "merchant activity, product adoption, lifecycle events, and risk scoring"
-> Verified: ✓ found in JD
-> Reasoning: SumUp is fintech; errors in merchant activity modeling and risk scoring directly affect financial operations and regulatory compliance.
-
-**Run 3:** `high` ✓
 > Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring"
 > Verified: ✓ found in JD
-> Reasoning: Risk scoring in a fintech company carries direct regulatory and financial implications for merchant approval decisions.
+> Reasoning: These are business analytics domains without explicit financial reporting, compliance, or regulatory framing, despite SumUp's fintech context.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']
+**Run 2:** `moderate` ✗
+> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring"
+> Verified: ✓ found in JD
+> Reasoning: While SumUp is a fintech company, the JD emphasizes building business domain models without explicit financial reporting, compliance, or regulatory language.
+
+**Run 3:** `moderate` ✗
+> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring"
+> Verified: ✓ found in JD
+> Reasoning: The role includes fintech-sensitive domains like risk scoring, but the JD frames impact in business terms rather than regulatory or compliance language.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
 ### collaboration_width
 **Manual:** `4`
 
 **Run 1:** `4` ✓
-> Quote: "Product Managers, Engineers, Analysts, and Data Scientists"
+> Quote: "Product Managers; Engineers; Analysts; Data Scientists"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names four distinct functions as collaboration partners: Product (Managers), Engineering, Analytics, and Data Science.
+> Reasoning: Four distinct named functions are explicitly listed as collaboration partners in the required qualifications.
 
 **Run 2:** `4` ✓
-> Quote: "Comfort working across squads with Product Managers, Engineers, Analysts, and Data Scientists"
+> Quote: "Product Managers, Engineers, Analysts, and Data Scientists"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named functions are explicitly listed as collaboration partners: Product Managers, Engineers, Analysts, and Data Scientists.
+> Reasoning: Four distinct named functions are explicitly listed as collaboration partners in the required qualifications.
 
 **Run 3:** `4` ✓
-> Quote: "Product Managers; Engineers; Analysts; Data Scientists"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions/teams are explicitly listed as collaboration partners.
+> Quote: "Product Managers, Engineers, Analysts, and Data Scientists"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct partner functions are explicitly named in the required qualifications section.
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "helping establish durable ownership, consistent definitions, and a shared catalogue of data products"
+> Quote: "maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: The mention of 'helping establish' durable ownership and governance indicates an evolving team still building its organizational structure, rather than an early-stage greenfield or mature, fully-formed operation.
+> Reasoning: Named tools (dbt, Snowflake, Iceberg), existing infrastructure, established patterns, and emerging governance language indicate a mid-stage data function with operational maturity but growing governance structure.
 
 **Run 2:** `mid` ✗
 > Quote: "Contribute to SumUp's broader data domain strategy, helping establish durable ownership, consistent definitions, and a shared catalogue of data products"
 > Verified: ✓ found in JD
-> Reasoning: Existing infrastructure is implied (Snowflake, dbt, staging pipelines, governed domains) and the role involves scaling governance and establishing shared standards across multiple business domains.
+> Reasoning: Language about scaling existing strategy and building shared infrastructure indicates an established data function in growth mode, not early-stage.
 
 **Run 3:** `mid` ✗
-> Quote: "Implement technical improvements including incremental processing strategies, performance optimisations, and scalable data architecture"
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: Focus on optimizing and scaling existing infrastructure indicates functional systems and tools already in place, not greenfield building.
+> Reasoning: Established infrastructure, named tools in responsibilities, and governance practices indicate a functioning data team that is growing and formalizing.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -151,100 +154,118 @@ Not explicitly listed — technical requirements folded into required qualificat
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
-> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
+> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities demonstrate technical specificity (data contracts, staging pipelines, modelling conventions, domain-driven design) and named business domains that only someone doing this job would articulate.
+> Reasoning: The technical specificity of event design, data contracts, staging pipelines, modelling conventions, incremental processing, and domain thinking demonstrates hands-on experience that only someone doing this work would articulate.
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
-> Verified: ✓ found in JD
-> Reasoning: The specific analytical constructs (KPI models, funnels, cohorts, segmentations), architectural terminology (insights layer, governed domains), and technical methodology (incremental processing strategies, modelling conventions) demonstrate direct experience from someone actively doing this work.
-
-**Run 3:** `mixed` ✗
 > Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring, building well-documented, quality-assured data products"
 > Verified: ✓ found in JD
-> Reasoning: Named business domains and specific technical outputs show domain knowledge, but generic phrases like 'quality-assured data products' and 'well-documented' indicate recruiter involvement.
+> Reasoning: Specific domain context and named technical methodologies (data contracts, incremental processing, dbt modelling conventions) indicate hiring manager authorship rather than recruiter boilerplate.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'mixed']
+**Run 3:** `hiring_manager` ✓
+> Quote: "maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities use technical specificity (data contracts, modelling conventions, staging pipelines, tested outputs) that suggests hands-on familiarity with the actual work.
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
+**Run 1:** `internal_data` ✓
 > Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is building data infrastructure and reusable analytics tools that serve other data consumers and analysts, not directly serving commercial, product, or finance stakeholders.
+> Reasoning: The primary emphasis is on building reusable analytics infrastructure and a shared catalogue of data products for internal consumption, not serving a specific commercial, product, or finance function.
 
-**Run 2:** `internal_data` ✗
+**Run 2:** `internal_data` ✓
 > Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes building infrastructure, shared catalogues, and reusable data products for internal data consumers rather than serving a specific business function like finance or commercial teams.
+> Reasoning: The emphasis on building reusable infrastructure and data products for other data consumers indicates the role primarily serves the data function itself.
 
-**Run 3:** `internal_data` ✗
+**Run 3:** `internal_data` ✓
 > Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
 > Verified: ✓ found in JD
-> Reasoning: The primary mission is building data infrastructure and governance for platform consumers rather than directly serving product, commercial, or finance teams.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+> Reasoning: The primary focus is building internal data infrastructure and reusable analytics products that enable other teams, not directly serving commercial or product teams.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `execution`
 
-**Run 1:** `execution` ✗
-> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize partnership, maintenance, and application of established patterns, framing the role as executing on defined work rather than independently setting direction.
-
-**Run 2:** `execution` ✗
+**Run 1:** `mixed` ✗
 > Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: The primary work verbs (maintain, apply, keep, model, build) are execution-focused; while event design involves collaboration, scope is determined by existing domain structures, business domains, and squad needs rather than self-directed strategic direction-setting.
+> Reasoning: The role combines strategic elements (partnering on event design, data contracts, modelling domains, establishing ownership) with execution elements (maintaining pipelines, applying established conventions).
 
-**Run 3:** `execution` ✗
+**Run 2:** `execution` ✓
 > Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions, and keeping domain outputs consistent, tested, and discoverable"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize maintaining existing systems, supporting squads, and applying established conventions, with direction set by partners rather than by the role.
+> Reasoning: The core responsibilities centre on maintaining, applying, and ensuring quality of existing systems rather than defining overall direction.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+**Run 3:** `mixed` ✗
+> Quote: "Contribute to SumUp's broader data domain strategy, helping establish durable ownership, consistent definitions, and a shared catalogue of data products"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic input on data domain strategy and ownership of the modeling layer with execution-oriented responsibilities for maintaining infrastructure and producing models.
+
+⚠ **Disagreement**: manual=`execution` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: ""
-> Reasoning: No AI tools, infrastructure, or GenAI responsibilities mentioned; standard analytics engineering and domain modeling work.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Model key business domains, including merchant activity, product adoption, lifecycle events, and risk scoring, building well-documented, quality-assured data products"
-> Reasoning: Standard analytics engineering work with no AI tooling, AI-first mindset, or GenAI infrastructure signals.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI/ML pipelines, GenAI applications, or AI skills appears anywhere in the job description.
 
-**Run 3:** `none` ✓
-> Quote: "Build and maintain the insights layer on top of governed domains, producing reusable KPI models, funnels, cohorts, and segmentations"
-> Reasoning: Standard analytics engineering work without AI tool or infrastructure expectations
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-enabled workflows, or AI data infrastructure.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, systems, or capabilities that the candidate should demonstrate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "building well-documented, quality-assured data products"
-> Reasoning: Candidate owns building and quality assurance of data products, with explicit ownership verb paired with quality expectation.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "keeping domain outputs consistent, tested, and discoverable"
-> Reasoning: Candidate owns quality practice through direct mention of testing and consistency as deliverable responsibilities.
+> Verified: ✓ found in JD
+> Reasoning: 'Tested' is framed as a characteristic of the outputs the role maintains (alongside 'consistent' and 'discoverable'), indicating ownership of ensuring test coverage rather than tool-listing.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `tool_listed` ✗
+> Quote: "Proficiency with dbt including testing, documentation, and modelling conventions"
+> Verified: ✓ found in JD
+> Reasoning: Testing appears in the skill requirements without framing as a defined practice the candidate owns or establishes.
+
+**Run 3:** `responsibility` ✗
 > Quote: "keeping domain outputs consistent, tested, and discoverable"
-> Reasoning: Candidate owns testing and quality assurance responsibilities explicitly
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as an owned responsibility (what the role keeps/maintains), not just a tool in the skill list.
 
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "keeping domain outputs consistent, tested, and discoverable"
-> Reasoning: Emphasis on operational consistency and discoverability suggests reliability and pipeline maintenance concerns rather than compliance/audit-primary framing.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "Partner with squads across the tribe on event design and data contracts, maintaining staging pipelines, applying modelling conventions"
-> Reasoning: Operational reliability emphasized through data contracts and pipeline stability, but no regulatory or compliance framing.
+**Run 1:** `moderate` ✗
+> Quote: "Deep care for data quality, trust, and discoverability, building models others can rely on"
+> Verified: ✓ found in JD
+> Reasoning: Quality and trust language appears throughout (quality-assured, tested, reliable), signaling operational reliability as a concern, but without explicit regulatory, compliance, or audit framing that would indicate high loss aversion.
 
-**Run 3:** `moderate` ✓
-> Quote: "governed domains"
-> Reasoning: Data governance and quality concerns drive the role, but no explicit compliance or regulatory framing
+**Run 2:** `moderate` ✗
+> Quote: "Deep care for data quality, trust, and discoverability, building models others can rely on"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes trustworthiness and reliability as core values, but without explicit compliance or regulatory framing.
 
+**Run 3:** `moderate` ✗
+> Quote: "Deep care for data quality, trust, and discoverability, building models others can rely on"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability and stakeholder trust as important but without explicit compliance or regulatory risk framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

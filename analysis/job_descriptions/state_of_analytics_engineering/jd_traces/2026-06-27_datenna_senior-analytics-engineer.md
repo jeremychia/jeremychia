@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Datenna BV
 
+**URL:** https://jobs.datenna.com/o/senior-analytics-engineer-3
 **Location:** Hybrid, Eindhoven, Noord-Brabant, Netherlands
 **Date Posted:** 2026-06-27
 
@@ -67,180 +68,207 @@ Note: Candidates must already reside in the Netherlands.
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | recruiter | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Implement data quality checks and governance practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasises data quality, governance, and software engineering best practices rather than speed or iteration—hallmark rigour signals.
+> Reasoning: Multiple rigour signals—governance, quality checks, best practices, documentation, CI/CD—dominate the responsibilities with no velocity language present.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Implement data quality checks and governance practices"
 > Verified: ✓ found in JD
-> Reasoning: Explicit data quality and governance signals (data quality checks, governance, documentation, best practices) dominate responsibilities with no velocity language present.
+> Reasoning: The responsibilities emphasize data quality, governance, best practices, and performance optimization with no velocity language in the responsibilities section.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Implement data quality checks and governance practices"
 > Verified: ✓ found in JD
-> Reasoning: Multiple rigour signals present (data quality, governance, software engineering best practices, CI/CD, version control, optimization) with no velocity language in the responsibilities section.
+> Reasoning: The responsibilities emphasize data quality, governance, documentation, and software engineering practices with no velocity-oriented language like 'fast-paced' or 'ship quickly'.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Impactful geopolitical intelligence work"
-> Verified: ✓ found in JD
-> Reasoning: While the work is described as impactful, the JD does not explicitly invoke financial reporting, regulatory, or compliance risk language that would classify as high risk.
-
-**Run 2:** `moderate`
-> Quote: "Datenna is a fast-growing tech scale-up combining cutting-edge OSINT and AI technologies focused on providing governments with insights into China's technological and economic landscape."
-> Verified: ✓ found in JD
-> Reasoning: Government intelligence work suggests high risk, but the JD lacks explicit regulatory, compliance, or financial terminology that would trigger the high-risk classification.
-
-**Run 3:** `moderate`
-> Quote: "Implement data quality checks and governance practices"
-> Verified: ✓ found in JD
-> Reasoning: Government intelligence work has high stakes for decision-making, but the JD lacks explicit regulatory, compliance, or financial reporting language that would trigger the high classification.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
-> Verified: ✓ found in JD
-> Reasoning: The JD mentions generic stakeholder collaboration but does not name specific functions like Product, Finance, Data Science, Engineering, or other discrete partner teams.
-
-**Run 2:** `0`
-> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
-> Verified: ✓ found in JD
-> Reasoning: Only generic 'stakeholders' mentioned with no named functions, teams, or partner groups explicitly identified.
-
-**Run 3:** `0`
-> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
-> Verified: ✓ found in JD
-> Reasoning: Only collaboration mention uses the generic term "stakeholders" with no named partner teams or distinct functions identified.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Verified: ✓ found in JD
-> Reasoning: The use of specific named tools (dbt, Databricks) in responsibilities and emphasis on maintaining and optimizing existing pipelines indicates an established data function with infrastructure already in place.
-
-**Run 2:** `mid`
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities with maintain/optimize focus indicates existing infrastructure and tooling at the growth stage, not greenfield or early phase.
-
-**Run 3:** `mid`
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Verified: ✓ found in JD
-> Reasoning: Named tools appearing in responsibilities and emphasis on maintaining existing infrastructure indicates an established data function that is growing, not greenfield.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Design efficient data models using techniques like star schema and snowflake schema"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities contain technical specificity about data modeling methods, named tools, and practices that only someone performing this work would articulate, beyond boilerplate action verbs.
-
-**Run 2:** `mixed`
-> Quote: "Design efficient data models using techniques like star schema and snowflake schema; Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical content including schema techniques and named tools appears alongside generic phrases like 'collaborate with stakeholders' and 'apply software engineering best practices'.
-
-**Run 3:** `mixed`
-> Quote: "Design efficient data models using techniques like star schema and snowflake schema"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities mix specific technical content (schema types, named tools like dbt and Databricks) with generic boilerplate verbs (collaborate, apply best practices).
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Maintain data documentation and catalogs to improve data discoverability"
-> Verified: ✓ found in JD
-> Reasoning: The role is focused on building and maintaining analytics infrastructure, documentation, and discoverability—serving internal data consumers rather than commercial, product, or finance teams.
-
-**Run 2:** `internal_data`
-> Quote: "Maintain data documentation and catalogs to improve data discoverability"
-> Verified: ✓ found in JD
-> Reasoning: Focus on data infrastructure, documentation, and discoverability directly serves data consumers and internal data platform users, not GTM, product, or finance audiences.
-
-**Run 3:** `internal_data`
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Verified: ✓ found in JD
-> Reasoning: Role focuses on building data infrastructure and modeling for internal consumption by the analytics team, not directly supporting commercial, product, or finance stakeholders.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
-> Verified: ✓ found in JD
-> Reasoning: The role receives scoped requirements from stakeholders and executes implementation; verbs are execution-focused (develop, maintain, implement, optimize) rather than strategic (define, establish, shape).
-
-**Run 2:** `execution`
-> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
-> Verified: ✓ found in JD
-> Reasoning: Role receives requirements from stakeholders and implements solutions against those requirements rather than setting overall direction or defining strategy.
-
-**Run 3:** `execution`
-> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize understanding externally-set requirements and delivering solutions within defined technical scope, not setting analytics strategy or priorities.
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Reasoning: Stack specifies standard data tools with no mention of AI coding tools or AI-ready infrastructure.
-
-**Run 2:** `none` ✓
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Reasoning: No AI tools or GenAI infrastructure mentioned; standard data engineering skills without AI signals.
-
-**Run 3:** `none` ✓
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Reasoning: Standard data engineering tools without AI signals.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Implement data quality checks and governance practices"
-> Reasoning: The verb 'implement' paired with 'data quality checks' signals ownership of the quality practice.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Implement data quality checks and governance practices"
-> Reasoning: Candidate owns quality implementation with explicit ownership verb 'implement' coupled with quality/governance practice.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Implement data quality checks and governance practices"
-> Reasoning: Explicit ownership of quality practice via 'implement' paired with 'data quality checks'.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
 > Quote: "Implement data quality checks and governance practices"
-> Reasoning: Governance and data quality emphasis indicate operational reliability concern, but lacks explicit compliance or regulatory framing.
+> Verified: ✓ found in JD
+> Reasoning: Intelligence work for government is inherently high-stakes, but the JD frames it through operational governance language rather than explicit compliance, regulatory, or audit framing typical of high-risk roles.
 
-**Run 2:** `none` ✗
-> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
-> Reasoning: Framing centers on delivery and technical maintenance, lacking regulatory/compliance or operational risk language.
+**Run 2:** `moderate` ✓
+> Quote: "Impactful geopolitical intelligence work"
+> Verified: ✓ found in JD
+> Reasoning: While the company serves governments with intelligence, the JD uses no explicit regulatory, compliance, or financial language that would elevate this to high-risk classification.
 
 **Run 3:** `moderate` ✓
-> Quote: "Implement data quality checks and governance practices"
-> Reasoning: Governance practices signal operational control and reliability concerns without explicit regulatory or audit language.
+> Quote: "providing governments with insights into China's technological and economic landscape"
+> Verified: ✓ found in JD
+> Reasoning: While government clients are served, the JD contains no explicit financial reporting, regulatory compliance, or audit language, making it moderate business intelligence risk rather than high-risk financial/compliance work.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']
+### collaboration_width
+**Manual:** `0`
+
+**Run 1:** `0` ✓
+> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
+> Verified: ✓ found in JD
+> Reasoning: No specific named teams, departments, or functions are identified; only generic 'stakeholders' is mentioned without naming any partner groups.
+
+**Run 2:** `0` ✓
+> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
+> Verified: ✓ found in JD
+> Reasoning: The JD uses generic terms like 'stakeholders' without naming specific teams or functions, so no named partnerships count toward collaboration width.
+
+**Run 3:** `0` ✓
+> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
+> Verified: ✓ found in JD
+> Reasoning: The collaboration reference uses generic 'stakeholders' without naming specific functions like Finance, Product, Engineering, or Data Science teams, resulting in a count of zero named partner teams.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Verified: ✓ found in JD
+> Reasoning: The 'maintain' verb combined with named tools (dbt, Databricks) in a responsibilities context indicates existing operational infrastructure being optimized and scaled, not early-stage building.
+
+**Run 2:** `mid` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Verified: ✓ found in JD
+> Reasoning: Named tools in responsibilities and responsibilities focused on maintaining/developing existing pipelines indicate an established data function with infrastructure already in place.
+
+**Run 3:** `mid` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize maintaining and optimizing existing infrastructure (dbt, documentation catalogs) rather than building from zero or establishing large sub-teams.
+
+### jd_authorship
+**Manual:** `recruiter`
+
+**Run 1:** `mixed` ✗
+> Quote: "Design efficient data models using techniques like star schema and snowflake schema"
+> Verified: ✓ found in JD
+> Reasoning: Some responsibilities show technical specificity (schema techniques, named tools, optimization) while others are generic boilerplate (collaborate, apply best practices), indicating mixed authorship.
+
+**Run 2:** `mixed` ✗
+> Quote: "Design efficient data models using techniques like star schema and snowflake schema"
+> Verified: ✓ found in JD
+> Reasoning: The presence of specific data modeling techniques alongside generic collaboration and best-practices language suggests both hiring manager technical specificity and recruiter boilerplate.
+
+**Run 3:** `mixed` ✗
+> Quote: "Design efficient data models using techniques like star schema and snowflake schema"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity (named schema techniques, specific tools) is present alongside generic phrases like 'Collaborate with stakeholders to understand data requirements', indicating mixed hiring manager and recruiter input.
+
+⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Maintain data documentation and catalogs to improve data discoverability"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities emphasize data infrastructure, quality, governance, and team enablement rather than serving commercial, product, finance, or external teams.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Maintain data documentation and catalogs to improve data discoverability"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities focus on data infrastructure, quality, and accessibility for internal data consumers rather than serving commercial, product, finance, or external stakeholders.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Maintain data documentation and catalogs to improve data discoverability"
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is building and maintaining data infrastructure and self-serve analytics rather than serving commercial, product, or finance teams directly.
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around implementing requirements identified by others rather than defining strategic direction or establishing priorities.
+
+**Run 2:** `execution` ✓
+> Quote: "Collaborate with stakeholders to understand data requirements and implement solutions"
+> Verified: ✓ found in JD
+> Reasoning: The analyst's work is scoped by stakeholder requirements rather than the analyst setting strategic direction for analytics delivery.
+
+**Run 3:** `execution` ✓
+> Quote: "Develop and maintain data transformation pipelines using dbt, SQL, and Python"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes developing, maintaining, and optimizing existing infrastructure using defined tools and practices rather than defining strategy or setting direction.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_user` ✗
+> Quote: "candidates are expected to use AI tools responsibly in daily work"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is explicitly expected to use AI coding assistants (Claude Code mentioned by name) as personal productivity tools, not to build AI infrastructure.
+
+**Run 2:** `ai_user` ✗
+> Quote: "candidates are expected to use AI tools responsibly in daily work"
+> Verified: ✓ found in JD
+> Reasoning: The preferred skills explicitly expect candidates to use AI coding assistants like Claude Code as a daily productivity tool.
+
+**Run 3:** `ai_user` ✗
+> Quote: "candidates are expected to use AI tools responsibly in daily work"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is explicitly expected to use AI coding assistants as a personal productivity tool in their daily work.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Implement data quality checks and governance practices"
+> Verified: ✓ found in JD
+> Reasoning: The verb 'implement' frames data quality checks as an owned responsibility the candidate will define and establish, not a tool listed in requirements.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Implement data quality checks and governance practices"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance are framed as responsibilities the candidate owns and implements, not as tools listed in a skills requirement.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Implement data quality checks and governance practices"
+> Verified: ✓ found in JD
+> Reasoning: The action verb 'Implement' indicates the candidate owns and is accountable for data quality and governance practices, not just using existing tools.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Implement data quality checks and governance practices"
+> Verified: ✓ found in JD
+> Reasoning: Quality checks and governance practices indicate concern for operational reliability and preventing data failures, but the framing is procedural rather than risk-centric or compliance-dominated.
+
+**Run 2:** `moderate` ✗
+> Quote: "Implement data quality checks and governance practices"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance are framed as operational practices to implement rather than as preventing specific bad outcomes or regulatory risk.
+
+**Run 3:** `moderate` ✗
+> Quote: "Implement data quality checks and governance practices"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and quality are concerns reflected in the data quality responsibility, but compliance or trust framing does not dominate the overall role positioning.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

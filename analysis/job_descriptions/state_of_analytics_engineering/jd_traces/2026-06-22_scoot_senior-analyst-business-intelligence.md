@@ -49,8 +49,11 @@ None explicitly listed.
 | collaboration_width | 2 | 0 | 0 | 0 | 100% | ✗ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
 | jd_authorship | recruiter | mixed | mixed | mixed | 100% | ✗ |
-| stakeholder_orientation |  | internal_data | internal_data | mixed | 33% | ✗ |
-| autonomy_level |  | execution | execution | execution | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | none | moderate | moderate | 33% | ✗ |
 
 ---
 
@@ -62,17 +65,17 @@ None explicitly listed.
 **Run 1:** `rigour` ✓
 > Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
 > Verified: ✓ found in JD
-> Reasoning: Quality is explicitly named as a core responsibility with no countervailing velocity signals present in the JD.
+> Reasoning: The explicit responsibility for 'quality and management' of data demonstrates a rigour-first orientation without any velocity language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, structure, and management as core responsibilities with no velocity language present, indicating a rigour-oriented role.
+> Reasoning: The responsibilities emphasize quality and structure as core expectations with no velocity language, positioning this as a rigour-oriented role.
 
 **Run 3:** `rigour` ✓
 > Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities explicitly emphasize quality and structure as core expectations, with no velocity-related language present.
+> Reasoning: The responsibilities emphasize quality, structure, and management as core expectations with no velocity language present.
 
 ### domain_risk
 **Manual:** `high`
@@ -80,17 +83,17 @@ None explicitly listed.
 **Run 1:** `moderate` ✗
 > Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
 > Verified: ✓ found in JD
-> Reasoning: The JD uses generic decision-support language without explicit regulatory, compliance, or financial reporting signals despite the airline industry context.
+> Reasoning: The role serves business decision-making without explicit financial reporting or regulatory language, indicating moderate risk from data errors.
 
 **Run 2:** `moderate` ✗
 > Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities focus on operational business intelligence and decision support without explicit financial reporting, regulatory, or compliance language, indicating moderate risk.
+> Reasoning: Data errors affect business decisions without explicit regulatory, compliance, or financial reporting consequences.
 
 **Run 3:** `moderate` ✗
-> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
+> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning"
 > Verified: ✓ found in JD
-> Reasoning: While airlines operate in regulated environments, the JD uses generic business intelligence language without mentioning compliance, financial reporting, or regulatory requirements.
+> Reasoning: Data errors would affect business decisions but the JD contains no financial reporting, regulatory, compliance, or audit language.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
@@ -98,19 +101,19 @@ None explicitly listed.
 **Manual:** `2`
 
 **Run 1:** `0` ✗
-> Quote: ""
+> Quote: "Ability to understand and explain complex data and effective working as a liaison between technical and non-technical groups."
 > Verified: ✓ found in JD
-> Reasoning: No named teams or functions are explicitly identified; references to 'end-user requirements' and 'technical and non-technical groups' are generic stakeholder descriptions that do not count as named collaborating teams.
+> Reasoning: No distinct named partner teams or functions are explicitly identified; 'technical and non-technical groups' is too generic to count as named collaborators.
 
 **Run 2:** `0` ✗
-> Quote: "effective working as a liaison between technical and non-technical groups"
-> Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams, functions, or stakeholder groups are identified; collaboration language refers only to generic 'technical and non-technical groups' which do not count per the classification rules.
+> Quote: "No named teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references only generic 'end-user requirements' and 'technical and non-technical groups' without naming specific functions or teams.
 
 **Run 3:** `0` ✗
-> Quote: "No named partner teams identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD mentions end-users and liaison with technical and non-technical groups but does not name any specific functions or teams.
+> Quote: "effective working as a liaison between technical and non-technical groups"
+> Verified: ✓ found in JD
+> Reasoning: The JD references only generic collaboration with unspecified groups but does not name specific partner functions, teams, or departments.
 
 ⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
@@ -120,17 +123,17 @@ None explicitly listed.
 **Run 1:** `mid` ✗
 > Quote: "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions."
 > Verified: ✓ found in JD
-> Reasoning: Existing BI infrastructure and tools (Tableau, BigQuery, SQL Server) are being maintained and managed, indicating an established data function rather than early-stage greenfield or a mature enterprise team.
+> Reasoning: The language emphasizes maintaining and managing existing infrastructure rather than building from scratch or being an established large-scale operation.
 
 **Run 2:** `mid` ✗
 > Quote: "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions."
 > Verified: ✓ found in JD
-> Reasoning: The role maintains existing BI solutions and works with established tools (SQL Server, BigQuery, Tableau), indicating a mid-stage data function with existing infrastructure already deployed.
+> Reasoning: The emphasis on maintaining and advancing existing BI infrastructure with named tools (Tableau, BigQuery, SQL Server) indicates an established but still-growing data function.
 
 **Run 3:** `mid` ✗
-> Quote: "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions."
+> Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery."
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on maintaining existing BI infrastructure with named tools already deployed (Tableau, SQL Server, BigQuery), indicating an established but growing function rather than greenfield.
+> Reasoning: Named tools and existing infrastructure mentioned in responsibilities indicate an established data function maintaining existing systems rather than building from zero.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -140,101 +143,116 @@ None explicitly listed.
 **Run 1:** `mixed` ✗
 > Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery."
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity in naming database constructs and tools is mixed with generic responsibility language lacking business context about what these dashboards actually track.
+> Reasoning: Technical specificity about named tools and database operations (stored procedures, triggers) mixed with otherwise generic responsibility framing indicates mixed authorship.
 
 **Run 2:** `mixed` ✗
 > Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery."
 > Verified: ✓ found in JD
-> Reasoning: The JD names specific technical tools and concepts suggesting hiring manager input, but lacks precise application context and uses boilerplate action verbs like 'maintain' and 'manage' throughout, indicating mixed authorship.
+> Reasoning: Technical specificity about database work and tools appears alongside boilerplate action verbs like 'Maintain' and 'manage' that could apply to any BI role.
 
 **Run 3:** `mixed` ✗
 > Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery."
 > Verified: ✓ found in JD
-> Reasoning: The JD combines specific technical details (stored procedures, triggers, named database platforms) with generic boilerplate verbs like execute and maintain.
+> Reasoning: Specific technical details about tools and methods are mixed with generic action verbs like 'Execute dashboard implementation' and 'Distil complex data' typical of recruiter writing.
 
 ⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
+**Run 1:** `internal_data` ✓
+> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
+> Verified: ✓ found in JD
+> Reasoning: The role builds and maintains the BI infrastructure (dashboards and reporting) that internal platform consumers rely on for decision-making.
+
+**Run 2:** `internal_data` ✓
 > Quote: "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions."
 > Verified: ✓ found in JD
-> Reasoning: The emphasis is on building and maintaining the BI platform infrastructure itself for internal consumption rather than serving a specific business function like Finance or Product.
+> Reasoning: The primary responsibility is maintaining the analytics platform itself rather than serving a specific business function like finance, product, or commercial.
 
-**Run 2:** `internal_data` ✗
-> Quote: "Execute dashboard implementation that meet end-user requirements."
+**Run 3:** `internal_data` ✓
+> Quote: "Maintain, and manage advanced reporting, analyses, dashboards, and other BI solutions."
 > Verified: ✓ found in JD
-> Reasoning: The role's primary responsibility is building and maintaining BI infrastructure (dashboards and reporting solutions) for internal stakeholder consumption, indicating internal_data platform orientation rather than serving a specific business function.
-
-**Run 3:** `mixed` ✗
-> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
-> Verified: ✓ found in JD
-> Reasoning: The JD does not specify which business function (commercial, product, finance, or operations) the BI dashboards primarily serve, describing only generic decision-making.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
+> Reasoning: The role focuses on maintaining the analytics infrastructure and BI platform itself rather than serving a specific commercial, product, or finance function.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `execution`
 
-**Run 1:** `execution` ✗
+**Run 1:** `execution` ✓
 > Quote: "Execute dashboard implementation that meet end-user requirements."
 > Verified: ✓ found in JD
-> Reasoning: The use of 'execute' and the framing of meeting 'end-user requirements' indicates the role executes against direction set by others rather than defining strategic direction.
+> Reasoning: The verb 'execute' indicates the role delivers against requirements rather than setting direction or defining strategy.
 
-**Run 2:** `execution` ✗
+**Run 2:** `execution` ✓
 > Quote: "Execute dashboard implementation that meet end-user requirements."
 > Verified: ✓ found in JD
-> Reasoning: The verb 'execute' combined with 'meet end-user requirements' indicates the role delivers work within constraints and priorities set by others rather than setting strategic direction independently.
+> Reasoning: All responsibilities use execution verbs and imply requirements come from elsewhere, with no strategic direction-setting expected.
 
-**Run 3:** `execution` ✗
+**Run 3:** `execution` ✓
 > Quote: "Execute dashboard implementation that meet end-user requirements."
 > Verified: ✓ found in JD
-> Reasoning: The core verbs emphasize execution and delivery of defined work (execute, maintain, manage) rather than setting strategic direction or defining priorities.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
+> Reasoning: The verb 'Execute' indicates the role receives requirements from end-users and delivers against them, with scope and direction set by others.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery"
-> Reasoning: Technical SQL skills but no AI tooling or GenAI responsibilities mentioned
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "N/A"
-> Reasoning: Traditional BI/analytics stack (SQL Server, BigQuery, dashboards) with no AI tool usage, AI-first framing, or GenAI infrastructure responsibilities.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD makes no reference to AI tools, capabilities, or skills expected of the candidate.
 
-**Run 3:** `none` ✓
-> Quote: "Develop and utilize custom queries, stored procedures, and triggers to extract data from Microsoft SQL Server and Google BigQuery"
-> Reasoning: Standard SQL/data extraction work with no AI coding tools, AI-assisted workflows, or AI infrastructure building mentioned.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: There is no mention of AI tools, coding assistants, AI infrastructure, or machine learning in the JD.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, ML pipelines, or AI-ready data foundations anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
-> Reasoning: Owns quality as a primary responsibility across data management
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
-> Reasoning: Candidate owns quality and data management end-to-end; no testing tool explicitly named.
+**Run 1:** `absent` ✗
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
+> Verified: ✓ found in JD
+> Reasoning: The role addresses data quality through structure and management rather than through testing frameworks, data contracts, or observability practices.
 
-**Run 3:** `responsibility` ✓
-> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
-> Reasoning: Candidate owns quality practice with explicit 'responsible for' + 'quality' framing indicating ownership of data quality standards.
+**Run 2:** `absent` ✗
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
+> Verified: ✓ found in JD
+> Reasoning: While quality is mentioned, no testing framework, data contracts, or quality assurance practice is explicitly framed or owned by this role.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
+> Verified: ✓ found in JD
+> Reasoning: The ownership verb 'Responsible for' combined with 'quality' indicates the candidate owns data quality management as a core responsibility.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'absent', 'responsibility']
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✗
-> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business"
-> Reasoning: Management and quality accountability suggests operational reliability concerns without explicit regulatory framing
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning."
-> Reasoning: Pure delivery/execution framing focused on enabling decision-making; no operational reliability or compliance risk language.
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames quality and data management as operational responsibilities without explicitly signaling concerns about preventing bad outcomes, failures, or compliance risks.
 
-**Run 3:** `none` ✓
-> Quote: "Distil complex data into meaningful business insights to facilitate decision-making and forward planning"
-> Reasoning: All framing centers on delivery and insights; no operational reliability fears (SLOs, incidents) or compliance/trust dominance signals present.
+**Run 2:** `moderate` ✗
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
+> Verified: ✓ found in JD
+> Reasoning: Operational data quality and reliability are clearly expected but secondary to the delivery and maintenance of dashboards, without regulatory or stakeholder-trust framing.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']
+**Run 3:** `moderate` ✗
+> Quote: "Responsible for the structure, quality, and management of large volumes of data from different sources within the business."
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality management are concerns, but the JD lacks compliance, regulatory, or stakeholder-trust framing that would signal high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

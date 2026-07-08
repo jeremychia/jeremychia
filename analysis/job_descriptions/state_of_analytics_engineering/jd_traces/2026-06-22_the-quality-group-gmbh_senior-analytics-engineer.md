@@ -66,9 +66,12 @@
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 2 | 2 | 2 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | mixed | recruiter | mixed | 33% | ✓ |
-| stakeholder_orientation |  | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level |  | execution | execution | mixed | 33% | ✗ |
+| jd_authorship | mixed | mixed | hiring_manager | mixed | 33% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | mixed | mixed | mixed | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -80,53 +83,53 @@
 **Run 1:** `rigour` ✓
 > Quote: "Ensure data quality through testing, validation, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes quality, testing, validation, and monitoring with no velocity-oriented language present.
+> Reasoning: The responsibilities emphasize quality assurance, testing, and monitoring as core expectations with no velocity-oriented language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Ensure data quality through testing, validation, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, validation, monitoring, and enforcing standards with no velocity, shipping, or speed language present.
+> Reasoning: The responsibilities section emphasizes data quality, testing, and monitoring as core expectations with no countervailing velocity language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Ensure data quality through testing, validation, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, testing, validation, monitoring, standards, and best practices with no velocity language present.
+> Reasoning: The responsibilities emphasise quality assurance, testing, validation, and standards enforcement with no velocity-oriented language present.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Transform DWH data into business-ready datasets"
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
 > Verified: ✓ found in JD
-> Reasoning: The JD describes business analytics and BI work without explicit financial reporting, compliance, or regulatory language that would signal high risk.
+> Reasoning: KPI logic in business analytics affects business decisions without explicit financial reporting, regulatory, or compliance language indicating moderate domain risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "Translate business requirements into clean, reusable data structures"
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes supporting business analytics and decision-making without explicit financial reporting, compliance, or regulatory consequences language.
+> Reasoning: The role affects business analytics and KPI decisions but contains no explicit financial, regulatory, or compliance risk language.
 
 **Run 3:** `moderate` ✓
-> Quote: "Transform DWH data into business-ready datasets"
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities focus on operational analytics and business intelligence rather than financial reporting, regulatory compliance, or mission-critical systems.
+> Reasoning: The role involves business analytics and KPI implementation without explicit financial reporting, compliance, or regulatory framing.
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `2` ✗
 > Quote: "Analytics Consulting; DWH team"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two named partner teams are explicitly mentioned as collaboration points in the responsibilities.
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners in the responsibilities.
 
 **Run 2:** `2` ✗
 > Quote: "Analytics Consulting; DWH team"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Only two explicitly named teams are identified in the responsibilities and role description.
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly identified as collaboration partners in the responsibilities.
 
 **Run 3:** `2` ✗
 > Quote: "Analytics Consulting; DWH team"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners in the responsibilities.
+> Verified: ✓ found in JD
+> Reasoning: Two distinct named teams are explicitly mentioned as collaboration partners in the responsibilities section.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
 
@@ -134,120 +137,134 @@
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities with existing infrastructure and language around growth and evolution indicate a mid-stage team.
+> Reasoning: References to maintaining existing KPI logic, named tools (dbt), and collaboration with an established Analytics Consulting team indicate a data function already built and scaling.
 
 **Run 2:** `mid` ✓
-> Quote: "Build and evolve data models and marts using tools like dbt"
+> Quote: "Define and enforce modeling standards and best practices"
 > Verified: ✓ found in JD
-> Reasoning: Named tool in responsibilities paired with language of evolving existing systems indicates a growing data function with established foundational infrastructure.
+> Reasoning: The role is tasked with standardizing and enforcing practices on existing infrastructure, indicating a team past initial build but still establishing mature processes.
 
 **Run 3:** `mid` ✓
-> Quote: "Serve as interface between stakeholders, Analytics Consulting, and the DWH team"
+> Quote: "Define and enforce modeling standards and best practices"
 > Verified: ✓ found in JD
-> Reasoning: Multiple established data functions exist with specific roles and charters, and the position involves defining standards, indicating growth beyond early stage but not yet mature.
+> Reasoning: The responsibility to define and enforce standards, combined with explicit mention of multiple data teams, indicates an existing function formalizing processes.
 
 ### jd_authorship
 **Manual:** `mixed`
 
 **Run 1:** `mixed` ✓
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical details like dbt with application context are mixed with generic action verbs like support and serve.
+> Reasoning: Mix of specific technical context (KPI logic, named Analytics Consulting team, DWH references) alongside generic action verbs (Implement, Maintain) suggests both hiring manager and recruiter input.
 
-**Run 2:** `recruiter` ✗
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
+**Run 2:** `hiring_manager` ✗
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions dbt without specific application context, scale, volume, or methodology details that would indicate hiring manager domain expertise.
+> Reasoning: The responsibilities demonstrate specific technical understanding of actual work (KPI logic, dbt models, DWH transformation) rather than generic boilerplate.
 
 **Run 3:** `mixed` ✓
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics; Ensure data quality through testing, validation, and monitoring"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD includes specific technical context (dbt, KPI logic, modeling standards) alongside generic collaboration language.
+> Quote: "Implement and maintain KPI logic in collaboration with Analytics Consulting"
+> Verified: ✓ found in JD
+> Reasoning: The JD contains specific technical context (named tools, KPI logic, team names, modeling standards) alongside generic action verbs ('translate', 'support', 'collaborate').
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
 
 ### stakeholder_orientation
-**Manual:** ``
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✗
+**Run 1:** `internal_data` ✓
 > Quote: "Transform DWH data into business-ready datasets"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves the analytics function and data consumers through infrastructure and data modeling work.
+> Reasoning: The primary responsibility is creating data models and datasets that serve internal analytics consumers and platform users within the organization.
 
-**Run 2:** `internal_data` ✗
+**Run 2:** `internal_data` ✓
+> Quote: "Transform DWH data into business-ready datasets"
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is building and maintaining analytical infrastructure and data models that serve the data function and its downstream consumers.
+
+**Run 3:** `internal_data` ✓
 > Quote: "Serve as interface between stakeholders, Analytics Consulting, and the DWH team"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is serving as part of the internal analytics infrastructure and data function rather than directly driving commercial, product, or finance outcomes.
-
-**Run 3:** `internal_data` ✗
-> Quote: "Transform DWH data into business-ready datasets"
-> Verified: ✓ found in JD
-> Reasoning: The role is focused on building the modeling layer and analytics infrastructure to serve internal Analytics Consulting and data consumers, not external commercial or specific business functions.
-
-⚠ **Disagreement**: manual=`` vs LLM majority=`internal_data`
+> Reasoning: The primary audience is the data function itself—Analytics Consulting and DWH team—making this fundamentally a role about enabling other data practitioners.
 
 ### autonomy_level
-**Manual:** ``
+**Manual:** `execution`
 
-**Run 1:** `execution` ✗
-> Quote: "Support ad-hoc analytical requests requiring data modeling"
+**Run 1:** `mixed` ✗
+> Quote: "Define and enforce modeling standards and best practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize executing defined work and supporting assigned requests rather than setting strategic direction for analytics.
+> Reasoning: The role combines strategic ownership of modeling standards and quality approaches with execution of business requirements and ad-hoc requests.
 
-**Run 2:** `execution` ✗
-> Quote: "Translate business requirements into clean, reusable data structures"
+**Run 2:** `mixed` ✗
+> Quote: "Define and enforce modeling standards and best practices"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on translating externally-set requirements and supporting ad-hoc requests indicates executing direction set by others rather than setting strategic direction.
+> Reasoning: The role combines strategic ownership of modeling standards and data quality with operational execution in service of Analytics Consulting and business teams.
 
 **Run 3:** `mixed` ✗
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics; Define and enforce modeling standards and best practices; Support ad-hoc analytical requests requiring data modeling"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic ownership of the modeling domain and governance with execution of support requests and interface responsibilities.
+> Quote: "Define and enforce modeling standards and best practices"
+> Verified: ✓ found in JD
+> Reasoning: The role has strategic ownership of technical standards and data architecture while also executing against business requirements and ad-hoc requests.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`execution`
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
+⚠ **Disagreement**: manual=`execution` vs LLM majority=`mixed`
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
-> Reasoning: dbt is a standard data transformation tool, not an AI coding or infrastructure tool; no GenAI responsibilities mentioned.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Build and evolve data models and marts using tools like dbt for scalable analytics"
-> Reasoning: No AI coding tools, GenAI responsibilities, or AI-ready infrastructure signals; dbt is traditional analytics tooling.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, capabilities, or infrastructure that candidates must demonstrate.
 
-**Run 3:** `none` ✓
-> Quote: "No explicit AI signals in stack or responsibilities"
-> Reasoning: Role describes standard analytics engineering work (dbt, data modeling, KPI logic) with no mention of AI coding tools, GenAI infrastructure, or AI-first approaches.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI infrastructure, or AI skill expectations for the candidate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI coding assistants, or AI-enabled data infrastructure expectations.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Ensure data quality through testing, validation, and monitoring"
-> Reasoning: Uses ownership verb 'ensure' paired with testing and validation responsibilities, indicating quality practice ownership.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
+**Run 1:** `responsibility` ✗
 > Quote: "Ensure data quality through testing, validation, and monitoring"
-> Reasoning: Ownership verb 'Ensure' paired with 'testing, validation, monitoring' indicates responsibility for quality practice.
+> Verified: ✓ found in JD
+> Reasoning: Data quality and testing are framed as explicit owned responsibilities using the ownership verb 'Ensure', not listed as a tool in the requirements section.
 
-**Run 3:** `responsibility` ✓
+**Run 2:** `responsibility` ✗
 > Quote: "Ensure data quality through testing, validation, and monitoring"
-> Reasoning: Candidate owns quality practice with direct ownership verb (ensure) applied to testing and validation.
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as candidate-owned responsibilities using the action verb 'Ensure'.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Verified: ✓ found in JD
+> Reasoning: Testing and validation are framed as owned responsibilities with the action verb 'Ensure' indicating accountability for these practices.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Ensure data quality through testing, validation, and monitoring"
-> Reasoning: Operational reliability framing centered on preventing data quality issues and incidents, not compliance or regulatory dominance.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
+**Run 1:** `moderate` ✗
 > Quote: "Ensure data quality through testing, validation, and monitoring"
-> Reasoning: Operational reliability signal in data quality monitoring and validation focus, but lacks compliance/audit/regulatory framing.
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes operational data quality and reliability but without regulatory or compliance risk framing, reflecting moderate loss aversion focused on pipeline integrity.
 
-**Run 3:** `moderate` ✓
+**Run 2:** `moderate` ✗
 > Quote: "Ensure data quality through testing, validation, and monitoring"
-> Reasoning: Loss aversion centers on operational reliability (monitoring, data quality) rather than regulatory compliance or trust/governance dominance.
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability and data accuracy but lacks compliance, regulatory, or stakeholder-trust framing characteristic of high loss aversion.
 
+**Run 3:** `moderate` ✗
+> Quote: "Ensure data quality through testing, validation, and monitoring"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability through quality assurance is emphasized throughout, but the framing centres on standards and best practices rather than compliance or preventing stakeholder trust damage.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
