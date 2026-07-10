@@ -23,6 +23,7 @@ These map to ST2187 syllabus topic 15 (Monte Carlo simulation) and complete Bloc
 - §15-2 Probability distributions for input variables (pp. 762–780)
 - §15-3 Simulation and the flaw of averages (pp. 780–783)
 - §15-4 Simulation with built-in Excel tools (pp. 783–794)
+- §15-6 Effects of input distributions on results (pp. 811–820) — §15-6a (shape) and §15-6b (correlated inputs) are exactly Part 3's sensitivity lab and the GIGO debrief
 
 Students who have @RISK installed can additionally read §15-5 Introduction to @RISK (pp. 794–811). In class, we will use Python — the concepts are identical, the tool differs.
 
@@ -117,11 +118,11 @@ Adapt the worked example:
 > **Simulation approach:**
 > Run the Monte Carlo model (N = 10,000). Observe mean profit and P(loss).
 >
-> (a) Why does the deterministic approach produce a different (likely higher) profit estimate than the simulation mean? (Hint: this is the "flaw of averages" from the reading. Revenue = units × price; when both are uncertain, E(units × price) ≠ E(units) × E(price) because they are multiplied together.)
+> (a) Run the simulation and compare its mean profit to the deterministic €80,000. They should match (within Monte Carlo noise). Why does "plug in the means" give the correct *mean* here — and what modelling feature would break that equality? Test your answer: add a production capacity of 12,000 units (`units_sold = np.minimum(units, 12_000)`) and rerun. What happens now?
 >
-> *Explanation:* E(units × price) = E(units) × E(price) only when units and price are **independent** — which they are in this model. However, the **variance** of the product is Var(units × price) = (E[units])² × Var(price) + (E[price])² × Var(units) + Var(units) × Var(price), which is nonzero. The distribution of the product is not symmetric, so the median profit differs from the mean profit.
+> *Explanation:* With independent inputs and a profit function that is linear in each term (units × price − units × cost − fixed), expectation distributes: E(profit) = E(units)E(price) − E(units)E(cost) − fixed = exactly €80,000 — the deterministic answer is unbiased *for the mean*. The **flaw of averages** appears once the function is nonlinear: with the 12,000-unit cap, E[min(units, 12,000)] ≈ 9,700 < 10,000, because the cap truncates the upside but not the downside (Jensen's inequality) — so the deterministic model now *overstates* expected sales and profit. And even without the cap, the deterministic model reports only a point: it cannot show variance, skewness, or tail risk — which is what (b)–(e) are about.
 >
-> (b) The deterministic model says "expected profit = €80,000." The simulation says "mean profit ≈ €79,000 with P(loss) = 11%." What critical information does the deterministic model completely hide?
+> (b) The deterministic model says "expected profit = €80,000." The simulation (uncapped model) agrees on the mean but adds "P(loss) ≈ 11%." What critical information does the deterministic model completely hide?
 > (c) A startup investor receives both reports. What additional question should they ask that the deterministic report cannot answer?
 > (d) When is the deterministic approach (plugging in mean values) acceptable, and when is it dangerously misleading? Give one example of each.
 > (e) A CFO says: "I don't need simulation — I just use our best estimate for each input." Write a two-sentence response explaining when this approach is defensible and when it is not.
@@ -184,7 +185,7 @@ Adapt the worked example:
 > | Retail price (USD) | Normal($149, $12) | Uncertain if tariffs must be passed on |
 > | Component cost (EUR, per unit) | Normal(€42, €5) | Already absorbed in current contracts |
 >
-> Assume the company's profit per unit = (retail price × FX rate − component cost) × (1 − tariff rate) − fixed costs of €18M.
+> Assume unit margin = retail price × FX rate − component cost × (1 + tariff rate), and total profit = units sold × unit margin − fixed costs of €18M. (The tariff is an import duty on the component, so it inflates component cost — at a 145% tariff the €42 component costs €102.90 landed.)
 >
 > (a) Before April 2025, the Monte Carlo model used a fixed tariff rate of 20%. Why might this have seemed reasonable at the time? What type of "risk" was being ignored?
 >
@@ -336,17 +337,17 @@ Run 5 versions of the model:
 - Units SD reduced by 50% (better demand forecasting)
 - Price SD reduced by 50% (longer-term contract with fixed pricing)
 - Variable cost SD reduced by 50% (supply contract with fixed unit cost)
-- Fixed cost uncertainty added (assume fixed costs are actually normal with SD €10,000)
+- Fixed cost uncertainty added (assume fixed costs are actually normal with SD €8,000, matching T6)
 
 For each version, record: mean profit, 5th percentile, P(loss).
 
 The variable that reduces P(loss) most when made certain is the highest-priority risk mitigation target. This is the quantitative version of a risk ranking.
 
-Students produce a 4-row results table. In 15 minutes of computation; then 10 minutes to interpret: "If you had to choose one risk to reduce first, which would it be? What does the simulation tell you — and what does it not tell you?"
+Students produce a five-row results table (baseline + four variants). In 15 minutes of computation; then 10 minutes to interpret: "If you had to choose one risk to reduce first, which would it be? What does the simulation tell you — and what does it not tell you?"
 
 ---
 
-### Part 4 — GIGO Debrief (20 minutes)
+### Part 4 — GIGO Debrief (15 minutes)
 
 Each pair presents their results (90 seconds each). The class asks one question for every presentation:
 
@@ -404,7 +405,7 @@ This is the communication standard for Block 4 (Weeks 19–22): technical output
 | Live coding: build simulation | 20 min | N=100 vs N=10,000; seed; distribution choice |
 | Buffer (explicit) | 10 min | Sensitivity preview; distribution change demonstration |
 | Sensitivity analysis lab | 25 min | 15 min computation + 10 min interpretation |
-| GIGO debrief | 20 min | ~90 sec per pair; input assumption challenge |
+| GIGO debrief | 15 min | ~90 sec per pair; input assumption challenge |
 | Debrief | 10 min | Block 4 close; bridge to Weeks 19–22 |
 | **Total** | **90 min** | |
 

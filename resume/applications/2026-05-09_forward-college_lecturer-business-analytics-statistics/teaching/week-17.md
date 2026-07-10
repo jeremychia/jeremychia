@@ -23,8 +23,10 @@ These map to ST2187 syllabus topic 14 (optimisation) and to the Block 4 arc: hav
 - §13-3 A two-variable product mix model — formulation and graphical solution (pp. 602–615)
 - §13-4 Sensitivity analysis — Solver's sensitivity report and shadow prices (pp. 615–626)
 - §13-5 Properties of linear models — linearity assumption and binding constraints (pp. 626–629)
+- §13-6 Infeasibility and unboundedness (pp. 629–631) — the formal treatment behind T4 and the build-and-break task
+- Chapter 14, §14-4a Transportation models (pp. 677–685) — the structure behind T1 and T6 (the scheduling and integer models touched in T7–T8 live in §14-2 and §14-7)
 
-Students who completed the DecisionTools Suite setup in the course introduction should confirm that Excel Solver is enabled: Data tab → Solver. If it's not there, go to File → Options → Add-ins → Excel Add-ins → Solver Add-in.
+Confirm that Excel's built-in Solver add-in is enabled: Data tab → Solver. If it's not there, go to File → Options → Add-ins → Excel Add-ins → Solver Add-in. (Solver ships with Excel — no separate suite is needed.)
 
 **Videos (~20 minutes total):**
 - [Linear Programming — Khan Academy](https://www.youtube.com/watch?v=Bzzqx1F23a8) (12 min) — graphical method. *Active watching: when the video identifies the feasible region (the area that satisfies all constraints), pause and write: what are the two types of boundaries that define it — and what makes a constraint "binding" vs "non-binding" at the optimal corner? This distinction is what T3 and T4 test.*
@@ -52,17 +54,17 @@ Students who completed the DecisionTools Suite setup in the course introduction 
 > - C ≥ 10
 > - M ≥ 10
 >
-> **Solver solution:** C = 25, M = 33; Profit = 37.5 + 66.0 = **€103.50**
+> **Solver solution:** C ≈ 22.86, M ≈ 34.29 (both the oven and labour constraints are binding); Profit = 34.29 + 68.57 = **€102.86**
 >
 > **Shadow prices (sensitivity report):**
-> - Oven constraint shadow price = €0.35/minute: each additional minute of oven time adds €0.35 to maximum profit
-> - Labour constraint shadow price = €0.55/minute: each additional minute of labour adds €0.55 to maximum profit
+> - Oven constraint shadow price ≈ €0.357/minute: each additional minute of oven time adds about €0.36 to maximum profit
+> - Labour constraint shadow price ≈ €0.214/minute: each additional minute of labour adds about €0.21 to maximum profit
 >
-> **Business implication:** labour is more valuable than oven time. If you can hire one more baker (adding 60 minutes/day), you could increase profit by 60 × 0.55 = **€33/day**. Is that worth the hiring cost?
+> **Business implication:** oven time is the more valuable resource. Hiring one more baker (adding 60 labour minutes/day) raises profit by only 60 × 0.214 ≈ **€12.86/day** — whereas 60 extra oven minutes would be worth 60 × 0.357 ≈ **€21.43/day**. Which is worth its cost?
 
 *This worked example is marked optional for students who feel confident formulating an LP (decision variables, objective function, constraints) and interpreting the Solver output (optimal values and shadow prices). If you can write the LP for T1 without guidance, you don't need it. If shadow prices felt abstract from the reading, read the worked example's sensitivity report section carefully before T2.* (On expertise reversal, see Kalyuga et al., 2003, DOI: [10.1207/S15326985EP3801_4](https://doi.org/10.1207/S15326985EP3801_4).)
 
-*The Khan Academy video's feasible region is the graphical version of the constraint inequalities in this worked example — each constraint is one boundary line. The shadow price you noted from the Solver tutorial maps directly onto the worked example's labour shadow price (€0.55/min). The tutorials extend this.*
+*The Khan Academy video's feasible region is the graphical version of the constraint inequalities in this worked example — each constraint is one boundary line. The shadow price you noted from the Solver tutorial maps directly onto the worked example's oven shadow price (€0.357/min). The tutorials extend this.*
 
 **Tutorial:**
 
@@ -106,7 +108,7 @@ Students who completed the DecisionTools Suite setup in the course introduction 
 >
 > (a) Add the constraint that the bakery has received a special order requiring at least 40 muffins per day (M ≥ 40). Find the new optimal solution using Solver. Has the objective value changed?
 >
-> *Solution (approximate):* The binding constraints shift. With M ≥ 40 binding: oven: 3C + 200 ≤ 240 → C ≤ 13.33; labour: 2C + 40 ≤ 80 → C ≤ 20. Labour is non-binding; oven binding gives C = 13 (rounded down for feasibility or accept 13.33). Profit ≈ 1.5 × 13.33 + 2.0 × 40 = 20 + 80 = **€100 per day** (vs €103.50 without the M ≥ 40 constraint). The special order costs the bakery approximately €3.50/day in lost flexibility.
+> *Solution (approximate):* The binding constraints shift. With M ≥ 40 binding: oven: 3C + 200 ≤ 240 → C ≤ 13.33; labour: 2C + 40 ≤ 80 → C ≤ 20. Labour is non-binding; oven binding gives C = 13 (rounded down for feasibility or accept 13.33). Profit ≈ 1.5 × 13.33 + 2.0 × 40 = 20 + 80 = **€100 per day** (vs €102.86 without the M ≥ 40 constraint). The special order costs the bakery approximately €2.86/day in lost flexibility.
 >
 > (b) Now add a second order: the bakery must produce at least 30 croissants (C ≥ 30) AND at least 40 muffins (M ≥ 40). Check whether this is feasible. Verify algebraically.
 >
@@ -154,9 +156,9 @@ Students who completed the DecisionTools Suite setup in the course introduction 
 > *Solution:* Set up: Minimise 4A1 + 8A2 + 6A3 + 3B1 + 7B2 + 5B3. Subject to: A1+A2+A3 ≤ 120; B1+B2+B3 ≤ 80; A1+B1 = 70; A2+B2 = 90; A3+B3 = 40; all variables ≥ 0. One typical optimal solution: A1 = 0, A2 = 90, A3 = 30, B1 = 70, B2 = 0, B3 = 10. Cost = 0 + 720 + 180 + 210 + 0 + 50 = **€1,160.**
 >
 > (b) Identify which warehouse constraint is binding and which is non-binding in the optimal solution. What does a non-binding supply constraint mean?
-> (c) The shadow price for Store 2's demand constraint is €7 (the cost of supplying one additional pallet to Store 2). Store 2 requests an additional 10 pallets (demand increases to 100). What is the expected increase in total shipping cost?
+> (c) The sensitivity report shows a shadow price of €7 on Store 2's demand constraint. Store 2 requests an additional 10 pallets (demand increases to 100). Can you quote 10 × €7 = €70 as the extra cost? Check the allowable increase before answering.
 >
-> *Solution:* 10 × €7 = **€70** (valid if within the allowable range for this constraint).
+> *Solution:* **No.** Total supply (200) already equals total demand (200) — the allowable increase on any demand constraint is **zero**, and at 201 pallets the model is infeasible. A shadow price is valid only within its allowable range, which here is nil: the company must first source additional supply, and only then can a marginal cost be quoted.
 >
 > (d) Warehouse A faces a capacity reduction from 120 to 90 pallets due to a flood. Can the remaining supply (90 + 80 = 170 pallets) still meet total demand (70 + 90 + 40 = 200 pallets)? What does Solver return? What are the business options?
 > (e) A new shipping route from Warehouse B to Store 2 becomes available at €6/unit (slightly cheaper than the current €7). Does Solver incorporate this automatically, or must the model be updated? After updating, does the optimal shipping plan change?
@@ -221,11 +223,11 @@ This question uses a verified 2025 policy context: the CMA and CAA review of Hea
 
 ### T2 — Solver setup (bakery)
 
-**(a)** After increasing oven time to 260 minutes: Solver adjusts the optimal mix. Using shadow price as a quick estimate: 20 extra minutes × €0.35/min = €7.00 more profit → predicted new profit ≈ €103.50 + €7.00 = **€110.50.** (Verify with Solver for exact answer, which should match if 260 is within the allowable range.)
+**(a)** After increasing oven time to 260 minutes: Solver gives C = 20, M = 40. Using the shadow price as a quick estimate: 20 extra minutes × €0.357/min ≈ €7.14 more profit → predicted new profit ≈ €102.86 + €7.14 = **€110.00** — and Solver confirms it exactly (1.5 × 20 + 2 × 40 = €110).
 
-**(b)** Profit increase = €110.50 − €103.50 = **€7.00 = 20 × €0.35** — yes, this matches the shadow price exactly (within the allowable range).
+**(b)** Profit increase = €110.00 − €102.86 = **€7.14 = 20 × €0.357** — yes, this matches the shadow price exactly (within the allowable range).
 
-**(c)** The shadow price for oven time is valid only within the **allowable increase** shown in Solver's sensitivity report. If the allowable increase is, say, 30 minutes: the shadow price of €0.35/min applies for oven time up to 270 minutes. Beyond that, the optimal basis changes (a different constraint becomes binding or the current binding constraints shift) and the shadow price may change. To find a new profit estimate beyond the allowable range, Solver must be rerun with the new constraint value.
+**(c)** The shadow price for oven time is valid only within the **allowable increase** shown in Solver's sensitivity report — here it runs to an oven RHS of 330 minutes (at which point C reaches its 10-croissant floor and the basis changes). Beyond that, the optimal basis changes (a different constraint becomes binding or the current binding constraints shift) and the shadow price may change. To find a new profit estimate beyond the allowable range, Solver must be rerun with the new constraint value.
 
 ---
 
@@ -241,7 +243,7 @@ This question uses a verified 2025 policy context: the CMA and CAA review of Hea
 
 ### T4 — Boundary case: infeasibility
 
-**(a)** With M ≥ 40 binding: oven constraint gives C ≤ (240 − 5×40)/3 = 40/3 ≈ 13.33; labour gives C ≤ (80 − 40)/2 = 20. Binding constraint is oven. Optimal: C ≈ 13.33, M = 40. Profit ≈ 1.5 × 13.33 + 2.0 × 40 = 20 + 80 = **€100/day.** The special order costs approximately €3.50/day in lost profit relative to the unconstrained optimum (€103.50).
+**(a)** With M ≥ 40 binding: oven constraint gives C ≤ (240 − 5×40)/3 = 40/3 ≈ 13.33; labour gives C ≤ (80 − 40)/2 = 20. Binding constraint is oven. Optimal: C ≈ 13.33, M = 40. Profit ≈ 1.5 × 13.33 + 2.0 × 40 = 20 + 80 = **€100/day.** The special order costs approximately €2.86/day in lost profit relative to the unconstrained optimum (€102.86).
 
 **(b)** Feasibility check for C ≥ 30 AND M ≥ 40: oven check: 3(30) + 5(40) = 90 + 200 = 290 > 240. **Infeasible** — minimum requirements alone exceed oven capacity.
 
@@ -249,7 +251,7 @@ This question uses a verified 2025 policy context: the CMA and CAA review of Hea
 
 **(d)** Needs 290 − 240 = **50 additional oven minutes** to make the model feasible at the minimum requirements. Renting cost = 50 × €0.50 = **€25/day.** This is the cost of *becoming feasible* — the profit from fulfilling both orders must exceed €25/day for renting to be worthwhile.
 
-**(e)** Shadow prices are valid only within the **allowable increase/decrease range** shown in the sensitivity report. The allowable increase for oven time in the original problem (let's say it was 20 minutes at a shadow price of €0.35/min) would give a cost estimate of 20 × €0.35 = €7. But making the infeasible model feasible requires 50 additional minutes — well outside any reasonable allowable range. At 50 minutes, the binding constraints have changed completely (the minimum M ≥ 40 and C ≥ 30 constraints are now active, not the oven constraint alone), so the shadow price from the original optimal basis is no longer applicable. The model must be rerun with the new capacity.
+**(e)** A shadow price prices a resource *for the constraint set that produced it*. The original €0.357/min values oven minutes in the original model, where the optimum trades off croissants against muffins freely. The question in (d) is different: the cheapest way to make a *new* model — with C ≥ 30 and M ≥ 40 imposed — feasible at all. Under those minimums the binding structure is entirely different (the two order constraints are active and the original optimum no longer exists), so the original sensitivity report — shadow price and allowable range alike — simply does not apply. The model must be rerun with the new constraints and capacity.
 
 ---
 
@@ -273,7 +275,7 @@ This question uses a verified 2025 policy context: the CMA and CAA review of Hea
 
 **(b)** In the optimal solution: Warehouse A ships A2=90 + A3=30 = 120 pallets — all of its 120 pallets → **binding** (uses full capacity). Warehouse B ships B1=70 + B3=10 = 80 pallets — all of its 80 pallets → **binding** (uses full capacity). Both supply constraints are binding in this balanced problem (total supply = total demand = 200). A non-binding supply constraint would mean the warehouse ships fewer pallets than its capacity — it has slack capacity.
 
-**(c)** Shadow price = €7/pallet for Store 2. Store 2 requests 10 more pallets: expected cost increase = 10 × €7 = **€70.** This is valid if 10 is within the allowable increase for Store 2's demand constraint.
+**(c)** **No quote is possible from the shadow price.** The problem is balanced (supply 200 = demand 200), so the allowable increase on Store 2's demand constraint is **zero** — demand of 201 is infeasible, and the €7 shadow price cannot be extrapolated by even one pallet. The lesson mirrors T4(e): a shadow price is a *local* rate, valid only within its allowable range — and that range can be zero.
 
 **(d)** With Warehouse A reduced to 90: total supply = 90 + 80 = 170 pallets < total demand = 200 pallets. **Supply is insufficient** — the model is infeasible (cannot meet all demand). Solver returns "No feasible solution." Business options: (i) prioritise which stores receive partial shipment; (ii) source additional stock externally; (iii) renegotiate delivery commitments with one or more stores; (iv) switch to a partial-fulfilment model with backorders.
 
@@ -374,7 +376,7 @@ The infeasibility test: changing the minimum demand requirements or maximum reso
 
 ---
 
-### Part 4 — Peer Presentation (20 minutes)
+### Part 4 — Peer Presentation (15 minutes)
 
 Two pairs present:
 - Their business scenario
@@ -430,7 +432,7 @@ No LMS post. The LP model (Excel file with Solver setup and sensitivity report) 
 | Live Solver demo | 20 min | Bakery model from scratch; sensitivity report |
 | Buffer (explicit) | 10 min | T2 live verification; shadow price explanation |
 | Build-and-break | 25 min | 15 min formulate and solve; 10 min break scenarios |
-| Peer presentation | 20 min | Two pairs; "constraint you missed?" challenge |
+| Peer presentation | 15 min | Two pairs; "constraint you missed?" challenge |
 | Debrief | 10 min | Three LP assumptions; bridge to Week 18 |
 | **Total** | **90 min** | |
 

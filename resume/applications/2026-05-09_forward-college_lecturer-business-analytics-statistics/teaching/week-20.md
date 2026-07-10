@@ -77,7 +77,7 @@ Examples of prepared challenges:
 
 Groups have 3 minutes to respond to the challenge before the class can add follow-up questions.
 
-The tone is adversarial in the most constructive sense: these are the questions a real stakeholder or regulator would ask. Students who can respond clearly are ready for Week 21 (the formal challenge round) and Week 22 (the external evaluator).
+The tone is adversarial in the most constructive sense: these are the questions a real stakeholder or regulator would ask. Students who can respond clearly are ready for Week 21 (the formal challenge round) and Week 22 (the formal presentation and Q&A).
 
 ---
 
@@ -144,7 +144,7 @@ This notice should sharpen both the presenting groups and the challenging groups
 
 A targeted, public challenge to a group's weakest assumption can feel like an attack rather than feedback. Year 3 students have had two years of feedback practice, but a statistical challenge is different from a presentation feedback.
 
-**Resolution:** the instructor models the tone in the first challenge: direct, precise, and not personal. "The question is about the method, not the people. If the method has a gap, we're going to find it now, not in Week 22 in front of an external evaluator." Naming the purpose — "this is practice for the harder challenge you'll face" — reframes it as preparation.
+**Resolution:** the instructor models the tone in the first challenge: direct, precise, and not personal. "The question is about the method, not the people. If the method has a gap, we're going to find it now, not in Week 22 in front of the full audience." Naming the purpose — "this is practice for the harder challenge you'll face" — reframes it as preparation.
 
 ---
 

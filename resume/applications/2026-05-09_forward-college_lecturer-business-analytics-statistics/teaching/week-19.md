@@ -18,7 +18,7 @@ This is Week 1 of the four-week full analysis cycle (Weeks 19–22). No new tech
 
 ## Before Class (Student Pre-Work)
 
-**No reading this week.** All pre-work is group preparation.
+**Reading:** Albright & Winston, Appendix A, §A-1–A-2 (Statistical Reporting, pp. A-1–A-7) — the planning and clear/concise/precise standards your Weeks 19–22 outputs will be held to; the example reports in §A-3 are the reference models for the Week 22 presentation. All other pre-work is group preparation.
 
 **Group formation and dataset selection:**
 
@@ -103,7 +103,7 @@ Answer: specificity, testability, and decision relevance. A question that satisf
 
 **Preview of Weeks 20 and 21:**
 
-Week 20: groups return with a model or test applied to their refined question. They present the method, the result, and the interpretation. Week 21: other groups challenge the analysis. Week 22: formal presentation to an audience that includes an external evaluator.
+Week 20: groups return with a model or test applied to their refined question. They present the method, the result, and the interpretation. Week 21: other groups challenge the analysis. Week 22: formal presentation to the full audience — the cohort and instructor, plus an invited external guest if one is arranged (confirmed by Week 20).
 
 *"By Week 21, someone will ask: 'What would make you wrong?' You should be able to answer that. If you can't, your analysis is not finished."*
 
