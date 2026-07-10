@@ -43,9 +43,9 @@ Each group prepares a 10-minute presentation with slides or a projected notebook
 | Reflective close | 10–15 min |
 | Individual written reflection | 10 min |
 
-The session timing depends on group count. Adjust:
-- 3 groups: 15 min per group + 15 min close = 60 min total. Consider extending Q&A to 7 minutes.
-- 4 groups: 15 min per group + 5 min close = 65 min + buffer. Shorten description section to 90 seconds.
+The session timing depends on group count. Full schedules (including the opening and individual reflection):
+- 3 groups: 5 opening + 45 presentations + 15 reflective close + 10 individual reflection = 75 min — use the spare 15 minutes to extend each Q&A to 7–8 minutes (5 + 54 + 15 + 10 = 84).
+- 4 groups: 5 opening + 60 presentations + 10 reflective close + 10 individual reflection = 85 min. Shorten each description section to 90 seconds to protect the buffer.
 
 ---
 
@@ -117,7 +117,7 @@ These are not graded. They are the individual close of a course that was otherwi
 
 "Over four weeks, our question evolved from ___ to ___. The most important analytical decision we made was ___. The thing we'd do differently is ___. The skill we developed most in Weeks 19–22 is ___."
 
-This is the group's narrative of intellectual growth. It is not assessed but it is required — forward College's emphasis on reflective practice means the course does not end with a presentation; it ends with a documented account of what changed.
+This is the group's narrative of intellectual growth. It is not assessed but it is required — Forward College's emphasis on reflective practice means the course does not end with a presentation; it ends with a documented account of what changed.
 
 ---
 

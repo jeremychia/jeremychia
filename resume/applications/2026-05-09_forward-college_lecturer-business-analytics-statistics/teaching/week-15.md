@@ -28,6 +28,8 @@ These objectives are at the **analysis and evaluation** levels of Bloom's Taxono
 - §11-5 Include/exclude decisions (pp. 502–507)
 - §11-6 Stepwise regression (pp. 507–512)
 - §11-7 Outliers and influential observations (pp. 512–517)
+- §11-8 Violations of regression assumptions (pp. 517–521) — §11-8a (nonconstant error variance) is exactly T3; §11-8c (autocorrelated residuals) is the bridge to Week 16
+- From Chapter 10: §10-5 Multiple regression and §10-6a–b Dummy and interaction variables (pp. 443–460) — the encodings used by T2, T6, and T7
 
 *Rationale:* Chapter 11 is inference-only — it picks up exactly where Chapter 10 (estimating relationships) ended. Students who read §11-2 and §11-3 carefully will arrive able to read a full regression output table with t-statistics and p-values; the session converts that reading into active interpretation practice.
 

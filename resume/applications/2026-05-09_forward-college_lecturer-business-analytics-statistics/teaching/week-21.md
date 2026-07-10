@@ -89,7 +89,7 @@ This is the session's most important question. For most groups, the claim will b
 
 **Preview of Week 22:**
 
-> *"Next week is the formal presentation. You have 10 minutes plus 5 minutes of Q&A. The audience includes [an external evaluator / the cohort / a panel — specify based on course administration]. Your task is to present your final claim, your evidence, and your stated limitations. The question you'll be asked — somewhere in the Q&A — is 'what would you do differently with more time, more data, or a different model?' Be ready with a specific answer, not a vague one."*
+> *"Next week is the formal presentation. You have 10 minutes plus 5 minutes of Q&A. The audience is the cohort and instructor — plus an invited external guest if one has been arranged (this was confirmed by Week 20, so you already know which). Your task is to present your final claim, your evidence, and your stated limitations. The question you'll be asked — somewhere in the Q&A — is 'what would you do differently with more time, more data, or a different model?' Be ready with a specific answer, not a vague one."*
 
 ---
 

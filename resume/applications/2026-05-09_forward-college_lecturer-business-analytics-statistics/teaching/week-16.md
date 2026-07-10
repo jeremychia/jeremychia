@@ -25,7 +25,7 @@ These map to ST2187 syllabus topic 13 (time series and forecasting) and close th
 - §12-7 Exponential smoothing forecasts — simple and Holt's trend model (pp. 570–580)
 - §12-8 Seasonal models — Winters' exponential smoothing (pp. 580–590)
 
-The regression-based trend models (§12-4) and random walk model (§12-5) are optional further reading — skip them on first pass unless you want a fuller picture of trend-based approaches.
+The regression-based trend models (§12-4, pp. 556–562) are optional further reading. **§12-5 The random walk model (pp. 562–565) is required** — it is the correct frame for T9's oil-price case: financial prices are near-random walks, and the naive last-value forecast is the honest benchmark any fancier model must beat.
 
 **Videos (~20 minutes total):**
 - [Time Series Decomposition in Python](https://www.youtube.com/watch?v=sAUx8y-rr10) (10 min) — walks through trend, seasonal, and residual decomposition using statsmodels, the same library used in Part 3. *Active watching: when the video plots the three components (trend, seasonal, residual) separately, pause and write: what does the residual component represent — what is "left over" after the trend and seasonal patterns are removed? This is what the assumption statement in Part 3 asks you to be specific about.*
@@ -116,7 +116,7 @@ Using the worked example dataset (shared on the course portal):
 >
 > (c) Which method responds more quickly to the recent spike at week 26 (990 units)? Explain why in terms of how each method weights historical data.
 > (d) For a business with volatile week-to-week demand (noise-dominated series), would a high or low α be more appropriate for exponential smoothing? What about a business with stable underlying demand?
-> (e) Neither method captures trend or seasonality. If production has a 4-week seasonal cycle (production spikes at the end of each month due to order deadlines), what would happen to the 3-week MA and the SES forecasts for week 27 if the spike has occurred in weeks 24 and 28 historically?
+> (e) Neither method captures trend or seasonality. If production has a 4-week seasonal cycle (production spikes at the end of each month due to order deadlines), what would happen to the 3-week MA and the SES forecasts for week 27 if the spikes have occurred in weeks 20 and 24, with the next expected at week 28?
 
 *T7 — Interpretation: error metrics in business context:*
 
@@ -191,7 +191,7 @@ This question uses verified events: the OPEC+ output increase announcement of Ma
 
 **(d)** For **volatile demand (noise-dominated):** a **low α** is more appropriate — it averages over recent fluctuations rather than chasing noise, producing more stable forecasts. For **stable underlying demand with meaningful recent signals:** a **high α** is more appropriate — it responds quickly to genuine shifts in the level. The key judgment: is recent variation signal (a real change in demand) or noise (random fluctuation)? High α treats recent observations as signal; low α treats them as noise.
 
-**(e)** Neither the 3-week MA nor the SES model captures the 4-week seasonal cycle. If production spikes in weeks 24 and 28 historically: the 3-week MA for week 27 uses weeks 24, 25, 26 — it includes the week-24 spike (950) and the non-spike weeks (920, 990), so it averages in the spike but doesn't predict week 27 correctly if the cycle puts the spike at week 28. Both methods would produce forecasts that lag behind the seasonal pattern — consistently under-forecasting spike weeks and over-forecasting off-peak weeks. Seasonal adjustment (using Holt-Winters with a period of 4) would be needed to capture this cycle.
+**(e)** Neither the 3-week MA nor the SES model captures the 4-week seasonal cycle. If production spikes in weeks 20 and 24, with the next expected at week 28: the 3-week MA for week 27 uses weeks 24, 25, 26 — it includes the week-24 spike (950) and the non-spike weeks (920, 990), so it averages in the spike but doesn't predict week 27 correctly if the cycle puts the spike at week 28. Both methods would produce forecasts that lag behind the seasonal pattern — consistently under-forecasting spike weeks and over-forecasting off-peak weeks. Seasonal adjustment (using Holt-Winters with a period of 4) would be needed to capture this cycle.
 
 ---
 
@@ -264,7 +264,6 @@ Instructor walks through the full worked example code, explaining each choice:
 
 **Error metrics live:**
 ```python
-from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 
 train = df['sales'].iloc[:36]
@@ -274,10 +273,12 @@ model = ExponentialSmoothing(train, trend='add', seasonal='mul', seasonal_period
 fit = model.fit()
 pred = fit.forecast(12)
 
-mae = mean_absolute_error(test, pred)
-rmse = np.sqrt(mean_squared_error(test, pred))
+mae = np.abs(test - pred).mean()
+rmse = np.sqrt(((test - pred) ** 2).mean())
 print(f"MAE: {mae:.1f}, RMSE: {rmse:.1f}")
 ```
+
+(Computing the metrics directly in numpy keeps the formulas visible and avoids an extra dependency — scikit-learn is not in this course's environment check.)
 
 Buffer: if the environment has issues, the buffer absorbs setup time. Also use it to compare MAE vs RMSE — "RMSE penalises large errors more heavily than MAE. For a business that can absorb small errors but not large ones (e.g., a perishable goods supplier), RMSE is the better metric."
 
@@ -310,7 +311,7 @@ The assumption statement is not a weakness of the model — it is the responsibl
 
 ---
 
-### Part 4 — Debrief and Peer Review (20 minutes)
+### Part 4 — Debrief and Peer Review (15 minutes)
 
 Two pairs present their forecasts (5 minutes each: chart + assumption statement). The rest of the class asks:
 - Is the assumption statement specific enough? ("It would break if anything changes" is not useful.)
@@ -361,7 +362,7 @@ No separate LMS post — the forecast notebook (with decomposition, model, evalu
 | Live coding: decompose and forecast | 20 min | Full pipeline; error metrics |
 | Buffer (explicit) | 10 min | Environment setup; MAE vs RMSE discussion |
 | Forecast critique: pairs | 25 min | Decompose + forecast + evaluate + assumption statement |
-| Peer review | 20 min | Two pairs present; directional error question |
+| Peer review | 15 min | Two pairs present (5 min each) + directional error question |
 | Debrief | 10 min | Week 2 callback; bridge to Week 17 |
 | **Total** | **90 min** | |
 
@@ -373,7 +374,7 @@ No separate LMS post — the forecast notebook (with decomposition, model, evalu
 
 Holt-Winters produces point forecasts; the prediction interval requires additional computation. Students who report "sales will be 1,240 units in January" without any uncertainty band are missing a critical element.
 
-**Resolution:** in the live coding, add: `fit.forecast(12, confidence_intervals=0.95)` if the library supports it, or explicitly note: "This is a point forecast. The actual value will almost certainly be different. At minimum, state that forecasting accuracy typically degrades as the horizon extends." Professional forecasts always include a confidence band; the session should model that expectation.
+**Resolution:** in the live coding, generate intervals by simulation — `sims = fit.simulate(12, repetitions=1000)`, then take `np.percentile(sims, [2.5, 97.5], axis=1)` as the band (this also previews Week 18's Monte Carlo logic; `statsmodels`' newer `ETSModel` offers `get_prediction()` with interval summaries). At minimum, explicitly note: "This is a point forecast. The actual value will almost certainly be different. At minimum, state that forecasting accuracy typically degrades as the horizon extends." Professional forecasts always include a confidence band; the session should model that expectation.
 
 ---
 
