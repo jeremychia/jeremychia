@@ -69,15 +69,15 @@ Number of openings: 1
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | high | moderate | high | 33% | ✓ |
-| collaboration_width | 4 | 2 | 2 | 3 | 33% | ✗ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 4 | 2 | 2 | 2 | 100% | ✗ |
 | data_team_maturity | mature | mid | mid | mature | 33% | ✗ |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
 | autonomy_level | execution | execution | execution | execution | 100% | ✓ |
 | ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | high | moderate | high | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -89,37 +89,35 @@ Number of openings: 1
 **Run 1:** `rigour` ✓
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data integrity protection, testing, and documentation as core practices, with no velocity-oriented language in the role framing.
+> Reasoning: Responsibilities emphasise data integrity, testing, documentation, and quality practices; only two velocity signals ("sprint cycles", "Deliver at pace") versus six rigour signals throughout.
 
 **Run 2:** `rigour` ✓
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data integrity, testing frameworks, and quality practices as core expectations, with 'deliver at pace' appearing only in company principles, not in the role's responsibilities.
+> Reasoning: The responsibilities section emphasizes data integrity, testing frameworks, documentation, and quality practices as core expectations, with no velocity signals.
 
 **Run 3:** `rigour` ✓
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes testing, documentation, data quality, and data integrity as core expectations, with no velocity or rapid delivery language present.
+> Reasoning: The responsibilities explicitly centre on testing, quality frameworks, and data integrity as core expectations, with multiple rigour signals and no velocity language in the responsibilities section.
 
 ### domain_risk
 **Manual:** `high`
 
 **Run 1:** `high` ✓
-> Quote: "publicly-traded FTSE250 FinTech company"
+> Quote: "Deliver the migration of business-critical dashboards to Looker"
 > Verified: ✓ found in JD
-> Reasoning: IG Group operates in fintech with direct impact on financial trading decisions and regulatory exposure, placing data errors in the high-risk category.
+> Reasoning: Business-critical dashboards in a fintech company (FTSE250) directly support client trading decisions with direct financial consequences.
 
-**Run 2:** `moderate` ✗
-> Quote: "turn raw data into trusted, self-serve insight that business users across IG can act on"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Although IG Group operates in fintech (trading platforms), the JD uses generic business analytics language without explicit financial reporting, compliance, or regulatory framing.
+**Run 2:** `high` ✓
+> Quote: "FTSE250 FinTech company running mobile, web, and desktop platforms that help clients trade stocks & shares, leveraged products, Futures & Options, and Crypto"
+> Verified: ✓ found in JD
+> Reasoning: The company operates in fintech trading (default high-risk sector) and the role addresses business-critical dashboards that directly impact financial operations.
 
 **Run 3:** `high` ✓
-> Quote: "IG Group is a publicly-traded FTSE250 FinTech company running mobile, web, and desktop platforms that help clients trade stocks & shares, leveraged products, Futures & Options, and Crypto."
+> Quote: "business-critical dashboards"
 > Verified: ✓ found in JD
-> Reasoning: The company operates in financial services/fintech where data errors directly affect trading platforms and financial decision-making, combined with repeated emphasis on business-critical systems and trusted data.
-
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
+> Reasoning: IG Group operates in regulated fintech with explicitly mission-critical data infrastructure; errors directly affect trading clients and regulatory compliance.
 
 ### collaboration_width
 **Manual:** `4`
@@ -127,39 +125,37 @@ Number of openings: 1
 **Run 1:** `2` ✗
 > Quote: "data engineers; data scientists"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly names two distinct partner functions—data engineers and data scientists—as collaborators in cross-functional squads.
+> Reasoning: Two distinct named functions explicitly identified as collaboration partners; analytics engineers are the candidate's own chapter/function and business stakeholders are too generic.
 
 **Run 2:** `2` ✗
+> Quote: "data engineers, analytics engineers, data scientists, and business stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Data engineers and data scientists are explicitly named as distinct cross-functional partner groups; analytics engineers represent the role holder's own team and do not count.
+
+**Run 3:** `2` ✗
 > Quote: "data engineers; data scientists"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names two distinct partner functions in cross-functional work (analytics engineers is the candidate's own cohort, and business stakeholders is too generic).
-
-**Run 3:** `3` ✗
-> Quote: "data engineers; analytics engineers; data scientists"
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named role cohorts are explicitly listed as cross-functional squad members; 'business stakeholders' is too generic to count per the rules.
+> Reasoning: Two distinct named technical teams are explicitly listed as routine collaboration partners in the squad-based delivery structure.
 
 ⚠ **Disagreement**: manual=`4` vs LLM majority=`2`
-
-⚠ **LLM inconsistency**: runs gave ['2', '2', '3']
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "Business Intelligence team, which acts as the centre of excellence for analytics across IG"
+> Quote: "You will work in cross-functional squads alongside data engineers, analytics engineers, data scientists, and business stakeholders, delivering measurable value within focused sprint cycles."
 > Verified: ✓ found in JD
-> Reasoning: The team has established structure, named tools, and a defined chapter system, but the major dashboard migration initiative suggests ongoing professionalization and scale.
+> Reasoning: Multiple specialized data roles, organizational structure with chapters and squads, and named tools in responsibilities (dbt, Looker) indicate an established but still-growing team beyond early stage.
 
 **Run 2:** `mid` ✗
-> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-service analytics for business users across IG"
+> Quote: "As a member of the Analytics Engineering Chapter, you will develop your skills alongside peers and rotate between squads based on business priorities."
 > Verified: ✓ found in JD
-> Reasoning: The presence of established named tools (dbt, Looker) in the responsibilities section with specific application context, combined with visible cohort/squad structure, indicates an existing and actively growing data function.
+> Reasoning: The established Analytics Engineering Chapter, squad-based structure, and specific named tools (dbt, Looker, BigQuery) indicate a growing data function with formal organization but not yet mature scale.
 
 **Run 3:** `mature` ✓
-> Quote: "Business Intelligence team, which acts as the centre of excellence for analytics across IG, making data, insight, and action usable across the whole business, from self-serve dashboards to the AI agents and co-pilots that deliver value to business users and clients."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: An established FTSE250 company with a named BI team as centre of excellence, multiple specialized data sub-roles, and specific technology stack deployed at scale.
+> Quote: "You will join the Business Intelligence team, which acts as the centre of excellence for analytics across IG, making data, insight, and action usable across the whole business"
+> Verified: ✓ found in JD
+> Reasoning: The team is framed as an established centre of excellence with formal sub-team structures (Analytics Engineering Chapter) and multiple specialized roles across the data function.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -168,56 +164,58 @@ Number of openings: 1
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
+**Run 1:** `mixed` ✗
+> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-service analytics for business users across IG"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific technical context tied to particular tools (Looker, LookML) and a specific business challenge (dashboard migration), indicating hands-on domain knowledge.
+> Reasoning: Specific technical context (dbt, LookML, Looker migration, self-serve analytics) mixed with generic verbs elsewhere (partner with, contribute to, safeguard).
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-service analytics for business users across IG; Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
+> Quote: "Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
 > Verified: ✓ found in JD
-> Reasoning: The specific technical details (dbt models, LookML, testing frameworks, BigQuery, data pipeline architecture) indicate hands-on domain knowledge from someone who performs this work.
+> Reasoning: The specific technical context (LookML for Looker migration, dashboard rebuilding) reflects hands-on experience and domain knowledge beyond generic boilerplate.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-serve analytics for business users across IG; Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities contain specific technical tools in precise business context (dbt models for self-serve, Looker/LookML migration) and named methodologies that demonstrate hands-on knowledge of the work.
+> Quote: "Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
+> Verified: ✓ found in JD
+> Reasoning: The specific technical activities (dashboard migration strategy, LookML rebuilding) and focus on clean transitions indicate someone who has performed this work describing the actual scope.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-service analytics for business users across IG"
+> Quote: "build the data models that power IG's next-generation analytics platform"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building a data platform that enables business users to serve themselves with analytics, rather than serving a specific business function.
+> Reasoning: Role primary serves the data infrastructure and self-serve analytics platform, with signal phrase "self-serve analytics" and focus on enabling data consumers rather than a business function.
 
 **Run 2:** `internal_data` ✓
-> Quote: "turn raw data into trusted, self-serve insight that business users across IG can act on"
+> Quote: "The candidate will turn raw data into trusted, self-serve insight that business users across IG can act on"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary purpose is building self-service analytics infrastructure (dbt models, Looker dashboards, data platform) for internal business users to consume, not serving GTM, product, or finance functions.
+> Reasoning: The role's primary mission is enabling self-serve analytics consumption and building the modelling layer for business users (data consumers), not serving a specific commercial, product, or finance function.
 
 **Run 3:** `internal_data` ✓
-> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-serve analytics for business users across IG"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary purpose is building data infrastructure (dbt models, Looker dashboards, data pipelines) that internal business users consume; the role serves the data function itself, not commercial or product-facing teams.
+> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-service analytics for business users across IG"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibilities centre on building data models and infrastructure that enable self-serve analytics for internal business users, characteristic of internal data platform orientation.
 
 ### autonomy_level
 **Manual:** `execution`
 
 **Run 1:** `execution` ✓
-> Quote: "Translate business requirements from stakeholders across functions into efficient, trusted data models"
+> Quote: "Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
 > Verified: ✓ found in JD
-> Reasoning: The role receives requirements set by others and executes on translating those requirements into technical solutions, with no framing around setting strategic direction.
+> Reasoning: Action verbs are execution-oriented (deliver, build, translate, contribute, partner) with no strategic direction-setting language; explicitly individual contributor role.
 
 **Run 2:** `execution` ✓
-> Quote: "Translate business requirements from stakeholders across functions into efficient, trusted data models"
+> Quote: "Build and maintain scalable, well-documented data models in dbt that enable self-service analytics for business users across IG"
 > Verified: ✓ found in JD
-> Reasoning: The candidate receives scoped requirements from stakeholders and executes against them, with no mention of defining direction, setting priorities, or shaping analytics strategy.
+> Reasoning: Verbs like 'build', 'maintain', 'deliver', and 'contribute' indicate execution of defined work within an established team structure rather than strategic direction-setting.
 
 **Run 3:** `execution` ✓
 > Quote: "Translate business requirements from stakeholders across functions into efficient, trusted data models"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as receiving and executing on requirements set by others, with no language about defining strategy or establishing direction; described as an individual contributor with no direct reports.
+> Reasoning: The role receives business requirements and translates them into technical solutions, which is execution of scoped work rather than strategic direction-setting.
 
 ### ai_role
 **Manual:** ``
@@ -225,17 +223,17 @@ Number of openings: 1
 **Run 1:** `ai_enabler` ✗
 > Quote: "Contribute to the development of AI agents, co-pilots, and automated insights that surface data directly to users"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems consume and run on, enabling AI products rather than using AI tools for personal coding acceleration.
+> Reasoning: Candidate builds data infrastructure (models, quality) that powers AI systems rather than using AI tools for personal productivity.
 
 **Run 2:** `ai_enabler` ✗
 > Quote: "Contribute to the development of AI agents, co-pilots, and automated insights that surface data directly to users"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure (models, dashboards, pipelines) that AI systems consume, making data ready for AI/ML applications.
+> Reasoning: The candidate is expected to build data models and infrastructure that AI agents and co-pilots consume to operate, making the role about enabling AI systems rather than using AI tools.
 
 **Run 3:** `ai_enabler` ✗
 > Quote: "Contribute to the development of AI agents, co-pilots, and automated insights that surface data directly to users"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data models and infrastructure that AI agents and co-pilots consume, not to use AI tools for their own coding productivity.
+> Reasoning: The candidate is expected to build data infrastructure and models that enable AI agents and co-pilots to function, which is ai_enabler work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
@@ -245,38 +243,36 @@ Number of openings: 1
 **Run 1:** `responsibility` ✗
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as explicit owner responsibilities using the ownership verb 'safeguard,' not merely as tools to be familiar with.
+> Reasoning: Testing and data quality are framed as owned responsibilities using the accountable action verb "safeguard" rather than listed as a required skill.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as something the candidate owns and actively practices using ownership language ('safeguard through'), not just a tool in their toolkit.
+> Reasoning: Testing and data quality are framed as an owned responsibility ('Safeguard') in the responsibilities section, not merely a tool in the requirements list.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality appear as owned responsibilities with the action verb 'safeguard,' not merely as a listed skill requirement.
+> Reasoning: Testing frameworks and data quality practices are framed as something the candidate owns and implements to safeguard data integrity, indicating ownership rather than just tool familiarity.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `high` ✗
-> Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
+**Run 1:** `moderate` ✗
+> Quote: "Deliver the migration of business-critical dashboards to Looker, rebuilding and modelling in LookML to ensure a clean, reliable transition"
 > Verified: ✓ found in JD
-> Reasoning: The JD repeatedly frames the role around preventing bad data and failures through safeguarding, testing, and trusted delivery in a fintech context where data errors have direct business and regulatory impact.
+> Reasoning: Operational reliability and data integrity are primary concerns through language like "safeguard", "trusted", "reliable", and "business-critical"; but no compliance or regulatory language present despite fintech sector.
 
 **Run 2:** `moderate` ✗
 > Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational data reliability and trustworthiness, but does not frame around regulatory compliance or preventing stakeholder trust damage from bad data.
+> Reasoning: The role emphasizes preventing operational failures and data quality issues, but lacks explicit compliance, regulatory, or stakeholder-trust framing typical of high loss aversion.
 
-**Run 3:** `high` ✗
-> Quote: "The candidate will turn raw data into trusted, self-serve insight that business users across IG can act on"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Trust language appears in the role summary, 'safeguard' and 'reliable' frame key responsibilities, and repeated emphasis on trustworthiness reflects fear of bad data reaching decision-makers in a fintech context.
+**Run 3:** `moderate` ✗
+> Quote: "Safeguard data integrity through robust testing frameworks, documentation, and data quality practices"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data integrity are foregrounded through multiple quality signals, but without explicit regulatory or compliance language; the primary fear is data errors affecting business decisions rather than regulatory exposure.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`high`
-
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

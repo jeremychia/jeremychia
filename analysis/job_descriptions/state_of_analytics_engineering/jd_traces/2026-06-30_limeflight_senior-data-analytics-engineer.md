@@ -86,182 +86,211 @@ Hiring Process: Four stages including recruiter screen, manager interview, techn
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | internal_data | product | internal_data | 33% |
-| autonomy_level | mixed | strategic | strategic | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
+| stakeholder_orientation | mixed | internal_data | product | internal_data | 33% | ✗ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "Ensure data quality, reliability, observability, and performance"
-> Verified: ✓ found in JD
-> Reasoning: The core responsibilities emphasize data quality, reliability, observability, and governance—foundational rigour principles—with no velocity-oriented language.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Implement validation scripts, unit tests, data quality checks"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality, testing, validation, CI/CD, and governance throughout, with no mention of speed or velocity priorities.
+> Reasoning: The responsibilities section emphasizes data quality, testing, CI/CD, and observability with no velocity language present, placing this firmly in the rigour category.
 
-**Run 3:** `rigour`
-> Quote: "Ensure data quality, reliability, observability, and performance"
+**Run 2:** `rigour` ✓
+> Quote: "Implement validation scripts, unit tests, data quality checks"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize data quality, testing, CI/CD, and reliability as core work characteristics with no counterbalancing velocity signals.
+> Reasoning: Multiple quality signals (tests, validation, CI/CD, governance) appear throughout responsibilities with no velocity language.
+
+**Run 3:** `rigour` ✓
+> Quote: "Implement validation scripts, unit tests, data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize quality, testing, and reliability practices throughout with no velocity language present, indicating a rigour-focused orientation.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "customer-facing BI products"
 > Verified: ✓ found in JD
-> Reasoning: While customer-facing, the role lacks signals of financial reporting, regulatory compliance, or direct revenue impact that would indicate high domain risk.
+> Reasoning: The role serves customer-facing analytics but lacks explicit financial reporting, regulatory, or compliance language that would elevate it to high risk.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✓
 > Quote: "Build and maintain customer dashboards and embedded analytics"
 > Verified: ✓ found in JD
-> Reasoning: The role delivers customer-facing analytics in a SaaS product environment, affecting business decisions without financial reporting or regulatory compliance consequences.
+> Reasoning: Data errors affect customer-facing products and business decisions, but no explicit financial reporting or compliance language.
 
-**Run 3:** `moderate`
+**Run 3:** `moderate` ✓
 > Quote: "5+ years in data engineering / analytics engineering for customer-facing BI products"
 > Verified: ✓ found in JD
-> Reasoning: Customer-facing analytics product but with no explicit signals about financial reporting, regulatory compliance, or mission-critical systems.
+> Reasoning: Customer-facing analytics in a SaaS product affects business decisions but without regulatory, compliance, or financial reporting language, placing this at moderate risk.
 
 ### collaboration_width
+**Manual:** `1`
 
-**Run 1:** `0`
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes technical ownership and platform work without naming specific cross-functional teams or departments as collaboration partners.
+**Run 1:** `0` ✗
+> Quote: "No explicitly named partner teams or functions identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD describes customer and cross-functional engagement but does not name specific internal teams like Finance, Product, Engineering, or Data Science as collaboration partners.
 
-**Run 2:** `0`
-> Quote: "take end-to-end ownership of our data platform and BI layer"
-> Verified: ✓ found in JD
-> Reasoning: No distinct named partner functions (Finance, Product, Marketing, Engineering, etc.) are explicitly mentioned; the role emphasizes end-to-end platform ownership.
+**Run 2:** `0` ✗
+> Quote: "None found"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No explicit named teams or functions (Finance, Product, Engineering, etc.) mentioned as collaboration partners in the responsibilities.
 
-**Run 3:** `0`
-> Quote: "Take end-to-end ownership of our data platform and BI layer"
-> Verified: ✓ found in JD
-> Reasoning: No named internal teams or functions are identified as collaboration partners; role framing emphasizes end-to-end solo ownership.
+**Run 3:** `0` ✗
+> Quote: "No named collaboration partners identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities section does not explicitly name any partner functions, teams, or external collaborators.
+
+⚠ **Disagreement**: manual=`1` vs LLM majority=`0`
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "take end-to-end ownership of our data platform and BI layer"
+**Run 1:** `mid` ✓
+> Quote: "Reduce technical debt and rebuild toward clean architecture"
 > Verified: ✓ found in JD
-> Reasoning: The platform already exists and is customer-facing, but requires significant ownership and modernization work—characteristic of a mid-stage team.
+> Reasoning: The data function is operational with customer-facing products and named tools in responsibilities (Databricks, Power BI), but the company is undergoing significant modernization from a vendor-built solution, indicating growth rather than early stage or full maturity.
 
-**Run 2:** `mid`
-> Quote: "Reverse-engineer vendor-built BI solution"
+**Run 2:** `mid` ✓
+> Quote: "Reverse-engineer vendor-built BI solution; Reduce technical debt and rebuild toward clean architecture"
 > Verified: ✓ found in JD
-> Reasoning: The role addresses modernizing existing infrastructure rather than building from zero, indicating a maturing team with established but legacy systems requiring architectural rebuild.
+> Reasoning: Existing platform infrastructure (Databricks, Fabric, Power BI) is being operated and migrated, indicating a mid-stage team with established tooling.
 
-**Run 3:** `mid`
-> Quote: "Reverse-engineer vendor-built BI solution"
+**Run 3:** `mid` ✓
+> Quote: "Reduce technical debt and rebuild toward clean architecture"
 > Verified: ✓ found in JD
-> Reasoning: Existing customer-facing infrastructure and named tools in use, but significant rebuilding required indicates growing mid-stage maturity rather than early or established teams.
+> Reasoning: The role involves maintaining and improving existing platforms (Databricks, Fabric, Power BI) rather than building from zero or joining a mature 20+ person team.
 
 ### jd_authorship
+**Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager`
+**Run 1:** `hiring_manager` ✓
 > Quote: "Maintain DAX performance and dataset refresh consistency"
 > Verified: ✓ found in JD
-> Reasoning: Knowledge of DAX optimization and Power BI refresh mechanics indicates a hiring manager who has worked in this technical domain.
+> Reasoning: The responsibilities demonstrate technical specificity about Power BI internals, lakehouse architecture, star schema modeling, and multi-tenant patterns that only come from someone who performs this work regularly.
 
-**Run 2:** `hiring_manager`
-> Quote: "Design and operate scalable pipelines and lakehouse architecture"
+**Run 2:** `hiring_manager` ✓
+> Quote: "Reverse-engineer vendor-built BI solution"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain precise technical methodology (lakehouse architecture, star schema, DAX, multi-tenant models) and specific business context that only comes from someone who has performed this work.
+> Reasoning: Specific technical challenge unique to this business context demonstrates hands-on knowledge from someone who has done this work.
 
-**Run 3:** `hiring_manager`
-> Quote: "Reverse-engineer vendor-built BI solution; Reduce technical debt and rebuild toward clean architecture"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities contain company-specific context and precise technical scope (star schema, lakehouse, DAX, semantic models) that only comes from someone doing this work.
+**Run 3:** `hiring_manager` ✓
+> Quote: "Reverse-engineer vendor-built BI solution"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical contexts and business challenges that only someone who owns this work would articulate, including vendor migration, dimensional modeling, and DAX optimization.
 
 ### stakeholder_orientation
+**Manual:** `mixed`
 
-**Run 1:** `internal_data`
-> Quote: "take end-to-end ownership of our data platform and BI layer"
+**Run 1:** `internal_data` ✗
+> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: The role's core responsibility is owning the data platform and infrastructure that happens to power customer-facing analytics.
+> Reasoning: The primary stakeholder is the data platform and analytics infrastructure itself; customer-facing analytics are built on top of and depend on this platform.
 
-**Run 2:** `product`
-> Quote: "Build and maintain customer dashboards and embedded analytics"
+**Run 2:** `product` ✗
+> Quote: "customer-facing BI products"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly framed around delivering customer-facing BI products in a SaaS environment, positioning customers as the primary audience for the analytics delivered.
+> Reasoning: Role serves customer value through BI and analytics products in a product-driven SaaS environment.
 
-**Run 3:** `internal_data`
-> Quote: "Enable self-serve analytics with governance"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Primary responsibility is building and operating the data platform and self-service analytics infrastructure rather than serving product, commercial, or finance teams.
+**Run 3:** `internal_data` ✗
+> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
+> Verified: ✓ found in JD
+> Reasoning: The primary focus is building and maintaining the data infrastructure platform itself, serving data consumers and platform operators rather than commercial or finance functions.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
 
 ⚠ **LLM inconsistency**: runs gave ['internal_data', 'product', 'internal_data']
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `mixed`
+**Run 1:** `strategic` ✓
 > Quote: "take end-to-end ownership of our data platform and BI layer"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of platform architecture and design with hands-on execution of technical implementations.
+> Reasoning: The role is expected to own, design, and build the data platform and quality frameworks rather than execute against defined priorities, reflecting strategic authority over the analytics function.
 
-**Run 2:** `strategic`
+**Run 2:** `strategic` ✓
 > Quote: "take end-to-end ownership of our data platform and BI layer"
 > Verified: ✓ found in JD
-> Reasoning: The role is positioned to set direction for the data platform and BI layer with verbs like 'own', 'design', and 'architect', combined with the explicit mindset requirement for 'strong ownership and autonomy'.
+> Reasoning: Ownership and design language indicate the role sets platform direction and strategy, not executing defined tasks.
 
-**Run 3:** `strategic`
-> Quote: "take end-to-end ownership of our data platform and BI layer"
+**Run 3:** `strategic` ✓
+> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: End-to-end ownership with responsibility for defining architecture and reducing technical debt indicates strategic autonomy to shape the platform direction rather than executing scoped work.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
+> Reasoning: The role is framed around ownership and architectural definition of the platform rather than executing work scoped by others.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
-> Reasoning: Data platform infrastructure role with named tools but no AI capabilities (coding assistants, GenAI, semantic models) in scope.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
-> Reasoning: No AI tooling (Copilot, Claude Code) or GenAI infrastructure mentioned; stack is traditional data tools.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, LLM-assisted workflows, or AI infrastructure expectations for the candidate.
 
-**Run 3:** `none` ✓
-> Quote: "Own end-to-end data platform using Databricks and Microsoft Fabric"
-> Reasoning: No AI coding tools, AI-ready infrastructure, or GenAI responsibilities mentioned.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Build CI/CD, testing, and versioning for pipelines"
-> Reasoning: Candidate owns testing implementation with explicit ownership verb ('Build') for CI/CD and testing practices.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Build CI/CD, testing, and versioning for pipelines"
-> Reasoning: Ownership verb 'build' applied to testing and quality; testing is core deliverable not just tooling.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Build CI/CD, testing, and versioning for pipelines"
-> Reasoning: Candidate explicitly owns CI/CD, testing, and versioning responsibilities.
-
-
-### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Ensure data quality, reliability, observability, and performance"
-> Reasoning: Operational reliability concerns (reliability, observability, performance) dominate without regulatory or compliance framing.
-
-**Run 2:** `moderate` ✓
-> Quote: "Ensure data quality, reliability, observability, and performance"
-> Reasoning: Operational reliability concerns (quality, observability, consistency) dominate; customer-facing BI adds business-decision risk but no regulatory/compliance language detected.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No AI tools, AI-ready foundations, or AI/ML pipeline signals mentioned; no expectation of AI skill from candidates.
 
 **Run 3:** `none` ✗
-> Quote: "Ensure data quality, reliability, observability, and performance"
-> Reasoning: Responsibilities focus on delivery and operations without regulatory compliance or trustworthiness as primary framing.
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no references to AI coding tools, GenAI applications, AI-assisted workflows, or AI-ready data infrastructure.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Implement validation scripts, unit tests, data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as responsibilities the candidate owns and implements, not merely tools they should know about.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Implement validation scripts, unit tests, data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and validation are framed as core responsibilities that the candidate owns and implements, not just tools in a requirements list.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Implement validation scripts, unit tests, data quality checks"
+> Verified: ✓ found in JD
+> Reasoning: Testing and quality practices are framed as candidate-owned responsibilities using action verbs like 'implement' and 'build', not merely listed as required tools.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Build CI/CD, testing, and versioning for pipelines"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are concerns, but framed as performance and operational discipline rather than regulatory compliance or prevention of stakeholder trust failure.
+
+**Run 2:** `moderate` ✗
+> Quote: "Ensure data quality, reliability, observability, and performance"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and quality are emphasized as core concerns, but there is no compliance, regulatory, or high-level business risk language.
+
+**Run 3:** `moderate` ✗
+> Quote: "Ensure data quality, reliability, observability, and performance"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are emphasized as service concerns without framing around regulatory compliance, audit, or preventing bad data reaching decision-makers.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

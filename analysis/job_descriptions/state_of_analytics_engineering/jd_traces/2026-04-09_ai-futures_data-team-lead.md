@@ -62,14 +62,14 @@
 
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
-| velocity_vs_rigour | velocity | rigour | rigour | velocity | 33% | ✗ |
-| domain_risk | high | high | high | high | 100% | ✓ |
-| collaboration_width | 2 | 2 | 2 | 1 | 33% | ✓ |
+| velocity_vs_rigour | velocity | velocity | velocity | rigour | 33% | ✓ |
+| domain_risk | high | moderate | moderate | high | 33% | ✗ |
+| collaboration_width | 2 | 0 | 1 | 1 | 33% | ✗ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
-| ai_role |  | ai_enabler | ai_enabler | ai_enabler | 100% | ✗ |
+| jd_authorship | mixed | hiring_manager | mixed | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | commercial | internal_data | internal_data | 33% | ✓ |
+| autonomy_level | strategic | mixed | strategic | strategic | 33% | ✓ |
+| ai_role |  | ai_enabler | none | none | 33% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
 | loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
@@ -80,62 +80,66 @@
 ### velocity_vs_rigour
 **Manual:** `velocity`
 
-**Run 1:** `rigour` ✗
-> Quote: "Designing and building a modern data platform for "high-volume, real-time vehicle and transaction data""
+**Run 1:** `velocity` ✓
+> Quote: "productionise pipelines at pace"
 > Verified: ✓ found in JD
-> Reasoning: Infrastructure language emphasizing high-volume real-time platforms implies reliability and quality orientation; only one velocity signal ("at pace") is insufficient to override this.
+> Reasoning: The only signal phrase is 'at pace' (velocity), while rigour signals like data quality, testing, CI/CD, compliance, or governance are entirely absent.
 
-**Run 2:** `rigour` ✗
-> Quote: "Designing and building a modern data platform for "high-volume, real-time vehicle and transaction data""
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize building robust infrastructure and data architecture for financial systems over speed, with "at pace" as a single velocity modifier in an otherwise infrastructure-focused narrative focused on architecture and ownership.
-
-**Run 3:** `velocity` ✓
+**Run 2:** `velocity` ✓
 > Quote: "Collaborating with OEM partners and external developers to productionise pipelines at pace"
 > Verified: ✓ found in JD
-> Reasoning: The explicit 'at pace' language in the responsibilities indicates velocity focus, with no corresponding rigour signals like testing, quality, compliance, or governance.
+> Reasoning: The JD explicitly prioritizes shipping pace without naming quality controls, testing frameworks, compliance, or governance as core responsibilities.
 
-⚠ **Disagreement**: manual=`velocity` vs LLM majority=`rigour`
+**Run 3:** `rigour` ✗
+> Quote: "Designing and building a modern data platform for "high-volume, real-time vehicle and transaction data""
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasises modern architectural patterns (medallion architectures, data lakes, SQL-based platforms) and platform design over speed; a single "at pace" phrase does not shift the rigour-dominant orientation.
 
-⚠ **LLM inconsistency**: runs gave ['rigour', 'rigour', 'velocity']
+⚠ **LLM inconsistency**: runs gave ['velocity', 'velocity', 'rigour']
 
 ### domain_risk
 **Manual:** `high`
 
-**Run 1:** `high` ✓
-> Quote: "Building infrastructure that powers "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems""
+**Run 1:** `moderate` ✗
+> Quote: "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems"
 > Verified: ✓ found in JD
-> Reasoning: Explicit financial outcomes (pricing, payments, financial decisioning) indicate direct business and revenue impact.
+> Reasoning: The role involves financial decisioning and payment processing in a fintech/automotive context, implying business impact, but the JD lacks explicit regulatory, compliance, or audit language that would elevate this to high risk.
 
-**Run 2:** `high` ✓
-> Quote: "Building infrastructure that powers "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems""
-> Verified: ✓ found in JD
-> Reasoning: Errors in payment and financial decisioning systems have direct regulatory and financial consequences, making data quality mission-critical.
+**Run 2:** `moderate` ✗
+> Quote: "Building infrastructure that powers AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Pricing and payment errors have direct financial impact, but the JD lacks regulatory, compliance, or audit language that would elevate this to high risk.
 
 **Run 3:** `high` ✓
-> Quote: "Building infrastructure that powers 'AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems'"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Financial decisioning directly affects financial outcomes at scale, indicating a high-risk domain with potential for significant business impact.
+> Quote: "Building infrastructure that powers "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems""
+> Verified: ✓ found in JD
+> Reasoning: Explicit mention of financial decisioning and payments—core financial functions with direct business consequence—elevates risk despite absence of regulatory language.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']
 
 ### collaboration_width
 **Manual:** `2`
 
-**Run 1:** `2` ✓
-> Quote: "OEM partners; external developers"
-> Verified: ✓ found in JD
-> Reasoning: Two distinct external partner groups explicitly named as collaboration partners.
+**Run 1:** `0` ✗
+> Quote: "No named partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: OEM partners and external developers are mentioned but are too generic to count as named teams or functions under the definition.
 
-**Run 2:** `2` ✓
-> Quote: "OEM partners; external developers"
+**Run 2:** `1` ✗
+> Quote: "OEM partners"
 > Verified: ✓ found in JD
-> Reasoning: Two distinct external collaboration groups are explicitly named in the responsibilities.
+> Reasoning: Only OEM partners are explicitly named as a distinct collaboration group; external developers is generic phrasing without specific team identity.
 
 **Run 3:** `1` ✗
 > Quote: "OEM partners"
 > Verified: ✓ found in JD
-> Reasoning: OEM partners are explicitly named as a collaboration partner in the responsibilities; external developers are mentioned but not as a distinct named team or function.
+> Reasoning: Only one explicitly named external collaboration partner; no internal functions (Finance, Product, Engineering, etc.) are named.
 
-⚠ **LLM inconsistency**: runs gave ['2', '2', '1']
+⚠ **Disagreement**: manual=`2` vs LLM majority=`1`
+
+⚠ **LLM inconsistency**: runs gave ['0', '1', '1']
 
 ### data_team_maturity
 **Manual:** `early`
@@ -143,17 +147,17 @@
 **Run 1:** `mid` ✗
 > Quote: "Growing and mentoring a data engineering team and contributing to hiring decisions"
 > Verified: ✓ found in JD
-> Reasoning: Existence of a team to grow and scale indicates an established data function in growth phase, not early-stage.
+> Reasoning: A team already exists and requires growth; named tools appear in responsibilities (RapidMiner, medallion architectures, Power BI, Azure); the focus is modernization and scaling, not establishment from zero.
 
 **Run 2:** `mid` ✗
 > Quote: "Growing and mentoring a data engineering team and contributing to hiring decisions"
 > Verified: ✓ found in JD
-> Reasoning: The data team already exists and is expanding with modern infrastructure development, indicating a function beyond early stage but not yet fully mature at enterprise scale.
+> Reasoning: The phrasing indicates an existing data team being expanded with named tools (Python, RapidMiner, medallion architecture), suggesting mid-stage maturity beyond greenfield but not yet fully specialized.
 
 **Run 3:** `mid` ✗
 > Quote: "Growing and mentoring a data engineering team and contributing to hiring decisions"
 > Verified: ✓ found in JD
-> Reasoning: The mention of an existing team to grow suggests the data function is established but in a growth phase, indicating a mid-stage organization.
+> Reasoning: Team already exists and is actively growing with hiring; multiple named technical platforms and a mentorship function imply an established but expanding team, not greenfield.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -163,93 +167,101 @@
 **Run 1:** `hiring_manager` ✗
 > Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool selections, domain knowledge (OEM partners, connected vehicle ecosystems), and precise use case context show hands-on technical experience.
+> Reasoning: The specificity of named tools (RapidMiner), architecture patterns (medallion architectures, data lakes), and domain context (high-volume real-time vehicle/transaction data) indicates deep technical knowledge of the actual role.
 
-**Run 2:** `hiring_manager` ✗
+**Run 2:** `mixed` ✓
 > Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner"
 > Verified: ✓ found in JD
-> Reasoning: The JD includes specific technical tool knowledge (RapidMiner, medallion architectures), domain-specific use cases (payments, financial decisioning), and business model understanding (OEM partnerships, vehicle data) only an SME would include.
+> Reasoning: Technical tool specificity (RapidMiner, medallion architecture) indicates hiring manager input, though generic action verbs elsewhere (growing, collaborating, productionise) reflect recruiter language.
 
 **Run 3:** `hiring_manager` ✗
-> Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner"
+> Quote: "Proven experience building pipelines within modern data stacks such as data lakes, medallion architectures, or SQL-based platforms"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about named tools, methodologies (ETL/ELT), data volumes ('high-volume, real-time'), and architectural patterns (medallion architectures, data lakes) indicates hands-on engineering experience.
+> Reasoning: The JD names specific architectural patterns (medallion), domain context (vehicle/transaction data), and tool combinations (RapidMiner for ETL/ELT, Azure/Kafka/Spark stack) with precision only a hiring manager would provide.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✓
-> Quote: "Designing and building a modern data platform"
-> Verified: ✓ found in JD
-> Reasoning: Primary focus is platform and infrastructure leadership; three of five responsibilities center on internal data function and team building.
+**Run 1:** `commercial` ✗
+> Quote: "Building infrastructure that powers AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The platform's primary purpose is to enable revenue/commercial functions—pricing strategy, payment processing, and financial operations for OEM partnerships.
 
 **Run 2:** `internal_data` ✓
-> Quote: "Designing and building a modern data platform for "high-volume, real-time vehicle and transaction data""
+> Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner"
 > Verified: ✓ found in JD
-> Reasoning: The primary focus is building and owning data infrastructure and platform components that internal teams and downstream AI systems consume.
+> Reasoning: Primary responsibilities focus on platform and infrastructure ownership for the data function; the team being led is data engineers; external outputs serve commercial purposes but the role itself is platform-centric.
 
 **Run 3:** `internal_data` ✓
-> Quote: "Designing and building a modern data platform for 'high-volume, real-time vehicle and transaction data'"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The primary focus is building the data infrastructure and platform itself rather than serving a specific external function like sales, finance operations, or product analytics.
+> Quote: "Designing and building a modern data platform"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as a Data Team Lead responsible for building platform infrastructure and growing the data team; while the output serves financial decisioning, the primary stakeholder relationship is with the data engineering function.
+
+⚠ **LLM inconsistency**: runs gave ['commercial', 'internal_data', 'internal_data']
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `strategic` ✓
-> Quote: "Designing and building a modern data platform; Owning ETL and ELT pipeline development"
-> Verified: ✓ found in JD
-> Reasoning: Verbs like "designing," "building," and "owning" indicate setting direction for both technology and team priorities.
-
-**Run 2:** `strategic` ✓
+**Run 1:** `mixed` ✗
 > Quote: "Owning ETL and ELT pipeline development"
 > Verified: ✓ found in JD
-> Reasoning: The role uses strategic verbs (designing, owning, building, growing) and includes independent decision-making on team-building, hiring, and platform architecture.
+> Reasoning: The role combines strategic elements (designing the platform, owning pipeline development, growing/mentoring the team) with execution work (collaborating with external partners to productionize).
+
+**Run 2:** `strategic` ✓
+> Quote: "Designing and building a modern data platform"
+> Verified: ✓ found in JD
+> Reasoning: Ownership verbs (designing, building, owning, growing) and responsibility for team expansion indicate direction-setting authority over the data platform rather than execution of others' priorities.
 
 **Run 3:** `strategic` ✓
 > Quote: "Owning ETL and ELT pipeline development"
 > Verified: ✓ found in JD
-> Reasoning: The role uses strategic action verbs (designing, building, owning, growing, mentoring) that indicate the candidate will shape and define the data function's direction.
+> Reasoning: Ownership verbs ("owning," "designing," "building") and responsibility for team growth and hiring decisions position this as strategic direction-setting for the data platform.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'strategic', 'strategic']
 
 ### ai_role
 **Manual:** ``
 
 **Run 1:** `ai_enabler` ✗
-> Quote: "Building infrastructure that powers "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems""
-> Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems consume and operate on.
-
-**Run 2:** `ai_enabler` ✗
-> Quote: "Building infrastructure that powers "AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems""
-> Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that AI systems consume, not to use AI coding tools for personal productivity.
-
-**Run 3:** `ai_enabler` ✗
-> Quote: "Building infrastructure that powers 'AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems'"
+> Quote: "Building infrastructure that powers AI-driven pricing, payments, and financial decisioning across connected vehicle ecosystems"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The candidate is expected to build data infrastructure that AI systems consume and run on, enabling AI-driven financial decision-making.
+> Reasoning: The candidate is expected to build data infrastructure that enables AI-driven business systems, making them an infrastructure enabler for AI rather than a user of AI coding tools.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While the company builds AI-driven products, the JD does not expect the candidate to demonstrate AI coding, usage, or AI infrastructure skills—they are building data infrastructure that feeds AI systems.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions "AI-driven pricing" as a business outcome the platform will serve, but does not require the candidate to demonstrate any AI skill—no coding tools, enablement, or ML collaboration is mentioned.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'none', 'none']
 
 ### testing_framing
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "No testing or data quality signal."
+> Quote: "Owning ETL and ELT pipeline development using Python and low-code platforms such as RapidMiner"
 > Verified: ✓ found in JD
-> Reasoning: No mention of testing, data quality, data contracts, observability, or SLOs anywhere in the JD.
+> Reasoning: The technical responsibilities describe development and infrastructure work without any mention of testing frameworks, data quality practices, data contracts, or observability standards.
 
 **Run 2:** `absent` ✗
-> Quote: "No testing or data quality signal in the JD."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: There are no mentions of testing, data quality, data contracts, observability, or reliability frameworks in the responsibilities.
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of testing frameworks, data contracts, observability, data quality ownership, or quality-related tools.
 
 **Run 3:** `absent` ✗
-> Quote: "No testing or data quality practice mentioned in the responsibilities."
+> Quote: "No mention of testing, data quality, or observability frameworks."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: No mention of testing, data contracts, observability, data quality, or related quality/reliability practices appears in the responsibilities section.
+> Reasoning: The JD focuses on platform design, pipeline development, and team leadership with no reference to testing practices, data contracts, SLOs, or quality frameworks.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
@@ -257,18 +269,18 @@
 **Manual:** ``
 
 **Run 1:** `none` ✗
-> Quote: "No loss aversion framing."
-> Verified: ✓ found in JD
-> Reasoning: JD is framed around capability building and delivery rather than risk management, compliance, or preventing bad outcomes.
+> Quote: "Designing and building a modern data platform for high-volume, real-time vehicle and transaction data"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role is framed around designing, building, and owning technical capabilities with no emphasis on risk, compliance, reliability concerns, or preventing bad outcomes.
 
 **Run 2:** `none` ✗
 > Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: The JD is framed in delivery and capability terms (designing, building, growing) without explicit risk mitigation, compliance, or reliability language despite the high-risk financial domain.
+> Reasoning: The JD is entirely framed around building and shipping capabilities with no mention of preventing bad outcomes, reliability concerns, or compliance constraints.
 
 **Run 3:** `none` ✗
 > Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: The JD frames the role in terms of building capabilities and leading the team with no emphasis on preventing bad outcomes, compliance, regulatory concerns, or stakeholder trust.
+> Reasoning: The JD frames the role in delivery and capability terms (building, designing, owning) with no explicit language around compliance, reliability, preventing bad outcomes, or risk management.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`

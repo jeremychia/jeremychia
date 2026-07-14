@@ -66,12 +66,12 @@ To ensure a fair and genuine hiring process, candidates are expected to particip
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | mixed | mixed | hiring_manager | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | strategic | strategic | mixed | strategic | 33% | ✓ |
-| ai_role |  | ai_user | ai_user | none | 33% | ✗ |
+| autonomy_level | strategic | strategic | strategic | mixed | 33% | ✓ |
+| ai_role |  | none | ai_user | ai_user | 33% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
+| loss_aversion_framing |  | high | moderate | moderate | 33% | ✗ |
 
 ---
 
@@ -81,19 +81,19 @@ To ensure a fair and genuine hiring process, candidates are expected to particip
 **Manual:** `mixed`
 
 **Run 1:** `rigour` ✗
-> Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
+> Quote: "ensuring data quality, operational excellence, and platform reliability through robust validation processes, monitoring, incident management, and well-defined operational procedures"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes data quality, reliability, validation, and monitoring as core responsibilities, with velocity language appearing only as a subordinate concern when 'balancing delivery speed with reliability.'
+> Reasoning: The role summary opens with data quality, operational excellence, and platform reliability as core responsibilities, supported by specific rigorous practices like validation, monitoring, and incident management, vastly outnumbering any velocity signals.
 
 **Run 2:** `rigour` ✗
 > Quote: "ensuring data quality, operational excellence, and platform reliability through robust validation processes, monitoring, incident management, and well-defined operational procedures"
 > Verified: ✓ found in JD
-> Reasoning: The role summary emphasizes operational excellence, validation, monitoring, and procedures as core expectations, with no velocity/speed language in the responsibilities section.
+> Reasoning: The role summary and responsibilities extensively emphasize quality, reliability, monitoring, and procedures, with no velocity framing — this is classic rigour orientation.
 
 **Run 3:** `rigour` ✗
-> Quote: "ensuring data quality, operational excellence, and platform reliability through robust validation processes, monitoring, incident management, and well-defined operational procedures"
+> Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section is dominated by quality, reliability, validation, monitoring, and operational excellence language with no velocity signals beyond a single phrase subordinating delivery speed to reliability.
+> Reasoning: Responsibilities emphasize data quality, reliability, and robust validation processes as core expectations rather than speed or iteration.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
@@ -101,55 +101,55 @@ To ensure a fair and genuine hiring process, candidates are expected to particip
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Define and maintain KPI/metric definitions, lineage, and reporting standards so stakeholders trust the numbers"
+> Quote: "stakeholders trust the numbers"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes internal business intelligence and stakeholder trust in data without explicit financial reporting, regulatory, compliance, or audit language that would signal high risk.
+> Reasoning: The emphasis on stakeholder trust implies business decisions depend on metric accuracy, but without explicit financial reporting or compliance language, this indicates moderate rather than high domain risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "establishing trusted KPIs and developing scalable semantic models that empower self-service reporting and analytics through Power BI"
+> Quote: "Define and maintain KPI/metric definitions, lineage, and reporting standards so stakeholders trust the numbers"
 > Verified: ✓ found in JD
-> Reasoning: This is business intelligence for an SaaS/tech company without explicit financial reporting, regulatory, or P&L language, pointing to moderate rather than high risk.
+> Reasoning: The JD emphasizes building stakeholder trust in metrics through operational BI rather than financial reporting, compliance, or regulatory language, indicating moderate rather than high risk.
 
 **Run 3:** `moderate` ✓
-> Quote: "establishing trusted KPIs and developing scalable semantic models that empower self-service reporting and analytics through Power BI"
+> Quote: "drive the end-to-end delivery of business intelligence solutions, establishing trusted KPIs"
 > Verified: ✓ found in JD
-> Reasoning: This is a business intelligence role emphasizing stakeholder trust and data quality without explicit financial reporting, compliance, or regulatory language.
+> Reasoning: This is standard business intelligence work establishing internal reporting and KPIs without explicit financial reporting, compliance, or regulatory language.
 
 ### collaboration_width
 **Manual:** `0`
 
 **Run 1:** `0` ✓
-> Quote: "None identified"
-> Verified: ✓ found in JD
-> Reasoning: The JD discusses collaboration through generic terms like 'stakeholders' and 'business outcomes' but does not name specific organizational functions such as Finance, Product, Engineering, Sales, or other distinct teams.
+> Quote: "No named partner teams"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While the role emphasizes stakeholder communication and leadership, no specific named partner teams or functions like Finance, Product, or Engineering are identified in the JD.
 
 **Run 2:** `0` ✓
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: The JD mentions only generic 'stakeholders' and 'business outcomes' with no specifically named functions or teams as collaboration partners.
+> Quote: "No explicitly named partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD mentions generic 'stakeholders' and 'business outcomes' but does not name specific partner functions like Finance, Product, Engineering, or Operations.
 
 **Run 3:** `0` ✓
-> Quote: ""
+> Quote: "so stakeholders trust the numbers"
 > Verified: ✓ found in JD
-> Reasoning: The JD uses only generic terms like 'stakeholders' and does not explicitly name any partner functions such as Finance, Product, Engineering, or Operations.
+> Reasoning: No named partner teams, functions, or roles are explicitly mentioned; collaboration is referenced only through generic 'stakeholders' and 'business outcomes'.
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "Lead and develop a team of 2 direct reports"
-> Verified: ✓ found in JD
-> Reasoning: The BI function clearly exists with a team structure and is growing through modernization, but is not yet operating at the scale or specialization of a mature multi-sub-team data organization.
+> Quote: "Drive modernization and Microsoft Fabric adoption, balancing delivery speed with long-term scalability and reliability"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role combines managing an existing small BI team and modernizing established infrastructure (Power BI, SQL Server), indicating a data function beyond initial establishment but not yet at enterprise scale.
 
 **Run 2:** `mid` ✗
-> Quote: "Drive modernization and Microsoft Fabric adoption, balancing delivery speed with reliability and operational excellence"
+> Quote: "Lead and develop a team of 2 direct reports (prioritization, coaching, performance management, hiring/onboarding support)"
 > Verified: ✓ found in JD
-> Reasoning: Modernization language suggests existing infrastructure is being improved and evolved, indicating a mid-stage team growing and introducing new tools rather than building from zero.
+> Reasoning: The role manages an existing small team and works with established tools (Power BI, SQL Server, SSAS, SSRS), indicating mid-stage maturity with growth through Fabric modernization.
 
 **Run 3:** `mid` ✗
-> Quote: "Drive modernization and Microsoft Fabric adoption, balancing delivery speed with reliability and operational excellence"
+> Quote: "modernizing the BI landscape through the adoption of Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: The team manages existing infrastructure (Power BI, SQL Server, SSIS) with modernization initiatives, indicating an established function scaling up but not yet a large mature organization.
+> Reasoning: Existing BI infrastructure and team structure are implied; the role focuses on scaling, modernizing, and developing rather than building from zero.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -157,83 +157,81 @@ To ensure a fair and genuine hiring process, candidates are expected to particip
 **Manual:** `hiring_manager`
 
 **Run 1:** `mixed` ✗
-> Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
+> Quote: "Strong SQL (T-SQL) and Microsoft BI stack: SQL Server, SSIS, SSAS (Tabular/Multidimensional), SSRS/Power BI Report Server, Power BI"
 > Verified: ✓ found in JD
-> Reasoning: Some responsibilities show technical specificity (incident triage, clear runbooks, semantic modeling, lineage) mixed with generic management language, indicating both hiring manager and recruiter input.
+> Reasoning: The requirements section shows technical specificity with named tools and versions (T-SQL, SSAS variants, Power BI Report Server) indicating hiring manager input, though the role summary mixes in generic language like team development and collaboration.
 
 **Run 2:** `mixed` ✗
-> Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
+> Quote: "Build scalable semantic models and datasets, enabling self-service dashboards and ad-hoc analysis in Power BI"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain technically specific concepts (incident triage, runbooks, lineage governance) alongside generic action verbs ('improve,' 'drive,' 'own'), indicating both hiring manager and recruiter input.
+> Reasoning: The responsibilities contain some technical specificity (semantic models, Power BI context, incident triage, runbooks) alongside generic leadership framing (team development, strategic modernization).
 
-**Run 3:** `hiring_manager` ✓
-> Quote: "Define and maintain KPI/metric definitions, lineage, and reporting standards so stakeholders trust the numbers; Build scalable semantic models and datasets, enabling self-service dashboards"
+**Run 3:** `mixed` ✗
+> Quote: "Define and maintain KPI/metric definitions, lineage, and reporting standards so stakeholders trust the numbers"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about KPI definitions, lineage, semantic models, and self-serve architecture reflects practitioner knowledge of BI work beyond recruiter boilerplate.
+> Reasoning: Specific BI domain knowledge (lineage, standards, semantic models, incident triage) is mixed with generic action verbs and framing typical of recruiter templates.
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "enabling self-service dashboards and ad-hoc analysis in Power BI"
-> Verified: ✓ found in JD
-> Reasoning: The primary focus is building BI infrastructure and enabling analytics consumption by the broader organization rather than serving commercial, product, or finance-specific stakeholders.
+> Quote: "Build scalable semantic models and datasets, enabling self-serve dashboards and ad-hoc analysis in Power BI"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The emphasis on semantic models and self-serve analytics infrastructure indicates the primary mission is enabling analytics consumers and building data infrastructure rather than serving specific business functions.
 
 **Run 2:** `internal_data` ✓
-> Quote: "enabling self-service dashboards and ad-hoc analysis in Power BI"
-> Verified: ✓ found in JD
-> Reasoning: The primary role is building and operating the analytics platform and enabling self-service consumption by internal analytics consumers rather than serving a specific business function.
-
-**Run 3:** `internal_data` ✓
 > Quote: "developing scalable semantic models that empower self-service reporting and analytics through Power BI"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building BI platform infrastructure and analytics capability as a service layer for business users to consume, not serving a specific commercial, product, or finance function.
+> Reasoning: The role explicitly emphasizes building self-serve analytics infrastructure for internal data consumers rather than commercial, product, or finance stakeholders.
+
+**Run 3:** `internal_data` ✓
+> Quote: "developing scalable semantic models that empower self-serve reporting and analytics through Power BI"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The primary focus is building analytics infrastructure and self-service capabilities for internal data consumers, not external GTM, finance, or product teams.
 
 ### autonomy_level
 **Manual:** `strategic`
 
 **Run 1:** `strategic` ✓
-> Quote: "Own end-to-end BI delivery"
+> Quote: "Own end-to-end BI delivery (requirements, modeling, reporting) for prioritized business outcomes"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use multiple strategic verbs—own, define, lead, drive—reflecting a role that sets direction and shapes the BI function rather than executing defined priorities.
+> Reasoning: The responsibility to own the entire delivery end-to-end, combined with defining standards and driving modernization, indicates strategic autonomy to set direction rather than execute on direction set by others.
 
-**Run 2:** `mixed` ✗
-> Quote: "Drive modernization and Microsoft Fabric adoption"
+**Run 2:** `strategic` ✓
+> Quote: "Own end-to-end BI delivery (requirements, modeling, reporting)"
 > Verified: ✓ found in JD
-> Reasoning: The role has strategic ownership of platform modernization and standard-setting but operates within business priorities set elsewhere ('prioritized business outcomes').
+> Reasoning: The role uses explicit ownership language and establishes KPI definitions, reporting standards, and drives Fabric modernization, indicating strategic direction-setting rather than execution.
 
-**Run 3:** `strategic` ✓
-> Quote: "Own end-to-end BI delivery (requirements, modeling, reporting) for prioritized business outcomes; Define and maintain KPI/metric definitions, lineage, and reporting standards; Drive modernization"
+**Run 3:** `mixed` ✗
+> Quote: "Own end-to-end BI delivery (requirements, modeling, reporting) for prioritized business outcomes"
 > Verified: ✓ found in JD
-> Reasoning: The role is expected to own direction-setting, define organizational standards, drive modernization strategy, and manage a team, not execute scoped work.
+> Reasoning: The role combines strategic direction-setting (define KPIs, drive modernization, lead team) with execution of BI solutions for externally-prioritized business outcomes.
 
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
+⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
 
 ### ai_role
 **Manual:** ``
 
-**Run 1:** `ai_user` ✗
+**Run 1:** `none` ✗
 > Quote: "AI-assisted automation for BI/data work (testing, documentation, or pipeline scripting)"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to use AI tools to accelerate personal productivity in BI work such as testing, documentation, and scripting.
+> Reasoning: AI-assisted automation is mentioned only as a desired skill in the nice-to-have section rather than in core expected competencies, indicating no required AI skill demonstration.
 
 **Run 2:** `ai_user` ✗
 > Quote: "AI-assisted automation for BI/data work (testing, documentation, or pipeline scripting)"
 > Verified: ✓ found in JD
-> Reasoning: The desired skills explicitly ask for the candidate to have used AI tools to accelerate personal work in testing, documentation, and scripting.
+> Reasoning: The JD lists experience with AI-assisted tools for automating the candidate's own BI work — testing, documentation, and scripting — as a desired skill.
 
-**Run 3:** `none` ✗
-> Quote: "No AI skill signal."
+**Run 3:** `ai_user` ✗
+> Quote: "AI-assisted automation for BI/data work (testing, documentation, or pipeline scripting)"
 > Verified: ✓ found in JD
-> Reasoning: AI is mentioned only in the 'Desired (nice to have)' section as optional experience, not as a core expectation; company builds AI products but candidates are not required to demonstrate AI usage.
+> Reasoning: The desired section indicates the candidate should have experience using AI tools to automate BI and data work tasks.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
-⚠ **LLM inconsistency**: runs gave ['ai_user', 'ai_user', 'none']
+⚠ **LLM inconsistency**: runs gave ['none', 'ai_user', 'ai_user']
 
 ### testing_framing
 **Manual:** ``
@@ -241,36 +239,38 @@ To ensure a fair and genuine hiring process, candidates are expected to particip
 **Run 1:** `responsibility` ✗
 > Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
 > Verified: ✓ found in JD
-> Reasoning: Data quality and validation are framed as core owned responsibilities with explicit accountability for improving reliability through validation and monitoring.
+> Reasoning: The responsibility to improve data quality and reliability through specific validation and monitoring processes indicates the role owns and is accountable for quality assurance practices.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
 > Verified: ✓ found in JD
-> Reasoning: Data quality and validation are framed with ownership action verbs and specific practices the candidate defines and maintains, not just tools listed in a requirements section.
+> Reasoning: The role owns data quality and reliability improvement through validation and incident management processes, framing these practices as core accountability.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Improve data quality and reliability through validation, monitoring, incident triage, and clear runbooks"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to own and drive improvements in data quality through defined validation and incident management practices, framed as active responsibility.
+> Reasoning: Data quality, validation, monitoring, and incident management are framed as owned responsibilities with specific accountability, not just tools in a requirements list.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `moderate` ✗
-> Quote: "ensuring data quality, operational excellence, and platform reliability through robust validation processes, monitoring, incident management"
+**Run 1:** `high` ✗
+> Quote: "stakeholders trust the numbers"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability concerns such as incident management and data quality to prevent decision-making failures, but lacks compliance, regulatory, or audit language that would signal high loss aversion.
+> Reasoning: The role is fundamentally framed around ensuring stakeholders can trust data and metrics, with repeated emphasis on preventing bad data reaching decision-makers through validation and incident management, indicating high loss aversion focused on stakeholder trust.
 
 **Run 2:** `moderate` ✗
 > Quote: "ensuring data quality, operational excellence, and platform reliability through robust validation processes, monitoring, incident management, and well-defined operational procedures"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and trust in data are primary concerns, but lack of regulatory or compliance framing indicates moderate rather than high loss aversion.
+> Reasoning: The JD emphasizes operational reliability, incident management, and trust in numbers, reflecting moderate risk aversion around operational failures rather than regulatory or compliance concerns.
 
 **Run 3:** `moderate` ✗
 > Quote: "ensuring data quality, operational excellence, and platform reliability through robust validation processes, monitoring, incident management"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability, incident response, and validation without compliance, regulatory, or systemic risk language, reflecting moderate concern with operational failures.
+> Reasoning: Operational reliability and stakeholder trust in data accuracy are emphasized throughout, but without compliance, regulatory, or audit risk language.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

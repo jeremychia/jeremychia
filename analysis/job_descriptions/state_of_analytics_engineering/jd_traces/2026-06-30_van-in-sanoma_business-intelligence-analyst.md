@@ -71,172 +71,221 @@ Sanoma Learning is a leading K12 European learning company, operating in 12 coun
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 0 | 1 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | execution | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | low | moderate | moderate | moderate | 100% | ✗ |
+| collaboration_width | 2 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | mixed | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | mixed | internal_data | 33% | ✓ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | tool_listed | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | none | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewacht"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD emphasizes data quality, governance, and reliability monitoring as core responsibilities with no velocity or speed-focused language.
+
+**Run 2:** `rigour` ✓
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewacht"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities emphasize data quality, governance, and reliability as core monitoring responsibilities, with no emphasis on speed or iteration velocity.
+
+**Run 3:** `rigour` ✓
 > Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewaakt"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, governance, and reliability as core responsibilities with no velocity signals present.
-
-**Run 2:** `rigour`
-> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewaakt"
-> Verified: ✓ found in JD
-> Reasoning: Data quality, governance, and reliability are emphasized as core responsibilities without any velocity-oriented language.
-
-**Run 3:** `rigour`
-> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewaakt"
-> Verified: ✓ found in JD
-> Reasoning: Explicit emphasis on data quality, governance, and reliability as core responsibilities with no speed or iteration framing signals a rigour orientation.
+> Reasoning: The responsibilities emphasize data quality, governance, and reliability as core work components with no velocity-oriented language like 'fast-paced' or 'rapid delivery.'
 
 ### domain_risk
+**Manual:** `low`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Wil jij met data échte impact maken op het onderwijs van morgen?"
 > Verified: ✓ found in JD
-> Reasoning: Educational context carries societal impact but lacks explicit financial reporting, compliance, or regulatory risk signals typical of high-risk roles.
+> Reasoning: The role impacts educational outcomes and student data but lacks explicit regulatory, compliance, or financial reporting language typical of high-risk domains.
 
-**Run 2:** `moderate`
-> Quote: "Je fungeert als brug tussen data en besluitvorming en helpt collega's data beter te begrijpen en te gebruiken."
-> Verified: ✓ found in JD
-> Reasoning: The role is general business intelligence for an educational organization; there are no explicit signals of financial reporting, regulatory compliance, or audit requirements.
+**Run 2:** `moderate` ✗
+> Quote: "je organisatie betere beslissingen nemen door data om te zetten in heldere inzichten"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role supports organizational decision-making in education without explicit financial reporting, regulatory, or compliance language, placing it in the moderate-risk category.
 
-**Run 3:** `moderate`
-> Quote: "Je fungeert als brug tussen data en besluitvorming en helpt collega's data beter te begrijpen en te gebruiken."
+**Run 3:** `moderate` ✗
+> Quote: "betere beslissingen nemen door data om te zetten in heldere inzichten"
 > Verified: ✓ found in JD
-> Reasoning: Supporting business decision-making in education without explicit financial reporting, regulatory compliance, or audit requirements indicates moderate risk.
+> Reasoning: The role supports business decision-making without explicit financial reporting, regulatory compliance, or audit responsibilities typical of high-risk domains.
+
+⚠ **Disagreement**: manual=`low` vs LLM majority=`moderate`
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `1`
-> Quote: "groter team van data-analisten en experts in Nederland"
+**Run 1:** `0` ✗
+> Quote: "Je wordt onderdeel van het Data & Analytics team, waar je samenwerkt met één andere data-analist in België"
 > Verified: ✓ found in JD
-> Reasoning: Only one named role cohort (data analysts team) is explicitly mentioned beyond the role holder's immediate team.
+> Reasoning: No explicitly named partner functions (Finance, Product, Marketing, etc.) are mentioned; collaboration is internal to the Data & Analytics team or with generic 'Business teams'.
 
-**Run 2:** `0`
+**Run 2:** `0` ✗
 > Quote: ""
 > Verified: ✓ found in JD
-> Reasoning: No explicitly named partner functions or teams are identified; references to 'Business teams' and 'stakeholders' are generic and do not meet the threshold for counting.
+> Reasoning: Collaboration is described generically as 'business teams' and 'stakeholders' without naming specific functions like Finance, Product, Marketing, or Engineering.
 
-**Run 3:** `1`
+**Run 3:** `0` ✗
 > Quote: "Business teams ondersteunt in projecten en besluitvorming"
 > Verified: ✓ found in JD
-> Reasoning: Only 'Business teams' is named as a distinct partner function; other references are either the role holder's own data team or generic stakeholders.
+> Reasoning: The JD references 'business teams' generically without naming specific partner functions like Product, Finance, Marketing, or Engineering.
 
-⚠ **LLM inconsistency**: runs gave ['1', '0', '1']
+⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
 > Verified: ✓ found in JD
-> Reasoning: Existing data team with multiple analysts, named tools in responsibilities (SQL, Snowflake, dbt, Power BI), and active infrastructure development indicate a growing but not yet mature data function.
+> Reasoning: The JD mentions named tools in responsibilities (SQL, Snowflake, DBT), ongoing infrastructure improvements, and a growing team structure, suggesting a maturing data function.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
 > Quote: "Meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (Snowflake, Power BI, dbt) appear in the responsibilities section and infrastructure is being actively improved, indicating an established but growing data function.
+> Reasoning: The team uses named tools (SQL, Snowflake, Power BI, dbt) operationally and is in an active phase of scaling infrastructure, indicating mid-stage maturity rather than greenfield setup or fully mature enterprise.
 
-**Run 3:** `mid`
-> Quote: "meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
+**Run 3:** `mid` ✓
+> Quote: "Meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
 > Verified: ✓ found in JD
-> Reasoning: Multiple named tools (SQL, Snowflake, Power BI, DBT) in responsibilities with existing team structure indicates established data function in active growth phase.
+> Reasoning: The data function has established tools (SQL, Snowflake, Power BI, dbt) and multiple roles but remains in active growth and professionalization, signaled by emphasis on 'further building' infrastructure.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `hiring_manager`
+**Run 1:** `hiring_manager` ✗
 > Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT is een mooie plus!"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains specific tool names in context and emphasis on actual solution usage that indicate technical specificity from someone doing the work.
+> Reasoning: The responsibilities section contains specific tool names and technical workflows (collect-transform-model, end-to-end solutions) indicating hands-on authorship from someone experienced with this work.
 
-**Run 2:** `mixed`
+**Run 2:** `mixed` ✓
 > Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT is een mooie plus!"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about tools and workflows is present, but combined with generic support language ('Business teams ondersteunt'), indicating both hiring-manager and recruiter influence.
+> Reasoning: Some responsibilities show specific tool context (SQL/Snowflake for end-to-end solutions) while others use generic action verbs, indicating partial hiring manager input and partial recruiter language.
 
-**Run 3:** `mixed`
+**Run 3:** `hiring_manager` ✗
 > Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT is een mooie plus!"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool references and end-to-end context mix with generic boilerplate action verbs about collaboration and communication.
+> Reasoning: The responsibilities contain specific technical context naming tools with precise application to the role, revealing hands-on familiarity with the day-to-day work.
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `internal_data`
+**Run 1:** `internal_data` ✓
 > Quote: "Meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
 > Verified: ✓ found in JD
-> Reasoning: The primary emphasis is on building the data platform and analytics infrastructure to enable organizational data capability.
+> Reasoning: The primary emphasis is on building data infrastructure, platform maturity, and data literacy within the organization, serving other analytics professionals and business data consumers.
 
-**Run 2:** `internal_data`
-> Quote: "Meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
-> Verified: ✓ found in JD
-> Reasoning: The explicit emphasis on building the data platform, infrastructure professionalization, and strengthening data literacy positions the role as serving the data function and internal data consumers rather than specific commercial, product, or finance audiences.
-
-**Run 3:** `internal_data`
-> Quote: "meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
-> Verified: ✓ found in JD
-> Reasoning: Primary mission is building data infrastructure and platform capability for organizational use, positioning platform consumers and data infrastructure as the principal audience.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Je werkt met een moderne data stack (SQL, Power BI,…) en krijgt veel autonomie om end-to-end oplossingen uit te bouwen"
-> Verified: ✓ found in JD
-> Reasoning: The role combines explicit autonomy to define and build technical solutions with execution responsibilities to support business teams and organizational priorities.
-
-**Run 2:** `execution`
+**Run 2:** `mixed` ✗
 > Quote: "Business teams ondersteunt in projecten en besluitvorming"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed primarily as supporting and executing on business requirements, with autonomy granted in how work is implemented rather than in setting strategic direction or defining priorities.
+> Reasoning: While primarily supporting business teams in decision-making, the role also contributes to data infrastructure professionalization, creating a mixed orientation between business and internal_data audiences.
 
-**Run 3:** `mixed`
-> Quote: "Je werkt... en krijgt veel autonomie om end-to-end oplossingen uit te bouwen"
+**Run 3:** `internal_data` ✓
+> Quote: "Meebouwt aan de verdere professionalisering van processen, data infrastructuur en het dataplatform"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes building and professionalizing data infrastructure and platform capabilities that analytics consumers rely on, positioning the analyst as a builder of the data function itself.
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `execution` ✗
+> Quote: "Business teams ondersteunt in projecten en besluitvorming"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibilities frame the role as supporting and delivering work within a team context rather than setting strategic direction.
+
+**Run 2:** `execution` ✗
+> Quote: "je veel autonomie om end-to-end oplossingen uit te bouwen"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Significant autonomy in executing end-to-end analytics solutions combined with supporting business team priorities reflects both strategic ownership of delivery and execution within externally-set scopes.
+> Reasoning: The role has high autonomy in how to solve problems but executes within direction set by business teams' needs rather than defining the data strategy itself.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'mixed']
+**Run 3:** `execution` ✗
+> Quote: "Business teams ondersteunt in projecten en besluitvorming"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as supporting and delivering on priorities set by business teams, with the analyst receiving business questions to translate rather than setting strategic direction.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT"
-> Reasoning: Stack lists traditional BI and SQL tools; no AI tooling, Copilot, Claude Code, or GenAI infrastructure mentioned.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "End-to-end oplossingen bouwt met SQL en Snowflake, Power BI en DBT"
-> Reasoning: No AI tools, GenAI, or AI-assisted coding mentioned; standard data stack only.
+**Run 1:** `none` ✗
+> Quote: "Je volgt trends in data, AI en analytics en denkt mee over toepassingen"
+> Verified: ✓ found in JD
+> Reasoning: The reference to AI is vague awareness and trend-following rather than a specific expectation for the candidate to use or build AI systems.
 
+**Run 2:** `none` ✗
+> Quote: "Je volgt trends in data, AI en analytics en denkt mee over toepassingen"
+> Verified: ✓ found in JD
+> Reasoning: Following trends and thinking about AI applications is vague trend awareness language; no specific AI tool usage or AI infrastructure building is expected of the candidate.
+
+**Run 3:** `none` ✗
+> Quote: "Je volgt trends in data, AI en analytics en denkt mee over toepassingen"
+> Verified: ✓ found in JD
+> Reasoning: The only AI mention is a vague requirement to follow trends and think about applications, which does not constitute a specific AI skill expectation for the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewakt"
-> Reasoning: Quality governance emphasized but no explicit testing ownership verbs (own, ensure, define, implement, establish).
+**Manual:** ``
 
-**Run 2:** `responsibility` ✗
-> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewaakt; Meebouwt aan de verdere professionalisering van processen"
-> Reasoning: Candidate owns data quality, governance, and reliability; actively professionalizes processes.
+**Run 1:** `responsibility` ✗
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewacht"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Data quality and reliability are framed as responsibilities the candidate participates in ('mee bewacht'), indicating shared accountability for these practices.
 
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility']
+**Run 2:** `tool_listed` ✗
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewacht"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Data quality and governance are mentioned as monitoring responsibilities but not framed as owned practices; dbt is listed as a nice-to-have tool rather than a core ownership area.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewaakt"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and reliability monitoring are listed in the responsibilities section as core activities the candidate participates in, though framed as shared accountability using 'mee' rather than solo ownership.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "maatschappelijke impact; K12 European learning company"
-> Reasoning: Education sector with societal impact framing; no regulatory/compliance language and errors affect internal decisions not regulated outputs.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Education sector with societal impact framing; no financial reporting or regulatory compliance language"
-> Reasoning: Operational rigor emphasized, but no compliance, audit, or regulatory trust-dominance present.
+**Run 1:** `moderate` ✗
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewacht"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Data quality and reliability are operational concerns but framed as professionalization practices rather than regulatory/compliance risk; reliability is secondary to delivery and infrastructure building.
 
+**Run 2:** `moderate` ✗
+> Quote: "Datakwaliteit, governance en betrouwbaarheid mee bewacht"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Operational reliability (data quality, governance) is a concern but framed as best practice rather than risk mitigation or preventing negative stakeholder impact.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around capability building and delivering insights without risk, compliance, or regulatory language—no fear register is evident.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

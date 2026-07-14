@@ -70,183 +70,221 @@ Supporto concreto a neogenitori: integrazione al 100% per i primi 3 mesi del con
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 5 | 5 | 6 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | hiring_manager | mixed | 33% |
-| stakeholder_orientation | mixed | commercial | commercial | 33% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 6 | 4 | 5 | 0% | ✗ |
+| data_team_maturity | mid | mid | mid | mature | 33% | ✓ |
+| jd_authorship | mixed | mixed | mixed | mixed | 100% | ✓ |
+| stakeholder_orientation | mixed | mixed | internal_data | internal_data | 33% | ✗ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
+| ai_role |  | ai_enabler | none | ai_enabler | 33% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | none | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "implementazione di servizi di progettazione dei dati con competenza metodica"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize methodical, precise implementation and data accuracy with no signals of speed, MVP delivery, or iteration velocity.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "garantendone l'accuratezza e la pertinenza"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes accuracy, precision, methodical competence, and attention to detail across multiple sections, with no velocity-oriented language like 'fast-paced' or 'rapid delivery'.
+> Reasoning: The responsibilities emphasize accuracy, precision, methodic competence, and attention to detail throughout with no velocity signals, establishing rigour as the clear primary orientation.
 
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "garantendone l'accuratezza e la pertinenza"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize accuracy, relevance, methodical competence, and attention to detail, with no velocity or speed-oriented language present.
+> Reasoning: Multiple explicit signals emphasize accuracy, methodical competence, and precision as core expectations with no velocity or speed language present.
+
+**Run 3:** `rigour` ✓
+> Quote: "l'implementazione di servizi di progettazione dei dati con competenza metodica"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize methodical expertise, accuracy, precision, and attention to detail over speed or iteration.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "soluzioni di visualizzazione dei dati per iniziative basate su progetti o come servizio per i clienti"
+**Run 1:** `moderate` ✓
+> Quote: "consentono un processo decisionale aziendale solido e basato sui dati"
 > Verified: ✓ found in JD
-> Reasoning: The role creates BI solutions for clients' business decisions but without explicit financial reporting, regulatory, or compliance context that would indicate high risk.
+> Reasoning: The data supports general business decision-making without explicit signals of financial reporting, regulatory compliance, audit, or P&L impact, placing this at moderate risk.
 
-**Run 2:** `moderate`
-> Quote: "fornitura di soluzioni tecniche e application-based nei progetti di Business Intelligence"
+**Run 2:** `moderate` ✓
+> Quote: "processo decisionale aziendale solido e basato sui dati"
 > Verified: ✓ found in JD
-> Reasoning: The JD describes delivering BI solutions to clients without explicit financial reporting, compliance, or regulatory language typical of high-risk domains.
+> Reasoning: The role supports business decision-making through BI solutions but lacks explicit financial reporting, compliance, or regulatory risk language.
 
-**Run 3:** `moderate`
+**Run 3:** `moderate` ✓
 > Quote: "fornendo metriche che consentono un processo decisionale aziendale solido e basato sui dati"
 > Verified: ✓ found in JD
-> Reasoning: The role supports business intelligence and business decision-making but contains no financial reporting, regulatory, or compliance language that would signal high-risk domain impact.
+> Reasoning: Data errors affect business decision-making without explicit regulatory, compliance, or financial reporting context that would elevate to high risk.
 
 ### collaboration_width
+**Manual:** `4`
 
-**Run 1:** `5`
-> Quote: "Data Scientist, esperti di Data Governance, Data Architect e Project Manager; clienti"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Five named partner teams identified: Data Scientist, Data Governance experts, Data Architect, Project Manager, and clients as explicit collaboration partners.
+**Run 1:** `6` ✗
+> Quote: "Data Scientist; esperti di Data Governance; Data Architect; Project Manager; junior analyst; clienti"
+> Verified: ✓ found in JD
+> Reasoning: Six distinct named teams or functions are identified: Data Scientists, Data Governance experts, Data Architects, Project Managers, junior analysts, and customers as explicit collaboration partners.
 
-**Run 2:** `5`
+**Run 2:** `4` ✓
+> Quote: "Data Scientist, esperti di Data Governance, Data Architect e Project Manager"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions are explicitly identified as collaboration partners in the responsibilities section.
+
+**Run 3:** `5` ✗
 > Quote: "Data Scientist; esperti di Data Governance; Data Architect; Project Manager; clienti"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names five distinct collaboration partners: Data Scientists, Data Governance experts, Data Architects, Project Managers, and clients.
+> Verified: ✓ found in JD
+> Reasoning: Five distinct named collaborators are explicitly mentioned: Data Scientists, Data Governance experts, Data Architects, Project Managers, and Clients.
 
-**Run 3:** `6`
-> Quote: "Data Scientist, esperti di Data Governance, Data Architect e Project Manager; clienti; vendor e partner tecnologici"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Six distinct named teams/functions are explicitly identified as collaboration partners: Data Scientists, Data Governance experts, Data Architects, Project Managers, clients, and technology vendors/partners.
+⚠ **Disagreement**: manual=`4` vs LLM majority=`6`
 
-⚠ **LLM inconsistency**: runs gave ['5', '5', '6']
+⚠ **LLM inconsistency**: runs gave ['6', '4', '5']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
+> Quote: "potrai guidare e coordinare junior analyst all'interno dei team di progetto"
+> Verified: ✓ found in JD
+> Reasoning: The existence of junior analysts to coordinate and multiple named tools deployed (Looker, Google GCP, SQL) indicate an established data function with growth underway.
+
+**Run 2:** `mid` ✓
 > Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
 > Verified: ✓ found in JD
-> Reasoning: Named tools already deployed with specific application context, plus conditional leadership of junior analysts, indicates existing infrastructure and team growth rather than greenfield build.
+> Reasoning: Named tools in responsibilities and multiple specialized roles implied suggest established infrastructure and tooling rather than greenfield building.
 
-**Run 2:** `mid`
-> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
+**Run 3:** `mature` ✗
+> Quote: "Data Scientist, esperti di Data Governance, Data Architect e Project Manager"
 > Verified: ✓ found in JD
-> Reasoning: The mention of established deployment tools (Looker and GCP) and the ability to coordinate junior analysts indicates a data function that exists with infrastructure and is growing, not early-stage or mature at scale.
+> Reasoning: Multiple specialized data roles with distinct charters (Data Science, Governance, Architecture) operating within a 4500+ person organization indicate an established, specialized team at scale.
 
-**Run 3:** `mid`
-> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
-> Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities with specific context (Looker, GCP), multiple established data roles are referenced, and the mention of junior analysts to coordinate indicates an organized team structure beyond greenfield stage.
+⚠ **LLM inconsistency**: runs gave ['mid', 'mid', 'mature']
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP; comunicare i tuoi risultati in modo efficace a colleghi e clienti"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical responsibilities with named tools and methodologies suggest hiring manager input, but generic relationship-building language indicates recruiter scaffolding.
-
-**Run 2:** `hiring_manager`
-> Quote: "analisi dell'origine dei dati, la modellazione dei dati e l'implementazione di servizi di progettazione dei dati"
+**Run 1:** `mixed` ✓
+> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical responsibilities (data source analysis, data modeling, data design services) with named tools (Looker, GCP) applied to concrete deliverables, demonstrating knowledge of actual job work rather than generic competencies.
+> Reasoning: Technical specificity with named tools and methodologies is present, but balanced by generic phrases like collaboration and stakeholder engagement typical of recruiting templates.
 
-**Run 3:** `mixed`
-> Quote: "svolgerai un ruolo fondamentale nella fornitura di soluzioni tecniche e application-based; Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD mixes generic language (delivering technical solutions) with specific technical knowledge (Looker, GCP named tools), suggesting input from both HR/recruiting and someone with direct BI project experience.
+**Run 2:** `mixed` ✓
+> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
+> Verified: ✓ found in JD
+> Reasoning: Technical precision in tool names and data modeling context is paired with generic soft skills language such as consulting standing and teamwork.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
+**Run 3:** `mixed` ✓
+> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
+> Verified: ✓ found in JD
+> Reasoning: Specific tool applications and outputs (Looker/GCP for dashboards) indicate hiring manager input, while generic requirement gathering and collaboration language reflects recruiter influence.
 
 ### stakeholder_orientation
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
-> Quote: "metriche che consentono un processo decisionale aziendale solido e basato sui dati"
+**Run 1:** `mixed` ✓
+> Quote: "fornitura di soluzioni tecniche e application-based nei progetti di Business Intelligence"
 > Verified: ✓ found in JD
-> Reasoning: The role creates general business analytics for clients across their organization without emphasis on a specific stakeholder function (commercial, product, finance, or internal data).
+> Reasoning: As a consulting firm serving various clients on BI projects without specifying customer domain (commercial, product, finance), the stakeholder focus spans multiple categories.
 
-**Run 2:** `commercial`
-> Quote: "costruire relazioni con i clienti, collaborare con vendor e partner tecnologici"
+**Run 2:** `internal_data` ✗
+> Quote: "processo decisionale aziendale solido e basato sui dati"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly prioritizes building client relationships and working with external technology partners, positioning external clients as the primary audience for delivered BI solutions.
+> Reasoning: The role is framed around building BI infrastructure and analytics systems to enable business decision-making rather than serving commercial or product teams.
 
-**Run 3:** `commercial`
-> Quote: "dimostrare e costruire relazioni con i clienti"
+**Run 3:** `internal_data` ✗
+> Quote: "fornitura di soluzioni tecniche e application-based nei progetti di Business Intelligence"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly emphasizes client relationships, consulting standing, and customer orientation in a consulting firm context, positioning the commercial stakeholder (clients) as the primary audience.
+> Reasoning: The role builds BI analytics platforms and solutions consumed by business stakeholders and data professionals, serving the analytics function rather than commercial, product, or finance teams.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'commercial', 'commercial']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'internal_data']
 
 ### autonomy_level
+**Manual:** `mixed`
 
-**Run 1:** `execution`
+**Run 1:** `execution` ✗
 > Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici"
 > Verified: ✓ found in JD
-> Reasoning: Core responsibilities are delivery-focused implementation of BI solutions with client requirements defining the scope, while strategic elements like leading junior analysts are secondary and conditional.
+> Reasoning: The core responsibilities emphasize delivery of BI solutions to specifications; leadership and relationship-building are framed as optional capabilities (potrai = may/could) rather than core strategic direction-setting.
 
-**Run 2:** `execution`
+**Run 2:** `execution` ✗
 > Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize delivering and implementing specific BI systems based on collected business requirements, rather than defining analytics strategy or shaping how analytics is organized.
+> Reasoning: The role is framed as delivering specific BI systems and implementing data services within project contexts defined by others, with strategic elements conditional on experience.
 
-**Run 3:** `execution`
-> Quote: "Ti impegnerai nella raccolta e nella valutazione dei requisiti aziendali"
+**Run 3:** `execution` ✗
+> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici"
 > Verified: ✓ found in JD
-> Reasoning: The core responsibilities involve gathering requirements set by others, implementing solutions to specifications, and delivering against scoped work rather than defining analytical strategy or direction.
+> Reasoning: Responsibility phrasing emphasizes delivery and execution of defined analytical solutions with some junior leadership rather than strategic direction-setting or defining analytics approach.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Looker, Google GCP, BigQuery, stored procedures"
-> Reasoning: No AI coding tools or GenAI infrastructure mentioned; traditional BI and analytics stack only.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici utilizzando gli strumenti Looker e Google GCP"
-> Reasoning: Role focuses on data visualization and analytics tools without AI/ML or AI-assisted coding responsibilities.
+**Run 1:** `ai_enabler` ✗
+> Quote: "Esperienza in progetti che utilizzano modelli di AI (Gemini, OpenAI, altro) che servono a generare insights dei dati"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to have experience with GenAI models for generating data insights, indicating they will build BI solutions that incorporate AI/ML capabilities.
 
-**Run 3:** `none` ✓
-> Quote: ""
-> Reasoning: No AI tools (Copilot, Claude Code, Cursor) or GenAI infrastructure capabilities mentioned; listed tools are Looker, GCP, BigQuery—standard analytics platforms.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The core role makes no AI skill requirement; the Plus section mentions AI project experience but is optional and too vague to constitute a clear expected AI capability.
 
+**Run 3:** `ai_enabler` ✗
+> Quote: "Esperienza in progetti che utilizzano modelli di AI (Gemini, OpenAI, altro) che servono a generare insights dei dati"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to have experience with projects integrating AI models into analytics work to generate data insights, fitting the pattern of building analytics infrastructure that AI systems contribute to.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
+
+⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'none', 'ai_enabler']
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "garantendone l'accuratezza e la pertinenza"
-> Reasoning: Individual precision and accuracy emphasized, but no ownership of testing practices, quality frameworks, or data contracts.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "Svilupperai sistemi di analisi delle performance, report interattivi e dashboard analitici"
-> Reasoning: Focus on analysis and visualization delivery; no testing ownership, practices, or tools mentioned.
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal in responsibilities or requirements."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While precision and attention to detail are mentioned as soft skills, no testing frameworks, data contracts, observability practices, or quality assurance methodologies appear anywhere in the JD.
 
-**Run 3:** `absent` ✓
-> Quote: "garantendone l'accuratezza e la pertinenza"
-> Reasoning: Quality required via accuracy and precision in deliverables but no testing ownership responsibility or framework implementation evident.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of data quality frameworks, testing practices, observability, data contracts, or quality assurance appears anywhere in the JD.
 
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality frameworks mentioned."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While accuracy and precision are emphasized as expectations, no data quality frameworks, testing tools (dbt, Great Expectations, Soda), data contracts, or owned testing practices are mentioned in the responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "No loss aversion framing detected"
-> Reasoning: Delivery and project outcome focus with no compliance, regulatory, or operational reliability risk language.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "precisione e stress tolerance nel rispetto delle scadenze; garantendone l'accuratezza e la pertinenza"
-> Reasoning: JD emphasizes delivery accuracy and deadline management without compliance, regulatory, or trustworthiness dominance.
+**Run 1:** `moderate` ✗
+> Quote: "garantendone l'accuratezza e la pertinenza"
+> Verified: ✓ found in JD
+> Reasoning: Emphasis on accuracy and precision indicates concern for delivering correct results and quality standards, but lacks explicit compliance, audit, or stakeholder-trust language characteristic of high loss aversion.
 
-**Run 3:** `none` ✓
-> Quote: "BIP is a consulting firm; the JD contains no explicit financial/regulatory/compliance language"
-> Reasoning: Role prioritizes precision and deadline delivery over compliance, audit, or data trustworthiness framing; no loss-aversion signals present.
+**Run 2:** `moderate` ✗
+> Quote: "garantendone l'accuratezza e la pertinenza"
+> Verified: ✓ found in JD
+> Reasoning: Emphasis on accuracy and precision signals concern for operational quality but lacks explicit risk, compliance, or trust language that would indicate high loss aversion.
 
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD frames accuracy and precision as professional values and standards, not as risk mitigation or loss aversion; there is no mention of regulatory compliance, audit, reliability targets, or preventing bad outcomes.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

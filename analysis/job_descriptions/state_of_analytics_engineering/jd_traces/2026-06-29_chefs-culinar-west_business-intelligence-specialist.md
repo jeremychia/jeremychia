@@ -58,181 +58,209 @@ Source: https://www.meine-karriere-im-handel.de/stellenangebot/6010
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | recruiter | recruiter | 33% |
-| stakeholder_orientation | internal_data | mixed | internal_data | 33% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | recruiter | recruiter | recruiter | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Ensuring data quality and governance"
 > Verified: ✓ found in JD
-> Reasoning: The explicit mention of data quality and governance as a core responsibility directly signals a rigour orientation with no competing velocity signals present.
+> Reasoning: The responsibilities emphasize data quality and governance as core expectations with no mention of speed, shipping, iteration, or delivery pace.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Ensuring data quality and governance"
 > Verified: ✓ found in JD
-> Reasoning: The explicit mention of data quality and governance as a core responsibility is a primary rigour signal with no offsetting velocity language.
+> Reasoning: The responsibilities emphasize data quality and governance as core expectations, with no counterbalancing velocity signals like 'fast-paced' or 'rapid delivery'.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Ensuring data quality and governance"
 > Verified: ✓ found in JD
-> Reasoning: The explicit inclusion of data quality and governance as core responsibilities demonstrates a rigour-oriented approach with no counterbalancing velocity language.
+> Reasoning: The explicit mention of data quality and governance as a core responsibility signals a rigour-oriented approach, with no counterbalancing velocity language about shipping speed or iteration pace.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: Supporting departmental analytics without explicit mention of financial reporting, compliance, or regulatory requirements indicates moderate domain risk typical of general business intelligence.
-
-**Run 2:** `moderate`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: The role supports operational business decisions in hospitality/catering without explicit mention of financial reporting, compliance, or regulatory requirements, indicating moderate rather than high risk.
-
-**Run 3:** `moderate`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: This is a B2B supply company BI role with no mention of financial reporting, regulatory compliance, or mission-critical systems, placing it in the moderate-risk business intelligence domain.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "business departments (Fachbereiche)"
-> Verified: ✓ found in JD
-> Reasoning: The only collaboration reference is a generic mention of "business departments" without naming specific functions or teams that meet the counting criteria.
-
-**Run 2:** `0`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: No specifically named partner teams (e.g., Finance, Product, Engineering) are mentioned; only generic reference to 'business departments.'
-
-**Run 3:** `0`
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams, functions, or roles are identified; 'business departments' is generic and does not count as a named collaborator.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Implementing and optimising ETL/ELT processes for integrating various data sources"
-> Verified: ✓ found in JD
-> Reasoning: The use of "optimising" existing processes and working with named tools (Power BI, Microsoft Fabric) indicates an established data function being improved rather than built from scratch.
-
-**Run 2:** `mid`
-> Quote: "Implementing and optimising ETL/ELT processes for integrating various data sources"
-> Verified: ✓ found in JD
-> Reasoning: The role involves working with named tools and optimizing existing processes, indicating established infrastructure and active growth rather than early-stage setup or mature specialization.
-
-**Run 3:** `mid`
-> Quote: "Implementing and optimising ETL/ELT processes for integrating various data sources"
-> Verified: ✓ found in JD
-> Reasoning: The presence of named tools being actively maintained and optimized indicates an established infrastructure that is growing and improving, not building from zero.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Implementing and optimising ETL/ELT processes for integrating various data sources; Designing data models; Developing high-performance dashboards and reports with Power BI"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The specific technical responsibilities with named tools and methodologies demonstrate domain knowledge indicating hiring manager input rather than generic recruiter language.
-
-**Run 2:** `recruiter`
-> Quote: "Developing high-performance dashboards and reports with Power BI"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic phrasing and standard tools without technical depth or specific context that would indicate a hiring manager's direct experience with the role.
-
-**Run 3:** `recruiter`
-> Quote: "Developing high-performance dashboards and reports with Power BI"
-> Verified: ✓ found in JD
-> Reasoning: The generic, boilerplate action verbs and lack of specific methodology, scale numbers, or technical context suggest recruitment language rather than technical specificity from someone who does this work.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'recruiter', 'recruiter']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Advancing the organisation's data architecture"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on building data infrastructure, designing models, and optimizing ETL processes indicates primary service to the data function and analytics platform rather than a specific external business stakeholder group.
-
-**Run 2:** `mixed`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: The role serves multiple types of business departments (finance, operations, commercial) without explicit focus on a single stakeholder category, indicating mixed stakeholder orientation.
-
-**Run 3:** `internal_data`
-> Quote: "Advancing the organisation's data architecture"
-> Verified: ✓ found in JD
-> Reasoning: The majority of responsibilities focus on building and maintaining data infrastructure—ETL processes, data models, data quality, and governance—that enables other data consumers rather than serving a specific business function.
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: The primary framing positions the role as supporting and delivering to business needs with execution-focused responsibilities rather than strategy-setting.
-
-**Run 2:** `execution`
-> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
-> Verified: ✓ found in JD
-> Reasoning: While the role includes technical design responsibilities, the overall framing emphasizes support and delivery to business departments rather than autonomous strategy-setting.
-
-**Run 3:** `execution`
-> Quote: "Implementing and optimising ETL/ELT processes for integrating various data sources"
-> Verified: ✓ found in JD
-> Reasoning: The role describes delivery of defined infrastructure tasks (implementing, optimizing) without language about setting priorities, defining strategy, or shaping organizational direction.
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "developing high-performance dashboards and reports with Power BI; ETL/ELT processes"
-> Reasoning: No mention of AI coding tools (Copilot, Claude Code) or AI infrastructure responsibilities (semantic models, GenAI).
-
-**Run 2:** `none` ✓
-> Quote: "developing high-performance dashboards and reports with Power BI; ETL/ELT processes for integrating various data sources"
-> Reasoning: Standard BI and ETL tool stack with no AI/GenAI skill expectations or AI infrastructure requirements.
-
-**Run 3:** `none` ✓
-> Quote: "No AI tool or GenAI mentions across JD"
-> Reasoning: No signals for AI coding tools (Copilot, Claude Code, Cursor) or AI infrastructure building responsibilities.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "ensuring data quality and governance"
-> Reasoning: Candidate owns quality practice through the verb 'ensuring' paired with data quality and governance.
-
-**Run 2:** `responsibility` ✓
-> Quote: "ensuring data quality and governance"
-> Reasoning: Ownership verb (ensuring) explicitly ties candidate to data quality and governance practices.
-
-**Run 3:** `responsibility` ✓
-> Quote: "ensuring data quality and governance"
-> Reasoning: Ownership verb 'ensuring' + quality practice framing indicates candidate owns data quality work.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "supplier to hospitality and catering sectors; ensuring data quality and governance"
-> Reasoning: Role impacts business decisions in a supply chain context but lacks compliance or regulatory language, indicating operational reliability concern rather than high-compliance framing.
+> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
+> Verified: ✓ found in JD
+> Reasoning: Data errors would affect business decisions without immediate regulatory or financial reporting consequences, typical of operational analytics.
 
 **Run 2:** `moderate` ✓
-> Quote: "ensuring data quality and governance"
-> Reasoning: Operational reliability framing (data quality affects business decisions) without explicit compliance or regulatory language.
+> Quote: "Supporting business departments with analytics requirements"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: This is operational B2B analytics for a hospitality supplier with no explicit financial reporting, regulatory, or compliance framing, making data errors material to business decisions but not regulatory or financial exposure.
 
 **Run 3:** `moderate` ✓
-> Quote: "ensuring data quality and governance; errors affect business decisions"
-> Reasoning: Operational reliability concern (data quality, governance) without explicit compliance, regulatory, or trust-as-primary framing.
+> Quote: "Supporting business departments with analytics requirements"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: A B2B supply company serving hospitality and catering has moderate data risk—business operations depend on data accuracy but there is no financial reporting, compliance, or regulatory exposure indicated.
 
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `0` ✗
+> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
+> Verified: ✓ found in JD
+> Reasoning: Business departments is a generic term; no explicitly named functions like Finance, Product, Engineering, or specific data team roles are identified.
+
+**Run 2:** `0` ✗
+> Quote: "Supporting business departments"
+> Verified: ✓ found in JD
+> Reasoning: While 'business departments' is mentioned as a stakeholder audience, this is too generic to count as a named partner function; specific team names (Finance, Product, Marketing, etc.) are not identified.
+
+**Run 3:** `0` ✗
+> Quote: "Supporting business departments"
+> Verified: ✓ found in JD
+> Reasoning: The JD does not explicitly name specific partner teams or functions—'business departments' is a generic collective phrase that does not count as distinct named collaborators.
+
+⚠ **Disagreement**: manual=`1` vs LLM majority=`0`
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Advancing the organisation's data architecture"
+> Verified: ✓ found in JD
+> Reasoning: Named tools in requirements (Power BI, Microsoft Fabric) combined with advancing/optimising language indicates existing infrastructure being grown and improved.
+
+**Run 2:** `mid` ✓
+> Quote: "Implementing and optimising ETL/ELT processes"
+> Verified: ✓ found in JD
+> Reasoning: The language 'implementing and optimising' signals existing infrastructure being improved rather than greenfield build, indicating a data function that has moved beyond initial establishment.
+
+**Run 3:** `mid` ✓
+> Quote: "Advancing the organisation's data architecture"
+> Verified: ✓ found in JD
+> Reasoning: The responsibility to advance existing architecture combined with named platforms already deployed (Power BI, IBM Cognos, Microsoft Fabric) indicates an established data function actively scaling rather than early-stage or fully mature.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `recruiter` ✗
+> Quote: "Developing high-performance dashboards and reports with Power BI"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use generic action verbs and tool names without specific context, scale, volume, or methodology that would indicate hands-on authorship.
+
+**Run 2:** `recruiter` ✗
+> Quote: "Supporting business departments with analytics requirements"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities use generic action verbs ('supporting', 'developing', 'ensuring') and lack the technical depth or scale context that would come from someone performing this work daily.
+
+**Run 3:** `recruiter` ✗
+> Quote: "Developing high-performance dashboards and reports with Power BI"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities use generic action verbs without technical specificity, scale context, or precision about what these dashboards actually track or optimize, indicating recruiter-created boilerplate.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Advancing the organisation's data architecture"
+> Verified: ✓ found in JD
+> Reasoning: The primary work emphasis is building and maintaining data infrastructure and models that internal business consumers rely on, not serving a specific business function.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Supporting business departments with analytics requirements"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role is framed around building and maintaining analytics infrastructure (ETL, data models, dashboards) that internal business departments consume as platform users.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Advancing the organisation's data architecture"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary mission is building and improving data infrastructure and platforms that serve the broader organization, not targeting commercial, product, or finance stakeholders specifically.
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Supporting business departments (Fachbereiche) with analytics requirements"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around delivering analytics outputs to address requirements defined by others, not setting strategic direction or defining how analytics is delivered.
+
+**Run 2:** `execution` ✓
+> Quote: "Supporting business departments with analytics requirements"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role uses support-oriented language and is framed as delivering against business department needs rather than setting strategy or defining direction.
+
+**Run 3:** `execution` ✓
+> Quote: "Supporting business departments with analytics requirements"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role is framed as delivering against needs set by business departments rather than defining strategy or shaping how the analytics function operates.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: There is no mention of AI tools, machine learning, AI-assisted coding, or any AI skill expectations anywhere in the job description.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, GenAI applications, or AI infrastructure expectations for the candidate.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, GenAI applications, or AI-ready data infrastructure anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Ensuring data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as a responsibility the candidate owns through an accountability verb, not listed as a tool or framework to learn.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Ensuring data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as an owned responsibility using an action verb, though without specification of testing tools or frameworks.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Ensuring data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is explicitly listed as a responsibility with the ownership verb 'ensuring,' making it a core accountability rather than a listed tool or absent entirely.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Ensuring data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are concerns but framed as standard responsibilities rather than risk prevention, compliance, or stakeholder trust issues.
+
+**Run 2:** `moderate` ✗
+> Quote: "Ensuring data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Governance language signals operational risk awareness and control concerns, but lacks explicit regulatory, compliance, or audit framing that would indicate high loss aversion.
+
+**Run 3:** `moderate` ✗
+> Quote: "Ensuring data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Operational data quality is a stated concern, but the JD lacks compliance, regulatory, or trust-centric language that would indicate high loss-aversion framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

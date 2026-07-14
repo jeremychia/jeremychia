@@ -55,15 +55,15 @@ No visa sponsorship available for this role. Referrals increase interview chance
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | high | high | high | 100% | ✓ |
-| collaboration_width | 2 | 0 | 0 | 2 | 33% | ✗ |
+| domain_risk | high | high | moderate | high | 33% | ✓ |
+| collaboration_width | 2 | 2 | 0 | 0 | 33% | ✗ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | mixed | mixed | hiring_manager | mixed | 33% | ✓ |
-| stakeholder_orientation | mixed | mixed | internal_data | mixed | 33% | ✓ |
+| jd_authorship | mixed | mixed | recruiter | recruiter | 33% | ✗ |
+| stakeholder_orientation | mixed | internal_data | internal_data | mixed | 33% | ✗ |
 | autonomy_level | execution | execution | execution | execution | 100% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
-| testing_framing |  | tool_listed | tool_listed | responsibility | 33% | ✗ |
-| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
+| testing_framing |  | responsibility | tool_listed | tool_listed | 33% | ✗ |
+| loss_aversion_framing |  | high | moderate | moderate | 33% | ✗ |
 
 ---
 
@@ -75,17 +75,17 @@ No visa sponsorship available for this role. Referrals increase interview chance
 **Run 1:** `rigour` ✓
 > Quote: "Perform data migration, validation, reconciliation, and quality analysis"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize correctness, quality, validation, and governance throughout, with no velocity or iteration language present.
+> Reasoning: Multiple quality, validation, governance, and testing signals with zero velocity language indicate rigour orientation.
 
 **Run 2:** `rigour` ✓
 > Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, validation, reconciliation, quality analysis, and documentation with no velocity language; rigour signals dominate throughout.
+> Reasoning: Responsibilities emphasize governance, validation, quality analysis, and formal documentation (Data Management Plans) with no velocity language present.
 
 **Run 3:** `rigour` ✓
-> Quote: "Perform data migration, validation, reconciliation, and quality analysis"
+> Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize validation, reconciliation, data quality analysis, governance, and modelling without any velocity signals like speed, iteration, or rapid delivery.
+> Reasoning: Multiple rigour signals including governance, data lineage, quality analysis, validation, reconciliation, and compliance dominate the responsibilities with no velocity language present.
 
 ### domain_risk
 **Manual:** `high`
@@ -93,57 +93,59 @@ No visa sponsorship available for this role. Referrals increase interview chance
 **Run 1:** `high` ✓
 > Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
 > Verified: ✓ found in JD
-> Reasoning: Audit and compliance are explicitly named as primary report audiences, combined with the Government Administration sector which carries inherent regulatory requirements.
+> Reasoning: Government administration sector with explicit audit and compliance language indicates high-risk regulatory environment.
 
-**Run 2:** `high` ✓
+**Run 2:** `moderate` ✗
 > Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
 > Verified: ✓ found in JD
-> Reasoning: Government Administration sector combined with explicit audit and compliance stakeholders signals high-risk data that directly serves regulatory and financial control functions.
+> Reasoning: Audit and compliance are mentioned in a government sector, but the JD frames these as secondary audiences rather than core financial or regulatory risk drivers.
 
 **Run 3:** `high` ✓
 > Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
 > Verified: ✓ found in JD
-> Reasoning: Government administration sector combined with explicit audit and compliance reporting requirements indicates data errors directly impact regulatory and compliance outcomes.
+> Reasoning: Government administration sector combined with explicit audit and compliance reporting requirements indicates data errors directly affect regulatory compliance and governance.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
 
 ### collaboration_width
 **Manual:** `2`
 
-**Run 1:** `0` ✗
-> Quote: "Collaborate with business and technical teams"
-> Verified: ✓ found in JD
-> Reasoning: No distinct named functions or teams are identified; 'business and technical teams' are generic descriptors, not named team cohorts.
-
-**Run 2:** `0` ✗
-> Quote: "No named teams identified; 'business and technical teams' are too generic to count."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD mentions generic 'business and technical teams' without naming specific functions like Finance, Product, or named data sub-teams.
-
-**Run 3:** `2` ✓
+**Run 1:** `2` ✓
 > Quote: "audit, and compliance"
 > Verified: ✓ found in JD
-> Reasoning: Audit and compliance are explicitly named stakeholder/partner functions that the role produces reports for.
+> Reasoning: Audit and compliance are named functional areas; 'business' is too generic to count as a distinct team.
+
+**Run 2:** `0` ✗
+> Quote: "Collaborate with business and technical teams"
+> Verified: ✓ found in JD
+> Reasoning: No named distinct teams or functions identified; only generic references to 'business' and 'technical teams' do not count as specific named partners.
+
+**Run 3:** `0` ✗
+> Quote: "Collaborate with business and technical teams to deliver scalable, high-quality data solutions"
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions generic 'business and technical teams' but does not name specific functions like Finance, Product, Marketing, or other defined partner teams.
 
 ⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
-⚠ **LLM inconsistency**: runs gave ['0', '0', '2']
+⚠ **LLM inconsistency**: runs gave ['2', '0', '0']
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "focusing on business intelligence, data analysis, migration, quality, governance, and reporting"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on data migration and governance support, combined with adoption of Microsoft Fabric, suggests an actively growing data function, not yet fully mature.
+> Quote: "supporting delivery of a modern enterprise data platform using Microsoft Fabric, focusing on business intelligence, data analysis, migration, quality, governance, and reporting"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Named tools in responsibilities (Microsoft Fabric, SQL) and platform migration work indicate established mid-stage data function undergoing transformation.
 
 **Run 2:** `mid` ✗
-> Quote: "Develop BI reports, dashboards, KPIs, and analytical solutions using Microsoft Fabric and SQL"
+> Quote: "support delivery of a modern enterprise data platform using Microsoft Fabric, focusing on business intelligence, data analysis, migration, quality, governance, and reporting"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (Microsoft Fabric, SQL, Power BI) appear as action verbs in responsibilities, indicating an existing platform being developed on rather than infrastructure built from zero.
+> Reasoning: The organization has existing infrastructure being modernized and names specific tools in responsibilities, indicating a growing team at mid-stage rather than early-stage or fully mature.
 
 **Run 3:** `mid` ✗
-> Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
+> Quote: "support delivery of a modern enterprise data platform using Microsoft Fabric, focusing on business intelligence, data analysis, migration, quality, governance, and reporting"
 > Verified: ✓ found in JD
-> Reasoning: Multiple established data practices (governance, lineage, integration) with named initiatives indicate mid-stage maturity with existing infrastructure.
+> Reasoning: Existing infrastructure (Microsoft Fabric, Power BI) is named in responsibilities and being actively used and migrated, indicating an established team undergoing platform modernization.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -153,39 +155,43 @@ No visa sponsorship available for this role. Referrals increase interview chance
 **Run 1:** `mixed` ✓
 > Quote: "Create data mappings, transformation rules, Data Management Plans, and technical documentation"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains specific technical artifacts (Data Management Plans, data lineage) and workflows, but lacks the deep contextual specificity and scale details typical of a hiring manager.
+> Reasoning: Specific technical outputs (data mappings, transformation rules, Data Management Plans) mixed with generic collaboration language indicates both hiring manager and recruiter input.
 
-**Run 2:** `hiring_manager` ✗
-> Quote: "Create data mappings, transformation rules, Data Management Plans, and technical documentation"
+**Run 2:** `recruiter` ✗
+> Quote: "Develop BI reports, dashboards, KPIs, and analytical solutions using Microsoft Fabric and SQL"
 > Verified: ✓ found in JD
-> Reasoning: The specificity of named methodology components (data mappings, transformation rules, Data Management Plans) indicates authorship by someone with hands-on experience in this work.
+> Reasoning: Responsibilities use generic action verbs and boilerplate language without specific context, scale, methodology, or the detailed application knowledge a hiring manager would provide.
 
-**Run 3:** `mixed` ✓
-> Quote: "Create data mappings, transformation rules, Data Management Plans, and technical documentation"
+**Run 3:** `recruiter` ✗
+> Quote: "Develop BI reports, dashboards, KPIs, and analytical solutions using Microsoft Fabric and SQL"
 > Verified: ✓ found in JD
-> Reasoning: Mix of technically specific deliverables (data mappings, Data Management Plans) and generic boilerplate language (collaborate, stakeholder engagement) indicates mixed authorship.
+> Reasoning: Responsibilities use generic action verbs without technical specificity, scale context, or details that only someone performing the role would include.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
 
 ### stakeholder_orientation
 **Manual:** `mixed`
 
-**Run 1:** `mixed` ✓
-> Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
-> Verified: ✓ found in JD
-> Reasoning: The role genuinely serves both finance/audit/compliance audiences and internal data platform consumers through governance and infrastructure initiatives, without clear dominance of either.
+**Run 1:** `internal_data` ✗
+> Quote: "supporting delivery of a modern enterprise data platform using Microsoft Fabric"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Core mission is building and maintaining data platform infrastructure; audit/compliance are secondary consumers.
 
 **Run 2:** `internal_data` ✗
 > Quote: "support delivery of a modern enterprise data platform using Microsoft Fabric, focusing on business intelligence, data analysis, migration, quality, governance, and reporting"
 > Verified: ✓ found in JD
-> Reasoning: The primary mission frames the role as building and supporting data platform infrastructure; governance, data lineage, and data modelling are internal data team responsibilities.
+> Reasoning: The primary framing emphasizes supporting the data platform itself through governance, lineage, and infrastructure work; BI reporting is an output of platform focus rather than primary audience.
 
 **Run 3:** `mixed` ✓
-> Quote: "Develop BI reports, dashboards, KPIs, and analytical solutions; Support data governance, data modelling, data lineage, and data integration initiatives"
+> Quote: "support delivery of a modern enterprise data platform using Microsoft Fabric, focusing on business intelligence, data analysis, migration, quality, governance, and reporting"
 > Verified: ✓ found in JD
-> Reasoning: The role combines reporting work serving finance/business stakeholders with infrastructure work serving the data function, with approximately equal emphasis on both.
+> Reasoning: The role balances internal data platform and governance work with business-facing BI and reporting responsibilities equally.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'mixed']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
 
 ### autonomy_level
 **Manual:** `execution`
@@ -193,17 +199,17 @@ No visa sponsorship available for this role. Referrals increase interview chance
 **Run 1:** `execution` ✓
 > Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
 > Verified: ✓ found in JD
-> Reasoning: The use of 'support' and the framing of work around delivering defined BI solutions, migrations, and executing governance initiatives set by others indicates execution rather than strategic ownership.
+> Reasoning: Consistent support/deliver/perform language without strategic direction-setting verbs indicates role is execution-focused.
 
 **Run 2:** `execution` ✓
 > Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'support' frames the role as executing initiatives and technical work defined by others, not setting strategic direction or defining priorities.
+> Reasoning: The repeated use of 'support' indicates the role executes direction set by others rather than defining priorities or shaping analytics strategy.
 
 **Run 3:** `execution` ✓
-> Quote: "Develop BI reports, dashboards, KPIs, and analytical solutions"
+> Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
 > Verified: ✓ found in JD
-> Reasoning: Action verbs throughout (develop, perform, produce, support) are all execution-oriented without strategic framing of defining direction or shaping priorities.
+> Reasoning: The word 'support' combined with absence of strategic verbs like 'define', 'own', or 'establish' indicates the role executes pre-scoped work within existing initiatives.
 
 ### ai_role
 **Manual:** ``
@@ -211,58 +217,60 @@ No visa sponsorship available for this role. Referrals increase interview chance
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, machine learning, generative AI applications, or AI-assisted coding practices.
+> Reasoning: No mention of AI coding tools, AI infrastructure, or AI skills expected of the candidate.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI-ready data infrastructure that the candidate must demonstrate.
+> Reasoning: The JD makes no reference to AI tools, AI-assisted coding, or building data infrastructure for AI systems.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No mention of AI tools, AI-assisted coding, or GenAI capabilities throughout the job description.
+> Reasoning: No mention of AI skills, tools, or applications appears anywhere in the requirements or responsibilities section.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
 **Manual:** ``
 
-**Run 1:** `tool_listed` ✗
-> Quote: "Data Quality, Data Validation"
-> Verified: ✓ found in JD
-> Reasoning: Data quality and validation appear in the required skills list without an ownership framing verb like 'own', 'define', or 'establish', indicating they are expected competencies rather than responsibilities the candidate will own.
-
-**Run 2:** `tool_listed` ✗
-> Quote: "Experience with Power BI, Data Quality, Data Validation, Data Governance, and Data Modelling"
-> Verified: ✓ found in JD
-> Reasoning: Data quality and validation appear as required skills in the requirements section without ownership verbs or accountability framing in the responsibilities.
-
-**Run 3:** `responsibility` ✗
+**Run 1:** `responsibility` ✗
 > Quote: "Perform data migration, validation, reconciliation, and quality analysis"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'perform' paired with explicit quality analysis responsibility indicates the candidate owns quality work throughout the engagement.
+> Reasoning: Quality analysis is an owned responsibility in core duties with ownership language, not just listed as a tool.
+
+**Run 2:** `tool_listed` ✗
+> Quote: "Perform data migration, validation, reconciliation, and quality analysis"
+> Verified: ✓ found in JD
+> Reasoning: Data quality work is executed as part of responsibilities but framed as tactical execution rather than owning or defining quality standards and frameworks.
+
+**Run 3:** `tool_listed` ✗
+> Quote: "Experience with Power BI, Data Quality, Data Validation, Data Governance, and Data Modelling"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and validation appear in the requirements list as skills needed without framing the candidate as owning or defining testing standards.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`tool_listed`
 
-⚠ **LLM inconsistency**: runs gave ['tool_listed', 'tool_listed', 'responsibility']
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'tool_listed']
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `moderate` ✗
+**Run 1:** `high` ✗
 > Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
 > Verified: ✓ found in JD
-> Reasoning: Compliance and audit are named concerns reflecting regulatory risk in the government sector, but the primary role framing emphasizes BI delivery and analytics development rather than risk prevention.
+> Reasoning: Government administration sector combined with explicit audit and compliance language throughout indicates regulatory compliance risk is primary concern.
 
 **Run 2:** `moderate` ✗
 > Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
 > Verified: ✓ found in JD
-> Reasoning: Audit and compliance are named stakeholders and governance is a responsibility, indicating operational reliability concerns; however, the overall framing emphasizes platform delivery rather than preventing regulatory failure or trust breakdown.
+> Reasoning: Audit and compliance are mentioned in a government context with repeated quality and governance emphasis, but concerns are framed as operational reliability rather than preventing regulatory exposure or protecting stakeholder trust.
 
 **Run 3:** `moderate` ✗
-> Quote: "Produce ad hoc reports and data extracts for business, audit, and compliance"
+> Quote: "Support data governance, data modelling, data lineage, and data integration initiatives"
 > Verified: ✓ found in JD
-> Reasoning: Explicit audit and compliance reporting indicates moderate risk awareness focused on operational compliance and regulatory reporting rather than high-stakes framing.
+> Reasoning: Governance and data quality concerns are present but secondary to platform delivery; operational reliability is prioritized over preventing regulatory or trust-damaging failures.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

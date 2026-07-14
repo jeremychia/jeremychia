@@ -51,12 +51,15 @@ Offer:
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | high | high | high | 100% | ✓ |
+| domain_risk | high | high | moderate | high | 33% | ✓ |
 | collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | hiring_manager | mixed | mixed | 33% | ✓ |
-| stakeholder_orientation | internal_data | finance | finance | internal_data | 33% | ✗ |
-| autonomy_level | mixed | mixed | mixed | mixed | 100% | ✓ |
+| jd_authorship | mixed | mixed | mixed | mixed | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | finance | 33% | ✓ |
+| autonomy_level | mixed | mixed | mixed | strategic | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | high | moderate | moderate | 33% | ✗ |
 
 ---
 
@@ -66,19 +69,19 @@ Offer:
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Modelado de datos: Desarrollar modelos de datos siguiendo buenas prácticas de ingeniería (control de versiones, testing y CI/CD)."
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, reliability, testing, CI/CD, code reviews, and best practices throughout, with no velocity language like 'fast-paced' or 'rapid delivery'.
-
-**Run 2:** `rigour` ✓
 > Quote: "Gobernanza y fiabilidad: Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, reliability, monitoring, and anomaly detection with explicit mentions of testing and CI/CD, establishing data quality and reliability as core expectations with no corresponding velocity language.
+> Reasoning: The responsibilities emphasize governance, proactive monitoring, alert systems, and anomaly detection—core rigour signals—with no corresponding velocity language (fast-paced, MVP, rapid delivery).
+
+**Run 2:** `rigour` ✓
+> Quote: "Modelado de datos siguiendo buenas prácticas de ingeniería (control de versiones, testing y CI/CD)"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities section emphasizes testing, code quality, CI/CD, governance, reliability, and quality standards throughout, with zero velocity signals like fast-paced or rapid delivery.
 
 **Run 3:** `rigour` ✓
-> Quote: "(control de versiones, testing y CI/CD)"
+> Quote: "Modelado de datos: Desarrollar modelos de datos siguiendo buenas prácticas de ingeniería (control de versiones, testing y CI/CD)."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, version control, CI/CD, governance, proactive monitoring, and code reviews with no velocity signals, establishing rigour as the dominant orientation.
+> Reasoning: The JD emphasizes testing, CI/CD, version control, and engineering best practices across multiple responsibilities rather than speed or iteration pace.
 
 ### domain_risk
 **Manual:** `high`
@@ -86,95 +89,93 @@ Offer:
 **Run 1:** `high` ✓
 > Quote: "Financial services knowledge (P&L, FX, reconciliation concepts)"
 > Verified: ✓ found in JD
-> Reasoning: The explicit requirement for P&L, FX, and reconciliation knowledge in a financial services company indicates data errors directly affect financial reporting and regulatory compliance.
+> Reasoning: The JD explicitly requires financial services domain knowledge including P&L, which is a direct signal that data errors affect core financial operations.
 
-**Run 2:** `high` ✓
-> Quote: "Financial services knowledge (P&L, FX, reconciliation concepts)"
+**Run 2:** `moderate` ✗
+> Quote: "an international financial services company"
 > Verified: ✓ found in JD
-> Reasoning: The role operates within a financial services company and explicitly requires expertise in P&L (financial reporting), foreign exchange, and reconciliation—core financial domain concepts with regulatory and reporting impact.
+> Reasoning: While the financial services sector defaults to high risk, the JD emphasizes reliability and business value without explicit regulatory, compliance, audit, or financial reporting framing.
 
 **Run 3:** `high` ✓
 > Quote: "Financial services knowledge (P&L, FX, reconciliation concepts)"
 > Verified: ✓ found in JD
-> Reasoning: P&L, FX, and reconciliation are explicitly high-risk financial operations requiring precision and compliance; the role requires specific financial services domain knowledge.
+> Reasoning: The role explicitly serves a financial services company with stated requirements for P&L, FX, and reconciliation knowledge—core financial reporting and regulatory domains.
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
 
 ### collaboration_width
 **Manual:** `0`
 
 **Run 1:** `0` ✓
-> Quote: "none identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD mentions generic stakeholders and business partners but does not name specific functions like Finance, Product, Marketing, Engineering, or other distinct named teams.
+> Quote: "Colaboración con negocio; Trabajo en equipo: Colaborar con otros miembros del equipo"
+> Verified: ✓ found in JD
+> Reasoning: The JD references 'business' and 'team members' generically but does not name specific partner functions (Finance, Product, Engineering, etc.) that count toward collaboration width.
 
 **Run 2:** `0` ✓
-> Quote: "Trabajar estrechamente con stakeholders"
+> Quote: "Trabajar estrechamente con stakeholders; Colaboración con negocio"
 > Verified: ✓ found in JD
-> Reasoning: The JD references only generic terms like 'stakeholders' and 'business' without naming specific partner functions, departments, or roles.
+> Reasoning: Collaboration references use generic terms like 'stakeholders' and 'negocio' (business) rather than named functions (Finance, Product, Engineering, etc.), so the count is zero.
 
 **Run 3:** `0` ✓
-> Quote: "Trabajar estrechamente con stakeholders para entender necesidades, definir requerimientos y traducirlos en planes técnicos accionables"
+> Quote: "None identified"
 > Verified: ✓ found in JD
-> Reasoning: No specifically named partner teams or functions are identified; 'stakeholders' and 'negocio' are too generic to count as distinct collaborators.
+> Reasoning: The JD references generic stakeholders and team collaboration without naming specific functions or partner teams.
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "Orquestación de pipelines: Gestionar workflows de datos mediante Airflow (Cloud Composer)."
+> Quote: "The company is evolving its data platform to create robust, reliable data products aligned with business."
 > Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities (Airflow, dbt) with specific application context, combined with references to multiple team members and an evolving platform, indicate a mid-stage team growing beyond initial setup.
+> Reasoning: The platform already exists and is being evolved, and the role involves named tools (Airflow, dbt) in responsibilities and multi-domain roadmap definition, indicating an established but growing data function.
 
 **Run 2:** `mid` ✓
-> Quote: "The company is evolving its data platform to create robust, reliable data products"
-> Verified: ✓ found in JD
-> Reasoning: The language 'evolving' indicates an existing platform being enhanced rather than built from scratch, with named infrastructure tools (Airflow/Cloud Composer) already in place.
-
-**Run 3:** `mid` ✓
 > Quote: "Orquestación de pipelines: Gestionar workflows de datos mediante Airflow (Cloud Composer)"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (Airflow, Cloud Composer) explicitly mentioned in responsibilities indicate an established data platform undergoing evolution, not greenfield building.
+> Reasoning: The JD references specific deployed tools (Airflow, Cloud Composer, dbt) in responsibilities and describes the role as part of an evolving platform, indicating established but growing infrastructure.
+
+**Run 3:** `mid` ✓
+> Quote: "evolving its data platform to create robust, reliable data products aligned with business"
+> Verified: ✓ found in JD
+> Reasoning: The company has existing data products and infrastructure but is actively evolving and improving them, indicating a growing data function beyond early stage.
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `hiring_manager` ✗
-> Quote: "Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio."
+**Run 1:** `mixed` ✓
+> Quote: "Orquestación de pipelines: Gestionar workflows de datos mediante Airflow (Cloud Composer); Modelado de datos: Desarrollar modelos de datos siguiendo buenas prácticas de ingeniería (control de versiones, testing y CI/CD)."
 > Verified: ✓ found in JD
-> Reasoning: The specific technical requirements (Airflow, dbt, alert systems for anomaly detection, P&L/FX knowledge, data modeling with CI/CD) show precision about actual daily work only a hiring manager would provide.
+> Reasoning: The JD combines technical specificity (Airflow, multi-domain roadmaps, alert systems, data modeling with CI/CD) with generic collaboration language, indicating mixed authorship.
 
 **Run 2:** `mixed` ✓
-> Quote: "Orquestación de pipelines: Gestionar workflows de datos mediante Airflow (Cloud Composer)."
-> Verified: ✓ found in JD
-> Reasoning: The JD mixes technical specificity (naming Airflow and Cloud Composer with orchestration context, requiring P&L/FX/reconciliation domain knowledge) with generic boilerplate verbs like 'collaborate' and 'promote best practices'.
+> Quote: "Modelado de datos siguiendo buenas prácticas de ingeniería (control de versiones, testing y CI/CD)"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Technical specificity in data modeling and pipeline orchestration with named tools suggests hiring manager input, but generic collaboration language ('trabajar estrechamente con stakeholders') suggests recruiter input.
 
 **Run 3:** `mixed` ✓
-> Quote: "Orquestación de pipelines: Gestionar workflows de datos mediante Airflow (Cloud Composer)"
+> Quote: "Orquestación de pipelines: Gestionar workflows de datos mediante Airflow (Cloud Composer)."
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity (Airflow/Cloud Composer, testing, CI/CD) is mixed with generic boilerplate language ('collaborate with stakeholders', 'work as a team').
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+> Reasoning: The JD combines specific technical context (Airflow/Cloud Composer) with generic stakeholder collaboration language typical of recruiter templates.
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
-**Run 1:** `finance` ✗
+**Run 1:** `internal_data` ✓
+> Quote: "The company is evolving its data platform to create robust, reliable data products aligned with business."
+> Verified: ✓ found in JD
+> Reasoning: The role's primary focus is on building and monitoring data products and platform infrastructure, which serve data consumers and the data function itself internally.
+
+**Run 2:** `internal_data` ✓
+> Quote: "evolving its data platform to create robust, reliable data products aligned with business"
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is building and maintaining the data platform infrastructure for internal business teams to consume, not serving external customers or specific business functions.
+
+**Run 3:** `finance` ✗
 > Quote: "Financial services knowledge (P&L, FX, reconciliation concepts)"
 > Verified: ✓ found in JD
-> Reasoning: The explicit requirement for P&L, FX, and reconciliation knowledge in a financial services company indicates this role primarily serves finance use cases and stakeholders.
+> Reasoning: The role serves a financial services company with explicit requirements around P&L, FX, and reconciliation—core financial reporting and decision-making domains.
 
-**Run 2:** `finance` ✗
-> Quote: "Financial services knowledge (P&L, FX, reconciliation concepts)"
-> Verified: ✓ found in JD
-> Reasoning: The explicit requirement for financial services domain knowledge (P&L = financial reporting, FX = foreign exchange, reconciliation = accounting) identifies finance teams as the primary audience for the data products.
-
-**Run 3:** `internal_data` ✓
-> Quote: "Gobernanza y fiabilidad: Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
-> Verified: ✓ found in JD
-> Reasoning: The role emphasizes data governance, reliability monitoring, and platform infrastructure, which are internal data function responsibilities focused on serving data consumers and the platform itself.
-
-⚠ **Disagreement**: manual=`internal_data` vs LLM majority=`finance`
-
-⚠ **LLM inconsistency**: runs gave ['finance', 'finance', 'internal_data']
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'finance']
 
 ### autonomy_level
 **Manual:** `mixed`
@@ -182,58 +183,78 @@ Offer:
 **Run 1:** `mixed` ✓
 > Quote: "Visión estratégica y ejecución técnica: Capacidad de alternar entre la definición de roadmaps multi-dominio y la resolución directa de problemas técnicos complejos."
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly requires both defining roadmaps (strategic ownership) and solving complex technical problems (execution), indicating the role encompasses both strategic direction-setting and execution.
+> Reasoning: The role explicitly combines strategic direction-setting (defining roadmaps, designing alert systems) with direct technical execution and problem-solving.
 
 **Run 2:** `mixed` ✓
-> Quote: "Visión estratégica y ejecución técnica: Capacidad de alternar entre la definición de roadmaps multi-dominio y la resolución directa de problemas técnicos complejos."
+> Quote: "Capacidad de alternar entre la definición de roadmaps multi-dominio y la resolución directa de problemas técnicos complejos"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly combines strategic direction-setting (defining multi-domain roadmaps, end-to-end project leadership) with direct technical execution (solving complex problems, writing models), making it a genuine combination of both patterns.
+> Reasoning: The role explicitly requires both strategic ownership (defining roadmaps) and tactical execution (solving technical problems), with responsibilities emphasizing both equally.
 
-**Run 3:** `mixed` ✓
-> Quote: "Visión estratégica y ejecución técnica: Capacidad de alternar entre la definición de roadmaps multi-dominio y la resolución directa de problemas técnicos complejos"
+**Run 3:** `strategic` ✗
+> Quote: "Capacidad de alternar entre la definición de roadmaps multi-dominio y la resolución directa de problemas técnicos complejos"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly combines strategic direction-setting (defining multi-domain roadmaps, end-to-end project leadership) with hands-on technical execution (solving complex problems, managing pipelines).
+> Reasoning: The role is expected to define multi-domain technical roadmaps and strategies, not merely execute plans set by others.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'strategic']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "No AI tool or platform references in JD"
-> Reasoning: No mention of AI coding tools, AI-ready infrastructure, or GenAI responsibilities.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "No AI-related phrases present"
-> Reasoning: JD contains no mentions of AI tools, AI-first mindset, or AI infrastructure responsibilities.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI skills expected from the candidate, either for personal productivity tools or building AI-ready infrastructure.
 
-**Run 3:** `none` ✓
-> Quote: "No AI capabilities mentioned; Airflow, data governance, testing, CI/CD focus"
-> Reasoning: JD emphasizes standard data platform reliability and workflow management with zero AI/GenAI components or AI infrastructure responsibility.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no references to AI coding tools, AI-assisted development, or building AI data infrastructure for candidates.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI skills, tools, or agentic workflows expected of the candidate—focus is purely on data engineering and analytics fundamentals.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
+**Manual:** ``
+
 **Run 1:** `responsibility` ✗
-> Quote: "Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas; Colaborar con otros miembros del equipo para reforzar estándares de calidad"
-> Reasoning: Quality and testing positioned as owned responsibilities; proactive monitoring and alert design indicate candidate ownership of data quality practices.
+> Quote: "Promover buenas prácticas en desarrollo de queries, revisiones de código, documentación y testing."
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as a practice the candidate promotes and leads within the team, combined with repeated reliability and governance language, indicating ownership of testing standards.
 
-**Run 2:** `tool_listed` ✓
-> Quote: "control de versiones, testing y CI/CD"
-> Reasoning: Testing appears as part of the technical stack without ownership verbs (own/ensure/define/implement).
+**Run 2:** `responsibility` ✗
+> Quote: "Promover buenas prácticas en desarrollo de queries, revisiones de código, documentación y testing"
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as a responsibility the candidate actively promotes and enforces through best practices, not merely a tool listed in a requirements list.
 
-**Run 3:** `tool_listed` ✓
-> Quote: "testing y CI/CD"
-> Reasoning: Testing and CI/CD appear in technical stack; quality reinforcement framed as team collaboration without explicit ownership verbs.
+**Run 3:** `responsibility` ✗
+> Quote: "Excelencia en desarrollo: Promover buenas prácticas en desarrollo de queries, revisiones de código, documentación y testing."
+> Verified: ✓ found in JD
+> Reasoning: Testing is framed as a core responsibility to own and promote as part of establishing quality standards, not merely as a tool to use.
 
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'tool_listed']
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✓
-> Quote: "diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio; financial services company where data errors could affect reporting"
-> Reasoning: Financial services context with compliance-focused framing: preventing data errors from reaching stakeholders; regulatory risk and trustworthiness as primary concerns.
+**Manual:** ``
+
+**Run 1:** `high` ✗
+> Quote: "Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio."
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes proactive monitoring and alert systems explicitly designed to prevent data anomalies from reaching business stakeholders, paired with repeated reliability and governance language and financial services context.
 
 **Run 2:** `moderate` ✗
-> Quote: "diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
-> Reasoning: Role frames around preventing operational failures and business impact through monitoring, signaling reliability-focused risk mitigation rather than compliance dominance.
+> Quote: "Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes proactive monitoring and operational reliability to prevent data product failures from reaching the business, but lacks explicit compliance or regulatory framing.
 
-**Run 3:** `high` ✓
-> Quote: "diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
-> Reasoning: Financial services domain (P&L, FX, reconciliation) where data errors affect reporting; role positioned as protecting business from data failures.
+**Run 3:** `moderate` ✗
+> Quote: "Monitorizar de forma proactiva los productos de datos, diseñando sistemas de alertas que permitan detectar anomalías antes de impactar al negocio"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes proactive monitoring and preventing data anomalies from reaching business stakeholders, reflecting moderate concern with operational reliability rather than compliance-driven risk.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']

@@ -55,11 +55,11 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | mixed | recruiter | mixed | recruiter | 33% | ✗ |
+| jd_authorship | mixed | recruiter | recruiter | mixed | 33% | ✗ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | strategic | strategic | mixed | mixed | 33% | ✗ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
-| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| testing_framing |  | tool_listed | absent | absent | 33% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
@@ -72,53 +72,53 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Run 1:** `rigour` ✓
 > Quote: "Establishing documentation, version control, and data privacy compliance"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, compliance, and documentation without any velocity-oriented language.
+> Reasoning: The responsibilities emphasize governance, compliance, and documentation as core expectations with no velocity or speed language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Establishing documentation, version control, and data privacy compliance"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance practices (documentation, version control, compliance) and CI/CD standards as core expectations rather than speed or delivery pace.
+> Reasoning: Responsibilities emphasize governance, documentation, and compliance practices with no speed or delivery-pace language typical of velocity-oriented roles.
 
 **Run 3:** `rigour` ✓
 > Quote: "Establishing documentation, version control, and data privacy compliance"
 > Verified: ✓ found in JD
-> Reasoning: Rigour signals (documentation, version control, compliance) dominate the responsibilities with no velocity language present.
+> Reasoning: The responsibilities emphasise governance, documentation, compliance, and standards—classic rigour signals—with no velocity or speed language present.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "data privacy compliance"
+> Quote: "Directing data integration and pipeline orchestration across the organization"
 > Verified: ✓ found in JD
-> Reasoning: While data privacy is mentioned as a regulatory concern, the company is retail/apparel and the JD frames the role as operational platform management rather than financial reporting or high-stakes compliance work.
+> Reasoning: Data errors would affect operational decisions and business continuity through infrastructure failures, but there are no signals of financial reporting, regulatory, or compliance-driven consequences.
 
 **Run 2:** `moderate` ✓
-> Quote: "data privacy compliance"
-> Verified: ✓ found in JD
-> Reasoning: While compliance is mentioned, the JD lacks financial reporting, regulatory reporting, or audit language; ASICS retail/sportswear context also suggests moderate rather than high risk.
-
-**Run 3:** `moderate` ✓
 > Quote: "Enhancing database platform performance and cost-effectiveness"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as internal infrastructure and platform work with no explicit financial reporting, regulatory, or compliance-critical framing.
+> Reasoning: Focus is operational efficiency and cost optimization rather than financial reporting, regulatory compliance, or mission-critical revenue exposure typical of high-risk domains.
+
+**Run 3:** `moderate` ✓
+> Quote: "data privacy compliance"
+> Verified: ✓ found in JD
+> Reasoning: While regulatory compliance is explicitly mentioned (GDPR for EMEA), the role focuses on infrastructure rather than compliance-dependent financial reporting or mission-critical decisions.
 
 ### collaboration_width
 **Manual:** `0`
 
 **Run 1:** `0` ✓
-> Quote: "None"
-> Verified: ✓ found in JD
-> Reasoning: No named teams like Finance, Product, Marketing, Data Science, or Engineering are explicitly identified; the JD uses generic language like 'colleagues' and 'the organization' without naming specific partner functions.
+> Quote: "No named teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No distinct named functions (Finance, Product, Engineering, etc.) are explicitly listed; only generic references to colleagues and business strategy.
 
 **Run 2:** `0` ✓
-> Quote: "Providing technical support and training to colleagues; Promoting BI adoption and data literacy across EMEA"
+> Quote: "Providing technical support and training to colleagues"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions collaboration scope but names no distinct partner functions like Finance, Product, Marketing, or Engineering; 'colleagues' and geographic region do not count as named teams.
+> Reasoning: Collaboration is mentioned generically; no specific functions (Finance, Product, Engineering, Sales, etc.) or named teams are explicitly identified as collaboration partners.
 
 **Run 3:** `0` ✓
 > Quote: "Providing technical support and training to colleagues"
 > Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams (Finance, Product, Data Science, Engineering, etc.) are identified; mentions are generic.
+> Reasoning: No named partner teams or functions (Product, Finance, Engineering, Sales, etc.) are identified; collaboration references use only generic terms like 'colleagues' and 'the organization'.
 
 ### data_team_maturity
 **Manual:** `mature`
@@ -126,17 +126,17 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Run 1:** `mid` ✗
 > Quote: "Directing data integration and pipeline orchestration across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The organization has existing infrastructure being actively directed and scaled, with training and adoption initiatives underway, but governance practices are still being established rather than mature.
+> Reasoning: The responsibilities assume existing infrastructure and data processes, with focus on optimization and governance rather than building from zero.
 
 **Run 2:** `mid` ✗
 > Quote: "Directing data integration and pipeline orchestration across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'directing' implies existing infrastructure at scale, and paired with named tools (Snowflake, DBT) suggests a growing function with established operations but not yet mature specialization.
+> Reasoning: Language indicates an established data function operating at organizational scale with named tools (Snowflake, DBT) in responsibilities, typical of a scaling mid-stage team.
 
 **Run 3:** `mid` ✗
 > Quote: "Directing data integration and pipeline orchestration across the organization"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities reference existing infrastructure, named tools (Snowflake, DBT), and enhancement work rather than greenfield build.
+> Reasoning: Named tools (Snowflake, DBT) and orchestration responsibilities indicate existing infrastructure requiring direction and enhancement, not early-stage establishment.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -144,23 +144,23 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Manual:** `mixed`
 
 **Run 1:** `recruiter` ✗
+> Quote: "Directing data integration and pipeline orchestration across the organization; Creating data models and implementing transformation/cleansing/enrichment processes"
+> Verified: ✓ found in JD
+> Reasoning: Boilerplate action verbs and generic responsibilities that could apply to any mid-level data infrastructure role, with named tools (Snowflake, DBT) listed without specific context about use cases or scale.
+
+**Run 2:** `recruiter` ✗
 > Quote: "Creating data models and implementing transformation/cleansing/enrichment processes"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs without technical specificity, scale, methodology, or context that would indicate authorship by someone doing this work.
+> Reasoning: Responsibilities use generic action verbs without specific technical context, scale figures, methodology names, or domain application knowledge that would indicate hiring manager authorship.
 
-**Run 2:** `mixed` ✓
-> Quote: "Strong hands-on experience with Snowflake and DBT; Define and prioritise technical requirements that align with the overall business strategy"
+**Run 3:** `mixed` ✓
+> Quote: "Creating data models and implementing transformation/cleansing/enrichment processes"
 > Verified: ✓ found in JD
-> Reasoning: The JD combines technical specificity (named tools, platform knowledge) with generic boilerplate action verbs ('Define and prioritise', 'Providing technical support', 'Promoting BI adoption') that lack operational context.
-
-**Run 3:** `recruiter` ✗
-> Quote: "Providing technical support and training to colleagues"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic boilerplate verbs without technical specificity about implementation context, scale, methodology, or how tools are applied.
+> Reasoning: Technical specificity in infrastructure responsibilities (data models, transformation, orchestration) is mixed with generic language around strategy alignment and BI adoption.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
 
-⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'recruiter', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
@@ -168,17 +168,17 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Run 1:** `internal_data` ✓
 > Quote: "Directing data integration and pipeline orchestration across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The primary responsibilities focus on building and maintaining the data platform itself and enabling internal data consumers rather than serving commercial, product, or finance stakeholders.
+> Reasoning: Core responsibilities focus on building and optimizing data platform infrastructure for internal consumption rather than serving specific business functions.
 
 **Run 2:** `internal_data` ✓
 > Quote: "Promoting BI adoption and data literacy across EMEA"
 > Verified: ✓ found in JD
-> Reasoning: The entire role focuses on building data infrastructure, enabling internal BI users, and training colleagues—not serving commercial, product, or finance stakeholders.
+> Reasoning: Primary audience is the data function and analytics consumers within the organization rather than commercial, product, finance, or external stakeholders.
 
 **Run 3:** `internal_data` ✓
-> Quote: "Promoting BI adoption and data literacy across EMEA"
+> Quote: "Directing data integration and pipeline orchestration across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves internal data consumers and analytics teams, with emphasis on data platform, infrastructure, and adoption.
+> Reasoning: The role's primary focus is building and enhancing the data platform to serve internal data consumers and data literacy, not commercial, product, or finance stakeholders.
 
 ### autonomy_level
 **Manual:** `strategic`
@@ -186,21 +186,17 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Run 1:** `strategic` ✓
 > Quote: "Define and prioritise technical requirements that align with the overall business strategy"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly expected to define and prioritize technical direction across the organization, establishing governance and shaping how data delivery works.
+> Reasoning: The primary responsibilities use strategic verbs (define, prioritise, directing, establishing) indicating the role sets direction for data infrastructure and initiatives.
 
-**Run 2:** `mixed` ✗
-> Quote: "Define and prioritise technical requirements that align with the overall business strategy; Directing data integration and pipeline orchestration across the organization; Creating data models and implementing transformation/cleansing/enrichment processes"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic direction-setting verbs (Define, Directing, Establishing) with execution responsibilities (Creating, Implementing, Providing support), equally present in the responsibilities section.
-
-**Run 3:** `mixed` ✗
+**Run 2:** `strategic` ✓
 > Quote: "Define and prioritise technical requirements that align with the overall business strategy"
 > Verified: ✓ found in JD
-> Reasoning: Strategic verbs like 'define' and 'directing' coexist with execution responsibilities like 'providing technical support' and 'creating data models.'
+> Reasoning: Opening responsibility uses the strategic verb 'define' to establish that the role sets technical direction and priorities aligned with business needs rather than executing work assigned by others.
 
-⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
+**Run 3:** `strategic` ✓
+> Quote: "Define and prioritise technical requirements that align with the overall business strategy"
+> Verified: ✓ found in JD
+> Reasoning: The verbs 'define', 'prioritise', and 'directing' indicate the role sets technical direction and establishes standards rather than executing direction from others.
 
 ### ai_role
 **Manual:** ``
@@ -208,39 +204,41 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, AI infrastructure, or any AI-related skill expectations.
+> Reasoning: The JD contains no expectations for the candidate to use AI tools or build AI infrastructure.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mentions of AI coding tools (Copilot, Claude Code, Cursor), AI infrastructure, or AI-assisted development that the candidate should demonstrate.
+> Reasoning: No mention of AI tools (Copilot, Claude Code, Cursor), AI-enabled data infrastructure, or AI capabilities expected of the candidate; focus is traditional BI and data engineering.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, GenAI applications, or AI-related candidate expectations.
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI-enablement responsibilities expected of the candidate.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
 **Manual:** ``
 
-**Run 1:** `absent` ✗
-> Quote: "No testing or data quality framing identified in the JD."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: There is no mention of testing frameworks, data contracts, observability, data quality ownership, or quality assurance practices anywhere in the JD.
+**Run 1:** `tool_listed` ✗
+> Quote: "CI/CD standards experience for data engineering"
+> Verified: ✓ found in JD
+> Reasoning: CI/CD appears in required qualifications as a skill but not as an owned responsibility with accountability for defining or owning testing frameworks.
 
 **Run 2:** `absent` ✗
-> Quote: "No data quality, testing, or observability framework mentioned."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes documentation and compliance but does not mention testing, data quality frameworks, data contracts, observability practices, or quality ownership.
-
-**Run 3:** `absent` ✗
 > Quote: "No testing or data quality signal."
 > Verified: ✓ found in JD
-> Reasoning: No testing frameworks, data contracts, observability, or data quality practices appear in responsibilities; CI/CD is listed as a requirement but not framed as testing ownership.
+> Reasoning: Testing, data quality frameworks, data contracts, or observability practices are not mentioned in responsibilities or requirements sections.
+
+**Run 3:** `absent` ✗
+> Quote: "Creating data models and implementing transformation/cleansing/enrichment processes"
+> Verified: ✓ found in JD
+> Reasoning: While data cleansing is mentioned, no testing frameworks, data contracts, or data quality ownership practices appear in the responsibilities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+⚠ **LLM inconsistency**: runs gave ['tool_listed', 'absent', 'absent']
 
 ### loss_aversion_framing
 **Manual:** ``
@@ -248,16 +246,16 @@ Benefits: Gym access, 50% ASICS gear discount, Calm app access, wellness program
 **Run 1:** `moderate` ✗
 > Quote: "Establishing documentation, version control, and data privacy compliance"
 > Verified: ✓ found in JD
-> Reasoning: Data privacy compliance is mentioned as a concern, signaling operational and regulatory risk awareness, but the overall JD framing emphasizes capability delivery and adoption rather than preventing bad outcomes.
+> Reasoning: Compliance and governance are present as responsibilities but the overall JD is framed around capability and optimization rather than preventing regulatory or business risk.
 
 **Run 2:** `moderate` ✗
 > Quote: "Establishing documentation, version control, and data privacy compliance"
 > Verified: ✓ found in JD
-> Reasoning: Compliance is explicitly listed as a responsibility to establish, signaling organizational concern, but it is framed as infrastructure setup rather than prevention of bad outcomes to decision-makers or regulatory exposure.
+> Reasoning: Compliance is mentioned as a responsibility area, but overall role framing emphasizes delivery and infrastructure building rather than risk prevention or stakeholder trust.
 
 **Run 3:** `moderate` ✗
 > Quote: "Establishing documentation, version control, and data privacy compliance"
 > Verified: ✓ found in JD
-> Reasoning: Compliance is mentioned as a secondary concern, but overall framing emphasizes delivery and capability, not risk prevention or regulatory exposure.
+> Reasoning: Regulatory compliance is explicitly mentioned as a responsibility, but it is framed as one technical concern among others rather than as the dominant risk or trust driver.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

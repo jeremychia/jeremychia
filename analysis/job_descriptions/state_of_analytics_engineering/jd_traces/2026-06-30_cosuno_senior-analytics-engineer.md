@@ -95,179 +95,217 @@ Top-Notch Equipment: A new MacBook Pro to ensure you have the best tools for the
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | mixed | execution | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 3 | 2 | 2 | 0 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| stakeholder_orientation | mixed | internal_data | internal_data | mixed | 33% | ✗ |
+| autonomy_level | strategic | strategic | strategic | mixed | 33% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "We treat our data models like production code—tested, version-controlled, and documented—so the numbers we serve are ones we can stand behind."
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes quality, testing, reliability, and best practices as core values, with explicit signals of governance-first culture rather than speed or iteration pace.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Quality by Default: We treat our data models like production code—tested, version-controlled, and documented—so the numbers we serve are ones we can stand behind."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, quality, documentation, and reliability as core expectations throughout, with no velocity-oriented language like fast-paced or rapid delivery.
+> Reasoning: Multiple rigour signals (testing, documentation, reliability, production-grade standards) with no velocity language; quality and correctness are framed as core expectations.
 
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "We treat our data models like production code—tested, version-controlled, and documented—so the numbers we serve are ones we can stand behind."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, version control, documentation, and quality as core values, with multiple rigour signals (Quality by Default, pipeline reliability) and no velocity language.
+> Reasoning: The responsibilities emphasize testing, quality, reliability, and documentation as core expectations with no language about speed, iteration, or rapid delivery.
+
+**Run 3:** `rigour` ✓
+> Quote: "Quality by Default: We treat our data models like production code—tested, version-controlled, and documented—so the numbers we serve are ones we can stand behind."
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes quality, testing, and reliability throughout ("reliable, well-tested", "production code", "stand behind") with no velocity signals, establishing rigour as the primary orientation.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Maintain and extend our Looker setup, and ship new dashboards and reports that customers and other stakeholders depend on."
-> Verified: ✓ found in JD
-> Reasoning: Data errors would affect business decisions but the JD lacks explicit mention of financial reporting, regulatory compliance, or P&L impact typical of high-risk domains.
-
-**Run 2:** `moderate`
-> Quote: "Maintain and extend our Looker setup, and ship new dashboards and reports that customers and other stakeholders depend on."
-> Verified: ✓ found in JD
-> Reasoning: The role supports business operations and customer decision-making in a SaaS construction platform without regulatory, financial reporting, or compliance requirements.
-
-**Run 3:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "for our product, our internal teams, our customers, and our investors"
 > Verified: ✓ found in JD
-> Reasoning: Data serves business intelligence and operational decisions for customers and stakeholders without explicit financial reporting, regulatory, or compliance language indicating high risk.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "No explicitly named partner teams or functions identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: While the role serves product, internal teams, customers, and investors, none are explicitly named as collaboration partners in the responsibilities section.
-
-**Run 2:** `0`
-> Quote: "Ownership Over Handoffs: On a small data team, you own your work from ingestion to dashboard. We trust you to make decisions and run with them."
-> Verified: ✓ found in JD
-> Reasoning: No named collaboration partner teams or functions are explicitly identified; the role emphasizes autonomous ownership over handoffs with no dependency on specific external teams.
-
-**Run 3:** `0`
-> Quote: "driving projects independently"
-> Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams are identified as collaboration partners; role emphasizes independent ownership of the data pipeline end-to-end.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure (dbt, BigQuery, Looker, Postgres pipeline) is operational; the focus is on improving and extending established systems rather than building from zero.
-
-**Run 2:** `mid`
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure (dbt, Looker, BigQuery, Postgres) is already deployed and operational; the role focuses on improving and extending rather than building from zero.
-
-**Run 3:** `mid`
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Verified: ✓ found in JD
-> Reasoning: Existing infrastructure with named tools (dbt, Looker, BigQuery, Postgres) and responsibilities framed as improving established systems on a small but functional data team.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Strengthen our data pipeline from Postgres to BigQuery, and build custom Python scripts to automate the flows that keep our warehouse fresh."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities contain technical specificity (named source/destination systems, scripting approach, specific infrastructure problem) that indicates deep operational knowledge of the actual work.
-
-**Run 2:** `hiring_manager`
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on. Maintain and extend our Looker setup, and ship new dashboards and reports that customers and other stakeholders depend on. Strengthen our data pipeline from Postgres to BigQuery, and build custom Python scripts to automate the flows that keep our warehouse fresh."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities detail specific technical stack choices, named tools with precise application context, and exact architectural patterns (ingestion to dashboard pipeline) that only someone with hands-on experience in this role would specify.
-
-**Run 3:** `hiring_manager`
-> Quote: "Strengthen our data pipeline from Postgres to BigQuery, and build custom Python scripts to automate the flows that keep our warehouse fresh."
-> Verified: ✓ found in JD
-> Reasoning: Specific technical details about database types, scripting approaches, and infrastructure tools indicate someone with hands-on data engineering experience wrote this.
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "you'll own the pipeline end to end, from ingestion to the numbers people actually act on"
-> Verified: ✓ found in JD
-> Reasoning: While serving multiple audiences (product, customers, investors), the core mission emphasizes building and maintaining the data infrastructure itself rather than serving a specific business function.
-
-**Run 2:** `internal_data`
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize building and maintaining data infrastructure, platform quality, and modeling practices rather than serving specific business functions.
-
-**Run 3:** `internal_data`
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Verified: ✓ found in JD
-> Reasoning: Primary focus is building and maintaining data infrastructure (dbt models, warehouse, pipelines) that serves internal data consumers and platform users.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "You won't just maintain dashboards; you'll own the pipeline end to end, from ingestion to the numbers people actually act on."
-> Verified: ✓ found in JD
-> Reasoning: The role has full responsibility for delivering within a defined scope (dbt models, Looker dashboards, data pipeline, integrations) but does not set the strategic direction of the data platform.
-
-**Run 2:** `mixed`
-> Quote: "You own your work from ingestion to dashboard. We trust you to make decisions and run with them."
-> Verified: ✓ found in JD
-> Reasoning: The role has strategic decision-making authority over the data platform domain while executing a defined mission to serve product, internal teams, customers, and investors.
-
-**Run 3:** `execution`
-> Quote: "On a small data team, you own your work from ingestion to dashboard."
-> Verified: ✓ found in JD
-> Reasoning: Role owns how to execute within defined scope (improve dbt models, maintain Looker, strengthen pipelines) rather than setting data strategy direction for the organization.
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "No AI tools mentioned; stack is dbt, Looker, Python, Postgres, BigQuery"
-> Reasoning: No AI tools, AI-first mindset, or AI infrastructure signals present; purely traditional data engineering stack.
-
-**Run 2:** `none` ✓
-> Quote: "Take ownership of our dbt pipeline... build custom Python scripts to automate the flows"
-> Reasoning: No AI coding tools or GenAI infrastructure mentioned; role uses traditional analytics engineering stack (dbt, Looker, BigQuery, Python).
-
-**Run 3:** `none` ✓
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on. Maintain and extend our Looker setup, and ship new dashboards and reports"
-> Reasoning: Traditional data stack (dbt, Looker, BigQuery, Python scripts) with no AI tool usage, AI-ready infrastructure, or GenAI responsibility signals.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Reasoning: Role owns data quality and testing as core practices, treating models as production code requiring rigorous testing.
-
-**Run 2:** `responsibility` ✓
-> Quote: "you own your work from ingestion to dashboard... improving our data models so they're reliable, well-tested"
-> Reasoning: Candidate owns data quality and testing end-to-end with explicit 'production code' rigor and 'well-tested' models standards.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
-> Reasoning: Candidate owns data quality and testing as core responsibility with explicit ownership verb paired to reliability/testing outcomes.
-
-
-### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "so the numbers we serve are ones we can stand behind; dashboards and reports that customers and other stakeholders depend on."
-> Reasoning: Data reliability framed around trustworthiness and stakeholder dependence, but no regulatory/compliance language; operational reliability dominates.
+> Reasoning: Data affects business decisions and customer reporting but no regulatory, compliance, or financial reporting language that would indicate high risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "so the numbers we serve are ones we can stand behind... customers and other stakeholders depend on"
-> Reasoning: Stakeholder trust and business decision impact frame the role, but no regulatory/compliance dominance; B2B SaaS error impact is moderate, not high-risk.
+> Quote: "turn raw data into decisions—for our product, our internal teams, our customers, and our investors"
+> Verified: ✓ found in JD
+> Reasoning: The data serves business decisions and customer-facing SaaS operations without explicit financial reporting, regulatory compliance, or P&L language typical of high-risk roles.
 
 **Run 3:** `moderate` ✓
-> Quote: "the numbers we serve are ones we can stand behind; customers and other stakeholders depend on"
-> Reasoning: Trust and stakeholder confidence dominate, but framed as operational reliability (business decisions, stakeholder impact) rather than regulatory/compliance risk.
+> Quote: "artificial intelligence is the key to our solution: it analyzes millions of price data points and helps construction companies create precise and efficient bids."
+> Verified: ✓ found in JD
+> Reasoning: Data errors impact customer business decisions and product quality, but the JD contains no language about financial reporting, regulatory compliance, or audit—typical of moderate-risk roles.
 
+### collaboration_width
+**Manual:** `3`
+
+**Run 1:** `2` ✗
+> Quote: "customers and other stakeholders depend on; investors"
+> Verified: ✓ found in JD
+> Reasoning: Two explicitly named external collaborators: customers (receive dashboards and reports) and investors (receive data); product and internal teams are too generic.
+
+**Run 2:** `2` ✗
+> Quote: "customers and our investors"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD explicitly names two external collaboration partners; internal teams and other stakeholders are mentioned generically without naming specific functions.
+
+**Run 3:** `0` ✗
+> Quote: "No named partner teams explicitly identified as collaboration partners"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While the role serves customers and investors, these are framed as audiences for dashboards and reports, not as named collaboration partners; internal teams are mentioned generically without specific function names.
+
+⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
+
+⚠ **LLM inconsistency**: runs gave ['2', '2', '0']
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Maintain and extend our Looker setup, and ship new dashboards and reports that customers and other stakeholders depend on."
+> Verified: ✓ found in JD
+> Reasoning: Existing named tools (dbt, Looker, BigQuery, Postgres) in production use with responsibilities framed as maintaining and extending; team described as small but established.
+
+**Run 2:** `mid` ✓
+> Quote: "On a small data team, you own your work from ingestion to dashboard."
+> Verified: ✓ found in JD
+> Reasoning: Named tools in responsibilities (dbt, Looker, BigQuery, Postgres) and existing infrastructure indicate an established but small data function in growth phase.
+
+**Run 3:** `mid` ✓
+> Quote: "On a small data team, you own your work from ingestion to dashboard."
+> Verified: ✓ found in JD
+> Reasoning: Named tools exist in responsibilities (dbt, Looker, BigQuery, Postgres) and the role focuses on improving and extending infrastructure, signaling a team past greenfield but not yet established at scale.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `mixed` ✗
+> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on."
+> Verified: ✓ found in JD
+> Reasoning: Specific technical responsibilities with named tools and precise application context combined with significant cultural framing sections.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "Take ownership of our dbt pipeline, improving our data models so they're reliable, well-tested, and easy to build on. Maintain and extend our Looker setup, and ship new dashboards and reports that customers and other stakeholders depend on. Strengthen our data pipeline from Postgres to BigQuery, and build custom Python scripts to automate the flows that keep our warehouse fresh."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific tool names, infrastructure context, and concrete workflows that someone actively doing this job would describe.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Strengthen our data pipeline from Postgres to BigQuery, and build custom Python scripts to automate the flows that keep our warehouse fresh."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain technical specificity (exact tools like dbt, Looker, BigQuery, Postgres; specific integrations with Salesforce/ActiveCampaign) that reflects hands-on domain knowledge.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** `mixed`
+
+**Run 1:** `internal_data` ✗
+> Quote: "own the pipeline end to end, from ingestion to the numbers people actually act on"
+> Verified: ✓ found in JD
+> Reasoning: Role emphasizes infrastructure and platform ownership that serves multiple audiences rather than serving a specific business function.
+
+**Run 2:** `internal_data` ✗
+> Quote: "you'll own the pipeline end to end, from ingestion to the numbers people actually act on"
+> Verified: ✓ found in JD
+> Reasoning: The role is primarily about building and maintaining data infrastructure and the modeling layer, even though outputs serve various audiences.
+
+**Run 3:** `mixed` ✓
+> Quote: "turn raw data into decisions—for our product, our internal teams, our customers, and our investors."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves four distinct audiences (product teams, internal operations, commercial customers, and finance/investors) with genuinely equal framing rather than emphasis on one.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `strategic` ✓
+> Quote: "take full ownership of the systems that turn raw data into decisions"
+> Verified: ✓ found in JD
+> Reasoning: Emphasis on ownership, making independent decisions, and driving projects; role is framed around defining and shaping data systems rather than executing defined work.
+
+**Run 2:** `strategic` ✓
+> Quote: "We trust you to make decisions and run with them."
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes ownership authority, decision-making autonomy, and independent project driving throughout, not execution of pre-scoped work.
+
+**Run 3:** `mixed` ✗
+> Quote: "take full ownership of the systems that turn raw data into decisions—for our product, our internal teams, our customers, and our investors."
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership of the technical data platform ("take full ownership", "We trust you to make decisions") with execution in service of business teams' priorities (product, customer, investor needs).
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_user` ✗
+> Quote: "Strong, hands-on familiarity with AI coding tools—especially Claude Code—and a habit of using them as part of your daily workflow."
+> Verified: ✓ found in JD
+> Reasoning: Candidate expected to use AI tools to accelerate personal work (writing models, scripts, debugging) as a productivity tool, not to build AI-consuming data infrastructure.
+
+**Run 2:** `ai_user` ✗
+> Quote: "We work heavily with Claude Code and other AI tools, and they're a core part of how we build—from writing models and scripts to debugging pipelines and exploring data."
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI coding tools fluently as a core part of daily workflow to accelerate writing, debugging, and data work.
+
+**Run 3:** `ai_user` ✗
+> Quote: "Strong, hands-on familiarity with AI coding tools—especially Claude Code—and a habit of using them as part of your daily workflow."
+> Verified: ✓ found in JD
+> Reasoning: The JD expects the candidate to use AI tools (Claude Code, others) as a core part of daily work to accelerate their own coding and debugging, not to build AI infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "We treat our data models like production code—tested, version-controlled, and documented—so the numbers we serve are ones we can stand behind."
+> Verified: ✓ found in JD
+> Reasoning: Testing, quality, and documentation are framed as core responsibilities the candidate owns and defines, not listed as tool requirements.
+
+**Run 2:** `responsibility` ✗
+> Quote: "improving our data models so they're reliable, well-tested, and easy to build on"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and testing are framed as an expected outcome the role is accountable for owning, not just a tool listed in requirements.
+
+**Run 3:** `responsibility` ✗
+> Quote: "improving our data models so they're reliable, well-tested, and easy to build on."
+> Verified: ✓ found in JD
+> Reasoning: The candidate owns ensuring models are well-tested as part of their core responsibility, framed with action verbs that establish quality as their accountability.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "the numbers we serve are ones we can stand behind"
+> Verified: ✓ found in JD
+> Reasoning: Emphasis on reliability, trustworthiness, and data quality reflects operational concerns about delivering reliable systems rather than regulatory or compliance risk.
+
+**Run 2:** `moderate` ✗
+> Quote: "the numbers we serve are ones we can stand behind"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis is on operational reliability and quality (production code, testing, documentation) rather than regulatory compliance or high-stakes stakeholder trust.
+
+**Run 3:** `moderate` ✗
+> Quote: "the numbers we serve are ones we can stand behind."
+> Verified: ✓ found in JD
+> Reasoning: Quality and reliability are framed as building stakeholder trust and operational dependability, reflecting moderate loss aversion around pipeline stability rather than high-stakes compliance or regulatory risk.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

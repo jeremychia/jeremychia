@@ -61,12 +61,12 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | mixed | recruiter | hiring_manager | 0% | ✗ |
+| jd_authorship | hiring_manager | mixed | recruiter | mixed | 33% | ✗ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
 | autonomy_level | strategic | strategic | mixed | strategic | 33% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | none | 33% | ✗ |
 
 ---
 
@@ -78,35 +78,35 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 **Run 1:** `rigour` ✓
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, quality, and standards across multiple bullet points with no velocity-oriented language like 'fast-paced' or 'rapid delivery'.
+> Reasoning: The responsibilities emphasize quality, governance, and enterprise standards with no velocity or speed signals present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize governance, standards, quality, and enterprise alignment without any delivery speed or iteration pace language.
+> Reasoning: The responsibilities emphasize correctness, governance, quality, and standards rather than speed or iteration.
 
 **Run 3:** `rigour` ✓
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize architecture standards, governance, quality, and enterprise alignment with no delivery velocity language, placing this firmly in the rigour category.
+> Reasoning: The responsibilities emphasize governance, standards, best practices, and data quality with no counterbalancing velocity language.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Design and deliver a modern Microsoft Fabric-based analytics platform"
-> Verified: ✓ found in JD
-> Reasoning: The JD describes a general enterprise BI platform without explicit financial reporting, compliance, or regulatory language typical of high-risk domains.
-
-**Run 2:** `moderate` ✓
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: The role builds data infrastructure and platforms without explicit financial reporting, regulatory compliance, or audit framing that would signal high-risk domain.
+> Reasoning: While governance is emphasized, there is no explicit financial reporting, regulatory, or compliance language, indicating operational reliability concerns rather than regulatory risk.
+
+**Run 2:** `moderate` ✓
+> Quote: "Translate business requirements into BI solutions and analytics outputs"
+> Verified: ✓ found in JD
+> Reasoning: The role affects business decisions through analytics but lacks explicit regulatory, compliance, or financial reporting signals.
 
 **Run 3:** `moderate` ✓
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: The role involves enterprise analytics infrastructure but lacks explicit financial reporting, regulatory, or compliance language that would elevate it to high risk.
+> Reasoning: The JD emphasizes governance and quality for business decision-making without explicit financial reporting, regulatory compliance, or public-facing product risk signals.
 
 ### collaboration_width
 **Manual:** `0`
@@ -114,35 +114,35 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 **Run 1:** `0` ✓
 > Quote: "Collaborate with stakeholders on requirements and insights delivery"
 > Verified: ✓ found in JD
-> Reasoning: The only collaboration reference uses generic 'stakeholders' language, which per the rules does not count as a named team or function.
+> Reasoning: Only generic 'stakeholders' are mentioned; no named teams, functions, or partner groups are identified.
 
 **Run 2:** `0` ✓
 > Quote: "Collaborate with stakeholders on requirements and insights delivery"
 > Verified: ✓ found in JD
-> Reasoning: No distinctly named teams, functions, or partner groups are explicitly identified; only generic 'stakeholders' are mentioned.
+> Reasoning: No named partner teams are identified; collaboration is only mentioned generically as 'stakeholders'.
 
 **Run 3:** `0` ✓
 > Quote: "Collaborate with stakeholders on requirements and insights delivery"
 > Verified: ✓ found in JD
-> Reasoning: No named partner teams or functions are specified; 'stakeholders' is generic language excluded from counting per the rules.
+> Reasoning: The JD mentions collaboration with stakeholders generically without naming specific partner teams or functions.
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "Define lakehouse, data warehouse, and semantic modelling structures"
+> Quote: "Design and implement end-to-end BI architecture using Microsoft Fabric and Azure; Define BI architecture standards, principles and best practices"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize defining and building technical structures for a modern platform, indicating an established organization in a platform modernization phase rather than greenfield or mature operating-at-scale.
+> Reasoning: The role combines design and implementation of infrastructure with definition of standards, indicating an evolving platform rather than greenfield or fully mature.
 
 **Run 2:** `mid` ✗
-> Quote: "Define BI architecture standards, principles and best practices"
+> Quote: "Design and deliver a modern Microsoft Fabric-based analytics platform"
 > Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities and the role involves modernizing/defining architecture, suggesting an established function being scaled and standardized rather than built from zero.
+> Reasoning: The focus on modernization with existing named tools in responsibilities (Fabric, Azure Data Factory, Power BI) suggests building on established infrastructure rather than starting from zero.
 
 **Run 3:** `mid` ✗
-> Quote: "Design and implement end-to-end BI architecture using Microsoft Fabric and Azure"
+> Quote: "Design and deliver a modern Microsoft Fabric-based analytics platform"
 > Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities with emphasis on designing and implementing (not maintaining) a platform, indicating an emerging/growing analytics function beyond early stage.
+> Reasoning: The focus on designing and delivering a modern platform suggests a significant modernization or scaling effort rather than establishment from zero or mature operations.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -150,59 +150,59 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 **Manual:** `hiring_manager`
 
 **Run 1:** `mixed` ✗
-> Quote: "Design and implement end-to-end BI architecture using Microsoft Fabric and Azure; Build and manage Azure Data Factory pipelines; Collaborate with stakeholders on requirements and insights delivery"
+> Quote: "Design and implement end-to-end BI architecture using Microsoft Fabric and Azure; Build and manage Azure Data Factory pipelines and ETL/ELT processes; Translate business requirements into BI solutions and analytics outputs"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about named tools and architectural approaches (Microsoft Fabric, Azure Data Factory, lakehouse structures) is mixed with generic boilerplate verbs ('Collaborate', 'Translate business requirements').
+> Reasoning: Specific technical responsibilities with named tools and architectural concepts appear alongside generic boilerplate like 'translate business requirements'.
 
 **Run 2:** `recruiter` ✗
 > Quote: "Translate business requirements into BI solutions and analytics outputs"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic boilerplate action verbs without specific business context, scale, named technical challenges, or details about what a Tuesday morning actually looks like.
+> Reasoning: While specific tools are mentioned, the responsibilities rely on generic boilerplate verbs and lack contextual depth about scale, specific problems, or methodologies.
 
-**Run 3:** `hiring_manager` ✓
-> Quote: "Design and implement end-to-end BI architecture using Microsoft Fabric and Azure; Build and manage Azure Data Factory pipelines and ETL/ELT processes; Develop Power BI datasets, dashboards, and reporting solutions"
+**Run 3:** `mixed` ✗
+> Quote: "Design and implement end-to-end BI architecture using Microsoft Fabric and Azure"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity throughout—named tools with precise architectural context (Microsoft Fabric platform design, ADF pipelines, Power BI reporting, semantic modelling)—indicates a hiring manager wrote this, with only minor generic additions.
+> Reasoning: The JD contains specific tool naming (Microsoft Fabric, Azure) alongside generic action verbs without scale or methodology context, suggesting both hiring manager and recruiter input.
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'hiring_manager']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "Define BI architecture standards, principles and best practices; design and deliver a modern Microsoft Fabric-based analytics platform"
+> Quote: "Define BI architecture standards, principles and best practices; Create reusable data models and curated data products"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as architecting and governing the analytics platform infrastructure itself, primarily serving the data function and analytics consumers rather than a specific business department.
+> Reasoning: The core responsibilities focus on building platform infrastructure and reusable data products for internal consumption rather than serving specific business functions.
 
 **Run 2:** `internal_data` ✓
 > Quote: "Create reusable data models and curated data products"
 > Verified: ✓ found in JD
-> Reasoning: The role is primarily accountable for building platform infrastructure and data products for internal data consumers, not for a specific business function.
+> Reasoning: The primary mission is building the analytics platform and standards for data consumers within the organization, not serving commercial, product, or finance stakeholders.
 
 **Run 3:** `internal_data` ✓
 > Quote: "Create reusable data models and curated data products"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on building analytics infrastructure, defining data models, and creating products for internal data consumers rather than serving commercial, product, or finance teams.
+> Reasoning: The emphasis on building reusable infrastructure and data products indicates the primary audience is the internal BI/data consumer base.
 
 ### autonomy_level
 **Manual:** `strategic`
 
 **Run 1:** `strategic` ✓
-> Quote: "Define BI architecture standards, principles and best practices; Define lakehouse, data warehouse, and semantic modelling structures"
+> Quote: "Define BI architecture standards, principles and best practices; Design and implement end-to-end BI architecture using Microsoft Fabric and Azure"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize defining and designing the architecture, standards, and technical structures, indicating the role sets direction for the BI platform rather than executing existing direction.
+> Reasoning: The repeated use of 'define' and 'design' indicates strategic ownership of the BI architecture direction and standards for the organization.
 
 **Run 2:** `mixed` ✗
 > Quote: "Define BI architecture standards, principles and best practices"
 > Verified: ✓ found in JD
-> Reasoning: The role genuinely combines strategic definition ('define standards', 'design architecture') with execution ('develop dashboards', 'build pipelines').
+> Reasoning: The role owns the technical direction of the platform (strategic) while executing in service of translated business requirements (execution).
 
 **Run 3:** `strategic` ✓
 > Quote: "Define BI architecture standards, principles and best practices"
 > Verified: ✓ found in JD
-> Reasoning: Multiple ownership verbs—define, design, establish—indicate the role sets direction for the analytics platform and architecture rather than executing predefined work.
+> Reasoning: Multiple uses of 'define' indicate the role sets direction for architectural decisions and standards rather than executing direction set by others.
 
 ⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'strategic']
 
@@ -212,17 +212,17 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI coding tools, AI infrastructure requirements, or AI product enablement.
+> Reasoning: No AI, machine learning, or AI tool usage is mentioned anywhere in the JD; the role focuses purely on traditional BI architecture.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No mention of AI skills, coding tools, agentic workflows, or data-for-AI infrastructure expected of the candidate.
+> Reasoning: There are no expectations for the candidate to use AI tools, build AI infrastructure, or work with GenAI applications.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or AI data infrastructure requirements for the candidate.
+> Reasoning: The JD does not expect the candidate to demonstrate AI skills; PySpark is listed for data engineering work, not AI development.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -232,17 +232,17 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 **Run 1:** `responsibility` ✗
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: Data quality and governance are framed as a key responsibility to 'ensure' rather than listed as tools or skills to learn, indicating the candidate owns these practices.
+> Reasoning: Data quality is framed as an explicit responsibility to ensure, using an action verb at the role level.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as a primary responsibility the candidate is accountable for ensuring, indicating ownership of quality and governance practices.
+> Reasoning: Data quality is explicitly framed as a responsibility the candidate ensures, though without specifying particular testing tools or frameworks.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'ensure' in Key Responsibilities indicates the candidate owns data quality outcomes, framing it as an accountability rather than a listed tool.
+> Reasoning: The use of 'Ensure' in the responsibilities section indicates the candidate owns data quality and governance practices, though no specific testing framework is named.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
@@ -250,18 +250,20 @@ Candidates must possess appropriate Irish work rights or valid long-term work vi
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "Ensure data quality, governance, and security standards"
+> Quote: "Ensure data quality, governance, and security standards; Ensure scalability, performance and enterprise alignment"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability through data quality and governance rather than regulatory compliance or stakeholder trust breaches, reflecting moderate loss aversion.
+> Reasoning: Operational reliability and quality are emphasized, but without regulatory or compliance framing, indicating fear of pipeline failures rather than compliance risk.
 
 **Run 2:** `moderate` ✗
 > Quote: "Ensure data quality, governance, and security standards"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data quality are concerns, but without high-risk regulatory, compliance, or stakeholder-trust-failure framing.
+> Reasoning: Operational reliability concerns (data quality, governance, security) are present throughout but secondary to architectural delivery rather than framed as preventing business or regulatory risk.
 
-**Run 3:** `moderate` ✗
-> Quote: "Ensure data quality, governance, and security standards"
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: Governance and standards language signal operational risk awareness, but the absence of compliance, regulatory, or 'prevent bad data' language prevents a high classification.
+> Reasoning: The JD frames the role around capability delivery and architectural standards without language emphasizing risk prevention, compliance, or protecting against bad outcomes.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

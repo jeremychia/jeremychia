@@ -106,19 +106,19 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "with a strong focus on scalability, clarity and long-term robustness"
+> Quote: "Define and evolve the architecture for enterprise analytical models with a strong focus on scalability, clarity and long-term robustness"
 > Verified: ✓ found in JD
-> Reasoning: Robustness, high-quality delivery, standards, and governance dominate the responsibilities with no velocity language (fast-paced, ship quickly, MVP); this is explicitly an architecture and standards-setting role.
+> Reasoning: The responsibilities emphasize architectural robustness, clarity, and long-term quality over speed or iteration, with no velocity language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "with a strong focus on scalability, clarity and long-term robustness"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, standards, documentation, and robustness throughout with no velocity language (fast-paced, ship quickly, MVP, iteration speed) present anywhere in the JD.
+> Reasoning: Multiple rigour signals (robustness, standards, governance, compliance) appear throughout with zero velocity signals (no fast-paced, rapid, or MVP language).
 
 **Run 3:** `rigour` ✓
-> Quote: "strong focus on scalability, clarity and long-term robustness"
+> Quote: "Define and evolve the architecture for enterprise analytical models with a strong focus on scalability, clarity and long-term robustness"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes robustness, quality standards, compliance, and documentation with no velocity or speed-oriented language, making rigour the dominant orientation.
+> Reasoning: The responsibilities emphasize robustness, scalability, clarity, and quality standards with no velocity language, establishing rigour as the primary orientation.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -126,17 +126,17 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Run 1:** `moderate` ✓
 > Quote: "Data privacy, security, and compliance knowledge"
 > Verified: ✓ found in JD
-> Reasoning: Leasing marketplace domain has financial implications, but the JD emphasizes analytics infrastructure and capability-building rather than financial reporting or regulatory operations.
+> Reasoning: Compliance is a named requirement and the automotive leasing domain involves financial products, but the role focuses on analytics infrastructure, not regulatory or financial reporting.
 
 **Run 2:** `moderate` ✓
 > Quote: "Data privacy, security, and compliance knowledge"
 > Verified: ✓ found in JD
-> Reasoning: Automotive leasing financial data domain requires compliance knowledge, but no explicit regulatory framework (e.g., GDPR, financial reporting standards) or compliance-centric framing indicates moderate rather than high risk.
+> Reasoning: Automotive leasing is a financial services-adjacent domain with compliance requirements, but the JD uses generic compliance language without explicit regulatory, audit, or financial reporting framing.
 
 **Run 3:** `moderate` ✓
 > Quote: "Data privacy, security, and compliance knowledge"
 > Verified: ✓ found in JD
-> Reasoning: The automotive leasing finance domain and explicit compliance requirement indicate moderate risk where data errors affect business operations and regulatory posture, but without explicit financial reporting or audit framing.
+> Reasoning: Compliance is required but not the primary domain framing; automotive leasing has commercial and privacy considerations but lacks explicit financial/regulatory dominance signals.
 
 ### collaboration_width
 **Manual:** `4`
@@ -144,17 +144,17 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Run 1:** `3` ✗
 > Quote: "data platform, engineering, and analytics teams"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct teams explicitly named as collaboration partners in the 'Partner with' statement.
+> Reasoning: Three distinct named teams are explicitly listed as collaboration partners in the requirements.
 
 **Run 2:** `3` ✗
-> Quote: "Partner with data platform, engineering, and analytics teams"
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named teams are explicitly listed as collaboration partners: data platform; engineering; and analytics.
-
-**Run 3:** `3` ✗
 > Quote: "data platform, engineering, and analytics teams"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named teams are explicitly listed as collaboration partners in the responsibilities.
+> Reasoning: Three explicitly named teams are listed as collaboration partners in the responsibilities section.
+
+**Run 3:** `3` ✗
+> Quote: "Partner with data platform, engineering, and analytics teams on high-performance pipelines"
+> Verified: ✓ found in JD
+> Reasoning: Three explicitly named teams (data platform, engineering, analytics) are identified as collaboration partners.
 
 ⚠ **Disagreement**: manual=`4` vs LLM majority=`3`
 
@@ -164,71 +164,71 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Run 1:** `mid` ✓
 > Quote: "Mentor analytics engineers and analysts on modeling skills and technical standards"
 > Verified: ✓ found in JD
-> Reasoning: Multiple data roles (plural engineers and analysts) exist and have named tools in use (AWS services), but the emphasis on setting technical direction and developing standards suggests the team is scaling and needs architectural coherence.
+> Reasoning: The existence of multiple analytics engineers and analysts to mentor indicates an established team, while emphasis on developing standards and defining direction suggests growth and evolution.
 
 **Run 2:** `mid` ✓
 > Quote: "Mentor analytics engineers and analysts on modeling skills and technical standards"
 > Verified: ✓ found in JD
-> Reasoning: Plural references to analysts and engineers, named tools (AWS Glue, Athena, S3, MWAA) in responsibilities, and multiple distinct sub-teams indicate a structured team growing and formalizing practices.
+> Reasoning: Multiple existing analytics engineers and analysts, named sub-teams, and AWS tooling in responsibilities indicate an established data function with growth and evolution, not early-stage or fully mature.
 
 **Run 3:** `mid` ✓
 > Quote: "Mentor analytics engineers and analysts on modeling skills and technical standards"
 > Verified: ✓ found in JD
-> Reasoning: The plural references to analytics engineers and analysts, combined with existing AWS infrastructure and multiple named data sub-teams, indicate a maturing data function with established infrastructure undergoing scale.
+> Reasoning: Multiple data roles exist and the team is growing, evidenced by mentorship responsibilities and plural role references; team has moved beyond early-stage but lacks mature specialization indicators.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
-> Quote: "AWS cloud-native services (Glue, Athena, S3, MWAA) to support scalable analytical and AI workloads"
-> Verified: ✓ found in JD
-> Reasoning: Specific AWS service names, precise AI capability descriptions (text-to-SQL, semantic modeling for AI), and expert-level seniority qualifiers reflect technical depth only a hiring manager with hands-on experience would write.
-
-**Run 2:** `hiring_manager` ✓
-> Quote: "Design and maintain advanced semantic layers to unify KPIs and analytical logic across business domains"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity about semantic layers, dimensional modeling mastery, exact AWS service names, and text-to-SQL/semantic modeling for AI all indicate hands-on technical experience writing the role description.
-
-**Run 3:** `hiring_manager` ✓
 > Quote: "Optimise AWS cloud-native services (Glue, Athena, S3, MWAA) to support scalable analytical and AI workloads"
 > Verified: ✓ found in JD
-> Reasoning: The specific AWS service names (Glue, Athena, S3, MWAA), precise AI terminology (text-to-SQL, semantic modeling for AI, conversational analytical interfaces), and expert-level seniority qualifiers indicate technical hiring manager authorship.
+> Reasoning: The exact AWS service names (Glue, Athena, S3, MWAA) indicate hiring manager authorship with direct hands-on experience, not generic recruiter language.
+
+**Run 2:** `hiring_manager` ✓
+> Quote: "text-to-SQL, automated insights, semantic modeling for AI and conversational analytical interfaces"
+> Verified: ✓ found in JD
+> Reasoning: Specific named AI capabilities, exact AWS services (Glue, Athena, S3, MWAA), and expert-level qualifiers reflect hiring manager technical expertise.
+
+**Run 3:** `hiring_manager` ✓
+> Quote: "Lead the definition and implementation of AI-driven analytical capabilities, including text-to-SQL, automated insights, semantic modeling for AI and conversational analytical interfaces"
+> Verified: ✓ found in JD
+> Reasoning: Specific AI practitioner concepts and exact AWS service names (Glue, Athena, S3, MWAA) indicate technical depth only a hiring manager would specify.
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "Partner with data platform, engineering, and analytics teams on high-performance pipelines"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary responsibilities involve setting technical direction, mentoring, and building infrastructure for the data function itself, even though self-serve analytics eventually serves business users.
+> Quote: "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role primarily serves internal data infrastructure and analytics consumers through modeling standards and platform development, not external commercial, product, or finance stakeholders.
 
 **Run 2:** `internal_data` ✓
-> Quote: "Fuel self-serve analytics, reporting and AI-powered insights"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The primary audience is internal analytics teams and self-serve data consumers within the organization, not commercial, product, or finance stakeholders.
-
-**Run 3:** `internal_data` ✓
 > Quote: "Mentor analytics engineers and analysts on modeling skills and technical standards"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves internal data teams—analytics engineers and analysts—through mentoring, partnership with data platform teams, and infrastructure provisioning rather than external business functions.
+> Reasoning: Primary responsibilities focus on building semantic architecture, developing modeling standards, and mentoring the analytics team, making the data function itself the primary audience.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Deliver high-quality semantic assets that fuel self-service analytics, reporting and AI-powered insights"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around building semantic infrastructure and modeling patterns for the analytics function itself, not serving commercial or product teams.
 
 ### autonomy_level
 **Manual:** `strategic`
 
 **Run 1:** `strategic` ✓
-> Quote: "Set technical direction and drive adoption of modern modeling practices across the organization"
+> Quote: "Set technical direction and drive adoption of modern modeling practices"
 > Verified: ✓ found in JD
-> Reasoning: Directive verbs (define, set, lead, drive) establish that this role is expected to shape how analytics is delivered, not execute direction set by others.
+> Reasoning: Strategic action verbs (Set, drive) indicate the role is expected to set direction and shape the analytics function, not execute direction set by others.
 
 **Run 2:** `strategic` ✓
 > Quote: "Set technical direction and drive adoption of modern modeling practices across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly owns setting direction, defining standards, leading implementation, and driving adoption—characteristic of strategic decision-making authority, not execution support.
+> Reasoning: Multiple direction-setting verbs (Define, Set direction, Lead, Drive adoption) position this as a principal IC role that shapes organizational direction through technical influence.
 
 **Run 3:** `strategic` ✓
 > Quote: "Set technical direction and drive adoption of modern modeling practices across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around defining direction, setting standards, and driving organizational change through technical leadership, indicating principal-level strategic autonomy.
+> Reasoning: The role explicitly owns technical direction-setting and organizational adoption, positioning it as a principal IC defining how analytics is delivered.
 
 ### ai_role
 **Manual:** ``
@@ -236,17 +236,17 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Run 1:** `ai_enabler` ✗
 > Quote: "Lead the definition and implementation of AI-driven analytical capabilities, including text-to-SQL, automated insights, semantic modeling for AI and conversational analytical interfaces"
 > Verified: ✓ found in JD
-> Reasoning: The candidate must build data infrastructure (semantic models, data foundations) that AI systems consume and run on, not use AI tools for personal productivity.
+> Reasoning: The candidate is expected to define and build AI-driven analytics infrastructure that AI systems consume, not use AI tools for personal coding productivity.
 
 **Run 2:** `ai_enabler` ✗
 > Quote: "Lead the definition and implementation of AI-driven analytical capabilities, including text-to-SQL, automated insights, semantic modeling for AI and conversational analytical interfaces"
 > Verified: ✓ found in JD
-> Reasoning: The candidate must build AI-ready data infrastructure (text-to-SQL, semantic modeling for AI, conversational interfaces) that AI systems consume or run on, not use AI tools for personal coding productivity.
+> Reasoning: The candidate is expected to build semantic modeling and AI-driven analytical infrastructure for AI systems to consume, not use AI tools for personal coding.
 
 **Run 3:** `ai_enabler` ✗
 > Quote: "Lead the definition and implementation of AI-driven analytical capabilities, including text-to-SQL, automated insights, semantic modeling for AI and conversational analytical interfaces"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build and lead AI-enabled analytics infrastructure that downstream AI systems consume, not use AI tools for personal productivity.
+> Reasoning: The candidate must build data infrastructure and semantic models that AI systems consume, not use AI tools for personal productivity.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
@@ -254,19 +254,19 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "Deliver high-quality semantic assets"
-> Verified: ✓ found in JD
-> Reasoning: Quality is valued as an outcome, but no testing frameworks, data contracts, or quality ownership patterns are explicitly named as a responsibility.
-
-**Run 2:** `absent` ✗
-> Quote: "high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: No testing practices, data quality frameworks, data contracts, observability, or testing tools are mentioned in responsibilities or required qualifications; quality is an output characteristic, not a testing methodology.
-
-**Run 3:** `absent` ✗
 > Quote: "No testing or data quality signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes semantic layers, AI capabilities, and architectural standards but contains no mention of testing frameworks, data quality practices, or observability tools as owned responsibilities.
+> Reasoning: No signals for data contracts, testing practices, quality frameworks, or observability appear anywhere in the JD.
+
+**Run 2:** `absent` ✗
+> Quote: "Deliver high-quality semantic assets that fuel self-serve analytics, reporting and AI-powered insights"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Quality is framed as an outcome of delivering semantic assets, with no testing practices, data quality frameworks, or observability practices mentioned in the JD.
+
+**Run 3:** `absent` ✗
+> Quote: "No testing framework signal."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While robustness and quality are emphasized as outcomes, no testing tools, frameworks, or quality practices are named in the responsibilities.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
@@ -276,16 +276,16 @@ Multiple governance/reliability signals indicate past incidents. Frame achieveme
 **Run 1:** `moderate` ✗
 > Quote: "with a strong focus on scalability, clarity and long-term robustness"
 > Verified: ✓ found in JD
-> Reasoning: Robustness, standards, and compliance appear as concerns, but are framed as architectural and governance improvements rather than regulatory risk or preventing stakeholder trust violations.
+> Reasoning: Multiple quality and robustness signals indicate operational reliability is a concern, but the primary framing is architectural capability-building rather than risk or regulatory prevention.
 
 **Run 2:** `moderate` ✗
 > Quote: "with a strong focus on scalability, clarity and long-term robustness"
 > Verified: ✓ found in JD
-> Reasoning: Robustness, governance, and compliance are meaningful concerns but secondary to the architectural and AI capability framing—operational reliability matters, but strategic technical direction is the primary driver.
+> Reasoning: Robustness and reliability are core concerns from the first responsibility, but the primary framing is architectural innovation and evolution rather than compliance or risk mitigation.
 
 **Run 3:** `moderate` ✗
-> Quote: "strong focus on scalability, clarity and long-term robustness"
+> Quote: "Define and evolve the architecture for enterprise analytical models with a strong focus on scalability, clarity and long-term robustness"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on robustness and compliance knowledge indicates operational reliability and risk management matter, but the role is primarily framed around building new AI capabilities rather than preventing bad outcomes.
+> Reasoning: Robustness and compliance are concerns, but the framing is capability-building and operational reliability rather than fear-driven risk prevention.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

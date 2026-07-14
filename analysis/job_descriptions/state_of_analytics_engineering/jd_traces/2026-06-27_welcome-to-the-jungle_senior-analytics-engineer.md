@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Welcome to the Jungle
 
+**URL:** https://ats.welcometothejungle.com/board/welcome-to-the-jungle-Pg4eV6k/job/77956acb-458f-402a-8b1e-27675bb6f91b/details?igbTracker=926953053
 **Location:** Paris (Hybrid)
 **Date Posted:** 2026-06-27
 **Salary:** €58,000 – €72,000 EUR
@@ -106,182 +107,209 @@ Best of luck !
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 3 | 3 | 3 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | recruiter | mixed | 0% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | mixed | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | recruiter | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | mixed | mixed | mixed | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | none | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "setting up standards and guidelines for other data practitioners as well as applying the first levels of governance and participating at setting up the architecture direction"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, standards, documentation, and best practices throughout with zero velocity-oriented language, signaling a rigour-focused orientation.
-
-**Run 2:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Ensure our data is well documented and well govern"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes governance, documentation, standards-setting, and quality infrastructure over delivery speed or iteration pace.
+> Reasoning: The role emphasizes governance, documentation, and standards with no velocity or iteration language.
 
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✓
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance and participating at setting up the architecture direction."
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize governance, standards, best practices, and documentation with no velocity language, establishing rigour as the primary orientation.
+
+**Run 3:** `rigour` ✓
 > Quote: "Ensure our data is well documented and well govern"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, documentation, standards, and best practices throughout with no velocity or speed language present.
+> Reasoning: Multiple rigour signals (standards, guidelines, governance, documentation, best practices) throughout with zero velocity language.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools and AI assistants"
-> Verified: ✓ found in JD
-> Reasoning: The role serves a SaaS job board platform's internal analytics needs without explicit financial reporting or compliance requirements, making data errors moderate business risks.
-
-**Run 2:** `moderate`
-> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools and AI assistants"
-> Verified: ✓ found in JD
-> Reasoning: The role focuses on business intelligence and operational reporting without explicit financial reporting, compliance, or regulatory obligations.
-
-**Run 3:** `moderate`
-> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools and AI assistants"
-> Verified: ✓ found in JD
-> Reasoning: The role serves business intelligence and AI systems but shows no indicators of financial reporting, compliance, or regulatory consequences.
-
-### collaboration_width
-
-**Run 1:** `3`
-> Quote: "Data Engineers (DE), Data Analyst (DA) or Data Scientists (DS)"
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly names three distinct data functions—Data Engineers, Data Analysts, and Data Scientists—as direct collaboration partners.
-
-**Run 2:** `3`
-> Quote: "work directly with the likes of Data Engineers (DE), Data Analyst (DA) or Data Scientists (DS)"
-> Verified: ✓ found in JD
-> Reasoning: Three named partner functions are explicitly identified: Data Engineers, Data Analysts, and Data Scientists.
-
-**Run 3:** `3`
-> Quote: "Data Engineers (DE); Data Analyst (DA); Data Scientists (DS)"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named partner functions explicitly listed in the responsibilities section.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Build-up our Data Warehouse by developing robust and efficient data pipelines and data models"
-> Verified: ✓ found in JD
-> Reasoning: The team has deployed a modern stack (Snowflake, dbt, Airflow) with multiple specialized roles, but is actively building and consolidating assets, indicating growth-stage mid-maturity.
-
-**Run 2:** `mid`
-> Quote: "building up our data assets and consolidating existing ones"
-> Verified: ✓ found in JD
-> Reasoning: The phrase indicates existing infrastructure requires consolidation while new capability is being built, characteristic of a scaling team with established but growing infrastructure.
-
-**Run 3:** `mid`
-> Quote: "building up our data assets and consolidating existing ones"
-> Verified: ✓ found in JD
-> Reasoning: The team has deployed existing infrastructure with named tools but is still in growth and improvement phase with emerging governance.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "deep proficiency in SQL, including architecting scalable transformations and frameworks to handle enterprise-scale datasets"
-> Verified: ✓ found in JD
-> Reasoning: The JD specifies named tools in applied context (dbt modeling, Snowflake, Airflow), enterprise-scale architectural requirements, and specific methodologies that signal authorship by someone actively doing this work.
-
-**Run 2:** `recruiter`
-> Quote: "Build-up our Data Warehouse by developing robust and efficient data pipelines and data models"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic action verbs without specific scale, volume, tooling context, or methodology that would indicate someone who performs this job wrote them.
-
-**Run 3:** `mixed`
-> Quote: "participating at setting up the architecture direction"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities show some domain specificity (governance, architecture, standards) but lack granular technical details and include generic collaborative language like 'advocate good practices'.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'recruiter', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
-> Verified: ✓ found in JD
-> Reasoning: The primary emphasis is on setting standards and governance for data practitioners within the team and advancing the data platform, making the data function itself the core audience.
-
-**Run 2:** `internal_data`
-> Quote: "setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
-> Verified: ✓ found in JD
-> Reasoning: The primary emphasis is on data infrastructure, governance frameworks, and enabling other data practitioners rather than serving commercial, product, or finance stakeholders.
-
-**Run 3:** `internal_data`
-> Quote: "setting up standards and guidelines for other data practitioners"
-> Verified: ✓ found in JD
-> Reasoning: The primary audience is the data function itself—other data practitioners and the data platform infrastructure—not commercial, product, or finance functions.
-
-### autonomy_level
-
-**Run 1:** `strategic`
-> Quote: "participating at setting up the architecture direction"
-> Verified: ✓ found in JD
-> Reasoning: The role is framed as 'pivotal' in defining standards, setting architecture direction, and developing team members, indicating clear strategic ownership and direction-setting expectations.
-
-**Run 2:** `mixed`
-> Quote: "setting up standards and guidelines for other data practitioners as well as applying the first levels of governance and participating at setting up the architecture direction"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic responsibilities (defining standards, establishing governance, architecture participation, mentoring junior team members) with execution responsibilities (building pipelines and models).
-
-**Run 3:** `mixed`
-> Quote: "participating at setting up the architecture direction"
-> Verified: ✓ found in JD
-> Reasoning: The role genuinely combines setting direction (standards, architecture, mentorship) with hands-on execution (building pipelines, models, documentation).
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "developing robust and efficient data pipelines and data models"
-> Reasoning: All phrases describe standard data engineering work with no mention of AI coding tools, GenAI infrastructure, or AI-assisted development.
-
-**Run 2:** `none` ✓
-> Quote: "developing robust and efficient data pipelines and data models"
-> Reasoning: No mention of AI tools, AI-first mindset, or AI infrastructure building.
-
-**Run 3:** `none` ✓
-> Quote: "developing robust and efficient data pipelines and data models"
-> Reasoning: Standard data engineering work with no AI tooling, infrastructure building, or AI-first mindset mentioned.
-
-
-### testing_framing
-**Run 1:** `absent` ✗
-> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
-> Reasoning: Standards and governance mentioned but no explicit testing responsibility verb or testing tools listed.
-
-**Run 2:** `responsibility` ✓
-> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
-> Reasoning: Candidate owns establishing quality standards and governance practices across the team.
-
-**Run 3:** `responsibility` ✓
-> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
-> Reasoning: Candidate owns quality and governance practice by establishing standards and applying governance across the data team.
-
-⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'responsibility']
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "developing robust and efficient data pipelines; applying the first levels of governance"
-> Reasoning: Emphasis on 'robust' pipelines and operational governance indicates reliability concerns, though without explicit incident/SLO/stability language.
+> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools and AI assistants"
+> Verified: ✓ found in JD
+> Reasoning: The role serves business users and external products rather than financial reporting or compliance functions, typical of moderate-risk SaaS/marketplace roles.
 
 **Run 2:** `moderate` ✓
-> Quote: "developing robust and efficient data pipelines and data models"
-> Reasoning: Emphasis on robust and efficient systems reflects operational reliability concerns without compliance or regulatory dominance.
+> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools and AI assistants"
+> Verified: ✓ found in JD
+> Reasoning: This is standard SaaS business intelligence work affecting business decisions without regulatory or financial reporting consequences.
 
 **Run 3:** `moderate` ✓
-> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance"
-> Reasoning: Operational governance and data standards matter for trustworthiness, framed around reliability and proper practices rather than explicit compliance.
+> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools"
+> Verified: ✓ found in JD
+> Reasoning: Data supports business intelligence and operational decisions without regulatory, financial reporting, or compliance language that would signal high risk.
 
+### collaboration_width
+**Manual:** `3`
+
+**Run 1:** `3` ✓
+> Quote: "work directly with the likes of Data Engineers (DE), Data Analyst (DA) or Data Scientists (DS)"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct data roles explicitly mentioned as collaboration partners: Data Engineers, Data Analysts, and Data Scientists.
+
+**Run 2:** `3` ✓
+> Quote: "Data Engineers (DE); Data Analyst (DA); Data Scientists (DS)"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct data functions are named as direct collaboration partners.
+
+**Run 3:** `3` ✓
+> Quote: "Data Engineers (DE), Data Analyst (DA) or Data Scientists (DS)"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named data functions explicitly listed as collaborators.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "building up our data assets and consolidating existing ones. It's pivotal in the definition of setting up standards and guidelines"
+> Verified: ✓ found in JD
+> Reasoning: The data function has existing infrastructure and tools but is in a growth phase establishing standards and governance.
+
+**Run 2:** `mid` ✓
+> Quote: "building up our data assets and consolidating existing ones"
+> Verified: ✓ found in JD
+> Reasoning: The team has established tools and infrastructure (Snowflake, dbt, Airflow) but is actively growing the function with governance still in early stages.
+
+**Run 3:** `mid` ✓
+> Quote: "The Analytics Engineer will work as part of the Data Platform team, regrouping both DE and AE specialists."
+> Verified: ✓ found in JD
+> Reasoning: Existing tools and infrastructure (Snowflake, dbt, Airflow) with multiple data roles and formalizing governance indicates an established function scaling, not building from scratch.
+
+### jd_authorship
+**Manual:** `recruiter`
+
+**Run 1:** `mixed` ✗
+> Quote: "Build-up our Data Warehouse by developing robust and efficient data pipelines and data models"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities combine specific tool context (dbt, Snowflake, third-party integrations) with generic action verbs and boilerplate phrases like 'keep up to speed with the novelty.'
+
+**Run 2:** `mixed` ✗
+> Quote: "Build-up our Data Warehouse by developing robust and efficient data pipelines and data models"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities contain specific technical context (named tools, data warehouse work) mixed with generic action verbs (advocate good practices, keep up to speed).
+
+**Run 3:** `mixed` ✗
+> Quote: "Build-up our Data Warehouse by developing robust and efficient data pipelines and data models"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity (named stack, specific roles) present but mixed with generic boilerplate language lacking specific context, scale, or methodology.
+
+⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools and AI assistants"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary focus is building and maintaining the data infrastructure and platform that business users and external systems consume.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Make our data ready to use by our end-users by setting up proper models in our BI tools"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily enables data infrastructure and governance for internal consumption rather than serving commercial, product, or finance functions.
+
+**Run 3:** `internal_data` ✓
+> Quote: "The Analytics Engineer will work as part of the Data Platform team, regrouping both DE and AE specialists."
+> Verified: ✓ found in JD
+> Reasoning: Role is centered on building and maintaining data infrastructure that serves other data practitioners, not commercial, product, finance, or GTM teams.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `mixed` ✓
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance and participating at setting up the architecture direction"
+> Verified: ✓ found in JD
+> Reasoning: The role genuinely combines strategic responsibilities (setting standards, defining architecture) with execution (building pipelines, maintaining models).
+
+**Run 2:** `mixed` ✓
+> Quote: "It's pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance and participating at setting up the architecture direction."
+> Verified: ✓ found in JD
+> Reasoning: The role sets strategic direction through standards and governance participation but also executes on implementation, creating a mixed autonomy pattern.
+
+**Run 3:** `mixed` ✓
+> Quote: "pivotal in the definition of setting up standards and guidelines for other data practitioners as well as applying the first levels of governance and participating at setting up the architecture direction"
+> Verified: ✓ found in JD
+> Reasoning: Role genuinely combines strategic direction-setting (defining standards, governance, architecture) with execution (building pipelines, supporting data use).
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: Mentions of AI (supporting AI assistants, optional experience with AI) are vague and not requirements for the candidate's own AI skills.
+
+**Run 2:** `none` ✗
+> Quote: "Some experience working with AI in the context of a data team is a plus but not a hard requirement"
+> Verified: ✓ found in JD
+> Reasoning: AI experience is mentioned only as a vague, non-required nice-to-have with no description of specific AI skills the candidate must demonstrate.
+
+**Run 3:** `none` ✗
+> Quote: "Some experience working with AI in the context of a data team is a plus but not a hard requirement"
+> Verified: ✓ found in JD
+> Reasoning: Vague reference to AI experience is not a specific skill expectation; neither ai_user (personal AI tool usage) nor ai_enabler (building AI infrastructure) is clearly signaled.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "Ensure our data is well documented and well govern"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes governance and documentation but contains no mention of testing frameworks, data contracts, or data quality responsibilities.
+
+**Run 2:** `absent` ✗
+> Quote: "Ensure our data is well documented and well govern"
+> Verified: ✓ found in JD
+> Reasoning: Testing, data quality frameworks, data contracts, or observability practices are absent; the JD emphasizes governance and documentation instead.
+
+**Run 3:** `absent` ✗
+> Quote: "No testing framing signal."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No mention of testing frameworks, data contracts, data quality practices, or observability anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Ensure our data is well documented and well govern"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability through governance and documentation, but this is secondary to the primary delivery mission of building data assets.
+
+**Run 2:** `moderate` ✗
+> Quote: "Ensure our data is well documented and well govern"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability through governance and robust pipelines is valued, but there is no language about compliance, audit, or stakeholder trust exposure.
+
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: JD is framed around building and developing capabilities; governance is mentioned as a setup activity rather than risk/compliance/reliability prevention.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'none']

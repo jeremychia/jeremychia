@@ -60,13 +60,16 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
-| velocity_vs_rigour | rigour | rigour | velocity | rigour | 33% | ✓ |
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | recruiter | recruiter | recruiter | recruiter | 100% | ✓ |
+| jd_authorship | recruiter | recruiter | mixed | mixed | 33% | ✗ |
 | stakeholder_orientation | commercial | commercial | commercial | commercial | 100% | ✓ |
 | autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
@@ -76,21 +79,19 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Present findings with appropriate detail and effective communication"
+> Quote: "Analyze revenue impacts of product and process changes"
 > Verified: ✓ found in JD
-> Reasoning: The JD lacks velocity language (fast-paced, ship, iterate) and emphasizes careful, detailed presentation of findings, indicating a rigour orientation.
+> Reasoning: The emphasis on revenue impact analysis and financial precision signals rigour-oriented work where accuracy and measurement quality matter; no velocity signals (fast-paced, iteration, shipping) appear.
 
-**Run 2:** `velocity` ✗
-> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
+**Run 2:** `rigour` ✓
+> Quote: "Develop understanding of reporting suite and identify gaps"
 > Verified: ✓ found in JD
-> Reasoning: The 'ad-hoc' nature of the analysis and emphasis on rapid response to business teams' analytical needs indicates a velocity-oriented role focused on quick turnaround rather than governance or testing frameworks.
+> Reasoning: The JD emphasizes quality awareness through reporting suite understanding and gap identification, with no velocity signals about speed or iteration pace.
 
 **Run 3:** `rigour` ✓
 > Quote: "Present findings with appropriate detail and effective communication"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on appropriate detail and effective communication establishes quality and rigour standards, with no corresponding velocity language in the JD.
-
-⚠ **LLM inconsistency**: runs gave ['rigour', 'velocity', 'rigour']
+> Reasoning: The JD has no velocity language and emphasizes analytical quality through professional standards, though rigour signals are implicit rather than explicit.
 
 ### domain_risk
 **Manual:** `high`
@@ -98,17 +99,17 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 **Run 1:** `moderate` ✗
 > Quote: "Analyze revenue impacts of product and process changes"
 > Verified: ✓ found in JD
-> Reasoning: While Flutter operates in the regulated gaming sector, the JD focuses on commercial performance and revenue analysis rather than regulatory compliance or financial reporting.
+> Reasoning: Gaming revenue analysis affects business decisions but lacks regulatory compliance, audit, or fiduciary language; errors have business consequences but not regulatory exposure.
 
 **Run 2:** `moderate` ✗
 > Quote: "Analyze revenue impacts of product and process changes"
 > Verified: ✓ found in JD
-> Reasoning: While Flutter operates in the regulated gaming industry, the JD frames the role around analyzing revenue impacts for business teams rather than compliance or regulatory requirements, suggesting moderate rather than high domain risk.
+> Reasoning: Gaming sector is regulated but this role is described as commercial analytics without compliance or financial reporting framing, making errors impactful to business decisions but not immediately regulatory or compliance-threatening.
 
 **Run 3:** `moderate` ✗
 > Quote: "Analyze revenue impacts of product and process changes"
 > Verified: ✓ found in JD
-> Reasoning: While the role involves financial analysis, the JD lacks explicit regulatory, compliance, or audit language that would indicate high-risk consequences.
+> Reasoning: While the gaming sector is regulated, the JD frames the role around commercial performance and revenue analysis for business decisions rather than regulatory compliance.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
@@ -118,17 +119,17 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 **Run 1:** `3` ✓
 > Quote: "Commercial, Marketing, and Acquisition teams"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named teams are explicitly identified as primary collaboration partners.
+> Reasoning: Three distinct named partner functions explicitly listed: Commercial, Marketing, and Acquisition.
 
 **Run 2:** `3` ✓
-> Quote: "collaborate with Commercial, Marketing, and Acquisition teams"
+> Quote: "Commercial, Marketing, and Acquisition teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names three distinct business functions as collaboration partners.
+> Reasoning: Three explicitly named teams are identified as collaboration partners in the responsibilities.
 
 **Run 3:** `3` ✓
 > Quote: "Commercial; Marketing; Acquisition teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named functions are explicitly listed as collaboration partners in the responsibilities section.
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams are explicitly listed as collaboration partners: Commercial, Marketing, and Acquisition.
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -136,17 +137,17 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 **Run 1:** `mid` ✓
 > Quote: "Develop understanding of reporting suite and identify gaps"
 > Verified: ✓ found in JD
-> Reasoning: The JD references an existing reporting infrastructure that the role works with and improves, indicating a mid-stage data function rather than building from zero.
+> Reasoning: Existing infrastructure and reporting suite are established; the role supports and extends them rather than building from zero or operating at scaled specialisation.
 
 **Run 2:** `mid` ✓
 > Quote: "Develop understanding of reporting suite and identify gaps"
 > Verified: ✓ found in JD
-> Reasoning: The existence of an established reporting suite with identifiable gaps indicates a mid-stage data team that has built foundational infrastructure but is still improving and extending it.
+> Reasoning: The JD references existing reporting infrastructure and named tools while acknowledging gaps to improve, indicating an established but growing data function.
 
 **Run 3:** `mid` ✓
 > Quote: "Develop understanding of reporting suite and identify gaps"
 > Verified: ✓ found in JD
-> Reasoning: The existence of a reporting suite indicates established infrastructure, but the emphasis on understanding and identifying gaps suggests room for growth typical of mid-stage teams.
+> Reasoning: The reference to an existing reporting suite with identifiable gaps indicates established infrastructure beyond early-stage, but the hiring of a single analyst role suggests not yet mature.
 
 ### jd_authorship
 **Manual:** `recruiter`
@@ -154,92 +155,114 @@ Flutter emphasizes inclusive hiring, stating candidates don't have to meet all t
 **Run 1:** `recruiter` ✓
 > Quote: "Conduct analysis using SQL, Excel, and data visualization tools to support Commercial, Marketing, and Acquisition teams"
 > Verified: ✓ found in JD
-> Reasoning: Tools are listed without specific application context and responsibilities use generic BI action verbs (conduct, support, provide) without technical depth, scale, or methodology specificity.
+> Reasoning: Tools and responsibilities are listed without context, scale, or methodology specificity; action verbs are generic boilerplate that apply to any BI analyst role.
 
-**Run 2:** `recruiter` ✓
-> Quote: "Conduct analysis using SQL, Excel, and data visualization tools to support Commercial, Marketing, and Acquisition teams"
+**Run 2:** `mixed` ✗
+> Quote: "Develop understanding of reporting suite and identify gaps; Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
 > Verified: ✓ found in JD
-> Reasoning: The generic action verbs throughout (conduct, provide, collaborate, contribute) and tools listed without specific context or application background are characteristic of recruiter-written copy.
+> Reasoning: Some company-specific technical context (reporting suite, ad-hoc analysis, dashboard building) is mixed with substantial boilerplate (collaborate with stakeholders, identify trends, analytical support).
 
-**Run 3:** `recruiter` ✓
-> Quote: "Conduct analysis using SQL, Excel, and data visualization tools to support Commercial, Marketing, and Acquisition teams"
+**Run 3:** `mixed` ✗
+> Quote: "Analyze revenue impacts of product and process changes"
 > Verified: ✓ found in JD
-> Reasoning: Tools are listed without specific application context or methodology, and the overall language uses generic boilerplate action verbs common in recruiter-written job descriptions.
+> Reasoning: The JD mixes hiring_manager specificity (multiple mentions of revenue impact analysis, acquisition team support) with recruiter boilerplate (generic collaboration and presentation language).
+
+⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `commercial`
 
 **Run 1:** `commercial` ✓
-> Quote: "collaborate with Commercial, Marketing, and Acquisition teams to uncover insights from large datasets"
+> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary audience is commercial functions (Acquisition, Commercial, Marketing teams) focused on revenue impacts and commercial performance.
+> Reasoning: The role primarily supports Commercial, Marketing, and Acquisition teams—all commercial/GTM functions—making revenue and acquisition performance the core audience.
 
 **Run 2:** `commercial` ✓
-> Quote: "collaborate with Commercial, Marketing, and Acquisition teams to uncover insights"
+> Quote: "collaborate with Commercial, Marketing, and Acquisition teams to uncover insights from large datasets"
 > Verified: ✓ found in JD
-> Reasoning: The explicitly named stakeholders—Commercial, Marketing, and Acquisition teams—are all GTM and revenue-focused functions, making commercial the primary orientation.
+> Reasoning: The primary audience is commercial revenue and GTM functions: Commercial teams, Marketing, and customer Acquisition.
 
 **Run 3:** `commercial` ✓
-> Quote: "support Commercial, Marketing, and Acquisition teams"
+> Quote: "Collaborate with Commercial, Marketing, and Acquisition teams"
 > Verified: ✓ found in JD
-> Reasoning: The primary stakeholders are explicitly named as commercial functions (Commercial, Marketing, Acquisition), which are all GTM and revenue-oriented.
+> Reasoning: The role explicitly serves commercial, marketing, and acquisition functions with emphasis on supporting revenue-related decisions.
 
 ### autonomy_level
 **Manual:** `execution`
 
 **Run 1:** `execution` ✓
-> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
+> Quote: "Provide analytical support to our Acquisition team"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as providing support and executing ad-hoc requests from business teams, with no language about defining strategy or setting direction.
+> Reasoning: All responsibilities use support/delivery verbs (conduct, provide, analyze, contribute) with no strategic ownership language (define, establish, own, shape, drive).
 
 **Run 2:** `execution` ✓
 > Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
 > Verified: ✓ found in JD
-> Reasoning: Consistent use of execution verbs (provide, support, contribute, assist) with no strategic ownership language indicates the role executes defined analytical tasks for business teams rather than setting its own direction.
+> Reasoning: The role is framed with support and execution verbs (conduct, provide, contribute) without strategic ownership, direction-setting, or defining language.
 
 **Run 3:** `execution` ✓
 > Quote: "Provide analytical support to our Acquisition team"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as providing support and contributing to predefined projects rather than setting direction or defining analytics strategy.
+> Reasoning: All verbs are execution-oriented with no strategic framing around defining direction or shaping analytics delivery.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "identifying key trends and helping form actionable insight on issues, opportunities and performance drivers using large datasets"
-> Reasoning: Standard analytics work with no AI tools, infrastructure, or text-to-SQL mentioned; purely traditional BI approach.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "identifying key trends and helping form actionable insight on issues, opportunities and performance drivers"
-> Reasoning: No AI tools (Copilot/Claude/Cursor), AI-first mindset, or AI infrastructure mentions; pure analytics work
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-assisted workflows, or AI infrastructure expectations anywhere in the JD.
 
-**Run 3:** `none` ✓
-> Quote: "identifying key trends and helping form actionable insight on issues, opportunities and performance drivers using large datasets"
-> Reasoning: Role relies on traditional data analysis without requiring AI tool proficiency or infrastructure for AI consumption.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI infrastructure in the candidate skills or role responsibilities.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI-assisted coding, or AI infrastructure for the candidate to build or use.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Responsibilities are generic boilerplate ('collaborate with business stakeholders', 'identify performance trends', 'present findings') with no scale numbers, named models, or tool-specific context"
-> Reasoning: No ownership verbs for quality/testing; role is ad-hoc support without defined testing responsibilities or framework.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal present in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No mention of testing frameworks, data quality, observability, data contracts, or any quality assurance responsibility.
+
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal in the JD."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Testing, data contracts, observability, or data quality frameworks are not mentioned anywhere in the responsibilities or requirements sections.
+
+**Run 3:** `absent` ✗
 > Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
-> Reasoning: Quality-focused language present but no ownership verbs (own/ensure/define/implement) and no testing tools listed
+> Verified: ✓ found in JD
+> Reasoning: No mention of testing frameworks, data quality ownership, data contracts, or observability; focus is on analytical delivery.
 
-**Run 3:** `absent` ✓
-> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
-> Reasoning: JD describes analytical output and delivery without mentioning testing ownership, data contracts, or quality assurance responsibilities.
-
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "The dominant verbs are 'support', 'contribute to', and 'collaborate', placing the role in a delivery/execution orientation with no strategic ownership language."
-> Reasoning: Framing is pure delivery/execution despite regulated gambling context; no compliance, audit, or trustworthiness language dominates the JD.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "revenue impacts of changes to products and processes"
-> Reasoning: Financial consequence framing (delivery impact) without compliance, regulatory, or trust-dominance language despite regulated gambling context
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: JD is framed entirely around delivery and capability—analyzing trends, supporting teams, revenue analysis—with no risk, compliance, reliability, or data trustworthiness language.
 
-**Run 3:** `none` ✓
-> Quote: "Provide analytical support to our Acquisition team, including various ad-hoc performance analysis and dashboard building"
-> Reasoning: Framing emphasizes delivery and support with no regulatory, compliance, or trustworthiness language despite company's regulated status.
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely in analytical delivery and capability terms without risk, compliance, reliability, or stakeholder trust concerns.
 
+**Run 3:** `none` ✗
+> Quote: "Analyze revenue impacts of product and process changes"
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed in analytical delivery and capability terms without explicit risk, compliance, reliability, or trust language that would indicate loss-aversion framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

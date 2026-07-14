@@ -79,181 +79,209 @@ Contact: Cem Yücel, Manager
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 2 | 1 | 1 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | recruiter | recruiter | 100% |
-| stakeholder_orientation | mixed | internal_data | mixed | 33% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 1 | 1 | 1 | 100% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | recruiter | recruiter | recruiter | recruiter | 100% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | none | none | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
-> Quote: "Du bist als Business Intelligence Spezialist für die Aufbereitung und Analyse von Daten zuständig."
+**Run 1:** `rigour` ✗
+> Quote: "Des Weiteren bist du dafür verantwortlich, die verschiedenen Datenquellen anzubinden, aufzubereiten und für die Visualisierung vorzubereiten oder auch zu visualisieren"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on careful data preparation (Aufbereitung) implies an orientation toward correctness and quality rather than speed or rapid delivery.
+> Reasoning: The emphasis on careful data source connection, preparation, and multi-step visualization over speed indicators suggests a quality-focused approach rather than rapid iteration.
 
-**Run 2:** `rigour`
-> Quote: "dass unsere Kunden stets zufrieden sind mit der entwickelten Lösung"
-> Verified: ✓ found in JD
-> Reasoning: The company's emphasis on customer satisfaction with the developed solution signals a quality/rigour orientation rather than speed-focused delivery.
-
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✗
 > Quote: "Du bist als Business Intelligence Spezialist für die Aufbereitung und Analyse von Daten zuständig"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on proper data preparation (Aufbereitung) and analysis indicates quality and correctness rather than speed of delivery.
+> Reasoning: The role focuses on data preparation and analysis, which are inherently rigour-oriented activities, without any velocity signals.
+
+**Run 3:** `rigour` ✗
+> Quote: "für die Aufbereitung und Analyse von Daten zuständig"
+> Verified: ✓ found in JD
+> Reasoning: Data preparation and ETL work inherently emphasize precision and correctness, despite no explicit quality language in the responsibilities.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Mit unserem Team unterstützen wir namhafte Unternehmen in unterschiedlichsten Branchen."
+**Run 1:** `moderate` ✓
+> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
 > Verified: ✓ found in JD
-> Reasoning: The role serves various industries without explicit financial, compliance, or regulatory language, placing it in the moderate risk category for typical business intelligence work.
+> Reasoning: The role supports business scenario analysis and decision-making without explicit financial reporting, compliance, or regulatory language, indicating moderate domain risk.
 
-**Run 2:** `moderate`
+**Run 2:** `moderate` ✓
+> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
+> Verified: ✓ found in JD
+> Reasoning: The JD describes business intelligence work for unspecified sectors and clients without explicit financial, compliance, or regulatory framing, typical of moderate-risk analytics.
+
+**Run 3:** `moderate` ✓
 > Quote: "namhafte Unternehmen in unterschiedlichsten Branchen"
 > Verified: ✓ found in JD
-> Reasoning: BI work serving multiple industries without specified financial, regulatory, or mission-critical context implies moderate risk to business decisions rather than high-risk domains.
-
-**Run 3:** `moderate`
-> Quote: "Mit unserem Team unterstützen wir namhafte Unternehmen in unterschiedlichsten Branchen"
-> Verified: ✓ found in JD
-> Reasoning: The JD mentions supporting various sectors without specific financial, compliance, or regulatory language, indicating typical business intelligence work affecting business decisions but not critical financial reporting or compliance.
+> Reasoning: Standard business intelligence work for enterprise clients without specified sectors or explicit compliance, regulatory, or financial reporting signals.
 
 ### collaboration_width
+**Manual:** `2`
 
-**Run 1:** `2`
-> Quote: "Fachbereichen; IT-Datenextraktion"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names two distinct partner functions: business units (Fachbereichen) and an IT data extraction team, both counted as named collaborators.
-
-**Run 2:** `1`
+**Run 1:** `1` ✗
 > Quote: "IT-Datenextraktion"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named team (IT Data Extraction) is identified as a collaboration partner; 'Fachbereichen' (departments) is generic and does not count as a named function.
+> Reasoning: Only one specifically named partner team (IT Data Extraction) is explicitly identified; business units are referenced generically as 'Fachbereichen' without specific naming.
 
-**Run 3:** `1`
+**Run 2:** `1` ✗
 > Quote: "IT-Datenextraktion"
 > Verified: ✓ found in JD
-> Reasoning: Only the IT data extraction team is explicitly named as a distinct partner; 'Fachbereichen' is a generic reference to business departments that does not count as a named function.
+> Reasoning: Only the IT data extraction team is explicitly named as a collaboration partner in the responsibilities section.
 
-⚠ **LLM inconsistency**: runs gave ['2', '1', '1']
+**Run 3:** `1` ✗
+> Quote: "IT-Datenextraktion"
+> Verified: ✓ found in JD
+> Reasoning: Only the IT data extraction team is named as a distinct partner; business departments are referenced generically.
+
+⚠ **Disagreement**: manual=`2` vs LLM majority=`1`
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um."
+**Run 1:** `mid` ✓
+> Quote: "MS SQL-Server (SSIS/SSAS/SSRS); ETL; Modern Data Warehouse; MS Fabric; Power BI (DAX, Power Query)"
 > Verified: ✓ found in JD
-> Reasoning: The presence of established collaboration patterns with named teams and a defined role within an existing structure indicates a mid-stage data function with named tools in the tech stack.
+> Reasoning: The presence of multiple named Microsoft BI tools suggests established infrastructure beyond early-stage, and the role is positioned as a standard specialist within an existing practice.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
+> Quote: "Die Bitac wurde im Jahre 2014 gegründet und hat sich auf Business Intelligence Lösungen im Microsoft Umfeld spezialisiert"
+> Verified: ✓ found in JD
+> Reasoning: The established company with 12 years of history and developed client base suggests a mid-stage data operation rather than early-stage, without signals of large-scale specialization.
+
+**Run 3:** `mid` ✓
 > Quote: "Mit unserem Team unterstützen wir namhafte Unternehmen in unterschiedlichsten Branchen"
 > Verified: ✓ found in JD
-> Reasoning: The company's 12-year history and existing Microsoft BI toolstack indicate an established data function, but no evidence of large specialized sub-teams or governance platforms characterizing mature stage.
-
-**Run 3:** `mid`
-> Quote: "hat sich auf Business Intelligence Lösungen im Microsoft Umfeld spezialisiert"
-> Verified: ✓ found in JD
-> Reasoning: The company's established specialization in BI solutions indicates a mid-stage function with proven expertise and existing infrastructure, not early-stage greenfield building.
+> Reasoning: Established company (founded 2014) serving multiple enterprise clients indicates a developed BI function that is scaling but not yet highly specialized.
 
 ### jd_authorship
+**Manual:** `recruiter`
 
-**Run 1:** `recruiter`
-> Quote: "Des Weiteren bist du dafür verantwortlich, die verschiedenen Datenquellen anzubinden, aufzubereiten und für die Visualisierung vorzubereiten oder auch zu visualisieren."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs and standard BI task descriptions without technical depth, named tools with operational context, or specific volume/scale details that would indicate hiring manager authorship.
-
-**Run 2:** `recruiter`
+**Run 1:** `recruiter` ✓
 > Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic action verbs ('develop', 'implement', 'prepare', 'visualize') without technical depth, context-specific scale, or methodology details that would indicate hiring manager authorship.
+> Reasoning: Generic boilerplate language about working with business units and developing scenarios lacks the technical specificity and application context that would indicate hiring manager authorship.
 
-**Run 3:** `recruiter`
+**Run 2:** `recruiter` ✓
 > Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section uses generic action verbs without technical specificity, scale references, or precise tool application context, indicating recruiter authorship.
+> Reasoning: The responsibilities use generic action verbs and lack technical specificity, scale numbers, or tool-specific context that would indicate hiring manager authorship.
+
+**Run 3:** `recruiter` ✓
+> Quote: "Du bist als Business Intelligence Spezialist für die Aufbereitung und Analyse von Daten zuständig."
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use generic action verbs and boilerplate descriptions without specific context about scale, methodology, or business impact.
 
 ### stakeholder_orientation
+**Manual:** `internal_data`
 
-**Run 1:** `mixed`
-> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um."
+**Run 1:** `internal_data` ✓
+> Quote: "Du erarbeitest zusammen mit den Fachbereichen... Szenarien aus und setzt diese um"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The focus on data preparation, integration, and visualization infrastructure as core responsibilities suggests the role is oriented toward providing data infrastructure and analytics capability to organizational stakeholders.
+
+**Run 2:** `internal_data` ✓
+> Quote: "verschiedenen Datenquellen anzubinden, aufzubereiten und für die Visualisierung vorzubereiten"
 > Verified: ✓ found in JD
-> Reasoning: The role serves multiple business units (Fachbereichen) generically without emphasis on specific functions (commercial, product, finance), indicating service to multiple stakeholder types without clear primary audience.
+> Reasoning: The role focuses on data infrastructure work (connecting sources, preparing data for consumption) rather than serving a specific external business stakeholder group.
 
-**Run 2:** `internal_data`
-> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus"
+**Run 3:** `internal_data` ✓
+> Quote: "zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
 > Verified: ✓ found in JD
-> Reasoning: The role primarily serves internal business departments through BI analysis and visualization rather than commercial, product, or finance-specific audiences.
-
-**Run 3:** `mixed`
-> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
-> Verified: ✓ found in JD
-> Reasoning: The role serves generic business departments without specifying finance, product, commercial, or operations, indicating service across multiple unspecified stakeholder types.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'mixed']
+> Reasoning: The role primarily prepares data and develops analytical scenarios to serve internal business departments' data needs.
 
 ### autonomy_level
+**Manual:** `execution`
 
-**Run 1:** `execution`
-> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um."
+**Run 1:** `execution` ✓
+> Quote: "Du bist als Business Intelligence Spezialist für die Aufbereitung und Analyse von Daten zuständig"
 > Verified: ✓ found in JD
-> Reasoning: The role collaborates on scenarios defined by business units and focuses on implementing data solutions, making it primarily execution-oriented rather than strategy-setting.
+> Reasoning: The role is framed through specific execution responsibilities for data tasks rather than strategic ownership, with no indication of defining analytics strategy or shaping the data function.
 
-**Run 2:** `execution`
+**Run 2:** `execution` ✓
 > Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
 > Verified: ✓ found in JD
-> Reasoning: The language emphasizes implementation and execution of scenarios developed with business departments rather than defining strategic direction or organizational priorities.
+> Reasoning: The role is framed as executing scenarios in collaboration with others, using 'work together' language rather than independent direction-setting verbs.
 
-**Run 3:** `execution`
-> Quote: "Du erarbeitest zusammen mit den Fachbereichen und der IT-Datenextraktion Szenarien aus und setzt diese um"
+**Run 3:** `execution` ✓
+> Quote: "setzt diese um"
 > Verified: ✓ found in JD
-> Reasoning: The language emphasizes implementing scenarios developed collaboratively with others rather than defining or determining direction independently, indicating execution-focused work.
+> Reasoning: The role implements scenarios and develops within frameworks set by business departments rather than defining strategy or direction.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Business Intelligence Lösungen im Microsoft Umfeld spezialisiert"
-> Reasoning: Standard BI specialist role with traditional data prep and visualization; no AI tools, GenAI responsibilities, or AI-ready infrastructure mentioned.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Aufbereitung und Analyse von Daten; Bitac hat sich auf Business Intelligence Lösungen im Microsoft Umfeld spezialisiert"
-> Reasoning: Traditional BI specialist role with no AI tool usage or infrastructure-building signals, focused on standard data preparation and visualization.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, techniques, or infrastructure, focusing instead entirely on traditional Microsoft BI stack tools and practices.
 
-**Run 3:** `none` ✓
-> Quote: "Business Intelligence Spezialist für die Aufbereitung und Analyse von Daten"
-> Reasoning: Standard BI and data preparation role with no mention of AI tools or GenAI-ready infrastructure.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI skills, tools, or capabilities expected of the candidate.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-assisted development, or AI data infrastructure anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "The single-paragraph responsibilities section is entirely generic boilerplate — 'data preparation', 'connect data sources', 'create visualisations'"
-> Reasoning: No testing ownership, quality governance, or data contract language; execution-oriented responsibilities without methodology specifics.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "The single-paragraph responsibilities section is entirely generic boilerplate — 'data preparation', 'connect data sources', 'create visualisations'"
-> Reasoning: No testing tools mentioned and no quality or testing ownership responsibilities defined in the JD.
+**Run 1:** `absent` ✗
+> Quote: "MS SQL-Server (SSIS/SSAS/SSRS); ETL; Modern Data Warehouse; MS Fabric; Power BI (DAX, Power Query)"
+> Verified: ✓ found in JD
+> Reasoning: The skills list emphasizes BI and ETL tools without mentioning testing frameworks, data quality practices, data contracts, or observability.
 
-**Run 3:** `absent` ✓
-> Quote: "verschiedenen Datenquellen anzubinden, aufzubereiten und für die Visualisierung vorzubereiten"
-> Reasoning: Role scope covers data connection and visualization without testing, quality ownership, or data contract responsibilities.
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of testing, data quality frameworks, observability, or related practices.
 
+**Run 3:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of testing, data quality, data contracts, observability, reliability frameworks, or quality assurance anywhere in the JD.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "No loss aversion framing detected"
-> Reasoning: JD emphasizes delivery for internal departments; no compliance, regulatory, SLO, incident prevention, or stakeholder risk language.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "No loss aversion framing detected."
-> Reasoning: JD emphasizes delivery and execution of data scenarios with no operational reliability or compliance risk framing.
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes technical responsibilities and general client satisfaction but contains no explicit risk, compliance, reliability, or trust language framing the role around preventing bad outcomes.
 
-**Run 3:** `none` ✓
-> Quote: "namhafte Unternehmen in unterschiedlichsten Branchen"
-> Reasoning: Generic industry-agnostic positioning with no compliance, regulatory, or operational stability framing.
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed entirely around work activities and capabilities with no emphasis on risk, reliability, compliance, or data trust.
 
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed around delivery capability and customer satisfaction with data solutions, not around preventing bad outcomes or managing compliance risk.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`

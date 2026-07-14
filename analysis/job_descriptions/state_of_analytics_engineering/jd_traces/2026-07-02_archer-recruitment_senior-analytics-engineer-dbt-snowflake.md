@@ -59,7 +59,7 @@ Contact: Brinsley Doran, Recruitment Executive at Archer Recruitment
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
 | jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | strategic | mixed | mixed | mixed | 100% | ✗ |
+| autonomy_level | strategic | strategic | mixed | mixed | 33% | ✗ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
@@ -72,129 +72,131 @@ Contact: Brinsley Doran, Recruitment Executive at Archer Recruitment
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Improving data quality through automated testing and validation"
+> Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, data quality, validation, and documentation standards as core responsibilities with no velocity signals present.
+> Reasoning: Multiple explicit quality and reliability signals (testing, documentation, data quality, automated validation) throughout responsibilities with no velocity language present indicate rigour-focused orientation.
 
 **Run 2:** `rigour` ✓
 > Quote: "Improving data quality through automated testing and validation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, validation, and standards-setting as core expectations, with no counterbalancing speed or velocity language.
+> Reasoning: The responsibilities emphasize testing standards, data quality, reliability, and best practices with no velocity language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Improving data quality through automated testing and validation"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, validation, documentation, and quality standards as core responsibilities with no counterbalancing velocity or speed-to-market language.
+> Reasoning: The responsibilities emphasize testing, quality, standards, and best practices throughout with no velocity language, indicating a rigour-focused orientation.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "Designing, building, and maintaining scalable data models using dbt"
+> Quote: "Developing analytics-ready transformation layers in Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: The focus is on analytics infrastructure without explicit financial reporting, compliance, or regulatory language, indicating moderate business consequence from data errors.
+> Reasoning: Analytics engineering role supporting business intelligence with no financial reporting, compliance, or regulatory language suggests moderate business decision impact without high regulatory risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "Building reliable ELT pipelines using SQL and Python"
+> Quote: "Developing analytics-ready transformation layers in Snowflake"
 > Verified: ✓ found in JD
-> Reasoning: While operational reliability is emphasized, there is no mention of financial reporting, compliance, regulatory requirements, or regulatory risk that would indicate high domain risk.
+> Reasoning: The JD describes analytics infrastructure and data marts for business decisions without financial reporting, compliance, or regulatory signals.
 
 **Run 3:** `moderate` ✓
-> Quote: "Building reliable ELT pipelines using SQL and Python"
+> Quote: "owning the transformation layer of a modern cloud data platform"
 > Verified: ✓ found in JD
-> Reasoning: The focus on operational reliability suggests business decisions depend on the data, but lacks explicit financial reporting, compliance, or regulatory signals that would indicate high domain risk.
+> Reasoning: The role affects analytics decision-making but lacks explicit financial reporting, regulatory, or compliance language that would indicate high risk.
 
 ### collaboration_width
 **Manual:** `0`
 
 **Run 1:** `0` ✓
-> Quote: "within a collaborative small team environment"
-> Verified: ✓ found in JD
-> Reasoning: No distinct named partner teams or functions (Finance, Product, Engineering, etc.) are explicitly identified in the JD.
+> Quote: "No named partner teams explicitly identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD focuses on technical transformation work and team mentoring without naming specific cross-functional partner functions or business teams.
 
 **Run 2:** `0` ✓
-> Quote: "within a collaborative small team environment"
+> Quote: "Mentoring teammates; opportunity to influence data modelling and testing practices across the organization"
 > Verified: ✓ found in JD
-> Reasoning: No named partner teams or functions (such as Finance, Product, Engineering, Marketing) are explicitly mentioned; "collaborative small team" is a generic descriptor that does not count.
+> Reasoning: Only generic mentions of own team and cross-organizational influence; no explicitly named partner functions.
 
 **Run 3:** `0` ✓
-> Quote: "within a collaborative small team environment"
+> Quote: "Mentoring teammates and championing Analytics Engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: No specific named partner teams or functions (Finance, Product, Engineering, etc.) are mentioned; all collaboration references are generic.
+> Reasoning: No named cross-functional partner teams are explicitly listed; the role focuses on the analytics engineering team only.
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "owning the transformation layer of a modern cloud data platform"
-> Verified: ✓ found in JD
-> Reasoning: Named tools in use (dbt, Snowflake, Airflow), an existing team structure to mentor, and organization-wide adoption imply a data function that has moved beyond early-stage but is not yet mature at scale.
-
-**Run 2:** `mid` ✓
 > Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: The presence of named tools in responsibilities with specific application context and the active definition of standards suggests a data function that exists but is actively maturing and standardizing practices.
+> Reasoning: Existing cloud data platform with named infrastructure tools (Snowflake, Airflow, dbt), multiple team members to mentor, and responsibility to define standards indicates growth phase beyond early stage.
+
+**Run 2:** `mid` ✓
+> Quote: "Mentoring teammates and championing Analytics Engineering best practices"
+> Verified: ✓ found in JD
+> Reasoning: The existence of teammates to mentor and an established cloud platform indicates a functioning analytics team with infrastructure in place.
 
 **Run 3:** `mid` ✓
 > Quote: "Mentoring teammates and championing Analytics Engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: Multiple team members exist and need mentoring, tools are deployed and named in responsibilities (dbt, Snowflake, Airflow), and the team is establishing standards—indicating a growing function with working infrastructure.
+> Reasoning: Multiple team members exist, specific tools are deployed, and there is opportunity to improve and champion practices across the organization, indicating an established but growing function.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `hiring_manager` ✓
-> Quote: "Defining data modelling, testing, and documentation standards"
+> Quote: "Designing, building, and maintaining scalable data models using dbt"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains specific methodological language (data modelling standards, testing frameworks) and named tools with precise application context that only an experienced data practitioner would specify.
+> Reasoning: Specific technical context including named tools with precise application, methodology names (dimensional models, ELT), and particular practices indicate authorship by someone with hands-on experience.
 
 **Run 2:** `hiring_manager` ✓
 > Quote: "Designing, building, and maintaining scalable data models using dbt"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain specific named tools (dbt, Snowflake, Airflow) with precise technical application context and methodology references (ELT, dimensional models) rather than generic boilerplate.
+> Reasoning: Named tools with specific application contexts (dbt for models, Airflow for orchestration, Snowflake for transformation) and specific methodologies demonstrate technical specificity only a hiring manager would provide.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Designing, building, and maintaining scalable data models using dbt; Developing analytics-ready transformation layers in Snowflake; Orchestrating workflows using Airflow"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities name specific tools with precise application context (data models in dbt, transformations in Snowflake, workflows in Airflow) that only someone doing this work would specify.
+> Quote: "Building reliable ELT pipelines using SQL and Python, Orchestrating workflows using Airflow"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities contain specific technical context and named tools only someone doing the job would articulate so precisely.
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "owning the transformation layer of a modern cloud data platform"
-> Verified: ✓ found in JD
-> Reasoning: The primary responsibilities focus on building and maintaining data infrastructure and standards for internal consumption rather than serving commercial, product, or finance stakeholders.
-
-**Run 2:** `internal_data` ✓
 > Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: The primary audience is the data platform consumers and the data function itself, as evidenced by the focus on infrastructure, standards, team mentoring, and platform ownership rather than serving specific business stakeholder teams.
+> Reasoning: Responsibilities emphasize building data infrastructure, defining team practices, and mentoring colleagues rather than serving commercial, product, or finance stakeholders.
+
+**Run 2:** `internal_data` ✓
+> Quote: "owning the transformation layer of a modern cloud data platform"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities focus on building transformation layers, analytics infrastructure, and standards for internal data consumers and the analytics team.
 
 **Run 3:** `internal_data` ✓
-> Quote: "real ownership over the analytics engineering function and opportunity to influence data modelling and testing practices across the organization"
+> Quote: "owning the transformation layer of a modern cloud data platform"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasizes ownership of the analytics engineering function itself and influencing practices for data consumers rather than serving external business functions like finance or product.
+> Reasoning: The primary audience is data platform consumers and the analytics engineering team, not commercial, product, or finance stakeholders.
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `mixed` ✗
+**Run 1:** `strategic` ✓
 > Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic direction-setting (defining standards, owning transformation layer, influencing practices) with hands-on execution of data engineering work.
+> Reasoning: Role emphasizes ownership of the transformation layer and active shaping of how analytics engineering is conducted across the organization, moving beyond execution into direction-setting.
 
 **Run 2:** `mixed` ✗
-> Quote: "Defining data modelling, testing, and documentation standards"
+> Quote: "owning the transformation layer of a modern cloud data platform; Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of the transformation layer and standards-setting with execution responsibilities for building, developing, and maintaining data models and pipelines.
+> Reasoning: The role combines strategic ownership (defining standards, influencing practices) with hands-on execution (designing, building, maintaining pipelines).
 
 **Run 3:** `mixed` ✗
-> Quote: "Defining data modelling, testing, and documentation standards; Designing, building, and maintaining scalable data models using dbt"
+> Quote: "owning the transformation layer of a modern cloud data platform"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of standards and practices with execution responsibilities for designing, building, and maintaining transformation systems.
+> Reasoning: The role combines strategic ownership and direction-setting for the analytics function with hands-on execution of building and maintaining data models.
 
 ⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
 
 ### ai_role
 **Manual:** ``
@@ -202,17 +204,17 @@ Contact: Brinsley Doran, Recruitment Executive at Archer Recruitment
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD makes no reference to AI tools, AI product development, or AI-related data infrastructure that the candidate would need to engage with.
+> Reasoning: No mention of AI tools, GenAI applications, or AI-related data infrastructure requirements appears anywhere in the JD.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no expectations for the candidate to use AI tools for coding or to build AI infrastructure; AI skill is neither expected nor mentioned.
+> Reasoning: The JD contains no mention of AI tools, GenAI capabilities, or AI-ready infrastructure expected of the candidate.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD lists no expectations for AI coding tools, AI-assisted workflows, or building AI infrastructure; all skills are traditional data engineering and analytics engineering.
+> Reasoning: No AI tooling, AI-assisted work, or AI infrastructure is mentioned or expected of the candidate anywhere in the JD.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -222,17 +224,17 @@ Contact: Brinsley Doran, Recruitment Executive at Archer Recruitment
 **Run 1:** `responsibility` ✗
 > Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Testing appears as an explicit responsibility the candidate owns and defines, not merely as a tool to be used.
+> Reasoning: Testing is framed as an owned responsibility with the candidate expected to define standards, not merely listed as a skill requirement.
 
 **Run 2:** `responsibility` ✗
-> Quote: "Improving data quality through automated testing and validation"
+> Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Data quality and testing are framed as an owned responsibility with action verbs indicating the candidate is accountable for defining and implementing the practice.
+> Reasoning: Testing standards and data quality validation are explicitly framed as something the candidate defines and owns using action verbs.
 
 **Run 3:** `responsibility` ✗
-> Quote: "Defining data modelling, testing, and documentation standards; Improving data quality through automated testing and validation"
+> Quote: "Defining data modelling, testing, and documentation standards"
 > Verified: ✓ found in JD
-> Reasoning: Testing and data quality are framed as owned practices with ownership verbs ('defining', 'improving') showing the candidate is accountable for establishing and driving these practices.
+> Reasoning: Testing is framed as an owned responsibility to define and champion, not merely a tool listed in a requirements list.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
@@ -240,18 +242,18 @@ Contact: Brinsley Doran, Recruitment Executive at Archer Recruitment
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "Building reliable ELT pipelines"
+> Quote: "Building reliable ELT pipelines using SQL and Python"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability and data quality as core concerns, but lacks explicit risk, compliance, or stakeholder-trust framing that would indicate high loss aversion.
+> Reasoning: Operational reliability and data quality are concerns present in the role but secondary to delivery and building focus, without compliance or trust-framing risk language.
 
 **Run 2:** `moderate` ✗
-> Quote: "Building reliable ELT pipelines using SQL and Python"
+> Quote: "Improving data quality through automated testing and validation"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data quality are emphasized as concerns, but the overall framing is capability-focused with no mention of compliance, regulatory risk, or preventing bad data reaching stakeholders.
+> Reasoning: Quality and reliability are present concerns but without compliance, audit, or regulatory language, indicating operational focus rather than risk management.
 
 **Run 3:** `moderate` ✗
-> Quote: "Building reliable ELT pipelines using SQL and Python"
+> Quote: "Building reliable ELT pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on reliability and data quality reflects concern for operational stability and decision-making accuracy, but lacks explicit compliance or regulatory language indicating high loss aversion.
+> Reasoning: Reliability and data quality are emphasized as important concerns but framed as capabilities to build rather than risks to prevent or regulatory fears.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

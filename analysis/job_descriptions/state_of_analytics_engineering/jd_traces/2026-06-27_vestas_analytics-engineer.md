@@ -5,6 +5,7 @@
 ```
 # Analytics Engineer — Vestas
 
+**URL:** https://careers.vestas.com/job/Copenhagen-S-Analytics-Engineer-Regi-2300/1401227733/?Codes=LinkedIn
 **Location:** Copenhagen S, Region Capital of Denmark, DK, 2300
 **Date Posted:** 2026-06-27
 **Application Deadline:** July 4, 2026
@@ -64,183 +65,221 @@ Vestas designs, manufactures, and services wind turbines globally with more than
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 3 | 3 | 4 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | mixed | mixed | 33% |
-| stakeholder_orientation | finance | finance | internal_data | 33% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
+| collaboration_width | 4 | 3 | 3 | 3 | 100% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | recruiter | recruiter | mixed | mixed | 33% | ✗ |
+| stakeholder_orientation | finance | finance | finance | internal_data | 33% | ✓ |
+| autonomy_level | execution | execution | execution | mixed | 33% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | absent | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "This centre creates a scalable, standardised, and high-quality analytics environment that delivers "one version of the truth" across Vestas"
+**Run 1:** `rigour` ✓
+> Quote: "scalable, standardised, and high-quality analytics environment that delivers "one version of the truth""
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes standardization, quality, governance, and accuracy without any speed or iteration language.
+> Reasoning: The JD emphasizes quality, standardization, governance, and accuracy throughout, with no countervailing velocity signals like 'fast-paced' or 'rapid delivery'.
 
-**Run 2:** `rigour`
-> Quote: "This centre creates a scalable, standardised, and high-quality analytics environment that delivers "one version of the truth" across Vestas."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize quality, standardization, accuracy, and governance ("one version of the truth") with no velocity language; the competencies section explicitly requires "High accuracy and precision in data handling."
-
-**Run 3:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, validation, and systematic quality processes, with required competencies including 'high accuracy and precision in data handling'.
+> Reasoning: The responsibilities explicitly emphasize validation, testing, and documentation alongside building a standardised, high-quality analytics environment with governance oversight.
+
+**Run 3:** `rigour` ✓
+> Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities emphasize validation, testing, and quality assurance as core deliverables, with no velocity language like 'fast-paced' or 'ship quickly'.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
+**Run 1:** `moderate` ✗
 > Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE"
 > Verified: ✓ found in JD
-> Reasoning: Positioning explicitly within Finance > Group Financial Performance at a large regulated manufacturing company indicates financial reporting infrastructure where data errors directly affect regulatory compliance and audit.
+> Reasoning: Although the role is in Finance, the JD lacks explicit language about financial reporting, compliance, or regulatory consequences; Vestas is a manufacturing company rather than a high-risk sector.
 
-**Run 2:** `high`
-> Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE."
-> Verified: ✓ found in JD
-> Reasoning: Explicit placement within Finance and Group Financial Performance (financial reporting context) combined with "one version of the truth" language signals financial reporting and governance responsibilities with high consequences for error.
-
-**Run 3:** `high`
+**Run 2:** `moderate` ✗
 > Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE"
 > Verified: ✓ found in JD
-> Reasoning: Explicit positioning within Group Financial Performance and language about delivering 'one version of the truth' indicates responsibility for financial reporting infrastructure where errors have direct consequences.
+> Reasoning: While positioned in Finance, the JD uses generic analytics language without explicit mention of financial reporting, compliance, or regulatory requirements.
+
+**Run 3:** `moderate` ✗
+> Quote: "Finance > Group Financial Performance > Reporting & Analytics CoE"
+> Verified: ✓ found in JD
+> Reasoning: The role sits in a Finance department which suggests financial context, but the JD language describes generic analytical solutions without explicit financial reporting, compliance, or regulatory language.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
 ### collaboration_width
+**Manual:** `4`
 
-**Run 1:** `3`
+**Run 1:** `3` ✗
 > Quote: "Product Owners; Business Analysts; governance teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named functions are explicitly listed as collaboration partners: Product (via Product Owners), Business Analysts (named role cohort), and Governance.
+> Verified: ✓ found in JD
+> Reasoning: Product Owners, Business Analysts, and governance teams are explicitly named as distinct collaboration partners, while 'domain experts' and 'stakeholders' are too generic to count.
 
-**Run 2:** `3`
+**Run 2:** `3` ✗
+> Quote: "Product Owners and Business Analysts; governance teams; domain experts"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named partner functions are identified: Product Owners (product function), Business Analysts (named role cohort), and governance teams.
+
+**Run 3:** `3` ✗
 > Quote: "Product Owners; Business Analysts; governance teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three named partner functions are explicitly listed: Product Owners (product team), Business Analysts (business analysis function), and governance teams (named organizational unit).
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names three distinct collaborating functions: Product (via Product Owners), Business Analysts as a named cohort, and governance teams.
 
-**Run 3:** `4`
-> Quote: "Finance; Product Owners; Business Analysts; governance teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named teams/functions are explicitly identified: Finance (organizational home), Product (Product Owners), Business Analysts (named role cohort), and Governance (governance teams).
-
-⚠ **LLM inconsistency**: runs gave ['3', '3', '4']
+⚠ **Disagreement**: manual=`4` vs LLM majority=`3`
 
 ### data_team_maturity
+**Manual:** `mature`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✗
+> Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE. This centre creates a scalable, standardised, and high-quality analytics environment that delivers "one version of the truth""
+> Verified: ✓ found in JD
+> Reasoning: The CoE structure and emphasis on standardization and continuous improvement indicate an established analytics function, but the absence of multiple named sub-teams or large team size signals mid-stage rather than mature maturity.
+
+**Run 2:** `mid` ✗
 > Quote: "Maintain, optimize, and continuously improve existing data models"
 > Verified: ✓ found in JD
-> Reasoning: The presence of existing data models to maintain and a CoE structure indicates established infrastructure beyond early stage, but the role's "contribute to" framing suggests not yet fully mature with specialized sub-teams.
+> Reasoning: The JD assumes existing analytics infrastructure and models are in place, and focuses on optimization and enhancement rather than building from scratch.
 
-**Run 2:** `mid`
+**Run 3:** `mid` ✗
 > Quote: "Maintain, optimize, and continuously improve existing data models"
 > Verified: ✓ found in JD
-> Reasoning: Existing infrastructure and solutions are in place with named responsibilities for maintenance and optimization; the CoE structure suggests organized scaling but not the degree of specialization and size implied by mature data organizations.
+> Reasoning: The team has existing infrastructure and models requiring maintenance and optimization, indicating an established function scaling up rather than building from zero.
 
-**Run 3:** `mid`
-> Quote: "Maintain, optimize, and continuously improve existing data models"
-> Verified: ✓ found in JD
-> Reasoning: The emphasis on maintaining and improving existing infrastructure indicates an established function beyond greenfield, but no mention of multiple specialized sub-teams or organizational scale suggesting mature multi-team structure.
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
 ### jd_authorship
+**Manual:** `recruiter`
 
-**Run 1:** `recruiter`
-> Quote: "Collaborate with Product Owners and Business Analysts to translate business requirements into analytics solutions"
+**Run 1:** `recruiter` ✓
+> Quote: "Collaborate with Product Owners and Business Analysts to translate business requirements into analytics solutions; Work cross-functionally with domain experts, governance teams, and stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section relies entirely on generic boilerplate verbs and processes without technical specificity about actual work, scale, or methodology that would signal hiring manager input.
+> Reasoning: Responsibilities lack the technical specificity and scale context that indicates hands-on authorship; they read as boilerplate action verbs with analytics vocabulary, making it impossible to understand what the role actually does on a Tuesday.
 
-**Run 2:** `mixed`
-> Quote: "Contribute to analytics data architecture design and implementation; Collaborate with Product Owners and Business Analysts to translate business requirements into analytics solutions"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Technical language (semantic layers, data architecture, core layers) indicates hiring manager input, but lacks contextual specificity about business processes, scale, or precise application context; generic boilerplate verbs (collaborate, work cross-functionally) indicate recruiter involvement.
+**Run 2:** `mixed` ✗
+> Quote: "Design and develop analytical solutions, including dashboards, semantic layers, and data models; Hands-on experience with cloud-based data platforms (Snowflake, Databricks, Microsoft Fabric)"
+> Verified: ✓ found in JD
+> Reasoning: The JD combines specific technical terminology (semantic layers, named platforms) with generic responsibility verbs lacking context about scale, volume, or specific operational challenges.
 
-**Run 3:** `mixed`
+**Run 3:** `mixed` ✗
 > Quote: "Design and develop analytical solutions, including dashboards, semantic layers, and data models"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity (semantic layers, named cloud platforms in requirements) is mixed with generic boilerplate collaboration language ('work cross-functionally with stakeholders').
+> Reasoning: The responsibilities contain technically specific architectural concepts (dashboards, semantic layers, multi-layer architecture) alongside generic collaboration verbs, indicating mixed technical and non-technical authorship.
+
+⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
 
 ⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `finance`
 
-**Run 1:** `finance`
+**Run 1:** `finance` ✓
 > Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE"
 > Verified: ✓ found in JD
-> Reasoning: The explicit organizational positioning within Finance and the "one version of the truth" mandate indicate the primary audience is financial reporting stakeholders and business performance consumers.
+> Reasoning: The role is explicitly positioned within the Finance organization's reporting and analytics function, making the Finance function the primary stakeholder orientation despite some collaboration with Product and Business.
 
-**Run 2:** `finance`
-> Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE."
-> Verified: ✓ found in JD
-> Reasoning: Explicit organizational placement within Finance and Group Financial Performance makes financial reporting and compliance the primary audience, despite broad cross-functional collaborations.
-
-**Run 3:** `internal_data`
-> Quote: "This centre creates a scalable, standardised, and high-quality analytics environment that delivers 'one version of the truth' across Vestas"
+**Run 2:** `finance` ✓
+> Quote: "The role sits within Finance > Group Financial Performance > Reporting & Analytics CoE. This centre creates a scalable, standardised, and high-quality analytics environment that delivers 'one version of the truth' across Vestas."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: Primary focus is building and maintaining analytics infrastructure and core platform layers for organizational consumption rather than serving a specific business function.
+> Reasoning: The role is explicitly positioned within Finance's Group Financial Performance division, and the 'one version of the truth' framing is characteristic of financial reporting infrastructure.
+
+**Run 3:** `internal_data` ✗
+> Quote: "This centre creates a scalable, standardised, and high-quality analytics environment that delivers "one version of the truth" across Vestas"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary purpose is building shared analytics infrastructure and data platforms that other teams consume, characteristic of internal data platform work.
 
 ⚠ **LLM inconsistency**: runs gave ['finance', 'finance', 'internal_data']
 
 ### autonomy_level
+**Manual:** `execution`
 
-**Run 1:** `execution`
-> Quote: "Contribute to analytics data architecture design and implementation"
+**Run 1:** `execution` ✓
+> Quote: "Collaborate with Product Owners and Business Analysts to translate business requirements into analytics solutions"
 > Verified: ✓ found in JD
-> Reasoning: Consistent use of "contribute to", "support", and "maintain" verbs demonstrates the role executes direction set by Product Owners and established architecture rather than defining strategy or direction.
+> Reasoning: The role is framed around translating requirements set by others and supporting rollouts defined by stakeholders, not setting analytics direction or strategy.
 
-**Run 2:** `execution`
-> Quote: "Contribute to analytics data architecture design and implementation; Support rollout of analytics solutions"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities emphasize contribution and support of existing strategies and systems rather than defining direction, setting priorities, or owning strategic domains.
-
-**Run 3:** `execution`
+**Run 2:** `execution` ✓
 > Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
 > Verified: ✓ found in JD
-> Reasoning: The 'support' framing and emphasis on rolling out, maintaining, and improving established solutions indicates execution within a defined CoE strategy rather than strategic direction-setting.
+> Reasoning: The use of 'support' and focus on executing rollouts and optimization within an established CoE structure indicates the role delivers against priorities set by others rather than defining strategic direction.
+
+**Run 3:** `mixed` ✗
+> Quote: "Design and develop analytical solutions, including dashboards, semantic layers, and data models"
+> Verified: ✓ found in JD
+> Reasoning: The role owns the strategic design and development of analytics architecture, but also translates business requirements from Product Owners and supports their rollout, combining strategic direction-setting with execution in service of others.
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Maintain, optimize, and continuously improve existing data models"
-> Reasoning: Standard analytics modeling and optimization without AI skill expectations or infrastructure-building responsibilities.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "translate business requirements into analytics solutions"
-> Reasoning: No AI coding tools, AI-ready infrastructure, or GenAI responsibilities mentioned; standard analytics engineering work.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, or data infrastructure for AI systems; 'Predictive modelling exposure' is statistical modeling, not AI capability expectation.
 
-**Run 3:** `none` ✓
-> Quote: "scalable, standardised, and high-quality analytics environment; Maintain, optimize, and continuously improve existing data models"
-> Reasoning: No AI skill expectations; standard analytics and data architecture work with no AI infrastructure or coding-assist signals.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, AI-assisted coding workflows, or AI-ready data infrastructure in responsibilities or requirements.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, agentic workflows, or AI-ready data infrastructure; 'Predictive modelling exposure considered advantageous' refers to traditional analytics skills.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "scalable, standardised, and high-quality analytics environment"
-> Reasoning: High-quality outputs valued but no testing ownership verbs or tools listed; quality is environmental goal, not individual responsibility.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "Maintain, optimize, and continuously improve existing data models"
-> Reasoning: No explicit testing ownership verbs (own/ensure/define/implement) or quality/testing practice responsibilities.
+**Run 1:** `responsibility` ✗
+> Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
+> Verified: ✓ found in JD
+> Reasoning: Validation and testing are listed as responsibilities the role will perform as part of analytics rollouts, making the role accountable for these activities even without an ownership framework.
 
-**Run 3:** `absent` ✓
-> Quote: "high-quality analytics environment; Contribute to analytics data architecture design and implementation"
-> Reasoning: Quality mentioned as outcome goal, not as owned practice; no testing tools or data-contract ownership verbs present.
+**Run 2:** `absent` ✗
+> Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
+> Verified: ✓ found in JD
+> Reasoning: Testing is mentioned only as a rollout support activity without ownership framing, no testing tools are named, and no data quality frameworks are referenced.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Support rollout of analytics solutions including validation, testing, documentation, and training"
+> Verified: ✓ found in JD
+> Reasoning: Testing and validation appear as explicit responsibilities within rollout activities, giving the candidate accountability for these practices rather than merely listing testing as a tool requirement.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'absent', 'responsibility']
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "delivers 'one version of the truth' across Vestas / governance teams"
-> Reasoning: Standardization and single-source-of-truth emphasis suggests operational reliability focus to prevent conflicting data; governance infrastructure present.
+**Manual:** ``
 
-**Run 2:** `moderate` ✓
-> Quote: "one version of the truth"
-> Reasoning: Standardization and organizational trust through formal governance (CoE, Finance hierarchy) signal operational reliability and accuracy concerns.
+**Run 1:** `moderate` ✗
+> Quote: "scalable, standardised, and high-quality analytics environment that delivers "one version of the truth""
+> Verified: ✓ found in JD
+> Reasoning: Quality, standardization, and data accuracy are emphasized for operational reliability and preventing conflicting data views, but compliance and regulatory risk language is absent.
 
-**Run 3:** `moderate` ✓
-> Quote: "delivers 'one version of the truth' across Vestas; governance teams [stakeholders]"
-> Reasoning: Organizational data consistency and governance control drive the role; preventing data divergence/inconsistency is the framing, not compliance/audit.
+**Run 2:** `moderate` ✗
+> Quote: "High accuracy and precision in data handling"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes accuracy and reliability through 'high-quality analytics environment' and 'one version of the truth,' indicating concern for data reliability without the compliance or regulatory-risk framing that would signal high loss aversion.
 
+**Run 3:** `moderate` ✗
+> Quote: "High accuracy and precision in data handling"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data quality are emphasized as core competencies, but the JD lacks explicit risk, compliance, or regulatory language that would indicate high loss aversion framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

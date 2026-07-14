@@ -63,13 +63,13 @@
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
-| domain_risk | moderate | high | moderate | high | 33% | ✗ |
+| domain_risk | moderate | moderate | high | high | 33% | ✗ |
 | collaboration_width | 5 | 6 | 6 | 6 | 100% | ✗ |
-| data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | recruiter | mixed | recruiter | mixed | 33% | ✗ |
-| stakeholder_orientation | internal_data | internal_data | mixed | mixed | 33% | ✗ |
-| autonomy_level | strategic | execution | strategic | strategic | 33% | ✓ |
-| ai_role |  | ai_user | none | ai_user | 33% | ✗ |
+| data_team_maturity | early | early | mid | mid | 33% | ✗ |
+| jd_authorship | recruiter | recruiter | hiring_manager | mixed | 0% | ✓ |
+| stakeholder_orientation | internal_data | mixed | internal_data | mixed | 33% | ✗ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
@@ -83,41 +83,41 @@
 **Run 1:** `rigour` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes governance, compliance, and reliability (GDPR protocols, metric standards, production data models) with no velocity-oriented language like 'fast-paced' or 'ship quickly'.
+> Reasoning: The JD emphasizes governance, compliance, and standardization (unified KPIs, data governance protocols) with no velocity signals like fast-paced or rapid iteration.
 
 **Run 2:** `rigour` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: Data governance, GDPR compliance, and consistent metric standards emphasize correctness and compliance without any velocity language (rapid, MVP, fast-paced) throughout the JD.
+> Reasoning: The responsibilities emphasize governance, compliance, and standardization as core expectations with no velocity-oriented language present.
 
 **Run 3:** `rigour` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, compliance, and systematic data quality practices without any velocity-oriented language, indicating a rigour-focused orientation.
+> Reasoning: The JD emphasizes governance, compliance, and structured data management with no velocity language, making rigour the clear dominant orientation.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
 **Manual:** `moderate`
 
-**Run 1:** `high` ✗
-> Quote: "Implement data governance protocols addressing GDPR compliance and access management"
+**Run 1:** `moderate` ✓
+> Quote: "Transform complex data into compelling narratives informing product strategy and financial planning"
 > Verified: ✓ found in JD
-> Reasoning: The explicit mention of GDPR compliance (regulatory) combined with financial planning as a stakeholder indicates data errors could have direct regulatory and financial consequences.
+> Reasoning: While GDPR and financial planning are mentioned, this is a general analytics role serving multiple stakeholders rather than a fintech/banking/regulated context where data errors directly impact financial reporting or regulatory compliance.
 
-**Run 2:** `moderate` ✓
+**Run 2:** `high` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: GDPR compliance and financial planning are mentioned as concerns, but the focus is on data governance and access management rather than financial reporting accuracy or regulatory compliance as the primary role driver.
+> Reasoning: Explicit regulatory (GDPR) compliance responsibility indicates data errors could create direct regulatory exposure.
 
 **Run 3:** `high` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly requires GDPR compliance implementation and mentions financial planning as a primary use case, establishing both regulatory and financial decision-making risk.
+> Reasoning: GDPR compliance and regulatory requirements are explicitly named as core responsibilities, placing data errors directly in the regulatory risk domain.
 
 ⚠ **Disagreement**: manual=`moderate` vs LLM majority=`high`
 
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']
 
 ### collaboration_width
 **Manual:** `5`
@@ -125,103 +125,101 @@
 **Run 1:** `6` ✗
 > Quote: "Product, Marketing, Finance, Support, and Country Management teams; engineering"
 > Verified: ✓ found in JD
-> Reasoning: Six distinct named functions are identified: Product, Marketing, Finance, Support, Country Management, and Engineering.
+> Reasoning: The JD explicitly names six distinct teams: Product, Marketing, Finance, Support, Country Management, and Engineering.
 
 **Run 2:** `6` ✗
-> Quote: "Product; Marketing; Finance; Support; Country Management; engineering"
+> Quote: "Product, Marketing, Finance, Support, and Country Management; engineering"
 > Verified: ✓ found in JD
-> Reasoning: Five teams explicitly named in establishing KPIs, plus engineering separately identified as a partner in ensuring data pipelines meet organizational needs.
+> Reasoning: Six distinct named functions explicitly listed across the KPI standardization and pipeline partnership responsibilities.
 
 **Run 3:** `6` ✗
-> Quote: "Product, Marketing, Finance, Support, and Country Management teams; engineering"
+> Quote: "Product; Marketing; Finance; Support; Country Management; Engineering"
 > Verified: ✓ found in JD
-> Reasoning: Six distinct named functions appear in the responsibilities: Product, Marketing, Finance, Support, Country Management, and Engineering.
+> Reasoning: Six distinct named teams are explicitly listed as collaboration partners in the first responsibility and throughout the JD.
 
 ⚠ **Disagreement**: manual=`5` vs LLM majority=`6`
 
 ### data_team_maturity
 **Manual:** `early`
 
-**Run 1:** `mid` ✗
-> Quote: "Partner with engineering to ensure data pipelines meet organizational needs"
+**Run 1:** `early` ✓
+> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
 > Verified: ✓ found in JD
-> Reasoning: The role involves implementing governance and creating self-serve capabilities on existing data infrastructure (pipelines, named tools), suggesting a team moving from early to mature but not yet fully established.
+> Reasoning: The dominant responsibility verbs are foundational (establish, design, construct, create, implement) indicating the role is building the analytics function from the ground up, not scaling an existing mature practice.
 
 **Run 2:** `mid` ✗
-> Quote: "Design and construct data models serving as the bridge between raw data and business insights"
+> Quote: "Design and construct data models serving as the bridge between raw data and business insights; Create self-serve analytics capabilities"
 > Verified: ✓ found in JD
-> Reasoning: References to production data models and existing pipelines indicate established infrastructure, while responsibilities emphasizing implement and create suggest growth and improvement rather than greenfield build.
+> Reasoning: Named infrastructure focus (models, self-serve analytics, governance protocols) indicates an established data function being scaled, not a greenfield build.
 
 **Run 3:** `mid` ✗
-> Quote: "Implement data governance protocols addressing GDPR compliance; Create self-serve analytics capabilities that empower teams"
+> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes implementing new governance and self-serve capabilities while requiring experience with 'production data models,' indicating existing infrastructure being enhanced rather than greenfield building.
+> Reasoning: The use of 'establish' signals building new capabilities while references to existing pipelines and BI tools indicate some infrastructure already exists.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
+
+⚠ **LLM inconsistency**: runs gave ['early', 'mid', 'mid']
 
 ### jd_authorship
 **Manual:** `recruiter`
 
-**Run 1:** `mixed` ✗
-> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams; Partner with engineering to ensure data pipelines meet organizational needs"
+**Run 1:** `recruiter` ✓
+> Quote: "Strong analytical abilities paired with clear data communication skills"
 > Verified: ✓ found in JD
-> Reasoning: The JD combines technical specificity (KPI standards, GDPR governance, specific tools like Metabase and Amplitude) with generic boilerplate (partnership language, empowering teams).
+> Reasoning: The responsibilities and requirements lack technical specificity—no named tools with context, no scale numbers, no specific methodologies—relying instead on generic boilerplate action verbs that could apply to any analytics role.
 
-**Run 2:** `recruiter` ✓
-> Quote: "Partner with engineering to ensure data pipelines meet organizational needs"
+**Run 2:** `hiring_manager` ✗
+> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
 > Verified: ✓ found in JD
-> Reasoning: Generic language about supporting teams to ensure needs are met lacks technical specificity about tools, scale, methodology, or current state that a hiring manager would provide.
+> Reasoning: This describes a specific, concrete business problem (KPI fragmentation across five named teams) that only surfaces from hands-on experience doing this work.
 
 **Run 3:** `mixed` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical elements like GDPR compliance and cross-functional KPI standardization indicate hiring manager input, but generic phrases like 'transform data into narratives' suggest recruiter contributions.
+> Reasoning: Most responsibilities use generic action verbs, but specific GDPR governance implementation and named BI tools (Metabase, Amplitude, GA4) suggest hiring manager input on technical sections.
 
-⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'hiring_manager', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✓
-> Quote: "Create self-serve analytics capabilities that empower teams to independently answer questions"
-> Verified: ✓ found in JD
-> Reasoning: The role is fundamentally about building data infrastructure and self-serve capabilities that serve other teams, placing the primary audience as data consumers and the platform itself.
-
-**Run 2:** `mixed` ✗
+**Run 1:** `mixed` ✗
 > Quote: "Transform complex data into compelling narratives informing product strategy and financial planning"
 > Verified: ✓ found in JD
-> Reasoning: The JD serves Product (strategy), Finance (planning), and Internal audiences (self-serve analytics capabilities, data infrastructure) with equal emphasis across multiple responsibilities.
+> Reasoning: The responsibilities show equal emphasis serving product (product strategy), finance (financial planning), and the internal data function (self-serve analytics, engineering partnership).
+
+**Run 2:** `internal_data` ✓
+> Quote: "Create self-serve analytics capabilities that empower teams to independently answer questions"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibilities center on building analytics infrastructure (self-serve capabilities, data models, KPI standardization) rather than serving a specific business function.
 
 **Run 3:** `mixed` ✗
-> Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
+> Quote: "Transform complex data into compelling narratives informing product strategy and financial planning"
 > Verified: ✓ found in JD
-> Reasoning: The role serves multiple business functions (Product, Marketing, Finance, Support, Country Management) with equal emphasis through shared analytics infrastructure rather than serving one primary stakeholder.
+> Reasoning: The JD emphasizes serving both product teams and finance teams with equal weight, while also establishing data infrastructure for internal consumption.
 
 ⚠ **Disagreement**: manual=`internal_data` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'mixed']
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `execution` ✗
+**Run 1:** `strategic` ✓
 > Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
 > Verified: ✓ found in JD
-> Reasoning: The role has specific, bounded responsibilities to deliver (establish KPIs, design models, implement governance) within a defined scope rather than setting overall direction for the analytics organization.
+> Reasoning: The role is expected to define direction and set standards (establish KPIs, design models, create capabilities, implement governance) rather than execute predefined work.
 
 **Run 2:** `strategic` ✓
 > Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
 > Verified: ✓ found in JD
-> Reasoning: Strategic direction-setting verbs (establish, design, create, implement) dominate the responsibilities section, indicating the role defines how analytics is delivered rather than executing scoped work.
+> Reasoning: The responsibilities emphasize establishing frameworks, designing solutions, and implementing governance—actions that shape how analytics is delivered rather than executing scoped work.
 
 **Run 3:** `strategic` ✓
 > Quote: "Establish unified KPIs and terminology across Product, Marketing, Finance, Support, and Country Management teams"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use directive verbs (establish, design, construct, create, implement) that emphasize defining direction and building capabilities rather than executing pre-defined work.
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'strategic', 'strategic']
+> Reasoning: The role is expected to establish and define analytics standards and capabilities across the organization rather than execute scoped work set by others.
 
 ### ai_role
 **Manual:** ``
@@ -229,39 +227,37 @@
 **Run 1:** `ai_user` ✗
 > Quote: "Familiarity with AI-assisted development tools"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to have familiarity with AI-assisted development tools (like GitHub Copilot or Claude Code) to accelerate their own coding and development work.
+> Reasoning: The candidate is expected to have familiarity with AI-assisted development tools (like Copilot or similar), indicating expectation to use AI tools to accelerate their own coding work.
 
-**Run 2:** `none` ✗
+**Run 2:** `ai_user` ✗
 > Quote: "Familiarity with AI-assisted development tools"
 > Verified: ✓ found in JD
-> Reasoning: Familiarity is too vague to count as a skill expectation (requires proven usage or proficiency), and the ML mention is exploratory rather than a core responsibility.
+> Reasoning: The candidate is expected to be familiar with AI coding tools to accelerate their own development work.
 
 **Run 3:** `ai_user` ✗
 > Quote: "Familiarity with AI-assisted development tools"
 > Verified: ✓ found in JD
-> Reasoning: The required qualifications expect candidates to be familiar with AI-assisted development tools, indicating the role expects candidates to use AI tools to accelerate their own coding and analytical productivity.
+> Reasoning: The JD explicitly requires familiarity with AI-assisted development tools, expecting the candidate to use these tools to accelerate their own development work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
-
-⚠ **LLM inconsistency**: runs gave ['ai_user', 'none', 'ai_user']
 
 ### testing_framing
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "No testing or data quality signal."
-> Verified: ✓ found in JD
-> Reasoning: The JD does not mention testing frameworks, data quality practices, data contracts, or observability as either a responsibility or a tool.
-
-**Run 2:** `absent` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: Governance language focuses on GDPR compliance and access management, not on testing, data contracts, data quality frameworks, or observability.
+> Reasoning: There is no mention of testing, data contracts, data quality frameworks, or observability; the focus is on governance and compliance rather than testing practices.
+
+**Run 2:** `absent` ✗
+> Quote: "No testing or data quality frameworks mentioned."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: No data quality, testing frameworks, observability practices, or data contracts are mentioned anywhere in the JD.
 
 **Run 3:** `absent` ✗
-> Quote: "No testing, data quality, data contracts, or observability practices mentioned in the JD."
+> Quote: "No testing, data contracts, or quality framework signals in the JD."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD contains no references to testing frameworks, data quality standards, data contracts, or observability tooling in either the responsibilities or requirements sections.
+> Reasoning: While data governance is mentioned, it focuses on GDPR compliance and access management rather than testing practices, data quality frameworks, or observability.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
@@ -271,16 +267,16 @@
 **Run 1:** `moderate` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: GDPR compliance and governance are mentioned as concerns, but the role's primary framing is capability-building (KPIs, self-serve analytics, modeling) rather than preventing catastrophic risk or regulatory exposure.
+> Reasoning: GDPR compliance and operational reliability are mentioned but as secondary concerns within a role primarily framed around capability-building (establish KPIs, design models, create analytics).
 
 **Run 2:** `moderate` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: GDPR compliance indicates regulatory risk awareness, but the role is framed primarily around analytics delivery and capability building rather than preventing failures or stakeholder trust as the dominant concern.
+> Reasoning: GDPR compliance is one responsibility among many delivery-focused objectives; regulatory risk is present but not the dominant framing of the role.
 
 **Run 3:** `moderate` ✗
 > Quote: "Implement data governance protocols addressing GDPR compliance and access management"
 > Verified: ✓ found in JD
-> Reasoning: Compliance and governance are explicit responsibilities, but the primary framing emphasizes capability building and analytics delivery rather than preventing bad data outcomes or regulatory exposure.
+> Reasoning: Compliance and governance are present concerns but appear as one of seven responsibilities rather than dominating the role framing, indicating moderate risk aversion.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

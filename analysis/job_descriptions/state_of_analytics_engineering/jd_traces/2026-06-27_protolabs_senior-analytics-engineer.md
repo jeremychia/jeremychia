@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Protolabs
 
+**URL:** https://jobs.lever.co/protolabs/b9b433de-3134-490d-bc7c-b74a9da34976
 **Location:** Amsterdam
 **Date Posted:** 2026-06-27
 
@@ -44,187 +45,222 @@ What you'll bring
 Education and Experience:
 Bachelor's Degree in Computer Science, Software Engineering, Mathematics, Data Engineering, or a related field
 Minimum of 5 years of experience in analytics engineering, data modeling, or data transformation
-Extensive hands on experience with dbt (or similar transformation tools such as SQLMesh), ideally in large, complex, multi project environments
-Advanced SQL skills, with the ability to refactor complex queries, simplify…[truncated]
+Extensive hands on experience with dbt (or similar transformation tools such as SQLMesh), ideally in large, complex, multi project environmen…[truncated]
 ```
 
 ---
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 0 | 1 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | hiring_manager | hiring_manager | 100% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | mixed | mixed | mixed | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 0 | 0 | 2 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | mixed | execution | mixed | mixed | 33% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | tool_listed | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "establishes robust modeling and testing standards, and helps elevate technical best practices across the Analytics Engineering team"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing standards, robust practices, and technical excellence as core expectations, with no emphasis on speed or shipping pace.
+> Reasoning: The JD emphasizes reliability, testing standards, and best practices as core expectations with no velocity-oriented language present.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
+> Quote: "establish robust modeling and testing standards"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The responsibilities section emphasizes quality, testing, reliability, and standards throughout, with rigour signals substantially outnumbering velocity signals.
+
+**Run 3:** `rigour` ✓
 > Quote: "establishes robust modeling and testing standards"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes testing, quality, standards, and robust practices as core expectations, with no velocity language like 'fast-paced' or 'rapid delivery.'
-
-**Run 3:** `rigour`
-> Quote: "establish robust modeling and testing standards, and helps elevate technical best practices across the Analytics Engineering team"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes testing, standards, reliability, and technical excellence (6+ rigour signals) far more than speed or delivery pace (2-3 velocity signals).
+> Reasoning: The JD emphasizes robust testing, data quality practices, modeling standards, and technical best practices as core responsibilities rather than delivery speed or rapid iteration.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
-> Verified: ✓ found in JD
-> Reasoning: The data supports business analytics and decision-making but the JD contains no mention of financial reporting, regulatory compliance, or direct revenue impact.
-
-**Run 2:** `moderate`
-> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
-> Verified: ✓ found in JD
-> Reasoning: Business intelligence and operational reporting influence decision-making but lack explicit regulatory, compliance, or financial reporting requirements.
-
-**Run 3:** `moderate`
-> Quote: "This role transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights."
-> Verified: ✓ found in JD
-> Reasoning: Data errors affect business decision-making, but the JD contains no financial reporting, compliance, regulatory, or audit language that would indicate high risk.
-
-### collaboration_width
-
-**Run 1:** `1`
-> Quote: "Principal Analytics Engineer"
-> Verified: ✓ found in JD
-> Reasoning: Only the Principal Analytics Engineer is explicitly named as a distinct collaborating role; other stakeholders referenced generically as 'business stakeholders' rather than named functions.
-
-**Run 2:** `0`
-> Quote: "Collaborate with business stakeholders to understand workflows and metrics"
-> Verified: ✓ found in JD
-> Reasoning: The JD references only generic 'business stakeholders' without naming specific partner teams like Finance, Product, or Marketing.
-
-**Run 3:** `1`
-> Quote: "analysts"
-> Verified: ✓ found in JD
-> Reasoning: Only 'analysts' counts as a named role cohort; 'business partners' and 'business stakeholders' are generic terms that fall into the do-not-count category.
-
-⚠ **LLM inconsistency**: runs gave ['1', '0', '1']
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Guide and support the growth of other Analytics Engineers, helping them strengthen dbt, SQL, modeling, and problem solving skills"
-> Verified: ✓ found in JD
-> Reasoning: The presence of multiple Analytics Engineers and an established Principal Analytics Engineer role, combined with active growth initiatives and tool scaling, indicates a maturing data function beyond early stage.
-
-**Run 2:** `mid`
-> Quote: "Working closely with the Principal Analytics Engineer, this role accelerates the migration from legacy DOMO pipelines to a modern data stack"
-> Verified: ✓ found in JD
-> Reasoning: Multiple data roles, existing infrastructure being migrated, and platform scaling indicate an established data function in growth phase.
-
-**Run 3:** `mid`
-> Quote: "Working closely with the Principal Analytics Engineer, this role accelerates the migration from legacy DOMO pipelines to a modern data stack"
-> Verified: ✓ found in JD
-> Reasoning: The presence of a Principal Analytics Engineer, multiple Analytics Engineers, and existing legacy infrastructure indicates an established team modernizing rather than early-stage building.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Act as the team's dbt expert, including refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value"
-> Verified: ✓ found in JD
-> Reasoning: The specific technical depth about dbt optimization, performance troubleshooting, and feature evaluation can only come from someone who has done this work hands-on.
-
-**Run 2:** `hiring_manager`
-> Quote: "Act as the team's dbt expert, including refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value"
-> Verified: ✓ found in JD
-> Reasoning: Specific technical details about dbt work, transformation challenges, and advanced features indicate authorship by someone with hands-on experience in this role.
-
-**Run 3:** `hiring_manager`
-> Quote: "Act as the team's dbt expert, including refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value"
-> Verified: ✓ found in JD
-> Reasoning: The specific technical detail about dbt expertise, transformation refactoring, and performance optimization can only come from someone with hands-on experience in this role.
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
-> Verified: ✓ found in JD
-> Reasoning: The primary mission is building reliable data infrastructure and products for internal analytics consumers rather than external commercial, product, or financial stakeholders.
-
-**Run 2:** `internal_data`
-> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
-> Verified: ✓ found in JD
-> Reasoning: The role primarily builds data infrastructure and products for internal use by analysts and data platform consumers rather than external commercial, product, or finance stakeholders.
-
-**Run 3:** `internal_data`
-> Quote: "establishes robust modeling and testing standards, and helps elevate technical best practices across the Analytics Engineering team"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary focus is building analytics engineering infrastructure and standards for the data function itself, even though it engages with business users to inform requirements.
-
-### autonomy_level
-
-**Run 1:** `mixed`
-> Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic direction-setting over analytics engineering standards and practices with significant hands-on execution of complex modeling and transformation work.
-
-**Run 2:** `mixed`
-> Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of analytics engineering practices (shaping approaches, mentoring) with execution on the migration project directed by the Principal Analytics Engineer.
-
-**Run 3:** `mixed`
-> Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of technical domain practices (shaping standards, guiding team growth) with execution of technical work (designing and maintaining models, supporting teams).
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "exploring, evaluating, and introducing advanced dbt features where they add clear value"
-> Reasoning: No AI tool usage or infrastructure-building signals; standard data engineering work.
-
-**Run 2:** `none` ✓
-> Quote: "support analytics and decision‑making across the organization"
-> Reasoning: No signals of AI tool usage or building AI infrastructure; standard data transformation and analytics work.
-
-**Run 3:** `none` ✓
-> Quote: "refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features"
-> Reasoning: Standard analytics engineering work around dbt and data transformation; no AI tooling, AI-assisted coding, or AI-ready infrastructure mentioned.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "establishes robust modeling and testing standards"
-> Reasoning: Candidate owns quality practices through establishment of testing and modeling standards.
-
-**Run 2:** `responsibility` ✓
-> Quote: "establishes robust modeling and testing standards"
-> Reasoning: Ownership verb 'establishes' paired with testing standards signals responsibility for quality practice.
-
-**Run 3:** `responsibility` ✓
-> Quote: "establishes robust modeling and testing standards"
-> Reasoning: Ownership verb 'establishes' paired with 'testing' indicates candidate owns the quality practice and standard-setting.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
-> Reasoning: Emphasis on operational reliability and stakeholder confidence in data quality, but framed around delivery and decision-making rather than compliance.
+> Quote: "reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
+> Verified: ✓ found in JD
+> Reasoning: Data errors would affect business decisions but there are no signals of financial reporting, compliance, or regulatory consequences.
 
 **Run 2:** `moderate` ✓
-> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use"
-> Reasoning: Operational reliability and trustworthiness emphasized, but framed as delivery enablement rather than compliance or regulatory driver.
+> Quote: "This role transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights."
+> Verified: ✓ found in JD
+> Reasoning: Data errors affect business decisions for a manufacturing company without regulatory or compliance consequences; this is operational/BI work, not financial reporting or compliance-critical.
 
 **Run 3:** `moderate` ✓
-> Quote: "transforms complex, raw data into reliable, well-structured data products that analysts and business partners can confidently use"
-> Reasoning: Operational reliability and stakeholder confidence framing (robust, reliable, confident use) without compliance or regulatory language.
+> Quote: "support analytics and decision‑making across the organization"
+> Verified: ✓ found in JD
+> Reasoning: The role supports internal business decision-making through analytics infrastructure without explicit regulatory, compliance, or financial reporting consequences.
 
+### collaboration_width
+**Manual:** `1`
+
+**Run 1:** `0` ✗
+> Quote: "Collaborate with business stakeholders"
+> Verified: ✓ found in JD
+> Reasoning: Collaborators are described generically as 'business stakeholders' with no explicitly named functions like Finance, Product, or Operations identified.
+
+**Run 2:** `0` ✗
+> Quote: "No distinct partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Collaboration is described with generic 'business stakeholders' and work involves the role holder's own Analytics Engineering team; no explicitly named partner functions are listed.
+
+**Run 3:** `2` ✗
+> Quote: "Principal Analytics Engineer; analysts"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names two distinct collaboration partners: the Principal Analytics Engineer (explicit collaboration) and analysts as a named role cohort consuming data products.
+
+⚠ **Disagreement**: manual=`1` vs LLM majority=`0`
+
+⚠ **LLM inconsistency**: runs gave ['0', '0', '2']
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales"
+> Verified: ✓ found in JD
+> Reasoning: An existing data function is scaling and refining practices; multiple analytics roles exist and are being developed, indicating a maturing but not yet fully established platform.
+
+**Run 2:** `mid` ✓
+> Quote: "Working closely with the Principal Analytics Engineer, this role accelerates the migration from legacy DOMO pipelines to a modern data stack, establishes robust modeling and testing standards, and helps elevate technical best practices across the Analytics Engineering team."
+> Verified: ✓ found in JD
+> Reasoning: Multiple Analytics Engineer roles exist (Principal, Senior, others to guide), legacy infrastructure is being modernized rather than built from zero, and the team is formalizing standards—indicative of a growing mid-stage team.
+
+**Run 3:** `mid` ✓
+> Quote: "Accelerate the migration from legacy DOMO pipelines to the modern data platform"
+> Verified: ✓ found in JD
+> Reasoning: The team has existing infrastructure and multiple analytics engineers, with modernization underway, indicating mid-stage growth rather than early-stage build or mature at-scale operation.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `hiring_manager` ✗
+> Quote: "Act as the team's dbt expert, including refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain technical specificity (multi-domain dbt environments, DOMO migration context, transformation optimization) that reflects real domain knowledge.
+
+**Run 2:** `hiring_manager` ✗
+> Quote: "Act as the team's dbt expert, including refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities contain specific technical detail about dbt expertise, performance optimization, and advanced feature evaluation that only someone who performs this work would articulate.
+
+**Run 3:** `hiring_manager` ✗
+> Quote: "Act as the team's dbt expert, including refactoring complex transformations, resolving performance issues, and exploring, evaluating, and introducing advanced dbt features where they add clear value"
+> Verified: ✓ found in JD
+> Reasoning: The specific technical context around dbt expertise, DOMO legacy migration, performance optimization, and advanced feature evaluation reflects hands-on knowledge of the actual work.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "The Senior Analytics Engineer plays a critical role in shaping and scaling the data foundations that support analytics and decision‑making across the organization"
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is building and scaling data infrastructure and modeling standards; business collaboration is secondary to understanding requirements.
+
+**Run 2:** `internal_data` ✓
+> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is building data infrastructure and models for internal analysts and the data function itself, not serving commercial, product, or finance teams.
+
+**Run 3:** `internal_data` ✓
+> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
+> Verified: ✓ found in JD
+> Reasoning: The primary mission is building and improving the analytics data platform that serves internal analysts and business stakeholders, not a revenue, product, or finance function.
+
+### autonomy_level
+**Manual:** `mixed`
+
+**Run 1:** `execution` ✗
+> Quote: "Accelerate the migration from legacy DOMO pipelines to the modern data platform in close collaboration with the Principal Analytics Engineer"
+> Verified: ✓ found in JD
+> Reasoning: The role executes a defined migration strategy and supports the Principal Analytics Engineer's direction rather than setting strategic priorities independently.
+
+**Run 2:** `mixed` ✓
+> Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic direction-setting (shaping approaches, establishing standards, guiding team growth) with execution (designing, building, and maintaining dbt models).
+
+**Run 3:** `mixed` ✓
+> Quote: "Help shape and refine shared approaches to data modeling, documentation, dbt project structure, and overall transformation practices as the platform scales"
+> Verified: ✓ found in JD
+> Reasoning: The role genuinely combines strategic direction-setting (shaping best practices, guiding team growth, establishing standards) with execution-level delivery (designing, building, and maintaining dbt models).
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'mixed']
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `ai_user` ✗
+> Quote: "Support the team in using AI powered IDEs, coding assistants, agents, and automation tools to improve development workflows and productivity"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use and advocate for AI-powered development tools to accelerate their own and the team's productivity.
+
+**Run 2:** `ai_user` ✗
+> Quote: "Support the team in using AI powered IDEs, coding assistants, agents, and automation tools to improve development workflows and productivity"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use and support others' use of AI-powered coding assistants to accelerate development workflows.
+
+**Run 3:** `ai_user` ✗
+> Quote: "Support the team in using AI powered IDEs, coding assistants, agents, and automation tools to improve development workflows and productivity"
+> Verified: ✓ found in JD
+> Reasoning: Candidates are expected to use AI coding tools and assistants to improve personal and team development productivity, not to build AI-enabled data infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "establishes robust modeling and testing standards"
+> Verified: ✓ found in JD
+> Reasoning: The role summary uses the ownership verb 'establishes' for testing and modeling standards, indicating the candidate owns this practice.
+
+**Run 2:** `responsibility` ✗
+> Quote: "establish robust modeling and testing standards"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Testing standards are framed as an action the candidate owns and defines through the action verb 'establish,' indicating accountability for the testing practice.
+
+**Run 3:** `tool_listed` ✗
+> Quote: "Experience working with data quality practices, including tests, validations, and investigating data issues"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality appear as required experience and part of platform foundation but are not framed as an explicit owned responsibility with accountability verbs in the responsibilities section.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+⚠ **LLM inconsistency**: runs gave ['responsibility', 'responsibility', 'tool_listed']
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and data quality are emphasized as operational capabilities rather than compliance or risk-prevention concerns.
+
+**Run 2:** `moderate` ✗
+> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use to drive insights"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and confidence in data are emphasized throughout, reflecting concern about preventing bad data reaching stakeholders, but without explicit compliance, regulatory, or audit language.
+
+**Run 3:** `moderate` ✗
+> Quote: "transforms complex, raw data into reliable, well‑structured data products that analysts and business partners can confidently use"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes reliability, trust, and data quality as capability and product goals rather than as risk prevention or compliance-driven accountability.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

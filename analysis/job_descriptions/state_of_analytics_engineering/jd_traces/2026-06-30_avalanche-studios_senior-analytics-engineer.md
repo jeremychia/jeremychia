@@ -45,168 +45,211 @@ Application: Submit CV in English via their careers portal. No relocation assist
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 1 | 1 | 1 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | recruiter | mixed | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | recruiter | recruiter | mixed | recruiter | 33% | ✓ |
+| stakeholder_orientation | product | internal_data | internal_data | internal_data | 100% | ✗ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | responsibility | absent | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "ensuring 'accuracy, compliance, scalability, and long-term usability.'"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, compliance, reliability, and governance throughout, with no velocity or fast-paced language present.
+> Reasoning: Responsibilities emphasize data accuracy, compliance, reliability, code reviews, and performance monitoring with no counterbalancing velocity signals.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "ensuring accuracy, compliance, scalability, and long-term usability"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities emphasize correctness, compliance, scalability, and reliability with no velocity-oriented language, indicating a rigour-focused orientation.
+> Reasoning: Multiple rigour signals (accuracy, compliance, scalability, high availability, code reviews) in responsibilities with no velocity language anywhere in the JD.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "ensuring 'accuracy, compliance, scalability, and long-term usability.'"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, compliance, scalability, and reliability with no mention of speed, iteration, or shipping velocity.
+> Reasoning: Multiple rigour signals (accuracy, compliance, monitoring for performance, code reviews) dominate with no velocity language present.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
+> Quote: "ensuring 'accuracy, compliance, scalability, and long-term usability.'"
+> Verified: ✓ found in JD
+> Reasoning: Gaming analytics affects business decisions and involves compliance concerns (likely GDPR for user profiles) but lacks the financial reporting or regulatory risk of high-risk sectors.
+
+**Run 2:** `moderate` ✓
 > Quote: "design data models capturing gaming KPIs and user profiles"
 > Verified: ✓ found in JD
-> Reasoning: The role operates in gaming analytics supporting business decisions, not regulatory, financial reporting, or compliance-critical domains.
+> Reasoning: Gaming analytics role without financial reporting, regulatory, or compliance language suggests data errors affect business decisions but not regulatory or financial reporting.
 
-**Run 2:** `moderate`
-> Quote: "design data models capturing gaming KPIs and user profiles"
+**Run 3:** `moderate` ✓
+> Quote: "accuracy, compliance, scalability, and long-term usability"
 > Verified: ✓ found in JD
-> Reasoning: Gaming analytics informs business decisions but does not involve financial reporting, regulatory compliance, or mission-critical systems, placing this in moderate risk.
-
-**Run 3:** `moderate`
-> Quote: "design data models capturing gaming KPIs and user profiles"
-> Verified: ✓ found in JD
-> Reasoning: Gaming analytics affect business decisions about player engagement and game design, but there is no explicit mention of financial reporting, regulatory compliance, or audit requirements.
+> Reasoning: Gaming analytics affects business decisions about player behavior and monetization but not financial reporting or regulatory compliance; compliance here refers to data governance, not regulatory exposure.
 
 ### collaboration_width
+**Manual:** `1`
 
-**Run 1:** `1`
-> Quote: "collaborate with data scientists"
-> Verified: ✓ found in JD
-> Reasoning: Only data scientists are explicitly named as a collaboration partner; other references like 'multiple teams' appear in requirements context, not as named collaborators.
-
-**Run 2:** `1`
+**Run 1:** `1` ✓
 > Quote: "data scientists"
 > Verified: ✓ found in JD
-> Reasoning: Only one explicitly named partner function (data scientists) is identified in the JD.
+> Reasoning: Only data scientists are explicitly named as a collaboration partner in the responsibilities section.
 
-**Run 3:** `1`
+**Run 2:** `1` ✓
 > Quote: "collaborate with data scientists"
 > Verified: ✓ found in JD
-> Reasoning: Only data scientists are explicitly named as a collaboration partner; other references are generic.
+> Reasoning: Only 'data scientists' is explicitly named as a partner function; no other named teams, departments, or functions mentioned.
+
+**Run 3:** `1` ✓
+> Quote: "collaborate with data scientists"
+> Verified: ✓ found in JD
+> Reasoning: Only one named partner function explicitly identified in the responsibilities.
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
-> Quote: "maintaining documentation, monitoring pipelines for 'high availability and performance,' conducting code reviews"
+**Run 1:** `mid` ✓
+> Quote: "monitoring pipelines for 'high availability and performance,' conducting code reviews"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities assume existing infrastructure, pipelines, and documentation in place, with multiple data roles present, but no signals of either greenfield establishment or mature multi-team platform scale.
+> Reasoning: The team has operational infrastructure with active maintenance and governance (code reviews, documentation) but no signals of multiple specialized sub-teams or extreme scale.
 
-**Run 2:** `mid`
-> Quote: "collaborate with data scientists to provide reliable datasets"
+**Run 2:** `mid` ✓
+> Quote: "The role focuses on data architecture development"
 > Verified: ✓ found in JD
-> Reasoning: The existence of data scientists indicates an established data function that is expanding and hiring senior talent to develop and improve the data architecture.
+> Reasoning: Responsibilities reference existing infrastructure (monitoring pipelines, maintaining documentation) and named tools (DBT, GCP) in use, suggesting evolution of an established function rather than greenfield build.
 
-**Run 3:** `mid`
+**Run 3:** `mid` ✓
 > Quote: "monitoring pipelines for 'high availability and performance,'"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on maintaining and monitoring existing pipelines indicates established infrastructure beyond greenfield, but without explicit signals of large-scale specialization or multiple sub-teams.
+> Reasoning: Existing infrastructure (pipelines, DBT tools) is established and being maintained; the role involves extending and operating existing systems rather than building from zero or managing a mature large-scale team.
 
 ### jd_authorship
+**Manual:** `recruiter`
 
-**Run 1:** `recruiter`
-> Quote: "collaborate with data scientists to provide reliable datasets"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities are predominantly generic action-verb boilerplate typical of recruiter templates, with minimal technical specificity about tools, scale, or methodology.
-
-**Run 2:** `recruiter`
-> Quote: "maintaining documentation, monitoring pipelines for high availability and performance, conducting code reviews, and staying current with industry trends"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The accumulation of generic action verbs without specific application context to this role's actual work indicates recruiter authorship.
-
-**Run 3:** `mixed`
-> Quote: "design data models capturing gaming KPIs and user profiles while ensuring 'accuracy, compliance, scalability, and long-term usability.'"
-> Verified: ✓ found in JD
-> Reasoning: Domain specificity about gaming KPIs and scale context mix with generic quality language, suggesting both hiring manager and recruiter input.
-
-⚠ **LLM inconsistency**: runs gave ['recruiter', 'recruiter', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "collaborate with data scientists to provide reliable datasets"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building reliable data infrastructure and supporting internal data consumers (data scientists and analytics users), not external commercial or product teams.
-
-**Run 2:** `internal_data`
-> Quote: "collaborate with data scientists to provide reliable datasets"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is serving the data function itself by building reliable datasets and data models for data scientists and analytics consumers.
-
-**Run 3:** `internal_data`
-> Quote: "collaborate with data scientists to provide reliable datasets"
-> Verified: ✓ found in JD
-> Reasoning: The primary audience is data scientists (other data team members), with responsibilities focused on building data infrastructure and models for internal consumption.
-
-### autonomy_level
-
-**Run 1:** `execution`
+**Run 1:** `recruiter` ✓
 > Quote: "extract, clean, and transform data from various sources"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around delivery-focused execution tasks within defined scope rather than strategic direction-setting or defining the analytics function.
+> Reasoning: Responsibilities use generic action verbs ('extract, clean, transform', 'maintaining', 'monitoring') without specific technical context about actual systems, data models, or problems.
 
-**Run 2:** `execution`
-> Quote: "design data models capturing gaming KPIs and user profiles"
-> Verified: ✓ found in JD
-> Reasoning: While the role involves architectural design work, it executes within pre-defined business requirements (gaming KPIs) set by product and business teams.
+**Run 2:** `mixed` ✗
+> Quote: "design data models capturing gaming KPIs and user profiles while ensuring accuracy, compliance, scalability, and long-term usability"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Combines specific technical context (gaming domain, data modeling) with generic phrasing typical of recruiter templates (extract/clean/transform boilerplate).
 
-**Run 3:** `execution`
-> Quote: "design data models capturing gaming KPIs"
+**Run 3:** `recruiter` ✓
+> Quote: "maintaining documentation, monitoring pipelines for 'high availability and performance,' conducting code reviews, and staying current with industry trends."
 > Verified: ✓ found in JD
-> Reasoning: The role executes against pre-defined KPI requirements rather than setting analytics strategy or defining what should be measured.
+> Reasoning: Responsibilities are predominantly generic action verbs (maintain, monitor, conduct, staying current) with minimal technical specificity about how the work is done.
+
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
+
+### stakeholder_orientation
+**Manual:** `product`
+
+**Run 1:** `internal_data` ✗
+> Quote: "collaborate with data scientists to provide reliable datasets"
+> Verified: ✓ found in JD
+> Reasoning: The role primarily serves the data platform and data consumers (data scientists, analytics infrastructure) rather than commercial, product, or finance stakeholders.
+
+**Run 2:** `internal_data` ✗
+> Quote: "collaborate with data scientists to provide reliable datasets"
+> Verified: ✓ found in JD
+> Reasoning: Role serves the data team and downstream analytics consumers through infrastructure and modeling work, not directly serving commercial, product, or finance functions.
+
+**Run 3:** `internal_data` ✗
+> Quote: "collaborate with data scientists to provide reliable datasets"
+> Verified: ✓ found in JD
+> Reasoning: The primary audience is the internal data function (data scientists and analysts) who consume the data models and infrastructure built by this role.
+
+⚠ **Disagreement**: manual=`product` vs LLM majority=`internal_data`
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "extract, clean, and transform data from various sources"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities are framed around delivery of defined work (extract, transform, maintain, monitor) within an existing data function rather than setting strategy or direction.
+
+**Run 2:** `execution` ✓
+> Quote: "extract, clean, and transform data from various sources"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use execution-oriented verbs (extract, transform, maintain, monitor) with no strategic direction-setting language or ownership of defining the analytics function.
+
+**Run 3:** `execution` ✓
+> Quote: "collaborate with data scientists to provide reliable datasets"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as supporting and delivering for data scientists with bounded design work on models, rather than setting analytics direction or strategy.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "extract, clean, and transform data from various sources; collaborate with data scientists"
-> Reasoning: Standard data engineering responsibilities with no AI tool usage signals or AI infrastructure-building responsibilities.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "extract, clean, and transform data from various sources; collaborate with data scientists to provide reliable datasets"
-> Reasoning: Phrases describe generic data engineering without AI tool or infrastructure signals.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI-assisted coding tools, GenAI data infrastructure, or AI-enabled workflows; generic interest in challenges does not count.
 
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, AI coding assistance, or building AI-ready infrastructure anywhere in the JD.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI-assisted development, or building data infrastructure for AI systems.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "collaborate with data scientists to provide reliable datasets"
-> Reasoning: Quality and reliability are outcomes but no explicit testing ownership or quality practice responsibility language.
+**Manual:** ``
 
-**Run 2:** `absent` ✓
-> Quote: "No quality ownership verbs (own, ensure, define, implement, establish) paired with testing or data contracts"
-> Reasoning: Work framed as delivery/execution with no testing responsibility or tool stack signal.
+**Run 1:** `absent` ✗
+> Quote: "ensuring 'accuracy, compliance, scalability, and long-term usability.'"
+> Verified: ✓ found in JD
+> Reasoning: While data quality outcomes are valued, no testing framework, data quality tools, observability practice, or explicit testing responsibility is mentioned.
 
+**Run 2:** `responsibility` ✗
+> Quote: "ensuring accuracy, compliance, scalability, and long-term usability"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Data quality (accuracy) is explicitly framed as a responsibility the candidate must own through the action verb 'ensuring', though no specific testing frameworks are named.
+
+**Run 3:** `absent` ✗
+> Quote: "ensuring 'accuracy, compliance, scalability, and long-term usability.'"
+> Verified: ✓ found in JD
+> Reasoning: Quality is framed as a design principle and goal, not as an owned testing/data quality framework responsibility; no testing tools or practices are named.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'responsibility', 'absent']
 
 ### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Rigour signals dominate — accuracy, compliance, scalability, high availability, monitoring"
-> Reasoning: Operational reliability concerns (monitoring, high availability, SLOs) dominate; compliance framed around data usability, not regulatory/audit.
+**Manual:** ``
 
-**Run 2:** `high` ✗
-> Quote: "accuracy, compliance, scalability, and long-term usability; rigour signals dominate with zero velocity phrases"
-> Reasoning: Compliance and regulatory trustworthiness frame the role as primary constraint, not operational reliability fear.
+**Run 1:** `moderate` ✗
+> Quote: "ensuring 'accuracy, compliance, scalability, and long-term usability.'"
+> Verified: ✓ found in JD
+> Reasoning: Compliance and reliability are concerns but secondary to delivery framing; the role is not primarily organized around preventing regulatory failures or stakeholder trust breaches.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'high']
+**Run 2:** `moderate` ✗
+> Quote: "monitoring pipelines for high availability and performance"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Operational reliability and data accuracy are concerns secondary to capability delivery, with no compliance or stakeholder-trust dominance to indicate high risk framing.
+
+**Run 3:** `moderate` ✗
+> Quote: "monitoring pipelines for 'high availability and performance,'"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability is a concern (preventing pipeline outages and performance issues) but compliance and risk mitigation are secondary to delivery; the fear is infrastructure failure, not regulatory/compliance exposure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

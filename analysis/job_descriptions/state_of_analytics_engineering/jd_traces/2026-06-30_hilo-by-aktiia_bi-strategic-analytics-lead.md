@@ -87,183 +87,215 @@ Hilo by Aktiia addresses high blood pressure, which causes 18M deaths each year.
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 6 | 6 | 6 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | internal_data | mixed | mixed | 33% |
-| autonomy_level | strategic | mixed | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
+| collaboration_width | 5 | 6 | 6 | 5 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | recruiter | mixed | mixed | 33% | ✓ |
+| stakeholder_orientation | mixed | commercial | mixed | mixed | 33% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Maintain high standards for data quality and consistency"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality, consistency, and governance frameworks as core expectations, with no velocity signals present.
+> Reasoning: Rigour signals (quality, governance, consistency, standards) substantially outweigh the single mention of 'fast-paced environments' in requirements.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
+> Quote: "Establish governance frameworks and best practices"
+> Verified: ✓ found in JD
+> Reasoning: The core responsibilities emphasize governance, quality standards, and consistency frameworks rather than speed or iteration.
+
+**Run 3:** `rigour` ✓
 > Quote: "Maintain high standards for data quality and consistency"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality standards, governance frameworks, and consistency across all sections, with no velocity or shipping-focused language present.
-
-**Run 3:** `rigour`
-> Quote: "Maintain high standards for data quality and consistency"
-> Verified: ✓ found in JD
-> Reasoning: The core responsibilities emphasize governance, data quality, and framework establishment as central expectations, with speed or iteration referenced only as context in the requirements section.
+> Reasoning: The responsibilities emphasize governance frameworks, quality standards, and best practices with no velocity language, indicating a rigour-oriented role.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `moderate`
-> Quote: "Analyze customer acquisition, engagement, retention, and monetization"
-> Verified: ✓ found in JD
-> Reasoning: The role focuses on commercial analytics and business decisions affecting strategy, but does not involve financial reporting, compliance, or regulatory functions.
-
-**Run 2:** `moderate`
+**Run 1:** `moderate` ✗
 > Quote: "Deliver insights informing commercial strategy and resource allocation"
 > Verified: ✓ found in JD
-> Reasoning: While the company operates in regulated healthcare, the JD focuses on commercial and operational analytics rather than explicitly requiring compliance, regulatory, or financial reporting responsibilities.
+> Reasoning: Healthcare company context implies higher baseline risk, but JD lacks explicit compliance, regulatory, or financial reporting language, focusing instead on business intelligence.
 
-**Run 3:** `moderate`
+**Run 2:** `moderate` ✗
 > Quote: "Analyze customer acquisition, engagement, retention, and monetization"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities focus on business analytics for commercial metrics rather than clinical, regulatory, or financial reporting despite operating in a healthcare company.
+> Reasoning: The role focuses on commercial and operational analytics rather than financial reporting, compliance, or regulatory requirements.
+
+**Run 3:** `moderate` ✗
+> Quote: "Analyze customer acquisition, engagement, retention, and monetization"
+> Verified: ✓ found in JD
+> Reasoning: While the healthcare sector might imply high risk, this JD focuses on commercial analytics and business metrics rather than regulatory, compliance, or financial reporting work.
+
+⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
 ### collaboration_width
+**Manual:** `5`
 
-**Run 1:** `6`
+**Run 1:** `6` ✗
 > Quote: "Finance; Product; Commercial; Clinical; Leadership; Data Engineering"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Six distinct named teams are explicitly identified as collaboration partners across the responsibilities sections.
+> Verified: ✓ found in JD
+> Reasoning: JD explicitly names six distinct partner functions across responsibilities and collaboration statements.
 
-**Run 2:** `6`
-> Quote: "Finance; Product; Commercial; Clinical; Leadership teams; Data Engineering"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Six distinct named teams are explicitly referenced as partners: Finance, Product, Commercial, Clinical, Leadership, and Data Engineering.
+**Run 2:** `6` ✗
+> Quote: "Finance; Product; Commercial; Clinical; Leadership; Data Engineering"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names six distinct partner functions in the responsibilities section.
 
-**Run 3:** `6`
-> Quote: "Act as analytics partner to Finance, Product, Commercial, Clinical, and Leadership teams; Partner with Data Engineering on data architecture"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Six distinct named teams are identified as collaboration partners in the core responsibilities.
+**Run 3:** `5` ✓
+> Quote: "Finance, Product, Commercial, Clinical, and Leadership teams"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names five distinct partner teams/functions that the role will serve as an analytics partner to.
+
+⚠ **Disagreement**: manual=`5` vs LLM majority=`6`
+
+⚠ **LLM inconsistency**: runs gave ['6', '6', '5']
 
 ### data_team_maturity
+**Manual:** `mid`
 
-**Run 1:** `mid`
+**Run 1:** `mid` ✓
 > Quote: "Own and evolve Hilo's Metabase platform as the central reporting source"
 > Verified: ✓ found in JD
-> Reasoning: The JD references an existing Metabase platform and Data Engineering team while emphasizing establishment of governance frameworks, indicating a growing but not yet mature function.
+> Reasoning: Existing named tool and platform suggest established function being evolved and scaled, not greenfield, but no indication of multiple specialized sub-teams.
 
-**Run 2:** `mid`
+**Run 2:** `mid` ✓
 > Quote: "Own and evolve Hilo's Metabase platform as the central reporting source"
 > Verified: ✓ found in JD
-> Reasoning: The presence of an established BI platform (Metabase), an existing Data Engineering team, and the focus on evolution rather than creation indicates a mid-stage data function.
+> Reasoning: The JD references an existing named BI platform to be evolved, indicating established data infrastructure rather than greenfield work.
 
-**Run 3:** `mid`
+**Run 3:** `mid` ✓
 > Quote: "Own and evolve Hilo's Metabase platform as the central reporting source"
 > Verified: ✓ found in JD
-> Reasoning: The platform and data engineering function already exist; the role focuses on evolving and improving existing infrastructure rather than building from zero.
+> Reasoning: The existing Metabase deployment, partnership with data engineering, and focus on scaling adoption indicate an established but growing data function.
 
 ### jd_authorship
+**Manual:** `mixed`
 
-**Run 1:** `mixed`
+**Run 1:** `recruiter` ✗
+> Quote: "Define and execute the BI roadmap aligned with company objectives"
+> Verified: ✓ found in JD
+> Reasoning: Generic action verbs and absence of specific operational context (scale, constraints, implementation challenges) despite named tools in requirements list.
+
+**Run 2:** `mixed` ✓
 > Quote: "Own and evolve Hilo's Metabase platform as the central reporting source"
 > Verified: ✓ found in JD
-> Reasoning: The role contains specific technical context (Metabase platform, BI roadmap, cloud data warehouses) mixed with generic boilerplate language like 'deliver actionable insights' and 'collaborate with business leaders'.
+> Reasoning: While most responsibilities use generic action verbs, the specific mention of maintaining an existing named platform suggests some hiring manager input, though generic boilerplate is also present.
 
-**Run 2:** `mixed`
-> Quote: "Own and evolve Hilo's Metabase platform as the central reporting source"
+**Run 3:** `mixed` ✓
+> Quote: "Own and evolve Hilo's Metabase platform as the central reporting source; Define and execute the BI roadmap aligned with company objectives"
 > Verified: ✓ found in JD
-> Reasoning: The JD includes specific tool context (Metabase as central reporting source) and named business metrics indicating hiring manager input, balanced against significant generic boilerplate language.
+> Reasoning: The JD contains specific platform and strategy ownership responsibilities alongside generic collaboration verbs like 'collaborate with business leaders' and 'champion data-driven culture'.
 
-**Run 3:** `recruiter`
-> Quote: "Design and develop dashboards, KPI frameworks, and self-service analytics capabilities; Deliver actionable insights supporting operational and strategic decisions; Collaborate with business leaders on analytical opportunities; Drive adoption of reporting tools across the organization"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities section uses generic action verbs and boilerplate phrasing typical of recruiter-written JDs, lacking technical context about actual day-to-day work.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'mixed']
 
 ### stakeholder_orientation
+**Manual:** `mixed`
 
-**Run 1:** `internal_data`
-> Quote: "Own and evolve Hilo's Metabase platform as the central reporting source"
+**Run 1:** `commercial` ✗
+> Quote: "Analyze customer acquisition, engagement, retention, and monetization"
 > Verified: ✓ found in JD
-> Reasoning: The bulk of responsibilities emphasize building and maintaining BI infrastructure and self-serve analytics for the data function, with commercial and finance analytics as applications of that platform.
+> Reasoning: Primary responsibilities emphasize customer and revenue analytics over financial reporting or internal data platform work.
 
-**Run 2:** `mixed`
+**Run 2:** `mixed` ✓
 > Quote: "Act as analytics partner to Finance, Product, Commercial, Clinical, and Leadership teams"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly serves multiple distinct stakeholder audiences—Finance, Product, Commercial—with genuinely equal responsibilities across commercial, strategic, and internal BI platform domains.
+> Reasoning: The role is positioned equally as a strategic partner to multiple business functions with no dominant stakeholder orientation.
 
-**Run 3:** `mixed`
-> Quote: "Analyze customer acquisition, engagement, retention, and monetization; Deliver insights informing commercial strategy and resource allocation; Support leadership with forecasting and scenario modeling"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Responsibilities explicitly emphasize both commercial stakeholders (customer metrics and commercial strategy) and finance stakeholders (forecasting) with equal weight across the core responsibilities.
+**Run 3:** `mixed` ✓
+> Quote: "Act as analytics partner to Finance, Product, Commercial, Clinical, and Leadership teams"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves multiple distinct stakeholder categories (finance, commercial, product, clinical, strategic leadership) with responsibilities split across forecasting, customer analytics, and platform ownership.
 
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['commercial', 'mixed', 'mixed']
 
 ### autonomy_level
+**Manual:** `strategic`
 
-**Run 1:** `strategic`
+**Run 1:** `strategic` ✓
 > Quote: "Define and execute the BI roadmap aligned with company objectives"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize defining direction, establishing governance frameworks, owning the platform strategy, and championing organizational data culture.
+> Reasoning: Role is framed around setting direction and shaping the analytics function through strategic verbs: define, own, establish, champion.
 
-**Run 2:** `mixed`
+**Run 2:** `strategic` ✓
 > Quote: "Define and execute the BI roadmap aligned with company objectives"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership verbs ('define', 'own', 'establish') for direction-setting with execution verbs ('design', 'deliver', 'drive adoption') for hands-on delivery to business teams.
+> Reasoning: The role emphasizes defining strategy and owning the BI function roadmap rather than executing work scoped by others.
 
-**Run 3:** `mixed`
-> Quote: "Define and execute the BI roadmap aligned with company objectives; Own and evolve Hilo's Metabase platform as the central reporting source; Establish governance frameworks and best practices"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role combines strategic direction-setting responsibilities (defining strategy, owning platforms, establishing governance) with execution responsibilities (designing dashboards, delivering insights, collaborating with teams).
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
+**Run 3:** `strategic` ✓
+> Quote: "Define and execute the BI roadmap aligned with company objectives"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around defining analytics strategy, establishing governance, owning platform evolution, and championing culture—all strategic direction-setting verbs.
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "Own and evolve Hilo's Metabase platform as the central reporting source; Partner with Data Engineering on data architecture"
-> Reasoning: Responsibilities center on BI platform management and data architecture partnership rather than AI tool usage or infrastructure building.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices; Trusted, accurate, consistent reporting"
-> Reasoning: No AI tool usage or infrastructure-building responsibility mentioned.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI coding tools, AI/ML pipelines, or AI-assisted development anywhere in the JD.
 
-**Run 3:** `none` ✓
-> Quote: "No AI tool or infrastructure mentions across responsibilities"
-> Reasoning: No signals of AI coding tools usage, GenAI capabilities, or AI-ready infrastructure building.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectation for the candidate to use or build AI infrastructure.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI tools, coding assistants, ML capabilities, or AI-ready infrastructure expected from the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices; Trusted, accurate, consistent reporting"
-> Reasoning: Candidate owns quality standards, governance frameworks, and reporting accuracy with explicit responsibility verbs.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices"
-> Reasoning: Candidate owns quality practice through establishment of governance frameworks and data quality standards.
+**Run 1:** `responsibility` ✗
+> Quote: "Maintain high standards for data quality and consistency"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as a core responsibility the candidate owns, though specific testing frameworks or data contracts are not explicitly named.
 
-**Run 3:** `responsibility` ✓
-> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices"
-> Reasoning: Candidate explicitly owns quality and governance practice through establishment and maintenance of frameworks.
+**Run 2:** `responsibility` ✗
+> Quote: "Maintain high standards for data quality and consistency"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as a core responsibility to maintain, though without explicit testing tool implementation details.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Maintain high standards for data quality and consistency"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as an owned responsibility through action verbs ('maintain', 'establish') in the core responsibilities section, not as a tool listed in requirements.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `high` ✓
-> Quote: "Hilo by Aktiia addresses high blood pressure, which causes 18M deaths each year; Act as analytics partner to Finance, Product, Commercial, Clinical, and Leadership teams"
-> Reasoning: Regulated healthcare context with clinical partnership positions data accuracy and trustworthiness as mission-critical to outcomes.
+**Manual:** ``
 
-**Run 2:** `high` ✓
-> Quote: "Maintain high standards for data quality and consistency; Establish governance frameworks and best practices; Trusted, accurate, consistent reporting"
-> Reasoning: Regulated healthcare domain (clinical partnership, financial reporting) combined with explicit trust and governance language indicates high loss-aversion framing.
+**Run 1:** `moderate` ✗
+> Quote: "Trusted, accurate, consistent reporting"
+> Verified: ✓ found in JD
+> Reasoning: Accuracy and stakeholder trust are important concerns, but secondary to primary framing of delivering insights and defining strategy; no compliance or regulatory risk language present.
 
-**Run 3:** `high` ✓
-> Quote: "Trusted, accurate, consistent reporting; regulated healthcare domain (blood pressure monitoring); Clinical team partnership"
-> Reasoning: Regulated medical device context with clinical stakeholders drives high emphasis on trustworthiness, accuracy, and compliance over speed.
+**Run 2:** `moderate` ✗
+> Quote: "Trusted, accurate, consistent reporting"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and stakeholder trust are emphasized as central concerns, indicating moderate loss-aversion around operational reliability rather than regulatory compliance.
 
+**Run 3:** `moderate` ✗
+> Quote: "Trusted, accurate, consistent reporting"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and organizational trust in reporting are emphasized as success metrics, reflecting concern about bad data reaching decision-makers, but without regulatory or compliance risk language.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

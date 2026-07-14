@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Sisu Group
 
+**URL:** https://sisugroup.teamtailor.com/jobs/6120204-senior-analytics-engineer
 **Location:** Tallinn
 **Date Posted:** 2026-06-27
 
@@ -53,182 +54,211 @@ Contact: Ginta Baranauskaite, TA & People Specialist
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 4 | 4 | 4 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | internal_data | commercial | finance | 0% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 4 | 4 | 4 | 100% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | hiring_manager | hiring_manager | recruiter | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | commercial | 33% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Implement validation processes to guarantee data accuracy and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly emphasizes validation, guarantees, and reliability across multiple responsibility items, with no velocity signals like rapid iteration or shipping pace.
+> Reasoning: The responsibilities emphasize correctness, accuracy, and reliability through validation processes and robust systems rather than speed or iteration velocity.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Implement validation processes to guarantee data accuracy and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data accuracy, reliability, and validation—core rigour concerns—without corresponding velocity language.
+> Reasoning: The responsibilities emphasize robust solutions, validation processes, and guaranteeing accuracy rather than speed or iteration pace, establishing a rigour orientation.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Implement validation processes to guarantee data accuracy and reliability"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize accuracy, validation, and reliability as core expectations with no counterbalancing velocity language like shipping, iteration, or speed.
+> Reasoning: The responsibilities section emphasizes validation, accuracy, and reliability with no velocity language (fast-paced, ship quickly, iteration speed) appearing anywhere in the JD.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Implement validation processes to guarantee data accuracy and reliability"
-> Verified: ✓ found in JD
-> Reasoning: While iGaming is a regulated sector, the JD emphasizes data quality without explicitly referencing financial reporting, compliance, or regulatory requirements.
-
-**Run 2:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "Department: Revenues"
 > Verified: ✓ found in JD
-> Reasoning: The revenue operations context suggests business-critical data decisions, but the JD contains no explicit regulatory, compliance, or financial reporting language.
-
-**Run 3:** `moderate`
-> Quote: "Department: Revenues"
-> Verified: ✓ found in JD
-> Reasoning: The Revenues department has financial implications, but the JD lacks explicit regulatory, compliance, or financial reporting language that would elevate this to high risk.
-
-### collaboration_width
-
-**Run 1:** `4`
-> Quote: "product; development; Marketing; Finance"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct teams are explicitly named in collaboration contexts: product, development, Marketing, and Finance.
-
-**Run 2:** `4`
-> Quote: "product and development teams; Marketing, Finance, and Product teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct teams are explicitly named: Product, Development, Marketing, and Finance.
-
-**Run 3:** `4`
-> Quote: "Work with product and development teams to enhance data structures; Demonstrated collaboration experience with Marketing, Finance, and Product teams"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions are identified: Product, Development, Marketing, and Finance.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Verified: ✓ found in JD
-> Reasoning: Named tools in responsibilities with build/maintain language indicates an established data function that is evolving, not greenfield or highly specialized.
-
-**Run 2:** `mid`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibility context (not just requirements), suggesting an existing data infrastructure that the role maintains and enhances rather than building from zero.
-
-**Run 3:** `mid`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Verified: ✓ found in JD
-> Reasoning: The existence of established infrastructure (warehouse, pipelines, BI tools) being maintained and extended indicates a mid-stage data function rather than early-stage greenfield or large mature organization.
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform; Expert-level SQL skills, with a strong grasp of performance optimization and data transformation logic"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Combines specific technical methodology names (dimensional modeling, performance optimization) and named tools with generic responsibility phrasing (collaborate, work with teams).
-
-**Run 2:** `mixed`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity about named tools and methodologies is balanced by generic collaborative language and limited business application depth.
-
-**Run 3:** `recruiter`
-> Quote: "Design and build clear, compelling visualizations, dashboards, and reports using BI tools like Power BI, Tableau, etc.; Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The responsibilities use generic action verbs and list tools without specific context, methodology, scale numbers, or technical challenges that would indicate hands-on hiring manager authorship.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines"
-> Verified: ✓ found in JD
-> Reasoning: Core responsibilities emphasize building and maintaining analytical infrastructure rather than serving a specific business function directly.
-
-**Run 2:** `commercial`
-> Quote: "Demonstrated collaboration experience with Marketing, Finance, and Product teams"
-> Verified: ✓ found in JD
-> Reasoning: The role sits in the Revenues department and explicitly collaborates with Marketing, Finance, and Product teams in a commercial/revenue-operations context.
-
-**Run 3:** `finance`
-> Quote: "Demonstrated collaboration experience with Marketing, Finance, and Product teams"
-> Verified: ✓ found in JD
-> Reasoning: The Revenues department placement combined with explicit Finance team collaboration indicates the primary audience is financial reporting and revenue analysis.
-
-⚠ **LLM inconsistency**: runs gave ['internal_data', 'commercial', 'finance']
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize execution tasks (build, maintain, configure, implement) with no language about defining strategy or shaping analytical direction.
-
-**Run 2:** `execution`
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities focus on building and maintaining technical systems within a defined scope rather than shaping analytics strategy or direction.
-
-**Run 3:** `execution`
-> Quote: "Work with product and development teams to enhance data structures"
-> Verified: ✓ found in JD
-> Reasoning: The language emphasizes enhancing and supporting existing structures and team needs rather than defining strategy or establishing new directions.
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Reasoning: Standard data tools with no mention of AI user tools or AI infrastructure enablement.
-
-**Run 2:** `none` ✓
-> Quote: "No mention of AI tools or AI-ready infrastructure"
-> Reasoning: Standard data warehouse and transformation work with traditional tools (Airflow, Dataform, SQL); no AI tooling or infrastructure requirements.
-
-**Run 3:** `none` ✓
-> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
-> Reasoning: Lists standard analytics/data engineering tools with no AI coding tools (Copilot, Claude Code) or AI infrastructure (GenAI, text-to-SQL, AI-ready) mentioned.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Implement validation processes to guarantee data accuracy and reliability"
-> Reasoning: Candidate owns validation and accuracy with ownership verbs (implement, guarantee).
-
-**Run 2:** `responsibility` ✓
-> Quote: "Implement validation processes to guarantee data accuracy and reliability"
-> Reasoning: Candidate owns implementation of validation processes and data quality practices.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Implement validation processes to guarantee data accuracy and reliability"
-> Reasoning: Candidate owns the responsibility to implement validation processes, demonstrating ownership of quality/testing practice.
-
-
-### loss_aversion_framing
-**Run 1:** `none` ✗
-> Quote: "iGaming/Revenues department; no explicit compliance, regulatory, or financial-reporting language in JD body"
-> Reasoning: Delivery-focused framing; explicitly no compliance or regulatory concerns despite iGaming context.
+> Reasoning: The role serves a revenue function but lacks explicit regulatory, compliance, or financial reporting language typical of high-risk domains.
 
 **Run 2:** `moderate` ✓
-> Quote: "Implement validation processes to guarantee data accuracy and reliability"
-> Reasoning: Framed around operational reliability (accuracy, reliability guarantees) without compliance, regulatory, or stakeholder-trust dominance.
+> Quote: "Department: Revenues"
+> Verified: ✓ found in JD
+> Reasoning: Although iGaming is a regulated sector, the JD lacks explicit compliance, audit, or financial reporting language; responsibilities focus on dashboards and data infrastructure rather than regulatory or financial accuracy requirements.
 
 **Run 3:** `moderate` ✓
-> Quote: "Implement validation processes to guarantee data accuracy and reliability"
-> Reasoning: Operational reliability concern (data accuracy, reliability) without compliance/regulatory framing typical of high loss-aversion roles.
+> Quote: "Design and build clear, compelling visualizations, dashboards, and reports using BI tools like Power BI, Tableau, etc."
+> Verified: ✓ found in JD
+> Reasoning: Although the iGaming sector is regulated, the JD lacks explicit financial reporting, compliance, regulatory, or audit language; the responsibilities are generic business analytics without high-stakes framing.
 
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']
+### collaboration_width
+**Manual:** `4`
+
+**Run 1:** `4` ✓
+> Quote: "Work with product and development teams; Demonstrated collaboration experience with Marketing, Finance, and Product teams"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions are mentioned: Product, Development, Marketing, and Finance.
+
+**Run 2:** `4` ✓
+> Quote: "product and development teams; Marketing, Finance, and Product teams"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named partner functions are explicitly referenced: Product, Development, Marketing, and Finance.
+
+**Run 3:** `4` ✓
+> Quote: "product and development teams; Demonstrated collaboration experience with Marketing, Finance, and Product teams"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named functions appear: Product, Development/Engineering, Marketing, and Finance.
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
+> Verified: ✓ found in JD
+> Reasoning: Specific named tools in responsibilities with emphasis on maintaining existing infrastructure signals an established data function with ongoing development work.
+
+**Run 2:** `mid` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
+> Verified: ✓ found in JD
+> Reasoning: Multiple named tools appear with specific application context (Airflow/Dataform for pipelines) and the emphasis on maintaining and enhancing existing infrastructure indicates an established data function in growth phase.
+
+**Run 3:** `mid` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
+> Verified: ✓ found in JD
+> Reasoning: Named tools appear in responsibilities (Airflow, Dataform) and the language emphasizes maintaining and enhancing existing infrastructure rather than establishing from zero or operating a scaled multi-team platform.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `hiring_manager` ✗
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines using tools like Airflow or Dataform"
+> Verified: ✓ found in JD
+> Reasoning: Technical depth including specific tool contexts, dimensional modeling, pipeline orchestration, and SQL optimization indicates author familiarity with the role's actual work.
+
+**Run 2:** `hiring_manager` ✗
+> Quote: "Expert-level SQL skills, with a strong grasp of performance optimization and data transformation logic"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity about dimensional data modeling, precise tool combinations for pipeline orchestration, and SQL optimization expectations reflect hands-on data engineering knowledge rather than recruiter boilerplate.
+
+**Run 3:** `recruiter` ✗
+> Quote: "Work with product and development teams to enhance data structures"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities use generic boilerplate action verbs without specific technical context, scale, volume, or concrete examples of what the role solves on a Tuesday morning.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'hiring_manager', 'recruiter']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines"
+> Verified: ✓ found in JD
+> Reasoning: The core responsibilities focus on building and maintaining data infrastructure that downstream analytics consumers depend on.
+
+**Run 2:** `internal_data` ✓
+> Quote: "Build and maintain robust data warehouse solutions and transformation pipelines"
+> Verified: ✓ found in JD
+> Reasoning: The core responsibility is building and operating data infrastructure (warehouse, pipelines, validation) that serves internal data consumers across multiple teams rather than a specific business function.
+
+**Run 3:** `commercial` ✗
+> Quote: "Department: Revenues"
+> Verified: ✓ found in JD
+> Reasoning: The role is explicitly positioned in the Revenues department with collaboration partners including Marketing and Finance, indicating primary audience is GTM and revenue operations functions.
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'commercial']
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Work with product and development teams to enhance data structures"
+> Verified: ✓ found in JD
+> Reasoning: The role collaborates with other teams on direction-setting rather than independently defining strategic priorities.
+
+**Run 2:** `execution` ✓
+> Quote: "Work with product and development teams to enhance data structures"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities emphasize designing and delivering solutions aligned with stakeholder needs (enhance structures collaboratively defined) rather than setting strategic direction for the analytics function.
+
+**Run 3:** `execution` ✓
+> Quote: "Work with product and development teams to enhance data structures"
+> Verified: ✓ found in JD
+> Reasoning: While the role owns implementation (design, build, configure), the framing of working with others to enhance structures suggests scope is defined by collaborative input rather than the role defining direction independently.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI tools, GenAI capabilities, or AI-assisted workflows in either responsibilities or requirements; Python is for integrations only.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectation for AI coding tools, agentic workflows, or AI infrastructure responsibility from the candidate.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, AI-ready infrastructure, or any expected AI skill from the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Verified: ✓ found in JD
+> Reasoning: The candidate owns implementing validation processes as an explicit responsibility rather than merely using testing tools.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and validation are framed as an owned responsibility using action verbs indicating the candidate is accountable for guaranteeing accuracy.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Verified: ✓ found in JD
+> Reasoning: Validation processes and data accuracy are assigned as an explicit responsibility with an ownership action verb (implement), rather than listed as a tool requirement.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and data accuracy are present concerns, but the overall JD is framed in delivery and capability terms rather than risk or compliance registers.
+
+**Run 2:** `moderate` ✗
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability and accuracy without regulatory or compliance framing, indicating concern for preventing data failures rather than catastrophic trust or compliance consequences.
+
+**Run 3:** `moderate` ✗
+> Quote: "Implement validation processes to guarantee data accuracy and reliability"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and accuracy are concerns in the JD (robust systems, validation, reliability language) but secondary to the primary frame of building and maintaining infrastructure, with no compliance, regulatory, or trust-centered risk language.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

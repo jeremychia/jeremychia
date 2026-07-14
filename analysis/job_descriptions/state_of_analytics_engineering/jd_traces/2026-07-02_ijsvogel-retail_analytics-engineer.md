@@ -40,15 +40,15 @@ Note: Acquisition approaches discouraged
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| domain_risk | moderate | moderate | high | moderate | 33% | ✓ |
 | collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | mixed | mixed | recruiter | 33% | ✗ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | recruiter | mixed | 33% | ✗ |
+| stakeholder_orientation | internal_data | mixed | internal_data | mixed | 33% | ✗ |
 | autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
 | ai_role |  | none | none | none | 100% | ✗ |
-| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
+| testing_framing |  | absent | absent | responsibility | 33% | ✗ |
+| loss_aversion_framing |  | moderate | high | moderate | 33% | ✗ |
 
 ---
 
@@ -60,17 +60,17 @@ Note: Acquisition approaches discouraged
 **Run 1:** `rigour` ✓
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, governance, and compliance as core expectations rather than speed or delivery pace.
+> Reasoning: Multiple explicit governance, compliance, and data quality signals with no velocity or speed-oriented language indicate a rigour-focused orientation.
 
 **Run 2:** `rigour` ✓
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities explicitly emphasise data quality, governance, and compliance as core expectations with no corresponding velocity language.
+> Reasoning: Multiple rigour signals (data quality, governance, GDPR compliance, monitoring) appear throughout with no velocity signals present.
 
 **Run 3:** `rigour` ✓
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data governance, quality monitoring, and regulatory compliance as core responsibilities with no counterbalancing velocity language.
+> Reasoning: The responsibilities emphasize compliance, governance, and data quality with no velocity signals present (no 'fast-paced', 'rapid', 'MVP', or 'iteration' language).
 
 ### domain_risk
 **Manual:** `moderate`
@@ -78,111 +78,117 @@ Note: Acquisition approaches discouraged
 **Run 1:** `moderate` ✓
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: GDPR compliance indicates regulatory awareness, but the role is primarily analytics-focused without emphasis on financial reporting or compliance-critical risk.
+> Reasoning: GDPR compliance indicates regulatory concern, but the role is in retail analytics rather than financial reporting, placing it in the moderate-risk category.
 
-**Run 2:** `moderate` ✓
+**Run 2:** `high` ✗
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: While GDPR compliance is mentioned, the primary framing is business analytics (dashboards and data solutions) for a retail company, which typically carries moderate business risk rather than high regulatory or financial consequences.
+> Reasoning: Explicit mention of GDPR compliance signals regulatory/legal risk where data errors have direct compliance consequences.
 
 **Run 3:** `moderate` ✓
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: While GDPR and governance matter, this retail company role is primarily framed around translating business questions into dashboards without direct financial reporting or compliance-driven consequences.
+> Reasoning: Retail analytics with privacy compliance concerns (GDPR) but no financial reporting, P&L, or high regulatory risk signals typical of banking or fintech.
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'moderate']
 
 ### collaboration_width
 **Manual:** `0`
 
 **Run 1:** `0` ✓
-> Quote: "works with stakeholders on information needs"
+> Quote: ""
 > Verified: ✓ found in JD
-> Reasoning: No named teams or functions are explicitly identified; stakeholders are referenced generically without specification.
+> Reasoning: The JD does not explicitly name any specific partner teams, functions, or departments; only generic 'stakeholders' are mentioned.
 
 **Run 2:** `0` ✓
 > Quote: "works with stakeholders on information needs"
 > Verified: ✓ found in JD
-> Reasoning: The JD uses generic terms like 'stakeholders' and 'business' without naming specific teams or functions.
+> Reasoning: JD mentions generic 'stakeholders' and 'organization' but no explicitly named functions or teams like Finance, Product, Engineering.
 
 **Run 3:** `0` ✓
 > Quote: "works with stakeholders on information needs"
 > Verified: ✓ found in JD
-> Reasoning: No explicitly named partner functions or teams are identified in the JD; 'stakeholders' is too generic to count as a specific collaboration partner.
+> Reasoning: No explicitly named partner functions (Finance, Product, Marketing, Engineering, Data Science) are identified; 'stakeholders' is generic and does not count.
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "designs datamodels in dbt and BigQuery, works with stakeholders on information needs, and monitors data quality and governance"
+> Quote: "designs datamodels in dbt and BigQuery"
 > Verified: ✓ found in JD
-> Reasoning: The role uses named existing tools (dbt, BigQuery) and works with established pipelines, indicating an existing but growing data function.
+> Reasoning: Named tools appearing in responsibilities (not just requirements) suggest existing data infrastructure and an established function in growth phase.
 
 **Run 2:** `mid` ✓
-> Quote: "designs datamodels in dbt and BigQuery, works with stakeholders on information needs, and monitors data quality"
+> Quote: "designs datamodels in dbt and BigQuery"
 > Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities with specific context (dbt models, BigQuery, existing pipelines), indicating an established but still-growing data function.
+> Reasoning: Established tools (dbt, BigQuery, Looker, existing pipelines) appear in responsibilities, indicating an existing data function at growth/improvement stage.
 
 **Run 3:** `mid` ✓
-> Quote: "designs datamodels in dbt and BigQuery, works with stakeholders on information needs, and monitors data quality and governance"
+> Quote: "designs datamodels in dbt and BigQuery"
 > Verified: ✓ found in JD
-> Reasoning: Named tools and established governance practices appear in the responsibilities section, indicating a developing data function beyond early-stage but without signals of multiple specialized sub-teams.
+> Reasoning: Named tools appear in responsibilities with specific application context (actively designing models), indicating established infrastructure and operational data work, but no indication of specialized sub-teams or massive scale.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
 **Run 1:** `mixed` ✗
-> Quote: "designs datamodels in dbt and BigQuery, works with stakeholders on information needs, and monitors data quality and governance"
+> Quote: "The engineer designs datamodels in dbt and BigQuery, works with stakeholders on information needs, and monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: Combines technical specificity (named tools, GDPR compliance) with generic boilerplate verbs like 'works with stakeholders' and 'promoting data-driven culture'.
+> Reasoning: Combines specific tool names (dbt, BigQuery, Looker) suggesting hiring-manager input with generic responsibility verbs ('works with stakeholders') typical of recruiter-written boilerplate.
 
-**Run 2:** `mixed` ✗
-> Quote: "designs datamodels in dbt and BigQuery, works with stakeholders on information needs, and monitors data quality and governance including GDPR compliance"
+**Run 2:** `recruiter` ✗
+> Quote: "translating business questions into dashboards and data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Some responsibilities show technical specificity (named tools, compliance context) while others are generic boilerplate, indicating both hiring manager and recruiter input.
+> Reasoning: Generic action verbs and tool names without technical specificity, scale numbers, or detailed context characteristic of recruiter templates.
 
-**Run 3:** `recruiter` ✗
-> Quote: "translating business questions into dashboards and data solutions. The engineer designs datamodels in dbt and BigQuery, works with stakeholders on information needs"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic boilerplate action verbs and collaboration language typical of recruiter templates, with tool names but limited contextual depth about problems solved.
+**Run 3:** `mixed` ✗
+> Quote: "designs datamodels in dbt and BigQuery, monitors data quality and governance including GDPR compliance"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Blends technical specificity from an operator ('designs datamodels in dbt', GDPR compliance context) with generic boilerplate ('translating business questions', 'promoting data-driven culture').
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
-**Run 1:** `internal_data` ✓
-> Quote: "translating business questions into dashboards and data solutions"
+**Run 1:** `mixed` ✗
+> Quote: "translating business questions into dashboards and data solutions; designs datamodels in dbt and BigQuery; monitors data quality and governance"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on providing analytics infrastructure and dashboards to internal business stakeholders seeking answers, rather than serving a specific commercial, product, or finance function.
+> Reasoning: Responsibilities equally emphasize serving business stakeholders through dashboards and serving the data platform through modeling and governance work.
 
 **Run 2:** `internal_data` ✓
-> Quote: "translating business questions into dashboards and data solutions"
-> Verified: ✓ found in JD
-> Reasoning: The primary function is providing self-serve analytics (dashboards) to business stakeholders seeking to answer their own questions, which aligns with internal_data stakeholder orientation.
-
-**Run 3:** `internal_data` ✓
 > Quote: "promoting data-driven culture across the organization"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on governance, quality monitoring, and cultural adoption suggests the role primarily serves the analytics function itself and internal platform consumers.
+> Reasoning: Emphasis on data platform/infrastructure (dbt, BigQuery, BI tools), governance, and promoting internal data adoption indicates primary focus on data platform and internal consumers.
+
+**Run 3:** `mixed` ✗
+> Quote: "translating business questions into dashboards and data solutions; monitors data quality and governance"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities split between serving business stakeholders through dashboards and insights, and serving the data function itself through quality and governance work.
+
+⚠ **Disagreement**: manual=`internal_data` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'internal_data', 'mixed']
 
 ### autonomy_level
 **Manual:** `mixed`
 
 **Run 1:** `execution` ✗
-> Quote: "translating business questions into dashboards and data solutions"
+> Quote: "works with stakeholders on information needs, and monitors data quality and governance"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'translating' and overall framing indicate the role implements solutions to defined business questions rather than setting strategic direction.
+> Reasoning: Action verbs focus on supporting others and maintaining systems rather than defining direction, indicating execution-oriented work.
 
 **Run 2:** `execution` ✗
 > Quote: "translating business questions into dashboards and data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The primary responsibility is translating given business questions into solutions, which frames the role as executing against questions defined by stakeholders rather than setting direction.
+> Reasoning: Responsibilities framed around delivering solutions and supporting stakeholders' needs rather than defining strategy or direction.
 
 **Run 3:** `execution` ✗
 > Quote: "translating business questions into dashboards and data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities frame the role as delivering solutions in response to others' needs rather than setting strategic direction or defining how analytics is delivered.
+> Reasoning: The role receives scoped business questions and delivers solutions to stakeholder-defined needs, with minimal indication of strategic direction-setting.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
 
@@ -192,56 +198,60 @@ Note: Acquisition approaches discouraged
 **Run 1:** `none` ✗
 > Quote: "interest in advanced analytics and AI applications"
 > Verified: ✓ found in JD
-> Reasoning: This is vague interest language without specific AI skill expectations for the candidate; interest is not equivalent to required proficiency or demonstrated application.
+> Reasoning: The phrase 'interest in advanced analytics' is vague preference language with no expectation that the candidate use or build AI tools.
 
 **Run 2:** `none` ✗
 > Quote: "interest in advanced analytics and AI applications"
 > Verified: ✓ found in JD
-> Reasoning: 'Interest in AI' is explicitly vague framing per the classification rules and does not demonstrate a concrete AI skill requirement.
+> Reasoning: Vague interest statement without expectation of AI capability or core skill requirement for the candidate.
 
 **Run 3:** `none` ✗
 > Quote: "interest in advanced analytics and AI applications"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions interest in AI but provides no specific AI skill requirement for the candidate; vague interest phrases do not constitute a skill expectation.
+> Reasoning: The phrase 'interest in' is a vague preference signal per the framework rules; no concrete AI skill (coding tools, enablement, or agentic workflows) is expected of the candidate.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
 **Manual:** ``
 
-**Run 1:** `responsibility` ✗
-> Quote: "monitors data quality and governance including GDPR compliance"
+**Run 1:** `absent` ✗
+> Quote: "monitors data quality and governance"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as an explicit responsibility the candidate monitors and is accountable for.
+> Reasoning: Data quality is mentioned only as a passive monitoring responsibility with no testing frameworks, data contracts, or quality ownership practices named.
 
-**Run 2:** `responsibility` ✗
-> Quote: "monitors data quality and governance including GDPR compliance"
-> Verified: ✓ found in JD
-> Reasoning: The role is explicitly accountable for data quality monitoring, which establishes ownership of the data quality practice even without specifying particular tools.
+**Run 2:** `absent` ✗
+> Quote: "No testing practices, data contracts, or testing frameworks mentioned in JD"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: JD mentions data quality monitoring and governance but not testing frameworks, dbt tests, data contracts, or quality assurance practices.
 
 **Run 3:** `responsibility` ✗
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: Data quality monitoring is framed as a core responsibility the engineer is accountable for, indicating ownership of this practice.
+> Reasoning: The candidate is assigned responsibility for monitoring and maintaining data quality standards through governance oversight, framing it as an accountability owned by the role.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+⚠ **LLM inconsistency**: runs gave ['absent', 'absent', 'responsibility']
 
 ### loss_aversion_framing
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "monitors data quality and governance including GDPR compliance; resolving pipeline issues"
-> Verified: ✓ found in JD
-> Reasoning: While compliance and operational reliability are mentioned, they are secondary to the primary delivery focus on translating business questions into dashboards.
-
-**Run 2:** `moderate` ✗
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: The JD includes operational reliability and compliance concerns, indicating moderate risk awareness, though they are secondary to the primary delivery responsibilities.
+> Reasoning: GDPR compliance and data governance elevate concern above purely delivery-focused roles, but the primary framing emphasizes dashboards and models over preventing bad outcomes.
+
+**Run 2:** `high` ✗
+> Quote: "monitors data quality and governance including GDPR compliance"
+> Verified: ✓ found in JD
+> Reasoning: Emphasis on GDPR compliance, data quality governance, and preventing regulatory/compliance failures indicates strong loss-aversion framing around regulatory risk.
 
 **Run 3:** `moderate` ✗
 > Quote: "monitors data quality and governance including GDPR compliance"
 > Verified: ✓ found in JD
-> Reasoning: Compliance and governance signal operational risk management concerns, but the role is primarily framed around delivering dashboards, making risk secondary to delivery.
+> Reasoning: Compliance (GDPR) and quality concerns are present but mentioned once in a single responsibility, secondary to the primary framing of delivering dashboards and solutions.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'moderate']
