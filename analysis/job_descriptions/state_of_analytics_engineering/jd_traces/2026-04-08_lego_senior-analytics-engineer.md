@@ -68,10 +68,10 @@ This role is essential as we strive to build a world-class analytics organizatio
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 8 | 6 | 5 | 5 | 33% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | hiring_manager | mixed | mixed | 33% | ✗ |
-| stakeholder_orientation | commercial | commercial | commercial | internal_data | 33% | ✓ |
-| autonomy_level | strategic | execution | mixed | mixed | 33% | ✗ |
-| ai_role |  | ai_enabler | none | ai_enabler | 33% | ✗ |
+| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | commercial | commercial | internal_data | commercial | 33% | ✓ |
+| autonomy_level | strategic | mixed | mixed | mixed | 100% | ✗ |
+| ai_role |  | none | ai_enabler | ai_enabler | 33% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
@@ -85,53 +85,53 @@ This role is essential as we strive to build a world-class analytics organizatio
 **Run 1:** `rigour` ✓
 > Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
 > Verified: ✓ found in JD
-> Reasoning: Eight distinct rigour signals (quality, CI/CD, frameworks, assertions, optimization, compliance, integrity, best practices) outweigh one velocity mention in a nice-to-have section.
+> Reasoning: The responsibilities emphasize CI/CD standards, data quality frameworks, assertion checks, governance, and best practices as core expectations with no velocity signals present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes CI/CD standards, data quality frameworks, assertion checks, and performance optimization as core expectations, demonstrating a rigour orientation.
+> Reasoning: The responsibilities section is dominated by governance, quality, testing, and compliance expectations; a single velocity signal in the nice-to-have section does not shift an otherwise rigour-dominated core mandate.
 
 **Run 3:** `rigour` ✓
 > Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section repeatedly emphasizes correctness, governance, compliance, testing, and data integrity as core expectations, with 8+ rigour signals (CI/CD standards, data quality frameworks, assertion checks, governance, compliance, best practices, reliability) versus only one velocity signal mentioned as a nice-to-have experience.
+> Reasoning: Multiple rigour signals (CI/CD standards, data quality frameworks, assertion checks, data integrity, meticulous quality emphasis) with no velocity language like 'fast-paced' or 'rapid delivery'.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "helping shape data-driven actions both for operational optimization purposes and tactical and strategical decision recommendations"
-> Verified: ✓ found in JD
-> Reasoning: The role serves retail operations and business analytics without financial reporting, regulatory compliance, or P&L framing that would indicate high risk.
+> Quote: "enable self-serve data products for Markets & Channels (Commercial) data consumers and decision makers; helping shape data-driven actions both for operational optimization purposes and tactical and strategical decision recommendations."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Data errors affect commercial business decisions and operational optimization but the role is not in a high-risk sector and lacks explicit financial reporting or regulatory language.
 
 **Run 2:** `moderate` ✓
-> Quote: "enabling self-serve data products for Markets & Channels (Commercial) data consumers and decision makers; helping shape data-driven actions both for operational optimization purposes and tactical and strategical decision recommendations"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role affects business decision-making and operational optimization but lacks signals of regulatory compliance, financial reporting, or audit that would indicate high risk.
+> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment."
+> Verified: ✓ found in JD
+> Reasoning: Governance and compliance concerns are present, but the role is centered on enabling commercial analytics and self-service products rather than financial reporting, audit, or regulatory exposure.
 
 **Run 3:** `moderate` ✓
-> Quote: "The overall department's key focus is to enable self-service data products for Markets & Channels (Commercial) data consumers and decision makers; helping shape data-driven actions both for operational optimization purposes and tactical and strategical decision recommendations."
-> Verified: ✓ found in JD
-> Reasoning: The role focuses on business intelligence and operational decision-making rather than financial reporting or regulatory compliance, placing it in moderate-risk territory where data errors affect business decisions but lack immediate regulatory consequences.
+> Quote: "drive quantifiable commercial value through data and insights"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: LEGO is retail/commercial data for operational decision-making without explicit financial reporting, regulatory, or compliance language that would elevate to high risk.
 
 ### collaboration_width
 **Manual:** `8`
 
 **Run 1:** `6` ✗
-> Quote: "Analytics Interface; Commercial Analytics; Markets & Channels; Analytics Innovation & Automation; Data Office; Shopper & Partner (D2C & B2B) digital product teams"
+> Quote: "Analytics Interface; Commercial Analytics; Markets & Channels; Analytics Innovation & Automation; Data Office product teams; Shopper & Partner (D2C & B2B) digital product teams"
 > Verified: ✓ found in JD
-> Reasoning: Six distinct teams are explicitly named as current collaborators in the responsibilities section; potential expansion areas (Data Science, Marketing, Finance, Operations) are listed separately as future possibilities.
+> Reasoning: Six distinct named teams or functions are explicitly referenced in the core responsibilities as collaborators.
 
 **Run 2:** `5` ✗
-> Quote: "Analytics Interface; Commercial Analytics; Analytics Innovation & Automation; Data Office; Shopper & Partner (D2C & B2B) digital product teams"
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly names five distinct collaborative teams: Analytics Interface, Commercial Analytics, Analytics Innovation & Automation, Data Office, and Shopper & Partner digital product teams.
-
-**Run 3:** `5` ✗
 > Quote: "Collaborate closely with the Analytics Interface, Commercial Analytics and business teams; Partner with the Analytics Innovation & Automation and Data Office product teams; Collaborate with Shopper & Partner (D2C & B2B) digital product teams"
 > Verified: ✓ found in JD
-> Reasoning: Five distinct named partner teams are explicitly listed: Analytics Interface, Commercial Analytics, Analytics Innovation & Automation, Data Office, and Shopper & Partner digital product teams.
+> Reasoning: Five distinct named teams are explicitly listed as collaboration partners: Analytics Interface, Commercial Analytics, Analytics Innovation & Automation, Data Office, and Shopper & Partner digital product teams.
+
+**Run 3:** `5` ✗
+> Quote: "Analytics Interface; Commercial Analytics; Analytics Innovation & Automation; Data Office; Shopper & Partner (D2C & B2B) digital product teams"
+> Verified: ✓ found in JD
+> Reasoning: Five distinct named teams explicitly listed in responsibilities; teams mentioned as 'potential expansion' (Data Science, Marketing, Finance, Operations) are not counted as current partners.
 
 ⚠ **Disagreement**: manual=`8` vs LLM majority=`5`
 
@@ -143,121 +143,117 @@ This role is essential as we strive to build a world-class analytics organizatio
 **Run 1:** `mid` ✓
 > Quote: "Our Commercial A&I function is recognized by the executive leadership team for spearheading the growth in analytics maturity at the LEGO Group"
 > Verified: ✓ found in JD
-> Reasoning: The function is established with named tools (Databricks, Unity Catalog), multiple sub-teams, and a self-serve platform, but still growing and maturing rather than at mature scale.
+> Reasoning: Multiple named sub-teams, existing platform infrastructure (Databricks), named tools in responsibilities, and a recognized function in growth phase indicate a mid-stage data organization.
 
 **Run 2:** `mid` ✓
-> Quote: "Commercial A&I function is recognized by the executive leadership team for spearheading the growth in analytics maturity at the LEGO Group"
+> Quote: "Build data pipeline engineering, orchestration, and monitoring to deliver high-quality data products"
 > Verified: ✓ found in JD
-> Reasoning: The function is established and recognized with multiple specialized teams, existing Databricks infrastructure, and active growth initiatives, indicating mid-maturity rather than early-stage or fully mature.
+> Reasoning: The function is recognized by leadership as spearheading analytics maturity at the company and uses named tools (Databricks, Unity Catalog) with multiple data teams, indicating established infrastructure being grown rather than a greenfield startup.
 
 **Run 3:** `mid` ✓
-> Quote: "Our Commercial A&I function is recognized by the executive leadership team for spearheading the growth in analytics maturity at the LEGO Group"
+> Quote: "analytics enablement team, as part of a company wide digital transformation and entering into a new era of Analytics & Insights"
 > Verified: ✓ found in JD
-> Reasoning: Named tools appear in responsibilities (Databricks, Unity Catalog, dbt implied via quality frameworks), multiple distinct data sub-teams exist, and data products are already being delivered, but the 'spearheading growth' language indicates active expansion rather than stable maturity.
+> Reasoning: Infrastructure exists (Databricks, Unity Catalog, semantic layer) with established recognition from leadership, but language emphasizes building and enhancing capabilities rather than operating mature systems.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization"
+**Run 1:** `mixed` ✗
+> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization."
 > Verified: ✓ found in JD
-> Reasoning: Specific technical patterns (metric view pipelines, materialization, optimization) and named platform (Unity Catalog) show familiarity with the actual work, not recruiter boilerplate.
+> Reasoning: Specific technical responsibilities with named tools and practices (semantic layer, metric view pipelines, Unity Catalog) mix with generic collaboration language (champion best practices, enable literacy), indicating input from both technical and recruiting perspectives.
 
 **Run 2:** `mixed` ✗
-> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization"
+> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment; Collaborate closely with the Analytics Interface, Commercial Analytics and business teams to turn business requirements into productionised AI-enabling data products."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain technical specificity about semantic layers, metric view pipelines, and Unity Catalog governance that comes from domain experience, but also include generic collaborative language throughout.
+> Reasoning: The responsibilities contain specific technical details with application context (Unity Catalog governance, assertion checks, semantic layers) alongside generic collaboration language ("collaborate", "champion"), indicating both hands-on technical knowledge and template-based framing.
 
 **Run 3:** `mixed` ✗
-> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment."
+> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance (schemas, access, metadata tagging)"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity appears in governance patterns and metric view optimization alongside more generic collaboration verbs like 'build' and 'collaborate', suggesting input from both someone with hands-on experience and standard recruitment language.
+> Reasoning: Responsibilities contain specific technical context (Unity Catalog, semantic layer, metric views) suggesting hiring manager input, mixed with generic collaboration verbs suggesting recruiter involvement.
 
 ⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
 
 ### stakeholder_orientation
 **Manual:** `commercial`
 
 **Run 1:** `commercial` ✓
-> Quote: "Build data pipeline engineering, orchestration, and monitoring to deliver high-quality data products centered around Retail Execution Commercial pillar"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly prioritizes building products centered on the commercial/retail execution pillar, indicating commercial stakeholders are the primary audience and direction-setter.
-
-**Run 2:** `commercial` ✓
-> Quote: "enable self-serve data products for Markets & Channels (Commercial) data consumers and decision makers"
+> Quote: "enable self-serve data products for Markets & Channels (Commercial) data consumers and decision makers; helping shape data-driven actions both for operational optimization purposes and tactical and strategical decision recommendations."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The role serves Commercial business decision-makers and operational leaders through data products, positioning commercial stakeholders as the primary audience despite working with internal data platform teams.
+> Reasoning: The primary emphasis is on serving Markets & Channels commercial stakeholders with data products for business decision-making and operational optimization.
 
-**Run 3:** `internal_data` ✗
-> Quote: "The overall department's key focus is to enable self-service data products for Markets & Channels (Commercial) data consumers and decision makers"
+**Run 2:** `internal_data` ✗
+> Quote: "The Analytics Engineering team's responsibility is to build an AI-enabled data foundation the entire company can rely on."
 > Verified: ✓ found in JD
-> Reasoning: The role builds data platform infrastructure and self-serve analytics for internal data consumers (Markets & Channels teams), not commercial/sales functions, placing it in internal_data orientation.
+> Reasoning: The primary role is building platform infrastructure and data foundations for other data consumers (analysts, data scientists, business teams), not directly serving commercial, product, or finance stakeholders.
 
-⚠ **LLM inconsistency**: runs gave ['commercial', 'commercial', 'internal_data']
+**Run 3:** `commercial` ✓
+> Quote: "enabling self-serve data products for Markets & Channels (Commercial) data consumers and decision makers"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Role explicitly serves commercial business function (Markets & Channels) for operational optimization and decision-making, not GTM/revenue sales or financial reporting.
+
+⚠ **LLM inconsistency**: runs gave ['commercial', 'internal_data', 'commercial']
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `execution` ✗
-> Quote: "Collaborate closely with the Analytics Interface, Commercial Analytics and business teams to turn business requirements into productionised AI-enabling data products"
+**Run 1:** `mixed` ✗
+> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment."
 > Verified: ✓ found in JD
-> Reasoning: The primary framing is executing against defined business requirements, not setting strategy; strategic language appears only in narrow technical domains (governance, best practices).
+> Reasoning: The role has strategic ownership of technical domains like governance and data quality practices while executing within a team structure that receives business requirements from others.
 
 **Run 2:** `mixed` ✗
-> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging)"
+> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Collaborate closely with the Analytics Interface, Commercial Analytics and business teams to turn business requirements into productionised AI-enabling data products."
 > Verified: ✓ found in JD
-> Reasoning: The role uses ownership verbs like 'build' and 'drive' for technical domains, but executes within requirements set by business and analytics teams, indicating strategic ownership of technical infrastructure combined with execution in service of broader organizational goals.
+> Reasoning: The role combines strategic ownership of technical domains (build, maintain, drive standards) with execution of business requirements defined by partner teams.
 
 **Run 3:** `mixed` ✗
-> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment; Consistently champion best practices in data product development within the team, across Markets & Channels and with the broader analytics community"
-> Verified: ✓ found in JD
-> Reasoning: The action verbs 'drive' and 'champion' indicate strategic ownership of governance and best-practice standards, while responsibilities like 'build', 'ensure', and 'maintain' indicate execution within defined scope.
+> Quote: "Build and maintain semantic layer infrastructure including metric view pipelines, materialization and optimization; Drive Unity Catalog governance; Collaborate closely with the Analytics Interface, Commercial Analytics and business teams to turn business requirements into productionised data products"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Role combines strategic ownership of technical domains (build, maintain, drive governance) with execution-mode collaboration (collaborate to deliver business outcomes).
 
 ⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'mixed']
 
 ### ai_role
 **Manual:** ``
 
-**Run 1:** `ai_enabler` ✗
-> Quote: "turn business requirements into productionised AI-enabling data products"
+**Run 1:** `none` ✗
+> Quote: "Use of coding assistants."
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to build data infrastructure that enables AI systems downstream; coding assistants appear only as a nice-to-have, making data-for-AI the primary skill.
+> Reasoning: Coding assistants appear only in the Nice to Have section without indicating the candidate is expected to demonstrate AI skill, falling short of any meaningful expectation.
 
-**Run 2:** `none` ✗
-> Quote: "No AI skill signal."
+**Run 2:** `ai_enabler` ✗
+> Quote: "build an AI-enabled data foundation the entire company can rely on"
 > Verified: ✓ found in JD
-> Reasoning: AI coding tools are listed only as a 'Nice to Have' rather than a core expectation, and there is no requirement for the candidate to use AI tools or build AI-enabling infrastructure in their day-to-day work.
+> Reasoning: The candidate is expected to build data infrastructure and products that enable AI systems downstream, not to use AI coding tools for personal productivity.
 
 **Run 3:** `ai_enabler` ✗
-> Quote: "Collaborate closely with the Analytics Interface, Commercial Analytics and business teams to turn business requirements into productionised AI-enabling data products."
+> Quote: "turn business requirements into productionised AI-enabling data products"
 > Verified: ✓ found in JD
-> Reasoning: The role's core output is building AI-enabling data infrastructure (semantic layers, metric views, governance for AI readiness); additionally, 'use of coding assistants' appears as a nice-to-have, placing primary emphasis on building infrastructure for AI systems to consume.
+> Reasoning: Core responsibility frames the candidate as building data infrastructure that enables AI/ML systems to consume, not using AI tools for personal productivity.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_enabler`
 
-⚠ **LLM inconsistency**: runs gave ['ai_enabler', 'none', 'ai_enabler']
+⚠ **LLM inconsistency**: runs gave ['none', 'ai_enabler', 'ai_enabler']
 
 ### testing_framing
 **Manual:** ``
 
 **Run 1:** `responsibility` ✗
-> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks"
-> Verified: ✓ found in JD
-> Reasoning: Data quality and testing practices are framed as owned responsibilities using accountability verbs ('Ensure', 'adhere'), not listed as tools in a skill requirement.
-
-**Run 2:** `responsibility` ✗
-> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied"
-> Verified: ✓ found in JD
-> Reasoning: Data quality frameworks and assertion checks are framed as responsibilities the candidate ensures and implements across data products, indicating ownership of the testing and quality practice.
-
-**Run 3:** `responsibility` ✗
 > Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'ensure' combined with ownership over data quality frameworks and assertion checks indicates the candidate is responsible for implementing and maintaining these practices, not merely using pre-existing tools.
+> Reasoning: The candidate owns the responsibility to ensure data quality frameworks and assertion checks are implemented and followed, using active ownership language.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
+> Verified: ✓ found in JD
+> Reasoning: Testing and quality are framed as owned responsibilities with action verbs ("Ensure", "adhere", "include"), not as tool requirements.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks"
+> Verified: ✓ found in JD
+> Reasoning: Role owns ensuring data products follow quality standards and assertion checks with accountability framing, not merely listing tools in a requirements list.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
@@ -265,18 +261,18 @@ This role is essential as we strive to build a world-class analytics organizatio
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied"
+> Quote: "the entire company can rely on"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data quality are core concerns, but without regulatory, compliance, or stakeholder-trust language that would indicate high loss aversion.
+> Reasoning: Compliance, governance, and data reliability are framed as important concerns about trustworthiness and operational stability, but secondary to the primary delivery and enablement mission.
 
 **Run 2:** `moderate` ✗
-> Quote: "highly controlled compliant environment"
+> Quote: "Ensure Data Products follow CI/CD standards, adhere to data quality frameworks; include assertion checks and have performance & cost optimization applied."
 > Verified: ✓ found in JD
-> Reasoning: While compliance and data quality are required (assertion checks, quality frameworks, CI/CD), the overall role framing emphasizes delivering data products and driving commercial value rather than preventing catastrophic outcomes from bad data reaching stakeholders.
+> Reasoning: Operational reliability and quality are important standards but secondary to the primary mission of building and enabling data products; there is no emphasis on preventing regulatory exposure or stakeholder trust failures.
 
 **Run 3:** `moderate` ✗
-> Quote: "Drive Unity Catalog governance (schemas, access, metadata tagging) to improve data accessibility in highly controlled compliant environment; Consistently champion best practices in data product development...helping ensure data integrity, quality, and scalability"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Governance, control, compliance, and repeated quality/integrity language indicate operational reliability is a material concern, but the overall framing remains capability-and-delivery-focused rather than risk-defensive, suggesting moderate loss aversion.
+> Quote: "AI-enabled data foundation the entire company can rely on"
+> Verified: ✓ found in JD
+> Reasoning: Emphasizes reliability and quality as core capability but lacks compliance, regulatory, or stakeholder-trust risk language that would elevate to high.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

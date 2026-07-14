@@ -62,12 +62,12 @@ Location & Benefits
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | mixed | hiring_manager | 33% | ✓ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | strategic | mixed | execution | strategic | 0% | ✗ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
-| loss_aversion_framing |  | none | none | moderate | 33% | ✗ |
+| loss_aversion_framing |  | moderate | none | none | 33% | ✗ |
 
 ---
 
@@ -79,35 +79,35 @@ Location & Benefits
 **Run 1:** `rigour` ✓
 > Quote: "Establish a single source of truth for business metric definitions"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes accurate metrics, documentation, best practices, and trusted infrastructure with no velocity signals.
+> Reasoning: The role emphasizes governance, documentation, and trusted metrics with no velocity language; signal phrases like 'single source of truth' and 'well-documented' dominate.
 
 **Run 2:** `rigour` ✓
 > Quote: "Establish a single source of truth for business metric definitions"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes establishing foundational practices with clear documentation and best practices rather than delivery speed or iteration pace.
+> Reasoning: The responsibilities section emphasizes consistency, documentation, and governance (single source of truth, well-documented data definitions, best practices) with no counterbalancing velocity language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Establish a single source of truth for business metric definitions"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize establishing trusted metrics, best practices, and well-documented definitions without any velocity language like fast-paced iteration or rapid delivery.
+> Reasoning: The role emphasizes accuracy, documentation, best practices, and creating trusted infrastructure, with no velocity or speed language present.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "creating a trusted semantic layer that enables self-serve analytics across the organisation"
+> Quote: "Establish a single source of truth for business metric definitions"
 > Verified: ✓ found in JD
-> Reasoning: Supports business decisions across the organization without financial reporting or regulatory signals.
+> Reasoning: Data errors affect business intelligence and decision-making but lack explicit financial reporting, compliance, or regulatory consequences.
 
 **Run 2:** `moderate` ✓
 > Quote: "creating a trusted semantic layer that enables self-serve analytics across the organisation"
 > Verified: ✓ found in JD
-> Reasoning: Data errors would affect business decisions through self-serve analytics, but lacks explicit financial, regulatory, or compliance language indicating high risk.
+> Reasoning: The role focuses on internal analytics infrastructure for business decision-making rather than financial reporting, regulatory compliance, or revenue attribution.
 
 **Run 3:** `moderate` ✓
-> Quote: "Establish a single source of truth for business metric definitions"
+> Quote: "Design data marts with self-serve usage in mind"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on analytics infrastructure for business decision-making rather than financial reporting, compliance, or regulatory concerns.
+> Reasoning: The role supports internal business decision-making through analytics infrastructure without financial reporting, compliance, or regulatory framing.
 
 ### collaboration_width
 **Manual:** `3`
@@ -115,17 +115,17 @@ Location & Benefits
 **Run 1:** `3` ✓
 > Quote: "Partner with Data Engineering teams; Collaborate with BI Developers and Insight Analysts"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named partner functions: Data Engineering, BI Developers, and Insight Analysts.
+> Reasoning: Three distinct named teams are explicitly identified as collaboration partners: Data Engineering, BI Developers, and Insight Analysts.
 
 **Run 2:** `3` ✓
 > Quote: "Partner with Data Engineering teams; Collaborate with BI Developers and Insight Analysts"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named teams/roles are explicitly identified as collaboration partners across the responsibilities.
+> Reasoning: Three distinct named functions explicitly mentioned as collaboration partners: Data Engineering teams, BI Developers, and Insight Analysts.
 
 **Run 3:** `3` ✓
-> Quote: "Partner with Data Engineering teams; Collaborate with BI Developers and Insight Analysts"
+> Quote: "Data Engineering teams; BI Developers; Insight Analysts"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names three distinct teams: Data Engineering, BI Developers, and Insight Analysts.
+> Reasoning: Three distinct named partner functions identified across the responsibilities section.
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -133,95 +133,91 @@ Location & Benefits
 **Run 1:** `mid` ✓
 > Quote: "establish their analytics engineering practice within the BI team"
 > Verified: ✓ found in JD
-> Reasoning: Data function exists with multiple roles (Data Engineering, BI teams) but the analytics engineering practice specifically needs establishment and growth.
+> Reasoning: The analytics engineering practice itself is new but sits within an already-established data organization with multiple named teams and production tools.
 
 **Run 2:** `mid` ✓
 > Quote: "establish their analytics engineering practice within the BI team"
 > Verified: ✓ found in JD
-> Reasoning: Analytics engineering is being newly established but within an already-existing BI and Data Engineering infrastructure with multiple roles implied, indicating mid-stage maturity.
+> Reasoning: The role aims to scale an existing BI function by establishing a new analytics engineering practice, indicating a growing data organization rather than early-stage greenfield or mature scale.
 
 **Run 3:** `mid` ✓
 > Quote: "establish their analytics engineering practice within the BI team"
 > Verified: ✓ found in JD
-> Reasoning: Multiple data functions already exist (Data Engineering, BI, Analysts) but the analytics engineering practice is newly being established and scaled.
+> Reasoning: An existing BI team structure is present, but the analytics engineering practice specifically is being newly established.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `mixed` ✗
-> Quote: "Provide business context for the mart layers of our data architecture; Partner with Data Engineering teams"
+**Run 1:** `hiring_manager` ✓
+> Quote: "Design data marts with self-serve usage in mind"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical concepts (mart layers, semantic layers, dimensional modelling) mixed with generic collaboration language.
+> Reasoning: The responsibilities demonstrate specific technical knowledge of semantic layer architecture and self-serve analytics patterns that come from hands-on experience.
 
 **Run 2:** `mixed` ✗
 > Quote: "Design data marts with self-serve usage in mind; Coach BI Developers in Analytics Engineering best practices"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity in semantic layer focus and coaching responsibilities suggests hiring manager input, but generic collaboration verbs and lack of scale/context indicate recruiter contribution.
+> Reasoning: The description contains both specific technical context (data marts, semantic layer, dimensional modelling) and generic action verbs (coach, collaborate, partner) without implementation specificity.
 
-**Run 3:** `mixed` ✗
-> Quote: "Design data marts with self-serve usage in mind; Coach BI Developers in Analytics Engineering best practices"
+**Run 3:** `hiring_manager` ✓
+> Quote: "Design data marts with self-serve usage in mind"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical architecture concepts (data marts, semantic layer, dimensional modeling) mix with generic collaboration and coaching verbs.
+> Reasoning: The responsibilities are technically specific about architecture and data mart design, requiring hands-on domain knowledge.
 
-⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "creating a trusted semantic layer that enables self-serve analytics across the organisation"
+> Quote: "focusing on creating a trusted semantic layer that enables self-serve analytics across the organisation"
 > Verified: ✓ found in JD
-> Reasoning: Role builds data infrastructure for internal consumers to use independently rather than serving commercial, product, or finance functions.
+> Reasoning: The role primarily serves the data function (BI Developers, Insight Analysts, data consumers) by building internal analytics infrastructure.
 
 **Run 2:** `internal_data` ✓
-> Quote: "Design data marts with self-serve usage in mind; Coach BI Developers in Analytics Engineering best practices; Create documentation enabling independent contributions"
+> Quote: "enables self-serve analytics across the organisation"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is enabling other data professionals and analytics consumers through infrastructure, coaching, and documentation rather than serving external stakeholders.
+> Reasoning: The role's primary purpose is enabling internal analytics consumers (BI developers, insight analysts) to access and use data independently, not serving commercial, product, finance, or external stakeholders.
 
 **Run 3:** `internal_data` ✓
-> Quote: "Design data marts with self-serve usage in mind"
+> Quote: "enables self-serve analytics across the organisation"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is building analytics infrastructure and enabling self-serve data consumption for internal data consumers.
+> Reasoning: The entire role is focused on building data infrastructure and enabling internal analytics teams, with no commercial or financial reporting audience.
 
 ### autonomy_level
 **Manual:** `strategic`
 
-**Run 1:** `mixed` ✗
-> Quote: "Establish a single source of truth for business metric definitions"
-> Verified: ✓ found in JD
-> Reasoning: Strategic ownership of analytics engineering practice and metric standards combined with execution supporting other teams' analytics needs.
-
-**Run 2:** `execution` ✗
-> Quote: "Translate ambiguous business requirements into clear, well-documented data definitions"
-> Verified: ✓ found in JD
-> Reasoning: While the role includes design responsibility for marts and metric definitions, it primarily executes direction set by business requirements and operates within an existing BI team structure.
-
-**Run 3:** `strategic` ✓
+**Run 1:** `strategic` ✓
 > Quote: "establish their analytics engineering practice within the BI team"
 > Verified: ✓ found in JD
-> Reasoning: The role is tasked with establishing and shaping how analytics engineering practices are delivered, designing the architecture, and coaching others in best practices.
+> Reasoning: The role is expected to define analytics engineering practices, establish metric governance, and coach others—not execute existing processes.
 
-⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+**Run 2:** `strategic` ✓
+> Quote: "Establish a single source of truth for business metric definitions"
+> Verified: ✓ found in JD
+> Reasoning: The role uses strategic ownership verbs like establish, design, and coach, indicating the candidate is expected to set direction for analytics engineering practices rather than execute preset tasks.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'strategic']
+**Run 3:** `strategic` ✓
+> Quote: "Establish a single source of truth for business metric definitions"
+> Verified: ✓ found in JD
+> Reasoning: The role uses strategic verbs like 'establish' and 'design' to define the analytics engineering practice and architecture.
 
 ### ai_role
 **Manual:** ``
 
 **Run 1:** `none` ✗
-> Quote: "Exposure to data observability or AI-readiness concepts"
+> Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: Only vague preference for exposure to concepts in preferred experience; no concrete AI skill requirement for the candidate.
+> Reasoning: Preferred experience mentions 'exposure to data observability or AI-readiness concepts' only as passive awareness, not a required or actively practiced skill.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No expected AI skill is articulated; the vague reference to 'AI-readiness concepts' in preferred experience does not constitute a clear expectation for the candidate to use or enable AI.
+> Reasoning: Vague reference to 'Exposure to data observability or AI-readiness concepts' in preferred experience does not constitute a concrete AI skill expectation for the candidate.
 
 **Run 3:** `none` ✗
 > Quote: "Exposure to data observability or AI-readiness concepts"
 > Verified: ✓ found in JD
-> Reasoning: The only AI mention is vague preferred exposure rather than a required skill expectation for using or building with AI tools.
+> Reasoning: The mention is vague, only in preferred experience, and does not demonstrate a clear AI skill requirement for the candidate.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -229,40 +225,40 @@ Location & Benefits
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "Exposure to data observability or AI-readiness concepts"
+> Quote: "Design data marts with self-serve usage in mind"
 > Verified: ✓ found in JD
-> Reasoning: No testing frameworks, data quality ownership, or observability responsibilities defined; observability mentioned only as marginal preferred skill.
+> Reasoning: No testing, data quality frameworks, data contracts, or observability ownership appears in the responsibilities; the focus is on metric definitions and self-serve design.
 
 **Run 2:** `absent` ✗
-> Quote: "No testing or data quality signal in responsibilities."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Testing, data quality frameworks, and data contracts are absent from core responsibilities; observability only appears as optional preferred experience without ownership framing.
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: Testing, data quality frameworks, and observability are not framed as owned responsibilities or listed as required tools in the responsibilities section.
 
 **Run 3:** `absent` ✗
-> Quote: "Exposure to data observability or AI-readiness concepts"
+> Quote: "Establish a single source of truth for business metric definitions"
 > Verified: ✓ found in JD
-> Reasoning: No explicit testing, data quality frameworks, or data contracts are mentioned in the responsibilities; the single data observability reference is too vague and peripheral.
+> Reasoning: No explicit mention of testing, data contracts, or observability as responsibilities; the quote shows emphasis on accuracy without testing language.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `none` ✗
-> Quote: "Establish a single source of truth for business metric definitions"
+**Run 1:** `moderate` ✗
+> Quote: "creating a trusted semantic layer that enables self-serve analytics across the organisation"
 > Verified: ✓ found in JD
-> Reasoning: JD framed around building capabilities and establishing best practices, not preventing bad outcomes or managing risk.
+> Reasoning: Operational reliability and stakeholder trust in data are central to the role, but driven by preventing analytics errors rather than regulatory or compliance risk.
 
 **Run 2:** `none` ✗
 > Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: The role is framed around establishing analytics engineering practices and enabling self-serve analytics as a capability-building effort, not around preventing bad outcomes or managing organizational risk.
+> Reasoning: The JD is framed entirely in delivery and capability terms (establish practice, create documentation, design architecture) with no risk register, operational reliability concerns, or explicit loss-aversion language.
 
-**Run 3:** `moderate` ✗
-> Quote: "Establish a single source of truth for business metric definitions"
-> Verified: ✓ found in JD
-> Reasoning: The framing implies concern about preventing metric confusion and unreliable data affecting business decisions, but lacks regulatory or compliance risk language.
+**Run 3:** `none` ✗
+> Quote: "enabling self-serve analytics across the organisation"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The role is framed around delivery capability and enabling analytics access, not around preventing bad outcomes, compliance, or operational reliability.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
-⚠ **LLM inconsistency**: runs gave ['none', 'none', 'moderate']
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

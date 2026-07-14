@@ -81,15 +81,15 @@
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
-| domain_risk | moderate | high | high | moderate | 33% | ✗ |
+| domain_risk | moderate | high | moderate | moderate | 33% | ✓ |
 | collaboration_width | 4 | 1 | 1 | 1 | 100% | ✗ |
 | data_team_maturity | early | mid | mid | early | 33% | ✗ |
-| jd_authorship | mixed | mixed | hiring_manager | mixed | 33% | ✓ |
+| jd_authorship | mixed | hiring_manager | mixed | hiring_manager | 33% | ✗ |
 | stakeholder_orientation | commercial | commercial | commercial | commercial | 100% | ✓ |
 | autonomy_level | execution | execution | execution | mixed | 33% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
-| loss_aversion_framing |  | none | moderate | moderate | 33% | ✗ |
+| loss_aversion_framing |  | moderate | none | none | 33% | ✗ |
 
 ---
 
@@ -101,17 +101,17 @@
 **Run 1:** `rigour` ✗
 > Quote: "Code complex business logic (royalties, taxable turnover, margins)"
 > Verified: ✓ found in JD
-> Reasoning: Financial data (royalties, taxable turnover) and complex logic requirements signal prioritization of correctness over delivery speed.
+> Reasoning: The responsibilities emphasize technical precision, complexity, and correctness (advanced SQL, expert Tableau, row-level security, data modeling) with no mentions of speed or rapid delivery.
 
 **Run 2:** `rigour` ✗
-> Quote: "Document KPI definitions and business rules"
+> Quote: "Code complex business logic (royalties, taxable turnover, margins)"
 > Verified: ✓ found in JD
-> Reasoning: Governance and documentation signals (row-level security, documentation requirements) outnumber any velocity language, with no explicit pace-oriented framing.
+> Reasoning: The emphasis on building structured data marts, complex business logic, and documenting KPI definitions and business rules signals quality and precision over speed.
 
 **Run 3:** `rigour` ✗
-> Quote: "Build data marts and business layers using dbt on Databricks"
+> Quote: "Document KPI definitions and business rules"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize structured data modeling with dbt, complex financial logic, row-level security implementation, and documentation—all governance and correctness indicators with no velocity language present.
+> Reasoning: Documentation, governance (row-level security), and data modeling rigor are emphasized throughout responsibilities, with no velocity-oriented language like 'fast-paced' or 'ship quickly'.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
@@ -121,39 +121,37 @@
 **Run 1:** `high` ✗
 > Quote: "Code complex business logic (royalties, taxable turnover, margins)"
 > Verified: ✓ found in JD
-> Reasoning: The explicit reference to taxable turnover signals regulatory/tax compliance sensitivity, classifying the domain as high-risk.
+> Reasoning: Royalties and taxable turnover calculations directly affect partner payments and tax obligations, making data accuracy a financial and regulatory concern.
 
-**Run 2:** `high` ✗
-> Quote: "Code complex business logic (royalties, taxable turnover, margins)"
+**Run 2:** `moderate` ✓
+> Quote: "Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: The role codes financial logic (royalties affect partner payments, taxable turnover is compliance/tax) where errors have direct regulatory and financial consequences.
+> Reasoning: Data errors affect partner business decisions and financial operations (royalties, taxable turnover) but lack explicit financial reporting, compliance, or regulatory language that would signal high risk.
 
 **Run 3:** `moderate` ✓
 > Quote: "Code complex business logic (royalties, taxable turnover, margins)"
 > Verified: ✓ found in JD
-> Reasoning: The role involves financial calculations (royalties, taxable turnover) affecting franchise operations, but lacks explicit regulatory or compliance framing typical of high-risk financial reporting roles.
+> Reasoning: Retail franchise operations include financial calculations but lack regulatory compliance, audit, or regulatory language that would elevate this to high risk.
 
-⚠ **Disagreement**: manual=`moderate` vs LLM majority=`high`
-
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']
 
 ### collaboration_width
 **Manual:** `4`
 
 **Run 1:** `1` ✗
-> Quote: "franchisees"
+> Quote: "franchise partners"
 > Verified: ✓ found in JD
-> Reasoning: Only franchisees are explicitly named as a collaboration partner; internal stakeholders are mentioned generically.
+> Reasoning: Franchisees/franchise partners are the only explicitly named collaboration partners mentioned across multiple responsibilities (Support franchise partners' decisions, Support franchisees in interpreting KPIs).
 
 **Run 2:** `1` ✗
-> Quote: "franchisees"
-> Verified: ✓ found in JD
-> Reasoning: Only franchisees are explicitly named as a distinct external collaboration partner; internal teams are mentioned but fall under the exclusion for generic vague references.
-
-**Run 3:** `1` ✗
 > Quote: "Support franchisees in interpreting KPIs"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly identifies franchisees as a named collaboration partner for dashboard design and KPI interpretation, representing one distinct stakeholder group.
+> Reasoning: Only franchisees/franchise partners are explicitly named as a distinct collaboration group; other references to 'internal teams' are generic and do not count.
+
+**Run 3:** `1` ✗
+> Quote: "franchise partners"
+> Verified: ✓ found in JD
+> Reasoning: Franchise partners are explicitly named as collaboration partners; no internal functional teams (Product, Finance, Engineering, Data Science) are named.
 
 ⚠ **Disagreement**: manual=`4` vs LLM majority=`1`
 
@@ -161,19 +159,19 @@
 **Manual:** `early`
 
 **Run 1:** `mid` ✗
-> Quote: "Early-stage opportunity to build and structure analytics capabilities"
+> Quote: "Build data marts and business layers using dbt on Databricks"
 > Verified: ✓ found in JD
-> Reasoning: The phrase indicates the analytics function is growing but not from zero; responsibilities involve building on existing Databricks infrastructure.
+> Reasoning: Named tools (dbt, Databricks, Tableau) are deployed in active use, and existing dashboards are being adapted, indicating established infrastructure that is being extended rather than built from zero.
 
 **Run 2:** `mid` ✗
 > Quote: "Early-stage opportunity to build and structure analytics capabilities"
 > Verified: ✓ found in JD
-> Reasoning: Infrastructure exists (Databricks, dbt, Tableau in responsibilities) with existing dashboards to adapt, indicating a growing established function rather than greenfield early-stage.
+> Reasoning: While infrastructure exists (Databricks, dbt, Tableau), the language of 'build and structure' combined with adaptation of existing dashboards suggests a growing data function in mid-stage maturity.
 
 **Run 3:** `early` ✓
 > Quote: "Early-stage opportunity to build and structure analytics capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly frames this as an early-stage role to build and structure the analytics function, indicating the data capability is being established rather than operating at mature scale.
+> Reasoning: The JD explicitly frames this as an early-stage role focused on building and structuring analytics infrastructure from the ground up.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -182,22 +180,24 @@
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `mixed` ✓
+**Run 1:** `hiring_manager` ✗
 > Quote: "Code complex business logic (royalties, taxable turnover, margins)"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity appears in data engineering and domain logic but stakeholder management responsibilities remain generic.
+> Reasoning: Specific technical knowledge appears throughout (exact business logic requirements, Tableau features like LODs and parameters, star schema methodology), indicating a hiring manager who understands the hands-on work required.
 
-**Run 2:** `hiring_manager` ✗
-> Quote: "Build data marts and business layers using dbt on Databricks"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity about tools in their application context plus named business logic (royalties, taxable turnover, margins) indicates someone who understands this job deeply.
-
-**Run 3:** `mixed` ✓
+**Run 2:** `mixed` ✓
 > Quote: "Code complex business logic (royalties, taxable turnover, margins)"
 > Verified: ✓ found in JD
-> Reasoning: The JD blends technical specificity (dbt, Databricks, specific business logic domains, row-level security implementation) with generic boilerplate (support decisions, promote data-driven thinking), indicating hybrid authorship.
+> Reasoning: The JD combines hiring-manager-level specificity about business domain logic and technical tools (dbt on Databricks) with generic support-oriented phrases like 'support franchise partners' and 'identify trends and anomalies.'
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'mixed']
+**Run 3:** `hiring_manager` ✗
+> Quote: "Code complex business logic (royalties, taxable turnover, margins)"
+> Verified: ✓ found in JD
+> Reasoning: Specific business logic examples (royalties, taxable turnover, margins) demonstrate technical depth only someone doing this job would write.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `commercial`
@@ -205,17 +205,17 @@
 **Run 1:** `commercial` ✓
 > Quote: "Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: The primary role framing emphasizes supporting franchisees' commercial decisions about stock and pricing, positioning them as the main audience.
+> Reasoning: Franchisees are revenue-generating partners, and the role's primary purpose is supporting their success and operational decisions, which aligns with commercial/partnership-focused functions.
 
 **Run 2:** `commercial` ✓
 > Quote: "Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: Primary emphasis is supporting external franchise partners' business operations (stock, pricing, supply chain), which is commercial/partnership stakeholder territory.
+> Reasoning: The primary audience is franchise partners making commercial decisions about their operations, placing this role in the commercial stakeholder category.
 
 **Run 3:** `commercial` ✓
 > Quote: "Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary framing is enabling commercial decisions for franchise partners on supply chain, inventory, and pricing—defining commercial/partner operations orientation.
+> Reasoning: The primary audience is franchise partners (external commercial stakeholders) for operational and business decisions around inventory management and pricing.
 
 ### autonomy_level
 **Manual:** `execution`
@@ -223,17 +223,17 @@
 **Run 1:** `execution` ✓
 > Quote: "Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: The repeated emphasis on 'support' rather than 'define' or 'establish' indicates the role executes within stakeholder-defined priorities.
+> Reasoning: The role is framed around supporting, building, and maintaining existing priorities rather than setting direction or defining strategy.
 
 **Run 2:** `execution` ✓
 > Quote: "Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: The use of support verbs throughout and framing as delivery-oriented (maintain dashboards, build systems, code logic) indicates execution of direction rather than strategic ownership.
+> Reasoning: The repeated use of 'support' and 'design/maintain' verbs, combined with responsibilities framed around executing against partner and internal team needs, indicates an execution-focused role.
 
 **Run 3:** `mixed` ✗
-> Quote: "build and structure analytics capabilities"
+> Quote: "Build data marts and business layers using dbt on Databricks; Support franchise partners' decisions regarding stock, supply chain, and pricing"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic responsibilities (building and structuring analytics, designing dashboards) with execution-focused work (supporting partners, adapting existing tools).
+> Reasoning: The role balances strategic elements (building and structuring analytics infrastructure, negotiating data access) with execution elements (supporting franchisees, maintaining dashboards).
 
 ⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
 
@@ -243,17 +243,17 @@
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no expectation for the candidate to use or build AI tools; it is a traditional analytics and BI role.
+> Reasoning: No mention of AI-assisted coding, AI tools, or AI-ready data infrastructure anywhere in the job description.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No mention of AI-assisted coding tools, GenAI applications, or AI/ML pipeline work anywhere in the JD.
+> Reasoning: The JD contains no mention of AI skills expected from the candidate, whether as a tool user or infrastructure enabler.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tooling, AI-assisted coding, or AI-ready data infrastructure that the candidate must use or develop.
+> Reasoning: No mention of AI coding tools, GenAI applications, AI data infrastructure, or AI-related candidate expectations anywhere in the JD.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -261,40 +261,40 @@
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "Build data marts and business layers using dbt on Databricks; Code complex business logic (royalties, taxable turnover, margins)"
+> Quote: "No testing or data quality signal."
 > Verified: ✓ found in JD
-> Reasoning: Despite coding complex financial logic, no mention of testing, data contracts, or quality frameworks appears in responsibilities or requirements.
+> Reasoning: No mention of testing practices, data quality frameworks, data contracts, or observability anywhere in the JD.
 
 **Run 2:** `absent` ✗
-> Quote: "No testing or data quality framework mentioned in JD."
+> Quote: "No testing or data quality signal in the JD."
 > Verified: ⚠ NOT found verbatim
-> Reasoning: No data quality, testing frameworks, data contracts, or observability signals appear in the responsibilities or requirements sections.
+> Reasoning: The JD contains no explicit mention of testing, data quality frameworks, observability, or data contracts in either the responsibility or requirements sections.
 
 **Run 3:** `absent` ✗
-> Quote: "No testing practice mentioned in the JD."
+> Quote: "Storage/Compute: Databricks (Lakehouse); Transformation: dbt with SQL; Visualization: Tableau Software"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The JD makes no reference to testing frameworks, data quality practices, observability tools, or data contracts in either responsibilities or requirements.
+> Reasoning: The technical stack lists storage, transformation, and visualization tools but includes no testing frameworks, data quality tools, or observability platforms.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `none` ✗
+**Run 1:** `moderate` ✗
+> Quote: "Implement row-level security"
+> Verified: ✓ found in JD
+> Reasoning: Row-level security indicates some concern for data protection and risk mitigation, but the overall role framing emphasizes capability building and business impact delivery rather than preventing failures.
+
+**Run 2:** `none` ✗
 > Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: Despite the regulatory-sensitive nature of taxable turnover calculations, the JD is framed around building capabilities rather than preventing bad outcomes or compliance risks.
+> Reasoning: The JD is framed in capability and business impact terms with no mention of regulatory compliance, risk management, or reliability concerns.
 
-**Run 2:** `moderate` ✗
-> Quote: "Implement row-level security"
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: Security and governance concerns are present (row-level security, taxable turnover compliance) but secondary to delivery; the role emphasizes support and insights more than risk prevention as primary framing.
+> Reasoning: The JD is framed around capability-building and business impact opportunities with no risk, compliance, regulatory, or data trust language.
 
-**Run 3:** `moderate` ✗
-> Quote: "Implement row-level security"
-> Verified: ✓ found in JD
-> Reasoning: Row-level security implementation and complex financial logic (taxable turnover) suggest operational governance and compliance concerns, but the JD lacks explicit regulatory or stakeholder-trust framing that would elevate this to high.
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
-
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

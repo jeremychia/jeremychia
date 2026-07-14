@@ -60,14 +60,14 @@ Not specified in posting
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | high | high | high | high | 100% | ✓ |
-| collaboration_width | 5 | 4 | 5 | 4 | 33% | ✗ |
+| collaboration_width | 5 | 5 | 4 | 5 | 33% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | mixed | hiring_manager | mixed | hiring_manager | 33% | ✗ |
+| jd_authorship | mixed | mixed | mixed | mixed | 100% | ✓ |
 | stakeholder_orientation | finance | finance | finance | finance | 100% | ✓ |
 | autonomy_level | execution | execution | execution | execution | 100% | ✓ |
 | ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
-| loss_aversion_framing |  | high | high | moderate | 33% | ✗ |
+| loss_aversion_framing |  | moderate | high | moderate | 33% | ✗ |
 
 ---
 
@@ -77,19 +77,19 @@ Not specified in posting
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Prepare materials for external and internal audit reviews"
+> Quote: "Conduct accounting analysis, measurement, and reconciliations of major revenue accounts"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize accounting accuracy, reconciliations, audit compliance, and IFRS 15 principles throughout, with acceleration language only in service of automating reconciliation tasks.
+> Reasoning: The responsibilities emphasize accounting accuracy, reconciliation, and audit review as core expectations, with no language prioritizing speed or iteration.
 
 **Run 2:** `rigour` ✓
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: The role centers on accounting reconciliation and audit-ready materials rather than rapid iteration or shipping.
+> Reasoning: The responsibilities center on accounting accuracy, reconciliation, and audit compliance rather than speed or iteration, with audit review preparation as an explicit responsibility.
 
 **Run 3:** `rigour` ✓
 > Quote: "Conduct accounting analysis, measurement, and reconciliations of major revenue accounts"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities emphasize accounting accuracy, reconciliations, and compliance rather than velocity, with rigour signals (reconciliation, measurement, audit) substantially outweighing velocity signals.
+> Reasoning: Emphasis on reconciliations, measurement accuracy, and audit compliance throughout indicates rigour-focused orientation.
 
 ### domain_risk
 **Manual:** `high`
@@ -97,39 +97,37 @@ Not specified in posting
 **Run 1:** `high` ✓
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: Data errors directly affect financial reporting, regulatory compliance (IFRS 15, SOX), and audit outcomes in a fintech/marketplace context.
+> Reasoning: Revenue accounting errors directly affect financial reporting, regulatory compliance, and stakeholder trust, placing this role in the highest risk category.
 
 **Run 2:** `high` ✓
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: Revenue accounting directly affects financial reporting accuracy and is subject to external audit, making data errors have immediate compliance consequences.
+> Reasoning: Revenue accounting errors directly impact financial reporting and regulatory compliance, with explicit audit review responsibility indicating regulatory risk.
 
 **Run 3:** `high` ✓
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: External audit requirements and explicit financial reporting context (revenue accounting, IFRS 15, SOX) signal high regulatory and financial reporting risk where data errors have direct compliance consequences.
+> Reasoning: Direct audit involvement and revenue accounting responsibility signal high consequence for data errors in regulatory and financial reporting contexts.
 
 ### collaboration_width
 **Manual:** `5`
 
-**Run 1:** `4` ✗
-> Quote: "Collaborate with Product, Analytics, Engineering, and Accounting teams on revenue data requirements"
+**Run 1:** `5` ✓
+> Quote: "Product; Analytics; Engineering; Accounting; Finance"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named teams are explicitly listed as collaboration partners: Product, Analytics, Engineering, and Accounting.
+> Reasoning: The JD explicitly names five distinct collaborative functions: Product, Analytics, Engineering, and Accounting in responsibilities, and Finance in requirements.
 
-**Run 2:** `5` ✓
-> Quote: "Collaborate with Product, Analytics, Engineering, and Accounting teams; Cross-functional collaboration skills with Engineering, Product, and Finance teams"
+**Run 2:** `4` ✗
+> Quote: "Product; Analytics; Engineering; Accounting"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names five distinct partner functions: Product, Analytics, Engineering, Accounting, and Finance.
+> Reasoning: The JD explicitly names four distinct partner teams in the requirement to collaborate with them on revenue data requirements.
 
-**Run 3:** `4` ✗
-> Quote: "Collaborate with Product, Analytics, Engineering, and Accounting teams on revenue data requirements"
+**Run 3:** `5` ✓
+> Quote: "Product; Analytics; Engineering; Accounting; Finance"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named partner teams are explicitly identified as collaboration stakeholders in responsibilities.
+> Reasoning: Five distinct named partner teams identified across responsibilities and qualifications sections.
 
-⚠ **Disagreement**: manual=`5` vs LLM majority=`4`
-
-⚠ **LLM inconsistency**: runs gave ['4', '5', '4']
+⚠ **LLM inconsistency**: runs gave ['5', '4', '5']
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -137,75 +135,71 @@ Not specified in posting
 **Run 1:** `mid` ✓
 > Quote: "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
 > Verified: ✓ found in JD
-> Reasoning: The revenue subledger already exists and is being scaled, indicating an established data function growing rather than building from scratch or operating at mature scale.
+> Reasoning: The language describes scaling and extending an existing revenue subledger system, indicating a mid-stage data function with established infrastructure being improved.
 
 **Run 2:** `mid` ✓
 > Quote: "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
 > Verified: ✓ found in JD
-> Reasoning: The role involves scaling an existing revenue infrastructure with named tools (NetSuite, dbt, Snowflake) rather than building from zero, indicating a mid-stage data function.
+> Reasoning: The language indicates scaling and improving existing infrastructure rather than building from zero or operating at established scale.
 
 **Run 3:** `mid` ✓
 > Quote: "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
 > Verified: ✓ found in JD
-> Reasoning: The language 'continued implementation' and 'scale' indicates an existing data function being expanded rather than built from scratch.
+> Reasoning: Reference to scaling existing revenue accounting infrastructure and continuing implementation indicates an established function growing rather than a greenfield setup.
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `hiring_manager` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
 > Verified: ✓ found in JD
-> Reasoning: Specific accounting methodologies (flux analysis, balance sheet reconciliations), regulatory frameworks (IFRS 15), and named tools (Claude Code, Cursor) demonstrate technical depth only someone doing this work would include.
+> Reasoning: The JD contains technical specificity (flux analysis, revenue subledger, Claude Code/Cursor usage context) alongside generic collaboration language, indicating mixed authorship.
 
 **Run 2:** `mixed` ✓
-> Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close; Leverage AI tools like Claude Code and Cursor to accelerate analysis and automate reconciliation tasks"
-> Verified: ✓ found in JD
-> Reasoning: The role includes specific accounting procedures and tools with clear application context alongside generic collaboration language.
-
-**Run 3:** `hiring_manager` ✗
 > Quote: "Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
 > Verified: ✓ found in JD
-> Reasoning: Specific accounting methodologies (flux analysis, balance sheet reconciliations, month-end close cycle) indicate domain expertise from someone doing this work daily.
+> Reasoning: Mix of specific accounting methodology (flux analysis, month-end close cycles) alongside generic collaboration and problem-solving language suggests both domain expertise and template-based writing.
 
-⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
+**Run 3:** `mixed` ✓
+> Quote: "Conduct accounting analysis, measurement, and reconciliations of major revenue accounts; Prepare journal entries, balance sheet reconciliations, and flux analysis during month-end close"
+> Verified: ✓ found in JD
+> Reasoning: Specific accounting methodologies and standards references indicate hiring manager input, while some generic collaboration verbs suggest recruiter additions.
 
 ### stakeholder_orientation
 **Manual:** `finance`
 
 **Run 1:** `finance` ✓
-> Quote: "Prepare materials for external and internal audit reviews"
+> Quote: "Conduct accounting analysis, measurement, and reconciliations of major revenue accounts"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary impact is on accounting accuracy, audit readiness, and financial reporting, with finance, controllership, and audit as the core audiences.
+> Reasoning: The role is fundamentally about ensuring accurate revenue accounting, supporting journal entries, reconciliations, and audit preparation—all core Finance/FP&A responsibilities.
 
 **Run 2:** `finance` ✓
-> Quote: "Conduct accounting analysis, measurement, and reconciliations of major revenue accounts; Prepare materials for external and internal audit reviews"
+> Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: The role's core responsibilities center on financial accounting accuracy and audit compliance, making Finance/FP&A the primary stakeholder.
+> Reasoning: The role primarily serves finance and audit functions, with audit review preparation and accounting-focused responsibilities as the core deliverables.
 
 **Run 3:** `finance` ✓
 > Quote: "Conduct accounting analysis, measurement, and reconciliations of major revenue accounts"
 > Verified: ✓ found in JD
-> Reasoning: The role's responsibilities center on revenue accounting and reconciliations supporting financial reporting and audit compliance, making finance the primary stakeholder.
+> Reasoning: Core responsibility is revenue accounting and financial measurement, with audit review as a primary stakeholder need.
 
 ### autonomy_level
 **Manual:** `execution`
 
 **Run 1:** `execution` ✓
-> Quote: "Support the continued implementation of our revenue subledger"
+> Quote: "Support the continued implementation of our revenue subledger to scale our revenue accounting to the next level"
 > Verified: ✓ found in JD
-> Reasoning: All responsibilities use execution verbs (support, conduct, prepare, contribute) with no strategic ownership of direction-setting or priority definition.
+> Reasoning: The role is framed as supporting an existing implementation rather than defining or architecting the revenue accounting strategy.
 
 **Run 2:** `execution` ✓
 > Quote: "Support the continued implementation of our revenue subledger"
 > Verified: ✓ found in JD
-> Reasoning: The core verb is 'support' and the role receives scoped deliverables (reconciliations, journal entries, audit materials) rather than defining how analytics is delivered.
+> Reasoning: The use of 'support' signals executing direction set by others, with no 'define', 'own', or 'drive' language indicating strategic autonomy.
 
 **Run 3:** `execution` ✓
 > Quote: "Support the continued implementation of our revenue subledger"
 > Verified: ✓ found in JD
-> Reasoning: The verb 'support' and framing around 'continued implementation' indicate execution of a pre-defined scope set by existing processes rather than strategic direction-setting.
+> Reasoning: Opening responsibility uses 'support' verb and frames the role as contributing to an existing accounting infrastructure rather than defining direction.
 
 ### ai_role
 **Manual:** ``
@@ -213,17 +207,17 @@ Not specified in posting
 **Run 1:** `ai_user` ✗
 > Quote: "Leverage AI tools like Claude Code and Cursor to accelerate analysis and automate reconciliation tasks"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to actively use AI coding tools to accelerate their own analytical and reconciliation work.
+> Reasoning: The candidate is expected to use AI coding tools to accelerate their own analysis and reconciliation work.
 
 **Run 2:** `ai_user` ✗
 > Quote: "Leverage AI tools like Claude Code and Cursor to accelerate analysis and automate reconciliation tasks"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to use AI coding tools to accelerate their own analysis and automation work, not to build data infrastructure for AI systems.
+> Reasoning: The candidate is expected to use AI coding assistants (Claude Code, Cursor) as personal productivity tools to speed their own analysis work.
 
 **Run 3:** `ai_user` ✗
 > Quote: "Leverage AI tools like Claude Code and Cursor to accelerate analysis and automate reconciliation tasks"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to use AI coding tools to accelerate their own analysis and automate reconciliation tasks as personal productivity tools.
+> Reasoning: Candidate is explicitly expected to use specific AI coding tools to enhance their own analysis and automation work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
@@ -233,38 +227,38 @@ Not specified in posting
 **Run 1:** `absent` ✗
 > Quote: "Identify and resolve data issues and reconciliation gaps"
 > Verified: ✓ found in JD
-> Reasoning: While the role involves data reconciliation and issue resolution, there is no explicit mention of data quality frameworks, testing practices, data contracts, or observability tooling.
+> Reasoning: Data quality concerns exist but are framed reactively (identifying and resolving issues) rather than as an owned testing framework or data quality practice.
 
 **Run 2:** `absent` ✗
-> Quote: "No testing or data quality signal."
+> Quote: "Identify and resolve data issues and reconciliation gaps"
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no reference to testing, data quality frameworks, or observability practices.
+> Reasoning: While data quality is implied through reconciliation work, there is no mention of testing frameworks, data contracts, or ownership of testing practices.
 
 **Run 3:** `absent` ✗
 > Quote: "Identify and resolve data issues and reconciliation gaps"
 > Verified: ✓ found in JD
-> Reasoning: While reconciliation and issue resolution are implicit quality activities, the JD does not frame testing, data contracts, or data quality frameworks as explicit responsibilities or mention any testing tools.
+> Reasoning: While data accuracy matters operationally through reconciliation, there is no framing of testing framework ownership, data quality standards, or observability practice responsibility.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `high` ✗
+**Run 1:** `moderate` ✗
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: The JD frames the role around regulatory compliance (IFRS 15, SOX, audit readiness), reflecting high fear of compliance failure and regulatory exposure.
+> Reasoning: Audit and compliance are explicit concerns, but the role is framed primarily as implementing and scaling the system, making compliance secondary to delivery.
 
 **Run 2:** `high` ✗
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: The role includes audit material preparation and mandatory IFRS 15 knowledge, indicating the fear is regulatory and compliance consequences from inaccurate financial data.
+> Reasoning: Audit compliance, regulatory (IFRS 15), and reconciliation language throughout indicates the core fear is bad data reaching auditors and regulators rather than operational delivery concerns.
 
 **Run 3:** `moderate` ✗
 > Quote: "Prepare materials for external and internal audit reviews"
 > Verified: ✓ found in JD
-> Reasoning: Audit compliance and regulatory requirements (IFRS 15, SOX) are explicitly present but framed as baseline operational requirements within the close process rather than as a primary risk-mitigation or stakeholder-trust mandate.
+> Reasoning: Audit preparation and IFRS 15 compliance are explicit requirements, but the role's primary framing emphasizes scaling and implementation rather than preventing compliance failures.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`high`
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
 
-⚠ **LLM inconsistency**: runs gave ['high', 'high', 'moderate']
+⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'moderate']

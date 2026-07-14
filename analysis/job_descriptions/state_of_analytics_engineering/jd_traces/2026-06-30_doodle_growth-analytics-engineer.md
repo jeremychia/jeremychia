@@ -65,184 +65,221 @@ Important: We can only consider applicants who have the right to work in Germany
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | recruiter | mixed | mixed | 33% |
-| stakeholder_orientation | mixed | mixed | mixed | 100% |
-| autonomy_level | strategic | strategic | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | mixed | rigour | rigour | rigour | 100% | ✗ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 2 | 0 | 0 | 1 | 33% | ✗ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | mixed | recruiter | recruiter | recruiter | 100% | ✗ |
+| stakeholder_orientation | mixed | mixed | commercial | commercial | 33% | ✗ |
+| autonomy_level | strategic | mixed | mixed | mixed | 100% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | none | moderate | moderate | 33% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `mixed`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✗
 > Quote: "Establish trusted business metrics with cross-functional leaders"
 > Verified: ✓ found in JD
-> Reasoning: Emphasis on establishing 'trusted' metrics prioritizes reliability and quality over speed.
+> Reasoning: The responsibilities emphasize building reliable, structured systems ('trusted business metrics', 'eliminate manual processes') with no velocity-focused language like 'fast-paced' or 'move quickly'.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✗
 > Quote: "Establish trusted business metrics with cross-functional leaders"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes establishing trusted metrics and data accessibility without any velocity language, signaling a rigour-oriented approach to analytics delivery.
+> Reasoning: The single rigour signal 'trusted' establishes reliability as a core value, while the JD contains no velocity signals like 'fast-paced' or 'rapid delivery'.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✗
 > Quote: "Establish trusted business metrics with cross-functional leaders"
 > Verified: ✓ found in JD
-> Reasoning: The phrase "trusted business metrics" is an explicit rigour signal, and there are no countervailing velocity signals in the JD.
+> Reasoning: The emphasis on 'trusted' metrics and 'define KPIs' prioritizes correctness and rigor over speed; there are no velocity signals like 'fast-paced' or 'rapid delivery.'
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`rigour`
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
 > Quote: "Connect product usage with commercial performance"
 > Verified: ✓ found in JD
-> Reasoning: SaaS analytics affects business decisions but shows no regulatory, compliance, or financial reporting consequences.
-
-**Run 2:** `moderate`
-> Quote: "connecting product usage with commercial performance"
-> Verified: ✓ found in JD
-> Reasoning: Data errors affect business decisions about growth strategy and enterprise revenue, but no regulatory, compliance, or financial reporting language is present.
-
-**Run 3:** `moderate`
-> Quote: "Connect product usage with commercial performance"
-> Verified: ✓ found in JD
-> Reasoning: While the role involves commercial analytics for a SaaS company, the JD uses operational and business intelligence language without explicit signals of financial reporting, compliance, or audit responsibility.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "cross-functional leaders"
-> Verified: ✓ found in JD
-> Reasoning: Collaboration is mentioned but no explicitly named partner teams or business functions are identified.
-
-**Run 2:** `0`
-> Quote: "Not identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD describes cross-functional work and business segments but does not explicitly name specific partner teams like Finance, Product, Sales, Engineering, or Data Science.
-
-**Run 3:** `0`
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: The JD uses generic phrases like "cross-functional leaders" but does not name specific partner teams or functions such as Finance, Product, Marketing, or Engineering.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Build datasets and reporting models to eliminate manual processes"
-> Verified: ✓ found in JD
-> Reasoning: Suggests existing processes requiring improvement and scaling rather than building core infrastructure from zero.
-
-**Run 2:** `mid`
-> Quote: "Improve data accessibility across the organisation"
-> Verified: ✓ found in JD
-> Reasoning: The JD shows existing data infrastructure and focuses on scaling, improving, and building upon it rather than establishing from zero.
-
-**Run 3:** `mid`
-> Quote: "Build datasets and reporting models to eliminate manual processes"
-> Verified: ✓ found in JD
-> Reasoning: The focus on building infrastructure to eliminate manual processes suggests an existing data function that is growing and maturing, not an early-stage or fully established team.
-
-### jd_authorship
-
-**Run 1:** `recruiter`
-> Quote: "Establish trusted business metrics with cross-functional leaders"
-> Verified: ✓ found in JD
-> Reasoning: Generic action verbs and boilerplate language that could apply to any analytics role without specific technical or company context.
-
-**Run 2:** `mixed`
-> Quote: "Define KPIs and design dashboards"
-> Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic, recruiter-style action verbs, but domain-specific competency requirements (subscription metrics, funnel analysis) suggest hiring manager input on the knowledge domain.
-
-**Run 3:** `mixed`
-> Quote: "Build datasets and reporting models to eliminate manual processes"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs without concrete technical context, but the requirements section includes specific methodologies (subscription metrics, funnel analysis, KPI frameworks) and tools (dbt, Redshift, GA4, HubSpot, Looker, Tableau), suggesting partial hiring manager input.
-
-⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'mixed']
-
-### stakeholder_orientation
-
-**Run 1:** `mixed`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
-> Verified: ✓ found in JD
-> Reasoning: Role explicitly serves both product stakeholders (PLG, growth experiments) and commercial stakeholders (Enterprise Revenue) with equal emphasis.
-
-**Run 2:** `mixed`
-> Quote: "connecting product usage with commercial performance"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly bridges product/growth analytics with commercial/revenue analytics as its primary framing, with additional work on internal data accessibility creating genuinely equal emphasis across multiple stakeholder dimensions.
-
-**Run 3:** `mixed`
-> Quote: "own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation, connecting product usage with commercial performance"
-> Verified: ✓ found in JD
-> Reasoning: The role explicitly serves both Product/Growth audiences (PLG, experiments, product usage, customer cohorts) and Commercial/Revenue audiences (commercial performance, Enterprise Revenue) with equal emphasis.
-
-### autonomy_level
-
-**Run 1:** `strategic`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
-> Verified: ✓ found in JD
-> Reasoning: Ownership language and responsibility for defining KPIs signal autonomous direction-setting authority for analytics across major business units.
-
-**Run 2:** `strategic`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
-> Verified: ✓ found in JD
-> Reasoning: The role is positioned to own and define analytics for business segments, establish metrics, and build data products rather than executing work defined by others.
-
-**Run 3:** `mixed`
-> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
-> Verified: ✓ found in JD
-> Reasoning: The role combines strategic direction-setting verbs (Own, Define, Establish) with execution-oriented responsibilities (Support, Conduct, Evaluate), indicating genuine ownership of analytics direction paired with specific supporting work.
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
-
-### ai_role
-**Run 1:** `ai_user` ✗
-> Quote: "evaluate AI effectiveness"
-> Reasoning: Candidate expected to assess AI tool capabilities and performance, indicating use rather than infrastructure building.
-
-**Run 2:** `none` ✓
-> Quote: "GA4, HubSpot, Redshift, dbt, Looker or Tableau; conduct analyses on customer cohorts"
-> Reasoning: No AI tool usage (Copilot/Claude/Cursor) or AI infrastructure building mentioned; standard analytics stack.
-
-**Run 3:** `none` ✓
-> Quote: "GA4, HubSpot, Redshift, dbt, Looker or Tableau; conduct analyses on customer cohorts; evaluate AI effectiveness"
-> Reasoning: Evaluating AI effectiveness is mentioned but no signals of using AI coding tools or building AI infrastructure.
-
-⚠ **LLM inconsistency**: runs gave ['ai_user', 'none', 'none']
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "establish trusted business metrics; own analytics"
-> Reasoning: Ownership verbs 'establish' and 'own' applied to metrics and analytics practice signal candidate owns the quality discipline.
-
-**Run 2:** `tool_listed` ✗
-> Quote: "Named tools appear in responsibilities (dbt, Redshift, Looker), multiple data roles implied"
-> Reasoning: Tools listed without ownership verbs for quality/testing; no testing responsibility signal.
-
-**Run 3:** `responsibility` ✓
-> Quote: "establish trusted business metrics"
-> Reasoning: The verb 'establish' signals ownership of quality practice applied to trusted business metrics.
-
-⚠ **LLM inconsistency**: runs gave ['responsibility', 'tool_listed', 'responsibility']
-
-### loss_aversion_framing
-**Run 1:** `none` ✗
-> Quote: "No loss aversion framing detected"
-> Reasoning: Role emphasizes growth, experimentation, and PLG velocity without regulatory, audit, or compliance-driven framing.
+> Reasoning: The role impacts business decisions around revenue and growth but lacks explicit financial reporting, regulatory, or compliance language that would elevate it to high risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "errors affect business decisions without regulatory or financial-reporting consequence"
-> Reasoning: Operational reliability concern (business impact of errors) without compliance or regulatory dominance.
+> Quote: "Connect product usage with commercial performance"
+> Verified: ✓ found in JD
+> Reasoning: Data informs commercial and business decisions but the JD contains no signals of regulatory compliance, financial reporting, or audit requirements typical of high-risk roles.
 
 **Run 3:** `moderate` ✓
-> Quote: "errors affect business decisions without regulatory or financial-reporting consequence"
-> Reasoning: Operational reliability concerns present but without regulatory drivers, indicating moderate loss aversion.
+> Quote: "Connect product usage with commercial performance"
+> Verified: ✓ found in JD
+> Reasoning: The role tracks commercial/revenue metrics without explicit financial reporting, compliance, or regulatory language, placing it at moderate business decision risk rather than high financial or regulatory risk.
+
+### collaboration_width
+**Manual:** `2`
+
+**Run 1:** `0` ✗
+> Quote: "No explicit named collaboration partners identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While the role serves Product Led Growth and Enterprise Revenue domains, no distinct named partner teams are explicitly listed as collaboration partners.
+
+**Run 2:** `0` ✗
+> Quote: "No named partner teams explicitly identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references business units (PLG, Enterprise Revenue) and 'cross-functional leaders' but does not explicitly name specific partner functions like Product, Finance, or Sales teams.
+
+**Run 3:** `1` ✗
+> Quote: "Enterprise Revenue organisation"
+> Verified: ✓ found in JD
+> Reasoning: The JD explicitly names the Revenue function as a core stakeholder the role owns analytics for; no other named partner teams are identified.
+
+⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
+
+⚠ **LLM inconsistency**: runs gave ['0', '0', '1']
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "Build datasets and reporting models to eliminate manual processes"
+> Verified: ✓ found in JD
+> Reasoning: The responsibility to eliminate existing manual processes and improve data accessibility indicates an established data function that needs scaling rather than a greenfield build.
+
+**Run 2:** `mid` ✓
+> Quote: "Build datasets and reporting models to eliminate manual processes; Improve data accessibility across the organisation"
+> Verified: ✓ found in JD
+> Reasoning: The focus on improving and scaling existing systems, combined with a specialized Growth Analytics Engineer role, indicates an established data function that is expanding rather than building from zero.
+
+**Run 3:** `mid` ✓
+> Quote: "Improve data accessibility across the organisation"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on improving existing accessibility and eliminating manual processes signals a data function that exists but is growing and refining its delivery.
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `recruiter` ✗
+> Quote: "Define KPIs and design dashboards"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities rely on generic action verbs without technical specificity that someone doing this job would include, typical of recruiter-written JDs.
+
+**Run 2:** `recruiter` ✗
+> Quote: "Familiarity with dbt, Redshift, GA4, HubSpot, Looker, or Tableau"
+> Verified: ✓ found in JD
+> Reasoning: Tools are listed without specific application context or integration patterns, and responsibilities use generic action verbs typical of recruitment templates rather than insider technical depth.
+
+**Run 3:** `recruiter` ✗
+> Quote: "Build datasets and reporting models to eliminate manual processes; Improve data accessibility across the organisation"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities use generic action verbs and operational framing without the specific technical context, workflow details, or scale/volume information that indicates hiring manager authorship.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`recruiter`
+
+### stakeholder_orientation
+**Manual:** `mixed`
+
+**Run 1:** `mixed` ✓
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation, connecting product usage with commercial performance"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly serves both product/growth teams (PLG business, experiments) and commercial/revenue teams (Enterprise Revenue, commercial performance) with roughly equal emphasis.
+
+**Run 2:** `commercial` ✗
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
+> Verified: ✓ found in JD
+> Reasoning: The two explicitly named stakeholder organizations (PLG and Enterprise Revenue) are both revenue and go-to-market focused, with commercial performance as the primary output frame.
+
+**Run 3:** `commercial` ✗
+> Quote: "Enterprise Revenue organisation"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly owns analytics for the Enterprise Revenue organisation, positioning commercial performance and revenue growth as the primary stakeholder focus.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`commercial`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'commercial', 'commercial']
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `mixed` ✗
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business"
+> Verified: ✓ found in JD
+> Reasoning: The role opens with 'own analytics' signaling strategic direction-setting, but many responsibilities use execution-oriented language like 'support growth experiments' and 'conduct analyses'.
+
+**Run 2:** `mixed` ✗
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
+> Verified: ✓ found in JD
+> Reasoning: Strategic verbs like 'Own' and 'Define' indicate domain ownership, but execution verbs like 'Support' and 'Conduct' in subsequent responsibilities indicate executing direction set by others.
+
+**Run 3:** `mixed` ✗
+> Quote: "Own analytics across Doodle's self serve Product Led Growth business and Enterprise Revenue organisation"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic ownership of analytics direction ('Own analytics', 'Define KPIs', 'Establish metrics') with execution work ('Conduct analyses', 'Support growth experiments').
+
+⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: 'Evaluate AI effectiveness' refers to assessing product features in experiments, not an expectation that the candidate demonstrate AI skills like coding agents or AI infrastructure building.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: 'Evaluate AI effectiveness' refers to assessing product AI capability rather than expecting the candidate to use AI tools for their work or build AI infrastructure.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: 'Evaluate AI effectiveness' is a measurement task, not a requirement for the candidate to possess AI coding, GenAI infrastructure, or ML development skills.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "No testing or data quality signal."
+> Verified: ✓ found in JD
+> Reasoning: While 'trusted business metrics' implies quality, there is no mention of testing frameworks, data contracts, observability, or data quality practices.
+
+**Run 2:** `absent` ✗
+> Quote: "Establish trusted business metrics with cross-functional leaders"
+> Verified: ✓ found in JD
+> Reasoning: While trustworthiness is valued in the metrics, no testing practices, data quality frameworks, data contracts, or observability tools are explicitly named or owned as a responsibility.
+
+**Run 3:** `absent` ✗
+> Quote: "Build datasets and reporting models to eliminate manual processes"
+> Verified: ✓ found in JD
+> Reasoning: No testing, data quality frameworks, data contracts, or observability practices are mentioned in the responsibilities.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No loss aversion framing."
+> Verified: ✓ found in JD
+> Reasoning: The JD is framed in capability and delivery terms with no risk register, compliance language, or fear-based motivation for role design.
+
+**Run 2:** `moderate` ✗
+> Quote: "Establish trusted business metrics with cross-functional leaders"
+> Verified: ✓ found in JD
+> Reasoning: Trust and reliability are valued concerns but are secondary to delivery and impact, typical of moderate loss aversion in a delivery-oriented analytics role rather than a compliance or risk-dominated framing.
+
+**Run 3:** `moderate` ✗
+> Quote: "Establish trusted business metrics with cross-functional leaders"
+> Verified: ✓ found in JD
+> Reasoning: The mention of 'trusted' metrics signals concern for reliability and preventing bad decisions, but without explicit compliance, audit, or systematic risk-prevention language indicating high loss aversion.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
 
 ⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

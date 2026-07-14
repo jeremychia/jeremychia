@@ -55,10 +55,10 @@ Must have:
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | mixed | mixed | mixed | mixed | 100% | ✓ |
-| domain_risk | moderate | moderate | moderate | high | 33% | ✓ |
+| domain_risk | moderate | high | moderate | moderate | 33% | ✓ |
 | collaboration_width | 3 | 2 | 2 | 2 | 100% | ✗ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | hiring_manager | mixed | hiring_manager | hiring_manager | 33% | ✓ |
+| jd_authorship | hiring_manager | hiring_manager | hiring_manager | hiring_manager | 100% | ✓ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
 | autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
@@ -75,37 +75,37 @@ Must have:
 **Run 1:** `mixed` ✓
 > Quote: "Balance rigour with delivery speed — we're still building foundations while the business moves fast"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly frames both orientations with rigour signals (governance, testing frameworks, documentation) and velocity signals (building, business moving fast), making this genuinely balanced rather than dominated by either.
+> Reasoning: The JD establishes governance standards and testing frameworks (rigour signals) while explicitly stating the need to balance with the fast-moving business (velocity signal).
 
 **Run 2:** `mixed` ✓
 > Quote: "Balance rigour with delivery speed — we're still building foundations while the business moves fast"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities heavily emphasize governance, testing, and standards (rigour signals) while explicitly framing a required balance with delivery speed and acknowledging the business moves fast.
+> Reasoning: The JD explicitly frames the role as balancing both rigour (governance, testing frameworks, production-quality) and velocity (move fast, building phase), with both orientations genuinely present.
 
 **Run 3:** `mixed` ✓
 > Quote: "Balance rigour with delivery speed — we're still building foundations while the business moves fast"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly frames managing tension between both: establishing governance and testing frameworks (rigour) while moving fast to build foundations (velocity), with both framed as essential.
+> Reasoning: The JD explicitly acknowledges both orientations: rigour signals throughout (governance, standards, testing frameworks, production-quality, data quality, pipeline reliability) are genuinely balanced against velocity signals (the business moves fast, building role), making this mixed.
 
 ### domain_risk
 **Manual:** `moderate`
 
-**Run 1:** `moderate` ✓
-> Quote: "customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
+**Run 1:** `high` ✗
+> Quote: "Own and evolve our core dbt models and semantic layer to support key analytical use cases: customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: While financial reporting is mentioned, the B2C/marketplace context and absence of regulatory or compliance language indicate moderate risk rather than high-risk financial/compliance domains.
+> Reasoning: Financial reporting is explicitly named as a key analytical use case, indicating a high-risk domain where data errors directly impact financial statements and decision-making.
 
 **Run 2:** `moderate` ✓
-> Quote: "financial reporting"
+> Quote: "customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: While the role mentions financial reporting as an analytical use case, the company is travel-tech (not fintech/banking/regulated), with no explicit compliance or regulatory language, placing it at moderate rather than high risk.
+> Reasoning: The JD mentions financial reporting as a use case but frames the role around business analytics and self-serve infrastructure without regulatory or compliance language.
 
-**Run 3:** `high` ✗
-> Quote: "financial reporting"
+**Run 3:** `moderate` ✓
+> Quote: "customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly lists financial reporting as a core analytical use case, which carries inherent high risk of financial impact if data is incorrect.
+> Reasoning: Financial reporting is explicitly named as an analytical use case, but the sector is travel-tech SaaS (not fintech/banking/insurance) and risk is framed operationally rather than as regulatory or compliance concern.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'moderate', 'high']
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'moderate']
 
 ### collaboration_width
 **Manual:** `3`
@@ -113,17 +113,17 @@ Must have:
 **Run 1:** `2` ✗
 > Quote: "analytics teams; Data Engineering"
 > Verified: ✓ found in JD
-> Reasoning: Named partner functions are analytics teams and Data Engineering; other references use generic terms like 'stakeholders' which do not count.
+> Reasoning: Two distinct named partner functions are explicitly mentioned: Analytics (referred to as 'analytics teams' and 'analysts') and Data Engineering; references to 'stakeholders' and 'all functions' are too generic to count.
 
 **Run 2:** `2` ✗
-> Quote: "Partner with analysts to translate their needs into scalable data assets, and with Data Engineering on pipeline reliability and data quality"
+> Quote: "Partner with analysts to translate their needs into scalable data assets, and with Data Engineering on pipeline reliability"
 > Verified: ✓ found in JD
-> Reasoning: Two distinct partner functions are explicitly named—Analysts and Data Engineering—as collaboration partners in the responsibilities.
+> Reasoning: The JD explicitly names two distinct collaboration functions: analysts and Data Engineering.
 
 **Run 3:** `2` ✗
 > Quote: "analytics teams; Data Engineering"
 > Verified: ✓ found in JD
-> Reasoning: The JD names two distinct functional partners: analytics teams/analysts as a cohort, and Data Engineering as a named function.
+> Reasoning: Two distinct named partner functions are explicitly mentioned: analytics teams/analysts as a collaborating group, and Data Engineering as a partner on pipeline and infrastructure work.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
 
@@ -131,75 +131,73 @@ Must have:
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "lead and grow a team of analytics engineers (currently 2, scaling to 4 this year)"
+> Quote: "Lead and grow a team of analytics engineers (currently 2, scaling to 4 this year)"
 > Verified: ✓ found in JD
-> Reasoning: The team already exists with foundation and tools in place, scaling from 2 to 4 engineers, indicating mid-stage growth rather than building from zero in a greenfield environment.
+> Reasoning: The analytics engineering team already exists and is actively growing with named tools (dbt, Lightdash, Fivetran) in use, indicating a mid-stage function building on existing infrastructure rather than establishing from zero.
 
 **Run 2:** `mid` ✓
 > Quote: "Own and evolve our core dbt models and semantic layer to support key analytical use cases"
 > Verified: ✓ found in JD
-> Reasoning: The data infrastructure exists (core dbt models, semantic layer, team of 2) and is being evolved and scaled, signaling mid-maturity rather than early greenfield or established mature stage.
+> Reasoning: Named tools in responsibilities (dbt models, semantic layer) combined with a 2-person team scaling to 4 indicates established infrastructure being grown rather than built from scratch.
 
 **Run 3:** `mid` ✓
-> Quote: "Lead and grow a team of analytics engineers (currently 2, scaling to 4 this year)"
+> Quote: "This is a building role — you'll establish how we model data, how we govern metrics, and how we roll out self-service capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The team exists with 2 people and is actively growing to 4, indicating a growing function with named tools in place rather than early greenfield or fully mature scale.
+> Reasoning: A team exists with real tools deployed (dbt, Lightdash, BigQuery, Fivetran) and a reporting structure (Director of Data), but the framing is explicitly about building and establishing foundations rather than maintaining mature operations.
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `mixed` ✗
+**Run 1:** `hiring_manager` ✓
 > Quote: "Own and evolve our core dbt models and semantic layer to support key analytical use cases: customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about dbt, semantic layer, and named analytical use cases indicates hiring-manager input, but this mixes with generic people-management language elsewhere suggesting recruiter involvement.
+> Reasoning: Technical specificity about named methodologies (dbt, semantic layer), specific use cases (LTV, attribution, funnel), and contextual knowledge of their current state ('patchwork of legacy reporting tools', '20M+ user business') demonstrates hiring manager-level domain expertise.
 
 **Run 2:** `hiring_manager` ✓
-> Quote: "Own and evolve our core dbt models and semantic layer to support key analytical use cases: customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
+> Quote: "Own all dashboard development initially — from executive reporting to operational views, with support from analysts — then fully transition the ownership to analysts as self-service matures, building the templates and processes that enable this shift"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities show deep technical specificity about platform architecture (semantic layer, dbt), specific business use cases (LTV, acquisition, retention), and data infrastructure choices that only come from someone managing this function.
+> Reasoning: This responsibility contains precise methodology and workflow specificity reflecting hands-on experience building analytics infrastructure, not generic boilerplate.
 
 **Run 3:** `hiring_manager` ✓
-> Quote: "Own and evolve our core dbt models and semantic layer to support key analytical use cases: customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
+> Quote: "customer LTV, acquisition effectiveness, retention, funnel performance, and financial reporting"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities contain specific technical context (named tools, specific use cases and metrics, data warehouse patterns) that only comes from direct experience, not recruiter boilerplate.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
+> Reasoning: The responsibilities section contains specific use cases, named tools with application context (Lightdash, dbt models, semantic layer), scale numbers (20M+ users, team scaling from 2 to 4), and detailed methodologies (dimensional modelling, data warehouse design patterns) that indicate deep technical knowledge from someone who has done this work.
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "the self-service platform (Lightdash) that enables teams across the business to answer their own questions"
+> Quote: "You'll own the foundations that make analytics possible at scale: the semantic layer, core data models, dashboards, and the self-service platform (Lightdash) that enables teams across the business to answer their own questions."
 > Verified: ✓ found in JD
-> Reasoning: The primary mission is building analytics infrastructure and platform capabilities that internal teams consume, not serving external commercial, product, or finance stakeholders directly.
+> Reasoning: The role is primarily focused on building and evolving the data infrastructure (semantic layer, dbt models, self-serve platform) that serves the data function itself and enables downstream analytics consumers.
 
 **Run 2:** `internal_data` ✓
-> Quote: "self-serve platform (Lightdash) that enables teams across the business to answer their own questions"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role is primarily focused on building and maintaining the data infrastructure and platform that business users consume, rather than serving a specific business function directly.
+> Quote: "Success looks like business users confidently answering their own questions, a governed semantic layer that analytics teams trust, and a self-service platform that replaces our patchwork of legacy reporting tools"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary audience is the analytics function itself and business users consuming self-serve infrastructure, not a specific business team like commercial, product, or finance.
 
 **Run 3:** `internal_data` ✓
-> Quote: "self-service analytics infrastructure and data modelling practice"
+> Quote: "the semantic layer, core data models, dashboards, and the self-service platform (Lightdash) that enables teams across the business to answer their own questions"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building infrastructure (semantic layer, models, self-serve platform) for internal analytics consumers to answer their own questions.
+> Reasoning: The role's primary mission is building internal data infrastructure and platforms that other analysts, data engineers, and business users consume, rather than serving a specific business function like commercial, product, or finance.
 
 ### autonomy_level
 **Manual:** `strategic`
 
 **Run 1:** `strategic` ✓
-> Quote: "You'll own the foundations that make analytics possible at scale... you'll establish how we model data, how we govern metrics, and how we roll out self-service capabilities"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Strategic ownership verbs throughout (own, establish, drive, design) indicate the manager sets direction and defines practices for the analytics engineering function.
+> Quote: "you'll establish how we model data, how we govern metrics, and how we roll out self-service capabilities across a 20M+ user business"
+> Verified: ✓ found in JD
+> Reasoning: The role is expected to establish direction and define practices for data modeling and governance rather than execute direction set by others.
 
 **Run 2:** `strategic` ✓
-> Quote: "establish how we model data, how we govern metrics, and how we roll out self-service capabilities"
+> Quote: "you'll establish how we model data, how we govern metrics, and how we roll out self-service capabilities across a 20M+ user business"
 > Verified: ✓ found in JD
-> Reasoning: The role is expected to set direction and define the analytics architecture, governance, and platform strategy, rather than executing work scoped by others.
+> Reasoning: The role is framed around establishing and defining the analytics engineering practice and direction, not executing against existing strategy.
 
 **Run 3:** `strategic` ✓
 > Quote: "you'll establish how we model data, how we govern metrics, and how we roll out self-service capabilities"
 > Verified: ✓ found in JD
-> Reasoning: The role is explicitly framed around establishing and defining foundational practices rather than executing pre-determined priorities, with the candidate setting direction for the analytics function.
+> Reasoning: The role uses consistent strategic ownership verbs (establish, own, lead, drive, shape) and is positioned as defining how analytics functions work for the organization, not executing against externally set priorities.
 
 ### ai_role
 **Manual:** ``
@@ -207,17 +205,17 @@ Must have:
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI coding tools, AI infrastructure development, or expected AI-related candidate skills.
+> Reasoning: The JD contains no mention of AI tools, coding assistants, or AI-enabled data capabilities; no AI skill is expected of the candidate.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no language suggesting the candidate should use AI coding tools or build AI data infrastructure; it focuses purely on traditional analytics engineering.
+> Reasoning: The JD contains no mention of AI tools, agentic workflows, or AI-powered systems that the candidate would be expected to use or build.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI coding tools, AI infrastructure, or AI systems requiring the candidate's involvement.
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, GenAI applications, or AI-enabled data infrastructure — only standard analytics engineering work.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -227,17 +225,17 @@ Must have:
 **Run 1:** `responsibility` ✗
 > Quote: "Establish governance and standards: metric definitions, dashboard design patterns, modelling practices, testing frameworks, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Testing frameworks are listed as something the candidate will establish and own through governance standards, indicating ownership of the testing practice rather than just tool familiarity.
+> Reasoning: Testing frameworks are explicitly listed as part of the candidate's governance ownership using the action verb 'establish', making this a responsibility the candidate is expected to own and define.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Establish governance and standards: metric definitions, dashboard design patterns, modelling practices, testing frameworks, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Testing frameworks are explicitly listed as something the role establishes and owns as part of the governance standards, indicating ownership rather than just tool usage.
+> Reasoning: Testing frameworks are framed as something the candidate will establish and own as a core responsibility, not merely a tool listed in requirements.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Establish governance and standards: metric definitions, dashboard design patterns, modelling practices, testing frameworks, and documentation"
 > Verified: ✓ found in JD
-> Reasoning: Testing frameworks are framed as something the candidate will establish (define and own standards), not merely use or have familiarity with.
+> Reasoning: Testing frameworks are explicitly listed as something the candidate will establish and own as part of governance responsibilities, not merely a tool they should be familiar with.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
@@ -245,18 +243,18 @@ Must have:
 **Manual:** ``
 
 **Run 1:** `moderate` ✗
-> Quote: "a governed semantic layer that analytics teams trust"
-> Verified: ✓ found in JD
-> Reasoning: Reliability and trust concerns are present (governance, robustness, reliability), but risk framing is secondary to the primary mission of building and enabling analytics capabilities.
-
-**Run 2:** `moderate` ✗
 > Quote: "Partner with Data Engineering on pipeline reliability and data quality"
 > Verified: ⚠ NOT found verbatim
-> Reasoning: The role emphasizes operational reliability and data quality as partnership areas, but these are presented as secondary to the primary mission of building self-serve analytics infrastructure, indicating moderate loss aversion rather than high.
+> Reasoning: Data quality and pipeline reliability are mentioned as secondary concerns alongside the primary framing of building and enabling self-service analytics infrastructure, indicating moderate rather than high loss aversion.
+
+**Run 2:** `moderate` ✗
+> Quote: "Partner with Data Engineering on pipeline reliability, data quality, and infrastructure decisions"
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes operational reliability and data quality as concerns, but lacks regulatory, compliance, or strategic stakeholder trust language that would indicate high loss aversion.
 
 **Run 3:** `moderate` ✗
-> Quote: "Balance rigour with delivery speed — we're still building foundations while the business moves fast"
+> Quote: "a governed semantic layer that analytics teams trust"
 > Verified: ✓ found in JD
-> Reasoning: The JD indicates operational quality and reliability must be balanced with delivery, but frames this as engineering practice rather than preventing regulatory/compliance risk.
+> Reasoning: The JD shows operational reliability and quality concerns (pipeline reliability, data quality, governance) but frames these as infrastructure-building priorities rather than loss-aversion or compliance risk prevention.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

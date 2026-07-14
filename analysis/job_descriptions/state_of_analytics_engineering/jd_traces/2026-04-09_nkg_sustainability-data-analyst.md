@@ -63,12 +63,12 @@ Not specified in the posting.
 | domain_risk | high | high | moderate | moderate | 33% | ✗ |
 | collaboration_width | 2 | 0 | 0 | 0 | 100% | ✗ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | recruiter | mixed | mixed | recruiter | 33% | ✗ |
+| jd_authorship | recruiter | mixed | recruiter | recruiter | 33% | ✓ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | execution | mixed | mixed | mixed | 100% | ✗ |
+| autonomy_level | execution | execution | mixed | execution | 33% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | absent | absent | absent | 100% | ✗ |
-| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
+| loss_aversion_framing |  | moderate | none | none | 33% | ✗ |
 
 ---
 
@@ -80,17 +80,17 @@ Not specified in the posting.
 **Run 1:** `rigour` ✓
 > Quote: "Structured and analytical manner with emphasis on data quality"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality as a core requirement and includes regulatory compliance (EUDR) signals, with no velocity language, placing it in rigour orientation.
+> Reasoning: The JD explicitly emphasizes data quality as a core expectation with no velocity or fast-paced language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Structured and analytical manner with emphasis on data quality"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality and professionalism without any velocity language, indicating a rigour-focused orientation.
+> Reasoning: The JD emphasizes data quality as a core qualification and frames responsibilities around infrastructure building and improvement, with no velocity language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Structured and analytical manner with emphasis on data quality"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality as a core expectation with no velocity language present, indicating a rigour orientation focused on systematic platform building rather than speed.
+> Reasoning: The JD emphasizes data quality and structured analytical approaches with no velocity signals like fast-paced or rapid delivery.
 
 ### domain_risk
 **Manual:** `high`
@@ -98,17 +98,17 @@ Not specified in the posting.
 **Run 1:** `high` ✓
 > Quote: "Experience with EUDR compliance systems (e.g., osapiens)"
 > Verified: ✓ found in JD
-> Reasoning: EUDR is a mandatory European regulatory requirement for commodity imports; non-compliance carries legal and business penalties, placing this in high domain risk.
+> Reasoning: EUDR is an EU regulatory framework for deforestation compliance in supply chains, placing this role in a high-risk regulatory context.
 
 **Run 2:** `moderate` ✗
 > Quote: "Create Power BI dashboards and reports for monitoring and decision-making"
 > Verified: ✓ found in JD
-> Reasoning: The role supports business decisions through sustainability data, but the JD language is generic without explicit financial reporting or compliance framing, placing it at moderate risk despite EUDR context.
+> Reasoning: The role is oriented toward business intelligence and operational reporting despite the sector's regulatory implications (EUDR compliance), which are only mentioned in preferred skills.
 
 **Run 3:** `moderate` ✗
 > Quote: "Experience with EUDR compliance systems (e.g., osapiens)"
 > Verified: ✓ found in JD
-> Reasoning: While the company operates in a regulated compliance space (EUDR), compliance is listed as a preferred skill rather than core responsibility, and the JD frames the role around platform delivery rather than compliance risk prevention.
+> Reasoning: While EUDR regulatory context appears in preferred skills, the JD frames this as standard BI/analytics work rather than compliance-critical reporting.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
 
@@ -118,19 +118,19 @@ Not specified in the posting.
 **Manual:** `2`
 
 **Run 1:** `0` ✗
-> Quote: "No named partner teams or functions explicitly identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD mentions cross-functional collaboration and gathering requirements but does not name specific partner teams or functions.
+> Quote: "Strong cross-functional collaboration abilities"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes cross-functional collaboration generically without naming any specific partner teams or functions.
 
 **Run 2:** `0` ✗
 > Quote: "Strong cross-functional collaboration abilities"
 > Verified: ✓ found in JD
-> Reasoning: The JD expects collaboration but does not name any specific teams or functions.
+> Reasoning: The JD emphasizes collaboration but names no specific functions, teams, or partner roles like Finance, Product, or Engineering.
 
 **Run 3:** `0` ✗
 > Quote: "Strong cross-functional collaboration abilities"
 > Verified: ✓ found in JD
-> Reasoning: The JD describes cross-functional collaboration as expected but names no specific teams, functions, or departments to partner with.
+> Reasoning: The JD mentions cross-functional collaboration generically but does not name any specific partner teams or functions.
 
 ⚠ **Disagreement**: manual=`2` vs LLM majority=`0`
 
@@ -140,17 +140,17 @@ Not specified in the posting.
 **Run 1:** `mid` ✗
 > Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: Named infrastructure tools in responsibilities (Microsoft Fabric, Power BI) and focus on operating and improving existing systems signals a mid-stage team.
+> Reasoning: Named tools (Microsoft Fabric, Power BI) appear in core responsibilities with 'improve' language indicating existing infrastructure being enhanced rather than built from scratch.
 
 **Run 2:** `mid` ✗
-> Quote: "Develop and implement a unified sustainability data platform integrating multiple sources"
+> Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: The JD references existing infrastructure and tools (Microsoft Fabric, multiple data sources) while planning a major integration initiative, indicating mid-stage maturity.
+> Reasoning: Named tools in responsibilities (Microsoft Fabric, Power BI) combined with scaling and improvement language suggest an existing function being enhanced, not a greenfield build.
 
 **Run 3:** `mid` ✗
 > Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (Fabric, Power BI) appear in specific responsibilities, indicating existing infrastructure, but the role emphasizes developing and scaling rather than maintaining a mature established function.
+> Reasoning: The presence of 'operate' signals existing infrastructure and production responsibility, while 'improve data management processes' suggests a team growing its capabilities rather than building from zero.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
@@ -160,21 +160,19 @@ Not specified in the posting.
 **Run 1:** `mixed` ✗
 > Quote: "Design and operate scalable data pipelines within Microsoft Fabric; Create Power BI dashboards and reports for monitoring and decision-making"
 > Verified: ✓ found in JD
-> Reasoning: The JD combines specific technical context (Microsoft Fabric, scalable pipelines) with generic boilerplate (create dashboards, gather requirements).
+> Reasoning: Specific tool stack and domain context suggest hiring manager input, but generic action verbs and vague stakeholder language indicate recruiter contribution.
 
-**Run 2:** `mixed` ✗
-> Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
+**Run 2:** `recruiter` ✓
+> Quote: "Gather requirements and translate them into effective reporting and analytics solutions"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical tool context and skill requirements indicate hiring manager input, but generic phrases like 'improve data management processes' show recruiter contributions.
+> Reasoning: Responsibilities use generic action verbs without technical context or domain-specific problem details that would indicate hiring manager authorship.
 
 **Run 3:** `recruiter` ✓
 > Quote: "Gather requirements and translate them into effective reporting and analytics solutions"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use generic boilerplate action verbs without specific application context, business scale, methodology, or domain depth.
+> Reasoning: Responsibilities use generic boilerplate verbs and lack specific application context, scale, or methodology that would indicate hands-on hiring manager authorship.
 
-⚠ **Disagreement**: manual=`recruiter` vs LLM majority=`mixed`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
@@ -182,37 +180,37 @@ Not specified in the posting.
 **Run 1:** `internal_data` ✓
 > Quote: "Develop and implement a unified sustainability data platform integrating multiple sources"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on building infrastructure and platforms for internal analytics and decision-making, serving the data function itself.
+> Reasoning: Primary emphasis is building data platform infrastructure for internal consumption rather than serving specific commercial, product, or finance audiences.
 
 **Run 2:** `internal_data` ✓
 > Quote: "Develop and implement a unified sustainability data platform integrating multiple sources"
 > Verified: ✓ found in JD
-> Reasoning: The primary responsibility is building the data platform and infrastructure, suggesting the role primarily serves the data function and internal analytics consumers.
+> Reasoning: The primary framing emphasizes data platform infrastructure and data management processes rather than serving external business functions.
 
 **Run 3:** `internal_data` ✓
 > Quote: "Develop and implement a unified sustainability data platform integrating multiple sources"
 > Verified: ✓ found in JD
-> Reasoning: The role is primarily about building data infrastructure and pipelines for internal sustainability management, not serving a specific GTM, product, finance, or commercial function.
+> Reasoning: The framing emphasizes building data infrastructure (platform) and improving internal processes rather than serving commercial, product, or finance stakeholders explicitly.
 
 ### autonomy_level
 **Manual:** `execution`
 
-**Run 1:** `mixed` ✗
-> Quote: "Develop and implement a unified sustainability data platform; Gather requirements and translate them into effective reporting and analytics solutions"
+**Run 1:** `execution` ✓
+> Quote: "Gather requirements and translate them into effective reporting and analytics solutions"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic platform and pipeline design with execution of stakeholder requirements, showing both strategic ownership and support orientation.
+> Reasoning: The role is scoped to translate others' requirements into technical solutions rather than defining overall direction or strategy.
 
 **Run 2:** `mixed` ✗
-> Quote: "Develop and implement a unified sustainability data platform integrating multiple sources"
-> Verified: ✓ found in JD
-> Reasoning: The role owns a major platform initiative, but also gathers requirements and translates them into solutions, combining strategic ownership with execution-oriented direction-taking.
-
-**Run 3:** `mixed` ✗
 > Quote: "Design and operate scalable data pipelines within Microsoft Fabric"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic ownership of technical systems (design, operate, develop, improve) with execution against gathered requirements, creating genuine mixed autonomy.
+> Reasoning: The role combines strategic responsibility for technical platform design (develop, design, implement) with execution in gathering stakeholder requirements and contributing ideas.
 
-⚠ **Disagreement**: manual=`execution` vs LLM majority=`mixed`
+**Run 3:** `execution` ✓
+> Quote: "Gather requirements and translate them into effective reporting and analytics solutions"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities frame the role as receiving scoped requirements and delivering against them, rather than defining strategy or shaping how analytics is delivered.
+
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
 
 ### ai_role
 **Manual:** ``
@@ -220,17 +218,17 @@ Not specified in the posting.
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No AI coding tools, models, or infrastructure skills are mentioned as candidate expectations; Python and PySpark in preferred skills are data engineering capabilities, not AI-specific.
+> Reasoning: No mention of AI-assisted coding, AI infrastructure, or AI capabilities anywhere in the job description.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, agentic workflows, AI-assisted coding, or AI-enabled data infrastructure expectations.
+> Reasoning: No signals that the candidate must use AI coding tools or build AI-ready infrastructure; Python is listed as a bonus skill but without AI context.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: Python and PySpark appear in preferred skills as data processing tools but not framed as AI-assisted development, and the JD contains no mention of AI tools or AI-ready infrastructure expectations.
+> Reasoning: Python/PySpark appear in preferred skills but are listed without AI-specific context; no coding assistants, AI pipelines, or enablement responsibilities are mentioned.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -238,19 +236,19 @@ Not specified in the posting.
 **Manual:** ``
 
 **Run 1:** `absent` ✗
-> Quote: "No explicit testing or data quality responsibility framed as role ownership"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Data quality appears only as a personal characteristic requirement, not as a role responsibility, ownership verb, or named testing framework.
+> Quote: "Structured and analytical manner with emphasis on data quality"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is mentioned as a desired mindset but not as a specific testing responsibility or named tool.
 
 **Run 2:** `absent` ✗
 > Quote: "Structured and analytical manner with emphasis on data quality"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is valued as a professional attribute, but no testing frameworks, data contracts, or observability practices are defined as explicit responsibilities.
+> Reasoning: While data quality is valued as a competency, no specific testing tools, data contracts, or quality frameworks are mentioned as owned responsibilities.
 
 **Run 3:** `absent` ✗
-> Quote: "Structured and analytical manner with emphasis on data quality"
-> Verified: ✓ found in JD
-> Reasoning: Data quality is valued as a candidate work style but is not framed as an owned responsibility, testing framework, or named testing tool.
+> Quote: "No testing or data quality practice mentioned with ownership or tool names."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While 'emphasis on data quality' appears in qualifications as a candidate trait, no testing framework, data contracts, or quality ownership responsibility is named.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
 
@@ -260,16 +258,18 @@ Not specified in the posting.
 **Run 1:** `moderate` ✗
 > Quote: "Experience with EUDR compliance systems (e.g., osapiens)"
 > Verified: ✓ found in JD
-> Reasoning: Regulatory compliance (EUDR) and data quality emphasis signal operational and regulatory risk awareness, but the overall JD is delivery-focused rather than risk-centric.
+> Reasoning: Compliance and regulatory concern are present via EUDR but secondary to the delivery-focused core responsibilities; role is not primarily framed around risk prevention.
 
-**Run 2:** `moderate` ✗
-> Quote: "Structured and analytical manner with emphasis on data quality"
+**Run 2:** `none` ✗
+> Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: Data quality emphasis suggests reliability is a concern, but the overall JD framing focuses on delivery and capability rather than risk prevention or compliance, indicating moderate loss-aversion.
+> Reasoning: The role is described entirely in terms of building and improving systems, with no emphasis on preventing bad outcomes, operational reliability, or compliance concerns.
 
-**Run 3:** `moderate` ✗
-> Quote: "Experience with EUDR compliance systems (e.g., osapiens)"
+**Run 3:** `none` ✗
+> Quote: "No loss aversion framing."
 > Verified: ✓ found in JD
-> Reasoning: The company operates in a regulated space where data accuracy matters, and quality is valued, but the role is framed around platform delivery rather than preventing bad outcomes or managing compliance risk.
+> Reasoning: The JD frames the role in delivery and capability terms ('develop', 'implement', 'create', 'improve') with no language about preventing failures or managing risk.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'none']

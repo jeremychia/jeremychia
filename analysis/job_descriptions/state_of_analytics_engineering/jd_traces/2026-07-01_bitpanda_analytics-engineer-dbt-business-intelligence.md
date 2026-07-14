@@ -47,15 +47,15 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | moderate | high | high | 33% | ✓ |
-| collaboration_width | 5 | 3 | 4 | 4 | 33% | ✗ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 5 | 3 | 5 | 5 | 33% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
 | jd_authorship | mixed | mixed | mixed | mixed | 100% | ✓ |
 | stakeholder_orientation | mixed | internal_data | internal_data | internal_data | 100% | ✗ |
-| autonomy_level | mixed | execution | execution | mixed | 33% | ✗ |
+| autonomy_level | mixed | execution | execution | execution | 100% | ✗ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | none | moderate | moderate | 33% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -67,37 +67,35 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 **Run 1:** `rigour` ✓
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality and rigorous infrastructure maintenance with no velocity or speed-oriented language present.
+> Reasoning: The core responsibility emphasizes data quality assurance and reliability over speed or iteration pace.
 
 **Run 2:** `rigour` ✓
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality and reliability of core infrastructure with no velocity or speed signals present.
+> Reasoning: The responsibilities section emphasizes data quality and correctness as core expectations, with explicit quality assurance framing in dbt governance.
 
 **Run 3:** `rigour` ✓
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes data quality and governance as core expectations with dbt-based testing, significantly outweighing the single efficiency signal of streamlining.
+> Reasoning: The responsibilities emphasize data quality and correctness as core expectations, with no velocity or speed language in the role description.
 
 ### domain_risk
 **Manual:** `high`
 
-**Run 1:** `moderate` ✗
+**Run 1:** `high` ✓
 > Quote: "Collaborating with Finance and Operations on reporting needs"
 > Verified: ✓ found in JD
-> Reasoning: While the fintech sector implies financial risk, the JD contains generic collaboration language without explicit regulatory, compliance, or financial reporting signals.
+> Reasoning: Bitpanda is a fintech platform with 7 million customers managing customer wealth; Finance involvement in reporting indicates financial reporting risk.
 
 **Run 2:** `high` ✓
 > Quote: "Collaborating with Finance and Operations on reporting needs"
 > Verified: ✓ found in JD
-> Reasoning: Finance is explicitly named as a key collaborator in a fintech trading platform, placing data errors within the high-risk domain of financial decision-making.
+> Reasoning: Explicit Finance collaboration in a fintech sector indicates financial reporting is a core concern, making data errors directly relevant to financial accuracy.
 
 **Run 3:** `high` ✓
-> Quote: "trade-everything platform serving over 7 million customers across Europe, offering investments in cryptocurrencies, stocks, precious metals, and commodities"
+> Quote: "trade-everything platform serving over 7 million customers across Europe"
 > Verified: ✓ found in JD
-> Reasoning: Bitpanda operates a fintech platform where data errors directly affect millions of customers' financial transactions and investment decisions, creating inherent regulatory and financial risk.
-
-⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'high']
+> Reasoning: Fintech platform with 7 million customers handling financial transactions where data errors directly affect financial operations and regulatory compliance at scale.
 
 ### collaboration_width
 **Manual:** `5`
@@ -105,21 +103,19 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 **Run 1:** `3` ✗
 > Quote: "Finance and Operations; data engineering"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named functions are explicitly mentioned as collaboration partners: Finance, Operations, and data engineering.
+> Reasoning: Three distinct named teams are explicitly identified as collaboration partners: Finance, Operations, and data engineering.
 
-**Run 2:** `4` ✗
-> Quote: "Finance; Operations; data engineering; analysts"
+**Run 2:** `5` ✓
+> Quote: "Finance and Operations; business intelligence, data engineering; analysts"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named teams are explicitly referenced across responsibilities: Finance, Operations, Data Engineering, and Analysts/BI.
+> Reasoning: The JD names five distinct teams: Finance, Operations, Business Intelligence, Data Engineering, and Analysts as collaboration partners.
 
-**Run 3:** `4` ✗
-> Quote: "Collaborating with Finance and Operations on reporting needs; Unifying business intelligence, data engineering, and business stakeholders; Enabling analysts"
+**Run 3:** `5` ✓
+> Quote: "business intelligence; data engineering; Finance; Operations; analysts"
 > Verified: ✓ found in JD
-> Reasoning: Four distinct named teams are explicitly identified: Finance, Operations, Data Engineering, and Analysts as a role cohort.
+> Reasoning: Five distinct named teams/functions are referenced in responsibilities: BI, data engineering, Finance, Operations, and analysts as a role cohort.
 
-⚠ **Disagreement**: manual=`5` vs LLM majority=`4`
-
-⚠ **LLM inconsistency**: runs gave ['3', '4', '4']
+⚠ **LLM inconsistency**: runs gave ['3', '5', '5']
 
 ### data_team_maturity
 **Manual:** `mid`
@@ -127,53 +123,53 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 **Run 1:** `mid` ✓
 > Quote: "Contributing to the ongoing design of our core data model"
 > Verified: ✓ found in JD
-> Reasoning: Named tools already in place (dbt, Airflow, Metabase, Tableau) with ongoing design and scaling efforts indicate an established team in growth phase.
+> Reasoning: Named tools (dbt) in responsibilities and multiple data roles implied (BI, data engineering, analysts) signal an established but still-growing data function.
 
 **Run 2:** `mid` ✓
 > Quote: "Contributing to the ongoing design of our core data model"
 > Verified: ✓ found in JD
-> Reasoning: Ongoing design of core infrastructure indicates the data function exists with established tools (dbt, dashboards) but is actively being developed and improved, typical of mid-stage teams.
+> Reasoning: References to an existing core data model, dbt infrastructure, and multiple teams indicate an established data function that is evolving and growing rather than nascent.
 
 **Run 3:** `mid` ✓
-> Quote: "Contributing to the ongoing design of our core data model; Ensuring high data quality of the core data layer with dbt models"
+> Quote: "Contributing to the ongoing design of our core data model"
 > Verified: ✓ found in JD
-> Reasoning: Existing named tools (dbt) and infrastructure are mentioned as being improved and maintained rather than built from zero, indicating an established team in growth phase.
+> Reasoning: Named tools in responsibilities (dbt) and multiple data roles (BI, data eng, analysts) indicate an established function being actively improved, not greenfield or mature scale.
 
 ### jd_authorship
 **Manual:** `mixed`
 
 **Run 1:** `mixed` ✓
-> Quote: "Ensuring high data quality of the core data layer with dbt models; Collaborating with Finance and Operations on reporting needs"
-> Verified: ✓ found in JD
-> Reasoning: Mix of technical specificity (dbt, Airflow, data-modelling frameworks) alongside generic boilerplate verbs like collaborating and unifying.
-
-**Run 2:** `mixed` ✓
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical details (core data model, dbt, Airflow) are mixed with generic collaboration language (unifying stakeholders, enabling analysts), suggesting both hiring manager and recruiter input.
+> Reasoning: One specific responsibility names dbt with technical context, but most other responsibilities use generic collaboration verbs without technical detail.
 
-**Run 3:** `mixed` ✓
+**Run 2:** `mixed` ✓
 > Quote: "Ensuring high data quality of the core data layer with dbt models; Unifying business intelligence, data engineering, and business stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool context (dbt models, core data layer) and practices suggest hiring-manager input, but generic action verbs like 'Unifying' and 'Enabling' sound recruiter-written.
+> Reasoning: The JD contains technical specificity about dbt's application in data quality alongside generic framing like 'Unifying' teams that lacks implementation context.
+
+**Run 3:** `mixed` ✓
+> Quote: "Ensuring high data quality of the core data layer with dbt models"
+> Verified: ✓ found in JD
+> Reasoning: Technically specific language (dbt, core data layer, data quality frameworks) is mixed with generic collaboration verbs like 'collaborate' and 'unify'.
 
 ### stakeholder_orientation
 **Manual:** `mixed`
 
 **Run 1:** `internal_data` ✗
-> Quote: "Contributing to the ongoing design of our core data model"
+> Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The primary work centers on building and maintaining data infrastructure (core data model, data quality layer) that serves internal analysts and data consumers.
+> Reasoning: The core responsibility is building and maintaining the data infrastructure that other teams (analysts, Finance, Operations) consume, making internal data infrastructure the primary orientation.
 
 **Run 2:** `internal_data` ✗
 > Quote: "Enabling analysts and streamlining dashboard creation"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize building and improving data infrastructure (models, quality, dashboards) primarily for internal analytics consumers rather than external commercial, product, or finance-specific functions.
+> Reasoning: Four of five responsibilities focus on data platform and infrastructure work serving analytics consumers; Finance collaboration is secondary to platform-building.
 
 **Run 3:** `internal_data` ✗
 > Quote: "Enabling analysts and streamlining dashboard creation"
 > Verified: ✓ found in JD
-> Reasoning: The primary audience is the analytics function itself—enabling analysts and maintaining data infrastructure they consume, with Finance and Operations as collaborative partners.
+> Reasoning: The role's primary responsibilities are building and maintaining data infrastructure that analysts and BI teams consume, not serving commercial, product, or finance stakeholders.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`internal_data`
 
@@ -181,23 +177,21 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 **Manual:** `mixed`
 
 **Run 1:** `execution` ✗
-> Quote: "Collaborating with Finance and Operations on reporting needs"
+> Quote: "Contributing to the ongoing design of our core data model"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities use execution-oriented verbs (contributing, collaborating, enabling) with no strategic direction-setting or ownership language present.
+> Reasoning: The role uses "contributing" and "collaborating" rather than owning or leading strategy, with emphasis on enabling and supporting other teams.
 
 **Run 2:** `execution` ✗
-> Quote: "assisting various teams in collecting and analyzing metrics that support growth"
+> Quote: "Contributing to the ongoing design of our core data model"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as assisting and contributing to work set by others, with no indication the candidate will define priorities or shape how analytics is delivered.
+> Reasoning: The use of 'Contributing to' and 'ongoing design' indicates executing within an established framework rather than defining strategic direction.
 
-**Run 3:** `mixed` ✓
-> Quote: "Contributing to the ongoing design of our core data model; Collaborating with Finance and Operations on reporting needs"
+**Run 3:** `execution` ✗
+> Quote: "Contributing to the ongoing design of our core data model"
 > Verified: ✓ found in JD
-> Reasoning: The role combines strategic technical ownership of data model design and quality with execution in service of Finance, Operations, and analytics consumers.
+> Reasoning: The role contributes to an existing design rather than defining or shaping overall analytics direction; the summary emphasizes 'assisting various teams'.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`execution`
-
-⚠ **LLM inconsistency**: runs gave ['execution', 'execution', 'mixed']
 
 ### ai_role
 **Manual:** ``
@@ -205,17 +199,17 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI coding tools, AI-assisted workflows, or AI infrastructure skills expected of the candidate.
+> Reasoning: No mention of AI coding tools, AI-ready data infrastructure, or AI/ML capabilities in the responsibilities or requirements.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no signals that the candidate should use AI tools for productivity or build data infrastructure for AI systems.
+> Reasoning: The JD contains no mention of AI tools or AI-ready infrastructure that the candidate should demonstrate.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD contains no mention of AI tools, AI-assisted coding, or data infrastructure for AI systems.
+> Reasoning: The JD contains no mention of AI coding tools, AI-assisted development, or expectations for building AI-ready data infrastructure.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -225,38 +219,36 @@ Hybrid flexibility with 25 additional work-from-abroad days, competitive compens
 **Run 1:** `responsibility` ✗
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as a core responsibility the candidate owns through dbt implementation and the data layer, not merely a tool to be familiar with.
+> Reasoning: Data quality is framed as a responsibility the candidate owns and delivers through dbt, with an ownership verb ("ensuring") rather than as a tool requirement.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as a core responsibility the candidate owns (Ensuring), implemented through dbt testing practices.
+> Reasoning: The ownership verb 'Ensuring' frames data quality as a responsibility the candidate owns, not merely a tool to know.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Data quality is framed as an ownership accountability using the action verb 'Ensuring,' with dbt as the testing mechanism the candidate is responsible for maintaining.
+> Reasoning: Data quality is framed as a responsibility the candidate owns and ensures, with dbt as the tool for implementing quality standards.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `none` ✗
-> Quote: "No loss aversion framing."
+**Run 1:** `moderate` ✗
+> Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: The JD is framed around capability, delivery, and enabling teams with no emphasis on preventing bad outcomes, mitigating risk, or compliance concerns.
+> Reasoning: Operational reliability through data quality is clearly important, but the JD does not explicitly invoke compliance, regulatory, or stakeholder-trust language that would elevate this to high loss aversion.
 
 **Run 2:** `moderate` ✗
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and data accuracy are central concerns, reflecting fear of pipeline failures and bad data reaching decision-makers, but without explicit compliance or regulatory risk framing.
+> Reasoning: Data quality is framed as an operational concern and responsibility, but the overall JD emphasizes delivery and enablement rather than risk or compliance prevention.
 
 **Run 3:** `moderate` ✗
 > Quote: "Ensuring high data quality of the core data layer with dbt models"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability through data quality is a concern, but the JD lacks explicit compliance, regulatory, or stakeholder-trust framing that would signal high loss aversion.
+> Reasoning: Operational reliability of the data layer is a core concern, but without explicit compliance, regulatory, or stakeholder trust risk language throughout the JD.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
-
-⚠ **LLM inconsistency**: runs gave ['none', 'moderate', 'moderate']

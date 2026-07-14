@@ -5,6 +5,7 @@
 ```
 # Area Lead Analytics Engineer — Vinted
 
+**URL:** https://careers.vinted.com/jobs/j/4838170101?gh_jid=4838170101&gh_src=2aee7c72teu
 **Location:** Berlin, Germany
 **Date Posted:** 2026-06-27
 **Salary:** €90,100–€121,900 EUR
@@ -91,193 +92,220 @@ Work Benefits
 
 Work Model
 
-Hybrid arrangement with 2 recommended office days weekly (flexible, team-determined schedule).
-
-Equal Opportunity Statement
-
-Vinted commits to inclusive hiring practices welcoming ap…[truncated]
+Hybrid arrangement with 2 recommended office days weekly (flexible, team-determined schedul…[truncated]
 ```
 
 ---
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 0 | 0 | 0 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | internal_data | internal_data | internal_data | 100% |
-| autonomy_level | strategic | strategic | mixed | 33% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 4 | 0 | 0 | 0 | 100% | ✗ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | mixed | hiring_manager | recruiter | hiring_manager | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Deep knowledge of analytics engineering principles including testing, documentation, lineage, data quality, and observability"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, testing, documentation, and observability as core principles with no velocity-oriented language (fast-paced, rapid delivery, shipping) present.
+> Reasoning: The JD emphasizes testing, documentation, data quality, and observability throughout responsibilities and requirements with no velocity language present.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Drive improvements in data product quality, documentation, and observability"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes quality, documentation, observability, testing, and architectural standards as core responsibilities with no velocity-oriented language present.
+> Reasoning: The responsibilities section emphasizes maintaining standards, quality, documentation, and observability with no competing velocity signals, indicating a rigour-first orientation.
 
-**Run 3:** `rigour`
-> Quote: "Deep knowledge of analytics engineering principles including testing, documentation, lineage, data quality, and observability"
+**Run 3:** `rigour` ✓
+> Quote: "Maintain architectural standards, data quality, and operational excellence"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit rigour signals—testing, documentation, data quality, observability, maintaining standards—with no velocity signals present.
+> Reasoning: The responsibilities consistently emphasize data quality, testing, documentation, and observability rather than shipping speed or iteration pace.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
+**Run 1:** `moderate` ✓
+> Quote: "This role involves providing strategic technical oversight across Revenue, Purchase, and Orders domains within the data analytics function"
+> Verified: ✓ found in JD
+> Reasoning: While the domains are business-critical, the JD frames the role operationally rather than emphasizing compliance, regulatory, or financial reporting risk.
+
+**Run 2:** `moderate` ✓
 > Quote: "Revenue, Purchase, and Orders domains"
 > Verified: ✓ found in JD
-> Reasoning: E-commerce marketplace operations where data errors affect business decisions and revenue operations but without explicit regulatory, compliance, or financial reporting language.
-
-**Run 2:** `moderate`
-> Quote: "Revenue, Purchase, and Orders domains within the data analytics function"
-> Verified: ✓ found in JD
-> Reasoning: These transactional domains affect business operations and financial metrics, but lack explicit regulatory or compliance language that would elevate to high risk in a non-regulated marketplace context.
-
-**Run 3:** `moderate`
-> Quote: "providing strategic technical oversight across Revenue, Purchase, and Orders domains"
-> Verified: ✓ found in JD
-> Reasoning: Marketplace context with business decision impact but no explicit regulatory, compliance, or financial reporting language indicating high financial/regulatory risk.
-
-### collaboration_width
-
-**Run 1:** `0`
-> Quote: "No named partner teams identified"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD references 'cross-domain initiatives' and 'multiple teams' generically but names no specific functions like Finance, Product, Engineering, or other departments.
-
-**Run 2:** `0`
-> Quote: ""
-> Verified: ✓ found in JD
-> Reasoning: No named external partner teams are explicitly identified in the JD; the role focuses on internal data function leadership across domains rather than cross-functional collaboration with specific named teams.
-
-**Run 3:** `0`
-> Quote: "serve as central technical contact for cross-domain initiatives"
-> Verified: ✓ found in JD
-> Reasoning: No explicitly named partner functions, business teams, or external stakeholders listed; focus is internal data domain leadership.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Mentor analytics engineers through technical guidance and design reviews"
-> Verified: ✓ found in JD
-> Reasoning: Multiple analytics engineers already exist and require mentoring; architectural standards and technical debt management suggest an established function still growing and evolving.
-
-**Run 2:** `mid`
-> Quote: "Identify cross-domain intersections and ensure consistent data modeling approaches"
-> Verified: ✓ found in JD
-> Reasoning: Multiple established domains exist and require coordination with existing analytics engineers to mentor, indicating an evolved function that needs architectural oversight rather than greenfield build.
-
-**Run 3:** `mid`
-> Quote: "Manage technical debt and enable sustainable evolution of data systems"
-> Verified: ✓ found in JD
-> Reasoning: Signals of existing operational systems with accumulated technical debt being actively managed and formalized, characteristic of platform-scaling rather than greenfield build.
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "Ensure consistent data modeling approaches; Maintain architectural standards, data quality, and operational excellence"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Shows technical understanding of analytics engineering principles but lacks specific details about tools in actual use, volume numbers, or concrete technical challenges from their systems.
-
-**Run 2:** `mixed`
-> Quote: "Establish long-term technical direction for analytics engineering across specified domains; Maintain architectural standards, data quality, and operational excellence"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Some responsibilities show technical specificity about domains and data modeling while others use generic boilerplate language (maintain standards, drive improvements) common in recruiter-written copy.
-
-**Run 3:** `recruiter`
-> Quote: "Mentor analytics engineers through technical guidance and design reviews"
-> Verified: ✓ found in JD
-> Reasoning: Generic leadership verbs and abstract responsibilities without technical specificity about tools, scale, or concrete Tuesday-morning work patterns that indicate hiring manager authorship.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
-
-### stakeholder_orientation
-
-**Run 1:** `internal_data`
-> Quote: "Develop reusable patterns and shared design standards; Drive improvements in data product quality, documentation, and observability"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role's primary mission is building and maintaining the data platform, infrastructure, and standards that serve internal analytics engineers and data consumers.
-
-**Run 2:** `internal_data`
-> Quote: "Mentor analytics engineers through technical guidance and design reviews; Develop reusable patterns and shared design standards"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The role primarily serves the data function and analytics engineers through mentorship and platform infrastructure improvements rather than external business teams.
-
-**Run 3:** `internal_data`
-> Quote: "Serve as central technical contact for cross-domain initiatives"
-> Verified: ✓ found in JD
-> Reasoning: Primary audience is other analytics engineers and data platform infrastructure, not commercial, product, or finance business teams.
-
-### autonomy_level
-
-**Run 1:** `strategic`
-> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
-> Verified: ✓ found in JD
-> Reasoning: The core responsibility is setting technical direction and defining architectural standards rather than executing priorities set by external stakeholders.
-
-**Run 2:** `strategic`
-> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
-> Verified: ✓ found in JD
-> Reasoning: The verb 'establish' combined with responsibilities for long-term direction-setting, developing architectural standards, and identifying patterns indicates strategic ownership rather than execution-focused support.
-
-**Run 3:** `mixed`
-> Quote: "The position balances hands-on engineering with architectural leadership"
-> Verified: ✓ found in JD
-> Reasoning: Role genuinely combines strategic direction-setting (establish technical direction, develop patterns) with hands-on execution (maintain standards, mentor, manage technical debt).
-
-⚠ **LLM inconsistency**: runs gave ['strategic', 'strategic', 'mixed']
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "No AI-related phrases present"
-> Reasoning: Standard data architecture and technical leadership work; no signals of AI tool usage or AI-enabled infrastructure.
-
-**Run 2:** `none` ✓
-> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
-> Reasoning: No mention of AI tools, GenAI capabilities, or AI-ready infrastructure; role focuses on traditional data architecture and engineering leadership.
-
-**Run 3:** `none` ✓
-> Quote: "No AI-related phrases across role responsibilities"
-> Reasoning: Role centers on data architecture, domain oversight, and technical standards with no mention of AI tools, GenAI infrastructure, or AI-assisted work.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Maintain architectural standards, data quality... Drive improvements in data product quality, documentation, and observability"
-> Reasoning: Candidate owns quality practices through ownership verbs ('maintain', 'drive improvements') paired with quality/standards domains.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Drive improvements in data product quality, documentation, and observability"
-> Reasoning: Candidate is expected to drive improvements in data product quality, indicating active ownership of quality practices and standards.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Maintain architectural standards, data quality, and operational excellence; Drive improvements in data product quality; Establish long-term technical direction"
-> Reasoning: Candidate owns quality practice via ownership verbs (Maintain, Drive, Establish) consistently paired with data quality, standards, and testing concepts.
-
-
-### loss_aversion_framing
-**Run 1:** `moderate` ✓
-> Quote: "Maintain... operational excellence... Manage technical debt and enable sustainable evolution"
-> Reasoning: Operational reliability framing (excellence, technical debt) present but without compliance or stakeholder-trust dominance.
-
-**Run 2:** `none` ✗
-> Quote: "Maintain architectural standards, data quality, and operational excellence"
-> Reasoning: Framing emphasizes achieving excellence and maintaining standards rather than preventing failures, managing compliance risk, or addressing incidents.
+> Reasoning: While the role touches revenue operations in a marketplace context, there is no explicit financial reporting, compliance, or regulatory language that would elevate risk to high.
 
 **Run 3:** `moderate` ✓
-> Quote: "Maintain architectural standards, data quality, and operational excellence; Manage technical debt and enable sustainable evolution of data systems"
-> Reasoning: Framing emphasizes operational reliability, quality standards, and system sustainability rather than regulatory/compliance concerns, indicating moderate risk aversion.
+> Quote: "provide strategic technical oversight across Revenue, Purchase, and Orders domains"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: While the role touches revenue and orders domains, there is no explicit language about financial reporting, compliance, or regulatory consequences.
 
-⚠ **LLM inconsistency**: runs gave ['moderate', 'none', 'moderate']
+### collaboration_width
+**Manual:** `4`
+
+**Run 1:** `0` ✗
+> Quote: "No named partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD references generic cross-functional work and the role's own analytics engineers team but does not explicitly name distinct external partner functions.
+
+**Run 2:** `0` ✗
+> Quote: "No explicitly named partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD describes technical domains (Revenue, Purchase, Orders) this role oversees but does not name external partner functions or teams to collaborate with.
+
+**Run 3:** `0` ✗
+> Quote: "No named partner teams identified"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The JD mentions business domains (Revenue, Purchase, Orders) and mentoring responsibilities but does not name specific external partner teams or functions beyond the analytics function itself.
+
+⚠ **Disagreement**: manual=`4` vs LLM majority=`0`
+
+### data_team_maturity
+**Manual:** `mature`
+
+**Run 1:** `mid` ✗
+> Quote: "Mentor analytics engineers through technical guidance and design reviews"
+> Verified: ✓ found in JD
+> Reasoning: The role implies an existing team of multiple analytics engineers, established systems with architectural standards, and infrastructure being maintained and evolved.
+
+**Run 2:** `mid` ✗
+> Quote: "Production-grade expertise designing and maintaining data models and pipelines at scale"
+> Verified: ✓ found in JD
+> Reasoning: The role assumes existing infrastructure, named tools (dbt, BigQuery, Snowflake), and multiple analytics engineers to mentor, indicating an established team in growth phase rather than early-stage startup.
+
+**Run 3:** `mid` ✗
+> Quote: "Maintain architectural standards, data quality, and operational excellence"
+> Verified: ✓ found in JD
+> Reasoning: The emphasis on maintaining existing standards and mentoring multiple engineers suggests an established data function with growing complexity, rather than one being built from scratch.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `mixed`
+
+**Run 1:** `hiring_manager` ✗
+> Quote: "Production-grade expertise designing and maintaining data models and pipelines at scale"
+> Verified: ✓ found in JD
+> Reasoning: The JD contains technical specificity from someone doing this work—precise tool names, scale considerations, and production context—not recruiter boilerplate.
+
+**Run 2:** `recruiter` ✗
+> Quote: "Establish long-term technical direction for analytics engineering across specified domains; Identify cross-domain intersections and ensure consistent data modeling approaches"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities use generic leadership verbs and abstract concepts without technical specificity about what the role actually owns or builds; technical details are relegated to the requirements section.
+
+**Run 3:** `hiring_manager` ✗
+> Quote: "Advanced SQL, data modeling, and semantic layer design expertise with dbt or similar tools; Query performance optimization and cloud cost governance knowledge"
+> Verified: ✓ found in JD
+> Reasoning: The JD contains precise technical requirements about specific methodologies such as semantic layer design and query optimization that demonstrate genuine experience with the work.
+
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'recruiter', 'hiring_manager']
+
+### stakeholder_orientation
+**Manual:** `internal_data`
+
+**Run 1:** `internal_data` ✓
+> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed as leading the data platform and analytics engineering function itself, not serving a specific business stakeholder type like finance or revenue operations.
+
+**Run 2:** `internal_data` ✓
+> Quote: "providing strategic technical oversight across Revenue, Purchase, and Orders domains within the data analytics function"
+> Verified: ✓ found in JD
+> Reasoning: The role's primary audience is the analytics engineering team and data infrastructure consumers, not commercial, product, or finance stakeholders.
+
+**Run 3:** `internal_data` ✓
+> Quote: "Develop reusable patterns and shared design standards; Mentor analytics engineers through technical guidance and design reviews"
+> Verified: ✓ found in JD
+> Reasoning: The role is framed around building infrastructure, mentoring other data professionals, and establishing standards for the data function itself, not serving external business domains.
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `strategic` ✓
+> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
+> Verified: ✓ found in JD
+> Reasoning: The role is expected to set direction, define architectural standards, manage technical debt, and shape team development across domains.
+
+**Run 2:** `strategic` ✓
+> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
+> Verified: ✓ found in JD
+> Reasoning: The responsibilities are dominated by strategic verbs (establish, develop, drive, manage) that frame the role as setting direction and architectural vision rather than executing predefined work.
+
+**Run 3:** `strategic` ✓
+> Quote: "Establish long-term technical direction for analytics engineering across specified domains"
+> Verified: ✓ found in JD
+> Reasoning: The primary responsibilities include defining direction, developing standards, and identifying architectural approaches rather than executing scoped work defined by others.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD mentions Feature Store and ML workload familiarity as infrastructure knowledge but does not expect the candidate to use or build AI tools.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectation that the candidate use AI coding tools or build AI-ready data infrastructure; ML workload familiarity is only infrastructure knowledge.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no mention of AI coding tools, agentic workflows, or AI infrastructure responsibilities expected of the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Drive improvements in data product quality, documentation, and observability"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and observability are framed as active ownership responsibilities using the verb 'drive', not just listed as required skills.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Maintain architectural standards, data quality, and operational excellence"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed with the ownership verb 'maintain,' indicating the candidate is accountable for quality practices, not just familiar with tools.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Maintain architectural standards, data quality, and operational excellence; Drive improvements in data product quality, documentation, and observability"
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly owns the maintenance and improvement of data quality and observability practices, not just the use of specific tools.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Manage technical debt and enable sustainable evolution of data systems"
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability and system sustainability are concerns, but there is no high-risk compliance, regulatory, or stakeholder trust framing present.
+
+**Run 2:** `moderate` ✗
+> Quote: "Maintain architectural standards, data quality, and operational excellence"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes operational reliability and excellence through repeated quality and standard language, but frames this as operational reliability rather than compliance or risk avoidance.
+
+**Run 3:** `moderate` ✗
+> Quote: "Maintain architectural standards, data quality, and operational excellence"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes reliability and quality as operational concerns focused on system health and sustainable evolution, rather than regulatory risks.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

@@ -69,11 +69,11 @@
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 3 | 2 | 2 | 2 | 100% | ✗ |
 | data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | mixed | recruiter | recruiter | 33% | ✗ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | mixed | mixed | 100% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | product | internal_data | 33% | ✓ |
+| autonomy_level | execution | mixed | execution | execution | 33% | ✓ |
 | ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
-| testing_framing |  | tool_listed | responsibility | responsibility | 33% | ✗ |
+| testing_framing |  | tool_listed | tool_listed | responsibility | 33% | ✗ |
 | loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
@@ -86,17 +86,17 @@
 **Run 1:** `rigour` ✓
 > Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities consistently emphasize reliability, quality, testing, and monitoring with no velocity language, establishing rigour as the dominant orientation.
+> Reasoning: Multiple explicit rigour signals (testing, monitoring, best practices, reliability) dominate the responsibilities with no velocity language.
 
 **Run 2:** `rigour` ✓
 > Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section emphasizes testing, monitoring, code quality, and best practices as core expectations, with no velocity-related phrases like 'fast-paced' or 'move fast'.
+> Reasoning: The responsibilities section emphasizes best practices, testing, monitoring, and SLOs as core expectations, with no velocity or speed-focused language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: Multiple explicit rigour signals (testing, monitoring, best practices, reliable, high-quality) substantially outweigh the single pragmatic refactoring mention, establishing a rigour-dominated orientation.
+> Reasoning: Multiple rigour signals (code quality, testing, monitoring) with no velocity framing present.
 
 ### domain_risk
 **Manual:** `moderate`
@@ -104,17 +104,17 @@
 **Run 1:** `moderate` ✓
 > Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
 > Verified: ✓ found in JD
-> Reasoning: As a marketplace data role with no financial reporting, compliance, or regulatory signals, data errors affect business decisions but lack the high-stakes compliance consequences that would elevate risk.
+> Reasoning: Travel marketplace/SaaS domain with no regulatory, compliance, or financial reporting language suggests moderate business risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "Deliver reliable, high-quality datasets/pipelines"
+> Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
 > Verified: ✓ found in JD
-> Reasoning: GetYourGuide is a marketplace platform with no regulatory or financial reporting language in the JD, placing it in the moderate risk category for operational decision-making.
+> Reasoning: The role supports product and operational decisions in a marketplace platform without financial reporting, compliance, or regulatory framing.
 
 **Run 3:** `moderate` ✓
 > Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
 > Verified: ✓ found in JD
-> Reasoning: The role translates business requirements into data infrastructure without explicit mention of financial reporting, regulatory compliance, or audit impact, indicating business-decision focus rather than high-consequence regulatory work.
+> Reasoning: Marketplace role with operational data impact but no explicit financial reporting, compliance, or regulatory language.
 
 ### collaboration_width
 **Manual:** `3`
@@ -122,17 +122,17 @@
 **Run 1:** `2` ✗
 > Quote: "Product and Data teams"
 > Verified: ✓ found in JD
-> Reasoning: Only two distinct named teams are explicitly identified as collaboration partners in the responsibilities section.
+> Reasoning: Two named collaboration partners: Product teams and Data teams.
 
 **Run 2:** `2` ✗
 > Quote: "Product and Data teams"
 > Verified: ✓ found in JD
-> Reasoning: The JD explicitly names two distinct partner groups: Product teams and Data teams.
+> Reasoning: Two explicitly named partner functions (Product and Data teams) are identified as primary collaborators in translating business requirements.
 
 **Run 3:** `2` ✗
 > Quote: "Product; Data teams"
 > Verified: ✓ found in JD
-> Reasoning: Two distinct named teams are explicitly identified as collaboration partners: Product and Data teams.
+> Reasoning: Two named functions identified as collaboration partners in responsibilities.
 
 ⚠ **Disagreement**: manual=`3` vs LLM majority=`2`
 
@@ -142,17 +142,17 @@
 **Run 1:** `mid` ✗
 > Quote: "Improve what's already in production: Pragmatically refactor and simplify existing pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The role operates within established infrastructure with defined SLOs and team processes, indicating a data function beyond its initial build phase but not yet mature at scale.
+> Reasoning: Production infrastructure with named tools (dbt, Spark, Snowflake) and operational responsibilities (SLOs) exist and are actively maintained.
 
 **Run 2:** `mid` ✗
-> Quote: "Improve what's already in production: Pragmatically refactor and simplify existing pipelines"
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: The focus on improving and refactoring existing production systems indicates an established data function with infrastructure already in place, characteristic of a mid-stage team.
+> Reasoning: The team has operational maturity (SLOs), existing production systems to improve, and established tooling (dbt, Spark, Snowflake), indicating a functioning mid-stage data organization.
 
 **Run 3:** `mid` ✗
 > Quote: "Improve what's already in production: Pragmatically refactor and simplify existing pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Existing production infrastructure, established tools (dbt, Spark, Delta, Snowflake), and multiple named data roles imply a growing but not yet fully mature function.
+> Reasoning: Existing infrastructure with established code review and planning practices, but no multi-team structure or massive scale signals.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
 
@@ -162,75 +162,77 @@
 **Run 1:** `mixed` ✗
 > Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: While most responsibilities use generic boilerplate verbs, specific operational details like SLOs and team practices suggest some hiring manager input alongside recruiter-written generic language.
+> Reasoning: SLO-specific operational framing suggests hiring manager input, but generic phrases like "translate business requirements" and "apply best practices" are recruiter boilerplate.
 
-**Run 2:** `recruiter` ✗
-> Quote: "Expertise in SQL & Python, building robust data pipelines and data models"
+**Run 2:** `mixed` ✗
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: The required qualifications list tools without specific application context or scale, using generic phrasing that could apply to any data engineer role.
+> Reasoning: The JD includes specific operational context (SLOs, managing production pipelines) but also generic collaboration verbs elsewhere, indicating a mix of hiring manager insight and recruiter template.
 
-**Run 3:** `recruiter` ✗
-> Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
+**Run 3:** `mixed` ✗
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: Responsibilities consist of generic action verbs ('deliver', 'serve as', 'apply', 'contribute to') and boilerplate phrasing with no technical specificity about actual Tuesday-morning work.
+> Reasoning: Mostly generic responsibility verbs mixed with some operational specificity (SLO framing and operational/dev balance distinction).
 
-⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`recruiter`
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'recruiter']
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
+> Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
 > Verified: ✓ found in JD
-> Reasoning: Despite partnering with Product teams, responsibilities emphasize data infrastructure quality and operational excellence rather than analytics insights or business impact.
+> Reasoning: While Product is a collaboration partner, the core responsibilities focus on building data infrastructure and operational reliability for internal data consumers.
 
-**Run 2:** `internal_data` ✓
-> Quote: "Improve what's already in production: Pragmatically refactor and simplify existing pipelines"
+**Run 2:** `product` ✗
+> Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities focus on maintaining and improving data infrastructure and team practices, with primary audience being the data function itself rather than downstream commercial, product, or finance consumers.
+> Reasoning: The role explicitly positions itself as serving Product teams by translating business requirements into data solutions.
 
 **Run 3:** `internal_data` ✓
-> Quote: "Improve what's already in production: Pragmatically refactor and simplify existing pipelines"
+> Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on maintaining operational responsibilities, production reliability (SLOs), and internal data infrastructure indicates the primary audience is the data platform and its consumers.
+> Reasoning: Role emphasizes data platform reliability and operations (SLOs, code reviews, infrastructure) despite Product partnership.
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'product', 'internal_data']
 
 ### autonomy_level
 **Manual:** `execution`
 
-**Run 1:** `execution` ✓
-> Quote: "Deliver reliable, high-quality datasets/pipelines"
+**Run 1:** `mixed` ✗
+> Quote: "Build end-to-end data solutions independently"
 > Verified: ✓ found in JD
-> Reasoning: The role executes within scoped direction set by Product and Data teams, with independence referring to delivery approach rather than strategic direction-setting.
+> Reasoning: Strong autonomy in building data solutions independently is balanced against execution-oriented verbs (Serve, Contribute, Apply) that frame the role as supporting defined priorities.
 
 **Run 2:** `execution` ✓
-> Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
+> Quote: "Improve what's already in production: Pragmatically refactor and simplify existing pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The role executes on requirements set by Product and Data teams rather than setting strategy or defining priorities.
+> Reasoning: The primary framing is delivering and maintaining existing systems rather than defining direction or strategy.
 
 **Run 3:** `execution` ✓
 > Quote: "Serve as a thought partner with Product and Data teams to translate business requirements"
 > Verified: ✓ found in JD
-> Reasoning: Language emphasizes supporting and assisting other teams with their requirements rather than setting strategic direction for how analytics is delivered.
+> Reasoning: Technical execution is independent but strategic direction and priorities are set by team leadership and Product.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']
 
 ### ai_role
 **Manual:** ``
 
 **Run 1:** `ai_user` ✗
-> Quote: "AI-first mindset: Uses modern AI tools to boost productivity"
+> Quote: "Uses modern AI tools to boost productivity"
 > Verified: ✓ found in JD
-> Reasoning: The preferred skills explicitly frame AI as a personal productivity tool for the candidate to use in their own work, not as infrastructure the role builds or serves.
+> Reasoning: Candidate is expected to use AI tools to accelerate their own work as a preferred qualification.
 
 **Run 2:** `ai_user` ✗
 > Quote: "AI-first mindset: Uses modern AI tools to boost productivity"
 > Verified: ✓ found in JD
-> Reasoning: The preferred skill explicitly expects the candidate to use modern AI tools to accelerate their own productivity.
+> Reasoning: The candidate is expected to use modern AI tools to accelerate their own work productivity.
 
 **Run 3:** `ai_user` ✗
-> Quote: "Uses modern AI tools to boost productivity"
+> Quote: "AI-first mindset: Uses modern AI tools to boost productivity"
 > Verified: ✓ found in JD
-> Reasoning: The candidate is expected to use modern AI tools to accelerate their own coding and productivity work.
+> Reasoning: Candidate is expected to use modern AI tools to accelerate their own work productivity.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
@@ -240,21 +242,21 @@
 **Run 1:** `tool_listed` ✗
 > Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: Testing appears as a practice to apply within best practices rather than as a domain the candidate owns or defines.
+> Reasoning: Testing is mentioned as a practice to apply but without ownership language like "own" or "define"—it's a requirement to follow existing practices.
 
-**Run 2:** `responsibility` ✗
+**Run 2:** `tool_listed` ✗
 > Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: Testing is listed in the responsibilities section as an active practice to apply, not just a tool in the tech stack.
+> Reasoning: Testing is mentioned as part of best practices to apply, not as an owned responsibility or framework to define.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Apply best practices in code quality, data modeling, testing, and monitoring"
 > Verified: ✓ found in JD
-> Reasoning: Testing appears in the responsibilities section as an active practice the candidate applies and is accountable for, not merely as a tool listed in requirements.
+> Reasoning: Testing is framed as a practice the candidate applies and owns, not just a tool listed in requirements.
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+⚠ **Disagreement**: manual=`` vs LLM majority=`tool_listed`
 
-⚠ **LLM inconsistency**: runs gave ['tool_listed', 'responsibility', 'responsibility']
+⚠ **LLM inconsistency**: runs gave ['tool_listed', 'tool_listed', 'responsibility']
 
 ### loss_aversion_framing
 **Manual:** ``
@@ -262,16 +264,16 @@
 **Run 1:** `moderate` ✗
 > Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and SLOs are repeated concerns, but without compliance, regulatory, or data accuracy framing that would signal high loss aversion.
+> Reasoning: SLOs and emphasis on reliability and monitoring signal operational reliability concerns, but there is no regulatory, compliance, or stakeholder-trust language.
 
 **Run 2:** `moderate` ✗
 > Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions SLOs and operational balance, indicating operational reliability is a concern, but this is secondary to the primary framing of building and improving solutions.
+> Reasoning: The JD emphasizes operational reliability through SLOs but frames this as infrastructure concern rather than preventing regulatory or trust risk.
 
 **Run 3:** `moderate` ✗
 > Quote: "Maintain balance between operational responsibilities and new development using team SLOs"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and SLOs are secondary concerns alongside delivery; there is no explicit compliance, regulatory, or stakeholder-trust framing that would indicate high loss aversion.
+> Reasoning: Risk framing centers on operational reliability and SLO compliance rather than compliance or stakeholder trust.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

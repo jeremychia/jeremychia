@@ -112,6 +112,26 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   border-left: 3px solid var(--accent); font-size: 0.82rem; color: var(--text);
 }
 .rel-read .resume-tip b { color: var(--accent); }
+.rel-test { margin-top: 0.65rem; font-size: 0.73rem; color: var(--muted); line-height: 1.6; }
+.rel-test .sig {
+  display: inline-block; font-weight: 700; font-size: 0.6rem; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 0.12rem 0.55rem; border-radius: 20px; margin-right: 0.45rem; vertical-align: 1px;
+}
+.sig-strong, .sig-ok { background: #dcfce7; color: #166534; }
+.sig-marginal { background: #fef3c7; color: #92400e; }
+.sig-none { background: #fee2e2; color: #991b1b; }
+.sig-na { background: var(--surface2); color: var(--muted); }
+
+/* ── NULL-RESULT CARDS ── */
+.null-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; }
+.null-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem 1.5rem; }
+.null-expect { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 700; margin-bottom: 0.45rem; }
+.null-title { font-size: 0.93rem; font-weight: 700; margin-bottom: 0.65rem; line-height: 1.4; }
+.null-result { font-size: 0.81rem; color: var(--muted); line-height: 1.7; }
+.null-result strong { color: var(--text); }
+.null-test { margin-top: 0.6rem; font-size: 0.72rem; color: var(--muted); }
+.null-apply { margin-top: 0.85rem; padding: 0.7rem 0.85rem; background: #fff; border-radius: 8px; border-left: 3px solid var(--accent); font-size: 0.77rem; color: var(--text); line-height: 1.65; }
+.null-apply b { color: var(--accent); }
 
 /* stacked-bar cross-tab (two categorical variables) */
 .xtab-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem; }
@@ -199,7 +219,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="hero" aria-label="Introduction">
   <div class="hero-eyebrow" id="heroEyebrow">JDs · classified on behavioural dimensions</div>
   <h1>What actually predicts what, in analytics engineering job descriptions</h1>
-  <p class="hero-sub">Single percentages ("82% rigour-oriented") are cheap and mostly uninformative on their own — every JD in a rigour-dominant market says similar things. What's useful is where two dimensions move together: does seniority predict autonomy? Does team maturity predict what kind of work you'll do? This page leads with those relationships, because that's where the market actually differentiates roles.</p>
+  <p class="hero-sub">Single percentages ("82% rigour-oriented") are cheap and mostly uninformative on their own — every JD in a rigour-dominant market says similar things. What's useful is where two dimensions move together: does seniority predict autonomy? Does team maturity predict what kind of work you'll do? This page leads with those relationships, shows the test statistic behind each one (recomputed live against whatever filter is active), and reports the relationships that <em>failed</em> — including one this page used to claim that dissolved when the corpus doubled.</p>
   <div class="hero-caveat">
     <strong>Read before trusting any number here:</strong> this is a pilot-scale, single-market dataset (Europe-heavy, collected opportunistically during one person's job search). Confidence intervals are wide — treat percentages as directional, not precise. Geography reflects what got scraped, not the market; see the callout in that section.
   </div>
@@ -210,6 +230,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   <span class="nav-title">AE/BI Market</span>
   <div class="nav-links" role="list">
     <a href="#relationships" role="listitem" data-section="relationships">Relationships</a>
+    <a href="#nulls"         role="listitem" data-section="nulls">Didn't hold</a>
     <a href="#explorer"      role="listitem" data-section="explorer">Explorer</a>
     <a href="#orientation"   role="listitem" data-section="orientation">Orientation</a>
     <a href="#geo-section"   role="listitem" data-section="geo-section">Coverage</a>
@@ -243,8 +264,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 <section class="section" id="relationships">
   <div class="section-label">Two-variable findings</div>
   <h2 class="section-headline">Where dimensions move together</h2>
-  <p class="section-body">Each panel below crosses two classifications to answer a question a single-dimension stat can't: not "how many roles are strategic" but "<strong>which</strong> roles are strategic." These are the findings worth reading closely before you apply.</p>
+  <p class="section-body">Each panel below crosses two classifications to answer a question a single-dimension stat can't: not "how many roles are strategic" but "<strong>which</strong> roles are strategic." Panels are ordered by effect size (Cramér's V), strongest first, and each carries its χ² test — recomputed against the active role filter. Several tables have sparse cells (expected counts under 5), which makes the χ² approximation optimistic; those are flagged inline and should be read as directional. The last panel is a finding this page used to assert that no longer survives.</p>
   <div class="rel-grid" id="relGrid"></div>
+</section>
+
+<hr class="divider">
+
+<!-- SECTION: NULL RESULTS -->
+<section class="section" id="nulls">
+  <div class="section-label">Negative results</div>
+  <h2 class="section-headline">What we expected but the data didn't support</h2>
+  <p class="section-body">A page that only shows the cross-tabs that worked is survivorship bias with charts. These are relationships we specifically went looking for — because an earlier draft claimed them, or because the industry narrative predicts them — that failed to replicate, flattened as the corpus grew, or never showed up. Reported with the same statistics as the findings above, because a solid null is often just as actionable.</p>
+  <div class="null-grid" id="nullGrid"></div>
 </section>
 
 <hr class="divider">
@@ -377,6 +408,7 @@ const COLOURS = {
   testing_framing:        { responsibility: '#1d4ed8', tool_listed: '#d97706', absent: '#9ca3af' },
   loss_aversion_framing:  { none: '#16a34a', moderate: '#d97706', high: '#c0392b' },
   seniority:              { junior: '#16a34a', mid: '#0891b2', senior: '#1d4ed8', lead: '#7c3aed', staff: '#c0392b', manager: '#d97706' },
+  dbt_named:              { named: '#1d4ed8', not_named: '#9ca3af' },
 };
 const LABELS = {
   domain_risk:            { high: 'High risk', moderate: 'Moderate', low: 'Low risk' },
@@ -390,6 +422,7 @@ const LABELS = {
   testing_framing:        { responsibility: 'Owns quality', tool_listed: 'Tool listed', absent: 'Absent' },
   loss_aversion_framing:  { none: 'No fear signal', moderate: 'Operational fear', high: 'Compliance / trust fear' },
   seniority:              { junior: 'Junior', mid: 'Mid', senior: 'Senior', lead: 'Lead', staff: 'Staff', manager: 'Manager' },
+  dbt_named:              { named: 'dbt named', not_named: 'dbt not named' },
 };
 const KEYWORDS = {
   velocity_vs_rigour: { rigour: ['TDD','CI/CD','production-grade','mocking','performance profiling','compliance','audit','meticulous','controlled','test coverage','regression','quality gate'], velocity: ['move fast','bias for action','agile','iterate','pragmatic','ship','fast-paced','rapid'] },
@@ -418,6 +451,96 @@ function wilsonMoe(successes, n) {
   const denom = 1 + z * z / n;
   const half = z * Math.sqrt((p * (1 - p) + z * z / (4 * n)) / n);
   return Math.round((half / denom) * 100);
+}
+
+// ── Inference helpers: χ² survival via regularized incomplete gamma ──
+function lgamma(x) {
+  const g = [76.18009172947146, -86.50532032941677, 24.01409824083091, -1.231739572450155, 0.1208650973866179e-2, -0.5395239384953e-5];
+  let y = x, tmp = x + 5.5;
+  tmp -= (x + 0.5) * Math.log(tmp);
+  let ser = 1.000000000190015;
+  for (let j = 0; j < 6; j++) ser += g[j] / ++y;
+  return -tmp + Math.log(2.5066282746310005 * ser / x);
+}
+function gammaQ(a, x) { // regularized upper incomplete gamma Q(a,x)
+  if (x <= 0) return 1;
+  if (x < a + 1) { // series for P, return 1-P
+    let ap = a, sum = 1 / a, del = sum;
+    for (let i = 1; i < 300; i++) { ap++; del *= x / ap; sum += del; if (Math.abs(del) < Math.abs(sum) * 1e-12) break; }
+    return 1 - sum * Math.exp(-x + a * Math.log(x) - lgamma(a));
+  }
+  let b = x + 1 - a, c = 1 / 1e-300, d = 1 / b, h = d; // continued fraction for Q
+  for (let i = 1; i < 300; i++) {
+    const an = -i * (i - a); b += 2;
+    d = an * d + b; if (Math.abs(d) < 1e-300) d = 1e-300;
+    c = b + an / c; if (Math.abs(c) < 1e-300) c = 1e-300;
+    d = 1 / d; const de = d * c; h *= de;
+    if (Math.abs(de - 1) < 1e-12) break;
+  }
+  return Math.exp(-x + a * Math.log(x) - lgamma(a)) * h;
+}
+function chi2sf(x, k) { return gammaQ(k / 2, x / 2); }
+
+function chiSqStats(data, aKey, bKey) {
+  const pairs = data.filter(d => d[aKey] && d[bKey]);
+  const ra = [...new Set(pairs.map(d => d[aKey]))], rb = [...new Set(pairs.map(d => d[bKey]))];
+  const n = pairs.length;
+  if (n < 30 || ra.length < 2 || rb.length < 2) return null;
+  const obs = ra.map(r => rb.map(c => pairs.filter(d => d[aKey] === r && d[bKey] === c).length));
+  const rs = obs.map(r => r.reduce((a, b) => a + b, 0));
+  const cs = rb.map((_, j) => obs.reduce((a, r) => a + r[j], 0));
+  let chi2 = 0, minexp = Infinity;
+  for (let i = 0; i < ra.length; i++) for (let j = 0; j < rb.length; j++) {
+    const e = rs[i] * cs[j] / n;
+    minexp = Math.min(minexp, e);
+    if (e > 0) chi2 += (obs[i][j] - e) ** 2 / e;
+  }
+  const dof = (ra.length - 1) * (rb.length - 1);
+  return { n, chi2, dof, p: chi2sf(chi2, dof), V: Math.sqrt(chi2 / (n * Math.min(ra.length - 1, rb.length - 1))), minexp };
+}
+
+function kruskalWallis(groups) { // groups: array of numeric arrays
+  const filled = groups.filter(g => g.length);
+  const all = [];
+  filled.forEach((g, i) => g.forEach(v => all.push([v, i])));
+  const N = all.length;
+  if (N < 20 || filled.length < 2) return null;
+  all.sort((a, b) => a[0] - b[0]);
+  const ranks = new Array(N);
+  let i = 0;
+  while (i < N) {
+    let j = i;
+    while (j < N && all[j][0] === all[i][0]) j++;
+    const r = (i + j + 1) / 2;
+    for (let k = i; k < j; k++) ranks[k] = r;
+    i = j;
+  }
+  const sums = filled.map(() => 0), cnt = filled.map(() => 0);
+  all.forEach(([, g], k) => { sums[g] += ranks[k]; cnt[g]++; });
+  let H = 0;
+  filled.forEach((_, gi) => { H += sums[gi] * sums[gi] / cnt[gi]; });
+  H = 12 / (N * (N + 1)) * H - 3 * (N + 1);
+  const df = filled.length - 1;
+  return { H, df, p: chi2sf(H, df), n: N };
+}
+
+function fmtP(p) {
+  if (p < 0.0001) return 'p&lt;0.0001';
+  if (p < 0.001) return 'p&lt;0.001';
+  return 'p=' + p.toFixed(p < 0.01 ? 3 : 2);
+}
+function sigBadge(s, statTxt) {
+  if (!s) return `<span class="sig sig-na">not testable</span> too few records under this filter for a meaningful test`;
+  let cls, word;
+  if (s.p < 0.05) { cls = s.p < 0.001 ? 'sig-strong' : 'sig-ok'; word = 'significant'; }
+  else if (s.p < 0.10) { cls = 'sig-marginal'; word = 'marginal'; }
+  else { cls = 'sig-none'; word = 'not significant'; }
+  const sparse = (s.minexp !== undefined && s.minexp < 5) ? ' · sparse cells — χ² approximate, read as directional' : '';
+  return `<span class="sig ${cls}">${word}</span> ${statTxt} · n=${s.n}${sparse}`;
+}
+function chiBadge(data, aKey, bKey) {
+  const s = chiSqStats(data, aKey, bKey);
+  return sigBadge(s, s ? `χ²=${s.chi2.toFixed(1)}, df=${s.dof}, ${fmtP(s.p)}, V=${s.V.toFixed(2)}` : '');
 }
 
 // ── Stats strip ──
@@ -521,6 +644,7 @@ const REL_ORDER = {
   loss_aversion_framing: ['high','moderate','none'],
   greenfield_vs_fix: ['greenfield','mixed','fix_scale'],
   jd_authorship: ['hiring_manager','mixed','recruiter'],
+  dbt_named: ['named','not_named'],
 };
 
 function pct(data, key, filterFn) {
@@ -545,55 +669,63 @@ function medianBy(data, groupKey, groupVal, numKey) {
 }
 
 function buildRelationships(data) {
+  const cnt = (k, v) => data.filter(d => d[k] === v).length;
   const panels = [
     {
-      id: 'rel-seniority-autonomy', rowKey: 'seniority', colKey: 'autonomy_level',
-      tag: 'Seniority × Autonomy', q: '"Senior" titles — do they actually predict who sets direction?',
-      statFn: () => `Staff titles are ${grpPct(data,'seniority','staff','autonomy_level','strategic')}% strategic; "Senior" splits roughly ${grpPct(data,'seniority','senior','autonomy_level','strategic')}% strategic / ${grpPct(data,'seniority','senior','autonomy_level','execution')}% execution / ${grpPct(data,'seniority','senior','autonomy_level','mixed')}% mixed.`,
-      read: `<strong>No.</strong> "Senior" is spread across all three autonomy levels almost evenly — the title alone tells you very little about whether you'll set direction or execute against someone else's. Staff titles are the only ones that reliably signal strategic autonomy, likely because they're rarer and more costly for an employer to hand out. Mid-level titles cluster hardest in execution and mixed.
-        <div class="resume-tip"><b>Apply this:</b> Don't trust "Senior" in the job title. Read the verbs in the responsibilities section — "define/own/shape" vs. "support/assist/deliver" tells you more than the seniority label does. Ask directly in the interview what decisions the role makes autonomously in year one.</div>`,
-    },
-    {
-      id: 'rel-maturity-autonomy', rowKey: 'data_team_maturity', colKey: 'autonomy_level',
-      tag: 'Team maturity × Autonomy', q: 'Where does "own the data model" actually mean something?',
-      statFn: () => `Early-stage teams offer strategic autonomy ${grpPct(data,'data_team_maturity','early','autonomy_level','strategic')}% of the time, vs. ${grpPct(data,'data_team_maturity','mid','autonomy_level','strategic')}% at mid-stage teams — despite mid-stage being ${Math.round(data.filter(d=>d.data_team_maturity==='mid').length/data.filter(d=>d.data_team_maturity).length*100)}% of the market.`,
-      read: `Early-stage companies are the clearest source of genuine strategic autonomy — the greenfield career-advice claim holds up in the data. But most of the market (roughly six in ten roles) is mid-stage, where the roadmap is already set and the role skews toward extending it, not defining it. Mature teams are more evenly split, but lean execution slightly more than mid-stage.
-        <div class="resume-tip"><b>Apply this:</b> If strategic ownership is what you want, filter for early-stage teams first — don't rely on title language at mid-stage companies to signal it. If you want structure and mentorship over direction-setting, mid-stage is the honest default, not a consolation prize.</div>`,
-    },
-    {
-      id: 'rel-stakeholder-autonomy', rowKey: 'stakeholder_orientation', colKey: 'autonomy_level',
-      tag: 'Stakeholder audience × Autonomy', q: 'Does who you serve determine how much say you get?',
-      statFn: () => `Finance-facing roles are ${grpPct(data,'stakeholder_orientation','finance','autonomy_level','execution')}% execution — the most execution-dominant segment in the dataset. Product-facing roles are the most strategic, at ${grpPct(data,'stakeholder_orientation','product','autonomy_level','strategic')}%.`,
-      read: `Finance-facing AE roles are shaped by externally imposed requirements — audit cycles, reporting standards, compliance frameworks — that define the deliverable before any internal conversation about direction happens. That's a structural constraint on autonomy, not an employer preference. Product and "mixed-stakeholder" roles (often platform or lead positions serving multiple audiences) show the most strategic latitude, likely because there's no external body dictating the output.
-        <div class="resume-tip"><b>Apply this:</b> If you're finance-facing, don't oversell "strategy" in your pitch — precision, auditability, and reliable delivery are what's being screened for. If you want strategic scope, mixed-stakeholder and product-facing roles are structurally more likely to offer it.</div>`,
+      id: 'rel-maturity-mission', rowKey: 'data_team_maturity', colKey: 'greenfield_vs_fix',
+      tag: 'Team maturity × Greenfield vs fix · Strongest relationship in the dataset', q: 'Where is the "build from scratch" work, really?',
+      statFn: () => `Greenfield work concentrates at ${grpPct(data,'data_team_maturity','early','greenfield_vs_fix','greenfield')}% of early-stage roles, vs. nearly absent at mature teams (${grpPct(data,'data_team_maturity','mature','greenfield_vs_fix','greenfield')}%). Mature teams' modal mission is fix/scale (${grpPct(data,'data_team_maturity','mature','greenfield_vs_fix','fix_scale')}%) — repairing and replacing, not starting over.`,
+      read: `The common advice ("go early-stage for greenfield work") holds structurally, and has held harder as the corpus grew — this is the one cross-tab in the dataset that behaves almost deterministically. What's less obvious: mature teams are now majority fix/scale — they're the segment most likely to be hiring explicitly to replace or repair an underperforming system, not just extend a stable stack. Mid-stage is dominated by "mixed" — the messiest, least clearly-scoped category, which also happens to be most of the market.
+        <div class="resume-tip"><b>Apply this:</b> If you want a portfolio-defining greenfield build, target early-stage specifically — don't assume a "modernise our stack" mid-stage JD will give you that. If you like fixing broken systems, mature teams with fix/scale framing are a better match than their seniority-heavy titles might suggest.</div>`,
     },
     {
       id: 'rel-domain-stakeholder', rowKey: 'domain_risk', colKey: 'stakeholder_orientation',
       tag: 'Domain risk × Stakeholder audience', q: 'Where does "high stakes" actually concentrate?',
-      statFn: () => `High-risk roles are ${grpPct(data,'domain_risk','high','stakeholder_orientation','finance')}% finance-facing — vs. ${grpPct(data,'domain_risk','moderate','stakeholder_orientation','finance')}% for moderate-risk roles. There are effectively zero high-risk product-analytics roles in this dataset.`,
-      read: `Domain risk isn't spread evenly across audiences — it concentrates almost entirely in finance, where regulation externally defines what "high stakes" means (IFRS, audit standards, SOX-adjacent controls). Product analytics is essentially never coded high-risk in JD language, even though experimentation errors can carry real revenue consequences — there's no external regulator setting a "risk bar" for A/B tests the way there is for financial reporting, so employers default to moderate.
+      statFn: () => `High-risk roles are ${grpPct(data,'domain_risk','high','stakeholder_orientation','finance')}% finance-facing — vs. ${grpPct(data,'domain_risk','moderate','stakeholder_orientation','finance')}% for moderate-risk roles. The current corpus contains exactly ${data.filter(d=>d.domain_risk==='high'&&d.stakeholder_orientation==='product').length} high-risk product-analytics role${data.filter(d=>d.domain_risk==='high'&&d.stakeholder_orientation==='product').length===1?'':'s'}.`,
+      read: `Domain risk isn't spread evenly across audiences — it concentrates heavily in finance, where regulation externally defines what "high stakes" means (IFRS, audit standards, SOX-adjacent controls). Product analytics is essentially never coded high-risk in JD language, even though experimentation errors can carry real revenue consequences — there's no external regulator setting a "risk bar" for A/B tests the way there is for financial reporting, so employers default to moderate. The association has weakened somewhat as the corpus grew (more high-risk internal-platform roles at fintechs), but remains one of the most robust in the data.
         <div class="resume-tip"><b>Apply this:</b> "High-stakes" framing on your resume is credible mainly if you're pointing at finance/compliance work — using it for product-analytics experience will read as inflated against how this market actually classifies risk.</div>`,
     },
     {
       id: 'rel-testing-rigour', rowKey: 'testing_framing', colKey: 'velocity_vs_rigour',
-      tag: 'Testing framing × Rigour orientation', q: 'Is "quality" a team value, or your personal job?',
-      statFn: () => `${grpPct(data,'testing_framing','responsibility','velocity_vs_rigour','rigour')}% of "owns quality" roles are also rigour-oriented overall — but the reverse framing matters more: two rigour-coded JDs can mean very different things.`,
-      read: `Rigour orientation (correctness over speed) is necessary but not sufficient to tell you whether <em>you personally</em> will be accountable for data quality, or whether it's just team culture. "Testing framing = responsibility" identifies the roles where governance has been written into the job as a named, individual accountability — not delegated to "the team" or a tool in the stack. That's the more actionable signal for how your first 90 days will actually go.
-        <div class="resume-tip"><b>Apply this:</b> For "owns quality" roles, lead with concrete accountability — "owned the data contract framework," "reduced production incidents by X%." For roles where testing is merely a listed tool or absent, don't over-index on quality bullets; lead with delivery and impact instead.</div>`,
+      tag: 'Testing framing × Rigour orientation · Coded on a subset', q: 'Is "quality" a team value, or your personal job?',
+      statFn: () => `${grpPct(data,'testing_framing','responsibility','velocity_vs_rigour','rigour')}% of "owns quality" JDs are rigour-coded, vs. ${grpPct(data,'testing_framing','absent','velocity_vs_rigour','rigour')}% of JDs that don't mention testing at all. This dimension was added late to the codebook and covers ${data.filter(d=>d.testing_framing).length} of ${data.length} roles.`,
+      read: `Rigour orientation (correctness over speed) is necessary but not sufficient to tell you whether <em>you personally</em> will be accountable for data quality, or whether it's just team culture. "Testing framing = responsibility" identifies the roles where governance has been written into the job as a named, individual accountability — not delegated to "the team" or a tool in the stack. That's the more actionable signal for how your first 90 days will actually go. Two caveats: the "tool listed" middle category is only a handful of records, so the real finding is the responsibility-vs-absent contrast; and the test clears p=0.05 without much room to spare on this subset.
+        <div class="resume-tip"><b>Apply this:</b> For "owns quality" roles, lead with concrete accountability — "owned the data contract framework," "reduced production incidents by X%." For roles where testing is absent from the JD, don't over-index on quality bullets; lead with delivery and impact instead.</div>`,
     },
     {
-      id: 'rel-maturity-mission', rowKey: 'data_team_maturity', colKey: 'greenfield_vs_fix',
-      tag: 'Team maturity × Greenfield vs fix', q: 'Where is the "build from scratch" work, really?',
-      statFn: () => `Greenfield work concentrates at ${grpPct(data,'data_team_maturity','early','greenfield_vs_fix','greenfield')}% of early-stage roles, vs. effectively rare at mature teams (${grpPct(data,'data_team_maturity','mature','greenfield_vs_fix','greenfield')}%). Mature teams' modal answer is "mixed" — expanding scope, not starting over.`,
-      read: `The common advice ("go early-stage for greenfield work") holds structurally. What's less obvious: mature teams have a meaningfully higher fix/scale share than mid-stage ones — they're the ones most likely posting roles explicitly to replace or repair underperforming systems, not just extend a stable stack. Mid-stage is dominated by "mixed" — the messiest, least clearly-scoped category, which also happens to be most of the market.
-        <div class="resume-tip"><b>Apply this:</b> If you want a portfolio-defining greenfield build, target early-stage specifically — don't assume a "modernise our stack" mid-stage JD will give you that. If you like fixing broken systems, mature teams with fix/scale framing are a better match than their seniority-heavy titles might suggest.</div>`,
+      id: 'rel-seniority-autonomy', rowKey: 'seniority', colKey: 'autonomy_level',
+      tag: 'Seniority × Autonomy · Revised as the corpus grew', q: '"Senior" titles — do they actually predict who sets direction?',
+      statFn: () => `"Senior" (n=${cnt('seniority','senior')}) is ${grpPct(data,'seniority','senior','autonomy_level','strategic')}% strategic vs. ${grpPct(data,'seniority','mid','autonomy_level','strategic')}% for mid-level titles (n=${cnt('seniority','mid')}). Staff titles are ${grpPct(data,'seniority','staff','autonomy_level','strategic')}% strategic — but on ${cnt('seniority','staff')} records.`,
+      read: `<strong>Partly — and more than an earlier cut of this data suggested.</strong> At n≈120, "Senior" looked spread almost evenly across all three autonomy levels and this page said the title told you nothing. With the corpus substantially larger, that's no longer fair: a Senior title roughly doubles the odds of strategic scope versus a mid-level title. But it's still not much better than a coin flip <em>within</em> the title, and the impressive-looking tail — staff and lead titles going overwhelmingly strategic — sits on single-digit counts, so the test's significance is partly carried by cells too sparse to trust individually. The senior-vs-mid boundary is the durable part of this finding.
+        <div class="resume-tip"><b>Apply this:</b> The senior-vs-mid distinction is worth filtering on. Within "Senior," keep reading the verbs — "define/own/shape" vs. "support/assist/deliver" — and ask directly in the interview what decisions the role makes autonomously in year one. Don't pay a premium for a Staff title on the strength of this dataset; the sample is too thin.</div>`,
+    },
+    {
+      id: 'rel-authorship-dbt', rowKey: 'jd_authorship', colKey: 'dbt_named',
+      tag: 'JD authorship × dbt requirement', q: 'A JD doesn\'t mention dbt — does that mean the team doesn\'t use it?',
+      statFn: () => `${grpPct(data,'jd_authorship','hiring_manager','dbt_named','named')}% of hiring-manager-authored JDs name dbt, vs. ${grpPct(data,'jd_authorship','recruiter','dbt_named','named')}% of recruiter-authored ones.`,
+      read: `Revealed-preference logic: a hiring manager writes the tools they actually screen with into the JD; a recruiter often works from a template. So a missing dbt requirement means different things depending on who wrote the posting — in an engineer-written JD it's moderately informative about the stack; in a recruiter-written one it's close to noise. One honesty caveat: authorship is the least reliable dimension in the codebook (lowest classifier self-consistency across repeated runs), though "recruiter" is the cleanest of its three labels — conveniently, the one this finding leans on most.
+        <div class="resume-tip"><b>Apply this:</b> Don't self-select out of a recruiter-authored posting because your core tool isn't listed — and don't skip dbt or tooling prep for it either. Conversely, treat every named tool in a clearly engineer-written JD as a real screening criterion, because for that author it probably is.</div>`,
+    },
+    {
+      id: 'rel-maturity-autonomy', rowKey: 'data_team_maturity', colKey: 'autonomy_level',
+      tag: 'Team maturity × Autonomy', q: 'Where does "own the data model" actually mean something?',
+      statFn: () => `Early-stage teams offer strategic autonomy ${grpPct(data,'data_team_maturity','early','autonomy_level','strategic')}% of the time, vs. ${grpPct(data,'data_team_maturity','mid','autonomy_level','strategic')}% at mid-stage teams — despite mid-stage being ${Math.round(data.filter(d=>d.data_team_maturity==='mid').length/(data.filter(d=>d.data_team_maturity).length||1)*100)}% of the market.`,
+      read: `Early-stage companies are the clearest source of genuine strategic autonomy — the greenfield career-advice claim holds up in the data, though this effect is real-but-modest (about half the strength of maturity's grip on mission type, above). Most of the market is mid-stage, where the roadmap is already set and the role skews toward extending it, not defining it. Mature teams lean execution harder than any other tier — sophisticated platforms come with established direction-setters already in the building.
+        <div class="resume-tip"><b>Apply this:</b> If strategic ownership is what you want, filter for early-stage teams first — don't rely on title language at mid-stage companies to signal it. If you want structure and mentorship over direction-setting, mid-stage is the honest default, not a consolation prize.</div>`,
     },
     {
       id: 'rel-fear-collab', rowKey: 'loss_aversion_framing', colKey: 'collaboration_width', numeric: true,
-      tag: 'Loss-aversion framing × Collaboration width', q: 'Do fearful employers ask you to talk to more people?',
-      statFn: () => `Median named-stakeholder count: ${medianBy(data,'loss_aversion_framing','high','collaboration_width').toFixed(1)} for high-fear JDs vs. ${medianBy(data,'loss_aversion_framing','moderate','collaboration_width').toFixed(1)} for moderate and ${medianBy(data,'loss_aversion_framing','none','collaboration_width').toFixed(1)} for no-fear JDs — a clean, monotonic gradient.`,
-      read: `This is the cleanest gradient in the dataset. Employers who write compliance- or trust-failure language into the JD ("data reaching decision-makers," "regulatory exposure," "auditability") also name more stakeholder teams in the responsibilities section — nearly double the collaboration width of JDs with no fear signal at all. One reading: when an employer is afraid of a specific failure mode, they scope the role to touch more of the organisation, on the theory that more surface area catches more failure points before they propagate. The JD can't tell you whether that fear is proportionate to real risk or a legal/compliance team over-specifying — but it reliably predicts a wider-scoped role either way.
-        <div class="resume-tip"><b>Apply this:</b> If a JD reads as fearful (compliance, trust, "single source of truth" framing), expect and prepare for a role that spans more stakeholder groups than the title suggests — cross-functional communication experience is worth foregrounding here, even if it wasn't your headline skill in a lower-fear application.</div>`,
+      tag: 'Loss-aversion framing × Collaboration width · Fragile but monotonic', q: 'Do fearful employers ask you to talk to more people?',
+      statFn: () => `Median named-stakeholder count: ${medianBy(data,'loss_aversion_framing','high','collaboration_width').toFixed(1)} for high-fear JDs vs. ${medianBy(data,'loss_aversion_framing','moderate','collaboration_width').toFixed(1)} for moderate and ${medianBy(data,'loss_aversion_framing','none','collaboration_width').toFixed(1)} for no-fear JDs — a monotonic gradient, on the shakiest foundations of any panel here.`,
+      read: `Employers who write compliance- or trust-failure language into the JD ("regulatory exposure," "auditability," "data reaching decision-makers") also name more stakeholder teams in the responsibilities section — roughly double the collaboration width of JDs with no fear signal. One reading: when an employer fears a specific failure mode, they scope the role to touch more of the organisation, so more surface area catches failures before they propagate. Now the caveats, which are substantial: both dimensions are coded on under half the corpus, the high-fear group is about a dozen records, collaboration width has the lowest evidence-quote pass rate of any dimension (JDs say "cross-functional" without naming teams), and the test clears p=0.05 only barely. A related earlier claim — that mature teams name the most partner teams — flattened out entirely at larger n (see the negative results below).
+        <div class="resume-tip"><b>Apply this:</b> If a JD reads as fearful (compliance, trust, "single source of truth" framing), treat wide stakeholder scope as a hypothesis worth probing in the interview — "how many teams does this role interface with in a normal month?" — rather than an established fact. Cross-functional communication experience is still worth foregrounding for these postings.</div>`,
+    },
+    {
+      id: 'rel-stakeholder-autonomy', rowKey: 'stakeholder_orientation', colKey: 'autonomy_level',
+      tag: 'Stakeholder audience × Autonomy · A finding that dissolved', q: 'Does who you serve determine how much say you get? We used to claim yes.',
+      statFn: () => `Finance-facing roles are ${grpPct(data,'stakeholder_orientation','finance','autonomy_level','execution')}% execution — still the highest share of any audience — and product-facing roles the most strategic at ${grpPct(data,'stakeholder_orientation','product','autonomy_level','strategic')}%. But at n=123 this association tested significant (p=0.007, V=0.29); on the current corpus it no longer does.`,
+      read: `An earlier version of this page ran a confident structural story here: finance roles are execution-shaped because audit cycles and reporting standards define the deliverable externally, before anyone discusses direction. The percentages still point the same way — finance most execution-leaning, product most strategic — but roughly doubling the corpus dissolved the statistical support: the differences are now well within what chance produces across five audience groups this size. The tidy causal explanation had been written to fit a fragile number, which is exactly the failure mode this page exists to protect you from. The direction may yet be real; this dataset currently can't tell.
+        <div class="resume-tip"><b>Apply this:</b> Don't infer autonomy from the audience label. Precision and auditability remain safe things to foreground in a finance-facing pitch — but the earlier advice to suppress strategic framing for finance roles was overfit to a small sample. Read each JD's actual verbs; the stakeholder category won't do it for you.</div>`,
     },
   ];
 
@@ -604,6 +736,7 @@ function buildRelationships(data) {
         <div class="rel-tag">${p.tag}</div>
         <div class="rel-question">${p.q}</div>
         <div class="rel-stat" id="${p.id}-stat"></div>
+        <div class="rel-test" id="${p.id}-test"></div>
       </div>
       <div class="rel-body">
         <div class="rel-viz" id="${p.id}-viz"></div>
@@ -615,12 +748,88 @@ function buildRelationships(data) {
   panels.forEach(p => {
     const statEl = document.getElementById(`${p.id}-stat`);
     if (statEl) statEl.innerHTML = p.statFn();
+    const testEl = document.getElementById(`${p.id}-test`);
     if (p.numeric) {
       renderNumBar(`${p.id}-viz`, data, p.rowKey, p.colKey, REL_ORDER[p.rowKey]);
+      if (testEl) {
+        const groups = (REL_ORDER[p.rowKey] || []).map(g =>
+          data.filter(d => d[p.rowKey] === g && d[p.colKey] != null && d[p.colKey] !== '')
+              .map(d => parseFloat(d[p.colKey])).filter(v => !isNaN(v)));
+        const kw = kruskalWallis(groups);
+        testEl.innerHTML = sigBadge(kw, kw ? `Kruskal–Wallis H=${kw.H.toFixed(1)}, df=${kw.df}, ${fmtP(kw.p)}` : '');
+      }
     } else {
       renderXtab(`${p.id}-viz`, data, p.rowKey, p.colKey, REL_ORDER[p.rowKey], REL_ORDER[p.colKey]);
+      if (testEl) testEl.innerHTML = chiBadge(data, p.rowKey, p.colKey);
     }
   });
+}
+
+// ── Null results (expectations the data didn't support) ──
+function buildNulls(data) {
+  const cards = [
+    {
+      expect: 'Expected — the industry narrative predicts it',
+      title: 'High-stakes domains should write more rigour-heavy JDs',
+      resultFn: () => {
+        const hi = grpPct(data,'domain_risk','high','velocity_vs_rigour','rigour');
+        const mod = grpPct(data,'domain_risk','moderate','velocity_vs_rigour','rigour');
+        const lo = grpPct(data,'domain_risk','low','velocity_vs_rigour','rigour');
+        return `If rigour language were a response to real stakes, finance and compliance roles should carry much more of it. They carry slightly more — <strong>${hi}% rigour-coded vs. ${mod}% in moderate-risk and ${lo}% in low-risk domains</strong> — but the association doesn't reach significance, and rigour is dominant in every tier. A signal this flat across every partition tested looks like an institutionalised norm, not a reaction to variable underlying risk.`;
+      },
+      testFn: () => chiBadge(data, 'domain_risk', 'velocity_vs_rigour'),
+      apply: 'Rigour framing is table stakes everywhere — don\'t tailor it by sector. What differentiates roles is whether quality is <em>your named job</em> (see the testing-framing panel above), not whether the JD says "data quality."',
+    },
+    {
+      expect: 'Expected — engineers should write like engineers',
+      title: 'Engineer-authored JDs should be more rigour-heavy than recruiter ones',
+      resultFn: () => {
+        const hm = grpPct(data,'jd_authorship','hiring_manager','velocity_vs_rigour','rigour');
+        const mx = grpPct(data,'jd_authorship','mixed','velocity_vs_rigour','rigour');
+        const rc = grpPct(data,'jd_authorship','recruiter','velocity_vs_rigour','rigour');
+        return `Flat: <strong>${hm}% / ${mx}% / ${rc}%</strong> rigour-coded for hiring-manager / mixed / recruiter authorship. Rigour vocabulary has diffused so thoroughly that recruiters working from templates produce it at the same rate as the engineers who mean it.`;
+      },
+      testFn: () => chiBadge(data, 'jd_authorship', 'velocity_vs_rigour'),
+      apply: 'Rigour language in a JD tells you nothing about who wrote it or how the team actually works. Tool specificity is where authorship shows (see the dbt panel above) — read the nouns, not the virtues.',
+    },
+    {
+      expect: 'Claimed in an earlier draft — retracted',
+      title: 'Mature teams name the most partner teams',
+      resultFn: () => {
+        const e = medianBy(data,'data_team_maturity','early','collaboration_width');
+        const m = medianBy(data,'data_team_maturity','mid','collaboration_width');
+        const ma = medianBy(data,'data_team_maturity','mature','collaboration_width');
+        return `An earlier draft of this analysis reported that mature organisations had the widest named-stakeholder counts, with a story about federated platforms attached. At the current corpus the medians are <strong>${e.toFixed(1)} / ${m.toFixed(1)} / ${ma.toFixed(1)}</strong> for early / mid / mature — no meaningful separation. Corpus growth flattened it; the claim is withdrawn.`;
+      },
+      testFn: () => {
+        const groups = ['early','mid','mature'].map(g =>
+          data.filter(d => d.data_team_maturity === g && d.collaboration_width != null && d.collaboration_width !== '')
+              .map(d => parseFloat(d.collaboration_width)).filter(v => !isNaN(v)));
+        const kw = kruskalWallis(groups);
+        return sigBadge(kw, kw ? `Kruskal–Wallis H=${kw.H.toFixed(1)}, df=${kw.df}, ${fmtP(kw.p)}` : '');
+      },
+      apply: 'Don\'t infer stakeholder load from team maturity. If meeting surface area matters to you, count the named teams in the JD itself — that number is in the data, the shortcut isn\'t.',
+    },
+    {
+      expect: 'Suggestive, not established',
+      title: 'AI-infrastructure roles cluster in platform teams',
+      resultFn: () => {
+        const enablers = data.filter(d => d.ai_role === 'ai_enabler');
+        const inPlatform = enablers.filter(d => d.stakeholder_orientation === 'internal_data').length;
+        return `Roles asking the hire to <em>build</em> AI infrastructure (rather than use AI tools) skew toward internal-platform audiences — <strong>${inPlatform} of ${enablers.length} ai-enabler roles serve internal data consumers</strong>. The test hovers just above p=0.05 with a medium effect size, but the enabler group is about a dozen records and several cells are near-empty. Directionally consistent with AI demand showing up as platform work first; not yet a fact.`;
+      },
+      testFn: () => chiBadge(data, 'ai_role', 'stakeholder_orientation'),
+      apply: 'If you\'re positioning as an AI-enablement AE, internal-platform roles are where that demand is visible so far — treat this as a scouting report to verify against live postings, not a market fact.',
+    },
+  ];
+  document.getElementById('nullGrid').innerHTML = cards.map(c => `
+    <div class="null-card">
+      <div class="null-expect">${c.expect}</div>
+      <div class="null-title">${c.title}</div>
+      <div class="null-result">${c.resultFn()}</div>
+      <div class="null-test">${c.testFn()}</div>
+      <div class="null-apply"><b>Apply this:</b> ${c.apply}</div>
+    </div>`).join('');
 }
 
 // ── Scatter (explorer) ──
@@ -797,15 +1006,17 @@ function render() {
 
   buildStats(activeData);
   buildRelationships(activeData);
+  buildNulls(activeData);
   buildScatter(activeData);
   buildOrientation();
   buildGeo(activeData);
   buildToolChart(activeData);
 }
 
-fetch('data.json')
+fetch('./data.json')
   .then(r=>r.json())
   .then(data=>{
+    data.forEach(d => { d.dbt_named = String(d.has_dbt).toLowerCase() === 'true' ? 'named' : 'not_named'; });
     ALL_DATA=data; render();
     document.getElementById('filterRoleType').addEventListener('change',render);
     document.getElementById('xAxis').addEventListener('change',()=>buildScatter(activeData));
@@ -814,7 +1025,7 @@ fetch('data.json')
   })
   .catch(err=>{
     document.querySelector('nav').insertAdjacentHTML('afterend',
-      `<div style="text-align:center;padding:4rem;color:#c0392b">Failed to load data.json: ${err.message}<br><small>Run <code>python3 -m http.server 8765</code> from the analysis/ folder.</small></div>`);
+      `<div style="text-align:center;padding:4rem;color:#c0392b">Failed to load data.json: ${err.message}<br><small>Run <code>python3 -m http.server 8765</code> from the state_of_analytics_engineering/ folder or navigate to http://localhost:8765/analysis/job_descriptions/state_of_analytics_engineering/index.html</small></div>`);
   });
 
 // ── Active nav on scroll ──

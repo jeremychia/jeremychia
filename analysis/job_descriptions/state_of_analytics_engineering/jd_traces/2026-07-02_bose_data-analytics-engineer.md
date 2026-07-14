@@ -61,10 +61,10 @@ CV submission in English via Apply button. Contact: ITCareers_Portugal@bose.com.
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
-| collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
-| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
-| jd_authorship | hiring_manager | hiring_manager | mixed | mixed | 33% | ✗ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
+| collaboration_width | 3 | 2 | 3 | 3 | 33% | ✓ |
+| data_team_maturity | mature | mid | mature | mid | 33% | ✗ |
+| jd_authorship | hiring_manager | recruiter | mixed | recruiter | 33% | ✗ |
+| stakeholder_orientation | internal_data | internal_data | mixed | internal_data | 33% | ✓ |
 | autonomy_level | execution | execution | execution | execution | 100% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
@@ -80,113 +80,119 @@ CV submission in English via Apply button. Contact: ITCareers_Portugal@bose.com.
 **Run 1:** `rigour` ✓
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, quality, reliability, standards, and best practices rather than speed or iteration, with multiple rigour-focused action verbs.
+> Reasoning: The responsibilities emphasize data quality, testing, reliability, accuracy, and best practices throughout, without any velocity or speed-focused language.
 
 **Run 2:** `rigour` ✓
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section consistently emphasizes data quality, testing, accuracy, reliability, standards, and best practices with no countervailing velocity signals.
+> Reasoning: The responsibilities emphasize data quality, testing, accuracy, and reliability as core expectations with multiple rigour signals and zero velocity signals.
 
 **Run 3:** `rigour` ✓
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize testing, standards, best practices, accuracy, and reliability throughout, with no counterbalancing velocity or speed language.
+> Reasoning: Strong emphasis on data quality, testing, accuracy, and reliability throughout responsibilities with no competing velocity signals.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "This work will directly inform and influence multiple divisions' strategies."
+> Quote: "This work will directly inform and influence multiple divisions' strategies"
 > Verified: ✓ found in JD
-> Reasoning: The role affects business strategy and decision-making without explicit regulatory, compliance, or financial reporting requirements.
+> Reasoning: Business intelligence and decision-support role for consumer electronics without explicit financial, regulatory, or compliance language indicating higher risk.
 
 **Run 2:** `moderate` ✓
-> Quote: "This work will directly inform and influence multiple divisions' strategies."
+> Quote: "This work will directly inform and influence multiple divisions' strategies"
 > Verified: ✓ found in JD
-> Reasoning: Data errors would affect business decisions across divisions, but without financial reporting, compliance, or regulatory language that would elevate risk to high for this consumer electronics company.
+> Reasoning: Data errors affect business strategy decisions without explicit regulatory or financial reporting language, placing the role in moderate risk territory.
 
 **Run 3:** `moderate` ✓
-> Quote: "This work will directly inform and influence multiple divisions' strategies."
+> Quote: "This work will directly inform and influence multiple divisions' strategies"
 > Verified: ✓ found in JD
-> Reasoning: The work affects strategic decisions across the business but lacks explicit financial reporting, compliance, or regulatory language that would indicate high risk.
+> Reasoning: Analytics support important business decisions but language lacks financial reporting, compliance, or regulatory risk signals typical of high-risk domains.
 
 ### collaboration_width
 **Manual:** `3`
 
-**Run 1:** `3` ✓
-> Quote: "analysts; product; software"
+**Run 1:** `2` ✗
+> Quote: "analysts; product"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named partner groups appear in the JD: analysts (collaborating with analysts), product stakeholders, and software stakeholders.
+> Reasoning: The JD explicitly names two distinct partner groups: analysts as a named role cohort and product as an explicitly named function.
 
 **Run 2:** `3` ✓
 > Quote: "analysts; product; software"
 > Verified: ✓ found in JD
-> Reasoning: Three distinct named partner functions appear in the responsibilities: analysts, product teams, and software stakeholders.
+> Reasoning: The JD names three distinct partner teams: analysts (from 'collaborating with analysts and business users'), product (from 'business, product, and software stakeholders'), and software engineering (from 'software stakeholders').
 
 **Run 3:** `3` ✓
-> Quote: "analysts; product; software stakeholders"
+> Quote: "analysts; product; software"
 > Verified: ✓ found in JD
-> Reasoning: Product teams, software/engineering teams, and analysts are explicitly named as collaboration partners or analytical request sources.
+> Reasoning: The JD explicitly names three distinct partner functions: analysts, product, and software engineering stakeholders.
+
+⚠ **LLM inconsistency**: runs gave ['2', '3', '3']
 
 ### data_team_maturity
 **Manual:** `mature`
 
 **Run 1:** `mid` ✗
-> Quote: "Follow and contribute to analytical engineering standards and best practices under the guidance of senior team members"
+> Quote: "Data and Analytics Center of Excellence in Portugal"
 > Verified: ✓ found in JD
-> Reasoning: The team has established standards, best practices, and a multi-level structure (seniors guiding juniors), indicating an existing but still growing function.
+> Reasoning: The team has an established name and implied multiple roles (analysts, engineers) but lacks explicit signals of specialized sub-teams or large-scale mature infrastructure.
 
-**Run 2:** `mid` ✗
-> Quote: "Follow and contribute to analytical engineering standards and best practices under the guidance of senior team members"
+**Run 2:** `mature` ✓
+> Quote: "Data and Analytics Center of Excellence in Portugal. The mission of this team is to develop world-class data science, machine learning, and statistical solutions"
 > Verified: ✓ found in JD
-> Reasoning: The existence of senior team members, established analytical engineering standards, and existing practices indicates a team beyond early stage but not yet mature at scale.
+> Reasoning: The 'Center of Excellence' designation with a named multi-disciplinary charter (data science, ML, statistics) and multi-division scale indicates an established, mature team structure.
 
 **Run 3:** `mid` ✗
-> Quote: "Follow and contribute to analytical engineering standards and best practices under the guidance of senior team members"
+> Quote: "Data and Analytics Center of Excellence in Portugal"
 > Verified: ✓ found in JD
-> Reasoning: The team has established standards, guidance structures, and named tools (semantic layer, data models), but the role is positioned for growth under mentorship rather than as an early-stage founder hire.
+> Reasoning: A named Center of Excellence with established standards and senior team members indicates an established function still growing rather than early-stage or fully mature.
 
 ⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+⚠ **LLM inconsistency**: runs gave ['mid', 'mature', 'mid']
 
 ### jd_authorship
 **Manual:** `hiring_manager`
 
-**Run 1:** `hiring_manager` ✓
-> Quote: "development of logical and physical data models, data wrangling and design/building of a semantic layer that helps create dashboards and models that drive insights"
+**Run 1:** `recruiter` ✗
+> Quote: "Assist in analyzing, cleaning, and transforming datasets, collaborating with analysts and business users to help create actionable metrics that solve business questions"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities contain technical specificity about data architecture (logical/physical models, semantic layers) that reflects practitioner knowledge beyond recruiter-level boilerplate.
+> Reasoning: Responsibilities rely on generic support verbs (assist, help, participate, contribute) without specific context about scale, technical challenges, or tools mentioned by name in the responsibility section.
 
 **Run 2:** `mixed` ✗
-> Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines; Assist in analyzing, cleaning, and transforming datasets"
+> Quote: "Write clean, efficient SQL queries and support the creation of reliable data structures to make data easily accessible and comprehendible"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about practices (data quality tests, reliability) mingles with generic boilerplate verbs (assist, participate), suggesting hiring manager input into a recruiter-written template.
+> Reasoning: The responsibilities contain technical specificity about data architecture and SQL practices alongside generic boilerplate language about collaboration and learning, indicating mixed authorship.
 
-**Run 3:** `mixed` ✗
-> Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
+**Run 3:** `recruiter` ✗
+> Quote: "Assist in analyzing, cleaning, and transforming datasets, collaborating with analysts and business users to help create actionable metrics that solve business questions"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical concepts (data quality tests, analytical engineering, semantic layer) indicate domain knowledge, but most responsibilities use generic collaborative action verbs without precise context about tools, scale, or methodologies.
+> Reasoning: Generic action verbs and broad scope statements are typical recruiter boilerplate without the specific technical context a hiring manager would provide.
 
-⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`recruiter`
 
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "will often serve as an internal expert about the data"
+> Quote: "Write clean, efficient SQL queries and support the creation of reliable data structures to make data easily accessible and comprehendible"
 > Verified: ✓ found in JD
-> Reasoning: The role's primary mission is building data infrastructure and serving the data function itself, with analysts and other data consumers as the core audience.
+> Reasoning: The role's primary focus is building data infrastructure and structures for internal consumption rather than serving a specific business function.
 
-**Run 2:** `internal_data` ✓
-> Quote: "design/building of a semantic layer that helps create dashboards and models that drive insights and actions"
+**Run 2:** `mixed` ✗
+> Quote: "requirement-gathering sessions alongside the team to clearly understand and help scope analytical requests from business, product, and software stakeholders"
 > Verified: ✓ found in JD
-> Reasoning: The primary responsibility is building data modeling and semantic layer infrastructure (internal data platform) that other analysts and teams consume, not directly serving commercial, product, or finance functions.
+> Reasoning: The role serves multiple distinct audiences with genuine emphasis split between internal data infrastructure (engineering standards, reliable structures) and business/product analytics (metrics, dashboards for business and product teams).
 
 **Run 3:** `internal_data` ✓
-> Quote: "design/building of a semantic layer that helps create dashboards and models that drive insights and actions"
+> Quote: "serve as an internal expert about the data"
 > Verified: ✓ found in JD
-> Reasoning: The role focuses on building analytical infrastructure (data models, semantic layers, reliable data structures, quality frameworks) that serves multiple internal consumers rather than directly supporting a specific business function.
+> Reasoning: The role's primary framing is supporting the analytics function and making data accessible to internal consumers across multiple business functions.
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
 
 ### autonomy_level
 **Manual:** `execution`
@@ -194,17 +200,17 @@ CV submission in English via Apply button. Contact: ITCareers_Portugal@bose.com.
 **Run 1:** `execution` ✓
 > Quote: "Follow and contribute to analytical engineering standards and best practices under the guidance of senior team members"
 > Verified: ✓ found in JD
-> Reasoning: The language emphasizes following established standards, contributing under guidance, assisting, and learning—all execution-oriented verbs without direction-setting authority.
+> Reasoning: The role receives guidance from senior team members and uses execution verbs (assist, support, participate, follow) rather than strategic direction-setting verbs.
 
 **Run 2:** `execution` ✓
-> Quote: "Follow and contribute to analytical engineering standards and best practices under the guidance of senior team members"
+> Quote: "Assist in analyzing, cleaning, and transforming datasets, collaborating with analysts and business users to help create actionable metrics"
 > Verified: ✓ found in JD
-> Reasoning: Execution verbs (assist, follow, participate, help) and explicit guidance from seniors indicate the role executes scoped work rather than defines direction.
+> Reasoning: The responsibilities consistently use execution verbs (assist, follow, participate, help, learn) with explicit framing of working 'under the guidance of senior team members'.
 
 **Run 3:** `execution` ✓
 > Quote: "Follow and contribute to analytical engineering standards and best practices under the guidance of senior team members"
 > Verified: ✓ found in JD
-> Reasoning: The role is framed as contributing and learning under guidance from senior team members rather than defining direction or owning strategic decisions.
+> Reasoning: Explicit 'under the guidance of' phrase and pervasive use of support/execution verbs indicate the candidate executes direction set by others.
 
 ### ai_role
 **Manual:** ``
@@ -212,17 +218,17 @@ CV submission in English via Apply button. Contact: ITCareers_Portugal@bose.com.
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions the team works on machine learning solutions but does not require the candidate to demonstrate any AI skill or tool usage.
+> Reasoning: While the team works on ML and data science solutions, the candidate is expected to build data infrastructure (SQL, modeling, quality testing) with no mention of AI tools or AI-capable infrastructure development.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: The JD makes no mention of AI tools, AI-assisted development, or AI infrastructure requirements for the candidate.
+> Reasoning: The JD mentions the team's mission includes ML and statistics but makes no expectation that the candidate will use AI coding tools, build AI systems, or apply AI in their own work.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: While the team develops machine learning solutions, the candidate's responsibilities focus on data engineering and analytics work with no expectation of AI-assisted coding tools or building AI-ready infrastructure.
+> Reasoning: The JD mentions ML as a team capability but expects the candidate to do analytical engineering, not AI development or AI tool usage.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -232,17 +238,17 @@ CV submission in English via Apply button. Contact: ITCareers_Portugal@bose.com.
 **Run 1:** `responsibility` ✗
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'implement' shows the candidate owns data quality testing practices, not merely using tools listed in a skill set.
+> Reasoning: The action verb 'Implement' and phrase 'participate in ensuring' frame data quality testing as an ownership responsibility rather than a tool to use.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Data quality testing is framed as a responsibility the role owns through the action verb 'implement', showing accountability rather than tool usage.
+> Reasoning: Data quality testing is framed as something the candidate will implement using the action verb 'implement', indicating ownership of the practice even if exercised under guidance.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The action verb 'implement' frames data quality testing as something the candidate owns and defines, not merely a tool to apply.
+> Reasoning: Action verb 'Implement' places testing and data quality as the candidate's active responsibility, not just a listed tool.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
@@ -252,16 +258,16 @@ CV submission in English via Apply button. Contact: ITCareers_Portugal@bose.com.
 **Run 1:** `moderate` ✗
 > Quote: "ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and accuracy are emphasized throughout, reflecting concern about pipeline failures and data errors affecting decisions, but without compliance or regulatory risk framing.
+> Reasoning: Data quality and reliability are secondary operational concerns mentioned without compliance or stakeholder trust language, indicating moderate loss aversion focused on stability.
 
 **Run 2:** `moderate` ✗
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability and accuracy are clear concerns but framed around building reliable systems for delivery rather than preventing regulatory or stakeholder trust failures.
+> Reasoning: Operational reliability and data quality are valued concerns but framed as best practices and quality standards rather than regulatory compliance or prevention of stakeholder harm.
 
 **Run 3:** `moderate` ✗
 > Quote: "Implement data quality tests and participate in ensuring the accuracy and reliability of data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on accuracy and reliability reflects operational pipeline concerns, not compliance risk or preventing bad data from reaching decision-makers.
+> Reasoning: Operational reliability and data quality are concerns but the framing is about making pipelines work reliably, not preventing compliance failures or regulatory risk.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

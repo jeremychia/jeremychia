@@ -70,9 +70,12 @@ Why Apply?
 | domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
 | collaboration_width | 0 | 0 | 0 | 0 | 100% | ✓ |
 | data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
-| jd_authorship | recruiter | recruiter | recruiter | recruiter | 100% | ✓ |
-| stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| jd_authorship | recruiter | recruiter | mixed | recruiter | 33% | ✓ |
+| stakeholder_orientation | internal_data | internal_data | internal_data | mixed | 33% | ✓ |
+| autonomy_level | execution | mixed | execution | execution | 33% | ✓ |
+| ai_role |  | ai_user | ai_user | ai_user | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -82,37 +85,37 @@ Why Apply?
 **Manual:** `rigour`
 
 **Run 1:** `rigour` ✓
-> Quote: "Apply validation and quality checks to ensure accuracy"
+> Quote: "Build and maintain high-quality, reusable datasets; Analyse complex data using SQL and Python; Apply validation and quality checks to ensure accuracy"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasises validation, quality checks, and accuracy as core expectations with no velocity language present.
+> Reasoning: The JD emphasizes production-grade analytics, data quality, validation, robust solutions, and accuracy throughout, with no velocity or fast-paced language present.
 
 **Run 2:** `rigour` ✓
 > Quote: "Apply validation and quality checks to ensure accuracy"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes quality, accuracy, robustness, and validation as core responsibilities, with no velocity signals present.
+> Reasoning: Multiple rigour signals (quality, validation, accuracy, production-grade, robust) with no velocity language present.
 
 **Run 3:** `rigour` ✓
 > Quote: "Apply validation and quality checks to ensure accuracy"
 > Verified: ✓ found in JD
-> Reasoning: Multiple data quality and accuracy signals throughout (high-quality datasets, improve data quality, production-grade solutions) with no velocity language indicate a rigour orientation.
+> Reasoning: The JD emphasizes production-readiness, robustness, quality, and accuracy as core expectations with no velocity or speed language.
 
 ### domain_risk
 **Manual:** `moderate`
 
 **Run 1:** `moderate` ✓
-> Quote: "delivering modern, production-grade analytics solutions"
+> Quote: "Partner with stakeholders to understand business problems"
 > Verified: ✓ found in JD
-> Reasoning: The JD mentions production-grade analytics but lacks explicit financial, compliance, or regulatory language that would indicate high risk.
+> Reasoning: The role is framed as general business analytics without signals of financial reporting, regulatory compliance, or high-stakes consequences.
 
 **Run 2:** `moderate` ✓
-> Quote: "delivering modern, production-grade analytics solutions across the business"
+> Quote: "join a growing data function within an established organisation"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes production-grade delivery and business impact but contains no explicit financial, compliance, or regulatory language.
+> Reasoning: Generic business analytics context with no regulatory, compliance, or financial risk indicators.
 
 **Run 3:** `moderate` ✓
-> Quote: "Partner with stakeholders to understand business problems and define data requirements"
+> Quote: "Deliver automated reporting and dashboards"
 > Verified: ✓ found in JD
-> Reasoning: Generic business analytics focus without explicit financial, compliance, or regulatory language indicates moderate risk.
+> Reasoning: Standard business analytics and BI work with no explicit financial, compliance, or regulatory language indicating high-risk consequences.
 
 ### collaboration_width
 **Manual:** `0`
@@ -120,128 +123,152 @@ Why Apply?
 **Run 1:** `0` ✓
 > Quote: "You will work closely with business and technology teams"
 > Verified: ✓ found in JD
-> Reasoning: No explicitly named partner teams like Finance, Product, or Engineering are identified; only generic references to business and technology.
+> Reasoning: The JD uses generic categorical terms ('business and technology teams', 'stakeholders') rather than naming specific functions like Finance, Product, or Engineering.
 
 **Run 2:** `0` ✓
-> Quote: ""
+> Quote: "work closely with business and technology teams"
 > Verified: ✓ found in JD
-> Reasoning: No specifically named teams (Finance, Product, Engineering, etc.) are identified; generic references to 'stakeholders,' 'business,' and 'technology teams' do not meet the naming specificity requirement.
+> Reasoning: Generic team references used instead of explicitly named functions like Finance, Product, or Engineering.
 
 **Run 3:** `0` ✓
-> Quote: "business and technology teams"
+> Quote: "work closely with business and technology teams"
 > Verified: ✓ found in JD
-> Reasoning: Only generic category references are present; no explicitly named functions like Finance, Product, or Engineering.
+> Reasoning: No specifically named partner functions or teams beyond generic references to 'business' and 'technology' teams.
 
 ### data_team_maturity
 **Manual:** `mid`
 
 **Run 1:** `mid` ✓
-> Quote: "moving beyond ad-hoc analysis to building robust, repeatable analytics solutions"
+> Quote: "Join a growing data function within an established organisation"
 > Verified: ✓ found in JD
-> Reasoning: The JD indicates a data function that exists and is growing, transitioning from ad-hoc work toward systematised analytics, typical of mid-stage development.
+> Reasoning: The team is expanding with existing modern infrastructure and named tools (Snowflake, Azure, AWS) but is still described as 'growing' rather than established or mature.
 
 **Run 2:** `mid` ✓
-> Quote: "join a growing team"
+> Quote: "join a growing data function within an established organisation"
 > Verified: ✓ found in JD
-> Reasoning: The JD indicates an existing data function that is expanding, with named tools in responsibilities (SQL, Python, cloud platforms) suggesting an established foundation being scaled.
+> Reasoning: The data function exists and is actively growing with infrastructure in place, indicating mid-stage development.
 
 **Run 3:** `mid` ✓
 > Quote: "Join a growing data function within an established organisation"
 > Verified: ✓ found in JD
-> Reasoning: The descriptor 'growing' indicates the data function exists and is expanding but not yet mature, typical of mid-stage teams.
+> Reasoning: The data function exists with modern tools and is expanding, indicating an established team in growth mode rather than early-stage or mature.
 
 ### jd_authorship
 **Manual:** `recruiter`
 
 **Run 1:** `recruiter` ✓
-> Quote: "Partner with stakeholders to understand business problems and define data requirements"
+> Quote: "Partner with stakeholders to understand business problems and define data requirements; Manipulate, link and analyse datasets to generate insights"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic boilerplate phrasing without specific technical context or domain-specific details that would indicate a hiring manager wrote them.
+> Reasoning: Responsibilities use generic boilerplate action verbs ('partner', 'collaborate', 'support') without technical specificity about scale, actual tool usage context, or methodology that would indicate hiring manager authorship.
 
-**Run 2:** `recruiter` ✓
-> Quote: "Partner with stakeholders to understand business problems and define data requirements"
+**Run 2:** `mixed` ✗
+> Quote: "Build automated reporting, dashboards and data pipelines"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic action verbs without specific context of scale, methodology, or technical implementation details that would indicate hiring-manager authorship.
+> Reasoning: Mix of technical specificity (SQL, Python, cloud platforms, data pipelines) and generic boilerplate responsibility language.
 
 **Run 3:** `recruiter` ✓
-> Quote: "Partner with stakeholders to understand business problems and define data requirements"
+> Quote: "Turn recurring analysis into reusable components and templates"
 > Verified: ✓ found in JD
-> Reasoning: Generic boilerplate action verbs without technical specificity, scale numbers, or precise tool application context signal recruiter authorship.
+> Reasoning: Responsibilities use boilerplate action verbs and generic analytics language without specific application context, scale numbers, or technical methodology details.
+
+⚠ **LLM inconsistency**: runs gave ['recruiter', 'mixed', 'recruiter']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "Turn recurring analysis into reusable components and templates"
+> Quote: "Opportunity to build data products, not just reports"
 > Verified: ✓ found in JD
-> Reasoning: The role emphasises building reusable analytics infrastructure and platforms that serve the data function and downstream analytics consumers.
+> Reasoning: The emphasis on building reusable data products and infrastructure components suggests this role primarily serves the data function and internal analytics consumers rather than specific external or departmental stakeholders.
 
 **Run 2:** `internal_data` ✓
 > Quote: "Turn recurring analysis into reusable components and templates"
 > Verified: ✓ found in JD
-> Reasoning: The emphasis on creating reusable, templated components indicates the role primarily serves the data function and internal analytics consumers seeking self-service access to data assets.
+> Reasoning: Emphasis on building reusable analytics infrastructure and data products for internal consumption.
 
-**Run 3:** `internal_data` ✓
-> Quote: "Turn recurring analysis into reusable components and templates"
+**Run 3:** `mixed` ✗
+> Quote: "Deliver automated reporting and dashboards; Turn recurring analysis into reusable components and templates"
 > Verified: ✓ found in JD
-> Reasoning: Focus on building reusable analytics infrastructure and platforms for internal consumption indicates primary audience is the data function itself.
+> Reasoning: The role genuinely balances business stakeholder service (dashboards, reports, insights) with internal data infrastructure service (pipelines, reusable components).
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'internal_data', 'mixed']
 
 ### autonomy_level
 **Manual:** `execution`
 
-**Run 1:** `execution` ✓
-> Quote: "Support the development of scalable data products"
+**Run 1:** `mixed` ✗
+> Quote: "hands-on role focused on moving beyond ad-hoc analysis to building robust, repeatable analytics solutions"
 > Verified: ✓ found in JD
-> Reasoning: The support verb indicates the role executes direction set by others rather than setting strategic direction autonomously.
+> Reasoning: The role combines strategic transformation (defining requirements, building new solutions, moving beyond ad-hoc) with hands-on execution (support, deliver, apply), demonstrating both direction-setting and implementation responsibilities.
 
 **Run 2:** `execution` ✓
-> Quote: "Deliver automated reporting and dashboards"
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use execution verbs (deliver, support, improve, build) without strategic ownership language like 'define,' 'establish,' or 'own.'
-
-**Run 3:** `execution` ✓
 > Quote: "Support the development of scalable data products"
 > Verified: ✓ found in JD
-> Reasoning: Primary language emphasizes supporting and delivering against defined goals rather than setting direction or strategy for the analytics function.
+> Reasoning: The support verb and framing of delivering against business-defined requirements indicates execution rather than strategic direction-setting.
+
+**Run 3:** `execution` ✓
+> Quote: "hands-on role focused on moving beyond ad-hoc analysis to building robust, repeatable analytics solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role executes a predetermined strategic direction set by others rather than setting overall analytics direction or strategy.
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "The responsibilities section is generic boilerplate with no named tools in context, no scale numbers, and no specific methodology"
-> Reasoning: No AI tools, infrastructure responsibilities, or AI-first language present.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "robust, repeatable analytics solutions"
-> Reasoning: No AI tools, AI-first thinking, or AI infrastructure mentioned; focus is entirely on traditional analytics delivery.
+**Run 1:** `ai_user` ✗
+> Quote: "Experience using AI coding tools (Copilot, Claude, etc.) is highly desirable"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI coding tools like Copilot and Claude as a personal productivity skill to accelerate their own work.
 
-**Run 3:** `none` ✓
-> Quote: "[No AI signals in JD]"
-> Reasoning: JD contains no references to AI tools, AI-assisted coding, semantic models, or AI infrastructure.
+**Run 2:** `ai_user` ✗
+> Quote: "Experience using AI coding tools (Copilot, Claude, etc.) is highly desirable"
+> Verified: ✓ found in JD
+> Reasoning: Candidate is expected to use AI coding tools to accelerate their personal development work.
 
+**Run 3:** `ai_user` ✗
+> Quote: "Experience using AI coding tools (Copilot, Claude, etc.) is highly desirable"
+> Verified: ✓ found in JD
+> Reasoning: The candidate is expected to use AI coding tools to accelerate their own development work.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`ai_user`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "validation and quality checks to ensure accuracy"
-> Reasoning: Ownership verb 'ensure' paired with quality and accuracy responsibilities.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "validation and quality checks to ensure accuracy"
-> Reasoning: Candidate owns quality/validation practices with explicit responsibility verb 'ensure' paired with quality/accuracy.
+**Run 1:** `responsibility` ✗
+> Quote: "Apply validation and quality checks to ensure accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are framed as active responsibilities the candidate owns and applies with action verbs, not merely tools listed in requirements.
 
-**Run 3:** `responsibility` ✓
-> Quote: "validation and quality checks to ensure accuracy"
-> Reasoning: Candidate owns quality practice; 'ensure' verb paired with validation and accuracy standards signals ownership of data quality discipline.
+**Run 2:** `responsibility` ✗
+> Quote: "Apply validation and quality checks to ensure accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and validation appear as owned responsibilities with action verbs, not listed as tools.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Apply validation and quality checks to ensure accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Testing and validation are listed as a Key Responsibility the candidate will own and apply.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "The framing is delivery-oriented with verbs like 'support', 'partner', and 'deliver'"
-> Reasoning: No compliance, regulatory, or loss-aversion language; framed around delivery and scalability.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "moving beyond ad-hoc analysis to building robust, repeatable analytics solutions"
-> Reasoning: Framing is purely delivery-oriented (replace ad-hoc with scalable systems); no compliance, regulatory, or trust-dominance language.
+**Run 1:** `moderate` ✗
+> Quote: "Apply validation and quality checks to ensure accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and production-readiness matter (robust, high-quality, accurate), signaling concern for operational reliability, but without regulatory, compliance, or stakeholder-trust framing that would indicate high loss aversion.
 
-**Run 3:** `none` ✓
-> Quote: "The framing is delivery-oriented with verbs like 'support', 'partner', and 'deliver'"
-> Reasoning: Role emphasizes execution and scaling existing capability; no compliance, regulatory, or trust-risk framing.
+**Run 2:** `moderate` ✗
+> Quote: "Improve data quality and consistency across systems"
+> Verified: ✓ found in JD
+> Reasoning: Quality and reliability are concerns but not framed around regulatory risk or stakeholder trust as the primary driver.
 
+**Run 3:** `moderate` ✗
+> Quote: "Apply validation and quality checks to ensure accuracy"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and accuracy are emphasized throughout but framed as building good solutions rather than preventing catastrophic outcomes or regulatory failure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

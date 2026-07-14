@@ -62,182 +62,211 @@ Bachelor's or Master's degree in Computer Science, Information Systems, Engineer
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | high | high | high | 100% |
-| collaboration_width | 3 | 4 | 4 | 33% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | mixed | mixed | recruiter | 33% |
-| stakeholder_orientation | finance | finance | finance | 100% |
-| autonomy_level | execution | execution | execution | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | high | high | high | high | 100% | ✓ |
+| collaboration_width | 3 | 4 | 3 | 3 | 33% | ✓ |
+| data_team_maturity | mid | mid | mid | mid | 100% | ✓ |
+| jd_authorship | hiring_manager | mixed | recruiter | mixed | 33% | ✗ |
+| stakeholder_orientation | finance | finance | finance | finance | 100% | ✓ |
+| autonomy_level | execution | execution | execution | execution | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | absent | absent | absent | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
-> Quote: "delivering accurate, reliable, and scalable financial planning, reporting, and performance management processes"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD emphasizes accuracy, reliability, quality, and stability as core values, with explicit signals around testing, data quality, documentation, and platform stability throughout the responsibilities.
-
-**Run 2:** `rigour`
-> Quote: "data quality, governance, and operational stability"
+**Run 1:** `rigour` ✓
+> Quote: "Troubleshoot platform issues and investigate data quality or integration challenges."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes correctness, reliability, governance, and testing as core expectations throughout, with no velocity or speed-related language.
+> Reasoning: The JD emphasizes accuracy, reliability, data quality, governance, and operational stability as core values, with no velocity signals like fast-paced iteration or rapid delivery.
 
-**Run 3:** `rigour`
-> Quote: "data quality, governance, and operational stability"
+**Run 2:** `rigour` ✓
+> Quote: "Optimize system performance and improve reliability of financial processes."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes reliability, data quality, governance, testing, and operational stability throughout with no velocity signals like fast-paced or rapid delivery.
+> Reasoning: The JD emphasizes reliability, data quality, governance, and operational stability throughout with no velocity or speed-focused language present.
+
+**Run 3:** `rigour` ✓
+> Quote: "Optimize system performance and improve reliability of financial processes."
+> Verified: ✓ found in JD
+> Reasoning: The role emphasizes reliability, stability, testing, and documentation over speed or iteration, with no signals of velocity orientation.
 
 ### domain_risk
+**Manual:** `high`
 
-**Run 1:** `high`
-> Quote: "Daily P&L, Actuals, Forecasting, Group Reporting"
-> Verified: ✓ found in JD
-> Reasoning: P&L and financial reporting are explicitly named as core responsibility areas, indicating direct impact on financial reporting and regulatory compliance—the defining signal of high-risk domains.
-
-**Run 2:** `high`
-> Quote: "Daily P&L, Actuals, Forecasting, Group Reporting"
-> Verified: ✓ found in JD
-> Reasoning: Errors in P&L, actuals, and financial group reporting directly impact financial reporting and regulatory compliance.
-
-**Run 3:** `high`
-> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes"
-> Verified: ✓ found in JD
-> Reasoning: The role directly supports financial reporting, P&L, forecasting, and group reporting—core financial processes where data errors have immediate regulatory and audit impact.
-
-### collaboration_width
-
-**Run 1:** `3`
-> Quote: "Finance; Data & Analytics teams; Business Process Owners"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Three distinct named collaboration partners are explicitly identified: Finance (function), Data & Analytics teams (function), and Business Process Owners (role cohort).
-
-**Run 2:** `4`
-> Quote: "Partnering with Finance, Data & Analytics teams, Business Process Owners, and external implementation partners"
-> Verified: ✓ found in JD
-> Reasoning: Four distinct named partner groups are explicitly listed: Finance, Data & Analytics teams, Business Process Owners, and external implementation partners.
-
-**Run 3:** `4`
-> Quote: "Finance; Data & Analytics teams; Business Process Owners; external implementation partners"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Four distinct named functions explicitly listed as collaboration partners in the role introduction.
-
-⚠ **LLM inconsistency**: runs gave ['3', '4', '4']
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "join at a key moment (platform ramp-up and CoE build)"
-> Verified: ✓ found in JD
-> Reasoning: The OneStream platform already exists with named components and operations, but the team is actively ramping up and building a new Center of Excellence, indicating growth from an existing foundation rather than greenfield or fully mature state.
-
-**Run 2:** `mid`
-> Quote: "join at a key moment (platform ramp-up and CoE build)"
-> Verified: ✓ found in JD
-> Reasoning: The EPM platform and Finance/Data teams already exist with experienced mentorship available, but the Center of Excellence is newly established and ramping up, indicating mid-stage growth rather than greenfield or mature operations.
-
-**Run 3:** `mid`
-> Quote: "join at a key moment (platform ramp-up and CoE build)"
-> Verified: ✓ found in JD
-> Reasoning: The OneStream platform already operates but the Center of Excellence is newly established, indicating active scaling rather than greenfield build or established steady state.
-
-### jd_authorship
-
-**Run 1:** `mixed`
-> Quote: "Support financial reporting, forecasting, planning, and performance management solutions"
-> Verified: ✓ found in JD
-> Reasoning: The brief section shows technical specificity (OneStream platform, named financial processes, specific technical activities), but the main responsibilities rely on generic action verbs ('support', 'develop', 'optimize') without deep technical context, indicating both hiring manager and recruiter input.
-
-**Run 2:** `mixed`
-> Quote: "Develop and enhance business rules, calculations, workflows, and data transformation processes"
-> Verified: ✓ found in JD
-> Reasoning: Technical specificity about EPM components and rule development is mixed with generic responsibilities like 'Work with Finance teams to understand business requirements' and boilerplate collaboration language.
-
-**Run 3:** `recruiter`
-> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
-> Verified: ✓ found in JD
-> Reasoning: The responsibilities use generic recruiter boilerplate verbs—support, work with, collaborate, participate, troubleshoot—without technical depth about the actual platform components or methodologies.
-
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'recruiter']
-
-### stakeholder_orientation
-
-**Run 1:** `finance`
-> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions"
-> Verified: ✓ found in JD
-> Reasoning: Finance teams are explicitly named as the primary audience multiple times, with all major responsibilities centered on supporting financial reporting, P&L systems, and Finance operational performance.
-
-**Run 2:** `finance`
-> Quote: "Support financial reporting, forecasting, planning, and performance management solutions"
-> Verified: ✓ found in JD
-> Reasoning: The role's primary purpose is delivering financial reporting, P&L, forecasting, and performance management solutions directly to Finance teams.
-
-**Run 3:** `finance`
-> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes"
-> Verified: ✓ found in JD
-> Reasoning: The role's core mission is delivering accurate financial reporting, forecasting, and P&L outcomes to the Finance function, not building data infrastructure for data consumers.
-
-### autonomy_level
-
-**Run 1:** `execution`
-> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions"
-> Verified: ✓ found in JD
-> Reasoning: The role is framed as receiving requirements from Finance and delivering solutions within an existing platform structure, rather than setting direction or defining analytics strategy—characteristics of execution-oriented work.
-
-**Run 2:** `execution`
-> Quote: "Support LDC's OneStream-based Enterprise Performance Management platform from Sofia as a core technical engineer"
-> Verified: ✓ found in JD
-> Reasoning: While the role involves technical ownership of EPM components, the primary framing is support-oriented with strategic direction set by Finance requirements and established EPM strategy.
-
-**Run 3:** `execution`
-> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
-> Verified: ✓ found in JD
-> Reasoning: The primary responsibilities emphasize receiving and executing against requirements set by Finance teams and external experts, not setting direction or strategy for the platform.
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Support LDC's OneStream-based Enterprise Performance Management platform; Daily P&L, Actuals, Forecasting, Group Reporting"
-> Reasoning: No AI tools, methodologies, or infrastructure mentioned; work centers entirely on traditional EPM platform support and financial reporting
-
-**Run 2:** `none` ✓
-> Quote: "N/A"
-> Reasoning: No explicit AI skill, tool usage, or AI-adjacent responsibility mentioned in job description.
-
-**Run 3:** `none` ✓
-> Quote: "Support LDC's OneStream-based Enterprise Performance Management platform; Support financial reporting; Troubleshoot platform issues; Participate in testing"
-> Reasoning: No AI tools, AI-first mindset, or AI infrastructure signals; standard Finance/EPM implementation and support work.
-
-
-### testing_framing
-**Run 1:** `absent` ✓
-> Quote: "Troubleshoot platform issues; Participate in testing"
-> Reasoning: Testing is mentioned as a participation activity but without ownership responsibility or specific quality tools named
-
-**Run 2:** `absent` ✓
-> Quote: "Participate in testing"
-> Reasoning: Testing mentioned as participant activity without ownership responsibility or specific tool requirement.
-
-**Run 3:** `absent` ✓
-> Quote: "Participate in testing"
-> Reasoning: Testing mentioned as activity but without ownership verbs (own/ensure/define/implement) and no specific testing tools named.
-
-
-### loss_aversion_framing
 **Run 1:** `high` ✓
-> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes"
-> Reasoning: Financial reporting in a regulated context creates high compliance and stakeholder trust requirements; accuracy and governance dominate the framing
+> Quote: "contributing to the delivery of accurate, reliable, and scalable financial planning, reporting, and performance management processes"
+> Verified: ✓ found in JD
+> Reasoning: Financial reporting, Daily P&L, and forecasting directly impact financial governance and executive decision-making for a major global trading company.
 
-**Run 2:** `moderate` ✗
-> Quote: "Optimize system performance and improve reliability of financial processes"
-> Reasoning: Risk framing emphasizes operational reliability and accuracy rather than regulatory compliance or audit-driven trust concerns.
+**Run 2:** `high` ✓
+> Quote: "Daily P&L, Actuals, Forecasting, Group Reporting and future Enterprise performance management roadmap components."
+> Verified: ✓ found in JD
+> Reasoning: Data errors in P&L, financial reporting, and forecasting directly affect financial accuracy and regulatory compliance in a global financial organization.
 
 **Run 3:** `high` ✓
-> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes"
-> Reasoning: Financial reporting combined with emphasis on accuracy and reliability in regulated commodities context signals regulatory/audit risk; data trustworthiness is primary framing.
+> Quote: "contributing to the delivery of accurate, reliable, and scalable financial planning, reporting, and performance management processes."
+> Verified: ✓ found in JD
+> Reasoning: This is a financial systems role supporting P&L, forecasting, and group reporting where data errors directly affect financial reporting accuracy.
 
-⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']
+### collaboration_width
+**Manual:** `3`
+
+**Run 1:** `4` ✗
+> Quote: "Partnering with Finance, Data & Analytics teams, Business Process Owners, and external implementation partners"
+> Verified: ✓ found in JD
+> Reasoning: Four distinct named teams explicitly listed: Finance, Data & Analytics, Business Process Owners, and external implementation partners.
+
+**Run 2:** `3` ✓
+> Quote: "Partnering with Finance, Data & Analytics teams, Business Process Owners, and external implementation partners"
+> Verified: ✓ found in JD
+> Reasoning: Three named partner functions are explicitly listed: Finance teams, Data & Analytics teams, and Business Process Owners.
+
+**Run 3:** `3` ✓
+> Quote: "Finance, Data & Analytics teams, Business Process Owners"
+> Verified: ✓ found in JD
+> Reasoning: The JD names three distinct partner functions: Finance, Data & Analytics teams, and Business Process Owners.
+
+⚠ **LLM inconsistency**: runs gave ['4', '3', '3']
+
+### data_team_maturity
+**Manual:** `mid`
+
+**Run 1:** `mid` ✓
+> Quote: "The resource will join at a key moment (platform ramp-up and CoE build), work closely with experienced internal and external experts"
+> Verified: ✓ found in JD
+> Reasoning: OneStream platform is deployed and operational, but the Center of Excellence is newly established; the team is growing with mentorship available from experts.
+
+**Run 2:** `mid` ✓
+> Quote: "Join a newly established Center of Excellence and help shape its future."
+> Verified: ✓ found in JD
+> Reasoning: The OneStream EPM platform infrastructure exists with established processes, but the Center of Excellence is newly built and growing, indicating a mid-stage function.
+
+**Run 3:** `mid` ✓
+> Quote: "The resource will join at a key moment (platform ramp-up and CoE build), work closely with experienced internal and external experts, and quickly take ownership of meaningful technical components."
+> Verified: ⚠ NOT found verbatim
+> Reasoning: The OneStream EPM platform and team already exist with internal/external experts, but the Center of Excellence is newly established and ramping up—indicating a maturing data function, not early or fully mature.
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `mixed` ✗
+> Quote: "Develop and enhance business rules, calculations, workflows, and data transformation processes."
+> Verified: ✓ found in JD
+> Reasoning: OneStream-specific terminology (rule development, Daily P&L/Actuals modules, Center of Excellence) suggests platform domain knowledge, but responsibilities are described with generic action verbs without specific methodologies or scale.
+
+**Run 2:** `recruiter` ✗
+> Quote: "Support financial reporting, forecasting, planning, and performance management solutions."
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities use generic boilerplate action verbs (support, work with, collaborate) without technical specificity about day-to-day work despite naming the OneStream platform.
+
+**Run 3:** `mixed` ✗
+> Quote: "Develop and enhance business rules, calculations, workflows, and data transformation processes."
+> Verified: ✓ found in JD
+> Reasoning: The role shows specific knowledge of EPM systems and OneStream platform context, but most responsibilities are written in generic boilerplate language like 'collaborate with stakeholders' and 'participate in testing'.
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'recruiter', 'mixed']
+
+### stakeholder_orientation
+**Manual:** `finance`
+
+**Run 1:** `finance` ✓
+> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
+> Verified: ✓ found in JD
+> Reasoning: Primary audience throughout is Finance; the role's impact is framed as directly supporting Finance performance and financial reporting processes.
+
+**Run 2:** `finance` ✓
+> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
+> Verified: ✓ found in JD
+> Reasoning: The entire role is framed around supporting Finance functions—financial reporting, P&L, forecasting, and FP&A processes.
+
+**Run 3:** `finance` ✓
+> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
+> Verified: ✓ found in JD
+> Reasoning: The role explicitly partners with Finance teams to support financial reporting, forecasting, planning, and performance management—clear finance/FP&A orientation.
+
+### autonomy_level
+**Manual:** `execution`
+
+**Run 1:** `execution` ✓
+> Quote: "Work with Finance teams to understand business requirements and translate them into technical solutions."
+> Verified: ✓ found in JD
+> Reasoning: Requirements are defined by Finance; this role executes by translating those requirements into platform configurations within an established system and defined CoE scope.
+
+**Run 2:** `execution` ✓
+> Quote: "The resource will join at a key moment (platform ramp-up and CoE build), work closely with experienced internal and external experts, and quickly take ownership of meaningful technical components"
+> Verified: ✓ found in JD
+> Reasoning: The role is execution-oriented, working under mentorship from experienced experts on scoped platform components in an early-career position (0-3 years).
+
+**Run 3:** `execution` ✓
+> Quote: "work closely with experienced internal and external experts, and quickly take ownership of meaningful technical components"
+> Verified: ✓ found in JD
+> Reasoning: The role takes ownership of technical implementation within OneStream EPM platform, but operates under scoped work mentorship from experienced experts, not setting strategic direction.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No AI tools, coding assistants, or AI skill expectations are mentioned; interest in machine learning is listed only as a nice-to-have, not a candidate requirement.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: Machine learning appears only as a nice-to-have interest in Python analytics; no AI coding tools, AI-assisted development, or AI infrastructure expectations are present.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD lists 'interest in Python-based analytics, machine learning, or process automation' as a nice-to-have, but expects no AI tool usage or AI data infrastructure building from the candidate.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `absent` ✗
+> Quote: "Participate in testing, releases, and deployments across development and production environments."
+> Verified: ✓ found in JD
+> Reasoning: Testing is mentioned only as participation in a process; no testing frameworks, data quality standards, or testing ownership appear as a defined candidate responsibility.
+
+**Run 2:** `absent` ✗
+> Quote: "Troubleshoot platform issues and investigate data quality or integration challenges."
+> Verified: ✓ found in JD
+> Reasoning: Data quality appears only in a troubleshooting context, not as an owned framework or responsibility, with no testing tools or practices listed.
+
+**Run 3:** `absent` ✗
+> Quote: "Participate in testing, releases, and deployments across development and production environments."
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality are mentioned as activities to participate in and troubleshoot, but the role does not own or define testing practices, frameworks, or data quality standards.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`absent`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Optimize system performance and improve reliability of financial processes."
+> Verified: ✓ found in JD
+> Reasoning: Operational reliability, data quality, and platform stability are emphasized, but there is no explicit regulatory, compliance, or risk-register framing typical of high loss aversion.
+
+**Run 2:** `moderate` ✗
+> Quote: "accurate, reliable, and scalable financial planning, reporting, and performance management processes."
+> Verified: ✓ found in JD
+> Reasoning: Reliability and accuracy are emphasized throughout, but framed as operational excellence and capability rather than compliance or regulatory risk.
+
+**Run 3:** `moderate` ✗
+> Quote: "contributing to the delivery of accurate, reliable, and scalable financial planning, reporting, and performance management processes."
+> Verified: ✓ found in JD
+> Reasoning: Reliability and accuracy are emphasized as operational concerns for financial processes, but without explicit compliance, regulatory, or audit framing—indicating moderate risk mitigation focus.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

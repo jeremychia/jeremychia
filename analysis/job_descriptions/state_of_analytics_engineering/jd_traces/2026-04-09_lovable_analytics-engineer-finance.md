@@ -59,12 +59,12 @@ Not specified in the posting.
 | domain_risk | high | high | high | high | 100% | ✓ |
 | collaboration_width | 1 | 1 | 1 | 1 | 100% | ✓ |
 | data_team_maturity | early | mid | mid | mid | 100% | ✗ |
-| jd_authorship | mixed | hiring_manager | hiring_manager | hiring_manager | 100% | ✗ |
+| jd_authorship | mixed | mixed | hiring_manager | hiring_manager | 33% | ✗ |
 | stakeholder_orientation | finance | finance | finance | finance | 100% | ✓ |
-| autonomy_level | execution | mixed | execution | execution | 33% | ✓ |
+| autonomy_level | execution | execution | mixed | execution | 33% | ✓ |
 | ai_role |  | none | none | none | 100% | ✗ |
 | testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
-| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
+| loss_aversion_framing |  | high | moderate | high | 33% | ✗ |
 
 ---
 
@@ -76,17 +76,17 @@ Not specified in the posting.
 **Run 1:** `rigour` ✓
 > Quote: "Implement quality assurance protocols for financial data"
 > Verified: ✓ found in JD
-> Reasoning: Multiple quality and rigor signals (verify, document, implement QA) with no delivery velocity mentions establish rigour as the primary orientation.
+> Reasoning: The responsibilities emphasize data accuracy, consistency verification, and QA implementation with zero velocity signals, establishing rigour as the dominant orientation.
 
 **Run 2:** `rigour` ✓
-> Quote: "Implement quality assurance protocols for financial data"
+> Quote: "Meticulous attention to financial data accuracy"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes verification, quality assurance, and accuracy as core responsibilities with no velocity language present.
+> Reasoning: The JD emphasizes accuracy, verification, quality assurance, and meticulous attention throughout with no velocity-oriented language present.
 
 **Run 3:** `rigour` ✓
 > Quote: "Implement quality assurance protocols for financial data"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, verification, and accuracy throughout with no velocity-oriented language, signaling a rigour-focused orientation.
+> Reasoning: The responsibilities emphasize verification, documentation, and quality assurance with no velocity or speed signals present.
 
 ### domain_risk
 **Manual:** `high`
@@ -94,35 +94,35 @@ Not specified in the posting.
 **Run 1:** `high` ✓
 > Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
 > Verified: ✓ found in JD
-> Reasoning: Revenue recognition and financial metrics are core to financial reporting and regulatory compliance, indicating high domain risk.
+> Reasoning: Revenue recognition is a core accounting and regulatory compliance function; errors directly affect financial reporting accuracy and regulatory compliance.
 
 **Run 2:** `high` ✓
-> Quote: "revenue recognition and subscription metrics"
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
 > Verified: ✓ found in JD
-> Reasoning: Revenue recognition and deferred income are explicit financial reporting concepts with direct regulatory and audit exposure.
+> Reasoning: The role involves revenue recognition, a directly regulated financial reporting function with compliance and regulatory implications.
 
 **Run 3:** `high` ✓
 > Quote: "Document business logic for financial metrics including revenue recognition and deferred income"
 > Verified: ✓ found in JD
-> Reasoning: Revenue recognition and deferred income are regulated accounting concepts that directly affect financial reporting, placing this in the high-risk domain.
+> Reasoning: Revenue recognition and deferred income are financial reporting and compliance-critical areas where data errors have direct regulatory implications.
 
 ### collaboration_width
 **Manual:** `1`
 
 **Run 1:** `1` ✓
-> Quote: "Finance"
+> Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Only Finance is explicitly named as a collaborating team; no other functions are mentioned.
+> Reasoning: Only Finance is explicitly named as a collaboration partner; payment processors and billing platforms are data sources, not partner teams.
 
 **Run 2:** `1` ✓
-> Quote: "Finance"
+> Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Only Finance is explicitly named as a collaboration partner; other references like 'systems' and 'reporting layers' are not named teams.
+> Reasoning: Only Finance is explicitly named as a collaboration partner in the JD.
 
 **Run 3:** `1` ✓
-> Quote: "Collaborate with Finance"
+> Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Only Finance is explicitly named as a collaborative partner; no other named teams or functions are identified.
+> Reasoning: Only Finance is explicitly named as a partner team; payment processors and BI platforms are systems/tools rather than partner teams.
 
 ### data_team_maturity
 **Manual:** `early`
@@ -130,77 +130,79 @@ Not specified in the posting.
 **Run 1:** `mid` ✗
 > Quote: "Establish foundational tables for monthly/annual recurring revenue, churn analysis, and revenue patterns"
 > Verified: ✓ found in JD
-> Reasoning: The combination of establishing foundational tables with sustaining existing models, plus specific tooling like SQLMesh and dbt, indicates a mid-stage team building out capabilities.
+> Reasoning: The presence of SQLMesh as an active tool and the framing to 'sustain' existing models suggests infrastructure exists, while 'establish foundational tables' indicates the team is expanding capacity rather than starting from zero.
 
 **Run 2:** `mid` ✗
-> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition"
 > Verified: ✓ found in JD
-> Reasoning: Named tools (SQLMesh, dbt, cloud DWs) appear in responsibilities indicating existing infrastructure, and the role combines building new models with sustaining existing ones.
+> Reasoning: The role involves sustaining existing infrastructure (SQLMesh) and building on established data sources rather than building from zero.
 
 **Run 3:** `mid` ✗
 > Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
 > Verified: ✓ found in JD
-> Reasoning: The combination of sustaining existing models while establishing foundational tables, plus named infrastructure tools, suggests a growing but not yet mature data function.
+> Reasoning: The data function uses named tools (SQLMesh) and has existing infrastructure to sustain, while establishing foundational models for the revenue analytics domain.
 
 ⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `hiring_manager` ✗
+**Run 1:** `mixed` ✓
 > Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
 > Verified: ✓ found in JD
-> Reasoning: Specific technical context (SQLMesh for revenue recognition, subscription economy metrics, payment platform integration) can only come from someone who has done this work.
+> Reasoning: Technical specificity appears (SQLMesh, revenue recognition, Stripe integrations) alongside generic boilerplate verbs ('collaborate with stakeholders', 'implement protocols'), indicating both hiring manager and recruiter input.
 
 **Run 2:** `hiring_manager` ✗
-> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics; Oversee data ingestion from Stripe, billing platforms, and payment processors"
 > Verified: ✓ found in JD
-> Reasoning: The specificity of tool stacks (SQLMesh), subscription economy metrics (MRR, ARR, churn, LTV), and financial domain concepts (revenue recognition, deferred income) exceeds boilerplate.
+> Reasoning: The responsibilities demonstrate technical specificity with named tools (SQLMesh), specific metrics (MRR, ARR, churn, LTV), and precise data sources that indicate authorship by someone who performs this work.
 
 **Run 3:** `hiring_manager` ✗
-> Quote: "Document business logic for financial metrics including revenue recognition and deferred income"
+> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
 > Verified: ✓ found in JD
-> Reasoning: The technical specificity (SQLMesh, dimensional modeling, revenue recognition, deferred income) and domain precision indicate someone with hands-on financial data engineering experience wrote this.
+> Reasoning: The responsibilities name specific tools (SQLMesh) with precise domain context (revenue recognition), specific financial methodologies (dimensional modeling, deferred income), and named payment systems (Stripe) that indicate hands-on experience.
 
 ⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['mixed', 'hiring_manager', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `finance`
 
 **Run 1:** `finance` ✓
-> Quote: "Collaborate with Finance to convert requirements into structured data solutions"
+> Quote: "Document business logic for financial metrics including revenue recognition and deferred income"
 > Verified: ✓ found in JD
-> Reasoning: Finance is explicitly named as the primary collaborator and all responsibilities directly serve financial reporting and business requirements.
+> Reasoning: The role exclusively serves Finance through accounting-focused metrics (revenue recognition, deferred income, MRR/ARR) with Finance explicitly named as the primary collaboration partner.
 
 **Run 2:** `finance` ✓
 > Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: Finance is the explicitly named primary stakeholder, and all responsibilities centre on financial reporting and revenue metrics.
+> Reasoning: Finance is explicitly named as the primary stakeholder, and all responsibilities flow from financial requirements including revenue recognition and deferred income.
 
 **Run 3:** `finance` ✓
-> Quote: "Develop and sustain dimensional models using SQLMesh for revenue recognition and subscription metrics"
+> Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The entire role is centered on delivering revenue recognition and subscription metrics in service to Finance, making Finance the primary stakeholder.
+> Reasoning: Finance is explicitly named as the primary stakeholder, and all responsibilities focus on revenue recognition, subscription metrics, and financial data accuracy.
 
 ### autonomy_level
 **Manual:** `execution`
 
-**Run 1:** `mixed` ✗
-> Quote: "Develop and sustain"
-> Verified: ✓ found in JD
-> Reasoning: Strategic technical verbs (develop, establish, oversee, implement) indicate architectural autonomy, balanced by Finance setting the business requirements and direction.
-
-**Run 2:** `execution` ✓
+**Run 1:** `execution` ✓
 > Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: The role executes requirements set by Finance rather than defining analytics strategy or priorities.
+> Reasoning: Requirements originate from Finance and the role executes their conversion into data infrastructure, with scope and direction set externally rather than the candidate defining strategy.
+
+**Run 2:** `mixed` ✗
+> Quote: "Establish foundational tables for monthly/annual recurring revenue, churn analysis, and revenue patterns; Collaborate with Finance to convert requirements into structured data solutions"
+> Verified: ✓ found in JD
+> Reasoning: The role combines strategic definition of foundational data models with execution in service of Finance's external requirements.
 
 **Run 3:** `execution` ✓
 > Quote: "Collaborate with Finance to convert requirements into structured data solutions"
 > Verified: ✓ found in JD
-> Reasoning: While the role has technical implementation autonomy, the strategic direction (requirements) originates from Finance, making this fundamentally an execution role.
+> Reasoning: The role receives scoped requirements from Finance and delivers data solutions against those requirements rather than setting strategic direction.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'execution', 'execution']
+⚠ **LLM inconsistency**: runs gave ['execution', 'mixed', 'execution']
 
 ### ai_role
 **Manual:** ``
@@ -208,17 +210,17 @@ Not specified in the posting.
 **Run 1:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No mention of AI tools, coding assistance, or AI-enabled infrastructure required of the candidate.
+> Reasoning: No mention of AI coding tools, AI-assisted workflows, GenAI applications, or AI-ready data infrastructure appears anywhere in the JD.
 
 **Run 2:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No mention of AI coding tools, AI-assisted development, or building AI-ready data infrastructure.
+> Reasoning: The JD contains no signal that the candidate is expected to use or build AI capabilities.
 
 **Run 3:** `none` ✗
 > Quote: "No AI skill signal."
 > Verified: ✓ found in JD
-> Reasoning: No AI-related skills, tools, or competencies are mentioned for the candidate to demonstrate in any capacity.
+> Reasoning: No mention of AI, machine learning, AI tools, or AI-assisted workflows in either the candidate requirements or responsibilities sections.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
@@ -228,36 +230,38 @@ Not specified in the posting.
 **Run 1:** `responsibility` ✗
 > Quote: "Implement quality assurance protocols for financial data"
 > Verified: ✓ found in JD
-> Reasoning: The responsibility uses an ownership verb (implement) to frame QA as something the candidate defines and owns, not merely a tool to use.
+> Reasoning: The action verb 'implement' applied to QA protocols positions the candidate as owning the testing and quality framework, not merely using existing tools.
 
 **Run 2:** `responsibility` ✗
 > Quote: "Implement quality assurance protocols for financial data"
 > Verified: ✓ found in JD
-> Reasoning: Testing and QA are framed as an ownership responsibility with an action verb (implement) indicating the candidate defines the protocols.
+> Reasoning: The candidate is expected to implement and own quality assurance protocols as an active responsibility rather than operate existing tools.
 
 **Run 3:** `responsibility` ✗
 > Quote: "Implement quality assurance protocols for financial data"
 > Verified: ✓ found in JD
-> Reasoning: Testing and quality frameworks are framed as owned responsibilities with action verbs, not merely as tool skills in a requirements list.
+> Reasoning: Data quality is framed as an owned responsibility with an action verb 'implement', not merely listed as a required tool or technical skill.
 
 ⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
 **Manual:** ``
 
-**Run 1:** `moderate` ✗
+**Run 1:** `high` ✗
 > Quote: "Implement quality assurance protocols for financial data"
 > Verified: ✓ found in JD
-> Reasoning: Operational reliability through accuracy, consistency verification, and QA protocols is central to the role, though without explicit compliance or regulatory framing.
+> Reasoning: Revenue recognition is inherently compliance-critical, and the repeated emphasis on accuracy, consistency verification, and QA protocols reflects high loss aversion around financial data quality reaching decision-makers.
 
 **Run 2:** `moderate` ✗
-> Quote: "Verify data consistency across systems and reporting layers"
+> Quote: "Meticulous attention to financial data accuracy"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes operational reliability and accuracy without explicit compliance or regulatory language, reflecting concern for data pipeline stability rather than regulatory exposure.
+> Reasoning: The JD emphasizes accuracy and quality in financial data consistently, indicating moderate loss aversion focused on operational correctness and stakeholder trust rather than explicit compliance/regulatory risk mitigation.
 
-**Run 3:** `moderate` ✗
-> Quote: "Implement quality assurance protocols for financial data"
+**Run 3:** `high` ✗
+> Quote: "Meticulous attention to financial data accuracy"
 > Verified: ✓ found in JD
-> Reasoning: Quality and accuracy are emphasized in a financial context, but without explicit compliance, regulatory, or audit framing, the loss aversion appears operationally motivated rather than existentially risk-driven.
+> Reasoning: Risk prevention dominates through repeated emphasis on accuracy, verification, and quality assurance in a compliance-critical domain (revenue recognition and financial reporting).
 
-⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
+⚠ **Disagreement**: manual=`` vs LLM majority=`high`
+
+⚠ **LLM inconsistency**: runs gave ['high', 'moderate', 'high']

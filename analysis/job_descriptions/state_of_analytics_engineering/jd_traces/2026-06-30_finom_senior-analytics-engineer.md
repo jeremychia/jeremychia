@@ -58,12 +58,15 @@ Benefits:
 | Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
 |-----------|--------|-------|-------|-------|-----------|--------|
 | velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
-| domain_risk | high | moderate | high | moderate | 33% | ✗ |
+| domain_risk | high | moderate | moderate | moderate | 100% | ✗ |
 | collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
-| data_team_maturity | early | mid | early | mid | 33% | ✗ |
-| jd_authorship | mixed | mixed | mixed | hiring_manager | 33% | ✓ |
+| data_team_maturity | early | early | mid | early | 33% | ✓ |
+| jd_authorship | mixed | hiring_manager | mixed | hiring_manager | 33% | ✗ |
 | stakeholder_orientation | internal_data | internal_data | internal_data | internal_data | 100% | ✓ |
-| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| autonomy_level | strategic | strategic | mixed | mixed | 33% | ✗ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
@@ -75,174 +78,194 @@ Benefits:
 **Run 1:** `rigour` ✓
 > Quote: "Implementing data quality and governance processes"
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes data quality, governance, and reliable, well-documented data products with no velocity framing present.
+> Reasoning: The JD emphasises data governance and quality as core responsibilities alongside documented, reliable data products, with no velocity language.
 
 **Run 2:** `rigour` ✓
 > Quote: "Implementing data quality and governance processes"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize governance, documentation, and reliability with no corresponding velocity signals like fast-paced or rapid delivery.
+> Reasoning: Multiple rigour signals (data quality, governance, documented products) with zero velocity language.
 
 **Run 3:** `rigour` ✓
 > Quote: "Implementing data quality and governance processes"
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize data quality, governance, and well-documented products with no velocity-focused language, establishing rigour as the primary orientation.
+> Reasoning: The responsibilities emphasize data quality, governance, and documentation as core expectations, with no velocity-framing language present.
 
 ### domain_risk
 **Manual:** `high`
 
 **Run 1:** `moderate` ✗
-> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation — partner with data consumers across the business, supporting their daily data needs and turning requirements into reliable, well-documented data products"
+> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation"
 > Verified: ✓ found in JD
-> Reasoning: Although Finom is fintech, the JD language frames data work as supporting internal analytics and data consumers rather than explicitly linking to financial reporting or regulatory compliance.
+> Reasoning: Despite fintech sector, the JD frames the role around internal data product delivery rather than financial reporting, compliance, or regulatory concerns.
 
-**Run 2:** `high` ✓
-> Quote: "creating integrated financial management solutions for entrepreneurs"
+**Run 2:** `moderate` ✗
+> Quote: "Building a Data Delivery Platform on Databricks"
 > Verified: ✓ found in JD
-> Reasoning: Fintech is a sector that defaults to high domain risk due to financial and regulatory exposure inherent to the business model.
+> Reasoning: While Finom is fintech (high-risk sector), the JD focuses on technical infrastructure with no financial reporting, compliance, or regulatory language.
 
 **Run 3:** `moderate` ✗
-> Quote: "creating integrated financial management solutions for entrepreneurs"
+> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation"
 > Verified: ✓ found in JD
-> Reasoning: While in the fintech sector (high-risk by default), the JD focuses on data infrastructure work without explicit financial reporting, compliance, or regulatory language, placing it at moderate risk.
+> Reasoning: While Finom is a fintech company, the JD frames the role in generic data platform terms without explicit financial reporting, compliance, or regulatory language.
 
 ⚠ **Disagreement**: manual=`high` vs LLM majority=`moderate`
-
-⚠ **LLM inconsistency**: runs gave ['moderate', 'high', 'moderate']
 
 ### collaboration_width
 **Manual:** `3`
 
 **Run 1:** `3` ✓
-> Quote: "Collaborating with data engineers on streaming ETL framework development; Supporting data consumers (ML engineers, analysts, stakeholders)"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names three distinct groups: data engineers, ML engineers, and analysts as collaboration partners.
+> Quote: "data engineers; ML engineers; analysts"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named functions identified as collaboration partners or data consumers across platform and analytics functions.
 
 **Run 2:** `3` ✓
-> Quote: "data engineers; ML engineers; analysts"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD explicitly names three distinct partner functions as collaboration partners in the responsibilities section.
+> Quote: "Collaborating with data engineers; Supporting data consumers (ML engineers, analysts, stakeholders)"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named teams: data engineers, ML engineers, and analysts (stakeholders excluded as too generic).
 
 **Run 3:** `3` ✓
 > Quote: "Collaborating with data engineers on streaming ETL framework development; Supporting data consumers (ML engineers, analysts, stakeholders)"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Explicitly named collaboration partners are data engineers, ML engineers, and analysts—three distinct teams.
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named partner functions identified: data engineers, ML engineers, and analysts.
 
 ### data_team_maturity
 **Manual:** `early`
 
-**Run 1:** `mid` ✗
-> Quote: "Newly formed Data Team building a Data Delivery Platform on Databricks"
-> Verified: ✓ found in JD
-> Reasoning: The phrase 'newly formed' indicates a growing team with foundational platform work underway, but the plural 'data engineers' and existing data consumers suggest beyond first-hire stage.
-
-**Run 2:** `early` ✓
-> Quote: "newly formed Data Team building a Data Delivery Platform"
-> Verified: ✓ found in JD
-> Reasoning: The 'newly formed' descriptor combined with 'building' and 'from inception' language signals a data function being established rather than operating at scale.
-
-**Run 3:** `mid` ✗
+**Run 1:** `early` ✓
 > Quote: "newly formed Data Team building a Data Delivery Platform on Databricks"
 > Verified: ✓ found in JD
-> Reasoning: The team is newly formed but has specific modern tools and infrastructure (Databricks, dbt, OpenMetadata) with defined responsibilities, indicating mid-stage rather than early-stage.
+> Reasoning: Explicit signal of a newly formed team building platform infrastructure from scratch, indicating early-stage maturity despite some existing infrastructure.
 
-⚠ **Disagreement**: manual=`early` vs LLM majority=`mid`
+**Run 2:** `mid` ✗
+> Quote: "newly formed Data Team building a Data Delivery Platform on Databricks"
+> Verified: ✓ found in JD
+> Reasoning: Newly formed suggests early stage, but presence of named platforms and supporting multiple specialized roles (data engineers, ML engineers, analysts) indicates mid-stage maturity.
 
-⚠ **LLM inconsistency**: runs gave ['mid', 'early', 'mid']
+**Run 3:** `early` ✓
+> Quote: "newly formed Data Team building a Data Delivery Platform on Databricks"
+> Verified: ✓ found in JD
+> Reasoning: The explicitly 'newly formed' team building 'from inception' signals an early-stage data function establishing its core platform and processes.
+
+⚠ **LLM inconsistency**: runs gave ['early', 'mid', 'early']
 
 ### jd_authorship
 **Manual:** `mixed`
 
-**Run 1:** `mixed` ✓
-> Quote: "Developing data warehouse core models that transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific technical responsibilities (Kafka transformations, OpenMetadata maintenance, DWH models) indicate hiring manager input, while generic collaboration language suggests recruiter contribution.
-
-**Run 2:** `mixed` ✓
+**Run 1:** `hiring_manager` ✗
 > Quote: "Developing data warehouse core models that transform Kafka topics into documented, easy-to-use data products"
 > Verified: ✓ found in JD
-> Reasoning: Technical specificity about Kafka transformations and warehouse architecture indicates hiring manager input, but other responsibilities use generic collaboration language.
+> Reasoning: The responsibilities contain technical specificity about named tools, technologies, and precise application context that indicates hands-on experience writing this role.
+
+**Run 2:** `mixed` ✓
+> Quote: "Developing data warehouse core models that transform Kafka topics into documented, easy-to-use data products; Collaborating with data engineers on streaming ETL framework development"
+> Verified: ✓ found in JD
+> Reasoning: Technical specificity (Kafka, streaming ETL, data warehouse models, OpenMetadata) mixed with generic collaboration and support language.
 
 **Run 3:** `hiring_manager` ✗
 > Quote: "Developing data warehouse core models that transform Kafka topics into documented, easy-to-use data products"
 > Verified: ✓ found in JD
-> Reasoning: Specific tool workflows and technical context (Kafka transformation, warehouse models) demonstrate hiring manager knowledge of the actual technical work rather than generic recruiter language.
+> Reasoning: This demonstrates specific technical application context (Kafka, DWH models on a specific platform) rather than generic boilerplate language.
 
-⚠ **LLM inconsistency**: runs gave ['mixed', 'mixed', 'hiring_manager']
+⚠ **Disagreement**: manual=`mixed` vs LLM majority=`hiring_manager`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
 
 ### stakeholder_orientation
 **Manual:** `internal_data`
 
 **Run 1:** `internal_data` ✓
-> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation — partner with data consumers across the business, supporting their daily data needs and turning requirements into reliable, well-documented data products"
+> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation — partner with data consumers across the business"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly serves internal data platform users (ML engineers, analysts) and exists to build infrastructure for the data team itself.
+> Reasoning: The primary audience is internal data consumers within the analytics and ML functions, not GTM, product, or finance teams.
 
 **Run 2:** `internal_data` ✓
-> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation"
+> Quote: "partner with data consumers across the business, supporting their daily data needs and turning requirements into reliable, well-documented data products"
 > Verified: ✓ found in JD
-> Reasoning: The primary mission is building data infrastructure and serving internal data team consumers, not external GTM, revenue, or finance functions.
+> Reasoning: The role centers on building and maintaining data infrastructure (Databricks platform, data catalog, core models) for internal technical teams and analysts.
 
 **Run 3:** `internal_data` ✓
-> Quote: "Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation"
+> Quote: "partner with data consumers across the business, supporting their daily data needs and turning requirements into reliable, well-documented data products"
 > Verified: ✓ found in JD
-> Reasoning: The role serves internal data consumers and is framed around building a data platform for internal infrastructure, not external commercial, product, or financial audiences.
+> Reasoning: The role's core mission is building data infrastructure and platforms that serve internal data consumers and other data engineers, not external GTM or financial reporting.
 
 ### autonomy_level
 **Manual:** `strategic`
 
 **Run 1:** `strategic` ✓
-> Quote: "The role offers significant autonomy in developing data products from scratch in a remote setting"
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly grants 'significant autonomy' and requires 'self-direction' in developing and architecting platform solutions from inception, indicating strategic ownership rather than execution of predefined scope.
-
-**Run 2:** `strategic` ✓
 > Quote: "significant autonomy in developing data products from scratch"
 > Verified: ✓ found in JD
-> Reasoning: The role explicitly offers 'significant autonomy' and involves defining and building platform components 'from inception', establishing strategic direction rather than executing pre-scoped work.
+> Reasoning: The role is explicitly described as having significant autonomy to develop data products from inception, with strategic ownership over platform architecture.
 
-**Run 3:** `strategic` ✓
-> Quote: "The role offers significant autonomy in developing data products from scratch"
+**Run 2:** `mixed` ✗
+> Quote: "significant autonomy in developing data products from scratch; Supporting data consumers across the business, supporting their daily data needs"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Strategic autonomy in platform building and addressing challenges from inception combined with execution responsibilities supporting data consumers.
+
+**Run 3:** `mixed` ✗
+> Quote: "significant autonomy in developing data products from scratch; Supporting data consumers (ML engineers, analysts, stakeholders) with requirements translation"
 > Verified: ✓ found in JD
-> Reasoning: The explicit mention of significant autonomy to develop products from scratch combined with ownership of platform building indicates strategic direction-setting rather than execution of defined work.
+> Reasoning: The role combines strategic autonomy in building the platform from inception with execution-oriented responsibilities in serving data consumer requirements.
+
+⚠ **Disagreement**: manual=`strategic` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['strategic', 'mixed', 'mixed']
 
 ### ai_role
-**Run 1:** `none` ✓
-> Quote: "transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
-> Reasoning: No AI tools, AI-first mindset, or GenAI infrastructure signals detected; stack is traditional data engineering (Kafka, Databricks, dbt).
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
-> Reasoning: No AI tools or AI-enabler infrastructure mentioned; focus is on standard data platform work with Kafka, OpenMetadata, Databricks.
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no expectation for the candidate to use AI coding tools or build AI infrastructure, despite ML engineers being named as data consumers.
 
-**Run 3:** `none` ✓
-> Quote: "transform Kafka topics into documented, easy-to-use data products; Contributing to OpenMetadata data catalog features and maintenance"
-> Reasoning: Stack comprises standard data engineering tools (Kafka, OpenMetadata, Databricks, dbt, PySpark) with no AI-coding or infrastructure-building signals.
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: No mention of AI capabilities, tools, or expectations anywhere in the JD.
 
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: The JD contains no signals that the candidate should demonstrate AI skills, either for personal productivity or for building AI-ready infrastructure.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
 
 ### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "implementing data quality and governance processes; reliable, well-documented data products"
-> Reasoning: JD explicitly assigns responsibility for implementing data quality and governance, using ownership verbs indicating candidate owns quality practice.
+**Manual:** ``
 
-**Run 2:** `responsibility` ✓
-> Quote: "implementing data quality and governance processes; reliable, well-documented data products"
-> Reasoning: Candidate owns quality and governance practice implementation through explicit ownership verbs (implementing, establishing processes).
+**Run 1:** `responsibility` ✗
+> Quote: "Implementing data quality and governance processes"
+> Verified: ✓ found in JD
+> Reasoning: Data quality is framed as a named responsibility with an action verb showing ownership rather than as a tool in a skill list.
 
-**Run 3:** `responsibility` ✓
-> Quote: "implementing data quality and governance processes; reliable, well-documented data products"
-> Reasoning: Ownership verb (implementing) paired with quality practice, indicating candidate owns quality assurance.
+**Run 2:** `responsibility` ✗
+> Quote: "Implementing data quality and governance processes"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance are direct responsibilities with an ownership verb (implementing), not tools listed in requirements.
 
+**Run 3:** `responsibility` ✗
+> Quote: "Implementing data quality and governance processes"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance practices are framed as something the candidate implements (ownership verb) in the responsibilities section.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
 
 ### loss_aversion_framing
-**Run 1:** `none` ✓
-> Quote: "building a Data Delivery Platform on Databricks; data products from scratch; addressing platform-building challenges from inception"
-> Reasoning: JD is framed around delivery and platform-building with no mention of compliance, regulatory requirements, incidents, or trust concerns.
+**Manual:** ``
 
-**Run 2:** `none` ✓
-> Quote: "No loss aversion framing detected"
-> Reasoning: Role focuses on data product delivery and platform building; domain context (fintech) is risk category not loss-aversion framing.
+**Run 1:** `moderate` ✗
+> Quote: "Implementing data quality and governance processes"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and governance are named operational concerns indicating reliability matters, but the JD lacks compliance/regulatory/stakeholder-trust language that would signal high loss aversion.
 
-**Run 3:** `none` ✓
-> Quote: "building a Data Delivery Platform on Databricks; data products from scratch; addressing platform-building challenges from inception"
-> Reasoning: Greenfield platform delivery dominates framing; no compliance, regulatory, SLO, or incident-risk language present.
+**Run 2:** `moderate` ✗
+> Quote: "reliable, well-documented data products"
+> Verified: ✓ found in JD
+> Reasoning: Reliability and quality are valued outcomes but the JD emphasizes technical excellence over risk prevention, compliance, or stakeholder trust concerns.
 
+**Run 3:** `moderate` ✗
+> Quote: "Implementing data quality and governance processes; reliable, well-documented data products"
+> Verified: ✓ found in JD
+> Reasoning: Data quality and reliability are core concerns, but framed operationally rather than around regulatory compliance or preventing bad data reaching critical decision-makers.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`

@@ -5,6 +5,7 @@
 ```
 # Senior Analytics Engineer — Preply
 
+**URL:** https://preply.com/en/careers/apply?ashby_jid=c0af4bdc-108c-405c-9425-2a15e9dc4c94
 **Location:** Barcelona
 **Date Posted:** 2026-06-27
 
@@ -68,188 +69,222 @@ Expert proficiency in SQL and Python, with a proven track record in designing, i
 
 Deep understanding of advanced data governance frameworks, modeling best practices, and implementation of scalable self-service analytics platforms.
 
-Exceptional blend of technical skills, business acumen, and compelling communication skills to effectively persuade and influence stakeholders…[truncated]
+Exceptional blend of technical skills, business ac…[truncated]
 ```
 
 ---
 
 ## Classification results
 
-| Dimension | Run 1 | Run 2 | Run 3 | Agreement |
-|-----------|-------|-------|-------|-----------|
-| velocity_vs_rigour | rigour | rigour | rigour | 100% |
-| domain_risk | moderate | moderate | moderate | 100% |
-| collaboration_width | 3 | 3 | 3 | 100% |
-| data_team_maturity | mid | mid | mid | 100% |
-| jd_authorship | hiring_manager | mixed | hiring_manager | 33% |
-| stakeholder_orientation | product | product | internal_data | 33% |
-| autonomy_level | strategic | strategic | strategic | 100% |
+| Dimension | Manual | Run 1 | Run 2 | Run 3 | Agreement | Match? |
+|-----------|--------|-------|-------|-------|-----------|--------|
+| velocity_vs_rigour | rigour | rigour | rigour | rigour | 100% | ✓ |
+| domain_risk | moderate | moderate | moderate | moderate | 100% | ✓ |
+| collaboration_width | 3 | 3 | 3 | 3 | 100% | ✓ |
+| data_team_maturity | mature | mid | mid | mid | 100% | ✗ |
+| jd_authorship | hiring_manager | hiring_manager | mixed | mixed | 33% | ✗ |
+| stakeholder_orientation | product | internal_data | mixed | internal_data | 33% | ✗ |
+| autonomy_level | strategic | strategic | strategic | strategic | 100% | ✓ |
+| ai_role |  | none | none | none | 100% | ✗ |
+| testing_framing |  | responsibility | responsibility | responsibility | 100% | ✗ |
+| loss_aversion_framing |  | moderate | moderate | moderate | 100% | ✗ |
 
 ---
 
 ## Evidence per dimension
 
 ### velocity_vs_rigour
+**Manual:** `rigour`
 
-**Run 1:** `rigour`
+**Run 1:** `rigour` ✓
 > Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
 > Verified: ✓ found in JD
-> Reasoning: The JD emphasizes engineering best practices, CI/CD pipelines, and rigorous automated data quality monitoring as core responsibilities.
+> Reasoning: Responsibilities consistently emphasize correctness, quality governance, and best practices with explicit CI/CD and data quality signals; velocity language is limited to product business context, not work orientation.
 
-**Run 2:** `rigour`
+**Run 2:** `rigour` ✓
 > Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities section is dominated by signals of quality, governance, best practices, and data reliability, significantly outnumbering the few passing references to fast-paced culture.
+> Reasoning: Responsibilities consistently emphasize correctness, governance, reliability, and best practices (CI/CD, data quality monitoring, version control) with only one reference to pace in company principles.
 
-**Run 3:** `rigour`
+**Run 3:** `rigour` ✓
 > Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
 > Verified: ✓ found in JD
-> Reasoning: The responsibilities emphasize engineering best practices, CI/CD, automated quality monitoring, data reliability, and governance as core expectations, with no velocity signals like 'fast-paced' or 'ship quickly' in the job responsibilities.
+> Reasoning: The responsibilities section emphasizes quality, governance, and best practices (CI/CD, data quality monitoring, accuracy, documentation) far outweighing any velocity language.
 
 ### domain_risk
+**Manual:** `moderate`
 
-**Run 1:** `moderate`
-> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
-> Verified: ✓ found in JD
-> Reasoning: The role emphasizes accuracy and documentation for critical business decisions, but without explicit financial reporting, regulatory compliance, or mission-critical operational signals typical of high-risk domains.
-
-**Run 2:** `moderate`
-> Quote: "ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making"
-> Verified: ✓ found in JD
-> Reasoning: The JD emphasizes business decision impact but lacks explicit references to financial reporting, regulatory compliance, or audit requirements typical of high-risk domains.
-
-**Run 3:** `moderate`
-> Quote: "At Preply, we run hundreds of A/B tests at any given time, each with unique tracking and analytical challenges."
-> Verified: ✓ found in JD
-> Reasoning: The role primarily supports experimentation and business decision-making in an ed-tech SaaS platform without explicit financial reporting, regulatory compliance, or direct revenue impact.
-
-### collaboration_width
-
-**Run 1:** `3`
-> Quote: "partner with data scientists, analysts, and engineers to create high-quality, actionable datasets for business insights"
-> Verified: ✓ found in JD
-> Reasoning: The JD explicitly names three distinct partner groups: data scientists, analysts, and engineers.
-
-**Run 2:** `3`
-> Quote: "partner with data scientists, analysts, and engineers to create high-quality, actionable datasets for business insights"
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named groups are explicitly identified as collaborators: data scientists, analysts, and engineers.
-
-**Run 3:** `3`
-> Quote: "Cross-team collaboration: partner with data scientists, analysts, and engineers to create high-quality, actionable datasets for business insights."
-> Verified: ✓ found in JD
-> Reasoning: Three distinct named teams are identified: data scientists, analysts, and engineers.
-
-### data_team_maturity
-
-**Run 1:** `mid`
-> Quote: "Own and enhance our BI layer (Looker via LookML), ensuring intuitive, performant, and scalable self-serve analytics."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The JD references named tools and existing infrastructure being enhanced and evolved, rather than building from zero, indicating an existing but growing data function.
-
-**Run 2:** `mid`
-> Quote: "work with DBT, Snowflake, Airflow, Looker, Databricks, Monte Carlo, and help shape our future tech choices"
-> Verified: ✓ found in JD
-> Reasoning: Multiple existing named tools indicate established infrastructure at scale, while 'help shape future tech choices' suggests active evolution rather than greenfield building or mature consolidation.
-
-**Run 3:** `mid`
-> Quote: "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem."
-> Verified: ✓ found in JD
-> Reasoning: Named tools already deployed (Snowflake, DBT, Airflow, Looker, Databricks, Monte Carlo), multi-terabyte data volume, and responsibilities focused on optimization and enhancement signal an established data function at scale, not greenfield.
-
-### jd_authorship
-
-**Run 1:** `hiring_manager`
-> Quote: "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem."
-> Verified: ✓ found in JD
-> Reasoning: The context-specific details about multi-terabyte scale and named tools indicate someone familiar with the actual job and its technical constraints.
-
-**Run 2:** `mixed`
-> Quote: "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem."
-> Verified: ✓ found in JD
-> Reasoning: Specific technical context (multi-terabyte scale, ETL/ELT work) shows hiring manager knowledge, while other responsibilities use generic action verbs, creating a mixed pattern.
-
-**Run 3:** `hiring_manager`
-> Quote: "Own and enhance our BI layer (Looker via LookML), ensuring intuitive, performant, and scalable self-serve analytics."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: Specific tool context (Looker via LookML) and precise application knowledge (self-serve analytics at scale) demonstrate technical specificity that only comes from someone who has done this role.
-
-⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'hiring_manager']
-
-### stakeholder_orientation
-
-**Run 1:** `product`
-> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
-> Verified: ✓ found in JD
-> Reasoning: The role's strategic purpose is to support product growth and experimentation, indicating the primary stakeholders are product and growth teams.
-
-**Run 2:** `product`
-> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
-> Verified: ✓ found in JD
-> Reasoning: The strategic framing emphasizes product growth, A/B testing, and experimentation as the primary use case, positioning product teams as the main beneficiary of this analytics infrastructure.
-
-**Run 3:** `internal_data`
-> Quote: "Own and enhance our BI layer (Looker via LookML), ensuring intuitive, performant, and scalable self-serve analytics."
-> Verified: ⚠ NOT found verbatim
-> Reasoning: The primary focus is building and maintaining analytics infrastructure and self-serve platforms for internal data consumers (analysts, data scientists), not directly serving commercial, product, or finance stakeholders.
-
-⚠ **LLM inconsistency**: runs gave ['product', 'product', 'internal_data']
-
-### autonomy_level
-
-**Run 1:** `strategic`
-> Quote: "Lead the architecture, design, and evolution of complex data models ensuring clarity, accessibility, scalability, and reliability."
-> Verified: ✓ found in JD
-> Reasoning: The role is expected to lead the design and evolution of data models and architecture, indicating decision-making authority rather than execution of direction set by others.
-
-**Run 2:** `strategic`
-> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
-> Verified: ✓ found in JD
-> Reasoning: The repeated use of action verbs like 'lead,' 'shape,' 'drive,' and 'strategically influence' indicates the role is expected to set company-wide direction rather than execute against defined priorities.
-
-**Run 3:** `strategic`
-> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
-> Verified: ✓ found in JD
-> Reasoning: The explicit expectation to 'strategically influence and drive company-wide data strategies' indicates the role sets direction for data infrastructure and priorities, not executing direction set by others.
-
-### ai_role
-**Run 1:** `none` ✓
-> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
-> Reasoning: No explicit AI skill expected; personalization context present but no signal of building AI infrastructure or using AI coding tools.
-
-**Run 2:** `none` ✓
-> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring"
-> Reasoning: Standard AE work with no AI tool usage, enablement, or GenAI infrastructure expectations.
-
-**Run 3:** `none` ✓
-> Quote: "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem."
-> Reasoning: Standard analytics engineering work with no AI skill signals or enablement responsibilities.
-
-
-### testing_framing
-**Run 1:** `responsibility` ✓
-> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
-> Reasoning: Candidate owns quality practice through 'Champion' ownership language and explicit responsibility for automated data quality monitoring.
-
-**Run 2:** `responsibility` ✓
-> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring"
-> Reasoning: Ownership verb 'champion' combined with 'rigorous automated data quality monitoring' signals candidate-owned testing practice.
-
-**Run 3:** `responsibility` ✓
-> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
-> Reasoning: Ownership verbs (champion, drive, own, ensure) paired with explicit quality monitoring and testing practice signals.
-
-
-### loss_aversion_framing
 **Run 1:** `moderate` ✓
-> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
-> Reasoning: Operational reliability framing dominates (data quality, reliability, cleanliness) without explicit compliance or regulatory language.
+> Quote: "optimize experiments, and power innovation"
+> Verified: ✓ found in JD
+> Reasoning: The role supports business experimentation and decision-making rather than financial reporting or regulatory compliance, placing it in the moderate risk category.
 
 **Run 2:** `moderate` ✓
-> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making"
-> Reasoning: Operational reliability concern framed around impact to business decision-making, not regulatory or compliance urgency.
+> Quote: "data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making"
+> Verified: ✓ found in JD
+> Reasoning: The role affects business decision-making quality but the JD lacks financial, regulatory, or compliance language that would indicate high financial or legal risk.
 
 **Run 3:** `moderate` ✓
-> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
-> Reasoning: Operational reliability and data quality impact on decision-making emphasized, but without compliance or regulatory framing.
+> Quote: "critical business decision-making"
+> Verified: ✓ found in JD
+> Reasoning: EdTech role supporting business decisions through analytics without explicit regulatory, compliance, or financial reporting language typical of high-risk sectors.
 
+### collaboration_width
+**Manual:** `3`
+
+**Run 1:** `3` ✓
+> Quote: "partner with data scientists, analysts, and engineers"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named partner functions are explicitly listed: data scientists, analysts, and engineers.
+
+**Run 2:** `3` ✓
+> Quote: "partner with data scientists, analysts, and engineers; collaboration with data science teams"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named functions are explicitly listed as collaboration partners: data scientists, analysts, and engineers.
+
+**Run 3:** `3` ✓
+> Quote: "partner with data scientists, analysts, and engineers"
+> Verified: ✓ found in JD
+> Reasoning: Three distinct named partner functions explicitly listed: data scientists, analysts, and engineers.
+
+### data_team_maturity
+**Manual:** `mature`
+
+**Run 1:** `mid` ✗
+> Quote: "Develop and optimize sophisticated ETL/ELT pipelines, enhancing performance and scalability within our multi-terabyte data ecosystem."
+> Verified: ✓ found in JD
+> Reasoning: Named tools (Snowflake, DBT, Airflow, Looker, Monte Carlo) appear in responsibilities with specific scale and optimization context, indicating existing infrastructure being scaled rather than greenfield or mature specialization.
+
+**Run 2:** `mid` ✗
+> Quote: "work with DBT, Snowflake, Airflow, Looker, Databricks, Monte Carlo, and help shape our future tech choices"
+> Verified: ✓ found in JD
+> Reasoning: Existing mature tooling and multi-terabyte data ecosystem indicate an established function beyond early stage, with responsibilities focused on evolving rather than establishing foundational infrastructure.
+
+**Run 3:** `mid` ✗
+> Quote: "own and evolve the entire data pipeline, from ingestion to transformation and modeling, ensuring accuracy, scalability, and performance"
+> Verified: ✓ found in JD
+> Reasoning: Multiple named tools in operation (DBT, Snowflake, Airflow, Looker, Databricks, Monte Carlo), multi-terabyte scale, and emphasis on evolution of existing infrastructure indicates established function in growth phase, not early or fully mature.
+
+⚠ **Disagreement**: manual=`mature` vs LLM majority=`mid`
+
+### jd_authorship
+**Manual:** `hiring_manager`
+
+**Run 1:** `hiring_manager` ✓
+> Quote: "own and enhance our BI layer (Looker via LookML), ensuring intuitive, performant, and scalable self-serve analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Specific tool applications (Looker via LookML), scale details (multi-terabyte ecosystem), and precise technical context indicate hands-on authorship by someone who has done this work.
+
+**Run 2:** `mixed` ✗
+> Quote: "Own and enhance our BI layer (Looker via LookML), ensuring intuitive, performant, and scalable self-serve analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Specific technical details like LookML, multi-terabyte scale, and Looker configuration suggest hiring manager input, mixed with generic collaboration language typical of recruiter-authored content.
+
+**Run 3:** `mixed` ✗
+> Quote: "Own and enhance our BI layer (Looker via LookML), ensuring intuitive, performant, and scalable self-service analytics."
+> Verified: ✓ found in JD
+> Reasoning: Mix of specific technical context (LookML implementation details, named tools with application) and generic responsibility verbs (develop, drive, champion) suggests dual authorship.
+
+⚠ **Disagreement**: manual=`hiring_manager` vs LLM majority=`mixed`
+
+⚠ **LLM inconsistency**: runs gave ['hiring_manager', 'mixed', 'mixed']
+
+### stakeholder_orientation
+**Manual:** `product`
+
+**Run 1:** `internal_data` ✗
+> Quote: "Provide technical leadership in collaboration with data science teams to optimize analytical workflows, reduce redundancy, and enforce robust data governance."
+> Verified: ✓ found in JD
+> Reasoning: The primary named audience and immediate collaborators are data functions (data scientists, analysts, engineers), and responsibilities focus on building infrastructure for analytics consumers rather than directly serving product teams.
+
+**Run 2:** `mixed` ✗
+> Quote: "supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives"
+> Verified: ✓ found in JD
+> Reasoning: Responsibilities balance product-oriented goals (experimentation, personalization) with internal data infrastructure work (self-serve BI layer, analytical workflows for data scientists), making primary audience internal_data and product equally.
+
+**Run 3:** `internal_data` ✗
+> Quote: "ensure intuitive, performant, and scalable self-service analytics"
+> Verified: ⚠ NOT found verbatim
+> Reasoning: Primary framing centers on enabling internal data consumers and building infrastructure (models, pipelines, BI layer) rather than serving commercial, product, or finance teams directly.
+
+⚠ **Disagreement**: manual=`product` vs LLM majority=`internal_data`
+
+⚠ **LLM inconsistency**: runs gave ['internal_data', 'mixed', 'internal_data']
+
+### autonomy_level
+**Manual:** `strategic`
+
+**Run 1:** `strategic` ✓
+> Quote: "Lead the architecture, design, and evolution of complex data models ensuring clarity, accessibility, scalability, and reliability."
+> Verified: ✓ found in JD
+> Reasoning: Verbs emphasizing direction-setting (lead, drive, champion, strategically influence) indicate the role defines approach and priorities rather than executing direction set by others.
+
+**Run 2:** `strategic` ✓
+> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives"
+> Verified: ✓ found in JD
+> Reasoning: The role uses explicit strategic verbs (lead, drive, influence, champion) and is framed around setting direction, architecture decisions, and company-wide strategy rather than executing defined work.
+
+**Run 3:** `strategic` ✓
+> Quote: "Strategically influence and drive company-wide data strategies supporting rapid product growth, sophisticated experimentation, and large-scale personalization initiatives."
+> Verified: ✓ found in JD
+> Reasoning: Consistent use of ownership and direction-setting verbs (lead, own, champion, drive, strategically) throughout responsibilities indicates the role sets data strategy, not executes pre-defined direction.
+
+### ai_role
+**Manual:** ``
+
+**Run 1:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: While the company description mentions AI-enhanced learning, there is no expectation that the candidate use AI tools or build AI-enabling infrastructure.
+
+**Run 2:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: Although the company uses AI-enhanced learning and Databricks is listed as a tool, the JD contains no signals that the candidate must demonstrate AI skills, use AI coding tools, or build data infrastructure for AI/ML systems.
+
+**Run 3:** `none` ✗
+> Quote: "No AI skill signal."
+> Verified: ✓ found in JD
+> Reasoning: Company operates AI-enhanced products but the JD contains no expectation that the candidate use AI tools or build AI infrastructure; no mention of coding agents, LLM data infrastructure, or AI-assisted development.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`none`
+
+### testing_framing
+**Manual:** ``
+
+**Run 1:** `responsibility` ✗
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
+> Verified: ✓ found in JD
+> Reasoning: Data quality and monitoring are framed as owned responsibilities with action verbs (champion, drive) rather than as tools in a requirements list.
+
+**Run 2:** `responsibility` ✗
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring"
+> Verified: ✓ found in JD
+> Reasoning: Data quality monitoring is framed as an ownership responsibility to champion and implement, not just a tool to have experience with.
+
+**Run 3:** `responsibility` ✗
+> Quote: "Champion engineering best practices, including advanced version control, CI/CD pipelines for analytics, and rigorous automated data quality monitoring."
+> Verified: ✓ found in JD
+> Reasoning: Testing and data quality monitoring are framed as ownership responsibilities the candidate champions and enforces, not as tools listed in a requirements section.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`responsibility`
+
+### loss_aversion_framing
+**Manual:** ``
+
+**Run 1:** `moderate` ✗
+> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
+> Verified: ✓ found in JD
+> Reasoning: The focus is on operational reliability and preventing data errors from affecting business decisions, rather than compliance or regulatory risk.
+
+**Run 2:** `moderate` ✗
+> Quote: "data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making"
+> Verified: ✓ found in JD
+> Reasoning: The JD emphasizes preventing operational failures and bad data from reaching decision-makers, but lacks regulatory or compliance language that would indicate high loss aversion.
+
+**Run 3:** `moderate` ✗
+> Quote: "Drive initiatives ensuring data reliability, cleanliness, accuracy, and comprehensive documentation for critical business decision-making."
+> Verified: ✓ found in JD
+> Reasoning: Emphasis on operational reliability and data accuracy to support business decisions, but no compliance, regulatory, or catastrophic-failure prevention language typical of high loss-aversion framing.
+
+⚠ **Disagreement**: manual=`` vs LLM majority=`moderate`
