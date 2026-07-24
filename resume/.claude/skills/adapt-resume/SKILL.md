@@ -19,6 +19,7 @@ Fetch `$ARGUMENTS` with WebFetch. Do two layers of analysis:
 - **Required skills and tools**
 - **Preferred/bonus skills**
 - **Domain context** — industry, team size, stack maturity
+- **ATS platform** — infer from the posting URL domain: `greenhouse.io`/`grnh.se` → Greenhouse, `myworkday.com` → Workday, `personio.de`/`personio.com` → Personio, `jobs.smartrecruiters.com` → SmartRecruiters, `lever.co` → Lever. If the domain doesn't match a known ATS, ask the user once which ATS the company uses (or "unknown"). Record as `meta.atsPlatform`; it drives formatting in Step 8.
 
 ### Layer B — Behavioural and cognitive reading
 
@@ -212,7 +213,9 @@ Apply **fluency**: short declarative sentences over long compound ones. Lead met
 
 **pillHighlights:** Replace with the 10–15 ATS phrases from Layer B.
 
-**meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"jobLocation"` (the role's location as listed in the JD — used for geographical analysis across applications), `"sourceUrl"`, `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (all Layer B findings including urgency, greenfield/fix-scale, velocity/rigour, internal customer, stack lock-in, and language gate), and `"adaptationNotes"`.
+**Tagline:** Derive `header.tagline` strictly from Jeremy's actual job titles and areas of work as evidenced in `resume-base.json` — do not invent seniority claims or specialisations not already demonstrated in the experience section. If the role's focus differs meaningfully from the base tagline ("Senior Analytics Engineer - Finance and Data"), propose an adapted tagline and show it to the user for confirmation before it goes into the JSON. If unchanged, no confirmation needed.
+
+**meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"jobLocation"` (the role's location as listed in the JD — used for geographical analysis across applications), `"sourceUrl"`, `"atsPlatform"` (from Step 1), `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (all Layer B findings including urgency, greenfield/fix-scale, velocity/rigour, internal customer, stack lock-in, and language gate), and `"adaptationNotes"`.
 
 ---
 
@@ -244,13 +247,22 @@ After writing the JSON, review every line of the summary and all bullets against
 
 **Complete Step 5b before starting this step.**
 
-Identify JD requirements or themes weakly covered or absent in the base resume. For each genuine gap, ask a targeted question, e.g.:
+**Skill-addition gate (non-negotiable):** Never add a skill, tool, technology, framework, methodology, or JD keyword to the JSON — anywhere: summary, tagline, bullets, skills section, or `pillHighlights` — unless the user has said **yes** to that **exact** item in this conversation, with when/where and what-for evidence collected as below. A gap existing does not grant permission to close it. If unsure whether the user has genuine experience with something, ask — never infer "likely has" or "adjacent skill" as grounds to add it.
 
-> "The JD emphasises Unity Catalog governance. Have you worked with any data catalog or governance tooling — even partially?"
+Identify JD requirements or themes weakly covered or absent in the base resume. For each genuine gap, ask **one question at a time**, terse, yes/no first:
 
-Limit to 3–5 questions. **Stop here and wait for the user to respond.** Do not render or proceed until the user answers. Then update the JSON with any new information before moving on.
+> "The JD emphasises Unity Catalog governance. Have you worked with any data catalog or governance tooling? (yes/no)"
 
-If the user says "no gaps" or "continue", proceed directly.
+Limit to 3–5 gaps total. **Stop and wait for the user to respond to each before asking the next.**
+
+For each gap the user answers **yes** to:
+1. Ask **when/where** — which role, employer, and approximate timeframe (or project) they used it.
+2. Ask **what for** — what they did with it (task, deliverable, outcome); ask for metrics only if they volunteer them, never invent numbers.
+3. Only after both answers, add it to the JSON: the skills section **and** a matching bullet (or amend an existing one) under the relevant role, using only what the user said — no embellishment of scope or seniority.
+
+For each gap the user answers **no**, skips, or cannot give a concrete role/use case for: do not add it. Leave it as a gap and note it can be mentioned in the cover letter instead (P3, conditional).
+
+If the user says "no gaps" or "continue" upfront, skip straight to the gaps file.
 
 **After the user responds (or skips):** Write `applications/{base name}/{base name}-gaps.md` documenting the gaps identified, regardless of whether the user had answers:
 
@@ -336,6 +348,12 @@ For any missing keyword: either weave it into a bullet or the summary, or remove
 ---
 
 ## Step 8 — Render HTML and PDF
+
+**ATS platform formatting check** (use `meta.atsPlatform` from Step 1):
+- **Greenhouse, SmartRecruiters, Lever:** no known parsing quirks — standard PDF render is fine.
+- **Workday:** Workday's parser struggles with dense multi-column layouts and tables. Confirm the rendered HTML keeps skills as a flat label/value list (already the template default) and avoids introducing new nested tables for this application.
+- **Personio:** no known quirks — standard PDF render.
+- **Unknown / anything not listed above:** search the web for "{ATS name} resume parser formatting tips" before rendering; apply anything material you find (e.g. avoid text boxes, avoid headers/footers for critical info). Note what you found and applied in the tailoring report.
 
 ```bash
 python3 .claude/tools/render_resume.py \
