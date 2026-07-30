@@ -5,7 +5,7 @@ allowed-tools: Read Write Bash WebSearch WebFetch
 argument-hint: <application-folder-name or partial match>
 ---
 
-`$ARGUMENTS` is a full or partial application folder name (e.g. `lego` or `2026-04-08_lego_senior-analytics-engineer`). Work through these steps **in order, completing each fully before starting the next**.
+`$ARGUMENTS` is a full or partial application folder name (e.g. `lego` or `2026-04-08_lego_senior-analytics-engineer`). Work through these steps **in order**, completing each fully before the next.
 
 ---
 
@@ -23,7 +23,7 @@ Set `{folder}` to the full folder name and `{path}` to `applications/{folder}`.
 
 ## Step 2 — Read the source files
 
-Read **all** of these before proceeding to Step 3. Do not proceed until all reads are complete.
+Read **all** of these before proceeding to Step 3.
 
 - `{path}/jd.md` — role title, company, responsibilities, requirements
 - `{path}/{folder}.json` — `meta.behaviouralInsights`, `meta.adaptationNotes`, `summary`, `experience` bullets
@@ -35,7 +35,7 @@ If `jd.md` is missing, proceed with JSON only and note the gap.
 
 ## Step 3 — Research the company
 
-You are doing the research — do not ask the user. For every specific fact or figure used in the output, include a source URL as a markdown link immediately after. Do not add sources to claims from the JD or resume. If a search returns nothing useful, say so explicitly rather than inventing.
+You are doing the research — do not ask the user. For every specific fact or figure used in the output, include a source URL as a markdown link immediately after. Don't add sources to claims from the JD or resume. If a search returns nothing useful, say so rather than inventing.
 
 **3A — Data stack:** Search `{company} engineering blog data` and `{company} data stack dbt snowflake`. Extract: tools, platform migrations, modelling decisions, data culture signals.
 
@@ -45,9 +45,9 @@ You are doing the research — do not ask the user. For every specific fact or f
 
 **3D — Role-specific insight:** Based on JD context, run one targeted search for something concretely useful — e.g. which ERP they use, their pricing tiers, a recent BI migration.
 
-**3E — Business model and unit economics:** Search `{company} business model revenue` and `{company} pricing` or `{company} annual report`. Understand: how do they make money (B2B/B2C/marketplace/SaaS/transaction)? What are their key revenue drivers and cost levers? What does that imply about which data problems matter most (e.g. a marketplace needs supply/demand balance metrics; a SaaS company lives or dies on churn and ARR)?
+**3E — Business model and unit economics:** Search `{company} business model revenue` and `{company} pricing` or `{company} annual report`. How do they make money (B2B/B2C/marketplace/SaaS/transaction)? What are their key revenue drivers and cost levers? What does that imply about which data problems matter most (e.g. a marketplace needs supply/demand balance metrics; a SaaS company lives or dies on churn and ARR)?
 
-**3F — Competitive landscape:** Search `{company} competitors` and `{company} vs {likely competitor}`. Identify: who are their 2–3 closest competitors? How does the company differentiate (price, product, distribution)? Are they the incumbent or the challenger? This informs what the data team is likely optimising for and what business questions are highest stakes.
+**3F — Competitive landscape:** Search `{company} competitors` and `{company} vs {likely competitor}`. Who are their 2–3 closest competitors? How does the company differentiate (price, product, distribution)? Incumbent or challenger? This informs what the data team is likely optimising for and which business questions are highest stakes.
 
 ---
 
