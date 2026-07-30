@@ -2,7 +2,7 @@
 
 A repository of personal content used as raw material for resumes, cover letters, recruiter call prep, and interviews.
 
-**Start here:** read [narrative.md](narrative.md) first — it's the backbone every other file builds on. See also the top-level [`resume/README.md`](../README.md#profile) for how these files fit into the wider skill workflow.
+**Start here:** read [narrative.md](narrative.md) first — it's the backbone every other file builds on. See also the top-level [`resume/README.md`](../README.md) for how these files fit into the wider skill workflow.
 
 ## Two versions
 
