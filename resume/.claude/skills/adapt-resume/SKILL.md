@@ -447,58 +447,6 @@ Tell the user:
 
 ---
 
-## Step 11b — Write analysis record
-
-Write `analysis/records/{base name}.json` using the Layer B findings from Step 1 and the meta from Step 5. This is the structured dataset record used for cross-sectional analysis across all applications.
-
-Use the schema defined in `analysis/schema.json`. Every field must be populated; use `null` only where the JD genuinely does not provide enough information to classify.
-
-```json
-{
-  "application_id": "{base name}",
-  "company": "{company name}",
-  "role": "{job title as listed in JD}",
-  "job_location": "{location from JD header}",
-  "seniority": "{junior|mid|senior|staff|lead|manager — from role title}",
-  "salary_min": {integer or null},
-  "salary_max": {integer or null},
-  "salary_currency": "{EUR|GBP|USD|etc or null}",
-  "jd_authorship": "{hiring_manager|recruiter|mixed}",
-  "greenfield_vs_fix": "{greenfield|fix_scale|mixed}",
-  "velocity_vs_rigour": "{velocity|rigour|mixed}",
-  "domain_risk": "{high|moderate|low}",
-  "collaboration_width": {integer — count of named partner teams},
-  "data_team_maturity": "{early|mid|mature}",
-  "urgency": "{standard|urgent}",
-  "language_gate_type": "{none|soft|hard}",
-  "language_gate_languages": ["{language name}"] or [],
-  "interview_stages": {integer or null},
-  "has_dbt": true/false,
-  "has_spark": true/false,
-  "has_python": true/false,
-  "has_sql": true/false,
-  "has_airflow": true/false,
-  "has_dagster": true/false,
-  "has_prefect": true/false,
-  "has_snowflake": true/false,
-  "has_databricks": true/false,
-  "has_bigquery": true/false,
-  "has_redshift": true/false,
-  "has_duckdb": true/false,
-  "has_kafka": true/false,
-  "has_terraform": true/false,
-  "has_looker": true/false,
-  "has_tableau": true/false,
-  "has_power_bi": true/false,
-  "has_great_expectations": true/false,
-  "has_soda": true/false
-}
-```
-
-After writing the record, run `python3 analysis/build.py` to regenerate `analysis/applications_dataset.csv` with the new row included.
-
----
-
 ## Step 12 — Iterative learning (MANDATORY after every run)
 
 After the conversation ends or the user gives feedback on the output, review the full session for improvements. Update this SKILL.md and related tooling immediately — do not defer. These updates compound across future runs.

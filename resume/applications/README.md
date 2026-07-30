@@ -40,4 +40,5 @@ Run `/review-applications` periodically (after a batch of rejections, or every f
 
 - [`../profile/README.md`](../profile/README.md) — the personal source material (`narrative.md`, `values.md`, `star-stories.md`, etc.) that `/adapt-resume` and the prep skills read from
 - [`../.claude/skills/README.md`](../.claude/skills/README.md) — how the skills that populate this folder work
-- [`../analysis/`](../analysis/) — structured dataset (one record per application, written by `/adapt-resume` Step 11b) feeding the job-market analysis dashboard; this is the quantitative counterpart to the qualitative synthesis in `review-{date}.md`
+
+Job-description classification and the job-market analysis dashboard used to live in this repo under `analysis/` — that work has moved to the separate `analytics-engineers-job-descriptions` repo and no longer reads from this folder.
