@@ -105,6 +105,8 @@ The `profile/` directory holds the raw material about who you are and what you w
 
 Keep these current. `/adapt-resume` uses `narrative.md`, `motivations.md`, and `values.md` to write the cover letter. `/prep-recruiter-call` uses `star-stories.md` (if present) to enrich STAR prompts.
 
+See [`profile/README.md`](profile/README.md) for the full file/folder listing (including `verbose/`, `academic/`, `quarterly_reviews/`, and `sources/`) and for guidance on building an equivalent system from scratch.
+
 ---
 
 ## Updating the base resume
