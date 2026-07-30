@@ -4,11 +4,11 @@ description: Renders resume-base.json into a one-page ATS-optimised HTML and PDF
 allowed-tools: Read Write Bash
 ---
 
-Read `resume-base.json` from the current directory, write an HTML file, then convert it to PDF using Chrome headless.
+Read `resume-base.json`, write an HTML file, then convert it to PDF using Chrome headless.
 
 **Output filenames:**
 - HTML: `resume-$ARGUMENTS.html`
-- PDF:  `resume-$ARGUMENTS.pdf`
+- PDF: `resume-$ARGUMENTS.pdf`
 
 If no argument is given, use `resume-rendered` as the base name.
 
@@ -18,7 +18,7 @@ Work through these steps **in order**.
 
 ## Step 1 — Read and validate the source JSON
 
-Read `resume-base.json` now — do not proceed until the read completes.
+Read `resume-base.json` now.
 
 Before rendering, run a quick sanity check:
 - [ ] `summary` field exists and is non-empty

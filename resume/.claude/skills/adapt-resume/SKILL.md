@@ -5,7 +5,7 @@ allowed-tools: WebFetch Read Write Bash
 argument-hint: <job-posting-url>
 ---
 
-`$ARGUMENTS` is a job posting URL. Work through these steps **in order, completing each fully before starting the next**. Steps marked **[BLOCKING]** require the agent to stop and wait for user input before continuing.
+`$ARGUMENTS` is a job posting URL. Work through these steps **in order**, completing each fully before the next. Steps marked **[BLOCKING]** require stopping to wait for user input.
 
 ---
 
@@ -23,9 +23,9 @@ Fetch `$ARGUMENTS` with WebFetch. Do two layers of analysis:
 
 ### Layer B — Behavioural and cognitive reading
 
-**Signal ordering:** What is listed first in responsibilities/requirements is the top priority. Weight the resume to match that order.
+**Signal ordering:** What's listed first in responsibilities/requirements is the top priority. Weight the resume to match.
 
-**Repetition = fear or desire:** Any theme appearing 3+ times signals a pain point (fear) or critical need (desire). Surface resume content that directly addresses it.
+**Repetition = fear or desire:** A theme appearing 3+ times signals a pain point (fear) or critical need (desire). Surface resume content that addresses it directly.
 
 **Seniority signals:** Phrases like "take ownership", "champion best practices", "translating to senior leadership" signal they want an autonomous IC. Phrases like "manage stakeholders", "drive alignment", "own the roadmap" signal a manager-adjacent scope.
 - Autonomous IC signal → lead with outcomes and scale, not tasks
@@ -39,27 +39,27 @@ Fetch `$ARGUMENTS` with WebFetch. Do two layers of analysis:
 
 **ATS keywords:** Extract 10–15 distinctive phrases likely used as ATS filters (not generics like "SQL"). These must appear verbatim in the resume.
 
-**Urgency signal:** Look for "immediately", "ASAP", short JD validity windows (≤30 days), "essential role", "critical hire", or re-post indicators. High urgency → they need time-to-value, not trajectory. Frame resume achievements with fast onboarding and immediate delivery signals. Low urgency → trajectory and strategic framing tolerated.
+**Urgency signal:** Look for "immediately", "ASAP", short JD validity windows (≤30 days), "essential role", "critical hire", or re-post indicators. High urgency → they need time-to-value, not trajectory; frame achievements around fast onboarding and immediate delivery. Low urgency → trajectory and strategic framing are fine.
 
 **Greenfield vs. fix/scale signal:** Detect whether the role is building from scratch or improving/scaling something existing. "Build", "establish", "define", "create" = greenfield (founder energy needed). "Improve", "scale", "maintain", "modernise" = scale phase (craftsperson needed). Greenfield → lead with "designed from scratch" bullets. Scale → lead with "inherited X, improved it to Y" bullets.
 
-**Velocity vs. rigour orientation:** Detect whether the culture rewards moving fast or getting it right. Velocity signals: "move fast", "bias for action", "agile", "iterate", "pragmatic". Rigour signals: "meticulous", "thorough", "compliance", "controlled", "assertion checks". Same career fact; entirely different framing emphasis required.
+**Velocity vs. rigour orientation:** Detect whether the culture rewards moving fast or getting it right. Velocity signals: "move fast", "bias for action", "agile", "iterate", "pragmatic". Rigour signals: "meticulous", "thorough", "compliance", "controlled", "assertion checks". Same career fact, different framing.
 
 **Internal customer:** Identify the primary consumers of the data products built in this role — data scientists, analysts, product managers, finance, executives, "the business". Align bullet outcomes to their needs: data scientists → ML-ready data; executives → decision-quality outputs; finance → auditability and controls; PMs → reliable metrics and funnels.
 
 **Stack lock-in:** Are tools listed as hard requirements or preferences? Identify mandatory platforms (e.g., "must have Databricks", "Azure required") vs. flexible mentions ("or similar"). Stack-locked roles → mirror named tools verbatim at the front of skills. Tech-agnostic roles → foreground transferability over specific tools.
 
-**JD authorship signal:** Who wrote this JD — a hiring manager with technical depth, or a generalist recruiter? Signals: highly specific technical requirements (e.g. "incremental models at scale, ~1B rows daily", exact tool versions) = hiring manager wrote it, speak to the engineer. Vague role descriptions with generic "data" language = recruiter filter, optimise for ATS keywords and broad framing. Mixed = address both layers.
+**JD authorship signal:** Who wrote this JD — a hiring manager with technical depth, or a generalist recruiter? Highly specific technical requirements (e.g. "incremental models at scale, ~1B rows daily", exact tool versions) = hiring manager, speak to the engineer. Vague, generic "data" language = recruiter filter, optimise for ATS keywords and broad framing. Mixed = address both layers.
 
-**Data team size and maturity:** What can you infer about the data team's size and stage? Signals: solo AE hire with no team described = very early, expect to be the only data practitioner. "Mentor junior engineers" = small team of 2–4, you set the standard. "Lead a team of N" = established function, hiring for scale. Team maturity determines what "first 90 days" looks like — solo → everything is yours to build; established → inherit and improve.
+**Data team size and maturity:** What can you infer about the data team's size and stage? Solo AE hire with no team described = very early, expect to be the only data practitioner. "Mentor junior engineers" = small team of 2–4, you set the standard. "Lead a team of N" = established function, hiring for scale. Team maturity determines what "first 90 days" looks like — solo → everything is yours to build; established → inherit and improve.
 
-**Domain risk:** What is the cost of a data error in this role? Signals: finance/revenue data = P&L impact, CFO visibility. Public sector = political and legal exposure. Consumer product = user experience degradation. Internal ops = slower decisions. High domain risk → every bullet should frame data accuracy and reliability as a risk-reduction outcome, not just a quality metric.
+**Domain risk:** What is the cost of a data error in this role? Finance/revenue data = P&L impact, CFO visibility. Public sector = political and legal exposure. Consumer product = user experience degradation. Internal ops = slower decisions. High domain risk → every bullet should frame data accuracy and reliability as a risk-reduction outcome, not just a quality metric.
 
-**Collaboration width:** How many distinct teams or functions does this role interface with? Count the named partners (Finance, Marketing, Product, Engineering, Data Science, etc.). Narrow (1–2 teams) → deep domain specialisation is valued; lead with domain expertise. Wide (4+ teams) → cross-functional translation and alignment is the differentiating skill; lead with multi-team coordination and shared metric definitions.
+**Collaboration width:** How many distinct teams or functions does this role interface with? Count the named partners (Finance, Marketing, Product, Engineering, Data Science, etc.). Narrow (1–2 teams) → domain specialisation is valued; lead with domain expertise. Wide (4+ teams) → cross-functional translation is the differentiating skill; lead with multi-team coordination and shared metric definitions.
 
-**Language gate:** Is there a hard language requirement beyond English? Quote the exact phrase (e.g. "Fluent German (C2 level)", "German proficiency is a plus"). Hard gate (C2, "required", "fluent") = Jeremy does not meet this; note in alignmentSignal if it is disqualifying. Soft gate ("plus", "nice to have") = acknowledge in cover letter P3 if relevant, do not flag as red.
+**Language gate:** Is there a hard language requirement beyond English? Quote the exact phrase (e.g. "Fluent German (C2 level)", "German proficiency is a plus"). Hard gate (C2, "required", "fluent") = Jeremy does not meet this; note in `alignmentSignal` if disqualifying. Soft gate ("plus", "nice to have") = acknowledge in cover letter P3 if relevant, don't flag as red.
 
-**Interview process signal:** Does the JD describe the interview stages? If yes, quote them verbatim and interpret: 1–2 stages = fast/pragmatic process, lean on direct credibility signals. 3–4 stages including a case study or technical test = high bar, lead with engineering precision and prepare a portfolio of concrete examples. Culture-add interview named = values alignment is explicitly evaluated; cover letter tone matters more than usual.
+**Interview process signal:** Does the JD describe interview stages? If so, quote them verbatim and interpret: 1–2 stages = fast/pragmatic process, lean on direct credibility signals. 3–4 stages including a case study or technical test = high bar, lead with engineering precision and concrete examples. Culture-add interview named = values alignment is explicitly evaluated; cover letter tone matters more than usual.
 
 Summarise as a short **behavioural insights** list to carry into Step 5.
 
@@ -174,7 +174,7 @@ Read **all** of these files now. Do not proceed to Step 5 until all reads are co
 
 Use these to inform the summary rewrite and cover letter. Note the "what I'm optimising for" priorities from `motivations.md` and the green/red flags from `values.md` to judge genuine role alignment.
 
-**Alignment flag (carry into Step 5 meta):** After reading both the JD and the profile, make an honest judgement: does this role match what Jeremy is optimising for? Green = clear match. Amber = partial match with noted reservations. Red = genuine misalignment. Record this in `meta.alignmentSignal`.
+**Alignment flag (carry into Step 5 meta):** After reading both the JD and the profile, judge honestly whether this role matches what Jeremy is optimising for. Green = clear match. Amber = partial match with reservations. Red = genuine misalignment. Record in `meta.alignmentSignal`.
 
 ---
 
@@ -199,7 +199,7 @@ Write `applications/{base name}/{base name}.json`.
 
 Max 3 sentences. Each sentence under 20 words. No personal pronouns. No sentence lists more than two things — split if needed.
 
-**Experience bullets:** Apply primacy bias — the first bullet of each role must directly address the JD's top-listed responsibility or biggest repeated theme. Reorder all bullets by JD relevance. Lightly rephrase (word choice, emphasis) but preserve the underlying fact. Keep at least 2 bullets per role.
+**Experience bullets:** Apply primacy bias — the first bullet of each role must directly address the JD's top-listed responsibility or biggest repeated theme. Reorder bullets by JD relevance. Lightly rephrase (word choice, emphasis) but preserve the underlying fact. Keep at least 2 bullets per role.
 
 Apply the **peak-end rule**: the last bullet of the most recent role must also be strong — a quantified result, not a process description.
 
@@ -209,11 +209,11 @@ Apply **fluency**: short declarative sentences over long compound ones. Lead met
 
 **Volunteering:** Only include volunteering experience if it directly reinforces a skill or theme the JD explicitly calls for. Omit it entirely for technical or business roles where it adds no signal.
 
-**Business impact framing:** For business, analytics, or data roles, frame every achievement in terms of business outcome — revenue, cost, retention, decision-quality — not technical process. Lead the metric, follow with the mechanism. Avoid tool-centric bullets that describe what was built without stating what changed for the business.
+**Business impact framing:** For business, analytics, or data roles, frame every achievement as a business outcome — revenue, cost, retention, decision-quality — not technical process. Lead the metric, follow with the mechanism. Avoid tool-centric bullets that describe what was built without stating what changed for the business.
 
 **pillHighlights:** Replace with the 10–15 ATS phrases from Layer B.
 
-**Tagline:** Derive `header.tagline` strictly from Jeremy's actual job titles and areas of work as evidenced in `resume-base.json` — do not invent seniority claims or specialisations not already demonstrated in the experience section. If the role's focus differs meaningfully from the base tagline ("Senior Analytics Engineer - Finance and Data"), propose an adapted tagline and show it to the user for confirmation before it goes into the JSON. If unchanged, no confirmation needed.
+**Tagline:** Derive `header.tagline` strictly from Jeremy's actual job titles and areas of work as evidenced in `resume-base.json` — don't invent seniority claims or specialisations not already demonstrated in the experience section. If the role's focus differs meaningfully from the base tagline ("Senior Analytics Engineer - Finance and Data"), propose an adapted tagline and confirm with the user before it goes into the JSON. No confirmation needed if unchanged.
 
 **meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"jobLocation"` (the role's location as listed in the JD — used for geographical analysis across applications), `"sourceUrl"`, `"atsPlatform"` (from Step 1), `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (all Layer B findings including urgency, greenfield/fix-scale, velocity/rigour, internal customer, stack lock-in, and language gate), and `"adaptationNotes"`.
 
@@ -247,9 +247,9 @@ After writing the JSON, review every line of the summary and all bullets against
 
 **Complete Step 5b before starting this step.**
 
-**Skill-addition gate (non-negotiable):** Never add a skill, tool, technology, framework, methodology, or JD keyword to the JSON — anywhere: summary, tagline, bullets, skills section, or `pillHighlights` — unless the user has said **yes** to that **exact** item in this conversation, with when/where and what-for evidence collected as below. A gap existing does not grant permission to close it. If unsure whether the user has genuine experience with something, ask — never infer "likely has" or "adjacent skill" as grounds to add it.
+**Skill-addition gate (non-negotiable):** Never add a skill, tool, technology, framework, methodology, or JD keyword to the JSON — anywhere: summary, tagline, bullets, skills section, or `pillHighlights` — unless the user has said **yes** to that **exact** item in this conversation, with when/where and what-for evidence collected below. A gap existing doesn't grant permission to close it. If unsure whether the user has genuine experience with something, ask — never infer "likely has" or "adjacent skill" as grounds to add it.
 
-Identify JD requirements or themes weakly covered or absent in the base resume. For each genuine gap, ask **one question at a time**, terse, yes/no first:
+Identify JD requirements or themes weakly covered or absent from the base resume. For each genuine gap, ask **one question at a time**, terse, yes/no first:
 
 > "The JD emphasises Unity Catalog governance. Have you worked with any data catalog or governance tooling? (yes/no)"
 

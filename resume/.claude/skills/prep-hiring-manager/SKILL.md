@@ -5,9 +5,9 @@ allowed-tools: Read Write Bash WebSearch WebFetch
 argument-hint: <application-folder-name> <hiring-manager-name or LinkedIn profile>
 ---
 
-`$ARGUMENTS` contains two parts: (1) a full or partial application folder name and (2) the hiring manager's name and/or LinkedIn profile URL or any biographical information the user has provided inline. Parse these from the input.
+`$ARGUMENTS` contains two parts: (1) a full or partial application folder name and (2) the hiring manager's name and/or LinkedIn profile URL, or any biographical information the user has provided inline. Parse these from the input.
 
-Work through these steps **in order, completing each fully before starting the next**.
+Work through these steps **in order**, completing each fully before the next.
 
 ---
 
@@ -38,33 +38,33 @@ Read **all** of these before proceeding. Do not proceed to Step 3 until all read
 
 You are doing the research — do not ask the user. If the user provided a LinkedIn URL, fetch it. Otherwise search for the person.
 
-**3A — Career history:** How long at this company? What was their last role before current? Are they a long-tenured insider or a recent hire? What was their path into the role?
+**3A — Career history:** How long at this company? What was their last role before this one? Long-tenured insider or recent hire? What was their path into the role?
 
-**3B — Did they hold this role?** If the hiring manager was previously in the exact role being hired for (promoted from within), flag this prominently — it means they know the job from the inside and will see through vague answers.
+**3B — Did they hold this role?** If the hiring manager previously held the exact role being hired for (promoted from within), flag this prominently — they know the job from the inside and will see through vague answers.
 
 **3C — Background type — business or engineering?** Look at education and early career. A finance/business degree with analytics progression reads differently from a CS degree with engineering progression. Business-first managers respond to outcome framing; engineering-first managers respond to technical rigour.
 
-**3D — Tenure signals:** Long tenure (3+ years at one company) signals they value culture fit and longevity. Short tenure signals they're outcome-focused and less attached to company lore. This shapes how to answer "why this company".
+**3D — Tenure signals:** Long tenure (3+ years at one company) signals they value culture fit and longevity. Short tenure signals they're outcome-focused, less attached to company lore. This shapes how to answer "why this company".
 
-**3E — What they are now responsible for:** As a team lead or manager, what has shifted in their remit since their promotion? What can they no longer do themselves that the new hire must own? This is the most useful inference for what they need.
+**3E — What they're now responsible for:** As a team lead or manager, what's shifted in their remit since promotion? What can they no longer do themselves that the new hire must own? This is the most useful inference for what they need.
 
-**3F — Any public writing, talks, or shared content?** If they have any public presence — blog posts, conference talks, LinkedIn activity — extract one concrete insight to reference naturally in the interview. This is low-confidence signal; only use if found.
+**3F — Any public writing, talks, or shared content?** If they have a public presence — blog posts, conference talks, LinkedIn activity — extract one concrete insight to reference naturally in the interview. Low-confidence signal; only use if found.
 
 ---
 
 ## Step 4 — Analyse for the prep document
 
 **4A — What the hiring manager needs from this hire:**
-Based on their background and current role, infer what the hiring manager needs the new person to do for them — not just the company. What have they stopped doing since their promotion? What would make their job easier? What would make them look good internally?
+Based on their background and current role, infer what they need the new person to do for them — not just the company. What have they stopped doing since promotion? What would make their job easier, or make them look good internally?
 
 **4B — What they will probe:**
 Based on their background, what are they best qualified to test? A manager who came from the same role will probe technical depth and independence. A manager from a business background will probe stakeholder communication and business impact. A new manager will probe whether you can work without direction.
 
 **4C — Their implicit fear:**
-What is the hire they most dread making? (e.g. someone who leaves in 12 months, someone who needs constant management, someone who alienates stakeholders). Frame the fear specifically — not generically.
+What's the hire they most dread making? (e.g. someone who leaves in 12 months, someone who needs constant management, someone who alienates stakeholders). Frame the fear specifically, not generically.
 
 **4D — STAR story adjustments:**
-Take 3 themes from the JD. For each, adjust the STAR story angle based on what this specific hiring manager will respond to. A business-first manager wants to hear about the business outcome; an engineering-first manager wants to hear about the technical decision; a new manager wants to hear about initiative and independence.
+Take 3 themes from the JD. For each, adjust the STAR story angle to what this specific hiring manager will respond to. A business-first manager wants the business outcome; an engineering-first manager wants the technical decision; a new manager wants initiative and independence.
 
 **4E — Questions for the hiring manager:**
 Generate 4 questions. Each must:
