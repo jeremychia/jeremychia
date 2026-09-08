@@ -9,17 +9,10 @@ Produce a filled-in PR body for the current branch that matches the repo's templ
 exactly, states only what the diff and the author actually support, and asks for the facts
 that cannot be read out of the code.
 
-## 0. House style — read this before drafting anything
+## The budget — apply it while drafting, not after
 
-The failure mode is not a missing section, it is a body three to six times too long that a
-reviewer has to mine for the parts they must check. So the length and voice rules come
-first, because they change how you draft rather than what you cut afterwards.
-
-**Write short first.** Do not draft the full version and trim it. Drafting long and
-cutting produces a compressed essay — every sentence survives in shortened form. Drafting
-short produces the right thing.
-
-**The budget, countable before posting:**
+**Write short first.** Drafting the full version and cutting it produces a compressed
+essay — every sentence survives in shortened form.
 
 | Measure | Limit |
 | --- | --- |
@@ -29,40 +22,12 @@ short produces the right thing.
 | Tables | 1 at most, and only where it replaces more prose than it costs |
 | `<details>` blocks | 1 at most |
 
-**Voice:** lowercase prose throughout — body, section text, bullets. Real identifiers and
-data literals keep their own casing; lowercasing those misstates the data. Plain,
-declarative, no build-up.
-
-**Plain language.** Short is not the same as readable, and both are required:
-
-- No jargon where an ordinary word exists. predicate → condition. bucket → those rows.
-- **Never use your own query's column names as prose.** A reader has not seen your query.
-- No internal shorthand for things the reader cannot see — say what the rule *does*.
-- **Lead with the headline in one sentence a non-author can act on**, then the detail.
-- State the consequence, not just the effect: "~400k rows fall in the warn window" →
-  "…so that test will start warning on a lot of rows."
-- Explain *why* something changed in terms of the data, not in terms of which condition
-  rejected it.
-- Keep SQL, but collapse it in `<details>` so the prose stands alone.
+**Lowercase prose throughout** — body, section text, bullets. Real identifiers and data
+literals keep their own casing; lowercasing those misstates the data. Plain, declarative,
+no build-up.
 
 **The ticket is the record of the work; the body is only what a reviewer needs in order to
 approve it.** When a fact feels too good to cut, put it in the ticket and link it.
-
-**Delete by category, not by sentence:**
-
-- the reasoning that led to the change — the reviewer is judging the result, not auditing
-  the derivation
-- count tables — usually one sentence
-- evidence for a claim nobody was going to dispute — keep the proof for the reply, where it
-  was actually asked for
-- what you decided *not* to do, and why — ticket material
-- the tool's behaviour: which flags you passed, what it got wrong, what you reverted
-- the validation method, as opposed to its one meaningful number
-- before/after examples — the diff shows all of them
-- essays justifying the approach — state the rule in one sentence
-
-What survives: what changed and its scope, the rule in a sentence, what was validated as
-one number, and the manual actions.
 
 ## 1. Load the live template — never a remembered copy
 
@@ -123,8 +88,22 @@ why in one line each. A diff touching only tests is a test-only PR: say so rathe
 reporting Validation as `N/A`. If you find no tests, leave the box unticked and ask (§4)
 rather than assuming they were skipped.
 
-Write each section to the §0 budget as you go. A section that wants more than 5 lines is a
-signal that most of what you are about to write belongs in the ticket.
+### How to word it
+
+Write to the budget as you go — a section that wants more than 5 lines is a signal that
+most of what you are about to write belongs in the ticket. Short is not the same as
+readable, and both are required: the body is read by someone who has not seen your
+analysis.
+
+- No jargon where an ordinary word exists. predicate → condition. bucket → those rows.
+- **Never use your own query's column names as prose.** A reader has not seen your query.
+- No internal shorthand for things the reader cannot see — say what the rule *does*.
+- **Lead with the headline in one sentence a non-author can act on**, then the detail.
+- State the consequence, not just the effect: "~400k rows fall in the warn window" →
+  "…so that test will start warning on a lot of rows."
+- Explain *why* something changed in terms of the data, not in terms of which condition
+  rejected it.
+- Keep SQL, but collapse it in `<details>` so the prose stands alone.
 
 ## 4. Ask about what the diff cannot tell you
 
@@ -147,19 +126,38 @@ figure, or notification.
 **Never fabricate:** links, ticket ids, threads, reviewer names, row counts, byte counts,
 or claims that tests or notifications happened.
 
-## 5. Check it against the budget before showing it
+## 5. Count it, then cut by category
 
-Run the count rather than eyeballing it — the draft will feel appropriately short while
-being twice the limit:
+Run the count rather than eyeballing it — a draft that is twice the limit still reads as
+appropriately short from the inside:
 
 ```bash
 sed '/^#* *Checklist/,$d' <path> | wc -w      # target ≤ 200
 ```
 
 Then re-read once and cut every sentence that explains **how you got there** rather than
-**what a reviewer must check**. If still over: drop the largest table or `<details>` block
-and see whether anything is lost; cut any §0 category that has crept back; move the residue
-to the ticket and link it. Reduce a section to one line rather than deleting it.
+**what a reviewer must check**.
+
+**Cut by category, not by sentence** — proportional trimming does not get you there. These
+go wholesale:
+
+- the reasoning that led to the change — the reviewer is judging the result, not auditing
+  the derivation
+- count tables — usually one sentence
+- evidence for a claim nobody was going to dispute — keep the proof for the reply, where it
+  was actually asked for
+- what you decided *not* to do, and why — ticket material
+- the tool's behaviour: which flags you passed, what it got wrong, what you reverted
+- the validation method, as opposed to its one meaningful number
+- before/after examples — the diff shows all of them
+- essays justifying the approach — state the rule in one sentence
+
+What survives: what changed and its scope, the rule in a sentence, what was validated as
+one number, and the manual actions.
+
+Still over? Drop the largest table or `<details>` block and see whether anything is lost,
+then move the residue to the ticket and link it. Reduce a section to one line rather than
+deleting it.
 
 ## 6. Deliver
 
