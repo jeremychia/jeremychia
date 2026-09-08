@@ -88,6 +88,32 @@ why in one line each. A diff touching only tests is a test-only PR: say so rathe
 reporting Validation as `N/A`. If you find no tests, leave the box unticked and ask (§4)
 rather than assuming they were skipped.
 
+### Links the Summary has to carry
+
+Most templates ask for these in the Summary hint in as many words ("add any relevant links
+that help contextualise — Slack, RFCs, designs"), so a Summary with no links has not filled
+the section. Gather:
+
+| Link | Where to find it | If you cannot |
+| --- | --- | --- |
+| **Ticket** | the branch name's key, or a commit message | ask (§4) — never guess a number |
+| **Thread** that asked for the change or agreed the approach | the user, a chat URL in a commit or code comment | ask |
+| **Design doc, RFC or wiki page** defining the business rule | a link already in the code or a neighbouring file | ask |
+| **Related PRs** — the one this stacks on, the follow-up, the cross-repo half | `git log`, `gh pr list` | search before asking |
+| **Consuming code** for a new export or interface | the consumer repo, line-anchored | ask which repo |
+
+Two rules on how they appear:
+
+- **Anchor the link on the thing, not on bare punctuation.** `[TICKET-123](url)` and
+  "agreed in [this thread](url)", not a trailing "(see: url)".
+- **Say what the reader gets from each one** in the same clause — "the RFC that defines the
+  cutover date", not "see the RFC". A bare link makes the reviewer open it to find out
+  whether they needed it.
+
+For a chat thread, **name the channel and what was decided there**, not just the link — a
+link alone rots for any reader without channel access. Links are cheap against the budget
+and are the first thing a reviewer follows, so they survive the cut in §5.
+
 ### How to word it
 
 Write to the budget as you go — a section that wants more than 5 lines is a signal that
@@ -119,12 +145,29 @@ for confirmation of something visible in the code. Ask when:
 - **Downstream consumers** — a shared interface or contract changed: who was notified, and
   where?
 
+**Always ask for any link from §3 that is not in the diff or in the conversation.** These
+are the questions most often skipped, because a body reads complete without them — and the
+ones that cannot be recovered later, since only the author knows which thread the decision
+happened in. Ask, in one batched call:
+
+- **The ticket**, where the branch name carries no key. Offer "no ticket"; never construct
+  a plausible key from the change.
+- **The chat thread or channel** where this was asked for, decided, or reported. Ask for
+  both the link and one line on what was decided there. Offer "not discussed".
+- **The design doc, RFC or wiki page** defining the business rule, whenever the change
+  implements a named process. Accept "no page exists" and say so in the body rather than
+  linking something that does not answer it.
+- **The consuming repo or service** for a new export, interface, or contract change, and
+  who supports it.
+
 Always include an escape hatch ("Not applicable", "Leave as TODO"). If the author declines,
 write `TODO: <what is needed>` rather than inventing a plausible-sounding validation, cost
 figure, or notification.
 
-**Never fabricate:** links, ticket ids, threads, reviewer names, row counts, byte counts,
-or claims that tests or notifications happened.
+**Never fabricate** links, ticket ids, threads or channel names, wiki pages, reviewer
+names, row counts, byte counts, or claims that tests or notifications happened. A guessed
+URL is worse than an admitted gap: it looks checkable, so nobody checks it. Write
+`TODO: link to <the thing>` and flag it in the handover.
 
 ## 5. Count it, then cut by category
 
@@ -153,7 +196,10 @@ go wholesale:
 - essays justifying the approach — state the rule in one sentence
 
 What survives: what changed and its scope, the rule in a sentence, what was validated as
-one number, and the manual actions.
+one number, the manual actions, and **every link from §3**. Never cut a link to save
+words — they cost a handful of words each, the template asks for them, and they are the
+first thing a reviewer follows. "Evidence for a claim" above means a restated proof in
+prose, not the link to where the decision was made.
 
 Still over? Drop the largest table or `<details>` block and see whether anything is lost,
 then move the residue to the ticket and link it. Reduce a section to one line rather than
