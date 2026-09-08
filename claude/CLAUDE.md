@@ -11,6 +11,10 @@ and the failure cases; this file is what should be in mind by default.
 - **Plain language, first time, without being asked.** No jargon where an ordinary word
   exists. Never use a query's own column names as prose. Lead with the headline in one
   sentence someone who has not read the analysis can act on, then the detail.
+- **Short sentences.** One idea each. Split at the em-dash, the semicolon, the "and" —
+  those joints are where a 40-word sentence hides four clauses. Aim under 16 words on
+  average, and almost nothing over 30. This is separate from length: a short document made
+  of long sentences still reads badly.
 - **Short by default, and shorter than feels natural.** A PR body is ~150 words of prose,
   200 at the outside. Write short first — drafting long and trimming produces a compressed
   essay rather than a short document.

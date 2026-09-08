@@ -24,6 +24,26 @@ rejected:
 - **stating the effect without the consequence.** "~400k rows sit inside the warn window" →
   "…so that test will start warning on a lot of rows."
 
+**The problem is sentence shape, not length.** Asked again with just "use claudish please",
+pointing at the plugin's own rewrite prompt: *"Use short sentences and everyday words. Keep
+every fact, name, number, and file path."* Short sentences is the operative half. My drafts
+run 40+ words with four clauses hung off em-dashes and semicolons, and they stay hard to
+read after being cut to length — a shorter document made of the same sentences reads no
+better.
+
+**It is measurable, so measure it.** Split on sentence-ending punctuation, strip code
+fences and tables, and count:
+
+- **average words per sentence** — target under 16. Two rule files I had written measured
+  27.6 and 20.7.
+- **share of sentences over 30 words** — target under 5%. Those two files were at 19% and
+  20%.
+
+The fix is mechanical: split every sentence at its em-dash, semicolon, or "and" joint, and
+keep one idea in each. Then swap the jargon — load-bearing → needed, blast radius → what
+else changes, residue → the rest, proportional trimming → cutting a bit from everywhere.
+Where a paragraph lists parallel items, a table beats prose.
+
 **Why:** these comments are read by the PR author, usually someone else. A finding nobody
 can decode gets ignored, so the review value is lost regardless of how sound the analysis
 was.
