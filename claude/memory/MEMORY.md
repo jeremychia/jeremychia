@@ -1,0 +1,12 @@
+- [Concise, lowercase writing](writing-concise-and-lowercase.md) — lowercase prose everywhere, and the categories to delete rather than trim
+- [Plain language in write-ups](plain-language-in-writeups.md) — asked for repeatedly; no jargon, no query column names as prose, lead with the headline
+- [PR description budget](pr-description-budget.md) — the countable version: ≤200 words, and the five categories that always creep back in
+- [One-line comments and docstrings](one-line-comments-and-docstrings.md) — business context only; refactor history belongs in the PR
+- [No AI attribution in commits](no-ai-attribution-in-commits.md) — no Co-Authored-By trailer, no "generated with" footer
+- [Documenting for downstream consumers](documenting-for-downstream-consumers.md) — link the consuming code, name a support channel and the real team, keep the sourcing out
+- [Test descriptions state the invariant](test-descriptions-state-the-invariant.md) — say why a fixture row exists, never what the expected output already says
+- [Abstract at two callers](abstract-at-two-callers.md) — one caller keeps it inline; one definition per concept
+- [Search for an existing implementation](search-for-an-existing-implementation.md) — packages first, then project helpers, reading candidates not filenames
+- [An assertion needs a test](an-assertion-needs-a-test.md) — my most-repeated review comment, and to assert it rather than ask it
+- [Verify before asserting](verify-before-asserting.md) — separate what the code shows from what only the data knows
+- [Git hygiene in shared checkouts](git-hygiene-in-shared-checkouts.md) — re-check the branch before committing, branch in place, never stash
