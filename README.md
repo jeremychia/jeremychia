@@ -9,3 +9,7 @@ I'm an Accountant turned Analytics Engineer. Currently Berlin-based :de:, from S
 I have the privilege of working with organisations, and on projects, which seek to drive societal good.
 
 At the same time, I'm always on the look out for new ways to create a positive impact by building a robust data foundation/stack for analysis. If bouncing ideas around and building for change is your thing too, let's connect: [LinkedIn](https://www.linkedin.com/in/jjchia).
+
+---
+
+:robot: [`claude/`](claude/) is my Claude Code working system — the writing, review and engineering standards I hold across codebases, in the form the tool actually reads. `make install-claude` wires it in.
