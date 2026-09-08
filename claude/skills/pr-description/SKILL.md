@@ -16,11 +16,22 @@ essay — every sentence survives in shortened form.
 
 | Measure | Limit |
 | --- | --- |
-| Prose words, checklist excluded | **≤ 200**, aim ~150 |
-| Any one section | ≤ 5 lines |
-| Summary | ≤ 3 sentences |
+| Prose words, checklist excluded | **≤ 300**, aim ~200 |
+| Any one section | ≤ 6 lines |
+| Summary | ≤ 3 sentences, plus a list if the change has parts |
 | Tables | 1 at most, and only where it replaces more prose than it costs |
 | `<details>` blocks | 1 at most |
+
+**Plain english beats the word count.** Where the two conflict, go over the limit. The limit
+exists to stop waffle, and there are two ways to hit it: cut the waffle, or compress the
+vocabulary. The second is a trap. "A narrowed case arm that leaves rows with no label" is
+nine words and unreadable to anyone who has not just read the code. "Someone tightens one
+rule in a chain of if/then labels, and the rows that no longer match end up with no label at
+all" is twenty-four words and needs no explaining. Write the second and go over.
+
+Order of operations: write it plainly, cut what is genuinely redundant, stop. Never buy
+words back with jargon. And note `wc -w` over-counts — it counts table cells and list items
+as prose, so judge the prose and use the number as a hint.
 
 **Lowercase prose throughout** — body, section text, bullets. Real identifiers and data
 literals keep their own casing; lowercasing those misstates the data. Plain, declarative,
@@ -116,10 +127,21 @@ and are the first thing a reviewer follows, so they survive the cut in §5.
 
 ### How to word it
 
-Write to the budget as you go — a section that wants more than 5 lines is a signal that
-most of what you are about to write belongs in the ticket. Short is not the same as
-readable, and both are required: the body is read by someone who has not seen your
-analysis.
+The reader has not opened the files you just edited. That is the whole rule, and the one
+most often broken — a body written in the vocabulary of the diff reads as complete to its
+author and as noise to everyone else.
+
+**The test: could someone on another team read this and say what goes wrong?** Two things
+fail it every time:
+
+- **Words that only mean something inside the change** — *case arm, invariant, caller,
+  fires, grain, exposure, predicate, assertion.* Say what the thing does. "A shared test
+  that many models use" beats "caller".
+- **Section numbers, rule codes and file paths standing in for content.** Those are places
+  to look, not information. Say what the check catches, then cite the code if the reader
+  needs to find it.
+
+Then the rest:
 
 - No jargon where an ordinary word exists. predicate → condition. bucket → those rows.
 - **Never use your own query's column names as prose.** A reader has not seen your query.
@@ -169,14 +191,20 @@ names, row counts, byte counts, or claims that tests or notifications happened. 
 URL is worse than an admitted gap: it looks checkable, so nobody checks it. Write
 `TODO: link to <the thing>` and flag it in the handover.
 
-## 5. Count it, then cut by category
+## 5. Read it back, then cut by category
 
-Run the count rather than eyeballing it — a draft that is twice the limit still reads as
-appropriately short from the inside:
+**First, read it as someone who has not seen the diff.** Every word that only makes sense
+with the files open is a rewrite, not a cut. Do this before counting: the count tempts you
+to fix length by compressing vocabulary, which makes it worse.
+
+Then count, rather than eyeballing it:
 
 ```bash
-sed '/^#* *Checklist/,$d' <path> | wc -w      # target ≤ 200
+sed '/^#* *Checklist/,$d' <path> | wc -w      # hint, not a limit: aim ~200, cap ~300
 ```
+
+This over-counts — table cells and list items are not prose. If the number is high and the
+prose is plain and non-repetitive, leave it.
 
 Then re-read once and cut every sentence that explains **how you got there** rather than
 **what a reviewer must check**.
