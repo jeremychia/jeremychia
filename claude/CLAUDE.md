@@ -17,6 +17,8 @@ and the failure cases; this file is what should be in mind by default.
   those joints are where a 40-word sentence hides four clauses. Aim under 16 words on
   average, and almost nothing over 30. This is separate from length: a short document made
   of long sentences still reads badly.
+- **Lead with what went wrong, then what the change does, then what was checked, then who acts
+  next.** Explain each term where it first appears. The reader is often not an engineer.
 - **Short by default, and shorter than feels natural.** A PR body is ~150 words of prose,
   200 at the outside. Write short first — drafting long and trimming produces a compressed
   essay rather than a short document.
