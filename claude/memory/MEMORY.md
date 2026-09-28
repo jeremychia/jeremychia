@@ -15,4 +15,5 @@
 - [Restate as of the date the figure was struck](restate-as-of-the-date-the-figure-was-struck.md) — sizing an error in a frozen number; gate the source to the freeze date and prove the method on an untouched control period
 - [Links carry where it was said](links-carry-where-it-was-said.md) — source every link and quoted phrase (channel, commit line, ticket field, bot comment); name the search and its blind spots
 - [Explain to a reader who was not there](explain-to-a-reader-who-was-not-there.md) — the write-up shape: what went wrong / what this fixes / what was checked / what happens next, terms explained inline
+- [README built for skimming](readme-built-for-skimming.md) — writing or tidying a README, project doc, plan, brief or talk run-sheet; a heading or bold label per idea, checkboxes, one numbers table, show vs say
 - [Self-assessment for a manager](self-assessment-for-a-manager.md) — writing a brag list, self-assessment, 1:1 update or promotion case; four numbered parts, highlights first, growth actions as a labelled list, links kept, standard capitalisation
