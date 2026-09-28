@@ -2,6 +2,16 @@
 
 Source: [Impact & Growth Framework - Analytics Engineer](https://docs.google.com/spreadsheets/d/16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y/edit?gid=955252402#gid=955252402). Statements are additive left to right: IC3 includes IC1–2, and IC4 includes IC3. The sheet says to judge a dimension as a whole, never as a checklist.
 
+| snapshot | value |
+| --- | --- |
+| downloaded | 2026-09-28 |
+| sheet last modified | 2026-06-03T12:06:47Z |
+| drive file id | `16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y` |
+| full export, all five levels | [ic-framework-analytics-engineer.csv](ic-framework-analytics-engineer.csv) |
+| sha256 of the export | `69c08ec71f82c97fce85a73bb7f04fa9882d030db7574f5e27ca754c8378f0d7` |
+
+**Check for changes:** compare the sheet's `modifiedTime` from `get_file_metadata` with the date above. If it is newer, export it again with `download_file_content` as `text/csv` and diff it against the CSV. Regenerate this file, then update the table.
+
 - **IC3, craft mastery:** tackles most challenges independently from start to finish while accounting for the full extent of the business context of the work
 - **IC4, technical lead:** fully responsible for identifying, prioritising, and systematically resolving area / domain level analytics engineering challenges
 - **IC4 note:** IC4 is a fundamentally different role for which a business need must exist before a promotion can be considered. Not everyone is expected to be able to grow to meet the expectations of an IC4 role

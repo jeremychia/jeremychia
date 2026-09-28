@@ -2,6 +2,8 @@
 
 Source: [Vinted Values](https://vinted.atlassian.net/wiki/spaces/EKP/pages/29905420289/Vinted+Values) (V-Know space, Confluence page 29905420289).
 
+**Snapshot:** downloaded 2026-09-28. The page was last modified 25 Sep 2026, 05:58. To check for changes, compare `lastModified` from `getConfluencePage` with that date, and re-copy the value statements if it is newer.
+
 ## We aim high
 
 Our mission is to make second-hand first choice worldwide, and "good enough" won't get us there.
