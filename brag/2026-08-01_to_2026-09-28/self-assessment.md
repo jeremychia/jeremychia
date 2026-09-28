@@ -1,8 +1,10 @@
-# Performance & career self-assessment
+# Performance & career self-assessment: IC4 and PL4
 
 **Review period:** 1 Aug – 28 Sep 2026
 
 **Name:** Jeremy Chia, Analytics Engineer, Finance DSA
+
+**Frameworks:** [AE Impact & Growth Framework (IC)](https://docs.google.com/spreadsheets/d/16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y/edit?gid=955252402#gid=955252402) and [DSA People Leader Impact & Growth Framework (PL)](https://docs.google.com/spreadsheets/d/1W8hRYEv_r4BKidwc8Maex2e2pvjIWHVA-yXH7lJxcHg/edit)
 
 **Primary artifact:** [brag-list.md](https://github.com/jeremychia/jeremychia/blob/main/brag/2026-08-01_to_2026-09-28/brag-list.md)
 
@@ -29,7 +31,25 @@
 
 ---
 
-## Part 2: Growth assessment against the career level framework
+## Part 2: Two tracks at a glance
+
+> **Both are different roles.** The IC framework says IC4 is "a fundamentally different role for which a business need must exist". People leadership likewise needs headcount and a scope. IC4 enables other AEs through technique and standards. PL4 does it through people: leading a large team or a small area, with its structure and a plan of up to 12 months.
+
+| | IC4: technical lead | PL4: manager |
+| --- | --- | --- |
+| **What the level is** | Resolves challenges across the area or domain, and enables other AEs to do the same | Leads a large team or a small area; defines team structure; plans up to 12 months ahead. Includes PL3 (team lead) |
+| **Where I stand** | IC3, with IC4 shown in part on 5 of 20 dimensions | PL4 shown on 8 of 21 dimensions (external engagement at PL5), but 2 need reports and 6 are PL3 in part |
+| **Strongest evidence** | Standards others use (review rules, linter rule C006, CI fixed for two teams); data mastery across the stack | Cross-domain collaboration with six teams; process improvements (CDD, triage bot); hosting the Berlin dbt meet-up |
+| **Biggest behaviour gap** | Enable rather than do: my own output is still the main driver | Delegate and keep a sustainable pace: 454 PRs, late evenings, stepping into others' incidents (7 Sep 1:1) |
+| **Biggest opportunity gap** | A teammate's project to enable, and a remit for AE standards in the domain | Direct reports: team performance and people growth can't be shown without them |
+| **Shared gaps** | Delegation, pace, structured feedback, a 6–12 month plan, and written standards | *(same)* |
+| **Business need** | An IC4 role in finance DSA | A PL3 team lead role first, then a larger scope for PL4 |
+
+**One decision first:** agree with António which track to aim for, or how to keep both open. The shared behaviour gaps below are worth closing either way.
+
+---
+
+## Part 3: IC4 assessment (Analytics Engineer framework)
 
 > **Framework context:** IC3 is mastery of one's own work. IC4 is a technical lead who resolves challenges across the domain and enables other AEs to do the same. The framework also says a business need must exist before an IC4 promotion is considered ([framework](https://docs.google.com/spreadsheets/d/16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y/edit?gid=955252402#gid=955252402)).
 
@@ -62,60 +82,124 @@ The gaps are split in two:
 
 ---
 
-## Part 3: Growth actions (path to IC4)
+## Part 4: PL4 assessment (DSA People Leader framework)
 
-*Ordered by how much each closes the gap to IC4. Target dates are proposals to agree with António.*
+> **What PL4 is:** "Manager". It means leading a large team with a complex scope, or a small area or domain. It means defining and evolving the team's structure, and planning up to 12 months ahead. The statements are additive, so PL4 includes everything in PL3 ("Team Lead").
 
-1. **Enable, rather than do**: *Scope of ownership, Structuring, Theory & techniques*. **Behaviour**
-    - **Action:** turn the refresh gate, the snapshot guard and case-log upkeep into three team skills or guides.
-    - **Done when:** a teammate ships one of these patterns without my help.
-    - **Target:** end of October.
-2. **Track impact over time**: *Impact measurement*. **Behaviour**
-    - **Action:** publish a scorecard of manual close steps left, ad-hoc refresh requests a month, MEC on-time % and alert false positives. Baseline it from the 1,255-ticket analysis.
-    - **Done when:** it is reviewed monthly in the 1:1.
-    - **Target:** baseline by mid-October, then monthly.
-3. **Record the trade-offs**: *Prioritisation*. **Behaviour**
-    - **Action:** keep a quarterly "doing / not doing" list, with the opportunity cost of each item.
-    - **Done when:** at least one item is cut or deferred each quarter, agreed with António.
-    - **Target:** Q4 planning.
-4. **Pace and expectations**: *Time management, Attitude*. **Behaviour**
-    - **Action:** keep to agreed working hours. Give each RFC a delivery estimate and a confidence level. Keep no more than 2 stacked PRs open.
-    - **Done when:** no late-evening work outside incidents, and estimates are hit.
+### Where I stand
+
+- **Already at PL4 or above, without reports:**
+  - **cross-domain collaboration:** with VGo, Checkout, Registration, DPX, Payments and iSAF.
+  - **quality standards and processes:** CDD, the triage bot, review rules, and CI fixed for two teams.
+  - **external engagement:** hosted a dbt meet-up for ~60 people, and contributed to open source. This is PL5 level.
+- **The structural gap is having no direct reports.** 5 of the 21 dimensions assume a team: team performance, people growth, team design, part of communication, and caring for a scope. None of them can be shown fully without people to lead.
+- **The biggest gap I can close myself is delegation and pace.** The framework asks a people leader to get people "working on the right things for the right amount of time … while keeping a healthy work life balance". My 454 PRs, late evenings, and stepping into incidents others own (7 Sep 1:1) are the opposite signal.
+- **Planning horizon:** my work runs on 3–6 month horizons, which is PL3. PL4 asks for turning strategy into plans of up to 12 months.
+
+| where I am | dimensions |
+| --- | --- |
+| **PL4 shown** (or above) | leading projects, decision making, risk, communication with stakeholders, collaboration, procedures, quality standards, external engagement |
+| **PL4 in part** | vision & strategy, business understanding, learning |
+| **PL3 shown** | theory & techniques, attitude |
+| **PL3 in part** | planning timespan, challenging, feedback, team design, caring, prioritisation & time management |
+| **Not yet shown: needs reports** | team performance, people growth |
+
+| Dimension | PL3 vs. PL4 ask | My evidence | Where I am | Gap: my behaviour | Gap: needs an opportunity |
+| --- | --- | --- | --- | --- | --- |
+| **Planning timespan** | Day to day, 3–6 months (PL3) vs. turning strategy into plans under 12 months (PL4) | Work planned in 3–6 month pieces; Q4 growth actions | **PL3 in part** | Write a 6–12 month plan for finance AE topics, with owners | A planning cycle where I own a plan |
+| **Vision & strategy** | Contribute to my organisation's vision (PL3) vs. contribute to DSA's and co-create my organisation's (PL4) | Self-service refresh RFC; policy gate for the AE roadmap; skills hierarchy and BI tooling proposals in #analytics-engineering | **PL4 in part** | Turn proposals into a written strategy for finance data | A seat in finance DSA roadmap planning |
+| **Theory & techniques** | Enough mastery to unblock my reports (same at PL3 and PL4) | Unblocked stakeholders: an over-limit Looker query, the shipping accrual logic explained step by step | **PL3 shown** | Unblock by pointing people to the answer, not only by doing it | Reports to unblock |
+| **Quality standards** | Deliverables meet standards, contribute to improving them (PL3) vs. drive improvements in the function (PL4) | CDD for finance; review rules; CI fixed for two teams; dbt 2.0 readiness | **PL4 shown** | Write the practices into standards | None |
+| **Leading projects** | Resolve complex problems in time and at quality (same at PL3 and PL4) | Shipping result chain; duplicate snapshots; the €1.29m accrual | **PL4 shown** | Lead with others doing the parts, not alone | A project with 1–2 contributors |
+| **Decision making** | Lay out arguments and rationale (PL3) vs. zoom out to the wider implications (PL4) | RFCs with options and costs; shared refresh dates across two projects | **PL4 shown** | None | None |
+| **Risk** | Conscious risk-reward trade-offs (same at PL3 and PL4) | Held the bucket merge until after close; used views to avoid doubling a 2.3 TB mart | **PL4 shown** | None | None |
+| **Business understanding** | Equal sparring partner (PL3) vs. one of the company's experts on the area (PL4) | Accrual, VAT and refund rules traced to source; anticipated the close dates | **PL4 in part** | Write the domain rules down so others learn them | Exposure to finance leadership forums |
+| **Prioritisation & time management** | People work on the right things, with delegation and a healthy work-life balance (same at PL3 and PL4) | Root-cause fixes chosen over patches, but 454 PRs, late evenings and others' incidents (7 Sep 1:1) | **PL3 in part** | Delegate; keep to working hours; leave others' incidents to them | A scope of people to prioritise for |
+| **Communication** | Bring clarity when plans change, and talk openly with reports (PL3) vs. complex ideas adapted to each audience (PL4) | Plain-language PRs and RFCs with € up front; heads-ups to upstream teams; moderated a career panel | **PL4 shown** (stakeholders) | Shorter threads, less review load | Direct reports, for the report half |
+| **Collaboration** | Align stakeholders and route their requests (PL3) vs. drive cross-function and cross-domain work (PL4) | Six teams; self-service refresh proposes a request route; shared dates with VGo | **PL4 shown** | None | A standing forum with Checkout |
+| **Procedures** | Improve tools and processes for collaboration (same at PL3 and PL4) | Triage bot and case log; CDD; On Support page | **PL4 shown** | None | None |
+| **Challenging** | Encourage others to challenge my ideas, safely (same at PL3 and PL4) | 45 review comments on others' RFCs | **PL3 in part** | Invite challenge to my own designs | None |
+| **Team design** | Hiring and onboarding with support (PL3) vs. adapt team structure, cross-function hiring (PL4) | AE hiring panel set-up; shadowing interviews; calibration loop; offered to lead interviews | **PL3 in part** | Lead interviews and debriefs | A hiring loop to own; a new joiner to onboard |
+| **Team performance** | High, sustainable team performance; spot underperformance (same at PL3 and PL4) | Not shown | **Needs reports** | None | A team |
+| **Feedback** | Build a feedback culture; give and seek feedback (same at PL3 and PL4) | 140 PR reviews; RFC comments | **PL3 in part** | Ask for feedback in a structured way | None |
+| **Learning** | Steer my own development (PL3) vs. spread learnings and network with other managers (PL4) | Shared with the guild and #group-applied-data; meet-up host | **PL4 in part** | Build a network of PL3 and PL4 leads to learn from | None |
+| **People growth** | Support growth plans (PL3) vs. mentor and spot career opportunities (PL4) | Guides shared; no formal mentoring | **Needs reports** | Mentor informally now | A mentee, or reports |
+| **Attitude** | Lead by example; share failures openly (same at PL3 and PL4) | Owned the "vintage" wording publicly; incident post-mortems | **PL3 shown** | Model a sustainable pace | None |
+| **Caring** | Wellbeing of the team (PL3) vs. of my scope, with processes that support it (PL4) | Insights Discovery suggestion; food bank days; public credit to teammates | **PL3 in part** | None beyond pace | A scope of people |
+| **External engagement** | Take part in community events (PL3) vs. might raise Vinted's profile (PL4) | Hosted the Berlin dbt meet-up; co-running Vilnius; open-source fix in dbt Labs | **PL5 shown** | None | None |
+
+---
+
+## Part 5: Growth actions
+
+*Ordered by how much each closes the gap. Each is tagged by track: **Both**, **IC4** or **PL4**. Target dates are proposals to agree with António.*
+
+### Shared: both tracks
+
+1. **Enable and delegate, rather than do**: *IC: Scope of ownership, Structuring. PL: Prioritisation & time management, People growth*. **Behaviour · Both**
+    - **Action:** turn the refresh gate, the snapshot guard and case-log upkeep into team guides. Each month, hand one piece of work to a teammate, with me as reviewer rather than doer.
+    - **Done when:** a teammate ships one pattern without my help, and three pieces have shipped this way.
+    - **Target:** end of December.
+2. **Sustainable pace and clear expectations**: *IC: Time management, Attitude. PL: Prioritisation & time management, Attitude, Caring*. **Behaviour · Both**
+    - **Action:** keep to working hours. Give each RFC an estimate and a confidence level. Keep no more than 2 stacked PRs open. Leave incidents that others own to them.
+    - **Done when:** there's no late-evening work outside incidents, estimates are hit, and no overlap is flagged in 1:1s.
     - **Target:** from now.
-5. **Reduce review overhead**: *Communication*. **Behaviour**
-    - **Action:** batch sweeps into fewer PRs where it is safe. Agree a review cadence for chained PRs. Post a short monthly stakeholder update.
-    - **Done when:** my share of the team's review queue stays under an agreed number.
-    - **Target:** end of October.
-6. **Respect incident ownership**: *Collaboration, Caring*. **Behaviour**
-    - **Action:** on incidents that others own, offer help and wait to be asked.
-    - **Done when:** no overlap is flagged in 1:1s.
-    - **Target:** from now.
-7. **Ask for challenge and feedback**: *Feedback, Challenging*. **Behaviour**
-    - **Action:** ask Ieva, Evita and Emily for structured feedback. Add a "what would you change?" section to every RFC I write.
-    - **Done when:** the feedback themes are reviewed with António.
-    - **Target:** mid-October.
-8. **Write the standards down**: *Quality standards, Knowledge leadership*. **Behaviour**
+3. **Ask for challenge and feedback**: *IC: Feedback, Challenging. PL: Feedback, Challenging*. **Behaviour · Both**
+    - **Action:** get quarterly structured feedback from 3 peers (Emily and two others) and 2 stakeholders (Ieva and Evita). Add "what would you change?" to every RFC.
+    - **Done when:** the themes are reviewed in a 1:1.
+    - **Target:** mid-October, then quarterly.
+4. **A 6–12 month plan, with the trade-offs written down**: *IC: Prioritisation, Strategy & roadmap. PL: Planning timespan, Vision & strategy*. **Behaviour · Both**
+    - **Action:** write a Q4 2026 – Q2 2027 plan for finance AE topics: close automation, controls, dbt 2.0 and self-service refresh. Give each an owner and a cost. Keep a "doing / not doing" list next to it.
+    - **Done when:** reviewed with António, and at least one item is cut explicitly each quarter.
+    - **Target:** mid-November.
+5. **Write the standards down**: *IC: Quality standards, Knowledge leadership, Technical debt. PL: DSA quality standards*. **Behaviour · Both**
     - **Action:** write the test-description and AI-review practices into the repo's standards, and start a shared debt list.
     - **Done when:** both are merged.
     - **Target:** end of November.
-9. **Write an IC4 development plan**: *Learning, Strategy & roadmap*. **Behaviour**
-    - **Action:** draft the plan with António. Join the *Ontology Pipeline* book club, and co-run the Vilnius dbt meet-up.
+6. **Write a development plan that picks the track**: *IC: Learning. PL: Learning*. **Behaviour · Both**
+    - **Action:** draft the plan with António, naming IC4, PL4 or both. Join the *Ontology Pipeline* book club.
     - **Done when:** the plan is agreed and reviewed quarterly.
     - **Target:** next 1:1.
-10. **Opportunities to discuss with António**: *Scope of ownership, Structuring, Strategy & roadmap, Collaboration, Knowledge leadership, Helping others*. **Opportunity**
-    - **Action:** discuss which of these the team can offer:
-        - a mentee, or a teammate's project to support.
-        - a seat in team or domain roadmap planning.
-        - a remit for AE quality standards in the domain.
-        - ownership of a standing agreement with Checkout: a pre-release notice for changes that touch invoices.
-        - a guild session slot.
-        - whether a business need for an IC4 role exists, or could exist.
+
+### IC4 only
+
+7. **Track impact over time**: *Impact measurement*. **Behaviour · IC4**
+    - **Action:** publish a scorecard of manual close steps left, ad-hoc refresh requests a month, MEC on-time % and alert false positives. Baseline it from the 1,255-ticket analysis.
+    - **Done when:** it is reviewed monthly in the 1:1.
+    - **Target:** baseline by mid-October.
+8. **Reduce review overhead**: *Communication*. **Behaviour · IC4**
+    - **Action:** batch sweeps into fewer PRs where it is safe. Agree a review cadence for chained PRs.
+    - **Done when:** my share of the review queue stays under an agreed number.
+    - **Target:** end of October.
+
+### PL4 only
+
+9. **Coach in the open**: *People growth, Theory & techniques*. **Behaviour · PL4**
+    - **Action:** in reviews, explain the pattern rather than fix it. Run a monthly AE clinic.
+    - **Done when:** two clinics are held.
+    - **Target:** end of November.
+10. **Build a manager network**: *Learning, Team design*. **Behaviour · PL4**
+    - **Action:** find 2–3 PL3 or PL4 leads to learn from, and ask to shadow a planning session. Use the learning budget for a people-management course. Lead AE interviews and debriefs.
+    - **Done when:** the network meets, the course is booked and I've led two interviews.
+    - **Target:** end of Q4.
+
+### Opportunities to discuss with António
+
+11. **Opportunities the team could offer**: *IC: Scope of ownership, Strategy & roadmap, Collaboration. PL: Team design, Team performance, People growth, Leading projects*. **Opportunity**
+    - **Action:** discuss which of these are possible:
+        - **Both:** a project with 1–2 contributors that I plan, split and deliver. Candidates are the escrow controls or self-service refresh.
+        - **Both:** a seat in finance DSA roadmap planning.
+        - **IC4:** a remit for AE quality standards in the domain, and a guild session slot.
+        - **IC4:** ownership of a standing agreement with Checkout: a pre-release notice for changes that touch invoices.
+        - **PL4:** a mentee, or onboarding buddy for the next AE hire.
+        - **PL4:** ownership of the MEC support rotation design, and standing in for António at team rituals.
+        - **Both:** whether a business need exists for an IC4 role, or for a PL3 team lead role.
     - **Done when:** at least two are agreed, with owners.
     - **Target:** next 1:1.
 
 ---
 
-## Part 4: Weekly achievement log
+## Part 6: Weekly achievement log
 
 ### 3–9 Aug 2026
 

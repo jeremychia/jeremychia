@@ -2,7 +2,7 @@
 import re
 import markdown
 
-for name in ("self-assessment", "pl4-pathway"):
+for name in ("self-assessment",):
   src = open(f"{name}.md").read()
   src = re.sub(r"<details>.*?</details>", "", src, flags=re.S)  # the compilation note stays in the markdown only
   src = re.sub(r"`(\[[^`]+\])`", r"\1", src)  # value tags as plain text, not code
