@@ -1,0 +1,141 @@
+repo	number	state	created	author	title
+vinted/terraform-dataverse	3668	merged	2026-08-03	berendgreijnvinted	Feat/ sb quota group-applied to m
+vinted/dataverse-finance	1810	merged	2026-08-03	juliasolee	feat: add purpose_group to exposed pii models
+vinted/dataverse-finance	1812	merged	2026-08-04	Samantava	chore: adding GBP for Vinted_pay
+vinted/dataverse-finance	1811	merged	2026-08-04	emily-broderick	fix: move non_transaction_fee_counts aggregation to cte
+vinted/dataverse-finance	1813	merged	2026-08-04	juliasolee	chore: update scheduler version to 1.24.3
+vinted/dataverse-sustainability	482	merged	2026-08-04	veda-patil	Enable CDD
+vinted/dataverse-finance	1825	merged	2026-08-05	antoniofitas	fix: add retention triggers to tax personal data mart
+vinted/dataverse-finance	1821	merged	2026-08-05	juliasolee	fix: add warning threshold and reduce lookback window for dhl_transaction_report test
+vinted/dataverse-finance	1823	merged	2026-08-05	juliasolee	fix: scope pending commits test to post-incident records
+vinted/dataverse-finance	1820	merged	2026-08-05	juliasolee	test: Adjust adyen invoice reconciliation warninigs
+vinted/dataverse-finance	1828	merged	2026-08-06	Samantava	test: adding a test to assert non-null refund estimates per country and categorisation version
+vinted/dataverse-finance	1831	merged	2026-08-06	antoniofitas	chore: vinted access to marketplace country vat rates
+vinted/dataverse-finance	1829	merged	2026-08-06	berendgreijnvinted	Feat/ New pigment staging and fact
+vinted/dataverse-groupfunctions-dbt	943	closed	2026-08-06	berendgreijnvinted	Feat/ expose dim
+vinted/dataverse-finance	1827	merged	2026-08-06	juliasolee	feat: monitor null ship state/postcode and adjust Sovos export for onesource + xendo
+vinted/dataverse-finance	1832	merged	2026-08-07	Samantava	feat: add Tier 0 monitoring baseline snapshot
+vinted/dataverse-finance	1833	merged	2026-08-07	emily-broderick	test: add test for supported vat countries
+vinted/dataverse-groupfunctions-looker	1891	merged	2026-08-07	katabardos05	Feat/Update dimension data type
+vinted/dataverse-finance	1835	merged	2026-08-10	rloredo	feat: tag seeds, bump scheduler
+vinted/dataverse-sustainability	493	merged	2026-08-10	vanwelljanou	Update partitions
+vinted/dataverse-sustainability	494	merged	2026-08-10	vanwelljanou	Update window for coverage test
+vinted/dataverse-finance	2053	merged	2026-08-11	Samantava	feat: Mart comparison model for Tier 0
+vinted/dataverse-finance	2052	merged	2026-08-11	emily-broderick	test: add cdc completeness tests
+vinted/dataverse-finance	2054	merged	2026-08-11	emily-broderick	test: add freshness tests for finance DSA owned sources in double entry lineage
+vinted/dataverse-groupfunctions-dbt	947	merged	2026-08-12	berendgreijnvinted	Feat/ disable logicgate ingestion
+vinted/dataverse-finance	2056	merged	2026-08-12	emily-broderick	test: update assert_valid_company_for_vat_country
+vinted/dataverse-finance	2060	merged	2026-08-13	Samantava	chore: Renaming a column
+vinted/dataverse-finance	2061	merged	2026-08-13	emily-broderick	feat: remove provider from memo_header and external_id
+vinted/dataverse-finance	2059	merged	2026-08-13	emily-broderick	test: add task to hourly DAG for CDC tests
+vinted/dataverse-sustainability	499	merged	2026-08-13	vanwelljanou	Cast probability as numeric
+vinted/dataverse-finance	2066	merged	2026-08-17	emily-broderick	feat: update reporting_group for closed account number
+vinted/dataverse-finance	2071	merged	2026-08-17	vinted-stutinigam	enforce policy violation and override
+vinted/dataverse-people	401	merged	2026-08-17	vinted-stutinigam	enforce policy violation and override
+vinted/dataverse-custom-data-ingestion	93	merged	2026-08-18	Junobijlard	chore: upgrade deps
+vinted/v-assist-registry	787	merged	2026-08-18	kimjunn	feat: refine prompt
+vinted/dataverse-groupfunctions-dbt	954	merged	2026-08-18	veda-patil	Enable CDD - IT
+vinted/dataverse-groupfunctions-dbt	955	merged	2026-08-18	veda-patil	Enable CDD - Legal
+vinted/dataverse-groupfunctions-dbt	953	merged	2026-08-18	veda-patil	Enable CDD - engineering experience
+vinted/dataverse-groupfunctions-dbt	956	merged	2026-08-18	veda-patil	Enable CDD : Privacy engineering
+vinted/dataverse-groupfunctions-dbt	959	merged	2026-08-18	veda-patil	Enable CDD: Corporate affairs
+vinted/dataverse-groupfunctions-dbt	957	merged	2026-08-18	veda-patil	Enable CDD: Production engineering
+vinted/dataverse-groupfunctions-dbt	958	merged	2026-08-18	veda-patil	Enable CDD: security domain reporting
+vinted/dataverse-finance	2076	merged	2026-08-19	Samantava	feat: separate Adyen Premium from Vinted Pay PSP payouts booking
+vinted/dataverse-finance	2085	closed	2026-08-19	emily-broderick	feat: update verifications accrual export process
+vinted/dataverse-finance	2074	merged	2026-08-19	emily-broderick	test: adjust invoice lines vat rate test
+vinted/dataverse-finance	2089	merged	2026-08-20	Samantava	tests: adding Tier_0 tests
+vinted/v-assist-registry	817	merged	2026-08-20	antoniofitas	chore: update tier 0 slo skill in Finance
+vinted/dataverse-finance	2087	merged	2026-08-20	emily-broderick	chore: move mec models to daily
+vinted/dataverse-finance	2086	merged	2026-08-20	emily-broderick	fix: Add supported case to reporting company VAT country seed
+vinted/dataverse-finance	2088	merged	2026-08-20	emily-broderick	test: exclude partially completed AU<>UK txs from vat rate test
+vinted/dataverse-finance	2091	merged	2026-08-20	kimjunn	feat: change vgo-network reference for dim_shipping_points
+vinted/dataverse-finance	2147	merged	2026-08-21	EGVAI	chore: migrate finance dataspace buckets to centralised projects
+vinted/dataverse-finance	2146	closed	2026-08-21	emily-broderick	feat: adjust compensations accounting splits process
+vinted/dataverse-finance	2144	merged	2026-08-21	emily-broderick	test: exclude invoice_amount = 0 rows from VAT test
+vinted/v-assist-registry	857	merged	2026-08-24	ArabellaCM	feat: Add title to daily DAG summary
+vinted/dataverse-finance	2150	merged	2026-08-24	emily-broderick	feat: add transaction_status to AU tax reconciliation
+vinted/dataverse-finance	2152	merged	2026-08-25	Samantava	fix: adding AU for a PSP splits
+vinted/dataverse-finance	2151	merged	2026-08-25	Samantava	test: adding a test
+vinted/dataverse-finance	2155	merged	2026-08-25	emily-broderick	feat: adjust mrt_compensations_accounting_splits process
+vinted/dataverse-finance	2161	merged	2026-08-26	Samantava	fix: adjusting PSP split export for accounting
+vinted/dataverse-finance	2159	merged	2026-08-26	emily-broderick	feat: adjust mrt_extra_service_accounting_revenue_deferral process
+vinted/dataverse-finance	2163	merged	2026-08-26	emily-broderick	feat: adjust shipping fees exports process
+vinted/dataverse-finance	2166	merged	2026-08-27	Samantava	test: adding a threshold
+vinted/dataverse-groupfunctions-dbt	1000	merged	2026-08-27	berendgreijnvinted	important change
+vinted/dataverse-finance	2169	merged	2026-08-27	emily-broderick	chore: improve safety of accounting exports
+vinted/dataverse-finance	2168	closed	2026-08-27	emily-broderick	feat: adjust verifications accrual export process
+vinted/v-assist-registry	902	merged	2026-08-27	v-assist-bot[bot]	feat(group-applied-data): add dataverse-corporate-affairs-first-responder for CA & sustainability monitoring
+vinted/dataverse-finance	2180	merged	2026-08-31	emily-broderick	feat: adjust discount coverages accounting splits process
+vinted/dataverse-finance	2177	merged	2026-08-31	emily-broderick	fix: prevent softco duplication
+vinted/service-catalog	16729	closed	2026-09-01	bekirio	Update githubteams.yaml
+vinted/dataverse-finance	2185	merged	2026-09-01	bsulmanas	Running 2 models on-demand
+vinted/dataverse-finance	2189	merged	2026-09-01	emily-broderick	feat: add vinted pay chargeback account
+vinted/dataverse-finance	2188	merged	2026-09-01	juliasolee	feat: add in-transit checkout Service Fee (BPF) month-end accrual
+vinted/dataverse-cli	689	merged	2026-09-01	juliasolee	feat: support vunit_tests in tests.yml for M007 and M008
+vinted/dataverse-finance	2184	merged	2026-09-01	juliasolee	fix: handle credited fees in invoice lines reconciliation return shipping
+vinted/dataverse-finance	2182	merged	2026-09-01	matsstijlaart	fix(dbt): remove state_modified_compare_more_unrendered_values flag
+vinted/ae-hiring-material	1	merged	2026-09-01	vinted-developer-portal-workflows[bot]	Generate llm service
+vinted/ae-hiring-material	2	merged	2026-09-01	vinted-stutinigam	Upload first documents
+vinted/dataverse-finance	2192	merged	2026-09-02	Samantava	chore: removing LT fallback
+vinted/dataverse-finance	2195	merged	2026-09-02	Samantava	feat: recommerce new active listings export
+vinted/dataverse-finance	2199	merged	2026-09-02	emily-broderick	feat: exclude VintedGo_POS accounts from adyen invoice reconciliation
+vinted/dataverse-finance	2191	merged	2026-09-02	emily-broderick	fix: add country codes for manual transfer compensation
+vinted/dataverse-finance	2190	merged	2026-09-02	emily-broderick	fix: add mangopay manual transfer t0 compensations
+vinted/dataverse-finance	2201	merged	2026-09-02	juliasolee	fix: sovos export dir timestamp format
+vinted/dataverse-finance	2200	merged	2026-09-02	juliasolee	ref: stream us tax report csv parsing in chunks
+vinted/dataverse-finance	2193	merged	2026-09-02	juliasolee	test: remove ship_from tests
+vinted/dataverse-groupfunctions-dbt	1041	merged	2026-09-02	katabardos05	Feat/update social media topic discovery
+vinted/dataverse-groupfunctions-dbt	1043	merged	2026-09-03	berendgreijnvinted	Chore/ Remove old poetry files
+vinted/dataverse-finance	2206	merged	2026-09-03	bsulmanas	Migrate finance models to M slot reservation
+vinted/dataverse-finance	2208	merged	2026-09-03	emily-broderick	fix: add export var for discount coverages accounting exports
+vinted/dataverse-finance	2210	merged	2026-09-03	emily-broderick	refactor: verifications accrual pipeline to enable daily quality tests
+vinted/dataverse-finance	2204	merged	2026-09-03	juliasolee	chore: remove memory limit after tr ingestion refactor
+vinted/dataverse-finance	2211	merged	2026-09-03	juliasolee	refactor: use transaction_cancelled_at macro in fct_transaction_month_end_cancellation_rates
+vinted/dataverse-groupfunctions-looker	1974	merged	2026-09-03	katabardos05	fix/Update is_vintedgo dataype
+vinted/dataverse-finance	2216	merged	2026-09-04	Samantava	fix: adjusting models + unit tests added
+vinted/dataverse-finance	2221	merged	2026-09-04	Samantava	test: adding dbt not null test
+vinted/dataverse-finance	2220	merged	2026-09-04	juliasolee	fix: raise stuck pending_commit threshold to 30 days (FDSA-3284)
+vinted/dataverse-sustainability	517	merged	2026-09-04	vanwelljanou	Feat add australian airports
+vinted/terraform-github	8543	merged	2026-09-06	vinted-stutinigam	update permissions
+vinted/dataverse-finance	2226	merged	2026-09-07	Samantava	feat: New Model For Suspicious Users Analysis
+vinted/dataverse-finance	2223	merged	2026-09-07	dataverse-bot	chore: auto-update pre-commit hooks
+vinted/dataverse-finance	2230	merged	2026-09-07	emily-broderick	chore: clean up psp fees snapshot
+vinted/dataverse-finance	2224	merged	2026-09-07	emily-broderick	feat: extend prep_checkout_fees to include current month
+vinted/dataverse-finance	2228	merged	2026-09-07	emily-broderick	feat: extend prep_payrails_fees to include current month
+vinted/dataverse-finance	2225	merged	2026-09-07	juliasolee	test: add threshold to assert_no_stuck_pending_commits_older_than_30_days
+vinted/terraform-github	8548	merged	2026-09-07	mindaugas-morkunas	add finance-dsa to oss-platform-service
+vinted/dataverse-finance	2233	merged	2026-09-08	EGVAI	fix: invoice line reference
+vinted/dataverse-finance	2236	merged	2026-09-08	emily-broderick	test: update adyen invoices completeness test
+vinted/dataverse-finance	2240	merged	2026-09-08	juliasolee	feat: add Service Fee cancellation provision (FDSA-3002)
+vinted/dataverse-finance	2301	merged	2026-09-09	Samantava	feat: add pay-ins metrics to VPay export
+vinted/dataverse-finance	2243	merged	2026-09-09	emily-broderick	refactor: adjust vgo pro wallet report process
+vinted/dataverse-finance	2245	merged	2026-09-09	juliasolee	refactor: share one cancellation sample threshold via a global var (FDSA-3316)
+vinted/dataverse-finance	2313	open	2026-09-10	Samantava	feat: model for current month data
+vinted/v-assist-registry	1111	merged	2026-09-10	annappoehlmann	feat(group-applied-data)/grant analysis-writeup-style access to Atlas team
+vinted/dataverse-finance	2314	merged	2026-09-10	emily-broderick	feat: extend prep_mangopay_payment_processing_fees to run daily
+vinted/financial-forecast	249	merged	2026-09-10	veda-patil	MIgrate to uv
+vinted/dataverse-finance	2318	merged	2026-09-11	emily-broderick	chore: update materialisation of vat threshold report
+vinted/terraform-github	8670	merged	2026-09-14	vinted-developer-portal-workflows[bot]	Update repository dats-hiring-material by Stuti Nigam
+vinted/dataverse-finance	2330	merged	2026-09-15	juliasolee	docs(skill): add dbt snapshot architecture standard
+vinted/dataverse-finance	2327	merged	2026-09-15	juliasolee	feat(BPF rebranding): add service fee accrual accounting splits export
+vinted/dataverse-finance	2341	merged	2026-09-17	emily-broderick	feat: run prep adyen payment processing fees daily
+vinted/dataverse-finance	2337	merged	2026-09-17	juliasolee	feat(test): alert on Vinted-covered US sales taxes (FDSA-3364)
+vinted/dataverse-finance	2354	open	2026-09-21	Samantava	chore: adding countries split
+vinted/dataverse-finance	2347	merged	2026-09-21	dataverse-bot	chore: auto-update pre-commit hooks
+vinted/dataverse-finance	2358	merged	2026-09-22	Samantava	fix: add date timeframe to invoice_month in mrt_suspicious_users_pnl
+vinted/v-assist-registry	1249	merged	2026-09-22	v-assist-bot[bot]	feat(data-platform-experience): centralize dataverse first responders under dataverse-airflow-first-responder
+vinted/dataverse-finance	2362	merged	2026-09-23	Samantava	fix: skip invoice lines without a parent invoice in mrt_suspicious_users_pnl
+vinted/dataverse-finance	2366	merged	2026-09-23	emily-broderick	chore: delete incorrect shipping snapshot
+vinted/dataverse-finance	2367	merged	2026-09-23	emily-broderick	feat: use the v2 reporting mapping in the vgo invoice breakdown from 2026 (FDSA-3398)
+vinted/dataverse-finance	2368	closed	2026-09-23	emily-broderick	test: add fashion and non_fashion to accepted vertical_reporting_category
+vinted/dataverse-finance	2371	merged	2026-09-23	juliasolee	feat(BPF rebranding): build the accrual for the months before go-live (FDSA-3405)
+vinted/dataverse-finance	2370	merged	2026-09-23	juliasolee	fix(BPF rebranding): only a service fee line means the fee was earned (FDSA-3404)
+vinted/dataverse-finance	2373	merged	2026-09-24	v-assist-bot[bot]	Run 4 finance models on slot reservations
+vinted/service-catalog	18184	merged	2026-09-24	vinted-stutinigam	updated ae-hiring team members
+vinted/dataverse-finance	2384	open	2026-09-25	emily-broderick	feat: standardise date filter format where filter relates to MEC month
+vinted/dataverse-finance	2385	merged	2026-09-25	juliasolee	feat(BPF rebranding): run the service fee accrual mart daily (FDSA-3419)
+vinted/dataverse-finance	2383	merged	2026-09-25	juliasolee	fix(Pigment): skip fashion / non_fashion overlap rows in the business metrics uniqueness test
+vinted/dataverse-finance	2376	merged	2026-09-25	juliasolee	fix: only return true on matching days in is_execution_day with days_of_month alone
+vinted/dataverse-finance	2380	merged	2026-09-25	v-assist-bot[bot]	fix(Pigment): keep the last valid export and warn when a newer one is skipped
+vinted/dataverse-finance	2389	merged	2026-09-28	juliasolee	fix(BPF rebranding): build the accrual from june and test it on its own key in double entry (FDSA-3405)

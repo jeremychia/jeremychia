@@ -1,0 +1,158 @@
+key	status	type	created	resolved	assignee	reporter	summary
+FDSA-3047	Done	Task	2026-08-03	2026-08-17	Jeremy Chia	António Fitas	onboarding
+FDSA-3054	Done	Bug/Incidents	2026-08-03	2026-08-06	Jeremy Chia	Júlia Solé Cubilo	fix 10 non compliant exposed_pii__ models (M003 being enforced next week)
+FDSA-3061	In Review	Story	2026-08-04		Jeremy Chia	Jeremy Chia	Check to see if `purpose_groups` need to be documented anywhere else
+FDSA-3066	Done	Bug/Incidents	2026-08-05	2026-08-06	Jeremy Chia	Jeremy Chia	add cursor to repositories
+FDSA-3067	Done	Task	2026-08-05	2026-08-13	Jeremy Chia	Emily Broderick	Adjust Mangopay S3 load logic
+FDSA-3068	Done	Bug/Incidents	2026-08-05	2026-08-17	Jeremy Chia	Jeremy Chia	update PR template
+FDSA-3070	Done	Bug/Incidents	2026-08-05	2026-08-06	Jeremy Chia	Jeremy Chia	replace `tests` with `data_tests`
+FDSA-3071	Done	Bug/Incidents	2026-08-05	2026-09-09	Jeremy Chia	Jeremy Chia	address dbt lint complaints
+FDSA-3075	Done	Bug/Incidents	2026-08-06	2026-09-04	Jeremy Chia	Jeremy Chia	address deprecation warnings
+FDSA-3085	Done	Bug/Incidents	2026-08-07	2026-08-10	Jeremy Chia	Jeremy Chia	fix timing of alert
+FDSA-3086	Done	Bug/Incidents	2026-08-07	2026-08-10	Jeremy Chia	Jeremy Chia	iterate on bugbot instructions for review
+FDSA-3087	Done	Idea	2026-08-07	2026-08-18	Jeremy Chia	Jeremy Chia	research agents, what others are doing
+FDSA-3090	In Progress	Task	2026-08-10		Jeremy Chia	António Fitas	Build a mart table for managing unusual shipping campaigns and automate monthly review
+FDSA-3096	To Do	Bug/Incidents	2026-08-10		Jeremy Chia	Jeremy Chia	revise MEC OKR measurement dashboard
+FDSA-3100	Done	Task	2026-08-10	2026-08-11	Jeremy Chia	Jeremy Chia	allow support for config.meta in lookml generator
+FDSA-3101	Done	Idea	2026-08-11	2026-08-11	Jeremy Chia	Jeremy Chia	document what mangopay api + s3 pipeline does
+FDSA-3102	Done	Task	2026-08-11	2026-08-13	Jeremy Chia	Jeremy Chia	technical interviews - give comments on documents
+FDSA-3108	Done	Task	2026-08-12	2026-08-12	Jeremy Chia	Kristupas Klevečka	Looker access 
+FDSA-3119	In Review	Bug/Incidents	2026-08-13		Jeremy Chia	Jeremy Chia	document other pipelines
+FDSA-3120	Done	Task	2026-08-14	2026-08-18	Jeremy Chia	Evita Mikšytė	Pro seller VAT code 
+FDSA-3121	Done	Task	2026-08-14	2026-08-17	Jeremy Chia	Jeremy Chia	vat schemes in invoice lines (pt. 2)
+FDSA-3123	Done	Bug/Incidents	2026-08-14	2026-08-31	Jeremy Chia	Jeremy Chia	fix paignation for mangopay s3
+FDSA-3124	Done	Bug/Incidents	2026-08-14	2026-08-31	Jeremy Chia	Jeremy Chia	compare that files are loaded completely - mangopay s3
+FDSA-3127	Done	Bug/Incidents	2026-08-17	2026-08-17	Jeremy Chia	Jeremy Chia	update mangopay test to only fire during the start of the month
+FDSA-3128	Done	Task	2026-08-17	2026-08-18	Jeremy Chia	Jeremy Chia	add extracted_at as a column to files in mangopay s3
+FDSA-3129	Done	Bug/Incidents	2026-08-17	2026-09-08	Jeremy Chia	Jeremy Chia	scheduler configs in dbt project do not propogate
+OPRA-843	Done	Task	2026-08-17	2026-08-19	Matteo Fiorani	Jeremy Chia	investigate VAT of pro seller 
+FDSA-3130	Done	Bug/Incidents	2026-08-17	2026-08-18	Jeremy Chia	Jeremy Chia	add test - length of vat registration number should not be more than 35 symbols
+FDSA-3131	Done	Bug/Incidents	2026-08-18	2026-08-18	Jeremy Chia	Jeremy Chia	add pigment access to mart__financial_monthly_targets_actuals
+FDSA-3133	Done	Task	2026-08-18	2026-08-24	Jeremy Chia	Evita Mikšytė	Invoice lines upload to iSAF 
+FDSA-3135	Done	Task	2026-08-18	2026-08-20	Jeremy Chia	Gabija Šleiniūtė	refund fees 
+FDSA-3138	Done	Bug/Incidents	2026-08-19	2026-08-20	Jeremy Chia	Jeremy Chia	hotfix: temporarily exclude user_id = 3155661135 from asset_check_test_pii__dim_pro_users
+FDSA-3139	Done	Bug/Incidents	2026-08-19	2026-08-20	Jeremy Chia	Jeremy Chia	check if there is metadata on 'extracted at' for other pipelines, add this into the pipeline if there is nothing to discern when the file is added
+FDSA-3143	In Review	Task	2026-08-19		Jeremy Chia	Samanta Vasilenkaitė	Understand and change Vpay accruals allocation code + add a country split
+FDSA-3149	Done	Task	2026-08-20	2026-09-08	Jeremy Chia	Jeremy Chia	Migrate legacy dv-grf-fin data spaces and notify active users
+FDSA-3153	Done	Bug/Incidents	2026-08-20	2026-08-31	Jeremy Chia	Jeremy Chia	address linter issues for m008
+FDSA-3156	To Do	Bug/Incidents	2026-08-21		Jeremy Chia	Jeremy Chia	triage bot investigation
+FDSA-3160	Done	Subtask	2026-08-24	2026-08-24	Jeremy Chia	Jeremy Chia	Phase 1 — give the SLO report its own agent (+ run budgets, escalation target)
+FDSA-3161	Done	Task	2026-08-24	2026-08-25	Jeremy Chia	Jeremy Chia	Phase 2 — triage reports the offending value, and whether the data or the test is at fault
+FDSA-3162	Done	Task	2026-08-24	2026-08-26	Jeremy Chia	Jeremy Chia	Phase 3 — triage reads the Alert Case Log and reports a reading instead of re-deriving
+FDSA-3163	Done	Task	2026-08-24	2026-08-26	Jeremy Chia	Jeremy Chia	Phase 4 — nightly handover: unanchored cases, moved counts, untriaged alerts
+FDSA-3164	To Do	Task	2026-08-24		Jeremy Chia	Jeremy Chia	Phase 5 — self-learning: the bot proposes what it learned as a PR
+FDSA-3165	Done	Task	2026-08-24	2026-08-25	Jeremy Chia	Jeremy Chia	dataverse-finance: make failing values and test intent readable (store_failures + a Bugbot nudge)
+FDSA-3169	Done	Bug/Incidents	2026-08-25	2026-09-01	Jeremy Chia	Jeremy Chia	implement monitoring for partitions, making sure that there are no runtime errors because of partitions
+FDSA-3173	In Progress	Subtask	2026-08-25			Jeremy Chia	Decide: delivery_method / channel join-key handling in mrt_shipping_result
+FDSA-3174	In Progress	Subtask	2026-08-25			Jeremy Chia	Decide: price_list mapping, precedence tie-break, and non-EUR backfill conversion
+FDSA-3175	Aborted	Subtask	2026-08-25	2026-08-25		Jeremy Chia	Decide: non-EUR (PLN/CZK/HUF/DKK) backfill conversion approach for campaigns_dv
+FDSA-3176	In Progress	Subtask	2026-08-25			Jeremy Chia	Implement and review the campaign pipeline code change (seeds, fct_shipping_campaigns, prep_shipping_campaign_application, mrt_shipping_result ref swap)
+FDSA-3177	Aborted	Subtask	2026-08-25	2026-08-25		Jeremy Chia	Review rewritten fct_shipping_campaigns.sql (threshold/gate/ceiling resolution)
+FDSA-3178	Aborted	Subtask	2026-08-25	2026-08-25		Jeremy Chia	Review new prep_shipping_campaign_application.sql (precedence trimming + revenue_month derivation)
+FDSA-3179	Aborted	Subtask	2026-08-25	2026-08-25		Jeremy Chia	mrt_shipping_result.sql ref swap + regression against existing unit test
+FDSA-3180	In Progress	Subtask	2026-08-25			Jeremy Chia	Run dbt build/test against vi-dv-sand-runner-16; reconcile against manual campaign numbers
+FDSA-3181	To Do	Subtask	2026-08-25			Jeremy Chia	Add automated config checks + write "how to add a campaign" MEC runbook entry
+FDSA-3182	In Progress	Subtask	2026-08-25			Jeremy Chia	Parallel-run one MEC cycle, then cut over and retire stg_google_sheets__shipping_campaigns
+FDSA-3189	Done	Task	2026-08-25	2026-09-09	Jeremy Chia	Ieva Miliauskaitė	Exclude SPEEDX carrier costs from shipping result table (from 2026-08-01)
+FDSA-3190	Done	Task	2026-08-25	2026-09-04	Jeremy Chia	Jeremy Chia	exclude models - export and snapshots from CDD
+FDSA-3191	To Do	Task	2026-08-25		Jeremy Chia	Jeremy Chia	Enforce exclude-from-cdd tagging so new models cannot silently miss it
+FDSA-3192	Done	Story	2026-08-26	2026-08-26	Jeremy Chia	Jeremy Chia	iterate on bot based on inputs
+FDSA-3194	Done	Task	2026-08-26	2026-09-07	Jeremy Chia	Emily Broderick	Adjust accounting exports post hook commands to address bucket migration
+FDSA-3195	Aborted	Bug/Incidents	2026-08-26	2026-09-07	Jeremy Chia	Jeremy Chia	address linter issue c005 in finance_dbt
+FDSA-3201	Done	Bug/Incidents	2026-08-27	2026-09-01		Jeremy Chia	fix pre-commit auto-update failure in dataverse-finance
+FDSA-3203	Done	Bug/Incidents	2026-08-27	2026-09-01	Jeremy Chia	Jeremy Chia	projected_breach_date shows today's date for tables with no partition growth projection
+FDSA-3204	Aborted	Subtask	2026-08-27	2026-08-31	Jeremy Chia	Emily Broderick	Adjust vouchers accrual splits process
+FDSA-3206	Done	Bug/Incidents	2026-08-27	2026-08-31	Jeremy Chia	Jeremy Chia	problem with prep_adyen_payment_processing_fees - OOM
+FDSA-3207	Done	Bug/Incidents	2026-08-27	2026-09-01	Jeremy Chia	Jeremy Chia	add state_modified_compare_more_unrendered_values flag
+FDSA-3209	Done	Bug/Incidents	2026-08-31	2026-08-31	Jeremy Chia	Jeremy Chia	fix xml generation + improve error handling in v-assist scheduled daily job
+FDSA-3217	Done	Subtask	2026-08-31	2026-09-02	Jeremy Chia	Automation for Jira	Download Adyen Invoices & Run Reconciliation
+FDSA-3218	Done	Subtask	2026-08-31	2026-09-02	Jeremy Chia	Automation for Jira	Run PSP Cost Estimation & Adjustment + Fill Flash Report
+FDSA-3219	Done	Subtask	2026-08-31	2026-09-02	Jeremy Chia	Automation for Jira	Shipping FX file generation
+FDSA-3222	Done	Subtask	2026-08-31	2026-09-01	Jeremy Chia	Automation for Jira	Calculate Voucher accrual
+FDSA-3223	Done	Subtask	2026-08-31	2026-09-02	Jeremy Chia	Automation for Jira	Discount coverage extract
+FDSA-3224	Done	Subtask	2026-08-31	2026-09-02	Jeremy Chia	Automation for Jira	Extra service revenue deferral
+FDSA-3226	Done	Subtask	2026-08-31	2026-09-02	Jeremy Chia	Automation for Jira	Vgo pro wallet WD2
+FDSA-3231	Done	Bug/Incidents	2026-08-31	2026-09-04	Jeremy Chia	Jeremy Chia	try 2 - fix xml generation
+FDSA-3234	Done	Task	2026-08-31	2026-09-03	Jeremy Chia	Jeremy Chia	Automate MEC CSV export for voucher accrual via post-hook
+FDSA-3236	Done	Bug/Incidents	2026-08-31	2026-09-01	Jeremy Chia	Jeremy Chia	fix unit test descriptions
+FDSA-3237	Done	Task	2026-09-01	2026-09-01	Jeremy Chia	Evita Mikšytė	Invoice lines upload to iSAF 
+FDSA-3238	Done	Task	2026-09-01	2026-09-01	Jeremy Chia	Martyna Grigaitytė	VGo invoice breakdown refresh 
+FDSA-3239	Done	Task	2026-09-01	2026-09-01	Jeremy Chia	Ieva Miliauskaitė	refresh shipping result table and make snapshot 
+FDSA-3243	Done	Task	2026-09-01	2026-09-01	Jeremy Chia	Matas Jaučeras	Looker tables related to Mangopay data 
+FDSA-3245	Done	Bug/Incidents	2026-09-01	2026-09-01	Jeremy Chia	Jeremy Chia	mangopay wallet reconciliation assertion should log more details
+FDSA-3246	Done	Bug/Incidents	2026-09-01	2026-09-01	Jeremy Chia	Jeremy Chia	fix mangopay movement check - run monthly
+FDSA-3247	Done	Task	2026-09-01	2026-09-01	Jeremy Chia	Martyna Grigaitytė	shipping accrued revenue and cancelation provision logic 
+FDSA-3250	Done	Task	2026-09-02	2026-09-02	Jeremy Chia	Evita Mikšytė	Discount coverages 
+FDSA-3256	Done	Bug/Incidents	2026-09-02	2026-09-02	Jeremy Chia	Jeremy Chia	fix debit/credit assignment in mrt_payment_processing_fees_accounting_transaction_accrual
+FDSA-3258	Done	Bug/Incidents	2026-09-02	2026-09-02	Jeremy Chia	Jeremy Chia	fill compensation reason and compensation cause group
+FDSA-3260	Done	Task	2026-09-02	2026-09-04	Jeremy Chia	Jeremy Chia	add automated checks for mrt_payment_processing_fees_accrual_breakdown
+FDSA-3262	Done	Bug/Incidents	2026-09-02	2026-09-02	Jeremy Chia	Jeremy Chia	fix debit/credit assignment in mrt_discount_coverages_accounting_deferral
+FDSA-3263	Done	Bug/Incidents	2026-09-02	2026-09-02	Jeremy Chia	Jeremy Chia	fix debit/credit assignment in mrt_extra_service_accounting_revenue_deferral
+FDSA-3265	Done	Task	2026-09-02	2026-09-03	Jeremy Chia	Šarūnė Lukošiūtė-Kumar	PSP VPay UAB variance 
+FDSA-3267	Done	Task	2026-09-03	2026-09-03	Jeremy Chia	Jeremy Chia	Automate MEC CSV export for VGo pro wallet via post-hook
+FDSA-3268	Done	Task	2026-09-03	2026-09-03	Jeremy Chia	Jeremy Chia	Automate MEC CSV export for payment processing fees accruals via post-hook
+FDSA-3274	Done	Task	2026-09-03	2026-09-10	Jeremy Chia	Júlia Solé Cubilo	Refactor mrt_double_entry into per-source prep models
+FDSA-3275	Done	Task	2026-09-03	2026-09-22	Jeremy Chia	Gabija Šleiniūtė	Invoice recon update 
+FDSA-3277	Done	Bug/Incidents	2026-09-03	2026-09-07	Jeremy Chia	Jeremy Chia	fix AU customer vendor in mrt_payment_processing_fees_accounting_accrual
+FDSA-3278	Done	Task	2026-09-03	2026-09-08	Jeremy Chia	Jeremy Chia	deprecate mrt_payment_processing_fees_flash_report
+FDSA-3279	Done	Bug/Incidents	2026-09-04	2026-09-04	Jeremy Chia	Jeremy Chia	remove unused dimensions.financial_planning config path in dbt_project.yml
+FDSA-3281	Done	Task	2026-09-04	2026-09-04	Jeremy Chia	Jeremy Chia	Clear remaining dbt 1.11 deprecations with dbt-autofix
+FDSA-3283	Done	Task	2026-09-04	2026-09-04	Jeremy Chia	Jeremy Chia	Regenerate looker_exposures.yaml so exposure tags sit under config
+FDSA-3285	Done	Task	2026-09-04	2026-09-10	Jeremy Chia	Jeremy Chia	Split mrt_shipping_result into single-purpose dim/prep models plus shared macros
+FDSA-3287	Done	Task	2026-09-07	2026-09-07	Jeremy Chia	Uršulė Sadauskaitė	Actuals load to looker 
+FDSA-3291	Done	Task	2026-09-07	2026-09-07	Jeremy Chia	Jeremy Chia	Point oss-platform-service at vi-dv-prod-data-accounting-exports bucket
+FDSA-3292	Done	Bug/Incidents	2026-09-07	2026-09-07	Jeremy Chia	Jeremy Chia	Add Vinted Platform Limited / CY to supported_reporting_company_vat_country seed
+FDSA-3299	In Review	Task	2026-09-07		Jeremy Chia	Jeremy Chia	investigate controls on escrow revenue
+FDSA-3301	To Do	Task	2026-09-07			Jeremy Chia	Declare numeric column_types on the external_vinted_actuals seed instead of casting downstream
+FDSA-3302	Done	Bug/Incidents	2026-09-07	2026-09-10	Jeremy Chia	Jeremy Chia	Guard finance snapshots against duplicate runs
+FDSA-3306	Done	Task	2026-09-08	2026-09-08	Jeremy Chia	Jeremy Chia	add dbt exposures for gcs exports to downstream services
+FDSA-3307	Done	Task	2026-09-08	2026-09-08	Jeremy Chia	Jeremy Chia	teach bugbot the review findings humans keep raising by hand
+FDSA-3308	Done	Task	2026-09-08	2026-09-08	Jeremy Chia	Jeremy Chia	fold the length and plain-language rules into the pr-description skill
+FDSA-3312	Done	Task	2026-09-08	2026-09-09	Jeremy Chia	Daniel Arango	SPEEDX to be VintedGo in Shipping export 
+FDSA-3313	To Do	Task	2026-09-09		Jeremy Chia	Jeremy Chia	Test that double entry sides balance in mrt_double_entry
+FDSA-3315	Done	Task	2026-09-09	2026-09-25	Jeremy Chia	Ieva Miliauskaitė	sync shipping mart with grf mrts 
+FDSA-3317	Done	Task	2026-09-09	2026-09-09	Jeremy Chia	Jeremy Chia	exclude SECOND_CHARGEBACK from adyen payment fee estimates
+FDSA-3318	Done	Bug/Incidents	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	Delete duplicate snapshots from prod
+FDSA-3319	Done	Task	2026-09-09	2026-09-17	Jeremy Chia	Jeremy Chia	Move the scheduled full refresh dates to a shared macro
+FDSA-3320	Done	Task	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	Move vunit test yml files out of the paths dbt parses
+FDSA-3321	Done	Subtask	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	dataverse-vunit: document vunit_tests/ as the place these files belong
+FDSA-3322	Done	Subtask	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	dataverse-finance: move the two tests.yml into finance_dbt/vunit_tests/
+FDSA-3323	Done	Subtask	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	dataverse-cli: fail a vunit test yml that sits where dbt parses it
+FDSA-3324	Done	Task	2026-09-09	2026-09-09	Jeremy Chia	Jeremy Chia	Test the declared grain of mrt_xendo_tax_reconciliation
+FDSA-3325	Aborted	Task	2026-09-09	2026-09-25	Jeremy Chia	Jeremy Chia	Move adyen merchant account reference data out of mrt_adyen_invoice_reconciliation into a seed
+FDSA-3326	Done	Task	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	Collapse the repeated compensation split struct padding in mrt_compensations into a macro
+FDSA-3327	In Progress	Task	2026-09-09		Jeremy Chia	Jeremy Chia	Put the plan vertical default in one macro instead of 25 copies across 4 models
+FDSA-3328	Done	Bug/Incidents	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	8,103 compensations get a case but no split because the transaction has no exchange rate
+FDSA-3329	Done	Bug/Incidents	2026-09-09	2026-09-10	Jeremy Chia	Jeremy Chia	The refund estimates fact strips the reporting category off 2025 plan rows, where every other model keeps it
+FDSA-3330	Done	Bug/Incidents	2026-09-10	2026-09-28	Jeremy Chia	Jeremy Chia	grf_finance_daily retries appended three snapshots per daily model on 10 Sep
+DPX-590	WONT	Task	2026-09-10			Jeremy Chia	Adjust catalog assets fqn granularity
+FDSA-3331	Done	Task	2026-09-10	2026-09-15	Jeremy Chia	Jeremy Chia	Make snapshot models replace the same-day snapshot instead of appending
+FDSA-3332	Done	Bug/Incidents	2026-09-10	2026-09-10	Jeremy Chia	Jeremy Chia	get_day_of_month_from_timestamp fails on iso timestamps, breaking every cdd run
+FDSA-3333	Done	Bug/Incidents	2026-09-10	2026-09-10	Jeremy Chia	Jeremy Chia	one_snapshot_per_day tests fail in ci because ci builds the snapshot twice
+FDSA-3334	In Progress	Task	2026-09-10		Paulius Gužauskas	Jeremy Chia	Cut unit test mocks down to one row per case
+FDSA-3335	In Progress	Subtask	2026-09-10			Jeremy Chia	Write down how big a unit test mock should be
+FDSA-3336	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_payment_processing_fees_accounting_transaction_accrual mock (542 rows)
+FDSA-3337	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_shipping_result mock (329 rows)
+FDSA-3338	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_discount_coverages_accounting_deferral mock (241 rows)
+FDSA-3339	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_discount_coverages_accounting mock (215 rows)
+FDSA-3340	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_double_entry mock (190 rows) and fix the stale netsuite_accounts copy
+FDSA-3341	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_extra_service_accounting_revenue_deferral mock (161 rows)
+FDSA-3342	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_invoice_lines_reconciliation mock (113 rows) — 49 dead revenue_type rows
+FDSA-3343	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_compensations_accounting_splits mock (103 rows)
+FDSA-3344	To Do	Subtask	2026-09-10			Jeremy Chia	Trim the mrt_payment_processing_fees_accounting_accrual mock (84 rows)
+FDSA-3370	Done	Task	2026-09-18	2026-09-25	Jeremy Chia	António Fitas	Fix payment reversal status source for cancelled transactions (use dim_payments)
+FDSA-3385	Done	Task	2026-09-22	2026-09-22	Jeremy Chia	Jeremy Chia	Replace "vintage" with "snapshot" in finance_dbt descriptions and comments
+FDSA-3387	Done	Task	2026-09-22	2026-09-23	Jeremy Chia	Jeremy Chia	prior_month_invoice_amount_due is always null for the earliest month of the reload window
+FDSA-3388	Done	Task	2026-09-23	2026-09-25	Jeremy Chia	Jeremy Chia	refresh shipping result table and make snapshot for september actuals
+FDSA-3390	In Review	Task	2026-09-23		Jeremy Chia	Jeremy Chia	Run the shipping result models daily, gated on the shared full refresh dates
+FDSA-3392	To Do	Task	2026-09-23		Jeremy Chia	Salvijus Jasiūnas	Transactions split by PSPs 
+FDSA-3401	To Do	Task	2026-09-23		Jeremy Chia	Jeremy Chia	Test the declared grain on the shipping snapshot models, and fix the agg grain description
+FDSA-3408	Done	Task	2026-09-24	2026-09-24	Jeremy Chia	Jeremy Chia	Add the November and December full refresh dates to the shared macro
+FDSA-3409	To Do	Task	2026-09-24		Jeremy Chia	Jeremy Chia	keep finance_dbt laptop tooling in step with the dataverse-dbt image
+FDSA-3410	Blocked	Task	2026-09-24		Jeremy Chia	Ieva Miliauskaitė	INPOST discount campaign 
+FDSA-3411	Done	Task	2026-09-24	2026-09-24	Jeremy Chia	Kristupas Klevečka	Changing pre mec check in tag 
+FDSA-3413	In Progress	Task	2026-09-24		Jeremy Chia	Jeremy Chia	Invoice lines arrive with VAT country GB as well as UK
+FDSA-3414	In Progress	Task	2026-09-25		Jeremy Chia	Jeremy Chia	Refresh the vgo carrier invoice breakdown on the shared full refresh dates
+FDSA-3415	Blocked	Task	2026-09-25		Jeremy Chia	Jeremy Chia	Map invoice line VAT country GB to UK in stg_cdc__core_invoice_lines
+FDSA-3417	In Progress	Task	2026-09-25			Jeremy Chia	Add daily completeness tests to the AU and US invoice extras CDC sources, and name the owner on every CDC completeness test
+FDSA-3418	To Do	Task	2026-09-25		Jeremy Chia	Jeremy Chia	Reconcile 2026-08 MGP numbers for UK

@@ -1,0 +1,455 @@
+repo	number	state	created	merged	title
+vinted/terraform-dataverse	3669	CLOSED	2026-08-03		chore: bump quota for grf-fin
+vinted/dataverse-vintedgo-dbt	9086	MERGED	2026-08-04	2026-08-05	docs(skill): purpose groups
+vinted/dataverse-finance	1817	MERGED	2026-08-05	2026-08-05	feat(bugbot): add review instructions
+vinted/dataverse-finance	1818	MERGED	2026-08-05	2026-08-07	feat: add /pr-description skill and fix stale PR template links
+vinted/dataverse-finance	1819	CLOSED	2026-08-05		docs: document purpose groups for all policy-tagged models
+vinted/dataverse-finance	1822	MERGED	2026-08-05	2026-08-05	chore(dbt): replace tests with data tests
+vinted/terraform-github	8079	MERGED	2026-08-05	2026-08-05	feat(cursor): add cursor app to grf-fin
+vinted/dataverse-finance	1826	CLOSED	2026-08-06		fix(lint): address dbt linter M017/M014 warnings across finance models
+vinted/dataverse-finance	1830	CLOSED	2026-08-06		chore(dbt): resolve dbt 1.11 deprecation warnings
+vinted/dataverse-finance	1834	MERGED	2026-08-07	2026-08-10	docs: extend bugbot review rules to cover generic tests and allowlist seeds
+vinted/v-assist-registry	675	MERGED	2026-08-07	2026-08-10	fix(finance-dsa): timing + scope of first responder
+vinted/v-assist-registry	677	MERGED	2026-08-07	2026-08-18	docs: readme + research for finance-dsa agent implementation
+vinted/dataverse-finance	1836	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in dim_mna_users
+vinted/dataverse-finance	1837	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in dbt_project.yml
+vinted/dataverse-finance	1838	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in dim_invoices
+vinted/dataverse-finance	1839	MERGED	2026-08-10	2026-08-10	chore(dbt): fix dbt 1.11 deprecations in dim_finance_dsa_model_deadlines
+vinted/dataverse-finance	1840	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_adyen_balanceplatform_accounting_report
+vinted/dataverse-finance	1841	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_adyen_invoice_rows
+vinted/dataverse-finance	1842	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_adyen_payments_accounting_report
+vinted/dataverse-finance	1843	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_adyen_settlement_detail_report
+vinted/dataverse-finance	1844	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_checkout_financial_actions_by_date_range
+vinted/dataverse-finance	1845	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_payhawk_api_employee_expenses
+vinted/dataverse-finance	1846	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_eur_exchange_rates
+vinted/dataverse-finance	1847	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_monthly_eur_exchange_rates
+vinted/dataverse-finance	1848	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_active_users_metrics_finance_daily
+vinted/dataverse-finance	1849	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_financial_planning_plans
+vinted/dataverse-finance	1850	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_first_time_listers_organic_finance_daily
+vinted/dataverse-finance	1851	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_hiring_costs_finance_monthly_pigment
+vinted/dataverse-finance	1852	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_item_transaction_verification_finance_daily
+vinted/dataverse-finance	1853	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_listing_metrics_finance_daily
+vinted/dataverse-finance	1854	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_non_additive_estimated_monthly
+vinted/dataverse-finance	1855	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_pnl_actuals_finance_monthly_pigment
+vinted/dataverse-finance	1856	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_revenue_metrics
+vinted/dataverse-finance	1857	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_sell_through_rate_metrics_finance_monthly
+vinted/dataverse-finance	1858	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_vas_purchase_finance_daily
+vinted/dataverse-finance	1859	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_mangopay_balance_report
+vinted/dataverse-finance	1860	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_mangopay_transactions_report
+vinted/dataverse-finance	1861	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_model_executions_finance_dsa
+vinted/dataverse-finance	1862	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_psp_invoice_details
+vinted/dataverse-finance	1863	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_gross_reporting_carriers
+vinted/dataverse-finance	1864	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_shipping_campaigns
+vinted/dataverse-finance	1865	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_transaction_month_end_cancellation_rates
+vinted/dataverse-finance	1866	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in fct_verifications_month_end_cancellation_rates
+vinted/dataverse-finance	1867	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in _mml__sources
+vinted/dataverse-finance	1868	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in _transactional_experience__sources
+vinted/dataverse-finance	1869	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_month_close_active_employees
+vinted/dataverse-finance	1870	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_enriched_listings
+vinted/dataverse-finance	1871	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_invoice_lines
+vinted/dataverse-finance	1872	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_mna_users_identification
+vinted/dataverse-finance	1873	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_payment_to_product_mapping
+vinted/dataverse-finance	1874	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_revenue_account_assignation
+vinted/dataverse-finance	1875	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_item_transactions_for_metrics
+vinted/dataverse-finance	1876	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_item_transactions_verifications
+vinted/dataverse-finance	1877	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in int_transactions_for_finance_reporting
+vinted/dataverse-finance	1878	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_vgo_pro_wallet_accounting_report
+vinted/dataverse-finance	1879	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_double_entry
+vinted/dataverse-finance	1880	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_shipping_fee_fx_ar_ap_matching
+vinted/dataverse-finance	1881	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_shipping_fee_fx_reclass
+vinted/dataverse-finance	1882	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_adyen_balance_vs_wallet_movements
+vinted/dataverse-finance	1883	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_adyen_balanceplatform_accounting_report
+vinted/dataverse-finance	1884	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_adyen_balanceplatform_balance_report
+vinted/dataverse-finance	1885	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_adyen_invoice_reconciliation
+vinted/dataverse-finance	1886	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_adyen_marketpay_balance_report
+vinted/dataverse-finance	1887	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_adyen_marketplace_payments_accounting_report
+vinted/dataverse-finance	1888	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_au_tax_reconciliation
+vinted/dataverse-finance	1889	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_chargebacks
+vinted/dataverse-finance	1890	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_checkout_financial_actions_by_date_range
+vinted/dataverse-finance	1891	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_cohort_seller_buyer
+vinted/dataverse-finance	1892	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_cohort_seller_buyer_vs_monthly_snapshot_check
+vinted/dataverse-finance	1893	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_compensations
+vinted/dataverse-finance	1894	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_compensations_accounting_splits
+vinted/dataverse-finance	1895	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_mna_performance_metrics
+vinted/dataverse-finance	1896	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_dhl_label_report
+vinted/dataverse-finance	1897	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_dhl_transaction_report
+vinted/dataverse-finance	1898	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_discount_coverages
+vinted/dataverse-finance	1899	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_discount_coverages_accounting
+vinted/dataverse-finance	1900	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_discount_coverages_accounting_deferral
+vinted/dataverse-finance	1901	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_employee_expenses
+vinted/dataverse-finance	1902	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_employee_expenses_vs_headcount
+vinted/dataverse-finance	1903	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_extra_service_accounting_revenue_deferral
+vinted/dataverse-finance	1904	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_business_metrics_incl_suspicious_users_vs_snapshot_comparison
+vinted/dataverse-finance	1905	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_actuals_excl_21d_quarterly_with_vertical_levels
+vinted/dataverse-finance	1906	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_actuals_excl_21d_with_vertical_levels
+vinted/dataverse-finance	1907	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_cohort_lister_retention
+vinted/dataverse-finance	1908	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_cohorts_for_board_data_pack
+vinted/dataverse-finance	1909	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_shipping_metrics
+vinted/dataverse-finance	1910	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_vcarrier_metrics
+vinted/dataverse-finance	1911	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_verification_actuals_monthly
+vinted/dataverse-finance	1912	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_vpay_metrics
+vinted/dataverse-finance	1913	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_export_financial_planning_vpay_metrics_quarterly
+vinted/dataverse-finance	1914	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_finance_business_metrics
+vinted/dataverse-finance	1915	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_finance_business_metrics_monitoring_live
+vinted/dataverse-finance	1916	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_finance_business_metrics_monitoring_live_tier_0
+vinted/dataverse-finance	1917	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_financial_planning_actuals_vs_latest_snapshot_check
+vinted/dataverse-finance	1918	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_financial_planning_cohorts_for_board_data_pack_vs_latest_snapshot_check
+vinted/dataverse-finance	1919	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_financial_planning_monthly_vs_quarterly_export_check
+vinted/dataverse-finance	1920	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_financial_planning_plans
+vinted/dataverse-finance	1921	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_item_transactions_metrics_finance_daily
+vinted/dataverse-finance	1922	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_mpi_vs_finance_actuals_comparison
+vinted/dataverse-finance	1923	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_invoice_lines
+vinted/dataverse-finance	1924	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_invoice_lines_reconciliation
+vinted/dataverse-finance	1925	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_invoice_lines_snapshot
+vinted/dataverse-finance	1926	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_mangopay_balance_report
+vinted/dataverse-finance	1927	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_mangopay_la_poste_wallets
+vinted/dataverse-finance	1928	MERGED	2026-08-10	2026-08-11	chore(dbt): fix dbt 1.11 deprecations in mrt_mangopay_movement_check
+vinted/dataverse-finance	1929	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_mangopay_repudiation_report
+vinted/dataverse-finance	1930	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_mangopay_wallets_report
+vinted/dataverse-finance	1931	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_mangopay_wallets_vs_invoices_movements
+vinted/dataverse-finance	1932	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_mec_marketplace_payouts
+vinted/dataverse-finance	1933	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_dbt_test_executions_finance_dsa
+vinted/dataverse-finance	1934	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_model_executions_finance_dsa
+vinted/dataverse-finance	1935	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees
+vinted/dataverse-finance	1936	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees_accounting_accrual
+vinted/dataverse-finance	1937	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees_accounting_transaction_accrual
+vinted/dataverse-finance	1938	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees_accrual
+vinted/dataverse-finance	1939	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees_accrual_breakdown
+vinted/dataverse-finance	1940	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees_flash_report
+vinted/dataverse-finance	1941	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_payment_processing_fees_snapshot
+vinted/dataverse-finance	1942	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_agg_shipping_result_snapshot
+vinted/dataverse-finance	1943	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_agg_shipping_transactions
+vinted/dataverse-finance	1944	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_laposte_reconciliation_snapshot
+vinted/dataverse-finance	1945	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in mrt_shipping_result
+vinted/dataverse-finance	1946	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in mrt_shipping_result_snapshot
+vinted/dataverse-finance	1947	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_shipping_revenue_vs_costs_snapshot
+vinted/dataverse-finance	1948	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_vgo_carrier_invoice_breakdown
+vinted/dataverse-finance	1949	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_softco_invoice_duration_metrics
+vinted/dataverse-finance	1950	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_softco_invoice_steps
+vinted/dataverse-finance	1951	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_softco_second_accountant_metrics
+vinted/dataverse-finance	1952	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_softco_invoice_payments
+vinted/dataverse-finance	1953	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_austrian_tax_authorities_yearly_report
+vinted/dataverse-finance	1954	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_tax_user_requests
+vinted/dataverse-finance	1955	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_vat_threshold_exceedance
+vinted/dataverse-finance	1956	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__mrt_us_tax_reconciliation
+vinted/dataverse-finance	1957	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_verifications_accrual
+vinted/dataverse-finance	1958	MERGED	2026-08-10	2026-08-12	chore(dbt): fix dbt 1.11 deprecations in mrt_verifications_accrual_accounting_splits
+vinted/dataverse-finance	1959	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in mrt_verifications_accrual_snapshot
+vinted/dataverse-finance	1960	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in mrt_vgo_shipping_fee_matching_accounting
+vinted/dataverse-finance	1961	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_vgo_shipping_fee_payment_accounting
+vinted/dataverse-finance	1962	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in mrt_vgo_shipping_fee_payment_accounting_weekly_export
+vinted/dataverse-finance	1963	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_vouchers_accounting_accrual
+vinted/dataverse-finance	1964	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_vouchers_accrual
+vinted/dataverse-finance	1965	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_vouchers_accrual_snapshot
+vinted/dataverse-finance	1966	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_vpay_marketplace_account_movement
+vinted/dataverse-finance	1967	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_vpay_marketplace_account_reconciliation
+vinted/dataverse-finance	1968	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in mrt_xendo_tax_reconciliation
+vinted/dataverse-finance	1969	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in deletions_exposed_pii__mrt_austrian_tax_authorities_yearly_report
+vinted/dataverse-finance	1970	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in pii__fct_softco_invoice_steps
+vinted/dataverse-finance	1971	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in prep_adyen_payment_processing_fees
+vinted/dataverse-finance	1972	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_checkout_fees
+vinted/dataverse-finance	1973	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_monthly_user_activity
+vinted/dataverse-finance	1974	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in prep_dhl_mangopay_wallet
+vinted/dataverse-finance	1975	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_business_metrics_finance_monthly
+vinted/dataverse-finance	1976	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_business_metrics_finance_monthly_excl_suspicious
+vinted/dataverse-finance	1977	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in prep_business_metrics_finance_quarterly_excl_suspicious
+vinted/dataverse-finance	1978	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_finance_business_metrics_live_tier_0
+vinted/dataverse-finance	1979	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_vpay_metrics_monthly
+vinted/dataverse-finance	1980	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_vpay_metrics_quarterly
+vinted/dataverse-finance	1981	OPEN	2026-08-10		chore(dbt): fix dbt 1.11 deprecations in prep_invoice_lines
+vinted/dataverse-finance	1982	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in prep_mangopay_payment_processing_fees
+vinted/dataverse-finance	1983	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in prep_mangopay_wallets_report
+vinted/dataverse-finance	1984	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in prep_payrails_fees
+vinted/dataverse-finance	1985	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in snap_compensations
+vinted/dataverse-finance	1986	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in snap_dhl_label_report
+vinted/dataverse-finance	1987	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in snap_dhl_transaction_report
+vinted/dataverse-finance	1988	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in snap_discount_coverages
+vinted/dataverse-finance	1989	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in snap_financial_planning_vcarrier_metrics
+vinted/dataverse-finance	1990	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in snap_financial_planning_verification_actuals_monthly
+vinted/dataverse-finance	1991	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in snap_invoice_lines
+vinted/dataverse-finance	1992	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in snap_payment_processing_fees
+vinted/dataverse-finance	1993	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in snap_shipping_result
+vinted/dataverse-finance	1994	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in exposed_pii__snap_us_tax_reconciliation
+vinted/dataverse-finance	1995	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in snap_us_tax_reconciliation
+vinted/dataverse-finance	1996	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in snap_vouchers_accrual
+vinted/dataverse-finance	1997	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in stg_adyen__balanceplatform_accounting_report
+vinted/dataverse-finance	1998	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in stg_adyen__payments_accounting_report
+vinted/dataverse-finance	1999	MERGED	2026-08-10	2026-08-14	chore(dbt): fix dbt 1.11 deprecations in _checkout__sources
+vinted/dataverse-finance	2000	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in _dhl__sources
+vinted/dataverse-finance	2001	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in stg_dhl__transactions_report
+vinted/dataverse-finance	2002	MERGED	2026-08-10	2026-08-13	chore(dbt): fix dbt 1.11 deprecations in stg_google_sheets__compensation_cause_group_map
+vinted/dataverse-finance	2003	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in stg_mangopay__balance_report
+vinted/dataverse-finance	2004	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in _pigment__sources
+vinted/dataverse-finance	2005	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in stg_pigment_business_metrics
+vinted/dataverse-finance	2006	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in stg_pigment_financial_metrics
+vinted/dataverse-finance	2007	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in stg_pigment_hiring_costs_export
+vinted/dataverse-finance	2008	MERGED	2026-08-10	2026-08-18	chore(dbt): fix dbt 1.11 deprecations in shipping_operation_countries
+vinted/dataverse-finance	2009	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in retrieve_payments_data macro
+vinted/dataverse-finance	2010	MERGED	2026-08-10	2026-08-20	fix(lint): address dbt linter warnings in dim_finance_dsa_model_deadlines
+vinted/dataverse-finance	2011	MERGED	2026-08-10	2026-08-25	fix(lint): address M017 in fct_adyen_payments_accounting_report
+vinted/dataverse-finance	2012	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_active_users_metrics_finance_daily
+vinted/dataverse-finance	2013	MERGED	2026-08-10	2026-08-20	fix(lint): address dbt linter warnings in fct_financial_planning_plans
+vinted/dataverse-finance	2014	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_first_time_listers_organic_finance_daily
+vinted/dataverse-finance	2015	MERGED	2026-08-10	2026-08-26	fix(lint): address M017 in fct_item_transaction_metrics_finance_daily
+vinted/dataverse-finance	2016	MERGED	2026-08-10	2026-08-26	fix(lint): address M017 in fct_item_transaction_verification_finance_daily
+vinted/dataverse-finance	2017	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_non_additive_estimated_monthly
+vinted/dataverse-finance	2018	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_pnl_actuals_finance_monthly_pigment
+vinted/dataverse-finance	2019	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_revenue_metrics
+vinted/dataverse-finance	2020	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_sell_through_rate_metrics_finance_monthly
+vinted/dataverse-finance	2021	MERGED	2026-08-10	2026-08-25	fix(lint): address M017 in fct_model_executions_finance_dsa
+vinted/dataverse-finance	2022	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_softco_invoice_payments
+vinted/dataverse-finance	2023	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in fct_transaction_month_end_cancellation_rates
+vinted/dataverse-finance	2024	MERGED	2026-08-10	2026-09-03	fix(lint): address M017 in fct_verifications_month_end_cancellation_rates
+vinted/dataverse-finance	2025	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in int_enriched_listings
+vinted/dataverse-finance	2026	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in int_mna_users_identification
+vinted/dataverse-finance	2027	MERGED	2026-08-10	2026-08-24	fix(lint): address M017 in int_payment_to_product_mapping
+vinted/dataverse-finance	2028	MERGED	2026-08-10	2026-08-13	fix(lint): address dbt linter warnings in int_item_transactions_verifications
+vinted/dataverse-finance	2029	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 and M014 in exposed_pii__mrt_vgo_pro_wallet_accounting_report
+vinted/dataverse-finance	2030	MERGED	2026-08-10	2026-08-24	fix(lint): address M017 in mrt_shipping_fee_fx_ar_ap_matching
+vinted/dataverse-finance	2031	MERGED	2026-08-10	2026-08-13	fix(lint): address dbt linter warnings in mrt_shipping_fee_fx_reclass
+vinted/dataverse-finance	2032	MERGED	2026-08-10	2026-08-24	fix(lint): address M017 in mrt_chargebacks
+vinted/dataverse-finance	2033	MERGED	2026-08-10	2026-08-24	fix(lint): address M017 in mrt_checkout_financial_actions_by_date_range
+vinted/dataverse-finance	2034	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in mrt_cohort_seller_buyer_vs_monthly_snapshot_check
+vinted/dataverse-finance	2035	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in mrt_discount_coverages_accounting_deferral
+vinted/dataverse-finance	2036	MERGED	2026-08-10	2026-08-13	fix(lint): address dbt linter warnings in mrt_business_metrics_incl_suspicious_users_vs_snapshot_comparison
+vinted/dataverse-finance	2037	MERGED	2026-08-10	2026-08-25	fix(lint): address M017 in mrt_export_financial_planning_cohort_lister_retention
+vinted/dataverse-finance	2038	MERGED	2026-08-10	2026-08-25	fix(lint): address M017 in mrt_export_financial_planning_cohorts_for_board_data_pack
+vinted/dataverse-finance	2039	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in mrt_financial_planning_cohorts_for_board_data_pack_vs_latest_snapshot_check
+vinted/dataverse-finance	2040	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in mrt_mpi_vs_finance_actuals_comparison
+vinted/dataverse-finance	2041	MERGED	2026-08-10	2026-08-26	fix(lint): address M017 in mrt_mangopay_movement_check
+vinted/dataverse-finance	2042	MERGED	2026-08-10	2026-08-25	fix(lint): address M017 in mrt_mangopay_repudiation_report
+vinted/dataverse-finance	2043	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in mrt_mangopay_wallets_report
+vinted/dataverse-finance	2044	MERGED	2026-08-10	2026-08-20	fix(lint): address dbt linter warnings in mrt_verifications_accrual
+vinted/dataverse-finance	2045	MERGED	2026-08-10	2026-08-20	fix(lint): address dbt linter warnings in mrt_vouchers_accrual
+vinted/dataverse-finance	2046	MERGED	2026-08-10	2026-08-26	fix(lint): address M017 in prep_monthly_user_activity
+vinted/dataverse-finance	2047	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in prep_mangopay_payment_processing_fees
+vinted/dataverse-finance	2048	MERGED	2026-08-10	2026-09-04	fix(lint): address M017 in prep_mangopay_wallets_report
+vinted/dataverse-finance	2049	MERGED	2026-08-10	2026-08-18	fix(lint): address dbt linter warnings in prep_payrails_fees
+vinted/dataverse-lookml-generator	160	MERGED	2026-08-10	2026-08-11	feat: read dbt meta from config.meta as well as meta
+vinted/dataverse-finance	2051	MERGED	2026-08-11	2026-08-11	docs: document the Mangopay API and S3 ingestion jobs
+vinted/dataverse-finance	2057	CLOSED	2026-08-12		feat(mangopay): alert when an S3 report's row count deviates from its moving average
+vinted/terraform-dataverse	3695	MERGED	2026-08-12	2026-08-12	feat(secret): add runner account to central slack access token
+vinted/dataverse-finance	2058	MERGED	2026-08-13	2026-08-13	test(mangopay): assert row counts stay within the moving average
+vinted/dataverse-finance	2062	OPEN	2026-08-13		docs: document every ingestion pipeline and add a skill for writing them
+vinted/dataverse-finance	2063	MERGED	2026-08-14	2026-08-17	feat(invoice-lines): map au vat country to au vat scheme
+vinted/dataverse-finance	2064	MERGED	2026-08-14	2026-08-31	fix: paginate the mangopay s3 bucket listing
+vinted/dataverse-finance	2065	MERGED	2026-08-14	2026-08-31	fix(mangopay_s3): mark completed downloads with a _SUCCESS file
+vinted/dataverse-finance	2067	MERGED	2026-08-17	2026-08-17	feat(dbt): gate mangopay volume tests to the first 6 days of the month
+vinted/dataverse-finance	2068	MERGED	2026-08-17	2026-08-18	feat(mangopay-s3): add extracted_at column to the s3 files
+vinted/dataverse-finance	2069	MERGED	2026-08-17	2026-09-08	fix(dbt): declare the trendsales scheduler config at model level
+vinted/dataverse-finance	2070	MERGED	2026-08-17	2026-08-18	test(invoice-lines): warn on pro vat longer than 35 characters
+vinted/dataverse-marketplace-intelligence	1141	MERGED	2026-08-18	2026-08-18	feat: grant pigment access for mart__financial_weekly_targets_actuals
+vinted/dataverse-finance	2073	MERGED	2026-08-19	2026-08-20	fix(test): exclude known VAT-length exception from pro user warn test (FDSA-3138)
+vinted/dataverse-finance	2075	MERGED	2026-08-19	2026-09-08	feat(ecb): add extracted_at column to the fx rate files
+vinted/dataverse-finance	2077	MERGED	2026-08-19	2026-08-20	feat(checkout-api): add extracted_at column to the report files
+vinted/dataverse-finance	2078	MERGED	2026-08-19	2026-08-20	feat(dhl): add extracted_at column to the transaction report files
+vinted/dataverse-finance	2079	MERGED	2026-08-19	2026-08-20	feat(mangopay-api): add extracted_at column to the transaction report files
+vinted/dataverse-finance	2080	MERGED	2026-08-19	2026-08-20	feat(softco): add extracted_at column to the analytics and payment files
+vinted/dataverse-finance	2081	MERGED	2026-08-19	2026-08-20	feat(adyen): add extracted_at column to the report and invoice files
+vinted/dataverse-finance	2082	MERGED	2026-08-19	2026-08-20	feat(pigment): add extracted_at column to the hiring costs export
+vinted/dataverse-finance	2083	MERGED	2026-08-19	2026-08-20	fix(adyen): split invoice refund fees out of payment method fees
+vinted/dataverse-finance	2084	CLOSED	2026-08-19		feat(us-tax-reports): add extracted_at column from the raw file arrival time
+vinted/dataverse-finance	2090	CLOSED	2026-08-20		chore: remove legacy dv-grf-fin references from pipeline code
+vinted/dataverse-finance	2092	MERGED	2026-08-20	2026-08-31	fix(lint): address M008 in fct_adyen_marketpay_balance_report
+vinted/dataverse-finance	2093	MERGED	2026-08-20	2026-08-25	fix(lint): address M008 in fct_shipping_campaigns
+vinted/dataverse-finance	2094	MERGED	2026-08-20	2026-08-31	fix(lint): address M008 in fct_gross_reporting_carriers
+vinted/dataverse-finance	2095	MERGED	2026-08-20	2026-08-31	fix(lint): address M008 in snap_financial_planning_vcarrier_metrics
+vinted/terraform-dataverse	3722	CLOSED	2026-08-20		feat(data-hub): add finance accounting and financial planning export buckets
+vinted/terraform-dataverse	3723	MERGED	2026-08-20	2026-08-26	feat(data-hub): add finance accounting and financial planning export buckets
+vinted/dataverse-finance	2096	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in snap_financial_planning_actuals_excl_21d_quarterly_with_vertical_levels
+vinted/dataverse-finance	2097	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in snap_financial_planning_verification_actuals_monthly
+vinted/dataverse-finance	2098	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in snap_financial_planning_shipping_metrics
+vinted/dataverse-finance	2099	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in snap_financial_planning_cohorts_for_board_data_pack
+vinted/dataverse-finance	2100	MERGED	2026-08-21	2026-08-26	fix(lint): address M008 in snap_cohort_seller_buyer
+vinted/dataverse-finance	2101	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in dim_invoices
+vinted/dataverse-finance	2102	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in snap_financial_planning_actuals
+vinted/dataverse-finance	2103	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_adyen_invoice_rows
+vinted/dataverse-finance	2104	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in dim_invoice_au_connection_extras
+vinted/dataverse-finance	2105	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in dim_invoice_us_connection_extras
+vinted/dataverse-finance	2106	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_adyen_balanceplatform_balance_report
+vinted/dataverse-finance	2107	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in snap_discount_coverages
+vinted/dataverse-finance	2108	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in snap_payment_processing_fees
+vinted/dataverse-finance	2109	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_adyen_balanceplatform_accounting_report
+vinted/dataverse-finance	2110	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in snap_us_tax_reconciliation
+vinted/dataverse-finance	2111	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_competitors_metrics
+vinted/dataverse-finance	2112	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in prep_dhl_mangopay_wallet
+vinted/dataverse-finance	2113	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in pii__stg_cdc__core_invoices
+vinted/dataverse-finance	2114	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_vas_purchase_finance_daily
+vinted/dataverse-finance	2115	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in prep_dhl_carrier_legs
+vinted/dataverse-finance	2116	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in pii__stg_cdc__core_user_vat_country_facts
+vinted/dataverse-finance	2117	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in fct_item_transaction_verification_finance_daily
+vinted/dataverse-finance	2118	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in deletions_pii__stg_cdc__core_invoices
+vinted/dataverse-finance	2119	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_revenue_metrics
+vinted/dataverse-finance	2120	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in deletions_pii__stg_cdc__core_user_vat_country_facts
+vinted/dataverse-finance	2121	MERGED	2026-08-21	2026-08-24	fix(lint): address M008 in fct_non_additive_estimated_monthly
+vinted/dataverse-finance	2122	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in deletions_exposed_pii__mrt_austrian_tax_authorities_yearly_report
+vinted/dataverse-finance	2123	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in prep_monthly_user_activity
+vinted/dataverse-finance	2124	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in mrt_adyen_balance_vs_wallet_movements
+vinted/dataverse-finance	2125	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_mangopay_transactions_report
+vinted/dataverse-finance	2126	MERGED	2026-08-21	2026-09-01	fix(lint): address M008 in fct_transaction_month_end_cancellation_rates
+vinted/dataverse-finance	2127	MERGED	2026-08-21	2026-08-26	fix(lint): address M008 in mrt_cohort_seller_buyer
+vinted/dataverse-finance	2128	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in mrt_vgo_carrier_invoice_breakdown
+vinted/dataverse-finance	2129	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in fct_verifications_month_end_cancellation_rates
+vinted/dataverse-finance	2130	MERGED	2026-08-21	2026-08-25	fix(lint): address M008 in mrt_adyen_invoice_reconciliation
+vinted/dataverse-finance	2131	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in prep_mangopay_wallets_report
+vinted/dataverse-finance	2132	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in mrt_finance_business_metrics_monitoring_live_vs_snapshot_tier_0
+vinted/dataverse-finance	2133	MERGED	2026-08-21	2026-08-24	fix(lint): address M008 in int_extra_services
+vinted/dataverse-finance	2134	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_transaction_metrics_with_refund_estimates_daily
+vinted/dataverse-finance	2135	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in exposed_pii__mrt_austrian_tax_authorities_yearly_report
+vinted/dataverse-finance	2136	MERGED	2026-08-21	2026-08-26	fix(lint): address M008 in prep_business_metrics_finance_monthly_excl_suspicious
+vinted/dataverse-finance	2137	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in fct_invoice_lines
+vinted/dataverse-finance	2138	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in prep_dhl_payments_transfers
+vinted/dataverse-finance	2139	MERGED	2026-08-21	2026-08-24	fix(lint): address M008 in mrt_double_entry
+vinted/dataverse-finance	2140	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in prep_business_metrics_finance_monthly
+vinted/dataverse-finance	2141	MERGED	2026-08-21	2026-08-31	fix(lint): address M008 in mrt_vpay_marketplace_account_reconciliation
+vinted/dataverse-finance	2142	MERGED	2026-08-21	2026-08-24	fix(lint): address M008 in prep_invoice_lines
+vinted/dataverse-finance	2143	MERGED	2026-08-21	2026-08-24	fix(lint): noqa M008 on the three softco models that cannot be unit tested
+vinted/dataverse-finance	2145	MERGED	2026-08-21	2026-08-24	fix(lint): noqa M008 on the six retrieve_payments_data callers
+vinted/dataverse-finance	2149	OPEN	2026-08-24		test(finance_dbt): store failures as views on the recurring triaged tests
+vinted/v-assist-registry	846	MERGED	2026-08-24	2026-08-24	finance-dsa: give the slo report its own agent
+vinted/v-assist-registry	851	MERGED	2026-08-24	2026-08-25	finance-dsa: triage reports the offending value and a data/test verdict
+vinted/dataverse-finance	2153	MERGED	2026-08-25	2026-09-04	chore(cdd): exclude static, pii and non-idempotent models from CDD
+vinted/dataverse-finance	2154	MERGED	2026-08-25	2026-09-09	ci(cdd): enable continuous data deployment
+vinted/dataverse-finance	2157	MERGED	2026-08-25	2026-08-26	feat: exclude SPEEDX carrier costs from shipping result from 2026-08-01
+vinted/dataverse-finance	2158	MERGED	2026-08-25	2026-08-27	feat: add governed shipping campaign config seeds (FDSA-3090)
+vinted/dataverse-metrics	604	MERGED	2026-08-25	2026-08-26	feat: monitor BigQuery partition limits (FDSA-3169)
+vinted/dataverse-finance	2160	CLOSED	2026-08-26		fix(lint): address C005 by setting indirect_selection to buildable
+vinted/v-assist-registry	878	MERGED	2026-08-26	2026-08-26	FDSA-3192 Separate run facts from disposition in finance first responder
+vinted/v-assist-registry	886	MERGED	2026-08-26	2026-08-26	FDSA-3162/3163 finance-dsa continuity: triage reads the Alert Case Log, nightly handover keeps its dates
+vinted/dataverse-finance	2165	MERGED	2026-08-27	2026-09-01	ci: fix and harden pre-commit auto-update, alert failures to slack
+vinted/dataverse-finance	2170	CLOSED	2026-08-27		feat: resolve shipping campaigns into the mart (FDSA-3176)
+vinted/dataverse-finance	2171	MERGED	2026-08-27	2026-08-31	feat: backfill campaigns_dv into the shipping campaign seeds (FDSA-3176)
+vinted/dataverse-finance	2172	CLOSED	2026-08-27		feat: add fct_shipping_campaign_definitions (FDSA-3176)
+vinted/dataverse-finance	2173	CLOSED	2026-08-27		feat: add prep_shipping_campaign_application (FDSA-3176)
+vinted/dataverse-finance	2174	CLOSED	2026-08-27		feat: point mrt_shipping_result at the resolved campaigns (FDSA-3176)
+vinted/dataverse-finance	2175	MERGED	2026-08-27	2026-08-31	fix(adyen): split prep_adyen_payment_processing_fees to stop cte re-inlining oom
+vinted/dataverse-finance	2176	MERGED	2026-08-27	2026-08-28	feat(dbt): set state_modified_compare_more_unrendered_values flag (FDSA-3207)
+vinted/dataverse-metrics	606	MERGED	2026-08-27	2026-09-01	fix: projected_breach_date, mart partitioning and snapshot timing (FDSA-3203)
+vinted/v-assist-registry	906	MERGED	2026-08-27	2026-08-27	finance-dsa: grant airflow the team skills, and make the handover report its write error
+vinted/dataverse-finance	2178	MERGED	2026-08-31	2026-09-03	feat(mec): export voucher accrual via post-hook, gated on the wd1 flooring check
+vinted/dataverse-finance	2181	MERGED	2026-08-31	2026-09-01	docs(finance_dbt): tighten the M008 unit test descriptions
+vinted/v-assist-registry	938	MERGED	2026-08-31	2026-08-31	fix: Deterministic Finance case-log editor, verifier and failure states
+vinted/v-assist-registry	951	MERGED	2026-08-31	2026-08-31	Fix Finance handover: em-dash model/check cells, backwards dates, tool envelope
+vinted/dataverse-finance	2186	MERGED	2026-09-01	2026-09-01	feat: log failing wallets in the mangopay reconciliation assertion
+vinted/dataverse-finance	2187	MERGED	2026-09-01	2026-09-01	fix: run the mangopay movement check on every mec day
+vinted/dataverse-finance	2194	MERGED	2026-09-02	2026-09-02	fix: assign debit/credit by sign in mrt_payment_processing_fees_accounting_transaction_accrual
+vinted/dataverse-finance	2196	MERGED	2026-09-02	2026-09-02	fix: fill compensation reason and cause group for manual transfer
+vinted/dataverse-finance	2197	MERGED	2026-09-02	2026-09-02	fix: assign debit/credit by sign in mrt_discount_coverages_accounting_deferral
+vinted/dataverse-finance	2198	MERGED	2026-09-02	2026-09-02	fix: assign debit/credit by sign in mrt_extra_service_accounting_revenue_deferral
+vinted/dataverse-finance	2203	MERGED	2026-09-02	2026-09-04	feat: automate month-end completeness checks for payment processing fees
+vinted/dataverse-finance	2205	MERGED	2026-09-03	2026-09-03	feat: export vgo pro wallet accounting report via post-hook
+vinted/dataverse-finance	2207	MERGED	2026-09-03	2026-09-03	feat: export payment processing fees accruals via post-hook
+vinted/dataverse-finance	2209	MERGED	2026-09-03	2026-09-10	refactor: split mrt_double_entry into per-source prep models
+vinted/dataverse-finance	2212	MERGED	2026-09-03	2026-09-08	fix: correct AU customer vendor for payment processing fee accrual
+vinted/dataverse-finance	2213	MERGED	2026-09-03	2026-09-08	chore: deprecate mrt_payment_processing_fees_flash_report
+vinted/dataverse-finance	2214	MERGED	2026-09-04	2026-09-04	chore: remove unused dimensions.financial_planning config path (FDSA-3279)
+vinted/dataverse-finance	2215	OPEN	2026-09-04		fix(ci): exclude elementary models from the dv-cli clone step
+vinted/dataverse-finance	2217	MERGED	2026-09-04	2026-09-04	chore(dbt): clear more dbt 1.11 deprecations
+vinted/dataverse-finance	2219	MERGED	2026-09-04	2026-09-04	chore(looker): regenerate looker_exposures.yaml
+vinted/dataverse-finance	2222	MERGED	2026-09-04	2026-09-10	refactor(shipping): split mrt_shipping_result into components (FDSA-3285)
+vinted/v-assist-registry	1054	MERGED	2026-09-04	2026-09-04	chore(finance-dsa): pause the nightly monitoring handover
+vinted/dataverse-cli	700	MERGED	2026-09-07	2026-09-09	fix: M017 counts import CTEs read from a subquery as consumed
+vinted/dataverse-finance	2227	MERGED	2026-09-07	2026-09-07	fix(seeds): allow Vinted Platform Limited with VAT country CY (FDSA-3292)
+vinted/dataverse-finance	2231	CLOSED	2026-09-07		fix(lint): address M017 in the 43 remaining models (FDSA-3071)
+vinted/dataverse-finance	2232	MERGED	2026-09-07	2026-09-09	test: catch duplicate snapshots per day (FDSA-3302)
+vinted/oss-platform-service	71	MERGED	2026-09-07	2026-09-07	FDSA-3291: point accounting exports at vi-dv-prod-data bucket
+vinted/service-catalog	17023	MERGED	2026-09-07	2026-09-07	Add ae-hiring-panel custom GitHub team
+vinted/terraform-github	8562	MERGED	2026-09-07	2026-09-08	Restrict ae-hiring-material access to ae-hiring-panel
+vinted/dataverse-finance	2234	MERGED	2026-09-08	2026-09-08	chore: migrate remaining export buckets to centralised projects (FDSA-3306)
+vinted/dataverse-finance	2235	MERGED	2026-09-08	2026-09-22	feat: add dbt exposures for gcs exports to downstream services (FDSA-3306)
+vinted/dataverse-finance	2237	MERGED	2026-09-08	2026-09-08	docs(bugbot): add the review classes humans raise by hand (FDSA-3307)
+vinted/dataverse-finance	2238	MERGED	2026-09-08	2026-09-08	docs(skill): give pr-description a length budget and plain-language rules (FDSA-3308)
+vinted/dataverse-finance	2239	MERGED	2026-09-08	2026-09-22	feat(adyen): add invoice total including taxes to the invoice recon (FDSA-3275)
+vinted/dataverse-finance	2242	MERGED	2026-09-08	2026-09-09	feat(financial_planning): add is_vgo_network to the shipping tx export (FDSA-3312)
+vinted/dataverse-cicd	220	MERGED	2026-09-09	2026-09-10	chore(dbt-runner): bump dataverse-vunit to v1.14.0
+vinted/dataverse-cli	705	MERGED	2026-09-09	2026-09-10	feat(linter): add C006, a separate vunit test file must sit outside dbt's paths (FDSA-3323)
+vinted/dataverse-dbt-shared	425	MERGED	2026-09-09	2026-09-09	feat(finance): hold the scheduled full refresh dates in a shared macro (FDSA-3319)
+vinted/dataverse-dbt-shared	426	CLOSED	2026-09-09		fix(codeowners): name the finance macro owners individually (FDSA-3319)
+vinted/dataverse-dbt-shared	427	MERGED	2026-09-09	2026-09-09	docs(codeowners): require a terraform write grant before naming a team (FDSA-3319)
+vinted/dataverse-finance	2244	MERGED	2026-09-09	2026-09-09	fix(adyen): exclude SECOND_CHARGEBACK from payment fee estimates (FDSA-3317)
+vinted/dataverse-finance	2246	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in dim_scd_user_countries
+vinted/dataverse-finance	2247	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in dim_rebelle_deletion_triggers
+vinted/dataverse-finance	2248	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in dim_united_wardrobe_deletion_triggers
+vinted/dataverse-finance	2249	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in fct_adyen_balanceplatform_balance_report
+vinted/dataverse-finance	2250	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in fct_external_actuals_finance_monthly
+vinted/dataverse-finance	2251	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in fct_transaction_metrics_with_refund_estimates_daily
+vinted/dataverse-finance	2252	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in int_extra_services
+vinted/dataverse-finance	2253	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in int_item_transactions_for_metrics
+vinted/dataverse-finance	2254	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in int_item_transactions_verifications
+vinted/dataverse-finance	2255	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_adyen_balance_vs_wallet_movements
+vinted/dataverse-finance	2256	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_au_tax_reconciliation
+vinted/dataverse-finance	2257	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_mna_performance_metrics
+vinted/dataverse-finance	2258	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_dhl_label_report
+vinted/dataverse-finance	2259	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_dhl_transaction_report
+vinted/dataverse-finance	2260	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_discount_coverages
+vinted/dataverse-finance	2261	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in exposed_pii__mrt_finance_recommerce_users_addresses
+vinted/dataverse-finance	2262	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_finance_business_metrics
+vinted/dataverse-finance	2263	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_mangopay_wallets_vs_invoices_movements
+vinted/dataverse-finance	2264	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_dbt_test_executions_finance_dsa
+vinted/dataverse-finance	2265	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_model_executions_finance_dsa
+vinted/dataverse-finance	2266	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_payment_processing_fees_accounting_accrual
+vinted/dataverse-finance	2267	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_payment_processing_fees_accounting_transaction_accrual
+vinted/dataverse-finance	2268	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_payment_processing_fees_accrual_breakdown
+vinted/dataverse-finance	2269	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_payment_processing_fees_accrual_vertical
+vinted/dataverse-finance	2270	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_agg_retrieved_compensations
+vinted/dataverse-finance	2271	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_agg_shipping_result_snapshot
+vinted/dataverse-finance	2272	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_agg_shipping_transactions
+vinted/dataverse-finance	2273	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in exposed_pii__mrt_austrian_tax_authorities_yearly_report
+vinted/dataverse-finance	2274	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_vat_threshold_exceedance
+vinted/dataverse-finance	2275	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_vpay_marketplace_account_reconciliation
+vinted/dataverse-finance	2276	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in mrt_xendo_tax_reconciliation
+vinted/dataverse-finance	2277	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in deletions_exposed_pii__mrt_austrian_tax_authorities_yearly_report
+vinted/dataverse-finance	2278	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in deletions_pii__stg_cdc__core_invoices
+vinted/dataverse-finance	2279	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in deletions_pii__stg_cdc__core_user_vat_country_facts
+vinted/dataverse-finance	2280	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_dhl_carrier_legs
+vinted/dataverse-finance	2281	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_dhl_payments_transfers
+vinted/dataverse-finance	2282	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_mangopay_repudiation_report_fallback
+vinted/dataverse-finance	2283	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_mangopay_wallets_report_fallback
+vinted/dataverse-finance	2284	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_payment_refunds
+vinted/dataverse-finance	2285	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_payrails_fees
+vinted/dataverse-finance	2286	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in prep_vpay_marketplace_account_movement
+vinted/dataverse-finance	2287	MERGED	2026-09-09	2026-09-09	fix(lint): address M017 in snap_item_transaction_metrics_finance_daily
+vinted/dataverse-finance	2288	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_compensations (FDSA-3318)
+vinted/dataverse-finance	2289	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_discount_coverages (FDSA-3318)
+vinted/dataverse-finance	2290	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_finance_business_metrics_monitoring_baseline_tier_0 (FDSA-3318)
+vinted/dataverse-finance	2291	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_financial_planning_actuals (FDSA-3318)
+vinted/dataverse-finance	2292	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_financial_planning_cohorts_for_board_data_pack (FDSA-3318)
+vinted/dataverse-finance	2293	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_financial_planning_shipping_metrics (FDSA-3318)
+vinted/dataverse-finance	2294	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_item_transaction_metrics_finance_daily (FDSA-3318)
+vinted/dataverse-finance	2295	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_invoice_lines (FDSA-3318)
+vinted/dataverse-finance	2296	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_payment_processing_fees (FDSA-3318)
+vinted/dataverse-finance	2297	MERGED	2026-09-09	2026-09-09	chore: keep the latest snapshot per day in snap_vouchers_accrual (FDSA-3318)
+vinted/dataverse-finance	2298	MERGED	2026-09-09	2026-09-10	refactor(vunit): move unit test yml out of the paths dbt parses (FDSA-3322)
+vinted/dataverse-finance	2299	MERGED	2026-09-09	2026-09-09	test(xendo): assert the declared grain of mrt_xendo_tax_reconciliation (FDSA-3324)
+vinted/dataverse-finance	2300	OPEN	2026-09-09		test(invoice_lines): add controls over the i.saf population (FDSA-3299)
+vinted/dataverse-finance	2302	MERGED	2026-09-09	2026-09-25	feat(vouchers): run the accrual mart daily and thin the accounting export
+vinted/dataverse-finance	2303	MERGED	2026-09-09	2026-09-25	fix(ppf): make the accounting export mapping checks able to fail
+vinted/dataverse-finance	2304	MERGED	2026-09-09	2026-09-25	refactor(ppf): read the eur rate off the accrual view in the transaction accrual export
+vinted/dataverse-finance	2305	MERGED	2026-09-09	2026-09-10	refactor(financial-planning): share the plan vertical default via a macro (FDSA-3327)
+vinted/dataverse-finance	2306	CLOSED	2026-09-09		refactor(adyen): move the merchant account reference data to a seed (FDSA-3325)
+vinted/dataverse-finance	2307	MERGED	2026-09-09	2026-09-10	refactor(compensations): one struct shape for the compensation split (FDSA-3326)
+vinted/dataverse-vintedgo-dbt	9472	MERGED	2026-09-09	2026-09-17	refactor(vgo_finance): read the full refresh dates from the shared macro (FDSA-3319)
+vinted/dataverse-vunit	120	MERGED	2026-09-09	2026-09-10	docs: point vunit test files at vunit_tests/ instead of models/ (FDSA-3321)
+vinted/terraform-github	8600	MERGED	2026-09-09	2026-09-09	feat(dataverse-dbt-shared): let the finance teams own the finance macros
+vinted/terraform-github	8602	MERGED	2026-09-09	2026-09-09	feat(dataverse-dbt-shared): grant the finance teams write so they can be code owners
+vinted/dataverse-finance	2308	MERGED	2026-09-10	2026-09-10	chore: delete all 10 Sep snapshots from the two daily snapshot models (FDSA-3330)
+vinted/dataverse-finance	2309	OPEN	2026-09-10		fix(snapshots): replace the same-day snapshot instead of appending, on both daily models (FDSA-3331)
+vinted/dataverse-finance	2310	CLOSED	2026-09-10		DO NOT MERGE: bite check for FDSA-3331 unit tests
+vinted/dataverse-finance	2311	MERGED	2026-09-10	2026-09-10	fix(macros): parse data_interval_end with fromisoformat (FDSA-3332)
+vinted/dataverse-finance	2312	MERGED	2026-09-10	2026-09-10	fix(snapshots): error on a duplicate snapshot only on prod (FDSA-3333)
+vinted/dataverse-finance	2317	MERGED	2026-09-10	2026-09-10	chore(profiles): add a dev_compile_prod target
+vinted/dataverse-metrics	630	MERGED	2026-09-10	2026-09-10	fix(catalog): keep one catalog row per fqn (DPX-590)
+vinted/dataverse-metrics	632	MERGED	2026-09-10	2026-09-10	feat(lint): expose the severity of each lint violation
+vinted/dataverse-finance	2359	MERGED	2026-09-22	2026-09-22	docs: say snapshot instead of vintage (FDSA-3385)
+vinted/dataverse-finance	2360	MERGED	2026-09-22	2026-09-23	fix(adyen): give the prior-month lag the month before the reload window (FDSA-3387)
+vinted/dataverse-finance	2361	MERGED	2026-09-22	2026-09-23	fix(ppf): accrue on the payment status, not the checkout attempt status (FDSA-3370)
+vinted/dataverse-finance	2369	OPEN	2026-09-23		feat(shipping): gate the shipping result chain on the scheduled full refresh dates (FDSA-3390)
+dbt-labs/dbt-external-tables	412	MERGED	2026-09-24	2026-09-24	fix(sample_sources/synapse): split rdbms example into separate table
+vinted/core	137604	OPEN	2026-09-24		ZS-370 Convert GB to UK for verification hub and IBAN VAT countries
+vinted/dataverse-dbt-shared	432	MERGED	2026-09-24	2026-09-24	feat(finance): add the november and december full refresh dates (FDSA-3408)
+vinted/terraform-github	8831	MERGED	2026-09-24	2026-09-24	fix(dataverse-dbt-shared): stop requiring the retired pre-commit check (FDSA-3408)
+vinted/dataverse-finance	2377	CLOSED	2026-09-25		fix(invoice_lines): map vat country GB to UK in staging
+vinted/dataverse-finance	2378	OPEN	2026-09-25		fix(invoice_lines): map vat country GB to UK in staging
+vinted/dataverse-finance	2379	OPEN	2026-09-25		feat(shipping): gate the vgo carrier invoice breakdown on the scheduled full refresh dates (FDSA-3414)
+vinted/dataverse-finance	2381	OPEN	2026-09-25		feat(shipping): add the governed campaign definitions and their resolution (FDSA-3176)
+vinted/dataverse-finance	2382	OPEN	2026-09-25		test(cdc): check the au and us invoice extras for gaps and name the owner on every cdc completeness test (FDSA-3417)
