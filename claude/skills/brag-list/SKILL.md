@@ -51,22 +51,37 @@ Write it as a titled document in four numbered parts, in this order. Follow the 
 
 **Title block:** the title "Performance & career self-assessment", the review period, and a link to the primary artifact, each on its own line.
 
+**Summary and ask**, above Part 1:
+- **where I am:** my read of the level.
+- **my preferred track and why:** a marked prompt for me.
+- **the business case for the role:** a marked prompt for me.
+- **the ask:** at most three things.
+- **the feedback I want.**
+
+State the evidence window, and propose a checkpoint date.
+
 **Part 1: Impact summary**
 - **Highlights:** four bullets first, each with a bold label and a **bold number**.
 - **Detailed impact table:** columns are area (bold), what changed, business impact, technical impact, evidence (links).
+- **Money figures:** label each one before close, after close, dashboard only, or prevented. Never add different kinds together.
+- **Order:** lead with leverage. Put sweeps and PR counts in one maintenance row. Add a cost row pricing performance work as a labelled estimate.
+- **What others said:** a table of quote, who, about and permalink.
+- **Systems others rely on:** a table of system, who relies on it and adoption. Mark unmeasured use as "to measure".
+- **What went wrong:** one incident I caused, written blamelessly.
+- **Feedback I received:** feedback, who from, and what I changed. Leave the last column as a prompt for me.
 
 **Part 2: Growth assessment against the framework**
 - **Definition:** put the framework's definition in a blockquote above the table.
 - **Columns:** one row per dimension, with dimension (bold), expectation, my evidence, current level, gap from my behaviour, gap that needs an opportunity.
 - **Expectation:** write it as a contrast, "X (IC3) vs. Y (IC4)".
-- **Current level:** bold. Use exactly one of `IC3`, `IC3 (IC4 in part)`, `IC3 in part`, `Met` or `Gap`.
+- **Evidence toward the target level:** bold `Strong`, `Partial` or `Not yet`. Call it my read for the manager to calibrate. Never count dimensions, and never claim a level above the target.
 - **Gap cells:** never leave one as "—". A strong dimension still names its next step. Put "none" only where that column truly has nothing.
 - **Opportunity column:** list what I can't create alone: a scope, a role, a mentee, a seat in planning, a business need. The framework says IC4 needs a business need.
 
 **Two tracks (IC4 and PL4):** assess both in the same document. Add a "two tracks at a glance" part after Part 1: a two-column table with what the level is, where I stand, strongest evidence, biggest behaviour gap, biggest opportunity gap, shared gaps and business need. Then give one assessment part per framework, then a single growth-action list grouped as shared, IC4 only, PL4 only and opportunities. Tag each action `Behaviour · Both / IC4 / PL4` or `Opportunity`.
 
 **Part 3: Growth actions (path to IC4)**
-- **Order:** a numbered list, ordered by how much each closes the gap.
+- **Order:** three focus actions for the quarter, as a numbered list. Put the rest in a one-line backlog, then the opportunities.
 - **Each action:** a bold named title, then its dimensions in italics, then **Behaviour** or **Opportunity**. Under it go three labelled lines: **Action**, **Done when**, **Target**.
 - **Opportunities:** group them into one action for the manager to discuss.
 - **Dates:** say that target dates are proposals to agree with the manager.

@@ -22,6 +22,19 @@ Jeremy rewrote my version as the model. The content was the same. The shape was 
 - **Weekly log: one heading per week, with bullets under it**, not table rows. Each bullet starts with a past-tense verb ("Converted", "Patched", "Traced"). Value tags go at the end in brackets, e.g. `[Ownership / Co-create]`.
 - **Standard capitalisation:** sentences start with a capital letter, and acronyms keep theirs (GB, VAT, MEC, CI). This doc is read by a manager outside code review, so the lowercase rule in [[writing-concise-and-lowercase]] does not apply to it. Headings stay in sentence case, per [[readme-built-for-skimming]].
 
+**Then review it as a career coach and as a staff engineer.** Jeremy asked for both passes, and each found real gaps:
+
+- **Summary and ask at the very top**, above Part 1: where I am, my preferred track and why, the business case for the role, what I'm asking for (at most three things), and the feedback I want. The ask was buried in the last growth action.
+- **The track preference, the business case and "what I changed after feedback" are mine to write.** Leave marked prompts for them. Never write them for me.
+- **Other people's words beat self-rating.** Add a quotes table (quote, who, about, permalink) from the evidence.
+- **Say which kind each money figure is:** caught before close, corrected after close, dashboard only, or prevented. Never add different kinds into one headline number.
+- **Leverage over volume.** Put mechanical sweeps and PR counts in one maintenance line. Lead with the systems others use, and add a "who relies on it / adoption" table, marking unmeasured use as "to measure".
+- **Include one thing I got wrong**, written blamelessly: what happened, what I did, what I learned.
+- **Price the performance work** (slot-hours, storage) as a labelled list-price estimate.
+- **Evidence levels, not dimension counts.** Rate each dimension Strong, Partial or Not yet toward the target level, call it my read for the manager to calibrate, and never claim a level above the target. Counting "8 of 21" is the checklist use both frameworks warn against.
+- **Three focus actions a quarter.** Put the rest in a one-line backlog.
+- **Frame a short window as a trajectory**, and propose a checkpoint date.
+
 Don't copy that example's defects:
 
 - **links replaced by code-formatted labels.** Keep every reference a working link, per [[links-carry-where-it-was-said]].
