@@ -11,6 +11,8 @@ and the failure cases; this file is what should be in mind by default.
 - **Plain language, first time, without being asked.** No jargon where an ordinary word
   exists. Never use a query's own column names as prose. Lead with the headline in one
   sentence someone who has not read the analysis can act on, then the detail.
+- **Never write "vintage" — write "snapshot".** Banned outright, including where the
+  codebase itself uses it.
 - **Short sentences.** One idea each. Split at the em-dash, the semicolon, the "and" —
   those joints are where a 40-word sentence hides four clauses. Aim under 16 words on
   average, and almost nothing over 30. This is separate from length: a short document made

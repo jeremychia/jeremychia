@@ -24,6 +24,13 @@ rejected:
 - **stating the effect without the consequence.** "~400k rows sit inside the warn window" →
   "…so that test will start warning on a lot of rows."
 
+**Never write "vintage". Write "snapshot".** Asked for twice — the second time the word had
+slipped back in because this file lost the rule when it moved repos. There is no second
+word needed for a snapshot taken at a different time. Say "the 2 September snapshot", "the
+three snapshots from that day", "the one that was replaced" and "the one that was kept". A
+word already in the codebase is not thereby allowed in prose; if it reads as wine or
+finance jargon, it is jargon.
+
 **The problem is sentence shape, not length.** Asked again with just "use claudish please",
 pointing at the plugin's own rewrite prompt: *"Use short sentences and everyday words. Keep
 every fact, name, number, and file path."* Short sentences is the operative half. My drafts

@@ -1,5 +1,5 @@
 - [Concise, lowercase writing](writing-concise-and-lowercase.md) — lowercase prose everywhere, and the categories to delete rather than trim
-- [Plain language in write-ups](plain-language-in-writeups.md) — asked for repeatedly; no jargon, no query column names as prose, lead with the headline
+- [Plain language in write-ups](plain-language-in-writeups.md) — asked for repeatedly; no jargon (never "vintage" — say snapshot), no query column names as prose, lead with the headline
 - [Write rules as imperatives](write-rules-as-imperatives.md) — rule files and skills lead with the verb; cut the framing that precedes the instruction
 - [PR description budget](pr-description-budget.md) — the countable version: ≤200 words, and the five categories that always creep back in
 - [One-line comments and docstrings](one-line-comments-and-docstrings.md) — business context only; refactor history belongs in the PR
