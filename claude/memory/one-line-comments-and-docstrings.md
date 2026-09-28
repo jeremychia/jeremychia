@@ -35,6 +35,8 @@ Two more, from reviewing a set of new models:
 - **don't explain your design decisions**, and don't defend a choice against an
   alternative nobody proposed.
 
+**The no-history rule covers column and model descriptions too, and a dated clause is the tell.** A column description I wrote read "the attempt status … has carried no refund information since 2026-07". Jeremy asked "do i still need to write this into the descriptions?" — no. It is an incident, in a file every downstream consumer reads forever, and it is noise the moment the incident is old. The durable version says what the column holds and which neighbour to use instead: "the month-end accrual decides on this, not on the attempt status, which describes the checkout attempt only." Anything with a date, a version, a PR number or a "since" in a description is almost always history — move it to the PR. A permanent property of the data is not history and stays: "null on months snapshotted before this column existed" earns its place.
+
 **Why:** long rationale bloats the file and the review surface, and duplicates what belongs
 in a ticket. Architectural history also goes stale in the file while staying accurate in
 the PR.

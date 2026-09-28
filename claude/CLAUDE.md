@@ -40,9 +40,8 @@ and the failure cases; this file is what should be in mind by default.
 
 - **One line wherever possible**, in any language. If a second line is needed, check
   whether it explains *why the change was made* — that part goes in the PR.
-- **A comment carries business context only.** Why a rule exists, why an exception is
-  booked separately. It must not narrate a prior architectural decision, a refactor's
-  history, or plan statistics — those go stale in the file while staying true in the PR.
+- **A comment or description carries business context only.** Why a rule exists, why an exception is booked separately. It must not narrate a prior architectural decision, a refactor's history, an incident, or plan statistics — those go stale in the file while staying true in the PR.
+- **A date, a version or a "since" in a description is almost always history.** Move it to the PR. A permanent property of the data stays ("null on months snapshotted before this column existed").
 - **Prose about a model belongs in its description**, not in a comment above the SQL —
   the description is what a downstream consumer actually sees.
 - **Don't defend a choice against an alternative nobody proposed.**
