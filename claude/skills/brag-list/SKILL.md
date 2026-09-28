@@ -44,23 +44,50 @@ Before using the values or the framework, check that each is still current. Each
 - **Internal links are required**, so every claim can be checked. Use the full URL: `https://github.com/<org>/<repo>/pull/<n>`, `https://vinted.atlassian.net/browse/<KEY>`, the Confluence page URL, and the Slack permalink.
 - **Never build a Slack URL from an id you have not seen in a permalink.** User-group ids (`S…`) are not channels.
 
-## 5. Map to the framework
+## 5. Build the self-assessment
 
-- **Table:** one row per framework dimension, with three columns: dimension, IC3 evidence (my own work), IC4 evidence (enabling others, or beyond my scope).
-- **Gaps:** add an honest gaps list against IC4. IC4 means enabling other AEs, not producing more output.
+Write it as a titled document in four numbered parts, in this order. Follow the memory `self-assessment-for-a-manager` for the reasoning.
+
+**Title block:** the title "Performance & career self-assessment", the review period, and a link to the primary artifact, each on its own line.
+
+**Part 1: Impact summary**
+- **Highlights:** four bullets first, each with a bold label and a **bold number**.
+- **Detailed impact table:** columns are area (bold), what changed, business impact, technical impact, evidence (links).
+
+**Part 2: Growth assessment against the framework**
+- **Definition:** put the framework's definition in a blockquote above the table.
+- **Columns:** one row per dimension, with dimension (bold), expectation, my evidence, current level, gap from my behaviour, gap that needs an opportunity.
+- **Expectation:** write it as a contrast, "X (IC3) vs. Y (IC4)".
+- **Current level:** bold. Use exactly one of `IC3`, `IC3 (IC4 in part)`, `IC3 in part`, `Met` or `Gap`.
+- **Gap cells:** never leave one as "—". A strong dimension still names its next step. Put "none" only where that column truly has nothing.
+- **Opportunity column:** list what I can't create alone: a scope, a role, a mentee, a seat in planning, a business need. The framework says IC4 needs a business need.
+
+**Part 3: Growth actions (path to IC4)**
+- **Order:** a numbered list, ordered by how much each closes the gap.
+- **Each action:** a bold named title, then its dimensions in italics, then **Behaviour** or **Opportunity**. Under it go three labelled lines: **Action**, **Done when**, **Target**.
+- **Opportunities:** group them into one action for the manager to discuss.
+- **Dates:** say that target dates are proposals to agree with the manager.
+
+**Part 4: Weekly achievement log**
+- **Layout:** one heading per week, with bullets under it.
+- **Bullets:** each starts with a past-tense verb and ends with its links. Value tags go at the end in brackets, e.g. `[Ownership / Co-create]`. Add `[Above & beyond]` where it applies.
+
+**Also:**
 - **Standing goals:** tie items back to the goals in manager-format.md.
+- **Capitalisation:** standard capitalisation, with headings in sentence case. Acronyms keep their capitals.
+- **Weekly 1:1:** one row for the 1:1 table (Date | Last week achievements | Weekly reflections), built from Part 4.
 
 ## 6. Output
 
-- **Weekly:** one row for the 1:1 table (Date | Last week achievements | Weekly reflections).
-- **Longer window:** write `brag/<start>_to_<end>/brag-list.md`. Include the headline, a numbers table, sections by theme, the IC table, the gaps and draft reflections. Put a "how this was compiled" note in a `<details>` block, naming any source days not read in full.
+- **Files:** write `brag/<start>_to_<end>/self-assessment.md` and a paste-ready `self-assessment.html` from one build script. Rich text keeps links and bullets when pasted into Google Docs.
+- **Compilation note:** put a "how this was compiled" note in a `<details>` block, naming any source days not read in full.
 - **Evidence:** keep the raw lists and agent summaries in `brag/<start>_to_<end>/sources/`.
-- **Reflections:** draft them from evidence (blocked reviews, upstream breakages, repeated requests) and mark them as a draft.
-- **Style:** follow my writing rules. Plain language, short sentences, headline first.
+- **Reflections:** leave them to me unless I ask. If asked, draft them from evidence and mark them as a draft.
+- **Before restyling a rewrite I supply:** re-check every figure against the sources. Keep the links.
 
 ## Worked case
 
 > **€1.29m of cost was carried out of August that should have stayed in it.** Fixed, merged ([#2361](https://github.com/vinted/dataverse-finance/pull/2361), [FDSA-3370](https://vinted.atlassian.net/browse/FDSA-3370)).
 > - **what:** an upstream change stopped cancelled purchases showing as refunded, so the accrual rule moved their fees into September. The status now comes from the payments table, closed months stay frozen, and a daily test guards it.
 > - **above and beyond:** I traced the upstream change and warned its owners so other consumers can check their models.
-> - **values:** [ownership] [aim high] [co-create]
+> - **values:** [Ownership / Aim High / Co-create]
