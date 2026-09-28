@@ -10,7 +10,7 @@ Read the context files first:
 - [context/manager-format.md](context/manager-format.md): the 1:1 doc, its template, the standing goals from past 1:1s, and the ids to search with.
 - [context/vinted-values.md](context/vinted-values.md): the five values, and when to tag each one.
 - [context/ic-framework-analytics-engineer.md](context/ic-framework-analytics-engineer.md): IC3 and IC4 statements per dimension.
-- [context/pl-framework-dsa-people-leader.md](context/pl-framework-dsa-people-leader.md): PL3 and PL4 statements per dimension, for a people-leader pathway. Build it in the same shape as the self-assessment, and split each gap into my behaviour vs. an opportunity. Most PL dimensions assume direct reports.
+- [context/pl-framework-dsa-people-leader.md](context/pl-framework-dsa-people-leader.md): PL3 and PL4 statements per dimension. Most PL dimensions assume direct reports.
 
 [prompt.md](prompt.md) holds the original asks verbatim.
 
@@ -62,6 +62,8 @@ Write it as a titled document in four numbered parts, in this order. Follow the 
 - **Current level:** bold. Use exactly one of `IC3`, `IC3 (IC4 in part)`, `IC3 in part`, `Met` or `Gap`.
 - **Gap cells:** never leave one as "—". A strong dimension still names its next step. Put "none" only where that column truly has nothing.
 - **Opportunity column:** list what I can't create alone: a scope, a role, a mentee, a seat in planning, a business need. The framework says IC4 needs a business need.
+
+**Two tracks (IC4 and PL4):** assess both in the same document. Add a "two tracks at a glance" part after Part 1: a two-column table with what the level is, where I stand, strongest evidence, biggest behaviour gap, biggest opportunity gap, shared gaps and business need. Then give one assessment part per framework, then a single growth-action list grouped as shared, IC4 only, PL4 only and opportunities. Tag each action `Behaviour · Both / IC4 / PL4` or `Opportunity`.
 
 **Part 3: Growth actions (path to IC4)**
 - **Order:** a numbered list, ordered by how much each closes the gap.

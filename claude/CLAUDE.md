@@ -36,7 +36,7 @@ and the failure cases; this file is what should be in mind by default.
   query is there to check rather than to read.
 - **Build READMEs, plans, briefs and run-sheets for skimming.** A heading or bold label per
   idea, checkboxes for actions, one numbers table, what to show split from what to say.
-- **Self-assessments follow four numbered parts:** impact summary, framework assessment, growth actions, weekly log. Put highlights before the tables. Split each gap into my behaviour vs. an opportunity I need. Keep links, and use standard capitalisation.
+- **Self-assessments follow four numbered parts:** impact summary, framework assessment, growth actions, weekly log. With IC4 and PL4 both in play, keep them in one doc: an at-a-glance table, then one assessment per track. Put highlights before the tables. Split each gap into my behaviour vs. an opportunity I need. Keep links, and use standard capitalisation.
 - **Write instruction files in imperatives.** Rule files, review guidance, skills, runbooks:
   lead with the verb — flag, ask, name, never. Cut any sentence that explains why a rule
   matters before saying what the rule is, and anything describing the document's own
