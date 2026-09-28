@@ -25,6 +25,7 @@ and the failure cases; this file is what should be in mind by default.
   → "…so that test will start warning on a lot of rows."
 - **Collapse long SQL and query output in `<details>`** so the prose stands alone and the
   query is there to check rather than to read.
+- **Self-assessments follow four numbered parts:** impact summary, framework assessment, growth actions, weekly log. Put highlights before the tables. Split each gap into my behaviour vs. an opportunity I need. Keep links, and use standard capitalisation.
 - **Write instruction files in imperatives.** Rule files, review guidance, skills, runbooks:
   lead with the verb — flag, ask, name, never. Cut any sentence that explains why a rule
   matters before saying what the rule is, and anything describing the document's own

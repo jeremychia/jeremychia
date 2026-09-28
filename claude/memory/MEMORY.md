@@ -11,3 +11,4 @@
 - [An assertion needs a test](an-assertion-needs-a-test.md) — my most-repeated review comment, and to assert it rather than ask it
 - [Verify before asserting](verify-before-asserting.md) — separate what the code shows from what only the data knows
 - [Git hygiene in shared checkouts](git-hygiene-in-shared-checkouts.md) — re-check the branch before committing, branch in place, never stash
+- [Self-assessment for a manager](self-assessment-for-a-manager.md) — writing a brag list, self-assessment, 1:1 update or promotion case; four numbered parts, highlights first, growth actions as a labelled list, links kept, standard capitalisation

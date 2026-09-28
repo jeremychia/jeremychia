@@ -30,3 +30,15 @@ Kept verbatim so the skill can be re-derived if it drifts.
 >
 > think about how i fulfill this at an IC3 level or even an IC4 level
 > write the prompt, these context, and the component files to my personal repository (jeremychia) and commit
+
+## 2026-09-28, later asks
+
+> could you add some points of how it has created impact (summary) and how it relates to the career level framework? so what? how?
+
+> can you present those in a tabular format? can you also see where the gaps are, suggest what are the growth actions to be taken based on the CLF?
+
+> learn from this rewriting, write this into the memory (a rewrite into four parts: impact summary, framework assessment, growth actions, weekly log) and update!
+
+> i think in the comments, also separate between what is because of my own behaviour and what is because i need an opportunity for it
+
+> for the memory, make sure that it's also in jeremychia as well as a skill

@@ -1,0 +1,387 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Self-assessment</title><style>body{font-family:Arial,sans-serif;font-size:11pt;max-width:1200px}table{border-collapse:collapse;margin:8px 0}td,th{border:1px solid #999;padding:6px;vertical-align:top;text-align:left}th{background:#eee}blockquote{border-left:3px solid #999;margin:8px 0;padding-left:12px;color:#333}</style></head><body><h1>Performance &amp; career self-assessment</h1>
+<p><strong>Review period:</strong> 1 Aug – 28 Sep 2026</p>
+<p><strong>Name:</strong> Jeremy Chia, Analytics Engineer, Finance DSA</p>
+<p><strong>Primary artifact:</strong> <a href="https://github.com/jeremychia/jeremychia/blob/main/brag/2026-08-01_to_2026-09-28/brag-list.md">brag-list.md</a></p>
+<hr />
+<h2>Part 1: Impact summary</h2>
+<h3>Highlights</h3>
+<ul>
+<li><strong>Financial integrity:</strong> kept <strong>~€2.7m</strong> of cost out of the wrong accounting period: <strong>€1.29m</strong> of accruals and <strong>€1.45m</strong> of double-counted carrier cost.</li>
+<li><strong>Reporting accuracy:</strong> removed a false <strong>€1.5m</strong> jump from Looker. Stopped <strong>€2.8k–3.5k a month</strong> of fees being booked as the wrong type.</li>
+<li><strong>Process automation:</strong> automated <strong>4</strong> close exports and <strong>3</strong> manual checks. The shipping refresh now schedules itself, so finance control no longer asks us for hand-run builds.</li>
+<li><strong>Fixed at the source:</strong> raised a fix in core billing for <strong>~44k invoice lines a month</strong> filed as GB instead of UK (still in review). Got Registration to fix invalid VAT input where it is entered.</li>
+</ul>
+<h3>Detailed impact</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>What changed</th>
+<th>Business impact</th>
+<th>Technical impact</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Money in the right month</strong></td>
+<td>Accruals read the correct payment status. Double-counted carrier cost removed. Duplicate snapshots cleaned up.</td>
+<td>Kept ~€2.7m of cost out of the wrong period. Removed a false €1.5m jump in Looker. Stopped €2.8–3.5k a month of wrong fees.</td>
+<td>Closed months are frozen. A one-snapshot-per-day test now covers 18 models.</td>
+<td><a href="https://github.com/vinted/dataverse-finance/pull/2361">#2361</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2157">#2157</a>, <a href="https://vinted.atlassian.net/browse/FDSA-3318">FDSA-3318</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2244">#2244</a></td>
+</tr>
+<tr>
+<td><strong>Close needs fewer hands</strong></td>
+<td>4 exports and 3 manual checks automated. The shipping refresh schedules itself.</td>
+<td>Finance control stops asking us for hand-run builds; there were 3 such requests since August. The WD1 vouchers step is off the critical path.</td>
+<td>One shared list of refresh dates for finance and VGo.</td>
+<td><a href="https://github.com/vinted/dataverse-finance/pull/2178">#2178</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2203">#2203</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2369">#2369</a>, <a href="https://github.com/vinted/dataverse-dbt-shared/pull/425">dbt-shared#425</a></td>
+</tr>
+<tr>
+<td><strong>Fixed at the source</strong></td>
+<td>Fixes raised in core billing and with Registration. Upstream owners warned about their changes.</td>
+<td>~44k invoice lines a month will stop filing the UK as a separate country. Bad VAT input is stopped where it is entered.</td>
+<td>Fewer downstream patches to maintain.</td>
+<td><a href="https://github.com/vinted/core/pull/137604">core#137604</a>, <a href="https://vinted.atlassian.net/browse/FDSA-3413">FDSA-3413</a>, <a href="https://vinted.slack.com/archives/C046D0K49C6/p1787125459869369">MA-83 thread</a></td>
+</tr>
+<tr>
+<td><strong>Safer for the whole org</strong></td>
+<td>Partition monitoring built. Unit tests that silently never ran now run. The triage bot names the failing value.</td>
+<td>Incidents are caught before they fail downstream tasks. One earlier incident failed 20.</td>
+<td>121 models at risk of the partition limit, flagged across 337 tables. CI fixed for two teams.</td>
+<td><a href="https://github.com/vinted/dataverse-metrics/pull/604">dataverse-metrics#604</a>, <a href="https://github.com/vinted/dataverse-cicd/pull/220">dataverse-cicd#220</a>, <a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32111329441/2026-08-24+-+Continuity+for+alert+triage">triage RFC</a></td>
+</tr>
+<tr>
+<td><strong>Ready for dbt 2.0</strong></td>
+<td>Deprecation and lint sweeps done. Test files moved out of dbt's path. An open-source fix contributed.</td>
+<td>The upgrade will not stall finance delivery.</td>
+<td>173 deprecation and 75 lint PRs, with all 930 tests unchanged. Fixes in 3 repos and in dbt Labs.</td>
+<td><a href="https://vinted.atlassian.net/browse/FDSA-3281">FDSA-3281</a>, <a href="https://vinted.atlassian.net/browse/FDSA-3320">FDSA-3320</a>, <a href="https://github.com/dbt-labs/dbt-external-tables/pull/412">dbt-external-tables#412</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Part 2: Growth assessment against the career level framework</h2>
+<blockquote>
+<p><strong>Framework context:</strong> IC3 is mastery of one's own work. IC4 is a technical lead who resolves challenges across the domain and enables other AEs to do the same. The framework also says a business need must exist before an IC4 promotion is considered (<a href="https://docs.google.com/spreadsheets/d/16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y/edit?gid=955252402#gid=955252402">framework</a>).</p>
+</blockquote>
+<p>The gaps are split in two:
+- <strong>My behaviour:</strong> what I can close myself.
+- <strong>Needs an opportunity:</strong> a scope, a role or a business need I can't create alone.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Expectation</th>
+<th>My evidence</th>
+<th>Current level</th>
+<th>Gap: my behaviour</th>
+<th>Gap: needs an opportunity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Theory &amp; techniques</strong></td>
+<td>Design complex architectures alone (IC3) vs. enable others to (IC4)</td>
+<td>Gated rebuild, governed campaign mart, snapshot guard (<a href="https://github.com/vinted/dataverse-finance/pull/2369">#2369</a>, <a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32088817762/2026-08-18+-+Governed+mart+for+shipping+discount+campaigns">RFC</a>)</td>
+<td><strong>IC3</strong></td>
+<td>Package these patterns so others can reuse them.</td>
+<td>A teammate's project where they build with them.</td>
+</tr>
+<tr>
+<td><strong>Engineering</strong></td>
+<td>Code that inspires (IC3) vs. set and guard best practices (IC4)</td>
+<td>Refactors with identical output over 4.0bn and 13.18bn rows (<a href="https://github.com/vinted/dataverse-finance/pull/2222">#2222</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2209">#2209</a>). 156 → 17.2 slot-hours (<a href="https://github.com/vinted/dataverse-finance/pull/2175">#2175</a>). Bugbot rules and linter rule C006.</td>
+<td><strong>IC3 (IC4 in part)</strong></td>
+<td>Explain the reasoning behind the rules, not just ship them.</td>
+<td>A mandate to own a standards area across teams.</td>
+</tr>
+<tr>
+<td><strong>Quality standards</strong></td>
+<td>Help others meet standards (IC3) vs. improve them and enable others (IC4)</td>
+<td>Fixed CI skipping tests for two teams (<a href="https://github.com/vinted/dataverse-cicd/pull/220">dataverse-cicd#220</a>). Test-description and AI-review practices.</td>
+<td><strong>IC4 in part</strong></td>
+<td>Write the practices into the repo's standards; they live in Slack threads today.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Data mastery</strong></td>
+<td>Whole lifecycle of my area (IC3) vs. all of the data stack (IC4)</td>
+<td>Traced core billing → CDC → tax filing (<a href="https://vinted.atlassian.net/browse/FDSA-3413">FDSA-3413</a>). Audited 337 tables org-wide.</td>
+<td><strong>IC3 (IC4 in part)</strong></td>
+<td>None.</td>
+<td>Work that spans stacks outside finance.</td>
+</tr>
+<tr>
+<td><strong>Impact measurement</strong></td>
+<td>Own the metrics of my work (IC3) vs. enable others to (IC4)</td>
+<td>€ and row counts quoted on every fix. The refresh RFC measured a 4.6 h median wait.</td>
+<td><strong>IC3 in part</strong></td>
+<td>Keep a standing scorecard that tracks impact over time.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Structuring</strong></td>
+<td>Iterative, systematic approach (IC3) vs. enable others to structure work (IC4)</td>
+<td>Triage bot delivered in 4 phases. Stacked PRs.</td>
+<td><strong>IC3</strong></td>
+<td>Coach structure in reviews, not only in my own work.</td>
+<td>Someone to coach: a mentee or a project lead.</td>
+</tr>
+<tr>
+<td><strong>Strategy &amp; roadmap</strong></td>
+<td>Bring input and facilitate (IC3) vs. strategic expert for the domain (IC4)</td>
+<td>Both 1:1 goals delivered. Self-service refresh RFC. Policy gate proposal.</td>
+<td><strong>IC3</strong></td>
+<td>Bring proposals to planning with an owner and a cost.</td>
+<td>A seat in team or domain roadmap planning.</td>
+</tr>
+<tr>
+<td><strong>Scope of ownership</strong></td>
+<td>Resolve complex new problems end to end (IC3) vs. own the long-term quality of AEs' output (IC4)</td>
+<td>€1.29m accrual, from detection to root cause (<a href="https://github.com/vinted/dataverse-finance/pull/2361">#2361</a>). Duplicate snapshots.</td>
+<td><strong>IC3</strong></td>
+<td>Delegate and review rather than do. My output is still the main driver.</td>
+<td>A formal remit for AE output quality in the domain.</td>
+</tr>
+<tr>
+<td><strong>Technical debt</strong></td>
+<td>Identify the team's debt (IC3) vs. make sure others decide consciously (IC4)</td>
+<td>173 + 75 sweep PRs. dbt 2.0 blockers cleared.</td>
+<td><strong>IC3</strong></td>
+<td>Start a shared debt list.</td>
+<td>The team agreeing to prioritise from it.</td>
+</tr>
+<tr>
+<td><strong>Business understanding</strong></td>
+<td>Anticipate users' needs (IC3) vs. expert on the domain (IC4)</td>
+<td>Added Nov and Dec close dates before anyone asked (<a href="https://github.com/vinted/dataverse-dbt-shared/pull/432">dbt-shared#432</a>). Spotted that a refunded purchase is never invoiced.</td>
+<td><strong>IC3</strong></td>
+<td>Turn domain rules into written guides.</td>
+<td>Exposure to finance strategy forums.</td>
+</tr>
+<tr>
+<td><strong>Prioritisation</strong></td>
+<td>Set my own priorities and cut scope (IC3) vs. prioritise systemic problems (IC4)</td>
+<td>Chose root-cause fixes: 13 snapshot models (<a href="https://vinted.atlassian.net/browse/FDSA-3331">FDSA-3331</a>).</td>
+<td><strong>IC3 in part</strong></td>
+<td>Record what I chose not to do. Fewer high-volume sweeps.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Time management</strong></td>
+<td>Manage expectations under uncertainty (IC3) vs. accurate delivery times (IC4)</td>
+<td>Stacked PRs waiting on review. Late-evening work (7 Sep 1:1).</td>
+<td><strong>Gap</strong></td>
+<td>Keep to working hours. Give an estimate and a confidence level. Keep no more than 2 stacked PRs open.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Collaboration</strong></td>
+<td>Drive cross-functional work (IC3) vs. drive cross-department work consistently (IC4)</td>
+<td>VGo, Checkout, Registration, DPX, Payments, iSAF</td>
+<td><strong>IC4 in part</strong></td>
+<td>Leave incidents that others own to them (7 Sep 1:1).</td>
+<td>A standing forum with Checkout.</td>
+</tr>
+<tr>
+<td><strong>Communication</strong></td>
+<td>Persuasive to any stakeholder (IC3) vs. minimal overhead, company-level influence (IC4)</td>
+<td>€ impact up front in PRs and RFCs. Incident updates.</td>
+<td><strong>IC3</strong></td>
+<td>Cut review load: 454 PRs and long threads.</td>
+<td>A company-level forum to influence.</td>
+</tr>
+<tr>
+<td><strong>Challenging</strong></td>
+<td>Reflect critically (IC3) vs. role model for inviting challenge (IC4)</td>
+<td>45 review comments on other teams' RFCs</td>
+<td><strong>IC3</strong></td>
+<td>Invite challenge to my own designs systematically.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Knowledge leadership</strong></td>
+<td>Initiate sharing (IC3) vs. an environment of excellence (IC4)</td>
+<td>Hosted the Berlin dbt meet-up for ~60 people (<a href="https://vinted.slack.com/archives/C02K4DJRZH8/p1789104601271289">recap</a>). Guides shared. Open source.</td>
+<td><strong>IC3 (IC4 in part)</strong></td>
+<td>Turn guides into written standards.</td>
+<td>A guild session slot.</td>
+</tr>
+<tr>
+<td><strong>Helping others</strong></td>
+<td>Pull my weight beyond my deliverables</td>
+<td>140 PR reviews. AE hiring panel.</td>
+<td><strong>Met</strong></td>
+<td>None.</td>
+<td>A mentee.</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Give feedback systematically (IC3) vs. build a feedback culture (IC4)</td>
+<td>140 PR reviews and RFC comments</td>
+<td><strong>IC3</strong></td>
+<td>Ask for structured feedback on my own work.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Learning</strong></td>
+<td>Own my career path, with a circle of peers</td>
+<td>Prepared for dbt 2.0. Filed dbt-core issues.</td>
+<td><strong>IC3 in part</strong></td>
+<td>Write a development plan toward IC4.</td>
+<td>None.</td>
+</tr>
+<tr>
+<td><strong>Attitude &amp; caring</strong></td>
+<td>Constructive, and responsible for the team's mood</td>
+<td>Food bank volunteering days. Public credit to teammates. Insights Discovery suggestion.</td>
+<td><strong>IC3</strong></td>
+<td>Model a sustainable pace for the team.</td>
+<td>None.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Part 3: Growth actions (path to IC4)</h2>
+<p><em>Ordered by how much each closes the gap to IC4. Target dates are proposals to agree with António.</em></p>
+<ol>
+<li><strong>Enable, rather than do</strong>: <em>Scope of ownership, Structuring, Theory &amp; techniques</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> turn the refresh gate, the snapshot guard and case-log upkeep into three team skills or guides.</li>
+<li><strong>Done when:</strong> a teammate ships one of these patterns without my help.</li>
+<li><strong>Target:</strong> end of October.</li>
+</ul>
+</li>
+<li><strong>Track impact over time</strong>: <em>Impact measurement</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> publish a scorecard of manual close steps left, ad-hoc refresh requests a month, MEC on-time % and alert false positives. Baseline it from the 1,255-ticket analysis.</li>
+<li><strong>Done when:</strong> it is reviewed monthly in the 1:1.</li>
+<li><strong>Target:</strong> baseline by mid-October, then monthly.</li>
+</ul>
+</li>
+<li><strong>Record the trade-offs</strong>: <em>Prioritisation</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> keep a quarterly "doing / not doing" list, with the opportunity cost of each item.</li>
+<li><strong>Done when:</strong> at least one item is cut or deferred each quarter, agreed with António.</li>
+<li><strong>Target:</strong> Q4 planning.</li>
+</ul>
+</li>
+<li><strong>Pace and expectations</strong>: <em>Time management, Attitude</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> keep to agreed working hours. Give each RFC a delivery estimate and a confidence level. Keep no more than 2 stacked PRs open.</li>
+<li><strong>Done when:</strong> no late-evening work outside incidents, and estimates are hit.</li>
+<li><strong>Target:</strong> from now.</li>
+</ul>
+</li>
+<li><strong>Reduce review overhead</strong>: <em>Communication</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> batch sweeps into fewer PRs where it is safe. Agree a review cadence for chained PRs. Post a short monthly stakeholder update.</li>
+<li><strong>Done when:</strong> my share of the team's review queue stays under an agreed number.</li>
+<li><strong>Target:</strong> end of October.</li>
+</ul>
+</li>
+<li><strong>Respect incident ownership</strong>: <em>Collaboration, Caring</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> on incidents that others own, offer help and wait to be asked.</li>
+<li><strong>Done when:</strong> no overlap is flagged in 1:1s.</li>
+<li><strong>Target:</strong> from now.</li>
+</ul>
+</li>
+<li><strong>Ask for challenge and feedback</strong>: <em>Feedback, Challenging</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> ask Ieva, Evita and Emily for structured feedback. Add a "what would you change?" section to every RFC I write.</li>
+<li><strong>Done when:</strong> the feedback themes are reviewed with António.</li>
+<li><strong>Target:</strong> mid-October.</li>
+</ul>
+</li>
+<li><strong>Write the standards down</strong>: <em>Quality standards, Knowledge leadership</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> write the test-description and AI-review practices into the repo's standards, and start a shared debt list.</li>
+<li><strong>Done when:</strong> both are merged.</li>
+<li><strong>Target:</strong> end of November.</li>
+</ul>
+</li>
+<li><strong>Write an IC4 development plan</strong>: <em>Learning, Strategy &amp; roadmap</em>. <strong>Behaviour</strong><ul>
+<li><strong>Action:</strong> draft the plan with António. Join the <em>Ontology Pipeline</em> book club, and co-run the Vilnius dbt meet-up.</li>
+<li><strong>Done when:</strong> the plan is agreed and reviewed quarterly.</li>
+<li><strong>Target:</strong> next 1:1.</li>
+</ul>
+</li>
+<li><strong>Opportunities to discuss with António</strong>: <em>Scope of ownership, Structuring, Strategy &amp; roadmap, Collaboration, Knowledge leadership, Helping others</em>. <strong>Opportunity</strong><ul>
+<li><strong>Action:</strong> discuss which of these the team can offer:<ul>
+<li>a mentee, or a teammate's project to support.</li>
+<li>a seat in team or domain roadmap planning.</li>
+<li>a remit for AE quality standards in the domain.</li>
+<li>ownership of a standing agreement with Checkout: a pre-release notice for changes that touch invoices.</li>
+<li>a guild session slot.</li>
+<li>whether a business need for an IC4 role exists, or could exist.</li>
+</ul>
+</li>
+<li><strong>Done when:</strong> at least two are agreed, with owners.</li>
+<li><strong>Target:</strong> next 1:1.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>Part 4: Weekly achievement log</h2>
+<h3>3–9 Aug 2026</h3>
+<ul>
+<li>Rejoined Finance DSA and started organising the Berlin dbt meet-up (<a href="https://vinted.slack.com/archives/C05L8F2HVGF/p1785741071289669">thread</a>). [Co-create]</li>
+<li>Turned PR review comments into Bugbot review rules (<a href="https://github.com/vinted/dataverse-finance/pull/1817">#1817</a>). [Aim High / Above &amp; beyond]</li>
+<li>Fixed 10 models that exposed personal data, before the linter rule was enforced (<a href="https://vinted.atlassian.net/browse/FDSA-3054">FDSA-3054</a>). [Ownership]</li>
+<li>Proposed the V-Assist agent roadmap for finance (<a href="https://github.com/vinted/v-assist-registry/pull/677">v-assist-registry#677</a>). [Co-create]</li>
+<li>Started the dbt deprecation and lint sweeps that prepare us for dbt 2.0 (<a href="https://vinted.atlassian.net/browse/FDSA-3070">FDSA-3070</a>). [Aim High]</li>
+</ul>
+<h3>10–16 Aug 2026</h3>
+<ul>
+<li>Fixed Looker measures that would have silently disappeared under the new meta format (<a href="https://github.com/vinted/dataverse-lookml-generator/pull/160">lookml-generator#160</a>). [Aim High / Above &amp; beyond]</li>
+<li>Found that the Mangopay S3 load stopped at 1,000 files, so a July close retry skipped files (<a href="https://vinted.atlassian.net/browse/FDSA-3067">FDSA-3067</a>). [Ownership]</li>
+<li>Documented the Mangopay API and S3 pipeline (<a href="https://vinted.atlassian.net/browse/FDSA-3101">FDSA-3101</a>). [Co-create]</li>
+<li>Gave feedback on the new AE technical interview material (<a href="https://vinted.atlassian.net/browse/FDSA-3102">FDSA-3102</a>). [Grow]</li>
+<li>Merged 162 finance PRs from the lint and deprecation sweeps across 3–16 Aug (<a href="https://vinted.atlassian.net/browse/FDSA-3281">FDSA-3281</a>). [Aim High]</li>
+</ul>
+<h3>17–23 Aug 2026</h3>
+<ul>
+<li>Traced a wrong VAT number that reached the Lithuanian tax authority and added a 35-character test (<a href="https://vinted.atlassian.net/browse/FDSA-3120">FDSA-3120</a>). Registration then fixed Spanish VAT validation at the source, in MA-83 (<a href="https://vinted.slack.com/archives/C046D0K49C6/p1787125459869369">thread</a>). [Ownership / Co-create / Above &amp; beyond]</li>
+<li>Wrote two RFCs: the <a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32088817762/2026-08-18+-+Governed+mart+for+shipping+discount+campaigns">governed shipping campaigns mart</a> and the <a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32099795441/2026-08-20+-+Split+mrt_shipping_results+into+components">shipping result split</a>. [Co-create]</li>
+<li>Split out Adyen refund fees for Gabija. They reconcile to Adyen on all 23 invoices (<a href="https://github.com/vinted/dataverse-finance/pull/2083">#2083</a>). [Aim High]</li>
+<li>Gave FP&amp;A Pigment access to weekly targets (<a href="https://github.com/vinted/dataverse-marketplace-intelligence/pull/1141">marketplace-intelligence#1141</a>). [Co-create]</li>
+<li>Started the export bucket move, and held the merge until after close (<a href="https://github.com/vinted/terraform-dataverse/pull/3723">terraform-dataverse#3723</a>). [Ownership]</li>
+<li>Organised Berliner Tafel food bank volunteering days (<a href="https://vinted.slack.com/archives/C04HC4J6X2R/p1786958374428139">thread</a>). [Care]</li>
+</ul>
+<h3>24–30 Aug 2026</h3>
+<ul>
+<li>Removed double-counted SPEEDX carrier cost from August before close: €712k invoiced and €741k accrued (<a href="https://github.com/vinted/dataverse-finance/pull/2157">#2157</a>). [Aim High]</li>
+<li>Found 121 models across the org at risk of BigQuery's partition limit, and built monitoring that alerts each owning team (<a href="https://github.com/vinted/dataverse-metrics/pull/604">dataverse-metrics#604</a>, <a href="https://vinted.atlassian.net/browse/FDSA-3169">FDSA-3169</a>). [Aim High / Co-create / Above &amp; beyond]</li>
+<li>Delivered the RFC and phases 1–2 of the finance alert-triage bot (<a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32111329441/2026-08-24+-+Continuity+for+alert+triage">RFC</a>, <a href="https://github.com/vinted/v-assist-registry/pull/846">v-assist-registry#846</a>). [Aim High]</li>
+<li>Fixed an out-of-memory failure on the Adyen fees model, from 156 to 17.2 slot-hours (<a href="https://github.com/vinted/dataverse-finance/pull/2175">#2175</a>). [Aim High]</li>
+<li>Added seeds for the governed campaign mart (<a href="https://github.com/vinted/dataverse-finance/pull/2158">#2158</a>) and CDD exclusion rules (<a href="https://github.com/vinted/dataverse-finance/pull/2153">#2153</a>). [Aim High]</li>
+<li>Shared my unit-testing guide with the AE community (<a href="https://vinted.slack.com/archives/C03JBPN0Q1W/p1787824097864589?thread_ts=1787823910.491879&amp;cid=C03JBPN0Q1W">thread</a>). [Co-create / Grow]</li>
+</ul>
+<h3>31 Aug – 6 Sep 2026</h3>
+<ul>
+<li>Ran my first month-end close with Emily, with 94.1% of models on time (<a href="https://vinted.slack.com/archives/G01A7KGHY74/p1788944254889679">retro</a>, <a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32142295207/2026-08+MEC+Issue+Request+Log">MEC log</a>). [Ownership / Co-create]</li>
+<li>Automated 4 close exports (<a href="https://github.com/vinted/dataverse-finance/pull/2178">#2178</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2205">#2205</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2207">#2207</a>), and turned 3 manual fee checks into tests (<a href="https://github.com/vinted/dataverse-finance/pull/2203">#2203</a>). [Aim High]</li>
+<li>Fixed the negative amounts NetSuite rejects (<a href="https://github.com/vinted/dataverse-finance/pull/2194">#2194</a>). Also fixed, unasked, two more models with the same risk (<a href="https://github.com/vinted/dataverse-finance/pull/2197">#2197</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2198">#2198</a>). [Ownership]</li>
+<li>Fixed the AU vendor mapping on AUD 85,991.59 of fee accrual that an accountant had corrected by hand (<a href="https://github.com/vinted/dataverse-finance/pull/2212">#2212</a>). [Ownership]</li>
+<li>Led the 4 Sep double-entry incident and recovered it in about 20 minutes (<a href="https://vinted.slack.com/archives/C0706RCL6CF/p1788502006663509?thread_ts=1788500547.898079&amp;cid=C0706RCL6CF">incident</a>). [Ownership]</li>
+<li>Set up the AE hiring panel group and its access (<a href="https://github.com/vinted/service-catalog/pull/17023">service-catalog#17023</a>). [Grow]</li>
+</ul>
+<h3>7–13 Sep 2026</h3>
+<ul>
+<li>Found 34 duplicate snapshots in 10 models, behind a false €1.5m jump in Looker. Cleaned them up and added a one-per-day test (<a href="https://github.com/vinted/dataverse-finance/pull/2232">#2232</a>, <a href="https://vinted.atlassian.net/browse/FDSA-3318">FDSA-3318</a>). [Ownership]</li>
+<li>Caught an upstream Adyen rename that would have booked €2.8–3.5k a month as the wrong fee type (<a href="https://github.com/vinted/dataverse-finance/pull/2244">#2244</a>). [Aim High]</li>
+<li>Wrote the self-service data refresh RFC from all 1,255 FDSA tickets. It estimates ~500 finance hours a year unblocked (<a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32174703071/2026-09-07+-+Self-service+data+refresh+for+Finance">RFC</a>). [Aim High / Co-create]</li>
+<li>Refactored the shipping result (1,206 → 117 lines) and double entry (837 → 88 lines), with identical output (<a href="https://github.com/vinted/dataverse-finance/pull/2222">#2222</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2209">#2209</a>). [Aim High]</li>
+<li>Found unit tests silently not running in CI for two teams, and fixed it (<a href="https://github.com/vinted/dataverse-cicd/pull/220">dataverse-cicd#220</a>, <a href="https://github.com/vinted/dataverse-cli/pull/705">dataverse-cli#705</a>). [Aim High / Above &amp; beyond]</li>
+<li>Turned on continuous deployment for finance (<a href="https://github.com/vinted/dataverse-finance/pull/2154">#2154</a>). Proposed one shared refresh-date list with VGo (<a href="https://github.com/vinted/dataverse-dbt-shared/pull/425">dbt-shared#425</a>). [Co-create]</li>
+<li>Hosted the Berlin dbt meet-up for ~60 guests and moderated the AE career panel (<a href="https://vinted.slack.com/archives/C02K4DJRZH8/p1789104601271289">recap</a>). [Co-create / Grow]</li>
+</ul>
+<h3>14–20 Sep 2026</h3>
+<ul>
+<li>Changed 13 snapshot models to replace a same-day re-run instead of adding a copy (<a href="https://vinted.atlassian.net/browse/FDSA-3331">FDSA-3331</a>). [Ownership]</li>
+<li>Put the shared refresh dates live in both the finance and VGo projects (<a href="https://vinted.atlassian.net/browse/FDSA-3319">FDSA-3319</a>, <a href="https://github.com/vinted/dataverse-vintedgo-dbt/pull/9472">vintedgo-dbt#9472</a>). [Co-create]</li>
+<li>Opened the investigation into the payment status change behind the €1.29m accrual shift (<a href="https://vinted.atlassian.net/browse/FDSA-3370">FDSA-3370</a>). [Aim High]</li>
+</ul>
+<h3>21–27 Sep 2026</h3>
+<ul>
+<li>Stopped €1.29m of cost moving out of August: fixed the accrual source, froze closed months and warned the upstream owners (<a href="https://github.com/vinted/dataverse-finance/pull/2361">#2361</a>, <a href="https://vinted.slack.com/archives/C077HPXKTSN/p1790104347593269?thread_ts=1787219993.360489&amp;cid=C077HPXKTSN">heads-up</a>). [Ownership / Aim High / Co-create]</li>
+<li>Wrote a fix in core billing for ~44k invoice lines a month filed as GB instead of UK; it is in review (<a href="https://github.com/vinted/core/pull/137604">core#137604</a>, <a href="https://vinted.atlassian.net/browse/FDSA-3413">FDSA-3413</a>). [Ownership / Co-create / Above &amp; beyond]</li>
+<li>Merged an open-source fix into dbt Labs' dbt-external-tables (<a href="https://github.com/dbt-labs/dbt-external-tables/pull/412">dbt-external-tables#412</a>). [Co-create / Grow / Above &amp; beyond]</li>
+<li>Made the shipping result rebuild itself on the agreed close and actuals dates (<a href="https://github.com/vinted/dataverse-finance/pull/2369">#2369</a>, <a href="https://github.com/vinted/dataverse-finance/pull/2379">#2379</a>). Added the Nov and Dec dates, and unblocked every dataverse-dbt-shared PR (<a href="https://github.com/vinted/dataverse-dbt-shared/pull/432">dbt-shared#432</a>, <a href="https://github.com/vinted/terraform-github/pull/8831">terraform-github#8831</a>). [Aim High]</li>
+<li>Found 39 wrong values in the Adyen reconciliation by comparing the table with its earlier version (<a href="https://github.com/vinted/dataverse-finance/pull/2360">#2360</a>). [Aim High]</li>
+<li>Added CDC gap checks that name the owner (<a href="https://github.com/vinted/dataverse-finance/pull/2382">#2382</a>). Created the <a href="https://vinted.atlassian.net/wiki/spaces/DF/pages/32104972550/Finance+DSA+Alert+Case+Log">alert case log</a> that the triage bot reads. [Co-create]</li>
+</ul></body></html>
