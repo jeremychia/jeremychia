@@ -5,11 +5,12 @@ description: Compile my achievements and reflections for a 1:1 with my manager, 
 
 # Brag list
 
-Read the three context files first:
+Read the context files first:
 
 - [context/manager-format.md](context/manager-format.md): the 1:1 doc, its template, the standing goals from past 1:1s, and the ids to search with.
 - [context/vinted-values.md](context/vinted-values.md): the five values, and when to tag each one.
 - [context/ic-framework-analytics-engineer.md](context/ic-framework-analytics-engineer.md): IC3 and IC4 statements per dimension.
+- [context/pl-framework-dsa-people-leader.md](context/pl-framework-dsa-people-leader.md): PL3 and PL4 statements per dimension, for a people-leader pathway. Build it in the same shape as the self-assessment, and split each gap into my behaviour vs. an opportunity. Most PL dimensions assume direct reports.
 
 [prompt.md](prompt.md) holds the original asks verbatim.
 
