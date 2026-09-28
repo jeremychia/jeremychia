@@ -23,6 +23,9 @@ and the failure cases; this file is what should be in mind by default.
 - **Cut whole categories, not sentences.** The reasoning that led to the change, the
   evidence for a claim nobody disputes, what was decided against, how the tooling behaved,
   the validation method rather than its one number. All of it belongs in the ticket.
+- **Leave no drafting history in the document.** The reader is seeing it for the first time.
+  No earlier passes, no self-correction, no confessing an invented detail, no "you asked."
+  Keep the instruction, delete the frame. The learning goes in memory.
 - **State the consequence, not just the effect.** "~400k rows fall in the warn window"
   → "…so that test will start warning on a lot of rows."
 - **Collapse long SQL and query output in `<details>`** so the prose stands alone and the
