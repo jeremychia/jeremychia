@@ -13,6 +13,8 @@ Read the three context files first:
 
 [prompt.md](prompt.md) holds the original asks verbatim.
 
+Before using the values or the framework, check that each is still current. Each file has a snapshot table or line and says how to check. If the source changed, refresh the file and commit it first.
+
 ## 1. Set the window
 
 - Default to the previous Monday to Sunday.
