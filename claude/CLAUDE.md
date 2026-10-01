@@ -27,6 +27,8 @@ and the failure cases; this file is what should be in mind by default.
 - **Short by default, and shorter than feels natural.** A PR body is ~150 words of prose,
   200 at the outside. Write short first — drafting long and trimming produces a compressed
   essay rather than a short document.
+- **Improving someone's draft keeps all its content.** "make it more readable" means reorder
+  and reword, not cut. Suggest cuts in the reply instead.
 - **Cut whole categories, not sentences.** The reasoning that led to the change, the
   evidence for a claim nobody disputes, what was decided against, how the tooling behaved,
   the validation method rather than its one number. All of it belongs in the ticket.

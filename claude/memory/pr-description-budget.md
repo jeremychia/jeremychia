@@ -1,6 +1,6 @@
 ---
 name: pr-description-budget
-description: The countable procedure for cutting a PR body to length, with the categories to delete
+description: The countable procedure for cutting a PR body to length, the categories to delete, and why editing an existing draft keeps all its content
 metadata:
   type: feedback
 ---
@@ -35,6 +35,19 @@ where it replaces more prose than it costs. One `<details>` block at most.
 - **validation method.** "deep diff of every node, source, exposure and macro", node-count
   inventories → the one number that means something: "930 test nodes resolve identically;
   manifests differ only in post-hook timestamps."
+
+**Editing an existing draft is not a rewrite.** When asked to improve a PR body or make it
+"more readable", keep every piece of content already in it: all the examples, the ops
+notes, the cost section, the checks list. Change the order, headings, sentences and casing,
+and keep the template's section headings. Do not apply the budget or the delete-by-category
+list. Suggest a cut in the reply instead of making it. Once I cut three of four example
+alert messages, a log-colour tip, a no-backfill note and the cost section, and got "nonon,
+include all the examples. just make it more readable."
+
+**Reword a rule only after reading the code.** Tightening a sentence about behaviour can
+invert it. "alerts only if it wasn't past the threshold in the prior week" became "alerts
+only if it was below the threshold at some point in the last 7 days", which is the
+opposite. Check the logic before rephrasing it.
 
 **Why:** the PR body is not the record of the work — the ticket is. It is only what a
 reviewer needs in order to approve.
