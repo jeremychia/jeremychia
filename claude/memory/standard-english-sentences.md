@@ -29,6 +29,7 @@ metadata:
 | "gets a second reader" | "now has a second downstream consumer" |
 | "off by 0.18%" | "shows a 0.18% variance" |
 | "the 2% is a proposal. X to confirm." | "the 2% threshold is a proposal and awaits confirmation from X." |
+| "that warning is the cue to re-size it" | "a warning means the limit needs re-sizing" |
 | data as a container or traveller: "the model holds one month", "the month held in X", "once the data lands" | "the model contains data for one month only", "the same month as the data in X", "once the data arrives" |
 | "half rows" | "incomplete rows" |
 | intensifiers: genuinely, simply, just | nothing — delete them |

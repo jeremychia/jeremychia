@@ -51,6 +51,8 @@ keep one idea in each. Then swap the jargon — load-bearing → needed, blast r
 else changes, residue → the rest, proportional trimming → cutting a bit from everywhere.
 Where a paragraph lists parallel items, a table beats prose.
 
+**Write standard english sentences**, per [[standard-english-sentences]], which has the words-to-avoid table and the accepted PR shape.
+
 **Why:** these comments are read by the PR author, usually someone else. A finding nobody
 can decode gets ignored, so the review value is lost regardless of how sound the analysis
 was.
