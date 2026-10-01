@@ -5,7 +5,7 @@ and the failure cases; this file is what should be in mind by default.
 
 ## Writing
 
-- **Lowercase prose.** Inline comments, PR descriptions, PR comments, commit bodies. Real
+- **Lowercase prose.** Inline comments, PR descriptions, PR comments, commit bodies, slack messages to anyone. Real
   identifiers and data literals keep their own casing — lowercasing those misstates the
   data.
 - **Plain language, first time, without being asked.** No jargon where an ordinary word
@@ -43,6 +43,7 @@ and the failure cases; this file is what should be in mind by default.
   idea, checkboxes for actions, one numbers table, what to show split from what to say. A
   model description gets one labelled one-line paragraph per rule, `Summary:` first.
 - **Self-assessments follow four numbered parts:** impact summary, framework assessment, growth actions, weekly log. With IC4 and PL4 both in play, keep them in one doc: an at-a-glance table, then one assessment per track. Put highlights before the tables. Split each gap into my behaviour vs. an opportunity I need. Keep links, and use standard capitalisation.
+- **Questions to finance or other non-engineers are structured.** Headline number first, then the problem (rule / the mismatch / impact), proposed solution with its financial impact, and numbered questions for you. Still lowercase, headings included, and bold the key numbers. Fact-check each figure against its month.
 - **Write instruction files in imperatives.** Rule files, review guidance, skills, runbooks:
   lead with the verb — flag, ask, name, never. Cut any sentence that explains why a rule
   matters before saying what the rule is, and anything describing the document's own
