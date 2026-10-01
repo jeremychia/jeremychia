@@ -35,7 +35,7 @@ Before using the values or the framework, check that each is still current. Each
 
 - **Headline:** one bold sentence with the business number, then the state (merged, open or in review) and the links.
 - **what:** one or two sentences.
-- **business:** the money, the deadline, who stops waiting, which report is now right.
+- **business:** the money, the deadline, who stops waiting, which report is now right. End on someone else's behaviour or trust: "so finance stopped correcting it by hand". Never invent a € figure, and never write "helped with".
 - **technical:** code standards, tech debt cleared, readiness for an upgrade, manual runs removed.
 - **above and beyond:** flag work outside my remit. Examples: a fix in another team's codebase, an open-source PR, a system others now use, a proposal that changes how another team works, a problem found before anyone reported it.
 - **values:** tag each item only where the evidence shows the value.
@@ -51,12 +51,18 @@ Write it as a titled document in four numbered parts, in this order. Follow the 
 
 **Title block:** the title "Performance & career self-assessment", the review period, and a link to the primary artifact, each on its own line.
 
-**Summary and ask**, above Part 1:
+**Summary and ask**, above Part 1, in BLUF order:
+- **the pattern:** one sentence naming the contribution that repeats across the wins. Mark it as a draft.
+- **the ask:** the level and the number, as a marked prompt for me. Keep the number out of this public repo.
+- **why it matters** and **why now:** marked prompts for me.
+- **next steps:** the focus actions with their dates, and the checkpoint.
 - **where I am:** my read of the level.
 - **my preferred track and why:** a marked prompt for me.
 - **the business case for the role:** a marked prompt for me.
-- **the ask:** at most three things.
-- **the feedback I want.**
+- **what I need from my manager:** at most three things.
+- **the feedback I want:** for each Not yet, what would move it, and what someone at the target level does that I don't yet.
+
+Check that my manager could repeat the ask and its reason in one sentence from this section alone.
 
 State the evidence window, and propose a checkpoint date.
 
@@ -67,6 +73,8 @@ State the evidence window, and propose a checkpoint date.
 - **Order:** lead with leverage. Put sweeps and PR counts in one maintenance row. Add a cost row pricing performance work as a labelled estimate.
 - **What others said:** a table of quote, who, about and permalink.
 - **Systems others rely on:** a table of system, who relies on it and adoption. Mark unmeasured use as "to measure".
+- **Judgment calls:** a table of decision, what I chose, what I rejected, and the trade-off. Take them from PR bodies and threads. Leave an unstated cost as a prompt.
+- **Agreed in 1:1s:** a table of date, what was agreed, owner and status, from the standing goals.
 - **What went wrong:** one incident I caused, written blamelessly.
 - **Feedback I received:** feedback, who from, and what I changed. Leave the last column as a prompt for me.
 

@@ -18,5 +18,6 @@
 - [README built for skimming](readme-built-for-skimming.md) — writing or tidying a README, project doc, plan, brief, talk run-sheet or data model description; a heading or bold label per idea, checkboxes, one numbers table, show vs say
 - [No hard-wrapped prose](no-hard-wrapped-prose.md) — one paragraph is one line in anything that renders as markdown; wrap only code and commit bodies
 - [Self-assessment for a manager](self-assessment-for-a-manager.md) — writing a brag list, self-assessment, 1:1 update or promotion case; four numbered parts, highlights first, growth actions as a labelled list, links kept, standard capitalisation
+- [Writing a promotion case](writing-a-promotion-case.md) — building a brag doc or promotion case; ask first in BLUF order, end each win on someone else's behaviour, log rejected alternatives, write down 1:1 promises
 - [Structured questions to business stakeholders](structured-questions-to-business-stakeholders.md) — drafting a slack message or question to finance, accounting or any non-engineer; headline number, problem / proposed solution / numbered questions, in lowercase
 - [Standard english sentences](standard-english-sentences.md) — plain subject and verb, verb-first bullets, bold labels, numerals, no aphorisms or metaphor-verbs; words-to-avoid table; still lowercase
