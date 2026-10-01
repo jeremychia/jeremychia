@@ -14,14 +14,22 @@
 
 ## Summary and ask
 
-- **Where I am:** a strong IC3. There is partial evidence toward IC4 in standards, data mastery and collaboration, and strong evidence on the PL side in collaboration, process and external engagement. I have no direct reports, so half of PL4 can't be shown yet. The levels below are my own read, for António to calibrate.
-- **My preferred track and why:** *[to write: which of IC4 or PL4 energises you more — shaping the data platform, or growing people — and why]*
-- **The business case for the role:** *[to write: why finance DSA needs a technical lead or a team lead now, in two or three sentences — e.g. the close automation and controls roadmap, the upstream-change risk, the request load]*
-- **What I'm asking for:**
+**The pattern** *(draft)*: I find money errors at their source, often in another team's system. Then I turn the fix into a check or a schedule that runs without me.
+
+- **The ask:** *[to write: the level you're asking for (IC4, or PL3 then PL4) and the number. Put the number in the 1:1 doc only, not in this public repo]*
+- **Why it matters:** *[to write: why finance DSA needs a technical lead or a team lead, in two or three sentences. For example: the close automation and controls roadmap, the upstream-change risk, the request load]*
+- **Why now:** *[to write: for example, continuous deployment is live, dbt 2.0 is coming, and Q4 close season is ahead]*
+- **Next steps:** the three focus actions in Part 5. The plan is due mid-November and the delegation target is end of December. The checkpoint is the end of Q1 2027.
+- **Where I am:** a strong IC3. There is partial evidence toward IC4 in standards, data mastery and collaboration. On the PL side, the evidence is strong in collaboration, process and external engagement. I have no direct reports, so half of PL4 can't be shown yet. The levels below are my own read, for António to calibrate.
+- **My preferred track and why:** *[to write: which of IC4 or PL4 energises you more, shaping the data platform or growing people, and why]*
+- **What I need from António:**
     1. agree the track, or how to keep both open until the checkpoint.
     2. a project with 1–2 contributors that I plan, split and deliver.
     3. a seat in finance DSA roadmap planning.
-- **Feedback I'd like:** does my read of the levels in Parts 3 and 4 match yours?
+- **Feedback I'd like:**
+    - does my read of the levels in Parts 3 and 4 match yours?
+    - for each **Not yet**, what would you need to see to move it?
+    - what does someone at IC4 or PL4 do that I don't do yet?
 
 ---
 
@@ -29,10 +37,10 @@
 
 ### Highlights
 
-- **Accounting accuracy:** removed **€1.45m** of double-counted carrier cost (€712k invoiced, €741k accrued) **before** the August close. Found a **€1.29m** accrual timing error **after** the August close. It is fixed from September; whether August is restated is accounting's call.
-- **Systems other teams rely on:** partition monitoring across **337** tables (**121** at-risk models flagged), unit tests in CI fixed for **two** teams, and one refresh calendar shared by finance and VGo.
-- **Automation:** **4** close exports and **3** manual checks now run themselves. The shipping refresh schedules itself (in review).
-- **Fixed at the source:** a fix in core billing for **~44k** invoice lines a month filed as GB instead of UK (in review). Registration is fixing VAT validation where it is entered (MA-83).
+- **Accounting accuracy:** removed **€1.45m** of double-counted carrier cost (€712k invoiced, €741k accrued) **before** the August close. July had been corrected by hand; August didn't need to be. Found a **€1.29m** accrual timing error **after** the August close. It is fixed from September. Whether August is restated is accounting's call, and the upstream owners were warned so other consumers can check their models.
+- **Systems other teams rely on:** partition monitoring across **337** tables, with **121** at-risk models flagged, so each owning team now gets its own alert. Unit tests that CI had silently skipped now run for **two** teams. VGo now rebuilds on the same dates as finance.
+- **Automation:** **4** close exports and **3** manual checks now run themselves. The shipping refresh schedules itself (in review), so finance control won't need to ask us for hand-run builds. There were **3** such requests since August.
+- **Fixed at the source:** a fix in core billing for **~44k** invoice lines a month filed as GB instead of UK (in review). Registration opened MA-83 to fix Spanish VAT validation, so bad numbers will be stopped where they are entered, not caught by finance later.
 
 ### What others said
 
@@ -69,6 +77,28 @@
 | Shared refresh dates | finance and VGo dbt projects | both rebuild on the same dates since 17 Sep |
 | Triage bot and case log | the finance DSA on-support rotation, every day | alerts triaged: to measure |
 | Continuous deployment | every finance merge | on since 9 Sep; 127 of 308 models excluded by rule |
+
+### Judgment calls
+
+These are the choices behind the work. They don't show up in the output.
+
+| Decision | What I chose | What I rejected | Trade-off |
+| --- | --- | --- | --- |
+| Duplicate snapshots | Scanned all 18 snapshot tables and found 34 duplicates in 10 models ([FDSA-3318](https://vinted.atlassian.net/browse/FDSA-3318)) | Fixing only the 6 in the ticket | More work up front, but it found 28 duplicates the ticket missed, going back to March 2025 |
+| GB filed instead of UK | Fixed it in core billing from a fork, with a staging mapping until it ships ([core#137604](https://github.com/vinted/core/pull/137604), [#2378](https://github.com/vinted/dataverse-finance/pull/2378)) | A downstream patch on its own | Two changes to keep in step until core merges, then one fewer patch for finance to maintain |
+| €1.29m accrual | Froze closed months and left restating August to accounting ([#2361](https://github.com/vinted/dataverse-finance/pull/2361)) | Letting the fix rewrite a month already closed | August stays as filed until accounting decides |
+| Shipping split | Views instead of tables ([#2222](https://github.com/vinted/dataverse-finance/pull/2222)) | Tables, which would have stored a second 2.3 TB copy | *[to write: what the views cost, e.g. compute on each read]* |
+| Export bucket move | Held the merge until after close and warned iSAF and Pigment ([terraform-dataverse#3723](https://github.com/vinted/terraform-dataverse/pull/3723)) | Merging during close | *[to write: what the delay cost]* |
+| Campaign mart cutover | Sized the change (+€17.9k InPost ES, −€8.8k SPS SK) and left the decision to Finance Control ([RFC](https://vinted.atlassian.net/wiki/spaces/DF/pages/32088817762/2026-08-18+-+Governed+mart+for+shipping+discount+campaigns)) | Switching over silently | The cutover waits for Finance Control's decision |
+
+### Agreed in 1:1s
+
+| Date | What was agreed | Owner | Status |
+| --- | --- | --- | --- |
+| 31 Aug | Automate the escrow revenue controls, with a September target | Me | 22 controls proposed; in review ([FDSA-3299](https://vinted.atlassian.net/browse/FDSA-3299), [#2300](https://github.com/vinted/dataverse-finance/pull/2300)) |
+| 31 Aug | Propose backend validation to Checkout | Me | Core billing fix open ([core#137604](https://github.com/vinted/core/pull/137604)); a standing agreement is in Part 5 |
+| 7 Sep | Keep to working hours, and leave incidents others own to them | Me | Ongoing; focus action 3 in Part 5 |
+| 23 Sep | Fill in weekly achievements and reflections | Me | Started; Part 6 is the log |
 
 ### What went wrong, and what I changed
 
@@ -110,6 +140,7 @@
 **Evidence toward IC4** is my read, for António to calibrate: **Strong** means the IC4 statement is evidenced, **Partial** means some of it is, **Not yet** means little or none. IC3 is met on every dimension except four: impact measurement, prioritisation, learning and time management.
 
 The gaps are split in two:
+
 - **My behaviour:** what I can close myself.
 - **Needs an opportunity:** a scope, a role or a business need I can't create alone.
 
@@ -145,9 +176,9 @@ The gaps are split in two:
 ### Where I stand
 
 - **Already at PL4 or above, without reports:**
-  - **cross-domain collaboration:** with VGo, Checkout, Registration, DPX, Payments and iSAF.
-  - **quality standards and processes:** CDD, the triage bot, review rules, and CI fixed for two teams.
-  - **external engagement:** hosted a dbt meet-up for ~60 people, and contributed to open source. 
+    - **cross-domain collaboration:** with VGo, Checkout, Registration, DPX, Payments and iSAF.
+    - **quality standards and processes:** CDD, the triage bot, review rules, and CI fixed for two teams.
+    - **external engagement:** hosted a dbt meet-up for ~60 people, and contributed to open source. 
 - **The structural gap is having no direct reports.** Five dimensions assume a team: team performance, people growth, team design, part of communication, and caring for a scope. None of them can be shown fully without people to lead.
 - **The biggest gap I can close myself is delegation and pace.** The framework asks a people leader to get people "working on the right things for the right amount of time … while keeping a healthy work life balance". My 454 PRs, late evenings, and stepping into incidents others own (7 Sep 1:1) are the opposite signal.
 - **Planning horizon:** my work runs on 3–6 month horizons, which is PL3. PL4 asks for turning strategy into plans of up to 12 months.
@@ -224,7 +255,7 @@ The gaps are split in two:
         - **PL4:** a mentee, or onboarding buddy for the next AE hire.
         - **PL4:** ownership of the MEC support rotation design, and standing in for António at team rituals.
         - **Both:** whether a business need exists for an IC4 role, or for a PL3 team lead role.
-    - **Done when:** at least two are agreed, with owners.
+    - **Done when:** at least two are agreed, with owners and dates written into the 1:1 doc.
     - **Target:** next 1:1.
 
 ---
