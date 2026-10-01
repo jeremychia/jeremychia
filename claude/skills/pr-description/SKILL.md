@@ -153,6 +153,34 @@ Then the rest:
   rejected it.
 - Keep SQL, but collapse it in `<details>` so the prose stands alone.
 
+### Write standard english sentences
+
+Short, lowercase and jargon-free is not enough on its own. Read each sentence alone and
+check it has a plain subject, a plain verb, and numbers as numerals.
+
+- **Open the Summary with "this pr adds / fixes / introduces …"**, then the ticket link.
+- **Start table rows and bullets with a third-person verb:** "ensures every checkout ends as
+  one outcome", "counts only fee lines", "does not rebuild final months". Never a bare rule
+  with an implied *must*.
+- **Start Validation bullets with a bold label, then what was done:** "**data accuracy:**
+  the total matches the snapshot to the cent. this confirms …".
+- **Give each decision a bold lead-in that states it**, then one sentence on why.
+- **Name the mechanism; never use a metaphor-verb or aphorism.** "borrows the rate" →
+  "carries over the latest available rate". "bites when loosened" → "fails when the
+  threshold is lowered". "the part that holds today" → "the rules that remain valid today".
+  "the model holds one month" → "the model contains data for one month only". "once the
+  data lands" → "once the data arrives".
+- **Never make an object the actor.** "the entity invoices shipping and nothing else" →
+  "the entity invoices only for shipping".
+- **Write numbers as numerals:** "12 checks", "more than 10%", "27.9 million".
+- **Split em-dash and semicolon chains** into one sentence per fact.
+- **Expand an abbreviation the first time** — "a service level agreement (SLA)".
+- **Drop intensifiers:** genuinely, simply, just.
+
+Take only the sentence construction from a rewrite pasted back by another tool. Keep
+lowercase, keep the template's checklist wording verbatim, and re-check every figure and
+unit it adds.
+
 ## 4. Ask about what the diff cannot tell you
 
 Batch up to 4 questions in one call. Skip anything the diff clearly answers — do not ask
