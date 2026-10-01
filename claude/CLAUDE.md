@@ -17,6 +17,9 @@ and the failure cases; this file is what should be in mind by default.
   those joints are where a 40-word sentence hides four clauses. Aim under 16 words on
   average, and almost nothing over 30. This is separate from length: a short document made
   of long sentences still reads badly.
+- **Standard english sentences.** Plain subject and plain verb. Verb-first bullets, numerals,
+  and abbreviations expanded on first use. No aphorisms, metaphor-verbs or objects as actors.
+  Take only the sentence construction from a pasted rewrite, and keep lowercase.
 - **Never hard-wrap prose.** One paragraph is one line in PR bodies, comments, yml descriptions
   and markdown. Wrap only code and commit message bodies.
 - **Lead with what went wrong, then what the change does, then what was checked, then who acts

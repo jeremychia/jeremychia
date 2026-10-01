@@ -18,3 +18,4 @@
 - [README built for skimming](readme-built-for-skimming.md) — writing or tidying a README, project doc, plan, brief or talk run-sheet; a heading or bold label per idea, checkboxes, one numbers table, show vs say
 - [No hard-wrapped prose](no-hard-wrapped-prose.md) — one paragraph is one line in anything that renders as markdown; wrap only code and commit bodies
 - [Self-assessment for a manager](self-assessment-for-a-manager.md) — writing a brag list, self-assessment, 1:1 update or promotion case; four numbered parts, highlights first, growth actions as a labelled list, links kept, standard capitalisation
+- [Standard english sentences](standard-english-sentences.md) — plain subject and verb, verb-first bullets, bold labels, numerals, no aphorisms or metaphor-verbs; words-to-avoid table; still lowercase
