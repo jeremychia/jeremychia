@@ -42,7 +42,7 @@ and the failure cases; this file is what should be in mind by default.
 - **Build READMEs, plans, briefs and run-sheets for skimming.** A heading or bold label per
   idea, checkboxes for actions, one numbers table, what to show split from what to say. A
   model description gets one labelled one-line paragraph per rule, `Summary:` first.
-- **Self-assessments follow four numbered parts:** impact summary, framework assessment, growth actions, weekly log. With IC4 and PL4 both in play, keep them in one doc: an at-a-glance table, then one assessment per track. Put highlights before the tables. Split each gap into my behaviour vs. an opportunity I need. Keep links, and use standard capitalisation.
+- **Self-assessments follow four numbered parts:** impact summary, framework assessment, growth actions, weekly log. With IC4 and PL4 both in play, keep them in one doc: an at-a-glance table, then one assessment per track. Put highlights before the tables. Split each gap into my behaviour vs. an opportunity I need. Keep links, and use standard capitalisation. Open with the ask in BLUF order. End each win on someone else's behaviour, never on an invented € figure.
 - **Questions to finance or other non-engineers are structured.** Headline number first, then the problem (rule / the mismatch / impact), proposed solution with its financial impact, and numbered questions for you. Still lowercase, headings included, and bold the key numbers. Fact-check each figure against its month.
 - **Write instruction files in imperatives.** Rule files, review guidance, skills, runbooks:
   lead with the verb — flag, ask, name, never. Cut any sentence that explains why a rule

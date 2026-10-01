@@ -44,4 +44,4 @@ Don't copy that example's defects:
 
 **Why:** a manager reads this to decide on a level and on next steps. Leading with the verdict and the gaps, rather than the chronology, puts that decision first. The log stays as the evidence behind it.
 
-**How to apply:** when writing a brag list, self-assessment or promotion case, build the four parts first, then fill them. Before restyling a rewrite, re-check every figure against the source per [[verify-before-asserting]]. Short sentences and plain words still apply, per [[plain-language-in-writeups]].
+**How to apply:** when writing a brag list, self-assessment or promotion case, build the four parts first, then fill them. Open with the ask and translate each win as in [[writing-a-promotion-case]]. Before restyling a rewrite, re-check every figure against the source per [[verify-before-asserting]]. Short sentences and plain words still apply, per [[plain-language-in-writeups]].
