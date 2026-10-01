@@ -1,6 +1,6 @@
 ---
 name: readme-built-for-skimming
-description: The shape Jeremy wants for a README, project doc, plan, brief or talk run-sheet — one heading or bold label per idea, checkboxes for actions, one numbers table, what-to-show split from what-to-say
+description: The shape Jeremy wants for a README, project doc, plan, brief, talk run-sheet or data model description — one heading or bold label per idea, checkboxes for actions, one numbers table, what-to-show split from what-to-say
 metadata:
   type: feedback
 ---
@@ -30,8 +30,21 @@ Don't copy that example's defects. It used Title Case headings, tracking paramet
 
 That example also had defects: jargon ("structural data drift", "ingestion boundary"), a code snippet showing patterns that weren't the real ones, and "highest globally" for "highest in this corpus". Take the structure, not the wording, and re-check every quoted figure and snippet against the source.
 
+**The same holds for a data model's description.** Jeremy rewrote two model descriptions as the model to follow. Each was a wrapped block under four labels, with several rules run together in one paragraph:
+
+- **One labelled paragraph per idea**, each on one line, with a blank line between. The line starts with the label and a colon.
+- **`Summary:` first**, one or two sentences on what the table holds.
+- **Then one label per rule**, named for the rule: `Threshold:`, `Precedence:`, `Batches:`, `Tests:`, `Refresh:`.
+- **`Granularity:` and `Filter:` get their own lines too.** Keep any keywords a linter requires, word for word.
+- **Short sentences, standard capitalisation after the label**, and never hard-wrapped.
+- **Only what the table holds and how it is built.** Leave out what tests check, why each exclusion exists and how to rebuild it. Those belong on the test, the column or the README. Asked to cut, a 2,500-character description came down to about 1,500 by dropping a tests paragraph and the reasons behind each filter. Aim for under ~1,500 characters.
+
+That example had defects too. Five of its claims were wrong against the code. It said the table held "every" record when it held only the ones the model could resolve. It left out one exclusion. It called an append a rebuild. It said a warning always fires when a match on other keys can hide it. It said "grouped by" where the model emits one row per month. Take the structure and re-derive every claim from the SQL.
+
 **Why:** a README is opened by someone looking for one thing, like how to run it, or why there's no database. Dense bullets that each wrap to five lines hide that one thing. Headings and labels let a reader jump straight to it.
+
+A model description is read by someone deciding whether a table fits their question, so each rule has to be findable by its label.
 
 A plan is opened by someone about to act — rehearse, build slides, check a fact — and reasoning prose makes them dig for the instruction.
 
-**How to apply:** when writing or tidying a README, plan, brief or run-sheet, restructure first. Put in headings, labels and separate blocks, then tighten the sentences per [[writing-concise-and-lowercase]] and [[plain-language-in-writeups]]. Never hard-wrap per [[no-hard-wrapped-prose]]. Before restyling, check every path and number against the repo per [[verify-before-asserting]].
+**How to apply:** when writing or tidying a README, plan, brief, run-sheet or model description, restructure first. Put in headings, labels and separate blocks, then tighten the sentences per [[writing-concise-and-lowercase]] and [[plain-language-in-writeups]]. Never hard-wrap per [[no-hard-wrapped-prose]]. Before restyling, check every path and number against the repo per [[verify-before-asserting]].
