@@ -2,7 +2,7 @@
 - [Plain language in write-ups](plain-language-in-writeups.md) — asked for repeatedly; no jargon (never "vintage" — say snapshot), no query column names as prose, lead with the headline
 - [No drafting history in the output](no-drafting-history-in-the-output.md) — writing a document for someone reading it the first time; cut self-correction, invented-detail confessions, "you asked"
 - [Write rules as imperatives](write-rules-as-imperatives.md) — rule files and skills lead with the verb; cut the framing that precedes the instruction
-- [PR description budget](pr-description-budget.md) — the countable version: ≤200 words, and the five categories that always creep back in
+- [PR description budget](pr-description-budget.md) — writing a PR body from scratch: ≤200 words and the five categories that creep back in; improving an existing draft: keep all its content, restructure only
 - [One-line comments and docstrings](one-line-comments-and-docstrings.md) — business context only; refactor history belongs in the PR
 - [No AI attribution in commits](no-ai-attribution-in-commits.md) — no Co-Authored-By trailer, no "generated with" footer
 - [Documenting for downstream consumers](documenting-for-downstream-consumers.md) — link the consuming code, name a support channel and the real team, keep the sourcing out
