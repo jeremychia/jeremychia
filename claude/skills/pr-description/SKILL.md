@@ -159,6 +159,11 @@ Short, lowercase and jargon-free is not enough on its own. Read each sentence al
 check it has a plain subject, a plain verb, and numbers as numerals.
 
 - **Open the Summary with "this pr adds / fixes / introduces …"**, then the ticket link.
+- **Name the key change in the Summary's first 2 sentences**: the one piece of logic the
+  reviewer must check, in plain words, plus the fault it fixes. Never give only the outcome.
+  "a payment charged back twice no longer gets each chargeback paired with the other one's
+  settlement line" → "this pr fixes chargebacks being paired with the wrong settlement line.
+  a payment's chargebacks are now put in order by value date instead of by transaction id."
 - **Start table rows and bullets with a third-person verb:** "ensures every checkout ends as
   one outcome", "counts only fee lines", "does not rebuild final months". Never a bare rule
   with an implied *must*.
