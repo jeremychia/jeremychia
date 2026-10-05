@@ -75,6 +75,7 @@ Run these checks on every test a PR adds or changes. Each rule names what to che
 
 - **Compile with dev, rewrite references to prod, and run `count(*)` over each test.** Compare each count with that test's own `warn_if` and `error_if`.
 - **Report every test that fires**, with the rows behind it and whether it is a known case.
+- **Leave a PR review note on every new data test.** Say it ran against prod for today and for the 1st of the month. Give the rows found, the cost, and the limit in words. Recommend whether it is safe to add. Collapse the compiled prod query in `<details>`.
 - **Leave a PR review note on every test removed from main.** Name the test that now covers it, say why the removed one could not fail alone, and link the SQL.
 - **Leave no note for a check that never reached main.** Dropping it removes nothing from production, and the diff against main shows nothing to explain.
 
