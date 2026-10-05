@@ -75,7 +75,8 @@ Run these checks on every test a PR adds or changes. Each rule names what to che
 
 - **Compile with dev, rewrite references to prod, and run `count(*)` over each test.** Compare each count with that test's own `warn_if` and `error_if`.
 - **Report every test that fires**, with the rows behind it and whether it is a known case.
-- **Leave a PR review note on every removed test.** Name the test that now covers it, say why the removed one could not fail alone, and link the SQL. If the test never reached main, anchor the note on the nearest line in that yml.
+- **Leave a PR review note on every test removed from main.** Name the test that now covers it, say why the removed one could not fail alone, and link the SQL.
+- **Never call a check removed if it never reached main.** The reviewer reads the diff against main and sees nothing removed. Write the note as why there is no such check here.
 
 ## Worked cases
 
