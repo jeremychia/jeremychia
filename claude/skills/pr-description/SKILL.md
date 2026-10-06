@@ -180,11 +180,29 @@ check it has a plain subject, a plain verb, and numbers as numerals.
 - **Write numbers as numerals:** "12 checks", "more than 10%", "27.9 million".
 - **Split em-dash and semicolon chains** into one sentence per fact.
 - **Expand an abbreviation the first time** — "a service level agreement (SLA)".
-- **Drop intensifiers:** genuinely, simply, just.
+- **Drop intensifiers:** genuinely, simply, just, critical, proper.
+- **Mirror What in Why when What has parts.** Number the Why items in the same order, one
+  per What bullet, each with a bold lead-in naming the fault: "**a day could go missing:**".
+- **Give the exact values the code uses**, in backticks: "`429`, `500`, `502`, `503` and
+  `504`", never "5xx" when the code lists four of them.
 
-Take only the sentence construction from a rewrite pasted back by another tool. Keep
-lowercase, keep the template's checklist wording verbatim, and re-check every figure and
-unit it adds.
+### Take structure, not text, from a pasted rewrite
+
+When another tool's rewrite is pasted back, keep its layout and redo the wording.
+
+- **Keep:** a numbered or bold-labelled layout that makes sections line up, backticks on
+  literals, any sentence split that reads better.
+- **Reject:** capitalised prose and title-case labels ("Proper Upload Error Handling"),
+  noun-phrase bullets, intensifiers, its preamble ("here is a cleaned-up version") and any
+  "what was refined" section after the body.
+- **Restore the template:** its hint lines and checklist wording, verbatim, even where the
+  rewrite dropped or reworded them.
+- **Re-check every fact against the diff.** A rewrite generalises: "5xx" for four status
+  codes. It also introduces ambiguous terms: "pre-commit code" reads as the pre-commit hook.
+
+Worked case: a rewrite of a three-fix body turned Why into three numbered, bolded items
+matching the three What bullets. That layout was taken. Its capitals, "critical", dropped
+template hint line and "what was refined" footer were not.
 
 ## 4. Ask about what the diff cannot tell you
 
