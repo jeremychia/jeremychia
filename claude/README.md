@@ -20,6 +20,7 @@ claude/
     pr-description/      write a PR body against the repo's live template
     memory-keeping/      how to add to and maintain this system
     data-test-review/    write and review dbt tests: placement, keys, windows, limits
+    dbt-pr-review/       the questions dataverse reviewers ask most on dbt PRs
 ```
 
 ## Install
