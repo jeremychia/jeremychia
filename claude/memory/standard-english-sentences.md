@@ -18,6 +18,7 @@ metadata:
 - **expand an abbreviation the first time it appears.** "a service level agreement (SLA)".
 - **one fact per sentence.** Split at the em-dash and the semicolon.
 - **name the consequence in full.** "flagging earlier would produce a false positive for every month."
+- **name the referent instead of "it", "they", "this" or "that".** Repeat the noun, even if it reads as repetitive. "update it to match the fix above" → "update this sentence to match the fix in the comment on `variance_eur`". "add it to the grain" → "add `reporting_company_name` to the grain". "above" and "below" are vague too, because review comments do not stay in order, so name the comment.
 
 **Words to avoid, and what to write instead:**
 
