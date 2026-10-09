@@ -1,0 +1,108 @@
+vinted/dataverse-finance	2503	merged	2026-10-09	fix(vas): leave €0 orders out of the missing-payment check (FDSA-3633)	https://github.com/vinted/dataverse-finance/pull/2503
+vinted/dataverse-groupfunctions-looker	2078	open	2026-10-08	ci: clean up stale pull requests and branches with the shared workflow (FDSA-3620)	https://github.com/vinted/dataverse-groupfunctions-looker/pull/2078
+vinted/dataverse-finance	2501	open	2026-10-08	ci: clean up stale pull requests and branches with the shared workflow (FDSA-3620)	https://github.com/vinted/dataverse-finance/pull/2501
+vinted/dataverse-cicd	280	open	2026-10-08	feat: add a reusable stale pull request and branch cleanup workflow (FDSA-3620)	https://github.com/vinted/dataverse-cicd/pull/280
+vinted/dataverse-groupfunctions-looker	2077	merged	2026-10-08	feat(finance_dbt): add the payment provider shares dashboard (FDSA-3621)	https://github.com/vinted/dataverse-groupfunctions-looker/pull/2077
+vinted/dataverse-finance	2500	open	2026-10-08	docs(financial_planning): drop the split_by filter config the lookml generator ignores (FDSA-3392)	https://github.com/vinted/dataverse-finance/pull/2500
+vinted/dataverse-finance	2498	merged	2026-10-08	fix(invoice lines): drop the one-snapshot-per-month warn on snap_invoice_lines (FDSA-3618)	https://github.com/vinted/dataverse-finance/pull/2498
+vinted/dataverse-finance	2496	open	2026-10-07	feat(shipping): read shipping campaigns from the seeds instead of the sheet (FDSA-3182)	https://github.com/vinted/dataverse-finance/pull/2496
+vinted/dataverse-vunit	129	closed	2026-10-07	ci: run the ci pipeline on every pull request	https://github.com/vinted/dataverse-vunit/pull/129
+vinted/terraform-github	9019	merged	2026-10-07	feat: give data-platform-foundations admin on dataverse-csv-cleaner	https://github.com/vinted/terraform-github/pull/9019
+vinted/dataverse-csv-cleaner	17	merged	2026-10-07	chore: add CODEOWNERS for data-platform-foundations	https://github.com/vinted/dataverse-csv-cleaner/pull/17
+vinted/service-catalog	18800	merged	2026-10-07	fix: set dataverse-vunit and dataverse-csv-cleaner owners	https://github.com/vinted/service-catalog/pull/18800
+vinted/dataverse-vunit	128	merged	2026-10-07	chore: set CODEOWNERS to data-platform-experience	https://github.com/vinted/dataverse-vunit/pull/128
+vinted/dataverse-vunit	127	open	2026-10-07	docs: compare vunit with native dbt unit tests	https://github.com/vinted/dataverse-vunit/pull/127
+vinted/dataverse-finance	2491	open	2026-10-07	fix: run the filed month check after the snapshot (FDSA-3566)	https://github.com/vinted/dataverse-finance/pull/2491
+vinted/dataverse-finance	2490	open	2026-10-07	fix: check the bpar mart total against a fact total it carries (FDSA-3562)	https://github.com/vinted/dataverse-finance/pull/2490
+vinted/dataverse-cli	735	open	2026-10-07	feat: add info rule M020 for data tests that read a downstream model	https://github.com/vinted/dataverse-cli/pull/735
+vinted/dataverse-finance	2489	open	2026-10-07	fix: run the vgo pro reconciliation on the movement check only (FDSA-3563)	https://github.com/vinted/dataverse-finance/pull/2489
+vinted/dataverse-finance	2488	open	2026-10-07	test: drop the exchange rates actual rate assignation test (FDSA-3564)	https://github.com/vinted/dataverse-finance/pull/2488
+vinted/dataverse-finance	2487	merged	2026-10-07	fix: move the active currencies check onto the seeds (FDSA-3560)	https://github.com/vinted/dataverse-finance/pull/2487
+vinted/dataverse-finance	2486	closed	2026-10-07	hotfix(fx): remove test which references downstream models	https://github.com/vinted/dataverse-finance/pull/2486
+apache/airflow	74338	open	2026-10-06	Validate trigger form date params against other params	https://github.com/apache/airflow/pull/74338
+vinted/dataverse-cli	733	open	2026-10-06	feat(scheduler): let a task post its own success message (FDSA-3557)	https://github.com/vinted/dataverse-cli/pull/733
+vinted/dataverse-finance	2485	merged	2026-10-06	feat(financial_planning): split actual transactions and vas orders by payment provider (FDSA-3392)	https://github.com/vinted/dataverse-finance/pull/2485
+vinted/dataverse-finance	2483	open	2026-10-06	feat(scheduler): run the isaf upload and dhl snapshots from a manual dag (FDSA-3556)	https://github.com/vinted/dataverse-finance/pull/2483
+vinted/dataverse-finance	2481	merged	2026-10-06	fix(us_tax): give every xendo line the document's total sales tax	https://github.com/vinted/dataverse-finance/pull/2481
+vinted/dataverse-finance	2480	merged	2026-10-06	fix(xendo): fail loudly on upload errors, retry the xendo api and log each step	https://github.com/vinted/dataverse-finance/pull/2480
+vinted/dataverse-finance	2479	merged	2026-10-06	fix(xendo): drop test records, warn on bad item ids, stop repeating us tax fee lines	https://github.com/vinted/dataverse-finance/pull/2479
+vinted/dataverse-finance	2478	closed	2026-10-06	docs(xendo): describe the line number, fee and total columns as xendo sends them	https://github.com/vinted/dataverse-finance/pull/2478
+vinted/dataverse-finance	2477	closed	2026-10-06	fix(xendo): add a timeout and retries to the xendo api calls	https://github.com/vinted/dataverse-finance/pull/2477
+vinted/dataverse-finance	2476	closed	2026-10-06	fix(xendo): upload the parquet file in one call that raises on failure	https://github.com/vinted/dataverse-finance/pull/2476
+vinted/dataverse-finance	2475	closed	2026-10-06	fix(xendo): delete the parquet file, not its folder, after a failed upload	https://github.com/vinted/dataverse-finance/pull/2475
+vinted/dataverse-finance	2474	closed	2026-10-06	feat(xendo): warn on, and drop, xendo item ids that are not whole numbers	https://github.com/vinted/dataverse-finance/pull/2474
+vinted/dataverse-finance	2473	closed	2026-10-06	fix(xendo): exclude xendo test records from stg_xendo_tax	https://github.com/vinted/dataverse-finance/pull/2473
+vinted/dataverse-metrics	697	closed	2026-10-05	feat(storage): recommend the cheaper storage billing model per table	https://github.com/vinted/dataverse-metrics/pull/697
+vinted/dataverse-sustainability	574	closed	2026-10-05	chore(sustainability): move 2 tables to their cheaper storage billing model	https://github.com/vinted/dataverse-sustainability/pull/574
+vinted/dataverse-groupfunctions-dbt	1139	open	2026-10-05	chore(security): move 2 tables to their cheaper storage billing model	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1139
+vinted/dataverse-billing	489	closed	2026-10-05	feat(storage): recommend the cheaper storage billing model per table	https://github.com/vinted/dataverse-billing/pull/489
+vinted/dataverse-finance	2472	merged	2026-10-05	chore(storage): move 10 finance tables to physical storage billing	https://github.com/vinted/dataverse-finance/pull/2472
+vinted/dataverse-finance	2471	open	2026-10-05	feat(shipping): add the campaign application over the governed definitions (FDSA-3176)	https://github.com/vinted/dataverse-finance/pull/2471
+vinted/dataverse-finance	2466	closed	2026-10-02	test(payment processing fees): fail the close when an adyen invoice does not reach the snapshot (FDSA-3536)	https://github.com/vinted/dataverse-finance/pull/2466
+vinted/dataverse-finance	2464	merged	2026-10-02	fix(adyen): build prep_adyen_invoice_fees daily and delete the unscaled september snapshot	https://github.com/vinted/dataverse-finance/pull/2464
+vinted/isaf-oss-tool-service	183	open	2026-10-02	feat: alert on NetSuite customers missing an invoice currency before upload	https://github.com/vinted/isaf-oss-tool-service/pull/183
+jeremychia/unga-speeches	22	merged	2026-10-02	feat(site): consistency, layout and accessibility pass	https://github.com/jeremychia/unga-speeches/pull/22
+vinted/dataverse-finance	2456	merged	2026-10-02	fix(logging): say in the full refresh log line when override dates were used (FDSA-3505)	https://github.com/vinted/dataverse-finance/pull/2456
+vinted/dataverse-finance	2455	merged	2026-10-02	fix(compensations): check the monthly rate on the previous month only (FDSA-3504)	https://github.com/vinted/dataverse-finance/pull/2455
+vinted/dataverse-finance	2450	merged	2026-10-01	fix(mangopay): start the S3 file checks on day 2 and move the wallets entry_source check to prep (FDSA-3500)	https://github.com/vinted/dataverse-finance/pull/2450
+jeremychia/unga-speeches	21	merged	2026-10-01	feat(site): compact section menus and quotes beside the naming counts	https://github.com/jeremychia/unga-speeches/pull/21
+vinted/dataverse-finance	2449	merged	2026-10-01	fix(adyen): start the invoices completeness test on day 2, after the invoice upload	https://github.com/vinted/dataverse-finance/pull/2449
+vinted/dataverse-finance	2447	merged	2026-10-01	docs(checkout): say what the missing-fee-days tests check and who fixes each cause	https://github.com/vinted/dataverse-finance/pull/2447
+jeremychia/unga-speeches	20	merged	2026-10-01	feat: yearly comparison and a naming graph with a taiwan callout	https://github.com/jeremychia/unga-speeches/pull/20
+vinted/dataverse-finance	2445	merged	2026-10-01	fix(compensations): skip the exchange rate check for months the ecb has not published yet	https://github.com/vinted/dataverse-finance/pull/2445
+vinted/dataverse-finance	2444	merged	2026-10-01	fix(exchange-rates): give EUR a monthly rate for the open month before the ecb publishes one	https://github.com/vinted/dataverse-finance/pull/2444
+vinted/dataverse-finance	2443	merged	2026-10-01	fix(compensations): fall back to the transfer's receiving user for the country and record the country source (FDSA-3491)	https://github.com/vinted/dataverse-finance/pull/2443
+vinted/dataverse-finance	2441	merged	2026-10-01	docs(skill): write pr descriptions in standard english sentences (FDSA-3490)	https://github.com/vinted/dataverse-finance/pull/2441
+jeremychia/jeremychia	1	merged	2026-10-01	docs(claude): write pr descriptions in standard english sentences	https://github.com/jeremychia/jeremychia/pull/1
+vinted/dataverse-finance	2439	merged	2026-10-01	fix(mangopay): check the vgo pro export for the same month as the movement check	https://github.com/vinted/dataverse-finance/pull/2439
+vinted/dataverse-finance	2438	merged	2026-10-01	chore(dbt): clear the finance parse warnings (FDSA-3488)	https://github.com/vinted/dataverse-finance/pull/2438
+jeremychia/unga-speeches	19	merged	2026-10-01	fix: make the pipeline reproducible and rebuild the scanned records on one code version	https://github.com/jeremychia/unga-speeches/pull/19
+vinted/dataverse-finance	2435	merged	2026-10-01	feat(vpay): book payment split movements as manual transfers (FDSA-3487)	https://github.com/vinted/dataverse-finance/pull/2435
+vinted/dataverse-metrics	683	merged	2026-10-01	fix(metrics): stop a one-day backfill from setting the partition growth rate (FDSA-3483)	https://github.com/vinted/dataverse-metrics/pull/683
+vinted/dataverse-metrics	681	open	2026-10-01	feat(metrics): tell teams what to do in each partition monitoring alert (FDSA-3484)	https://github.com/vinted/dataverse-metrics/pull/681
+vinted/dataverse-finance	2432	merged	2026-10-01	perf(financial planning): cluster the listing and transaction intermediates on categorisation version	https://github.com/vinted/dataverse-finance/pull/2432
+vinted/dataverse-finance	2426	merged	2026-10-01	chore(trendsales): move the trendsales models to the static pipeline (FDSA-3477)	https://github.com/vinted/dataverse-finance/pull/2426
+vinted/dataverse-finance	2425	merged	2026-10-01	fix(vouchers): carry over the latest exchange rate until ecb publishes the open month's rate	https://github.com/vinted/dataverse-finance/pull/2425
+vinted/dataverse-cicd	266	merged	2026-09-30	fix: label the pytest coverage comment by working directory (FDSA-3474)	https://github.com/vinted/dataverse-cicd/pull/266
+vinted/dataverse-finance	2423	closed	2026-09-30	tmp: test dataverse-cicd coverage title (do not merge)	https://github.com/vinted/dataverse-finance/pull/2423
+vinted/dataverse-finance	2421	merged	2026-09-30	ci: run the python suites only for the folders a pr changes (FDSA-3474)	https://github.com/vinted/dataverse-finance/pull/2421
+vinted/dataverse-finance	2420	merged	2026-09-30	test(vouchers): replace the usd trivial-balance check with a per-voucher cap and a us accrual limit	https://github.com/vinted/dataverse-finance/pull/2420
+vinted/ae-hiring-material	14	open	2026-09-30	fix(content): move the data modeling extension answers out of the candidate prompts	https://github.com/vinted/ae-hiring-material/pull/14
+jeremychia/unga-speeches	18	merged	2026-09-30	feat: keep a version history of news reports and add 2024 and 2025 coverage	https://github.com/jeremychia/unga-speeches/pull/18
+vinted/ae-hiring-material	13	open	2026-09-30	fix(content): crop the white space around the ic2/ic3 data model	https://github.com/vinted/ae-hiring-material/pull/13
+vinted/ae-hiring-material	12	open	2026-09-30	feat(site): create the working copy as a locked-down google doc	https://github.com/vinted/ae-hiring-material/pull/12
+jeremychia/unga-speeches	17	merged	2026-09-30	feat: link the 1946-1992 speeches to the un's own scanned records	https://github.com/jeremychia/unga-speeches/pull/17
+vinted/ae-hiring-material	11	open	2026-09-30	feat(scorecard): add guidance on how to score each competency and value	https://github.com/vinted/ae-hiring-material/pull/11
+vinted/dataverse-finance	2410	merged	2026-09-29	fix(adyen): treat every VintedGo_POS_ account as point of sale (FDSA-3460)	https://github.com/vinted/dataverse-finance/pull/2410
+jeremychia/unga-speeches	16	merged	2026-09-29	feat: keep outlet leanings as a slowly changing history	https://github.com/jeremychia/unga-speeches/pull/16
+vinted/ae-hiring-material	10	merged	2026-09-29	style(content): run the sql blocks through sqlfmt	https://github.com/vinted/ae-hiring-material/pull/10
+vinted/ae-hiring-material	9	merged	2026-09-29	feat(site): highlight sql and mark up column names and formulas in prose	https://github.com/vinted/ae-hiring-material/pull/9
+jeremychia/unga-speeches	15	merged	2026-09-29	feat: record each outlet's political leaning	https://github.com/jeremychia/unga-speeches/pull/15
+jeremychia/unga-speeches	14	merged	2026-09-29	feat: count every big outlet per country, weighted by reach	https://github.com/jeremychia/unga-speeches/pull/14
+vinted/terraform-github	8891	merged	2026-09-29	feat(ae-hiring-material): deploy github pages from the actions workflow	https://github.com/vinted/terraform-github/pull/8891
+vinted/ae-hiring-material	8	merged	2026-09-29	fix(content): merge duplicate content headings and check for them	https://github.com/vinted/ae-hiring-material/pull/8
+vinted/ae-hiring-material	7	merged	2026-09-29	feat(site): organise interviewer pages by section, prompt and stage	https://github.com/vinted/ae-hiring-material/pull/7
+vinted/dataverse-finance	2408	merged	2026-09-29	fix(vouchers): group vouchers by the country they are booked under (FDSA-3459)	https://github.com/vinted/dataverse-finance/pull/2408
+jeremychia/unga-speeches	13	merged	2026-09-29	feat: compare the press with one outlet per country	https://github.com/jeremychia/unga-speeches/pull/13
+jeremychia/unga-speeches	12	merged	2026-09-29	feat: add african press and weight each region equally	https://github.com/jeremychia/unga-speeches/pull/12
+vinted/dataverse-finance	2406	merged	2026-09-29	fix(us-sales-taxes): roll the stuck pending_commit window forward (FDSA-3356)	https://github.com/vinted/dataverse-finance/pull/2406
+jeremychia/unga-speeches	11	merged	2026-09-29	feat: add pacific press and a maintained registry of outlets	https://github.com/jeremychia/unga-speeches/pull/11
+jeremychia/unga-speeches	10	merged	2026-09-29	feat: widen the press sample to 52 reports across five regions	https://github.com/jeremychia/unga-speeches/pull/10
+vinted/dataverse-finance	2396	merged	2026-09-29	docs(cdc): point completeness test owners at the schema registry (FDSA-3448)	https://github.com/vinted/dataverse-finance/pull/2396
+vinted/dataverse-finance	2395	merged	2026-09-29	feat(shipping): exclude the tagged shipping result tests from the daily scheduler run (FDSA-3446)	https://github.com/vinted/dataverse-finance/pull/2395
+jeremychia/unga-speeches	9	merged	2026-09-29	feat: combine the speeches with press coverage, un summaries and the secretary-general race	https://github.com/jeremychia/unga-speeches/pull/9
+vinted/dataverse-metrics	678	merged-in-window	2026-09-28	feat(metrics): post partition limit alerts to each owning team's channel (FDSA-3443)	https://github.com/vinted/dataverse-metrics/pull/678
+vinted/dataverse-metrics	677	merged-in-window	2026-09-28	feat(metrics): add each dbt project's alert channel to dim_dbt_projects (FDSA-3444)	https://github.com/vinted/dataverse-metrics/pull/677
+vinted/dataverse-groupfunctions-dbt	1124	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in security_domain_reporting (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1124
+vinted/dataverse-groupfunctions-dbt	1123	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in production_engineering (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1123
+vinted/dataverse-groupfunctions-dbt	1122	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in privacy_engineering (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1122
+vinted/dataverse-groupfunctions-dbt	1121	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in legal (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1121
+vinted/dataverse-groupfunctions-dbt	1120	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in it_team (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1120
+vinted/dataverse-groupfunctions-dbt	1119	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in engineering_experience (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1119
+vinted/dataverse-groupfunctions-dbt	1118	merged-in-window	2026-09-28	chore(dbt): clear dbt 1.11 deprecations in corporate_affairs (FDSA-3441)	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1118
+vinted/dataverse-finance	2382	merged-in-window	2026-09-25	test(cdc): check the au and us invoice extras for gaps and name the owner on every cdc completeness test (FDSA-3417)	https://github.com/vinted/dataverse-finance/pull/2382
+vinted/dataverse-finance	2381	merged-in-window	2026-09-25	feat(shipping): add the governed campaign definitions (FDSA-3176)	https://github.com/vinted/dataverse-finance/pull/2381
+vinted/dataverse-finance	2379	merged-in-window	2026-09-25	feat(shipping): gate the vgo carrier invoice breakdown on the scheduled full refresh dates (FDSA-3414)	https://github.com/vinted/dataverse-finance/pull/2379
+vinted/dataverse-finance	2300	merged-in-window	2026-09-09	test(invoice_lines): add controls over the i.saf population (FDSA-3299)	https://github.com/vinted/dataverse-finance/pull/2300
+vinted/dataverse-finance	2149	merged-in-window	2026-08-24	test(finance_dbt): store failures as views on the recurring triaged tests	https://github.com/vinted/dataverse-finance/pull/2149
+vinted/dataverse-finance	2062	merged-in-window	2026-08-13	docs: document every ingestion pipeline with its business context, and add a skill for writing them	https://github.com/vinted/dataverse-finance/pull/2062

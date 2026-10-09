@@ -1,6 +1,167 @@
-# Brag list: 1 Aug – 28 Sep 2026
+# Brag list: 2026
 
-**Jeremy Chia, Analytics Engineer, Finance DSA.** Written for António Fitas, for our 1:1s.
+**Jeremy Chia, Analytics Engineer, Finance DSA.** Written for António Fitas, for our 1:1s. Newest period first.
+
+Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted Values](https://vinted.atlassian.net/wiki/spaces/EKP/pages/29905420289/Vinted+Values). IC levels are from the [Impact & Growth Framework](https://docs.google.com/spreadsheets/d/16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y/edit?gid=955252402#gid=955252402).
+
+---
+
+## 29 Sep – 9 Oct 2026
+
+**Headline:** the September close ran with three money errors caught in the data. I fixed voucher provisions before the close, so August needed no restatement. I found €33.9k of Adyen payout fees booked to the wrong account. The partition alerts now reach every owning team. Financial planning has a payment provider split that matches Pigment exactly. The escrow controls from our 31 Aug 1:1 merged, and so did the core billing fix.
+
+| measure | count |
+| --- | --- |
+| PRs authored | 78 (43 merged, 22 open), plus 15 older PRs merged in the window |
+| repos | 15, including an open PR to [apache/airflow](https://github.com/apache/airflow/pull/74338) |
+| PRs reviewed for others | 40 (Júlia 16, Vedashree 9, Emily 5, Paulius 5) |
+| Jira tickets | 147 updated |
+| RFCs written or updated | 3 |
+
+
+---
+
+### 1. September close
+
+**Voucher provisions came out blank in August and September.** Fixed before the close ([#2408](https://github.com/vinted/dataverse-finance/pull/2408), [FDSA-3459](https://vinted.atlassian.net/browse/FDSA-3459)).
+- **what:** the accrual took the rate group and the 500-voucher count from two different countries. Both now use the country the voucher is booked under.
+- **business:** I gave finance two options. Option 1 added €7,123 to August and €8,861 to September. Option 2 added €7 and €2,301. I recommended option 2, and finance did not need to restate August ([options](https://vinted.slack.com/archives/G01A7KGHY74/p1790687441708849?thread_ts=1790687343.956889&cid=G01A7KGHY74)).
+- **credit:** Emily's live month-to-date view caught it, and I said so in the thread ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1790689923664639?thread_ts=1790687343.956889&cid=G01A7KGHY74)).
+- **values:** [aim high] [co-create]
+
+**€33.9k of Adyen payout fees were booked to 700007 instead of 700006.** Found, and the fix is in review ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1791267423699489?thread_ts=1791264406.708729&cid=G01A7KGHY74), [FDSA-3542](https://vinted.atlassian.net/browse/FDSA-3542)).
+- **what:** I traced it to the identity-check estimate. It estimated 70,396 checks, and Adyen billed 5,616. 93% of those sellers were already on Vinted Pay.
+- **above and beyond:** I raised it with payments, since the estimate is theirs ([ticket thread](https://vinted.slack.com/archives/C04QY983L5C/p1791277456617379?thread_ts=1791277456.617379&cid=C04QY983L5C)).
+- **values:** [aim high] [co-create]
+
+**Accounting no longer splits Adyen payouts by country by hand.** From the September file, the payout fees (700006) are split by country ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1790950498218939?thread_ts=1786610159.001499&cid=G01A7KGHY74)).
+- **values:** [aim high]
+
+**A miss I owned: the September Adyen fee snapshot had every fee unscaled.** Fixed the same day ([#2464](https://github.com/vinted/dataverse-finance/pull/2464)).
+- **what:** an earlier change moved three Adyen fee models to the daily run but missed the fourth. It still held August invoices, so none of the 328,933,345 September rows matched an invoice. I deleted the bad snapshot, scheduled the model daily and reran the close chain.
+- **ownership:** I explained the cause in the team channel and apologised ([thread](https://vinted.slack.com/archives/C076F6CME10/p1790947776366779?thread_ts=1790947520.071299&cid=C076F6CME10)).
+- **values:** [ownership]
+
+**Other close fixes.**
+- **Exchange rates:** on the 1st of the month, before the ECB publishes, EUR had no rate. 14 models read that table. EUR now gets a rate of 1 for the open month, and the vouchers accrual carries the last rate forward ([#2444](https://github.com/vinted/dataverse-finance/pull/2444), [#2425](https://github.com/vinted/dataverse-finance/pull/2425)).
+- **Vinted Pay:** money moved by hand on 29 Sep showed as 5 "unknown" rows in Looker. They now book as manual transfers, and any new unknown movement warns ([#2435](https://github.com/vinted/dataverse-finance/pull/2435)).
+- **Vinted Go point of sale:** Portugal went live on 26 Sep. Its first invoice would have entered the Adyen reconciliation. Every point-of-sale account is now handled without a code change ([#2410](https://github.com/vinted/dataverse-finance/pull/2410)).
+- **Invoice lines:** Vinted Pay closes on WD1, but invoice lines were snapshotted on WD2 only. Double entry now gets a WD1 snapshot ([#2498](https://github.com/vinted/dataverse-finance/pull/2498)).
+- **NetSuite currencies:** NetSuite rejected 71 of 3,030 invoices on WD2 because customers lacked a currency. I set out three options, António backed option 2, and the check is open ([thread](https://vinted.slack.com/archives/C09A63VS421/p1790933676957659?thread_ts=1790933676.957659&cid=C09A63VS421), [isaf-oss-tool-service#183](https://github.com/vinted/isaf-oss-tool-service/pull/183)).
+- **MEC log:** co-wrote the September issue log with Júlia ([MEC log](https://vinted.atlassian.net/wiki/spaces/DF/pages/32294830083)).
+- **values:** [aim high] [ownership] [co-create]
+
+### 2. Standing goals from our 1:1s
+
+**The escrow revenue controls merged** (31 Aug goal) ([#2300](https://github.com/vinted/dataverse-finance/pull/2300), [FDSA-3299](https://vinted.atlassian.net/browse/FDSA-3299)).
+- **what:** 25 new checks on the invoice lines that reach the iSAF tax filing. The six that catch a duplicated line fail the build once duplicates could pass the €1,000 clearly trivial threshold. The rest warn.
+- **business:** many of these replace fields Evita checks by hand in her monthly Looker review.
+- **values:** [aim high]
+
+**The core billing fix for GB instead of UK merged** (31 Aug goal) ([core#137777](https://github.com/vinted/core/pull/137777), [FDSA-3413](https://vinted.atlassian.net/browse/FDSA-3413)).
+- **business:** about 44k invoice lines a month stop filing the UK as a separate country.
+- **above and beyond:** a fix in checkout's Ruby codebase.
+- **values:** [ownership] [co-create]
+
+### 3. New data for finance
+
+**Financial planning can see each payment provider's share of transactions.** Merged ([#2485](https://github.com/vinted/dataverse-finance/pull/2485), [groupfunctions-looker#2077](https://github.com/vinted/dataverse-groupfunctions-looker/pull/2077), [FDSA-3392](https://vinted.atlassian.net/browse/FDSA-3392)).
+- **what:** a new mart and Looker dashboard split transactions and paid-feature orders by provider, per seller country.
+- **business:** financial planning uses the shares to forecast payment processing cost. The totals match Pigment exactly for May to September 2026. The card-provider shares match their sheet for all 27 countries in August ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1791466380169449?thread_ts=1790148016.670809&cid=G01A7KGHY74)).
+- **governance:** I kept the new metrics in their own mart, so FP&A's governed metrics stay untouched. Daniel Arango: "That works, thanks!" ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1791451996400679?thread_ts=1790148016.670809&cid=G01A7KGHY74)).
+- **recognition:** Tomas Radavičius: "thank you! :mvp:" ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1791466948373199?thread_ts=1790148016.670809&cid=G01A7KGHY74)).
+- **values:** [aim high] [co-create]
+
+**The shipping campaign definitions merged.** The campaign application and the switch from the sheet are open ([#2381](https://github.com/vinted/dataverse-finance/pull/2381), [#2471](https://github.com/vinted/dataverse-finance/pull/2471), [#2496](https://github.com/vinted/dataverse-finance/pull/2496), [FDSA-3176](https://vinted.atlassian.net/browse/FDSA-3176)).
+- **values:** [aim high]
+
+**US tax reconciliation: the Xendo feed stopped breaking.** Merged ([#2479](https://github.com/vinted/dataverse-finance/pull/2479), [#2480](https://github.com/vinted/dataverse-finance/pull/2480), [#2481](https://github.com/vinted/dataverse-finance/pull/2481), [FDSA-3543](https://vinted.atlassian.net/browse/FDSA-3543)).
+- **what:** on 5 Oct, Xendo sent 102 test records and stopped both reconciliation marts. Test records are now dropped and other bad ids warn. The download job also could lose a day of data without failing. It now fails loudly, retries and logs each step.
+- **business:** a repeated invoice line would have doubled its tax in the Sovos export. A new test now fails the mart on one.
+- **values:** [ownership] [aim high]
+
+### 4. Incidents
+
+**Incident 6848: a currency test stopped the finance daily DAG** ([incident](https://vinted.slack.com/archives/C0C78PLMYK0/p1791348259231989), [root cause](https://vinted.slack.com/archives/C076F6CME10/p1791348448794769?thread_ts=1791348395.883899&cid=C076F6CME10)).
+- **what:** I had the failing model green four minutes after responding, and posted recovery times for other teams. The cause was a test on an upstream model that read a downstream one ([#2487](https://github.com/vinted/dataverse-finance/pull/2487)).
+- **fix at the root:** the same day, I wrote an [RFC](https://vinted.atlassian.net/wiki/spaces/DF/pages/32320717248) and a new linter rule, M020 ([dataverse-cli#735](https://github.com/vinted/dataverse-cli/pull/735), open). It ran over all 8,274 models in 58 projects, and it flags 49 tests in 11 projects.
+- **above and beyond:** I proposed M020 to the whole AE community ([thread](https://vinted.slack.com/archives/C03JBPN0Q1W/p1791361148128839?thread_ts=1791361148.128839&cid=C03JBPN0Q1W)).
+- **values:** [ownership] [aim high] [co-create]
+
+### 5. Systems other teams use
+
+**Partition alerts now go to every owning team.** Merged ([dataverse-metrics#678](https://github.com/vinted/dataverse-metrics/pull/678), [#683](https://github.com/vinted/dataverse-metrics/pull/683), [launch](https://vinted.slack.com/archives/C03JBPN0Q1W/p1790845548733249?thread_ts=1787641419.547139&cid=C03JBPN0Q1W)).
+- **what:** in September, two marketing models failed at the 4,000-partition limit while the mart already flagged them. Now each team gets a message. A backfill on 30 Sep made the monitor project a 16-year cap at 74 days, so I made the growth rate ignore one-day spikes. The next PR tells teams what to do ([#681](https://github.com/vinted/dataverse-metrics/pull/681), open).
+- **recognition:** Yirong Lo: "Thanks Jeremy! This is awesome" ([thread](https://vinted.slack.com/archives/C06CS5E2AFM/p1790844380295139?thread_ts=1790843951.733179&cid=C06CS5E2AFM)).
+- **values:** [aim high] [co-create]
+
+**Self-service data refresh: data platform agreed a ticket.** RFC updated ([RFC](https://vinted.atlassian.net/wiki/spaces/DF/pages/32174703071), [thread](https://vinted.slack.com/archives/C059T9KAF8X/p1791280101885869?thread_ts=1791280101.885869&cid=C059T9KAF8X)).
+- **business:** 62 refresh requests still need an engineer. The median wait is 6.3 hours, and the slowest tenth wait about 143 hours. Finance waits about 400 hours a year in total.
+- **next:** monthly manual jobs move to their own DAG, each with its own success message ([#2483](https://github.com/vinted/dataverse-finance/pull/2483), [dataverse-cli#733](https://github.com/vinted/dataverse-cli/pull/733), both open).
+- **values:** [co-create]
+
+**Chargeback split RFC** ([RFC](https://vinted.atlassian.net/wiki/spaces/DF/pages/32322650572)).
+- **what:** proposes a dbt journal file to replace a split that two teams build by hand. September's net is €911,175 over 35,457 rows. It sets 7 principles and 4 decisions for accounting.
+- **values:** [aim high] [co-create]
+
+### 6. Cost, CI and standards
+
+- **Storage:** moved 10 finance tables to physical storage billing, saving about €80 a month ([#2472](https://github.com/vinted/dataverse-finance/pull/2472)).
+- **Scan cost:** adding a third financial plan raised seven models' daily scan by about 50%. Clustering cut the one-version reads from 38.9 to 13.0 GiB and from 84.9 to 26.0 GiB, with identical results ([#2432](https://github.com/vinted/dataverse-finance/pull/2432)). Shipping result tests no longer scan about 1.33 TB a day on tables that don't change daily ([#2395](https://github.com/vinted/dataverse-finance/pull/2395)).
+- **CI:** a PR now runs only the Python suites it changes, and each suite gets its own coverage comment ([#2421](https://github.com/vinted/dataverse-finance/pull/2421), [dataverse-cicd#266](https://github.com/vinted/dataverse-cicd/pull/266)). A shared stale-branch clean-up is open for finance and Looker, which hold 80 and 316 stale branches ([dataverse-cicd#280](https://github.com/vinted/dataverse-cicd/pull/280)).
+- **Docs:** every one of the 11 ingestion jobs now has a README that says who uses the feed ([#2062](https://github.com/vinted/dataverse-finance/pull/2062)).
+- **dbt 2.0:** cleared dbt 1.11 deprecations in 7 group functions domains, another team's project ([groupfunctions-dbt#1118](https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1118)). Wrote down what blocks a move from vunit to native dbt unit tests ([dataverse-vunit#127](https://github.com/vinted/dataverse-vunit/pull/127), open), and re-opened [dbt-labs/dbt#8425](https://vinted.slack.com/archives/C03JBPN0Q1W/p1791529401095519?thread_ts=1791529401.095519&cid=C03JBPN0Q1W) on testing CTEs.
+- **Open source:** opened [apache/airflow#74338](https://github.com/apache/airflow/pull/74338). It stops someone triggering a DAG with the end date before the start date. **[above and beyond]**
+- **values:** [aim high] [co-create]
+
+### 7. Team, hiring and community
+
+- **AE hiring material:** reorganised the interviewer guide, and opened scoring guidance and a locked-down candidate doc ([ae-hiring-material#7](https://github.com/vinted/ae-hiring-material/pull/7), [#11](https://github.com/vinted/ae-hiring-material/pull/11), [#12](https://github.com/vinted/ae-hiring-material/pull/12)). Stuti Nigam: "who needs to find time when they have Jeremy ... :mvp:" ([thread](https://vinted.slack.com/archives/C0BPJ3MQV71/p1790695329565529?thread_ts=1790685817.910629&cid=C0BPJ3MQV71)). **[grow] [co-create]**
+- **Career framework:** gave feedback on how leads use the level framework, including an appeals route ([thread](https://vinted.slack.com/archives/C076F6CME10/p1790952482765669?thread_ts=1790951023.686409&cid=C076F6CME10)). **[grow]**
+- **Paris conference:** I am presenting in November ([thread](https://vinted.slack.com/archives/C076F6CME10/p1791462964816519?thread_ts=1791462964.816519&cid=C076F6CME10)). **[grow]**
+- **Berliner Tafel:** organised the 9 Oct volunteering day ([thread](https://vinted.slack.com/archives/C04HC4J6X2R/p1790924596988009?thread_ts=1790924596.988009&cid=C04HC4J6X2R)). **[care]**
+
+### Feedback I received
+
+| feedback | from | what I changed |
+| --- | --- | --- |
+| My tone on a slow review "comes off a bit like you think this is not worth your time but is mine". I asked how to phrase it better and offered a call ([thread](https://vinted.slack.com/archives/C04KMGDQ11D/p1791458451060299?thread_ts=1791362734.533299&cid=C04KMGDQ11D)). | Igor Bobić, 8 Oct | *[to write]* |
+
+---
+
+### Weekly log
+
+#### 29 Sep – 5 Oct 2026
+
+- Fixed blank voucher provisions before the close, so August needed no restatement ([#2408](https://github.com/vinted/dataverse-finance/pull/2408)). `[Aim High / Co-create]`
+- Sent partition alerts to every owning team, and fixed a false 74-day projection ([dataverse-metrics#678](https://github.com/vinted/dataverse-metrics/pull/678), [#683](https://github.com/vinted/dataverse-metrics/pull/683)). `[Aim High / Co-create / Above & beyond]`
+- Gave EUR a rate for the open month, used by 14 models ([#2444](https://github.com/vinted/dataverse-finance/pull/2444)). `[Aim High]`
+- Booked Vinted Pay's hand-moved refunds as manual transfers ([#2435](https://github.com/vinted/dataverse-finance/pull/2435)). `[Co-create]`
+- Caught and fixed the unscaled September Adyen snapshot, and reran the close chain ([#2464](https://github.com/vinted/dataverse-finance/pull/2464)). `[Ownership]`
+- Proposed a NetSuite currency check after 71 invoices were rejected ([thread](https://vinted.slack.com/archives/C09A63VS421/p1790933676957659?thread_ts=1790933676.957659&cid=C09A63VS421)). `[Aim High]`
+- Saw the core billing fix for GB instead of UK merge ([core#137777](https://github.com/vinted/core/pull/137777)). `[Ownership / Above & beyond]`
+
+#### 6–9 Oct 2026
+
+- Found €33.9k of Adyen payout fees on the wrong account, and raised the cause with payments ([thread](https://vinted.slack.com/archives/G01A7KGHY74/p1791267423699489?thread_ts=1791264406.708729&cid=G01A7KGHY74)). `[Aim High / Co-create]`
+- Shipped the payment provider shares mart and dashboard, matching Pigment exactly ([#2485](https://github.com/vinted/dataverse-finance/pull/2485), [groupfunctions-looker#2077](https://github.com/vinted/dataverse-groupfunctions-looker/pull/2077)). `[Aim High / Co-create]`
+- Led incident 6848 and proposed linter rule M020, which flags 49 tests in 11 projects ([RFC](https://vinted.atlassian.net/wiki/spaces/DF/pages/32320717248), [dataverse-cli#735](https://github.com/vinted/dataverse-cli/pull/735)). `[Ownership / Above & beyond]`
+- Merged the 25 escrow revenue controls from our 31 Aug 1:1 ([#2300](https://github.com/vinted/dataverse-finance/pull/2300)). `[Aim High]`
+- Made the Xendo US tax feed fail loudly and drop test records ([#2479](https://github.com/vinted/dataverse-finance/pull/2479), [#2480](https://github.com/vinted/dataverse-finance/pull/2480)). `[Ownership]`
+- Wrote the chargeback split RFC ([RFC](https://vinted.atlassian.net/wiki/spaces/DF/pages/32322650572)). Updated the self-service refresh RFC, and data platform agreed a ticket ([thread](https://vinted.slack.com/archives/C059T9KAF8X/p1791280101885869?thread_ts=1791280101.885869&cid=C059T9KAF8X)). `[Co-create]`
+- Moved 10 tables to cheaper storage billing, saving about €80 a month ([#2472](https://github.com/vinted/dataverse-finance/pull/2472)). `[Aim High]`
+- Opened an Airflow PR that validates trigger dates ([apache/airflow#74338](https://github.com/apache/airflow/pull/74338)). `[Co-create / Above & beyond]`
+- Organised the Berliner Tafel volunteering day ([thread](https://vinted.slack.com/archives/C04HC4J6X2R/p1790924596988009?thread_ts=1790924596.988009&cid=C04HC4J6X2R)). `[Care]`
+
+### 1:1 row
+
+| Date | Last week achievements | Weekly reflections |
+| --- | --- | --- |
+| 29 Sep – 9 Oct 2026 | Fixed blank voucher provisions before close, so August needed no restatement. Found €33.9k of Adyen payout fees on the wrong account. Shipped payment provider shares, matching Pigment. Merged the escrow controls and the core GB/UK fix (31 Aug goals). Led incident 6848 and proposed linter rule M020. Partition alerts now reach every team. | *[to write]* |
+
+---
+
+## 1 Aug – 28 Sep 2026
 
 **Headline:** in eight weeks I kept about €2.7m of cost from being booked in the wrong place (€1.29m of accruals and €1.45m of double-counted carrier cost). I moved four close exports, three manual checks and the shipping refresh into the pipeline. I also built systems other teams now use: org-wide partition monitoring, the finance triage bot's memory, and review rules. And I took fixes upstream myself, into core billing and into an open-source dbt package.
 
@@ -14,11 +175,10 @@
 | RFCs written | 4, plus the alert case log and the August MEC log |
 | Confluence review comments | 45 |
 
-Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted Values](https://vinted.atlassian.net/wiki/spaces/EKP/pages/29905420289/Vinted+Values). IC levels are from the [Impact & Growth Framework](https://docs.google.com/spreadsheets/d/16_i3t4lxF-niI92dy_E3MbxNdIusJ4bilndOClbwL5Y/edit?gid=955252402#gid=955252402).
 
 ---
 
-## 1. Month-end close is right, and less manual
+### 1. Month-end close is right, and less manual
 
 **€1.29m of cost was carried out of August that should have stayed in it.** Fixed, merged ([#2361](https://github.com/vinted/dataverse-finance/pull/2361), [FDSA-3370](https://vinted.atlassian.net/browse/FDSA-3370)).
 - **what:** an upstream change stopped cancelled purchases showing as refunded, so the accrual rule moved their fees into September. The status now comes from the payments table. Months already closed stay frozen, and a daily test guards the rule.
@@ -46,7 +206,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **incident:** I led [the 4 Sep double-entry incident](https://vinted.slack.com/archives/C0706RCL6CF/p1788502006663509?thread_ts=1788500547.898079&cid=C0706RCL6CF) and recovered it in about 20 minutes. It landed 33 seconds past the 09:00 deadline. António: "33 seconds is peanuts, thanks for the fast response" ([4 Sep](https://vinted.slack.com/archives/C0706RCL6CF/p1788506906115249)).
 - **values:** [ownership] [co-create]
 
-## 2. Shipping result: one agreed schedule, no hand-run refreshes
+### 2. Shipping result: one agreed schedule, no hand-run refreshes
 
 **The shipping result now rebuilds itself on the agreed close and actuals dates.** In review: [#2369](https://github.com/vinted/dataverse-finance/pull/2369) and [#2379](https://github.com/vinted/dataverse-finance/pull/2379), [FDSA-3390](https://vinted.atlassian.net/browse/FDSA-3390) and [FDSA-3414](https://vinted.atlassian.net/browse/FDSA-3414).
 - **what:** 11 models run daily but only rebuild on the dates in one shared list. On other days they cost 0 bytes.
@@ -65,7 +225,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **business:** it reconciles to 174 live rows with 0 mismatches, and it found one campaign missing from the manual list. It also explains why one campaign gave two answers a month apart. It sizes the change at cutover (+€17.9k InPost ES, −€8.8k SPS SK) for Finance Control to decide.
 - **values:** [aim high] [co-create]
 
-## 3. Controls and data quality: problems found before anyone reported them
+### 3. Controls and data quality: problems found before anyone reported them
 
 **The escrow revenue review only saw under 1% of cases.** In review ([FDSA-3299](https://vinted.atlassian.net/browse/FDSA-3299), [#2300](https://github.com/vinted/dataverse-finance/pull/2300)). This is the 31 Aug 1:1 goal.
 - **what:** the monthly review query groups August into 67,443 rows but stops at 500. I proposed 22 controls on the invoice lines that reach the iSAF tax filing, validated over 1.15bn lines.
@@ -90,7 +250,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **CDC gaps:** added gap checks to the AU and US invoice extras. The checks name the owner and find exactly the empty hour of incident 6593 ([#2382](https://github.com/vinted/dataverse-finance/pull/2382), [FDSA-3417](https://vinted.atlassian.net/browse/FDSA-3417)).
 - **values:** [aim high]
 
-## 4. Incidents I led and cleaned up at the root
+### 4. Incidents I led and cleaned up at the root
 
 **A duplicate snapshot put a €1.5m jump into Looker.** Fixed at the root ([FDSA-3302](https://vinted.atlassian.net/browse/FDSA-3302), [FDSA-3318](https://vinted.atlassian.net/browse/FDSA-3318), [FDSA-3330](https://vinted.atlassian.net/browse/FDSA-3330), [FDSA-3331](https://vinted.atlassian.net/browse/FDSA-3331)).
 - **what:** a re-run on 2 Sep made Vinted UAB payment fees look €1.5m too high. Reported figures were unaffected. The first ticket listed 6 duplicates. I scanned all 18 snapshot tables and found 34 in 10 models, going back to March 2025.
@@ -103,7 +263,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **CDD queue:** I found the CDD pipeline paused with 58 merges queued and never run ([#2308](https://github.com/vinted/dataverse-finance/pull/2308), [FDSA-3332](https://vinted.atlassian.net/browse/FDSA-3332)).
 - **values:** [ownership]
 
-## 5. Systems other teams now use
+### 5. Systems other teams now use
 
 **Partition-limit monitoring for every team.** Merged ([dataverse-metrics#604](https://github.com/vinted/dataverse-metrics/pull/604), [#606](https://github.com/vinted/dataverse-metrics/pull/606), [FDSA-3169](https://vinted.atlassian.net/browse/FDSA-3169)).
 - **what:** an incident elsewhere failed 20 downstream tasks. I checked every table and found 121 at-risk models org-wide. One table had about 78 hours of headroom. Alerts now go to each owning team.
@@ -125,7 +285,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **business:** it estimates about 500 finance hours a year unblocked and 9–11 engineer-days saved. Júlia: "the data makes a super clear case".
 - **values:** [aim high] [co-create]
 
-## 6. Code standards and dbt 2.0 readiness
+### 6. Code standards and dbt 2.0 readiness
 
 **Deprecation and lint sweeps.** 173 dbt deprecation PRs and 75 M017 lint PRs, with all 930 tests resolving identically before and after ([FDSA-3281](https://vinted.atlassian.net/browse/FDSA-3281), [#2217](https://github.com/vinted/dataverse-finance/pull/2217), [lint drive](https://vinted.slack.com/archives/C076F6CME10/p1787583981544379)).
 - **technical:** one warning type went from 103 to 65 and another from 13 to 0.
@@ -154,7 +314,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **scoped:** laptop tooling differs from CI on 94 of 182 packages ([FDSA-3409](https://vinted.atlassian.net/browse/FDSA-3409)).
 - **values:** [aim high]
 
-## 7. Platform and migration
+### 7. Platform and migration
 
 **Continuous deployment turned on for finance** ([#2153](https://github.com/vinted/dataverse-finance/pull/2153), [#2154](https://github.com/vinted/dataverse-finance/pull/2154), [#2176](https://github.com/vinted/dataverse-finance/pull/2176), [FDSA-3190](https://vinted.atlassian.net/browse/FDSA-3190)).
 - **what:** I cleared three blockers with DPX. 127 of 308 models are excluded from rebuilding on merge. One of them would have written Austrian taxpayer personal data to the prod bucket on any build.
@@ -167,7 +327,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **lineage:** 24 export models now show their consumers across iSAF, Austrian tax, Sovos, NetSuite and Pigment ([#2235](https://github.com/vinted/dataverse-finance/pull/2235), [FDSA-3306](https://vinted.atlassian.net/browse/FDSA-3306)).
 - **values:** [ownership] [co-create]
 
-## 8. Team, community and hiring
+### 8. Team, community and hiring
 
 - **Berlin dbt meet-up:** I hosted it on 10 Sep, for about 60 guests. I moderated the AE career panel and promoted our open roles. António: the round table was "very well conducted" ([recap](https://vinted.slack.com/archives/C02K4DJRZH8/p1789104601271289), [António](https://vinted.slack.com/archives/C076F6CME10/p1789104603255589)). I am co-organising a Vilnius meet-up for mid-October ([thread](https://vinted.slack.com/archives/C076F6CME10/p1787561169076779?thread_ts=1786355397.086789&cid=C076F6CME10)). **[co-create] [grow]**
 - **AE hiring panel:** I set up the group and its access ([service-catalog#17023](https://github.com/vinted/service-catalog/pull/17023), [terraform-github#8562](https://github.com/vinted/terraform-github/pull/8562)). I shadow interviews, join the calibration loop, and offered to lead interviews ([thread](https://vinted.slack.com/archives/C076F6CME10/p1788425573475809?thread_ts=1788425500.516319&cid=C076F6CME10)). **[co-create] [grow]**
@@ -175,7 +335,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 - **Shared practices:** I shared the unit-testing guide ([thread](https://vinted.slack.com/archives/C03JBPN0Q1W/p1787824097864589?thread_ts=1787823910.491879&cid=C03JBPN0Q1W)) and a self-review practice for AI-written PRs ([thread](https://vinted.slack.com/archives/C076F6CME10/p1788853912393169?thread_ts=1787727215.817299&cid=C076F6CME10)). I proposed that test descriptions state the rule and what to do on failure ([thread](https://vinted.slack.com/archives/C076F6CME10/p1788770645634999?thread_ts=1788769943.200799&cid=C076F6CME10)). **[co-create] [grow]**
 - **Care:** I organised Berliner Tafel food bank volunteering days ([thread](https://vinted.slack.com/archives/C04HC4J6X2R/p1786958374428139)). I credited Emily's export automation in public ([thread](https://vinted.slack.com/archives/C076F6CME10/p1788364525194939)), and suggested an Insights Discovery retake before the offsite. **[care]**
 
-## 9. Strategy and influence beyond finance
+### 9. Strategy and influence beyond finance
 
 - **RFC reviews:** I left 45 review comments. They include the [Tier 1 Reliability Review](https://vinted.atlassian.net/wiki/spaces/DF/pages/32046055735/2026+Q3+-+Tier+1+Reliability+Review) (shift testing left) and [Tier 0 P&L scope](https://vinted.atlassian.net/wiki/spaces/DF/pages/32120244315/2026-08-26+Increasing+Tier+0+Scope+to+P+L+Financial+Metrics). On [Tier 0 Data Assets](https://vinted.atlassian.net/wiki/spaces/DF/pages/32202654020/2026+Q3+-+Tier+0+Data+Assets+-+what+it+means+for+your+team) I proposed a policy gate as an AE roadmap item. On [Recovering failed DAG runs](https://vinted.atlassian.net/wiki/spaces/DPV2/pages/32026985454/2026-09-22+Recovering+consecutive+failed+DAG+runs) I asked for a minimum lookback rather than a default.
 - **CDD for the org:** I asked for CDD to cover SQL changes only, to allow a per-PR opt-out, and to show a plan first ([thread](https://vinted.slack.com/archives/C02JMNFS9GD/p1787656910916349?thread_ts=1787653801.646929&cid=C02JMNFS9GD)).
@@ -186,7 +346,7 @@ Values key: **[aim high] [ownership] [co-create] [care] [grow]**, from [Vinted V
 
 ---
 
-## How this maps to IC3 and IC4
+### How this maps to IC3 and IC4
 
 The framework is additive: IC4 is a technical lead who resolves challenges at the level of the area or domain, and enables other AEs to do the same. IC3 is craft mastery on my own work.
 
@@ -212,7 +372,7 @@ The framework is additive: IC4 is a technical lead who resolves challenges at th
 - **prioritisation:** the lint and unit-test sweeps were high volume. IC4 asks me to prioritise the most systemic problems. I can show that by cutting scope explicitly, and by saying what I chose not to do.
 - **working hours:** from the 7 Sep 1:1. Some of this landed late in the evening. A sustainable pace is part of the "attitude" and "caring" rows too.
 
-## Reflections (draft for me to finish)
+### Reflections (draft for me to finish)
 
 - **went well:** the biggest finds came from checking my own work (a table compared with its earlier version, a snapshot scan), not from alerts.
 - **issue:** other teams' upstream changes caused most of the breakage: the payment status change, GB from core, the Adyen rename and the partition limits. Each cost days after the fact. Could finance get into those teams' release process earlier?
@@ -224,9 +384,18 @@ The framework is additive: IC4 is a technical lead who resolves challenges at th
 <details>
 <summary>How this was compiled</summary>
 
-- **GitHub:** `gh search prs --author=@me` and `--reviewed-by=@me`, created 2026-08-01..2026-09-28, split by date to get past the 200-result cap. The raw lists are in [sources/gh_prs.tsv](sources/gh_prs.tsv) and [sources/gh_reviews.tsv](sources/gh_reviews.tsv).
-- **Jira:** `(assignee = currentUser() OR reporter = currentUser()) AND updated >= "2026-08-01"`. The raw list is in [sources/jira_tickets.tsv](sources/jira_tickets.tsv).
-- **Confluence:** created and edited pages, plus comments. See [sources/confluence_slack_summary.md](sources/confluence_slack_summary.md).
+**29 Sep – 9 Oct 2026**
+
+- **GitHub:** PRs authored and reviewed, created or merged 29 Sep – 9 Oct. The raw lists are in [sources/gh_prs_2026-09-29_to_2026-10-09.tsv](sources/gh_prs_2026-09-29_to_2026-10-09.tsv) and [sources/gh_reviews_2026-09-29_to_2026-10-09.tsv](sources/gh_reviews_2026-09-29_to_2026-10-09.tsv). PR bodies are in [sources/pr_bodies_2026-09-29_to_2026-10-09.md](sources/pr_bodies_2026-09-29_to_2026-10-09.md).
+- **Jira:** `(assignee = currentUser() OR reporter = currentUser()) AND updated >= "2026-09-29"`.
+- **Slack and Confluence:** see [sources/slack_confluence_summary_2026-09-29_to_2026-10-09.md](sources/slack_confluence_summary_2026-09-29_to_2026-10-09.md). Every message was searched, and no channel was read in full. 9 Oct is covered up to 10:10. The praise search found only messages that name Jeremy.
+- **Figures:** quoted from a PR body, ticket, page or message, never inferred from a title.
+
+**1 Aug – 28 Sep 2026**
+
+- **GitHub:** `gh search prs --author=@me` and `--reviewed-by=@me`, created 2026-08-01..2026-09-28, split by date to get past the 200-result cap. The raw lists are in [sources/gh_prs_2026-08-01_to_2026-09-28.tsv](sources/gh_prs_2026-08-01_to_2026-09-28.tsv) and [sources/gh_reviews_2026-08-01_to_2026-09-28.tsv](sources/gh_reviews_2026-08-01_to_2026-09-28.tsv).
+- **Jira:** `(assignee = currentUser() OR reporter = currentUser()) AND updated >= "2026-08-01"`. The raw list is in [sources/jira_tickets_2026-08-01_to_2026-09-28.tsv](sources/jira_tickets_2026-08-01_to_2026-09-28.tsv).
+- **Confluence:** created and edited pages, plus comments. See [sources/confluence_slack_summary_2026-08-01_to_2026-09-28.md](sources/confluence_slack_summary_2026-08-01_to_2026-09-28.md).
 - **Slack:** public and private channels only, never DMs. 15 Aug – 11 Sep and 21–28 Sep were read in full ([15–28 Aug](sources/slack_2026-08-15_to_2026-08-28.md), [29 Aug – 11 Sep](sources/slack_2026-08-29_to_2026-09-11.md)). 1–14 Aug and 12–20 Sep came only from targeted searches.
 - **Figures:** every figure is quoted from a PR body, ticket description or page, never inferred from a title.
 

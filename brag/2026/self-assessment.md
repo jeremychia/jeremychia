@@ -8,7 +8,7 @@
 
 **Evidence window:** 8 weeks, since I rejoined on 3 Aug 2026. This is a trajectory, not a finished case; proposed checkpoint at the end of Q1 2027.
 
-**Primary artifact:** [brag-list.md](https://github.com/jeremychia/jeremychia/blob/main/brag/2026-08-01_to_2026-09-28/brag-list.md)
+**Primary artifact:** [brag-list.md](https://github.com/jeremychia/jeremychia/blob/main/brag/2026/brag-list.md)
 
 ---
 

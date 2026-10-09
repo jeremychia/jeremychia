@@ -13,9 +13,9 @@ Fill the "Last Week Achievements" column of the table on the **Weekly Achievemen
 - [ ] Confirm the **Google Docs** editor connector is loaded (search for `update_doc` / `read_doc`). If it isn't, stop and tell Jeremy. Never create a new doc instead.
 - [ ] Load the `anthropic-skills:google-workspace` skill and read `references/docs.md` in full.
 - [ ] Read the source material:
-  - `/Users/jeremychia/Documents/Github/jeremychia/brag/2026-08-01_to_2026-09-28/brag-list.md` (the brag list, with links)
-  - `.../sources/gh_prs.tsv` and `.../sources/jira_tickets.tsv` (dates, to place each item in its week)
-  - `.../sources/slack_*.md` and `.../sources/confluence_slack_summary.md`
+  - `/Users/jeremychia/Documents/Github/jeremychia/brag/2026/brag-list.md` (the brag list, with links)
+  - `.../sources/gh_prs_2026-08-01_to_2026-09-28.tsv` and `.../sources/jira_tickets_2026-08-01_to_2026-09-28.tsv` (dates, to place each item in its week)
+  - `.../sources/slack_*.md` and `.../sources/confluence_slack_summary_2026-08-01_to_2026-09-28.md`
 - [ ] Ask Jeremy one question before writing: **one row per week (8 rows) or one row for the whole period?** Recommend weekly, because the template is weekly.
 
 ## The table today
@@ -30,7 +30,7 @@ It has a header row (**Date | Last Week Achievements | Weekly Reflections**) and
   - **Links:** link every bullet to its PR, Jira ticket, Confluence page or Slack thread. Use the full URLs from brag-list.md, and never build a Slack URL from an id you haven't seen.
   - **Flags:** add "(above and beyond)" on work outside Jeremy's remit (core billing, dbt Labs open source, systems others use). Add value tags in square brackets, e.g. [ownership].
 - **Last row only:** add a closing bullet linking the full brag list, which holds the IC3/IC4 mapping:
-  https://github.com/jeremychia/jeremychia/blob/main/brag/2026-08-01_to_2026-09-28/brag-list.md
+  https://github.com/jeremychia/jeremychia/blob/main/brag/2026/brag-list.md
 - **Style:** lowercase prose, plain language, short sentences. No drafting notes in the doc.
 
 ## How to write it

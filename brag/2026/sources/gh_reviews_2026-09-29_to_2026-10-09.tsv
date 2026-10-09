@@ -1,0 +1,41 @@
+vinted/dataverse-finance	2502	juliasolee	feat(service_fee_accrual): add Looker measures to the variance control (FDSA-3003)	https://github.com/vinted/dataverse-finance/pull/2502
+vinted/dataverse-metrics	701	ali-vinted	feat: model quality scoring framework	https://github.com/vinted/dataverse-metrics/pull/701
+vinted/dataverse-finance	2494	juliasolee	fix(adyen double entry): book Vinted UAB payouts to the ING bank accounts (FDSA-3571)	https://github.com/vinted/dataverse-finance/pull/2494
+vinted/dataverse-finance	2493	juliasolee	feat(invoice lines): flag the latest snapshot run in mrt_invoice_lines_snapshot (FDSA-3587)	https://github.com/vinted/dataverse-finance/pull/2493
+vinted/dataverse-finance	2470	matsstijlaart	chore: bump scheduler version from 1.42 to 1.47	https://github.com/vinted/dataverse-finance/pull/2470
+vinted/dataverse-finance	2469	ClemCiupek	chore: remove legacy lookml workflows	https://github.com/vinted/dataverse-finance/pull/2469
+vinted/dataverse-finance	2468	antoniofitas	test(checkout): allow MBWAY as a checkout payment method (OPRA-1022)	https://github.com/vinted/dataverse-finance/pull/2468
+vinted/dataverse-finance	2467	dataverse-bot	chore: auto-update pre-commit hooks	https://github.com/vinted/dataverse-finance/pull/2467
+vinted/dataverse-finance	2465	antoniofitas	feat(financial planning): tag the actuals export for Pigment access (FDSA-3535)	https://github.com/vinted/dataverse-finance/pull/2465
+vinted/dataverse-finance	2463	emily-broderick	refactor(mna users): load trendsales users from the static backfill (FDSA-3528)	https://github.com/vinted/dataverse-finance/pull/2463
+vinted/dataverse-finance	2461	emily-broderick	chore: create new mna_users backfill including trendsales	https://github.com/vinted/dataverse-finance/pull/2461
+vinted/dataverse-finance	2460	juliasolee	fix(financial planning): count every checked verification in the export, delivered or not	https://github.com/vinted/dataverse-finance/pull/2460
+vinted/dataverse-finance	2458	juliasolee	test(payment processing fees): fail the MEC snapshot when Adyen invoices are missing (FDSA-3510)	https://github.com/vinted/dataverse-finance/pull/2458
+vinted/dataverse-finance	2457	juliasolee	chore(payment processing fees): delete the first 2026-09 snapshot	https://github.com/vinted/dataverse-finance/pull/2457
+vinted/dataverse-finance	2453	juliasolee	fix(mangopay repudiation): keep only the newest file per month in staging (FDSA-3502)	https://github.com/vinted/dataverse-finance/pull/2453
+vinted/dataverse-finance	2448	juliasolee	chore(looker): add the service fee variance control to looker_exposures.yaml (FDSA-3003)	https://github.com/vinted/dataverse-finance/pull/2448
+vinted/dataverse-finance	2446	pgz-ship	test: trim mrt_payment_processing_fees_accounting_accrual mock (FDSA-…	https://github.com/vinted/dataverse-finance/pull/2446
+vinted/dataverse-finance	2442	juliasolee	fix(financial planning): roll the 2025 refund estimates up from the v3 version so v0 adds up to v3 (FDSA-3288)	https://github.com/vinted/dataverse-finance/pull/2442
+vinted/dataverse-finance	2440	pgz-ship	test: trimmed mrt_payment_processing_fees_accounting_transaction_accrual mock	https://github.com/vinted/dataverse-finance/pull/2440
+vinted/dataverse-finance	2433	emily-broderick	refactor: update transactions source in exposed_pii__mrt_finance_recommerce_users_addresses	https://github.com/vinted/dataverse-finance/pull/2433
+vinted/dataverse-finance	2431	juliasolee	Revert "fix(financial planning): run prep_business_metrics_finance_monthly on the enterprise reservation (FDSA-3478)"	https://github.com/vinted/dataverse-finance/pull/2431
+vinted/dataverse-finance	2430	juliasolee	perf(financial planning): build prep_business_metrics_finance_monthly without the 12 key joins (FDSA-3473)	https://github.com/vinted/dataverse-finance/pull/2430
+vinted/dataverse-finance	2429	juliasolee	fix(financial planning): run prep_business_metrics_finance_monthly on the enterprise reservation (FDSA-3478)	https://github.com/vinted/dataverse-finance/pull/2429
+vinted/dataverse-finance	2427	pgz-ship	test: trim mrt_discount_coverages_accounting mock (FDSA-3339)	https://github.com/vinted/dataverse-finance/pull/2427
+vinted/dataverse-finance	2424	pgz-ship	test: trim mrt_discount_coverages_accounting_deferral mock FDSA-3338	https://github.com/vinted/dataverse-finance/pull/2424
+vinted/dataverse-finance	2422	juliasolee	chore(looker): add the quote-to-payment control to looker_exposures.yaml (FDSA-3005)	https://github.com/vinted/dataverse-finance/pull/2422
+vinted/dataverse-finance	2419	juliasolee	refactor(accounting exports): read netsuite accounts from the seed in the service fee export (FDSA-3399)	https://github.com/vinted/dataverse-finance/pull/2419
+vinted/dataverse-finance	2417	juliasolee	fix(double entry): stop booking empty and zero chargeback sides (FDSA-3464)	https://github.com/vinted/dataverse-finance/pull/2417
+vinted/dataverse-finance	2415	juliasolee	feat(BPF rebranding): check the service fee accrual against what gets invoiced (FDSA-3003)	https://github.com/vinted/dataverse-finance/pull/2415
+vinted/dataverse-finance	2405	veda-patil	Migrate xendo uv	https://github.com/vinted/dataverse-finance/pull/2405
+vinted/dataverse-finance	2403	veda-patil	Migrate US tax reports to uv	https://github.com/vinted/dataverse-finance/pull/2403
+vinted/dataverse-finance	2402	veda-patil	Migrate softco to uv	https://github.com/vinted/dataverse-finance/pull/2402
+vinted/dataverse-finance	2401	veda-patil	Migrate Payhawk to uv	https://github.com/vinted/dataverse-finance/pull/2401
+vinted/dataverse-finance	2400	veda-patil	Migrate Mangopay to uv	https://github.com/vinted/dataverse-finance/pull/2400
+vinted/dataverse-finance	2398	veda-patil	Migrate Checkout API to uv	https://github.com/vinted/dataverse-finance/pull/2398
+vinted/dataverse-finance	2397	veda-patil	Migrate ecb to uv	https://github.com/vinted/dataverse-finance/pull/2397
+vinted/dataverse-finance	2392	pgz-ship	test: trim 49 unused rows from revenue_type mock (FDSA-3342)	https://github.com/vinted/dataverse-finance/pull/2392
+vinted/dataverse-finance	2391	veda-patil	Migrate adyen_dockerfile to uv	https://github.com/vinted/dataverse-finance/pull/2391
+vinted/dataverse-groupfunctions-dbt	1115	veda-patil	Revert "Temp: Use dbt-12 runners"	https://github.com/vinted/dataverse-groupfunctions-dbt/pull/1115
+vinted/dataverse-finance	2384	emily-broderick	feat: standardise date filter format where filter relates to MEC month	https://github.com/vinted/dataverse-finance/pull/2384
+vinted/dataverse-finance	2374	emily-broderick	feat: adjust payment process fees and related exports process	https://github.com/vinted/dataverse-finance/pull/2374
