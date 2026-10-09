@@ -1,6 +1,6 @@
 ---
 name: brag-list
-description: Compile my achievements and reflections for a 1:1 with my manager, or a longer-period brag doc, from my work in Jira, Confluence, GitHub and Slack, mapped to the company values and the IC3/IC4 framework. Use when asked for a brag list, a brag doc, weekly achievements, a 1on1 update, what I did last week or since a date, or how my work maps to my level.
+description: Compile my achievements and reflections for a 1:1 with my manager, or a longer-period brag doc, from my work in Jira, Confluence, GitHub and Slack, mapped to the company values and the IC3/IC4 framework. Use when asked for a brag list, a brag doc, weekly achievements, a 1on1 update, what I did last week or since a date, how my work maps to my level, or answers to an onboarding, probation or reflection form.
 ---
 
 # Brag list
@@ -105,11 +105,32 @@ State the evidence window, and propose a checkpoint date.
 
 ## 6. Output
 
-- **Files:** write `brag/<start>_to_<end>/self-assessment.md` and a paste-ready `self-assessment.html` from one build script. Rich text keeps links and bullets when pasted into Google Docs.
+- **Folder:** use one folder per year, `brag/<yyyy>/`.
+- **Brag list:** fold each new window into `brag/<yyyy>/brag-list.md` as a `## <dates>` section, newest first. Demote its own headings one level, and merge its compilation note into the single `<details>` block at the end.
+- **Files:** write `brag/<yyyy>/self-assessment.md` and a paste-ready `self-assessment.html` from one build script. Rich text keeps links and bullets when pasted into Google Docs.
 - **Compilation note:** put a "how this was compiled" note in a `<details>` block, naming any source days not read in full.
-- **Evidence:** keep the raw lists and agent summaries in `brag/<start>_to_<end>/sources/`.
+- **Evidence:** keep the raw lists and agent summaries in `brag/<yyyy>/sources/`, suffixed with the window, e.g. `gh_prs_2026-09-29_to_2026-10-09.tsv`.
 - **Reflections:** leave them to me unless I ask. If asked, draft them from evidence and mark them as a draft.
 - **Before restyling a rewrite I supply:** re-check every figure against the sources. Keep the links.
+
+## 7. Reflection forms
+
+Use this for an HR form with free-text questions: onboarding, probation, or a quarterly reflection. Build it from the brag list and self-assessment, never from fresh claims.
+
+- **File:** write `brag/<yyyy>/<yyyy-mm>-<form>-reflection.md`. Use one numbered `##` per form question, in the form's order.
+- **Title block:** the name line in bold, then `**Period:**` on its own line.
+- **Examples:** give each one a `###` noun-phrase heading, e.g. "Fixing problems at the source". Under it, add **Achieved**, **Missed** and **Values demonstrated** bullets.
+- **Achieved and missed:** start with a past-tense verb and drop the "I", e.g. "Traced…", "Removed…". Keep "I" for the reflective parts, e.g. "I agree…", "I found it only after the close".
+- **Missed:** name a real miss in every example. A fix still in review, an unmeasured outcome, or a mistake I caused all count.
+- **Values demonstrated:** italicise the values. Put the evidence for the least obvious one in a parenthesis with its link.
+- **Learning bullets:** start with a bold topic label and its source, e.g. "**Work pace (7 Sep 1:1):**". Say what was learned, then what changed.
+- **Next period:** open with one sentence on the shift, then numbered actions. End each action with `*(Target: …)*`. Close with a `**Support needed:**` line.
+- **Feedback I received:** leave what I changed as a marked prompt. Never invent an example.
+- **Restyling a rewrite I paste:** take the layout and the verb-first bullets only.
+  - **Keep:** sentence-case headings, lowercase `m` in €1.45m, British spelling, and plain verbs.
+  - **Remove:** "successfully", "fully", "comprehensive", "proactively" and similar praise words.
+  - **Check each link:** keep the original URL. A rewrite can wrap a link in a search URL or swap its thread id.
+  - **Check each figure and state:** re-check them against the sources. Rewrites drift, e.g. "file the UK as GB" became "categorizing", and a review fix became "resolved". Update any state that changed since the period ended, and give the date.
 
 ## Worked case
 
@@ -117,3 +138,10 @@ State the evidence window, and propose a checkpoint date.
 > - **what:** an upstream change stopped cancelled purchases showing as refunded, so the accrual rule moved their fees into September. The status now comes from the payments table, closed months stay frozen, and a daily test guards it.
 > - **above and beyond:** I traced the upstream change and warned its owners so other consumers can check their models.
 > - **values:** [Ownership / Aim High / Co-create]
+
+Reflection form, one example:
+
+> ### Fixing problems at the source
+> - **Achieved:** Traced about 44k invoice lines a month that file the UK as "GB" to core billing, and wrote the fix in their code ([core#137604](https://github.com/vinted/core/pull/137604)).
+> - **Missed:** The core fix was still in review at the end of the period, so a temporary mapping covered the gap ([#2378](https://github.com/vinted/dataverse-finance/pull/2378)). It merged on 29 Sep ([core#137777](https://github.com/vinted/core/pull/137777)).
+> - **Values demonstrated:** *Ownership* and *Co-create*.
