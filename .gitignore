@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 # skills synced from claude.ai into the symlinked skills folder
 claude/skills/synced/
+
+# trash the claude code harness leaves when it removes a skill
+claude/skills/.trash/
