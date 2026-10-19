@@ -7,6 +7,25 @@ description: Review a dbt pull request the way Vinted's dataverse reviewers do, 
 
 Ask each question below of every model the PR adds or changes. Answer what the repo shows yourself. Post a question only where the author or the data holds the answer. Sections run from the most-asked question to the least. Each link is a real review comment that asks it.
 
+## Running the review in parallel
+
+Split the review across subagents when the PR touches more than one model or more than about 200 lines. Run a small PR in one pass.
+
+1. **Gather once.** Fetch the PR branch and check it out as a detached worktree in the scratchpad. Save the diff and the PR body there. Give every subagent these paths, so none of them re-fetches.
+2. **Fan out by lens, not by file.** Launch these four in one message. Each reads the whole diff but asks only its own sections:
+
+   | Agent | Sections | Also give it |
+   | --- | --- | --- |
+   | Grain and logic | 1, 6, 7 | the consumer macro or model the new rows feed |
+   | Runtime and cost | 2, 3, 12 | the scheduler config and the prod query recipe |
+   | Structure | 4, 5, 8, 9 | the `.cursor/BUGBOT.md` files and `dataverse-dbt-shared` |
+   | Docs and tests | 10, 11, 13 | the `data-test-review` skill |
+
+   Add a fifth agent for sections 14 and 15 only when the PR touches LookML, Looker `meta:` or Python.
+3. **Seed each prompt with the PR's risky spots.** Read the diff yourself first. Name the joins, windows and claims you want checked, per agent. A bare "review sections 1, 6 and 7" finds less.
+4. **Ask for one output shape.** Each agent returns findings with file and line, section, label, the scenario and its consequence, the evidence it verified, and a draft comment. It also lists the checks that came back clean and what it could not verify. Tell it never to post to GitHub.
+5. **Merge, then verify.** Drop duplicates across agents and keep the better-evidenced one. Re-check every blocking finding against the code yourself before you report it. Order the result by severity, with section 1 findings first among equals.
+
 ## 1. Grain and joins
 
 - **Does this join fan out rows?** Find the key on each side. Check it is unique on the joined table. ([marketplace#18897](https://github.com/vinted/dataverse-marketplace-dbt/pull/18897#discussion_r4163608036), [experimentation#462](https://github.com/vinted/dataverse-experimentation-dbt/pull/462#discussion_r2634957525), [sustainability#445](https://github.com/vinted/dataverse-sustainability/pull/445#discussion_r3378734022))
