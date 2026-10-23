@@ -1,0 +1,159 @@
+cc,name,lat,lon,non,wd,bezirk
+AE,Botschaft der Vereinigten Arabischen Emirate,52.5079886,13.357361,False,True,Mitte
+AF,Botschaft der Islamischen Republik Afghanistan,52.4798211,13.2783989,False,True,Charlottenburg-Wilmersdorf
+AL,Botschaft der Republik Albanien,52.5029601,13.3907772,False,True,Friedrichshain-Kreuzberg
+AM,Botschaft der Republik Armenien,52.5170639,13.2758172,False,True,Charlottenburg-Wilmersdorf
+AO,Botschaft der Republik Angola,52.5154935,13.3974676,False,True,Mitte
+AR,Embajada de la República Argentina en Alemania,52.5070408,13.3543997,False,True,Mitte
+AT,Botschaft der Republik Österreich,52.5094504,13.3636763,False,True,Mitte
+AU,Botschaft von Australien,52.5122655,13.4093648,False,True,Mitte
+AZ,Botschaft der Republik Aserbaidschan,52.4875262,13.2841085,False,True,Charlottenburg-Wilmersdorf
+BA,Botschaft von Bosnien und Herzegowina,52.5556781,13.4094064,False,True,Pankow
+BD,Botschaft der Volksrepublik Bangladesch,52.5254099,13.322059,False,True,Mitte
+BE,Botschaft des Königreichs Belgien,52.5144598,13.3944104,False,True,Mitte
+BF,Botschaft von Burkina Faso,52.5073889,13.2701927,False,True,Charlottenburg-Wilmersdorf
+BG,Botschaft der Republik Bulgarien,52.5099755,13.3882087,False,True,Mitte
+BH,Botschaft des Königreichs Bahrain,52.5070372,13.3510372,False,True,Mitte
+BI,Botschaft der Republik Burundi,52.4866918,13.3217499,False,True,Charlottenburg-Wilmersdorf
+BN,Botschaft von Brunei Darussalam,52.5115328,13.3907245,False,True,Mitte
+BO,Botschaft des Plurinationalen Staates Bolivien,52.5052882,13.3481666,False,True,Mitte
+BR,Brasilianische Botschaft,52.5136175,13.4136259,False,True,Mitte
+BW,Botschaft der Republik Botsuana,52.5117035,13.3757955,False,True,Mitte
+BY,Botschaft der Republik Belarus,52.486997,13.4636905,False,True,Treptow-Köpenick
+CA,Kanadische Botschaft,52.5103186,13.377492,False,True,Mitte
+CD,Botschaft der Demokratischen Republik Kongo,52.5179587,13.2657682,False,True,Charlottenburg-Wilmersdorf
+CG,Botschaft der Republik Kongo,52.5126002,13.4104861,False,True,Mitte
+CH,Schweizerische Botschaft,52.5211018,13.3712807,False,True,Mitte
+CI,Republik Côte d’Ivoire,52.4925554,13.2843241,False,True,Charlottenburg-Wilmersdorf
+CL,Botschaft der Republik Chile,52.5125252,13.3942446,False,True,Mitte
+CM,Botschaft der Republik Kamerun,52.51737,13.2688589,False,True,Charlottenburg-Wilmersdorf
+CN,Botschaft der Volksrepublik China,52.5136105,13.4168021,False,True,Mitte
+CO,Kolumbianische Botschaft,52.5131264,13.3948638,False,True,Mitte
+CR,Botschaft der Republik Costa Rica,52.5222052,13.3782521,False,True,Mitte
+CU,Botschaft der Republik Kuba,52.5562042,13.4109419,False,True,Pankow
+CV,Botschaft der Republik Kap Verde,52.5562649,13.4095844,False,True,Pankow
+CY,Botschaft der Republik Zypern,52.5003555,13.313487,False,True,Charlottenburg-Wilmersdorf
+CZ,Botschaft der Tschechischen Republik,52.5114393,13.384316,False,True,Mitte
+DJ,,52.5046401,13.3439691,False,True,Mitte
+DK,Botschaft des Königreichs Dänemark,52.5087712,13.3500357,False,True,Mitte
+DO,Botschaft der Dominikanischen Republik,52.5010614,13.322651,False,False,Charlottenburg-Wilmersdorf
+DZ,Botschaft der Volksrepublik Algerien,52.5667269,13.3996714,False,True,Pankow
+EC,Botschaft der Republik Ecuador,52.5026042,13.3308475,False,True,Charlottenburg-Wilmersdorf
+EE,Botschaft der Republik Estland,52.5084454,13.359184,False,True,Mitte
+EG,Botschaft der Arabischen Republik Ägypten,52.5086917,13.3632928,False,True,Mitte
+ER,Botschaft des Staates Eritrea,52.556242,13.4102814,False,True,Pankow
+ES,Spanische Botschaft,52.5103421,13.3454696,False,True,Mitte
+ET,Botschaft Äthiopien,52.434713,13.3236176,False,True,Steglitz-Zehlendorf
+FI,Botschaft der Republik Finnland,52.5088494,13.3507254,False,True,Mitte
+FR,Botschaft der Französischen Republik,52.517171,13.3795681,False,True,Mitte
+GA,Botschaft Gabun,52.4757469,13.314478,False,False,Charlottenburg-Wilmersdorf
+GB,Botschaft des Vereinigten Königreichs Großbritannien und Nordirland,52.5155893,13.3807825,False,True,Mitte
+GE,Botschaft von Georgien,52.5091472,13.3464505,False,True,Mitte
+GH,Botschaft der Republik Ghana,52.5568342,13.4095843,False,True,Pankow
+GN,Botschaft der Republik Guinea,52.5138775,13.3870852,False,True,Mitte
+GQ,Botschaft der Republik Äquatorialguinea,52.4634698,13.3016222,False,False,Steglitz-Zehlendorf
+GR,Botschaft der Hellenischen Republik,52.5085751,13.3590402,False,True,Mitte
+GT,Botschaft von Guatemala,52.5105515,13.2864455,False,True,Charlottenburg-Wilmersdorf
+HN,Botschaft von Honduras,52.5178502,13.3383221,False,True,Mitte
+HR,Kroatische Botschaft,52.5013919,13.3520232,False,True,Tempelhof-Schöneberg
+HT,,52.4925256,13.2856685,False,False,Charlottenburg-Wilmersdorf
+HU,Botschaft von Ungarn,52.5168286,13.3810657,False,True,Mitte
+ID,Botschaft von Indonesien,52.5094039,13.3566836,False,False,Mitte
+IE,Botschaft von Irland,52.5145569,13.3949221,False,True,Mitte
+IL,Botschaft des Staates Israel,52.4834204,13.2886257,False,True,Charlottenburg-Wilmersdorf
+IN,Botschaft der Republik Indien,52.509336,13.3620113,False,True,Mitte
+IQ,Botschaft der Republik Irak,52.465999,13.2881522,False,True,Steglitz-Zehlendorf
+IR,Botschaft der Islamischen Republik Iran,52.4609513,13.2999621,False,True,Steglitz-Zehlendorf
+IS,Botschaft der Republik Island,52.5090776,13.350146,False,True,Mitte
+IT,Botschaft der Italienischen Republik,52.509327,13.3594478,False,True,Mitte
+JM,Botschaft von Jamaika,52.4709803,13.3333728,False,True,Tempelhof-Schöneberg
+JO,Botschaft Jordanien,52.5118664,13.2015839,False,True,Spandau
+JP,Botschaft von Japan,52.5092298,13.3578079,False,True,Mitte
+KE,Botschaft von Kenia,52.5076196,13.3940151,False,True,Friedrichshain-Kreuzberg
+KG,Kirgisische Botschaft,52.5198117,13.3003236,False,True,Charlottenburg-Wilmersdorf
+KH,Botschaft des Königreichs Kambodscha,52.5672098,13.4057091,False,True,Pankow
+KP,Botschaft der Demokratischen Volksrepublik Korea,52.5116006,13.3856616,False,True,Mitte
+KR,Botschaft der Republik Korea,52.5079233,13.3483204,False,True,Mitte
+KW,Botschaft des Staates Kuwait,52.4801583,13.2669246,False,True,Charlottenburg-Wilmersdorf
+KZ,Botschaft der Republik Kasachstan,52.5900165,13.392731,False,True,Pankow
+LA,Botschaft von Laos,52.490997,13.283936,False,True,Charlottenburg-Wilmersdorf
+LB,Botschaft des Libanon,52.5698714,13.4119846,False,True,Pankow
+LI,Botschaft des Fürstentums Liechtenstein,52.5126212,13.3944772,False,True,Mitte
+LK,Botschaft von Sri Lanka,52.4337022,13.2307426,False,True,Steglitz-Zehlendorf
+LR,Botschaft der Republik Liberia,52.4976352,13.309056,False,False,Charlottenburg-Wilmersdorf
+LS,,52.5046918,13.343829,False,True,Mitte
+LT,Botschaft der Republik Litauen,52.5230978,13.3789286,False,True,Mitte
+LU,Luxemburgische Botschaft,52.506983,13.3510996,False,True,Mitte
+LV,Botschaft Lettlands,52.4841076,13.2862153,False,True,Charlottenburg-Wilmersdorf
+LY,Libysche Botschaft,52.4656183,13.295934,False,False,Steglitz-Zehlendorf
+MA,Botschaft des Königreichs Marokko,52.5130811,13.397839,False,True,Mitte
+MC,Botschaft des Fürstentums Monaco,52.5068738,13.3514634,False,True,Mitte
+MD,Botschaft der Republik Moldau,52.5562782,13.4118255,False,True,Pankow
+ME,Botschaft von Montenegro,52.5163531,13.3909743,False,False,Mitte
+MK,Botschaft der Republik Nordmazedonien,52.4937668,13.284708,False,True,Charlottenburg-Wilmersdorf
+ML,Botschaft der Republik Mali,52.5001153,13.3059684,False,True,Charlottenburg-Wilmersdorf
+MM,Botschaft der Republik der Union Myanmar,52.4553068,13.2848332,False,True,Steglitz-Zehlendorf
+MN,Botschaft der Mongolei,52.5133337,13.3975334,False,True,Mitte
+MR,Botschaft der Islamischen Republik Mauretanien,52.4590269,13.3044501,False,True,Steglitz-Zehlendorf
+MT,Botschaft der Republik Malta,52.5069884,13.3513973,False,True,Mitte
+MU,Botschaft der Republik Mauritius,52.5047555,13.3438142,False,True,Mitte
+MV,Botschaft der Malediven,52.5096155,13.3902605,False,True,Mitte
+MW,Botschaft der Republik Malawi,52.4921685,13.3080927,False,True,Charlottenburg-Wilmersdorf
+MX,Botschaft der Vereinigten Mexikanischen Staaten,52.5081261,13.3511589,False,True,Mitte
+MY,Botschaft von Malaysia,52.5072178,13.3512362,False,False,Mitte
+MZ,Botschaft der Republik Mosambik,52.5294556,13.3427642,False,True,Mitte
+NA,Botschaft der Republik Namibia,52.5143887,13.2647254,False,True,Charlottenburg-Wilmersdorf
+NE,Botschaft der Republik Niger,52.4266394,13.2534488,False,True,Steglitz-Zehlendorf
+NG,Botschaft der Bundesrepublik Nigeria,52.5112299,13.4130396,False,True,Mitte
+NI,Botschaft der Republik Nicaragua,52.5227933,13.3589576,False,False,Mitte
+NL,Botschaft des Königreichs der Niederlande,52.5152959,13.4119633,False,True,Mitte
+NO,Botschaft des Königreiches Norwegen,52.5091473,13.3504725,False,True,Mitte
+NP,Botschaft von Nepal,52.5170957,13.320491,False,True,Charlottenburg-Wilmersdorf
+NZ,Botschaft von Neuseeland,52.5106285,13.3903464,False,True,Mitte
+OM,Botschaft des Sultanats Oman,52.4618053,13.2761059,False,False,Steglitz-Zehlendorf
+PA,Botschaft der Republik Panama,52.5052418,13.3483604,False,True,Mitte
+PE,Botschaft der Republik Peru,52.5131159,13.3944081,False,True,Mitte
+PH,Botschaft der Republik Philippinen,52.522216,13.3794274,False,True,Mitte
+PK,Botschaft der Islamischen Republik Pakistan,52.4992711,13.3316483,False,True,Charlottenburg-Wilmersdorf
+PL,Botschaft der Republik Polen,52.5170881,13.3822181,False,True,Mitte
+PS,Palästinensische Mission,52.4758337,13.2830638,False,True,Charlottenburg-Wilmersdorf
+PT,Botschaft von Portugal,52.5019825,13.3553772,False,True,Mitte
+PY,Botschaft der Republik Paraguay,52.5083806,13.3268951,False,True,Charlottenburg-Wilmersdorf
+QA,Botschaft des Staates Katar,52.477806,13.2802231,False,True,Charlottenburg-Wilmersdorf
+RO,Botschaft von Rumänien,52.5187762,13.3864481,False,True,Mitte
+RS,Botschaft der Republik Serbien,52.4834661,13.2714431,False,True,Charlottenburg-Wilmersdorf
+RU,Botschaft der Russischen Föderation,52.5161459,13.383406,False,True,Mitte
+RW,Botschaft der Republik Rwanda,52.513943,13.3871489,False,True,Mitte
+SA,Botschaft des Königreichs Saudi-Arabien,52.5092746,13.3533325,False,True,Mitte
+SD,Botschaft der Republik Sudan,52.500247,13.2924742,False,False,Charlottenburg-Wilmersdorf
+SE,Botschaft des Königreichs Schweden,52.5091558,13.3508445,False,True,Mitte
+SG,Botschaft der Republik Singapur,52.5111524,13.3777542,False,True,Mitte
+SI,Slowenische Botschaft,52.5134673,13.3957588,False,True,Mitte
+SK,Botschaft der Slowakischen Republik,52.5089324,13.3602944,False,True,Mitte
+SL,Botschaft der Republik Sierra Leone,52.4314703,13.3141793,False,True,Steglitz-Zehlendorf
+SN,Botschaft der Republik Senegal,52.5075412,13.3512791,False,True,Mitte
+SO,Botschaft von Somalia,52.4703198,13.3335406,False,True,Tempelhof-Schöneberg
+SS,Botschaft der Republik Südsudan,52.5088339,13.3788299,False,True,Mitte
+SV,Botschaft der Republik El Salvador,52.5287089,13.3800402,False,True,Mitte
+SY,Botschaft der Arabischen Republik Syrien,52.5082753,13.3501576,False,True,Mitte
+TD,Botschaft der Republik Tschad,52.4560636,13.3121663,False,False,Steglitz-Zehlendorf
+TG,Botschaft der Republik Togo,52.5753805,13.3974593,False,True,Pankow
+TH,Königlich Thailändische Botschaft,52.4605259,13.3168252,False,True,Steglitz-Zehlendorf
+TJ,Botschaft Tadschikistan,52.5294062,13.3450324,False,True,Mitte
+TM,Botschaft von Turkmenistan,52.5159118,13.3916391,False,False,Mitte
+TN,Botschaft der Tunesischen Republik,52.5141973,13.273071,False,True,Charlottenburg-Wilmersdorf
+TR,Botschaft der Republik Türkiye,52.5093519,13.3605902,False,True,Mitte
+TZ,Botschaft von Tansania,52.5172812,13.2681145,False,True,Charlottenburg-Wilmersdorf
+UA,Botschaft der Ukraine,52.5239214,13.3837031,False,True,Mitte
+UG,Botschaft der Republik Uganda,52.5099723,13.4014505,False,True,Mitte
+US,Botschaft der Vereinigten Staaten von Amerika,52.5153039,13.3783601,False,True,Mitte
+UY,Botschaft der Republik Östlich des Uruguay,52.5049862,13.3406663,False,True,Charlottenburg-Wilmersdorf
+UZ,Botschaft der Republik Usbekistan,52.5344233,13.3554731,False,True,Mitte
+VA,Apostolische Nuntiatur in Deutschland,52.4879886,13.4087618,False,True,Neukölln
+VE,Botschaft der Bolivarischen Republik Venezuela,52.5038501,13.3501797,False,True,Mitte
+VN,Botschaft der Sozialistischen Republik Vietnam,52.4936181,13.4594312,False,True,Treptow-Köpenick
+XK,Botschaft der Republik Kosovo,52.4878309,13.2746582,False,False,Charlottenburg-Wilmersdorf
+YE,Botschaft der Republik Jemen,52.4586847,13.3115312,False,True,Steglitz-Zehlendorf
+ZA,Botschaft der Republik Südafrika,52.5093909,13.3614913,False,True,Mitte
+ZM,Botschaft der Republik Sambia,52.510129,13.4012874,False,True,Mitte
+ZW,Botschaft der Republik Simbabwe,52.5923835,13.3498783,False,True,Reinickendorf
