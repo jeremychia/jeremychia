@@ -184,10 +184,16 @@ Re-read `resume-base.json` immediately before writing — do not rely on memory 
 
 Write `applications/{base name}/{base name}.json`.
 
-### Do NOT change
-- Employer names, dates, locations, degree names, certification names
+### Do NOT change (facts lock)
+
+`resume-base.json` is the umbrella source of truth — the fullest, most complete version of Jeremy's history. It is also what his LinkedIn profile should reflect at the same level of detail (full scope per role, biggest outcomes). Every tailored resume is a **zoomed-in slice** of that umbrella, never a divergent version of it. A recruiter comparing a tailored resume to LinkedIn should conclude "this is the detailed version of that" — never "which one is real?" Customise the story, never the facts:
+
+- Employer names, dates (to the month), locations, degree names, certification names — must match `resume-base.json` exactly, since these are what recruiters cross-check against LinkedIn/XING
+- Job titles — use the standard market title exactly as it appears in `resume-base.json`'s `header`/`experience` sections on every tailored resume. Do not invent a JD-flattering variant (e.g. don't relabel "Analytics Engineer" as "Data Engineering Manager" to chase a title in the posting) — title drift across documents reads as inflation, not tailoring. If an internal/employer-specific title differs from the market-standard one already used in the base resume, keep the base resume's market title and add the internal title in brackets only if useful, never swap it out.
 - Quantified metrics (€1.6m, 90%, 75%, etc.)
 - Any factual claim that would require the candidate to lie
+
+What CAN flex per application: which projects/bullets are surfaced, their ordering, phrasing/emphasis, and which skills are foregrounded (see Adapt, below) — this is the "framing," and it's expected and safe to change.
 
 ### Adapt
 
@@ -213,7 +219,7 @@ Apply **fluency**: short declarative sentences over long compound ones. Lead met
 
 **pillHighlights:** Replace with the 10–15 ATS phrases from Layer B.
 
-**Tagline:** Derive `header.tagline` strictly from Jeremy's actual job titles and areas of work as evidenced in `resume-base.json` — don't invent seniority claims or specialisations not already demonstrated in the experience section. If the role's focus differs meaningfully from the base tagline ("Senior Analytics Engineer - Finance and Data"), propose an adapted tagline and confirm with the user before it goes into the JSON. No confirmation needed if unchanged.
+**Tagline:** Derive `header.tagline` strictly from Jeremy's actual job titles and areas of work as evidenced in `resume-base.json` — don't invent seniority claims or specialisations not already demonstrated in the experience section. This is framing (emphasis), not a new fact — never let it imply a different job title than the market-standard one used in `resume-base.json`'s experience entries. If the role's focus differs meaningfully from the base tagline ("Senior Analytics Engineer - Finance and Data"), propose an adapted tagline and confirm with the user before it goes into the JSON. No confirmation needed if unchanged.
 
 **meta:** Set `"version"` to base name, `"lastUpdated"` to today. Add `"targetRole"`, `"targetCompany"`, `"jobLocation"` (the role's location as listed in the JD — used for geographical analysis across applications), `"sourceUrl"`, `"atsPlatform"` (from Step 1), `"alignmentSignal"` (from Step 4), `"behaviouralInsights"` array (all Layer B findings including urgency, greenfield/fix-scale, velocity/rigour, internal customer, stack lock-in, and language gate), and `"adaptationNotes"`.
 
@@ -377,8 +383,9 @@ Before generating the cover letter, run this checklist and report any failures:
 3. **Company/role match:** The company name and job title in the JSON `meta` match the JD.
 4. **No personal pronouns:** Summary contains none of: I, my, me, we, our.
 5. **Metrics preserved:** All quantified figures from base resume (€1.6m, 90%, 75%, 88%→97%) that were included are unchanged.
+6. **Facts lock:** Employer names, dates (to the month), locations, and job titles in the adapted JSON match `resume-base.json` exactly — no title, employer, or date drift introduced while tailoring.
 
-Report: `✓ Pre-send checklist: N/5 passed` — list any failures with a one-line fix. Do not proceed to Step 10 until all 5 pass.
+Report: `✓ Pre-send checklist: N/6 passed` — list any failures with a one-line fix. Do not proceed to Step 10 until all 6 pass.
 
 ---
 
