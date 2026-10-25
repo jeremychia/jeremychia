@@ -21,6 +21,8 @@ claude/
     memory-keeping/      how to add to and maintain this system
     data-test-review/    write and review dbt tests: placement, keys, windows, limits
     dbt-pr-review/       the questions dataverse reviewers ask most on dbt PRs
+    a11y-audit/          WCAG 2.1 AA audit of an HTML page, with computed contrast
+    design-critique/     usability, hierarchy, consistency and default-design-tell feedback on a page
 ```
 
 ## Install
