@@ -86,6 +86,8 @@ and the failure cases; this file is what should be in mind by default.
 - **One definition per concept.** The same business rule computed in two places drifts.
   Reusing an established name for a different definition is worse than duplicating it.
 - **Prefer a named CTE to a nested subquery.**
+- **Unit tests use the fewest fixture rows that prove the rule.** Start from the nearest
+  existing test, and drop a new test that another already covers.
 
 ## Git
 

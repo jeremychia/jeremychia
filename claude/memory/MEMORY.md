@@ -7,6 +7,7 @@
 - [No AI attribution in commits](no-ai-attribution-in-commits.md) — no Co-Authored-By trailer, no "generated with" footer
 - [Documenting for downstream consumers](documenting-for-downstream-consumers.md) — link the consuming code, name a support channel and the real team, keep the sourcing out
 - [Test descriptions state the invariant](test-descriptions-state-the-invariant.md) — say why a fixture row exists, never what the expected output already says
+- [Unit test fixtures use the fewest rows](unit-test-fixtures-use-the-fewest-rows.md) — writing a new unit test: start from the nearest existing test, cut rows to the minimum, drop a test another already covers
 - [Abstract at two callers](abstract-at-two-callers.md) — one caller keeps it inline; one definition per concept
 - [Search for an existing implementation](search-for-an-existing-implementation.md) — packages first, then project helpers, reading candidates not filenames
 - [An assertion needs a test](an-assertion-needs-a-test.md) — my most-repeated review comment, and to assert it rather than ask it
