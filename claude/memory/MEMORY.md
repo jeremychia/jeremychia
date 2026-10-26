@@ -22,3 +22,6 @@
 - [Writing a promotion case](writing-a-promotion-case.md) — building a brag doc or promotion case; ask first in BLUF order, end each win on someone else's behaviour, log rejected alternatives, write down 1:1 promises
 - [Structured questions to business stakeholders](structured-questions-to-business-stakeholders.md) — drafting a slack message or question to finance, accounting or any non-engineer; headline number, problem / proposed solution / numbered questions, in lowercase
 - [Standard english sentences](standard-english-sentences.md) — plain subject and verb, verb-first bullets, bold labels, numerals, no aphorisms or metaphor-verbs; words-to-avoid table; still lowercase
+- [Pass only what the code reads](pass-only-what-the-code-reads.md) — giving an object project-wide data: a lean shared field of the fields read; keep the central class in place so other code is untouched
+- [Full-word names in code](full-word-names-in-code.md) — naming loop and comprehension variables: `parent`, never `p`
+- [Filter, then act](filter-then-act.md) — a loop full of `if …: continue` guards: move scope into a named generator, keep only the deciding condition

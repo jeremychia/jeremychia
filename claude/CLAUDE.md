@@ -86,6 +86,11 @@ and the failure cases; this file is what should be in mind by default.
 - **One definition per concept.** The same business rule computed in two places drifts.
   Reusing an established name for a different definition is worse than duplicating it.
 - **Prefer a named CTE to a nested subquery.**
+- **Pass only what the code reads.** A lean shared field of the needed data, never a whole
+  parent structure. Keep the central class where it is, so a change touches no other code.
+- **Full words for every name**, comprehension variables included: `parent`, never `p`.
+- **Filter, then act.** Move `if …: continue` guards into a named generator, and keep the
+  one deciding condition in the loop.
 - **Unit tests use the fewest fixture rows that prove the rule.** Start from the nearest
   existing test, and drop a new test that another already covers.
 
