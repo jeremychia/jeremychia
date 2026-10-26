@@ -8,7 +8,7 @@ Kept verbatim so the skill can be re-derived if it drifts.
 >
 > in this document: https://docs.google.com/document/d/1xAsWxVkSAr7mVcFgMuj_mED277CEax4_hRyN6PS_Pto/edit?tab=t.8vgt5q95pls
 >
-> (the weekly achievements/reflections template, see [context/manager-format.md](context/manager-format.md))
+> (the weekly achievements/reflections template, see [context/manager-format.md](~/Documents/Github/brag/context/manager-format.md))
 >
 > can you please focus on
 >

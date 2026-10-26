@@ -5,12 +5,12 @@ description: Compile my achievements and reflections for a 1:1 with my manager, 
 
 # Brag list
 
-Read the context files first:
+Read the context files first. They live in the private `brag` repo (`gh repo clone jeremychia/brag` into `~/Documents/Github`):
 
-- [context/manager-format.md](context/manager-format.md): the 1:1 doc, its template, the standing goals from past 1:1s, and the ids to search with.
-- [context/vinted-values.md](context/vinted-values.md): the five values, and when to tag each one.
-- [context/ic-framework-analytics-engineer.md](context/ic-framework-analytics-engineer.md): IC3 and IC4 statements per dimension.
-- [context/pl-framework-dsa-people-leader.md](context/pl-framework-dsa-people-leader.md): PL3 and PL4 statements per dimension. Most PL dimensions assume direct reports.
+- [context/manager-format.md](~/Documents/Github/brag/context/manager-format.md): the 1:1 doc, its template, the standing goals from past 1:1s, and the ids to search with.
+- [context/vinted-values.md](~/Documents/Github/brag/context/vinted-values.md): the five values, and when to tag each one.
+- [context/ic-framework-analytics-engineer.md](~/Documents/Github/brag/context/ic-framework-analytics-engineer.md): IC3 and IC4 statements per dimension.
+- [context/pl-framework-dsa-people-leader.md](~/Documents/Github/brag/context/pl-framework-dsa-people-leader.md): PL3 and PL4 statements per dimension. Most PL dimensions assume direct reports.
 
 [prompt.md](prompt.md) holds the original asks verbatim.
 
@@ -53,7 +53,7 @@ Write it as a titled document in four numbered parts, in this order. Follow the 
 
 **Summary and ask**, above Part 1, in BLUF order:
 - **the pattern:** one sentence naming the contribution that repeats across the wins. Mark it as a draft.
-- **the ask:** the level and the number, as a marked prompt for me. Keep the number out of this public repo.
+- **the ask:** the level and the number, as a marked prompt for me. Keep the number out of the file.
 - **why it matters** and **why now:** marked prompts for me.
 - **next steps:** the focus actions with their dates, and the checkpoint.
 - **where I am:** my read of the level.
@@ -105,11 +105,11 @@ State the evidence window, and propose a checkpoint date.
 
 ## 6. Output
 
-- **Folder:** use one folder per year, `brag/<yyyy>/`.
-- **Brag list:** fold each new window into `brag/<yyyy>/brag-list.md` as a `## <dates>` section, newest first. Demote its own headings one level, and merge its compilation note into the single `<details>` block at the end.
-- **Files:** write `brag/<yyyy>/self-assessment.md` and a paste-ready `self-assessment.html` from one build script. Rich text keeps links and bullets when pasted into Google Docs.
+- **Folder:** write only to the private `brag` repo, never this public one. Use one folder per year, `~/Documents/Github/brag/<yyyy>/`.
+- **Brag list:** fold each new window into `~/Documents/Github/brag/<yyyy>/brag-list.md` as a `## <dates>` section, newest first. Demote its own headings one level, and merge its compilation note into the single `<details>` block at the end.
+- **Files:** write `~/Documents/Github/brag/<yyyy>/self-assessment.md` and a paste-ready `self-assessment.html` from one build script. Rich text keeps links and bullets when pasted into Google Docs.
 - **Compilation note:** put a "how this was compiled" note in a `<details>` block, naming any source days not read in full.
-- **Evidence:** keep the raw lists and agent summaries in `brag/<yyyy>/sources/`, suffixed with the window, e.g. `gh_prs_2026-09-29_to_2026-10-09.tsv`.
+- **Evidence:** keep the raw lists and agent summaries in `~/Documents/Github/brag/<yyyy>/sources/`, suffixed with the window, e.g. `gh_prs_2026-09-29_to_2026-10-09.tsv`.
 - **Reflections:** leave them to me unless I ask. If asked, draft them from evidence and mark them as a draft.
 - **Before restyling a rewrite I supply:** re-check every figure against the sources. Keep the links.
 
@@ -117,7 +117,7 @@ State the evidence window, and propose a checkpoint date.
 
 Use this for an HR form with free-text questions: onboarding, probation, or a quarterly reflection. Build it from the brag list and self-assessment, never from fresh claims.
 
-- **File:** write `brag/<yyyy>/<yyyy-mm>-<form>-reflection.md`. Use one numbered `##` per form question, in the form's order.
+- **File:** write `~/Documents/Github/brag/<yyyy>/<yyyy-mm>-<form>-reflection.md`. Use one numbered `##` per form question, in the form's order.
 - **Title block:** the name line in bold, then `**Period:**` on its own line.
 - **Examples:** give each one a `###` noun-phrase heading, e.g. "Fixing problems at the source". Under it, add **Achieved**, **Missed** and **Values demonstrated** bullets.
 - **Achieved and missed:** start with a past-tense verb and drop the "I", e.g. "Traced…", "Removed…". Keep "I" for the reflective parts, e.g. "I agree…", "I found it only after the close".
