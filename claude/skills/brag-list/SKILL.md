@@ -103,6 +103,8 @@ State the evidence window, and propose a checkpoint date.
 - **Capitalisation:** standard capitalisation, with headings in sentence case. Acronyms keep their capitals.
 - **Weekly 1:1:** one row for the 1:1 table (Date | Last week achievements | Weekly reflections), built from Part 4.
 
+To bring an existing self-assessment up to date, save a dated version and show what changed, use the `self-assessment-update` skill in the private `brag` repo (`.claude/skills/`).
+
 ## 6. Output
 
 - **Folder:** write only to the private `brag` repo, never this public one. Use one folder per year, `~/Documents/Github/brag/<yyyy>/`.
