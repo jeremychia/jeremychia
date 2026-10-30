@@ -23,6 +23,7 @@ claude/
     dbt-pr-review/       the questions dataverse reviewers ask most on dbt PRs
     a11y-audit/          WCAG 2.1 AA audit of an HTML page, with computed contrast
     design-critique/     usability, hierarchy, consistency and default-design-tell feedback on a page
+    html-slide-deck/     single-file html decks: 16:9 stage, palette, svg diagrams, step-through animation
 ```
 
 ## Install
