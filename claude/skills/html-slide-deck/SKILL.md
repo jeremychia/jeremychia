@@ -23,7 +23,8 @@ Build the deck as one HTML file: inline CSS, inline JS, Google Fonts only. Keep 
 
 ## Step 2 — Apply the design
 
-- Define colours as tokens on `:root`, and use only the tokens. Take them from the house template when one exists. The default set: `--teal:#004654` (ink on accents, links, selected), `--mint:#edffe9` (selected fill, text on dark), `--lilac:#ceceff` (highlight slides, active row), `--violet:#9999ff` (tests, secondary marks), `--peach:#ffa580` (major events), `--grey:#f7f7f7` (panels), `--line:#e3e3e3`, `--ink:#111`, `--muted:#5a6465`, `--ok:#0b7a52`, `--bad:#c2410c`.
+- Define colours as tokens on `:root`, and use only the tokens. Take them from the house template when one exists. The default set: `--teal:#004654` (ink on accents, links, selected), `--mint:#edffe9` (selected fill, text on dark), `--lilac:#ceceff` (highlight slides, active row), `--violet:#9999ff` (tests, secondary marks), `--peach:#ffa580` (major events), `--grey:#f7f7f7` (panels), `--line:#e3e3e3`, `--ink:#111`, `--muted:#5a6465`, `--ok:#0b7a52`, `--bad:#c2410c`, `--merged:#8250df`.
+- Colour a pull request's status by state: purple `.merged` for merged, green `.ok` for approved, `--bad` for in review or blocked. Recheck each state on the day the slide's "status on" date says.
 - Pair two typefaces: Inter Tight 600 for covers, dividers and big numbers, and Inter 400–700 for everything else. Never ship the system default.
 - Keep one type scale: `h2` 2.5cqw, body 1.6cqw, small 1.4cqw, tables 1.32cqw, captions in teal.
 - Use four slide kinds: cover, `.dark` divider (teal ground, mint text) to open each section, `.highlight` (lilac) for the one sentence the audience must keep, and plain white content slides.
