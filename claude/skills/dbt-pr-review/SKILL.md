@@ -18,7 +18,7 @@ Split the review across subagents when the PR touches more than one model or mor
    | --- | --- | --- |
    | Grain and logic | 1, 6, 7 | the consumer macro or model the new rows feed |
    | Runtime and cost | 2, 3, 12 | the scheduler config and the prod query recipe |
-   | Structure | 4, 5, 8, 9 | the `.cursor/BUGBOT.md` files and `dataverse-dbt-shared` |
+   | Structure | 4, 5, 8, 9 | the repo's `REVIEW.md` rule files and `dataverse-dbt-shared` |
    | Docs and tests | 10, 11, 13 | the `data-test-review` skill |
 
    Add a fifth agent for sections 14 and 15 only when the PR touches LookML, Looker `meta:` or Python.
