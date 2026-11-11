@@ -1,0 +1,388 @@
+{
+ "events": 832,
+ "companies_note": "see build_v3.py output (first-word key, date-bounded dedupe); stats count distinct lower-cased names so may overstate",
+ "by_year_tier": {
+  "2021": {
+   "S": 50,
+   "A": 3,
+   "B": 3
+  },
+  "2022": {
+   "S": 102,
+   "B": 16,
+   "A": 31
+  },
+  "2023": {
+   "S": 166,
+   "A": 47,
+   "B": 18
+  },
+  "2024": {
+   "S": 115,
+   "B": 11,
+   "A": 28
+  },
+  "2025": {
+   "S": 92,
+   "A": 36,
+   "B": 14
+  },
+  "2026": {
+   "S": 72,
+   "B": 15,
+   "A": 13
+  }
+ },
+ "by_year_total": {
+  "2021": 56,
+  "2022": 149,
+  "2023": 231,
+  "2024": 154,
+  "2025": 142,
+  "2026": 100
+ },
+ "by_source_pipeline": {
+  "edgar": 605,
+  "year_gapfill": 91,
+  "research_agent": 136
+ },
+ "by_sector": {
+  "biotech_health": 258,
+  "saas": 162,
+  "traditional": 138,
+  "hardware_auto": 79,
+  "finance_realestate": 38,
+  "media_gaming": 29,
+  "international_startup": 10,
+  "consumer_internet": 53,
+  "fintech_crypto": 30,
+  "big_tech": 27,
+  "consulting_finance": 8
+ },
+ "text_source": {
+  "sec_filing": 605,
+  "reproduction": 111,
+  "company": 53,
+  "news_only": 62,
+  "null": 1
+ },
+ "with_news_coverage": 215,
+ "news_outlets_top": [
+  [
+   "TechCrunch",
+   91
+  ],
+  [
+   "CNBC",
+   60
+  ],
+  [
+   "Fortune",
+   42
+  ],
+  [
+   "Bloomberg",
+   38
+  ],
+  [
+   "CNN",
+   25
+  ],
+  [
+   "Axios",
+   13
+  ],
+  [
+   "Fox Business",
+   11
+  ],
+  [
+   "Engadget",
+   10
+  ],
+  [
+   "SiliconANGLE",
+   7
+  ],
+  [
+   "The Register",
+   7
+  ],
+  [
+   "Entrepreneur",
+   7
+  ],
+  [
+   "Boston Globe",
+   4
+  ],
+  [
+   "CoinDesk",
+   4
+  ],
+  [
+   "CBS News",
+   4
+  ],
+  [
+   "PYMNTS",
+   4
+  ]
+ ],
+ "tierA": 158,
+ "tierA_apology": [
+  23,
+  118
+ ],
+ "tierA_responsibility": [
+  26,
+  96
+ ],
+ "tierA_by_year": {
+  "2021": {
+   "n": 3,
+   "apology": [
+    0,
+    3
+   ],
+   "responsibility": [
+    1,
+    2
+   ],
+   "ai_mention": 0
+  },
+  "2022": {
+   "n": 31,
+   "apology": [
+    7,
+    23
+   ],
+   "responsibility": [
+    7,
+    20
+   ],
+   "ai_mention": 1
+  },
+  "2023": {
+   "n": 47,
+   "apology": [
+    10,
+    46
+   ],
+   "responsibility": [
+    12,
+    27
+   ],
+   "ai_mention": 8
+  },
+  "2024": {
+   "n": 28,
+   "apology": [
+    5,
+    21
+   ],
+   "responsibility": [
+    4,
+    21
+   ],
+   "ai_mention": 3
+  },
+  "2025": {
+   "n": 36,
+   "apology": [
+    0,
+    18
+   ],
+   "responsibility": [
+    0,
+    18
+   ],
+   "ai_mention": 20
+  },
+  "2026": {
+   "n": 13,
+   "apology": [
+    1,
+    7
+   ],
+   "responsibility": [
+    2,
+    8
+   ],
+   "ai_mention": 9
+  }
+ },
+ "ai_mention_by_year_all": {
+  "2021": [
+   0,
+   56
+  ],
+  "2022": [
+   1,
+   149
+  ],
+  "2023": [
+   9,
+   231
+  ],
+  "2024": [
+   5,
+   154
+  ],
+  "2025": [
+   28,
+   142
+  ],
+  "2026": [
+   24,
+   100
+  ]
+ },
+ "ai_mention_by_year_nonbio": {
+  "2021": [
+   0,
+   32
+  ],
+  "2022": [
+   1,
+   100
+  ],
+  "2023": [
+   9,
+   167
+  ],
+  "2024": [
+   5,
+   95
+  ],
+  "2025": [
+   28,
+   101
+  ],
+  "2026": [
+   24,
+   79
+  ]
+ },
+ "communicator": {
+  "sec_filing": 604,
+  "ceo": 137,
+  "media_leak": 9,
+  "earnings_call": 13,
+  "exec_other": 20,
+  "spokesperson": 20,
+  "founder": 23,
+  "cpo_hr": 5,
+  "podcast_interview": 1
+ },
+ "median_pct_by_sector": {
+  "big_tech": 5.0,
+  "biotech_health": 34.0,
+  "consulting_finance": 5.0,
+  "consumer_internet": 13.0,
+  "finance_realestate": 12.0,
+  "fintech_crypto": 19.5,
+  "hardware_auto": 10.0,
+  "international_startup": 14.0,
+  "media_gaming": 10.0,
+  "saas": 11.0,
+  "traditional": 17.5
+ },
+ "median_pct_all": 16.0,
+ "reasons_nonbio": [
+  [
+   "restructuring",
+   331
+  ],
+  [
+   "cost_cutting",
+   277
+  ],
+  [
+   "efficiency",
+   212
+  ],
+  [
+   "macro",
+   153
+  ],
+  [
+   "profitability",
+   133
+  ],
+  [
+   "strategic_pivot",
+   124
+  ],
+  [
+   "regulatory",
+   99
+  ],
+  [
+   "ai_automation",
+   58
+  ],
+  [
+   "revenue_decline",
+   45
+  ],
+  [
+   "overhiring",
+   38
+  ],
+  [
+   "flatten_management",
+   36
+  ],
+  [
+   "merger_integration",
+   30
+  ],
+  [
+   "covid",
+   23
+  ],
+  [
+   "interest_rates",
+   21
+  ],
+  [
+   "other",
+   16
+  ],
+  [
+   "performance",
+   6
+  ],
+  [
+   "clinical_failure",
+   2
+  ]
+ ],
+ "overhiring_by_year_nonbio": {
+  "2021": [
+   0,
+   32
+  ],
+  "2022": [
+   13,
+   100
+  ],
+  "2023": [
+   18,
+   167
+  ],
+  "2024": [
+   5,
+   95
+  ],
+  "2025": [
+   1,
+   101
+  ],
+  "2026": [
+   1,
+   79
+  ]
+ }
+}

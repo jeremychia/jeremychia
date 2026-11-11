@@ -1,0 +1,160 @@
+company,sector,events,first,last,min_gap_months,median_gap_months,within_12m,pcts,communicators,mentions_ai,tiers
+Amazon,big_tech,6,2022-11,2026-01,1.6,3.0,4,None;1.2;0.6;35.0;0.9;None,exec_other;ceo;ceo;ceo;cpo_hr;cpo_hr,0;0;0;0;1;0,AAAAAA
+"Atara Biotherapeutics, Inc.",biotech_health,6,2022-08,2025-10,2.2,4.9,3,20.0;30.0;25.0;50.0;30.0;29.0,sec_filing;sec_filing;sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0;0;0,SSSSSS
+Meta,big_tech,6,2022-11,2026-04,4.1,8.4,4,13.0;None;80.0;5.0;None;10.0,ceo;ceo;sec_filing;ceo;exec_other;cpo_hr,1;1;0;1;1;1,AASAAA
+"Blend Labs, Inc.",saas,5,2022-04,2023-08,2.0,3.4,4,10.0;11.0;6.4;None;None,sec_filing;sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0;0,SSSSS
+"CHEGG, INC",traditional,5,2023-06,2025-10,4.8,5.7,3,4.0;23.0;21.0;22.0;45.0,sec_filing;ceo;sec_filing;sec_filing;ceo,1;0;0;0;1,SASSB
+Unity,saas,5,2023-01,2025-02,0.0,5.9,3,None;8.0;25.0;25.0;None,ceo;sec_filing;sec_filing;sec_filing;ceo,0;0;0;0;1,BSBBA
+IROBOT CORP,hardware_auto,5,2022-08,2024-11,3.3,6.2,4,10.0;7.0;31.0;30.0;16.0,sec_filing;sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0;0,SSSSS
+MERCURY SYSTEMS INC,hardware_auto,5,2021-08,2025-02,5.0,6.3,3,None;None;None;None;None,sec_filing;sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0;0,SSSSS
+Cruise,hardware_auto,5,2023-12,2026-05,1.8,7.6,4,24.0;None;50.0;None;None,exec_other;exec_other;exec_other;spokesperson;spokesperson,0;0;0;0;1,AAAAB
+"BEYOND MEAT, INC.",traditional,5,2022-08,2025-08,2.3,9.0,2,4.0;19.0;8.0;6.0;6.0,sec_filing;sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0;0,SSSSS
+"FORRESTER RESEARCH, INC.",traditional,5,2023-01,2026-02,3.7,10.1,3,4.0;8.0;3.0;6.0;8.0,sec_filing;sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0;0,SSSSS
+Microsoft,big_tech,5,2022-07,2026-07,6.2,12.2,1,1.0;4.5;8.0;4.0;2.1,spokesperson;ceo;ceo;exec_other;cpo_hr,0;1;0;1;1,AAAAA
+"DermTech, Inc.",biotech_health,4,2023-06,2024-06,2.0,2.6,3,None;15.0;56.0;20.0,sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0,SSSS
+Cue Health Inc.,biotech_health,4,2023-01,2024-05,3.7,3.8,3,None;None;None;None,sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0,SSSS
+Gemini,fintech_crypto,4,2022-06,2026-02,1.5,6.2,2,10.0;10.0;10.0;25.0,founder;founder;founder;sec_filing,0;0;0;0,BBBS
+INTERNATIONAL PAPER CO /NEW/,traditional,4,2023-10,2025-08,3.8,6.2,2,None;None;None;None,sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0,SSSS
+DOW INC.,traditional,4,2023-01,2026-01,5.2,6.8,2,None;None;None;None,sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0,SSSS
+"Alector, Inc.",biotech_health,4,2023-03,2025-10,3.5,7.4,2,None;None;None;None,sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0,SSSS
+Sonos Inc,hardware_auto,4,2023-06,2025-11,5.8,9.0,2,7.0;6.0;6.0;12.0,sec_filing;sec_filing;ceo;sec_filing,0;0;0;0,SSAS
+WESTLAKE CORP,traditional,4,2024-07,2026-09,6.0,9.5,3,None;None;None;None,sec_filing;sec_filing;sec_filing;sec_filing,0;0;0;0,SSSS
+Latch,traditional,4,2022-05,2026-08,2.2,11.2,2,28.0;37.0;59.0;None,ceo;sec_filing;sec_filing;sec_filing,0;0;0;0,BSSS
+Wayfair,consumer_internet,4,2022-08,2025-01,5.1,11.7,3,5.0;10.0;13.0;3.0,ceo;ceo;ceo;founder,0;0;0;0,AAAA
+Salesforce,big_tech,4,2023-01,2026-02,5.4,12.7,1,10.0;1.0;None;None,ceo;media_leak;podcast_interview;spokesperson,0;0;1;1,BBBB
+"Pear Therapeutics, Inc.",biotech_health,3,2022-07,2023-04,3.7,4.2,2,9.0;22.0;92.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+"Vintage Wine Estates, Inc.",traditional,3,2023-07,2024-05,3.8,4.9,2,4.0;15.0;10.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Redfin Corp,finance_realestate,3,2022-01,2022-11,4.9,5.0,2,None;None;13.0,sec_filing;sec_filing;ceo,0;0;0,SSB
+"OMNICELL, INC.",saas,3,2022-11,2023-11,3.0,5.5,2,9.0;None;7.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+"Bionano Genomics, Inc.",biotech_health,3,2023-10,2024-09,4.8,5.5,2,17.0;39.0;45.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+TuSimple Holdings Inc.,saas,3,2022-12,2023-12,4.9,5.7,2,25.0;30.0;None,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+"Velo3D, Inc.",hardware_auto,3,2023-10,2024-10,1.9,6.0,2,21.0;30.0;32.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+"INOVIO PHARMACEUTICALS, INC.",biotech_health,3,2022-07,2023-08,6.0,6.2,2,18.0;11.0;30.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+NanoString Technologies Inc,biotech_health,3,2022-11,2024-01,2.9,7.0,2,10.0;20.0;9.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Twilio,saas,3,2022-09,2023-12,5.0,7.3,2,11.0;17.0;5.0,ceo;ceo;sec_filing,0;0;0,BAS
+"Edgio, Inc.",saas,3,2022-12,2024-03,5.8,7.4,2,10.0;12.0;10.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+"Vacasa, Inc.",traditional,3,2023-01,2024-05,2.3,7.7,1,17.0;5.0;13.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+ContextLogic Inc.,consumer_internet,3,2022-03,2023-08,6.0,8.5,2,None;17.0;34.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Motorsport Games Inc.,saas,3,2023-11,2025-05,7.1,9.1,2,40.0;39.0;38.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Rivian,hardware_auto,3,2022-07,2024-02,6.2,9.4,1,6.0;6.0;10.0,ceo;ceo;ceo,0;0;0,BBB
+MARIN SOFTWARE INC,saas,3,2023-08,2025-03,4.6,9.6,1,37.0;26.0;28.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+"Cibus, Inc.",traditional,3,2023-10,2025-07,9.1,10.6,1,None;None;None,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+BIOMARIN PHARMACEUTICAL INC,biotech_health,3,2022-10,2024-08,3.5,11.4,1,None;None;None,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Okta,saas,3,2023-02,2025-02,12.0,12.1,1,5.0;7.0;3.0,ceo;ceo;spokesperson,0;0;0,AAA
+"UiPath, Inc.",saas,3,2022-06,2024-07,4.6,12.2,1,5.0;6.0;10.0,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Peloton,consumer_internet,3,2022-02,2024-05,6.1,13.4,1,20.0;None;15.0,ceo;ceo;ceo,0;0;0,BBB
+Ford,hardware_auto,3,2022-08,2024-11,5.8,13.5,1,None;None;14.0,ceo;spokesperson;spokesperson,0;0;0,ABA
+Atlassian,saas,3,2023-03,2026-03,7.4,18.1,1,5.0;None;10.0,founder;ceo;ceo,0;1;1,BBB
+Cisco,big_tech,3,2022-11,2026-05,21.0,21.0,0,5.0;7.0;5.0,earnings_call;sec_filing;ceo,0;1;1,ABB
+Opendoor,consumer_internet,3,2022-11,2026-06,19.1,21.6,0,18.0;17.0;None,ceo;sec_filing;ceo,0;0;1,ASB
+Snap,consumer_internet,3,2022-08,2026-04,17.2,21.8,0,20.0;10.0;16.0,ceo;sec_filing;ceo,0;0;1,AAA
+Dropbox,saas,3,2021-01,2024-10,18.2,22.8,0,11.0;16.0;20.0,ceo;ceo;ceo,0;1;1,AAA
+"Fulcrum Therapeutics, Inc.",biotech_health,3,2022-08,2026-06,20.3,22.9,0,None;None;None,sec_filing;sec_filing;sec_filing,0;0;0,SSS
+Coinbase,fintech_crypto,3,2022-06,2026-05,6.9,23.4,1,18.0;20.0;14.0,ceo;ceo;ceo,0;0;1,BAA
+Robinhood,fintech_crypto,3,2022-04,2026-06,3.2,24.9,1,9.0;23.0;10.0,ceo;ceo;sec_filing,0;0;0,ABS
+23andMe Holding Co.,biotech_health,2,2023-06,2023-08,2.0,2.0,1,9.0;11.0,sec_filing;sec_filing,0;0,SS
+"Recro Pharma, Inc.",biotech_health,2,2021-02,2021-05,2.3,2.3,1,15.0;10.0,sec_filing;sec_filing,0;0,SS
+"ARDELYX, INC.",biotech_health,2,2021-08,2021-10,2.3,2.3,1,None;None,sec_filing;sec_filing,0;0,SS
+"EQRx, Inc.",biotech_health,2,2023-02,2023-05,2.4,2.4,1,None;None,sec_filing;sec_filing,0;0,SS
+"IronNet, Inc.",saas,2,2022-06,2022-09,2.7,2.7,1,17.0;35.0,sec_filing;sec_filing,0;0,SS
+Zymergen Inc.,biotech_health,2,2022-07,2022-10,2.8,2.8,1,None;None,sec_filing;sec_filing,0;0,SS
+"Lyra Therapeutics, Inc.",biotech_health,2,2024-05,2024-08,2.8,2.8,1,None;75.0,sec_filing;sec_filing,0;0,SS
+"Starry Group Holdings, Inc.",traditional,2,2022-10,2023-01,3.0,3.0,1,50.0;24.0,sec_filing;sec_filing,0;0,SS
+"Viracta Therapeutics, Inc.",biotech_health,2,2024-07,2024-11,3.3,3.3,1,23.0;42.0,sec_filing;sec_filing,0;0,SS
+"Coherus BioSciences, Inc.",biotech_health,2,2023-03,2023-06,3.4,3.4,1,None;50.0,sec_filing;sec_filing,0;0,SS
+Oncocyte Corp,biotech_health,2,2022-12,2023-04,3.7,3.7,1,40.0;20.0,sec_filing;sec_filing,0;0,SS
+Quotient Technology Inc.,traditional,2,2022-07,2022-11,4.1,4.1,1,None;None,sec_filing;sec_filing,0;0,SS
+Sarcos Technology & Robotics Corp,saas,2,2023-07,2023-11,4.1,4.1,1,24.0;70.0,sec_filing;sec_filing,0;0,SS
+"HilleVax, Inc.",biotech_health,2,2024-07,2024-12,4.2,4.2,1,40.0;70.0,sec_filing;sec_filing,0;0,SS
+"Fast Radius, Inc.",traditional,2,2022-06,2022-11,4.4,4.4,1,20.0;20.0,sec_filing;sec_filing,0;0,SS
+APPLIED DNA SCIENCES INC,finance_realestate,2,2025-02,2025-06,4.5,4.5,1,20.0;27.0,sec_filing;sec_filing,0;0,SS
+"AMYRIS, INC.",traditional,2,2023-08,2023-12,4.6,4.6,1,None;None,sec_filing;sec_filing,0;0,SS
+ZIOPHARM ONCOLOGY INC,biotech_health,2,2021-05,2021-09,4.7,4.7,1,15.0;50.0,sec_filing;sec_filing,0;0,SS
+"CATALYST BIOSCIENCES, INC.",biotech_health,2,2021-11,2022-04,4.7,4.7,1,None;None,sec_filing;sec_filing,0;0,SS
+"Gemini Therapeutics, Inc. /DE",biotech_health,2,2021-10,2022-02,4.8,4.8,1,None;None,sec_filing;sec_filing,0;0,SS
+"Leafly Holdings, Inc. /DE",saas,2,2022-10,2023-03,4.9,4.9,1,None;None,sec_filing;sec_filing,0;0,SS
+"INFINITY PHARMACEUTICALS, INC.",biotech_health,2,2023-02,2023-07,5.0,5.0,1,13.0;78.0,sec_filing;sec_filing,0;0,SS
+Lyft,consumer_internet,2,2022-11,2023-04,5.8,5.8,1,13.0;26.0,founder;ceo,0;0,AB
+Carvana,consumer_internet,2,2022-05,2022-11,6.1,6.1,1,12.0;8.0,ceo;ceo,0;0,BB
+NETSCOUT SYSTEMS INC,saas,2,2024-07,2025-01,6.2,6.2,1,6.5;6.2,sec_filing;sec_filing,0;0,SS
+"Appgate, Inc.",saas,2,2022-07,2023-02,6.4,6.4,1,22.0;8.0,sec_filing;sec_filing,0;0,SS
+"Zendesk, Inc.",saas,2,2022-11,2023-05,6.7,6.7,1,None;8.0,sec_filing;ceo,0;1,SA
+"Stitch Fix, Inc.",consumer_internet,2,2022-06,2023-01,6.9,6.9,1,4.0;15.0,sec_filing;sec_filing,0;0,SS
+"AEye, Inc.",hardware_auto,2,2023-03,2023-11,7.3,7.3,1,None;None,sec_filing;sec_filing,0;0,SS
+"Virgin Orbit Holdings, Inc.",traditional,2,2023-03,2023-11,7.3,7.3,1,85.0;18.0,sec_filing;ceo,0;0,SA
+STEELCASE INC,traditional,2,2022-09,2023-05,7.4,7.4,1,None;None,sec_filing;sec_filing,0;0,SS
+"Surface Oncology, Inc.",biotech_health,2,2022-11,2023-06,7.4,7.4,1,20.0;50.0,sec_filing;sec_filing,0;0,SS
+PEGASYSTEMS INC,saas,2,2023-01,2023-08,7.9,7.9,1,4.0;4.0,sec_filing;sec_filing,0;0,SS
+EnerSys,hardware_auto,2,2025-07,2026-03,8.1,8.1,1,None;None,sec_filing;sec_filing,0;0,SS
+Ultragenyx Pharmaceutical Inc.,biotech_health,2,2026-02,2026-11,8.7,8.7,1,None;20.0,sec_filing;sec_filing,0;0,SS
+"1stdibs.com, Inc.",consumer_internet,2,2022-09,2023-06,9.2,9.2,1,10.0;20.0,sec_filing;sec_filing,0;0,SS
+Shopify,saas,2,2022-07,2023-05,9.3,9.3,1,10.0;20.0,ceo;ceo,0;1,AA
+"Caribou Biosciences, Inc.",biotech_health,2,2024-07,2025-04,9.3,9.3,1,None;None,sec_filing;sec_filing,0;0,SS
+"MAXCYTE, INC.",biotech_health,2,2024-12,2025-09,9.4,9.4,1,15.0;34.0,sec_filing;sec_filing,0;0,SS
+"NexImmune, Inc.",biotech_health,2,2022-11,2023-08,9.5,9.5,1,None;None,sec_filing;sec_filing,0;0,SS
+"EXICURE, INC.",biotech_health,2,2021-12,2022-09,9.6,9.6,1,50.0;66.0,sec_filing;sec_filing,0;0,SS
+Informatica Inc.,saas,2,2023-01,2023-11,9.7,9.7,1,7.0;10.0,sec_filing;sec_filing,0;0,SS
+"Science 37 Holdings, Inc.",biotech_health,2,2023-04,2024-02,10.0,10.0,1,30.0;23.2,sec_filing;sec_filing,0;0,SS
+"TScan Therapeutics, Inc.",biotech_health,2,2025-11,2026-09,10.0,10.0,1,30.0;75.0,sec_filing;sec_filing,0;0,SS
+"Frequency Therapeutics, Inc.",biotech_health,2,2022-04,2023-02,10.2,10.2,1,30.0;55.0,sec_filing;sec_filing,0;0,SS
+"SOLAREDGE TECHNOLOGIES, INC.",hardware_auto,2,2024-01,2024-11,10.2,10.2,1,None;None,sec_filing;sec_filing,0;0,SS
+Spotify,consumer_internet,2,2023-01,2023-12,10.4,10.4,1,6.0;17.0,ceo;ceo,0;0,AA
+Hasbro,traditional,2,2023-01,2023-12,10.5,10.5,1,15.0;None,earnings_call;ceo,0;0,AA
+Autodesk,saas,2,2025-02,2026-01,10.8,10.8,1,9.0;7.0,ceo;ceo,1;1,AB
+RIGEL PHARMACEUTICALS INC,biotech_health,2,2021-11,2022-10,10.9,10.9,1,16.0;16.0,sec_filing;sec_filing,0;0,SS
+"Finch Therapeutics Group, Inc.",biotech_health,2,2022-04,2023-03,11.1,11.1,1,None;95.0,sec_filing;sec_filing,0;0,SS
+Block,fintech_crypto,2,2025-03,2026-02,11.1,11.1,1,None;40.0,founder;founder,1;1,BA
+DocuSign,saas,2,2023-02,2024-02,11.7,11.7,1,10.0;None,spokesperson;ceo,0;0,BA
+Sonder Holdings Inc.,traditional,2,2023-03,2024-02,11.7,11.7,1,None;None,sec_filing;sec_filing,0;0,SS
+Intel,big_tech,2,2024-08,2025-07,11.7,11.7,1,15.0;15.0,ceo;ceo,1;1,AA
+Alphabet/Google,big_tech,2,2023-01,2024-01,11.9,11.9,1,6.0;None,ceo;ceo,1;0,AA
+"MedAvail Holdings, Inc.",traditional,2,2023-01,2024-01,12.1,12.1,0,75.0;40.0,sec_filing;sec_filing,0;0,SS
+"Acutus Medical, Inc.",biotech_health,2,2023-11,2024-12,12.9,12.9,0,65.0;70.0,sec_filing;ceo,0;0,SA
+EMCORE CORP,hardware_auto,2,2023-04,2024-05,13.1,13.1,0,22.0;40.0,sec_filing;sec_filing,0;0,SS
+Li-Cycle Holdings Corp.,traditional,2,2024-03,2025-05,13.2,13.2,0,17.0;50.0,sec_filing;sec_filing,0;0,SS
+Hippo Holdings Inc.,finance_realestate,2,2022-08,2023-10,13.8,13.8,0,10.0;None,sec_filing;sec_filing,0;0,SS
+ZUORA INC,saas,2,2022-12,2024-02,13.9,13.9,0,11.0;8.0,sec_filing;sec_filing,0;0,SS
+Paramount Global,media_gaming,2,2024-08,2025-10,14.5,14.5,0,15.0;None,exec_other;ceo,0;0,AB
+Getir,international_startup,2,2022-05,2023-08,15.0,15.0,0,14.0;10.0,spokesperson;ceo,0;0,AB
+"Aterian, Inc.",hardware_auto,2,2024-02,2025-05,15.0,15.0,0,None;None,sec_filing;sec_filing,0;0,SS
+"Molecular Templates, Inc.",biotech_health,2,2023-06,2024-10,15.5,15.5,0,None;60.0,sec_filing;sec_filing,0;0,SS
+Bumble Inc.,saas,2,2024-02,2025-06,15.9,15.9,0,None;30.0,sec_filing;spokesperson,0;0,SA
+"Bolt Biotherapeutics, Inc.",biotech_health,2,2024-05,2025-10,16.6,16.6,0,50.0;50.0,sec_filing;ceo,0;0,SA
+"Origin Materials, Inc.",traditional,2,2024-09,2026-02,16.7,16.7,0,28.0;32.0,sec_filing;sec_filing,0;0,SS
+STANDARD BIOTOOLS INC.,biotech_health,2,2024-04,2025-09,16.8,16.8,0,10.0;15.0,sec_filing;sec_filing,0;0,SS
+"Nkarta, Inc.",biotech_health,2,2023-10,2025-03,17.3,17.3,0,10.0;34.0,sec_filing;sec_filing,0;0,SS
+"GoPro, Inc.",traditional,2,2024-08,2026-04,19.6,19.6,0,None;None,sec_filing;sec_filing,0;0,SS
+"FRACTYL HEALTH, INC.",biotech_health,2,2025-01,2026-10,20.7,20.7,0,17.0;45.0,sec_filing;sec_filing,0;0,SS
+UPS,traditional,2,2024-01,2025-10,21.0,21.0,0,2.4;None,earnings_call;earnings_call,0;0,AA
+"Mersana Therapeutics, Inc.",biotech_health,2,2023-07,2025-05,21.3,21.3,0,50.0;55.0,sec_filing;sec_filing,0;0,SS
+Intuit,saas,2,2024-07,2026-05,22.3,22.3,0,10.0;17.0,ceo;ceo,1;1,AB
+Tesla,hardware_auto,2,2022-06,2024-04,22.4,22.4,0,3.5;10.0,ceo;ceo,0;1,AB
+Workday,saas,2,2023-02,2025-02,24.0,24.0,0,3.0;8.5,ceo;ceo,0;1,BA
+Sophos,saas,2,2023-01,2025-02,24.9,24.9,0,10.0;6.0,spokesperson;spokesperson,0;0,AA
+Stripe,fintech_crypto,2,2022-11,2025-01,26.6,26.6,0,14.0;3.5,ceo;cpo_hr,0;0,AA
+HP Inc,big_tech,2,2022-11,2025-02,27.2,27.2,0,9.0;3.4,earnings_call;earnings_call,0;1,AB
+Emergent BioSolutions Inc.,biotech_health,2,2024-05,2026-08,27.2,27.2,0,None;None,sec_filing;sec_filing,0;0,SS
+Indeed,consumer_internet,2,2023-03,2025-07,27.7,27.7,0,15.0;6.0,ceo;ceo,0;1,AA
+Bolt,fintech_crypto,2,2023-12,2026-04,27.8,27.8,0,29.0;30.0,spokesperson;founder,0;1,AB
+The Washington Post,media_gaming,2,2023-10,2026-02,27.9,27.9,0,10.0;33.0,exec_other;exec_other,0;0,AA
+GOODYEAR TIRE & RUBBER CO /OH/,traditional,2,2023-09,2026-03,30.4,30.4,0,None;None,sec_filing;sec_filing,0;0,SS
+Etsy,consumer_internet,2,2023-12,2026-08,32.0,32.0,0,11.0;None,ceo;sec_filing,0;0,BS
+COMPUTER PROGRAMS & SYSTEMS INC,saas,2,2021-02,2023-11,32.8,32.8,0,1.0;2.0,sec_filing;sec_filing,0;0,SS
+"10x Genomics, Inc.",biotech_health,2,2022-08,2025-05,33.2,33.2,0,8.0;8.0,sec_filing;sec_filing,0;0,SS
+Goldman Sachs,consulting_finance,2,2023-01,2025-10,33.2,33.2,0,6.5;None,media_leak;exec_other,0;1,BB
+"Cardlytics, Inc.",saas,2,2022-11,2025-10,34.6,34.6,0,None;24.0,sec_filing;sec_filing,0;0,SS
+Pinterest,consumer_internet,2,2023-02,2026-01,35.9,35.9,0,None;15.0,spokesperson;sec_filing,0;1,AB
+IMPINJ INC,hardware_auto,2,2021-02,2024-02,36.0,36.0,0,3.0;10.0,sec_filing;sec_filing,0;0,SS
+Dell,big_tech,2,2023-02,2026-03,37.8,37.8,0,5.0;10.0,exec_other;sec_filing,0;1,AB
+"SANGAMO THERAPEUTICS, INC",biotech_health,2,2023-04,2026-06,38.0,38.0,0,None;40.0,sec_filing;sec_filing,0;0,SS
+PayPal,fintech_crypto,2,2023-01,2026-05,39.1,39.1,0,7.0;20.0,ceo;earnings_call,0;1,BB
+"Phunware, Inc.",saas,2,2023-07,2026-11,39.8,39.8,0,33.0;26.0,sec_filing;sec_filing,0;0,SS
+Groupon,consumer_internet,2,2023-01,2026-05,39.9,39.9,0,None;None,sec_filing;sec_filing,0;0,AS
+"EyePoint Pharmaceuticals, Inc.",biotech_health,2,2023-05,2026-10,41.1,41.1,0,None;53.0,sec_filing;sec_filing,0;0,SS
+"NEW RELIC, INC.",saas,2,2021-04,2024-10,42.5,42.5,0,None;8.0,sec_filing;sec_filing,0;0,SS
+HubSpot,saas,2,2023-01,2026-10,44.2,44.2,0,7.0;7.0,ceo;ceo,0;1,AB
+Chime,fintech_crypto,2,2022-11,2026-08,45.1,45.1,0,12.0;10.0,ceo;sec_filing,0;0,AS
+"BIO-RAD LABORATORIES, INC.",biotech_health,2,2021-02,2025-02,48.4,48.4,0,None;5.0,sec_filing;sec_filing,0;0,SS
+Elanco Animal Health Inc,biotech_health,2,2021-11,2025-12,48.4,48.4,0,None;None,sec_filing;sec_filing,0;0,SS
+"Spok Holdings, Inc",traditional,2,2022-02,2026-04,49.9,49.9,0,None;10.0,sec_filing;sec_filing,0;0,SS
+SHENANDOAH TELECOMMUNICATIONS CO/VA/,traditional,2,2021-04,2026-02,58.8,58.8,0,30.0;10.0,sec_filing;sec_filing,0;0,SS

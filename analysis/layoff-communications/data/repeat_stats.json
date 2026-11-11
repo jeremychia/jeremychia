@@ -1,0 +1,557 @@
+{
+ "companies": 582,
+ "repeaters": 159,
+ "share_repeaters": 0.273,
+ "three_plus": 53,
+ "within_12m_pairs": 157,
+ "companies_with_back_to_back_within_12m": 104,
+ "median_gap_months": 10.2,
+ "by_sector": {
+  "big_tech": [
+   9,
+   12
+  ],
+  "biotech_health": [
+   48,
+   194
+  ],
+  "consulting_finance": [
+   1,
+   7
+  ],
+  "consumer_internet": [
+   14,
+   32
+  ],
+  "finance_realestate": [
+   3,
+   30
+  ],
+  "fintech_crypto": [
+   8,
+   21
+  ],
+  "hardware_auto": [
+   14,
+   46
+  ],
+  "international_startup": [
+   1,
+   10
+  ],
+  "media_gaming": [
+   2,
+   22
+  ],
+  "saas": [
+   33,
+   114
+  ],
+  "traditional": [
+   26,
+   94
+  ]
+ },
+ "wording_drift_pairs": [
+  {
+   "company": "Dropbox",
+   "first": "2021-01",
+   "last": "2024-10",
+   "apology": [
+    false,
+    true
+   ],
+   "responsibility": [
+    null,
+    true
+   ],
+   "ai": [
+    false,
+    true
+   ],
+   "pct": [
+    11.0,
+    20.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Coinbase",
+   "first": "2023-01",
+   "last": "2026-05",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    true,
+    false
+   ],
+   "ai": [
+    false,
+    true
+   ],
+   "pct": [
+    20.0,
+    14.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Microsoft",
+   "first": "2022-07",
+   "last": "2026-07",
+   "apology": [
+    false,
+    null
+   ],
+   "responsibility": [
+    false,
+    null
+   ],
+   "ai": [
+    false,
+    true
+   ],
+   "pct": [
+    1.0,
+    2.1
+   ],
+   "comm": [
+    "spokesperson",
+    "cpo_hr"
+   ]
+  },
+  {
+   "company": "Shopify",
+   "first": "2022-07",
+   "last": "2023-05",
+   "apology": [
+    true,
+    false
+   ],
+   "responsibility": [
+    true,
+    false
+   ],
+   "ai": [
+    false,
+    true
+   ],
+   "pct": [
+    10.0,
+    20.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Wayfair",
+   "first": "2022-08",
+   "last": "2025-01",
+   "apology": [
+    false,
+    null
+   ],
+   "responsibility": [
+    true,
+    null
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    5.0,
+    3.0
+   ],
+   "comm": [
+    "ceo",
+    "founder"
+   ]
+  },
+  {
+   "company": "Ford",
+   "first": "2022-08",
+   "last": "2024-11",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    null,
+    false
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    null,
+    14.0
+   ],
+   "comm": [
+    "ceo",
+    "spokesperson"
+   ]
+  },
+  {
+   "company": "Snap",
+   "first": "2022-08",
+   "last": "2026-04",
+   "apology": [
+    true,
+    null
+   ],
+   "responsibility": [
+    false,
+    null
+   ],
+   "ai": [
+    false,
+    true
+   ],
+   "pct": [
+    20.0,
+    16.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Stripe",
+   "first": "2022-11",
+   "last": "2025-01",
+   "apology": [
+    true,
+    null
+   ],
+   "responsibility": [
+    true,
+    null
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    14.0,
+    3.5
+   ],
+   "comm": [
+    "ceo",
+    "cpo_hr"
+   ]
+  },
+  {
+   "company": "Meta",
+   "first": "2022-11",
+   "last": "2026-04",
+   "apology": [
+    true,
+    null
+   ],
+   "responsibility": [
+    true,
+    null
+   ],
+   "ai": [
+    true,
+    true
+   ],
+   "pct": [
+    13.0,
+    10.0
+   ],
+   "comm": [
+    "ceo",
+    "cpo_hr"
+   ]
+  },
+  {
+   "company": "Amazon (Devices & Services)",
+   "first": "2022-11",
+   "last": "2026-01",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    null,
+    false
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    null,
+    null
+   ],
+   "comm": [
+    "exec_other",
+    "cpo_hr"
+   ]
+  },
+  {
+   "company": "Sophos",
+   "first": "2023-01",
+   "last": "2025-02",
+   "apology": [
+    false,
+    null
+   ],
+   "responsibility": [
+    null,
+    null
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    10.0,
+    6.0
+   ],
+   "comm": [
+    "spokesperson",
+    "spokesperson"
+   ]
+  },
+  {
+   "company": "Alphabet/Google",
+   "first": "2023-01",
+   "last": "2024-01",
+   "apology": [
+    true,
+    false
+   ],
+   "responsibility": [
+    true,
+    false
+   ],
+   "ai": [
+    true,
+    false
+   ],
+   "pct": [
+    6.0,
+    null
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Spotify",
+   "first": "2023-01",
+   "last": "2023-12",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    true,
+    false
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    6.0,
+    17.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Hasbro",
+   "first": "2023-01",
+   "last": "2023-12",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    null,
+    null
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    15.0,
+    null
+   ],
+   "comm": [
+    "earnings_call",
+    "ceo"
+   ]
+  },
+  {
+   "company": "Okta",
+   "first": "2023-02",
+   "last": "2025-02",
+   "apology": [
+    true,
+    null
+   ],
+   "responsibility": [
+    false,
+    null
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    5.0,
+    3.0
+   ],
+   "comm": [
+    "ceo",
+    "spokesperson"
+   ]
+  },
+  {
+   "company": "Indeed",
+   "first": "2023-03",
+   "last": "2025-07",
+   "apology": [
+    false,
+    null
+   ],
+   "responsibility": [
+    null,
+    null
+   ],
+   "ai": [
+    false,
+    true
+   ],
+   "pct": [
+    15.0,
+    6.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  },
+  {
+   "company": "The Washington Post",
+   "first": "2023-10",
+   "last": "2026-02",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    true,
+    false
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    10.0,
+    33.0
+   ],
+   "comm": [
+    "exec_other",
+    "exec_other"
+   ]
+  },
+  {
+   "company": "Cruise (GM)",
+   "first": "2023-12",
+   "last": "2025-10",
+   "apology": [
+    true,
+    false
+   ],
+   "responsibility": [
+    false,
+    false
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    24.0,
+    null
+   ],
+   "comm": [
+    "exec_other",
+    "spokesperson"
+   ]
+  },
+  {
+   "company": "UPS",
+   "first": "2024-01",
+   "last": "2025-10",
+   "apology": [
+    null,
+    false
+   ],
+   "responsibility": [
+    null,
+    false
+   ],
+   "ai": [
+    false,
+    false
+   ],
+   "pct": [
+    2.4,
+    null
+   ],
+   "comm": [
+    "earnings_call",
+    "earnings_call"
+   ]
+  },
+  {
+   "company": "Intel",
+   "first": "2024-08",
+   "last": "2025-07",
+   "apology": [
+    false,
+    false
+   ],
+   "responsibility": [
+    false,
+    false
+   ],
+   "ai": [
+    true,
+    true
+   ],
+   "pct": [
+    15.0,
+    15.0
+   ],
+   "comm": [
+    "ceo",
+    "ceo"
+   ]
+  }
+ ]
+}
