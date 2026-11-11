@@ -1,0 +1,360 @@
+[
+ {
+  "company": "Gorillas",
+  "event_date": "2022-05-23",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Kagan Sumer",
+  "channel": [
+   "internal_email",
+   "media_leak",
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "Reported ~300-320 Berlin HQ staff, about half of admin staff; Manager Magazin reported first (pre_leak). Internal email from Sumer reported by Exberliner but full text not read; no quotes verified.",
+  "sources": [
+   {
+    "title": "Tech.eu",
+    "type": "news",
+    "url": "https://tech.eu/2022/05/24/trouble-in-the-jungle-as-gorillas-axes-almost-half-its-hq-staff/"
+   },
+   {
+    "title": "Reuters via The Star",
+    "type": "news",
+    "url": "https://www.thestar.com.my/tech/tech-news/2022/05/24/german-grocery-app-gorillas-to-cut-staff-in-search-of-profit"
+   }
+  ]
+ },
+ {
+  "company": "Byju's",
+  "event_date": "2022-10-31",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Byju Raveendran",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes read in Business Today. Cuts phased over six months across product/content/media/tech; reports of employees informed by calls without notice and a Kerala labour dispute. Email date approximate (31 Oct/1 Nov). Later rounds in 2023 not recorded.",
+  "sources": [
+   {
+    "title": "Business Today",
+    "type": "news",
+    "url": "https://www.businesstoday.in/technology/story/byjus-ceo-says-laying-off-2500-employees-is-a-price-to-pay-for-profitability-351429-2022-11-01"
+   }
+  ]
+ },
+ {
+  "company": "Coinbase",
+  "event_date": "2023-01-10",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Brian Armstrong",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Primary not fetched (TechCrunch guess URL 404). Paraphrase only: reduce operating expenses ~25%, cut projects with lower probability of success; 'well capitalized, and crypto isn't going anywhere' reported by secondary source - not verified so not in key_quotes.",
+  "sources": [
+   {
+    "title": "Bloomberg",
+    "type": "news",
+    "url": "https://www.bloomberg.com/news/articles/2023-01-10/coinbase-to-cut-workforce-by-about-950-employees-in-crypto-slump"
+   },
+   {
+    "title": "The Block",
+    "type": "news",
+    "url": "https://www.theblock.co/post/200383/coinbase-to-cut-20-of-staff-in-latest-round-of-layoffs"
+   }
+  ]
+ },
+ {
+  "company": "Workday",
+  "event_date": "2023-02-07",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Carl Eschenbach",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Only a Spanish-language source (~552 jobs, 3%); exact date, headcount and communicator (co-CEO era) NOT verified, headcount and date are approximate. Needs follow-up via Workday 8-K.",
+  "sources": [
+   {
+    "title": "La Opinion",
+    "type": "news",
+    "url": "https://laopinion.com/?p=3325338"
+   }
+  ]
+ },
+ {
+  "company": "Binance",
+  "event_date": "2023-07-14",
+  "tier": "B",
+  "communicator": "media_leak",
+  "communicator_name": "WSJ report; company spokesperson",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "WSJ-reported >1,000 dismissals; Binance declined to confirm size; 20% (of ~8,000) rumoured since May 2023 and unconfirmed. Phrases 'talent density audit' via spokesperson per secondary. CEO then Changpeng Zhao (to Nov 2023). No memo text found.",
+  "sources": [
+   {
+    "title": "The Block: Binance dismissed more than 1,000 (WSJ)",
+    "type": "news",
+    "url": "https://www.theblock.co/post/239695/binance-dismissed-more-than-1000-employees-in-recent-weeks-wsj"
+   }
+  ]
+ },
+ {
+  "company": "eBay",
+  "event_date": "2024-01-23",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Jamie Iannone",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Date approximate. Fragments paraphrased from news, no verbatim quote kept.",
+  "sources": [
+   {
+    "title": "eBay laying off 1,000 employees",
+    "type": "news",
+    "url": "https://abc7.com/ebay-employees-laid-off-1-000-roles-cut/14355503"
+   }
+  ]
+ },
+ {
+  "company": "Northvolt",
+  "event_date": "2024-09-23",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Peter Carlsson",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "Original press release not fetched; wording only paraphrased in secondary sources (no verified verbatim quotes). 1,600 = notice of redundancy (Swedish process, union negotiation): 1,000 Skelleftea, 400 Vasteras, 200 Stockholm.",
+  "sources": [
+   {
+    "title": "Northvolt to cut more than 20% of jobs",
+    "type": "news",
+    "url": "https://www.irishtimes.com/business/2024/09/23/northvolt-to-cut-more-than-20-of-jobs-in-battle-for-survival"
+   },
+   {
+    "title": "Northvolt lays off 1,600",
+    "type": "news",
+    "url": "https://northswedenbusiness.com/news/2024/september/northvolt-lays-off-1-600-employees/"
+   }
+  ]
+ },
+ {
+  "company": "Procter & Gamble",
+  "event_date": "2025-06-05",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Andre Schulten (CFO)",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Announced at Deutsche Bank conference; up to 7,000 over two years, ~15% of non-manufacturing, ~6% overall; $1-1.6B pretax cost. 'Digitization and automation' cited, not generative AI. No quotes verified verbatim; CEO Jejurikar not the voice.",
+  "sources": [
+   {
+    "title": "P&G to cut 7,000 jobs",
+    "type": "news",
+    "url": "https://www.fox19.com/2025/06/05/procter-gamble-cut-7000-jobs-over-two-years"
+   }
+  ]
+ },
+ {
+  "company": "General Motors",
+  "event_date": "2025-10-22",
+  "tier": "B",
+  "communicator": "spokesperson",
+  "communicator_name": "Mary Barra (quoted separately); company statement",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "1,750 indefinite + 1,670 temporary (total ~3,400 across EV/battery plants). Barra quote reported in search summary fragment, trimmed to a verified fragment; may come from a different venue. No memo text. Also separate Oct 2025 salaried cuts (~200) not recorded.",
+  "sources": [
+   {
+    "title": "GM lays off over 1,700 workers",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/lifestyle/gm-lays-off-over-1700-workers-indefinitely-ev-demand-slows"
+   }
+  ]
+ },
+ {
+  "company": "McKinsey",
+  "event_date": "2025-12-01",
+  "tier": "B",
+  "communicator": "media_leak",
+  "communicator_name": "Firm leadership (unnamed); spokesperson",
+  "channel": [
+   "zoom"
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (Dec 2025). ~10% of non-client-facing staff; counts reported variously (~2,000 / 'thousands'). Channel guessed from 'discussed with managers', uncertain. Bob Sternfels not shown to have written.",
+  "sources": [
+   {
+    "title": "McKinsey bosses plot job cuts",
+    "type": "news",
+    "url": "https://news.bloomberglaw.com/daily-labor-report/mckinsey-bosses-plot-thousands-of-job-cuts-with-fees-under-fire"
+   }
+  ]
+ },
+ {
+  "company": "Airbnb",
+  "event_date": "2020-05-05",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Brian Chesky",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes taken from Bernoff blog extraction of the email (secondary reproduction), not Airbnb's own page (airbnb.com/d/ceoemail fetch returned homepage). 'Responsibility' not explicitly verified so null. Severance from news. Headcount 1,900 of ~7,500.",
+  "sources": [
+   {
+    "title": "Brian Chesky lays off 1,900 Airbnb staff like an actual human being",
+    "type": "analysis",
+    "url": "https://bernoff.com/blog/brian-chesky-lays-off-1900-airbnb-staff-like-an-actual-human-being"
+   },
+   {
+    "title": "Truly sorry: Airbnb laying off a quarter of its employees",
+    "type": "news",
+    "url": "https://www.washingtonexaminer.com/?p=590252"
+   }
+  ]
+ },
+ {
+  "company": "Twitter/X",
+  "event_date": "2022-11-03",
+  "tier": "A",
+  "communicator": "exec_other",
+  "communicator_name": "Unsigned company email (owner Elon Musk)",
+  "channel": [
+   "internal_email",
+   "personal_email_to_laid_off"
+  ],
+  "confidence": "medium",
+  "notes": "Opening line truncated by fetch (~85 chars); sentence continues. Headcount 3,700 / ~50% are press (Bloomberg), not in email. Email 3 Nov; cuts 4 Nov. Notices to personal email, badge access cut.",
+  "sources": [
+   {
+    "title": "Fortune: Twitter layoff memo",
+    "type": "news",
+    "url": "https://fortune.com/2022/11/04/twitter-layoff-memo-elon-musk"
+   }
+  ]
+ },
+ {
+  "company": "Microsoft",
+  "event_date": "2023-01-18",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Satya Nadella",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "confidence": "high",
+  "notes": "Primary blog read via summariser; only one short verbatim quote retained. Nadella pledge to 'treat our people with dignity and respect' paraphrased/short-quoted by summariser; charge ~$1.2B (blog) vs $800M severance per search. 10,000 = just under 5% of ~220,000. No explicit apology found.",
+  "sources": [
+   {
+    "title": "Subject: Focusing on our short- and long-term opportunity",
+    "type": "primary",
+    "url": "https://blogs.microsoft.com/blog/2023/01/18/subject-focusing-on-our-short-and-long-term-opportunity/"
+   }
+  ]
+ },
+ {
+  "company": "BuzzFeed",
+  "event_date": "2023-04-20",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Jonah Peretti",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "BuzzFeed News closed. ~180 estimated from ~1,200 staff. Memo mentions AI only re sales; company said no jobs replaced by AI. mentions_ai set false for layoff rationale. Earlier Dec 2022 round was 12%.",
+  "sources": [
+   {
+    "title": "BuzzFeed News shutting down (memo in full)",
+    "type": "news",
+    "url": "https://www.cbsnews.com/news/buzzfeed-news-shutting-down-job-cuts"
+   }
+  ]
+ },
+ {
+  "company": "Microsoft Gaming (Xbox/Activision Blizzard/ZeniMax)",
+  "event_date": "2024-01-25",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Phil Spencer",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "Memo text via Game Informer (credits IGN). ~8% of ~22,000 gaming staff per news. Only partial fragments verified; responsibility/apology not seen. Phil Spencer's 2025 cuts (about 9,000 Microsoft-wide) not covered.",
+  "sources": [
+   {
+    "title": "Microsoft is laying off 1,900 employees",
+    "type": "news",
+    "url": "https://gameinformer.com/news/2024/01/25/microsoft-is-laying-off-1900-employees-across-xbox-activision-blizzard-and-zenimax"
+   }
+  ]
+ },
+ {
+  "company": "Dropbox",
+  "event_date": "2024-10-30",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Drew Houston",
+  "channel": [
+   "public_blog",
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes from news excerpts of the memo, not the original page; opening line not verified. Cost estimate $63-68M (news); a sqmagazine figure of $47.2M conflicts and was discounted.",
+  "sources": [
+   {
+    "title": "Entrepreneur",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/dropbox-is-laying-off-more-than-500-employees/482173"
+   },
+   {
+    "title": "CC Startup",
+    "type": "news",
+    "url": "https://ccstartup.com/blog/2024/10/30/dropbox-lays-off-20-of-staff-says-it-overinvested-and-underperformed"
+   }
+  ]
+ },
+ {
+  "company": "Pinterest",
+  "event_date": "2026-01-27",
+  "tier": "A",
+  "communicator": "sec_filing",
+  "communicator_name": "Bill Ready (CEO)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Fragments quoted from Engadget summarising the filing. Headcount approx (<15% of ~4,500-5,200); charges $35-45M, completion by Sept 2026. Ready's own memo not read.",
+  "sources": [
+   {
+    "title": "Pinterest layoffs",
+    "type": "news",
+    "url": "https://www.engadget.com/ai/pinterest-is-conducting-a-massive-round-of-layoffs-to-prioritize-ai-powered-products-and-capabilities-163440004.html"
+   }
+  ]
+ }
+]

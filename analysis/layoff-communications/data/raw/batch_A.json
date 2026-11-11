@@ -1,0 +1,1072 @@
+[
+ {
+  "company": "Microsoft",
+  "sector": "big_tech",
+  "event_date": "2014-07-17",
+  "headcount_cut": 18000,
+  "pct_workforce": 14.0,
+  "communicator": "ceo",
+  "communicator_name": "Satya Nadella",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Last week in my email to you I synthesized our strategic direction as a productivity and platform company.",
+  "key_quotes": [
+   "we will begin to reduce the size of our overall workforce by up to 18,000 jobs in the next year.",
+   "We will offer severance to all employees impacted by these changes.",
+   "My promise to you is that we will go through this process in the most thoughtful and transparent way possible."
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "merger_integration",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our overall workforce"
+  ],
+  "severance": "Severance offered to all impacted employees (terms not itemised in text read)",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Strategic and managerial; first-year CEO framing cuts as part of simplifying and integrating Nokia, with a promise of transparency.",
+  "sources": [
+   {
+    "url": "https://news.microsoft.com/source/2014/07/17/starting-to-evolve-our-organization-and-culture/",
+    "title": "Starting to evolve our organization and culture",
+    "type": "primary"
+   },
+   {
+    "url": "https://www.geekwire.com/2014/full-text-microsoft-ceo-satya-nadella-explains-massive-job-cuts/",
+    "title": "GeekWire full text",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Roughly 12,500 of the cuts tied to Nokia Devices & Services (per GeekWire via search; not verified in memo read). First wave 13,000 per search results. 14% is a press estimate. Quotes read via page fetch summariser."
+ },
+ {
+  "company": "Microsoft",
+  "sector": "big_tech",
+  "event_date": "2023-01-18",
+  "headcount_cut": 10000,
+  "pct_workforce": 4.5,
+  "communicator": "ceo",
+  "communicator_name": "Satya Nadella",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "opening_line": "We're living through times of significant change, and as I meet with customers and partners, a few things are clear.",
+  "key_quotes": [
+   "regardless of whether such notice is legally required"
+  ],
+  "stated_reasons": [
+   "macro",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reduction of our overall workforce"
+  ],
+  "severance": "60 days notice regardless of legal requirement; enhanced severance; 6 months healthcare and stock vesting; career transition services (US)",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate-strategic; couples cuts with AI optimism and promises dignity and transparency, no personal apology.",
+  "sources": [
+   {
+    "url": "https://blogs.microsoft.com/blog/2023/01/18/subject-focusing-on-our-short-and-long-term-opportunity/",
+    "title": "Subject: Focusing on our short- and long-term opportunity",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Primary blog read via summariser; only one short verbatim quote retained. Nadella pledge to 'treat our people with dignity and respect' paraphrased/short-quoted by summariser; charge ~$1.2B (blog) vs $800M severance per search. 10,000 = just under 5% of ~220,000. No explicit apology found."
+ },
+ {
+  "company": "Microsoft",
+  "sector": "big_tech",
+  "event_date": "2025-07-02",
+  "headcount_cut": 9000,
+  "pct_workforce": 4.0,
+  "communicator": "exec_other",
+  "communicator_name": "Satya Nadella (follow-up memo 2025-07-24); initial notice via company statement",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "As we begin a new fiscal year, I've been reflecting on the road we've traveled together and the path ahead.",
+  "key_quotes": [
+   "These decisions are among the most difficult we have to make.",
+   "We will reimagine every layer of the tech stack for AI"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "efficiency",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "job eliminations",
+   "layoffs"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Reflective but corporate; reframes cuts as 'enigma of success' while stressing AI investment.",
+  "sources": [
+   {
+    "url": "https://blogs.microsoft.com/blog/2025/07/24/recommitting-to-our-why-what-and-how/",
+    "title": "Recommitting to our why, what, and how",
+    "type": "primary"
+   },
+   {
+    "url": "https://fortune.com/2025/07/24/satya-nadella-memo-microsoft-layoffs-enigma-of-success-artificial-intelligence",
+    "title": "Fortune on Nadella memo",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Record is the 2 July ~9,000 cut (headcount from news, not read in primary); the CEO text is the 24 July memo, which is a post-hoc explanation, not the announcement. Opening/quotes via fetch summariser; phrase 'enigma of success in an industry that has no franchise value' reported by Fortune. Microsoft also cut ~6,000 in May 2025 (not recorded separately). Nadella said headcount 'relatively unchanged'."
+ },
+ {
+  "company": "Alphabet/Google",
+  "sector": "big_tech",
+  "event_date": "2023-01-20",
+  "headcount_cut": 12000,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "Sundar Pichai",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "I have some difficult news to share.",
+  "key_quotes": [
+   "We've decided to reduce our workforce by approximately 12,000 roles.",
+   "I take full responsibility for the decisions that led us here.",
+   "We'll also offer a severance package starting at 16 weeks salary plus two weeks for every additional year at Google."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "restructuring"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reduce our workforce",
+   "roles"
+  ],
+  "severance": "16 weeks salary plus 2 weeks per additional year; 60+ days notice (US), accelerated vesting, healthcare",
+  "notice_style": "same_day",
+  "ceo_voice": "Direct and personal; explicit ownership of the decision, measured tone.",
+  "sources": [
+   {
+    "url": "https://blog.google/inside-google/message-ceo/january-update/",
+    "title": "A difficult decision to set us up for the future",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Quotes via fetch summariser of primary blog; whether memo explicitly says 'sorry' not confirmed. Pichai also mentions AI as long-term opportunity (paraphrase; ai_framing future_context). Later Alphabet cuts (2024 teams, 2025 buyouts) not researched."
+ },
+ {
+  "company": "Meta",
+  "sector": "big_tech",
+  "event_date": "2022-11-09",
+  "headcount_cut": 11000,
+  "pct_workforce": 13.0,
+  "communicator": "ceo",
+  "communicator_name": "Mark Zuckerberg",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Today I'm sharing some of the most difficult changes we've made in Meta's history.",
+  "key_quotes": [
+   "I got this wrong, and I take responsibility for that.",
+   "reduce the size of our team by about 13%.",
+   "We will pay 16 weeks of base pay plus two additional weeks for every year of service, with no cap."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "revenue_decline",
+   "macro",
+   "efficiency"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "16 weeks base pay + 2 weeks per year of service, no cap; 6 months healthcare",
+  "notice_style": "same_day",
+  "ceo_voice": "Personal, accountable, plain-spoken; owns the over-optimistic growth bet.",
+  "sources": [
+   {
+    "url": "https://about.fb.com/news/2022/11/mark-zuckerberg-layoff-message-to-employees/",
+    "title": "Mark Zuckerberg: layoff message to employees",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Quotes via fetch summariser of primary. Headcount ~11,000 from news. Opening line in quote 'sorry' language ('I want to say I'm sorry') not verified in text read, so apology=null."
+ },
+ {
+  "company": "Meta",
+  "sector": "big_tech",
+  "event_date": "2023-03-14",
+  "headcount_cut": 10000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Mark Zuckerberg",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Meta is building the future of human connection, and today I want to share some updates on our Year of Efficiency",
+  "key_quotes": [
+   "Overall, we expect to reduce our team size by around 10,000 people and to close around 5,000 additional open roles",
+   "This will be tough and there's no way around that."
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "flatten_management",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "Year of Efficiency",
+   "reduce our team size"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Managerial and candid; blunt about toughness, frames as Year of Efficiency.",
+  "sources": [
+   {
+    "url": "https://about.fb.com/news/2023/03/mark-zuckerberg-meta-year-of-efficiency/",
+    "title": "Mark Zuckerberg: Meta Year of Efficiency",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Opening line truncated at ~110 characters by fetch tool; not complete sentence. Responsibility: 'I underestimated the indirect costs of lower priority projects' (summariser). Announced 10,000 more cuts after Nov 2022 11,000 (13%); pct not stated in text read."
+ },
+ {
+  "company": "Meta",
+  "sector": "big_tech",
+  "event_date": "2025-01-14",
+  "headcount_cut": 3600,
+  "pct_workforce": 5.0,
+  "communicator": "ceo",
+  "communicator_name": "Mark Zuckerberg (memo); HR memo by Hillary Champion/Janelle Gale",
+  "channel": [
+   "internal_email",
+   "media_leak"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "I've decided to raise the bar on performance management and move out low performers faster.",
+   "This is going to be an intense year, and I want to make sure we have the best people on our teams."
+  ],
+  "stated_reasons": [
+   "performance",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "raise the bar on performance management",
+   "move out low performers",
+   "non-regrettable attrition"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Terse and performance-driven; no apology, 'intense year' framing.",
+  "sources": [
+   {
+    "url": "https://www.entrepreneur.com/business-news/meta-is-laying-off-5-of-its-workforce-read-the-memo/485540",
+    "title": "Meta is laying off 5% ... read the memo",
+    "type": "news"
+   },
+   {
+    "url": "https://bnnbloomberg.ca/business/company-news/2025/01/14/meta-to-cut-5-of-staff-with-eye-on-lowest-performers-memo-says",
+    "title": "Bloomberg: Meta to cut 5%",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo first reported by Bloomberg; full text not seen. Quotes from Entrepreneur via fetch summariser. Opening line the summariser gave ('Meta is working on...') was uncertain so left null. 3,600 is press estimate on ~72,000 staff; US staff told by Feb 10 per search."
+ },
+ {
+  "company": "Amazon",
+  "sector": "big_tech",
+  "event_date": "2023-01-04",
+  "headcount_cut": 18000,
+  "pct_workforce": 1.2,
+  "communicator": "ceo",
+  "communicator_name": "Andy Jassy",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "As I shared back in November, as part of our annual planning process for 2023, leaders across the company have been working with their teams and looking at their workforce levels",
+  "key_quotes": [
+   "we plan to eliminate just over 18,000 roles.",
+   "These changes will help us pursue our long-term opportunities with a stronger cost structure"
+  ],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "overhiring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "role eliminations"
+  ],
+  "severance": "Separation payment, transitional health insurance, external job placement support",
+  "notice_style": "pre_leak",
+  "ceo_voice": "Corporate and procedural; frames as annual-planning outcome.",
+  "sources": [
+   {
+    "url": "https://www.aboutamazon.com/news/company-news/update-from-ceo-andy-jassy-on-role-eliminations",
+    "title": "Update from CEO Andy Jassy on role eliminations",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Opening line shortened by me (truncated, verbatim prefix of the sentence). Released early after a leak (per search coverage). Includes Nov 2022 reductions in 18,000. Notifications from Jan 18. pct ~1.2% of ~1.5M staff is my computation, not company-stated."
+ },
+ {
+  "company": "Amazon",
+  "sector": "big_tech",
+  "event_date": "2023-03-20",
+  "headcount_cut": 9000,
+  "pct_workforce": 0.6,
+  "communicator": "ceo",
+  "communicator_name": "Andy Jassy",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "As we've just concluded the second phase of our operating plan (\"OP2\") this past week, I'm writing to share that we intend to eliminate about 9,000 more positions",
+  "key_quotes": [
+   "This was a difficult decision, but one that we think is best for the company long term.",
+   "we have chosen to be more streamlined in our costs and headcount."
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "macro",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminate positions",
+   "streamlined"
+  ],
+  "severance": "Separation payment, transitional health insurance, external job placement support",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Brisk, businesslike, minimal emotion.",
+  "sources": [
+   {
+    "url": "https://www.aboutamazon.com/news/company-news/update-from-ceo-andy-jassy-on-amazons-operating-plan-and-additional-role-eliminations",
+    "title": "Update from CEO Andy Jassy on operating plan and additional role eliminations",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Date 2023-03-20 from search coverage (page undated; fetch summariser wrongly guessed 2026). Mostly AWS, PXT, Advertising, Twitch. Opening line truncated after 'positions'; sentence continues."
+ },
+ {
+  "company": "Amazon",
+  "sector": "big_tech",
+  "event_date": "2025-10-28",
+  "headcount_cut": 14000,
+  "pct_workforce": 0.9,
+  "communicator": "cpo_hr",
+  "communicator_name": "Beth Galetti",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "I want to let you know that we're making organizational changes across Amazon that will impact some of our teammates.",
+  "key_quotes": [
+   "This generation of AI is the most transformative technology we've seen since the Internet",
+   "we'll offer them transition support including severance pay"
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "ai_automation",
+   "efficiency",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "organizational changes",
+   "reduction in our corporate workforce",
+   "impact some of our teammates"
+  ],
+  "severance": "90 days to find an internal role; otherwise severance pay, outplacement, health insurance",
+  "notice_style": "same_day",
+  "ceo_voice": "Empathetic-corporate HR voice; acknowledges difficulty without apology.",
+  "sources": [
+   {
+    "url": "https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction",
+    "title": "An update from SVP Beth Galetti on Amazon workforce reduction",
+    "type": "primary"
+   },
+   {
+    "url": "https://www.prdaily.com/the-scoop-amazons-job-cuts-memo-cuts-through-public-speculation/",
+    "title": "PR Daily",
+    "type": "analysis"
+   }
+  ],
+  "confidence": "high",
+  "notes": "CEO Jassy did not author; he later said cuts were 'culture' not AI or finance (per Gizmodo via summariser). Reuters had reported up to 30,000 beforehand; official ~14,000. pct ~0.9% of ~1.55M total, ~4% of ~350k corporate (computed)."
+ },
+ {
+  "company": "Amazon",
+  "sector": "big_tech",
+  "event_date": "2026-01-28",
+  "headcount_cut": 16000,
+  "pct_workforce": null,
+  "communicator": "cpo_hr",
+  "communicator_name": "Beth Galetti",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "I want to let you know that we're making additional organizational changes across Amazon that will impact some of our teammates.",
+  "key_quotes": [
+   "The reductions we are making today will impact approximately 16,000 roles across Amazon."
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "organizational changes",
+   "reductions",
+   "impact some of our teammates"
+  ],
+  "severance": "90 days internal search; otherwise severance pay, outplacement, health insurance where applicable",
+  "notice_style": "pre_leak",
+  "ceo_voice": "Standardised HR-corporate; reassures that mass cuts every few months is not the plan.",
+  "sources": [
+   {
+    "url": "https://www.aboutamazon.com/news/company-news/amazon-layoffs-corporate-jan-2026",
+    "title": "A message from Amazon on recent layoff",
+    "type": "primary"
+   },
+   {
+    "url": "https://gizmodo.com/amazon-laying-off-16000-as-it-increases-ownership-and-removes-bureaucracy-2000715027",
+    "title": "Gizmodo",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Draft email sent in error the night before (news). Date from news (page undated). 'That's not our plan' on regular layoffs per Gizmodo."
+ },
+ {
+  "company": "Salesforce",
+  "sector": "big_tech",
+  "event_date": "2023-01-04",
+  "headcount_cut": 8000,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Marc Benioff",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "opening_line": "The environment remains challenging, and our customers are taking a more measured approach to their purchasing decisions.",
+  "key_quotes": [
+   "we've made the very difficult decision to reduce our workforce by about 10%, mostly over the coming weeks",
+   "we hired too many people leading into this economic downturn we're now facing"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "revenue_decline"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce our workforce"
+  ],
+  "severance": "US: minimum ~5 months pay, health insurance, career resources",
+  "notice_style": "same_day",
+  "ceo_voice": "Candid and owning; admits overhiring, 'I take responsibility for that' (per coverage).",
+  "sources": [
+   {
+    "url": "https://fortune.com/2023/01/04/salesforce-layoffs-10-percent-staff-office-space-marc-benioff",
+    "title": "Fortune",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quotes via Fortune fetch summariser; the 'opening' may not be the true first sentence of the email. Responsibility phrase 'I take responsibility for that' reported in search, not read. Headcount ~8,000 press estimate; US staff apology not confirmed. ~7,000-8,000 per search."
+ },
+ {
+  "company": "Salesforce",
+  "sector": "big_tech",
+  "event_date": "2025-08-29",
+  "headcount_cut": 4000,
+  "pct_workforce": null,
+  "communicator": "podcast_interview",
+  "communicator_name": "Marc Benioff",
+  "channel": [
+   "podcast"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "I've reduced it from 9,000 heads to about 5,000 because I need less heads."
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "need less heads",
+   "reduced"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Matter-of-fact and boastful about AI; treats headcount as an efficiency metric.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/economy/salesforce-cuts-4000-jobs-due-ai-ceo-says",
+    "title": "Fox Business",
+    "type": "news"
+   },
+   {
+    "url": "https://www.salesforceben.com/ai-agents-drive-4000-job-cuts-in-salesforce-support-division/",
+    "title": "SalesforceBen",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Disclosed on The Logan Bartlett Show (about 29 Aug-1 Sep 2025); quote is from search-result summary, not the transcript. SalesforceBen says some staff redeployed so 4,000 is media framing. No memo; no formal announcement. Salesforce 2026 events not researched."
+ },
+ {
+  "company": "Oracle",
+  "sector": "big_tech",
+  "event_date": "2026-03-31",
+  "headcount_cut": 21000,
+  "pct_workforce": null,
+  "communicator": "media_leak",
+  "communicator_name": "None (no CEO statement found)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "restructuring plan"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Silent; no public CEO wording located.",
+  "sources": [
+   {
+    "url": "https://www.rte.ie/news/business/2026/0401/1566208-oracle-begins-layoffs-affecting-thousands-cnbc-reports",
+    "title": "RTE/CNBC",
+    "type": "news"
+   },
+   {
+    "url": "https://www.businesstoday.in/technology/news/story/oracle-lays-off-thousands-globally-india-cuts-may-reach-12000-523419-2026-03-31",
+    "title": "Business Today",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "From search snippets only, no page read. Overnight termination emails 31 Mar 2026; second round mid-Sept; headcount ~162k to ~141k (FY26) and Bloomberg 21,000 are press/10-K derived. Estimates up to 30,000 are unconfirmed. Restructuring plan in 10-Q ($982M then $2.8B). AI data-centre capex cited by press as driver."
+ },
+ {
+  "company": "IBM",
+  "sector": "big_tech",
+  "event_date": "2025-11-04",
+  "headcount_cut": null,
+  "pct_workforce": 1.0,
+  "communicator": "spokesperson",
+  "communicator_name": "IBM spokesperson",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "a low single-digit percentage"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "rebalance",
+   "routinely review our workforce"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate boilerplate via spokesperson; CEO Krishna spoke only of AI revenue.",
+  "sources": [
+   {
+    "url": "https://www.entrepreneur.com/business-news/ibm-is-laying-off-thousands-of-employees/499219",
+    "title": "Entrepreneur",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Fragment quote is from IBM statement to Bloomberg via Entrepreneur. No headcount stated by IBM; 1% of ~270,000 is illustrative, 'several thousand' per The Register. US headcount to stay flat. Earlier IBM cuts (2023 ~3,900 reported in search) not recorded."
+ },
+ {
+  "company": "Intel",
+  "sector": "big_tech",
+  "event_date": "2024-08-01",
+  "headcount_cut": 15000,
+  "pct_workforce": 15.0,
+  "communicator": "ceo",
+  "communicator_name": "Pat Gelsinger",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "all_hands",
+   "earnings_call"
+  ],
+  "public_primary_text": true,
+  "opening_line": "We have moved our All Company Meeting to today, following our earnings call, as we are announcing significant actions to reduce our costs.",
+  "key_quotes": [
+   "This is painful news for me to share.",
+   "Our costs are too high, our margins are too low.",
+   "These decisions have challenged me to my core, and this is the hardest thing I've done in my career."
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "cost_cutting",
+   "efficiency",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reducing our head count",
+   "actions to reduce our costs"
+  ],
+  "severance": "Enhanced retirement offering and voluntary departure program announced following week",
+  "notice_style": "same_day",
+  "ceo_voice": "Emotive and human but financially blunt; first-person pain, no apology.",
+  "sources": [
+   {
+    "url": "https://d1io3yog0oux5.cloudfront.net/_30f8d843824dfbccc3bd0b0cd772d41f/intel/news/2024-08-01_Actions_to_Accelerate_our_1712.pdf",
+    "title": "Actions to Accelerate our Progress (Intel newsroom PDF)",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Read full text from PDF. Also suspended dividend; $10B savings in 2025. Memo mentions AI only as a trend Intel has not benefited from. Earlier Intel cuts in 2022 not researched."
+ },
+ {
+  "company": "Intel",
+  "sector": "big_tech",
+  "event_date": "2025-07-24",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Lip-Bu Tan",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We need to right-size and scale back the company."
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "efficiency",
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "right-size",
+   "streamline"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Austere, accountability-focused turnaround voice.",
+  "sources": [
+   {
+    "url": "https://www.entrepreneur.com/business-news/intel-laying-off-tens-of-thousands-of-employees-ceo-memo/495070",
+    "title": "Entrepreneur",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Quote is Tan on the earnings call per Entrepreneur, not memo text. Memo not read. Sources conflict on size: Entrepreneur says over 33,000 jobs, others ~15% / target about 75,000 staff from ~108,900; ~21,000 cut April-June. April 2025 earlier memo also not read. Date is inferred."
+ },
+ {
+  "company": "Cisco",
+  "sector": "big_tech",
+  "event_date": "2024-08-14",
+  "headcount_cut": 5600,
+  "pct_workforce": 7.0,
+  "communicator": "sec_filing",
+  "communicator_name": "Cisco (8-K); CFO Scott Herren on call",
+  "channel": [
+   "8k_filing",
+   "earnings_call"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "expected to impact approximately 7 percent of Cisco's global workforce"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "restructuring plan"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Clinical filing language; CEO personal wording not found.",
+  "sources": [
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000119312524200636/d878533d8k.htm",
+    "title": "Cisco 8-K Aug 2024",
+    "type": "primary"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "8-K read: up to $1B charges. Headcount 5,600 to 6,000 is press estimate. Cisco earlier cut 5% in Feb 2024. Employees reportedly not told who was affected until Sept 16 (TechCrunch via search)."
+ },
+ {
+  "company": "Dell",
+  "sector": "big_tech",
+  "event_date": "2023-02-06",
+  "headcount_cut": 6650,
+  "pct_workforce": 5.0,
+  "communicator": "exec_other",
+  "communicator_name": "Jeff Clarke",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce headcount"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Clinical memo from co-COO; CEO Michael Dell not the voice.",
+  "sources": [
+   {
+    "url": "https://globalnews.ca/news/9464045/tech-layoffs-dell/",
+    "title": "Global News on Dell layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "From search snippets only; memo text not read. Earlier hiring pause etc. 'no longer enough' paraphrase. Date approximate (Feb 2023). Dell also has quiet cuts via 10-K (2024, 2025) not researched."
+ },
+ {
+  "company": "HP Inc",
+  "sector": "big_tech",
+  "event_date": "2022-11-22",
+  "headcount_cut": 5000,
+  "pct_workforce": 9.0,
+  "communicator": "earnings_call",
+  "communicator_name": "Enrique Lores",
+  "channel": [
+   "press_release",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "revenue_decline",
+   "macro",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce gross global headcount",
+   "Future Ready strategy"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate, tied to Future Ready plan; framed as toughest decisions involving colleagues (paraphrase).",
+  "sources": [
+   {
+    "url": "https://www.engadget.com/hp-plans-to-lay-off-up-to-6000-employees-220057960.html",
+    "title": "Engadget",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Range 4,000-6,000 by FY2025 (midpoint used for headcount_cut). Cost savings $1.4B. Percent (7-11%) vs press; headcount base conflict 51k vs 61k. Wording from search only; no quotes verified. Later HP cuts (Nov 2025, 4,000-6,000 AI-linked) not researched."
+ },
+ {
+  "company": "Tesla",
+  "sector": "hardware_auto",
+  "event_date": "2022-06-03",
+  "headcount_cut": null,
+  "pct_workforce": 3.5,
+  "communicator": "ceo",
+  "communicator_name": "Elon Musk",
+  "channel": [
+   "internal_email",
+   "media_leak",
+   "x_post"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "overhiring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reducing salaried headcount"
+  ],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "Blunt, gut-feel economic pessimism; later walked back on Twitter.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2022/06/03/elon-musk-tesla-layoffs-salaried-staff",
+    "title": "Fortune",
+    "type": "news"
+   },
+   {
+    "url": "https://www.autoblog.com/2022/06/05/tesla-jobs-increase-salaried-flat/",
+    "title": "Autoblog",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Executive email 2 June (Reuters) said 'super bad feeling' about economy and cut ~10%; all-staff email 3 June said salaried headcount cut 10%, hourly would rise. Musk backtracked on 4 June. Text from search snippets only; no quotes kept. 3.5% of total is stated by Musk per coverage."
+ },
+ {
+  "company": "Tesla",
+  "sector": "hardware_auto",
+  "event_date": "2024-04-15",
+  "headcount_cut": 14000,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Elon Musk",
+  "channel": [
+   "internal_email",
+   "media_leak"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "For those remaining, I would like to thank you in advance for the difficult job that lies ahead,",
+   "duplication of roles and job functions in certain areas"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "efficiency",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reducing headcount",
+   "duplication of roles"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Terse and unsentimental; thanks and forward-looking pitch.",
+  "sources": [
+   {
+    "url": "https://www.dice.com/career-advice/elon-musk-email-breaks-down-proposed-tesla-layoffs",
+    "title": "Dice on Musk email",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Email first published by Electrek; page not read. Quotes via Dice summariser. 'There is nothing I hate more, but it must be done' reported by several outlets in search (not read). 14,000 is estimate from 140,473 staff, not stated by Musk. Opening line not retrieved."
+ },
+ {
+  "company": "Twitter/X",
+  "sector": "big_tech",
+  "event_date": "2022-11-03",
+  "headcount_cut": 3700,
+  "pct_workforce": 50.0,
+  "communicator": "exec_other",
+  "communicator_name": "Unsigned company email (owner Elon Musk)",
+  "channel": [
+   "internal_email",
+   "personal_email_to_laid_off"
+  ],
+  "public_primary_text": true,
+  "opening_line": "In an effort to place Twitter on a healthy path, we will go through the difficult process",
+  "key_quotes": [
+   "this action is unfortunately necessary to ensure the company's success moving forward.",
+   "our offices will be temporarily closed and all badge access will be suspended."
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce our global workforce",
+   "difficult process",
+   "impacted"
+  ],
+  "severance": "Remain on payroll until early January 2023 (WARN-style notice) per coverage; details not in text read",
+  "notice_style": "locked_out_first",
+  "ceo_voice": "Impersonal and procedural; no named author, no apology.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2022/11/04/twitter-layoff-memo-elon-musk",
+    "title": "Fortune: Twitter layoff memo",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Opening line truncated by fetch (~85 chars); sentence continues. Headcount 3,700 / ~50% are press (Bloomberg), not in email. Email 3 Nov; cuts 4 Nov. Notices to personal email, badge access cut."
+ },
+ {
+  "company": "PayPal",
+  "sector": "fintech_crypto",
+  "event_date": "2023-01-31",
+  "headcount_cut": 2000,
+  "pct_workforce": 7.0,
+  "communicator": "ceo",
+  "communicator_name": "Dan Schulman",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce headcount",
+   "right-sizing cost structure"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate-managerial; references macro environment (paraphrase).",
+  "sources": [
+   {
+    "url": "https://www.nbcbayarea.com/news/business/money-report/paypal-to-lay-off-2000-employees-in-coming-weeks-about-7-of-workforce/3144221/",
+    "title": "NBC Bay Area/CNBC",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "From search snippets only; memo text not read (EcommerceBytes page defunct). Cuts rolling over several weeks. No quotes verified."
+ }
+]

@@ -1,0 +1,413 @@
+[
+ {
+  "company": "Carvana",
+  "event_date": "2022-05-18",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Ernie Garcia",
+  "channel": [
+   "internal_email",
+   "zoom"
+  ],
+  "confidence": "medium",
+  "notes": "Quote from secondary summary of internal email. 10-12% disagreement across outlets. Many staff told via Zoom; spokesperson said under half. Date 2022-05-18 from my background knowledge, not source-verified.",
+  "sources": [
+   {
+    "title": "PYMNTS: Carvana to cut 2,500 workers",
+    "type": "news",
+    "url": "https://www.pymnts.com/personnel/2022/carvana-to-cut-2500-workers/"
+   },
+   {
+    "title": "Audacy: many fired over Zoom",
+    "type": "news",
+    "url": "https://www.audacy.com/wbbm780/news/national/carvana-fires-2-500-workers-many-over-zoom"
+   }
+  ]
+ },
+ {
+  "company": "Snap",
+  "event_date": "2022-08-31",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Evan Spiegel",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Axios fetch blocked (403); memo wording not read, quotes left empty. Headcount: Axios >1,200, other ~1,280. Spiegel memo reportedly cited three priorities (community growth, revenue growth, AR) and ~$500M savings.",
+  "sources": [
+   {
+    "title": "Axios: Snap restructuring",
+    "type": "news",
+    "url": "https://www.axios.com/2022/08/31/snap-restructuring-layoffs"
+   },
+   {
+    "title": "TechCrunch Snap cuts 20%",
+    "type": "news",
+    "url": "https://techcrunch.com/2022/08/31/snap-cuts-20-of-staff-amid-major-restructuring/amp/"
+   }
+  ]
+ },
+ {
+  "company": "Kraken",
+  "event_date": "2022-11-30",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Jesse Powell",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Powell stepped down as CEO Sept 2022 (Dave Ripley became CEO in Nov); attribution of the announcement to Powell/Ripley is unclear; no Ripley memo found. Primary page 403; no verified quotes.",
+  "sources": [
+   {
+    "title": "Blockworks: Kraken lays off over 1,000",
+    "type": "news",
+    "url": "https://blockworks.co/news/kraken-layoffs-30-percent"
+   },
+   {
+    "title": "CNBC/NBC (403)",
+    "type": "news",
+    "url": "https://www.nbcboston.com/news/business/money-report/crypto-exchange-kraken-lays-off-1000-employees/2907329/"
+   }
+  ]
+ },
+ {
+  "company": "Okta",
+  "event_date": "2023-02-02",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Todd McKinnon",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Memo wording not read; quotes empty. About $15M restructuring cost per search summary. Okta blog URL guessed returned 404.",
+  "sources": [
+   {
+    "title": "Bloomberg",
+    "type": "news",
+    "url": "https://www.bloomberg.com/news/articles/2023-02-02/okta-to-lay-off-300-employees-citing-overhiring-execution-challenges"
+   },
+   {
+    "title": "Channel Futures",
+    "type": "news",
+    "url": "https://www.channelfutures.com/business-models/okta-cites-overhiring-execution-challenges-for-300-layoffs"
+   }
+  ]
+ },
+ {
+  "company": "Shopify",
+  "event_date": "2023-05-04",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Tobi Lutke",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "low",
+  "notes": "Memo text not read, no quotes. Combined with sale of logistics to Flexport. 'More than 2,000' per outlets.",
+  "sources": [
+   {
+    "title": "CBC (403, not read)",
+    "type": "news",
+    "url": "https://amp.cbc.ca/news/business/shopify-layoffs-1.6831842"
+   },
+   {
+    "title": "BetaKit",
+    "type": "news",
+    "url": "https://betakit.com/shopify-cuts-20-percent-of-staff-announces-sale-of-logistics-division"
+   }
+  ]
+ },
+ {
+  "company": "Discord",
+  "event_date": "2024-01-11",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Jason Citron",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Memo obtained by The Verge (not fetched); full text not read. Citron was CEO.",
+  "sources": [
+   {
+    "title": "Discord lays off 170",
+    "type": "news",
+    "url": "https://www.gameinformer.com/gamer-culture/2024/01/12/discord-lays-off-170-employees-due-to-overhiring"
+   }
+  ]
+ },
+ {
+  "company": "Stability AI",
+  "event_date": "2024-04-17",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Stability AI leadership (new CEO Prem Akkaraju)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Company-wide memo first published by Business Insider; wording not retrieved. Humane (HP sale Feb 2025) considered but is an acquisition/shutdown, not a layoff memo -- not recorded.",
+  "sources": [
+   {
+    "title": "Stability AI layoff",
+    "type": "news",
+    "url": "https://www.theregister.com/2024/04/18/stability_ai_layoff_staff/"
+   },
+   {
+    "title": "Stability AI lays off 10% of staff",
+    "type": "news",
+    "url": "https://siliconangle.com/2024/04/18/stability-ai-lay-off-10-staff-wake-resignation-ceo/"
+   }
+  ]
+ },
+ {
+  "company": "Block",
+  "event_date": "2025-03-25",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Jack Dorsey",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "From search summary of TechCrunch report only; page not fetched (direct TechCrunch URL 404). Reported ~8% (not verified) so pct null. Date inferred from 'Tuesday March 25'.",
+  "sources": [
+   {
+    "title": "Fintech Futures (Block layoffs)",
+    "type": "news",
+    "url": "https://www.fintechfutures.com/job-cuts-new-hires/jack-dorsey-s-block-lays-off-staff-across-cash-app-square-and-foundational-teams"
+   }
+  ]
+ },
+ {
+  "company": "Lufthansa",
+  "event_date": "2025-09-29",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Carsten Spohr",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "4,000 admin jobs by 2030 mainly Germany; digitalisation/automation (AI per some outlets); Verdi criticised. No memo text.",
+  "sources": [
+   {
+    "title": "Lufthansa announces 4,000 job cuts",
+    "type": "news",
+    "url": "https://www.rte.ie/news/business/2025/0929/1535830-lufthansa-announces-4-000-job-cuts-higher-profit-targets"
+   }
+  ]
+ },
+ {
+  "company": "IBM",
+  "event_date": "2025-11-04",
+  "tier": "B",
+  "communicator": "spokesperson",
+  "communicator_name": "IBM spokesperson",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Fragment quote is from IBM statement to Bloomberg via Entrepreneur. No headcount stated by IBM; 1% of ~270,000 is illustrative, 'several thousand' per The Register. US headcount to stay flat. Earlier IBM cuts (2023 ~3,900 reported in search) not recorded.",
+  "sources": [
+   {
+    "title": "Entrepreneur",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/ibm-is-laying-off-thousands-of-employees/499219"
+   }
+  ]
+ },
+ {
+  "company": "Opendoor",
+  "event_date": "2026-06-10",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Kaz Nejatian",
+  "channel": [
+   "public_blog",
+   "x_post"
+  ],
+  "confidence": "low",
+  "notes": "Announced June 10, 2026 per search; third-party site gave 18% of ~1,400 (unverified). Nejatian said not performance-related. Channel inferred. Opendoor 2022 layoffs not found.",
+  "sources": [
+   {
+    "title": "Opendoor shuts India operations",
+    "type": "news",
+    "url": "https://www.ibtimes.co.uk/opendoor-technologies-shuts-down-india-operations-1802071"
+   }
+  ]
+ },
+ {
+  "company": "Robinhood",
+  "event_date": "2022-08-02",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Vlad Tenev",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Blog post not fetched directly (robinhood newsroom URL 404); quote via Cointelegraph. 780 from UPI. Earlier April 2022 9% cut not recorded. Sector arguably fintech_crypto.",
+  "sources": [
+   {
+    "title": "This is on me: Robinhood CEO",
+    "type": "news",
+    "url": "https://cointelegraph.com/news/this-is-on-me-robinhood-ceo-to-lay-off-23-of-staff-after-q2-loss"
+   },
+   {
+    "title": "UPI Robinhood cuts 23%",
+    "type": "news",
+    "url": "https://www.upi.com/Top_News/US/2022/08/02/robinhood-online-brokerage-layoffs-23-cut-costs-pandemic-trading-boom/8261659483972/"
+   }
+  ]
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2023-01-04",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Andy Jassy",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Opening line shortened by me (truncated, verbatim prefix of the sentence). Released early after a leak (per search coverage). Includes Nov 2022 reductions in 18,000. Notifications from Jan 18. pct ~1.2% of ~1.5M staff is my computation, not company-stated.",
+  "sources": [
+   {
+    "title": "Update from CEO Andy Jassy on role eliminations",
+    "type": "primary",
+    "url": "https://www.aboutamazon.com/news/company-news/update-from-ceo-andy-jassy-on-role-eliminations"
+   }
+  ]
+ },
+ {
+  "company": "Meta",
+  "event_date": "2023-03-14",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Mark Zuckerberg",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "Opening line truncated at ~110 characters by fetch tool; not complete sentence. Responsibility: 'I underestimated the indirect costs of lower priority projects' (summariser). Announced 10,000 more cuts after Nov 2022 11,000 (13%); pct not stated in text read.",
+  "sources": [
+   {
+    "title": "Mark Zuckerberg: Meta Year of Efficiency",
+    "type": "primary",
+    "url": "https://about.fb.com/news/2023/03/mark-zuckerberg-meta-year-of-efficiency/"
+   }
+  ]
+ },
+ {
+  "company": "Twitch (Amazon)",
+  "event_date": "2024-01-10",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Dan Clancy",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "'Just over 500' people; 35% came from Bloomberg pre-announcement reporting, not Twitch. Takes_responsibility unverified. Follow-up livestream Jan 11.",
+  "sources": [
+   {
+    "title": "A Difficult Update About Our Workforce",
+    "type": "primary",
+    "url": "https://blog.twitch.tv/en/2024/01/10/a-difficult-update-about-our-workforce/"
+   }
+  ]
+ },
+ {
+  "company": "Cisco",
+  "event_date": "2024-08-14",
+  "tier": "A",
+  "communicator": "sec_filing",
+  "communicator_name": "Cisco (8-K); CFO Scott Herren on call",
+  "channel": [
+   "8k_filing",
+   "earnings_call"
+  ],
+  "confidence": "medium",
+  "notes": "8-K read: up to $1B charges. Headcount 5,600 to 6,000 is press estimate. Cisco earlier cut 5% in Feb 2024. Employees reportedly not told who was affected until Sept 16 (TechCrunch via search).",
+  "sources": [
+   {
+    "title": "Cisco 8-K Aug 2024",
+    "type": "primary",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000119312524200636/d878533d8k.htm"
+   }
+  ]
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2025-10-28",
+  "tier": "A",
+  "communicator": "cpo_hr",
+  "communicator_name": "Beth Galetti",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "CEO Jassy did not author; he later said cuts were 'culture' not AI or finance (per Gizmodo via summariser). Reuters had reported up to 30,000 beforehand; official ~14,000. pct ~0.9% of ~1.55M total, ~4% of ~350k corporate (computed).",
+  "sources": [
+   {
+    "title": "An update from SVP Beth Galetti on Amazon workforce reduction",
+    "type": "primary",
+    "url": "https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction"
+   },
+   {
+    "title": "PR Daily",
+    "type": "analysis",
+    "url": "https://www.prdaily.com/the-scoop-amazons-job-cuts-memo-cuts-through-public-speculation/"
+   }
+  ]
+ },
+ {
+  "company": "Canva",
+  "event_date": "2026-11-04",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Melanie Perkins",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "all_hands"
+  ],
+  "confidence": "high",
+  "notes": "Primary text read via Wayback Machine (direct site 403s). Title 'An important update on our team'; CEO note to staff republished on newsroom same day. 1,271 = people impacted, includes role changes and relocations to hubs (Sydney); number actually exiting not disclosed. Date: Sydney 4 Nov 2026 (Bloomberg stamped 3 Nov). Broke Canva's no-layoff history; earlier 2026 reporting (Startup Daily, Mar 2026) had Canva denying redundancies during Leonardo.AI integration. Company All Hands 10 Nov; org all hands from 11 Nov. AI mentioned only as 'New technology is transforming what people can create'; not named as cause. Access to Slack/Gmail kept until end of week (not locked out).",
+  "sources": [
+   {
+    "title": "An important update on our team (Wayback snapshot 20261104 read in full)",
+    "type": "primary",
+    "url": "https://www.canva.com/newsroom/news/canva-team-update/"
+   },
+   {
+    "title": "Adweek",
+    "type": "news",
+    "url": "https://www.adweek.com/creativity/canva-to-cut-or-redeploy-22-of-staff-following-hardest-year-yet/"
+   },
+   {
+    "title": "TechCrunch",
+    "type": "news",
+    "url": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/"
+   },
+   {
+    "title": "Bloomberg (dated 3 Nov US time)",
+    "type": "news",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-03/canva-announces-layoffs-job-changes-for-about-22-of-workforce"
+   }
+  ]
+ }
+]

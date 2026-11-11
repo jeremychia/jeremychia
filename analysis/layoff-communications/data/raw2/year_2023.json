@@ -1,0 +1,1549 @@
+[
+ {
+  "company": "Spotify",
+  "sector": "consumer_internet",
+  "event_date": "2023-01-23",
+  "headcount_cut": 600,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "Daniel Ek",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "I take full accountability for the moves that got us here today",
+   "In hindsight, I was too ambitious in investing ahead of our revenue growth."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency",
+   "macro"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reducing our employee base"
+  ],
+  "severance": "On average five months of severance; accrued vacation paid; healthcare continued during severance; immigration and career support (per TechCrunch)",
+  "notice_style": "same_day",
+  "ceo_voice": "Reflective and accountable; admits over-investment in hindsight.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/23/spotify-cuts-6-of-its-workforce-impacting-600-people",
+    "title": "Spotify cuts 6% of its workforce, impacting 600 people",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Ek memo was posted on Spotify newsroom per coverage but primary page not retrieved; quotes from TechCrunch reproduction. Distinct from the Dec 2023 Spotify event.",
+  "framing_gap": "Ek frames it as his own over-investment, while memo also announces C-suite changes and an efficiency push on strategy syncing.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/23/spotify-cuts-6-of-its-workforce-impacting-600-people",
+    "headline": "Spotify cuts 6% of its workforce, impacting 600 people",
+    "date": "2023-01-23",
+    "framing": "Memo-led, notes length of letter and C-suite shuffle"
+   },
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/spotify-will-lay-off-6-percent-of-employees-130337498.html",
+    "headline": "Spotify is laying off 6 percent of employees",
+    "date": "2023-01-23",
+    "framing": "Compares Ek accountability to Pichai; severance detail"
+   }
+  ],
+  "reproduction_path": "data/sources/spotify__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Twilio",
+  "sector": "saas",
+  "event_date": "2023-02-13",
+  "headcount_cut": 1400,
+  "pct_workforce": 17.0,
+  "communicator": "ceo",
+  "communicator_name": "Jeff Lawson",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "I’m unfortunately bearing the news that we’re parting ways with approximately 17% of our team",
+   "we’ve gotten too big, especially in Communications"
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "restructuring",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "parting ways",
+   "letting go"
+  ],
+  "severance": "12 weeks base pay plus one week per year of service, health coverage, career resources (per TechCrunch)",
+  "notice_style": "same_day",
+  "ceo_voice": "Plain, business-unit restructuring language; acknowledges over-size and cancels a perk.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/02/13/twilio-cuts-17-of-its-workforce-just-months-after-previous-round-of-layoffs",
+    "title": "Twilio cuts 17% of its workforce just months after previous round of layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Headcount ~1,400 is TechCrunch estimate. Second round after 11% in Sept 2022. Lawson salary cut and Recharge sabbatical ended.",
+  "framing_gap": "Email says the company has \"gotten too big\" but structure framed as strategic split into two units.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/02/13/twilio-cuts-17-of-its-workforce-just-months-after-previous-round-of-layoffs",
+    "headline": "Twilio cuts 17% of its workforce just months after previous round of layoffs",
+    "date": "2023-02-13",
+    "framing": "Second round in months; reorg into two units"
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/2023/02/13/twilio-lets-go-17-employees-latest-workforce-reduction/",
+    "headline": "Twilio lets go of 17% of employees in latest workforce reduction",
+    "date": "2023-02-13",
+    "framing": "Reports ~1,400 affected"
+   }
+  ],
+  "reproduction_path": "data/sources/twilio__2023-02/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "GitHub",
+  "sector": "big_tech",
+  "event_date": "2023-02-09",
+  "headcount_cut": 300,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Thomas Dohmke",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Today, we are announcing a number of difficult decisions, including saying goodbye to some Hubbers and enacting new budgetary realignments",
+  "key_quotes": [
+   "new budgetary realignments"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "saying goodbye to some Hubbers",
+   "budgetary realignments"
+  ],
+  "severance": "Transition compensation, COBRA-equivalent health coverage, career transition services (per press)",
+  "notice_style": "same_day",
+  "ceo_voice": "Soft, euphemistic internal tone (\"Hubbers\"); respectful.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2023/02/09/github-is-laying-off-10-of-staff-and-cutting-down-office-space",
+    "title": "GitHub is laying off 10% of staff and cutting down office space",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Cut \"up to 10% through end of FY23\" (~300 of ~3,000, press estimate). Also announced going fully remote. Microsoft subsidiary.",
+  "framing_gap": "Framed as \"budgetary realignments\"; also bundles office closures as strategy.",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/02/09/github-is-laying-off-10-of-staff-and-cutting-down-office-space",
+    "headline": "GitHub is laying off 10% of staff and cutting down office space",
+    "date": "2023-02-09",
+    "framing": "Memo reported with remote-work move"
+   }
+  ],
+  "reproduction_path": "data/sources/github__2023-02/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Gemini",
+  "sector": "fintech_crypto",
+  "event_date": "2023-01-23",
+  "headcount_cut": null,
+  "pct_workforce": 10.0,
+  "communicator": "founder",
+  "communicator_name": "Cameron Winklevoss",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "workforce reduction"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Defensive; blames macro and bad actors (per reports).",
+  "sources": [
+   {
+    "url": "https://fortune.com/2023/01/23/winklevoss-gemini-trust-layoffs-crypto-terra-stablecoin-three-arrows-2023-barry-silbert",
+    "title": "Gemini layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Third round in ~8 months. Internal message first reported by The Information; no primary text read, quotes empty.",
+  "framing_gap": "Reported as macro and fraud-driven; Genesis/Earn customer dispute context absent from staff message per coverage.",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/01/23/winklevoss-gemini-trust-layoffs-crypto-terra-stablecoin-three-arrows-2023-barry-silbert",
+    "headline": "Winklevoss Gemini layoffs",
+    "date": "2023-01-23",
+    "framing": "Tied to Genesis/DCG troubles"
+   }
+  ],
+  "reproduction_path": "data/sources/gemini__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Vimeo",
+  "sector": "saas",
+  "event_date": "2023-01-04",
+  "headcount_cut": null,
+  "pct_workforce": 11.0,
+  "communicator": "ceo",
+  "communicator_name": "Anjali Sud",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Today we made the decision to reduce the size of our team by 11%.",
+  "key_quotes": [
+   "our team size and composition needs to reflect that focus",
+   "what we need right now is to come together with humanity"
+  ],
+  "stated_reasons": [
+   "macro",
+   "interest_rates",
+   "profitability",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our team"
+  ],
+  "severance": "Financial and transition support similar to past, with enhancements",
+  "notice_style": "same_day",
+  "ceo_voice": "Empathetic and strategic; \"humanity\" language; promises direct outreach.",
+  "sources": [
+   {
+    "url": "https://vimeo.com/blog/post/a-message-from-vimeos-ceo-jan-2023/",
+    "title": "A message from Vimeo's CEO",
+    "type": "primary"
+   },
+   {
+    "url": "https://techcrunch.com/2023/01/04/vimeo-layoffs-2023/",
+    "title": "Vimeo layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Second round after 6% in July 2022. CEO note posted publicly on company blog.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/04/vimeo-layoffs-2023/",
+    "headline": "Vimeo rings in the new year with layoffs",
+    "date": "2023-01-04",
+    "framing": "Second round; cites uncertain economy"
+   }
+  ],
+  "company_text_path": "data/sources/vimeo__2023-01/company.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Rivian",
+  "sector": "hardware_auto",
+  "event_date": "2023-02-01",
+  "headcount_cut": null,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "RJ Scaringe",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "profitability",
+   "cost_cutting",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "workforce reduction"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Forward-looking and strategic; focus on ramp and profitability.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/02/01/rivian-to-cut-another-6-of-its-workforce/",
+    "title": "Rivian to cut another 6% of its workforce",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo leaked; confirmed by spokesperson. Manufacturing jobs at Normal, IL not affected.",
+  "framing_gap": "Framed as path to profitability; press links to EV price war pressure.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/02/01/rivian-to-cut-another-6-of-its-workforce/",
+    "headline": "Rivian to cut another 6% of its workforce",
+    "date": "2023-02-01",
+    "framing": "Second 6% cut in under a year; leaked memo"
+   }
+  ],
+  "reproduction_path": "data/sources/rivian__2023-02/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "NetApp",
+  "sector": "saas",
+  "event_date": "2023-01-31",
+  "headcount_cut": 960,
+  "pct_workforce": 8.0,
+  "communicator": "ceo",
+  "communicator_name": "George Kurian",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We are not immune to these challenges"
+  ],
+  "stated_reasons": [
+   "macro",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "sharpening our strategy"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, macro-focused.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/31/netapp-a-specialist-in-cloud-data-management-says-it-will-lay-off-8-or-around-960-people-citing-economic-climate/",
+    "title": "NetApp layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Headcount estimated by TechCrunch from ~12,000 employees.",
+  "framing_gap": "Reasons attributed wholly to IT spending conservatism.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/31/netapp-a-specialist-in-cloud-data-management-says-it-will-lay-off-8-or-around-960-people-citing-economic-climate/",
+    "headline": "NetApp says it will lay off 8%",
+    "date": "2023-01-31",
+    "framing": "Macro-driven"
+   }
+  ],
+  "reproduction_path": "data/sources/netapp__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "SuperRare",
+  "sector": "fintech_crypto",
+  "event_date": "2023-01-06",
+  "headcount_cut": null,
+  "pct_workforce": 30.0,
+  "communicator": "ceo",
+  "communicator_name": "John Crain",
+  "channel": [
+   "internal_email",
+   "x_post"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "We over-hired, and I take full ownership of this mistake."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "cutting"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Candid; owns the over-hiring mistake; shared Slack screenshot publicly.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/06/nft-marketplace-superrare-cuts-30-of-staff/",
+    "title": "NFT marketplace SuperRare cuts 30% of staff",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Slack message screenshot posted on Twitter by CEO.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/06/nft-marketplace-superrare-cuts-30-of-staff/",
+    "headline": "NFT marketplace SuperRare cuts 30% of staff",
+    "date": "2023-01-06",
+    "framing": "Founder owns over-hiring"
+   }
+  ],
+  "reproduction_path": "data/sources/superrare__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Yahoo",
+  "sector": "consumer_internet",
+  "event_date": "2023-02-09",
+  "headcount_cut": 1600,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "Jim Lanzone",
+  "channel": [
+   "internal_email",
+   "spokesperson"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "Despite many years of effort and investment, this strategy was not profitable"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "profitability",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "laid off"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Matter-of-fact; frames as strategic reset of unprofitable ad tech, explicitly not economic.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/02/09/yahoo-will-lay-off-20-of-staff-or-1600-people/",
+    "title": "Yahoo will lay off 20% of staff, or 1600 people",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "12% (1,000) same day, further 8% (600) in six months; Lanzone interview with Axios. TechCrunch disclosed Yahoo is its parent.",
+  "framing_gap": "Says layoffs are not economic but a deliberate ad-tech strategy change at an otherwise profitable company.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/02/09/yahoo-will-lay-off-20-of-staff-or-1600-people/",
+    "headline": "Yahoo will lay off 20% of staff, or 1600 people",
+    "date": "2023-02-09",
+    "framing": "Strategic reset of ad tech, not macro"
+   }
+  ],
+  "reproduction_path": "data/sources/yahoo__2023-02/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Indeed",
+  "sector": "consumer_internet",
+  "event_date": "2023-03-22",
+  "headcount_cut": 2200,
+  "pct_workforce": 15.0,
+  "communicator": "ceo",
+  "communicator_name": "Chris Hyams",
+  "channel": [
+   "all_hands",
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "our organization is simply too big for what lies ahead",
+   "the revenue trends are undeniable. So I have decided to act now."
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "too big",
+   "act now"
+  ],
+  "severance": "At least 16 weeks base pay, PTO payout, cash for unvested RSUs, career and mental health services, 4 months COBRA (per TechCrunch)",
+  "notice_style": "same_day",
+  "ceo_voice": "Direct and numbers-driven; CEO takes 25% pay cut; efficient notification emails.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/03/22/job-listing-platform-indeed-lays-off-2200-employees/",
+    "title": "Job listing platform Indeed lays off 2,200 employees",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Hyams blog post exists per TechCrunch but not retrieved. Email subject lines \"Your Position Has Been Impacted\".",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/03/22/job-listing-platform-indeed-lays-off-2200-employees/",
+    "headline": "Job listing platform Indeed lays off 2,200 employees",
+    "date": "2023-03-22",
+    "framing": "Revenue trends cited; CEO pay cut"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/09/01/indeed-ceo-ccreate-cyborg-recruiters-strengths-humans-ai/",
+    "headline": "Indeed CEO wants to create cyborg recruiters",
+    "date": "2023-09-01",
+    "framing": "Later AI framing of recruiting"
+   }
+  ],
+  "reproduction_path": "data/sources/indeed__2023-03/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Niantic",
+  "sector": "media_gaming",
+  "event_date": "2023-06-29",
+  "headcount_cut": 230,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "John Hanke",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "In the wake of the revenue surge we saw during Covid, we grew our headcount and related expenses in order to pursue growth more aggressively",
+   "The top priority is to keep Pokémon GO healthy and growing as a forever game"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "revenue_decline",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "laid off"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Candid about post-Covid overexpansion; pivots to Pokemon GO priority and AR.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/06/29/niantic-lays-off-230-employees-cancels-nba-and-marvel-games/",
+    "title": "Niantic lays off 230 employees, cancels NBA and Marvel games",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Email cross-posted to company blog per TechCrunch; blog not retrieved.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/06/29/niantic-lays-off-230-employees-cancels-nba-and-marvel-games/",
+    "headline": "Niantic lays off 230 employees, cancels NBA and Marvel games",
+    "date": "2023-06-29",
+    "framing": "Overhiring, canceled games, weak new projects"
+   }
+  ],
+  "reproduction_path": "data/sources/niantic__2023-06/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Ford Europe",
+  "sector": "hardware_auto",
+  "event_date": "2023-02-14",
+  "headcount_cut": 3800,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "Ford",
+  "channel": [
+   "press_release",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "leaner structure"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate; EV transition framing; three-year horizon.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/02/14/ford-to-eliminate-3800-engineering-administration-jobs-in-europe.html",
+    "title": "Ford to cut 3,800 jobs in Europe in shift to electric vehicle production",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Jobs over three years (Germany 2,300, UK 1,300, other 200 per CNBC). No direct company quotes captured.",
+  "framing_gap": "EV-transition framing for what is product development and admin job cuts.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/02/14/ford-to-eliminate-3800-engineering-administration-jobs-in-europe.html",
+    "headline": "Ford to cut 3,800 jobs in Europe in shift to electric vehicle production",
+    "date": "2023-02-14",
+    "framing": "Leaner structure for EV push"
+   }
+  ],
+  "reproduction_path": "data/sources/ford-europe__2023-02/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "NPR",
+  "sector": "media_gaming",
+  "event_date": "2023-02-22",
+  "headcount_cut": 100,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "John Lansing",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "This will be a major loss."
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminating filled positions"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Sombre and personal; names the loss of colleagues; candid about ad market.",
+  "sources": [
+   {
+    "url": "https://www.npr.org/2023/02/22/1158710498/npr-layoffs-2023",
+    "title": "NPR announces layoffs, cutting jobs by 10% as ad revenue drops",
+    "type": "primary"
+   },
+   {
+    "url": "https://www.cnn.com/2023/02/22/business/npr-layoffs/index.html",
+    "title": "NPR to cut 10% of its staff in a major loss",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Company text file is NPR own news story quoting Lansing memo, not the memo itself. Further cuts finalised March 2023.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2023/02/22/business/npr-layoffs/index.html",
+    "headline": "NPR to cut 10% of its staff in a major loss for the public radio network, CEO says",
+    "date": "2023-02-22",
+    "framing": "Ad revenue slump; $30M shortfall"
+   }
+  ],
+  "company_text_path": "data/sources/npr__2023-02/company.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Groupon",
+  "sector": "consumer_internet",
+  "event_date": "2023-01-30",
+  "headcount_cut": 500,
+  "pct_workforce": null,
+  "communicator": "sec_filing",
+  "communicator_name": "Groupon",
+  "channel": [
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "approved the second phase of the Company’s multi-phase restructuring plan"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring plan",
+   "reduction of approximately 500 positions"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Regulatory filing language.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/30/groupon-cuts-another-500-employees-in-the-second-round-of-layoffs/",
+    "title": "Groupon cuts another 500 employees",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Filing language via TechCrunch; CPO comment on LinkedIn.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/30/groupon-cuts-another-500-employees-in-the-second-round-of-layoffs/",
+    "headline": "Groupon cuts another 500 employees in second round of layoffs",
+    "date": "2023-01-30",
+    "framing": "Phase two of restructuring"
+   }
+  ],
+  "reproduction_path": "data/sources/groupon__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Sophos",
+  "sector": "saas",
+  "event_date": "2023-01-18",
+  "headcount_cut": 450,
+  "pct_workforce": 10.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Jitendra Bulani",
+  "channel": [
+   "spokesperson"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "the optimal balance of growth and profitability"
+  ],
+  "stated_reasons": [
+   "macro",
+   "profitability",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "internal restructuring",
+   "job losses"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate and impersonal.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/18/sophos-global-layoffs/",
+    "title": "Sophos global layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Consultation periods; potentially 10% of global staff.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/18/sophos-global-layoffs/",
+    "headline": "Sophos global layoffs",
+    "date": "2023-01-18",
+    "framing": "Growth/profit balance, MDR focus"
+   }
+  ],
+  "reproduction_path": "data/sources/sophos__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Pinterest",
+  "sector": "consumer_internet",
+  "event_date": "2023-02-01",
+  "headcount_cut": 150,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "Pinterest spokesperson",
+  "channel": [
+   "spokesperson"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We’re making organizational changes to further set us up to deliver against our company priorities and our long-term strategy"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "organizational changes"
+  ],
+  "severance": "Separation packages, benefits, and other services (per spokesperson)",
+  "notice_style": "same_day",
+  "ceo_voice": "Minimal corporate statement.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/02/01/pinterest-lays-off-150-people-as-a-part-of-its-long-term-strategy/",
+    "title": "Pinterest lays off 150 people",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Second job-cutting move within weeks of December 2022.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/02/01/pinterest-lays-off-150-people-as-a-part-of-its-long-term-strategy/",
+    "headline": "Pinterest lays off 150 people as part of its long-term strategy",
+    "date": "2023-02-01",
+    "framing": "Org changes, second round"
+   }
+  ],
+  "reproduction_path": "data/sources/pinterest__2023-02/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Clearco",
+  "sector": "fintech_crypto",
+  "event_date": "2023-01-17",
+  "headcount_cut": null,
+  "pct_workforce": 30.0,
+  "communicator": "founder",
+  "communicator_name": "Michele Romanow",
+  "channel": [
+   "spokesperson",
+   "podcast"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "we’ve just continued to make the hard decisions"
+  ],
+  "stated_reasons": [
+   "profitability",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "hard decisions"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Defiant, says ahead of the curve; co-founder steps down as CEO same day.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/17/clearco-co-founder-michele-romanow-steps-down-cuts-30-of-staff/",
+    "title": "Clearco co-founder steps down, cuts 30% of staff",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Staff now 140 from 500; quote from TechCrunch interview.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/17/clearco-co-founder-michele-romanow-steps-down-cuts-30-of-staff/",
+    "headline": "Clearco co-founder Michele Romanow steps down, cuts 30% of staff",
+    "date": "2023-01-17",
+    "framing": "Leadership change with cuts"
+   }
+  ],
+  "reproduction_path": "data/sources/clearco__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Carta",
+  "sector": "saas",
+  "event_date": "2023-01-11",
+  "headcount_cut": 200,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Henry Ward",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "if our customers suffer, so do we"
+  ],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce headcount"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Ties company to customer ecosystem downturn.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/11/carta-lays-off-10-as-cto-lawsuit-looms/",
+    "title": "Carta lays off 10% as CTO lawsuit looms",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Headcount estimated via LinkedIn per TechCrunch; CEO name from general knowledge not the retrieved text.",
+  "framing_gap": "Layoff coincided with CTO misconduct lawsuit news.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/11/carta-lays-off-10-as-cto-lawsuit-looms/",
+    "headline": "Carta lays off 10% as CTO lawsuit looms",
+    "date": "2023-01-11",
+    "framing": "Layoff alongside lawsuit"
+   }
+  ],
+  "reproduction_path": "data/sources/carta__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Hasbro",
+  "sector": "traditional",
+  "event_date": "2023-01-26",
+  "headcount_cut": 1000,
+  "pct_workforce": 15.0,
+  "communicator": "earnings_call",
+  "communicator_name": "Chris Cocks",
+  "channel": [
+   "press_release",
+   "earnings_call"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "we are confident in our Blueprint 2.0 strategy"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "restructuring",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminate positions"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; couched in strategy (\"Blueprint 2.0\") with earnings warning.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/01/26/hasbro-stock-tanks-as-company-cuts-jobs-warns-of-weak-fourth-quarter.html",
+    "title": "Hasbro warns of weak holiday quarter results, cuts 15% of its workforce",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Announced with Q4 warning; 1,000 roles and ~15% per CNBC headline/summary.",
+  "framing_gap": "Cuts folded into a strategy narrative of fewer, bigger brands rather than demand weakness.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/01/26/hasbro-stock-tanks-as-company-cuts-jobs-warns-of-weak-fourth-quarter.html",
+    "headline": "Hasbro warns of weak holiday quarter results, cuts 15% of its workforce",
+    "date": "2023-01-26",
+    "framing": "Weak quarter, stock falls"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/01/26/hasbro-layoffs-toys-pandemic-dungeons-and-dragons-eranings-fourth-quarter/",
+    "headline": "Hasbro to cut 1,000 jobs as the pandemic-era toy-buying boom cools",
+    "date": "2023-01-26",
+    "framing": "Pandemic boom cooling"
+   }
+  ],
+  "reproduction_path": "data/sources/hasbro__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Hasbro",
+  "sector": "traditional",
+  "event_date": "2023-12-11",
+  "headcount_cut": 1100,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Chris Cocks",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "the headwinds we saw through the first nine months of the year have continued into Holiday"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "macro",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "laying off"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Sober, market-headwind framing.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/12/11/hasbro-layoffs-weak-toy-sales.html",
+    "title": "Hasbro laying off 1,100 workers as weak toy sales persist into holiday season",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo obtained by CNBC; ~6,300 employees. Second round of 2023 (see Jan).",
+  "framing_gap": "Blames market after pandemic highs.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/12/11/hasbro-layoffs-weak-toy-sales.html",
+    "headline": "Hasbro laying off 1,100 workers as weak toy sales persist into holiday season",
+    "date": "2023-12-11",
+    "framing": "Memo leak, weak holiday"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/12/11/hasbro-layoffs-1100-job-cuts-holiday-sales/",
+    "headline": "Hasbro slashes 1,100 jobs blaming low holiday-season sales",
+    "date": "2023-12-11",
+    "framing": "Blames holiday sales"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/12/11/hasbro-layoffs-dungeons-dragons-wizards/",
+    "headline": "Hasbro to cut 1,100 jobs despite Dungeons & Dragons thriving",
+    "date": "2023-12-11",
+    "framing": "D&D contrast"
+   }
+  ],
+  "reproduction_path": "data/sources/hasbro__2023-12/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Grubhub",
+  "sector": "consumer_internet",
+  "event_date": "2023-06-12",
+  "headcount_cut": 400,
+  "pct_workforce": 15.0,
+  "communicator": "ceo",
+  "communicator_name": "Howard Migdal",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "we need to make some tough decisions in order to maintain our competitiveness"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "tough decisions"
+  ],
+  "severance": "Minimum 16 weeks severance",
+  "notice_style": "same_day",
+  "ceo_voice": "Optimistic and corporate; \"tough decisions\".",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/06/12/grubhub-layoffs-400-employees-or-15percent-of-corporate-workforce.html",
+    "title": "Grubhub layoffs: 400 employees, or 15% of corporate workforce",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Parent Just Eat Takeaway was exploring sale of Grubhub.",
+  "framing_gap": "Language of \"competitiveness\" without mentioning the potential sale process.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/06/12/grubhub-layoffs-400-employees-or-15percent-of-corporate-workforce.html",
+    "headline": "Grubhub layoffs: 400 employees, or 15% of corporate workforce",
+    "date": "2023-06-12",
+    "framing": "Market share struggles"
+   }
+  ],
+  "reproduction_path": "data/sources/grubhub__2023-06/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Bolt (checkout)",
+  "sector": "fintech_crypto",
+  "event_date": "2023-12-14",
+  "headcount_cut": null,
+  "pct_workforce": 29.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Bolt spokesperson",
+  "channel": [
+   "spokesperson"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "an operating model optimized for sustainable growth and efficiency"
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce layers and roles"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Statement-only; layers-and-agility language.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/12/14/one-click-checkout-bolt-another-round-of-layoffs/",
+    "title": "One-click checkout company Bolt confirms another round of layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Cut happened the week before; confirmed to TechCrunch. Distinct from Estonian Bolt.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/12/14/one-click-checkout-bolt-another-round-of-layoffs/",
+    "headline": "One-click checkout company Bolt confirms another round of layoffs",
+    "date": "2023-12-14",
+    "framing": "Confirmed after the fact"
+   }
+  ],
+  "reproduction_path": "data/sources/bolt-checkout__2023-12/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "The Washington Post",
+  "sector": "media_gaming",
+  "event_date": "2023-10-10",
+  "headcount_cut": 240,
+  "pct_workforce": 10.0,
+  "communicator": "exec_other",
+  "communicator_name": "Patty Stonesifer",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "in the hopes of averting more difficult actions such as layoffs"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "voluntary buyouts"
+  ],
+  "severance": "Voluntary buyouts first; involuntary layoffs on less generous terms if target missed (per NPR)",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Frank admission of over-optimism; tries to avert layoffs.",
+  "sources": [
+   {
+    "url": "https://www.npr.org/2023/10/10/1204939842/the-washington-post-will-cut-240-jobs-through-voluntary-buyouts",
+    "title": "The Washington Post will cut 240 jobs through voluntary buyouts",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Interim CEO email; buyouts, not layoffs initially. Fuller NPR text; takes_responsibility set true based on admission of over-optimism, judgment call.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "NPR",
+    "url": "https://www.npr.org/2023/10/10/1204939842/the-washington-post-will-cut-240-jobs-through-voluntary-buyouts",
+    "headline": "The Washington Post will cut 240 jobs through voluntary buyouts",
+    "date": "2023-10-10",
+    "framing": "Over-optimistic growth"
+   }
+  ],
+  "reproduction_path": "data/sources/washington-post__2023-10/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Zendesk",
+  "sector": "saas",
+  "event_date": "2023-05-31",
+  "headcount_cut": null,
+  "pct_workforce": 8.0,
+  "communicator": "ceo",
+  "communicator_name": "Tom Eggemeier",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "All, this is difficult news to share, but I’ve made the decision to reduce our workforce by 8% at Zendesk.",
+  "key_quotes": [
+   "From 2020 – 2022, our hiring outpaced our business realities.",
+   "as CEO, I take full responsibility for this decision."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reduce our workforce",
+   "say goodbye to teammates"
+  ],
+  "severance": "3 months base/OTE plus 1 week per full year of service, career coaching, prorated bonus at target, 60 days vesting cash, health coverage, immigration support",
+  "notice_style": "same_day",
+  "ceo_voice": "Humane and detailed; explicit sorry and responsibility; process-transparent (email within the hour).",
+  "sources": [
+   {
+    "url": "https://www.zendesk.com/newsroom/articles/zendesk-workforce-reduction/",
+    "title": "Zendesk Workforce Reduction",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "CEO note published on company newsroom. Zendesk had been taken private in 2022; Eggemeier joined end of Nov 2022. TechCrunch later described cuts as in June.",
+  "framing_gap": "Cites overhiring and macro but also customers shifting to generative AI as a reason to refocus.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/10/08/zendesk-strong-outlook/",
+    "headline": "Zendesk emerges from last year's turbulence with strong outlook",
+    "date": "2023-10-08",
+    "framing": "Later retrospective on the 8% cut"
+   }
+  ],
+  "company_text_path": "data/sources/zendesk__2023-05/company.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Goldman Sachs",
+  "sector": "consulting_finance",
+  "event_date": "2023-01-09",
+  "headcount_cut": 3200,
+  "pct_workforce": 6.5,
+  "communicator": "media_leak",
+  "communicator_name": "Goldman Sachs",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "job cuts"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Impersonal; staff summoned to meetings (per coverage).",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/01/09/goldman-sachs-job-cuts-up-to-3200-employees-laid-off-this-week-.html",
+    "title": "Goldman Sachs is cutting up to 3,200 employees this week",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Pre-leaked; CEO Solomon had warned in December of January headcount reduction. No company quote captured.",
+  "framing_gap": "Staff learned via calendar invites per later Fortune report.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/01/09/goldman-sachs-job-cuts-up-to-3200-employees-laid-off-this-week-.html",
+    "headline": "Goldman Sachs is cutting up to 3,200 employees this week as Wall Street girds for tough year",
+    "date": "2023-01-09",
+    "framing": "Dealmaking slump"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/01/14/goldman-sachs-employees-laid-off-in-meetings-emailed-calendar-invites-for-report/",
+    "headline": "Goldman Sachs employees were laid off at meetings they had been emailed calendar invites for",
+    "date": "2023-01-14",
+    "framing": "Delivery of the news"
+   }
+  ],
+  "reproduction_path": "data/sources/goldman-sachs__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "BlackRock",
+  "sector": "consulting_finance",
+  "event_date": "2023-01-11",
+  "headcount_cut": 500,
+  "pct_workforce": 3.0,
+  "communicator": "spokesperson",
+  "communicator_name": "BlackRock spokesperson",
+  "channel": [
+   "spokesperson"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "unprecedented market environment"
+  ],
+  "stated_reasons": [
+   "macro",
+   "overhiring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "job cuts"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Brief statement framing as market-driven.",
+  "sources": [
+   {
+    "url": "https://www.cnn.com/2023/01/11/investing/blackrock-layoffs/index.html",
+    "title": "BlackRock is cutting 500 jobs as Wall Street layoffs continue",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Spokesperson statement to MarketWatch via CNN; headcount up ~22% over three years.",
+  "framing_gap": "none",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2023/01/11/investing/blackrock-layoffs/index.html",
+    "headline": "BlackRock is cutting 500 jobs as Wall Street layoffs continue",
+    "date": "2023-01-11",
+    "framing": "First major layoffs since 2019"
+   }
+  ],
+  "reproduction_path": "data/sources/blackrock__2023-01/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Foodpanda (Delivery Hero)",
+  "sector": "international_startup",
+  "event_date": "2023-09-21",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "exec_other",
+  "communicator_name": "Jakob Sebastian Angele",
+  "channel": [
+   "internal_email",
+   "spokesperson"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "become leaner, more efficient and even more agile"
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "streamline our operations",
+   "leaner"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate and forward-looking; sale talks undisclosed in letter.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/09/22/foodpanda-confirms-talks-to-sell-part-of-its-asia-business-layoffs.html",
+    "title": "Foodpanda confirms layoffs, says it is in talks to sell part of Asia food delivery business",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Letter from APAC CEO seen by CNBC; headcount not given. Delivery Hero confirmed sale talks.",
+  "framing_gap": "Staff letter talks of agility while parent confirms sale negotiations.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/09/22/foodpanda-confirms-talks-to-sell-part-of-its-asia-business-layoffs.html",
+    "headline": "Foodpanda confirms layoffs, says it is in talks to sell part of Asia food delivery business",
+    "date": "2023-09-22",
+    "framing": "Layoffs amid sale talks"
+   }
+  ],
+  "reproduction_path": "data/sources/foodpanda__2023-09/reproduction.txt",
+  "year_batch": 2023
+ },
+ {
+  "company": "Vice Media",
+  "sector": "media_gaming",
+  "event_date": "2023-04-27",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Bruce Dixon and Hozefa Lokhandwala",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "we are moving forward on some painful but necessary reductions, primarily across our News business"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "painful but necessary reductions",
+   "transforming Vice News"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; acknowledges \"painful\" cuts; shows news program cancelled.",
+  "sources": [
+   {
+    "url": "https://www.cnn.com/2023/04/27/media/vice-news-tonight-canceled/index.html",
+    "title": "Vice Media cancels Vice News Tonight as it makes painful layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Co-CEOs memo; company exploring sale; headcount not specified.",
+  "framing_gap": "Cuts framed as transformation while company was in a sales process.",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2023/04/27/media/vice-news-tonight-canceled/index.html",
+    "headline": "Vice Media cancels its flagship Vice News Tonight program as it makes painful layoffs",
+    "date": "2023-04-27",
+    "framing": "Restructuring ahead of sale"
+   }
+  ],
+  "reproduction_path": "data/sources/vice__2023-04/reproduction.txt",
+  "year_batch": 2023
+ }
+]

@@ -1,0 +1,917 @@
+[
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/netflix__2022-05/reproduction.txt",
+  "headcount_cut": 150,
+  "pct_workforce": 2.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": false,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [
+   "These changes are primarily driven by business needs rather than individual performance",
+   "We're working hard to support them through this very difficult transition."
+  ],
+  "company": "Netflix",
+  "sector": "media_gaming",
+  "event_date": "2022-05-17",
+  "communicator": "spokesperson",
+  "communicator_name": "Netflix spokesperson (unnamed)",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "euphemisms": [
+   "let go",
+   "changes"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Brief corporate statement via spokesperson; frames cuts as business need, not performance.",
+  "sources": [
+   {
+    "url": "https://www.businesstoday.in/latest/world/story/netflix-lays-off-150-employees-mostly-in-us-amid-slowing-growth-334010-2022-05-18",
+    "title": "Netflix lays off 150 employees mostly in US amid slowing growth (Reuters via BusinessToday)",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Reuters (via BusinessToday)",
+    "url": "https://www.businesstoday.in/latest/world/story/netflix-lays-off-150-employees-mostly-in-us-amid-slowing-growth-334010-2022-05-18",
+    "headline": "Netflix lays off 150 employees mostly in US amid slowing growth",
+    "date": "2022-05-18",
+    "framing": "Cuts follow first subscriber loss in a decade"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/",
+    "headline": "Tech layoffs top 15K in a brutal May",
+    "date": "2022-05-27",
+    "framing": "Part of May 2022 layoff wave"
+   }
+  ],
+  "framing_gap": "Statement stresses business needs over performance, while context was the first subscriber loss in over a decade.",
+  "confidence": "medium",
+  "notes": "Only the Reuters-reproduced statement was read; no CEO memo. 2% is of US/Canada workforce per Reuters."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/thrasio__2022-05/reproduction.txt",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [
+   "made the decision to reduce the size of the Thrasio team",
+   "strategic and operational changes"
+  ],
+  "company": "Thrasio",
+  "sector": "consumer_internet",
+  "event_date": "2022-05-02",
+  "communicator": "exec_other",
+  "communicator_name": "Carlos Cashman and Danny Boockvar",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring"
+  ],
+  "euphemisms": [
+   "reduce the size of the Thrasio team",
+   "strategic and operational changes"
+  ],
+  "notice_style": "advance_notice",
+  "ceo_voice": "Terse leaked memo; no reasons or numbers; paired with CEO change.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/05/02/amazon-aggregator-thrasio-begins-layoffs-names-new-ceo/",
+    "title": "Amazon aggregator Thrasio begins layoffs, names new CEO",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/05/02/amazon-aggregator-thrasio-begins-layoffs-names-new-ceo/",
+    "headline": "Amazon aggregator Thrasio begins layoffs, names new CEO",
+    "date": "2022-05-02",
+    "framing": "Reckoning for aggregator model after $5-10B valuation"
+   }
+  ],
+  "framing_gap": "Memo cites only vague strategic and operational changes while news was a reckoning for a once $5-10B company.",
+  "confidence": "medium",
+  "notes": "Memo seen only via TechCrunch quotes; headcount unconfirmed; staff told by managers over two days."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/vtex__2022-05/reproduction.txt",
+  "headcount_cut": 193,
+  "pct_workforce": 13.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [
+   "The world changes fast and we need to adapt,"
+  ],
+  "company": "VTEX",
+  "sector": "saas",
+  "event_date": "2022-05-26",
+  "communicator": "founder",
+  "communicator_name": "Geraldo Thomaz and Mariano Gomide de Faria (co-CEOs)",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "efficiency"
+  ],
+  "euphemisms": [
+   "reduce our workforce"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Measured founder letter, strategic framing; public spreadsheet to help laid-off staff.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/",
+    "title": "Tech layoffs top 15K in a brutal May",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/",
+    "headline": "Tech layoffs top 15K in a brutal May",
+    "date": "2022-05-27",
+    "framing": "Roundup quoting Vtex letter"
+   }
+  ],
+  "framing_gap": "Frames cut as a strategic organizational judgment rather than overhiring or financial pressure.",
+  "confidence": "medium",
+  "notes": "Letter published by company per TechCrunch; only TechCrunch excerpt read. Date is the Thursday before May 27."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/getir__2022-05/reproduction.txt",
+  "headcount_cut": null,
+  "pct_workforce": 14.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [
+   "With a heavy heart, we today shared with our team the saddening and difficult decision to reduce the size of our global organization,"
+  ],
+  "company": "Getir",
+  "sector": "international_startup",
+  "event_date": "2022-05-25",
+  "communicator": "spokesperson",
+  "communicator_name": "Getir (statement)",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability",
+   "macro"
+  ],
+  "euphemisms": [
+   "reduce the size of our global organization"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Emotive corporate statement (\"heavy heart\") with reassurance on growth plans.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2022/05/26/rapid-grocery-delivery-start-ups-getir-gorillas-slash-jobs.html",
+    "title": "Rapid grocery delivery boom comes to a grinding halt as Getir, Gorillas slash jobs",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2022/05/26/rapid-grocery-delivery-start-ups-getir-gorillas-slash-jobs.html",
+    "headline": "Rapid grocery delivery boom comes to a grinding halt as Getir, Gorillas slash jobs",
+    "date": "2022-05-26",
+    "framing": "Instant delivery boom ends as investors favour profitability"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/",
+    "headline": "Tech layoffs top 15K in a brutal May",
+    "date": "2022-05-27",
+    "framing": "Getir cuts 14% globally despite $12B valuation"
+   }
+  ],
+  "framing_gap": "Emotional \"heavy heart\" framing alongside promise of no change to market plans despite 14% cut.",
+  "confidence": "medium",
+  "notes": "Headcount left null: sources conflict (CNBC >6,000 employees; TechCrunch ~32,000 estimate)."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/latch__2022-05/reproduction.txt",
+  "headcount_cut": 130,
+  "pct_workforce": 28.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "company": "Latch",
+  "sector": "hardware_auto",
+  "event_date": "2022-05-27",
+  "communicator": "ceo",
+  "communicator_name": "Luke Schoenfelder",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "profitability"
+  ],
+  "euphemisms": [
+   "cut"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; second round in a month confirmed by late-Friday press release.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/",
+    "title": "Tech layoffs top 15K in a brutal May",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/",
+    "headline": "Tech layoffs top 15K in a brutal May",
+    "date": "2022-05-27",
+    "framing": "Second Latch round in a month, 28% of FTEs"
+   }
+  ],
+  "framing_gap": "First round framed as ensuring sustainable growth, then a larger second round followed within weeks.",
+  "confidence": "medium",
+  "notes": "130 total includes an earlier 30-person round that month; CEO email only paraphrased, so no quotes."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/irl__2022-06/reproduction.txt",
+  "headcount_cut": 25,
+  "pct_workforce": 25.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": null,
+  "severance": "Severance offered (details not read)",
+  "opening_line": "Today was tough. We had to lay off many talented people, which is never easy.",
+  "key_quotes": [
+   "Courage is a decision, and we will choose courage."
+  ],
+  "company": "IRL",
+  "sector": "consumer_internet",
+  "event_date": "2022-06-02",
+  "communicator": "founder",
+  "communicator_name": "Abraham Shafi",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "macro",
+   "efficiency",
+   "restructuring"
+  ],
+  "euphemisms": [
+   "downsize our team to the fundamentals",
+   "lay off"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Motivational and philosophical (Darwin, mission); plain \"lay off\" wording.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/06/02/irl-layoffs-abraham-shafi-social-media/",
+    "title": "Social app IRL lays off 25% of team",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/06/02/irl-layoffs-abraham-shafi-social-media/",
+    "headline": "Social app IRL lays off 25% of team, says it has enough runway",
+    "date": "2022-06-02",
+    "framing": "Notable for upbeat, philosophical tone"
+   }
+  ],
+  "framing_gap": "Memo pivots to mission and courage while cutting a quarter of a ~100-person team.",
+  "confidence": "medium",
+  "notes": "Full memo reproduced by TechCrunch via sources. Headcount ~25 inferred from 100 to ~75."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/wealthsimple__2022-06/reproduction.txt",
+  "headcount_cut": 159,
+  "pct_workforce": 13.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [
+   "Of course volatility works both ways, and we’re seeing the other side of it now as the pandemic market conditions unwind."
+  ],
+  "company": "Wealthsimple",
+  "sector": "fintech_crypto",
+  "event_date": "2022-06-15",
+  "communicator": "ceo",
+  "communicator_name": "Michael Katchen",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "macro",
+   "covid",
+   "strategic_pivot"
+  ],
+  "euphemisms": [
+   "laying off"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Reflective market-volatility narrative; refocus on core investing, banking and crypto.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/06/15/wealthsimple-valued-at-4b-last-year-joins-the-fintech-layoffs-list/",
+    "title": "Wealthsimple joins the fintech layoffs list",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/06/15/wealthsimple-valued-at-4b-last-year-joins-the-fintech-layoffs-list/",
+    "headline": "Wealthsimple, valued at $4B last year, joins the fintech layoffs list",
+    "date": "2022-06-15",
+    "framing": "Pandemic boom unwinding"
+   }
+  ],
+  "framing_gap": "Blames market volatility and unwinding pandemic demand, not company hiring decisions.",
+  "confidence": "medium",
+  "notes": "Letter published as blog per TechCrunch; only excerpt read."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/compass__2022-06/reproduction.txt",
+  "headcount_cut": 450,
+  "pct_workforce": 10.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "company": "Compass",
+  "sector": "consumer_internet",
+  "event_date": "2022-06-14",
+  "communicator": "ceo",
+  "communicator_name": "Robert Reffkin",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting"
+  ],
+  "euphemisms": [
+   "cutting jobs"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Not assessed; memo text not read.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/06/17/layoffs-crypto-real-estate-tech-june/",
+    "title": "Layoffs hit crypto and real estate tech particularly hard",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/06/17/layoffs-crypto-real-estate-tech-june/",
+    "headline": "Layoffs hit crypto and real estate tech particularly hard",
+    "date": "2022-06-17",
+    "framing": "Proptech squeezed by rising mortgage rates"
+   }
+  ],
+  "framing_gap": "none",
+  "confidence": "low",
+  "notes": "Memo not obtained; roundup says 450 jobs, 10%, hiring and M&A paused. Exact date 06-14 from search snippet, not in saved text. Stated reasons inferred from article context."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/opensea__2022-07/reproduction.txt",
+  "headcount_cut": null,
+  "pct_workforce": 20.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": "Generous severance, healthcare into 2023, accelerated vesting, job placement help",
+  "opening_line": "Today is a hard day for OpenSea, as we’re letting go of ~20% of our team.",
+  "key_quotes": [
+   "We need to prepare the company for the possibility of a prolonged downturn."
+  ],
+  "company": "OpenSea",
+  "sector": "fintech_crypto",
+  "event_date": "2022-07-14",
+  "communicator": "ceo",
+  "communicator_name": "Devin Finzer",
+  "channel": [
+   "internal_email",
+   "x_post"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "macro",
+   "revenue_decline"
+  ],
+  "euphemisms": [
+   "letting go"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Human and direct; note posted publicly on X; stresses runway (5 years at current volume).",
+  "sources": [
+   {
+    "url": "https://fortune.com/crypto/2022/07/14/opensea-nft-marketplace-layoff-crypto-winter",
+    "title": "OpenSea chops 20% of staff, CEO cites crypto winter",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/crypto/2022/07/14/opensea-nft-marketplace-layoff-crypto-winter",
+    "headline": "OpenSea chops 20% of staff, CEO cites crypto winter",
+    "date": "2022-07-14",
+    "framing": "Crypto winter forces cuts"
+   },
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/2022/07/14/opensea-lays-off-20-braces-for-prolonged-downturn",
+    "headline": "OpenSea lays off 20%, braces for prolonged downturn",
+    "date": "2022-07-14",
+    "framing": "Preparing for prolonged downturn (URL seen in search only)"
+   }
+  ],
+  "framing_gap": "Blames crypto winter and macro, while promising runway so layoffs happen only once.",
+  "confidence": "high",
+  "notes": "Opening line is the CEO tweet as reproduced by Fortune. Headcount not stated. Axios not fetched."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/microsoft__2022-07/reproduction.txt",
+  "headcount_cut": null,
+  "pct_workforce": 1.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": false,
+  "severance": null,
+  "opening_line": null,
+  "key_quotes": [
+   "Today we had a small number of role eliminations.",
+   "We will continue to invest in our business and grow headcount overall in the year ahead."
+  ],
+  "company": "Microsoft",
+  "sector": "big_tech",
+  "event_date": "2022-07-12",
+  "communicator": "spokesperson",
+  "communicator_name": "Microsoft spokesperson (statement to Bloomberg)",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring"
+  ],
+  "euphemisms": [
+   "role eliminations",
+   "structural adjustments",
+   "realignment"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Minimal corporate statement downplaying scale; pairs cuts with hiring growth.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/07/12/microsoft-lays-off-a-portion-of-its-workforce-as-part-of-a-realignment/",
+    "title": "Microsoft lays off a portion of its workforce as part of a realignment",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/07/12/microsoft-lays-off-a-portion-of-its-workforce-as-part-of-a-realignment/",
+    "headline": "Microsoft lays off a portion of its workforce as part of a realignment",
+    "date": "2022-07-12",
+    "framing": "Big Tech joins layoffs; under 1% of 180k"
+   }
+  ],
+  "framing_gap": "Calls it role eliminations and structural adjustment while growing headcount overall.",
+  "confidence": "medium",
+  "notes": "Under 1% of ~180,000 per Bloomberg via TechCrunch; no exact count."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/ford__2022-08/reproduction.txt",
+  "headcount_cut": 3000,
+  "pct_workforce": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": null,
+  "severance": "Benefits and career-transition help (details not specified)",
+  "opening_line": null,
+  "key_quotes": [
+   "None of this changes the fact that this is a difficult and emotional time.",
+   "We have a duty to care for and support those affected"
+  ],
+  "company": "Ford",
+  "sector": "hardware_auto",
+  "event_date": "2022-08-22",
+  "communicator": "ceo",
+  "communicator_name": "Bill Ford and Jim Farley",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting",
+   "strategic_pivot"
+  ],
+  "euphemisms": [
+   "eliminating work",
+   "reorganizing and simplifying functions"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate but empathetic; thanks departing staff, ties cuts to Ford+ plan.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/08/22/ford-to-cut-3000-jobs-amid-restructuring/",
+    "title": "Ford to cut 3,000 jobs amid restructuring",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/08/22/ford-to-cut-3000-jobs-amid-restructuring/",
+    "headline": "Ford to cut 3,000 jobs amid restructuring",
+    "date": "2022-08-22",
+    "framing": "Restructuring for EV/ICE split; 2,000 salaried, 1,000 agency"
+   }
+  ],
+  "framing_gap": "Email speaks of eliminating work and reorganizing, while Farley said on the July call there were too many people in places.",
+  "confidence": "high",
+  "notes": "Excerpt of internal email reproduced by TechCrunch."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/wayfair__2022-08/reproduction.txt",
+  "headcount_cut": 870,
+  "pct_workforce": 5.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": true,
+  "severance": "$30-40M severance and benefit costs expected Q3 2022",
+  "opening_line": null,
+  "key_quotes": [
+   "I personally pushed hard to hire a strong team to support that growth,",
+   "Our team is too large for the environment we are now in, and unfortunately we need to adjust."
+  ],
+  "company": "Wayfair",
+  "sector": "consumer_internet",
+  "event_date": "2022-08-19",
+  "communicator": "ceo",
+  "communicator_name": "Niraj Shah",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "profitability",
+   "flatten_management"
+  ],
+  "euphemisms": [
+   "adjust"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Personal accountability for overestimating pandemic e-commerce growth; plain.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/lifestyle/wayfair-cutting-5-percent-global-workforce",
+    "title": "Wayfair cutting 5% of global workforce",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/lifestyle/wayfair-cutting-5-percent-global-workforce",
+    "headline": "Wayfair cutting 5% of global workforce",
+    "date": "2022-08-19",
+    "framing": "CEO takes responsibility for overhiring"
+   }
+  ],
+  "framing_gap": "Shah takes personal responsibility, but the remedy is a smaller corporate team, not strategy change.",
+  "confidence": "high",
+  "notes": "Memo quoted by Fox Business: 5% of global workforce, 10% of corporate teams. Responsibility per Fox paraphrase."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/opendoor__2022-11/reproduction.txt",
+  "headcount_cut": 550,
+  "pct_workforce": 18.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": "10 weeks pay plus 2 weeks per full year beyond 2 years; 3 months health insurance; job transition support",
+  "opening_line": null,
+  "key_quotes": [
+   "We did not make the decision to downsize the team today lightly"
+  ],
+  "company": "Opendoor",
+  "sector": "consumer_internet",
+  "event_date": "2022-11-02",
+  "communicator": "ceo",
+  "communicator_name": "Eric Wu",
+  "channel": [
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "macro",
+   "interest_rates",
+   "cost_cutting"
+  ],
+  "euphemisms": [
+   "downsize the team"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Measured corporate tone; cites earlier capacity cuts of 830 positions.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/11/02/opendoor-lays-off-about-550-employees-or-18-of-its-workforce/",
+    "title": "Opendoor lays off about 550 employees, or 18% of its workforce",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/11/02/opendoor-lays-off-about-550-employees-or-18-of-its-workforce/",
+    "headline": "Opendoor lays off about 550 employees, or 18% of its workforce",
+    "date": "2022-11-02",
+    "framing": "Proptech hit by mortgage rates and inflation"
+   }
+  ],
+  "framing_gap": "Blames one of the toughest real estate markets in 40 years and notes earlier cuts, framing this as partly absorbed.",
+  "confidence": "high",
+  "notes": "CEO blog post quoted by TechCrunch; blog not fetched."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/lyft__2022-11/reproduction.txt",
+  "headcount_cut": 683,
+  "pct_workforce": 13.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": null,
+  "takes_responsibility": null,
+  "severance": "At least 10 weeks pay (+4 if over 4 years); health care through April; accelerated vesting",
+  "opening_line": null,
+  "key_quotes": [
+   "We are not immune to the realities of inflation and a slowing economy",
+   "the tough reality is that today’s actions set us up to do that"
+  ],
+  "company": "Lyft",
+  "sector": "consumer_internet",
+  "event_date": "2022-11-03",
+  "communicator": "founder",
+  "communicator_name": "Logan Green and John Zimmer",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "flatten_management",
+   "strategic_pivot"
+  ],
+  "euphemisms": [
+   "deprioritization initiatives",
+   "broader savings goals"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Sober corporate; blames economy and insurance costs, promises stable 2023 execution.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/economy/lyft-laying-off-nearly-700-workers",
+    "title": "Lyft laying off nearly 700 workers",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://foxbusiness.com/economy/lyft-laying-off-nearly-700-workers",
+    "headline": "Lyft laying off nearly 700 workers",
+    "date": "2022-11-03",
+    "framing": "Recession risk and insurance costs"
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2022-11-03/lyft-is-cutting-13-of-staff-amid-tough-economic-conditions",
+    "headline": "Lyft Is Cutting 13% of Staff to Cope With Tough Reality",
+    "date": "2022-11-03",
+    "framing": "URL seen in search only"
+   }
+  ],
+  "framing_gap": "Attributes cuts to inflation, recession and insurance costs while also citing deprioritized initiatives and management layers.",
+  "confidence": "high",
+  "notes": "Memo quoted by Fox Business; full memo not read. 683 per SEC filing via search/TechCrunch."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/cisco__2022-11/reproduction.txt",
+  "headcount_cut": null,
+  "pct_workforce": 5.0,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": false,
+  "severance": "About $600M pre-tax charges incl. severance and real estate",
+  "opening_line": null,
+  "key_quotes": [
+   "Don't think of this as a headcount action that is motivated by cost savings. This really is a rebalancing",
+   "what we're doing is rightsizing certain businesses"
+  ],
+  "company": "Cisco",
+  "sector": "big_tech",
+  "event_date": "2022-11-16",
+  "communicator": "earnings_call",
+  "communicator_name": "Chuck Robbins and Scott Herren",
+  "channel": [
+   "earnings_call",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "euphemisms": [
+   "rebalancing",
+   "talent movement options",
+   "rightsizing"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Heavily euphemistic, announced alongside record revenue; denies cost motive.",
+  "sources": [
+   {
+    "url": "https://www.theregister.com/2022/11/17/cisco_embarks_on_talent_movement/",
+    "title": "Cisco embarks on talent movement",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/2022/11/17/cisco_embarks_on_talent_movement/",
+    "headline": "Cisco embarks on talent movement",
+    "date": "2022-11-17",
+    "framing": "Restructuring despite record revenue"
+   }
+  ],
+  "framing_gap": "CFO calls it rebalancing, not cost savings, while booking $600M charges and cutting ~5%.",
+  "confidence": "medium",
+  "notes": "Register says ~5% of 26,000; headcount left null. Announced on earnings call evening of Nov 16."
+ },
+ {
+  "year_batch": 2022,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/amazon-devices__2022-11/reproduction.txt",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "apology": false,
+  "takes_responsibility": null,
+  "severance": "Separation payment, transitional benefits, external job placement support",
+  "opening_line": null,
+  "key_quotes": [
+   "It pains me to have to deliver this news",
+   "some roles will no longer be required",
+   "remains an important area of investment for Amazon"
+  ],
+  "company": "Amazon (Devices & Services)",
+  "sector": "big_tech",
+  "event_date": "2022-11-16",
+  "communicator": "exec_other",
+  "communicator_name": "Dave Limp",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "macro"
+  ],
+  "euphemisms": [
+   "consolidate some teams",
+   "roles will no longer be required"
+  ],
+  "notice_style": "same_day",
+  "ceo_voice": "Empathetic exec letter (\"pains me\") with reassurance on continued investment.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/11/16/amazon-hardware-head-confirms-layoffs-in-memo/",
+    "title": "Amazon hardware head confirms layoffs in memo",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/11/16/amazon-hardware-head-confirms-layoffs-in-memo/",
+    "headline": "Amazon hardware head confirms layoffs in memo",
+    "date": "2022-11-16",
+    "framing": "Part of reported ~10,000 company-wide cuts"
+   },
+   {
+    "outlet": "UPI",
+    "url": "https://www.upi.com/Top_News/US/2022/11/16/Amazon-begins-layoffs-in-devices-services-division/5831668633543/",
+    "headline": "Amazon begins layoffs in devices services division",
+    "date": "2022-11-16",
+    "framing": "URL seen in search only"
+   }
+  ],
+  "framing_gap": "Letter says teams are consolidated and devices stay an investment area, while press tied it to a reported ~10,000-job plan.",
+  "confidence": "high",
+  "notes": "Company posted letter publicly; read via TechCrunch excerpts. Spokesperson cited macro and rapid hiring."
+ }
+]

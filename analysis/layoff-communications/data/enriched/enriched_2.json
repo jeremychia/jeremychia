@@ -1,0 +1,928 @@
+[
+ {
+  "company": "Peloton",
+  "event_date": "2022-02-08",
+  "headcount_cut": 2800,
+  "pct_workforce": 20.0,
+  "channel": [
+   "public_blog",
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting",
+   "revenue_decline"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "severance": "Cash severance by title and tenure plus 12-month Peloton membership (per search summary of the memo; page itself not readable)",
+  "notice_style": "same_day",
+  "notes": "Foley open letter hosted at onepeloton.com/press/articles/a-message-from-john-foley (JS-only page; text not retrievable). Leadership change (Foley to exec chair, McCarthy CEO) announced in same letter. Quotes not verified from the letter.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/02/08/peloton-ceo-steps-down-as-the-company-cuts-2800-jobs",
+    "headline": "Peloton CEO steps down as the company cuts 2,800 jobs",
+    "date": "2022-02-08",
+    "framing": "Pairs layoffs with CEO exit and quotes Foley's open letter; adds Blackwells activist and McKinsey context"
+   },
+   {
+    "outlet": "NPR",
+    "url": "https://www.npr.org/2022/02/08/1079153289/peloton-ceo-layoffs",
+    "headline": "Peloton CEO layoffs",
+    "date": "2022-02-08",
+    "framing": "Leads on CEO departure and job cuts together as a post-pandemic demand reversal"
+   },
+   {
+    "outlet": "Boston Globe",
+    "url": "https://www.bostonglobe.com/2022/02/08/business/peloton-says-its-ceo-will-step-aside-announces-2800-layoffs",
+    "headline": "Peloton says CEO has stepped aside, announces 2,800 layoffs",
+    "date": "2022-02-08",
+    "framing": "Frames cuts as part of leadership overhaul"
+   },
+   {
+    "outlet": "UPI",
+    "url": "https://www.upi.com/Top_News/US/2022/02/08/peloton-cutting-2800-jobs-ceo-resigns-stock-rises/4251644341317/",
+    "headline": "Peloton cutting 2,800 jobs, CEO resigns; stock rises",
+    "date": "2022-02-08",
+    "framing": "Notes stock rose on news, framing cuts as investor-welcomed"
+   }
+  ],
+  "framing_gap": "Company framed it as a restructuring/succession plan; coverage foregrounds the CEO's exit, activist pressure and the stock rising. Based on partial reading (letter itself not retrieved).",
+  "company_text_path": null,
+  "company_text_url": "https://www.onepeloton.com/press/articles/a-message-from-john-foley",
+  "reproduction_url": null,
+  "fetch_log": "Company page is a JS-only shell (200, no text); wayback rate-limited (429); TechCrunch fetched, quoted only partial letter."
+ },
+ {
+  "company": "Peloton",
+  "event_date": "2022-08-12",
+  "headcount_cut": 784,
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring",
+   "revenue_decline"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Per Front Office Sports snippet via search: McCarthy letter 'making the hard choices', 784 jobs, store closures, price rises. Not read in full; memo text not retrieved. Date (Friday 12 Aug 2022) inferred from 'Friday' in snippet and input.",
+  "news_coverage": [
+   {
+    "outlet": "Front Office Sports",
+    "url": "https://frontofficesports.com/peloton-to-eliminate-800-jobs-shutter-stores-raises-prices",
+    "headline": "Peloton to eliminate 800 jobs, shutter stores, raises prices",
+    "date": "2022-08-12",
+    "framing": "Reports McCarthy letter naming 784 jobs alongside retail closures and price increases"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/10/06/peloton-barry-mccarthy-gives-company-6-months-to-save-itself",
+    "headline": "Peloton's Barry McCarthy gives company 6 months to save itself",
+    "date": "2022-10-06",
+    "framing": "Later-round coverage (Oct 2022) about McCarthy's turnaround deadline; headline-only, not read"
+   },
+   {
+    "outlet": "PYMNTS",
+    "url": "https://www.pymnts.com/personnel/2022/further-staff-reductions-could-be-last-hope-for-struggling-peloton/",
+    "headline": "Further staff reductions could be last hope for struggling Peloton",
+    "date": "2022-08-12",
+    "framing": "Frames cuts as a last-ditch survival step; headline-only"
+   }
+  ],
+  "framing_gap": "Coverage describes the cuts as a survival step amid inventory losses; McCarthy's letter (per snippets) framed them as hard but necessary choices. Not verified against letter.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "No Peloton primary text found; search budget exhausted, news URLs from search results only."
+ },
+ {
+  "company": "HP Inc",
+  "event_date": "2022-11-22",
+  "public_primary_text": true,
+  "opening_line": "We had a solid end to our fiscal year despite navigating a volatile macro-environment and softening demand in the second half.",
+  "key_quotes": [
+   "We had a solid end to our fiscal year despite navigating a volatile macro-environment and softening demand in the second half.",
+   "the new Future Ready strategy we introduced this quarter will enable us to better serve our customers and drive long-term value creation"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "Future Ready Transformation",
+   "reduce gross global headcount",
+   "restructuring and other charges"
+  ],
+  "severance": null,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "ceo_voice": "Corporate and upbeat; layoffs are buried in a results press release as a cost-saving transformation.",
+  "notice_style": "advance_notice",
+  "confidence": "high",
+  "notes": "Press release text saved (first 16k chars). 4,000-6,000 gross headcount reduction by end of FY2025; ~$1.0B restructuring charges; >=$1.4B annualised savings. No apology/ownership; no severance terms.",
+  "news_coverage": [
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/hp-plans-to-lay-off-up-to-6000-employees-220057960.html",
+    "headline": "HP plans to lay off up to 6,000 employees",
+    "date": "2022-11-22",
+    "framing": "Leads with the layoff number the press release buries in a results statement"
+   },
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/2022/11/23/hp_inc_q4_2022/",
+    "headline": "HP Inc Q4 2022",
+    "date": "2022-11-23",
+    "framing": "Computes headcount share (~12% of ~51,000) and ties cuts to falling PC demand"
+   },
+   {
+    "outlet": "Business Standard",
+    "url": "https://business-standard.com/amp/article/international/hp-inc-to-reduce-global-headcount-by-up-to-6-000-employees-as-demand-slows-122112300212_1.html",
+    "headline": "HP Inc to reduce global headcount by up to 6,000 employees as demand slows",
+    "date": "2022-11-23",
+    "framing": "Frames cuts as a response to slowing demand"
+   }
+  ],
+  "framing_gap": "Company called it a 'Future Ready' transformation within a results release; news headlines lead with the 6,000 job cuts and demand slump.",
+  "company_text_path": "data/sources/hp-inc__2022-11/company.txt",
+  "company_text_url": "https://press.hp.com/us/en/press-releases/2022/hp-inc-reports-fiscal-2022-full-year-and-fourth-quarter-results.html",
+  "reproduction_url": null,
+  "fetch_log": "HP press release fetched directly (200). News URLs from search results."
+ },
+ {
+  "company": "PayPal",
+  "event_date": "2023-01-31",
+  "headcount_cut": 2000,
+  "pct_workforce": 7.0,
+  "key_quotes": [
+   "I want to express my personal appreciation for the meaningful contributions they have made to PayPal."
+  ],
+  "euphemisms": [
+   "workforce reduction",
+   "departing colleagues"
+  ],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "severance": "'generous packages' (no figures seen)",
+  "notes": "Quote copied from Fortune's excerpt of Schulman's statement; memo/newsroom page itself unreachable (newsroom URL 404). 'challenging macroeconomic environment' also quoted by Fortune. Apology/responsibility not seen in excerpts; left null.",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/01/31/paypal-layoffs-2000-jobs",
+    "headline": "PayPal is laying off around 2,000 employees",
+    "date": "2023-01-31",
+    "framing": "Quotes Schulman's macro framing and promises of generous packages; places cut among wave of tech layoffs"
+   },
+   {
+    "outlet": "NBC Bay Area/CNBC",
+    "url": "https://www.nbcbayarea.com/news/business/money-report/paypal-to-lay-off-2000-employees-in-coming-weeks-about-7-of-workforce/3144221/",
+    "headline": "PayPal to lay off 2,000 employees in coming weeks, about 7% of workforce",
+    "date": "2023-01-31",
+    "framing": "Reports rolling cuts over several weeks and 7% scale"
+   },
+   {
+    "outlet": "Spokesman-Review (AP)",
+    "url": "https://www.spokesman.com/stories/2023/jan/31/paypal-to-cut-2000-jobs-in-push-to-trim-costs",
+    "headline": "PayPal to cut 2,000 jobs in push to trim costs",
+    "date": "2023-01-31",
+    "framing": "Frames as cost trimming, citing savings targets"
+   }
+  ],
+  "framing_gap": "Company language stresses macro environment and respect for departing staff; news adds cost-savings targets and share-price decline context.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "PayPal newsroom guessed URLs 404; no primary text. News via search results; Fortune fetched."
+ },
+ {
+  "company": "Lyft",
+  "event_date": "2023-04-27",
+  "headcount_cut": 1072,
+  "pct_workforce": 26.0,
+  "channel": [
+   "internal_email",
+   "8k_filing",
+   "press_release"
+  ],
+  "key_quotes": [
+   "better meeting the needs of riders and drivers."
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "profitability",
+   "flatten_management"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "TechCrunch: 26% / about 1,072 people; 250 open roles eliminated; $41-47M severance and benefits cost; Risher memo ~Apr 21 said significant reduction, partial quote only. 'faster, flatter' wording from a search summary, unverified, not recorded as quote. Memo itself not read.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/04/27/lyft-layoffs-to-affect-26-of-workforce",
+    "headline": "Lyft layoffs to affect 26% of workforce",
+    "date": "2023-04-27",
+    "framing": "Reports filing numbers and restructuring around core ride-hailing; notes unspecified departments"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://dc.fortune.com/2023/04/21/lyft-layoffs-new-ceo-david-risher-amazon-significant-number",
+    "headline": "Lyft layoffs new CEO David Risher Amazon significant number",
+    "date": "2023-04-21",
+    "framing": "Covers new CEO's memo warning of significant cuts; headline-only"
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/?p=613281",
+    "headline": "Lyft layoffs report (Apr 21 2023)",
+    "date": "2023-04-21",
+    "framing": "Early report of planned layoffs under new CEO; headline-only"
+   }
+  ],
+  "framing_gap": "Company framed cuts as refocusing on riders and drivers; coverage stresses new-CEO shake-up and the large 26% scale.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "No Lyft primary text found (blog guess 404; SEC not fetched per rules). TechCrunch fetched."
+ },
+ {
+  "company": "Unity Software",
+  "event_date": "2024-01-08",
+  "headcount_cut": 1800,
+  "pct_workforce": 25.0,
+  "stated_reasons": [
+   "restructuring",
+   "profitability",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Game Developer: 8-K says ~1,800 roles / 25%, 'restructure and refocus on its core business', 'position itself for long-term and profitable growth'. Communicator inference (Whitehurst memo) comes only from search summaries; not verified. No quotes recorded; 8-K not fetched (sec.gov excluded).",
+  "news_coverage": [
+   {
+    "outlet": "Game Developer",
+    "url": "https://gamedeveloper.com/business/unity-is-cutting-1-800-jobs-in-the-name-of-profitable-growth-",
+    "headline": "Unity is cutting 1,800 jobs in the name of 'profitable growth'",
+    "date": "2024-01-09",
+    "framing": "Notes sequence of prior Unity layoffs and questions 'customer-first' rhetoric against workers"
+   },
+   {
+    "outlet": "TechRadar",
+    "url": "https://www.techradar.com/gaming/unity-announces-plans-to-cut-around-25-of-its-staff-affecting-approximately-1800-people",
+    "headline": "Unity announces plans to cut around 25% of its staff, affecting approximately 1,800 people",
+    "date": "2024-01-09",
+    "framing": "Straight report of the filing; headline-only"
+   },
+   {
+    "outlet": "SF Standard",
+    "url": "https://sfstandard.com/2024/01/08/unity-software-tech-layoffs/",
+    "headline": "Unity Software tech layoffs",
+    "date": "2024-01-08",
+    "framing": "Local Bay Area report of the cuts; headline-only"
+   }
+  ],
+  "framing_gap": "Company language is 'refocus on core business / profitable growth'; trade press frames it as Unity's largest-ever cut after repeated rounds.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Unity blog URL guess 404; no primary text. Game Developer fetched."
+ },
+ {
+  "company": "Electronic Arts",
+  "event_date": "2024-02-28",
+  "public_primary_text": true,
+  "opening_line": "We are entertaining, inspiring, and connecting more people with more content and deeper experiences than ever before.",
+  "key_quotes": [
+   "we expect these decisions to impact approximately 5 percent of our workforce.",
+   "I understand this will create uncertainty and be challenging for many who have worked with such dedication and passion",
+   "We are also sunsetting games and moving away from development of future licensed IP that we do not believe will be successful"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "impact approximately 5 percent of our workforce",
+   "sunsetting games",
+   "streamlining our company operations",
+   "optimize our global real estate footprint"
+  ],
+  "severance": null,
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "ceo_voice": "Corporate and strategy-heavy; empathy sentence appears late, no apology.",
+  "notice_style": "unknown",
+  "confidence": "high",
+  "notes": "Full memo retrieved from ea.com (inside-ea path; the /news path 404s). Memo says communication begins now and largely completes by early next quarter. No severance terms stated.",
+  "news_coverage": [
+   {
+    "outlet": "PC Gamer",
+    "url": "https://www.pcgamer.com/electronic-arts-is-laying-off-5-of-its-workforce",
+    "headline": "Electronic Arts is laying off 5% of its workforce",
+    "date": "2024-02-28",
+    "framing": "Reports the 5% cut and game cancellations; headline-only"
+   },
+   {
+    "outlet": "TechPowerUp",
+    "url": "https://techpowerup.com/319809/ea-ceo-announces-approximate-5-workforce-reduction",
+    "headline": "EA CEO announces approximate 5% workforce reduction",
+    "date": "2024-02-29",
+    "framing": "Follows memo wording on 5% and sunsetting games"
+   }
+  ],
+  "framing_gap": "Memo frames cuts as evolving the business and focus on owned IP; coverage states plainly 'laying off 5%' and names cancelled projects.",
+  "company_text_path": "data/sources/electronic-arts__2024-02/company.txt",
+  "company_text_url": "https://www.ea.com/inside-ea/news/continuing-to-evolve-our-business-and-teams",
+  "reproduction_url": null,
+  "fetch_log": "ea.com/news path 404; ea.com/inside-ea/news path fetched directly (200). Only 2 news URLs (search budget exhausted)."
+ },
+ {
+  "company": "Morgan Stanley",
+  "event_date": "2025-03-18",
+  "notes": "No on-record company text. thinkadvisor.com page is blocked by Cloudflare for automated access (not circumvented). Details come only from search-result headline ('about 2,000 job cuts'); other fields unverified.",
+  "news_coverage": [
+   {
+    "outlet": "ThinkAdvisor",
+    "url": "https://www.thinkadvisor.com/amp/2025/03/19/morgan-stanley-plans-about-2000-job-cuts/",
+    "headline": "Morgan Stanley plans about 2,000 job cuts",
+    "date": "2025-03-19",
+    "framing": "Reports cuts via leak/sources with no company statement; headline-only"
+   }
+  ],
+  "framing_gap": "No company framing exists (media leak); coverage is the only narrative.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "blocked: thinkadvisor.com (Cloudflare). No other searches possible."
+ },
+ {
+  "company": "Accenture",
+  "event_date": "2025-09-25",
+  "public_primary_text": true,
+  "opening_line": "I am very pleased with our 7% growth in fiscal 2025, demonstrating our unique ability to deliver for our clients as they seek our help to reinvent and lead with AI.",
+  "key_quotes": [
+   "exiting people in a compressed timeline where reskilling is not a viable path for the skills it needs",
+   "In Q4 FY25, the company initiated a six-month business optimization program and recorded a charge of $615 million."
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "business optimization program",
+   "exiting people in a compressed timeline",
+   "talent strategy"
+  ],
+  "severance": "$344M employee severance costs in FY25 charge (~$615M total incl. $271M impairments); ~$250M more in Q1 FY26; no per-employee terms",
+  "stated_reasons": [
+   "efficiency",
+   "strategic_pivot",
+   "restructuring",
+   "ai_automation"
+  ],
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "ceo_voice": "Upbeat results-release tone; exits described as talent strategy, no personal address to affected staff.",
+  "notice_style": "unknown",
+  "confidence": "high",
+  "notes": "Press release PDF read (first pages saved). The CEO quote is about growth; the exits language is in the company's financial-review text, not a CEO quote. Release says Accenture expects to increase overall headcount in FY26.",
+  "news_coverage": [
+   {
+    "outlet": "Irish Times",
+    "url": "https://www.irishtimes.com/business/2025/09/26/accenture-to-exit-staff-who-cannot-be-retrained-for-age-of-ai",
+    "headline": "Accenture to exit staff who cannot be retrained for age of AI",
+    "date": "2025-09-26",
+    "framing": "Foregrounds the AI-retraining angle the release states only obliquely"
+   },
+   {
+    "outlet": "Free Press Journal",
+    "url": "https://www.freepressjournal.in/tech/accenture-announces-over-11000-job-cuts-amid-ai-driven-restructuring",
+    "headline": "Accenture announces over 11,000 job cuts amid AI-driven restructuring",
+    "date": "2025-09-26",
+    "framing": "Headlines a 11,000+ figure and AI-driven restructuring; number is outlet's own headcount calculation"
+   }
+  ],
+  "framing_gap": "Release frames it as a business optimization program amid 7% growth and planned FY26 hiring; news leads with thousands of AI-linked job cuts.",
+  "company_text_path": "data/sources/accenture__2025-09/company.txt",
+  "company_text_url": "https://newsroom.accenture.com/content/4q-full-fy25-earnings/accenture-reports-fourth-quarter-and-full-year-fiscal-2025-results.pdf",
+  "reproduction_url": null,
+  "fetch_log": "Accenture earnings PDF fetched directly (200); first newsroom URL guess 404. Two news URLs only."
+ },
+ {
+  "company": "Paramount Skydance",
+  "event_date": "2025-10-29",
+  "public_primary_text": true,
+  "opening_line": "When we launched the new Paramount in August, we made clear that building a strong, future-focused company would require significant change – including restructuring the organization.",
+  "key_quotes": [
+   "In some areas, we are addressing redundancies that have emerged across the organization.",
+   "Ultimately, these steps are necessary to position Paramount for long-term success.",
+   "These decisions are never made lightly"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reduce the size of our workforce",
+   "phasing out roles",
+   "informing impacted team members",
+   "addressing redundancies"
+  ],
+  "severance": null,
+  "stated_reasons": [
+   "merger_integration",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "ceo_voice": "Corporate and formal; claims openness but gives no specifics or apology.",
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "notes": "Full memo text reproduced by Variety (saved as reproduction.txt, retrieved from Variety AU). First wave ~1,000 of ~2,000 planned. Memo gives no severance figures ('detailed information on benefits and transition services').",
+  "news_coverage": [
+   {
+    "outlet": "Variety",
+    "url": "https://au.variety.com/2025/biz/news/paramount-layoffs-underway-david-ellison-internal-memo-29474",
+    "headline": "Paramount Layoffs Underway: CEO David Ellison Says Cuts Are 'Necessary' for Company's Long-Term Success",
+    "date": "2025-10-30",
+    "framing": "Publishes full memo and adds Skydance $2B cost plan and Warner Bros. Discovery bid context"
+   },
+   {
+    "outlet": "NBC News",
+    "url": "https://www.nbcnews.com/business/media/paramount-skydance-layoffs-rcna240067",
+    "headline": "Paramount Skydance begins layoffs, plans to slash about 2,000 jobs",
+    "date": "2025-10-29",
+    "framing": "Leads with 2,000-job total the memo did not state; headline-only"
+   },
+   {
+    "outlet": "CBS News",
+    "url": "https://www.cbsnews.com/amp/news/paramount-layoffs-merger-skydance",
+    "headline": "Paramount to lay off 2,000 workers shortly after merging with Skydance",
+    "date": "2025-10-29",
+    "framing": "Ties cuts to the Skydance merger; headline-only"
+   }
+  ],
+  "framing_gap": "Memo avoids a number and merger language; news supplies the ~1,000 first-wave and ~2,000 total plus merger/cost-saving context.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://au.variety.com/2025/biz/news/paramount-layoffs-underway-david-ellison-internal-memo-29474",
+  "fetch_log": "Variety AU fetched (200) with full memo, saved as reproduction.txt. No company-hosted copy found."
+ },
+ {
+  "company": "Nike",
+  "event_date": "2026-04-23",
+  "key_quotes": [
+   "a leaner, faster, more connected Technology organisation",
+   "less complex and more responsive",
+   "very hard for the teammates directly affected and for the teams around them"
+  ],
+  "euphemisms": [
+   "operational changes",
+   "adjusting staffing",
+   "consolidate systems"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Quotes copied from People Matters' report of the memo (via Business Insider); memo not read directly, so wording could differ from the original. Memo reportedly calls it 'the final stretch' of 'win now' actions. Memo mentions automation only.",
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/markets/nike-announces-roughly-1400-layoffs-across-its-global-operations-team-latest-round-cuts",
+    "headline": "Nike announces roughly 1,400 layoffs in latest round of cuts",
+    "date": "2026-04-24",
+    "framing": "Reports tech-heavy cuts and the second round this year"
+   },
+   {
+    "outlet": "Retail Dive",
+    "url": "https://www.retaildive.com/news/nike-layoffs-cuts-thousands-tech-jobs/818391/",
+    "headline": "Nike layoffs cuts thousands tech jobs",
+    "date": "2026-04-24",
+    "framing": "Focuses on consolidating tech into two hubs and CTO role change"
+   },
+   {
+    "outlet": "People Matters",
+    "url": "https://www.peoplematters.in/amp/news/strategic-hr/nike-to-cut-1400-roles-coo-venkatesh-alagirisamy-tells-staff-in-memo-49375",
+    "headline": "Nike to cut 1,400 roles, COO Venkatesh Alagirisamy tells staff in memo",
+    "date": "2026-04-24",
+    "framing": "Quotes memo language on a leaner tech organisation; relays Business Insider"
+   },
+   {
+    "outlet": "Quartz",
+    "url": "https://qz.com/nike-layoffs-1400-jobs-technology-global-operations-042426",
+    "headline": "Nike layoffs 1,400 jobs technology global operations",
+    "date": "2026-04-24",
+    "framing": "Headline-only; covers tech and global operations cuts"
+   }
+  ],
+  "framing_gap": "Memo frames it as 'the next phase of work already underway' toward leaner operations; coverage adds the turnaround-delay and analyst view that problems run deeper.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "No company text found; People Matters fetched (200). Memo behind Business Insider."
+ },
+ {
+  "company": "Shopify",
+  "event_date": "2022-07-26",
+  "public_primary_text": true,
+  "opening_line": "I’m sitting down to write this email not far from where I once sat down to write the first few lines of code for Shopify itself.",
+  "key_quotes": [
+   "Ultimately, placing this bet was my call to make and I got this wrong.",
+   "we have to say goodbye to some of you today and I’m deeply sorry for that.",
+   "It’s now clear that bet didn’t pay off."
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reduction in workforce",
+   "say goodbye",
+   "over-specialized and duplicate roles",
+   "impacted roles"
+  ],
+  "severance": "16 weeks severance pay plus 1 week per year of tenure; equity cliff removed; medical benefits extended; outplacement; keep home-office furniture; laptop kickstart allowance; internet costs paid",
+  "stated_reasons": [
+   "covid",
+   "overhiring",
+   "macro",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "ceo_voice": "Personal, accountable and contrite; founder-narrative opening, explicit ownership of the mistaken bet.",
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full memo retrieved from news.shopify.com/changes-to-shopifys-team (URL found via MobileSyrup link). Previous opening-line caveat now resolved. Cuts ~10% (~1,000).",
+  "news_coverage": [
+   {
+    "outlet": "Globe and Mail",
+    "url": "https://www.theglobeandmail.com/business/article-shopify-layoffs-pay-boost-restructuring",
+    "headline": "Shopify layoffs, pay boost, restructuring",
+    "date": "2022-07-26",
+    "framing": "Domestic outlet covering the memo and restructuring"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/07/26/shopify-lays-off-10-of-its-workforce-as-rapid-pandemic-growth-slows",
+    "headline": "Shopify lays off 10% of its workforce as rapid pandemic growth slows",
+    "date": "2022-07-26",
+    "framing": "Frames as unwinding of pandemic growth bet"
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://edition.cnn.com/2022/07/26/tech/shopify-layoffs",
+    "headline": "Shopify layoffs",
+    "date": "2022-07-26",
+    "framing": "Headline-only; covers 10% cut"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/07/26/shopify-cuts-10-percent-staff-1000-workers",
+    "headline": "Shopify cuts 10% of staff, 1,000 workers",
+    "date": "2022-07-26",
+    "framing": "Headline-only; puts scale at 1,000 workers"
+   }
+  ],
+  "framing_gap": "Little gap: coverage largely echoes Lutke's admission of a wrong bet; news emphasises the 'I got this wrong' line and 1,000-job scale.",
+  "company_text_path": "data/sources/shopify__2022-07/company.txt",
+  "company_text_url": "https://news.shopify.com/changes-to-shopifys-team",
+  "reproduction_url": null,
+  "fetch_log": "Shopify newsroom memo fetched directly (200); earlier guessed URL 404."
+ },
+ {
+  "company": "Plaid",
+  "event_date": "2022-12-07",
+  "public_primary_text": true,
+  "opening_line": "Today, I’m announcing the most difficult change we have had to make at Plaid to date.",
+  "key_quotes": [
+   "I made the decision to hire and invest ahead of revenue growth",
+   "If you are among those impacted, I am truly sorry.",
+   "our pace of cost growth outstripped our pace of revenue growth"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reduce the size of our team",
+   "say goodbye",
+   "parting ways",
+   "impacted / not-impacted"
+  ],
+  "severance": "16 weeks base pay plus more weeks beyond 1 year of tenure; 6 months health premiums cash equivalent; equity accelerated to Feb 15 2023 and cliff waived; 6 months career coaching; 6 months Modern Health; immigration counsel",
+  "stated_reasons": [
+   "overhiring",
+   "macro"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "ceo_voice": "Detailed and humane; explains reasoning, owns hiring decision, apologises.",
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full CEO message retrieved from plaid.com/team-update (~260 people, ~20%). System access removed for departing staff, email kept open to end of day.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/12/07/plaid-layoff-fintech/amp",
+    "headline": "Plaid layoff fintech",
+    "date": "2022-12-07",
+    "framing": "Reports CEO letter, 20% cut, immediate loss of system access"
+   },
+   {
+    "outlet": "Banking Dive",
+    "url": "https://www.bankingdive.com/news/plaid-cuts-260-employees/638226/",
+    "headline": "Plaid cuts 260 employees",
+    "date": "2022-12-07",
+    "framing": "Trade framing around fintech cost pressure; headline-only"
+   },
+   {
+    "outlet": "The Star (Reuters)",
+    "url": "https://www.thestar.com.my/news/world/2022/12/08/us-fintech-company-to-lay-off-20-pct-of-workforce",
+    "headline": "US fintech company to lay off 20 pct of workforce",
+    "date": "2022-12-08",
+    "framing": "Wire report of 20% cut"
+   }
+  ],
+  "framing_gap": "None substantive; coverage mirrors the CEO's over-hiring and macro explanation.",
+  "company_text_path": "data/sources/plaid__2022-12/company.txt",
+  "company_text_url": "https://plaid.com/team-update/",
+  "reproduction_url": null,
+  "fetch_log": "plaid.com/team-update fetched directly (200) after finding link in TechCrunch page; blog guesses 404."
+ },
+ {
+  "company": "Atlassian",
+  "event_date": "2023-03-07",
+  "key_quotes": [
+   "with the heaviest of hearts",
+   "To those who are leaving us: we are deeply sorry",
+   "We know the industry standard is to block access to communication tools immediately. This approach didn’t feel right to us"
+  ],
+  "apology": true,
+  "euphemisms": [
+   "rebalance",
+   "leaving us",
+   "separation pay"
+  ],
+  "severance": "15 weeks separation pay plus 1 week per year of service; most affected staff can stay until end of week",
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "same_day",
+  "ceo_voice": "Warm and apologetic; emphasises trust by keeping access open for farewells.",
+  "notes": "Quotes taken from the Guardian's reproduction of the memo (read directly); memo was filed as an 8-K exhibit (sec.gov not fetched). Guardian: cuts largely in talent acquisition, program management and research; 'not a reflection of financial performance'. 'Heaviest of hearts' attributed to the founders; overhiring reason not verified.",
+  "news_coverage": [
+   {
+    "outlet": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2023/mar/07/atlassian-to-axe-500-jobs-with-the-heaviest-of-hearts",
+    "headline": "Atlassian to axe 500 jobs 'with the heaviest of hearts'",
+    "date": "2023-03-07",
+    "framing": "Quotes the memo, notes cuts months after a hiring drive"
+   },
+   {
+    "outlet": "TechRadar",
+    "url": "https://www.techradar.com/news/atlassian-is-the-latest-tech-firm-to-axe-jobs",
+    "headline": "Atlassian is the latest tech firm to axe jobs",
+    "date": "2023-03-07",
+    "framing": "Situates cut within wave of tech layoffs; headline-only"
+   },
+   {
+    "outlet": "SmartCompany",
+    "url": "https://www.smartcompany.com.au/technology/atlassian-lays-off-500-employees/",
+    "headline": "Atlassian lays off 500 employees",
+    "date": "2023-03-07",
+    "framing": "Australian trade framing; headline-only"
+   }
+  ],
+  "framing_gap": "Founders said it was a rebalance not a reflection of financial performance; Guardian highlights it as coming months after a hiring spree.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Atlassian blog URL guesses 404; marketscreener 8-K page 403 (not circumvented); Guardian fetched."
+ },
+ {
+  "company": "Cruise (GM)",
+  "event_date": "2023-12-14",
+  "public_primary_text": true,
+  "opening_line": "We knew this day was coming, but that does not make it any less difficult—especially for those whose jobs are affected.",
+  "key_quotes": [
+   "Today, we are making staff reductions that will affect 24% of full-time Cruisers, through no fault of their own.",
+   "I am so sorry we have to do this by email, as I would prefer that we have a conversation with each of you."
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "staff reductions",
+   "part ways with several SLT members",
+   "departing Cruisers",
+   "ended additional assignments of contingent workers"
+  ],
+  "severance": "Pay through at least Apr 8 2024 (~16 weeks): payroll through Feb 12 plus 8 weeks, plus 2 weeks per year over 3; subsidized health through end of May; Jan 5 bonus; Jan 15 RSU vest with liquidity; LinkedIn Premium; immigration support",
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "ceo_voice": "Human and apologetic about the email format, but frames job loss as 'no fault of their own' and avoids naming the pedestrian incident.",
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full blog post and Elshenawy letter saved (wayback copy of getcruise.com blog; live domain unreachable). Apology is specific to delivering by email, not for layoffs. Staff kept email and Zoom until 10am PT.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/12/14/cruise-slashes-24-of-self-driving-car-workforce-in-sweeping-layoffs/",
+    "headline": "Cruise slashes 24% of self-driving car workforce in sweeping layoffs",
+    "date": "2023-12-14",
+    "framing": "Reproduces memo and ties cuts to October incident and executive departures"
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2023-12-14/gm-s-cruise-cuts-900-workers-amid-executive-exits-safety-probe",
+    "headline": "GM's Cruise Dismisses 900 Employees, Cutting 24% of Workforce",
+    "date": "2023-12-14",
+    "framing": "Adds executive exits and safety probe context absent from memo"
+   },
+   {
+    "outlet": "Digital Trends",
+    "url": "https://digitaltrends.com/cars/beleaguered-robotaxi-startup-cruise-lays-off-900-workers",
+    "headline": "Beleaguered robotaxi startup Cruise lays off 900 workers",
+    "date": "2023-12-14",
+    "framing": "Frames Cruise as beleaguered; headline-only"
+   }
+  ],
+  "framing_gap": "Memo ties cuts to slowing commercialization; coverage centres on the pedestrian incident, DMV suspension and safety probes the memo omits.",
+  "company_text_path": "data/sources/cruise-gm__2023-12/company.txt",
+  "company_text_url": "https://getcruise.com/news/blog/2023/cruise-team-updates",
+  "reproduction_url": null,
+  "fetch_log": "getcruise.com unreachable directly; Wayback raw copy (2024id_) worked."
+ },
+ {
+  "company": "Intel",
+  "event_date": "2024-08-01",
+  "public_primary_text": true,
+  "opening_line": "We have moved our All Company Meeting to today, following our earnings call, as we are announcing significant actions to reduce our costs.",
+  "key_quotes": [
+   "This is painful news for me to share.",
+   "Our costs are too high, our margins are too low.",
+   "These decisions have challenged me to my core, and this is the hardest thing I’ve done in my career."
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "significant actions to reduce our costs",
+   "reducing our head count",
+   "enhanced retirement offering",
+   "voluntary departures"
+  ],
+  "severance": "No cash terms; enhanced retirement offer and voluntary-departure application program announced for the following week",
+  "stated_reasons": [
+   "revenue_decline",
+   "cost_cutting",
+   "efficiency",
+   "flatten_management",
+   "profitability"
+  ],
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "ceo_voice": "Candid and emotional, but no apology; mix of personal pain and financial urgency.",
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full memo text saved from Intel's newsroom PDF. ~15,000 roles (15%), $10B savings in 2025, dividend suspended. AI mentioned only as a trend Intel has not yet benefited from. No news URLs: none surfaced in searches before search budget ran out.",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: no news coverage retrieved.",
+  "company_text_path": "data/sources/intel__2024-08/company.txt",
+  "company_text_url": "https://d1io3yog0oux5.cloudfront.net/_30f8d843824dfbccc3bd0b0cd772d41f/intel/news/2024-08-01_Actions_to_Accelerate_our_1712.pdf",
+  "reproduction_url": null,
+  "fetch_log": "Intel PDF fetched directly (200). No news search done for Intel (search limit reached)."
+ },
+ {
+  "company": "Fiverr",
+  "event_date": "2025-09-15",
+  "public_primary_text": true,
+  "opening_line": "I am writing to you today with an important update on Fiverr.",
+  "key_quotes": [
+   "This transformation requires a painful reset, and as we make it, we will be parting ways with approximately 250 team members",
+   "we believe we don’t need as many people to operate the existing business",
+   "To those who will be leaving us: thank you!"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "parting ways",
+   "painful reset",
+   "resizing and refocusing",
+   "smaller and flatter organization"
+  ],
+  "severance": "'generous severance, extended healthcare, career transition assistance' (no figures)",
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "flatten_management",
+   "strategic_pivot"
+  ],
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "ceo_voice": "Visionary and AI-evangelical; sorrow acknowledged but dominated by transformation narrative.",
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Letter retrieved from Fiverr's investor-relations shareholder update PDF (wayback copy; live copy returned Access Denied). Guidance reiterated; savings partly reinvested. No apology.",
+  "news_coverage": [
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/2025/09/16/fiverr_ai_layoff/",
+    "headline": "Fiverr AI layoff",
+    "date": "2025-09-16",
+    "framing": "Reports the 'parting ways' phrasing and AI-first pivot"
+   },
+   {
+    "outlet": "Gizmodo",
+    "url": "https://gizmodo.com/the-ai-layoffs-have-come-for-freelance-marketplace-fiverr-2000660080",
+    "headline": "The AI layoffs have come for freelance marketplace Fiverr",
+    "date": "2025-09-16",
+    "framing": "Frames it explicitly as AI-driven layoffs hitting an AI-exposed marketplace"
+   },
+   {
+    "outlet": "The Hill",
+    "url": "https://digital-release.thehill.com/business/5509113-fiverr-layoffs-artificial-intelligence/",
+    "headline": "'AI-first' push leads to 250 layoffs at Fiverr",
+    "date": "2025-09-15",
+    "framing": "Straight report of AI-first push; headline-only"
+   }
+  ],
+  "framing_gap": "CEO frames as AI-first transformation and efficiency; coverage amplifies the AI angle and the irony for a freelancing platform.",
+  "company_text_path": "data/sources/fiverr__2025-09/company.txt",
+  "company_text_url": "https://investors.fiverr.com/static-files/eb07ed19-eb8f-4ae4-9618-8d733f44bdf7",
+  "reproduction_url": null,
+  "fetch_log": "Fiverr IR static file 403 directly; Wayback raw copy worked. X essay not fetched."
+ },
+ {
+  "company": "HubSpot",
+  "event_date": "2026-10-06",
+  "key_quotes": [
+   "This is not driven by AI-related efficiencies",
+   "not simply a cost-cutting exercise",
+   "The reduction was the outcome of that work, not the starting point"
+  ],
+  "euphemisms": [
+   "reduction",
+   "difficult choices",
+   "reduce fragmented ownership"
+  ],
+  "severance": "20 weeks base pay plus 1 week per year of service up to 30 weeks; 5 months COBRA lump sum (US) / 5 months Modern Health globally; 6 months outplacement; keep laptops (per CMSWire)",
+  "stated_reasons": [
+   "restructuring",
+   "flatten_management",
+   "strategic_pivot"
+  ],
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "notes": "Quotes copied from CMSWire excerpts of the Oct 6 memo (read directly); full memo/8-K not retrieved (hubspot.com URL guess 404; sec.gov excluded). Memo says restructuring around customer outcomes rather than Hubs; ~$65-75M charges; completion by end Q1 2027.",
+  "news_coverage": [
+   {
+    "outlet": "CMSWire",
+    "url": "https://cmswire.com/digital-experience/hubspot-cuts-660-jobs-reorganizes-product-teams-around-customer-outcomes",
+    "headline": "HubSpot cuts 660 jobs, reorganizes product teams around customer outcomes",
+    "date": "2026-10-06",
+    "framing": "Quotes memo at length; takes CEO's no-AI-efficiency claim at face value"
+   },
+   {
+    "outlet": "Boston Globe",
+    "url": "https://www.bostonglobe.com/2026/10/06/business/hubspot-layoffs/",
+    "headline": "HubSpot layoffs",
+    "date": "2026-10-06",
+    "framing": "Local report of the cuts; headline-only"
+   },
+   {
+    "outlet": "Fast Company",
+    "url": "https://fastcompany.com/91619102/hubspot-layoffs-today-jobs-slashed-stock-struggles-why",
+    "headline": "HubSpot layoffs today: jobs slashed, stock struggles, why",
+    "date": "2026-10-06",
+    "framing": "Links cuts to the stock struggles; headline-only"
+   },
+   {
+    "outlet": "IBTimes UK",
+    "url": "https://www.ibtimes.co.uk/hubspot-cuts-660-jobs-ai-restructure-1824190",
+    "headline": "HubSpot axes 660 jobs as AI reshapes company, despite CEO denying AI is behind layoffs",
+    "date": "2026-10-06",
+    "framing": "Challenges the CEO's denial that AI drove the cuts"
+   }
+  ],
+  "framing_gap": "CEO says cuts are not driven by AI efficiencies; some outlets argue AI still underlies the reorg.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "No primary text retrievable (hubspot.com guess 404; sec.gov excluded). CMSWire fetched."
+ }
+]

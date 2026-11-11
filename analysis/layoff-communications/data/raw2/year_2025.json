@@ -1,0 +1,1049 @@
+[
+ {
+  "company": "Stripe",
+  "year_batch": 2025,
+  "sector": "fintech_crypto",
+  "event_date": "2025-01-21",
+  "headcount_cut": 300,
+  "pct_workforce": 3.5,
+  "communicator": "cpo_hr",
+  "communicator_name": "Rob McIntosh",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "became clear there were several team-level changes needed",
+   "largely in product, engineering, and operations roles"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "team-level changes"
+  ],
+  "severance": null,
+  "notice_style": "media_leak",
+  "ceo_voice": "Corporate, reassuring: pairs cuts with a plan to grow headcount 17%.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/01/21/stripe-is-laying-off-300-people-but-says-it-still-plans-to-hire-in-2025/",
+    "title": "Stripe is laying off 300 people, but says it still plans to hire in 2025",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/01/21/stripe-is-laying-off-300-people-but-says-it-still-plans-to-hire-in-2025/",
+    "headline": "Stripe is laying off 300 people, but says it still plans to hire in 2025",
+    "date": "2025-01-21",
+    "framing": "Framed as reshaping not shrinkage; headline pairs layoffs with continued hiring."
+   }
+  ],
+  "framing_gap": "Cut framed as \"right people in the right roles\" while net headcount is promised to grow.",
+  "confidence": "medium",
+  "notes": "Memo leaked via Business Insider; only paraphrase/quotes via TechCrunch. Pct estimated (300/~8,550).",
+  "reproduction_path": "data/sources/stripe__2025-01/reproduction.txt"
+ },
+ {
+  "company": "Wayfair",
+  "year_batch": 2025,
+  "sector": "consumer_internet",
+  "event_date": "2025-01-10",
+  "headcount_cut": 730,
+  "pct_workforce": 3.0,
+  "communicator": "founder",
+  "communicator_name": "Niraj Shah",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "Scaling our market share and improving our unit economics in the German market has proven challenging"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reallocate efforts"
+  ],
+  "severance": "About half of affected employees offered relocation (per CFO)",
+  "notice_style": "unknown",
+  "ceo_voice": "Businesslike, explains a market-exit decision as a return-on-investment judgment.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2025/01/10/wayfair-to-exit-germany-cut-730-jobs-in-latest-layoffs.html",
+    "title": "Wayfair to exit Germany, cut 730 jobs in latest layoffs",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2025/01/10/wayfair-to-exit-germany-cut-730-jobs-in-latest-layoffs.html",
+    "headline": "Wayfair to exit Germany, cut 730 jobs in latest layoffs",
+    "date": "2025-01-10",
+    "framing": "Market exit and reprioritisation to physical retail, not distress."
+   }
+  ],
+  "framing_gap": "Memo calls it \"difficult but necessary\" while presenting it as capital reallocation.",
+  "confidence": "medium",
+  "notes": "Memo text only as quoted by CNBC.",
+  "reproduction_path": "data/sources/wayfair__2025-01/reproduction.txt"
+ },
+ {
+  "company": "Okta",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-02-04",
+  "headcount_cut": 180,
+  "pct_workforce": 3.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Okta spokesperson",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "eliminating approximately 180 roles to reallocate resources to new growth areas"
+  ],
+  "stated_reasons": [
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminating roles",
+   "reallocate resources"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Terse corporate statement; revenue growth cited elsewhere in article.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/02/04/okta-lays-off-180-employees-nearly-one-year-after-last-workforce-reduction/",
+    "title": "Okta lays off 180 employees — nearly one year after last workforce reduction",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/02/04/okta-lays-off-180-employees-nearly-one-year-after-last-workforce-reduction/",
+    "headline": "Okta lays off 180 employees — nearly one year after last workforce reduction",
+    "date": "2025-02-04",
+    "framing": "Third reduction in two years despite 14% revenue growth."
+   }
+  ],
+  "framing_gap": "\"Reallocate resources to new growth areas\" while company is growing and still cutting.",
+  "confidence": "medium",
+  "notes": "Statement via spokesperson; no CEO text seen.",
+  "reproduction_path": "data/sources/okta__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Cruise",
+  "year_batch": 2025,
+  "sector": "hardware_auto",
+  "event_date": "2025-02-04",
+  "headcount_cut": 1000,
+  "pct_workforce": 50.0,
+  "communicator": "exec_other",
+  "communicator_name": "Craig Glidden",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "today we will part with nearly 50% of our Cruise employee base, through a reduction in force"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduction in force",
+   "part with"
+  ],
+  "severance": "Severance packages and career support (company statement)",
+  "notice_style": "same_day",
+  "ceo_voice": "Plain and sympathetic (\"extremely difficult\") but procedural.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/02/04/cruise-to-slash-workforce-by-50-after-gm-cuts-funding-to-robotaxi-operations/",
+    "title": "Cruise to slash workforce by nearly 50% after GM cuts funding to robotaxi operations",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/02/04/cruise-to-slash-workforce-by-50-after-gm-cuts-funding-to-robotaxi-operations/",
+    "headline": "Cruise to slash workforce by nearly 50% after GM cuts funding to robotaxi operations",
+    "date": "2025-02-04",
+    "framing": "Wind-down of robotaxi business folded into GM; execs also depart."
+   }
+  ],
+  "framing_gap": "Euphemism \"part with\" for a near-halving of staff while shutting the product line.",
+  "confidence": "medium",
+  "notes": "Headcount ~1,000+ is TechCrunch estimate from ~2,100.",
+  "reproduction_path": "data/sources/cruise__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Sonos",
+  "year_batch": 2025,
+  "sector": "hardware_auto",
+  "event_date": "2025-02-05",
+  "headcount_cut": 200,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "Tom Conrad",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "we’ve become mired in too many layers that have made collaboration and decision-making harder than it needs to be"
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reorganizing into flatter, smaller, and more focused teams"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Candid turnaround-CEO tone, diagnoses organizational bloat.",
+  "sources": [
+   {
+    "url": "https://www.theverge.com/news/607022/sonos-february-layoffs-app-problems",
+    "title": "Sonos lays off 200 employees as its struggles continue",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "The Verge",
+    "url": "https://www.theverge.com/news/607022/sonos-february-layoffs-app-problems",
+    "headline": "Sonos lays off 200 employees as its struggles continue",
+    "date": "2025-02-05",
+    "framing": "Interim CEO says getting smaller and more focused is the way forward."
+   }
+  ],
+  "framing_gap": "none",
+  "confidence": "medium",
+  "notes": "Letter posted on Sonos site; only excerpts read via The Verge. Pct estimated.",
+  "reproduction_path": "data/sources/sonos__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Sprinklr",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-02-06",
+  "headcount_cut": 500,
+  "pct_workforce": 15.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Sprinklr spokesperson",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We will support departing teammates with the greatest care and respect, acknowledging their contributions to Sprinklr"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "refocus and rebalance"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; acknowledges business performance candidly.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/02/06/sprinklr-cuts-500-employees-citing-underwhelming-business-performance/",
+    "title": "Sprinklr cuts 500 employees, citing underwhelming business performance",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/02/06/sprinklr-cuts-500-employees-citing-underwhelming-business-performance/",
+    "headline": "Sprinklr cuts 500 employees, citing underwhelming business performance",
+    "date": "2025-02-06",
+    "framing": "Candid about missed performance, third cut in two years."
+   }
+  ],
+  "framing_gap": "Says \"refocus\" toward AI platform while citing performance shortfall.",
+  "confidence": "medium",
+  "notes": "",
+  "reproduction_path": "data/sources/sprinklr__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Bird (MessageBird)",
+  "year_batch": 2025,
+  "sector": "international_startup",
+  "event_date": "2025-02-10",
+  "headcount_cut": 120,
+  "pct_workforce": 33.0,
+  "communicator": "ceo",
+  "communicator_name": "Robert Vis",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "not a cost-reduction exercise"
+  ],
+  "stated_reasons": [
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "strategic realignment"
+  ],
+  "severance": "comprehensive transition support (unspecified)",
+  "notice_style": "same_day",
+  "ceo_voice": "Defensive: insists finances are strong and cuts are not cost-driven.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/02/10/bird-cuts-120-jobs-as-part-of-strategic-realignment/",
+    "title": "Bird cuts 120 jobs as part of ‘strategic realignment’",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/02/10/bird-cuts-120-jobs-as-part-of-strategic-realignment/",
+    "headline": "Bird cuts 120 jobs as part of ‘strategic realignment’",
+    "date": "2025-02-10",
+    "framing": "Geographic realignment framed as proximity to customers amid AI boom."
+   }
+  ],
+  "framing_gap": "Denies cost-cutting while eliminating a third of staff.",
+  "confidence": "medium",
+  "notes": "",
+  "reproduction_path": "data/sources/bird-messagebird__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Zepz",
+  "year_batch": 2025,
+  "sector": "fintech_crypto",
+  "event_date": "2025-02-12",
+  "headcount_cut": 200,
+  "pct_workforce": 20.0,
+  "communicator": "media_leak",
+  "communicator_name": "Zepz spokesperson / Lenhard (memo)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "To be clear, this is not a change of strategy."
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "optimise operations",
+   "proposed reduction in roles"
+  ],
+  "severance": null,
+  "notice_style": "media_leak",
+  "ceo_voice": "Mission-driven, \"ruthlessly prioritize\", reassuring customers.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2025/02/12/fintech-unicorn-zepz-to-lay-off-200-employees-sources-say.html",
+    "title": "Fintech unicorn Zepz to lay off 200 employees, sources say",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2025/02/12/fintech-unicorn-zepz-to-lay-off-200-employees-sources-say.html",
+    "headline": "Fintech unicorn Zepz to lay off 200 employees, sources say",
+    "date": "2025-02-12",
+    "framing": "UK redundancy after replatforming with automation and AI."
+   }
+  ],
+  "framing_gap": "\"Not a change of strategy\" while closing Poland and Kenya units.",
+  "confidence": "medium",
+  "notes": "Count from employees; company declined number. Executive first name not seen.",
+  "reproduction_path": "data/sources/zepz__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Sophos",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-02-13",
+  "headcount_cut": null,
+  "pct_workforce": 6.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Sara Eberle",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "positions that are no longer needed when Secureworks delisted as a public company"
+  ],
+  "stated_reasons": [
+   "merger_integration"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "streamlining duplicative roles"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Minimal statement via spokesperson.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/02/13/sophos-lays-off-6-of-workforce-following-secureworks-acquisition/",
+    "title": "Sophos lays off 6% of workforce following Secureworks acquisition",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/02/13/sophos-lays-off-6-of-workforce-following-secureworks-acquisition/",
+    "headline": "Sophos lays off 6% of workforce following Secureworks acquisition",
+    "date": "2025-02-13",
+    "framing": "Post-acquisition duplication."
+   }
+  ],
+  "framing_gap": "none",
+  "confidence": "medium",
+  "notes": "Headcount not disclosed.",
+  "reproduction_path": "data/sources/sophos__2025-02/reproduction.txt"
+ },
+ {
+  "company": "HP Inc.",
+  "year_batch": 2025,
+  "sector": "hardware_auto",
+  "event_date": "2025-02-27",
+  "headcount_cut": 2000,
+  "pct_workforce": 3.4,
+  "communicator": "earnings_call",
+  "communicator_name": "HP earnings release",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring plan"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Corporate; cuts buried in earnings with tariff caveat.",
+  "sources": [
+   {
+    "url": "https://www.sfchronicle.com/tech/article/hp-job-cuts-tariff-concerns-20193141.php",
+    "title": "Amid Trump tariff worries, Bay Area tech giant HP lays off 2,000 workers",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "San Francisco Chronicle",
+    "url": "https://www.sfchronicle.com/tech/article/hp-job-cuts-tariff-concerns-20193141.php",
+    "headline": "Amid Trump tariff worries, Bay Area tech giant HP lays off 2,000 workers",
+    "date": "2025-02-27",
+    "framing": "Tied to tariff concerns and the ongoing \"Future Now\" plan."
+   }
+  ],
+  "framing_gap": "Announced alongside strong PC results.",
+  "confidence": "medium",
+  "notes": "No quotes extracted; pct from ~58,000 employees (2,000/58,000).",
+  "reproduction_path": "data/sources/hp-inc__2025-02/reproduction.txt"
+ },
+ {
+  "company": "Automattic",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-04-02",
+  "headcount_cut": 281,
+  "pct_workforce": 16.0,
+  "communicator": "ceo",
+  "communicator_name": "Matt Mullenweg",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "To support our customers and products, we must improve our productivity, profitability, and capacity to invest"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring"
+  ],
+  "severance": "Disputed (reports of 9 weeks; company denied)",
+  "notice_style": "locked_out_first",
+  "ceo_voice": "Managerial, optimistic; confident of coming out better.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/04/02/wordpress-maker-automattic-lays-off-16-of-staff/",
+    "title": "WordPress maker Automattic lays off 16% of staff",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/04/02/wordpress-maker-automattic-lays-off-16-of-staff/",
+    "headline": "WordPress maker Automattic lays off 16% of staff",
+    "date": "2025-04-02",
+    "framing": "Blog post framing vs. employees locked out immediately and severance dispute."
+   }
+  ],
+  "framing_gap": "Public \"agile\" language vs. same-day Slack loss of access.",
+  "confidence": "medium",
+  "notes": "Headcount per TechCrunch sources, company did not confirm.",
+  "reproduction_path": "data/sources/automattic__2025-04/reproduction.txt"
+ },
+ {
+  "company": "Match Group",
+  "year_batch": 2025,
+  "sector": "consumer_internet",
+  "event_date": "2025-05-08",
+  "headcount_cut": 325,
+  "pct_workforce": 13.0,
+  "communicator": "ceo",
+  "communicator_name": "Spencer Rascoff",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reorganization"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Corporate, efficiency language; one in five managers cut.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/05/08/match-to-lay-off-13-of-staff/",
+    "title": "Match to lay off 13% of staff",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/05/08/match-to-lay-off-13-of-staff/",
+    "headline": "Match to lay off 13% of staff",
+    "date": "2025-05-08",
+    "framing": "Reorg to \"one company\" saving $100M annualised."
+   }
+  ],
+  "framing_gap": "none",
+  "confidence": "medium",
+  "notes": "Headcount estimated from 2,500 employees. No direct quotes extracted.",
+  "reproduction_path": "data/sources/match-group__2025-05/reproduction.txt"
+ },
+ {
+  "company": "CrowdStrike",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-05-07",
+  "headcount_cut": 500,
+  "pct_workforce": 5.0,
+  "communicator": "ceo",
+  "communicator_name": "George Kurtz",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "These changes position us to move faster, operate more efficiently, and continue our cybersecurity leadership"
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "evolve its operations"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Upbeat efficiency framing despite record cash flow.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/05/07/crowdstrike-says-it-will-lay-off-500-workers/",
+    "title": "CrowdStrike says it will lay off 500 workers",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/05/07/crowdstrike-says-it-will-lay-off-500-workers/",
+    "headline": "CrowdStrike says it will lay off 500 workers",
+    "date": "2025-05-07",
+    "framing": "Cuts despite record results and CEO pay."
+   }
+  ],
+  "framing_gap": "\"Move faster\" framing despite record cash flow.",
+  "confidence": "medium",
+  "notes": "Letter quoted via WSJ in TechCrunch.",
+  "reproduction_path": "data/sources/crowdstrike__2025-05/reproduction.txt"
+ },
+ {
+  "company": "Siemens",
+  "year_batch": 2025,
+  "sector": "traditional",
+  "event_date": "2025-03-18",
+  "headcount_cut": 6050,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "Siemens AG press office",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "Operational-related layoffs in Germany are ruled out."
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "capacity adjustments"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Formal German corporate style; emphasises no compulsory layoffs in Germany.",
+  "sources": [
+   {
+    "url": "https://press.siemens.com/global/en/pressrelease/siemens-strengthen-competitiveness-automation-business-and-electric-vehicle-charging",
+    "title": "Siemens to strengthen competitiveness in automation business and in electric vehicle charging business",
+    "type": "primary"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Siemens (press release)",
+    "url": "https://press.siemens.com/global/en/pressrelease/siemens-strengthen-competitiveness-automation-business-and-electric-vehicle-charging",
+    "headline": "Siemens to strengthen competitiveness in automation business and in electric vehicle charging business",
+    "date": "2025-03-18",
+    "framing": "Jobs \"affected\" with Germany layoffs ruled out."
+   }
+  ],
+  "framing_gap": "Headline is about competitiveness; job number sits in bullet list.",
+  "confidence": "high",
+  "notes": "~5,600 + ~450 jobs affected worldwide (headcount 6,050 sum). Plans presented to employee representatives.",
+  "company_text_path": "data/sources/siemens__2025-03/company.txt"
+ },
+ {
+  "company": "TomTom",
+  "year_batch": 2025,
+  "sector": "consumer_internet",
+  "event_date": "2025-06-30",
+  "headcount_cut": 300,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Harold Goddijn",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": true,
+  "opening_line": "the location technology specialist, today announced that it is realigning its organization with its product-led strategy",
+  "key_quotes": [
+   "we are making organizational changes that will affect certain roles in the units working on our application layer"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "realigning its organization",
+   "reduction of 300 roles"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Polished corporate: strategy language first, 300 roles in one sentence.",
+  "sources": [
+   {
+    "url": "https://www.tomtom.com/newsroom/press-releases/earnings-other/29121/tomtom-advances-its-product-led-strategy-and-realigns-its-organization/",
+    "title": "TomTom advances its product-led strategy and realigns its organization",
+    "type": "primary"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TomTom (press release)",
+    "url": "https://www.tomtom.com/newsroom/press-releases/earnings-other/29121/tomtom-advances-its-product-led-strategy-and-realigns-its-organization/",
+    "headline": "TomTom advances its product-led strategy and realigns its organization",
+    "date": "2025-06-30",
+    "framing": "Layoff framed as product-led AI realignment."
+   }
+  ],
+  "framing_gap": "Headline never mentions job cuts.",
+  "confidence": "high",
+  "notes": "Pct from 3,300 employees stated in release.",
+  "company_text_path": "data/sources/tomtom__2025-06/company.txt"
+ },
+ {
+  "company": "Bumble",
+  "year_batch": 2025,
+  "sector": "consumer_internet",
+  "event_date": "2025-06-25",
+  "headcount_cut": 240,
+  "pct_workforce": 30.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Bumble spokesperson",
+  "channel": [
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "not made lightly"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reconfiguration of operating structure"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Muted spokesperson statement; no founder-voice memo seen.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2025/06/25/bumble-layoffs.html",
+    "title": "Bumble jumps 25% as dating company plans to axe 30% of workforce",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2025/06/25/bumble-layoffs.html",
+    "headline": "Bumble jumps 25% as dating company plans to axe 30% of workforce",
+    "date": "2025-06-25",
+    "framing": "Stock rallied on $40M savings."
+   }
+  ],
+  "framing_gap": "\"Not made lightly\" vs. market rewarding the cut.",
+  "confidence": "medium",
+  "notes": "Filing language via CNBC.",
+  "reproduction_path": "data/sources/bumble__2025-06/reproduction.txt"
+ },
+ {
+  "company": "Klue",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-06-25",
+  "headcount_cut": 85,
+  "pct_workforce": 40.0,
+  "communicator": "founder",
+  "communicator_name": "Jason Smith",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "A layoff of this magnitude acts as a kind of forcing function for us as a company"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "restructure",
+   "layoffs and voluntary departures"
+  ],
+  "severance": "generous severance packages, extended benefits (per CEO)",
+  "notice_style": "unknown",
+  "ceo_voice": "Frank: names AI as competitor and internal replacement.",
+  "sources": [
+   {
+    "url": "https://betakit.com/klue-lays-off-40-percent-of-staff-as-startup-faces-internal-and-external-ai-pressure/",
+    "title": "Klue lays off 40 percent of staff as startup navigates shifting AI landscape",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "BetaKit",
+    "url": "https://betakit.com/klue-lays-off-40-percent-of-staff-as-startup-faces-internal-and-external-ai-pressure/",
+    "headline": "Klue lays off 40 percent of staff as startup navigates shifting AI landscape",
+    "date": "2025-06-25",
+    "framing": "AI as both threat and replacement; leaked FAQ disputed."
+   }
+  ],
+  "framing_gap": "CEO disputes leaked FAQ figures (runway).",
+  "confidence": "medium",
+  "notes": "Event date from CEO: restructuring June 25; article June 27.",
+  "reproduction_path": "data/sources/klue__2025-06/reproduction.txt"
+ },
+ {
+  "company": "Indeed / Glassdoor (Recruit)",
+  "year_batch": 2025,
+  "sector": "consumer_internet",
+  "event_date": "2025-07-11",
+  "headcount_cut": 1300,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "Hisayuki \"Deko\" Idekoba",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "AI is changing the world, and we must adapt by ensuring our product delivers truly great experiences for job seekers and employers"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "restructuring"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Strategic, AI-first imperative.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/07/11/indeed-glassdoor-to-lay-off-1300-staff/",
+    "title": "Indeed, Glassdoor to lay off 1,300 staff amid AI push",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/07/11/indeed-glassdoor-to-lay-off-1300-staff/",
+    "headline": "Indeed, Glassdoor to lay off 1,300 staff amid AI push",
+    "date": "2025-07-11",
+    "framing": "AI adaptation and Glassdoor integration into Indeed."
+   }
+  ],
+  "framing_gap": "\"We must adapt\" casts cuts as inevitable.",
+  "confidence": "medium",
+  "notes": "Pct is of Recruit HR technology division.",
+  "reproduction_path": "data/sources/indeed-glassdoor-recruit__2025-07/reproduction.txt"
+ },
+ {
+  "company": "Windsurf (Cognition)",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-08-05",
+  "headcount_cut": 30,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Scott Wu",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We don’t believe in work-life balance"
+  ],
+  "stated_reasons": [
+   "merger_integration",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "buyouts"
+  ],
+  "severance": "Buyout of nine months salary (per The Information)",
+  "notice_style": "unknown",
+  "ceo_voice": "Defiant, intense hustle-culture tone.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/08/05/three-weeks-after-acquiring-windsurf-cognition-offers-staff-the-exit-door/",
+    "title": "Three weeks after acquiring Windsurf, Cognition offers staff the exit door",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/08/05/three-weeks-after-acquiring-windsurf-cognition-offers-staff-the-exit-door/",
+    "headline": "Three weeks after acquiring Windsurf, Cognition offers staff the exit door",
+    "date": "2025-08-05",
+    "framing": "Acqui-hire redundancy plus buyouts, 80-hour weeks."
+   }
+  ],
+  "framing_gap": "Earlier promise of \"world-class people\" vs. exit offers.",
+  "confidence": "medium",
+  "notes": "Reported via The Information.",
+  "reproduction_path": "data/sources/windsurf-cognition__2025-08/reproduction.txt"
+ },
+ {
+  "company": "Deepwatch",
+  "year_batch": 2025,
+  "sector": "saas",
+  "event_date": "2025-11-12",
+  "headcount_cut": 70,
+  "pct_workforce": 28.0,
+  "communicator": "ceo",
+  "communicator_name": "John DiLullo",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "is aligning our organization to accelerate our significant investments in AI and automation"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "aligning our organization"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, AI-forward; employee scepticism quoted.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/",
+    "title": "Cybersecurity firm Deepwatch lays off dozens, citing move to ‘accelerate’ AI investment",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/",
+    "headline": "Cybersecurity firm Deepwatch lays off dozens, citing move to ‘accelerate’ AI investment",
+    "date": "2025-11-12",
+    "framing": "AI cited; employee calls it spin."
+   }
+  ],
+  "framing_gap": "CEO says AI investment; employee says it sounds like nonsense.",
+  "confidence": "medium",
+  "notes": "Headcount 60-80 of ~250.",
+  "reproduction_path": "data/sources/deepwatch__2025-11/reproduction.txt"
+ }
+]

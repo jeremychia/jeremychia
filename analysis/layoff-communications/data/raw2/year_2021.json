@@ -1,0 +1,204 @@
+[
+ {
+  "year_batch": 2021,
+  "headcount_cut": 315,
+  "pct_workforce": 11.0,
+  "communicator_name": "Drew Houston",
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "painful, but necessary.",
+   "This is one of the toughest decisions I’ve had to make in my 14 years as CEO."
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "scaling back that investment",
+   "redeploying those resources"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "sources": [
+   {
+    "url": "https://siliconangle.com/2021/01/13/dropbox-lays-off-11-workforce-coo-departs/",
+    "title": "Dropbox lays off 11% of its workforce as COO departs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo was published via regulatory filing (not read directly; SEC not fetched). Quotes taken from SiliconANGLE reproduction. COO Olivia Nottebohm departure announced same day. Severance not in text read.",
+  "company_text_path": null,
+  "reproduction_path": "data/sources/dropbox__2021-01/reproduction.txt",
+  "news_coverage": [
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/2021/01/13/dropbox-lays-off-11-workforce-coo-departs/",
+    "headline": "Dropbox lays off 11% of its workforce as COO departs",
+    "date": "2021-01-13",
+    "framing": "Painful but necessary realignment after remote-work shift; COO exit"
+   }
+  ],
+  "framing_gap": "CEO frames cut as realigning with remote-work strategy while the company was profitable and growing 14%.",
+  "company": "Dropbox",
+  "sector": "saas",
+  "event_date": "2021-01-13",
+  "communicator": "ceo",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "ceo_voice": "Measured, corporate-human; frames cuts as painful but strategically necessary after the shift to remote work."
+ },
+ {
+  "year_batch": 2021,
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator_name": "",
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "regulatory"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "Laid off 'with compensation' per anonymous source; terms unspecified",
+  "notice_style": "unknown",
+  "sources": [
+   {
+    "url": "https://www.caixinglobal.com/2021-08-06/bytedance-lays-off-hundreds-after-chinas-tutoring-crackdown-101752134.html",
+    "title": "ByteDance Lays Off Hundreds After China's Tutoring Crackdown (Bloomberg via Caixin)",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "'At least hundreds' affected; Guagua Long, Qingbei, GoGoKid. No public company text.",
+  "company_text_path": null,
+  "reproduction_path": "data/sources/bytedance-edtech__2021-08/reproduction.txt",
+  "news_coverage": [
+   {
+    "outlet": "Bloomberg (via Caixin Global)",
+    "url": "https://www.caixinglobal.com/2021-08-06/bytedance-lays-off-hundreds-after-chinas-tutoring-crackdown-101752134.html",
+    "headline": "ByteDance Lays Off Hundreds After China's Tutoring Crackdown",
+    "date": "2021-08-06",
+    "framing": "Regulatory crackdown forces shutdown of edtech products"
+   }
+  ],
+  "framing_gap": "No public company framing; story told entirely through anonymous sources.",
+  "company": "ByteDance (education business)",
+  "sector": "international_startup",
+  "event_date": "2021-08-06",
+  "communicator": "media_leak",
+  "channel": [],
+  "ceo_voice": "No company statement; representative did not respond. Reported via anonymous source."
+ },
+ {
+  "year_batch": 2021,
+  "headcount_cut": 48000,
+  "pct_workforce": null,
+  "communicator_name": "",
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "regulatory"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "sources": [
+   {
+    "url": "https://technode.com/2021/08/26/china-edtech-giants-cut-tens-of-thousands-of-jobs-report/",
+    "title": "China edtech giants cut tens of thousands of jobs: report",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Aggregate figure is TechNode's calculation (at least 48,000) from a single Late Post report; includes voluntary departures. Multi-company event.",
+  "company_text_path": null,
+  "reproduction_path": "data/sources/chinese-edtech__2021-08/reproduction.txt",
+  "news_coverage": [
+   {
+    "outlet": "TechNode",
+    "url": "https://technode.com/2021/08/26/china-edtech-giants-cut-tens-of-thousands-of-jobs-report/",
+    "headline": "China edtech giants cut tens of thousands of jobs: report",
+    "date": "2021-08-26",
+    "framing": "Regulatory crackdown causes mass downsizing"
+   }
+  ],
+  "framing_gap": "Companies silent; cuts surfaced only through media reports.",
+  "company": "Yuanfudao / Zuoyebang / TAL (China edtech)",
+  "sector": "international_startup",
+  "event_date": "2021-08-26",
+  "communicator": "media_leak",
+  "channel": [],
+  "ceo_voice": "Companies declined or did not respond to comment; no public wording."
+ },
+ {
+  "year_batch": 2021,
+  "headcount_cut": 220,
+  "pct_workforce": null,
+  "communicator_name": "",
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructure",
+   "letting go"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "sources": [
+   {
+    "url": "https://www.biospace.com/zymergen-cuts-over-200-jobs-shuts-down-consumer-units-as-restructuring-continues",
+    "title": "Zymergen Eliminates 220 Jobs in Restructuring Push",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Announced with preliminary Q3 results; $21.2M restructuring cost; runway to mid-2023. Synthetic-biology company, not small biotech. Company primary text not read; no quotes saved.",
+  "company_text_path": null,
+  "reproduction_path": "data/sources/zymergen__2021-11/reproduction.txt",
+  "news_coverage": [
+   {
+    "outlet": "BioSpace",
+    "url": "https://www.biospace.com/zymergen-cuts-over-200-jobs-shuts-down-consumer-units-as-restructuring-continues",
+    "headline": "Zymergen Eliminates 220 Jobs in Restructuring Push",
+    "date": "2021-11-04",
+    "framing": "Restructuring to extend cash runway"
+   }
+  ],
+  "framing_gap": "Cuts framed as portfolio focus after IPO collapse and CEO exit.",
+  "company": "Zymergen",
+  "sector": "saas",
+  "event_date": "2021-11-04",
+  "communicator": "earnings_call",
+  "channel": [
+   "press_release"
+  ],
+  "ceo_voice": "Corporate, portfolio-review framing in preliminary-results announcement."
+ }
+]

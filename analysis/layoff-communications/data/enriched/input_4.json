@@ -1,0 +1,373 @@
+[
+ {
+  "company": "Klarna",
+  "event_date": "2022-05-23",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Sebastian Siemiatkowski",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Prerecorded video (channel recorded as internal_email as closest; actually video). ~700 is estimate from >7,000 staff. Apology not found in read excerpt. Date: announced Monday (24 May 2022 report -> 2022-05-23).",
+  "sources": [
+   {
+    "title": "ITPro: Klarna to cut tenth of workforce",
+    "type": "news",
+    "url": "https://www.itpro.com/business-operations/business-management/367771/klarna-to-cut-tenth-of-workforce-due-to-market-restraints"
+   },
+   {
+    "title": "Gizmodo",
+    "type": "news",
+    "url": "https://gizmodo.com/klarna-ceo-ai-chatbot-customer-service-700-jobs-layoffs-1851293200"
+   }
+  ]
+ },
+ {
+  "company": "Sea Ltd / Shopee",
+  "event_date": "2022-09-15",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Forrest Li (memo to staff, exec comp waiver); Chris Feng (Shopee group president, layoff memo)",
+  "channel": [
+   "internal_email",
+   "media_leak"
+  ],
+  "confidence": "low",
+  "notes": "Rolling cuts Sep 2022 onward (Shopee Indonesia 3% reported, Garena Shanghai, LatAm closures); ~7,000 jobs cut in six months per Sea's own Q3 disclosure via Bloomberg. Memo wording only paraphrased in sources; no quotes. Headcount_cut left null since the 7,000 aggregate spans multiple events.",
+  "sources": [
+   {
+    "title": "Tech Wire Asia",
+    "type": "news",
+    "url": "https://techwireasia.com/2022/09/why-is-e-commerce-giant-shopee-on-a-layoff-spree/"
+   },
+   {
+    "title": "Bloomberg",
+    "type": "news",
+    "url": "https://www.bloomberg.com/news/articles/2022-11-15/singapore-s-sea-slashed-7-000-jobs-in-six-months-to-curb-losses"
+   }
+  ]
+ },
+ {
+  "company": "Micron",
+  "event_date": "2022-12-21",
+  "tier": "B",
+  "communicator": "earnings_call",
+  "communicator_name": "Sanjay Mehrotra",
+  "channel": [
+   "earnings_call",
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Initial 10% (about half layoffs/half attrition) Dec 2022; Feb 2023 Mehrotra email added 5% (total 15%). Quote from secondary summary, unverified. Date approximate.",
+  "sources": [
+   {
+    "title": "Micron to cut 10% of workforce",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/markets/micron-cut-10-percent-workforce-suspend-bonuses-2023"
+   },
+   {
+    "title": "Micron layoffs roughly double",
+    "type": "news",
+    "url": "https://www.boisestatepublicradio.org/news/2023-02-16/layoffs-at-micron-roughly-double-total-workforce-reduction-now-15"
+   }
+  ]
+ },
+ {
+  "company": "Dell",
+  "event_date": "2023-02-06",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Jeff Clarke",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "From search snippets only; memo text not read. Earlier hiring pause etc. 'no longer enough' paraphrase. Date approximate (Feb 2023). Dell also has quiet cuts via 10-K (2024, 2025) not researched.",
+  "sources": [
+   {
+    "title": "Global News on Dell layoffs",
+    "type": "news",
+    "url": "https://globalnews.ca/news/9464045/tech-layoffs-dell/"
+   }
+  ]
+ },
+ {
+  "company": "Linktree",
+  "event_date": "2023-06-08",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Alex Zaccaria",
+  "channel": [
+   "internal_email",
+   "linkedin"
+  ],
+  "confidence": "low",
+  "notes": "B&T dated 9 Jun 2023; email date approximate. Staff update also posted to LinkedIn; layoffs reportedly 4th paragraph, Bento acquisition 10th (NZ Herald via search summary). Quotes not verified from text read; left empty. ANZ staff hit hardest, shift to US hires.",
+  "sources": [
+   {
+    "title": "B&T",
+    "type": "news",
+    "url": "https://www.bandt.com.au/linktree-slashes-27-of-global-headcount-australia-new-zealand-hit-hardest/"
+   },
+   {
+    "title": "NZ Herald",
+    "type": "news",
+    "url": "https://nzherald.co.nz/business/linktree-goes-from-best-place-to-work-to-mocked-over-layoff-email/LEV2RD5BNJHG7KPLMTD2NQAMOE"
+   }
+  ]
+ },
+ {
+  "company": "Citigroup",
+  "event_date": "2024-01-12",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Jane Fraser",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "confidence": "low",
+  "notes": "Announced with Q4 earnings; 20,000 roles by 2026 (timeline varies by source). Full memo not read; only a secondhand Benzinga line unverified so quotes empty. Jan 2026 'The Bar is Raised' memo not recorded.",
+  "sources": [
+   {
+    "title": "Citigroup 20,000 job cuts",
+    "type": "news",
+    "url": "https://fortune.com/2024/01/12/citigroup-20000-job-cuts-jane-fraser-layoffs-1-billion-charge"
+   }
+  ]
+ },
+ {
+  "company": "Peloton",
+  "event_date": "2024-05-02",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Barry McCarthy",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "About 400 jobs/15%; memo cited positive free cash flow aiding debt refinancing.",
+  "sources": [
+   {
+    "title": "NBC Peloton CEO to step down, 15% layoffs",
+    "type": "news",
+    "url": "https://www.nbcnews.com/business/business-news/peloton-ceo-barry-mccarthy-step-company-lay-15-staff-looks-refinance-d-rcna150359"
+   }
+  ]
+ },
+ {
+  "company": "Walmart",
+  "event_date": "2025-05-14",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "John Furner and Suresh Kumar",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (mid-May 2025). Affected employees kept jobs until August. Memo did not state numbers; ~1,500 from WSJ/Bloomberg. McMillon's AI 'change every job' comments (Sept 2025) are a separate event not recorded; Feb 2024 relocation not verified.",
+  "sources": [
+   {
+    "title": "Walmart cuts 1,500 corporate jobs",
+    "type": "news",
+    "url": "https://benzinga.com/z/45573883"
+   }
+  ]
+ },
+ {
+  "company": "Goldman Sachs",
+  "event_date": "2025-10-15",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "David Solomon, John Waldron, Denis Coleman (joint memo)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Memo reported by Bloomberg/Reuters; no headcount given; firm expects higher headcount by year-end. Annual cull pulled forward to Q2 2025. Quotes from reports of memo.",
+  "sources": [
+   {
+    "title": "Goldman tells employees it will cut more jobs",
+    "type": "news",
+    "url": "https://www.thestar.com.my/business/business-news/2025/10/16/goldman-tells-employees-it-will-cut-more-jobs-as-ai-saves-costs"
+   }
+  ]
+ },
+ {
+  "company": "Verizon",
+  "event_date": "2025-11-20",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Dan Schulman",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Largest layoff in company history; ~20% of non-union management per AP. Memo said tech/economy changes 'are impacting the workforce across all industries' (paraphrase of read text). ai_framing is a weak inference; AP excerpt did not mention AI as cause. Date inferred from AP publication (Thursday).",
+  "sources": [
+   {
+    "title": "Verizon cutting 13,000 jobs (AP)",
+    "type": "news",
+    "url": "https://www.wnem.com/2025/11/21/verizon-is-cutting-more-than-13000-jobs-it-works-reorient-entire-company"
+   }
+  ]
+ },
+ {
+  "company": "Microsoft",
+  "event_date": "2014-07-17",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Satya Nadella",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Roughly 12,500 of the cuts tied to Nokia Devices & Services (per GeekWire via search; not verified in memo read). First wave 13,000 per search results. 14% is a press estimate. Quotes read via page fetch summariser.",
+  "sources": [
+   {
+    "title": "Starting to evolve our organization and culture",
+    "type": "primary",
+    "url": "https://news.microsoft.com/source/2014/07/17/starting-to-evolve-our-organization-and-culture/"
+   },
+   {
+    "title": "GeekWire full text",
+    "type": "news",
+    "url": "https://www.geekwire.com/2014/full-text-microsoft-ceo-satya-nadella-explains-massive-job-cuts/"
+   }
+  ]
+ },
+ {
+  "company": "Twilio",
+  "event_date": "2022-09-14",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Jeff Lawson",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Twilio blog fetch failed; quotes from news excerpts (first from search snippet). 936 of 8,510 per Register. Date Sept 14 2022 (task listed 2022-23; Twilio's Feb 2023 17% round is a separate event not captured). Cost $70-90M. Opening line not verified.",
+  "sources": [
+   {
+    "title": "The Register",
+    "type": "news",
+    "url": "https://www.theregister.com/2022/09/14/struggling_pandemic_darling_twilio_lays/"
+   },
+   {
+    "title": "Channel Futures (search snippet)",
+    "type": "news",
+    "url": "https://channelfutures.com/business-models/twilio-slashes-jobs-ceo-not-going-to-sugarcoat-things"
+   }
+  ]
+ },
+ {
+  "company": "Salesforce",
+  "event_date": "2023-01-04",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Marc Benioff",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes via Fortune fetch summariser; the 'opening' may not be the true first sentence of the email. Responsibility phrase 'I take responsibility for that' reported in search, not read. Headcount ~8,000 press estimate; US staff apology not confirmed. ~7,000-8,000 per search.",
+  "sources": [
+   {
+    "title": "Fortune",
+    "type": "news",
+    "url": "https://fortune.com/2023/01/04/salesforce-layoffs-10-percent-staff-office-space-marc-benioff"
+   }
+  ]
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2023-03-20",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Andy Jassy",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Date 2023-03-20 from search coverage (page undated; fetch summariser wrongly guessed 2026). Mostly AWS, PXT, Advertising, Twitch. Opening line truncated after 'positions'; sentence continues.",
+  "sources": [
+   {
+    "title": "Update from CEO Andy Jassy on operating plan and additional role eliminations",
+    "type": "primary",
+    "url": "https://www.aboutamazon.com/news/company-news/update-from-ceo-andy-jassy-on-amazons-operating-plan-and-additional-role-eliminations"
+   }
+  ]
+ },
+ {
+  "company": "Riot Games",
+  "event_date": "2024-01-22",
+  "tier": "A",
+  "communicator": "founder",
+  "communicator_name": "Dylan Jadeja (CEO) and Marc Merrill",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Riot's own posts (Rioter update + player update) are public but could not be fetched (404); quotes come via Game Developer/Game Informer excerpts. Opening line unverified. 'no perfect way to do a layoff' appeared only in a search summary, not verified. Riot Forge wound down.",
+  "sources": [
+   {
+    "title": "Riot overreached with big bets",
+    "type": "news",
+    "url": "https://www.gamedeveloper.com/business/riot-games-overreached-with-big-bets-and-now-530-people-are-losing-their-jobs"
+   },
+   {
+    "title": "Riot lays off 530",
+    "type": "news",
+    "url": "https://gameinformer.com/news/2024/01/23/league-of-legends-company-riot-games-lays-off-530-employees"
+   }
+  ]
+ },
+ {
+  "company": "Boeing",
+  "event_date": "2024-10-11",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Kelly Ortberg",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes from excerpts in ABC article; letter itself (Boeing newsroom) not fetched, opening line unverified. Context: IAM strike, 777X delay to 2026, 767F end 2027. Employees told of specifics starting following week. Calhoun not recorded.",
+  "sources": [
+   {
+    "title": "Boeing to cut approximately 17,000 jobs",
+    "type": "news",
+    "url": "https://abc7.com/post/boeing-layoffs-approximately-17000-job-cuts-coming-months/15418007/"
+   }
+  ]
+ },
+ {
+  "company": "Autodesk",
+  "event_date": "2026-01-22",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Andrew Anagnost",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "high",
+  "notes": "Verbatim from SEC exhibit. Prior round Feb 2025 (~1,350, ~9%).",
+  "sources": [
+   {
+    "title": "Autodesk 8-K Ex 99.1 CEO email",
+    "type": "primary",
+    "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000006/ceoemlfinal.htm"
+   }
+  ]
+ }
+]

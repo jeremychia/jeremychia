@@ -1,0 +1,668 @@
+[
+ {
+  "company": "Twitch (Amazon)",
+  "sector": "media_gaming",
+  "event_date": "2024-01-10",
+  "headcount_cut": 500,
+  "pct_workforce": 35.0,
+  "communicator": "ceo",
+  "communicator_name": "Dan Clancy",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "I wanted to send a short note to let you know that we've made the difficult decision to reduce the size of our workforce today.",
+  "key_quotes": [
+   "it has become clear that our organization is still meaningfully larger than it needs to be given the size of our business.",
+   "I also want to acknowledge how disappointed I was yesterday that this information leaked.",
+   "I want to close with my sincerest apology to everyone who is leaving Twitch."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our workforce"
+  ],
+  "severance": "Org leaders email each affected employee with severance package; terms not in post",
+  "notice_style": "pre_leak",
+  "ceo_voice": "Plain, apologetic, personal; acknowledges the leak.",
+  "sources": [
+   {
+    "url": "https://blog.twitch.tv/en/2024/01/10/a-difficult-update-about-our-workforce/",
+    "title": "A Difficult Update About Our Workforce",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "'Just over 500' people; 35% came from Bloomberg pre-announcement reporting, not Twitch. Takes_responsibility unverified. Follow-up livestream Jan 11."
+ },
+ {
+  "company": "Spotify",
+  "sector": "media_gaming",
+  "event_date": "2023-12-04",
+  "headcount_cut": 1500,
+  "pct_workforce": 17.0,
+  "communicator": "ceo",
+  "communicator_name": "Daniel Ek",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Over the last two years, we've put significant emphasis on building Spotify into a truly great and sustainable business.",
+  "key_quotes": [
+   "Economic growth has slowed dramatically and capital has become more expensive",
+   "I have made the difficult decision to reduce our total headcount by approximately 17% across the company.",
+   "Our cost structure for where we need to be is still too big"
+  ],
+  "stated_reasons": [
+   "macro",
+   "interest_rates",
+   "cost_cutting",
+   "overhiring"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce our total headcount"
+  ],
+  "severance": "Avg ~5 months baseline (notice+tenure), unused vacation paid, healthcare through severance, 2 months outplacement, immigration help",
+  "notice_style": "same_day",
+  "ceo_voice": "Direct, first-person ownership, business-case framing, no apology.",
+  "sources": [
+   {
+    "url": "https://www.entrepreneur.com/business-news/read-spotify-ceos-email-to-employees-announcing-layoffs/466343",
+    "title": "Read Spotify CEO's email to employees",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Text read via Entrepreneur reproduction; original on newsroom.spotify.com not fetched (URL guessed 404). Headcount ~1,500 from news."
+ },
+ {
+  "company": "BuzzFeed",
+  "sector": "media_gaming",
+  "event_date": "2023-04-20",
+  "headcount_cut": 180,
+  "pct_workforce": 15.0,
+  "communicator": "ceo",
+  "communicator_name": "Jonah Peretti",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "I am writing to announce some difficult news.",
+  "key_quotes": [
+   "I could have managed these changes better as the CEO of this company",
+   "I made the decision to overinvest in BuzzFeed News because I love their work and mission so much.",
+   "I regret that I didn't hold the company to higher standards for profitability"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability",
+   "revenue_decline"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reducing layers in their organization",
+   "cost saving measures",
+   "painful days like today"
+  ],
+  "severance": "Not in memo; HR emails affected staff; News Guild talks underway",
+  "notice_style": "same_day",
+  "ceo_voice": "Candid, self-critical, personal accountability without a formal apology.",
+  "sources": [
+   {
+    "url": "https://www.cbsnews.com/news/buzzfeed-news-shutting-down-job-cuts",
+    "title": "BuzzFeed News shutting down (memo in full)",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "BuzzFeed News closed. ~180 estimated from ~1,200 staff. Memo mentions AI only re sales; company said no jobs replaced by AI. mentions_ai set false for layoff rationale. Earlier Dec 2022 round was 12%."
+ },
+ {
+  "company": "Microsoft Gaming (Xbox/Activision Blizzard/ZeniMax)",
+  "sector": "media_gaming",
+  "event_date": "2024-01-25",
+  "headcount_cut": 1900,
+  "pct_workforce": 8.0,
+  "communicator": "ceo",
+  "communicator_name": "Phil Spencer",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "It's been a little over three months since the Activision, Blizzard, and King teams joined Microsoft.",
+  "key_quotes": [
+   "aligning on a strategy and an execution plan with a sustainable cost structure",
+   "reduce the size of our gaming workforce by approximately 1900 roles",
+   "including severance benefits informed by local employment laws"
+  ],
+  "stated_reasons": [
+   "merger_integration",
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our gaming workforce",
+   "roles"
+  ],
+  "severance": "Severance benefits informed by local employment laws",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, integration-focused, little emotion.",
+  "sources": [
+   {
+    "url": "https://gameinformer.com/news/2024/01/25/microsoft-is-laying-off-1900-employees-across-xbox-activision-blizzard-and-zenimax",
+    "title": "Microsoft is laying off 1,900 employees",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Memo text via Game Informer (credits IGN). ~8% of ~22,000 gaming staff per news. Only partial fragments verified; responsibility/apology not seen. Phil Spencer's 2025 cuts (about 9,000 Microsoft-wide) not covered."
+ },
+ {
+  "company": "Riot Games",
+  "sector": "media_gaming",
+  "event_date": "2024-01-22",
+  "headcount_cut": 530,
+  "pct_workforce": 11.0,
+  "communicator": "founder",
+  "communicator_name": "Dylan Jadeja (CEO) and Marc Merrill",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "Today, we're a company without a sharp enough focus, and simply put, we have too many things underway.",
+   "Our costs have grown to the point where they're unsustainable.",
+   "This isn't to appease shareholders or to hit a quarterly earnings number—it's a necessity."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminating roles",
+   "fewer, high-impact projects"
+  ],
+  "severance": "Minimum 6 months severance pay, cash bonus equal to annual bonus offered, health benefits",
+  "notice_style": "same_day",
+  "ceo_voice": "Candid and defensive of motive; owns overreach.",
+  "sources": [
+   {
+    "url": "https://www.gamedeveloper.com/business/riot-games-overreached-with-big-bets-and-now-530-people-are-losing-their-jobs",
+    "title": "Riot overreached with big bets",
+    "type": "news"
+   },
+   {
+    "url": "https://gameinformer.com/news/2024/01/23/league-of-legends-company-riot-games-lays-off-530-employees",
+    "title": "Riot lays off 530",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Riot's own posts (Rioter update + player update) are public but could not be fetched (404); quotes come via Game Developer/Game Informer excerpts. Opening line unverified. 'no perfect way to do a layoff' appeared only in a search summary, not verified. Riot Forge wound down."
+ },
+ {
+  "company": "Disney",
+  "sector": "media_gaming",
+  "event_date": "2023-02-08",
+  "headcount_cut": 7000,
+  "pct_workforce": null,
+  "communicator": "earnings_call",
+  "communicator_name": "Bob Iger",
+  "channel": [
+   "earnings_call",
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "The difficult reality of many colleagues and friends leaving Disney is not something we take lightly."
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "elimination of positions",
+   "restructuring"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Measured, empathetic but corporate; 'do what is required'.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2023/03/28/disney-layoffs-bob-iger-staff-memo-job-cuts",
+    "title": "Disney layoffs: Iger staff memo",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Announced on Feb 8 2023 earnings call with 7,000 target; staff memo reported Mar 27 2023 said notifications begin that week in three waves (March, April, pre-summer). Only Fortune excerpt read; memo opening not verified. A line from earnings call ('I do not make this decision lightly') seen only in a search summary, so not recorded as quote. Disney 2025 cuts not researched. Severance not stated."
+ },
+ {
+  "company": "Epic Games",
+  "sector": "media_gaming",
+  "event_date": "2023-09-28",
+  "headcount_cut": 830,
+  "pct_workforce": 16.0,
+  "communicator": "founder",
+  "communicator_name": "Tim Sweeney",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "We've been spending way more money than we earn"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "cost_cutting",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "Six months base pay; six months Epic-paid healthcare in US, Canada, Brazil (per news)",
+  "notice_style": "same_day",
+  "ceo_voice": "Frank founder voice about overspending on metaverse ambitions.",
+  "sources": [
+   {
+    "url": "https://www.pcgamer.com/epic-games-is-laying-off-more-than-800-people",
+    "title": "Epic Games is laying off more than 800 people",
+    "type": "news"
+   },
+   {
+    "url": "https://gamesradar.com/fortnite-and-unreal-engine-developer-epic-reportedly-laying-off-900-people",
+    "title": "Epic lays off 830",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo posted on epicgames.com (403 on fetch). Only headline quote verified; opening line not verified. About 250 additional staff left via Bandcamp/SuperAwesome divestitures. Date approximate (Sept 28 vs 29)."
+ },
+ {
+  "company": "Electronic Arts",
+  "sector": "media_gaming",
+  "event_date": "2024-02-28",
+  "headcount_cut": 670,
+  "pct_workforce": 5.0,
+  "communicator": "ceo",
+  "communicator_name": "Andrew Wilson",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "continuing to evolve our business and teams"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate strategy framing, 'accelerating industry transformation' (paraphrase from news).",
+  "sources": [
+   {
+    "url": "https://www.ea.com/news/continuing-to-evolve-our-business-and-teams",
+    "title": "Continuing to evolve our business and teams (URL from search; fetch 404)",
+    "type": "primary"
+   }
+  ],
+  "confidence": "low",
+  "notes": "No quotes verified; primary text not read. Includes cancelled Star Wars FPS, Ridgeline closure, ~5% cut. Severance unknown."
+ },
+ {
+  "company": "Sony Interactive Entertainment (PlayStation)",
+  "sector": "media_gaming",
+  "event_date": "2024-02-27",
+  "headcount_cut": 900,
+  "pct_workforce": 8.0,
+  "communicator": "exec_other",
+  "communicator_name": "Hermen Hulst (statement); Jim Ryan (email)",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Our goal at PlayStation Studios has always been to make the best games for PlayStation fans",
+  "key_quotes": [
+   "the decision to stop work on these projects is not a reflection on the talent or passion of team members."
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reductions"
+  ],
+  "severance": "Affected employees will receive support, including severance benefits (Ryan email)",
+  "notice_style": "same_day",
+  "ceo_voice": "Sympathetic, 'deeply saddened'.",
+  "sources": [
+   {
+    "url": "https://gameinformer.com/news/2024/02/27/playstation-laying-off-900-across-insomniac-naughty-dog-guerrilla-and-more-closing",
+    "title": "PlayStation laying off 900",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Opening line is truncated excerpt (not full sentence). Percentage ~8% (user prompt guessed 11%, contradicted by sources). London Studio closed. Hulst authored studios post; Jim Ryan sent company email."
+ },
+ {
+  "company": "Discord",
+  "sector": "media_gaming",
+  "event_date": "2024-01-11",
+  "headcount_cut": 170,
+  "pct_workforce": 17.0,
+  "communicator": "ceo",
+  "communicator_name": "Jason Citron",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We grew quickly and expanded our workforce even faster, increasing by 5x since 2020."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "Per The Verge via search summary: 5 months salary, 5 months benefits, 3 months outplacement (unverified)",
+  "notice_style": "same_day",
+  "ceo_voice": "Plainspoken growth-overshoot explanation.",
+  "sources": [
+   {
+    "url": "https://www.gameinformer.com/gamer-culture/2024/01/12/discord-lays-off-170-employees-due-to-overhiring",
+    "title": "Discord lays off 170",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo obtained by The Verge (not fetched); full text not read. Citron was CEO."
+ },
+ {
+  "company": "Unity Software",
+  "sector": "media_gaming",
+  "event_date": "2025-02-11",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Matthew Bromberg",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "We are making some important organizational changes today within the CTO, Engine Product, and Ads teams.",
+  "key_quotes": [
+   "Our primary directive is to help customers reach the widest possible audience across platforms and devices."
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "important organizational changes"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, strategy-led, no emotion; sent 5am.",
+  "sources": [
+   {
+    "url": "https://80.lv/articles/exclusive-unity-ceo-s-internal-announcement-to-staff-amidst-the-layoffs/",
+    "title": "Unity CEO's internal announcement",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Headcount undisclosed. Email sent at 5 AM PST; notifications complete by Feb 12 EOD. Text via 80.lv."
+ },
+ {
+  "company": "Unity Software",
+  "sector": "media_gaming",
+  "event_date": "2024-01-08",
+  "headcount_cut": 1800,
+  "pct_workforce": 25.0,
+  "communicator": "sec_filing",
+  "communicator_name": "Unity (interim CEO Jim Whitehurst)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": null,
+  "sources": [
+   {
+    "url": "https://gamedeveloper.com/business/unity-is-cutting-1-800-jobs-in-the-name-of-profitable-growth-",
+    "title": "Unity is cutting 1,800 jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Only search-result snippets seen; communicator inferred (interim CEO Whitehurst) from background knowledge, not verified. No quotes."
+ },
+ {
+  "company": "CNN (Warner Bros. Discovery)",
+  "sector": "media_gaming",
+  "event_date": "2025-01-23",
+  "headcount_cut": 200,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "Mark Thompson",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": "The changes we're announcing today are part of an ongoing response by this great news organization",
+  "key_quotes": [],
+  "stated_reasons": [
+   "strategic_pivot",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "changes",
+   "further shift to digital"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Strategic, pivot-to-digital framing; offsets with digital investment.",
+  "sources": [
+   {
+    "url": "https://www.spokesman.com/stories/2025/jan/23/cnn-hit-with-significant-layoffs-as-network-sets-a",
+    "title": "CNN hit with significant layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Opening is truncated excerpt. $70M digital investment; $1B digital revenue goal by 2030. Pay-TV decline cited. Full memo not read."
+ },
+ {
+  "company": "The Washington Post",
+  "sector": "media_gaming",
+  "event_date": "2026-02-04",
+  "headcount_cut": null,
+  "pct_workforce": 33.0,
+  "communicator": "exec_other",
+  "communicator_name": "Staff meeting (Will Lewis and Jeff Bezos absent); Lewis memo later",
+  "channel": [
+   "all_hands",
+   "zoom"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "now is the right time for me to step aside",
+   "The institution could not have had a better owner"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Publisher absent at announcement; later resignation email deferential to owner.",
+  "sources": [
+   {
+    "url": "https://www.pbs.org/newshour/nation/days-after-big-layoffs-at-the-washington-post-publisher-will-lewis-says-hes-stepping-down",
+    "title": "Will Lewis stepping down",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quotes are from Lewis's Feb 7 resignation email, not the layoff announcement. Roughly one third of staff; 300+ journalists per search summaries (unverified). Neither Lewis nor Bezos attended announcement meeting. Announcer not named in source."
+ },
+ {
+  "company": "Paramount Skydance",
+  "sector": "media_gaming",
+  "event_date": "2025-10-29",
+  "headcount_cut": 1000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "David Ellison",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "merger_integration",
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "redundancies",
+   "phasing out roles that no longer fit"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": null,
+  "sources": [
+   {
+    "url": "https://lamag.com/media/paramount-cuts-10-of-staff-in-first-wave-of-layoffs/",
+    "title": "Paramount cuts 10% of staff",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Page fetch 403; details from search summary only. First wave ~1,000 vs Variety total ~2,000 (~10%). No quotes. Bakish cuts not researched."
+ },
+ {
+  "company": "Warner Bros. Discovery",
+  "sector": "media_gaming",
+  "event_date": "2023-11-30",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "podcast_interview",
+  "communicator_name": "David Zaslav",
+  "channel": [
+   "podcast"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "merger_integration"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": null,
+  "sources": [
+   {
+    "url": "https://fortune.com/2023/11/30/david-zaslav-warner-bros-discovery-layoffs-forced-never-restructured-worst-day",
+    "title": "Zaslav on forced layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "This is Zaslav retrospectively justifying layoffs in an interview (said WarnerMedia was never restructured), not a layoff announcement. Page not read. 2022 merger layoffs memo not located."
+ }
+]

@@ -1,0 +1,418 @@
+[
+ {
+  "company": "Zillow (Zillow Offers wind-down)",
+  "event_date": "2021-11-02",
+  "tier": "B",
+  "communicator": "earnings_call",
+  "communicator_name": "Rich Barton",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Quote via news-search summary, not read from primary. Headcount not stated (company base ~6,400 so ~2,000 implied; left null). Internal memo text not found. Zillow Oct 2022 (~300 roles, ~5%, spokesperson statement only) not recorded.",
+  "sources": [
+   {
+    "title": "Zillow calls it quits on ibuying",
+    "type": "news",
+    "url": "https://therealdeal.com/2021/11/02/zillow-calls-it-quits-on-ibuying-will-lay-off-25-of-staff"
+   }
+  ]
+ },
+ {
+  "company": "Rivian",
+  "event_date": "2022-07-27",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "RJ Scaringe",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Email text only seen as quoted by TechCrunch; opening line of full email not verified (first quoted passage is a mid-sentence fragment). Headcount not stated in source read (~6%).",
+  "sources": [
+   {
+    "title": "Rivian begins laying off 6% of workforce",
+    "type": "news",
+    "url": "https://techcrunch.com/2022/07/27/rivian-begins-laying-off-6-of-workforce"
+   }
+  ]
+ },
+ {
+  "company": "GoTo (Gojek/Tokopedia)",
+  "event_date": "2022-11-18",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Andre Soelistyo",
+  "channel": [
+   "internal_email",
+   "zoom",
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "Primary text not retrieved; no verbatim quotes recorded. Search summaries report Soelistyo apologised for not conveying the decision earlier, and cited macro conditions; Rp800bn savings. Announced Friday across Indonesia, Vietnam, Singapore, India. A further ~600 cut in Mar 2023 (not recorded separately).",
+  "sources": [
+   {
+    "title": "Tech Wire Asia",
+    "type": "news",
+    "url": "https://techwireasia.com/2022/11/tech-layoffs-alas-indonesias-goto-shrinks-workforce-by-12/"
+   },
+   {
+    "title": "Tempo (403, seen via search summary only)",
+    "type": "news",
+    "url": "https://en.tempo.co/amp/1659325/goto-ceo-apologizes-for-not-issuing-advance-notice-of-layoffs"
+   }
+  ]
+ },
+ {
+  "company": "Unity",
+  "event_date": "2023-01-24",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "John Riccitiello",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Single secondary source; the date (2023-01-24) is approximate and not verified in my searches; 284 stated by source; phrase is paraphrase-in-quotes from that source, so left out of key_quotes.",
+  "sources": [
+   {
+    "title": "Udonis",
+    "type": "news",
+    "url": "https://www.blog.udonis.co/mobile-marketing/mobile-games/unity-layoffs"
+   }
+  ]
+ },
+ {
+  "company": "Xero",
+  "event_date": "2023-03-09",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Sukhinder Singh Cassidy",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Brief assumed Steve Vamos 2023; Vamos had stepped down Nov 2022, so the 2023 cuts were announced by new CEO Cassidy via ASX release (700-800 roles, midpoint 750 used). Restructuring cost A$25-35M; Waddle exit. Quotes from NZ Herald as returned by fetch tool; ASX release not read. Individual severance terms not found.",
+  "sources": [
+   {
+    "title": "NZ Herald",
+    "type": "news",
+    "url": "https://www.nzherald.co.nz/business/difficult-but-necessary-xero-to-cut-up-to-800-jobs/QGLTIKCN3JHXDJUVXU2JLYRUME"
+   }
+  ]
+ },
+ {
+  "company": "Unity",
+  "event_date": "2024-01-08",
+  "tier": "B",
+  "communicator": "sec_filing",
+  "communicator_name": "Jim Whitehurst (interim CEO)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Task said Matt Bromberg; he became CEO May 2024, so Jan 2024 communicator was interim CEO Whitehurst. Quote is from the SEC filing as reported, not a CEO memo. Bromberg-era round (later 2024/2025, 'stretched across too many products') not captured with date. Whitehurst memo text not read.",
+  "sources": [
+   {
+    "title": "Game World Observer",
+    "type": "news",
+    "url": "https://gameworldobserver.com/2024/01/09/unity-layoffs-1800-employees-largest-cuts-in-its-history"
+   },
+   {
+    "title": "Game Developer",
+    "type": "news",
+    "url": "https://gamedeveloper.com/business/unity-is-cutting-1-800-jobs-in-the-name-of-profitable-growth-"
+   }
+  ]
+ },
+ {
+  "company": "Rivian",
+  "event_date": "2024-02-21",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "RJ Scaringe",
+  "channel": [
+   "internal_email",
+   "earnings_call",
+   "zoom"
+  ],
+  "confidence": "low",
+  "notes": "Full email published by Business Insider (autos.yahoo.com mirror 403, BI not fetchable); email reportedly opens 'Hi Team' per secondary summary -- no verbatim quotes verified. ~16,700 total employees; salaried count not specified; impacted staff notified by calendar invite next morning. Cuts hit ~10% salaried plus limited non-manufacturing hourly.",
+  "sources": [
+   {
+    "title": "Rivian layoffs for 10 percent of salaried workers",
+    "type": "news",
+    "url": "https://abc7chicago.com/post/rivian-layoffs-2024-earnings-call-rivn/14455105/"
+   },
+   {
+    "title": "Rivian lays off 10% of workforce",
+    "type": "news",
+    "url": "https://techcrunch.com/2024/02/21/rivian-lays-off-10-of-workforce-as-ev-pricing-pressure-mounts/amp"
+   }
+  ]
+ },
+ {
+  "company": "Autodesk",
+  "event_date": "2025-02-27",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Andrew Anagnost",
+  "channel": [
+   "public_blog",
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Event is Feb 2025 not 2023. Message was shared publicly; text not read, so no quotes. 80.lv headline links cuts to AI investment; unverified.",
+  "sources": [
+   {
+    "title": "CNBC via NBC Miami (fetch 403)",
+    "type": "news",
+    "url": "https://www.nbcmiami.com/news/business/money-report/autodesk-says-it-will-cut-1350-employees-or-9-of-workforce-to-make-the-most-of-sales-changes/3554447/"
+   },
+   {
+    "title": "80.lv",
+    "type": "news",
+    "url": "https://80.lv/articles/maya-3ds-max-developer-autodesk-fires-1-350-workers-to-accelerate-investments-in-ai/"
+   }
+  ]
+ },
+ {
+  "company": "Starbucks",
+  "event_date": "2025-09-25",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Brian Niccol",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Primary page returned 403 so no verbatim quotes verified; ~900 non-retail roles, part of $1B restructuring; employees notified 2025-09-26; office 4 days/week from Sept 30; earlier 1,100 cuts Feb 2025 not recorded separately. Pct workforce not stated.",
+  "sources": [
+   {
+    "title": "A message from Brian Niccol (newsroom; fetch returned 403)",
+    "type": "primary",
+    "url": "https://about.starbucks.com/press/2025/a-message-from-brian-niccol-on-starbucks-path-forward/"
+   },
+   {
+    "title": "Starbucks to lay off 900 workers, close stores",
+    "type": "news",
+    "url": "https://6abc.com/post/starbucks-lay-off-900-workers-close-stores/17880928/"
+   }
+  ]
+ },
+ {
+  "company": "UPS",
+  "event_date": "2025-10-28",
+  "tier": "B",
+  "communicator": "earnings_call",
+  "communicator_name": "Carol Tome / Brian Dykes (CFO)",
+  "channel": [
+   "earnings_call",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "48,000 = 34,000 operational + 14,000 mostly management through first nine months 2025; April 2025 announcement was ~20,000 (first pass), Jan 2024 12,000 mgmt cut (Tome) not verified; Jan 2026 up to 30,000 more. Quote attributed to Tome by news summary. Amazon glide-down is context.",
+  "sources": [
+   {
+    "title": "UPS discloses 48,000 layoffs",
+    "type": "news",
+    "url": "https://finance.yahoo.com/news/ups-stock-rallies-after-company-discloses-48000-layoffs-in-multibillion-dollar-savings-push-180929600.html"
+   },
+   {
+    "title": "UPS down 34,000 jobs",
+    "type": "news",
+    "url": "https://www.ajc.com/business/2025/10/ups-down-34000-jobs-in-the-last-year-amid-shrinking-of-amazon-relationship"
+   }
+  ]
+ },
+ {
+  "company": "Bolt",
+  "event_date": "2026-04-07",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Ryan Breslow",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "American Banker said 'less than 40 people', ~30% of workforce; reported Apr 7 2026, cuts 'last week' so date approximate. Breslow also separately fired entire HR team (May 2026 reports, not read). Earlier cuts: May 2022 (~250, CEO then Maju Kuruvilla), Jan 2023 10%, Dec 2023 29%.",
+  "sources": [
+   {
+    "title": "American Banker: Bolt lays off a third of its employees, citing AI",
+    "type": "news",
+    "url": "https://www.americanbanker.com/news/bolt-lays-off-a-third-of-its-employees-citing-ai"
+   }
+  ]
+ },
+ {
+  "company": "Coinbase",
+  "event_date": "2022-06-14",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Brian Armstrong",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Primary blog returned 403; quotes taken from TechCrunch's reproduction via a summarising fetch - verify. Opening line not verified. Employees notified by HR email and access cut same day.",
+  "sources": [
+   {
+    "title": "Coinbase CEO says it is laying off 18% of its workers",
+    "type": "news",
+    "url": "https://techcrunch.com/2022/06/14/coinbase-ceo-says-it-is-laying-off-18-of-its-workers/"
+   },
+   {
+    "title": "Coinbase blog (403, not read)",
+    "type": "primary",
+    "url": "https://www.coinbase.com/blog/a-difficult-but-necessary-decision"
+   }
+  ]
+ },
+ {
+  "company": "DoorDash",
+  "event_date": "2022-11-30",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Tony Xu",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Apology not verified (null). 2024 DoorDash layoffs not researched (not found/recorded). Quote extracted via fetch summarizer.",
+  "sources": [
+   {
+    "title": "DoorDash Team Update (Tony Xu)",
+    "type": "primary",
+    "url": "https://about.doordash.com/en-us/news/teamupdate"
+   },
+   {
+    "title": "CNBC DoorDash lays off 1,250",
+    "type": "news",
+    "url": "https://www.cnbc.com/2022/11/30/doordash-lays-off-1250-employees.html"
+   }
+  ]
+ },
+ {
+  "company": "Affirm",
+  "event_date": "2023-02-08",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Max Levchin",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "earnings_call"
+  ],
+  "confidence": "high",
+  "notes": "Headcount ~485 is computed from 2,552 (Jun 2022); company said up to ~500. Also ended crypto initiative. Event is Feb 2023, not 2022.",
+  "sources": [
+   {
+    "title": "CNBC: Affirm cuts 19%",
+    "type": "news",
+    "url": "https://www.cnbc.com/2023/02/08/affirm-cuts-19percent-of-workforce-shares-tank-on-earnings-miss.html"
+   }
+  ]
+ },
+ {
+  "company": "Spotify",
+  "event_date": "2023-12-04",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Daniel Ek",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Text read via Entrepreneur reproduction; original on newsroom.spotify.com not fetched (URL guessed 404). Headcount ~1,500 from news.",
+  "sources": [
+   {
+    "title": "Read Spotify CEO's email to employees",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/read-spotify-ceos-email-to-employees-announcing-layoffs/466343"
+   }
+  ]
+ },
+ {
+  "company": "Intuit",
+  "event_date": "2024-07-10",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Sasan Goodarzi",
+  "channel": [
+   "public_blog",
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes from Cointelegraph excerpt; Intuit's own blog not opened. Message titled 'Investing in our future'; ~1,050 cut for performance; intent to hire a similar number in FY25. Opening line not verified.",
+  "sources": [
+   {
+    "title": "Cointelegraph",
+    "type": "news",
+    "url": "https://www.cointelegraph.com/news/intuit-lays-off-10-focus-on-ai-artificial-intelligence"
+   },
+   {
+    "title": "ABC/AP",
+    "type": "news",
+    "url": "https://abcnews.go.com/Technology/wireStory/tax-preparation-company-intuit-lay-off-1800-part-111813622"
+   }
+  ]
+ },
+ {
+  "company": "Salesforce",
+  "event_date": "2025-08-29",
+  "tier": "A",
+  "communicator": "podcast_interview",
+  "communicator_name": "Marc Benioff",
+  "channel": [
+   "podcast"
+  ],
+  "confidence": "medium",
+  "notes": "Disclosed on The Logan Bartlett Show (about 29 Aug-1 Sep 2025); quote is from search-result summary, not the transcript. SalesforceBen says some staff redeployed so 4,000 is media framing. No memo; no formal announcement. Salesforce 2026 events not researched.",
+  "sources": [
+   {
+    "title": "Fox Business",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/economy/salesforce-cuts-4000-jobs-due-ai-ceo-says"
+   },
+   {
+    "title": "SalesforceBen",
+    "type": "news",
+    "url": "https://www.salesforceben.com/ai-agents-drive-4000-job-cuts-in-salesforce-support-division/"
+   }
+  ]
+ },
+ {
+  "company": "Coinbase",
+  "event_date": "2026-05-05",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Brian Armstrong",
+  "channel": [
+   "x_post",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Opening line shown is CBS's lede, NOT Armstrong's wording. Quotes via summarising fetch of CBS. Severance not found. Restructuring charge $50-60M; ~5,000 staff end-2025. Analyst skeptic: AI 'easy excuse'. No separate 2025 cut found.",
+  "sources": [
+   {
+    "title": "CBS News: Coinbase to lay off 700 workers as exchange embraces AI",
+    "type": "news",
+    "url": "https://www.cbsnews.com/news/coinbase-layoffs-ai-brian-armstrong/"
+   },
+   {
+    "title": "Decrypt",
+    "type": "news",
+    "url": "https://decrypt.co/366765/coinbase-cuts-14-of-staff-amid-crypto-down-market-ai-adoption-ceo"
+   }
+  ]
+ }
+]

@@ -1,0 +1,1058 @@
+[
+ {
+  "company": "Rappi",
+  "event_date": "2022-05-26",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/rappi__2020-01/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://techcrunch.com/2020/01/10/rappi-and-oyo-pare-staff-as-vision-fund-companies-trim-costs-target-profits/",
+  "event_date_corrected": "2020-01-10",
+  "pct_workforce": 6.0,
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "double down on our technology team and to focus on our user experience"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "cuts",
+   "staff reductions"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "confidence": "low",
+  "notes": "DATE LIKELY WRONG: the 6% Rappi cut cited by TechCrunch (2020-01-10, citing Reuters) and Bloomberg (2020-01-14) is January 2020, not May 2022; search found no May 2022 Rappi 6% cut. Company statement seen only as quoted by TechCrunch; Rappi also said the cut was not driven by SoftBank. Marketscreener/Reuters page returned 403.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2020/01/10/rappi-and-oyo-pare-staff-as-vision-fund-companies-trim-costs-target-profits/",
+    "headline": "Rappi and Oyo pare staff as Vision Fund companies trim costs, target profits",
+    "date": "2020-01-10",
+    "framing": "Frames cut as SoftBank-era push to profitability; notes company said it was not driven by SoftBank."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2020-01-14/softbank-backed-rappi-hit-by-cuts-trade-secret-theft-claims",
+    "headline": "SoftBank-Backed Rappi Hit by Cuts, Trade-Secret Theft Claims",
+    "date": "2020-01-14",
+    "framing": "Pairs layoffs with trade-secret theft allegations (headline only; page not read)."
+   },
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/layoffs-rappi-softbank-food-delivery-04a38f1e-d7fd-482c-882a-3c834a28210e.html",
+    "headline": "Layoffs begin at SoftBank-backed delivery company Rappi",
+    "date": "",
+    "framing": "Headline frames it as SoftBank-backed delivery layoffs (page not read)."
+   }
+  ],
+  "framing_gap": "Company framed the cut as refocusing on tech and user experience and denied SoftBank pressure; TechCrunch read it as overspending/burn correction and a Vision Fund profitability push.",
+  "fetch_log": "TechCrunch 2020 article fetched direct (statement quoted there); marketscreener 403; no wayback snapshot; date correction to Jan 2020."
+ },
+ {
+  "company": "Chime",
+  "event_date": "2022-11-02",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/chime__2022-11/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://techcrunch.com/2022/11/02/digital-bank-chime-is-cutting-costs-across-the-board-including-12-of-staff",
+  "headcount_cut": 160,
+  "pct_workforce": 12.0,
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "we also need to adjust the size of our organization as we increase our focus and forge our path to profitability"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "adjust the size of our organization",
+   "eliminating some positions"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability",
+   "macro"
+  ],
+  "confidence": "medium",
+  "notes": "Memo seen only as excerpted by TechCrunch (quoted fragment 'regardless of market conditions'); full memo not read. TechCrunch: about 160 people, 12%. Spokesperson said eliminating some positions while still hiring for others; severance questions unanswered.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/11/02/digital-bank-chime-is-cutting-costs-across-the-board-including-12-of-staff/",
+    "headline": "Digital bank Chime is cutting costs across the board - including 12% of staff",
+    "date": "2022-11-02",
+    "framing": "Quotes memo; links cuts to paused IPO and slowing fintech growth."
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2022/11/03/chime-cuts-12percent-of-its-workforce-adding-to-recent-wave-of-tech-layoffs.html",
+    "headline": "Chime cuts 12% of its workforce, adding to recent wave of tech layoffs",
+    "date": "2022-11-03",
+    "framing": "Places Chime within the broader tech layoff wave."
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/11/04/tech-layoffs-twitter-stripe-lyft-chime-amazon-apple-hiring-freeze/",
+    "headline": "Twitter, Stripe, Lyft layoffs cause tech industry to question long-term outlook",
+    "date": "2022-11-04",
+    "framing": "Roundup treating Chime as one of several layoffs raising doubts about outlook."
+   }
+  ],
+  "framing_gap": "Company stressed being well-capitalized and still hiring; TechCrunch suggests the cut and paused IPO signal changed growth trends.",
+  "fetch_log": "TechCrunch fetched direct; no Chime-owned page found; memo only excerpted."
+ },
+ {
+  "company": "Crypto.com",
+  "event_date": "2023-01-12",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/crypto-com__2023-01/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://techcrunch.com/2023/01/12/crypto-com-cuts-20-jobs-amid-unforeseeable-industry-events",
+  "pct_workforce": 20.0,
+  "public_primary_text": true,
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "opening_line": null,
+  "key_quotes": [
+   "The reductions we made last July positioned us to weather the macro economic downturn, but it did not account for the recent collapse of FTX",
+   "we made the difficult but necessary decision to make additional reductions in order to position the company for long-term success"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reductions",
+   "additional reductions"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "macro",
+   "other",
+   "cost_cutting"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes are from Marszalek's blog post as quoted by TechCrunch; blog itself not fetched (crypto.com URL guess 404). Headcount unclear: estimates 490 to 900. A separate March 2026 12% cut explicitly tied to AI exists (CNBC 2026-03-19); not this event.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/01/12/crypto-com-cuts-20-jobs-amid-unforeseeable-industry-events",
+    "headline": "Crypto.com cuts 20% jobs amid 'significant damage' to industry from FTX",
+    "date": "2023-01-12",
+    "framing": "Repeats CEO blog blaming FTX; adds context of earlier 2022 cut and company controversies."
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/01/13/cryptocom-lays-off-20percent-of-workforce-after-ftx-collapse.html",
+    "headline": "Crypto.com lays off 20% of workforce after FTX collapse blunted ambitious growth",
+    "date": "2023-01-13",
+    "framing": "Frames cut as consequence of FTX collapse and slowed growth plans."
+   },
+   {
+    "outlet": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2023/01/13/cryptocom-cuts-workforce-by-nearly-20",
+    "headline": "Crypto.com Cuts 20% Workforce as Firm Braces for Crypto Winter",
+    "date": "2023-01-13",
+    "framing": "Crypto-winter framing."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2023-01-13/crypto-com-cuts-global-workforce-20-as-industry-s-woes-deepen",
+    "headline": "Crypto.com Cuts Global Workforce 20% as Digital-Asset Industry's Woes Deepen",
+    "date": "2023-01-13",
+    "framing": "Industry-woes framing (headline only)."
+   }
+  ],
+  "framing_gap": "Company attributes cut to FTX-driven loss of trust and external events; press adds that Crypto.com had its own troubled 2022 (earlier cuts, ads, audit questions).",
+  "fetch_log": "TechCrunch fetched direct; crypto.com blog URL guess 404; blog text only as quoted by TechCrunch."
+ },
+ {
+  "company": "Disney",
+  "event_date": "2023-02-08",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/disney__2023-03/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnbc.com/2023/03/27/disney-layoffs-bob-iger-memo.html",
+  "headcount_cut": 7000,
+  "public_primary_text": true,
+  "opening_line": "As I shared with you in February, we have made the difficult decision to reduce our overall workforce by approximately 7,000 jobs",
+  "key_quotes": [
+   "The difficult reality of many colleagues and friends leaving Disney is not something we take lightly.",
+   "strategic realignment of the company, including important cost-saving measures necessary for creating a more effective, coordinated and streamlined approach to our business",
+   "In tough moments, we must always do what is required to ensure Disney can continue delivering exceptional entertainment"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reduce our overall workforce",
+   "strategic realignment",
+   "workforce reductions",
+   "staff reductions",
+   "impacted"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting",
+   "efficiency"
+  ],
+  "notice_style": "advance_notice",
+  "confidence": "high",
+  "notes": "Full March 27 2023 memo read via CNBC reproduction (salutation 'Dear Fellow Employees'). Memo: first notifications that week, larger April round, final round before summer. No severance terms in memo. Feb 8 earnings-call line not verified.",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/03/28/disney-layoffs-bob-iger-staff-memo-job-cuts",
+    "headline": "Bob Iger warns Disney staff that 7,000 layoffs will come in 3 waves, starting this week",
+    "date": "2023-03-28",
+    "framing": "Reports memo wave schedule; quotes his thanks and 'challenges ahead'."
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/03/27/disney-layoffs-bob-iger-memo.html",
+    "headline": "Disney layoffs will begin this week, CEO Bob Iger says in memo",
+    "date": "2023-03-27",
+    "framing": "Publishes full memo; frames as streamlining per Iger."
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2023/03/27/media/disney-layoffs/index.html",
+    "headline": "Disney begins laying off 7,000 employees, CEO Bob Iger announces",
+    "date": "2023-03-27",
+    "framing": "Frames as start of announced 7,000 cuts (headline only)."
+   },
+   {
+    "outlet": "Variety",
+    "url": "https://variety.com/2023/biz/news/disney-layoffs-7000-bob-iger-1235565275/",
+    "headline": "Disney to Begin Layoffs of 7,000 Staffers This Week: Bob Iger Cites Need for 'Streamlined Approach to Our Business'",
+    "date": "2023-03-27",
+    "framing": "Echoes Iger's 'streamlined approach' language."
+   }
+  ],
+  "framing_gap": "Press largely repeats the memo's streamlining language; Fortune adds the $5.5B cost-cut context and Iger's returning-CEO restructuring that the memo does not quantify.",
+  "fetch_log": "Fortune and CNBC fetched direct; memo full text via CNBC; no disney.com copy."
+ },
+ {
+  "company": "Getir",
+  "event_date": "2023-08-23",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "headcount_cut": 2500,
+  "pct_workforce": 10.0,
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "confidence": "low",
+  "notes": "No company text retrieved. Sifted page 403 direct; Retail Bulletin Wayback copy returned navigation only. Per search summaries (Sifted/Bloomberg, Aug 22 2023): about 2,500 jobs, roughly 10% of about 23k staff, five countries; Bloomberg says Getir struggled to pay some bills in Germany. Date per Sifted/Bloomberg is Aug 22, 2023.",
+  "news_coverage": [
+   {
+    "outlet": "Sifted",
+    "url": "https://sifted.eu/articles/getir-cuts-10-of-staff-news",
+    "headline": "Getir cuts 10% of staff in latest sign of speedy grocery industry's struggles",
+    "date": "2023-08-22",
+    "framing": "Frames as latest sign of quick-commerce industry struggles."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2023-08-22/getir-to-slash-10-of-global-workforce-as-fast-delivery-stumbles",
+    "headline": "Turkey Getir to Slash 10% of Global Workforce as Fast Delivery Stumbles",
+    "date": "2023-08-22",
+    "framing": "Frames as a stumbling fast-delivery business; cash-strapped."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/07/27/cash-strapped-instant-delivery-giant-getir-trying-to-close-funding-pulls-out-of-spain-italy-and-portugal/",
+    "headline": "Cash-strapped instant delivery giant Getir, trying to close funding, pulls out of Spain, Italy and Portugal",
+    "date": "2023-07-27",
+    "framing": "Prior-month context (cash-strapped, exiting markets); not about this cut itself."
+   }
+  ],
+  "framing_gap": "Company statement text not obtained; press (Bloomberg, Sifted) frames the cut as survival of a cash-strapped quick-commerce firm.",
+  "fetch_log": "Sifted 403; Retail Bulletin via Wayback nav only (blocked/empty); no company page found; news from search results only."
+ },
+ {
+  "company": "Brex",
+  "event_date": "2024-01-23",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/brex__2024-01/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://techcrunch.com/2024/01/23/brex-layoffs-fintech/",
+  "headcount_cut": 282,
+  "pct_workforce": 20.0,
+  "public_primary_text": true,
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "opening_line": null,
+  "key_quotes": [
+   "emphasizing long-term thinking and ownership over short-term gains",
+   "The opportunity ahead of Brex is massive, and we want everyone staying to have high conviction and financial upside in our equity",
+   "The changes today are driven by a desire to make Brex more agile and accelerate our path to profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "euphemisms": [
+   "reduction in force",
+   "restructuring"
+  ],
+  "severance": "Eight weeks of severance plus two additional weeks per additional year of service; waiver of the one-year equity cliff.",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "profitability",
+   "flatten_management",
+   "efficiency"
+  ],
+  "confidence": "medium",
+  "notes": "Per TechCrunch the note to employees was also published on Brex's site, but the URL was not found; text taken from TechCrunch excerpts (third quote is a company spokesperson). 282 people per TechCrunch. Bloomberg headline says Franceschi said Brex grew too quickly (headline only; wording not read). Also: CTO Nicolaescu and COO Tannenbaum role changes.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2024/01/23/brex-layoffs-fintech/",
+    "headline": "Brex cuts 20% of staff amid reports of stalled growth, high burn",
+    "date": "2024-01-23",
+    "framing": "Links cut to slowed growth and The Information's cash-burn report, which Brex called inaccurate."
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2024/01/23/brex-announced-it-will-lay-off-20-of-its-staff",
+    "headline": "Brex, the fintech giant valued at $12.3 billion, announced it will lay off 20% of its staff",
+    "date": "2024-01-23",
+    "framing": "Quotes anonymous employee on week of advance rumours and meeting format."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2024-01-23/fintech-brex-eliminates-20-of-staff-after-growing-too-quickly",
+    "headline": "Brex Fires 20% of Staff After Founder Pedro Franceschi Said It Grew Too Quickly",
+    "date": "2024-01-23",
+    "framing": "Headline foregrounds founder admitting over-fast growth."
+   },
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/pro/fintech-deals/2024/01/24/brex-lays-off-20-percent",
+    "headline": "Brex lays off 20% of workforce",
+    "date": "2024-01-24",
+    "framing": "Brief deal-newsletter item (headline only)."
+   }
+  ],
+  "framing_gap": "Company frames cut as agility/path to profitability and denies burn concerns; press leads with cash burn and valuation drop, and Fortune adds employees' account of rumours beforehand.",
+  "fetch_log": "TechCrunch and Fortune fetched direct; brex.com post URL not located."
+ },
+ {
+  "company": "Ford Motor (Europe)",
+  "event_date": "2024-11-20",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/ford-motor-europe__2024-11/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnn.com/2024/11/20/business/ford-layoffs-europe-intl/index.html",
+  "headcount_cut": 4000,
+  "pct_workforce": 14.0,
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "It is critical to take difficult but decisive action to ensure Ford's future competitiveness in Europe.",
+   "the industry faces unprecedented competitive, regulatory and economic headwinds"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "difficult but decisive action"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "regulatory",
+   "macro",
+   "other"
+  ],
+  "confidence": "medium",
+  "notes": "Statement text from CNN reproduction (Ford statement plus Dave Johnston quote); Ford newsroom page not fetched. Cuts through end 2027 pending union consultation. Lisa Brankin not verified in any read source. CNN cites weak EV demand and Chinese competition.",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2024/11/20/business/ford-layoffs-europe-intl/index.html",
+    "headline": "Ford to lay off 4,000 workers in Europe",
+    "date": "2024-11-20",
+    "framing": "Ties cuts to slowing EV demand and Chinese competition."
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2024/11/20/ford-to-cut-14percent-of-european-jobs-blaming-ev-shift-and-rising-competition.html",
+    "headline": "Ford to cut 14% of European jobs, blaming EV shift and rising competition",
+    "date": "2024-11-20",
+    "framing": "Headline attributes cuts to EV shift and competition."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2024-11-20/ford-plans-4-000-more-job-cuts-in-europe-as-evs-lose-momentum",
+    "headline": "Ford Plans 4,000 More Job Cuts in Europe as EVs Lose Momentum",
+    "date": "2024-11-20",
+    "framing": "EV-momentum framing; 'more' cuts after 2023 round."
+   },
+   {
+    "outlet": "Automotive News",
+    "url": "https://www.autonews.com/ford/ane-ford-job-cuts-uk-germany/",
+    "headline": "Ford cuts 4,000 jobs, lowers Explorer, Capri production",
+    "date": "2024-11-20",
+    "framing": "Pairs job cuts with EV production reductions."
+   }
+  ],
+  "framing_gap": "Ford stresses 'disruption' and regulatory/economic headwinds in the industry; press names EV demand, Chinese competition and the earlier 2023 cut round.",
+  "fetch_log": "CNN and HRD (hcamag) fetched direct; no ford.com page found."
+ },
+ {
+  "company": "Scale AI",
+  "event_date": "2025-07-16",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/scale-ai__2025-07/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnbc.com/2025/07/16/scale-ai-cuts-14percent-of-workforce-after-meta-investment-hiring-of-wang.html",
+  "headcount_cut": 200,
+  "pct_workforce": 14.0,
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "These changes will make us more nimble — enabling us to react more quickly to shifts in the market and customer needs",
+   "I want to extend our deepest gratitude for their valuable contributions and dedication to our company.",
+   "We're streamlining our data business to help us move faster and deliver even better data solutions to our GenAI customers"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "streamlining",
+   "changes",
+   "layoffs"
+  ],
+  "severance": "Spokesperson: affected employees have been provided severance (no terms given).",
+  "ai_framing": "not about AI",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "overhiring",
+   "flatten_management",
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "confidence": "medium",
+  "notes": "Memo seen via CNBC excerpts only (full email on BI not read). CNBC quotes: ramped GenAI capacity 'too quickly', 'excessive bureaucracy'. Also 500 contractors cut. Third quote is spokesperson Joe Osborne.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2025/07/16/scale-ai-cuts-14percent-of-workforce-after-meta-investment-hiring-of-wang.html",
+    "headline": "Scale AI cuts 14% of workforce after Meta investment, hiring of Wang",
+    "date": "2025-07-16",
+    "framing": "Foregrounds Meta deal context and customer defections alongside memo."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/07/16/scale-ai-lays-off-14-of-staff-largely-in-data-labeling-business/",
+    "headline": "Scale AI lays off 14% of staff, largely in data-labeling business",
+    "date": "2025-07-16",
+    "framing": "Frames as forced pivot after Meta deal, like other reverse acqui-hires."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2025-07-16/scale-ai-to-cut-14-of-staff-following-meta-investment",
+    "headline": "Scale AI to Cut 14% of Staff Following Meta Investment",
+    "date": "2025-07-16",
+    "framing": "Ties cuts to Meta investment (headline only)."
+   }
+  ],
+  "framing_gap": "Memo blames over-fast scaling and bureaucracy; press adds the Meta $14.3B deal and loss of customers like OpenAI as the underlying driver.",
+  "fetch_log": "CNBC and TechCrunch fetched direct; BI not retried; no Scale-owned page."
+ },
+ {
+  "company": "Meta (Superintelligence Labs)",
+  "event_date": "2025-10-22",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/meta-superintelligence-labs__2025-10/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.foxbusiness.com/technology/meta-cuts-600-jobs-amid-ai-expansion-push-automation-replaces-human-staff",
+  "headcount_cut": 600,
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "fewer conversations will be required to make a decision, and each person will be more load-bearing and have more scope and impact",
+   "This is a talented group of individuals, and we need their skills in other parts of the company"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reducing the size of our team"
+  ],
+  "severance": null,
+  "ai_framing": "not about AI",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "flatten_management",
+   "efficiency",
+   "restructuring"
+  ],
+  "confidence": "medium",
+  "notes": "Memo excerpts via Fox Business citing Axios; full memo not read. Fox also reports Meta risk-org roles cut because automation replaced manual reviews (Business Insider; separate memo by Michel Protti), which is AI-as-cause for that group. MSL about 3,000 staff before cuts; pct of Meta workforce not applicable. Search summaries mention severance terms (unread), not recorded.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2025/10/22/meta-layoffs-ai.html",
+    "headline": "Meta lays off 600 from 'bloated' AI unit as Wang cements leadership",
+    "date": "2025-10-22",
+    "framing": "Calls unit 'bloated'; frames as Wang consolidating power."
+   },
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/2025/10/22/meta-superintelligence-tbd-ai-reorg",
+    "headline": "Meta's Alexandr Wang reorgs superintelligence lab",
+    "date": "2025-10-22",
+    "framing": "Original memo report; frames as reorg sparing TBD Lab."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/10/22/meta-cuts-600-ai-jobs-amid-ongoing-reorganization/",
+    "headline": "Meta cuts 600 AI jobs amid ongoing reorganization",
+    "date": "2025-10-22",
+    "framing": "Treats as continuing reorg more than headcount reduction."
+   },
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/technology/meta-cuts-600-jobs-amid-ai-expansion-push-automation-replaces-human-staff",
+    "headline": "Meta cuts 600 jobs amid AI expansion push, automation replaces human staff",
+    "date": "2025-10-22",
+    "framing": "Adds AI-automation angle via separate risk-org cuts."
+   }
+  ],
+  "framing_gap": "Wang's memo frames the cut as decision-speed and impact per person; CNBC's 'bloated' and Fox's automation angle add narratives the memo does not.",
+  "fetch_log": "Fox Business fetched direct; Axios/CNBC/TechCrunch from search results only."
+ },
+ {
+  "company": "The Washington Post",
+  "event_date": "2026-02-04",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/the-washington-post__2026-02/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnn.com/2026/02/07/media/washington-post-will-lewis-publisher-resigns",
+  "pct_workforce": 33.0,
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "During my tenure, difficult decisions have been taken in order to ensure the sustainable future of The Post"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "difficult decisions"
+  ],
+  "severance": null,
+  "stated_reasons": [
+   "restructuring",
+   "revenue_decline"
+  ],
+  "confidence": "medium",
+  "notes": "Quote is from Lewis's Feb 7 resignation note (CNN), not the Feb 4 layoff announcement; no layoff announcement text found. CNN: one-third of staff incl. at least 300 newsroom journalists. PBS/AP: neither Lewis nor Bezos took part in the staff meeting. Search summaries (unread) say Matt Murray called it a 'strategic reset' tied to AI; mentions_ai left unchanged/unverified.",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2026/02/04/media/washington-post-layoffs",
+    "headline": "Jeff Bezos-owned Washington Post conducts widespread layoffs, gutting a third of its staff",
+    "date": "2026-02-04",
+    "framing": "Emphasises scale ('gutting') and Bezos ownership."
+   },
+   {
+    "outlet": "NPR",
+    "url": "https://www.npr.org/2026/02/04/nx-s1-5699474/the-washington-post-cuts-a-third-of-its-staff",
+    "headline": "'The Washington Post' cuts a third of its staff",
+    "date": "2026-02-04",
+    "framing": "Straight account of cuts across sections."
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2026/02/07/media/washington-post-will-lewis-publisher-resigns",
+    "headline": "Washington Post publisher Will Lewis abruptly steps down, days after massive layoffs gut the newspaper",
+    "date": "2026-02-07",
+    "framing": "Notes staff hadn't seen Lewis during layoffs and celebrated his exit."
+   },
+   {
+    "outlet": "PBS NewsHour (AP)",
+    "url": "https://www.pbs.org/newshour/nation/days-after-big-layoffs-at-the-washington-post-publisher-will-lewis-says-hes-stepping-down",
+    "headline": "Days after big layoffs at The Washington Post, publisher Will Lewis says he's stepping down",
+    "date": "2026-02-08",
+    "framing": "Notes Lewis and Bezos absent from layoff meeting; ties to Bezos endorsement backlash."
+   }
+  ],
+  "framing_gap": "Company-side wording on the layoffs not found; press frames it as self-inflicted damage and leadership absence, with Lewis's exit note praising Bezos and justifying 'difficult decisions'.",
+  "fetch_log": "CNN and PBS fetched direct; NPR from search results; no washingtonpost.com announcement text."
+ },
+ {
+  "company": "Better.com",
+  "event_date": "2021-12-01",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/better-com__2021-12/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.thenewsminute.com/news/bettercom-ceo-vishal-garg-fires-over-900-employees-over-zoom-call-158451",
+  "headcount_cut": 900,
+  "pct_workforce": 9.0,
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "ultimately it was my decision, and I wanted you to hear it from me",
+   "This is the second time in my career I'm doing this and I do not, do not want to do this.",
+   "If you’re on this call, you are part of the unlucky group being laid off"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "euphemisms": [
+   "letting off",
+   "laid off",
+   "market efficiency, performance, and productivity"
+  ],
+  "stated_reasons": [
+   "macro",
+   "efficiency",
+   "performance"
+  ],
+  "notice_style": "same_day",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "confidence": "high",
+  "notes": "Transcript passage from The News Minute (PTI/CNN-based). takes_responsibility=true only for 'it was my decision' (ownership of decision, not an admission of fault). The passage beginning 'I come to you with not great news' is probably the opening but first words not verified. Garg said about 15% on call vs about 9% (900+) per reports. No apology on the call; search summaries (unread) say he later apologised for the delivery and took leave.",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://edition.cnn.com/2021/12/05/business/better-ceo-fires-employees/index.html",
+    "headline": "Better.com CEO fires 900 employees over Zoom",
+    "date": "2021-12-05",
+    "framing": "Original report on the abrupt Zoom firing."
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://edition.cnn.com/2021/12/10/business/better-com-ceo-vishal-garg-time-off",
+    "headline": "Better.com CEO is taking time off after laying off 900 employees via Zoom",
+    "date": "2021-12-10",
+    "framing": "Follow-up: CEO leave after backlash."
+   },
+   {
+    "outlet": "Forbes",
+    "url": "https://www.forbes.com/sites/davidjeans/2021/12/10/bettercom-ceo-vishal-garg-leave-effective-immediately/",
+    "headline": "Better.com CEO, Who Fired 900 Workers On Zoom Call, Taking Leave 'Effective Immediately'",
+    "date": "2021-12-10",
+    "framing": "Frames leave as consequence of backlash."
+   },
+   {
+    "outlet": "The News Minute",
+    "url": "https://www.thenewsminute.com/news/bettercom-ceo-vishal-garg-fires-over-900-employees-over-zoom-call-158451",
+    "headline": "Better.com CEO Vishal Garg fires over 900 employees over Zoom call",
+    "date": "2021-12-07",
+    "framing": "Quotes call transcript; includes 'I cried' and accusation of low productivity."
+   }
+  ],
+  "framing_gap": "On the call Garg cited efficiency and productivity and said it was his decision; press focused on the cold Zoom delivery and holiday timing, forcing his leave.",
+  "fetch_log": "TNM fetched direct (transcript quoted there); CNN/Forbes from search results; no company page."
+ },
+ {
+  "company": "Stripe",
+  "event_date": "2022-11-03",
+  "company_text_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/stripe__2022-11/company.txt",
+  "company_text_url": "https://stripe.com/newsroom/news/ceo-patrick-collisons-email-to-stripe-employees",
+  "reproduction_url": null,
+  "headcount_cut": 1100,
+  "pct_workforce": 14.0,
+  "public_primary_text": true,
+  "opening_line": "Today we’re announcing the hardest change we have had to make at Stripe to date.",
+  "key_quotes": [
+   "we’re very sorry to be taking this step and John and I are fully responsible for the decisions leading up to it",
+   "We overhired for the world we’re in",
+   "We grew operating costs too quickly."
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reducing the size of our team",
+   "saying goodbye",
+   "departures",
+   "impacted"
+  ],
+  "severance": "14 weeks severance (more for longer tenure), 2022 bonus, unused PTO, 6 months healthcare cash equivalent, RSU vesting acceleration, career and immigration support.",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "interest_rates",
+   "cost_cutting"
+  ],
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full primary email read on stripe.com. Page states 'around 14%' and 'almost 7,000' remaining; ~1,100 headcount from CNBC/TechCrunch (TechCrunch says ~1,120 of 8,000). Founders admit two mistakes: too optimistic on internet economy growth and operating costs grew too quickly.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2022/11/03/stripe-plans-to-lay-off-14percent-of-workers.html",
+    "headline": "Stripe lays off 14% of workers",
+    "date": "2022-11-03",
+    "framing": "Reports memo; roughly 1,100 people."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/11/03/stripe-cuts-14-of-its-workforce-ceo-says-they-overhired-for-the-world-were-in/",
+    "headline": "Stripe cuts 14% of its workforce, CEO says they 'overhired for the world we're in'",
+    "date": "2022-11-03",
+    "framing": "Leads with overhiring admission."
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/11/07/layoffs-tech-ceo-figured-out-how-to-do-them-right/",
+    "headline": "As layoffs mount, one tech CEO figured out how to do them right",
+    "date": "2022-11-07",
+    "framing": "Praises Collison's handling as a model for layoffs."
+   },
+   {
+    "outlet": "The Block",
+    "url": "https://www.theblock.co/post/182689/stripe-cuts-14-of-workforce-as-fintech-layoffs-roll-on",
+    "headline": "Stripe cuts 14% of workforce as fintech layoffs roll on",
+    "date": "2022-11-03",
+    "framing": "Fintech-wide layoff trend framing."
+   }
+  ],
+  "framing_gap": "Press largely echoes the company's candid self-blame and Fortune holds it up as a good example; little gap.",
+  "fetch_log": "stripe.com fetched direct; news from search results."
+ },
+ {
+  "company": "Alphabet/Google",
+  "event_date": "2023-01-20",
+  "company_text_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/alphabet-google__2023-01/company.txt",
+  "company_text_url": "https://blog.google/inside-google/message-ceo/january-update/",
+  "reproduction_url": null,
+  "headcount_cut": 12000,
+  "pct_workforce": 6.0,
+  "public_primary_text": true,
+  "opening_line": "I have some difficult news to share.",
+  "key_quotes": [
+   "I’m deeply sorry for that.",
+   "I take full responsibility for the decisions that led us here.",
+   "we hired for a different economic reality than the one we face today"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reduce our workforce",
+   "roles we’re eliminating",
+   "saying goodbye",
+   "tough choices"
+  ],
+  "severance": "Paid through notification period (min 60 days); 16 weeks salary plus 2 weeks per additional year; at least 16 weeks GSU vesting; 2022 bonuses and vacation; 6 months healthcare, job placement, immigration support (US).",
+  "ai_framing": "future_context",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "overhiring",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full primary text read on blog.google. Apology and responsibility both explicit. Pichai frames AI as the opportunity ('AI-first', 'early investments in AI'), not the cause. Roughly 6% of workforce per CNBC (search summary).",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/01/20/google-to-lay-off-12000-people-memo-from-ceo-sundar-pichai-says.html",
+    "headline": "Google to lay off 12,000 people - read the memo CEO Sundar Pichai sent to staff",
+    "date": "2023-01-20",
+    "framing": "Publishes memo; notes responsibility and severance."
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2023/01/20/tech/google-job-cuts/index.html",
+    "headline": "Google-parent Alphabet is cutting 12,000 jobs",
+    "date": "2023-01-20",
+    "framing": "Straight report of cut size and memo."
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2023/01/20/alphabet-google-layoffs-microsoft-openai-generative-chatgpt/",
+    "headline": "Alphabet, Google layoffs notice foretells A.I. products amid Microsoft, OpenAI competition",
+    "date": "2023-01-20",
+    "framing": "Adds AI-competition angle (OpenAI/Microsoft) beyond memo."
+   },
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/2023/01/20/google-layoffs-ceo-sundar-pichai-memo-email",
+    "headline": "Google layoffs to hit 12,000 workers, Alphabet CEO Sundar Pichai says",
+    "date": "2023-01-20",
+    "framing": "Report of memo and 12,000 figure."
+   }
+  ],
+  "framing_gap": "Fortune adds an AI-competition angle the memo only gestures at as long-term opportunity; otherwise coverage mirrors the memo.",
+  "fetch_log": "blog.google fetched direct; news from search results."
+ },
+ {
+  "company": "Dropbox",
+  "event_date": "2023-04-27",
+  "company_text_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/dropbox__2023-04/company.txt",
+  "company_text_url": "https://blog.dropbox.com/topics/company/a-message-from-drew",
+  "reproduction_url": null,
+  "headcount_cut": 500,
+  "pct_workforce": 16.0,
+  "public_primary_text": true,
+  "opening_line": "I'm writing to share that I’ve made the difficult decision to reduce our global workforce by about 16%, or 500 Dropboxers.",
+  "key_quotes": [
+   "I take full ownership of this decision and the path that led us here.",
+   "I’m truly sorry that as a result of these decisions, we have to part ways with Dropboxers",
+   "the AI era of computing has finally arrived"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reduce our global workforce",
+   "reductions",
+   "part ways",
+   "impacted"
+  ],
+  "severance": "Sixteen weeks of pay plus one week per completed year of tenure; Q2 equity vest; up to six months COBRA (US); keep devices; job placement and career coaching.",
+  "ai_framing": "reallocation",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "macro",
+   "strategic_pivot",
+   "performance",
+   "restructuring"
+  ],
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "CORRECTION: Dropbox's own blog page (blog.dropbox.com/topics/company/a-message-from-drew) loaded and contains an explicit apology and ownership, contradicting the earlier note. Houston cites slowing growth, downturn, and need for 'a different mix of skill sets, particularly in AI and early-stage product development'. 8-K cost estimate not verified here.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/04/27/dropbox-lays-off-500-employees-16-of-staff-ceo-says-due-to-slowing-growth-and-the-era-of-ai/",
+    "headline": "Dropbox lays off 500 employees, 16% of staff, CEO says due to slowing growth and 'the era of AI'",
+    "date": "2023-04-27",
+    "framing": "Headline foregrounds the AI-era rationale."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2023/04/27/daily-crunch-citing-slow-growth-and-desire-to-be-at-the-forefront-of-the-ai-era-dropbox-ceo-lays-off-500/",
+    "headline": "Daily Crunch: Citing slow growth and desire to be 'at the forefront of the AI era,' Dropbox CEO lays off 500",
+    "date": "2023-04-27",
+    "framing": "Repeats slow growth plus AI-forefront rationale."
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://edition.cnn.com/2023/07/04/tech/ai-tech-layoffs/index.html",
+    "headline": "AI is already linked to layoffs in the industry that created it",
+    "date": "2023-07-04",
+    "framing": "Cites Dropbox as example of AI-linked layoffs."
+   }
+  ],
+  "framing_gap": "Press highlights the AI rationale as the headline; the CEO letter presents AI as reallocation of skills alongside slow growth and performance issues, with an explicit apology.",
+  "fetch_log": "blog.dropbox.com fetched direct (earlier 404 was a different URL); news from search results."
+ },
+ {
+  "company": "Okta",
+  "event_date": "2024-02-01",
+  "reproduction_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/okta__2024-02/reproduction.txt",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnbc.com/2024/02/01/okta-to-lay-off-7percent-of-staff-about-400-employees.html",
+  "headcount_cut": 400,
+  "pct_workforce": 7.0,
+  "public_primary_text": true,
+  "opening_line": "After a thoughtful FY25 business planning process, the leadership team and I have made the difficult decision to implement a workforce reduction",
+  "key_quotes": [
+   "To the impacted employees, I am deeply sorry and we thank you for your many contributions.",
+   "the reality is that costs are still too high",
+   "This action is a proactive measure to help set the company up for long-term success."
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "workforce reduction",
+   "impacted",
+   "transition support"
+  ],
+  "severance": "US: additional time on payroll, March RSU vest if eligible, cash severance, extended healthcare, job placement, visa support; non-US per local law.",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "efficiency",
+   "profitability"
+  ],
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full memo read via CNBC reproduction (opens 'Hi Everyone,'). No explicit responsibility language ('the leadership team and I have made the decision'). 8-K cost ($24M restructuring) via search summary only.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2024/02/01/okta-to-lay-off-7percent-of-staff-about-400-employees.html",
+    "headline": "Okta to lay off 7% of staff, about 400 employees",
+    "date": "2024-02-01",
+    "framing": "Reproduces full memo; notes shares rose in premarket."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2024/02/01/okta-layoffs-400-employees/",
+    "headline": "Okta lays off 400 employees - almost exactly a year after last staff cuts",
+    "date": "2024-02-01",
+    "framing": "Highlights repeat cuts a year after previous round."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2024-02-01/okta-to-cut-400-jobs-following-tech-peers-in-reducing-costs",
+    "headline": "Okta to Cut 400 Jobs Following Tech Peers in Reducing Costs",
+    "date": "2024-02-01",
+    "framing": "Cost-cutting wave framing (headline only)."
+   }
+  ],
+  "framing_gap": "Press mostly mirrors the memo's cost framing; CNBC adds the market reaction (shares up) and prior February 2023 cut.",
+  "fetch_log": "CNBC fetched direct; okta.com memo not located."
+ },
+ {
+  "company": "Workday",
+  "event_date": "2025-02-05",
+  "company_text_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/workday__2025-02/company.txt",
+  "company_text_url": "https://blog.workday.com/en-us/changes-position-workday-for-future.html",
+  "reproduction_url": null,
+  "headcount_cut": 1750,
+  "pct_workforce": 8.5,
+  "public_primary_text": true,
+  "opening_line": "Our journey at Workday has always been about challenging the status quo, embracing change, and putting our customers at the heart of everything we do.",
+  "key_quotes": [
+   "we have made the difficult, but necessary, decision to eliminate approximately 1,750 positions, or 8.5% of our current workforce",
+   "I realize this is tough news, and it affects all of us",
+   "the increasing demand for AI has the potential to drive a new era of growth for Workday"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "eliminate approximately 1,750 positions",
+   "changes",
+   "Workmates who are leaving"
+  ],
+  "severance": "US: minimum 12 weeks pay plus tenure-based weeks, additional RSU vesting, career services, benefits and immigration support; non-US per local standards.",
+  "ai_framing": "reallocation",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring",
+   "efficiency"
+  ],
+  "notice_style": "same_day",
+  "confidence": "high",
+  "notes": "Full memo read on Workday's blog. Count resolved: company says 1,750 (8.5% of 20,500); Bloomberg/TechCrunch 'nearly 2,000'. No apology; thanks only. AI framed as investment priority, not direct replacement.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/02/05/workday-cuts-nearly-2000-employees/",
+    "headline": "Workday cuts nearly 2,000 employees",
+    "date": "2025-02-05",
+    "framing": "Uses higher 'nearly 2,000' figure."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2025-02-05/workday-layoffs-will-hit-nearly-2-000-workers",
+    "headline": "Workday Layoffs Will Hit Nearly 2,000 Employees",
+    "date": "2025-02-05",
+    "framing": "Reports nearly 2,000, differing from company's 1,750."
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2025/02/07/workday-layoff-ai-future-of-work/",
+    "headline": "A workforce management giant will lay off 1,750 employees to make way for AI",
+    "date": "2025-02-07",
+    "framing": "Headline makes AI the cause, stronger than the memo."
+   },
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/workday-is-laying-off-1750-employees/486707",
+    "headline": "Workday Is Laying Off 1,750 Employees",
+    "date": "2025-02-05",
+    "framing": "Quotes memo; pivots to Workday applicant-portal complaints."
+   }
+  ],
+  "framing_gap": "Fortune frames the cut as making way for AI, while the memo says AI is an investment priority amid broader restructuring; Bloomberg's ~2,000 conflicts with the company's 1,750.",
+  "fetch_log": "Workday blog and Entrepreneur fetched direct; news from search results."
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2026-01-28",
+  "company_text_path": "/Users/jeremychia/Documents/Github/jeremychia/analysis/layoff-communications/data/sources/amazon__2026-01/company.txt",
+  "company_text_url": "https://www.aboutamazon.com/news/company-news/amazon-layoffs-corporate-jan-2026",
+  "reproduction_url": null,
+  "headcount_cut": 16000,
+  "public_primary_text": true,
+  "opening_line": "I want to let you know that we're making additional organizational changes across Amazon that will impact some of our teammates.",
+  "key_quotes": [
+   "I recognize this is difficult news, which is why I’m sharing what’s happening and why.",
+   "reducing layers, increasing ownership, and removing bureaucracy",
+   "That’s not our plan."
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "organizational changes",
+   "reductions",
+   "impact some of our teammates",
+   "roles impacted"
+  ],
+  "severance": "Most US employees get 90 days to find an internal role; then severance pay, outplacement, health insurance benefits.",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "flatten_management",
+   "restructuring"
+  ],
+  "confidence": "high",
+  "notes": "Full message read on aboutamazon.com; page undated (date from news). No AI mention in the message. 'That's not our plan' answers whether broad cuts will recur every few months. Press (CNN, Bloomberg) adds AI angle; message does not.",
+  "news_coverage": [
+   {
+    "outlet": "CNN",
+    "url": "https://www.cnn.com/2026/01/28/tech/amazon-layoffs-ai",
+    "headline": "Amazon is laying off 16,000 employees as AI battle intensifies",
+    "date": "2026-01-28",
+    "framing": "Headline adds AI-competition angle absent from the message."
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/01/28/amazon-says-it-is-laying-off-16000-employees/",
+    "headline": "Amazon says it is laying off 16,000 employees",
+    "date": "2026-01-28",
+    "framing": "Straight report of announcement."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2026-01-28/amazon-to-cut-16-000-jobs-trimming-bureaucracy-amid-ai-tussle",
+    "headline": "Amazon Layoffs: 16,000 Jobs Cut as AI Competition Heats Up",
+    "date": "2026-01-28",
+    "framing": "Pairs bureaucracy trimming with AI competition."
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2026/01/28/amazon-layoffs-anti-bureaucracy-ai.html",
+    "headline": "Amazon layoffs: 16,000 jobs to be cut in latest anti-bureaucracy push",
+    "date": "2026-01-28",
+    "framing": "Anti-bureaucracy framing, matching the message."
+   },
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/2026/01/28/amazon-layoffs-16000",
+    "headline": "Amazon cutting another 16,000 jobs",
+    "date": "2026-01-28",
+    "framing": "'Another' round after October cuts."
+   }
+  ],
+  "framing_gap": "Message stresses layers and bureaucracy and rejects a 'new rhythm' of cuts; several outlets add an AI-battle framing and the cumulative ~30,000 since October.",
+  "fetch_log": "aboutamazon.com fetched direct; news from search results."
+ }
+]

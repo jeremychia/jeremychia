@@ -1,0 +1,660 @@
+[
+ {
+  "headcount_cut": 1271,
+  "pct_workforce": 22.0,
+  "opening_line": "Hi everyone, Today, I have some profoundly difficult news to share.",
+  "key_quotes": [
+   "This means 1,271 people, or 22% of Canva, will be impacted.",
+   "I'm deeply sorry for the pain and disruption this will cause for everyone affected.",
+   "we need to refound Canva, getting back to our roots of small, empowered teams"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "impacted",
+   "saying goodbye to teammates",
+   "changes to how we're organised",
+   "collapsing layers",
+   "reducing subspecialisation"
+  ],
+  "severance": "At least six months salary incl. statutory entitlements globally; one-year vesting cliff removed for joiners in past year; 12 months healthcare (where provided) and EAP incl. family; career coaching, 1yr LinkedIn Premium; keep MacBook; US$10,000 Canva Collective Fund grants; Slack/Gmail access until end of week.",
+  "notice_style": "advance_notice",
+  "confidence": "high",
+  "notes": "Primary text read via Wayback Machine (direct site 403s). Title 'An important update on our team'; CEO note to staff republished on newsroom same day. 1,271 = people impacted, includes role changes and relocations to hubs (Sydney); number actually exiting not disclosed. Date: Sydney 4 Nov 2026 (Bloomberg stamped 3 Nov). Broke Canva's no-layoff history; earlier 2026 reporting (Startup Daily, Mar 2026) had Canva denying redundancies during Leonardo.AI integration. Company All Hands 10 Nov; org all hands from 11 Nov. AI mentioned only as 'New technology is transforming what people can create'; not named as cause. Access to Slack/Gmail kept until end of week (not locked out).",
+  "company": "Canva",
+  "sector": "saas",
+  "event_date": "2026-11-04",
+  "communicator": "ceo",
+  "communicator_name": "Melanie Perkins",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "all_hands"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "flatten_management",
+   "strategic_pivot",
+   "revenue_decline",
+   "efficiency"
+  ],
+  "ceo_voice": "Contrite, humane and detailed; first-person apology repeated at open and close, framed as 'refounding' rather than cost-cutting.",
+  "sources": [
+   {
+    "url": "https://www.canva.com/newsroom/news/canva-team-update/",
+    "title": "An important update on our team (Wayback snapshot 20261104 read in full)",
+    "type": "primary"
+   },
+   {
+    "url": "https://www.adweek.com/creativity/canva-to-cut-or-redeploy-22-of-staff-following-hardest-year-yet/",
+    "title": "Adweek",
+    "type": "news"
+   },
+   {
+    "url": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/",
+    "title": "TechCrunch",
+    "type": "news"
+   },
+   {
+    "url": "https://www.bloomberg.com/news/articles/2026-11-03/canva-announces-layoffs-job-changes-for-about-22-of-workforce",
+    "title": "Bloomberg (dated 3 Nov US time)",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 500,
+  "pct_workforce": 5.0,
+  "opening_line": null,
+  "key_quotes": [
+   "with the heaviest of hearts",
+   "To those who are leaving us: we are deeply sorry",
+   "We know the industry standard is to block access to communication tools immediately. This approach didn't feel right to us"
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "rebalance",
+   "leaving us"
+  ],
+  "severance": "15 weeks separation pay plus 1 week per year of service; most could stay until end of week.",
+  "notice_style": "advance_notice",
+  "confidence": "medium",
+  "notes": "Quotes read from Guardian's report of the memo (memo filed with SEC as 8-K exhibit; filing itself not read). Opening line not verified so left null. Cuts described as not a reflection of financial performance. Overhiring reason is inferred from commentary, not verified in memo.",
+  "company": "Atlassian",
+  "sector": "saas",
+  "event_date": "2023-03-07",
+  "communicator": "founder",
+  "communicator_name": "Mike Cannon-Brookes and Scott Farquhar",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "overhiring"
+  ],
+  "ceo_voice": "Warm, trust-centred and apologetic; contrasts itself with industry norm of immediate lockouts.",
+  "sources": [
+   {
+    "url": "https://www.theguardian.com/technology/2023/mar/07/atlassian-to-axe-500-jobs-with-the-heaviest-of-hearts",
+    "title": "Guardian (read via mirror reader)",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 1600,
+  "pct_workforce": 10.0,
+  "opening_line": null,
+  "key_quotes": [
+   "We are doing this to self-fund further investment in AI and enterprise sales, while strengthening our financial profile",
+   "it would be disingenuous to pretend AI doesn't change the mix of skills we need or the number of roles required in certain areas",
+   "This is primarily about adaptation."
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "adaptation",
+   "reshaping our skill mix"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "notes": "Quotes taken from Market Realist report of CNBC/blog post; primary blog not read. Apology not verified (one headline claims 'I'm sorry' but unverified) so apology null. Charges $225-236M; CTO Rajeev Rajan departing; ~30% of roles in Australia (per reports). Employees notified by email. Severance terms not retrieved.",
+  "company": "Atlassian",
+  "sector": "saas",
+  "event_date": "2026-03-11",
+  "communicator": "ceo",
+  "communicator_name": "Mike Cannon-Brookes",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "ai_automation",
+   "strategic_pivot",
+   "profitability",
+   "efficiency"
+  ],
+  "ceo_voice": "Candid and strategic; admits AI changes role mix while denying AI is simply replacing people.",
+  "sources": [
+   {
+    "url": "https://marketrealist.com/atlassian-layoffs-to-invest-in-ai/",
+    "title": "Market Realist quoting CEO blog post",
+    "type": "news"
+   },
+   {
+    "url": "https://www.bloomberg.com/news/articles/2026-03-11/atlassian-team-ceo-announces-layoffs-of-1-600-citing-ai-shift",
+    "title": "Bloomberg",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 1000,
+  "pct_workforce": 11.0,
+  "opening_line": null,
+  "key_quotes": [
+   "not doing this as a shortcut to profitability",
+   "nimble execution and cost leadership"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "strategic reorganisation"
+  ],
+  "severance": "Reported: half a month per six months of service or local statutory minimum, whichever higher (not verified from primary).",
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "notes": "Brief said 2022 for Grab Tan; actual mass layoff was 20 Jun 2023 (Dec 2022 memo was salary freezes only). Quotes are fragments cited by Mothership from letter screenshot / Reuters; full letter not read. Grab hosted an extract on its website. Headcount base 11,934 (annual report) per Mothership; other outlets differ. Opening line not verified. Apology/responsibility not confirmed.",
+  "company": "Grab",
+  "sector": "consumer_internet",
+  "event_date": "2023-06-20",
+  "communicator": "ceo",
+  "communicator_name": "Anthony Tan",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "strategic_pivot",
+   "efficiency",
+   "ai_automation",
+   "interest_rates"
+  ],
+  "ceo_voice": "Defensive-corporate; pre-empts 'cost-cutting' reading, stresses strategic reorganisation.",
+  "sources": [
+   {
+    "url": "https://mothership.sg/2023/06/grab-layoff-1000-jobs",
+    "title": "Mothership",
+    "type": "news"
+   },
+   {
+    "url": "https://dollarsandsense.sg/business/grab-retrench-over-1000-employees/",
+    "title": "Dollars and Sense",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 1300,
+  "pct_workforce": 12.0,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "efficiency program",
+   "adjustments"
+  ],
+  "severance": "Reported: one extra month's salary plus pay in lieu of notice.",
+  "notice_style": "same_day",
+  "confidence": "low",
+  "notes": "Primary text not retrieved; no verbatim quotes recorded. Search summaries report Soelistyo apologised for not conveying the decision earlier, and cited macro conditions; Rp800bn savings. Announced Friday across Indonesia, Vietnam, Singapore, India. A further ~600 cut in Mar 2023 (not recorded separately).",
+  "company": "GoTo (Gojek/Tokopedia)",
+  "sector": "consumer_internet",
+  "event_date": "2022-11-18",
+  "communicator": "ceo",
+  "communicator_name": "Andre Soelistyo",
+  "channel": [
+   "internal_email",
+   "zoom",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "efficiency"
+  ],
+  "ceo_voice": "Corporate with a later apology for lack of advance notice (reported).",
+  "sources": [
+   {
+    "url": "https://techwireasia.com/2022/11/tech-layoffs-alas-indonesias-goto-shrinks-workforce-by-12/",
+    "title": "Tech Wire Asia",
+    "type": "news"
+   },
+   {
+    "url": "https://en.tempo.co/amp/1659325/goto-ceo-apologizes-for-not-issuing-advance-notice-of-layoffs",
+    "title": "Tempo (403, seen via search summary only)",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "optimise our operations in certain segments and markets"
+  ],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "confidence": "low",
+  "notes": "Rolling cuts Sep 2022 onward (Shopee Indonesia 3% reported, Garena Shanghai, LatAm closures); ~7,000 jobs cut in six months per Sea's own Q3 disclosure via Bloomberg. Memo wording only paraphrased in sources; no quotes. Headcount_cut left null since the 7,000 aggregate spans multiple events.",
+  "company": "Sea Ltd / Shopee",
+  "sector": "consumer_internet",
+  "event_date": "2022-09-15",
+  "communicator": "exec_other",
+  "communicator_name": "Forrest Li (memo to staff, exec comp waiver); Chris Feng (Shopee group president, layoff memo)",
+  "channel": [
+   "internal_email",
+   "media_leak"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability",
+   "efficiency"
+  ],
+  "ceo_voice": "Austerity-led; leadership forgoes cash pay while rolling cuts reported through leaks.",
+  "sources": [
+   {
+    "url": "https://techwireasia.com/2022/09/why-is-e-commerce-giant-shopee-on-a-layoff-spree/",
+    "title": "Tech Wire Asia",
+    "type": "news"
+   },
+   {
+    "url": "https://www.bloomberg.com/news/articles/2022-11-15/singapore-s-sea-slashed-7-000-jobs-in-six-months-to-curb-losses",
+    "title": "Bloomberg",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 350,
+  "pct_workforce": 10.0,
+  "opening_line": "We are no strangers to the harsh economic conditions that everyone is witnessing these days.",
+  "key_quotes": [
+   "I want to apologise to everyone sincerely since we made a commitment of no layoffs in the organisation",
+   "I take full responsibility",
+   "There is no easy way to do this"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "say goodbye",
+   "impacted",
+   "scale down or shut verticals"
+  ],
+  "severance": "Notice period pay plus two additional months and an additional year of medical cover.",
+  "notice_style": "advance_notice",
+  "confidence": "high",
+  "notes": "Quotes as reproduced by Business Today (email not itself public). Opening line is the email's first quoted sentence per BT. Affected staff to hear from HR within 48 hours. Munjal also tweeted offering the directory of impacted roles to hiring companies. Earlier April 2022 round ~600 and a July promise of no more layoffs.",
+  "company": "Unacademy",
+  "sector": "international_startup",
+  "event_date": "2022-11-07",
+  "communicator": "ceo",
+  "communicator_name": "Gaurav Munjal",
+  "channel": [
+   "internal_email",
+   "x_post"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Plain-spoken, contrite; owns breaking an earlier no-layoffs pledge.",
+  "sources": [
+   {
+    "url": "https://www.businesstoday.in/latest/corporate/story/no-easy-way-to-do-this-unacademy-lays-off-10-of-its-employees-to-reduce-monthly-burns-352136-2022-11-07",
+    "title": "Business Today",
+    "type": "news"
+   },
+   {
+    "url": "https://www.businesstoday.in/latest/corporate/story/painful-to-see-talented-people-leave-us-unacademys-gaurav-munjal-laments-sacking-350-employees-352154-2022-11-08",
+    "title": "Business Today",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 750,
+  "pct_workforce": 15.0,
+  "opening_line": null,
+  "key_quotes": [
+   "difficult but necessary steps as we work to further strengthen Xero for the future",
+   "we recognise today is a very hard day for our people"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "streamline and simplify our organisation",
+   "roles eliminated"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "notes": "Brief assumed Steve Vamos 2023; Vamos had stepped down Nov 2022, so the 2023 cuts were announced by new CEO Cassidy via ASX release (700-800 roles, midpoint 750 used). Restructuring cost A$25-35M; Waddle exit. Quotes from NZ Herald as returned by fetch tool; ASX release not read. Individual severance terms not found.",
+  "company": "Xero",
+  "sector": "saas",
+  "event_date": "2023-03-09",
+  "communicator": "ceo",
+  "communicator_name": "Sukhinder Singh Cassidy",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "efficiency",
+   "profitability",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Corporate and measured; framed as step to higher-performing SaaS company.",
+  "sources": [
+   {
+    "url": "https://www.nzherald.co.nz/business/difficult-but-necessary-xero-to-cut-up-to-800-jobs/QGLTIKCN3JHXDJUVXU2JLYRUME",
+    "title": "NZ Herald",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 380,
+  "pct_workforce": null,
+  "opening_line": "We're implementing a very difficult decision to reduce the size of our team as a part of a restructuring exercise.",
+  "key_quotes": [
+   "In this process, we will be bidding goodbye to 380 talented Swiggsters.",
+   "I'm extremely sorry to all of you for having to go through with this"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our team",
+   "restructuring exercise",
+   "bidding goodbye"
+  ],
+  "severance": "Cash payout of 3-6 months salary by tenure/grade, 100% incentive payout; eligible for July 2023 ESOP liquidity programme.",
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "notes": "Quotes read in FPJ. Overhiring 'poor judgement' line reported by Business Standard/Onmanorama (seen only in search summary, not recorded as quote). Meat marketplace shut. Town hall 20 Jan plus email.",
+  "company": "Swiggy",
+  "sector": "consumer_internet",
+  "event_date": "2023-01-20",
+  "communicator": "ceo",
+  "communicator_name": "Sriharsha Majety",
+  "channel": [
+   "internal_email",
+   "all_hands"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "overhiring",
+   "revenue_decline",
+   "restructuring",
+   "macro"
+  ],
+  "ceo_voice": "Candid, self-critical; admits overhiring as poor judgement (reported).",
+  "sources": [
+   {
+    "url": "https://www.freepressjournal.in/business/swiggy-lays-off-380-employees-ahead-of-ipo",
+    "title": "Free Press Journal",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 2500,
+  "pct_workforce": 5.0,
+  "opening_line": null,
+  "key_quotes": [
+   "I seek your forgiveness if this process is not as smooth as we had intended it to be.",
+   "2022 happened. This is the year when many adverse macroeconomic factors changed the business landscape."
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "job cuts",
+   "sustainability and capital-efficient growth"
+  ],
+  "severance": "15-day notice period served (reported); fuller terms not retrieved.",
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "notes": "Quotes read in Business Today. Cuts phased over six months across product/content/media/tech; reports of employees informed by calls without notice and a Kerala labour dispute. Email date approximate (31 Oct/1 Nov). Later rounds in 2023 not recorded.",
+  "company": "Byju's",
+  "sector": "international_startup",
+  "event_date": "2022-10-31",
+  "communicator": "founder",
+  "communicator_name": "Byju Raveendran",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "macro",
+   "efficiency",
+   "overhiring"
+  ],
+  "ceo_voice": "Apologetic but deflective; blames macro and says cuts 'not more than five percent'.",
+  "sources": [
+   {
+    "url": "https://www.businesstoday.in/technology/story/byjus-ceo-says-laying-off-2500-employees-is-a-price-to-pay-for-profitability-351429-2022-11-01",
+    "title": "Business Today",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 27.0,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "same_day",
+  "confidence": "low",
+  "notes": "B&T dated 9 Jun 2023; email date approximate. Staff update also posted to LinkedIn; layoffs reportedly 4th paragraph, Bento acquisition 10th (NZ Herald via search summary). Quotes not verified from text read; left empty. ANZ staff hit hardest, shift to US hires.",
+  "company": "Linktree",
+  "sector": "saas",
+  "event_date": "2023-06-08",
+  "communicator": "founder",
+  "communicator_name": "Alex Zaccaria",
+  "channel": [
+   "internal_email",
+   "linkedin"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "ceo_voice": "Corporate; widely mocked for burying layoffs below the fold and announcing a Bento acquisition.",
+  "sources": [
+   {
+    "url": "https://www.bandt.com.au/linktree-slashes-27-of-global-headcount-australia-new-zealand-hit-hardest/",
+    "title": "B&T",
+    "type": "news"
+   },
+   {
+    "url": "https://nzherald.co.nz/business/linktree-goes-from-best-place-to-work-to-mocked-over-layoff-email/LEV2RD5BNJHG7KPLMTD2NQAMOE",
+    "title": "NZ Herald",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 2500,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "part ways with"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "confidence": "low",
+  "notes": "Only seen via search summaries: CEO told managers on a call; company statement said it would part ways with ~2,500 employees. No verbatim quotes verified. Earlier May 2022 round (14%) via leaked memo not recorded separately.",
+  "company": "Getir",
+  "sector": "consumer_internet",
+  "event_date": "2023-08-23",
+  "communicator": "ceo",
+  "communicator_name": "Nazim Salur",
+  "channel": [
+   "zoom",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "ceo_voice": "Sombre corporate; reported 'with a heavy heart'.",
+  "sources": [
+   {
+    "url": "https://www.theretailbulletin.com/food-and-drink/getir-to-cut-2500-jobs-across-five-countries-23-08-2023/",
+    "title": "Retail Bulletin (blocked)",
+    "type": "news"
+   },
+   {
+    "url": "https://sifted.eu/articles/getir-cuts-10-of-staff-news",
+    "title": "Sifted",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 300,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "confidence": "low",
+  "notes": "Reported ~300-320 Berlin HQ staff, about half of admin staff; Manager Magazin reported first (pre_leak). Internal email from Sumer reported by Exberliner but full text not read; no quotes verified.",
+  "company": "Gorillas",
+  "sector": "consumer_internet",
+  "event_date": "2022-05-23",
+  "communicator": "founder",
+  "communicator_name": "Kagan Sumer",
+  "channel": [
+   "internal_email",
+   "media_leak",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "profitability",
+   "cost_cutting",
+   "strategic_pivot"
+  ],
+  "ceo_voice": "Hard-nosed; framed as shift from growth to profit before IPO.",
+  "sources": [
+   {
+    "url": "https://tech.eu/2022/05/24/trouble-in-the-jungle-as-gorillas-axes-almost-half-its-hq-staff/",
+    "title": "Tech.eu",
+    "type": "news"
+   },
+   {
+    "url": "https://www.thestar.com.my/tech/tech-news/2022/05/24/german-grocery-app-gorillas-to-cut-staff-in-search-of-profit",
+    "title": "Reuters via The Star",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 6.0,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "re-balancing areas",
+   "embracing high performers"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "confidence": "low",
+  "notes": "Date approximate (search summary only, snippet had no date). Statement paraphrase seen only via search summary; no verbatim quote recorded. No CEO letter found.",
+  "company": "Rappi",
+  "sector": "international_startup",
+  "event_date": "2022-05-26",
+  "communicator": "spokesperson",
+  "communicator_name": "Rappi (company statement)",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "performance"
+  ],
+  "ceo_voice": "Corporate, performance-framed.",
+  "sources": [
+   {
+    "url": "https://uk.marketscreener.com/news/latest/SoftBank-backed-delivery-app-Rappi-lays-off-6-of-workers-29815571",
+    "title": "Reuters via MarketScreener",
+    "type": "news"
+   }
+  ]
+ }
+]

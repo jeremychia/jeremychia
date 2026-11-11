@@ -1,0 +1,860 @@
+[
+ {
+  "company": "Gorillas",
+  "event_date": "2022-05-23",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.euronews.com/next/2022/05/24/gorillas-layoffs",
+  "reproduction_path": "data/sources/gorillas__2022-05/reproduction.txt",
+  "key_quotes": [
+   "That's why fixed costs have to come down and the Berlin headquarters should become the hub",
+   "When we go public, we want to do it as a profitable company."
+  ],
+  "opening_line": null,
+  "headcount_cut": 300,
+  "takes_responsibility": null,
+  "apology": null,
+  "euphemisms": [
+   "lay off administrative staff"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "profitability",
+   "cost_cutting",
+   "macro"
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Euronews (Reuters)",
+    "url": "https://www.euronews.com/next/2022/05/24/gorillas-layoffs",
+    "headline": "Gorillas layoffs",
+    "date": "2022-05-24",
+    "framing": "Reuters interview with Sumer; frames cuts as shift from expansion to profitability ahead of IPO."
+   },
+   {
+    "outlet": "Tech.eu",
+    "url": "https://tech.eu/2022/05/24/trouble-in-the-jungle-as-gorillas-axes-almost-half-its-hq-staff/",
+    "headline": "Trouble in the jungle as Gorillas axes almost half its HQ staff",
+    "date": "2022-05-24",
+    "framing": "Headline stresses scale of HQ cuts; jungle metaphor; not read in full."
+   },
+   {
+    "outlet": "Grocery Gazette",
+    "url": "https://www.grocerygazette.co.uk/2022/05/24/gorillas-lays-off-300-employees-as-it-explores-strategic-options/",
+    "headline": "Gorillas lays off 300 employees as it explores 'strategic options'",
+    "date": "2022-05-24",
+    "framing": "Adds strategic-options angle (possible sale/merger) beyond company's profitability framing; headline only."
+   },
+   {
+    "outlet": "Silicon Republic",
+    "url": "https://siliconrepublic.com/?p=977225",
+    "headline": "Grocery unicorn Gorillas is cutting half its global office workforce",
+    "date": "2022-05",
+    "framing": "Emphasises half of office staff cut; headline only."
+   }
+  ],
+  "framing_gap": "Company/CEO framed it as a pivot to profitability with riders spared; headlines stress the scale (half of HQ) and hint at strategic options.",
+  "fetch_log": "Euronews (Reuters) direct OK; tech.eu fetched but body had no CEO email; Sumer internal email text not found; sifted 403."
+ },
+ {
+  "company": "Byju's",
+  "event_date": "2022-10-31",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.businesstoday.in/technology/story/byjus-ceo-says-laying-off-2500-employees-is-a-price-to-pay-for-profitability-351429-2022-11-01",
+  "reproduction_path": "data/sources/byjus__2022-10/reproduction.txt",
+  "opening_line": "I seek your forgiveness if this process is not as smooth as we had intended it to be.",
+  "key_quotes": [
+   "we are informing all the affected team members individually with the dignity, empathy, and patience they deserve",
+   "the overall job cuts are not more than five percent of our total strength"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "let go",
+   "restructure",
+   "optimise"
+  ],
+  "severance": "15-day notice period (per Business Today)",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability",
+   "restructuring",
+   "macro"
+  ],
+  "notice_style": "unknown",
+  "news_coverage": [
+   {
+    "outlet": "Business Today",
+    "url": "https://www.businesstoday.in/technology/story/byjus-ceo-says-laying-off-2500-employees-is-a-price-to-pay-for-profitability-351429-2022-11-01",
+    "headline": "Byju's CEO says laying off 2,500 employees is a price to pay for profitability",
+    "date": "2022-11-01",
+    "framing": "Calls the email an 'apology email'; frames cuts as price of profitability."
+   }
+  ],
+  "framing_gap": "Business Today labels the email an apology; the wording is 'seek your forgiveness' (not sorry), and the cuts are framed as a profitability price.",
+  "fetch_log": "Business Today direct OK (excerpts of email only); only one outlet found; search budget exhausted so no further outlets."
+ },
+ {
+  "company": "Coinbase",
+  "event_date": "2023-01-10",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://mondovisione.com/news/a-message-from-ceo-and-co-founder-brian-armstrong-to-coinbase-employees-2023112",
+  "reproduction_path": "data/sources/coinbase__2023-01/reproduction.txt",
+  "opening_line": "I shared an update with our employees today that I want to also share publicly.",
+  "key_quotes": [
+   "accountability rests with me as the CEO",
+   "in hindsight, we could have cut further at that time",
+   "Coinbase is well capitalized, and crypto isn't going anywhere."
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "euphemisms": [
+   "reduce our operating expense",
+   "letting go of about 950 people",
+   "headcount reduction"
+  ],
+  "severance": "US: minimum 14 weeks base pay (2 additional weeks per year worked), health insurance and other benefits; extra support for visa holders",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "efficiency",
+   "other"
+  ],
+  "public_primary_text": true,
+  "notice_style": "same_day",
+  "headcount_cut": 950,
+  "news_coverage": [
+   {
+    "outlet": "Mondo Visione (reprint of Coinbase statement)",
+    "url": "https://mondovisione.com/news/a-message-from-ceo-and-co-founder-brian-armstrong-to-coinbase-employees-2023112",
+    "headline": "A Message From CEO And Co-Founder, Brian Armstrong, To Coinbase Employees",
+    "date": "2023-01-10",
+    "framing": "Reprint of the public statement, not independent reporting."
+   }
+  ],
+  "framing_gap": "No independent news coverage retrieved; verbatim post shows explicit CEO accountability that earlier notes only paraphrased.",
+  "fetch_log": "coinbase.com and medium blog 403; reproduction on mondovisione OK (full text). TheBlock 403, Bloomberg not fetched; search budget exhausted."
+ },
+ {
+  "company": "Workday",
+  "event_date": "2023-01-31",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnbc.com/2023/01/31/workday-lays-off-employees-but-will-grow-head-count.html",
+  "reproduction_path": "data/sources/workday__2023-01/reproduction.txt",
+  "event_date_corrected": "2023-01-31",
+  "headcount_cut": 525,
+  "pct_workforce": 3.0,
+  "communicator": "ceo",
+  "communicator_name": "Aneel Bhusri and Carl Eschenbach (co-CEOs)",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "opening_line": null,
+  "key_quotes": [
+   "we continue to operate in a global economic environment that is challenging for companies of all sizes"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "euphemisms": [
+   "lay off"
+  ],
+  "severance": "Three months pay plus two weeks per year of service; stock vesting continues through April 2023; immigration support; six months optional medical",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "macro",
+   "restructuring"
+  ],
+  "notice_style": "same_day",
+  "confidence": "medium",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/01/31/workday-lays-off-employees-but-will-grow-head-count.html",
+    "headline": "Workday lays off employees but will grow head count",
+    "date": "2023-01-31",
+    "framing": "Highlights co-CEOs' claim cuts are not overhiring, cross-checked against headcount growth data."
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/?p=608267",
+    "headline": "Workday layoffs",
+    "date": "2023-02",
+    "framing": "Not read in full; surfaced in search."
+   },
+   {
+    "outlet": "HCA Mag",
+    "url": "https://hcamag.com/us/specialization/hr-technology/california-hr-tech-firm-lays-off-hundreds-of-employees/434684",
+    "headline": "California HR tech firm lays off hundreds of employees",
+    "date": "2023-02",
+    "framing": "Headline-level coverage; not read."
+   }
+  ],
+  "framing_gap": "CNBC tests the 'not overhiring' claim against the company's own headcount growth figures, which the memo does not.",
+  "fetch_log": "CNBC direct OK (article quoting co-CEO message); Workday blog 404; original date was Jan 31 2023 per CNBC, not Feb 7; ~525 not 552."
+ },
+ {
+  "company": "Binance",
+  "event_date": "2023-07-14",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "news_coverage": [
+   {
+    "outlet": "The Block (WSJ report)",
+    "url": "https://www.theblock.co/post/239695/binance-dismissed-more-than-1000-employees-in-recent-weeks-wsj",
+    "headline": "Binance dismissed more than 1,000 employees in recent weeks: WSJ",
+    "date": "2023-07-14",
+    "framing": "Relays WSJ leak; company did not announce; not read (403)."
+   },
+   {
+    "outlet": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2023/07/14/binance-cut-1000-workers-in-recent-weeks-wsj",
+    "headline": "Binance Has Cut 1,000 Workers in Recent Weeks: WSJ",
+    "date": "2023-07-14",
+    "framing": "Leak-led; spokesperson cited as 'talent density' (per search snippet only)."
+   },
+   {
+    "outlet": "Business Standard",
+    "url": "https://www.business-standard.com/amp/companies/news/crypto-giant-binance-lays-off-more-than-1-000-employees-says-report-123071401135_1.html",
+    "headline": "Crypto giant Binance lays off more than 1,000 employees, says report",
+    "date": "2023-07-14",
+    "framing": "Attributes figures to a report; company did not confirm size."
+   },
+   {
+    "outlet": "PYMNTS",
+    "url": "https://www.pymnts.com/?p=1581396",
+    "headline": "Binance CEO Confirms Job Cuts but Disputes Numbers",
+    "date": "2023-07",
+    "framing": "Shows CEO disputing numbers; headline only."
+   }
+  ],
+  "framing_gap": "News led by an anonymous-source WSJ leak with large numbers; company response was a spokesperson 'talent density' line and CEO 'still hiring' pushback (per search snippets, unverified).",
+  "fetch_log": "theblock 403, coindesk 429 blocked; no company text exists; coverage from search results only."
+ },
+ {
+  "company": "eBay",
+  "event_date": "2024-01-23",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://entrepreneur.com/business-news/read-ebay-ceo-jamie-iannones-memo-to-staff-about-layoffs/468750",
+  "reproduction_path": "data/sources/ebay__2024-01/reproduction.txt",
+  "opening_line": "We are on a path to building a stronger eBay for the future — one that is growing, and resilient in the face of any challenge.",
+  "key_quotes": [
+   "our overall headcount and expenses have outpaced the growth of our business",
+   "reduce our current workforce by approximately 1,000 roles or an estimated 9% of full-time employees",
+   "We’re committed to treating everyone with respect and empathy through this transition"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reduce our current workforce",
+   "roles have been eliminated",
+   "organizational changes",
+   "say goodbye to people"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "efficiency",
+   "macro",
+   "overhiring"
+  ],
+  "public_primary_text": true,
+  "notice_style": "same_day",
+  "headcount_cut": 1000,
+  "pct_workforce": 9.0,
+  "news_coverage": [
+   {
+    "outlet": "Entrepreneur (via Business Insider)",
+    "url": "https://entrepreneur.com/business-news/read-ebay-ceo-jamie-iannones-memo-to-staff-about-layoffs/468750",
+    "headline": "Read eBay CEO Jamie Iannone's Memo To Staff About Layoffs",
+    "date": "2024-01-23",
+    "framing": "Reprints full memo; notes memo shared on company site; places cuts in wave of tech layoffs."
+   },
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/ebay-is-laying-off-9-percent-of-its-workforce-035136287.html",
+    "headline": "eBay is laying off 9 percent of its workforce",
+    "date": "2024-01-23",
+    "framing": "Headline frames as 9% cut; surfaced in search, not read."
+   },
+   {
+    "outlet": "ABC7",
+    "url": "https://abc7.com/ebay-employees-laid-off-1-000-roles-cut/14355503",
+    "headline": "eBay laying off 1,000 employees",
+    "date": "2024-01-23",
+    "framing": "Local-news summary of the cut; not read in full."
+   },
+   {
+    "outlet": "Free Press Journal",
+    "url": "https://www.freepressjournal.in/tech/ebay-to-layoff-about-1000-employees-ceo-wants-to-shift-money-to-faster-growing-areas",
+    "headline": "eBay to layoff about 1,000 employees, CEO wants to shift money to faster-growing areas",
+    "date": "2024-01-24",
+    "framing": "Adds reallocation-to-growth framing; snippet only."
+   }
+  ],
+  "framing_gap": "Memo blames own headcount outpacing growth (alongside macro); coverage largely repeats this, one outlet adds a reallocation-to-growth angle.",
+  "fetch_log": "Entrepreneur reprint of memo direct OK (full text); ebayinc.com newsroom not memo-bearing; memo text is eBay-site-published per Entrepreneur."
+ },
+ {
+  "company": "Northvolt",
+  "event_date": "2024-09-23",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.just-auto.com/news/northvolt-restructures-in-sweden",
+  "reproduction_path": "data/sources/northvolt__2024-09/reproduction.txt",
+  "opening_line": null,
+  "key_quotes": [
+   "We now need to focus all energy and investments into our core business.",
+   "the decisions we’re taking today, however tough, are required for Northvolt’s future."
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "redundancy",
+   "restructuring",
+   "revised scope of operations"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "macro",
+   "strategic_pivot",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "notice_style": "advance_notice",
+  "headcount_cut": 1600,
+  "news_coverage": [
+   {
+    "outlet": "Irish Times",
+    "url": "https://www.irishtimes.com/business/2024/09/23/northvolt-to-cut-more-than-20-of-jobs-in-battle-for-survival",
+    "headline": "Northvolt to cut more than 20% of jobs in battle for survival",
+    "date": "2024-09-23",
+    "framing": "'Battle for survival' framing stresses financial distress beyond company's core-business refocus."
+   },
+   {
+    "outlet": "CNBC (via NBC LA)",
+    "url": "https://www.nbclosangeles.com/news/business/money-report/battery-giant-northvolt-to-cut-25-of-workforce-in-sweden-as-part-of-a-major-cost-cutting-drive/3517560/",
+    "headline": "Battery giant Northvolt to cut 25% of workforce in Sweden as part of major cost-cutting drive",
+    "date": "2024-09-23",
+    "framing": "Cost-cutting drive framing; page blocked, headline from search."
+   },
+   {
+    "outlet": "North Sweden Business",
+    "url": "https://northswedenbusiness.com/news/2024/september/northvolt-lays-off-1-600-employees/",
+    "headline": "Northvolt lays off 1,600 employees",
+    "date": "2024-09",
+    "framing": "Regional lens on Skelleftea impact."
+   },
+   {
+    "outlet": "Just Auto",
+    "url": "https://www.just-auto.com/news/northvolt-restructures-in-sweden",
+    "headline": "Northvolt restructures in Sweden",
+    "date": "2024-09-23",
+    "framing": "Reproduces company statement and CEO quotes largely verbatim."
+   }
+  ],
+  "framing_gap": "Company frames it as focus on core ramp-up amid industry headwinds; the press frames it as a survival move with financial distress.",
+  "fetch_log": "northvolt.com press release not located (articles page lacked it); Just Auto reproduction OK; CNBC/NBC page 403 (headline from search only)."
+ },
+ {
+  "company": "Procter & Gamble",
+  "event_date": "2025-06-05",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.fox19.com/2025/06/05/procter-gamble-cut-7000-jobs-over-two-years",
+  "reproduction_path": "data/sources/procter-gamble__2025-06/reproduction.txt",
+  "opening_line": null,
+  "key_quotes": [
+   "As always, employee separations will be managed with support and respect, and in line with our principles and values and local laws."
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "employee separations",
+   "restructuring plan"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "cost_cutting"
+  ],
+  "notice_style": "unknown",
+  "news_coverage": [
+   {
+    "outlet": "Fox 19 (WXIX)",
+    "url": "https://www.fox19.com/2025/06/05/procter-gamble-cut-7000-jobs-over-two-years",
+    "headline": "Procter & Gamble to cut 7,000 jobs over two years",
+    "date": "2025-06-05",
+    "framing": "Quotes company presentation; adds local-official comment on P&G's reputation."
+   },
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/markets/procter-gamble-slashing-up-7000-jobs-amid-restructuring-effort",
+    "headline": "Procter & Gamble slashing up to 7,000 jobs amid restructuring effort",
+    "date": "2025-06-05",
+    "framing": "Restructuring framing; search snippet only."
+   },
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/procter-gamble-layoffs-7000-jobs-affected-corporate-hq/492823",
+    "headline": "P&G layoffs: 7,000 jobs affected",
+    "date": "2025-06",
+    "framing": "Focuses on corporate HQ roles; snippet only."
+   },
+   {
+    "outlet": "MediaPost",
+    "url": "https://www.mediapost.com/publications/article/406440/pg-to-slash-7000-jobs-as-it-grapples-with-trade.html",
+    "headline": "P&G To Slash 7,000 Jobs As It Grapples With Trade Turmoil, Shaky Consumers",
+    "date": "2025-06",
+    "framing": "Adds tariff and weak-consumer causes not in company's growth-plan framing."
+   }
+  ],
+  "framing_gap": "Company presented a growth/restructuring plan with no named cause; outlets add tariffs and weak consumer demand as drivers.",
+  "fetch_log": "P&G investor site not fetched (404 on guessed URL); Fox19 reproduction OK with quote from presentation."
+ },
+ {
+  "company": "General Motors",
+  "event_date": "2025-10-22",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.foxbusiness.com/lifestyle/gm-lays-off-over-1700-workers-indefinitely-ev-demand-slows",
+  "reproduction_path": "data/sources/general-motors__2025-10/reproduction.txt",
+  "event_date_corrected": "2025-10-29",
+  "opening_line": null,
+  "key_quotes": [
+   "GM remains committed to our U.S. manufacturing footprint"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "scaling back production",
+   "realigning electric vehicle capacity",
+   "laid off indefinitely"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "regulatory",
+   "strategic_pivot",
+   "revenue_decline"
+  ],
+  "notice_style": "unknown",
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/lifestyle/gm-lays-off-over-1700-workers-indefinitely-ev-demand-slows",
+    "headline": "GM lays off over 1,700 workers indefinitely as EV demand slows",
+    "date": "2025-10-29",
+    "framing": "Carries GM statement stressing US manufacturing commitment; ties cuts to $1.6B charge."
+   },
+   {
+    "outlet": "Carscoops",
+    "url": "https://www.carscoops.com/?p=3311437",
+    "headline": "GM layoffs EV",
+    "date": "2025-10",
+    "framing": "Snippet only."
+   },
+   {
+    "outlet": "Crain's Detroit",
+    "url": "https://prod.crainsdetroit.com/node/930391",
+    "headline": "GM to lay off 1,200 workers building EVs in Detroit as demand slows",
+    "date": "2025-10",
+    "framing": "Local framing around Factory Zero shift cut."
+   },
+   {
+    "outlet": "EVXL",
+    "url": "https://evxl.co/2025/10/29/gm-lays-off-3300-ev-workers",
+    "headline": "GM Lays Off 3,300 EV Workers As Battery Plants Idle Following Tax Credit Expiration",
+    "date": "2025-10-29",
+    "framing": "Links cuts to expiry of EV tax credit."
+   }
+  ],
+  "framing_gap": "GM cites slower EV adoption and regulatory environment while stressing commitment to US manufacturing; outlets add EV tax-credit expiry and the $1.6B charge.",
+  "fetch_log": "Fox Business direct OK; date corrected to 2025-10-29 (Wednesday per Fox); no Barra quote verified, so none recorded."
+ },
+ {
+  "company": "McKinsey",
+  "event_date": "2025-12-01",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "news_coverage": [
+   {
+    "outlet": "Bloomberg Law (Bloomberg)",
+    "url": "https://news.bloomberglaw.com/daily-labor-report/mckinsey-bosses-plot-thousands-of-job-cuts-with-fees-under-fire",
+    "headline": "McKinsey Bosses Plot Thousands of Job Cuts With Fees Under Fire",
+    "date": "2025-12",
+    "framing": "Leak-based: leaders 'discussed with managers' ~10% non-client-facing cuts; cites flat fees and AI."
+   },
+   {
+    "outlet": "Computing",
+    "url": "https://www.computing.co.uk/news/2025/ai/mckinsey-considers-thousands-of-job-cuts-as-ai-reshapes-consultancy-work",
+    "headline": "McKinsey considers thousands of job cuts as AI reshapes consultancy work",
+    "date": "2025-12",
+    "framing": "Adds AI-reshaping angle."
+   },
+   {
+    "outlet": "Insurance Journal",
+    "url": "https://www.insurancejournal.com/news/national/2025/12/16/851200.htm",
+    "headline": "McKinsey job cuts report",
+    "date": "2025-12-16",
+    "framing": "Syndicated Bloomberg-style summary; snippet only."
+   }
+  ],
+  "framing_gap": "No formal company announcement found; coverage is a leak of 'considered' cuts, with outlets adding AI and fee-pressure framing.",
+  "fetch_log": "Bloomberg Law direct OK (excerpt); no company statement or memo found; channel unverified."
+ },
+ {
+  "company": "Airbnb",
+  "event_date": "2020-05-05",
+  "company_text_path": "data/sources/airbnb__2020-05/company.txt",
+  "company_text_url": "https://news.airbnb.com/a-message-from-co-founder-and-ceo-brian-chesky/",
+  "public_primary_text": true,
+  "opening_line": "This is my seventh time talking to you from my house.",
+  "key_quotes": [
+   "Today, I must confirm that we are reducing the size of the Airbnb workforce.",
+   "I am truly sorry. Please know this is not your fault.",
+   "nearly 1,900 teammates will have to leave Airbnb, comprising around 25% of our company"
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "reducing the size of the Airbnb workforce",
+   "part with teammates",
+   "reductions"
+  ],
+  "severance": "US: 14 weeks base pay plus 1 week per year (rounded); equity cliff dropped, May 25 vesting; 12 months COBRA health insurance; 4 months RiseSmart; keep laptops; alumni directory",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "covid",
+   "revenue_decline",
+   "strategic_pivot"
+  ],
+  "notice_style": "same_day",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2020-05-05/airbnb-is-cutting-25-of-staff-amid-global-travel-slump",
+    "headline": "Airbnb Is Cutting 25% of Staff Amid Global Travel Slump",
+    "date": "2020-05-05",
+    "framing": "Pandemic travel-slump framing; revenue to be half of 2019."
+   },
+   {
+    "outlet": "Josh Bernoff blog",
+    "url": "https://bernoff.com/blog/brian-chesky-lays-off-1900-airbnb-staff-like-an-actual-human-being",
+    "headline": "Brian Chesky lays off 1,900 Airbnb staff like an actual human being",
+    "date": "2020-05",
+    "framing": "Praises memo as compassionate, clear on why and how."
+   },
+   {
+    "outlet": "Commercial Observer",
+    "url": "https://commercialobserver.com/2020/05/airbnb-lays-off-1900-workers/",
+    "headline": "Airbnb Lays Off 1,900 Workers",
+    "date": "2020-05-05",
+    "framing": "Straight report of 25% cut."
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/2020/05/05/airbnb-lay-off-1900-staff-members-amid-covid-19-pandemic/",
+    "headline": "Airbnb lay off 1,900 staff members amid COVID-19 pandemic",
+    "date": "2020-05-05",
+    "framing": "Pandemic framing; adds business refocus."
+   }
+  ],
+  "framing_gap": "Mostly aligned with the company's COVID-driven framing; commentators single out the memo's apology and transparency.",
+  "fetch_log": "Airbnb newsroom page found direct (news.airbnb.com); airbnb.com/d/ceoemail only homepage; Wayback not needed.",
+  "reproduction_url": null
+ },
+ {
+  "company": "Twitter/X",
+  "event_date": "2022-11-03",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://fortune.com/2022/11/04/twitter-layoff-memo-elon-musk",
+  "reproduction_path": "data/sources/twitter-x__2022-11/reproduction.txt",
+  "opening_line": "In an effort to place Twitter on a healthy path, we will go through the difficult process of reducing our global workforce on Friday.",
+  "key_quotes": [
+   "this action is unfortunately necessary to ensure the company’s success moving forward",
+   "our offices will be temporarily closed and all badge access will be suspended"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reducing our global workforce",
+   "impacted individuals"
+  ],
+  "severance": null,
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "other"
+  ],
+  "notice_style": "locked_out_first",
+  "news_coverage": [
+   {
+    "outlet": "Fortune (Bloomberg)",
+    "url": "https://fortune.com/2022/11/04/twitter-layoff-memo-elon-musk",
+    "headline": "Here's the memo that Elon Musk's Twitter sent out to the entire staff about massive layoffs",
+    "date": "2022-11-04",
+    "framing": "Reprints memo obtained by Bloomberg; contrasts with owner's cost-cutting plan to halve staff."
+   }
+  ],
+  "framing_gap": "Memo is unsigned and process-only (email timing, badge access); press supplies the scale (half of staff) and Musk's role, which the memo omits.",
+  "fetch_log": "Fortune/Bloomberg memo reprint direct OK; no company-published copy; search budget exhausted, only one outlet."
+ },
+ {
+  "company": "Microsoft",
+  "event_date": "2023-01-18",
+  "company_text_path": "data/sources/microsoft__2023-01/company.txt",
+  "company_text_url": "https://blogs.microsoft.com/blog/2023/01/18/subject-focusing-on-our-short-and-long-term-opportunity/",
+  "public_primary_text": true,
+  "opening_line": "We’re living through times of significant change, and as I meet with customers and partners, a few things are clear.",
+  "key_quotes": [
+   "we will align our cost structure with our revenue and where we see customer demand",
+   "we will treat our people with dignity and respect, and act transparently",
+   "above-market severance pay"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reduction of our overall workforce",
+   "eliminating roles",
+   "divesting"
+  ],
+  "severance": "Above-market severance, 6 months healthcare, 6 months continued stock vesting, career transition services, 60 days' notice (US)",
+  "ai_framing": "future_context",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "strategic_pivot",
+   "efficiency"
+  ],
+  "notice_style": "advance_notice",
+  "news_coverage": [],
+  "framing_gap": "No independent coverage retrieved; the primary text pairs 'dignity and respect' language with a $1.2B charge and no apology.",
+  "fetch_log": "Primary blog direct OK (full text); $1.2B Q2 charge per blog; no news outlets collected (search budget exhausted).",
+  "reproduction_url": null
+ },
+ {
+  "company": "BuzzFeed",
+  "event_date": "2023-04-20",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cbsnews.com/news/buzzfeed-news-shutting-down-job-cuts",
+  "reproduction_path": "data/sources/buzzfeed__2023-04/reproduction.txt",
+  "opening_line": "I am writing to announce some difficult news.",
+  "key_quotes": [
+   "I could have managed these changes better as the CEO of this company",
+   "I regret that I didn't hold the company to higher standards for profitability",
+   "No jobs are being replaced by AI"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "euphemisms": [
+   "reducing our workforce",
+   "headcount reductions",
+   "cost reduction plans"
+  ],
+  "severance": null,
+  "ai_framing": "not about AI",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting",
+   "merger_integration"
+  ],
+  "notice_style": "same_day",
+  "news_coverage": [
+   {
+    "outlet": "CBS News",
+    "url": "https://www.cbsnews.com/news/buzzfeed-news-shutting-down-job-cuts",
+    "headline": "BuzzFeed News shutting down as parent company slashes 15% of jobs",
+    "date": "2023-04-20",
+    "framing": "Publishes memo in full; foregrounds company denial that AI replaced jobs."
+   }
+  ],
+  "framing_gap": "CBS leads with the News closure and the AI denial; memo itself foregrounds CEO self-blame over integration and News overinvestment.",
+  "fetch_log": "CBS reprint direct OK (memo in full); 'No jobs are being replaced by AI' is a company statement to CBS, not in memo; mentions_ai true because memo cites AI sales enhancements; one outlet only."
+ },
+ {
+  "company": "Microsoft Gaming (Xbox/Activision Blizzard/ZeniMax)",
+  "event_date": "2024-01-25",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://gameinformer.com/news/2024/01/25/microsoft-is-laying-off-1900-employees-across-xbox-activision-blizzard-and-zenimax",
+  "reproduction_path": "data/sources/microsoft-gaming__2024-01/reproduction.txt",
+  "opening_line": "It's been a little over three months since the Activision, Blizzard, and King teams joined Microsoft.",
+  "key_quotes": [
+   "made the painful decision to reduce the size of our gaming workforce by approximately 1900 roles",
+   "We will provide our full support to those who are impacted during the transition, including severance benefits informed by local employment laws."
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reduce the size of our gaming workforce",
+   "roles impacted",
+   "areas of overlap"
+  ],
+  "severance": "Severance benefits informed by local employment laws",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "merger_integration",
+   "cost_cutting",
+   "strategic_pivot"
+  ],
+  "public_primary_text": false,
+  "notice_style": "same_day",
+  "news_coverage": [
+   {
+    "outlet": "Game Informer",
+    "url": "https://gameinformer.com/news/2024/01/25/microsoft-is-laying-off-1900-employees-across-xbox-activision-blizzard-and-zenimax",
+    "headline": "Microsoft Is Laying Off 1900 Employees Across Xbox, Activision Blizzard, And ZeniMax",
+    "date": "2024-01-25",
+    "framing": "Reprints Spencer and Booty memos; adds Blizzard leadership exits and cancelled game."
+   }
+  ],
+  "framing_gap": "Memo stresses sustainable cost structure and 'painful decision'; outlet adds Blizzard leadership departures and project cancellation context.",
+  "fetch_log": "Game Informer direct OK (full Spencer memo from IGN plus Booty memo); one outlet only."
+ },
+ {
+  "company": "Dropbox",
+  "event_date": "2024-10-30",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.entrepreneur.com/business-news/dropbox-is-laying-off-more-than-500-employees/482173",
+  "reproduction_path": "data/sources/dropbox__2024-10/reproduction.txt",
+  "opening_line": null,
+  "key_quotes": [
+   "I take full responsibility for this decision and the circumstances that led to it, and I’m truly sorry to those impacted",
+   "This market is moving fast, and investors are pouring hundreds of millions of dollars into this space"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reduce our global workforce",
+   "impacted"
+  ],
+  "severance": "16 weeks plus 1 week per year of service (per news summary)",
+  "ai_framing": "future_context",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "overhiring",
+   "flatten_management",
+   "strategic_pivot",
+   "revenue_decline"
+  ],
+  "public_primary_text": true,
+  "notice_style": "same_day",
+  "headcount_cut": 528,
+  "pct_workforce": 20.0,
+  "news_coverage": [
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/dropbox-is-laying-off-more-than-500-employees/482173",
+    "headline": "Dropbox Is Laying Off More Than 500 Employees",
+    "date": "2024-10-30",
+    "framing": "Leads with CEO's 'full responsibility' and 'truly sorry' lines."
+   },
+   {
+    "outlet": "Gizmodo",
+    "url": "https://gizmodo.com/dropbox-ceo-takes-full-accountability-as-he-fires-500-people-2000519853",
+    "headline": "Dropbox CEO takes full accountability as he fires 500 people",
+    "date": "2024-10-30",
+    "framing": "Headline frames accountability; snippet/unread detail."
+   },
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/2024/10/31/dropbox_layoffs/",
+    "headline": "Dropbox to shed another 500 staff, CEO takes 'full responsibility'",
+    "date": "2024-10-31",
+    "framing": "Puts accountability in scare quotes; notes second round of cuts."
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://www.fortune.com/2024/10/31/dropbox-lays-off-20-of-workforce",
+    "headline": "Dropbox lays off 20% of workforce",
+    "date": "2024-10-31",
+    "framing": "Straight report of 20% cut."
+   }
+  ],
+  "framing_gap": "Headlines amplify the CEO's accountability language; sceptical outlets (Register) place it in quotes and note this is a repeat round.",
+  "fetch_log": "Dropbox 2024 blog post not located (2023 post found at blog.dropbox.com but different round); Entrepreneur excerpts only; AI link inferred from 'this space' context and search snippet on Dash, hence medium confidence."
+ },
+ {
+  "company": "Pinterest",
+  "event_date": "2026-01-27",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "key_quotes": [
+   "reallocating resources",
+   "AI-powered products and capabilities"
+  ],
+  "opening_line": null,
+  "takes_responsibility": null,
+  "apology": null,
+  "euphemisms": [
+   "reallocating resources",
+   "restructuring"
+  ],
+  "severance": null,
+  "ai_framing": "reallocation",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring",
+   "other"
+  ],
+  "notice_style": "unknown",
+  "news_coverage": [
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/ai/pinterest-is-conducting-a-massive-round-of-layoffs-to-prioritize-ai-powered-products-and-capabilities-163440004.html",
+    "headline": "Pinterest is conducting a massive round of layoffs to prioritize 'AI-powered products and capabilities'",
+    "date": "2026-01-27",
+    "framing": "Sceptical tone; pairs AI framing with strong earnings and mentions AI-washing."
+   },
+   {
+    "outlet": "eWeek",
+    "url": "https://www.eweek.com/news/pinterest-layoffs-ai-2026/",
+    "headline": "Pinterest Layoffs Driven by AI Restructuring",
+    "date": "2026-01",
+    "framing": "Cites CNBC; stresses stock drop and 9% share decline, charges $35-45M."
+   },
+   {
+    "outlet": "LeadDev",
+    "url": "https://leaddev.com/ai/pinterest-fires-two-engineers-for-building-layoff-tracking-tool",
+    "headline": "Pinterest fires two engineers for building layoff tracking tool",
+    "date": "2026-02",
+    "framing": "Follow-on controversy about layoff tracking tool."
+   }
+  ],
+  "framing_gap": "Filing language is 'reallocating resources' to AI; Engadget calls it an AI-driven cut and raises AI-washing suspicion despite strong earnings.",
+  "fetch_log": "Pinterest primary/8-K text not fetched (sec.gov excluded); key_quotes are filing fragments as quoted by Engadget/eWeek; Ready's memo not found."
+ }
+]

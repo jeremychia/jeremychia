@@ -1,0 +1,915 @@
+[
+ {
+  "company": "Airbnb",
+  "sector": "consumer_internet",
+  "event_date": "2020-05-05",
+  "headcount_cut": 1900,
+  "pct_workforce": 25.0,
+  "communicator": "ceo",
+  "communicator_name": "Brian Chesky",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "This is my seventh time talking to you from my house.",
+  "key_quotes": [
+   "To those leaving Airbnb, I am truly sorry.",
+   "Employees in the US will receive 14 weeks of base pay, plus one additional week for every year at Airbnb."
+  ],
+  "stated_reasons": [
+   "covid",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "laying off",
+   "leaving Airbnb"
+  ],
+  "severance": "US: 14 weeks base pay + 1 week per year of service, equity, 12 months health insurance (COBRA); non-US at least 14 weeks adjusted locally",
+  "notice_style": "same_day",
+  "ceo_voice": "Personal, emotional, apologetic; long values-led letter.",
+  "sources": [
+   {
+    "url": "https://bernoff.com/blog/brian-chesky-lays-off-1900-airbnb-staff-like-an-actual-human-being",
+    "title": "Brian Chesky lays off 1,900 Airbnb staff like an actual human being",
+    "type": "analysis"
+   },
+   {
+    "url": "https://www.washingtonexaminer.com/?p=590252",
+    "title": "Truly sorry: Airbnb laying off a quarter of its employees",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quotes taken from Bernoff blog extraction of the email (secondary reproduction), not Airbnb's own page (airbnb.com/d/ceoemail fetch returned homepage). 'Responsibility' not explicitly verified so null. Severance from news. Headcount 1,900 of ~7,500."
+ },
+ {
+  "company": "Uber",
+  "sector": "consumer_internet",
+  "event_date": "2020-05-06",
+  "headcount_cut": 3700,
+  "pct_workforce": 14.0,
+  "communicator": "ceo",
+  "communicator_name": "Dara Khosrowshahi",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "the Company is reducing its customer support and recruiting teams by approximately 3,700 full-time employee roles."
+  ],
+  "stated_reasons": [
+   "covid",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reducing teams",
+   "eliminate roles"
+  ],
+  "severance": "~$20M severance and termination costs (8-K); no per-employee terms verified",
+  "notice_style": "same_day",
+  "ceo_voice": "Regretful, corporate (per news paraphrase; email not read).",
+  "sources": [
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278120000325/e20313_uber-8k.htm",
+    "title": "Uber Form 8-K May 2020",
+    "type": "primary"
+   },
+   {
+    "url": "https://fortune.com/2020/05/06/uber-layoffs-coronavirus",
+    "title": "Fortune: Uber layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quote from 8-K (read). Dara email text not read; news (CNN/Bloomberg) says he expressed sorry, so apology=True is from secondary reports. 14% is Bloomberg figure. Second round ~3,000 on 2020-05-18 (Uber Eats/ops, ~25% total) not recorded separately. Uber 2022 (May memo) was a hiring-freeze/'hiring as privilege' memo, not a mass layoff - not recorded."
+ },
+ {
+  "company": "Lyft",
+  "sector": "consumer_internet",
+  "event_date": "2023-04-27",
+  "headcount_cut": 1072,
+  "pct_workforce": 26.0,
+  "communicator": "ceo",
+  "communicator_name": "David Risher",
+  "channel": [
+   "internal_email",
+   "8k_filing",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "profitability",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce workforce",
+   "restructuring"
+  ],
+  "severance": "Est. $41M-$47M severance and benefits costs in Q2 2023; per-employee terms not verified",
+  "notice_style": "pre_leak",
+  "ceo_voice": "Corporate restructuring framing; new CEO.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/04/27/lyft-layoffs-to-affect-26-of-workforce",
+    "title": "Lyft layoffs to affect 26% of workforce",
+    "type": "news"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1759509/000175950923000096/lyft-20230630.htm",
+    "title": "Lyft 10-Q Q2 2023",
+    "type": "primary"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo (sent ~a week earlier, reported April 2023) wording not read; no quotes. Also cut 250 open roles and management layers 8 to 5 (per search summary). Lyft Nov 2022 (Logan Green era, ~13%) not researched."
+ },
+ {
+  "company": "DoorDash",
+  "sector": "consumer_internet",
+  "event_date": "2022-11-30",
+  "headcount_cut": 1250,
+  "pct_workforce": 6.0,
+  "communicator": "ceo",
+  "communicator_name": "Tony Xu",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "This is the most difficult change to DoorDash that I’ve had to announce in our almost 10-year history.",
+  "key_quotes": [
+   "we were not as rigorous as we should have been in managing our team growth.",
+   "Anyone impacted will receive 17 weeks (13 weeks + 1 four-week lump sum severance pay) of compensation"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "cost_cutting",
+   "efficiency"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "difficult change",
+   "impacted"
+  ],
+  "severance": "17 weeks pay (13 + 4-week lump sum), Feb 2023 vest, healthcare through March 2023",
+  "notice_style": "same_day",
+  "ceo_voice": "Plain, accountable, business-like.",
+  "sources": [
+   {
+    "url": "https://about.doordash.com/en-us/news/teamupdate",
+    "title": "DoorDash Team Update (Tony Xu)",
+    "type": "primary"
+   },
+   {
+    "url": "https://www.cnbc.com/2022/11/30/doordash-lays-off-1250-employees.html",
+    "title": "CNBC DoorDash lays off 1,250",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Apology not verified (null). 2024 DoorDash layoffs not researched (not found/recorded). Quote extracted via fetch summarizer."
+ },
+ {
+  "company": "Spotify",
+  "sector": "consumer_internet",
+  "event_date": "2023-12-04",
+  "headcount_cut": 1500,
+  "pct_workforce": 17.0,
+  "communicator": "ceo",
+  "communicator_name": "Daniel Ek",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Over the last two years, we've put significant emphasis on building Spotify into a truly great and sustainable business",
+  "key_quotes": [
+   "Economic growth has slowed dramatically and capital has become more expensive.",
+   "I have made the difficult decision to reduce our total headcount by approximately 17% across the company."
+  ],
+  "stated_reasons": [
+   "macro",
+   "interest_rates",
+   "cost_cutting",
+   "efficiency"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce our total headcount",
+   "right-sized"
+  ],
+  "severance": "Average ~5 months severance (baseline for all, longer for tenure/local law)",
+  "notice_style": "same_day",
+  "ceo_voice": "Measured, first-person, accountable; frames lean as necessity.",
+  "sources": [
+   {
+    "url": "https://www.hypebot.com/spotify-ceo-daniel-eks-layoff-letter-to-staff-full-text/",
+    "title": "Spotify CEO Daniel Ek's layoff letter full text",
+    "type": "news"
+   },
+   {
+    "url": "https://www.entrepreneur.com/business-news/read-spotify-ceos-email-to-employees-announcing-layoffs/466343",
+    "title": "Read Spotify CEO's email",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Opening line as returned truncated by fetch (sentence may continue). Earlier 2023 rounds (Jan 6% ~600; June podcast ~200) not recorded. Apology not verified."
+ },
+ {
+  "company": "Zillow (Zillow Offers wind-down)",
+  "sector": "consumer_internet",
+  "event_date": "2021-11-02",
+  "headcount_cut": null,
+  "pct_workforce": 25.0,
+  "communicator": "earnings_call",
+  "communicator_name": "Rich Barton",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We've determined the unpredictability in forecasting home prices far exceeds what we anticipated"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "wind down",
+   "reduction of Zillow's workforce"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Candid, analytical; blames forecasting unpredictability.",
+  "sources": [
+   {
+    "url": "https://therealdeal.com/2021/11/02/zillow-calls-it-quits-on-ibuying-will-lay-off-25-of-staff",
+    "title": "Zillow calls it quits on ibuying",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quote via news-search summary, not read from primary. Headcount not stated (company base ~6,400 so ~2,000 implied; left null). Internal memo text not found. Zillow Oct 2022 (~300 roles, ~5%, spokesperson statement only) not recorded."
+ },
+ {
+  "company": "Redfin",
+  "sector": "consumer_internet",
+  "event_date": "2022-11-09",
+  "headcount_cut": 862,
+  "pct_workforce": 13.0,
+  "communicator": "ceo",
+  "communicator_name": "Glenn Kelman",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "opening_line": "We’re laying off 862 brilliant, loyal people and also closing RedfinNow.",
+  "key_quotes": [
+   "iBuying is a staggering amount of money and risk for a now-uncertain benefit.",
+   "I’m sorry that we don’t have enough sales to keep paying you."
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "laying off"
+  ],
+  "severance": "10-15 weeks pay by tenure, 3 months healthcare (same as before)",
+  "notice_style": "same_day",
+  "ceo_voice": "Warm, blunt, self-deprecating, human.",
+  "sources": [
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1382821/000138282122000232/articlepublishednovember92.htm",
+    "title": "Redfin 8-K all-hands email on November layoff",
+    "type": "primary"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Additional 218 could be laid off if they decline internal transfer. Combined with April 2022 wave ~27%. Compass not researched."
+ },
+ {
+  "company": "Robinhood",
+  "sector": "fintech_crypto",
+  "event_date": "2022-08-02",
+  "headcount_cut": 780,
+  "pct_workforce": 23.0,
+  "communicator": "ceo",
+  "communicator_name": "Vlad Tenev",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "As CEO, I approved and took responsibility for our ambitious staffing trajectory — this is on me."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce team"
+  ],
+  "severance": "Pay and benefits kept through Oct 1, 2022 plus job-search help (per secondary report)",
+  "notice_style": "same_day",
+  "ceo_voice": "Accountable, direct.",
+  "sources": [
+   {
+    "url": "https://cointelegraph.com/news/this-is-on-me-robinhood-ceo-to-lay-off-23-of-staff-after-q2-loss",
+    "title": "This is on me: Robinhood CEO",
+    "type": "news"
+   },
+   {
+    "url": "https://www.upi.com/Top_News/US/2022/08/02/robinhood-online-brokerage-layoffs-23-cut-costs-pandemic-trading-boom/8261659483972/",
+    "title": "UPI Robinhood cuts 23%",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Blog post not fetched directly (robinhood newsroom URL 404); quote via Cointelegraph. 780 from UPI. Earlier April 2022 9% cut not recorded. Sector arguably fintech_crypto."
+ },
+ {
+  "company": "Snap",
+  "sector": "consumer_internet",
+  "event_date": "2022-08-31",
+  "headcount_cut": 1280,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "Evan Spiegel",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "revenue_decline",
+   "restructuring",
+   "cost_cutting",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring plan",
+   "reduce workforce"
+  ],
+  "severance": "US employees: four months of compensation; overseas per local regulations",
+  "notice_style": "same_day",
+  "ceo_voice": "Strategic, plan-oriented memo.",
+  "sources": [
+   {
+    "url": "https://www.axios.com/2022/08/31/snap-restructuring-layoffs",
+    "title": "Axios: Snap restructuring",
+    "type": "news"
+   },
+   {
+    "url": "https://techcrunch.com/2022/08/31/snap-cuts-20-of-staff-amid-major-restructuring/amp/",
+    "title": "TechCrunch Snap cuts 20%",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Axios fetch blocked (403); memo wording not read, quotes left empty. Headcount: Axios >1,200, other ~1,280. Spiegel memo reportedly cited three priorities (community growth, revenue growth, AR) and ~$500M savings."
+ },
+ {
+  "company": "Snap",
+  "sector": "consumer_internet",
+  "event_date": "2024-02-05",
+  "headcount_cut": 500,
+  "pct_workforce": 10.0,
+  "communicator": "sec_filing",
+  "communicator_name": "Snap Inc. (spokesperson)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "flatten_management",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reorganizing",
+   "reduce hierarchy"
+  ],
+  "severance": "Charges $55M-$75M; terms not verified",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, filing-led; in-person collaboration framing.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/amp/2024/02/05/snap-to-lay-off-10percent-of-global-workforce-around-500-employees.html",
+    "title": "CNBC Snap to lay off 10%",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Counts vary 500-540. Spokesperson reason: 'reduce hierarchy and promote in-person collaboration' (paraphrase, not verified verbatim)."
+ },
+ {
+  "company": "Pinterest",
+  "sector": "consumer_internet",
+  "event_date": "2026-01-27",
+  "headcount_cut": 675,
+  "pct_workforce": 15.0,
+  "communicator": "sec_filing",
+  "communicator_name": "Bill Ready",
+  "channel": [
+   "8k_filing",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "strategic_pivot",
+   "ai_automation",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "reallocating resources"
+  ],
+  "severance": "Pre-tax restructuring charges $35M-$45M; terms not verified",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, AI-pivot framed.",
+  "sources": [
+   {
+    "url": "https://www.engadget.com/ai/pinterest-is-conducting-a-massive-round-of-layoffs-to-prioritize-ai-powered-products-and-capabilities-163440004.html",
+    "title": "Engadget: Pinterest layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "'Just under 15%'; Engadget estimate up to 675 (derived from 4,500 headcount) vs AP ~5,200 base; headcount_cut is an estimate. Filing dated ~Jan 22, news Jan 27. No memo text found. Pinterest 2023 round not researched."
+ },
+ {
+  "company": "Peloton",
+  "sector": "consumer_internet",
+  "event_date": "2022-02-08",
+  "headcount_cut": 2800,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "John Foley",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "covid",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring",
+   "comprehensive restructuring program"
+  ],
+  "severance": "One-year free digital Peloton subscription as part of severance; other terms not verified",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; paired with Foley stepping aside.",
+  "sources": [
+   {
+    "url": "https://www.npr.org/2022/02/08/1079153289/peloton-ceo-layoffs",
+    "title": "NPR Peloton CEO layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "20% of corporate workforce. Memo cited post-COVID demand 'looks different than anticipated' (paraphrase; no verified quote)."
+ },
+ {
+  "company": "Peloton",
+  "sector": "consumer_internet",
+  "event_date": "2022-08-12",
+  "headcount_cut": 780,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Barry McCarthy",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "profitability",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring"
+  ],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "Blunt, financial-survival framing.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2022/10/06/peloton-barry-mccarthy-gives-company-6-months-to-save-itself",
+    "title": "Fortune: McCarthy gives company 6 months",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (August 2022), reported first by Bloomberg; ~800 per sources. Oct 2022 round (~500 jobs) not separately recorded."
+ },
+ {
+  "company": "Peloton",
+  "sector": "consumer_internet",
+  "event_date": "2024-05-02",
+  "headcount_cut": 400,
+  "pct_workforce": 15.0,
+  "communicator": "ceo",
+  "communicator_name": "Barry McCarthy",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "profitability",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "lay off"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; coincided with CEO stepping down.",
+  "sources": [
+   {
+    "url": "https://www.nbcnews.com/business/business-news/peloton-ceo-barry-mccarthy-step-company-lay-15-staff-looks-refinance-d-rcna150359",
+    "title": "NBC Peloton CEO to step down, 15% layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "About 400 jobs/15%; memo cited positive free cash flow aiding debt refinancing."
+ },
+ {
+  "company": "Duolingo",
+  "sector": "consumer_internet",
+  "event_date": "2025-04-28",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Luis von Ahn",
+  "channel": [
+   "internal_email",
+   "all_hands",
+   "linkedin"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "This isn't about replacing Duos with AI.",
+   "We're making a similar call now, and this time the platform shift is AI."
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "euphemisms": [
+   "phase out contractors"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Upbeat, strategic; later softened after backlash.",
+  "sources": [
+   {
+    "url": "https://www.businesstoday.in/tech-today/news/story/duolingo-goes-all-in-on-ai-phases-out-contractors-in-favour-of-automation-474009-2025-04-29",
+    "title": "Duolingo goes all in on AI",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Contractor phase-out, not employee layoff; headcount not stated (10% of contractors cut prior year per press). Quotes from news-search summary of the LinkedIn post; LinkedIn URL not fetchable. ai_framing: company says it is not about replacing employees but AI is the driver."
+ },
+ {
+  "company": "Chegg",
+  "sector": "consumer_internet",
+  "event_date": "2025-10-27",
+  "headcount_cut": 388,
+  "pct_workforce": 45.0,
+  "communicator": "ceo",
+  "communicator_name": "Dan Rosensweig",
+  "channel": [
+   "press_release",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "I remain confident in Chegg's future and will explore every avenue to drive growth and maximize shareholder value."
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "revenue_decline",
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "streamline operations"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Confident, corporate; blames AI and Google traffic.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/technology/chegg-lay-off-45-workforce-ai-google-traffic-shifts-batter-business",
+    "title": "Fox Business: Chegg cuts 45%",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Rosensweig replaced Nathan Schultz as CEO same day; second 2025 round after 22% in May. Quote via search summary."
+ },
+ {
+  "company": "Wayfair",
+  "sector": "consumer_internet",
+  "event_date": "2023-01-20",
+  "headcount_cut": 1750,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Niraj Shah",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "important changes to reshape our business for the future"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "overhiring",
+   "flatten_management",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reshape our business"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, forward-looking.",
+  "sources": [
+   {
+    "url": "https://www.retaildive.com/news/wayfair-lays-off-nearly-two-thousand-employees/640835/",
+    "title": "Retail Dive Wayfair layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "~18% of corporate staff. A later round of 1,650 (13%) attributed to a later Shah email ('I truly regret the impact') - date unclear in search results, not recorded. Fragment quote from search summary."
+ },
+ {
+  "company": "Etsy",
+  "sector": "consumer_internet",
+  "event_date": "2023-12-05",
+  "headcount_cut": 225,
+  "pct_workforce": 11.0,
+  "communicator": "ceo",
+  "communicator_name": "Josh Silverman",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "roles eliminated"
+  ],
+  "severance": "16 weeks base pay plus 1 week per full year",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate.",
+  "sources": [
+   {
+    "url": "https://www.retaildive.com/news/etsy-225-layoffs-workforce-CMO/702528/",
+    "title": "Retail Dive Etsy 225 layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (announced December 2023; effective Jan 1, 2024). Email said GMS 'essentially flat'. CMO departed."
+ },
+ {
+  "company": "eBay",
+  "sector": "consumer_internet",
+  "event_date": "2024-01-23",
+  "headcount_cut": 1000,
+  "pct_workforce": 9.0,
+  "communicator": "ceo",
+  "communicator_name": "Jamie Iannone",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "overhiring",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "better organize our teams for speed"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; asked staff to work from home to give privacy for conversations.",
+  "sources": [
+   {
+    "url": "https://abc7.com/ebay-employees-laid-off-1-000-roles-cut/14355503",
+    "title": "eBay laying off 1,000 employees",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Date approximate. Fragments paraphrased from news, no verbatim quote kept."
+ },
+ {
+  "company": "Instacart (Maplebear)",
+  "sector": "consumer_internet",
+  "event_date": "2024-02-13",
+  "headcount_cut": 250,
+  "pct_workforce": 7.0,
+  "communicator": "ceo",
+  "communicator_name": "Fidji Simo",
+  "channel": [
+   "press_release",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "Today, we made the tough decision to part with approximately 250 of our talented team members."
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "flatten_management",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "part with"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, in shareholder letter.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2024/02/13/instacart-lays-off-250-employees-or-7-of-its-workforce-to-reshape-company/",
+    "title": "TechCrunch Instacart lays off 250",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Announced in Q4 shareholder letter, board approved Feb 9, 2024; charges $19M-$24M. Quote from search summary. No 2022/2023 layoff found."
+ },
+ {
+  "company": "Opendoor",
+  "sector": "consumer_internet",
+  "event_date": "2026-06-10",
+  "headcount_cut": 250,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Kaz Nejatian",
+  "channel": [
+   "public_blog",
+   "x_post"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "ai_automation",
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "wind down India operations"
+  ],
+  "severance": "Severance and transition support (details not verified)",
+  "notice_style": "same_day",
+  "ceo_voice": "Defiant, nationalist-AI framing.",
+  "sources": [
+   {
+    "url": "https://www.ibtimes.co.uk/opendoor-technologies-shuts-down-india-operations-1802071",
+    "title": "Opendoor shuts India operations",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Announced June 10, 2026 per search; third-party site gave 18% of ~1,400 (unverified). Nejatian said not performance-related. Channel inferred. Opendoor 2022 layoffs not found."
+ }
+]

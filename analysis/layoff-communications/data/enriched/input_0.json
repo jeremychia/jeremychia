@@ -1,0 +1,414 @@
+[
+ {
+  "company": "Uber",
+  "event_date": "2020-05-06",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Dara Khosrowshahi",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Quote from 8-K (read). Dara email text not read; news (CNN/Bloomberg) says he expressed sorry, so apology=True is from secondary reports. 14% is Bloomberg figure. Second round ~3,000 on 2020-05-18 (Uber Eats/ops, ~25% total) not recorded separately. Uber 2022 (May memo) was a hiring-freeze/'hiring as privilege' memo, not a mass layoff - not recorded.",
+  "sources": [
+   {
+    "title": "Uber Form 8-K May 2020",
+    "type": "primary",
+    "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278120000325/e20313_uber-8k.htm"
+   },
+   {
+    "title": "Fortune: Uber layoffs",
+    "type": "news",
+    "url": "https://fortune.com/2020/05/06/uber-layoffs-coronavirus"
+   }
+  ]
+ },
+ {
+  "company": "Gemini",
+  "event_date": "2022-07-18",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Cameron Winklevoss",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Second round, ~10%, 'turbulent market conditions' per search summary; text not read. A third round (Benzinga/The Information) reportedly cut headcount to 650-700 by year end - unverified.",
+  "sources": [
+   {
+    "title": "TechCrunch: Gemini second round",
+    "type": "news",
+    "url": "https://techcrunch.com/2022/07/18/crypto-exchange-gemini-executes-second-round-of-layoffs-less-than-two-months-after-axing-10-of-staff"
+   }
+  ]
+ },
+ {
+  "company": "Carvana",
+  "event_date": "2022-11-18",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Ernie Garcia",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Memo obtained by CNBC per secondary; text not read. Date inferred (Friday memo, Nov 2022). Garcia statement is 'we failed' (collective responsibility), recorded as takes_responsibility true tentatively.",
+  "sources": [
+   {
+    "title": "Fox Business",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/markets/carvana-lay-off-12-percent-workforce-expansion-deal-stock"
+   },
+   {
+    "title": "CBT News",
+    "type": "news",
+    "url": "https://www.cbtnews.com/carvana-cuts-2500-jobs-after-posting-net-loss-of-506m/"
+   }
+  ]
+ },
+ {
+  "company": "Swiggy",
+  "event_date": "2023-01-20",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Sriharsha Majety",
+  "channel": [
+   "internal_email",
+   "all_hands"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes read in FPJ. Overhiring 'poor judgement' line reported by Business Standard/Onmanorama (seen only in search summary, not recorded as quote). Meat marketplace shut. Town hall 20 Jan plus email.",
+  "sources": [
+   {
+    "title": "Free Press Journal",
+    "type": "news",
+    "url": "https://www.freepressjournal.in/business/swiggy-lays-off-380-employees-ahead-of-ipo"
+   }
+  ]
+ },
+ {
+  "company": "Ericsson",
+  "event_date": "2023-02-24",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Borje Ekholm",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Quote is Ericsson statement to Light Reading, not the memo. Ekholm memo (via Reuters) not read; Reuters-reported fragments (headcount reductions already communicated in several countries) unverified here. Pre-announced cost cut SEK 9bn at Capital Markets Day.",
+  "sources": [
+   {
+    "title": "Ericsson confirms 8,500 job cuts",
+    "type": "news",
+    "url": "https://www.lightreading.com/5g-and-beyond/ericsson-confirms-8500-job-cuts-in-latest-reorg/d/d-id/783441"
+   }
+  ]
+ },
+ {
+  "company": "Etsy",
+  "event_date": "2023-12-05",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Josh Silverman",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (announced December 2023; effective Jan 1, 2024). Email said GMS 'essentially flat'. CMO departed.",
+  "sources": [
+   {
+    "title": "Retail Dive Etsy 225 layoffs",
+    "type": "news",
+    "url": "https://www.retaildive.com/news/etsy-225-layoffs-workforce-CMO/702528/"
+   }
+  ]
+ },
+ {
+  "company": "Instacart (Maplebear)",
+  "event_date": "2024-02-13",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Fidji Simo",
+  "channel": [
+   "press_release",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Announced in Q4 shareholder letter, board approved Feb 9, 2024; charges $19M-$24M. Quote from search summary. No 2022/2023 layoff found.",
+  "sources": [
+   {
+    "title": "TechCrunch Instacart lays off 250",
+    "type": "news",
+    "url": "https://techcrunch.com/2024/02/13/instacart-lays-off-250-employees-or-7-of-its-workforce-to-reshape-company/"
+   }
+  ]
+ },
+ {
+  "company": "CNN (Warner Bros. Discovery)",
+  "event_date": "2025-01-23",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Mark Thompson",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Opening is truncated excerpt. $70M digital investment; $1B digital revenue goal by 2030. Pay-TV decline cited. Full memo not read.",
+  "sources": [
+   {
+    "title": "CNN hit with significant layoffs",
+    "type": "news",
+    "url": "https://www.spokesman.com/stories/2025/jan/23/cnn-hit-with-significant-layoffs-as-network-sets-a"
+   }
+  ]
+ },
+ {
+  "company": "Atlassian",
+  "event_date": "2025-07-30",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Mike Cannon-Brookes",
+  "channel": [
+   "zoom",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "No verbatim video transcript found, so quotes empty. Video title verified from news; 150 customer-support staff; email ~15 minutes after video and laptops blocked per search summaries. Severance 'reportedly'.",
+  "sources": [
+   {
+    "title": "Cyber Daily",
+    "type": "news",
+    "url": "https://www.cyberdaily.au/digital-transformation/12441-atlassian-terminates-150-staff-with-pre-recorded-video-will-be-largely-replaced-by-ai"
+   },
+   {
+    "title": "TechSpot",
+    "type": "news",
+    "url": "https://www.techspot.com/news/108912-fired-video-atlassian-terminates-150-workers-using-pre.html"
+   }
+  ]
+ },
+ {
+  "company": "Chegg",
+  "event_date": "2025-10-27",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Dan Rosensweig",
+  "channel": [
+   "press_release",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Rosensweig replaced Nathan Schultz as CEO same day; second 2025 round after 22% in May. Quote via search summary.",
+  "sources": [
+   {
+    "title": "Fox Business: Chegg cuts 45%",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/technology/chegg-lay-off-45-workforce-ai-google-traffic-shifts-batter-business"
+   }
+  ]
+ },
+ {
+  "company": "Oracle",
+  "event_date": "2026-03-31",
+  "tier": "B",
+  "communicator": "media_leak",
+  "communicator_name": "None (no CEO statement found)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "From search snippets only, no page read. Overnight termination emails 31 Mar 2026; second round mid-Sept; headcount ~162k to ~141k (FY26) and Bloomberg 21,000 are press/10-K derived. Estimates up to 30,000 are unconfirmed. Restructuring plan in 10-Q ($982M then $2.8B). AI data-centre capex cited by press as driver.",
+  "sources": [
+   {
+    "title": "RTE/CNBC",
+    "type": "news",
+    "url": "https://www.rte.ie/news/business/2026/0401/1566208-oracle-begins-layoffs-affecting-thousands-cnbc-reports"
+   },
+   {
+    "title": "Business Today",
+    "type": "news",
+    "url": "https://www.businesstoday.in/technology/news/story/oracle-lays-off-thousands-globally-india-cuts-may-reach-12000-523419-2026-03-31"
+   }
+  ]
+ },
+ {
+  "company": "Gemini",
+  "event_date": "2022-06-02",
+  "tier": "A",
+  "communicator": "founder",
+  "communicator_name": "Cameron and Tyler Winklevoss",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Quote from Bloomberg via search summary; CNBC page had only summary. Opening line not verified. Headcount not stated (company ~1,100 at start of 2022, so ~100).",
+  "sources": [
+   {
+    "title": "CNBC: Gemini cutting 10%",
+    "type": "news",
+    "url": "https://www.cnbc.com/amp/2022/06/02/winklevoss-twins-gemini-citting-10percent-says-crypto-winter-is-here.html"
+   },
+   {
+    "title": "Bloomberg via BNN",
+    "type": "news",
+    "url": "https://www.bnnbloomberg.ca/winklevoss-twins-gemini-slashes-staff-10-on-crypto-slump-1.1773654"
+   }
+  ]
+ },
+ {
+  "company": "Redfin",
+  "event_date": "2022-11-09",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Glenn Kelman",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "high",
+  "notes": "Additional 218 could be laid off if they decline internal transfer. Combined with April 2022 wave ~27%. Compass not researched.",
+  "sources": [
+   {
+    "title": "Redfin 8-K all-hands email on November layoff",
+    "type": "primary",
+    "url": "https://www.sec.gov/Archives/edgar/data/1382821/000138282122000232/articlepublishednovember92.htm"
+   }
+  ]
+ },
+ {
+  "company": "Zoom",
+  "event_date": "2023-02-07",
+  "tier": "A",
+  "communicator": "founder",
+  "communicator_name": "Eric Yuan",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Primary blog fetch failed (404/redirect). Quotes taken from search-result snippets quoting the message (second quote is a trimmed fragment of a longer sentence). Pay: 98% salary cut and no FY23 bonus; resulting salary conflicts ($10,000 per MarketBeat vs ~$6,000 per Bloomberg via Channelweb). Opening line not verified. Exec team also took 20% salary cuts per wider reporting (not verified here).",
+  "sources": [
+   {
+    "title": "Zoom blog (fetch returned 404)",
+    "type": "primary",
+    "url": "https://www.zoom.com/en/blog/a-message-from-eric-yuan-to-zoom-employees/"
+   },
+   {
+    "title": "ThePrint",
+    "type": "news",
+    "url": "https://theprint.in/tech/zoom-to-lay-off-around-1300-employees-ceo-eric-yuan-taking-98-per-cent-pay-cut/1360608"
+   },
+   {
+    "title": "MarketBeat",
+    "type": "news",
+    "url": "https://www.marketbeat.com/articles/zoom-ceo-eric-yuan-cuts-his-own-pay-by-98-amid-layoffs-2023-02-08/"
+   }
+  ]
+ },
+ {
+  "company": "Epic Games",
+  "event_date": "2023-09-28",
+  "tier": "A",
+  "communicator": "founder",
+  "communicator_name": "Tim Sweeney",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Memo posted on epicgames.com (403 on fetch). Only headline quote verified; opening line not verified. About 250 additional staff left via Bandcamp/SuperAwesome divestitures. Date approximate (Sept 28 vs 29).",
+  "sources": [
+   {
+    "title": "Epic Games is laying off more than 800 people",
+    "type": "news",
+    "url": "https://www.pcgamer.com/epic-games-is-laying-off-more-than-800-people"
+   },
+   {
+    "title": "Epic lays off 830",
+    "type": "news",
+    "url": "https://gamesradar.com/fortnite-and-unreal-engine-developer-epic-reportedly-laying-off-900-people"
+   }
+  ]
+ },
+ {
+  "company": "Tesla",
+  "event_date": "2024-04-15",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Elon Musk",
+  "channel": [
+   "internal_email",
+   "media_leak"
+  ],
+  "confidence": "medium",
+  "notes": "Email first published by Electrek; page not read. Quotes via Dice summariser. 'There is nothing I hate more, but it must be done' reported by several outlets in search (not read). 14,000 is estimate from 140,473 staff, not stated by Musk. Opening line not retrieved.",
+  "sources": [
+   {
+    "title": "Dice on Musk email",
+    "type": "news",
+    "url": "https://www.dice.com/career-advice/elon-musk-email-breaks-down-proposed-tesla-layoffs"
+   }
+  ]
+ },
+ {
+  "company": "Microsoft",
+  "event_date": "2025-07-02",
+  "tier": "A",
+  "communicator": "exec_other",
+  "communicator_name": "Satya Nadella (follow-up memo 2025-07-24); initial notice via company statement",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Record is the 2 July ~9,000 cut (headcount from news, not read in primary); the CEO text is the 24 July memo, which is a post-hoc explanation, not the announcement. Opening/quotes via fetch summariser; phrase 'enigma of success in an industry that has no franchise value' reported by Fortune. Microsoft also cut ~6,000 in May 2025 (not recorded separately). Nadella said headcount 'relatively unchanged'.",
+  "sources": [
+   {
+    "title": "Recommitting to our why, what, and how",
+    "type": "primary",
+    "url": "https://blogs.microsoft.com/blog/2025/07/24/recommitting-to-our-why-what-and-how/"
+   },
+   {
+    "title": "Fortune on Nadella memo",
+    "type": "news",
+    "url": "https://fortune.com/2025/07/24/satya-nadella-memo-microsoft-layoffs-enigma-of-success-artificial-intelligence"
+   }
+  ]
+ },
+ {
+  "company": "Atlassian",
+  "event_date": "2026-03-11",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Mike Cannon-Brookes",
+  "channel": [
+   "public_blog",
+   "zoom",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes from news reports of blog/video; first two read in Cyber Daily, third from search snippet only. Date conflict: 11 Mar (SMH/others) vs 12 Mar (Cyber Daily, Australian time). 480 Australia-based (30%). Email ~20 min after video. Severance not found. Over 900 cuts in R&D per analysis.",
+  "sources": [
+   {
+    "title": "Cyber Daily",
+    "type": "news",
+    "url": "https://www.cyberdaily.au/digital-transformation/13318-atlassian-says-its-ai-growth-means-more-staff-have-to-go-will-invest-in-ai-with-the-savings"
+   },
+   {
+    "title": "ACS Information Age",
+    "type": "news",
+    "url": "https://ia.acs.org.au/article/2026/atlassian-cuts-1-600-jobs-to-invest-more-in-ai.html"
+   },
+   {
+    "title": "Business Insider via AOL (search snippet only)",
+    "type": "news",
+    "url": "https://www.aol.com/news/atlassian-says-its-laying-off-10-234245128.html"
+   }
+  ]
+ }
+]

@@ -1,0 +1,781 @@
+[
+ {
+  "company": "Carvana",
+  "event_date": "2022-05-18",
+  "public_primary_text": false,
+  "key_quotes": [
+   "Recent macroeconomic factors have pushed automotive retail into recession."
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "severance": "Four weeks of pay plus one week per year of service; executives forgo salary for rest of year",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of certain operations teams"
+  ],
+  "notice_style": "locked_out_first",
+  "notes": "Company statement quoted via CBS News; Garcia memo text itself not retrieved. Statement is spokesperson wording, not the CEO memo.",
+  "news_coverage": [
+   {
+    "outlet": "CBS News",
+    "url": "https://www.cbsnews.com/news/carvana-layoffs-zoom-email-2500-workers/",
+    "headline": "Carvana fires 2,500 workers, some via Zoom: \"It was so disrespectful\"",
+    "date": "2022-05-18",
+    "framing": "Centres laid-off workers' accounts of Zoom firing and lockout; company says not all conversations were on Zoom"
+   },
+   {
+    "outlet": "ABC15 Arizona",
+    "url": "https://www.abc15.com/news/state/carvana-lays-off-12-of-workforce-many-over-zoom",
+    "headline": "Carvana lays off 12% of workforce, many over Zoom",
+    "date": "2022-05-18",
+    "framing": "Quotes Garcia email blaming car prices slowing sales to recession levels; highlights Zoom delivery"
+   }
+  ],
+  "framing_gap": "Company framed it as macro-driven right-sizing of operations teams; coverage foregrounded the Zoom/lockout delivery and worker anger.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "No company-hosted memo found; quotes from CBS fetch. Memo text not reproduced in sources read."
+ },
+ {
+  "company": "Snap",
+  "event_date": "2022-08-31",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/snap__2022-08/company.txt",
+  "company_text_url": "https://newsroom.snap.com/restructuring-and-refocusing-our-business",
+  "reproduction_url": null,
+  "opening_line": "Thank you for your patience as we have worked through our 2023 financial planning and reprioritization process.",
+  "key_quotes": [
+   "we have made the difficult decision to reduce the size of our team by approximately 20%.",
+   "I am deeply sorry that these changes are necessary to ensure the long term success of our business.",
+   "it has become clear that we must reduce our cost structure to avoid incurring significant ongoing losses."
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "cost_cutting",
+   "restructuring",
+   "strategic_pivot",
+   "macro"
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "reduce the size of our team",
+   "restructuring"
+  ],
+  "severance": "US: at least four months compensation replacement plus COBRA assistance; non-US per local norms; outplacement and talent directory",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "same_day",
+  "news_coverage": [
+   {
+    "outlet": "Axios",
+    "url": "https://www.axios.com/2022/08/31/snap-restructuring-layoffs",
+    "headline": "Major Snap restructuring to include 20% layoffs, product pullbacks",
+    "date": "2022-08-31",
+    "framing": "Pairs layoffs with discontinued products; frames as major restructuring"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/08/31/snap-cuts-20-of-staff-amid-major-restructuring/amp/",
+    "headline": "Snap cuts 20% of staff amid major restructuring",
+    "date": "2022-08-31",
+    "framing": "Reports as restructuring tied to revenue slowdown"
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/amp/2022/08/31/snap-confirms-20percent-job-cuts-and-announces-business-restructuring-.html",
+    "headline": "Snap shares pop on plans to cut 20% of staff as part of major restructuring",
+    "date": "2022-08-31",
+    "framing": "Emphasises positive investor reaction to the cuts"
+   }
+  ],
+  "framing_gap": "Company memo is contrite and cites revenue shortfall; headlines lead with restructuring and share-price reaction rather than the apology.",
+  "fetch_log": "Direct fetch of newsroom.snap.com OK."
+ },
+ {
+  "company": "Kraken",
+  "event_date": "2022-11-30",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/kraken__2022-11/company.txt",
+  "company_text_url": "https://blog.kraken.com/news/business-update",
+  "reproduction_url": null,
+  "opening_line": "Today we’re announcing one of the hardest decisions at Kraken to date.",
+  "key_quotes": [
+   "We’re reducing our global workforce by approximately 1,100 people, or 30 percent, in order to adapt to current market conditions.",
+   "This reduction takes our team size back to where it was only 12 months ago."
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "overhiring",
+   "cost_cutting"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reducing our global workforce",
+   "impacted"
+  ],
+  "severance": "16 weeks base pay (incl. paid leave); bonus if eligible; 4 months healthcare; extended option exercise window; visa support; outplacement",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "same_day",
+  "notes": "Blog post author not stated in retrieved text; first-person closing line only.",
+  "news_coverage": [
+   {
+    "outlet": "FinTech Futures",
+    "url": "https://www.fintechfutures.com/blockchain-crypto-digital-assets/crypto-exchange-kraken-to-lay-off-30-of-staff-as-it-looks-to-weather-crypto-winter",
+    "headline": "Crypto exchange Kraken to lay off 30% of staff as it looks to weather crypto winter",
+    "date": "2022-11-30",
+    "framing": "Follows company's market-conditions framing"
+   },
+   {
+    "outlet": "Blockworks",
+    "url": "https://blockworks.co/news/kraken-announces-layoffs-and-new-co-ceo",
+    "headline": "Kraken lays off staff, announces new co-CEO",
+    "date": "2022-11-30",
+    "framing": "Pairs layoffs with leadership change"
+   }
+  ],
+  "framing_gap": "Little divergence in coverage read; outlets repeat the company's crypto-winter and market-conditions framing (headlines only).",
+  "fetch_log": "Direct fetch of blog.kraken.com OK."
+ },
+ {
+  "company": "Okta",
+  "event_date": "2023-02-02",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/okta__2023-02/company.txt",
+  "company_text_url": "https://www.okta.com/blog/company-and-culture/message-okta-ceo/",
+  "reproduction_url": null,
+  "opening_line": "I have made the very difficult decision to reduce our global workforce by 5% or approximately 300 employees.",
+  "key_quotes": [
+   "A workforce reduction like this is the last thing I wanted to do, and I am truly sorry.",
+   "This led us to overhire for the macroeconomic reality we’re in today.",
+   "I wish I had responded sooner, but we’re doing the best we can today to adjust to this reality."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "profitability",
+   "cost_cutting",
+   "other"
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "workforce reduction",
+   "impacted"
+  ],
+  "severance": "Min 13 weeks pay via notice+severance; FY23 bonus eligibility; RSU vesting through March 15; outplacement; immigration support",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "same_day",
+  "notes": "Acknowledges own 'execution challenges' and 'wish I had responded sooner' but no explicit 'I am responsible' so responsibility=false.",
+  "news_coverage": [
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2023-02-02/okta-to-lay-off-300-employees-citing-overhiring-execution-challenges",
+    "headline": "Okta to Cut 300 Jobs Citing Overhiring, 'Execution Challenges'",
+    "date": "2023-02-02",
+    "framing": "Foregrounds overhiring and execution admissions"
+   },
+   {
+    "outlet": "Channel Futures",
+    "url": "https://www.channelfutures.com/business-models/okta-cites-overhiring-execution-challenges-for-300-layoffs",
+    "headline": "Okta Cites Overhiring, 'Execution Challenges' for 300 Layoffs",
+    "date": "2023-02-02",
+    "framing": "Mirrors company's overhiring and execution framing"
+   }
+  ],
+  "framing_gap": "Close match: headlines reuse the CEO's own overhiring and execution-challenge admissions.",
+  "fetch_log": "Direct fetch of okta.com blog OK (text embedded in page JSON; extracted)."
+ },
+ {
+  "company": "Shopify",
+  "event_date": "2023-05-04",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/shopify__2023-05/company.txt",
+  "company_text_url": "https://www.shopify.com/news/important-team-and-business-changes",
+  "reproduction_url": null,
+  "opening_line": "We are changing the shape of Shopify significantly today to pay unshared attention to our mission.",
+  "key_quotes": [
+   "after today Shopify will be smaller by about 20% and Flexport will buy Shopify Logistics",
+   "I recognize the crushing impact this decision has on some of you, and did not make this decision lightly.",
+   "now we are at the dawn of the AI era and the new capabilities that are unlocked by that are unprecedented."
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring",
+   "efficiency"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "smaller by about 20%",
+   "leave Shopify today",
+   "side quests"
+  ],
+  "severance": "Min 16 weeks plus 1 week per year of tenure; medical and EAP covered; outplacement; keep office furniture; help buying laptop",
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "notice_style": "same_day",
+  "notes": "The 20% headcount reduction is accompanied by sale of logistics to Flexport; 2022 memo (different event, 10%) was not used here.",
+  "news_coverage": [
+   {
+    "outlet": "CBC News",
+    "url": "https://amp.cbc.ca/news/business/shopify-layoffs-1.6831842",
+    "headline": "Shopify to lay off 20% of staff",
+    "date": "2023-05-04",
+    "framing": "Reports cuts alongside logistics sale; notes investor reaction"
+   },
+   {
+    "outlet": "NBC News",
+    "url": "https://www.nbcnews.com/tech/tech-news/shopify-cuts-20-workforce-rcna82941",
+    "headline": "Shopify cuts 20% of its workforce",
+    "date": "2023-05-04",
+    "framing": "Straight report of cuts and logistics divestiture"
+   },
+   {
+    "outlet": "Retail Dive",
+    "url": "https://www.retaildive.com/news/shopify-lays-off-20-percent-workforce/649444",
+    "headline": "Shopify lays off 20% of workforce",
+    "date": "2023-05-04",
+    "framing": "Ties layoffs to exit from logistics business"
+   }
+  ],
+  "framing_gap": "Company framed cuts as refocus on 'main quest' mission; coverage frames them as a consequence of unwinding the costly logistics bet.",
+  "fetch_log": "Direct fetch of shopify.com/news OK."
+ },
+ {
+  "company": "Discord",
+  "event_date": "2024-01-11",
+  "public_primary_text": false,
+  "key_quotes": [
+   "We grew quickly and expanded our workforce even faster, increasing by 5x since 2020.",
+   "we are increasingly clear on the need to sharpen our focus and improve the way we work together"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Quotes taken from TechCrunch's reproduction of the memo as obtained by The Verge; memo not retrieved from a primary source. Severance (5 months pay plus 1 week/year) reported secondhand in search summaries only.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2024/01/11/discord-lays-off-170-people-blames-growing-too-quickly/",
+    "headline": "Discord lays off 170 people, blames growing too quickly",
+    "date": "2024-01-11",
+    "framing": "Leads with over-hiring admission from leaked memo"
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/amp/2024/01/11/discord-cuts-17percent-of-workforce-latest-tech-company-to-downsize-in-2024.html",
+    "headline": "Discord cuts 17% of workforce, joining growing list of tech companies downsizing to start 2024",
+    "date": "2024-01-11",
+    "framing": "Places cuts in wave of early-2024 tech layoffs"
+   },
+   {
+    "outlet": "GamesBeat",
+    "url": "https://gamesbeat.com/discord-cuts-17-of-employees-to-sharpen-its-focus/",
+    "headline": "Discord cuts 17% of employees to 'sharpen its focus'",
+    "date": "2024-01-11",
+    "framing": "Adopts the CEO's 'sharpen focus' phrase in headline"
+   }
+  ],
+  "framing_gap": "Little gap: coverage repeats the memo's growth and focus language, with TechCrunch adding that Discord is still unprofitable.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "discord.com/blog guesses returned no layoff post; Verge domain not searchable; used TechCrunch."
+ },
+ {
+  "company": "Stability AI",
+  "event_date": "2024-04-17",
+  "public_primary_text": true,
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.cnbc.com/2024/04/18/ai-startup-stability-lays-off-10percent-of-employees-after-ceo-exit.html",
+  "opening_line": "Following a review of the global team, we have determined the need to restructure parts of the business, which will sadly mean saying goodbye to some colleagues.",
+  "key_quotes": [
+   "These decisions have not been taken lightly and they are intended to right-size parts of the business and focus our operations",
+   "Those who are affected by this have been notified individually and we will be supporting them throughout this period."
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "restructure parts of the business",
+   "right-size",
+   "saying goodbye to some colleagues"
+  ],
+  "severance": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Full memo reproduced by CNBC (saved as reproduction.txt). Memo does not state headcount; CNBC reports 'more than 20' employees.",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2024/04/18/ai-startup-stability-lays-off-10percent-of-employees-after-ceo-exit.html",
+    "headline": "AI startup Stability lays off 10% of staff after controversial CEO's exit: Read the full memo",
+    "date": "2024-04-18",
+    "framing": "Links layoffs to founder's exit; publishes full memo"
+   },
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/2024/04/18/stability_ai_layoff_staff/",
+    "headline": "Stability AI layoffs",
+    "date": "2024-04-18",
+    "framing": "Reports cuts following CEO departure"
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/2024/04/18/stability-ai-lay-off-10-staff-wake-resignation-ceo/",
+    "headline": "Stability AI to lay off 10% of staff in wake of CEO resignation",
+    "date": "2024-04-18",
+    "framing": "Frames cuts as aftermath of Mostaque resignation"
+   }
+  ],
+  "framing_gap": "Memo frames cuts as routine right-sizing for sustainability; coverage ties them to the founder's abrupt exit and prior cost pressures.",
+  "fetch_log": "CNBC fetch OK (memo reproduction); no company-hosted copy."
+ },
+ {
+  "company": "Block",
+  "event_date": "2025-03-25",
+  "public_primary_text": true,
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://techcrunch.com/2025/03/25/read-the-email-jack-dorsey-sent-when-he-cut-931-of-blocks-staff",
+  "opening_line": "today we’ll be making some org changes, including eliminating roles and beginning the consultation process in countries where required.",
+  "key_quotes": [
+   "none of the above points are trying to hit a specific financial target, replacing folks with AI, or changing our headcount cap.",
+   "we’re behind in our actions, and that’s not fair to the individuals who work here or the company."
+  ],
+  "stated_reasons": [
+   "performance",
+   "flatten_management",
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "org changes",
+   "eliminating roles",
+   "parting ways"
+  ],
+  "severance": null,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "notes": "TechCrunch reproduced the leaked email with grammar/format slightly modified; quotes copied from that reproduction. Breakdown: 391 strategy, 460 performance, 80 managers.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2025/03/25/read-the-email-jack-dorsey-sent-when-he-cut-931-of-blocks-staff",
+    "headline": "Read the email Jack Dorsey sent when he cut 931 of Block's staff",
+    "date": "2025-03-25",
+    "framing": "Publishes leaked email; stresses denial of AI or financial motive"
+   },
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/big-tech/block-reportedly-lays-off-almost-1000-employees-130056952.html",
+    "headline": "Block reportedly lays off almost 1,000 employees",
+    "date": "2025-03-25",
+    "framing": "Reports as leak-based news"
+   },
+   {
+    "outlet": "PYMNTS",
+    "url": "https://www.pymnts.com/?p=2518391",
+    "headline": "Block Cuts 8% of Staff Citing 'Strategy' and 'Performance' Issues",
+    "date": "2025-03-25",
+    "framing": "Headline highlights performance rationale"
+   }
+  ],
+  "framing_gap": "Dorsey's email separates 'performance' cuts from financial motives; coverage highlights the performance bucket and the explicit no-AI disclaimer.",
+  "fetch_log": "TechCrunch fetch OK; Block has no public copy found."
+ },
+ {
+  "company": "Lufthansa",
+  "event_date": "2025-09-29",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/lufthansa__2025-09/company.txt",
+  "company_text_url": "https://newsroom.lufthansagroup.com/en/lufthansa-group-is-consistently-pursuing-its-strategy-and-aims-to-significantly-increase-profitability/",
+  "reproduction_url": null,
+  "opening_line": "At its Capital Markets Day in Munich, the Lufthansa Group presented its strategic planning and published new medium-term financial targets.",
+  "key_quotes": [
+   "Reduction of 4,000 administrative jobs by 2030 through digitalization, automation, and process consolidation",
+   "the profound changes brought about by digitalization and the increased use of artificial intelligence will lead to greater efficiency in many areas and processes"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "profitability",
+   "restructuring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "reduction of administrative jobs",
+   "activities will no longer be necessary"
+  ],
+  "severance": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "notice_style": "advance_notice",
+  "notes": "Release is investor/corporate voice, not a personal CEO message; cuts 'in consultation with the social partners'. Release page 403'd on first company-path guess but newsroom URL fetched OK.",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: no news results retrieved (search budget exhausted).",
+  "fetch_log": "Direct fetch of newsroom.lufthansagroup.com OK; no news searched."
+ },
+ {
+  "company": "IBM",
+  "event_date": "2025-11-04",
+  "public_primary_text": false,
+  "key_quotes": [
+   "a low single-digit percentage",
+   "may impact some US-based roles"
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "rebalances its workforce"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Only fragmentary spokesperson statements, as quoted by Entrepreneur (citing Bloomberg and CNBC); full statement not retrieved. Entrepreneur ties cuts to AI-consulting focus, which is the outlet's framing, not IBM's.",
+  "news_coverage": [
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/ibm-is-laying-off-thousands-of-employees/499219",
+    "headline": "IBM Is Laying Off Thousands of Employees as Its AI Business Surges",
+    "date": "2025-11-05",
+    "framing": "Adds AI-growth angle IBM did not state; cites The Register on 30-day notice"
+   },
+   {
+    "outlet": "DatacenterDynamics",
+    "url": "https://www.datacenterdynamics.com/en/news/ibm-to-cut-thousands-of-jobs-to-focus-on-software-segment/",
+    "headline": "IBM to cut thousands of jobs to focus on software segment",
+    "date": "2025-11-05",
+    "framing": "Frames as shift to software"
+   },
+   {
+    "outlet": "ITPro",
+    "url": "https://itpro.com/business/business-strategy/ibm-layoffs-loom-as-single-digit-percentage-of-global-workforce-set-for-cuts",
+    "headline": "IBM layoffs loom as 'single-digit percentage' of global workforce set for cuts",
+    "date": "2025-11-05",
+    "framing": "Emphasises vague company number"
+   }
+  ],
+  "framing_gap": "IBM gave only a vague percentage and a 'rebalance' line; outlets supplied the AI and thousands-of-jobs framing.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "No company page found; Entrepreneur fetched."
+ },
+ {
+  "company": "Opendoor",
+  "event_date": "2026-06-10",
+  "public_primary_text": true,
+  "opening_line": "Today we began to say goodbye to our colleagues in India as we wind down our India operations.",
+  "key_quotes": [
+   "Our customers are in America, and that's where our operational work belongs.",
+   "This decision is not a reflection of the quality of their work",
+   "Opendoor 2.0 will be a much smaller company by headcount, but a much larger company by impact."
+  ],
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring",
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "say goodbye",
+   "wind down our India operations"
+  ],
+  "severance": "Transition packages including severance, outplacement, other resources",
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "notes": "Quotes from the CEO note as reported by IBTimes UK and Deccan Herald; the X post image was not retrieved (x.com 404). headcount ~250 India only.",
+  "news_coverage": [
+   {
+    "outlet": "IBTimes UK",
+    "url": "https://www.ibtimes.co.uk/opendoor-technologies-shuts-down-india-operations-1802071",
+    "headline": "Opendoor CEO Shuts India Operations, Lays Off Nearly 250 Jobs: CEO Says Work 'Belongs' in America",
+    "date": "2026-06-11",
+    "framing": "Adopts the CEO's 'belongs in America' framing; notes stock rise"
+   },
+   {
+    "outlet": "Deccan Herald",
+    "url": "https://www.deccanherald.com/amp/story/business/opendoor-shuts-india-operations-overnight-over-ai-shift-sacks-250-employees-4035116",
+    "headline": "Opendoor shuts India operations overnight over 'AI shift', sacks 250 employees",
+    "date": "2026-06-11",
+    "framing": "Headline adds an AI-shift angle the note only implies"
+   },
+   {
+    "outlet": "ThePrint",
+    "url": "https://theprint.in/feature/opendoor-shut-its-india-offices-is-ai-finally-coming-for-outsourcing/2957017/",
+    "headline": "Opendoor shut its India offices: Is AI finally coming for outsourcing?",
+    "date": "2026-06-11",
+    "framing": "Raises AI-and-outsourcing question"
+   }
+  ],
+  "framing_gap": "Company says geography ('customers are in America'); Indian outlets frame it as an AI-driven offshoring cut.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "x.com 404; company note taken from IBTimes/Deccan Herald fetches."
+ },
+ {
+  "company": "Robinhood",
+  "event_date": "2022-08-02",
+  "public_primary_text": false,
+  "key_quotes": [
+   "As CEO, I approved and took responsibility for our ambitious staffing trajectory — this is on me.",
+   "In this new environment, we are operating with more staffing than appropriate"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notes": "Quotes from TechCrunch's excerpt of Tenev's blog post; the post itself was not found (newsroom.aboutrobinhood.com guesses 404; the page found was the April 2022 9% message). Severance/notice terms (employed through Oct 1) reported only in search summaries.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/08/02/robinhood-23-layoff-vlad-tenev-responsibility-hiring/amp/",
+    "headline": "Robinhood lays off 23% of staff, CEO Vlad Tenev says, 'This is on me'",
+    "date": "2022-08-02",
+    "framing": "Leads with CEO taking responsibility for over-hiring"
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2022/08/02/robinhood-cutting-about-23percent-of-jobs.html",
+    "headline": "Robinhood cutting about 23% of jobs",
+    "date": "2022-08-02",
+    "framing": "Straight report tied to earnings"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/08/02/robinhood-cutting-23-of-staff-ceo-says",
+    "headline": "Robinhood cutting 23% of staff, CEO says",
+    "date": "2022-08-02",
+    "framing": "Reports CEO's statement"
+   }
+  ],
+  "framing_gap": "Little gap on responsibility: headlines repeat 'this is on me'; coverage adds the same-day earnings and NYDFS fine context.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Company blog post not located; used TechCrunch fetch."
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2023-01-04",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/amazon__2023-01/company.txt",
+  "company_text_url": "https://www.aboutamazon.com/news/company-news/update-from-ceo-andy-jassy-on-role-eliminations",
+  "reproduction_url": null,
+  "opening_line": "Today, I wanted to share the outcome of these further reviews, which is the difficult decision to eliminate additional roles.",
+  "key_quotes": [
+   "we plan to eliminate just over 18,000 roles",
+   "because one of our teammates leaked this information externally, we decided it was better to share this news earlier",
+   "we don’t take these decisions lightly or underestimate how much they might affect the lives of those who are impacted"
+  ],
+  "stated_reasons": [
+   "macro",
+   "overhiring",
+   "cost_cutting"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "role eliminations",
+   "eliminate additional roles"
+  ],
+  "severance": "Separation payment, transitional health insurance benefits, external job placement support",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "pre_leak",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: no news results retrieved (search budget exhausted).",
+  "fetch_log": "Direct fetch of aboutamazon.com OK; no news searched."
+ },
+ {
+  "company": "Meta",
+  "event_date": "2023-03-14",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/meta__2023-03/company.txt",
+  "company_text_url": "https://about.fb.com/news/2023/03/mark-zuckerberg-meta-year-of-efficiency/",
+  "reproduction_url": null,
+  "opening_line": "Meta is building the future of human connection, and today I want to share some updates on our Year of Efficiency that will help us do that.",
+  "key_quotes": [
+   "Overall, we expect to reduce our team size by around 10,000 people and to close around 5,000 additional open roles",
+   "This will be tough and there’s no way around that.",
+   "In retrospect, I underestimated the indirect costs of lower priority projects."
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "flatten_management",
+   "macro",
+   "interest_rates",
+   "profitability",
+   "cost_cutting"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "Year of Efficiency",
+   "flattening our orgs",
+   "reduce our team size",
+   "removing jobs"
+  ],
+  "severance": "Only 'We will support people in the same ways we have before'",
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "notice_style": "advance_notice",
+  "notes": "Memo is a long strategy letter; responsibility only for underestimating costs of low-priority projects, not for the layoffs.",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: no news results retrieved (search budget exhausted).",
+  "fetch_log": "Direct fetch of about.fb.com OK; no news searched."
+ },
+ {
+  "company": "Twitch (Amazon)",
+  "event_date": "2024-01-10",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/twitch-amazon__2024-01/company.txt",
+  "company_text_url": "https://blog.twitch.tv/en/2024/01/10/a-difficult-update-about-our-workforce/",
+  "reproduction_url": null,
+  "opening_line": "I wanted to send a short note to let you know that we’ve made the difficult decision to reduce the size of our workforce today.",
+  "key_quotes": [
+   "I want to close with my sincerest apology to everyone who is leaving Twitch.",
+   "our organization is still meaningfully larger than it needs to be given the size of our business",
+   "I am sorry for all of the anxiety that it caused over the last several hours."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency",
+   "cost_cutting",
+   "profitability"
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "rightsize our company",
+   "reduce our headcount",
+   "saying goodbye"
+  ],
+  "severance": "Details sent individually; org leaders to share severance packages; access to Slack/email until 1 PM PT",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "pre_leak",
+  "notes": "Blog (by Twitch CEO) reproduces the internal email; information leaked the day before.",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: no news results retrieved (search budget exhausted).",
+  "fetch_log": "Direct fetch (gzip) of blog.twitch.tv OK; no news searched."
+ },
+ {
+  "company": "Cisco",
+  "event_date": "2024-08-14",
+  "news_coverage": [],
+  "framing_gap": "Not assessed.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "notes": "No enrichment: only SEC 8-K source (sec.gov handled by separate script) and web search budget was exhausted before Cisco could be searched.",
+  "fetch_log": "Skipped: sec.gov excluded by brief; search limit reached."
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2025-10-28",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/amazon__2025-10/company.txt",
+  "company_text_url": "https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction",
+  "reproduction_url": null,
+  "opening_line": "I want to let you know that we're making organizational changes across Amazon that will impact some of our teammates.",
+  "key_quotes": [
+   "it will mean an overall reduction in our corporate workforce of approximately 14,000 roles",
+   "This generation of AI is the most transformative technology we’ve seen since the Internet",
+   "we need to be organized more leanly, with fewer layers and more ownership"
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "organizational changes",
+   "reducing bureaucracy",
+   "removing layers"
+  ],
+  "severance": "90 days to find internal role; severance pay, outplacement, health insurance benefits",
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "notice_style": "same_day",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: no news results retrieved (search budget exhausted).",
+  "fetch_log": "Direct fetch of aboutamazon.com OK; no news searched."
+ },
+ {
+  "company": "Canva",
+  "event_date": "2026-11-04",
+  "public_primary_text": true,
+  "company_text_path": "data/sources/canva__2026-11/company.txt",
+  "company_text_url": "https://www.canva.com/newsroom/news/canva-team-update/",
+  "reproduction_url": null,
+  "headcount_cut": 1271,
+  "pct_workforce": 22.0,
+  "opening_line": "Today, I have some profoundly difficult news to share.",
+  "key_quotes": [
+   "This means 1,271 people, or 22% of Canva, will be impacted.",
+   "I’m deeply sorry for the pain and disruption this will cause for everyone affected.",
+   "we need to refound Canva, getting back to our roots of small, empowered teams"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "revenue_decline",
+   "flatten_management"
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "euphemisms": [
+   "impacted",
+   "saying goodbye",
+   "refound Canva"
+  ],
+  "severance": "At least 6 months salary; vesting cliff removed; 12 months healthcare and EAP; career coaching; keep MacBook; US$10,000 Collective Fund grants",
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "notice_style": "same_day",
+  "notes": "Some roles relocated to Sydney hub rather than cut; memo cites 'new technology' but not AI explicitly. Direct fetch returned 403; text retrieved via Wayback.",
+  "news_coverage": [],
+  "framing_gap": "Not assessed: news URLs in input were not verified via search/fetch.",
+  "fetch_log": "canva.com 403; Wayback raw copy OK."
+ }
+]

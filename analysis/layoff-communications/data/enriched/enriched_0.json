@@ -1,0 +1,623 @@
+[
+ {
+  "company": "Uber",
+  "event_date": "2020-05-06",
+  "news_coverage": [
+   {
+    "outlet": "CBS News",
+    "url": "https://www.cbsnews.com/news/uber-layoffs-3000-workers-closing-45-offices",
+    "headline": "Uber layoffs 3,000 workers closing 45 offices",
+    "date": "2020-05-18",
+    "framing": "Covers second round; frames combined cuts as roughly a quarter of workforce in a month"
+   },
+   {
+    "outlet": "Salon",
+    "url": "https://www.salon.com/2020/05/18/uber-lays-off-more-than-3000-workers-as-silicon-valleys-implosion-continues",
+    "headline": "Uber lays off more than 3,000 workers as Silicon Valley's implosion continues",
+    "date": "2020-05-18",
+    "framing": "Places Uber cuts within wider pandemic tech retrenchment"
+   }
+  ],
+  "framing_gap": "Search coverage relays the CEO's 'brutal'/sorry tone; no outlet found disputing it, though coverage stresses the cumulative scale across both rounds.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Searches only; target outlets (CNBC/CNN/Fortune) not returned directly; Dara email text not retrieved; sec.gov skipped per brief."
+ },
+ {
+  "company": "Gemini",
+  "event_date": "2022-07-18",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2022/07/18/crypto-exchange-gemini-executes-second-round-of-layoffs-less-than-two-months-after-axing-10-of-staff",
+    "headline": "Crypto exchange Gemini executes second round of layoffs",
+    "date": "2022-07-18",
+    "framing": "Scoop from anonymous sources: about 7% (68 people); company had not commented publicly"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/07/20/winklevoss-twins-gemini-layoffs-second-round-crypto-winter",
+    "headline": "Winklevoss twins Gemini layoffs second round crypto winter",
+    "date": "2022-07-20",
+    "framing": "Follow-up coverage of second round amid crypto winter"
+   },
+   {
+    "outlet": "The Block",
+    "url": "https://www.theblock.co/post/158288/crypto-exchange-gemini-undertakes-second-round-of-layoffs-techcrunch",
+    "headline": "Crypto exchange Gemini undertakes second round of layoffs: TechCrunch",
+    "date": "2022-07-18",
+    "framing": "Relays TechCrunch scoop"
+   }
+  ],
+  "framing_gap": "Company made no public statement on this round; all framing (cost cutting, ~7%) comes from anonymous sources via press.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search worked (TechCrunch/Fortune/The Block); no company text exists/found. CryptoSlate reports 15% vs 7% elsewhere."
+ },
+ {
+  "company": "Carvana",
+  "event_date": "2022-11-18",
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/markets/carvana-lay-off-12-percent-workforce-expansion-deal-stock",
+    "headline": "Carvana lay off 12 percent workforce expansion deal stock",
+    "date": "2022-11-18",
+    "framing": "Reports the layoff alongside stock and expansion deal"
+   },
+   {
+    "outlet": "CBT News",
+    "url": "https://www.cbtnews.com/carvana-cuts-2500-jobs-after-posting-net-loss-of-506m/",
+    "headline": "Carvana cuts 2,500 jobs after posting net loss of $506M",
+    "date": "2022-11-18",
+    "framing": "Ties cuts to quarterly net loss"
+   },
+   {
+    "outlet": "Reuters via StreetInsider",
+    "url": "https://www.streetinsider.com/Reuters/Carvana+cuts+8%25+of+workforce+on+slowing+used-car+demand/20874428.html",
+    "headline": "Carvana cuts 8% of workforce on slowing used-car demand",
+    "date": "2022-11-18",
+    "framing": "Frames as demand slowdown; cites CNBC's memo report"
+   }
+  ],
+  "framing_gap": "Press frames as demand slowdown and net loss; company memo's 'we failed to accurately predict' self-criticism is quoted in some reports. Note headcount conflict: search reports ~1,500 (8%) vs input 2,500.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search worked via Reuters syndication; memo text not fetched. Possible event mismatch: 2,500/12% figure may relate to the May 2022 round; verify headcount_cut.",
+  "headcount_cut_note": "search indicates Nov 2022 memo = ~1,500 (8%); May 2022 = 2,500"
+ },
+ {
+  "company": "Swiggy",
+  "event_date": "2023-01-20",
+  "news_coverage": [
+   {
+    "outlet": "Free Press Journal",
+    "url": "https://www.freepressjournal.in/business/swiggy-lays-off-380-employees-ahead-of-ipo",
+    "headline": "Swiggy lays off 380 employees ahead of IPO",
+    "date": "2023-01-20",
+    "framing": "Quotes CEO email calling it extremely difficult decision"
+   },
+   {
+    "outlet": "Onmanorama",
+    "url": "https://www.onmanorama.com/news/india/2023/01/20/swiggy-lays-off-380-employees-ceo-majety-overhiring-poor-judgement.html",
+    "headline": "Swiggy lays off 380 employees, CEO Majety: overhiring poor judgement",
+    "date": "2023-01-20",
+    "framing": "Highlights CEO admission that overhiring was poor judgement"
+   },
+   {
+    "outlet": "YourStory",
+    "url": "https://yourstory.com/2023/01/swiggy-lays-off-380-employees-to-shut-meat-marketplace",
+    "headline": "Swiggy lays off 380 employees, to shut meat marketplace",
+    "date": "2023-01-20",
+    "framing": "Adds meat marketplace closure and severance of 3-6 months"
+   }
+  ],
+  "framing_gap": "Little gap; press mirrors the CEO's own admission of overhiring and adds severance detail (3-6 months cash).",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search worked (Indian outlets; TechCrunch only via republished copies). Email text not retrieved. Search summary reports apology and severance 3-6 months; not verified from text."
+ },
+ {
+  "company": "Ericsson",
+  "event_date": "2023-02-24",
+  "news_coverage": [
+   {
+    "outlet": "Light Reading",
+    "url": "https://www.lightreading.com/5g-and-beyond/ericsson-confirms-8500-job-cuts-in-latest-reorg/d/d-id/783441",
+    "headline": "Ericsson confirms 8,500 job cuts in latest reorg",
+    "date": "2023-02-24",
+    "framing": "Company statement confirming cuts as part of SEK 9bn cost plan"
+   },
+   {
+    "outlet": "Reuters via Yahoo Finance",
+    "url": "https://ca.finance.yahoo.com/news/1-ericsson-lay-off-8-125324968.html",
+    "headline": "UPDATE 2-Ericsson to lay off 8,500 employees -memo",
+    "date": "2023-02-24",
+    "framing": "First reported from Ekholm memo; quotes 'obligation to take this cost out to remain competitive'"
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/?p=608115",
+    "headline": "Ericsson layoffs (Feb 24 2023)",
+    "date": "2023-02-24",
+    "framing": "Tech-trade coverage of 8,500 cut"
+   }
+  ],
+  "framing_gap": "Press adds CEO memo's competitiveness rationale; company public statement is terse 'structural cost reductions'.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search worked; Reuters only through Yahoo reprint; memo itself not retrieved. Quote 'It is our obligation to take this cost out to remain competitive' seen in search summary only."
+ },
+ {
+  "company": "Etsy",
+  "event_date": "2023-12-05",
+  "event_date_note": "search indicates announcement Dec 13, 2023 (CNBC)",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/2023/12/13/etsy-laying-off-11percent-of-staff-citing-competitive-environment.html/",
+    "headline": "Etsy stock falls after company lays off 11% of its staff, citing 'very challenging' environment",
+    "date": "2023-12-13",
+    "framing": "Notes flat GMS, 16 weeks severance, CMO and CHRO departures"
+   },
+   {
+    "outlet": "Yahoo Finance",
+    "url": "https://ca.news.yahoo.com/etsy-laying-off-225-workers-040823460.html",
+    "headline": "Etsy is laying off 225 of its workers after 2 years of 'essentially flat' merchandise sales",
+    "date": "2023-12-13",
+    "framing": "Emphasises two years of flat sales"
+   },
+   {
+    "outlet": "PYMNTS",
+    "url": "https://www.pymnts.com/?p=1646730",
+    "headline": "Etsy Cuts 11% of Workforce as Sales Remain 'Essentially Flat'",
+    "date": "2023-12-13",
+    "framing": "Reports sales stagnation framing"
+   }
+  ],
+  "severance": "16 weeks of base pay plus one week per full year of service (per CNBC/search summary)",
+  "framing_gap": "Press adds severance specifics and CMO/CHRO exits and notes holiday timing the CEO acknowledged.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search worked. Event date appears to be 2023-12-13 not 12-05; correct in coding. Email text not retrieved."
+ },
+ {
+  "company": "Instacart (Maplebear)",
+  "event_date": "2024-02-13",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2024/02/14/instacart-layoffs-cuts-250-jobs-asha-sharma-varouj-chitilian-jj-zhuang",
+    "headline": "Instacart layoffs cuts 250 jobs; exec departures",
+    "date": "2024-02-14",
+    "framing": "Pairs layoffs with exits of COO, CTO and chief architect"
+   },
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/instacart-cuts-250-jobs-after-reporting-increased-revenue-112503431.html",
+    "headline": "Instacart cuts 250 jobs after reporting increased revenue",
+    "date": "2024-02-14",
+    "framing": "Layoffs despite revenue growth; mostly middle management, not ads team"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2024/02/13/instacart-lays-off-250-employees-or-7-of-its-workforce-to-reshape-company/",
+    "headline": "Instacart lays off 250 employees, or 7% of its workforce",
+    "date": "2024-02-13",
+    "framing": "Restructuring to streamline and refocus"
+   }
+  ],
+  "framing_gap": "Company framed as streamlining; press adds the flatter-structure/middle-management angle and simultaneous C-suite exits.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "IR page 403 (blocked, not evaded). Search worked. Shareholder letter text not retrieved."
+ },
+ {
+  "company": "CNN (Warner Bros. Discovery)",
+  "event_date": "2025-01-23",
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://foxbusiness.com/media/cnn-cuts-6-workforce-layoffs-hit-struggling-network",
+    "headline": "CNN cuts 6% of workforce as layoffs hit struggling network",
+    "date": "2025-01-23",
+    "framing": "Frames around ratings decline; about 200 jobs"
+   },
+   {
+    "outlet": "TheWrap",
+    "url": "https://www.thewrap.com/cnn-layoffs-200-job-cuts-new-streaming-service",
+    "headline": "CNN to slash 200 jobs, launch new streaming service",
+    "date": "2025-01-23",
+    "framing": "Pairs cuts with streaming launch pivot"
+   },
+   {
+    "outlet": "Daily Beast",
+    "url": "https://www.thedailybeast.com/cnn-cuts-6-percent-of-staff-in-quest-for-digital-success/",
+    "headline": "CNN cuts 6 percent of staff in quest for digital success",
+    "date": "2025-01-23",
+    "framing": "Adopts digital-success framing of the memo"
+   }
+  ],
+  "framing_gap": "Press mostly echoes Thompson's digital-pivot framing but foregrounds TV ratings decline and that 100 new digital hires offset cuts.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search worked; CNN/Axios/Variety not returned directly. Memo not retrieved (WaPo obtained it)."
+ },
+ {
+  "company": "Atlassian",
+  "event_date": "2025-07-30",
+  "news_coverage": [
+   {
+    "outlet": "Cyber Daily",
+    "url": "https://www.cyberdaily.au/digital-transformation/12441-atlassian-terminates-150-staff-with-pre-recorded-video-will-be-largely-replaced-by-ai",
+    "headline": "Atlassian terminates 150 staff with pre-recorded video",
+    "date": "2025-07-30",
+    "framing": "Adds AI-replacement angle; criticises impersonal video delivery"
+   },
+   {
+    "outlet": "TechSpot",
+    "url": "https://www.techspot.com/news/108912-fired-video-atlassian-terminates-150-workers-using-pre.html",
+    "headline": "Fired by video: Atlassian terminates 150 workers using pre-recorded video",
+    "date": "2025-07-30",
+    "framing": "Focuses on backlash over pre-recorded video"
+   },
+   {
+    "outlet": "ITPro",
+    "url": "https://www.itpro.com/business/business-strategy/atlassian-denies-ai-is-behind-customer-service-job-cuts",
+    "headline": "Atlassian denies AI is behind customer service job cuts",
+    "date": "2025-07-31",
+    "framing": "Reports company denial that roles are replaced by AI"
+   }
+  ],
+  "framing_gap": "Press added an AI-replacement angle and impersonal-delivery criticism; Atlassian said roles are not being replaced by AI and cited customer experience improvements.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Company blog URL guessed -> 404; video transcript not found. Search worked. Severance 'at least six months pay' per search summary."
+ },
+ {
+  "company": "Chegg",
+  "event_date": "2025-10-27",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://www.fortune.com/2025/10/28/chegg-layoffs-ceo-dan-rosensweig-poster-child-ai-slashing-staff-shares",
+    "headline": "Chegg layoffs: CEO Dan Rosensweig, poster child for AI slashing staff",
+    "date": "2025-10-28",
+    "framing": "Casts Chegg as AI casualty"
+   },
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/technology/chegg-lay-off-45-workforce-ai-google-traffic-shifts-batter-business",
+    "headline": "Chegg cuts 45% of staff as AI reshapes online learning business",
+    "date": "2025-10-27",
+    "framing": "Reports company blaming AI and reduced Google traffic"
+   },
+   {
+    "outlet": "Gizmodo",
+    "url": "https://gizmodo.com/chegg-lays-off-hundreds-replaces-ceo-all-because-of-ai-2000677794",
+    "headline": "Chegg lays off hundreds, replaces CEO, all because of AI",
+    "date": "2025-10-27",
+    "framing": "AI-as-cause framing"
+   }
+  ],
+  "framing_gap": "Little gap; company itself cites 'new realities of AI and reduced traffic from Google'; press amplifies AI-as-cause and CEO swap.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "IR press release 403 and Wayback 404 (blocked, not evaded). Search worked. ~388 roles, savings up to $110M per search."
+ },
+ {
+  "company": "Oracle",
+  "event_date": "2026-03-31",
+  "news_coverage": [
+   {
+    "outlet": "Washington Times",
+    "url": "https://m.washingtontimes.com/news/2026/mar/31/oracle-begins-massive-layoffs-fund-ai-data-center-push/",
+    "headline": "Oracle begins massive layoffs to fund AI data center push",
+    "date": "2026-03-31",
+    "framing": "Links layoffs to funding AI data-centre build-out"
+   },
+   {
+    "outlet": "CIO",
+    "url": "https://www.cio.com/article/4153113/oracle-cuts-up-to-30000-jobs-globally-putting-enterprise-support-and-roadmaps-at-risk.html",
+    "headline": "Oracle cuts up to 30,000 jobs globally",
+    "date": "2026-04-01",
+    "framing": "Estimate up to 30,000; focuses on enterprise support risk"
+   },
+   {
+    "outlet": "RTE (citing CNBC)",
+    "url": "https://www.rte.ie/news/business/2026/0401/1566208-oracle-begins-layoffs-affecting-thousands-cnbc-reports",
+    "headline": "Oracle begins layoffs affecting thousands, CNBC reports",
+    "date": "2026-04-01",
+    "framing": "Reports thousands cut via early-morning termination emails"
+   }
+  ],
+  "framing_gap": "Oracle made no public statement found; press supplies the AI-capex framing and unconfirmed headcount estimates (up to 30,000).",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Search only; no company text exists/found. Headcount unconfirmed. Bloomberg reported planned cuts 5 Mar 2026 per search."
+ },
+ {
+  "company": "Gemini",
+  "event_date": "2022-06-02",
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/amp/2022/06/02/winklevoss-twins-gemini-citting-10percent-says-crypto-winter-is-here.html",
+    "headline": "Winklevoss twins' Gemini cutting 10% of its staff, saying 'crypto winter' is here",
+    "date": "2022-06-02",
+    "framing": "Leads with founders' 'crypto winter' framing"
+   },
+   {
+    "outlet": "CoinDesk",
+    "url": "https://coindesk.com/business/2022/06/02/winklevoss-led-gemini-cuts-10-staff-citing-turbulent-crypto-market/",
+    "headline": "Winklevoss-Led Gemini Cuts 10% of Staff, Citing 'Turbulent' Crypto Market",
+    "date": "2022-06-02",
+    "framing": "Market-conditions framing as stated by company"
+   },
+   {
+    "outlet": "Bloomberg Law",
+    "url": "https://news.bloomberglaw.com/private-equity/winklevoss-twins-gemini-slashes-staff-10-on-crypto-slump",
+    "headline": "Winklevoss Twins' Gemini Slashes Staff 10% on Crypto Slump",
+    "date": "2022-06-02",
+    "framing": "Industry-slump framing"
+   }
+  ],
+  "framing_gap": "None substantial; press adopts founders' crypto-winter/market framing.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Gemini blog index fetched (200) but post not located; Wayback 404. Founder quote 'Today is a tough day, but one that will make Gemini better over the long run' seen only in search summary."
+ },
+ {
+  "company": "Redfin",
+  "event_date": "2022-11-09",
+  "news_coverage": [
+   {
+    "outlet": "Boston Globe",
+    "url": "https://www.bostonglobe.com/2022/11/09/business/redfin-real-estate-broker-lays-off-13-its-staff",
+    "headline": "Redfin, a real estate broker, lays off 13 percent of its staff",
+    "date": "2022-11-09",
+    "framing": "Frames around housing slowdown"
+   },
+   {
+    "outlet": "The Real Deal",
+    "url": "https://therealdeal.com/national/2022/11/09/redfin-reports-90m-loss-plans-to-take-share-kick-butt/",
+    "headline": "Redfin reports $90M loss, plans to take share",
+    "date": "2022-11-09",
+    "framing": "Pairs layoffs with $90M quarterly loss"
+   },
+   {
+    "outlet": "HR Dive",
+    "url": "https://www.hrdive.com/news/redfin-layoffs-troubled-real-estate-industry/636256/",
+    "headline": "Redfin layoffs troubled real estate industry",
+    "date": "2022-11-09",
+    "framing": "Sector-wide downturn framing"
+   }
+  ],
+  "severance": "10 to 15 weeks of pay depending on tenure, plus three months of healthcare (per search summary of the all-hands email)",
+  "framing_gap": "Little gap; press mirrors the housing-market framing; company email is public via the 8-K.",
+  "company_text_path": null,
+  "company_text_url": "https://investors.redfin.com/financial-information/sec-filings/content/0001382821-22-000232/articlepublishednovember92.htm",
+  "reproduction_url": null,
+  "fetch_log": "Email is SEC 8-K exhibit (sec.gov skipped per brief; handled by separate script). IR mirror URL redirected to press center, not saved."
+ },
+ {
+  "company": "Zoom",
+  "event_date": "2023-02-07",
+  "news_coverage": [
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/zoom-layoffs-202256575.html",
+    "headline": "Zoom is laying off around 1,300 workers",
+    "date": "2023-02-07",
+    "framing": "Straight report of layoffs and CEO pay cut"
+   },
+   {
+    "outlet": "CNN via ABC11",
+    "url": "https://abc11.com/post/zoom-layoffs-2023-tech-companies-in/12782118/",
+    "headline": "Zoom will lay off 1,300 employees as CEO takes massive pay cut",
+    "date": "2023-02-08",
+    "framing": "Emphasises CEO taking accountability via 98% pay cut"
+   },
+   {
+    "outlet": "NBC Bay Area (CNBC)",
+    "url": "https://www.nbcbayarea.com/news/business/money-report/zoom-to-lay-off-1300-employees-or-about-15-of-its-workforce/3150523/",
+    "headline": "Zoom to lay off 1,300 employees, or about 15% of its workforce",
+    "date": "2023-02-07",
+    "framing": "Notes pandemic demand fall and over-expansion; $50-68M charges"
+   }
+  ],
+  "opening_line": "Over the past few years, Zoom has become an indispensable source of connection for businesses and individuals as well as a globally recognized brand.",
+  "key_quotes": [
+   "As the CEO and founder of Zoom, I am accountable for these mistakes and the actions we take today",
+   "I am sorry you are finding out this way",
+   "But we also made mistakes."
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "euphemisms": [
+   "reduce our team",
+   "say goodbye to",
+   "departure"
+  ],
+  "severance": "Up to 16 weeks' salary and healthcare, earned FY23 bonus, 6 months equity vesting (US), outplacement",
+  "ai_framing": "none",
+  "mentions_ai": false,
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "covid"
+  ],
+  "public_primary_text": true,
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "framing_gap": "None substantial; press echoes the accountability and pay-cut framing, with CNN/CNBC adding pandemic-demand context.",
+  "company_text_path": "data/sources/zoom__2023-02/company.txt",
+  "company_text_url": "https://blog.zoom.us/a-message-from-eric-yuan-ceo-of-zoom/",
+  "reproduction_url": null,
+  "fetch_log": "Direct zoom.com URL 404; Wayback id_ copy of blog.zoom.us post retrieved and saved. Salary cut 98% confirmed in text (resolves the $10,000/$6,000 figure issue: text states no dollar figure). Apology is to employees learning by email, not for the layoffs themselves."
+ },
+ {
+  "company": "Epic Games",
+  "event_date": "2023-09-28",
+  "news_coverage": [
+   {
+    "outlet": "PC Gamer",
+    "url": "https://www.pcgamer.com/epic-games-is-laying-off-more-than-800-people",
+    "headline": "Epic Games is laying off more than 800 people: 'We've been spending way more money than we earn'",
+    "date": "2023-09-28",
+    "framing": "Leads with Sweeney's overspending admission"
+   },
+   {
+    "outlet": "GamesRadar",
+    "url": "https://gamesradar.com/fortnite-and-unreal-engine-developer-epic-reportedly-laying-off-900-people",
+    "headline": "Epic lays off 830 people, says Fortnite Chapter 5 won't be delayed",
+    "date": "2023-09-28",
+    "framing": "Reassurance on Fortnite schedule"
+   },
+   {
+    "outlet": "TheWrap",
+    "url": "https://thewrap.com/fortnight-studio-epic-games-lays-off-830-employees-16-percent",
+    "headline": "Fortnite studio Epic Games lays off 830 employees, 16% workforce reduction",
+    "date": "2023-09-28",
+    "framing": "Numbers-led report of 16% cut"
+   }
+  ],
+  "severance": "Six months base pay; six months Epic-paid healthcare in US, Canada, Brazil (per search summary)",
+  "framing_gap": "Little gap; press repeats Sweeney's 'spending more than we earn' framing and adds ~250 divestiture-related departures.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "epicgames.com 403 and guessed Wayback URLs 404 (blocked; not evaded). Search worked; Sweeney quotes seen in search summary only."
+ },
+ {
+  "company": "Tesla",
+  "event_date": "2024-04-15",
+  "news_coverage": [
+   {
+    "outlet": "Engadget",
+    "url": "https://www.engadget.com/tesla-is-reportedly-laying-off-more-than-10-percent-of-its-workforce-121724301.html",
+    "headline": "Tesla is reportedly laying off more than 10 percent of its workforce",
+    "date": "2024-04-15",
+    "framing": "Reports Musk email via Electrek"
+   },
+   {
+    "outlet": "Business Insider India",
+    "url": "https://www.businessinsider.in/thelife/news/tesla-is-laying-off-more-than-10-of-its-workforce-memo-shows/amp_articleshow/109314009.cms",
+    "headline": "Tesla is laying off more than 10% of its workforce, memo shows",
+    "date": "2024-04-15",
+    "framing": "Memo-based; cost reduction and productivity"
+   },
+   {
+    "outlet": "Bloomberg via TT News",
+    "url": "https://ttnews.com/articles/tesla-cut-workforce-global",
+    "headline": "Tesla cut workforce global",
+    "date": "2024-04-15",
+    "framing": "Bloomberg-confirmed cut following weak deliveries"
+   }
+  ],
+  "framing_gap": "Press adds weak-deliveries and executive-exits (Baglino, Patel) context beyond the email's cost/productivity rationale.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Electrek URL guessed -> 404; Wayback 404. Search worked; email text not retrieved. 'nothing I hate more' seen in search summary only."
+ },
+ {
+  "company": "Microsoft",
+  "event_date": "2025-07-02",
+  "news_coverage": [
+   {
+    "outlet": "CNBC via NBC Washington",
+    "url": "https://www.nbcwashington.com/news/business/money-report/microsofts-satya-nadella-says-job-cuts-have-been-weighing-heavily-on-him/3964172/",
+    "headline": "Microsoft's Satya Nadella says job cuts have been weighing heavily on him",
+    "date": "2025-07-24",
+    "framing": "Reports Nadella memo acknowledging incongruence of layoffs amid thriving results"
+   },
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2025/07/24/satya-nadella-memo-microsoft-layoffs-enigma-of-success-artificial-intelligence",
+    "headline": "Satya Nadella memo Microsoft layoffs 'enigma of success'",
+    "date": "2025-07-24",
+    "framing": "Highlights 'enigma of success' and AI context"
+   },
+   {
+    "outlet": "Business Today",
+    "url": "https://www.businesstoday.in/amp/technology/news/story/satya-nadella-acknowledges-microsoft-layoffs-calls-industry-success-dissonant-and-demanding-486267-2025-07-25",
+    "headline": "Satya Nadella acknowledges Microsoft layoffs, calls industry success 'dissonant and demanding'",
+    "date": "2025-07-25",
+    "framing": "Notes headcount relatively unchanged; further layoffs not ruled out"
+   }
+  ],
+  "opening_line": "As we begin a new fiscal year, I’ve been reflecting on the road we’ve traveled together and the path ahead.",
+  "key_quotes": [
+   "This is the enigma of success in an industry that has no franchise value.",
+   "These decisions are among the most difficult we have to make.",
+   "By every objective measure, Microsoft is thriving"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "euphemisms": [
+   "job eliminations",
+   "unlearning"
+  ],
+  "severance": null,
+  "ai_framing": "future_context",
+  "mentions_ai": true,
+  "stated_reasons": [
+   "strategic_pivot",
+   "other"
+  ],
+  "public_primary_text": true,
+  "framing_gap": "Company frames layoffs as an 'enigma of success' and a learning transition; press stresses the contradiction with record profits, AI capex and Brad Smith's cost-pressure remarks.",
+  "company_text_path": "data/sources/microsoft__2025-07/company.txt",
+  "company_text_url": "https://blogs.microsoft.com/blog/2025/07/24/recommitting-to-our-why-what-and-how/",
+  "reproduction_url": null,
+  "fetch_log": "Direct fetch of Microsoft blog 200 (July 24 memo, not the July 2 announcement). No apology or responsibility language found (grep). Memo does not state a reason for cuts directly, so reasons coded loosely."
+ },
+ {
+  "company": "Atlassian",
+  "event_date": "2026-03-11",
+  "news_coverage": [
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2026-03-11/atlassian-team-ceo-announces-layoffs-of-1-600-citing-ai-shift",
+    "headline": "Atlassian to Reduce 1,600 Jobs in the Latest AI-Linked Cuts",
+    "date": "2026-03-11",
+    "framing": "AI-linked cuts framing"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/",
+    "headline": "Atlassian follows Block's footsteps and cuts staff in the name of AI",
+    "date": "2026-03-12",
+    "framing": "Sceptical of AI justification; quotes CEO denying 'AI replaces people'"
+   },
+   {
+    "outlet": "Cyber Daily",
+    "url": "https://www.cyberdaily.au/digital-transformation/13318-atlassian-says-its-ai-growth-means-more-staff-have-to-go-will-invest-in-ai-with-the-savings",
+    "headline": "Atlassian says its AI growth means more staff have to go",
+    "date": "2026-03-12",
+    "framing": "Savings to be invested in AI"
+   }
+  ],
+  "severance": "16 weeks severance plus one week per year of service; pre-tax charges US$225-236M (per TechCrunch via search)",
+  "framing_gap": "CEO said 'Our approach is not AI replaces people'; press (Bloomberg, TechCrunch) labels the cuts AI-linked and some analysts doubt AI is the only reason.",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "fetch_log": "Company blog guess 404. Search worked; ~1,600 jobs (10%) confirmed by multiple outlets; date 11 Mar (TechCrunch/Bloomberg). Quotes seen via search summary only."
+ }
+]

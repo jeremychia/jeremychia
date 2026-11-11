@@ -1,0 +1,546 @@
+{
+ "n_events": 140,
+ "n_companies": 110,
+ "n_excluded": 9,
+ "tierA": 56,
+ "tierB": 84,
+ "communicator": {
+  "ceo": 91,
+  "earnings_call": 6,
+  "founder": 13,
+  "spokesperson": 5,
+  "exec_other": 13,
+  "media_leak": 4,
+  "sec_filing": 5,
+  "podcast_interview": 1,
+  "cpo_hr": 2
+ },
+ "communicator_ceo_or_founder_share": 0.743,
+ "by_year": {
+  "2014": 1,
+  "2020": 2,
+  "2021": 2,
+  "2022": 31,
+  "2023": 36,
+  "2024": 25,
+  "2025": 29,
+  "2026": 14
+ },
+ "apology_tierA": [
+  11,
+  24
+ ],
+ "responsibility_tierA": [
+  18,
+  19
+ ],
+ "ai_mention_by_year": {
+  "2014": [
+   0,
+   1
+  ],
+  "2020": [
+   0,
+   2
+  ],
+  "2021": [
+   0,
+   2
+  ],
+  "2022": [
+   0,
+   31
+  ],
+  "2023": [
+   3,
+   36
+  ],
+  "2024": [
+   5,
+   25
+  ],
+  "2025": [
+   13,
+   29
+  ],
+  "2026": [
+   11,
+   14
+  ]
+ },
+ "ai_framing_2025plus": {
+  "none": 18,
+  "reallocation": 7,
+  "cause": 8,
+  "future_context": 8,
+  "not about AI": 2
+ },
+ "reasons": [
+  [
+   "efficiency",
+   60
+  ],
+  [
+   "restructuring",
+   58
+  ],
+  [
+   "cost_cutting",
+   54
+  ],
+  [
+   "macro",
+   47
+  ],
+  [
+   "strategic_pivot",
+   41
+  ],
+  [
+   "overhiring",
+   32
+  ],
+  [
+   "revenue_decline",
+   29
+  ],
+  [
+   "ai_automation",
+   21
+  ],
+  [
+   "profitability",
+   20
+  ],
+  [
+   "flatten_management",
+   20
+  ],
+  [
+   "other",
+   8
+  ],
+  [
+   "performance",
+   6
+  ],
+  [
+   "merger_integration",
+   3
+  ],
+  [
+   "covid",
+   3
+  ],
+  [
+   "interest_rates",
+   3
+  ],
+  [
+   "regulatory",
+   3
+  ]
+ ],
+ "reasons_tierA": [
+  [
+   "efficiency",
+   30
+  ],
+  [
+   "strategic_pivot",
+   22
+  ],
+  [
+   "overhiring",
+   21
+  ],
+  [
+   "macro",
+   20
+  ],
+  [
+   "cost_cutting",
+   20
+  ],
+  [
+   "restructuring",
+   16
+  ],
+  [
+   "ai_automation",
+   13
+  ],
+  [
+   "revenue_decline",
+   10
+  ],
+  [
+   "flatten_management",
+   10
+  ],
+  [
+   "other",
+   4
+  ],
+  [
+   "profitability",
+   4
+  ],
+  [
+   "merger_integration",
+   2
+  ],
+  [
+   "performance",
+   2
+  ],
+  [
+   "interest_rates",
+   2
+  ],
+  [
+   "covid",
+   1
+  ],
+  [
+   "regulatory",
+   1
+  ]
+ ],
+ "median_pct": 10.5,
+ "channel": [
+  [
+   "internal_email",
+   115
+  ],
+  [
+   "public_blog",
+   45
+  ],
+  [
+   "8k_filing",
+   28
+  ],
+  [
+   "press_release",
+   26
+  ],
+  [
+   "earnings_call",
+   13
+  ],
+  [
+   "zoom",
+   9
+  ],
+  [
+   "x_post",
+   6
+  ],
+  [
+   "media_leak",
+   5
+  ],
+  [
+   "all_hands",
+   4
+  ],
+  [
+   "personal_email_to_laid_off",
+   1
+  ],
+  [
+   "linkedin",
+   1
+  ],
+  [
+   "podcast",
+   1
+  ]
+ ],
+ "notice": {
+  "advance_notice": 25,
+  "same_day": 86,
+  "pre_leak": 11,
+  "locked_out_first": 2,
+  "unknown": 16
+ },
+ "euphemisms": [
+  [
+   "impacted",
+   3
+  ],
+  [
+   "organizational changes",
+   3
+  ],
+  [
+   "laying off",
+   2
+  ],
+  [
+   "reduce our global workforce",
+   2
+  ],
+  [
+   "reduce our workforce",
+   2
+  ],
+  [
+   "roles",
+   2
+  ],
+  [
+   "reduce the size of our workforce",
+   2
+  ],
+  [
+   "reductions",
+   2
+  ],
+  [
+   "impact some of our teammates",
+   2
+  ],
+  [
+   "reduce the size of our overall workforce",
+   1
+  ],
+  [
+   "leaving airbnb",
+   1
+  ],
+  [
+   "letting off about 15% of the company",
+   1
+  ],
+  [
+   "reductions to robinhood's staff",
+   1
+  ],
+  [
+   "reduce the size of our team",
+   1
+  ],
+  [
+   "reduce team",
+   1
+  ]
+ ],
+ "apology_by_sector": {
+  "big_tech": [
+   [
+    0,
+    8
+   ],
+   15
+  ],
+  "consulting_finance": [
+   [
+    0,
+    0
+   ],
+   0
+  ],
+  "consumer_internet": [
+   [
+    2,
+    2
+   ],
+   5
+  ],
+  "fintech_crypto": [
+   [
+    1,
+    1
+   ],
+   10
+  ],
+  "hardware_auto": [
+   [
+    0,
+    2
+   ],
+   3
+  ],
+  "international_startup": [
+   [
+    0,
+    0
+   ],
+   1
+  ],
+  "media_gaming": [
+   [
+    1,
+    3
+   ],
+   8
+  ],
+  "saas": [
+   [
+    7,
+    8
+   ],
+   14
+  ],
+  "traditional": [
+   [
+    0,
+    0
+   ],
+   0
+  ]
+ },
+ "communicator_by_year": {
+  "2020-21": {
+   "ceo": 4,
+   "earnings_call": 1
+  },
+  "2022": {
+   "ceo": 22,
+   "founder": 4,
+   "spokesperson": 1,
+   "exec_other": 2,
+   "earnings_call": 2
+  },
+  "2023": {
+   "ceo": 27,
+   "exec_other": 2,
+   "founder": 4,
+   "earnings_call": 1,
+   "spokesperson": 1,
+   "media_leak": 1
+  },
+  "2024": {
+   "sec_filing": 4,
+   "ceo": 16,
+   "founder": 2,
+   "exec_other": 2,
+   "spokesperson": 1
+  },
+  "2025": {
+   "ceo": 15,
+   "media_leak": 2,
+   "founder": 1,
+   "exec_other": 5,
+   "podcast_interview": 1,
+   "earnings_call": 2,
+   "spokesperson": 2,
+   "cpo_hr": 1
+  },
+  "2026": {
+   "ceo": 7,
+   "sec_filing": 1,
+   "cpo_hr": 1,
+   "exec_other": 2,
+   "founder": 2,
+   "media_leak": 1
+  }
+ },
+ "overhiring_by_year": {
+  "2020-21": [
+   0,
+   5
+  ],
+  "2022": [
+   12,
+   31
+  ],
+  "2023": [
+   13,
+   36
+  ],
+  "2024": [
+   5,
+   25
+  ],
+  "2025": [
+   1,
+   29
+  ],
+  "2026": [
+   1,
+   14
+  ]
+ },
+ "ai_cause_reason_by_year": {
+  "2020-21": 0,
+  "2022": 0,
+  "2023": 2,
+  "2024": 2,
+  "2025": 10,
+  "2026": 7
+ },
+ "responsibility_by_year_tierA": {
+  "2020-21": [
+   0,
+   0
+  ],
+  "2022": [
+   7,
+   7
+  ],
+  "2023": [
+   9,
+   10
+  ],
+  "2024": [
+   1,
+   1
+  ],
+  "2025": [
+   0,
+   0
+  ],
+  "2026": [
+   1,
+   1
+  ]
+ },
+ "apology_by_year_tierA": {
+  "2020-21": [
+   1,
+   1
+  ],
+  "2022": [
+   3,
+   4
+  ],
+  "2023": [
+   3,
+   9
+  ],
+  "2024": [
+   2,
+   4
+  ],
+  "2025": [
+   0,
+   2
+  ],
+  "2026": [
+   2,
+   4
+  ]
+ },
+ "median_pct_by_sector": {
+  "big_tech": 5.5,
+  "consulting_finance": 6.5,
+  "consumer_internet": 12.5,
+  "fintech_crypto": 18.0,
+  "hardware_auto": 10.0,
+  "international_startup": 10.0,
+  "media_gaming": 15.5,
+  "saas": 10.0,
+  "traditional": 6.0
+ },
+ "pct_known": 110,
+ "notice_by_comm_ceo": {
+  "advance_notice": 17,
+  "same_day": 72,
+  "pre_leak": 6,
+  "unknown": 8,
+  "locked_out_first": 1
+ }
+}

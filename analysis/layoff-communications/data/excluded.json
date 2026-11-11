@@ -1,0 +1,389 @@
+[
+ {
+  "company": "Duolingo",
+  "sector": "consumer_internet",
+  "event_date": "2025-04-28",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Luis von Ahn",
+  "channel": [
+   "internal_email",
+   "all_hands",
+   "linkedin"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "This isn't about replacing Duos with AI.",
+   "We're making a similar call now, and this time the platform shift is AI."
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "euphemisms": [
+   "phase out contractors"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Upbeat, strategic; later softened after backlash.",
+  "sources": [
+   {
+    "url": "https://www.businesstoday.in/tech-today/news/story/duolingo-goes-all-in-on-ai-phases-out-contractors-in-favour-of-automation-474009-2025-04-29",
+    "title": "Duolingo goes all in on AI",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Contractor phase-out, not employee layoff; headcount not stated (10% of contractors cut prior year per press). Quotes from news-search summary of the LinkedIn post; LinkedIn URL not fetchable. ai_framing: company says it is not about replacing employees but AI is the driver.",
+  "batch": "B",
+  "excluded_reason": "contractor phase-out, not an employee layoff"
+ },
+ {
+  "company": "Stripe",
+  "sector": "fintech_crypto",
+  "event_date": "2025-01-21",
+  "headcount_cut": 300,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Patrick Collison (reported; unverified)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Not read; only headline/URL seen.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/01/21/stripe-is-laying-off-300-people-but-says-it-still-plans-to-hire-in-2025",
+    "title": "TechCrunch: Stripe is laying off 300 people but says it still plans to hire in 2025",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Only search-result title seen; text not fetched. Communicator, channel, reasons, pct all unverified guesses/null. Say still plans to hire in 2025.",
+  "batch": "C",
+  "excluded_reason": "search title only; fields are guesses"
+ },
+ {
+  "company": "Klarna",
+  "sector": "fintech_crypto",
+  "event_date": "2024-12-12",
+  "headcount_cut": null,
+  "pct_workforce": 22.0,
+  "communicator": "podcast_interview",
+  "communicator_name": "Sebastian Siemiatkowski",
+  "channel": [
+   "podcast"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "People internally at Klarna are just rallying to deploy as much efficiency AI as they can"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "attrition"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Boastful about AI efficiency; headcount fell via attrition and hiring freeze rather than layoffs.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/12/12/klarna-stopped-all-hiring-replace-workers-with-ai",
+    "title": "Fortune: Klarna stopped all hiring a year ago to replace workers with AI",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Not a layoff event strictly: headcount down 22% to 3,500 mostly attrition; AI assistant claimed equal to 700 agents (Klarna said unconnected to 2022 layoffs). pct_workforce 22 is the shrink. Aug 2024 claim of 5,000->3,800 and ~2,000 target from secondary search only.",
+  "batch": "C",
+  "excluded_reason": "attrition/AI claim, not a layoff memo"
+ },
+ {
+  "company": "Warner Bros. Discovery",
+  "sector": "media_gaming",
+  "event_date": "2023-11-30",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "podcast_interview",
+  "communicator_name": "David Zaslav",
+  "channel": [
+   "podcast"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "merger_integration"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": null,
+  "sources": [
+   {
+    "url": "https://fortune.com/2023/11/30/david-zaslav-warner-bros-discovery-layoffs-forced-never-restructured-worst-day",
+    "title": "Zaslav on forced layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "This is Zaslav retrospectively justifying layoffs in an interview (said WarnerMedia was never restructured), not a layoff announcement. Page not read. 2022 merger layoffs memo not located.",
+  "batch": "E",
+  "excluded_reason": "retrospective interview, not a layoff announcement"
+ },
+ {
+  "company": "Nestle",
+  "sector": "traditional",
+  "event_date": "2025-10-16",
+  "headcount_cut": 16000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Philipp Navratil",
+  "channel": [
+   "press_release",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "cost_cutting",
+   "efficiency",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "job reductions",
+   "automation"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Not read directly.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2025/10/27/nestle-job-cuts.html",
+    "title": "(guessed URL returned 404; not read)",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Recorded from background knowledge, not verified in this session: ~16,000 over two years (~12,000 white-collar), announced with Q3 sales. Treat as unverified.",
+  "batch": "F",
+  "excluded_reason": "recorded from memory, never verified"
+ },
+ {
+  "headcount_cut": 1258,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "public_primary_text": false,
+  "notes": "Found only WARN-filing coverage; no CEO memo located. Channel value 8k_filing is a stand-in for regulatory (WARN) filing. TI and Western Digital searched, nothing found -- not recorded.",
+  "confidence": "low",
+  "company": "Qualcomm",
+  "sector": "hardware_auto",
+  "event_date": "2023-10-13",
+  "communicator": "sec_filing",
+  "communicator_name": "California EDD WARN filing",
+  "channel": [
+   "8k_filing"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "macro"
+  ],
+  "ceo_voice": "No CEO voice; surfaced via WARN notice.",
+  "sources": [
+   {
+    "url": "https://www.theweek.in/news/biz-tech/2023/10/14/qualcomm-to-cut-1-258-jobs-in-california-amidst-sluggish-demand.amp.html",
+    "title": "Qualcomm to cut 1,258 jobs in California",
+    "type": "news"
+   }
+  ],
+  "batch": "G",
+  "excluded_reason": "WARN filing only; no CEO communication"
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.47,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "attrition",
+   "shrink headcount"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "public_primary_text": false,
+  "notes": "Not a mass layoff memo: attrition + hiring freeze. Aug 2024: 3,800 -> ~2,000 target; Dec 2024 3,500; May 2025 ~40% down (CNBC), later ~3,000; baselines conflict (5,000/7,000). Headcount_cut left null. pct 0.47 = 3,800 to 2,000 target, rough. No verbatim quotes read.",
+  "confidence": "low",
+  "company": "Klarna",
+  "sector": "fintech_crypto",
+  "event_date": "2024-08-27",
+  "communicator": "podcast_interview",
+  "communicator_name": "Sebastian Siemiatkowski",
+  "channel": [
+   "podcast",
+   "press_release"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "ceo_voice": "Matter-of-fact tech-optimist; headcount shrink via hiring freeze/attrition, not formal layoff.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/12/12/klarna-stopped-all-hiring-replace-workers-with-ai",
+    "title": "Klarna stopped all hiring",
+    "type": "news"
+   },
+   {
+    "url": "https://www.nbcnewyork.com/news/business/money-report/klarna-ceo-says-ai-helped-company-shrink-workforce-by-40/6264593/",
+    "title": "Klarna CEO says AI helped shrink workforce by 40%",
+    "type": "news"
+   }
+  ],
+  "batch": "G",
+  "excluded_reason": "attrition/hiring freeze, not a layoff memo"
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.8,
+  "opening_line": null,
+  "key_quotes": [
+   "I do not recommend that at all. That was not our goal. It was extremely difficult.",
+   "And so we said goodbye to those people."
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "said goodbye",
+   "replaced"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "public_primary_text": false,
+  "notes": "event_date = Fortune interview date; actual cuts in batches 2023 to early 2024. No contemporaneous memo; communication per-individual not described. Headcount not given. Claims self-reported.",
+  "confidence": "medium",
+  "company": "IgniteTech",
+  "sector": "saas",
+  "event_date": "2025-08-17",
+  "communicator": "ceo",
+  "communicator_name": "Eric Vaughan",
+  "channel": [
+   "all_hands",
+   "podcast_interview"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "performance",
+   "strategic_pivot"
+  ],
+  "ceo_voice": "Unapologetic, retrospective justification; would do it again.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2025/08/17/ceo-laid-off-80-percent-workforce-ai-sabotage",
+    "title": "CEO laid off 80% of workforce over AI",
+    "type": "news"
+   }
+  ],
+  "batch": "G",
+  "excluded_reason": "no contemporaneous memo; dated from later interview"
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [
+   "This was on me. I did not give enough context.",
+   "We've never laid off any full-time employees. We don't plan to."
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "phase out contractors"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "public_primary_text": true,
+  "notes": "NOT a layoff of FTEs: contractor phase-out. Quotes are the Aug 2025 NYT-sourced walk-back, not the April memo; memo opening not read. takes_responsibility reflects 'on me' re: memo communication.",
+  "confidence": "medium",
+  "company": "Duolingo",
+  "sector": "consumer_internet",
+  "event_date": "2025-04-28",
+  "communicator": "ceo",
+  "communicator_name": "Luis von Ahn",
+  "channel": [
+   "linkedin",
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "ceo_voice": "Evangelical AI-first memo, later partially walked back after backlash.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2025/08/18/duolingo-ceo-admits-controversial-ai-memo-did-not-give-enough-context-insists-company-never-laid-off-full-time-employees",
+    "title": "Duolingo CEO admits memo did not give enough context",
+    "type": "news"
+   },
+   {
+    "url": "https://www.computing.co.uk/news/2025/ai/duolingo-goes-ai-first-as-it-phases-out-human-contractors",
+    "title": "Duolingo goes AI first",
+    "type": "news"
+   }
+  ],
+  "batch": "G",
+  "excluded_reason": "contractor phase-out, not an employee layoff"
+ }
+]

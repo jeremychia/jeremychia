@@ -1,0 +1,874 @@
+[
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.06,
+  "opening_line": null,
+  "key_quotes": [
+   "Over the last six months, the world has dramatically changed with inflation reaching record highs,",
+   "To those leaving Rivian, I am genuinely sorry,",
+   "Thank you for pouring so much of yourself into what we're building."
+  ],
+  "takes_responsibility": null,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "leaving Rivian"
+  ],
+  "severance": "14 weeks regular pay, health coverage, Rivian-paid COBRA, mental health/fertility benefits through year-end, job placement, current-quarter equity vesting (per TechCrunch)",
+  "notice_style": "same_day",
+  "public_primary_text": false,
+  "notes": "Email text only seen as quoted by TechCrunch; opening line of full email not verified (first quoted passage is a mid-sentence fragment). Headcount not stated in source read (~6%).",
+  "confidence": "medium",
+  "company": "Rivian",
+  "sector": "hardware_auto",
+  "event_date": "2022-07-27",
+  "communicator": "ceo",
+  "communicator_name": "RJ Scaringe",
+  "channel": [
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Human and personal; macro-framed with an explicit apology.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/07/27/rivian-begins-laying-off-6-of-workforce",
+    "title": "Rivian begins laying off 6% of workforce",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.1,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reducing our salaried employees"
+  ],
+  "severance": "Severance, Rivian-paid COBRA, job placement services; FY23 bonus still eligible (per secondary summary of BI-published email)",
+  "notice_style": "same_day",
+  "public_primary_text": true,
+  "notes": "Full email published by Business Insider (autos.yahoo.com mirror 403, BI not fetchable); email reportedly opens 'Hi Team' per secondary summary -- no verbatim quotes verified. ~16,700 total employees; salaried count not specified; impacted staff notified by calendar invite next morning. Cuts hit ~10% salaried plus limited non-manufacturing hourly.",
+  "confidence": "low",
+  "company": "Rivian",
+  "sector": "hardware_auto",
+  "event_date": "2024-02-21",
+  "communicator": "ceo",
+  "communicator_name": "RJ Scaringe",
+  "channel": [
+   "internal_email",
+   "earnings_call",
+   "zoom"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability"
+  ],
+  "ceo_voice": "Direct, brief team-style email delivered right after earnings.",
+  "sources": [
+   {
+    "url": "https://abc7chicago.com/post/rivian-layoffs-2024-earnings-call-rivn/14455105/",
+    "title": "Rivian layoffs for 10 percent of salaried workers",
+    "type": "news"
+   },
+   {
+    "url": "https://techcrunch.com/2024/02/21/rivian-lays-off-10-of-workforce-as-ev-pricing-pressure-mounts/amp",
+    "title": "Rivian lays off 10% of workforce",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.12,
+  "opening_line": null,
+  "key_quotes": [
+   "Saying goodbye to colleagues is never easy,"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "saying goodbye",
+   "reduction of salaried workforce"
+  ],
+  "severance": "Severance, bonus, continued health benefits, transition support (as quoted from memo)",
+  "notice_style": "unknown",
+  "public_primary_text": false,
+  "notes": "Quote is excerpt as reported; whether it is the memo's literal first line unverified. Headcount unclear (12% of salaried/US-based; sources conflict). Memo first reported by TechCrunch. Separate 2024 6% cut (Rawlinson email) and June 2026 18% cut (Napoli) not recorded here; not read.",
+  "confidence": "medium",
+  "company": "Lucid Motors",
+  "sector": "hardware_auto",
+  "event_date": "2026-02-20",
+  "communicator": "ceo",
+  "communicator_name": "Marc Winterhoff (interim CEO)",
+  "channel": [
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "profitability",
+   "restructuring"
+  ],
+  "ceo_voice": "Soft, human but corporate; euphemistic farewell framing.",
+  "sources": [
+   {
+    "url": "https://thedriven.io/2026/02/25/lucid-motors-to-lay-off-12-per-cent-of-its-workforce/",
+    "title": "Lucid Motors to lay off 12 per cent",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 900,
+  "pct_workforce": 0.24,
+  "opening_line": "We knew this day was coming, but that does not make it any less difficult—especially for those whose jobs are affected.",
+  "key_quotes": [
+   "through no fault of their own"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "staff reductions"
+  ],
+  "severance": "On payroll through Feb 12 + 8 weeks pay; +2 weeks/yr over 3 yrs; 2023 target bonus Jan 5; health through May; 2 months 401(k); visa holders on payroll to Mar 24",
+  "notice_style": "same_day",
+  "public_primary_text": true,
+  "notes": "Quotes via TechCrunch reproduction. Came after Oct 2023 pedestrian incident, DMV suspension, 9 execs fired.",
+  "confidence": "high",
+  "company": "Cruise (GM)",
+  "sector": "hardware_auto",
+  "event_date": "2023-12-14",
+  "communicator": "exec_other",
+  "communicator_name": "Mo Elshenawy (president & CTO)",
+  "channel": [
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "regulatory",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Sympathetic but distancing; fault placed away from employees, safety framed as north star; sent by exec after CEO Vogt resigned.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/12/14/cruise-slashes-24-of-self-driving-car-workforce-in-sweeping-layoffs/",
+    "title": "Cruise slashes 24% of workforce",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 1600,
+  "pct_workforce": 0.25,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "revising Swedish operations"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "public_primary_text": false,
+  "notes": "Original press release not fetched; wording only paraphrased in secondary sources (no verified verbatim quotes). 1,600 = notice of redundancy (Swedish process, union negotiation): 1,000 Skelleftea, 400 Vasteras, 200 Stockholm.",
+  "confidence": "low",
+  "company": "Northvolt",
+  "sector": "hardware_auto",
+  "event_date": "2024-09-23",
+  "communicator": "ceo",
+  "communicator_name": "Peter Carlsson",
+  "channel": [
+   "press_release"
+  ],
+  "stated_reasons": [
+   "macro",
+   "restructuring",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Corporate and sober; calls decisions challenging and painful but necessary.",
+  "sources": [
+   {
+    "url": "https://www.irishtimes.com/business/2024/09/23/northvolt-to-cut-more-than-20-of-jobs-in-battle-for-survival",
+    "title": "Northvolt to cut more than 20% of jobs",
+    "type": "news"
+   },
+   {
+    "url": "https://northswedenbusiness.com/news/2024/september/northvolt-lays-off-1-600-employees/",
+    "title": "Northvolt lays off 1,600",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 8500,
+  "pct_workforce": 0.08,
+  "opening_line": null,
+  "key_quotes": [
+   "We believe a total of 8,500 positions will be affected."
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "positions affected",
+   "headcount reductions"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "public_primary_text": false,
+  "notes": "Quote is Ericsson statement to Light Reading, not the memo. Ekholm memo (via Reuters) not read; Reuters-reported fragments (headcount reductions already communicated in several countries) unverified here. Pre-announced cost cut SEK 9bn at Capital Markets Day.",
+  "confidence": "medium",
+  "company": "Ericsson",
+  "sector": "hardware_auto",
+  "event_date": "2023-02-24",
+  "communicator": "ceo",
+  "communicator_name": "Borje Ekholm",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "macro"
+  ],
+  "ceo_voice": "Clinical, process-oriented; defers to local country practice.",
+  "sources": [
+   {
+    "url": "https://www.lightreading.com/5g-and-beyond/ericsson-confirms-8500-job-cuts-in-latest-reorg/d/d-id/783441",
+    "title": "Ericsson confirms 8,500 job cuts",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 14000,
+  "pct_workforce": 0.16,
+  "opening_line": null,
+  "key_quotes": [
+   "We simply don't know when it will recover"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "cost savings programme"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "public_primary_text": false,
+  "notes": "'Up to 14,000' (9,000-14,000 range); workforce ~86,000 -> 72-77k; savings EUR 800m-1.2bn by 2026. Quote as reported in search summary, not verified against transcript.",
+  "confidence": "low",
+  "company": "Nokia",
+  "sector": "hardware_auto",
+  "event_date": "2023-10-19",
+  "communicator": "ceo",
+  "communicator_name": "Pekka Lundmark",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Corporate, market-driven, 'up to' hedging.",
+  "sources": [
+   {
+    "url": "https://www.lightreading.com/5g/nokia-to-cut-up-to-14-000-jobs-in-dire-warning-about-market",
+    "title": "Nokia to cut up to 14,000 jobs",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.1,
+  "opening_line": null,
+  "key_quotes": [
+   "Due to the significant supply demand mismatch entering calendar 2023, we expect that profitability will remain challenged throughout 2023."
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "workforce reduction"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "public_primary_text": false,
+  "notes": "Initial 10% (about half layoffs/half attrition) Dec 2022; Feb 2023 Mehrotra email added 5% (total 15%). Quote from secondary summary, unverified. Date approximate.",
+  "confidence": "low",
+  "company": "Micron",
+  "sector": "hardware_auto",
+  "event_date": "2022-12-21",
+  "communicator": "earnings_call",
+  "communicator_name": "Sanjay Mehrotra",
+  "channel": [
+   "earnings_call",
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Corporate/financial; announced in earnings context with bonus suspension.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/markets/micron-cut-10-percent-workforce-suspend-bonuses-2023",
+    "title": "Micron to cut 10% of workforce",
+    "type": "news"
+   },
+   {
+    "url": "https://www.boisestatepublicradio.org/news/2023-02-16/layoffs-at-micron-roughly-double-total-workforce-reduction-now-15",
+    "title": "Micron layoffs roughly double",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 1258,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "public_primary_text": false,
+  "notes": "Found only WARN-filing coverage; no CEO memo located. Channel value 8k_filing is a stand-in for regulatory (WARN) filing. TI and Western Digital searched, nothing found -- not recorded.",
+  "confidence": "low",
+  "company": "Qualcomm",
+  "sector": "hardware_auto",
+  "event_date": "2023-10-13",
+  "communicator": "sec_filing",
+  "communicator_name": "California EDD WARN filing",
+  "channel": [
+   "8k_filing"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "macro"
+  ],
+  "ceo_voice": "No CEO voice; surfaced via WARN notice.",
+  "sources": [
+   {
+    "url": "https://www.theweek.in/news/biz-tech/2023/10/14/qualcomm-to-cut-1-258-jobs-in-california-amidst-sluggish-demand.amp.html",
+    "title": "Qualcomm to cut 1,258 jobs in California",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 250,
+  "pct_workforce": 0.3,
+  "opening_line": null,
+  "key_quotes": [
+   "This transformation requires a painful reset",
+   "We need to go back to a startup mode, with speed and agility, a flatter organizational structure,",
+   "liberate humans from manual and tedious tasks"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "parting ways",
+   "painful reset"
+  ],
+  "severance": "Severance and extended health insurance (per The Register)",
+  "notice_style": "same_day",
+  "public_primary_text": true,
+  "notes": "Opening line not verified (X essay not fetchable). Kaufman earlier sent a staff email (April or May 2025) saying 'AI is coming for your jobs' -- quote per secondary sources only. 'parting ways with approximately 250 team members' phrasing seen in The Register fetch. No apology reported.",
+  "confidence": "medium",
+  "company": "Fiverr",
+  "sector": "international_startup",
+  "event_date": "2025-09-15",
+  "communicator": "ceo",
+  "communicator_name": "Micha Kaufman",
+  "channel": [
+   "x_post",
+   "internal_email",
+   "public_blog"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "strategic_pivot",
+   "flatten_management",
+   "efficiency"
+  ],
+  "ceo_voice": "Visionary, AI-evangelist; frames cut as necessary reset toward AI-first.",
+  "sources": [
+   {
+    "url": "https://www.theregister.com/2025/09/16/fiverr_ai_layoff/",
+    "title": "Fiverr cuts 30% of staff in pivot to AI-first",
+    "type": "news"
+   },
+   {
+    "url": "https://gizmodo.com/the-ai-layoffs-have-come-for-freelance-marketplace-fiverr-2000660080",
+    "title": "The AI layoffs have come for Fiverr",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.47,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "attrition",
+   "shrink headcount"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "public_primary_text": false,
+  "notes": "Not a mass layoff memo: attrition + hiring freeze. Aug 2024: 3,800 -> ~2,000 target; Dec 2024 3,500; May 2025 ~40% down (CNBC), later ~3,000; baselines conflict (5,000/7,000). Headcount_cut left null. pct 0.47 = 3,800 to 2,000 target, rough. No verbatim quotes read.",
+  "confidence": "low",
+  "company": "Klarna",
+  "sector": "fintech_crypto",
+  "event_date": "2024-08-27",
+  "communicator": "podcast_interview",
+  "communicator_name": "Sebastian Siemiatkowski",
+  "channel": [
+   "podcast",
+   "press_release"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "ceo_voice": "Matter-of-fact tech-optimist; headcount shrink via hiring freeze/attrition, not formal layoff.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/12/12/klarna-stopped-all-hiring-replace-workers-with-ai",
+    "title": "Klarna stopped all hiring",
+    "type": "news"
+   },
+   {
+    "url": "https://www.nbcnewyork.com/news/business/money-report/klarna-ceo-says-ai-helped-company-shrink-workforce-by-40/6264593/",
+    "title": "Klarna CEO says AI helped shrink workforce by 40%",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": 0.8,
+  "opening_line": null,
+  "key_quotes": [
+   "I do not recommend that at all. That was not our goal. It was extremely difficult.",
+   "And so we said goodbye to those people."
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "said goodbye",
+   "replaced"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "public_primary_text": false,
+  "notes": "event_date = Fortune interview date; actual cuts in batches 2023 to early 2024. No contemporaneous memo; communication per-individual not described. Headcount not given. Claims self-reported.",
+  "confidence": "medium",
+  "company": "IgniteTech",
+  "sector": "saas",
+  "event_date": "2025-08-17",
+  "communicator": "ceo",
+  "communicator_name": "Eric Vaughan",
+  "channel": [
+   "all_hands",
+   "podcast_interview"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "performance",
+   "strategic_pivot"
+  ],
+  "ceo_voice": "Unapologetic, retrospective justification; would do it again.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2025/08/17/ceo-laid-off-80-percent-workforce-ai-sabotage",
+    "title": "CEO laid off 80% of workforce over AI",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [
+   "This was on me. I did not give enough context.",
+   "We've never laid off any full-time employees. We don't plan to."
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "phase out contractors"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "public_primary_text": true,
+  "notes": "NOT a layoff of FTEs: contractor phase-out. Quotes are the Aug 2025 NYT-sourced walk-back, not the April memo; memo opening not read. takes_responsibility reflects 'on me' re: memo communication.",
+  "confidence": "medium",
+  "company": "Duolingo",
+  "sector": "consumer_internet",
+  "event_date": "2025-04-28",
+  "communicator": "ceo",
+  "communicator_name": "Luis von Ahn",
+  "channel": [
+   "linkedin",
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "ceo_voice": "Evangelical AI-first memo, later partially walked back after backlash.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2025/08/18/duolingo-ceo-admits-controversial-ai-memo-did-not-give-enough-context-insists-company-never-laid-off-full-time-employees",
+    "title": "Duolingo CEO admits memo did not give enough context",
+    "type": "news"
+   },
+   {
+    "url": "https://www.computing.co.uk/news/2025/ai/duolingo-goes-ai-first-as-it-phases-out-human-contractors",
+    "title": "Duolingo goes AI first",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 388,
+  "pct_workforce": 0.45,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "restructuring",
+   "reduction in force"
+  ],
+  "severance": "Cash severance; charges $15-19M (per coverage)",
+  "notice_style": "same_day",
+  "public_primary_text": true,
+  "notes": "Press release not fetched; 'the new realities of AI and reduced traffic from Google to content publishers' is a paraphrased/quoted phrase from coverage, not stored as verified quote. Rosensweig replaced Nathan Schultz.",
+  "confidence": "medium",
+  "company": "Chegg",
+  "sector": "consumer_internet",
+  "event_date": "2025-10-27",
+  "communicator": "sec_filing",
+  "communicator_name": "Chegg / Dan Rosensweig (returning CEO)",
+  "channel": [
+   "press_release",
+   "8k_filing"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "revenue_decline",
+   "restructuring"
+  ],
+  "ceo_voice": "Corporate press release; blames 'new realities of AI' and Google traffic; CEO swap same day.",
+  "sources": [
+   {
+    "url": "https://www.highereddive.com/news/chegg-layoffs-strategic-alternatives-google-ai/804192/",
+    "title": "Chegg layoffs",
+    "type": "news"
+   },
+   {
+    "url": "https://www.foxbusiness.com/technology/chegg-lay-off-45-workforce-ai-google-traffic-shifts-batter-business",
+    "title": "Chegg cuts 45% of staff",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 700,
+  "pct_workforce": 0.15,
+  "opening_line": null,
+  "key_quotes": [
+   "reallocating resources",
+   "AI-powered products and capabilities"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "reallocating resources",
+   "restructuring"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "public_primary_text": true,
+  "notes": "Fragments quoted from Engadget summarising the filing. Headcount approx (<15% of ~4,500-5,200); charges $35-45M, completion by Sept 2026. Ready's own memo not read.",
+  "confidence": "medium",
+  "company": "Pinterest",
+  "sector": "consumer_internet",
+  "event_date": "2026-01-27",
+  "communicator": "sec_filing",
+  "communicator_name": "Bill Ready (CEO)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Corporate, forward-looking; AI reallocation framing. Later fired engineers who tracked layoffs.",
+  "sources": [
+   {
+    "url": "https://www.engadget.com/ai/pinterest-is-conducting-a-massive-round-of-layoffs-to-prioritize-ai-powered-products-and-capabilities-163440004.html",
+    "title": "Pinterest layoffs",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 1000,
+  "pct_workforce": 0.07,
+  "opening_line": "Today we are announcing enterprise-wide organizational changes as part of entering the next phase of our strategy.",
+  "key_quotes": [
+   "We are making the difficult decision to reduce the size of Autodesk's workforce by approximately 7% globally",
+   "I recognize the weight of this news, particularly as it follows the organizational changes we made last year.",
+   "these changes are not driven by the external environment or an effort to replace people with AI."
+  ],
+  "takes_responsibility": null,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "euphemisms": [
+   "organizational changes",
+   "reduce the size of workforce"
+  ],
+  "severance": "Severance, benefits continuation, career transition assistance; consultative process in some countries",
+  "notice_style": "same_day",
+  "public_primary_text": true,
+  "notes": "Verbatim from SEC exhibit. Prior round Feb 2025 (~1,350, ~9%).",
+  "confidence": "high",
+  "company": "Autodesk",
+  "sector": "saas",
+  "event_date": "2026-01-22",
+  "communicator": "ceo",
+  "communicator_name": "Andrew Anagnost",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "efficiency"
+  ],
+  "ceo_voice": "Measured and corporate; preemptively denies AI replacement.",
+  "sources": [
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000006/ceoemlfinal.htm",
+    "title": "Autodesk 8-K Ex 99.1 CEO email",
+    "type": "primary"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 4000,
+  "pct_workforce": 0.4,
+  "opening_line": "The core thesis is simple. Intelligence tools have changed what it means to build and run a company,",
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "intelligence tools",
+   "smaller team"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "public_primary_text": true,
+  "notes": "Opening line as reported by Fortune for the shareholder letter (verbatim in quote, not full letter read). Severance figures not retrieved. Headcount ~10,000 to <6,000; 'over 4,000'. Critics call it AI-washing.",
+  "confidence": "medium",
+  "company": "Block",
+  "sector": "fintech_crypto",
+  "event_date": "2026-02-26",
+  "communicator": "founder",
+  "communicator_name": "Jack Dorsey",
+  "channel": [
+   "internal_email",
+   "x_post",
+   "public_blog"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "strategic_pivot"
+  ],
+  "ceo_voice": "Bold, thesis-driven; frames AI as why a smaller team is better; stock rose up to 24%.",
+  "sources": [
+   {
+    "url": "https://www.fortune.com/2026/02/27/jack-dorsey-block-40-percent-layoff-ai-intelligence-tools-smaller-team",
+    "title": "Dorsey Block 40% layoff",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 600,
+  "pct_workforce": null,
+  "opening_line": null,
+  "key_quotes": [
+   "fewer conversations will be required to make a decision, and each person will be more load-bearing"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "non-working notice period",
+   "reduce layers"
+  ],
+  "severance": "Non-working notice period until Nov 21; encouraged to apply for other Meta roles",
+  "notice_style": "advance_notice",
+  "public_primary_text": false,
+  "notes": "Memo reported by Axios; quote as excerpted by Fox Business. Full memo not read; opening line unknown. Cuts to FAIR/product; TBD Lab spared. AI is the business, not the cause of cuts.",
+  "confidence": "medium",
+  "company": "Meta (Superintelligence Labs)",
+  "sector": "big_tech",
+  "event_date": "2025-10-22",
+  "communicator": "exec_other",
+  "communicator_name": "Alexandr Wang (Chief AI Officer)",
+  "channel": [
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "efficiency",
+   "restructuring"
+  ],
+  "ceo_voice": "Efficiency-oriented, bureaucracy-blaming; cuts framed as speeding decisions.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/technology/meta-cuts-600-jobs-amid-ai-expansion-push-automation-replaces-human-staff",
+    "title": "Meta cuts 600 jobs in AI division",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 200,
+  "pct_workforce": 0.14,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring",
+   "layoffs"
+  ],
+  "severance": "Severance packages (spokesperson); ~500 contractors also ended",
+  "notice_style": "same_day",
+  "public_primary_text": false,
+  "notes": "BI published full email (businessinsider fetch failed) so no verbatim quote verified. Paraphrase: ramped GenAI capacity too quickly, 'too many layers, excessive bureaucracy'. Followed Meta's $14.3B investment / Wang's exit.",
+  "confidence": "low",
+  "company": "Scale AI",
+  "sector": "international_startup",
+  "event_date": "2025-07-16",
+  "communicator": "ceo",
+  "communicator_name": "Jason Droege (interim CEO)",
+  "channel": [
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "restructuring",
+   "efficiency"
+  ],
+  "ceo_voice": "Candid about overhiring and bureaucracy; reassures financial health.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/?p=3028564",
+    "title": "Scale AI lays off 200",
+    "type": "news"
+   }
+  ]
+ },
+ {
+  "headcount_cut": 20,
+  "pct_workforce": 0.1,
+  "opening_line": null,
+  "key_quotes": [],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "public_primary_text": false,
+  "notes": "Company-wide memo first published by Business Insider; wording not retrieved. Humane (HP sale Feb 2025) considered but is an acquisition/shutdown, not a layoff memo -- not recorded.",
+  "confidence": "low",
+  "company": "Stability AI",
+  "sector": "international_startup",
+  "event_date": "2024-04-17",
+  "communicator": "exec_other",
+  "communicator_name": "Stability AI leadership (new CEO Prem Akkaraju)",
+  "channel": [
+   "internal_email"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting"
+  ],
+  "ceo_voice": "Unknown; memo text not read.",
+  "sources": [
+   {
+    "url": "https://www.theregister.com/2024/04/18/stability_ai_layoff_staff/",
+    "title": "Stability AI layoff",
+    "type": "news"
+   },
+   {
+    "url": "https://siliconangle.com/2024/04/18/stability-ai-lay-off-10-staff-wake-resignation-ceo/",
+    "title": "Stability AI lays off 10% of staff",
+    "type": "news"
+   }
+  ]
+ }
+]

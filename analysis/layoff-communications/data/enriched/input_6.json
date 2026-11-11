@@ -1,0 +1,365 @@
+[
+ {
+  "company": "Rappi",
+  "event_date": "2022-05-26",
+  "tier": "B",
+  "communicator": "spokesperson",
+  "communicator_name": "Rappi (company statement)",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (search summary only, snippet had no date). Statement paraphrase seen only via search summary; no verbatim quote recorded. No CEO letter found.",
+  "sources": [
+   {
+    "title": "Reuters via MarketScreener",
+    "type": "news",
+    "url": "https://uk.marketscreener.com/news/latest/SoftBank-backed-delivery-app-Rappi-lays-off-6-of-workers-29815571"
+   }
+  ]
+ },
+ {
+  "company": "Chime",
+  "event_date": "2022-11-02",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Chris Britt",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Memo paraphrased in search summary only; not read. 150-160 range across outlets (Banking Dive ~150 of 1,300).",
+  "sources": [
+   {
+    "title": "TechCrunch: Chime cutting 12%",
+    "type": "news",
+    "url": "https://techcrunch.com/2022/11/02/digital-bank-chime-is-cutting-costs-across-the-board-including-12-of-staff"
+   }
+  ]
+ },
+ {
+  "company": "Crypto.com",
+  "event_date": "2023-01-12",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Kris Marszalek",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Message to all employees; text not read, no verified quotes. Earlier June 2022 5% (~260) cut also reported. Also an AI-pivot cut reported (cointelegraph URL seen, 2026, unread).",
+  "sources": [
+   {
+    "title": "TechCrunch",
+    "type": "news",
+    "url": "https://techcrunch.com/2023/01/12/crypto-com-cuts-20-jobs-amid-unforeseeable-industry-events"
+   },
+   {
+    "title": "CNBC",
+    "type": "news",
+    "url": "https://www.cnbc.com/2023/01/13/cryptocom-lays-off-20percent-of-workforce-after-ftx-collapse.html"
+   }
+  ]
+ },
+ {
+  "company": "Disney",
+  "event_date": "2023-02-08",
+  "tier": "B",
+  "communicator": "earnings_call",
+  "communicator_name": "Bob Iger",
+  "channel": [
+   "earnings_call",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Announced on Feb 8 2023 earnings call with 7,000 target; staff memo reported Mar 27 2023 said notifications begin that week in three waves (March, April, pre-summer). Only Fortune excerpt read; memo opening not verified. A line from earnings call ('I do not make this decision lightly') seen only in a search summary, so not recorded as quote. Disney 2025 cuts not researched. Severance not stated.",
+  "sources": [
+   {
+    "title": "Disney layoffs: Iger staff memo",
+    "type": "news",
+    "url": "https://fortune.com/2023/03/28/disney-layoffs-bob-iger-staff-memo-job-cuts"
+   }
+  ]
+ },
+ {
+  "company": "Getir",
+  "event_date": "2023-08-23",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Nazim Salur",
+  "channel": [
+   "zoom",
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "Only seen via search summaries: CEO told managers on a call; company statement said it would part ways with ~2,500 employees. No verbatim quotes verified. Earlier May 2022 round (14%) via leaked memo not recorded separately.",
+  "sources": [
+   {
+    "title": "Retail Bulletin (blocked)",
+    "type": "news",
+    "url": "https://www.theretailbulletin.com/food-and-drink/getir-to-cut-2500-jobs-across-five-countries-23-08-2023/"
+   },
+   {
+    "title": "Sifted",
+    "type": "news",
+    "url": "https://sifted.eu/articles/getir-cuts-10-of-staff-news"
+   }
+  ]
+ },
+ {
+  "company": "Brex",
+  "event_date": "2024-01-23",
+  "tier": "B",
+  "communicator": "founder",
+  "communicator_name": "Pedro Franceschi",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Quote from search summary of memo coverage; page not fetched. Oct 2022 earlier cut: 136 people, 11%. Dubugras did not author the Jan 2024 memo.",
+  "sources": [
+   {
+    "title": "Fortune: Brex to lay off 20%",
+    "type": "news",
+    "url": "https://fortune.com/2024/01/23/brex-announced-it-will-lay-off-20-of-its-staff"
+   }
+  ]
+ },
+ {
+  "company": "Ford Motor (Europe)",
+  "event_date": "2024-11-20",
+  "tier": "B",
+  "communicator": "spokesperson",
+  "communicator_name": "Dave Johnston / Lisa Brankin",
+  "channel": [
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "14% of ~28,000 European workforce; by end 2027; 2,900 Germany, 800 UK. No Farley memo found; 2022 Farley cuts not verified.",
+  "sources": [
+   {
+    "title": "Ford to cut 4,000 jobs in Europe",
+    "type": "news",
+    "url": "https://www.hcamag.com/au/specialisation/industrial-relations/ford-to-cut-4000-jobs-in-europe-reports/514896"
+   }
+  ]
+ },
+ {
+  "company": "Scale AI",
+  "event_date": "2025-07-16",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Jason Droege (interim CEO)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "BI published full email (businessinsider fetch failed) so no verbatim quote verified. Paraphrase: ramped GenAI capacity too quickly, 'too many layers, excessive bureaucracy'. Followed Meta's $14.3B investment / Wang's exit.",
+  "sources": [
+   {
+    "title": "Scale AI lays off 200",
+    "type": "news",
+    "url": "https://techcrunch.com/?p=3028564"
+   }
+  ]
+ },
+ {
+  "company": "Meta (Superintelligence Labs)",
+  "event_date": "2025-10-22",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Alexandr Wang (Chief AI Officer)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Memo reported by Axios; quote as excerpted by Fox Business. Full memo not read; opening line unknown. Cuts to FAIR/product; TBD Lab spared. AI is the business, not the cause of cuts.",
+  "sources": [
+   {
+    "title": "Meta cuts 600 jobs in AI division",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/technology/meta-cuts-600-jobs-amid-ai-expansion-push-automation-replaces-human-staff"
+   }
+  ]
+ },
+ {
+  "company": "The Washington Post",
+  "event_date": "2026-02-04",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Staff meeting (Will Lewis and Jeff Bezos absent); Lewis memo later",
+  "channel": [
+   "all_hands",
+   "zoom"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes are from Lewis's Feb 7 resignation email, not the layoff announcement. Roughly one third of staff; 300+ journalists per search summaries (unverified). Neither Lewis nor Bezos attended announcement meeting. Announcer not named in source.",
+  "sources": [
+   {
+    "title": "Will Lewis stepping down",
+    "type": "news",
+    "url": "https://www.pbs.org/newshour/nation/days-after-big-layoffs-at-the-washington-post-publisher-will-lewis-says-hes-stepping-down"
+   }
+  ]
+ },
+ {
+  "company": "Better.com",
+  "event_date": "2021-12-01",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Vishal Garg",
+  "channel": [
+   "zoom"
+  ],
+  "confidence": "high",
+  "notes": "Conflict: Garg said 'about 15%' on the call; reports say 9% of staff. Opening line not verified as first words. Per search: Garg said it was second time he'd done this and 'I cried'. Date reported as Dec 1 2021.",
+  "sources": [
+   {
+    "title": "The News Minute (CNN-based)",
+    "type": "news",
+    "url": "https://www.thenewsminute.com/news/bettercom-ceo-vishal-garg-fires-over-900-employees-over-zoom-call-158451"
+   }
+  ]
+ },
+ {
+  "company": "Stripe",
+  "event_date": "2022-11-03",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Patrick Collison",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Headcount ~1,100 of ~8,000 per news (not in fetched primary excerpt). Also said to have misjudged internet economy growth (secondary reporting).",
+  "sources": [
+   {
+    "title": "CEO Patrick Collison's email to Stripe employees",
+    "type": "primary",
+    "url": "https://stripe.com/newsroom/news/ceo-patrick-collisons-email-to-stripe-employees"
+   },
+   {
+    "title": "The Block",
+    "type": "news",
+    "url": "https://www.theblock.co/post/182689/stripe-cuts-14-of-workforce-as-fintech-layoffs-roll-on"
+   }
+  ]
+ },
+ {
+  "company": "Alphabet/Google",
+  "event_date": "2023-01-20",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Sundar Pichai",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Quotes via fetch summariser of primary blog; whether memo explicitly says 'sorry' not confirmed. Pichai also mentions AI as long-term opportunity (paraphrase; ai_framing future_context). Later Alphabet cuts (2024 teams, 2025 buyouts) not researched.",
+  "sources": [
+   {
+    "title": "A difficult decision to set us up for the future",
+    "type": "primary",
+    "url": "https://blog.google/inside-google/message-ceo/january-update/"
+   }
+  ]
+ },
+ {
+  "company": "Dropbox",
+  "event_date": "2023-04-27",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Drew Houston",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes read from article excerpts of the letter, not Dropbox's own page (dropbox.com URL guessed returned 404). No explicit apology found in excerpts. Cost estimate $37-42M per 8-K (via search). AI-skills line 'a different mix of skill sets, particularly in AI' seen only in a search snippet.",
+  "sources": [
+   {
+    "title": "iPhone in Canada",
+    "type": "news",
+    "url": "https://www.iphoneincanada.ca/2023/04/27/dropbox-cut-workforce-ceo/"
+   },
+   {
+    "title": "People Matters",
+    "type": "news",
+    "url": "https://www.peoplematters.in/amp/news/strategic-hr/dropbox-to-lay-off-hundreds-prioritise-ai-development-37684"
+   }
+  ]
+ },
+ {
+  "company": "Okta",
+  "event_date": "2024-02-01",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Todd McKinnon",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "high",
+  "notes": "Memo text via CNBC. Opening line is a generic salutation only.",
+  "sources": [
+   {
+    "title": "CNBC (memo reproduced)",
+    "type": "news",
+    "url": "https://www.cnbc.com/2024/02/01/okta-to-lay-off-7percent-of-staff-about-400-employees.html"
+   }
+  ]
+ },
+ {
+  "company": "Workday",
+  "event_date": "2025-02-05",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Carl Eschenbach",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Memo reportedly filed with SEC; quotes from Entrepreneur excerpt. Count conflict: 1,750 (memo/most) vs 1,760 (SiliconANGLE headline); Bloomberg said nearly 2,000. Opening line unverified.",
+  "sources": [
+   {
+    "title": "Entrepreneur",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/workday-is-laying-off-1750-employees/486707"
+   },
+   {
+    "title": "SiliconANGLE",
+    "type": "news",
+    "url": "https://siliconangle.com/2025/02/05/workday-lays-off-1760-employees-focus-ai-platform-innovation/"
+   }
+  ]
+ },
+ {
+  "company": "Amazon",
+  "event_date": "2026-01-28",
+  "tier": "A",
+  "communicator": "cpo_hr",
+  "communicator_name": "Beth Galetti",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "Draft email sent in error the night before (news). Date from news (page undated). 'That's not our plan' on regular layoffs per Gizmodo.",
+  "sources": [
+   {
+    "title": "A message from Amazon on recent layoff",
+    "type": "primary",
+    "url": "https://www.aboutamazon.com/news/company-news/amazon-layoffs-corporate-jan-2026"
+   },
+   {
+    "title": "Gizmodo",
+    "type": "news",
+    "url": "https://gizmodo.com/amazon-laying-off-16000-as-it-increases-ownership-and-removes-bureaucracy-2000715027"
+   }
+  ]
+ }
+]

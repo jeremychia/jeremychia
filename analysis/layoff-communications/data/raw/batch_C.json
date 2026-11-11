@@ -1,0 +1,1108 @@
+[
+ {
+  "company": "Stripe",
+  "sector": "fintech_crypto",
+  "event_date": "2022-11-03",
+  "headcount_cut": 1100,
+  "pct_workforce": 14.0,
+  "communicator": "ceo",
+  "communicator_name": "Patrick Collison",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Today we’re announcing the hardest change we have had to make at Stripe to date.",
+  "key_quotes": [
+   "we’re very sorry to be taking this step.",
+   "John and I are fully responsible for the decisions leading up to it."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "At least 14 weeks, more with tenure; paid to at least 21 Feb 2023; 2022 bonus; unused PTO; 6 months healthcare cash; RSU vesting cliff waived/accelerated",
+  "notice_style": "same_day",
+  "ceo_voice": "Contrite, founder-owned, plain; co-written with John Collison.",
+  "sources": [
+   {
+    "url": "https://stripe.com/newsroom/news/ceo-patrick-collisons-email-to-stripe-employees",
+    "title": "CEO Patrick Collison's email to Stripe employees",
+    "type": "primary"
+   },
+   {
+    "url": "https://www.theblock.co/post/182689/stripe-cuts-14-of-workforce-as-fintech-layoffs-roll-on",
+    "title": "The Block",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Headcount ~1,100 of ~8,000 per news (not in fetched primary excerpt). Also said to have misjudged internet economy growth (secondary reporting)."
+ },
+ {
+  "company": "Stripe",
+  "sector": "fintech_crypto",
+  "event_date": "2025-01-21",
+  "headcount_cut": 300,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Patrick Collison (reported; unverified)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Not read; only headline/URL seen.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2025/01/21/stripe-is-laying-off-300-people-but-says-it-still-plans-to-hire-in-2025",
+    "title": "TechCrunch: Stripe is laying off 300 people but says it still plans to hire in 2025",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Only search-result title seen; text not fetched. Communicator, channel, reasons, pct all unverified guesses/null. Say still plans to hire in 2025."
+ },
+ {
+  "company": "Coinbase",
+  "sector": "fintech_crypto",
+  "event_date": "2022-06-14",
+  "headcount_cut": 1100,
+  "pct_workforce": 18.0,
+  "communicator": "ceo",
+  "communicator_name": "Brian Armstrong",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "stay healthy during this economic downturn",
+   "I realize that removal of access will feel sudden and unexpected."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our team"
+  ],
+  "severance": "At least 14 weeks plus 2 weeks per year of service; 4 months COBRA support in US; mental health support",
+  "notice_style": "same_day",
+  "ceo_voice": "Matter-of-fact; owns over-hiring ('we over-hired' per secondary reports) but not an explicit apology in read text.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/06/14/coinbase-ceo-says-it-is-laying-off-18-of-its-workers/",
+    "title": "Coinbase CEO says it is laying off 18% of its workers",
+    "type": "news"
+   },
+   {
+    "url": "https://www.coinbase.com/blog/a-difficult-but-necessary-decision",
+    "title": "Coinbase blog (403, not read)",
+    "type": "primary"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Primary blog returned 403; quotes taken from TechCrunch's reproduction via a summarising fetch - verify. Opening line not verified. Employees notified by HR email and access cut same day."
+ },
+ {
+  "company": "Coinbase",
+  "sector": "fintech_crypto",
+  "event_date": "2023-01-10",
+  "headcount_cut": 950,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "Brian Armstrong",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "letting go of about 950 people"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Reassuring-but-firm; says Coinbase remains 'well capitalized'.",
+  "sources": [
+   {
+    "url": "https://www.bloomberg.com/news/articles/2023-01-10/coinbase-to-cut-workforce-by-about-950-employees-in-crypto-slump",
+    "title": "Bloomberg",
+    "type": "news"
+   },
+   {
+    "url": "https://www.theblock.co/post/200383/coinbase-to-cut-20-of-staff-in-latest-round-of-layoffs",
+    "title": "The Block",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Primary not fetched (TechCrunch guess URL 404). Paraphrase only: reduce operating expenses ~25%, cut projects with lower probability of success; 'well capitalized, and crypto isn't going anywhere' reported by secondary source - not verified so not in key_quotes."
+ },
+ {
+  "company": "Coinbase",
+  "sector": "fintech_crypto",
+  "event_date": "2026-05-05",
+  "headcount_cut": 700,
+  "pct_workforce": 14.0,
+  "communicator": "ceo",
+  "communicator_name": "Brian Armstrong",
+  "channel": [
+   "x_post",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": "Coinbase announced on Tuesday that it is cutting 700 jobs.",
+  "key_quotes": [
+   "we're currently in a down market and need to adjust our cost structure now",
+   "This is a new way of working, and we need to leverage AI across every facet of our jobs"
+  ],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "ai_automation",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "adjust our cost structure"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Business-like, AI-forward; flattening to max 5 layers below top leadership.",
+  "sources": [
+   {
+    "url": "https://www.cbsnews.com/news/coinbase-layoffs-ai-brian-armstrong/",
+    "title": "CBS News: Coinbase to lay off 700 workers as exchange embraces AI",
+    "type": "news"
+   },
+   {
+    "url": "https://decrypt.co/366765/coinbase-cuts-14-of-staff-amid-crypto-down-market-ai-adoption-ceo",
+    "title": "Decrypt",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Opening line shown is CBS's lede, NOT Armstrong's wording. Quotes via summarising fetch of CBS. Severance not found. Restructuring charge $50-60M; ~5,000 staff end-2025. Analyst skeptic: AI 'easy excuse'. No separate 2025 cut found."
+ },
+ {
+  "company": "Block",
+  "sector": "fintech_crypto",
+  "event_date": "2026-02-26",
+  "headcount_cut": 4000,
+  "pct_workforce": 40.0,
+  "communicator": "founder",
+  "communicator_name": "Jack Dorsey",
+  "channel": [
+   "x_post",
+   "8k_filing",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "We're not making this decision because we're in trouble",
+   "I'd rather get there honestly and on our own terms than be forced into it reactively."
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "overhiring",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "smaller, flatter teams"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Confident, AI-evangelising; frames cut as proactive single deep round while business is strong.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2026/02/27/block-jack-dorsey-ceo-xyz-stock-square-4000-ai-layoffs/",
+    "title": "Fortune: Block cuts 4,000 AI layoffs",
+    "type": "news"
+   },
+   {
+    "url": "https://eweek.com/news/block-layoffs-ai-driven-pivot-jack-dorsey",
+    "title": "eWeek",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "~10,000 -> just under 6,000. Dorsey X post + shareholder letter; full text not read; opening line not verified. Severance not found. Also partly attributed to COVID overhiring. User-specified 'March 2023' Block cut not verified (see failures)."
+ },
+ {
+  "company": "Block",
+  "sector": "fintech_crypto",
+  "event_date": "2025-03-25",
+  "headcount_cut": 931,
+  "pct_workforce": null,
+  "communicator": "founder",
+  "communicator_name": "Jack Dorsey",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "performance",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Transactional; breaks cut into 391 'strategic' and 460 'performance' roles.",
+  "sources": [
+   {
+    "url": "https://www.fintechfutures.com/job-cuts-new-hires/jack-dorsey-s-block-lays-off-staff-across-cash-app-square-and-foundational-teams",
+    "title": "Fintech Futures (Block layoffs)",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "From search summary of TechCrunch report only; page not fetched (direct TechCrunch URL 404). Reported ~8% (not verified) so pct null. Date inferred from 'Tuesday March 25'."
+ },
+ {
+  "company": "Klarna",
+  "sector": "fintech_crypto",
+  "event_date": "2022-05-23",
+  "headcount_cut": 700,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Sebastian Siemiatkowski",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "When we set our goals for 2022 in the autumn, it was a very different world than the one we have today.",
+   "That is why we need to act."
+  ],
+  "stated_reasons": [
+   "macro",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Calm, explanatory; delivered in a prerecorded video message to staff.",
+  "sources": [
+   {
+    "url": "https://www.itpro.com/business-operations/business-management/367771/klarna-to-cut-tenth-of-workforce-due-to-market-restraints",
+    "title": "ITPro: Klarna to cut tenth of workforce",
+    "type": "news"
+   },
+   {
+    "url": "https://gizmodo.com/klarna-ceo-ai-chatbot-customer-service-700-jobs-layoffs-1851293200",
+    "title": "Gizmodo",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Prerecorded video (channel recorded as internal_email as closest; actually video). ~700 is estimate from >7,000 staff. Apology not found in read excerpt. Date: announced Monday (24 May 2022 report -> 2022-05-23)."
+ },
+ {
+  "company": "Klarna",
+  "sector": "fintech_crypto",
+  "event_date": "2024-12-12",
+  "headcount_cut": null,
+  "pct_workforce": 22.0,
+  "communicator": "podcast_interview",
+  "communicator_name": "Sebastian Siemiatkowski",
+  "channel": [
+   "podcast"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "People internally at Klarna are just rallying to deploy as much efficiency AI as they can"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "attrition"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Boastful about AI efficiency; headcount fell via attrition and hiring freeze rather than layoffs.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/12/12/klarna-stopped-all-hiring-replace-workers-with-ai",
+    "title": "Fortune: Klarna stopped all hiring a year ago to replace workers with AI",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Not a layoff event strictly: headcount down 22% to 3,500 mostly attrition; AI assistant claimed equal to 700 agents (Klarna said unconnected to 2022 layoffs). pct_workforce 22 is the shrink. Aug 2024 claim of 5,000->3,800 and ~2,000 target from secondary search only."
+ },
+ {
+  "company": "Gemini",
+  "sector": "fintech_crypto",
+  "event_date": "2022-06-02",
+  "headcount_cut": null,
+  "pct_workforce": 10.0,
+  "communicator": "founder",
+  "communicator_name": "Cameron and Tyler Winklevoss",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "Today is a tough day, but one that will make Gemini better over the long run."
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "Calendar invite for 1:1 on separation payments and medical coverage",
+  "notice_style": "same_day",
+  "ceo_voice": "Collective founder voice, 'crypto winter' framing, staff called 'astronauts'.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/amp/2022/06/02/winklevoss-twins-gemini-citting-10percent-says-crypto-winter-is-here.html",
+    "title": "CNBC: Gemini cutting 10%",
+    "type": "news"
+   },
+   {
+    "url": "https://www.bnnbloomberg.ca/winklevoss-twins-gemini-slashes-staff-10-on-crypto-slump-1.1773654",
+    "title": "Bloomberg via BNN",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quote from Bloomberg via search summary; CNBC page had only summary. Opening line not verified. Headcount not stated (company ~1,100 at start of 2022, so ~100)."
+ },
+ {
+  "company": "Gemini",
+  "sector": "fintech_crypto",
+  "event_date": "2022-07-18",
+  "headcount_cut": null,
+  "pct_workforce": 10.0,
+  "communicator": "founder",
+  "communicator_name": "Cameron Winklevoss",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Brief, market-conditions framing.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/07/18/crypto-exchange-gemini-executes-second-round-of-layoffs-less-than-two-months-after-axing-10-of-staff",
+    "title": "TechCrunch: Gemini second round",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Second round, ~10%, 'turbulent market conditions' per search summary; text not read. A third round (Benzinga/The Information) reportedly cut headcount to 650-700 by year end - unverified."
+ },
+ {
+  "company": "Kraken",
+  "sector": "fintech_crypto",
+  "event_date": "2022-11-30",
+  "headcount_cut": 1100,
+  "pct_workforce": 30.0,
+  "communicator": "ceo",
+  "communicator_name": "Jesse Powell",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "layoffs are our last resort (paraphrase)"
+  ],
+  "severance": "16 weeks base pay and healthcare coverage",
+  "notice_style": "same_day",
+  "ceo_voice": "Measured; layoffs framed as last resort.",
+  "sources": [
+   {
+    "url": "https://blockworks.co/news/kraken-layoffs-30-percent",
+    "title": "Blockworks: Kraken lays off over 1,000",
+    "type": "news"
+   },
+   {
+    "url": "https://www.nbcboston.com/news/business/money-report/crypto-exchange-kraken-lays-off-1000-employees/2907329/",
+    "title": "CNBC/NBC (403)",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Powell stepped down as CEO Sept 2022 (Dave Ripley became CEO in Nov); attribution of the announcement to Powell/Ripley is unclear; no Ripley memo found. Primary page 403; no verified quotes."
+ },
+ {
+  "company": "Crypto.com",
+  "sector": "fintech_crypto",
+  "event_date": "2023-01-12",
+  "headcount_cut": null,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "Kris Marszalek",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce headcount"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; blames unforeseen industry events (FTX).",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2023/01/12/crypto-com-cuts-20-jobs-amid-unforeseeable-industry-events",
+    "title": "TechCrunch",
+    "type": "news"
+   },
+   {
+    "url": "https://www.cnbc.com/2023/01/13/cryptocom-lays-off-20percent-of-workforce-after-ftx-collapse.html",
+    "title": "CNBC",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Message to all employees; text not read, no verified quotes. Earlier June 2022 5% (~260) cut also reported. Also an AI-pivot cut reported (cointelegraph URL seen, 2026, unread)."
+ },
+ {
+  "company": "Bolt",
+  "sector": "fintech_crypto",
+  "event_date": "2026-04-07",
+  "headcount_cut": null,
+  "pct_workforce": 30.0,
+  "communicator": "founder",
+  "communicator_name": "Ryan Breslow",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "Going forward, Bolt will be operating as a much leaner organization and leveraging AI at our core",
+   "we need to adapt as an organization to be leaner and more AI-centric than ever"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "leaner organization"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Efficiency-minded, AI-centric; company called it a decision from 'a place of strength'.",
+  "sources": [
+   {
+    "url": "https://www.americanbanker.com/news/bolt-lays-off-a-third-of-its-employees-citing-ai",
+    "title": "American Banker: Bolt lays off a third of its employees, citing AI",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "American Banker said 'less than 40 people', ~30% of workforce; reported Apr 7 2026, cuts 'last week' so date approximate. Breslow also separately fired entire HR team (May 2026 reports, not read). Earlier cuts: May 2022 (~250, CEO then Maju Kuruvilla), Jan 2023 10%, Dec 2023 29%."
+ },
+ {
+  "company": "Brex",
+  "sector": "fintech_crypto",
+  "event_date": "2024-01-23",
+  "headcount_cut": 282,
+  "pct_workforce": 20.0,
+  "communicator": "founder",
+  "communicator_name": "Pedro Franceschi",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "I realized we grew our org too quickly, making it harder to move at the speed we once did"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "flatten_management",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "First-person, takes ownership of growth decisions.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/01/23/brex-announced-it-will-lay-off-20-of-its-staff",
+    "title": "Fortune: Brex to lay off 20%",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quote from search summary of memo coverage; page not fetched. Oct 2022 earlier cut: 136 people, 11%. Dubugras did not author the Jan 2024 memo."
+ },
+ {
+  "company": "Plaid",
+  "sector": "fintech_crypto",
+  "event_date": "2022-12-07",
+  "headcount_cut": 260,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "Zach Perret",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "our pace of cost growth outstripped our pace of revenue growth",
+   "I made the decision to hire and invest ahead of revenue growth."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "16 weeks separation pay; equity accelerated (vesting to 15 Feb 2023) for >1yr; immigration counsel",
+  "notice_style": "same_day",
+  "ceo_voice": "Plain, accountable CEO voice; acknowledges abrupt system-access removal.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/12/07/plaid-layoff-fintech/amp",
+    "title": "TechCrunch: Plaid layoff",
+    "type": "news"
+   },
+   {
+    "url": "https://www.bankingdive.com/news/plaid-cuts-260-employees/638226/",
+    "title": "Banking Dive",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Event is Dec 2022 (not Jan 2023). Opening line not verified (only excerpts). Severance via search summary."
+ },
+ {
+  "company": "Binance",
+  "sector": "fintech_crypto",
+  "event_date": "2023-07-14",
+  "headcount_cut": 1000,
+  "pct_workforce": null,
+  "communicator": "media_leak",
+  "communicator_name": "WSJ report; company spokesperson",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "other",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "talent density audit",
+   "resource allocation exercise"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Evasive: denied it was cost-cutting; no CEO memo.",
+  "sources": [
+   {
+    "url": "https://www.theblock.co/post/239695/binance-dismissed-more-than-1000-employees-in-recent-weeks-wsj",
+    "title": "The Block: Binance dismissed more than 1,000 (WSJ)",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "WSJ-reported >1,000 dismissals; Binance declined to confirm size; 20% (of ~8,000) rumoured since May 2023 and unconfirmed. Phrases 'talent density audit' via spokesperson per secondary. CEO then Changpeng Zhao (to Nov 2023). No memo text found."
+ },
+ {
+  "company": "Better.com",
+  "sector": "fintech_crypto",
+  "event_date": "2021-12-01",
+  "headcount_cut": 900,
+  "pct_workforce": 9.0,
+  "communicator": "ceo",
+  "communicator_name": "Vishal Garg",
+  "channel": [
+   "zoom"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "If you're on this call, you are part of the unlucky group that is being laid off,",
+   "Your employment here is terminated effective immediately,"
+  ],
+  "stated_reasons": [
+   "performance",
+   "efficiency",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "letting off about 15% of the company"
+  ],
+  "severance": "Details to come by HR email (none given on call)",
+  "notice_style": "same_day",
+  "ceo_voice": "Cold, abrupt, scripted Zoom webinar of ~900 people; went viral.",
+  "sources": [
+   {
+    "url": "https://www.thenewsminute.com/news/bettercom-ceo-vishal-garg-fires-over-900-employees-over-zoom-call-158451",
+    "title": "The News Minute (CNN-based)",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Conflict: Garg said 'about 15%' on the call; reports say 9% of staff. Opening line not verified as first words. Per search: Garg said it was second time he'd done this and 'I cried'. Date reported as Dec 1 2021."
+ },
+ {
+  "company": "Better.com",
+  "sector": "fintech_crypto",
+  "event_date": "2021-12-08",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Vishal Garg",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "I failed to show the appropriate amount of respect and appreciation for the individuals who were affected"
+  ],
+  "stated_reasons": [
+   "other"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Apologetic about execution ('blundered the execution'), not about the decision; addressed to current staff.",
+  "sources": [
+   {
+    "url": "https://www.cbsnews.com/amp/newyork/news/better-ceo-apologizes-for-zoom-firing",
+    "title": "CBS NY: Better CEO apologizes",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Follow-up apology to current employees, posted on Better's site; not to those laid off. 'Blundered the execution' from search summary. No 2022 second apology found. Quote is an excerpt, not confirmed opening."
+ },
+ {
+  "company": "Carvana",
+  "sector": "consumer_internet",
+  "event_date": "2022-05-18",
+  "headcount_cut": 2500,
+  "pct_workforce": 12.0,
+  "communicator": "ceo",
+  "communicator_name": "Ernie Garcia",
+  "channel": [
+   "internal_email",
+   "zoom"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "all time high car prices slowing sales to recession levels"
+  ],
+  "stated_reasons": [
+   "macro",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "4 weeks pay plus 1 week per year of service; executives forgo salary rest of year",
+  "notice_style": "same_day",
+  "ceo_voice": "Defensive-practical; notes uneven burden on operations teams.",
+  "sources": [
+   {
+    "url": "https://www.pymnts.com/personnel/2022/carvana-to-cut-2500-workers/",
+    "title": "PYMNTS: Carvana to cut 2,500 workers",
+    "type": "news"
+   },
+   {
+    "url": "https://www.audacy.com/wbbm780/news/national/carvana-fires-2-500-workers-many-over-zoom",
+    "title": "Audacy: many fired over Zoom",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quote from secondary summary of internal email. 10-12% disagreement across outlets. Many staff told via Zoom; spokesperson said under half. Date 2022-05-18 from my background knowledge, not source-verified."
+ },
+ {
+  "company": "Carvana",
+  "sector": "consumer_internet",
+  "event_date": "2022-11-18",
+  "headcount_cut": 1500,
+  "pct_workforce": 8.0,
+  "communicator": "ceo",
+  "communicator_name": "Ernie Garcia",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We failed to accurately predict how this would all play out and the impact it would have on our business"
+  ],
+  "stated_reasons": [
+   "macro",
+   "interest_rates",
+   "overhiring"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Candid admission of forecasting failure.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/markets/carvana-lay-off-12-percent-workforce-expansion-deal-stock",
+    "title": "Fox Business",
+    "type": "news"
+   },
+   {
+    "url": "https://www.cbtnews.com/carvana-cuts-2500-jobs-after-posting-net-loss-of-506m/",
+    "title": "CBT News",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo obtained by CNBC per secondary; text not read. Date inferred (Friday memo, Nov 2022). Garcia statement is 'we failed' (collective responsibility), recorded as takes_responsibility true tentatively."
+ },
+ {
+  "company": "Affirm",
+  "sector": "fintech_crypto",
+  "event_date": "2023-02-08",
+  "headcount_cut": 485,
+  "pct_workforce": 19.0,
+  "communicator": "ceo",
+  "communicator_name": "Max Levchin",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "earnings_call"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "I acted too slowly as these macroeconomic changes unfolded.",
+   "the single most difficult one"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "revenue_decline",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "US: min 15 weeks base pay + 1 week/yr; $5,000 health stipend; devices kept; visa holders on payroll to 30 Apr; 3 months career advising",
+  "notice_style": "same_day",
+  "ceo_voice": "Personal and self-blaming, explicit CEO accountability; shareholder letter plus staff message.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2023/02/08/affirm-cuts-19percent-of-workforce-shares-tank-on-earnings-miss.html",
+    "title": "CNBC: Affirm cuts 19%",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Headcount ~485 is computed from 2,552 (Jun 2022); company said up to ~500. Also ended crypto initiative. Event is Feb 2023, not 2022."
+ },
+ {
+  "company": "Shopify",
+  "sector": "saas",
+  "event_date": "2022-07-26",
+  "headcount_cut": 1000,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Tobi Lutke",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "Ultimately, placing this bet was my call to make and I got this wrong."
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "16 weeks pay plus 1 week per year of service; extended medical; outplacement (NDA required per Globe)",
+  "notice_style": "same_day",
+  "ceo_voice": "Founder-owned apology; admits e-commerce bet failed.",
+  "sources": [
+   {
+    "url": "https://www.theglobeandmail.com/business/article-shopify-layoffs-pay-boost-restructuring",
+    "title": "Globe and Mail",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo was published on Shopify's site but Shopify URL guess 404; quote via Globe. Opening line not verified. August 2022 further layoffs mentioned by Globe (unquantified)."
+ },
+ {
+  "company": "Shopify",
+  "sector": "saas",
+  "event_date": "2023-05-04",
+  "headcount_cut": 2000,
+  "pct_workforce": 20.0,
+  "communicator": "ceo",
+  "communicator_name": "Tobi Lutke",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency",
+   "strategic_pivot",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "Minimum 16 weeks plus 1 week per year (reported)",
+  "notice_style": "same_day",
+  "ceo_voice": "Plain; says numbers were 'unhealthy' per Bloomberg headline summary (paraphrase).",
+  "sources": [
+   {
+    "url": "https://amp.cbc.ca/news/business/shopify-layoffs-1.6831842",
+    "title": "CBC (403, not read)",
+    "type": "news"
+   },
+   {
+    "url": "https://betakit.com/shopify-cuts-20-percent-of-staff-announces-sale-of-logistics-division",
+    "title": "BetaKit",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Memo text not read, no quotes. Combined with sale of logistics to Flexport. 'More than 2,000' per outlets."
+ },
+ {
+  "company": "Robinhood",
+  "sector": "fintech_crypto",
+  "event_date": "2022-04-26",
+  "headcount_cut": 340,
+  "pct_workforce": 9.0,
+  "communicator": "ceo",
+  "communicator_name": "Vlad Tenev",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "we determined that making these reductions to Robinhood's staff is the right decision to improve efficiency"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "efficiency",
+   "macro"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reductions to Robinhood's staff"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate, growth-explanation; emphasises $6B+ cash.",
+  "sources": [
+   {
+    "url": "https://www.coindesk.com/business/2022/04/26/robinhood-cuts-9-of-workforce-as-hyper-growth-slows/amp/",
+    "title": "CoinDesk",
+    "type": "news"
+   },
+   {
+    "url": "https://decrypt.co/98736",
+    "title": "Decrypt",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Blog post not fetched (robinhood.com URL 404). Quote is a CoinDesk excerpt. 342 per one outlet. Headcount grew 700->~3,800. Aug 2022 23% cut not researched."
+ },
+ {
+  "company": "Chime",
+  "sector": "fintech_crypto",
+  "event_date": "2022-11-02",
+  "headcount_cut": 160,
+  "pct_workforce": 12.0,
+  "communicator": "ceo",
+  "communicator_name": "Chris Britt",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "adjust the size of our organization"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; 'path to profitability' framing.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2022/11/02/digital-bank-chime-is-cutting-costs-across-the-board-including-12-of-staff",
+    "title": "TechCrunch: Chime cutting 12%",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Memo paraphrased in search summary only; not read. 150-160 range across outlets (Banking Dive ~150 of 1,300)."
+ }
+]

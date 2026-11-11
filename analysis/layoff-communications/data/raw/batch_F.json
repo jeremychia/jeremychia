@@ -1,0 +1,723 @@
+[
+ {
+  "company": "Starbucks",
+  "sector": "traditional",
+  "event_date": "2025-09-25",
+  "headcount_cut": 900,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Brian Niccol",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "revenue_decline",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "path forward",
+   "restructuring",
+   "notified"
+  ],
+  "severance": "Severance and support packages incl. benefits extension (per news)",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate turnaround register; frames cuts as a step in building a stronger Starbucks; announced alongside ~1% NA store closures.",
+  "sources": [
+   {
+    "url": "https://about.starbucks.com/press/2025/a-message-from-brian-niccol-on-starbucks-path-forward/",
+    "title": "A message from Brian Niccol (newsroom; fetch returned 403)",
+    "type": "primary"
+   },
+   {
+    "url": "https://6abc.com/post/starbucks-lay-off-900-workers-close-stores/17880928/",
+    "title": "Starbucks to lay off 900 workers, close stores",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Primary page returned 403 so no verbatim quotes verified; ~900 non-retail roles, part of $1B restructuring; employees notified 2025-09-26; office 4 days/week from Sept 30; earlier 1,100 cuts Feb 2025 not recorded separately. Pct workforce not stated."
+ },
+ {
+  "company": "Nike",
+  "sector": "traditional",
+  "event_date": "2026-04-23",
+  "headcount_cut": 1400,
+  "pct_workforce": null,
+  "communicator": "exec_other",
+  "communicator_name": "Venkatesh Alagirisamy (COO)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "efficiency",
+   "restructuring",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reshaping our Technology team",
+   "leaner teams",
+   "realignment"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Operational/corporate; COO not CEO Elliott Hill delivered it; CEO publicly said you never want to go through layoffs.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/markets/nike-announces-roughly-1400-layoffs-across-its-global-operations-team-latest-round-cuts",
+    "title": "Nike announces roughly 1,400 layoffs",
+    "type": "news"
+   },
+   {
+    "url": "https://www.retaildive.com/news/nike-layoffs-cuts-thousands-tech-jobs/818391/",
+    "title": "Nike layoffs cuts tech jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (coverage 23-24 Apr 2026). Memo text not read; paraphrase only so no quotes. 'just under 2%' of workforce per news. Donahoe 2024 (~2%, Feb 2024) and Hill 2025 tech cuts (May/Jun 2025, ~1% Aug 2025) not verified in this pass."
+ },
+ {
+  "company": "Target",
+  "sector": "traditional",
+  "event_date": "2025-10-23",
+  "headcount_cut": 1800,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Michael Fiddelke (incoming CEO; COO)",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "Too many layers and overlapping work have slowed decisions, making it harder to bring ideas to life.",
+   "a necessary step in building the future of Target."
+  ],
+  "stated_reasons": [
+   "flatten_management",
+   "revenue_decline",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminate roles",
+   "necessary step"
+  ],
+  "severance": "Pay and benefits through Jan 3 plus severance (per WSJ via Entrepreneur)",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Plain, diagnostic and forward-looking; blames internal complexity rather than markets.",
+  "sources": [
+   {
+    "url": "https://www.entrepreneur.com/business-news/target-to-cut-1800-corporate-jobs-first-layoffs-since/498733",
+    "title": "Target to cut 1,800 corporate jobs",
+    "type": "news"
+   },
+   {
+    "url": "https://finance.yahoo.com/news/target-plans-layoffs-eliminating-1800-roles-as-new-ceo-michael-fiddelke-aims-to-reset-the-struggling-retailer-152024247.html",
+    "title": "Target plans layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "1,800 = ~1,000 filled + ~800 open roles; ~8% of corporate (HQ) workforce, not total, so pct null. Affected told Tue Oct 28. Quotes via CNBC as quoted in Entrepreneur, not full memo. Brian Cornell was outgoing CEO (Fiddelke took over Feb 2026)."
+ },
+ {
+  "company": "Verizon",
+  "sector": "traditional",
+  "event_date": "2025-11-20",
+  "headcount_cut": 13000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Dan Schulman",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "We must reorient our entire company around delivering for and delighting our customers."
+  ],
+  "stated_reasons": [
+   "cost_cutting",
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reorient",
+   "simplify operations"
+  ],
+  "severance": "$20M Reskilling and Career Transition Fund (severance not stated in article)",
+  "notice_style": "same_day",
+  "ceo_voice": "New-CEO reset tone, customer-first, clinical about cost structure.",
+  "sources": [
+   {
+    "url": "https://www.wnem.com/2025/11/21/verizon-is-cutting-more-than-13000-jobs-it-works-reorient-entire-company",
+    "title": "Verizon cutting 13,000 jobs (AP)",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Largest layoff in company history; ~20% of non-union management per AP. Memo said tech/economy changes 'are impacting the workforce across all industries' (paraphrase of read text). ai_framing is a weak inference; AP excerpt did not mention AI as cause. Date inferred from AP publication (Thursday)."
+ },
+ {
+  "company": "Boeing",
+  "sector": "hardware_auto",
+  "event_date": "2024-10-11",
+  "headcount_cut": 17000,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Kelly Ortberg",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "Our business is in a difficult position, and it is hard to overstate the challenges we face together",
+   "we will have to make structural changes to ensure we can stay competitive"
+  ],
+  "stated_reasons": [
+   "revenue_decline",
+   "restructuring",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "structural changes",
+   "reduce the size of our workforce",
+   "tough decisions"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Sober, candid about the crisis; no apology; frames cuts as necessary to restore company.",
+  "sources": [
+   {
+    "url": "https://abc7.com/post/boeing-layoffs-approximately-17000-job-cuts-coming-months/15418007/",
+    "title": "Boeing to cut approximately 17,000 jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Quotes from excerpts in ABC article; letter itself (Boeing newsroom) not fetched, opening line unverified. Context: IAM strike, 777X delay to 2026, 767F end 2027. Employees told of specifics starting following week. Calhoun not recorded."
+ },
+ {
+  "company": "Accenture",
+  "sector": "consulting_finance",
+  "event_date": "2025-09-25",
+  "headcount_cut": 11000,
+  "pct_workforce": null,
+  "communicator": "earnings_call",
+  "communicator_name": "Julie Sweet",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "reskilling, based on our experience, is not a viable path for the skills we need"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "exiting",
+   "reinventors",
+   "talent rotation"
+  ],
+  "severance": "$865M restructuring ($615M Q4 FY25 + $250M Q1 FY26) covering severance and divestitures",
+  "notice_style": "unknown",
+  "ceo_voice": "Corporate-analytic; frames cuts as AI-skills mismatch while stressing net hiring growth.",
+  "sources": [
+   {
+    "url": "https://www.irishtimes.com/business/2025/09/26/accenture-to-exit-staff-who-cannot-be-retrained-for-age-of-ai",
+    "title": "Accenture to exit staff who cannot be retrained",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Headcount fell 791k to 779k (net >11,000 in 3 months); exits continue to end-November. Pct (~1.4%) is my calculation so left null. No memo; analyst call."
+ },
+ {
+  "company": "General Motors",
+  "sector": "hardware_auto",
+  "event_date": "2025-10-22",
+  "headcount_cut": 1750,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "Mary Barra (quoted separately); company statement",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "near-term EV adoption will be much lower than planned"
+  ],
+  "stated_reasons": [
+   "regulatory",
+   "macro",
+   "revenue_decline"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "laid off indefinitely",
+   "temporary layoff",
+   "right-size"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Impersonal company statement; blame on policy and demand; CEO quote came from separate comments.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/lifestyle/gm-lays-off-over-1700-workers-indefinitely-ev-demand-slows",
+    "title": "GM lays off over 1,700 workers",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "1,750 indefinite + 1,670 temporary (total ~3,400 across EV/battery plants). Barra quote reported in search summary fragment, trimmed to a verified fragment; may come from a different venue. No memo text. Also separate Oct 2025 salaried cuts (~200) not recorded."
+ },
+ {
+  "company": "UPS",
+  "sector": "traditional",
+  "event_date": "2025-10-28",
+  "headcount_cut": 48000,
+  "pct_workforce": null,
+  "communicator": "earnings_call",
+  "communicator_name": "Carol Tome / Brian Dykes (CFO)",
+  "channel": [
+   "earnings_call",
+   "8k_filing"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "the most significant strategic shift in our company's history"
+  ],
+  "stated_reasons": [
+   "efficiency",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "Efficiency Reimagined",
+   "Fit to Serve",
+   "attrition"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Strategic-corporate; presents cuts as transformation, largely via attrition.",
+  "sources": [
+   {
+    "url": "https://finance.yahoo.com/news/ups-stock-rallies-after-company-discloses-48000-layoffs-in-multibillion-dollar-savings-push-180929600.html",
+    "title": "UPS discloses 48,000 layoffs",
+    "type": "news"
+   },
+   {
+    "url": "https://www.ajc.com/business/2025/10/ups-down-34000-jobs-in-the-last-year-amid-shrinking-of-amazon-relationship",
+    "title": "UPS down 34,000 jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "48,000 = 34,000 operational + 14,000 mostly management through first nine months 2025; April 2025 announcement was ~20,000 (first pass), Jan 2024 12,000 mgmt cut (Tome) not verified; Jan 2026 up to 30,000 more. Quote attributed to Tome by news summary. Amazon glide-down is context."
+ },
+ {
+  "company": "Goldman Sachs",
+  "sector": "consulting_finance",
+  "event_date": "2025-10-15",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "exec_other",
+  "communicator_name": "David Solomon, John Waldron, Denis Coleman (joint memo)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "constrain headcount growth through the end of the year",
+   "limited reduction in roles across the firm"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "constrain headcount growth",
+   "limited reduction in roles",
+   "OneGS 3.0"
+  ],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "Measured, institutional; AI-efficiency framing, minimal alarm.",
+  "sources": [
+   {
+    "url": "https://www.thestar.com.my/business/business-news/2025/10/16/goldman-tells-employees-it-will-cut-more-jobs-as-ai-saves-costs",
+    "title": "Goldman tells employees it will cut more jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo reported by Bloomberg/Reuters; no headcount given; firm expects higher headcount by year-end. Annual cull pulled forward to Q2 2025. Quotes from reports of memo."
+ },
+ {
+  "company": "Citigroup",
+  "sector": "consulting_finance",
+  "event_date": "2024-01-12",
+  "headcount_cut": 20000,
+  "pct_workforce": 10.0,
+  "communicator": "ceo",
+  "communicator_name": "Jane Fraser",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "efficiency",
+   "restructuring",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "simplification",
+   "reorganization",
+   "roles"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Transformation-programme register; savings-targeted ($2.5B).",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/01/12/citigroup-20000-job-cuts-jane-fraser-layoffs-1-billion-charge",
+    "title": "Citigroup 20,000 job cuts",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Announced with Q4 earnings; 20,000 roles by 2026 (timeline varies by source). Full memo not read; only a secondhand Benzinga line unverified so quotes empty. Jan 2026 'The Bar is Raised' memo not recorded."
+ },
+ {
+  "company": "Walmart",
+  "sector": "traditional",
+  "event_date": "2025-05-14",
+  "headcount_cut": 1500,
+  "pct_workforce": null,
+  "communicator": "exec_other",
+  "communicator_name": "John Furner and Suresh Kumar",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "eliminating roles",
+   "simplify"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Operational, low-key; mentions new roles to be added.",
+  "sources": [
+   {
+    "url": "https://benzinga.com/z/45573883",
+    "title": "Walmart cuts 1,500 corporate jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (mid-May 2025). Affected employees kept jobs until August. Memo did not state numbers; ~1,500 from WSJ/Bloomberg. McMillon's AI 'change every job' comments (Sept 2025) are a separate event not recorded; Feb 2024 relocation not verified."
+ },
+ {
+  "company": "Morgan Stanley",
+  "sector": "consulting_finance",
+  "event_date": "2025-03-18",
+  "headcount_cut": 2000,
+  "pct_workforce": 3.0,
+  "communicator": "media_leak",
+  "communicator_name": "Ted Pick (no statement)",
+  "channel": [],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "cost_cutting",
+   "performance"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "No public voice; story broke via sources.",
+  "sources": [
+   {
+    "url": "https://www.thinkadvisor.com/amp/2025/03/19/morgan-stanley-plans-about-2000-job-cuts/",
+    "title": "Morgan Stanley plans about 2,000 job cuts",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Pct (~3%) from my memory of coverage, not read. Financial advisors exempted. No on-record text. A 2026 round of ~2,500 also reported (not recorded)."
+ },
+ {
+  "company": "McKinsey",
+  "sector": "consulting_finance",
+  "event_date": "2025-12-01",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "media_leak",
+  "communicator_name": "Firm leadership (unnamed); spokesperson",
+  "channel": [
+   "zoom"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "redesigning non-client-serving teams"
+  ],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "Leak-driven; spokesperson says teams are being redesigned.",
+  "sources": [
+   {
+    "url": "https://news.bloomberglaw.com/daily-labor-report/mckinsey-bosses-plot-thousands-of-job-cuts-with-fees-under-fire",
+    "title": "McKinsey bosses plot job cuts",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (Dec 2025). ~10% of non-client-facing staff; counts reported variously (~2,000 / 'thousands'). Channel guessed from 'discussed with managers', uncertain. Bob Sternfels not shown to have written."
+ },
+ {
+  "company": "Ford Motor (Europe)",
+  "sector": "hardware_auto",
+  "event_date": "2024-11-20",
+  "headcount_cut": 4000,
+  "pct_workforce": 14.0,
+  "communicator": "spokesperson",
+  "communicator_name": "Dave Johnston / Lisa Brankin",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "regulatory",
+   "revenue_decline",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructure",
+   "reduce"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Regional executive voice; policy-blaming; Farley not directly quoted.",
+  "sources": [
+   {
+    "url": "https://www.hcamag.com/au/specialisation/industrial-relations/ford-to-cut-4000-jobs-in-europe-reports/514896",
+    "title": "Ford to cut 4,000 jobs in Europe",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "14% of ~28,000 European workforce; by end 2027; 2,900 Germany, 800 UK. No Farley memo found; 2022 Farley cuts not verified."
+ },
+ {
+  "company": "Procter & Gamble",
+  "sector": "traditional",
+  "event_date": "2025-06-05",
+  "headcount_cut": 7000,
+  "pct_workforce": 6.0,
+  "communicator": "exec_other",
+  "communicator_name": "Andre Schulten (CFO)",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "efficiency",
+   "cost_cutting",
+   "restructuring"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructuring program",
+   "smaller teams"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Investor-conference CFO register; productivity framing.",
+  "sources": [
+   {
+    "url": "https://www.fox19.com/2025/06/05/procter-gamble-cut-7000-jobs-over-two-years",
+    "title": "P&G to cut 7,000 jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Announced at Deutsche Bank conference; up to 7,000 over two years, ~15% of non-manufacturing, ~6% overall; $1-1.6B pretax cost. 'Digitization and automation' cited, not generative AI. No quotes verified verbatim; CEO Jejurikar not the voice."
+ },
+ {
+  "company": "Lufthansa",
+  "sector": "traditional",
+  "event_date": "2025-09-29",
+  "headcount_cut": 4000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Carsten Spohr",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "efficiency",
+   "profitability"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "efficiency",
+   "administrative roles"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Capital-markets-day register; financial targets first; consulted social partners.",
+  "sources": [
+   {
+    "url": "https://www.rte.ie/news/business/2025/0929/1535830-lufthansa-announces-4-000-job-cuts-higher-profit-targets",
+    "title": "Lufthansa announces 4,000 job cuts",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "4,000 admin jobs by 2030 mainly Germany; digitalisation/automation (AI per some outlets); Verdi criticised. No memo text."
+ },
+ {
+  "company": "Nestle",
+  "sector": "traditional",
+  "event_date": "2025-10-16",
+  "headcount_cut": 16000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Philipp Navratil",
+  "channel": [
+   "press_release",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [],
+  "stated_reasons": [
+   "cost_cutting",
+   "efficiency",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "job reductions",
+   "automation"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Not read directly.",
+  "sources": [
+   {
+    "url": "https://www.cnbc.com/2025/10/27/nestle-job-cuts.html",
+    "title": "(guessed URL returned 404; not read)",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Recorded from background knowledge, not verified in this session: ~16,000 over two years (~12,000 white-collar), announced with Q3 sales. Treat as unverified."
+ }
+]

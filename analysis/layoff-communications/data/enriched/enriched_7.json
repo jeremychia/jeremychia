@@ -1,0 +1,1050 @@
+[
+ {
+  "company": "Tesla",
+  "event_date": "2022-06-03",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://electrek.co/2022/06/03/elon-musk-clarifies-tesla-layoffs-salaried-employees/",
+  "reproduction_path": "data/sources/tesla__2022-06/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": "Tesla will be reducing salaried headcount by 10% as we have become overstaffed in many areas.",
+  "key_quotes": [
+   "Tesla will be reducing salaried headcount by 10% as we have become overstaffed in many areas.",
+   "Note, this does not apply to anyone actually building cars, battery packs or installing solar. Hourly headcount will increase.",
+   "super bad feeling"
+  ],
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "cost_cutting"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reducing salaried headcount"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Terse, clinical, two-line directive with no empathy language.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2022/06/03/elon-musk-tesla-layoffs-salaried-staff",
+    "headline": "Elon Musk Tesla layoffs salaried staff",
+    "date": "2022-06-03",
+    "framing": "Reports 10% salaried cut; headline-level framing (article not read by me)."
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2022-06-03/musk-tells-tesla-staff-only-salaried-jobs-to-be-cut-report-says",
+    "headline": "Musk tells Tesla staff only salaried jobs to be cut, report says",
+    "date": "2022-06-03",
+    "framing": "Frames as clarification that only salaried staff are cut."
+   },
+   {
+    "outlet": "BNN Bloomberg (Reuters)",
+    "url": "https://www.bnnbloomberg.ca/tesla-pauses-hiring-musk-says-need-to-cut-staff-by-10-reuters-1.1774031",
+    "headline": "Tesla pauses hiring, Musk says need to cut staff by 10%",
+    "date": "2022-06-03",
+    "framing": "Leads with Musk's 'super bad feeling' about the economy; later described the 4 June tweet as backtracking."
+   },
+   {
+    "outlet": "Electrek",
+    "url": "https://electrek.co/2022/06/03/elon-musk-clarifies-tesla-layoffs-salaried-employees/",
+    "headline": "Elon Musk clarifies that Tesla layoffs are just for salaried employees, still hiring hourly workers",
+    "date": "2022-06-03",
+    "framing": "Publishes full email; ties cut to pandemic overhiring."
+   },
+   {
+    "outlet": "CleanTechnica",
+    "url": "https://cleantechnica.com/2022/06/05/heres-what-elon-musk-actually-said-regarding-10-job-cuts/",
+    "headline": "Here's What Elon Musk Actually Said Regarding 10% Job Cuts",
+    "date": "2022-06-05",
+    "framing": "Argues reports of a mass layoff were misleading since salaried headcount was not disclosed."
+   }
+  ],
+  "framing_gap": "Company email was a brief 'overstaffed' directive; news added the leaked 'super bad feeling' macro framing and then the Musk reversal, which the email itself did not contain.",
+  "fetch_log": "electrek direct OK (full email); nbclosangeles 403; Tesla has no newsroom text.",
+  "notes": "All-staff email text read via Electrek reproduction (full email is ~3 lines). 'super bad feeling' is a fragment from the earlier executive email as quoted by Electrek/Reuters. Musk walked back on 4 June (tweet: total headcount to rise, salaried flat). Not a mass layoff in headcount terms per CleanTechnica; ~3.5% of total workforce per Dice."
+ },
+ {
+  "company": "Unacademy",
+  "event_date": "2022-11-07",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.businesstoday.in/latest/corporate/story/no-easy-way-to-do-this-unacademy-lays-off-10-of-its-employees-to-reduce-monthly-burns-352136-2022-11-07",
+  "reproduction_path": "data/sources/unacademy__2022-11/reproduction.txt",
+  "public_primary_text": false,
+  "opening_line": "We are no strangers to the harsh economic conditions that everyone is witnessing these days.",
+  "key_quotes": [
+   "I want to apologise to everyone sincerely since we made a commitment of no layoffs in the organisation",
+   "I take full responsibility",
+   "There is no easy way to do this and this is definitely not the kind of separation I would have wanted"
+  ],
+  "headcount_cut": 350,
+  "pct_workforce": 10.0,
+  "stated_reasons": [
+   "macro",
+   "cost_cutting",
+   "revenue_decline"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "separation",
+   "impacted"
+  ],
+  "severance": "Notice-period pay plus two additional months' salary; medical coverage for an additional year",
+  "notice_style": "same_day",
+  "ceo_voice": "Contrite and candid; apologises for breaking a no-layoffs promise.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Business Today",
+    "url": "https://www.businesstoday.in/latest/corporate/story/no-easy-way-to-do-this-unacademy-lays-off-10-of-its-employees-to-reduce-monthly-burns-352136-2022-11-07",
+    "headline": "'No easy way to do this': Unacademy lays off 10% of its employees to reduce monthly burns",
+    "date": "2022-11-07",
+    "framing": "Quotes Munjal's apology and 'full responsibility'; frames as burn reduction."
+   },
+   {
+    "outlet": "Business Today",
+    "url": "https://www.businesstoday.in/latest/corporate/story/painful-to-see-talented-people-leave-us-unacademys-gaurav-munjal-laments-sacking-350-employees-352154-2022-11-08",
+    "headline": "'Painful to see talented people leave us': Unacademy's Gaurav Munjal laments sacking 350 employees",
+    "date": "2022-11-08",
+    "framing": "Follow-up focusing on Munjal's public lament and tweets."
+   },
+   {
+    "outlet": "Business Insider India",
+    "url": "https://www.businessinsider.in/business/startups/news/unacademy-lays-off-10-of-workforce-as-funding-winter-deepens/amp_articleshow/95369741.cms",
+    "headline": "Unacademy lays off 10% of workforce as funding winter deepens",
+    "date": "2022-11-07",
+    "framing": "Frames within the funding winter rather than the CEO's apology."
+   },
+   {
+    "outlet": "People Matters",
+    "url": "https://www.peoplematters.in/news/hr-technology/softbank-backed-unacademy-fires-350-employees-ceo-apologises-and-promises-severance-pay-35962",
+    "headline": "SoftBank-backed Unacademy fires 350 employees, CEO apologises and promises severance pay",
+    "date": "2022-11-08",
+    "framing": "Headline foregrounds the apology and severance."
+   },
+   {
+    "outlet": "YourStory",
+    "url": "https://yourstory.com/2022/11/edtech-startup-unicorn-unacademy-lays-off-workforce-mail",
+    "headline": "Edtech startup unicorn Unacademy lays off 10pc of workforce: report",
+    "date": "2022-11-07",
+    "framing": "Reports the layoffs as based on the leaked mail."
+   }
+  ],
+  "framing_gap": "Company/CEO framing was personal and apologetic about a broken no-layoffs promise; business press mostly foregrounded funding-winter and burn-reduction context.",
+  "fetch_log": "businesstoday direct OK (reproduced fragments of email); no first-party text found; CEO tweets not fetched.",
+  "notes": "Email not itself public; fragments via Business Today. Stated reasons: funding slowdown and core business moving offline; 'reduce monthly burns' in BT headline. Outlets disagree on whether this was the second or third round in a year."
+ },
+ {
+  "company": "Wayfair",
+  "event_date": "2023-01-20",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.bostonglobe.com/2023/01/20/business/wayfair-cutting-1750-jobs-double-size-august-layoffs",
+  "reproduction_path": "data/sources/wayfair__2023-01/reproduction.txt",
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "Unfortunately, along the way, we over complicated things, lost sight of some of our fundamentals and simply grew too big.",
+   "We thrive when we are scrappy and dedicated to customer outcomes"
+  ],
+  "headcount_cut": 1750,
+  "pct_workforce": 10.0,
+  "stated_reasons": [
+   "overhiring",
+   "cost_cutting",
+   "flatten_management",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "right-sizing its cost structure"
+  ],
+  "severance": "Varies by tenure, level and country (per coverage)",
+  "notice_style": "same_day",
+  "ceo_voice": "Plain, self-critical about overgrowth, upbeat on momentum.",
+  "confidence": "medium",
+  "news_coverage": [
+   {
+    "outlet": "Boston Globe",
+    "url": "https://www.bostonglobe.com/2023/01/20/business/wayfair-cutting-1750-jobs-double-size-august-layoffs",
+    "headline": "Wayfair cutting 1,750 jobs, double the size of August layoffs",
+    "date": "2023-01-20",
+    "framing": "Quotes Shah admitting overcomplication; notes one in five corporate staff cut."
+   },
+   {
+    "outlet": "Retail Dive",
+    "url": "https://www.retaildive.com/news/wayfair-lays-off-nearly-two-thousand-employees/640835/",
+    "headline": "Wayfair lays off nearly two thousand employees",
+    "date": "2023-01-20",
+    "framing": "Headline-level: layoffs as retail cost-cutting (article not read in full)."
+   },
+   {
+    "outlet": "Daily Business Review (Law.com)",
+    "url": "https://law.com/dailybusinessreview/2023/01/20/wayfair-to-cut-1750-jobs-10-of-staff-after-sales-decline",
+    "headline": "Wayfair to cut 1,750 jobs, 10% of staff after sales decline",
+    "date": "2023-01-20",
+    "framing": "Frames cut as consequence of sales decline."
+   },
+   {
+    "outlet": "Chain Store Age",
+    "url": "https://chainstoreage.com/wayfair-laying-10-workforce-part-broader-cost-cutting-plan",
+    "headline": "Wayfair laying off 10% of workforce as part of broader cost-cutting plan",
+    "date": "2023-01-20",
+    "framing": "Places cut in broader cost-cutting plan."
+   }
+  ],
+  "framing_gap": "Shah's email blamed internal overcomplication and growth; trade outlets framed it as a sales-decline cost cut.",
+  "fetch_log": "bostonglobe direct OK; wayfair memo not public; foxbusiness result was the 2024 round (not used).",
+  "notes": "CORRECTION: this Jan 2023 round was ~1,750 jobs (~10% of global staff; 1,200 corporate = almost one in five corporate staff). The 1,650 / 13% round was Jan 2024. Quotes from Boston Globe reproduction; full email not read. 'Right-sizing' phrase from PYMNTS snippet title, not verified in email."
+ },
+ {
+  "company": "DocuSign",
+  "event_date": "2023-02-16",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "stated_reasons": [
+   "restructuring",
+   "profitability"
+  ],
+  "headcount_cut": 700,
+  "pct_workforce": 10.0,
+  "euphemisms": [
+   "restructure and reduce its current workforce"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "takes_responsibility": false,
+  "apology": false,
+  "news_coverage": [
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/amp/2023/02/16/docusign-layoffs-company-to-cut-10percent-of-workforce.html",
+    "headline": "DocuSign to lay off 10% of its workforce, or about 700 employees",
+    "date": "2023-02-16",
+    "framing": "Straight wire-style report from the 8-K filing."
+   },
+   {
+    "outlet": "Channel Futures",
+    "url": "https://channelfutures.com/business-models/docusign-cutting-700-workers-in-latest-layoffs-amid-restructuring",
+    "headline": "DocuSign cutting 700 workers in latest layoffs amid restructuring",
+    "date": "2023-02-16",
+    "framing": "Frames as latest in a series of restructurings."
+   },
+   {
+    "outlet": "Business Standard",
+    "url": "https://bsppd.business-standard.com/amp/article/companies/docusign-to-lay-off-10-of-its-workforce-as-part-of-its-restructuring-plan-123021700387_1.html",
+    "headline": "DocuSign to lay off 10% of its workforce as part of its restructuring plan",
+    "date": "2023-02-17",
+    "framing": "Adopts the company's 'restructuring plan' framing."
+   }
+  ],
+  "framing_gap": "Minimal: coverage largely repeats the 8-K restructuring language; adds that it is the second cut in six months.",
+  "fetch_log": "investor.docusign.com 403; sec.gov not fetched per brief; headlines/snippets only for news (not read in full).",
+  "notes": "No company-authored prose found; wording is 8-K boilerplate (SEC not fetched per brief). ~700 people per CNBC; reduction mainly in worldwide field organization. Second round in ~6 months."
+ },
+ {
+  "company": "Nokia",
+  "event_date": "2023-10-19",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": null,
+  "headcount_cut": 14000,
+  "pct_workforce": 16.0,
+  "stated_reasons": [
+   "revenue_decline",
+   "macro",
+   "cost_cutting"
+  ],
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "news_coverage": [
+   {
+    "outlet": "Light Reading",
+    "url": "https://www.lightreading.com/5g/nokia-to-cut-up-to-14-000-jobs-in-dire-warning-about-market",
+    "headline": "Nokia to cut up to 14,000 jobs in dire warning about market",
+    "date": "2023-10-19",
+    "framing": "Frames as a dire market warning; notes 9,000 floor."
+   },
+   {
+    "outlet": "CNN Business (via KTVZ)",
+    "url": "https://ktvz.com/money/cnn-business-consumer/2023/10/18/nokia-says-will-cut-up-to-14000-jobs/",
+    "headline": "Nokia says will cut up to 14,000 jobs",
+    "date": "2023-10-19",
+    "framing": "Straight report of the cut and sales plunge."
+   },
+   {
+    "outlet": "The Hill (AP)",
+    "url": "https://digital-release.thehill.com/?p=4264226",
+    "headline": "Nokia plans to cut up to 14,000 jobs after sales and profits plunge in a weak market",
+    "date": "2023-10-19",
+    "framing": "Ties cuts to sales and profit plunge."
+   },
+   {
+    "outlet": "TechCentral (Reuters)",
+    "url": "https://techcentral.co.za/nokia-to-slash-up-to-14-000-jobs/233620/",
+    "headline": "Nokia to slash up to 14,000 jobs",
+    "date": "2023-10-19",
+    "framing": "Reuters angle: lower costs amid weak US/Europe demand."
+   }
+  ],
+  "framing_gap": "Company framed it as cost-savings and cost-base adjustment to market; news framed it as a warning sign for 5G demand. (Company text not read; based on coverage.)",
+  "fetch_log": "nokia.com q3 results URL 404; wayback availability empty; news from search snippets only.",
+  "notes": "Up to 14,000 (lower bound ~9,000) of ~86,000, about 16% at the top of range; savings up to EUR 1.2bn by 2026; Q3 sales down ~20% on weak 5G demand. Lundmark declined to detail where cuts fall while staff consultations ongoing. No company text retrieved (nokia.com newsroom URLs 404)."
+ },
+ {
+  "company": "Snap",
+  "event_date": "2024-02-05",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://techcrunch.com/2024/02/05/snapchats-parent-lays-off-10-of-workforce-in-order-to-reduce-hierarchy-says-company",
+  "reproduction_path": "data/sources/snap__2024-02/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "We are reorganizing our team to reduce hierarchy and promote in-person collaboration",
+   "we have made the difficult decision to restructure our team"
+  ],
+  "headcount_cut": 500,
+  "pct_workforce": 10.0,
+  "stated_reasons": [
+   "flatten_management",
+   "restructuring",
+   "other"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "restructure our team",
+   "reorganizing our team"
+  ],
+  "severance": "Pre-tax charges of $55-75 million, primarily severance and related costs (no individual terms)",
+  "notice_style": "unknown",
+  "ceo_voice": "Corporate; spokesperson and 8-K boilerplate, no CEO voice.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2024/02/05/snapchats-parent-lays-off-10-of-workforce-in-order-to-reduce-hierarchy-says-company",
+    "headline": "Snapchat's parent lays off 10% of workforce in order to 'reduce hierarchy,' says company",
+    "date": "2024-02-05",
+    "framing": "Leads with the company's hierarchy rationale; notes prior rounds."
+   },
+   {
+    "outlet": "CNBC",
+    "url": "https://www.cnbc.com/amp/2024/02/05/snap-to-lay-off-10percent-of-global-workforce-around-500-employees.html",
+    "headline": "Snap to lay off 10% of global workforce, around 500 employees",
+    "date": "2024-02-05",
+    "framing": "Straight report from SEC filing."
+   },
+   {
+    "outlet": "HR Brew",
+    "url": "https://www.hr-brew.com/stories/2024/02/08/snap-announces-layoffs-to-promote-in-person-collaboration",
+    "headline": "Snap announces layoffs to promote 'in-person collaboration'",
+    "date": "2024-02-08",
+    "framing": "Quotes experts sceptical that layoffs build collaboration or trust."
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/2024/02/05/snap-lets-go-10-workforce-following-return-revenue-growth/",
+    "headline": "Snap lets go 10% of workforce following return to revenue growth",
+    "date": "2024-02-05",
+    "framing": "Highlights the cut coming despite revenue growth."
+   }
+  ],
+  "framing_gap": "Company offered a culture/structure rationale (hierarchy, in-person); outlets questioned that rationale and noted timing before earnings and a return to revenue growth.",
+  "fetch_log": "techcrunch direct OK; cnbc direct fetched; 8-K not fetched (sec.gov excluded).",
+  "notes": "Spokesperson quote verified verbatim via TechCrunch (CORRECTS prior 'paraphrase' caveat). 8-K quote also via TechCrunch. Second round in months; Q4 earnings the next day."
+ },
+ {
+  "company": "Meta",
+  "event_date": "2025-01-14",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.entrepreneur.com/business-news/meta-is-laying-off-5-of-its-workforce-read-the-memo/485540",
+  "reproduction_path": "data/sources/meta__2025-01/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": "Meta is working on building some of the most important technologies of the world.",
+  "key_quotes": [
+   "I’ve decided to raise the bar on performance management and move out low performers faster.",
+   "This is going to be an intense year, and I want to make sure we have the best people on our teams.",
+   "for those we do let go, we’ll provide generous severance in line with what we provided with previous cuts"
+  ],
+  "headcount_cut": 3600,
+  "pct_workforce": 5.0,
+  "stated_reasons": [
+   "performance"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "move out low performers",
+   "manage out",
+   "performance-based cuts"
+  ],
+  "severance": "Generous severance in line with previous cuts; US staff notified from Feb 10",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Brisk, performance-driven; no empathy language.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/meta-is-laying-off-5-of-its-workforce-read-the-memo/485540",
+    "headline": "Meta is laying off 5% of its workforce. Read the memo.",
+    "date": "2025-01-15",
+    "framing": "Reprints memo; sets alongside fact-checking and DEI rollbacks."
+   },
+   {
+    "outlet": "BNN Bloomberg",
+    "url": "https://bnnbloomberg.ca/business/company-news/2025/01/14/meta-to-cut-5-of-staff-with-eye-on-lowest-performers-memo-says",
+    "headline": "Meta to cut 5% of staff with eye on lowest performers, memo says",
+    "date": "2025-01-14",
+    "framing": "First report; frames as targeting lowest performers."
+   },
+   {
+    "outlet": "Silicon Republic",
+    "url": "https://siliconrepublic.com/business/meta-job-cuts-layoffs-zuckerberg-low-performers",
+    "headline": "Meta to lay off 5pc of its 'lowest performers'",
+    "date": "2025-01-15",
+    "framing": "Frames around low-performer language."
+   },
+   {
+    "outlet": "Tech.co",
+    "url": "https://tech.co/news/meta-layoffs-incoming-zuckerberg",
+    "headline": "Meta Layoffs Incoming As Zuckerberg Predicts 'Intense Year'",
+    "date": "2025-01-15",
+    "framing": "Foregrounds Zuckerberg's 'intense year' line."
+   }
+  ],
+  "framing_gap": "Memo frames cuts as raising the performance bar with roles backfilled; coverage adds context of Meta's DEI/fact-check reversals and the 5% / ~3,600 figure the memo does not state.",
+  "fetch_log": "entrepreneur direct OK (memo reproduced); bloomberg not fetched.",
+  "notes": "Full memo text now read (Entrepreneur reproduces it; Bloomberg first reported). Opening line verified. Roles to be backfilled in 2025. Meta confirmed accuracy to AP. Headcount 3,600 is a press estimate on ~72,000."
+ },
+ {
+  "company": "Intel",
+  "event_date": "2025-07-24",
+  "company_text_path": "data/sources/intel__2025-07/company.txt",
+  "company_text_url": "https://newsroom.intel.com/corporate/lip-bu-tan-steps-in-the-right-direction",
+  "reproduction_url": null,
+  "public_primary_text": true,
+  "opening_line": "This afternoon, we reported our Q2 2025 results. We delivered revenue above the high end of our guidance, reflecting solid demand and execution across the business.",
+  "key_quotes": [
+   "We are making hard but necessary decisions to streamline the organization, drive greater efficiency and increase accountability at every level of the company.",
+   "We are implementing a plan to reduce our headcount by approximately 15%",
+   "There are no more blank checks."
+  ],
+  "pct_workforce": 15.0,
+  "headcount_cut": null,
+  "stated_reasons": [
+   "efficiency",
+   "cost_cutting",
+   "flatten_management",
+   "restructuring",
+   "profitability"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "workforce reductions",
+   "streamline the organization",
+   "saying goodbye to valued colleagues"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Managerial and strategic; thanks leavers briefly, then pivots to growth plan.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/intel-laying-off-tens-of-thousands-of-employees-ceo-memo/495070",
+    "headline": "Intel Is Laying Off 33,000 Employees in Turnaround Plan: 'Scale Back the Company'",
+    "date": "2025-07-25",
+    "framing": "Leads with a 33,000 figure the memo does not state; stresses scale-back."
+   },
+   {
+    "outlet": "Gizmodo",
+    "url": "https://gizmodo.com/intels-steady-decline-continues-with-15-cut-to-staff-and-scrapped-factory-plans-2000634458",
+    "headline": "Intel's steady decline continues with 15% cut to staff and scrapped factory plans",
+    "date": "2025-07-25",
+    "framing": "Frames as continuing decline."
+   },
+   {
+    "outlet": "Benzinga",
+    "url": "https://www.benzinga.com/markets/tech/25/07/46621426/intel-ceo-says-hes-making-hard-but-necessary-decisions-as-chipmaker-announces-massive-layoffs-projec",
+    "headline": "Intel CEO says he's making hard but necessary decisions as chipmaker announces massive layoffs",
+    "date": "2025-07-25",
+    "framing": "Echoes the CEO's 'hard but necessary' language."
+   },
+   {
+    "outlet": "The Star (AP)",
+    "url": "https://www.thestar.com.my/tech/tech-news/2025/07/25/intel-to-slash-workforce-by-year-end-as-it-forecasts-steeper-losses-than-expected",
+    "headline": "Intel is cutting more jobs as CEO Tan tries to fix manufacturing missteps",
+    "date": "2025-07-25",
+    "framing": "Frames around manufacturing missteps and steeper losses."
+   }
+  ],
+  "framing_gap": "Tan led with a strong-Q2 and financial-discipline framing and a % target; outlets led with absolute job numbers (some inflated) and decline narrative.",
+  "fetch_log": "newsroom.intel.com direct 403; wayback id_ copy OK (RETRIEVED_VIA wayback).",
+  "notes": "CORRECTION: primary note (all-employee note dated 24 Jul 2025, posted on Intel newsroom) says ~15% headcount reduction to ~75,000 by year-end via reductions and attrition; most reductions completed in Q2, management layers cut ~50%. 'Over 33,000' (Entrepreneur) is not in the note. Quote is from the note, not the earnings call. AI is one of three strategy pillars (section read only in part)."
+ },
+ {
+  "company": "Target",
+  "event_date": "2025-10-23",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.entrepreneur.com/business-news/target-to-cut-1800-corporate-jobs-first-layoffs-since/498733",
+  "reproduction_path": "data/sources/target__2025-10/reproduction.txt",
+  "public_primary_text": false,
+  "opening_line": null,
+  "key_quotes": [
+   "The truth is, the complexity we’ve created over time has been holding us back",
+   "Too many layers and overlapping work have slowed decisions, making it harder to bring ideas to life.",
+   "a necessary step in building the future of Target"
+  ],
+  "headcount_cut": 1800,
+  "pct_workforce": null,
+  "stated_reasons": [
+   "flatten_management",
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [],
+  "severance": "Pay and benefits through Jan 3, 2026 plus severance (per ABC coverage)",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate-candid; blames accumulated complexity rather than people.",
+  "confidence": "medium",
+  "news_coverage": [
+   {
+    "outlet": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/target-to-cut-1800-corporate-jobs-first-layoffs-since/498733",
+    "headline": "'Total Panic': Target Is Planning to Cut 8% of Its Global Corporate Workforce",
+    "date": "2025-10-24",
+    "framing": "Adds anonymous employee 'total panic' not in memo."
+   },
+   {
+    "outlet": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/news/target-plans-layoffs-eliminating-1800-roles-as-new-ceo-michael-fiddelke-aims-to-reset-the-struggling-retailer-152024247.html",
+    "headline": "Target plans layoffs eliminating 1,800 roles as new CEO aims to reset the struggling retailer",
+    "date": "2025-10-23",
+    "framing": "Frames as new CEO resetting a struggling retailer."
+   },
+   {
+    "outlet": "Retail TouchPoints",
+    "url": "https://www.retailtouchpoints.com/features/news-briefs/target-cuts-1800-corporate-jobs-in-bid-to-streamline-operations",
+    "headline": "Target Cuts 1,800 Corporate Jobs in Bid to Streamline Operations",
+    "date": "2025-10-23",
+    "framing": "Adopts the streamline-operations framing."
+   },
+   {
+    "outlet": "ABC7 News",
+    "url": "https://abc7news.com/post/target-announces-plan-eliminate-1800-corporate-jobs/18065602/",
+    "headline": "Target announces plan to eliminate 1,800 corporate jobs",
+    "date": "2025-10-23",
+    "framing": "Straight report with benefits detail."
+   }
+  ],
+  "framing_gap": "Memo blamed complexity/layers; coverage added weak sales and employee panic context.",
+  "fetch_log": "entrepreneur direct OK; corporate.target.com release URL 404; no company-authored full memo found.",
+  "notes": "Quotes are CNBC-reported memo excerpts via Entrepreneur; full memo not read. Anonymous employees told BI of 'total panic'. Affected told Tue Oct 28. First major layoffs in about a decade."
+ },
+ {
+  "company": "Lucid Motors",
+  "event_date": "2026-02-20",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://www.aol.com/articles/read-memo-tesla-rival-lucid-162755807.html",
+  "reproduction_path": "data/sources/lucid-motors__2026-02/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": "Today I want to share an important business update.",
+  "key_quotes": [
+   "This difficult but necessary decision was made to improve operational effectiveness and optimize our resources as we continue on our path toward profitability.",
+   "Saying goodbye to colleagues is never easy."
+  ],
+  "headcount_cut": null,
+  "pct_workforce": 12.0,
+  "stated_reasons": [
+   "profitability",
+   "efficiency",
+   "restructuring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduction of our U.S. workforce",
+   "streamlining our organization",
+   "saying goodbye to colleagues"
+  ],
+  "severance": "Severance, bonus, continued health benefits, and transition support (no terms)",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate and measured; memo sent to unaffected staff, urging empathy.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Business Insider (via AOL)",
+    "url": "https://www.aol.com/articles/read-memo-tesla-rival-lucid-162755807.html",
+    "headline": "Read the memo: Tesla rival Lucid cuts 12% of its US workforce as EV winter takes hold",
+    "date": "2026-02-20",
+    "framing": "Prints full memo; frames as EV winter."
+   },
+   {
+    "outlet": "The Driven",
+    "url": "https://thedriven.io/2026/02/25/lucid-motors-to-lay-off-12-per-cent-of-its-workforce/",
+    "headline": "Lucid Motors to lay off 12 per cent of its workforce",
+    "date": "2026-02-25",
+    "framing": "Reports the cut in profitability context."
+   },
+   {
+    "outlet": "Reuters (via StreetInsider)",
+    "url": "https://www.streetinsider.com/Reuters/Lucid+trims+12%25+of+US+workforce+in+profitability+push/26034534.html",
+    "headline": "Lucid trims 12% of US workforce in profitability push",
+    "date": "2026-02-20",
+    "framing": "Reuters: profitability push amid softer EV demand."
+   },
+   {
+    "outlet": "MarketScreener",
+    "url": "https://www.marketscreener.com/news/lucid-trims-12-of-workforce-in-profitability-push-ce7e5dddde8efe2d",
+    "headline": "Lucid trims 12% of workforce in profitability push",
+    "date": "2026-02-20",
+    "framing": "Repeats the profitability-push framing."
+   }
+  ],
+  "framing_gap": "Memo said strategy unchanged and stressed efficiency; coverage added EV demand downturn and tax-credit expiry.",
+  "fetch_log": "aol direct OK; thedriven fetched; TechCrunch original not fetched.",
+  "notes": "Full memo read via Business Insider/AOL. It is a 12% cut to the U.S. workforce excluding hourly production in manufacturing/logistics/quality (not 'salaried'). Memo sent to unaffected employees. Opening line verified. Town hall Monday."
+ },
+ {
+  "company": "Robinhood",
+  "event_date": "2022-04-26",
+  "company_text_path": "data/sources/robinhood__2022-04/company.txt",
+  "company_text_url": "https://robinhood.com/newsroom/a-message-from-our-ceo-and-co-founder-vlad-tenev/",
+  "reproduction_url": null,
+  "public_primary_text": true,
+  "opening_line": "Today we made the difficult announcement that we are letting go approximately 9% of our full-time employees.",
+  "key_quotes": [
+   "This rapid headcount growth has led to some duplicate roles and job functions, and more layers and complexity than are optimal.",
+   "we went through a period of hyper growth accelerated by several factors including pandemic lockdowns, low interest rates, and fiscal stimulus",
+   "our financial position remains strong with over $6B in cash"
+  ],
+  "pct_workforce": 9.0,
+  "stated_reasons": [
+   "overhiring",
+   "efficiency",
+   "covid",
+   "interest_rates",
+   "macro"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "letting go",
+   "reductions to Robinhood’s staff",
+   "departing colleagues"
+  ],
+  "severance": "Unspecified: separation packages, healthcare and job-search assistance",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate and justificatory; heavy on growth stats and cash position.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2022/04/26/robinhood-cuts-9-of-workforce-as-hyper-growth-slows/amp/",
+    "headline": "Robinhood cuts 9% of workforce as 'hyper growth' slows",
+    "date": "2022-04-26",
+    "framing": "Frames as end of hyper-growth."
+   },
+   {
+    "outlet": "CNN Business (via KTVZ)",
+    "url": "https://ktvz.com/money/cnn-business-consumer/2022/04/26/robinhood-shares-plummet-as-company-announces-layoffs/",
+    "headline": "Robinhood shares plummet as company announces layoffs",
+    "date": "2022-04-26",
+    "framing": "Foregrounds stock drop to IPO-low."
+   },
+   {
+    "outlet": "The Block",
+    "url": "https://www.theblock.co/linked/143679/robinhood-announces-layoffs-ahead-of-first-quarter-earnings-release",
+    "headline": "Robinhood announces layoffs ahead of first-quarter earnings release",
+    "date": "2022-04-26",
+    "framing": "Highlights timing before earnings."
+   },
+   {
+    "outlet": "InvestmentNews",
+    "url": "https://www.investmentnews.com/robinhood-cutting-9-of-full-time-staff-as-hyper-growth-ebbs-220672",
+    "headline": "Robinhood cutting 9% of full-time staff as 'hyper growth' ebbs",
+    "date": "2022-04-26",
+    "framing": "Adopts hyper-growth-ebbs framing."
+   }
+  ],
+  "framing_gap": "Company framed it as efficiency after a pandemic hiring surge with a strong balance sheet; news added share-price collapse and earnings-timing angles.",
+  "fetch_log": "robinhood.com/newsroom direct OK; old blog.robinhood.com 404.",
+  "notes": "Primary text retrieved from robinhood.com/newsroom (page tail contains injected spam, excluded). Headcount grew from ~700 to nearly 3,800 (almost 6X). Posted as note to employees after all-hands. Announced before Q1 earnings."
+ },
+ {
+  "company": "Meta",
+  "event_date": "2022-11-09",
+  "company_text_path": "data/sources/meta__2022-11/company.txt",
+  "company_text_url": "https://about.fb.com/news/2022/11/mark-zuckerberg-layoff-message-to-employees/",
+  "reproduction_url": null,
+  "public_primary_text": true,
+  "opening_line": "Today I’m sharing some of the most difficult changes we’ve made in Meta’s history.",
+  "key_quotes": [
+   "I want to take accountability for these decisions and for how we got here.",
+   "I got this wrong, and I take responsibility for that.",
+   "I know this is tough for everyone, and I’m especially sorry to those impacted."
+  ],
+  "headcount_cut": 11000,
+  "pct_workforce": 13.0,
+  "stated_reasons": [
+   "overhiring",
+   "covid",
+   "revenue_decline",
+   "macro",
+   "efficiency",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "takes_responsibility": true,
+  "apology": true,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "reduce the size of our team",
+   "let more than 11,000 of our talented employees go",
+   "let people go",
+   "leaner and more efficient company"
+  ],
+  "severance": "US: 16 weeks base pay plus 2 weeks per year of service (no cap); PTO paid; Nov 15 RSU vest; 6 months healthcare; 3 months career services; immigration support",
+  "notice_style": "same_day",
+  "ceo_voice": "Accountable and personal; explicit ownership of the miscalculation.",
+  "confidence": "high",
+  "news_coverage": [],
+  "framing_gap": "none (no news coverage retrieved: web search quota was exhausted before this event)",
+  "fetch_log": "about.fb.com direct OK (full post); news search not performed - quota exhausted.",
+  "notes": "CORRECTION: apology is explicit ('I’m especially sorry to those impacted'), so apology=true; responsibility explicit. Full post read from about.fb.com. System access removed same day for departing staff; emails kept active. AI mentioned as priority area (AI discovery engine, AI infrastructure), not as cause."
+ },
+ {
+  "company": "HubSpot",
+  "event_date": "2023-01-31",
+  "company_text_path": "data/sources/hubspot__2023-01/company.txt",
+  "company_text_url": "https://www.hubspot.com/company-news/a-message-from-hubspot-ceo-yamini-rangan",
+  "reproduction_url": null,
+  "public_primary_text": true,
+  "opening_line": "I’m writing to share some really sad news and the hardest decision we’ve had to make in HubSpot’s history.",
+  "key_quotes": [
+   "I am deeply sorry to be taking this step.",
+   "We grew headcount faster than revenue in a number of teams.",
+   "I am truly sorry for the impact this has on you and your family."
+  ],
+  "headcount_cut": 500,
+  "pct_workforce": 7.0,
+  "stated_reasons": [
+   "overhiring",
+   "macro",
+   "efficiency"
+  ],
+  "takes_responsibility": false,
+  "apology": true,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduce the size of our team",
+   "saying goodbye to approximately 500 HubSpotters",
+   "parting ways"
+  ],
+  "severance": "5 months severance plus 1 week per year of service up to 7 months total; medical benefits through severance period up to 5 months; vesting accelerated through April 1, 2023; keep laptops; career support",
+  "notice_style": "same_day",
+  "ceo_voice": "Contrite and detailed; explains principles and process.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "CX Today",
+    "url": "https://www.cxtoday.com/crm/hubspot-ceo-clarifies-challenging-times-ahead-remark",
+    "headline": "HubSpot CEO clarifies 'challenging times ahead' remark",
+    "date": "2023-01-31",
+    "framing": "Headline-level: covers CEO clarifying outlook remark (listed in input; not fetched by me)."
+   }
+  ],
+  "framing_gap": "Only one outlet (not read); search quota exhausted. Unable to compare.",
+  "fetch_log": "hubspot.com direct OK (full memo); news search not performed - quota exhausted.",
+  "notes": "Full memo read directly. Apology explicit (twice). Responsibility marked false because phrasing is 'I came to the hard decision' / 'we underestimated', no explicit 'responsible/accountable'. Email to affected employees within 15 minutes of the post."
+ },
+ {
+  "company": "Grab",
+  "event_date": "2023-06-20",
+  "company_text_path": "data/sources/grab__2023-06/company.txt",
+  "company_text_url": "https://www.grab.com/inside-grab/stories/message-from-ceo/",
+  "reproduction_url": null,
+  "public_primary_text": true,
+  "opening_line": "I have difficult news to share today. We are letting over 1,000 Grabbers go.",
+  "key_quotes": [
+   "I want to be clear that we are not doing this as a shortcut to profitability.",
+   "I know that a decision like this is a difficult one, and I want to be accountable and explain why and how we got here.",
+   "Restructuring thus emerged as a painful but necessary step, to set Grab on the correct trajectory towards our longer-term future."
+  ],
+  "headcount_cut": 1000,
+  "pct_workforce": 11.0,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "interest_rates",
+   "profitability"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "letting go",
+   "restructuring",
+   "strategically reorganise",
+   "rebalance our resources"
+  ],
+  "severance": "Half a month per 6 months of service or statutory minimum if higher; ex-gratia for forgone bonus/equity; medical cover to year-end; LinkedIn Premium 1 year; keep laptop",
+  "notice_style": "same_day",
+  "ceo_voice": "Sombre and explanatory; pre-empts the 'shortcut to profitability' charge.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Mothership",
+    "url": "https://mothership.sg/2023/06/grab-layoff-1000-jobs",
+    "headline": "Grab cuts some 1,000 jobs, CEO Anthony Tan denies layoff 'a shortcut to profitability'",
+    "date": "2023-06-20",
+    "framing": "Foregrounds Tan's denial of profitability shortcut."
+   },
+   {
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/economy/2023/6/21/singapores-grab-fires-1000-in-biggest-layoffs-since-pandemic",
+    "headline": "Singapore's Grab fires 1,000 in biggest layoffs since pandemic",
+    "date": "2023-06-21",
+    "framing": "Uses 'fires' and 'biggest since pandemic' rather than 'letting go'."
+   },
+   {
+    "outlet": "Investing.com (Reuters)",
+    "url": "https://m.uk.investing.com/news/stock-market-news/singapores-grab-informs-staff-of-1000-layoffs-3057534?ampMode=1",
+    "headline": "Singapore's Grab informs staff of 1,000 layoffs",
+    "date": "2023-06-20",
+    "framing": "Wire report of the staff letter."
+   },
+   {
+    "outlet": "Dollars and Sense",
+    "url": "https://dollarsandsense.sg/business/grab-retrench-over-1000-employees/",
+    "headline": "Grab retrench over 1,000 employees",
+    "date": "2023-06-20",
+    "framing": "Local business angle: retrenchment."
+   }
+  ],
+  "framing_gap": "Company used 'letting go' and 'restructuring' and denied cost-shortcut; outlets used 'fires' / 'biggest since pandemic'.",
+  "fetch_log": "grab.com direct OK; headlines/snippets only for news.",
+  "notes": "Extract of Tan's 20 Jun 2023 email, hosted on grab.com (read in full). Responsibility true is borderline: 'I want to be accountable' not 'I am responsible'. No apology word. Generative AI mentioned as environment change, not cause. Cost of capital cited."
+ },
+ {
+  "company": "Sony Interactive Entertainment (PlayStation)",
+  "event_date": "2024-02-27",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://gameinformer.com/news/2024/02/27/playstation-laying-off-900-across-insomniac-naughty-dog-guerrilla-and-more-closing",
+  "reproduction_path": "data/sources/sony-interactive-entertainment-playstation__2024-02/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": "It is important to provide you with updates about the business as often as possible. Today, I am writing with sad news.",
+  "key_quotes": [
+   "We envision reducing our headcount by about 900 people, or about 8% of our current workforce",
+   "we have concluded that tough decisions have become inevitable",
+   "I am deeply saddened to see individuals leave the company."
+  ],
+  "headcount_cut": 900,
+  "pct_workforce": 8.0,
+  "stated_reasons": [
+   "restructuring",
+   "macro",
+   "strategic_pivot",
+   "efficiency"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": "none",
+  "euphemisms": [
+   "reduction in our workforce",
+   "restructure operations",
+   "reducing our headcount",
+   "streamline our resources",
+   "future ready"
+  ],
+  "severance": "Severance benefits mentioned without terms; UK collective consultation; Japan next-career program",
+  "notice_style": "same_day",
+  "ceo_voice": "Formal and regretful ('sad news'), corporate abstraction on causes.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "Game Informer",
+    "url": "https://gameinformer.com/news/2024/02/27/playstation-laying-off-900-across-insomniac-naughty-dog-guerrilla-and-more-closing",
+    "headline": "PlayStation laying off 900 across Insomniac, Naughty Dog, Guerrilla and more; closing London Studio",
+    "date": "2024-02-27",
+    "framing": "Reprints statements; notes Hulst cites overgrowth."
+   },
+   {
+    "outlet": "Quartz",
+    "url": "https://qz.com/sony-layoffs-playstation-games-1851289699",
+    "headline": "Sony layoffs playstation games",
+    "date": "2024-02-27",
+    "framing": "Headline-level only (not read)."
+   },
+   {
+    "outlet": "Investing.com",
+    "url": "https://uk.investing.com/news/stock-market-news/playstation-feels-industry-pressure-sony-cuts-900-jobs-shuts-down-london-studio-3356105",
+    "headline": "PlayStation feels industry pressure: Sony cuts 900 jobs, shuts down London Studio",
+    "date": "2024-02-27",
+    "framing": "Frames as industry pressure."
+   },
+   {
+    "outlet": "Cartoon Brew",
+    "url": "https://www.cartoonbrew.com/animators/sonys-playstation-laying-off-900-workers-8-of-its-global-workforce-238508.html",
+    "headline": "Sony's PlayStation laying off 900 workers, 8% of its global workforce",
+    "date": "2024-02-27",
+    "framing": "Quantifies the cut as 8% of global workforce."
+   }
+  ],
+  "framing_gap": "Company cited industry change and being 'future ready'; coverage tied cuts to weaker PS5 demand/forecast cut, which the statements do not mention (from search summary).",
+  "fetch_log": "gameinformer direct OK (full email); blog.playstation.com 404 and wayback empty.",
+  "notes": "Jim Ryan email + SIE statement + Hulst studios statement reproduced in full by Game Informer (read). Quotes 1-2 are Ryan's email; quote 3 is Hulst's. Opening line is from Ryan's email. Company blog URL not retrieved (blog.playstation.com 404; wayback empty)."
+ },
+ {
+  "company": "Unity Software",
+  "event_date": "2025-02-11",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://80.lv/articles/exclusive-unity-ceo-s-internal-announcement-to-staff-amidst-the-layoffs/",
+  "reproduction_path": "data/sources/unity-software__2025-02/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": "We are making some important organizational changes today within the CTO, Engine Product, and Ads teams.",
+  "key_quotes": [
+   "These changes are a response to choices we’re making about what direction Unity will take in the future",
+   "I want to thank each impacted colleague for their contributions to Unity."
+  ],
+  "headcount_cut": null,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "efficiency",
+   "merger_integration"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "organizational changes",
+   "jobs will be impacted",
+   "roles are being eliminated"
+  ],
+  "severance": "Mental health benefits extended to leavers; no financial terms stated",
+  "notice_style": "same_day",
+  "ceo_voice": "Strategic and detailed; business-plan memo with brief thanks.",
+  "confidence": "high",
+  "news_coverage": [
+   {
+    "outlet": "80 Level",
+    "url": "https://80.lv/articles/exclusive-unity-ceo-s-internal-announcement-to-staff-amidst-the-layoffs/",
+    "headline": "EXCLUSIVE: Unity CEO's Internal Announcement Amidst the Layoffs",
+    "date": "2025-02-11",
+    "framing": "Publishes email; adds employee accounts of a 5 AM notice and undisclosed headcount."
+   }
+  ],
+  "framing_gap": "Email was strategy-first; 80 Level adds employees' accounts of 'massive' cuts and generic HR termination letters. Only one outlet retrieved (search quota exhausted).",
+  "fetch_log": "80.lv direct returned gzip garble; wayback id_ copy OK with --compressed.",
+  "notes": "Full email read via 80.lv (wayback copy). No apology/ownership language. Cites 'extended debates', slowing structures and ironSource integration. AI group moved under CTO; AI listed in invest areas. Notifications to be done by EOD Feb 12."
+ },
+ {
+  "company": "Block",
+  "event_date": "2026-02-26",
+  "company_text_path": null,
+  "company_text_url": null,
+  "reproduction_url": "https://finance.yahoo.com/news/jack-dorsey-lays-off-4-002036006.html",
+  "reproduction_path": "data/sources/block__2026-02/reproduction.txt",
+  "public_primary_text": true,
+  "opening_line": null,
+  "key_quotes": [
+   "A significantly smaller team, using the tools we're building, can do more and do it better.",
+   "We’re not making this decision because we’re in trouble",
+   "I’d rather get there honestly and on our own terms than be forced into it reactively."
+  ],
+  "headcount_cut": 4000,
+  "pct_workforce": 40.0,
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency",
+   "overhiring"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "asked to leave or entering into consultation",
+   "structural changes"
+  ],
+  "severance": "Per press coverage: 20 weeks pay plus 1 week per year of tenure, equity vested through end of May, 6 months healthcare, devices, $5,000 (not verified in primary)",
+  "notice_style": "same_day",
+  "ceo_voice": "Confident and prophetic; frames layoff as proactive AI-era restructuring, 'on our own terms'.",
+  "confidence": "medium",
+  "news_coverage": [
+   {
+    "outlet": "Fortune",
+    "url": "https://fortune.com/2026/02/27/block-jack-dorsey-ceo-xyz-stock-square-4000-ai-layoffs/",
+    "headline": "Block cuts 4,000 in AI layoffs",
+    "date": "2026-02-27",
+    "framing": "Ties layoffs to AI 'jobpocalypse' anxiety; quotes Dorsey predicting others will follow."
+   },
+   {
+    "outlet": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/news/jack-dorsey-lays-off-4-002036006.html",
+    "headline": "Jack Dorsey lays off 4,000, says others will do same 'within the next year'",
+    "date": "2026-02-27",
+    "framing": "Notes cut is far larger than 2025's despite $1.3B profit."
+   },
+   {
+    "outlet": "ABC7 News",
+    "url": "https://abc7news.com/post/jack-dorseys-oakland-based-fintech-company-block-laying-off-4000-10000-staff-artificial-intelligence-shift/18658391/",
+    "headline": "Jack Dorsey's Oakland-based fintech company Block cutting 4,000 jobs over AI shift",
+    "date": "2026-02-27",
+    "framing": "Headline attributes cuts to AI shift."
+   },
+   {
+    "outlet": "DL News",
+    "url": "https://dlnews.com/articles/people-culture/block-lays-off-staff-in-major-ai-driven-restructuring/",
+    "headline": "Block lays off staff in major AI-driven restructuring",
+    "date": "2026-02-27",
+    "framing": "Frames as AI-driven restructuring (headline only)."
+   }
+  ],
+  "framing_gap": "Company said cuts were from strength and AI-enabled; coverage echoes AI cause but adds analyst scepticism that AI is a convenient rationale and COVID overhiring context.",
+  "fetch_log": "block.xyz 404; fortune and yahoo direct OK; eweek 403.",
+  "notes": "Quotes are as reproduced by Yahoo Finance (shareholder letter) and Fortune (X post + letter); primary pages not retrieved (block.xyz URLs 404). Letter says 'nearly half' of 10,000+; >4,000 asked to leave or enter consultation. Fortune: Dorsey also mentions COVID overhiring. Prior cut was March 2025 (931), not March 2023."
+ }
+]

@@ -1,0 +1,837 @@
+[
+ {
+  "company": "Cloudflare",
+  "sector": "saas",
+  "event_date": "2026-05-07",
+  "headcount_cut": 1100,
+  "pct_workforce": 20.0,
+  "communicator": "founder",
+  "communicator_name": "Matthew Prince and Michelle Zatlyn",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "earnings_call",
+   "all_hands"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "reduce Cloudflare’s workforce",
+   "saying goodbye to teammates",
+   "departing team members"
+  ],
+  "severance": "Full base pay through end of 2026; US healthcare support through year-end; equity vesting through Aug 15 with one-year cliff waived",
+  "notice_style": "same_day",
+  "ceo_voice": "Founder-to-staff, transparent and empathetic in tone while insisting on AI-era reinvention; posted the internal email verbatim on the public blog.",
+  "sources": [
+   {
+    "url": "https://blog.cloudflare.com/building-for-the-future/",
+    "title": "Building for the future",
+    "type": "primary"
+   },
+   {
+    "url": "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/",
+    "title": "Cloudflare says AI made 1,100 jobs obsolete even as revenue hit a record high",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Full internal email published on company blog same day as Q1 earnings. Prince later wrote a WSJ op-ed (per TechCrunch list) describing laid-off staff as mostly \"measurers\".",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/",
+    "headline": "Cloudflare says AI made 1,100 jobs obsolete even as revenue hit a record high",
+    "date": "2026-05-08",
+    "framing": "AI-obsolescence framing despite record revenue"
+   },
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/off-prem/2026/05/08/cloudflare-to-fire-1100-staff-whose-jobs-just-arent-ai-enough/5235536",
+    "headline": "Cloudflare to fire 1,100 staff whose jobs just aren't AI enough",
+    "date": "2026-05-08",
+    "framing": "skeptical of AI rationale"
+   }
+  ],
+  "framing_gap": "Email says the cuts are \"not a cost-cutting exercise\" yet attributes them to agentic-AI restructuring while revenue hit a record.",
+  "key_quotes": [
+   "Today’s actions are not a cost-cutting exercise or an assessment of individuals’ performance",
+   "It’s not an easy day, but it’s the right decision.",
+   "Cloudflare’s usage of AI has increased by more than 600% in the last three months alone."
+  ],
+  "opening_line": "We are writing to let you know directly that we’ve made the decision to reduce Cloudflare’s workforce by more than 1,100 employees globally.",
+  "company_text_path": "data/sources/cloudflare__2026-05/company.txt",
+  "reproduction_path": null,
+  "year_batch": 2026,
+  "public_primary_text": true
+ },
+ {
+  "company": "Snap",
+  "sector": "consumer_internet",
+  "event_date": "2026-04-15",
+  "headcount_cut": 1000,
+  "pct_workforce": 16.0,
+  "communicator": "ceo",
+  "communicator_name": "Evan Spiegel",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "ai_automation",
+   "profitability",
+   "cost_cutting",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "these changes"
+  ],
+  "severance": "US employees: four months severance, healthcare coverage, equity vesting, transition support",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate and investor-facing; memo filed with SEC, pairs AI efficiency with $500M cost-base reduction.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2026/04/15/snap-is-cutting-1000-jobs-16-of-its-workforce/",
+    "title": "Snap is cutting 1,000 jobs, 16% of its workforce",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Memo made public via SEC filing; quotes taken from TechCrunch reproduction. Reported activist investor Irenic Capital had urged cuts (per search summary, not verified in saved text).",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/04/15/snap-is-cutting-1000-jobs-16-of-its-workforce/",
+    "headline": "Snap is cutting 1,000 jobs, 16% of its workforce",
+    "date": "2026-04-15",
+    "framing": "AI cited as driver"
+   },
+   {
+    "outlet": "Engadget",
+    "url": "https://engadget.com/big-tech/snap-is-laying-off-16-percent-of-its-workforce-blames-ai-162456069.html",
+    "headline": "Snap is laying off 16 percent of its workforce, blames AI",
+    "date": "2026-04-15",
+    "framing": "blames AI"
+   }
+  ],
+  "framing_gap": "Memo credits AI for reduced repetitive work while the investor deck frames it as a $500M cost cut toward profitability.",
+  "key_quotes": [
+   "rapid advancements in artificial intelligence enable our teams to reduce repetitive work, increase velocity, and better support our community, partners, and advertisers",
+   "Snap faces a crucible moment"
+  ],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/snap__2026-04/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "Microsoft",
+  "sector": "big_tech",
+  "event_date": "2026-07-06",
+  "headcount_cut": 4800,
+  "pct_workforce": 2.1,
+  "communicator": "cpo_hr",
+  "communicator_name": "Amy Coleman (EVP, Chief People Officer); Asha Sharma (Xbox CEO)",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "flatten_management",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "euphemisms": [
+   "adjust resources and roles",
+   "role eliminations",
+   "restructure"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate HR memo preemptively denying AI replacement; Xbox chief blunt that the business is unhealthy.",
+  "sources": [
+   {
+    "url": "https://www.techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales",
+    "title": "Microsoft lays off nearly 5,000 employees across Xbox, commercial sales",
+    "type": "news"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Memo excerpts reproduced by TechCrunch; 1,600 Xbox cuts now, ~3,200 through FY27 per Sharma. Earlier voluntary retirement offer (April) not covered here.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://www.techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales",
+    "headline": "Microsoft lays off nearly 5,000 employees across Xbox, commercial sales",
+    "date": "2026-07-06",
+    "framing": "distinction between replaced by AI and AI changing work"
+   },
+   {
+    "outlet": "TheWrap",
+    "url": "https://www.thewrap.com/industry-news/business/microsoft-layoffs-xbox-job-cuts-ai/",
+    "headline": "Microsoft Cuts 4,800 Jobs, Vows They Are Not Being Replaced by AI",
+    "date": "2026-07-06",
+    "framing": "AI denial"
+   }
+  ],
+  "framing_gap": "Memo denies AI replacement while saying AI is changing the work and Xbox margins are the real problem.",
+  "key_quotes": [
+   "are not being replaced by AI",
+   "AI is changing how work gets done",
+   "Our business today is not healthy,"
+  ],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/microsoft__2026-07/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "Intuit",
+  "sector": "saas",
+  "event_date": "2026-05-20",
+  "headcount_cut": 3000,
+  "pct_workforce": 17.0,
+  "communicator": "ceo",
+  "communicator_name": "Sasan Goodarzi",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "euphemisms": [
+   "reducing complexity",
+   "simplifying the structure"
+  ],
+  "severance": "US: 16 weeks base pay plus 2 weeks per year of service; last day July 31",
+  "notice_style": "advance_notice",
+  "ceo_voice": "Corporate simplification language; CEO said on the call none of it had to do with AI.",
+  "sources": [
+   {
+    "url": "https://www.bnnbloomberg.ca/business/2026/05/20/intuit-to-cut-17-of-global-jobs-to-streamline-operations-memo-shows-reuters-exclusive/",
+    "title": "Intuit to cut 17% of global jobs, memo shows: Reuters exclusive",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Reuters saw the memo; full memo text not public. \"None of it had to do with AI\" is from search summary of the analyst call, not in saved text, so not quoted. Reno and Woodland Hills offices closing.",
+  "news_coverage": [
+   {
+    "outlet": "Reuters via BNN Bloomberg",
+    "url": "https://www.bnnbloomberg.ca/business/2026/05/20/intuit-to-cut-17-of-global-jobs-to-streamline-operations-memo-shows-reuters-exclusive/",
+    "headline": "Intuit to cut 17% of global jobs to streamline operations, memo shows",
+    "date": "2026-05-20",
+    "framing": "complexity reduction; AI focus"
+   },
+   {
+    "outlet": "SiliconANGLE",
+    "url": "https://siliconangle.com/2026/05/20/intuit-cuts-17-staff-focus-ai-refuses-blame-ai/",
+    "headline": "Intuit cuts 17% of staff to focus on AI, refuses to blame AI",
+    "date": "2026-05-20",
+    "framing": "company refuses AI blame"
+   }
+  ],
+  "framing_gap": "Company says cuts are unrelated to AI yet describes refocusing on AI bets and signs OpenAI/Anthropic deals the same day.",
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/intuit__2026-05/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "Meta",
+  "sector": "big_tech",
+  "event_date": "2026-04-23",
+  "headcount_cut": 8000,
+  "pct_workforce": 10.0,
+  "communicator": "cpo_hr",
+  "communicator_name": "Janelle Gale",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "efficiency",
+   "strategic_pivot",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "let go",
+   "layoffs"
+  ],
+  "severance": "Per search summary: US 16 weeks base pay plus 2 weeks per year (not in saved text)",
+  "notice_style": "pre_leak",
+  "ceo_voice": "HR-chief memo, empathetic but corporate; offsets AI investment; announced a month ahead of the May 20 cuts after leaks.",
+  "sources": [
+   {
+    "url": "https://www.foxbusiness.com/technology/meta-informs-staff-layoffs-affecting-8000-employees-amid-ai-push",
+    "title": "Meta informs staff of layoffs affecting 8,000 employees amid AI push",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Memo obtained by Bloomberg; cuts effective May 20 (about 7,000 others moved into AI groups per TechCrunch list). Announcement date taken from search coverage (April 23), not the Fox text.",
+  "news_coverage": [
+   {
+    "outlet": "Fox Business (Bloomberg)",
+    "url": "https://www.foxbusiness.com/technology/meta-informs-staff-layoffs-affecting-8000-employees-amid-ai-push",
+    "headline": "Meta informs staff of layoffs affecting 8,000 employees amid AI push",
+    "date": "2026-04-23",
+    "framing": "offsetting AI investment"
+   },
+   {
+    "outlet": "Engadget",
+    "url": "https://engadget.com/2178378/meta-reportedly-lays-off-8000-employees/",
+    "headline": "Meta has reportedly laid off 8,000 employees",
+    "date": "2026-05-20",
+    "framing": ""
+   }
+  ],
+  "framing_gap": "Memo frames cuts as routine efficiency to offset AI spending, while a month-long wait before notifications left staff in limbo.",
+  "key_quotes": [
+   "part of our continued effort to run the company more efficiently and to allow us to offset the other investments we’re making"
+  ],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/meta__2026-04/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "GitLab",
+  "sector": "saas",
+  "event_date": "2026-05-19",
+  "headcount_cut": null,
+  "pct_workforce": 7.0,
+  "communicator": "ceo",
+  "communicator_name": "Bill Staples",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "ai_automation",
+   "restructuring",
+   "flatten_management",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "restructuring",
+   "voluntary separation window"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Visionary \"agentic era\" framing; cuts presented as rebuilding the company for machine-written software.",
+  "sources": [
+   {
+    "url": "https://thenextweb.com/news/gitlab-cuts-7-of-workforce-and-flattens-management-in-sweeping-agentic-era-restructuring",
+    "title": "GitLab cuts 7% of workforce...",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Initial May 19 report said ~7%; June 2 earnings (per TechCrunch list) put it at ~14% / ~350 employees, exit from 22 countries, $30-35M charges. Headcount left null for that conflict.",
+  "news_coverage": [
+   {
+    "outlet": "The Next Web",
+    "url": "https://thenextweb.com/news/gitlab-cuts-7-of-workforce-and-flattens-management-in-sweeping-agentic-era-restructuring",
+    "headline": "GitLab cuts 7% of workforce and flattens management in sweeping agentic era restructuring",
+    "date": "2026-05-19",
+    "framing": "agentic-era rebuild"
+   },
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "headline": "Monday.com is the latest tech company to blame AI for layoffs",
+    "date": "2026-07-25",
+    "framing": "listed among AI-cited cuts"
+   }
+  ],
+  "framing_gap": "Initial 7% was later revealed as roughly 14%, with AI infrastructure cited as the driver.",
+  "key_quotes": [
+   "software will be built by machines, directed by people"
+  ],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/gitlab__2026-05/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "monday.com",
+  "sector": "saas",
+  "event_date": "2026-07-21",
+  "headcount_cut": 620,
+  "pct_workforce": 20.0,
+  "communicator": "founder",
+  "communicator_name": "Eran Zinman",
+  "channel": [
+   "linkedin",
+   "8k_filing"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "not about AI",
+  "euphemisms": [
+   "restructuring plan",
+   "leaner, more focused operating model"
+  ],
+  "severance": "$30-35M severance and benefits charges (company-wide)",
+  "notice_style": "same_day",
+  "ceo_voice": "Co-founder LinkedIn note: \"most painful decision\" yet offensive reframing; FAQ denies cost or AI replacement motive.",
+  "sources": [
+   {
+    "url": "https://thenextweb.com/news/monday-com-layoffs-20-percent-ai-growth-strategy",
+    "title": "Monday.com is cutting 20 percent of its workforce as it pivots to an AI work platform",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Zinman LinkedIn note is public but I did not fetch it; paraphrase only in saved news text, so no quotes. Filed Form 6-K Tuesday July 21 per TNW.",
+  "news_coverage": [
+   {
+    "outlet": "The Next Web",
+    "url": "https://thenextweb.com/news/monday-com-layoffs-20-percent-ai-growth-strategy",
+    "headline": "Monday.com is cutting 20 percent of its workforce as it pivots to an AI work platform",
+    "date": "2026-07-22",
+    "framing": "AI pivot; skeptic of AI washing"
+   },
+   {
+    "outlet": "Globes",
+    "url": "https://en.globes.co.il/en/article-1001550113",
+    "headline": "monday.com to lay off 620, as it adapts to AI",
+    "date": "2026-07-22",
+    "framing": ""
+   }
+  ],
+  "framing_gap": "Says cuts are not to replace people with AI while restructuring around an AI-first platform vision.",
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/monday-com__2026-07/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "American Express",
+  "sector": "consulting_finance",
+  "event_date": "2026-10-23",
+  "headcount_cut": null,
+  "pct_workforce": 5.0,
+  "communicator": "earnings_call",
+  "communicator_name": "Stephen Squeri; Christophe Le Caillec",
+  "channel": [
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "flatten_management",
+   "ai_automation"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "restructuring",
+   "reduce layers and increase spans of control"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Corporate earnings-call efficiency language; AI as preparation rather than replacement.",
+  "sources": [
+   {
+    "url": "https://thenextweb.com/news/amex-job-cuts-ai-agents-run-rogue",
+    "title": "American Express cuts 5% of staff and won't let AI agents run rogue",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Around 77,000 employees at end 2025 per CNBC via TNW; $336M restructuring charge; headcount estimates (3,500-3,850) vary so left null.",
+  "news_coverage": [
+   {
+    "outlet": "The Next Web (citing CNBC)",
+    "url": "https://thenextweb.com/news/amex-job-cuts-ai-agents-run-rogue",
+    "headline": "American Express cuts 5% of staff and won't let AI agents run rogue",
+    "date": "2026-10-23",
+    "framing": "AI preparation"
+   }
+  ],
+  "framing_gap": "CFO says restructuring is to prepare for AI, but CEO calls it about efficiency.",
+  "key_quotes": [
+   "You don’t want to automate processes that are not optimally structured.",
+   "we needed to become [a] more agile and efficient organization"
+  ],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/american-express__2026-10/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "ClickUp",
+  "sector": "saas",
+  "event_date": "2026-05-21",
+  "headcount_cut": null,
+  "pct_workforce": 22.0,
+  "communicator": "founder",
+  "communicator_name": "Zeb Evans",
+  "channel": [
+   "x_post"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "ai_automation",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": true,
+  "apology": null,
+  "mentions_ai": true,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "reduced workforce"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Founder-direct on X; reframes cuts as reinvestment with million-dollar salary bands for survivors.",
+  "sources": [
+   {
+    "url": "https://americanbazaaronline.com/2026/05/22/clickup-cuts-22-workforce-as-ceo-zeb-evans-pushes-ai-first-strategy-481410/",
+    "title": "ClickUp cuts 22% workforce as CEO Zeb Evans pushes AI-first strategy",
+    "type": "news"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Takes-responsibility inferred from a LatestLY headline \"I made this decision and I own it\" (not verified in saved text). Quote taken from American Bazaar reproduction of the X post.",
+  "news_coverage": [
+   {
+    "outlet": "LatestLY",
+    "url": "https://www.latestly.com/technology/clickup-layoffs-ceo-zeb-evans-says-i-made-this-decision-and-i-own-it-as-us-based-software-firm-slashes-workforce-by-22-7444692.html",
+    "headline": "ClickUp layoffs: CEO Zeb Evans says I made this decision and I own it",
+    "date": "2026-05-21",
+    "framing": "ownership"
+   }
+  ],
+  "framing_gap": "Says not about costs yet cuts 22% and promises survivors million-dollar salary bands.",
+  "key_quotes": [
+   "This wasn’t about cutting costs,"
+  ],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": "data/sources/clickup__2026-05/reproduction.txt",
+  "year_batch": 2026
+ },
+ {
+  "company": "Cisco",
+  "sector": "hardware_auto",
+  "event_date": "2026-05-13",
+  "headcount_cut": 4000,
+  "pct_workforce": 5.0,
+  "communicator": "ceo",
+  "communicator_name": "Chuck Robbins",
+  "channel": [
+   "public_blog",
+   "earnings_call"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "ai_framing": "reallocation",
+  "euphemisms": [
+   "reducing roles",
+   "realigning resources"
+  ],
+  "severance": "Pro-rated FY26 bonuses, severance support, placement services (per search summary)",
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate; cuts announced alongside record revenue as reallocation to silicon, optics, security and AI.",
+  "sources": [
+   {
+    "url": "https://gvwire.com/2026/05/13/cisco-to-cut-about-4000-jobs-in-ai-focused-restructuring-as-orders-surge/",
+    "title": "Cisco to cut about 4,000 jobs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Company text not retrieved (gvwire page returned redirect). CFO quote in TechCrunch list: \"This was really not a savings-driven restructure\" - not saved so not quoted.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "headline": "Monday.com is the latest tech company to blame AI for layoffs - here are 20 others",
+    "date": "2026-07-25",
+    "framing": "\"not a savings-driven restructure\""
+   },
+   {
+    "outlet": "Fox 6",
+    "url": "https://www.fox6now.com/news/cisco-layoffs-ai-push",
+    "headline": "Cisco to cut thousands of jobs as CEO signals hard decisions in AI race",
+    "date": "2026-05-13",
+    "framing": "AI race"
+   }
+  ],
+  "framing_gap": "Described as not savings-driven despite up to $1B restructuring costs and AI reallocation.",
+  "year_batch": 2026,
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": null,
+  "public_primary_text": false,
+  "mentions_ai": true
+ },
+ {
+  "company": "PayPal",
+  "sector": "fintech_crypto",
+  "event_date": "2026-05-05",
+  "headcount_cut": 4760,
+  "pct_workforce": 20.0,
+  "communicator": "earnings_call",
+  "communicator_name": "Enrique Lores",
+  "channel": [
+   "earnings_call"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "ai_automation",
+   "profitability",
+   "flatten_management"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "simplification",
+   "remove layers"
+  ],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "New-CEO turnaround language: aggressive AI adoption, simplification over 2-3 years.",
+  "sources": [
+   {
+    "url": "https://www.latestly.com/technology/paypal-layoffs-ceo-enrique-lores-led-fintech-giant-announces-4760-job-cuts-to-accelerate-ai-adoption-and-tech-investment-7420240.html",
+    "title": "PayPal layoffs",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Bloomberg reported leak before earnings call; no company text retrieved. Headcount 4,500-4,760 varies by outlet.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "headline": "Monday.com is the latest tech company to blame AI for layoffs - here are 20 others",
+    "date": "2026-07-25",
+    "framing": "AI adoption turnaround"
+   },
+   {
+    "outlet": "LatestLY",
+    "url": "https://www.latestly.com/technology/paypal-layoffs-ceo-enrique-lores-led-fintech-giant-announces-4760-job-cuts-to-accelerate-ai-adoption-and-tech-investment-7420240.html",
+    "headline": "PayPal layoffs: CEO Enrique Lores announces 4,760 job cuts to accelerate AI adoption",
+    "date": "2026-05-05",
+    "framing": ""
+   }
+  ],
+  "framing_gap": "Cuts phased over two to three years, softening immediate-layoff perception.",
+  "year_batch": 2026,
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": null,
+  "public_primary_text": false,
+  "mentions_ai": true
+ },
+ {
+  "company": "Salesforce",
+  "sector": "saas",
+  "event_date": "2026-02-10",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "Company statement to Fortune",
+  "channel": [
+   "press_release"
+  ],
+  "stated_reasons": [
+   "ai_automation",
+   "efficiency"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "ai_framing": "cause",
+  "euphemisms": [
+   "no longer need to actively backfill"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Spokesperson attributing cuts to Agentforce efficiencies.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "title": "TechCrunch running list",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Fewer than 1,000 cut across marketing, product, data analytics, Agentforce per TechCrunch list; no primary text retrieved.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "headline": "Monday.com is the latest tech company to blame AI for layoffs - here are 20 others",
+    "date": "2026-07-25",
+    "framing": "Agentforce reduces support cases"
+   }
+  ],
+  "framing_gap": "Attributes cuts to Agentforce efficiencies, tying headcount directly to its own AI product.",
+  "year_batch": 2026,
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": null,
+  "public_primary_text": false,
+  "mentions_ai": true
+ },
+ {
+  "company": "General Motors",
+  "sector": "hardware_auto",
+  "event_date": "2026-05-12",
+  "headcount_cut": 550,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "GM spokesperson",
+  "channel": [
+   "press_release"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "other"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "ai_framing": "future_context",
+  "euphemisms": [
+   "transforming its Information Technology organization"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Terse corporate statement; AI role confirmed only by an unnamed source to CNBC.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "title": "TechCrunch running list",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "500-600 IT jobs (Austin, Warren) per TechCrunch list; headcount midpoint 550 is an approximation.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "headline": "Monday.com is the latest tech company to blame AI for layoffs - here are 20 others",
+    "date": "2026-07-25",
+    "framing": "AI played a role per a source"
+   }
+  ],
+  "framing_gap": "Company statement omits AI while a source tells CNBC AI played a role.",
+  "year_batch": 2026,
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": null,
+  "public_primary_text": false,
+  "mentions_ai": true
+ },
+ {
+  "company": "Dell Technologies",
+  "sector": "hardware_auto",
+  "event_date": "2026-03-31",
+  "headcount_cut": 11000,
+  "pct_workforce": 10.0,
+  "communicator": "sec_filing",
+  "communicator_name": "Annual report",
+  "channel": [
+   "8k_filing"
+  ],
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting"
+  ],
+  "takes_responsibility": null,
+  "apology": null,
+  "ai_framing": "none",
+  "euphemisms": [
+   "workforce reduction"
+  ],
+  "severance": "$569M severance costs",
+  "notice_style": "unknown",
+  "ceo_voice": "Silent disclosure inside annual report; no announcement.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "title": "TechCrunch running list",
+    "type": "news"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Event date is approximate: TechCrunch says cut Jan 30, disclosed in March 2026 annual report; headcount fell 108,000 to 97,000.",
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+    "headline": "Monday.com is the latest tech company to blame AI for layoffs - here are 20 others",
+    "date": "2026-07-25",
+    "framing": "disclosed only in annual report"
+   }
+  ],
+  "framing_gap": "A 10% workforce cut was disclosed only via headcount in a filing, with no announcement.",
+  "year_batch": 2026,
+  "key_quotes": [],
+  "opening_line": null,
+  "company_text_path": null,
+  "reproduction_path": null,
+  "public_primary_text": false,
+  "mentions_ai": true
+ }
+]

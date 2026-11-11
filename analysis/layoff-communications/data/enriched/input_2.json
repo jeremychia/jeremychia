@@ -1,0 +1,384 @@
+[
+ {
+  "company": "Peloton",
+  "event_date": "2022-02-08",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "John Foley",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "20% of corporate workforce. Memo cited post-COVID demand 'looks different than anticipated' (paraphrase; no verified quote).",
+  "sources": [
+   {
+    "title": "NPR Peloton CEO layoffs",
+    "type": "news",
+    "url": "https://www.npr.org/2022/02/08/1079153289/peloton-ceo-layoffs"
+   }
+  ]
+ },
+ {
+  "company": "Peloton",
+  "event_date": "2022-08-12",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Barry McCarthy",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (August 2022), reported first by Bloomberg; ~800 per sources. Oct 2022 round (~500 jobs) not separately recorded.",
+  "sources": [
+   {
+    "title": "Fortune: McCarthy gives company 6 months",
+    "type": "news",
+    "url": "https://fortune.com/2022/10/06/peloton-barry-mccarthy-gives-company-6-months-to-save-itself"
+   }
+  ]
+ },
+ {
+  "company": "HP Inc",
+  "event_date": "2022-11-22",
+  "tier": "B",
+  "communicator": "earnings_call",
+  "communicator_name": "Enrique Lores",
+  "channel": [
+   "press_release",
+   "earnings_call"
+  ],
+  "confidence": "medium",
+  "notes": "Range 4,000-6,000 by FY2025 (midpoint used for headcount_cut). Cost savings $1.4B. Percent (7-11%) vs press; headcount base conflict 51k vs 61k. Wording from search only; no quotes verified. Later HP cuts (Nov 2025, 4,000-6,000 AI-linked) not researched.",
+  "sources": [
+   {
+    "title": "Engadget",
+    "type": "news",
+    "url": "https://www.engadget.com/hp-plans-to-lay-off-up-to-6000-employees-220057960.html"
+   }
+  ]
+ },
+ {
+  "company": "PayPal",
+  "event_date": "2023-01-31",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Dan Schulman",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "From search snippets only; memo text not read (EcommerceBytes page defunct). Cuts rolling over several weeks. No quotes verified.",
+  "sources": [
+   {
+    "title": "NBC Bay Area/CNBC",
+    "type": "news",
+    "url": "https://www.nbcbayarea.com/news/business/money-report/paypal-to-lay-off-2000-employees-in-coming-weeks-about-7-of-workforce/3144221/"
+   }
+  ]
+ },
+ {
+  "company": "Lyft",
+  "event_date": "2023-04-27",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "David Risher",
+  "channel": [
+   "internal_email",
+   "8k_filing",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Memo (sent ~a week earlier, reported April 2023) wording not read; no quotes. Also cut 250 open roles and management layers 8 to 5 (per search summary). Lyft Nov 2022 (Logan Green era, ~13%) not researched.",
+  "sources": [
+   {
+    "title": "Lyft layoffs to affect 26% of workforce",
+    "type": "news",
+    "url": "https://techcrunch.com/2023/04/27/lyft-layoffs-to-affect-26-of-workforce"
+   },
+   {
+    "title": "Lyft 10-Q Q2 2023",
+    "type": "primary",
+    "url": "https://www.sec.gov/Archives/edgar/data/1759509/000175950923000096/lyft-20230630.htm"
+   }
+  ]
+ },
+ {
+  "company": "Unity Software",
+  "event_date": "2024-01-08",
+  "tier": "B",
+  "communicator": "sec_filing",
+  "communicator_name": "Unity (interim CEO Jim Whitehurst)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Only search-result snippets seen; communicator inferred (interim CEO Whitehurst) from background knowledge, not verified. No quotes.",
+  "sources": [
+   {
+    "title": "Unity is cutting 1,800 jobs",
+    "type": "news",
+    "url": "https://gamedeveloper.com/business/unity-is-cutting-1-800-jobs-in-the-name-of-profitable-growth-"
+   }
+  ]
+ },
+ {
+  "company": "Electronic Arts",
+  "event_date": "2024-02-28",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Andrew Wilson",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "low",
+  "notes": "No quotes verified; primary text not read. Includes cancelled Star Wars FPS, Ridgeline closure, ~5% cut. Severance unknown.",
+  "sources": [
+   {
+    "title": "Continuing to evolve our business and teams (URL from search; fetch 404)",
+    "type": "primary",
+    "url": "https://www.ea.com/news/continuing-to-evolve-our-business-and-teams"
+   }
+  ]
+ },
+ {
+  "company": "Morgan Stanley",
+  "event_date": "2025-03-18",
+  "tier": "B",
+  "communicator": "media_leak",
+  "communicator_name": "Ted Pick (no statement)",
+  "channel": [],
+  "confidence": "low",
+  "notes": "Pct (~3%) from my memory of coverage, not read. Financial advisors exempted. No on-record text. A 2026 round of ~2,500 also reported (not recorded).",
+  "sources": [
+   {
+    "title": "Morgan Stanley plans about 2,000 job cuts",
+    "type": "news",
+    "url": "https://www.thinkadvisor.com/amp/2025/03/19/morgan-stanley-plans-about-2000-job-cuts/"
+   }
+  ]
+ },
+ {
+  "company": "Accenture",
+  "event_date": "2025-09-25",
+  "tier": "B",
+  "communicator": "earnings_call",
+  "communicator_name": "Julie Sweet",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "Headcount fell 791k to 779k (net >11,000 in 3 months); exits continue to end-November. Pct (~1.4%) is my calculation so left null. No memo; analyst call.",
+  "sources": [
+   {
+    "title": "Accenture to exit staff who cannot be retrained",
+    "type": "news",
+    "url": "https://www.irishtimes.com/business/2025/09/26/accenture-to-exit-staff-who-cannot-be-retrained-for-age-of-ai"
+   }
+  ]
+ },
+ {
+  "company": "Paramount Skydance",
+  "event_date": "2025-10-29",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "David Ellison",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Page fetch 403; details from search summary only. First wave ~1,000 vs Variety total ~2,000 (~10%). No quotes. Bakish cuts not researched.",
+  "sources": [
+   {
+    "title": "Paramount cuts 10% of staff",
+    "type": "news",
+    "url": "https://lamag.com/media/paramount-cuts-10-of-staff-in-first-wave-of-layoffs/"
+   }
+  ]
+ },
+ {
+  "company": "Nike",
+  "event_date": "2026-04-23",
+  "tier": "B",
+  "communicator": "exec_other",
+  "communicator_name": "Venkatesh Alagirisamy (COO)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "low",
+  "notes": "Date approximate (coverage 23-24 Apr 2026). Memo text not read; paraphrase only so no quotes. 'just under 2%' of workforce per news. Donahoe 2024 (~2%, Feb 2024) and Hill 2025 tech cuts (May/Jun 2025, ~1% Aug 2025) not verified in this pass.",
+  "sources": [
+   {
+    "title": "Nike announces roughly 1,400 layoffs",
+    "type": "news",
+    "url": "https://www.foxbusiness.com/markets/nike-announces-roughly-1400-layoffs-across-its-global-operations-team-latest-round-cuts"
+   },
+   {
+    "title": "Nike layoffs cuts tech jobs",
+    "type": "news",
+    "url": "https://www.retaildive.com/news/nike-layoffs-cuts-thousands-tech-jobs/818391/"
+   }
+  ]
+ },
+ {
+  "company": "Shopify",
+  "event_date": "2022-07-26",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Tobi Lutke",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Memo was published on Shopify's site but Shopify URL guess 404; quote via Globe. Opening line not verified. August 2022 further layoffs mentioned by Globe (unquantified).",
+  "sources": [
+   {
+    "title": "Globe and Mail",
+    "type": "news",
+    "url": "https://www.theglobeandmail.com/business/article-shopify-layoffs-pay-boost-restructuring"
+   }
+  ]
+ },
+ {
+  "company": "Plaid",
+  "event_date": "2022-12-07",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Zach Perret",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "Event is Dec 2022 (not Jan 2023). Opening line not verified (only excerpts). Severance via search summary.",
+  "sources": [
+   {
+    "title": "TechCrunch: Plaid layoff",
+    "type": "news",
+    "url": "https://techcrunch.com/2022/12/07/plaid-layoff-fintech/amp"
+   },
+   {
+    "title": "Banking Dive",
+    "type": "news",
+    "url": "https://www.bankingdive.com/news/plaid-cuts-260-employees/638226/"
+   }
+  ]
+ },
+ {
+  "company": "Atlassian",
+  "event_date": "2023-03-07",
+  "tier": "A",
+  "communicator": "founder",
+  "communicator_name": "Mike Cannon-Brookes and Scott Farquhar",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Quotes read from Guardian's report of the memo (memo filed with SEC as 8-K exhibit; filing itself not read). Opening line not verified so left null. Cuts described as not a reflection of financial performance. Overhiring reason is inferred from commentary, not verified in memo.",
+  "sources": [
+   {
+    "title": "Guardian (read via mirror reader)",
+    "type": "news",
+    "url": "https://www.theguardian.com/technology/2023/mar/07/atlassian-to-axe-500-jobs-with-the-heaviest-of-hearts"
+   }
+  ]
+ },
+ {
+  "company": "Cruise (GM)",
+  "event_date": "2023-12-14",
+  "tier": "A",
+  "communicator": "exec_other",
+  "communicator_name": "Mo Elshenawy (president & CTO)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "high",
+  "notes": "Quotes via TechCrunch reproduction. Came after Oct 2023 pedestrian incident, DMV suspension, 9 execs fired.",
+  "sources": [
+   {
+    "title": "Cruise slashes 24% of workforce",
+    "type": "news",
+    "url": "https://techcrunch.com/2023/12/14/cruise-slashes-24-of-self-driving-car-workforce-in-sweeping-layoffs/"
+   }
+  ]
+ },
+ {
+  "company": "Intel",
+  "event_date": "2024-08-01",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Pat Gelsinger",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "all_hands",
+   "earnings_call"
+  ],
+  "confidence": "high",
+  "notes": "Read full text from PDF. Also suspended dividend; $10B savings in 2025. Memo mentions AI only as a trend Intel has not benefited from. Earlier Intel cuts in 2022 not researched.",
+  "sources": [
+   {
+    "title": "Actions to Accelerate our Progress (Intel newsroom PDF)",
+    "type": "primary",
+    "url": "https://d1io3yog0oux5.cloudfront.net/_30f8d843824dfbccc3bd0b0cd772d41f/intel/news/2024-08-01_Actions_to_Accelerate_our_1712.pdf"
+   }
+  ]
+ },
+ {
+  "company": "Fiverr",
+  "event_date": "2025-09-15",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Micha Kaufman",
+  "channel": [
+   "x_post",
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Opening line not verified (X essay not fetchable). Kaufman earlier sent a staff email (April or May 2025) saying 'AI is coming for your jobs' -- quote per secondary sources only. 'parting ways with approximately 250 team members' phrasing seen in The Register fetch. No apology reported.",
+  "sources": [
+   {
+    "title": "Fiverr cuts 30% of staff in pivot to AI-first",
+    "type": "news",
+    "url": "https://www.theregister.com/2025/09/16/fiverr_ai_layoff/"
+   },
+   {
+    "title": "The AI layoffs have come for Fiverr",
+    "type": "news",
+    "url": "https://gizmodo.com/the-ai-layoffs-have-come-for-freelance-marketplace-fiverr-2000660080"
+   }
+  ]
+ },
+ {
+  "company": "HubSpot",
+  "event_date": "2026-10-06",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Yamini Rangan",
+  "channel": [
+   "internal_email",
+   "8k_filing"
+  ],
+  "confidence": "medium",
+  "notes": "Memo filed as 8-K exhibit (per search summary) but I could not open the full text; the hubspot.com URL I tried returned the 2023 letter. Quotes come from CMSWire excerpts, not the full memo; opening line not verified. Board authorized plan Oct 1. 660 is 'nearly 660'; ~$65-75M charges. Completion by end Q1 2027.",
+  "sources": [
+   {
+    "title": "CMSWire",
+    "type": "news",
+    "url": "https://cmswire.com/digital-experience/hubspot-cuts-660-jobs-reorganizes-product-teams-around-customer-outcomes"
+   },
+   {
+    "title": "Boston.com",
+    "type": "news",
+    "url": "https://www.boston.com/news/business/2026/10/06/hubspot-to-lay-off-660-employees/"
+   }
+  ]
+ }
+]

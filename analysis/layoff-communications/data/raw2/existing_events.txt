@@ -1,0 +1,139 @@
+2014-07 Microsoft
+2020-05 Airbnb
+2020-05 Uber
+2021-11 Zillow (Zillow Offers wind-down)
+2021-12 Better.com
+2022-02 Peloton
+2022-04 Robinhood
+2022-05 Carvana
+2022-05 Klarna
+2022-05 Gorillas
+2022-06 Gemini
+2022-06 Tesla
+2022-06 Coinbase
+2022-07 Gemini
+2022-07 Shopify
+2022-07 Rivian
+2022-08 Robinhood
+2022-08 Peloton
+2022-08 Snap
+2022-09 Twilio
+2022-09 Sea Ltd / Shopee
+2022-10 Byju's
+2022-11 Chime
+2022-11 Twitter/X
+2022-11 Stripe
+2022-11 Unacademy
+2022-11 Meta
+2022-11 Redfin
+2022-11 Carvana
+2022-11 GoTo (Gojek/Tokopedia)
+2022-11 HP Inc
+2022-11 DoorDash
+2022-11 Kraken
+2022-12 Plaid
+2022-12 Micron
+2023-01 Amazon
+2023-01 Salesforce
+2023-01 Coinbase
+2023-01 Crypto.com
+2023-01 Unity
+2023-01 Microsoft
+2023-01 Alphabet/Google
+2023-01 Wayfair
+2023-01 Swiggy
+2023-01 PayPal
+2023-01 HubSpot
+2023-02 Okta
+2023-02 Dell
+2023-02 Zoom
+2023-02 Workday
+2023-02 Affirm
+2023-02 Disney
+2023-02 DocuSign
+2023-02 Ericsson
+2023-03 Atlassian
+2023-03 Xero
+2023-03 Meta
+2023-03 Amazon
+2023-04 BuzzFeed
+2023-04 Lyft
+2023-04 Dropbox
+2023-05 Shopify
+2023-06 Linktree
+2023-06 Grab
+2023-07 Binance
+2023-08 Getir
+2023-09 Epic Games
+2023-10 Nokia
+2023-12 Spotify
+2023-12 Etsy
+2023-12 Cruise (GM)
+2024-01 Unity
+2024-01 Unity Software
+2024-01 Twitch (Amazon)
+2024-01 Discord
+2024-01 Citigroup
+2024-01 Riot Games
+2024-01 eBay
+2024-01 Brex
+2024-01 Microsoft Gaming (Xbox/Activision Blizzard/ZeniMax)
+2024-02 Okta
+2024-02 Snap
+2024-02 Instacart (Maplebear)
+2024-02 Rivian
+2024-02 Sony Interactive Entertainment (PlayStation)
+2024-02 Electronic Arts
+2024-04 Tesla
+2024-04 Stability AI
+2024-05 Peloton
+2024-07 Intuit
+2024-08 Intel
+2024-08 Cisco
+2024-09 Northvolt
+2024-10 Boeing
+2024-10 Dropbox
+2024-11 Ford Motor (Europe)
+2025-01 Meta
+2025-01 CNN (Warner Bros. Discovery)
+2025-02 Workday
+2025-02 Unity Software
+2025-02 Autodesk
+2025-03 Morgan Stanley
+2025-03 Block
+2025-05 Walmart
+2025-06 Procter & Gamble
+2025-07 Microsoft
+2025-07 Scale AI
+2025-07 Intel
+2025-07 Atlassian
+2025-08 Salesforce
+2025-09 Fiverr
+2025-09 Starbucks
+2025-09 Accenture
+2025-09 Lufthansa
+2025-10 Goldman Sachs
+2025-10 Meta (Superintelligence Labs)
+2025-10 Target
+2025-10 Chegg
+2025-10 Amazon
+2025-10 UPS
+2025-10 General Motors
+2025-10 Paramount Skydance
+2025-11 IBM
+2025-11 Verizon
+2025-12 McKinsey
+2026-01 Autodesk
+2026-01 Pinterest
+2026-01 Amazon
+2026-02 The Washington Post
+2026-02 Lucid Motors
+2026-02 Block
+2026-03 Atlassian
+2026-03 Oracle
+2026-04 Bolt
+2026-04 Nike
+2026-05 Coinbase
+2026-06 Opendoor
+2026-10 HubSpot
+2026-11 Canva

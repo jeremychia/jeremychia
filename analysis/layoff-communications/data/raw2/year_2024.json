@@ -1,0 +1,631 @@
+[
+ {
+  "company": "Google (Alphabet)",
+  "sector": "big_tech",
+  "event_date": "2024-01-17",
+  "headcount_cut": 1000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Sundar Pichai",
+  "channel": [
+   "internal_email"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "restructuring",
+   "flatten_management",
+   "strategic_pivot"
+  ],
+  "takes_responsibility": false,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "role eliminations",
+   "tough choices"
+  ],
+  "severance": null,
+  "notice_style": "unknown",
+  "ceo_voice": "Measured and corporate; frames cuts as capacity for priorities, acknowledges difficulty without apology.",
+  "sources": [
+   {
+    "url": "https://www.theregister.com/2024/01/18/google_ceo_tell_googlers_more/",
+    "title": "Alphabet CEO tells Googlers: More job cuts on the way",
+    "type": "news"
+   },
+   {
+    "url": "https://edition.cnn.com/2024/01/18/tech/google-ceo-sundar-pichai-further-layoffs/index.html",
+    "title": "Google CEO’s internal memo warns of further layoffs ahead",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "The Register",
+    "url": "https://www.theregister.com/2024/01/18/google_ceo_tell_googlers_more/",
+    "headline": "Alphabet CEO tells Googlers: More job cuts on the way",
+    "date": "2024-01-18",
+    "framing": "Pichai warns of more cuts, smaller than 2023"
+   },
+   {
+    "outlet": "CNN",
+    "url": "https://edition.cnn.com/2024/01/18/tech/google-ceo-sundar-pichai-further-layoffs/index.html",
+    "headline": "Google CEO’s internal memo warns of further layoffs ahead",
+    "date": "2024-01-18",
+    "framing": "Cuts tied to reorienting toward AI"
+   }
+  ],
+  "framing_gap": "Memo frames cuts as funding \"ambitious goals\" while Google was profitable ($53.1B net profit in nine months, per The Register).",
+  "confidence": "medium",
+  "notes": "Memo text seen via The Register/CNN excerpts only (memo first reported by The Verge); 1,000+ is cumulative January count per The Register. Opening line not verified as first line.",
+  "reproduction_path": "data/sources/google__2024-01/reproduction.txt",
+  "key_quotes": [
+   "We have ambitious goals and will be investing in our big priorities this year,",
+   "These role eliminations are not at the scale of last year’s reduction, and will not touch every team,",
+   "removing layers to simplify execution and drive velocity in some areas,"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "company_text_path": null
+ },
+ {
+  "company": "UPS",
+  "sector": "traditional",
+  "event_date": "2024-01-30",
+  "headcount_cut": 12000,
+  "pct_workforce": 2.4,
+  "communicator": "earnings_call",
+  "communicator_name": "Carol Tomé",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "cost_cutting",
+   "revenue_decline",
+   "efficiency"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "cost reductions"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Corporate and numbers-led; cuts folded into earnings guidance.",
+  "sources": [
+   {
+    "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
+    "title": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "NBC News",
+    "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
+    "headline": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
+    "date": "2024-01-30",
+    "framing": "Softer demand and union labor costs"
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2024-01-30/ups-to-cut-12-000-jobs-bring-workers-in-five-days-a-week",
+    "headline": "UPS CEO Kicks Off Productivity Drive by Cutting 12,000 Managers",
+    "date": "2024-01-30",
+    "framing": "Productivity drive targeting management roles"
+   }
+  ],
+  "framing_gap": "Company statement talks of a \"unique and difficult year\"; Bloomberg framed it as a manager-targeted productivity drive.",
+  "confidence": "medium",
+  "notes": "Only NBC reproduction of a one-line statement read; full release not retrieved.",
+  "reproduction_path": "data/sources/ups__2024-01/reproduction.txt",
+  "key_quotes": [
+   "2023 was a unique and difficult year,"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Paramount Global",
+  "sector": "media_gaming",
+  "event_date": "2024-08-13",
+  "headcount_cut": null,
+  "pct_workforce": 15.0,
+  "communicator": "exec_other",
+  "communicator_name": "Brian Robbins, Chris McCarthy, George Cheeks (co-CEOs)",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring",
+   "merger_integration"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "actions",
+   "part ways with teammates"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Collective, corporate-empathetic; \"inflection point\" language and phased rollout.",
+  "sources": [
+   {
+    "url": "https://spokesman.com/stories/2024/aug/13/paramount-begins-major-layoffs-ahead-of-skydance-m",
+    "title": "Paramount begins major layoffs ahead of Skydance merger",
+    "type": "news"
+   },
+   {
+    "url": "https://www.foxbusiness.com/entertainment/paramount-begins-laying-off-15-work-force-hundreds-expected-cut",
+    "title": "Paramount begins laying off 15% of work force",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Fox Business",
+    "url": "https://www.foxbusiness.com/entertainment/paramount-begins-laying-off-15-work-force-hundreds-expected-cut",
+    "headline": "Paramount begins laying off 15% of work force, hundreds expected to be cut",
+    "date": "2024-08-13",
+    "framing": "$500M savings, ahead of Skydance deal"
+   },
+   {
+    "outlet": "Spokesman-Review (AP/other)",
+    "url": "https://spokesman.com/stories/2024/aug/13/paramount-begins-major-layoffs-ahead-of-skydance-m",
+    "headline": "Paramount begins major layoffs ahead of Skydance merger",
+    "date": "2024-08-13",
+    "framing": "Phased layoffs ahead of merger"
+   }
+  ],
+  "framing_gap": "Memo says changes strengthen the business; coverage ties it to the $500M savings target ahead of the Skydance merger.",
+  "confidence": "medium",
+  "notes": "Memo quoted in news reproduction; headcount reports vary (about 2,000-3,000); cuts first announced on earnings call the week before.",
+  "reproduction_path": "data/sources/paramount-global__2024-08/reproduction.txt",
+  "key_quotes": [
+   "We expect 90% of these actions to be complete by the end of September,",
+   "We know that having to part ways with teammates whose contributions have been instrumental to our success is incredibly hard,"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Business Insider",
+  "sector": "media_gaming",
+  "event_date": "2024-01-25",
+  "headcount_cut": null,
+  "pct_workforce": 8.0,
+  "communicator": "ceo",
+  "communicator_name": "Barbara Peng",
+  "channel": [
+   "internal_email",
+   "all_hands",
+   "public_blog"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "strategic_pivot"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "scale back",
+   "focusing our company"
+  ],
+  "severance": "Minimum 13 weeks pay and medical coverage through end of May; career support",
+  "notice_style": "same_day",
+  "ceo_voice": "Forward-looking, corporate; euphemistic \"focusing our company\".",
+  "sources": [
+   {
+    "url": "https://pressgazette.co.uk/north-america/business-insider-8-percent-cut-global/",
+    "title": "Business Insider cuts see 8% of jobs axed",
+    "type": "news"
+   },
+   {
+    "url": "https://thedailybeast.com/business-insider-undergoes-yet-another-brutal-round-of-layoffs",
+    "title": "Business Insider Undergoes Yet Another Brutal Round of Layoffs",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Press Gazette",
+    "url": "https://pressgazette.co.uk/north-america/business-insider-8-percent-cut-global/",
+    "headline": "Business Insider cuts see 8% of jobs axed",
+    "date": "2024-01-25",
+    "framing": "Staff cite communication vacuum"
+   },
+   {
+    "outlet": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2024-01-25/business-insider-cuts-8-of-staff-amid-restructuring",
+    "headline": "Business Insider Cuts 8% of Staff as Part of Restructuring",
+    "date": "2024-01-25",
+    "framing": "Restructuring"
+   },
+   {
+    "outlet": "The Daily Beast",
+    "url": "https://thedailybeast.com/business-insider-undergoes-yet-another-brutal-round-of-layoffs",
+    "headline": "Business Insider Undergoes Yet Another Brutal Round of Layoffs",
+    "date": "2024-01-25",
+    "framing": "Second round in under a year"
+   }
+  ],
+  "framing_gap": "Memo frames cuts as focus on the new plan; staff told Press Gazette there was a \"communication vacuum\".",
+  "confidence": "high",
+  "notes": "Memo published on BI website per Press Gazette; excerpts seen via Press Gazette. Approx 40 journalists est.",
+  "reproduction_path": "data/sources/business-insider__2024-01/reproduction.txt",
+  "key_quotes": [
+   "closed out last year with a plan in place, a clear target audience and a vision",
+   "Unfortunately, this also means we need to scale back in some areas of our organisation,"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Telstra",
+  "sector": "traditional",
+  "event_date": "2024-05-21",
+  "headcount_cut": 2800,
+  "pct_workforce": 9.0,
+  "communicator": "ceo",
+  "communicator_name": "Vicki Brady",
+  "channel": [
+   "press_release",
+   "earnings_call"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "cost_cutting",
+   "revenue_decline"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "restructure",
+   "reset"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Calm, explanatory press-conference tone focusing on competition and cost pressure.",
+  "sources": [
+   {
+    "url": "https://theconversation.com/telstra-says-slashing-almost-a-tenth-of-its-workforce-will-help-save-350-million-why-is-the-business-under-pressure-230533",
+    "title": "Telstra says slashing almost a tenth of its workforce will help save $350 million",
+    "type": "analysis"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "The Conversation",
+    "url": "https://theconversation.com/telstra-says-slashing-almost-a-tenth-of-its-workforce-will-help-save-350-million-why-is-the-business-under-pressure-230533",
+    "headline": "Telstra says slashing almost a tenth of its workforce will help save $350 million. Why is the business under pressure?",
+    "date": "2024-05-21",
+    "framing": "Enterprise decline; possible share-price motive"
+   },
+   {
+    "outlet": "Gizmodo Australia",
+    "url": "https://gizmodo.com.au/2024/05/telstra-to-slash-2800-jobs-by-end-of-year-ceo-says-measures-necessary",
+    "headline": "Telstra to slash 2800 jobs by end of year, CEO says measures necessary",
+    "date": "2024-05",
+    "framing": "CEO says necessary"
+   }
+  ],
+  "framing_gap": "Brady cites changing industry; analysis notes cuts may also support a flagging share price.",
+  "confidence": "medium",
+  "notes": "Quote from press conference as reproduced by The Conversation; Telstra primary release not retrieved. Gizmodo page returned no usable text.",
+  "reproduction_path": "data/sources/telstra__2024-05/reproduction.txt",
+  "key_quotes": [
+   "Our industry and the world we are operating in are changing."
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Salesforce",
+  "sector": "saas",
+  "event_date": "2024-01-26",
+  "headcount_cut": 700,
+  "pct_workforce": 1.0,
+  "communicator": "media_leak",
+  "communicator_name": "unnamed source (WSJ/Bloomberg)",
+  "channel": [],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "cost_cutting"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [],
+  "severance": null,
+  "notice_style": "pre_leak",
+  "ceo_voice": "No public statement; company declined to comment.",
+  "sources": [
+   {
+    "url": "https://fortune.com/2024/01/26/salesforce-layoffs-700-jobs-employees-big-tech/",
+    "title": "Salesforce slashes 700 jobs, adding to brutal string of 2024 tech layoffs",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Fortune (Bloomberg)",
+    "url": "https://fortune.com/2024/01/26/salesforce-layoffs-700-jobs-employees-big-tech/",
+    "headline": "Salesforce slashes 700 jobs, adding to brutal string of 2024 tech layoffs",
+    "date": "2024-01-26",
+    "framing": "Part of a wave of January tech cuts"
+   }
+  ],
+  "framing_gap": "Company said nothing publicly; story told entirely by leaks and a spokesperson declining comment.",
+  "confidence": "medium",
+  "notes": "No primary communication found; no employee memo located.",
+  "reproduction_path": "data/sources/salesforce__2024-01/reproduction.txt",
+  "key_quotes": [],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Nissan",
+  "sector": "hardware_auto",
+  "event_date": "2024-11-07",
+  "headcount_cut": 9000,
+  "pct_workforce": null,
+  "communicator": "ceo",
+  "communicator_name": "Makoto Uchida",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "revenue_decline",
+   "restructuring"
+  ],
+  "takes_responsibility": true,
+  "apology": false,
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "restructure",
+   "leaner"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Sombre and accountable; pay cut of 50% offered as responsibility, details withheld.",
+  "sources": [
+   {
+    "url": "https://www.clickondetroit.com/business/2024/11/07/japanese-automaker-nissan-cuts-9000-jobs-as-its-vehicles-fail-to-sell",
+    "title": "Japanese automaker Nissan cuts 9,000 jobs as its vehicles fail to sell (AP)",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "Associated Press (ClickOnDetroit)",
+    "url": "https://www.clickondetroit.com/business/2024/11/07/japanese-automaker-nissan-cuts-9000-jobs-as-its-vehicles-fail-to-sell",
+    "headline": "Japanese automaker Nissan cuts 9,000 jobs as its vehicles fail to sell",
+    "date": "2024-11-07",
+    "framing": "Jobs cut as vehicles fail to sell"
+   },
+   {
+    "outlet": "IndustryWeek",
+    "url": "https://www.industryweek.com/leadership/companies-executives/news/55241210/nissan-announces-9000-job-cuts-slashes-sales-forecast",
+    "headline": "Nissan Announces 9,000 Job Cuts, Slashes Sales Forecast",
+    "date": "2024-11-07",
+    "framing": "Cuts alongside lowered forecast"
+   }
+  ],
+  "framing_gap": "CEO took a symbolic 50% pay cut yet declined to say which regions or roles would be cut.",
+  "confidence": "medium",
+  "notes": "AP says Uchida took pay cut to take responsibility; his quoted words are not an explicit \"I am responsible\".",
+  "reproduction_path": "data/sources/nissan__2024-11/reproduction.txt",
+  "key_quotes": [
+   "I take this situation very seriously,",
+   "Nissan will restructure its business to become leaner and more resilient."
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "company_text_path": null
+ },
+ {
+  "company": "Chegg",
+  "sector": "consumer_internet",
+  "event_date": "2024-06-18",
+  "headcount_cut": 440,
+  "pct_workforce": 23.0,
+  "communicator": "ceo",
+  "communicator_name": "Nathan Schultz",
+  "channel": [
+   "8k_filing",
+   "press_release"
+  ],
+  "public_primary_text": true,
+  "stated_reasons": [
+   "restructuring",
+   "efficiency",
+   "cost_cutting"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "restructuring effort",
+   "reduction of our global workforce"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Upbeat shareholder-letter tone; mission and new chapter framing.",
+  "sources": [
+   {
+    "url": "https://www.kron4.com/news/bay-area/chegg-layoffs-to-impact-hundreds-of-employees/amp",
+    "title": "Chegg layoffs to impact hundreds of employees",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "KRON4",
+    "url": "https://www.kron4.com/news/bay-area/chegg-layoffs-to-impact-hundreds-of-employees/amp",
+    "headline": "Chegg layoffs to impact hundreds of employees",
+    "date": "2024-06",
+    "framing": "Restructuring, $40-50M savings in 2025"
+   }
+  ],
+  "framing_gap": "Letter frames cuts as a new chapter for the mission; coverage notes stock jumped on the news.",
+  "confidence": "low",
+  "notes": "Exact date not in fetched text (June 2024 week of announcement; 2024-06-18 from memory, unverified). Letter seen via KRON4 excerpt.",
+  "reproduction_path": "data/sources/chegg__2024-06/reproduction.txt",
+  "key_quotes": [
+   "I am committed to our Student First mission and confident that we can achieve remarkable results serving learners around the world,"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Volkswagen",
+  "sector": "hardware_auto",
+  "event_date": "2024-09-02",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "spokesperson",
+  "communicator_name": "Oliver Blume (CEO) / company statement",
+  "channel": [
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "cost_cutting",
+   "restructuring",
+   "macro"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "drastic cost-cutting measures"
+  ],
+  "severance": null,
+  "notice_style": "advance_notice",
+  "ceo_voice": "Consensus-seeking; frames plant closures as last resort, works council confrontational.",
+  "sources": [
+   {
+    "url": "https://www.thelocal.de/20240925/job-cuts-loom-as-germanys-volkswagen-kicks-off-crisis-talks",
+    "title": "Job cuts loom as Germany's Volkswagen kicks off crisis talks (AFP)",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "AFP via The Local",
+    "url": "https://www.thelocal.de/20240925/job-cuts-loom-as-germanys-volkswagen-kicks-off-crisis-talks",
+    "headline": "Job cuts loom as Germany's Volkswagen kicks off crisis talks",
+    "date": "2024-09-25",
+    "framing": "First-ever German plant closures, union resistance"
+   },
+   {
+    "outlet": "Associated Press via Washington Times",
+    "url": "https://m.washingtontimes.com/news/2024/oct/28/volkswagens-employee-council-automaker-plans-close/",
+    "headline": "Volkswagen employee council: automaker plans to close three German plants",
+    "date": "2024-10-28",
+    "framing": "Works council pledges resistance"
+   }
+  ],
+  "framing_gap": "Management frames plant closures as possible, not decided; works council says they are planned.",
+  "confidence": "low",
+  "notes": "Quote is the works council chief Daniela Cavallo, not management. Event date 2024-09-02 is from search summary (early September), not verified in saved text. Closures were a possibility, no headcount announced.",
+  "reproduction_path": "data/sources/volkswagen__2024-09/reproduction.txt",
+  "key_quotes": [
+   "bitter resistance"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ },
+ {
+  "company": "Cruise (GM)",
+  "sector": "hardware_auto",
+  "event_date": "2024-12-10",
+  "headcount_cut": null,
+  "pct_workforce": null,
+  "communicator": "exec_other",
+  "communicator_name": "Marc Whitten (Cruise CEO)",
+  "channel": [
+   "all_hands",
+   "press_release"
+  ],
+  "public_primary_text": false,
+  "stated_reasons": [
+   "strategic_pivot",
+   "restructuring",
+   "cost_cutting"
+  ],
+  "mentions_ai": false,
+  "ai_framing": null,
+  "euphemisms": [
+   "restructuring",
+   "absorbed"
+  ],
+  "severance": null,
+  "notice_style": "same_day",
+  "ceo_voice": "Short, consoling all-hands; Slack message plus press release.",
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2024/12/11/cruise-employees-blindsided-by-gms-plan-to-end-robotaxi-program",
+    "title": "Cruise employees blindsided by GM's plan to end robotaxi program",
+    "type": "news"
+   }
+  ],
+  "news_coverage": [
+   {
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2024/12/11/cruise-employees-blindsided-by-gms-plan-to-end-robotaxi-program",
+    "headline": "Cruise employees blindsided by GM's plan to end robotaxi program",
+    "date": "2024-12-11",
+    "framing": "Employees learned via Slack at the same time as media"
+   },
+   {
+    "outlet": "NBC News",
+    "url": "https://www.nbcnews.com/business/business-news/gm-cuts-50-cruise-staff-ending-robotaxi-business-rcna190668",
+    "headline": "GM cuts 50% of Cruise staff after ending robotaxi business",
+    "date": "2025-02",
+    "framing": "Follow-on layoffs in Feb 2025"
+   }
+  ],
+  "framing_gap": "Leaders told staff they \"should be proud\" while employees said they were blindsided and no layoff details were given.",
+  "confidence": "medium",
+  "notes": "Program shutdown announced Dec 2024; actual layoffs (~50% of staff) came Feb 2025 so headcount null.",
+  "reproduction_path": "data/sources/gm-cruise__2024-12/reproduction.txt",
+  "key_quotes": [
+   "should be proud",
+   "the technology will live on,"
+  ],
+  "opening_line": null,
+  "year_batch": 2024,
+  "takes_responsibility": null,
+  "apology": null,
+  "company_text_path": null
+ }
+]

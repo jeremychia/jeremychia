@@ -1,0 +1,382 @@
+[
+ {
+  "company": "Tesla",
+  "event_date": "2022-06-03",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Elon Musk",
+  "channel": [
+   "internal_email",
+   "media_leak",
+   "x_post"
+  ],
+  "confidence": "medium",
+  "notes": "Executive email 2 June (Reuters) said 'super bad feeling' about economy and cut ~10%; all-staff email 3 June said salaried headcount cut 10%, hourly would rise. Musk backtracked on 4 June. Text from search snippets only; no quotes kept. 3.5% of total is stated by Musk per coverage.",
+  "sources": [
+   {
+    "title": "Fortune",
+    "type": "news",
+    "url": "https://fortune.com/2022/06/03/elon-musk-tesla-layoffs-salaried-staff"
+   },
+   {
+    "title": "Autoblog",
+    "type": "news",
+    "url": "https://www.autoblog.com/2022/06/05/tesla-jobs-increase-salaried-flat/"
+   }
+  ]
+ },
+ {
+  "company": "Unacademy",
+  "event_date": "2022-11-07",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Gaurav Munjal",
+  "channel": [
+   "internal_email",
+   "x_post"
+  ],
+  "confidence": "high",
+  "notes": "Quotes as reproduced by Business Today (email not itself public). Opening line is the email's first quoted sentence per BT. Affected staff to hear from HR within 48 hours. Munjal also tweeted offering the directory of impacted roles to hiring companies. Earlier April 2022 round ~600 and a July promise of no more layoffs.",
+  "sources": [
+   {
+    "title": "Business Today",
+    "type": "news",
+    "url": "https://www.businesstoday.in/latest/corporate/story/no-easy-way-to-do-this-unacademy-lays-off-10-of-its-employees-to-reduce-monthly-burns-352136-2022-11-07"
+   },
+   {
+    "title": "Business Today",
+    "type": "news",
+    "url": "https://www.businesstoday.in/latest/corporate/story/painful-to-see-talented-people-leave-us-unacademys-gaurav-munjal-laments-sacking-350-employees-352154-2022-11-08"
+   }
+  ]
+ },
+ {
+  "company": "Wayfair",
+  "event_date": "2023-01-20",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Niraj Shah",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "~18% of corporate staff. A later round of 1,650 (13%) attributed to a later Shah email ('I truly regret the impact') - date unclear in search results, not recorded. Fragment quote from search summary.",
+  "sources": [
+   {
+    "title": "Retail Dive Wayfair layoffs",
+    "type": "news",
+    "url": "https://www.retaildive.com/news/wayfair-lays-off-nearly-two-thousand-employees/640835/"
+   }
+  ]
+ },
+ {
+  "company": "DocuSign",
+  "event_date": "2023-02-16",
+  "tier": "B",
+  "communicator": "spokesperson",
+  "communicator_name": "DocuSign spokesperson",
+  "channel": [
+   "8k_filing",
+   "press_release"
+  ],
+  "confidence": "high",
+  "notes": "Impairment charge $25-35M. Follows a 9% cut in Sept 2022. A later 2024 round (~6%) not captured.",
+  "sources": [
+   {
+    "title": "CNBC",
+    "type": "news",
+    "url": "https://www.cnbc.com/amp/2023/02/16/docusign-layoffs-company-to-cut-10percent-of-workforce.html"
+   }
+  ]
+ },
+ {
+  "company": "Nokia",
+  "event_date": "2023-10-19",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Pekka Lundmark",
+  "channel": [
+   "earnings_call",
+   "press_release"
+  ],
+  "confidence": "low",
+  "notes": "'Up to 14,000' (9,000-14,000 range); workforce ~86,000 -> 72-77k; savings EUR 800m-1.2bn by 2026. Quote as reported in search summary, not verified against transcript.",
+  "sources": [
+   {
+    "title": "Nokia to cut up to 14,000 jobs",
+    "type": "news",
+    "url": "https://www.lightreading.com/5g/nokia-to-cut-up-to-14-000-jobs-in-dire-warning-about-market"
+   }
+  ]
+ },
+ {
+  "company": "Snap",
+  "event_date": "2024-02-05",
+  "tier": "B",
+  "communicator": "sec_filing",
+  "communicator_name": "Snap Inc. (spokesperson)",
+  "channel": [
+   "8k_filing",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Counts vary 500-540. Spokesperson reason: 'reduce hierarchy and promote in-person collaboration' (paraphrase, not verified verbatim).",
+  "sources": [
+   {
+    "title": "CNBC Snap to lay off 10%",
+    "type": "news",
+    "url": "https://www.cnbc.com/amp/2024/02/05/snap-to-lay-off-10percent-of-global-workforce-around-500-employees.html"
+   }
+  ]
+ },
+ {
+  "company": "Meta",
+  "event_date": "2025-01-14",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Mark Zuckerberg (memo); HR memo by Hillary Champion/Janelle Gale",
+  "channel": [
+   "internal_email",
+   "media_leak"
+  ],
+  "confidence": "medium",
+  "notes": "Memo first reported by Bloomberg; full text not seen. Quotes from Entrepreneur via fetch summariser. Opening line the summariser gave ('Meta is working on...') was uncertain so left null. 3,600 is press estimate on ~72,000 staff; US staff told by Feb 10 per search.",
+  "sources": [
+   {
+    "title": "Meta is laying off 5% ... read the memo",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/meta-is-laying-off-5-of-its-workforce-read-the-memo/485540"
+   },
+   {
+    "title": "Bloomberg: Meta to cut 5%",
+    "type": "news",
+    "url": "https://bnnbloomberg.ca/business/company-news/2025/01/14/meta-to-cut-5-of-staff-with-eye-on-lowest-performers-memo-says"
+   }
+  ]
+ },
+ {
+  "company": "Intel",
+  "event_date": "2025-07-24",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Lip-Bu Tan",
+  "channel": [
+   "internal_email",
+   "earnings_call"
+  ],
+  "confidence": "low",
+  "notes": "Quote is Tan on the earnings call per Entrepreneur, not memo text. Memo not read. Sources conflict on size: Entrepreneur says over 33,000 jobs, others ~15% / target about 75,000 staff from ~108,900; ~21,000 cut April-June. April 2025 earlier memo also not read. Date is inferred.",
+  "sources": [
+   {
+    "title": "Entrepreneur",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/intel-laying-off-tens-of-thousands-of-employees-ceo-memo/495070"
+   }
+  ]
+ },
+ {
+  "company": "Target",
+  "event_date": "2025-10-23",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Michael Fiddelke (incoming CEO; COO)",
+  "channel": [
+   "internal_email",
+   "press_release"
+  ],
+  "confidence": "medium",
+  "notes": "1,800 = ~1,000 filled + ~800 open roles; ~8% of corporate (HQ) workforce, not total, so pct null. Affected told Tue Oct 28. Quotes via CNBC as quoted in Entrepreneur, not full memo. Brian Cornell was outgoing CEO (Fiddelke took over Feb 2026).",
+  "sources": [
+   {
+    "title": "Target to cut 1,800 corporate jobs",
+    "type": "news",
+    "url": "https://www.entrepreneur.com/business-news/target-to-cut-1800-corporate-jobs-first-layoffs-since/498733"
+   },
+   {
+    "title": "Target plans layoffs",
+    "type": "news",
+    "url": "https://finance.yahoo.com/news/target-plans-layoffs-eliminating-1800-roles-as-new-ceo-michael-fiddelke-aims-to-reset-the-struggling-retailer-152024247.html"
+   }
+  ]
+ },
+ {
+  "company": "Lucid Motors",
+  "event_date": "2026-02-20",
+  "tier": "B",
+  "communicator": "ceo",
+  "communicator_name": "Marc Winterhoff (interim CEO)",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Quote is excerpt as reported; whether it is the memo's literal first line unverified. Headcount unclear (12% of salaried/US-based; sources conflict). Memo first reported by TechCrunch. Separate 2024 6% cut (Rawlinson email) and June 2026 18% cut (Napoli) not recorded here; not read.",
+  "sources": [
+   {
+    "title": "Lucid Motors to lay off 12 per cent",
+    "type": "news",
+    "url": "https://thedriven.io/2026/02/25/lucid-motors-to-lay-off-12-per-cent-of-its-workforce/"
+   }
+  ]
+ },
+ {
+  "company": "Robinhood",
+  "event_date": "2022-04-26",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Vlad Tenev",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Blog post not fetched (robinhood.com URL 404). Quote is a CoinDesk excerpt. 342 per one outlet. Headcount grew 700->~3,800. Aug 2022 23% cut not researched.",
+  "sources": [
+   {
+    "title": "CoinDesk",
+    "type": "news",
+    "url": "https://www.coindesk.com/business/2022/04/26/robinhood-cuts-9-of-workforce-as-hyper-growth-slows/amp/"
+   },
+   {
+    "title": "Decrypt",
+    "type": "news",
+    "url": "https://decrypt.co/98736"
+   }
+  ]
+ },
+ {
+  "company": "Meta",
+  "event_date": "2022-11-09",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Mark Zuckerberg",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "high",
+  "notes": "Quotes via fetch summariser of primary. Headcount ~11,000 from news. Opening line in quote 'sorry' language ('I want to say I'm sorry') not verified in text read, so apology=null.",
+  "sources": [
+   {
+    "title": "Mark Zuckerberg: layoff message to employees",
+    "type": "primary",
+    "url": "https://about.fb.com/news/2022/11/mark-zuckerberg-layoff-message-to-employees/"
+   }
+  ]
+ },
+ {
+  "company": "HubSpot",
+  "event_date": "2023-01-31",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Yamini Rangan",
+  "channel": [
+   "internal_email",
+   "public_blog",
+   "8k_filing"
+  ],
+  "confidence": "high",
+  "notes": "Quotes read via fetch of hubspot.com page (summarised by fetch tool, quotes returned verbatim). Exact headcount 'about 500' per memo; page said 7,400+ staff.",
+  "sources": [
+   {
+    "title": "A message from HubSpot CEO Yamini Rangan",
+    "type": "primary",
+    "url": "https://www.hubspot.com/company-news/a-message-from-hubspot-ceo-yamini-rangan"
+   },
+   {
+    "title": "CX Today",
+    "type": "news",
+    "url": "https://www.cxtoday.com/crm/hubspot-ceo-clarifies-challenging-times-ahead-remark"
+   }
+  ]
+ },
+ {
+  "company": "Grab",
+  "event_date": "2023-06-20",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Anthony Tan",
+  "channel": [
+   "internal_email",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "Brief said 2022 for Grab Tan; actual mass layoff was 20 Jun 2023 (Dec 2022 memo was salary freezes only). Quotes are fragments cited by Mothership from letter screenshot / Reuters; full letter not read. Grab hosted an extract on its website. Headcount base 11,934 (annual report) per Mothership; other outlets differ. Opening line not verified. Apology/responsibility not confirmed.",
+  "sources": [
+   {
+    "title": "Mothership",
+    "type": "news",
+    "url": "https://mothership.sg/2023/06/grab-layoff-1000-jobs"
+   },
+   {
+    "title": "Dollars and Sense",
+    "type": "news",
+    "url": "https://dollarsandsense.sg/business/grab-retrench-over-1000-employees/"
+   }
+  ]
+ },
+ {
+  "company": "Sony Interactive Entertainment (PlayStation)",
+  "event_date": "2024-02-27",
+  "tier": "A",
+  "communicator": "exec_other",
+  "communicator_name": "Hermen Hulst (statement); Jim Ryan (email)",
+  "channel": [
+   "public_blog",
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Opening line is truncated excerpt (not full sentence). Percentage ~8% (user prompt guessed 11%, contradicted by sources). London Studio closed. Hulst authored studios post; Jim Ryan sent company email.",
+  "sources": [
+   {
+    "title": "PlayStation laying off 900",
+    "type": "news",
+    "url": "https://gameinformer.com/news/2024/02/27/playstation-laying-off-900-across-insomniac-naughty-dog-guerrilla-and-more-closing"
+   }
+  ]
+ },
+ {
+  "company": "Unity Software",
+  "event_date": "2025-02-11",
+  "tier": "A",
+  "communicator": "ceo",
+  "communicator_name": "Matthew Bromberg",
+  "channel": [
+   "internal_email"
+  ],
+  "confidence": "medium",
+  "notes": "Headcount undisclosed. Email sent at 5 AM PST; notifications complete by Feb 12 EOD. Text via 80.lv.",
+  "sources": [
+   {
+    "title": "Unity CEO's internal announcement",
+    "type": "news",
+    "url": "https://80.lv/articles/exclusive-unity-ceo-s-internal-announcement-to-staff-amidst-the-layoffs/"
+   }
+  ]
+ },
+ {
+  "company": "Block",
+  "event_date": "2026-02-26",
+  "tier": "A",
+  "communicator": "founder",
+  "communicator_name": "Jack Dorsey",
+  "channel": [
+   "x_post",
+   "8k_filing",
+   "public_blog"
+  ],
+  "confidence": "medium",
+  "notes": "~10,000 -> just under 6,000. Dorsey X post + shareholder letter; full text not read; opening line not verified. Severance not found. Also partly attributed to COVID overhiring. User-specified 'March 2023' Block cut not verified (see failures).",
+  "sources": [
+   {
+    "title": "Fortune: Block cuts 4,000 AI layoffs",
+    "type": "news",
+    "url": "https://fortune.com/2026/02/27/block-jack-dorsey-ceo-xyz-stock-square-4000-ai-layoffs/"
+   },
+   {
+    "title": "eWeek",
+    "type": "news",
+    "url": "https://eweek.com/news/block-layoffs-ai-driven-pivot-jack-dorsey"
+   }
+  ]
+ }
+]
