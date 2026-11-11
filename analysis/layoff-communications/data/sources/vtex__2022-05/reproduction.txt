@@ -1,0 +1,92 @@
+URL: https://techcrunch.com/2022/05/27/tech-layoffs-top-15k-employees-in-a-brutal-may/
+RETRIEVED_VIA: direct
+ 
+ Tech layoffs top 15K in a brutal May 
+ Tech layoffs top 15K in a brutal May
+ Natasha Mascarenhas 
+ Amanda Silberling 
+ 2:38 PM PDT · May 27, 2022 
+ It’s been a rough month in the tech sector. We’ve rounded up week after week of layoffs, and according to aggregator layoffs.fyi , more than 15,000 tech workers have lost their jobs this month. Hopefully the sun will come out in June.
+ A number of tech companies that enjoyed pandemic-related surges are facing a correction, due to a number of factors, from rising inflation, economic distress, war and shifting consumer taste buds. Companies including Meta and Twitter have publicly announced hiring freezes, while Snap confirmed this week that it is slowing hiring as it misses revenue targets. 
+ It’s worth noting that a change in hiring cadence, along with the Great Resignation , could mean that headcount is net decreasing at the aforementioned companies, as people leave and companies are slow to refill those empty positions.
+ Vtex
+ On Thursday, the enterprise e-commerce platform Vtex announced that it would lay off 193 employees, who make up about 13% of the Brazilian unicorn’s team.
+ “The world changes fast and we need to adapt,” founders and co-CEOs Geraldo Thomaz and Mariano Gomide de Faria wrote in a letter to employees . “The decision to reduce our workforce was taken as a strategic judgment around what organizational structure can deliver our adjusted priorities.”
+ The founders stated that they don’t have another round of layoffs planned, and that they won’t cut investments into the development of their talent despite their “high-efficiency mindset.” Vtex also compiled an opt-in public spreadsheet for dismissed workers to share that they’re looking for a job. So, if you’re looking for Brazil-based fintech talent, here you go .
+ PayPal
+ PayPal laid off dozens of employees from its San Jose headquarters, filings show. As first reported by The Information and later confirmed by TechCrunch, the layoffs impacted 83 employees. This is a very small fraction of PayPal staff, which counts over 30,000 staff.
+ PayPal’s layoffs, while just now coming to the surface, were conducted around a week before the fintech confirmed that it was shuttering its San Francisco office. When asked about this round of layoffs, a PayPal spokesperson told TechCrunch that it is “constantly evaluating how we work to ensure we are prepared to meet the needs of our customers and operate with the best structure and processes to support our strategic business priorities as we continue to grow and evolve.”
+ It did not directly speak to the filing and layoffs but said that it will continue hiring. PayPal did not offer specific details about severance packages offered to employees impacted.
+ Getir
+ Getir — the $12 billion quick commerce startup — is cutting 14% of its staff globally. It’s been estimated that the Turkish company employs around 32,000 people in nine markets, which means these layoffs will impact about 4,480 people. The company also said it will slow hiring, marketing investments and promotions (not the HR kind, the coupon-for-hungry-customers kind).
+ Just two months ago, Getir raised another $768 in funding, which valued the company at $12 billion as it sought to deliver groceries to customers within minutes. Like other startups, we may see that valuation drop.
+ “There is no change in Getir’s plans to serve in the nine countries it operates. In these tough times, we are committed to leading the ultra-fast grocery delivery industry that we pioneered seven years ago,” Getir wrote in a memo to employees. 
+ The delivery business is a challenging space in which to profit, and the macroeconomic downturn clearly isn’t helping. U.S.-based delivery companies have been impacted as well — the Philadelphia-based startup Gopuff also downsized earlier this year and delayed its plans to go public.
+ Gorillas
+ A rival to Getir, Gorillas also weathered a rough week of layoffs, dismissing about half of staff in its Berlin HQ. 
+ The instant grocery delivery company raised nearly $1 billion dollars at a $3 billion valuation just seven months ago , but this week, laid off about 300 employees. The company is also pulling out of markets in Italy, Spain, Denmark and Belgium and will shift its focus to its home market, Germany, as well as France, the Netherlands, the U.K. and the U.S. 
+ A source told TechCrunch’s Ingrid Lunden that the company was estimated to be down to its last $300 million. That may sound like a lot, but not when you’re failing to turn a profit and spending between $50 and $75 million a month. Gorillas declined to verify that claim.  
+ From Getir to Gorillas, we may be observing a market correction after instant delivery became a necessity during pandemic lockdowns. Though we aren’t yet safe from COVID-19, many customers are now more confident going to the grocery store than they were in 2020. So, delivery companies are facing the music. 
+ Latch
+ Latch, a proptech smart lock company that raised $152 million in known private capital before debuting on the stock market through a SPAC last year, is conducting another round of layoffs. Earlier this month, the startup cut 30 people, or 6% of its total staff, per an email obtained by TechCrunch.
+ Now, as confirmed by a late Friday press release, Latch announced that it has cut a total of 130 people, or 28% of its full-time employee base. Sources say the cuts impact chief revenue officer Chris Lee and VP of sales Adam Sold.
+ In the email viewed by TechCrunch, Latch CEO Luke Schoenfelder told staff that the first round of layoffs were conducted to “ensure Latch is on a path to sustainable growth.” He also said that Latch will be reducing some areas of the business, but we are unsure if that means cutting entire products or just shrinking resources behind each vision. TechCrunch reached out to Latch about this week’s layoffs but has not yet heard back at time of publication.
+ Snap
+ What’s worse: missing your revenue goals, or filing with the SEC ahead of time to say that you’re going to miss your revenue goals? That’s what Snap did this week, noting in an 8-K filing that it expects Q2 2022 revenue and adjusted EBITDA to fall below its expectations.
+ CEO Evan Spiegel addressed Snap in a company memo, obtained by TechCrunch. Consistent with his comments during last quarter’s earnings , he wrote that Snap’s revenue has fallen short due to inflation, as well as the impact of the war in Ukraine on advertising. Spiegel also indicated that last year’s iOS privacy change continues to affect the company.
+ According to the memo, Snap plans to hire more than 500 team members this year, in addition to 900 offers already accepted. That’s a 41% increase in hiring year-over-year, but it’s not as many new hires as the company had planned as it pushes some planned hiring into 2023. Spiegel’s letter specified that the pace of hiring for unopened roles will slow, but didn’t clearly state how current open roles may be affected.
+ Spiegel added that Snap will backfill positions if current employees leave, so long as those roles are high-priority. Plus, leaders at Snap have also been advised to review their budgets to find ways to cut costs — hopefully, that doesn’t mean layoffs .
+ Klarna
+ Buy now, pay later company Klarna was hit with two significant bits of bad news this week. First, The Wall Street Journal reported that it’s cutting its valuation to raise new venture capital, which isn’t a great look for a company that has already raised over $3 billion . This news comes a little less than a year after the Swedish fintech giant raised $639 million, led by SoftBank’s Vision Fund 2, at a $45.6 billion valuation.
+ Then, the other shoe dropped: Klarna co-founder and CEO Sebastian Siemiatkowski announced to a staff of 7,000 that 10% of the company would be laid off , meaning that 700 people will lose their jobs in exchange for severance pay.
+ “I am no stranger to sharing good and bad news. However, today is the hardest one to date,” Siemiatkowski wrote in a message to employees. “As much as we may like it to be the case, Klarna does not exist in a bubble.” 
+ The CEO’s message doesn’t list a clear reason for the layoffs, but cites a variety of shifting macroeconomic and geopolitical factors that have trickled down to affect the fintech company.  
+ “When we set our business plans for 2022 in the autumn of last year, it was a very different world than the one we are in today,” he said. “Since then, we have seen a tragic and unnecessary war in Ukraine unfold, a shift in consumer sentiment, a steep increase in inflation, a highly volatile stock market and a likely recession.” 
+ Upon announcing these layoffs on Monday, Klarna didn’t immediately tell employees whether or not they were going to keep their jobs. Instead, they had to wait to get a calendar invite to learn their fate over the rest of the week. At least Klarna let them work from home “in consideration of [their] privacy.” 
+ Bolt
+ One-click checkout startup Bolt has laid off at least 100 employees and counting across go-to-market, sales and recruiting roles, sources say. CEO Maju Kuruvilla confirmed the workforce reduction in a blog post but did not say how many people were impacted or what roles were targeted. 
+ “It’s no secret that the market conditions across our industry and the tech sector are changing, and against the macro challenges, we’ve been taking measures to adapt our business,” Kurvilla wrote in the blog post. “In an effort to ensure Bolt owns its own destiny, the leadership team and I have made the decision to secure our financial position, extend our runway, and reach profitability with the money we have already raised.” 
+ As of May 26, reports indicated that the number of affected employees was actually 185, or one-third of Bolt’s workforce. 
+ Instacart
+ Instacart, a grocery delivery company that saw demand for its service skyrocket amid the pandemic, is slowing down hiring. As first reported by the NY Post and confirmed by TechCrunch. 
+ “We hired more than 1,500 people over the last year and nearly doubled the size of our engineering teams. As part of our second half planning, we’re slowing down our hiring to focus on our most important priorities and continue driving profitable growth,” Instacart said in a statement to TechCrunch.  
+ Instacart is no stranger to tension. In March, the day after announcing a new growth plan, the company slashed its valuation by nearly 40% from around $39 billion to $24 billion.  
+ ​​Co-founder Apoorva Mehta left his post as chief executive of Instacart in July, to be replaced by Facebook executive Fidji Simo. Her rise to chief executive came as the pandemic winds down and parts of the world begin to reopen, a crucial moment for the company to rethink how it conducts business. Under Simo, a few executives have left, including the head of payments and the head of talent.  
+ Post-pandemic reset leads to wave of layoffs in tech 
+ Tech employees face another tough week of cross-stage layoffs 
+ A third straight week of tech layoffs in the books 
+ Topics
+ Bolt , future of work , getir , hiring , Instacart , labor , Latch , layoff , PayPal , Snap , TC , Tech , vtex , work , workforce 
+ When you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence. 
+ Natasha Mascarenhas 
+ Senior Reporter 
+ Natasha Mascarenhas was a senior reporter at TechCrunch covering early stage startups and venture capital trends.
+ View Bio 
+ Amanda Silberling 
+ Senior Writer 
+ Amanda Silberling is a senior writer at TechCrunch covering the intersection of technology and culture. She has also written for publications like Polygon, MTV, the Kenyon Review, NPR, and Business Insider. She is the co-host of Wow If True, a podcast about internet culture, with science fiction author Isabel J. Kim. Prior to joining TechCrunch, she worked as a grassroots organizer, museum educator, and film festival coordinator. She holds a B.A. in English from the University of Pennsylvania and served as a Princeton in Asia Fellow in Laos.
+ You can contact or verify outreach from Amanda by emailing [email protected]  or via encrypted message at @amanda.100 on Signal. 
+ View Bio 
+ 2027
+ San Francisco 
+ Get an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist 
+ Register Now 
+ Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks 
+ Aisha Malik 
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes 
+ Dominic-Madori Davis 
+ Lucas Ropek 
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say 
+ Kirsten Korosec 
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production 
+ Kirsten Korosec 
+ Tesla will stop making the Cybertruck in 2027 
+ Sean O'Kane 
+ Claude can now analyze your spending with its new Personal Finance tool 
+ Aisha Malik 
+ Harbinger raises $240M after expanding into defense 
+ Sean O'Kane 
+ Loading the next article 
+ Error loading the next article 
+

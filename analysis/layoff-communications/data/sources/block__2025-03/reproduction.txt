@@ -1,0 +1,31 @@
+URL: https://techcrunch.com/2025/03/25/read-the-email-jack-dorsey-sent-when-he-cut-931-of-blocks-staff
+RETRIEVED_VIA: direct
+Read the email Jack Dorsey sent when he cut 931 of Block’s staff
+Fintech Block laid off 931 people, roughly 8% of the company’s staff, on Tuesday, according to a leaked message from the company seen by TechCrunch.
+The news was announced to staff in an email from Block’s co-founder and CEO, Jack Dorsey. Dorsey told staff that on Tuesday, Block will be “making some org changes, including eliminating roles and beginning the consultation process in countries where required.”
+These are the latest changes to hit Block, Dorsey’s financial services giant that owns Cash App and Square. The company provides mobile payments services for consumers, as well as point-of-sale hardware and software for businesses.
+In the email, Dorsey explained that Block is cutting roles across three broad buckets. The first he lists is 391 people being cut for “strategy” reasons.
+The second and biggest bucket, 460 people, is for “performance” reasons, with Dorsey explaining that Block is laying off employees who score a “below” rating on the company’s internal performance tracking metrics, or were trending towards it.
+The third bucket is managers, 80 of whom are being cut in order to flatten Block’s hierarchy to “innercore+4,” which refers to Dorsey’s direct reports and then four levels of direct reports beyond that, according to a source familiar. Dorsey also said that 193 managers are being moved to individual contributor roles.
+Dorsey’s email denies that the layoffs are for financial reasons or to replace workers with AI. Rather, he said that Block is cutting the roles owing to shifting strategic needs while “raising the bar and acting faster on performance.”
+Dorsey also noted that Block is closing 748 open roles at the company, with the exception of those that have progressed to an offer stage, critical operations roles, and key leadership roles, among others.
+Block last underwent major layoffs in January 2024, when it cut around 1,000 roles. As of December 2024, the outfit had around 11,300 staff members worldwide, according to the company’s latest 10K filing.
+Block didn’t immediately respond to a request for comment.
+Below is the entire email Dorsey sent to Block employees on Tuesday. The grammar and format of this text has been modified slightly to protect the sources who shared it with TechCrunch. The email follows:
+today we’ll be making some org changes, including eliminating roles and beginning the consultation process in countries where required. i want to give you all the straight facts.
+as I said at the last Block, there are three areas we’d like to address:
+strategy: reducing from teams that are off strategy, and fixing our discipline ratios.
+performance: parting ways with people with a “below” or trending towards “below.”
+hierarchy: driving to flattening our org to a max depth of innercore+4
+what that translates to in actual numbers of people:
+hierarchy: 80 managers (with 193 moving it individual contributor roles)
+we’re also closing all the 748 roles we had open with the exception of:
+none of the above points are trying to hit a specific financial target, replacing folks with AI, or changing our headcount cap. they are specific to our needs around strategy, raising the bar and acting faster on performance, and flattening our org so we can move faster and with less abstraction.
+why do this all at once instead of over time? we’re behind in our actions, and that’s not fair to the individuals who work here or the company. when we know, we should move, and there hasn’t been enough movement. we need to move to help us meet and stay ahead of the transformational moment our industry is in.
+this is the toughest part of my job, and I fight hard against any of these considerations. we must have a very high bar of correctness for us to take any action, which takes iteration and time to get right. i always balance this with the fact that everyone here, and those that are departing, has equity in our company. it’s my job to increase that value. we believe this will help us focus and execute better to do just that.
+we’re working to give clarity to everyone as quickly, with as much context and support, as possible. you’ll receive an email soon about what this means for you. if there are areas where you think we could do better, please send me a note. direct feedback makes us better, and I always act when it makes sense.
+thank you to all those leaving us. i am grateful and appreciative for you and your work, which has built us up to this point. we will continue to honor that by increasing our value to our customers, and therefore to all of our shareholders, including you.
+This story was updated at 4:28pm on Tuesday to include the full email announcing the layoffs.
+When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+Charles Rollet was a senior reporter at TechCrunch. His investigative reporting led to U.S. government sanctions against four tech companies, including China’s largest AI firm. Prior to joining TechCrunch, Charles covered the surveillance industry for IPVM. Charles is based in San Francisco, where he enjoys hiking with his dogs. You can contact Charles securely on Signal at charlesrollet.12 or +1-628-282-2811.
+Maxwell Zeff was a senior reporter at TechCrunch specializing in AI. Previously with Gizmodo, Bloomberg, and MSNBC, Zeff has covered the rise of AI and the Silicon Valley Bank crisis. He is based in San Francisco. When not reporting, he can be found hiking, biking, and exploring the Bay Area’s food scene.

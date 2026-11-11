@@ -1,0 +1,51 @@
+URL: https://techcrunch.com/2023/06/29/niantic-lays-off-230-employees-cancels-nba-and-marvel-games/
+RETRIEVED_VIA: direct
+
+ Niantic lays off 230 employees, cancels NBA and Marvel games | TechCrunch
+ Apps 
+ Niantic lays off 230 employees, cancels NBA and Marvel games
+ Amanda Silberling
+ 11:34 AM PDT · June 29, 2023
+ Pokémon GO maker Niantic laid off 230 employees today, just one year after it laid off around 90 employees.
+During last year’s layoffs, Niantic canceled four projects, including a Transformers game. Some Niantic games will meet the same fate this time around. After four months in the App Store, Niantic is shutting down NBA All-World; the company will also cancel production on a game based on the Marvel franchise.
+“In the wake of the revenue surge we saw during Covid, we grew our headcount and related expenses in order to pursue growth more aggressively,” CEO John Hanke wrote in an email to employees, cross-posted to the company blog.
+This has been a common refrain among the hundreds of tech companies that have conducted layoffs over the last year — companies claimed they overhired during the pandemic and now need to right-size their teams. In Niantic’s case, Hanke said that revenue has returned to pre-pandemic levels, and new projects have not delivered as much revenue as they would have hoped.
+One such new project is Peridot, a Tamagotchi-like mobile game. Niantic’s first attempt at original IP since Ingress, Peridot launched in May. But according to market intelligence firm Sensor Tower, Peridot has only made $1.4 million in gross in-app purchase revenue thus far.
+Peridot is a technologically sophisticated game, complete with a robust breeding system that makes every players’ pets genetically unique. But players were disappointed at launch, since many of the game’s most exciting features are paywalled. The only way to hatch a new Peridot, for example, is to pay $5 for an in-game item. And once you pay to hatch a Peridot, you discover that you also have to pay if you want your new pet to have certain unique fur patterns or styles.
+Pokémon GO is Niantic’s cash cow, pulling in more than $1 billion in in-app purchases each year since 2020. But players have also been feeling slighted by Niantic’s in-app purchase system.
+At the end of March, Niantic nearly doubled the price of remote raid passes, an extremely popular in-app item. The company’s reasoning is that remote play options were essential during pandemic lockdowns, but they go against Niantic’s vision for the game, which is to get people outside to play together in person. Players don’t feel that way, though. Some even chose to boycott Pokémon GO in protest. While their protest may not have caught Niantic’s attention, its in-app purchase sales likely did.
+Between July 2022 and March 2023, Sensor Tower data shows Niantic made an average of $70 million in gross in-app purchase revenue each month. In the three months since the remote raid pass price increase, Niantic has made an average of $53 million per month.
+“The top priority is to keep Pokémon GO healthy and growing as a forever game,” Hanke wrote. Some Pokémon GO staff were impacted by these layoffs.
+Though games like Peridot have not yet proved financially sustainable, Niantic has an entire business arm separate from its own games. Niantic’s Lightship AR developer kit makes it possible for any developer who knows how to use Unity to make AR games. Developers also have access to Niantic’s impressive visual positioning system (VPS), which lets users interact with local landmarks in their real-world surroundings.
+Hanke even mentioned in his note to employees that the company wants to ramp up its focus on building for mixed-reality devices and AR glasses. So, if Niantic can’t seem to make a successful follow-up to Pokémon GO, maybe its developer tools can keep the company on the right track.
+The Niantic EC-1
+ Topics
+ Apps, AR, Gaming, Layoffs, niantic, peridot, Pokémon Go, Startups 
+ When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+ Amanda Silberling 
+ Senior Writer
+ Amanda Silberling is a senior writer at TechCrunch covering the intersection of technology and culture. She has also written for publications like Polygon, MTV, the Kenyon Review, NPR, and Business Insider. She is the co-host of Wow If True, a podcast about internet culture, with science fiction author Isabel J. Kim. Prior to joining TechCrunch, she worked as a grassroots organizer, museum educator, and film festival coordinator. She holds a B.A. in English from the University of Pennsylvania and served as a Princeton in Asia Fellow in Laos.
+You can contact or verify outreach from Amanda by emailing [email protected] or via encrypted message at @amanda.100 on Signal. 
+ View Bio 
+ 2027
+ San Francisco
+ Get an Early Peek at the Next TechCrunch DisruptDisrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line.Sign up for our waitlist
+Register Now
+Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks
+Aisha Malik
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes
+Dominic-Madori Davis
+Lucas Ropek
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say
+Kirsten Korosec
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production
+Kirsten Korosec
+ Tesla will stop making the Cybertruck in 2027
+Sean O'Kane
+ Claude can now analyze your spending with its new Personal Finance tool
+Aisha Malik
+ Harbinger raises $240M after expanding into defense
+Sean O'Kane
+ Loading the next article 
+ Error loading the next article 

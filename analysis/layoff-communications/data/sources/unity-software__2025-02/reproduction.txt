@@ -1,0 +1,40 @@
+URL: https://80.lv/articles/exclusive-unity-ceo-s-internal-announcement-to-staff-amidst-the-layoffs/
+RETRIEVED_VIA: wayback
+Lastly, the reasons behind the layoffs. Along with the company's strategy going forward, they were detailed in Matthew Bromberg's internal statement, which reads as follows:
+"Folks,
+We are making some important organizational changes today within the CTO, Engine Product, and Ads teams. These changes are a response to choices we’re making about what direction Unity will take in the future, and some of our colleagues’ jobs will be impacted.
+What follows provides some detail on the rationale behind the decisions we’ve made and how those decisions will be implemented. I know that there is some exhaustion associated with prior changes at Unity that haven’t delivered the promised results, but 2025 is going to be the year where we bring to market products and services that will transform our position in the marketplace and provide a springboard to long-term growth.
+The Engine
+Our product and engineering teams are currently stretched across too many products, creating complexity and limiting impact. Historically, we’ve engaged in extended debates about what our focus would be, which would prevent crisp decision making and limit release velocity. We also added people and created operating structures that were meant to speed us up, only to find they were slowing us down. Under the leadership of Steve Collins, Shanti Gaudreault, Andie Nordgren, and Adam Smith, we are changing this approach. Some principles we’ll be following:
+Optimize around “fidelity for ubiquity”: While we’ll always try to enable the best quality graphics we can, our primary directive is to help customers reach the widest possible audience across platforms and devices.
+Improve the customer experience today: While we won’t sacrifice innovation, we need a better balance between looking ahead and shipping higher quality, better performing, more stable software. We are going to invest in stability by tackling critical technical debt, making it easier for customers to build and run games while reducing risks tied to outdated technologies. To innovate, we must first strengthen our existing foundation.
+Platform extensibility: Our platform’s extensibility is its greatest strength. We’ll double down on this by allowing customers and partners to build on our core capabilities with strong support.
+Invest in Industry, Live Services, and AI.
+Data is our future: Our engine customers need better insight into player behavior and Runtime stability, and our advertising customers need better ROI to grow their games. The Runtime must enable both.
+As part of this new approach, we are also bringing key technical teams together to ensure all product decisions directly support our new principles. Pierre-Paul Giroux’s AI group and Amar Mehta’s Central Technology Services team are joining the CTO organization, with both Pierre-Paul and Amar reporting directly to Steve.
+Advertising Products, Engineering and Revenue 
+Two years on from the merger with ironSource, it is time to bring our go-to market teams, technology, and product offering together, integrating them directly into the Unity ecosystem so that our customers can gain a competitive edge in the market. 
+In 2025, in conjunction with completing the rebuild of our machine learning stack, we’ll integrate Unity Ads, Unity LevelPlay, and the Tapjoy offerwall into the Runtime so that they are on the same cloud and data platform and share a single data set. Our Ads revenue teams will then require some modification to align fully with our product and engineering teams, and we’ll be able to streamline our data science and ad serving teams as well.
+We are splitting the revenue organization into two global teams - Supply and Demand - which will be led from EMEA and the U.S., respectively.
+This will allow the Demand leader in the U.S. to be closer to the PE teams working on the machine learning and data initiatives that will have the greatest impact on our advertising customers.
+The Supply team will align more closely with the relevant PE teams in Tel Aviv and EMEA for smoother coordination, and will own supply sales, LevelPlay and Offerwall integrations, and tech support.
+The product and engineering teams for the ironSource ad network will remain as a cohesive, standalone team that can move fast and adjust to customer needs with no investment in tech migrations. This will create two distinct paths for each network to thrive, and ensure we can maintain growth in our current business while evolving as quickly as we can to meet the challenges in the marketplace. 
+As part of this change, we also want to consolidate the Ads leadership in the U.S., and therefore in a few months, after completing the transition and ensuring we're set up for success, Nadav Ashkenazy will hand over the CRO responsibility to a new leader in North America. Nadav wears many hats at Unity - leader of the Ads revenue org, GM of Supersonic, and site leader of Tel Aviv. I want to extend my deep gratitude to him for his leadership, dedication, and the amazing job he’s done leading our Tel Aviv office. I’m very grateful for his partnership.
+That’s the gist of what we are doing and why. People whose roles are being eliminated or those entering an employment consultation period will be notified over the course of the next couple of days, with instructions on next steps. We expect all notifications to be completed by EOD on Feb 12. 
+I want to thank each impacted colleague for their contributions to Unity. We’ll do everything we can to handle these difficult changes with a lot of care and consideration, and to support impacted employees through this transition. Please remember to take care of yourselves as well. Confidential support through Lyra is available if you need it, and we’ll extend access to mental health benefits to those who are leaving. 
+If you have questions or concerns, don’t hesitate to reach out to your manager, an executive leader, or #ask-hr. More details about the changes and updated org charts will be added to this intranet page.
+Starting later this week, I’ll be sharing more about our 2025 strategy in a series of Town Halls in Montreal, Tel Aviv, Copenhagen, Seoul, Tokyo, and San Francisco, where I’ll also be able to answer your questions about how these changes support that strategy. The first Town Hall will be global and I will host it in Montreal tomorrow. I look forward to seeing many of you both in person and virtually then. 
+Matt"
+Read the original report here and don't forget to join our 80 Level Talent platform and our new Discord server, follow us on Instagram, Twitter, LinkedIn, Telegram, TikTok, and Threads, where we share breakdowns, the latest news, awesome artworks, and more.
+Ready to grow your game’s revenue?
+Talk to us
+Comments 
+2
+CancelPost
+Anonymous user
+9 months ago
+1
+Anonymous user
+9 months ago
+1
+Leave Comment

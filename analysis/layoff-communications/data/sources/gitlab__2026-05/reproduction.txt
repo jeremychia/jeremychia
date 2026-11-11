@@ -1,0 +1,145 @@
+URL: https://thenextweb.com/news/gitlab-cuts-7-of-workforce-and-flattens-management-in-sweeping-agentic-era-restructuring
+RETRIEVED_VIA: direct
+GitLab cuts 7% of workforce and flattens management in sweeping ‘agentic era’ restructuring
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
+    
+        
+    
+    
+    
+    
+    
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+
+
+
+
+        
+
+    Skip to content
+
+    
+
+    
+
+    
+
+    
+    
+        
+            
+
+
+
+
+
+
+    
+        
+
+        
+                
+            This article was published on May 19, 2026
+TL;DRGitLab is cutting 7% of its workforce, reducing its country footprint by 30%, and flattening management layers in a sweeping restructuring for what CEO Bill Staples calls the “agentic era.” The company plans to reorganise R&D into 60 autonomous teams and deploy AI agents internally, while reaffirming its FY27 financial guidance ahead of a 2 June earnings call.
+GitLab is slashing jobs, shrinking its geographic footprint, and reorganising its engineering teams as it bets its future on a world where AI agents, not humans, write most of the code.
+The DevOps platform company announced on 19 May that it will cut approximately 7% of its workforce, reduce its country presence by up to 30%, and strip out as many as three layers of management in certain functions. The company, which employed roughly 2,580 people as of January 2026, is also offering a voluntary separation window for those who want to leave on their own terms.
+CEO Bill Staples framed the overhaul as a necessary response to what he calls the “agentic era,” a period in which autonomous AI systems take on an increasingly central role in software development, deployment, and internal workflows. In a company-wide memo, Staples wrote that “software will be built by machines, directed by people,” a line that neatly captures the philosophical shift GitLab is attempting.
+The restructuring will see GitLab’s research and development organisation broken into roughly 60 smaller, autonomous teams. The company also plans to deploy AI agents internally to automate reviews, approvals, and handoffs, essentially practising what it preaches to its customers.
+GitLab is not alone in wielding the “agentic AI” framing to justify headcount reductions. Cloudflare recently cut 1,100 jobs in a strikingly similar pivot, and the broader tech sector has recorded more than 95,000 job losses across 247 layoff events in 2026. The pattern has prompted critics to question whether these restructurings represent genuine strategic pivots or what some have termed “AI washing,” using the language of artificial intelligence to dress up conventional cost-cutting.
+The financial picture adds another layer of complexity. GitLab’s stock dropped roughly 8% in after-hours trading following the announcement, extending a painful 12-month slide that has seen shares fall from $52 to around $26. The company’s board authorised a $400 million share repurchase programme when it reported Q4 FY26 results in March, a move that now looks like an attempt to shore up investor confidence ahead of the restructuring news.
+Despite the upheaval, GitLab is reaffirming its financial outlook. The company guided Q1 FY27 revenue of $253 million to $255 million, representing 18% to 19% year-over-year growth, with non-GAAP operating income expected between $32 million and $34 million. The full-year FY27 forecast remains unchanged. GitLab plans to finalise its new organisational structure on or before 1 June, with the full scope and financial impact to be disclosed during its Q1 earnings call on 2 June.
+The question now is whether GitLab’s bet pays off. The economics of running AI agents at scale remain punishing, and the transition from human-driven to agent-driven development is far from straightforward. But Staples appears committed to making GitLab a company that does not merely sell agentic AI tooling but operates as one itself.
+For the roughly 180 employees who will lose their jobs, the philosophical framing offers little comfort. As one industry observer noted, the gap between AI’s promise and its present reality remains wide, and workers are the ones absorbing the cost of that uncertainty.
+Story by
+                                
+                                    Allison Steffens Herrera
+Communication and media student and intern at The Next Web, contributing to research-backed content, with experience in media campaigns, and                                                                        (show all)
+                                                                    
+                                Communication and media student and intern at The Next Web, contributing to research-backed content, with experience in media campaigns, and communication strategy. Interested in business strategy and how technology shapes public perception and corporate decision-making.
+Get the most important tech news in your inbox each week.
+Thanks! Check your inbox to confirm your subscription.
+By subscribing you agree to our Privacy Statement.
+1
+                                    
+                                        Amazon pledges 30,000 entry-level UK jobs to young people by 2030
+2
+                                    
+                                        American Express cuts 5% of staff and won’t let AI agents ‘run rogue’
+3
+                                    
+                                        Sam Altman says AI means we can no longer just patch all the bugs
+4
+                                    
+                                        OpenAI checked fired researchers’ phones for Signal chats, WSJ reports
+5
+                                    
+                                        Web Summit survey: 60% in tech say AI has increased their workload
+Get the most important tech news in your inbox each week.
+Thanks! Check your inbox to confirm your subscription.
+By subscribing you agree to our Privacy Statement.

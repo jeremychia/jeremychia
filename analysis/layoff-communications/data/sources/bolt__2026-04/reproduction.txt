@@ -1,0 +1,4 @@
+URL: https://www.americanbanker.com/news/bolt-lays-off-a-third-of-its-employees-citing-ai
+RETRIEVED_VIA: direct
+NOTE: passages below are verbatim quotes extracted from the news article by a fetch summariser, not the full article.
+"Going forward, Bolt will be operating as a much leaner organization and leveraging AI at our core," ... "Developing products and operating in 2026 is very different than it was in prior years" ; company statement: decision made from "a place of strength"; "less than 40 people".

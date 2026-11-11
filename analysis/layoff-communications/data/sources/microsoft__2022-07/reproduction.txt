@@ -1,0 +1,46 @@
+URL: https://techcrunch.com/2022/07/12/microsoft-lays-off-a-portion-of-its-workforce-as-part-of-a-realignment/
+RETRIEVED_VIA: direct
+ 
+ Microsoft lays off portion of workforce in 'realignment' 
+ Image Credits: Jean-Luc Ichard / Getty Images 
+ Microsoft lays off a portion of its workforce as part of a ‘realignment’
+ Kyle Wiggers 
+ 9:58 AM PDT · July 12, 2022 
+ Microsoft today became the latest Big Tech company to cut jobs during a period of mounting economic uncertainty. Bloomberg reports that the Redmond firm is “realigning business groups and roles” after the close of its fiscal year (on June 30), even as the company intends to grow its headcount in the coming months.
+ The layoffs reportedly affect less than 1% of Microsoft’s 180,000-person workforce and follow no clear pattern with respect to geography or product division, touching on teams including customer and partner solutions and consulting. They come after Microsoft slowed hiring in the Windows, Teams and Office groups while assuring that recruitment hadn’t been affected by industry headwinds.
+ “Today we had a small number of role eliminations. Like all companies, we evaluate our business priorities on a regular basis, and make structural adjustments accordingly,” Microsoft told Bloomberg in an emailed statement. “We will continue to invest in our business and grow headcount overall in the year ahead.”
+ Microsoft reported strong earnings in Q3, with a 26% year-over-year increase in cloud revenue and overall revenue of $49.4 billion. But in early June, the company revised its Q4 revenue and earnings guidance downward, citing the impact of foreign exchange fluctuations.
+ Bloomberg notes that Microsoft has in recent years typically announced job cuts shortly after the July 4 holiday in the U.S. as it makes changes for the new fiscal period.
+ Layoffs within the tech sector have accelerated over the past few months as investors, fearful of a recession, pull back. Startups, particularly those in capital-intensive businesses like delivery, events and fintech, have had to bear the brunt of the impact. But as the unfavorable conditions persist, there’s been a knock-on effect. Oracle, for instance, is said to be considering a $1 billion cost-cutting initiative that would include thousands of layoffs. 
+ Beyond Microsoft and Oracle, Twitter let go a third of its recruiting team last week. Tesla has been laying off hundreds of employees over the past month. And groups at Meta are bracing for firings after managers at the company were reportedly told to “move to exit” poor performers. Meta, which CEO Mark Zuckerberg perceives as in the midst of “one of the worst downturns … in recent history,” previously said that it would slash its target number for new engineer hires this year by about 30%.
+ Nvidia, Lyft, Snap, Uber, Spotify, Intel, Google, and Salesforce are among the other publicly traded tech companies that slowed hiring this spring into summer. So far, IBM and Amazon haven’t made similar moves.
+ Topics
+ Enterprise , firings , hiring , hiring freeze , labor , laid off , layoff , Layoffs , Microsoft , recession , recruitment , report 
+ When you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence. 
+ Kyle Wiggers 
+ AI Editor 
+ Kyle Wiggers was TechCrunch’s AI Editor until June 2025. His writing has appeared in VentureBeat and Digital Trends, as well as a range of gadget blogs including Android Police, Android Authority, Droid-Life, and XDA-Developers. He lives in Manhattan with his partner, a music therapist. 
+ View Bio 
+ 2027
+ San Francisco 
+ Get an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist 
+ Register Now 
+ Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks 
+ Aisha Malik 
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes 
+ Dominic-Madori Davis 
+ Lucas Ropek 
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say 
+ Kirsten Korosec 
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production 
+ Kirsten Korosec 
+ Tesla will stop making the Cybertruck in 2027 
+ Sean O'Kane 
+ Claude can now analyze your spending with its new Personal Finance tool 
+ Aisha Malik 
+ Harbinger raises $240M after expanding into defense 
+ Sean O'Kane 
+ Loading the next article 
+ Error loading the next article 
+

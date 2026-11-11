@@ -1,0 +1,76 @@
+URL: https://techcrunch.com/2022/05/02/amazon-aggregator-thrasio-begins-layoffs-names-new-ceo/
+RETRIEVED_VIA: direct
+ 
+ Amazon aggregator Thrasio begins layoffs, names new CEO 
+ Amazon aggregator Thrasio begins layoffs, names new CEO
+ Christine Hall 
+ Ingrid Lunden 
+ 12:40 PM PDT · May 2, 2022 
+ A day of reckoning has come for Thrasio , one of the bigger startups buying up and consolidating third-party Amazon sellers. TechCrunch has learned from sources that the company, valued last year at between $5 billion and $10 billion, is going to be laying off a portion of its employees this week. That news is coming at the same time that Thrasio is changing its leadership: today it announced that Greg Greeley, a former president of Airbnb and a longtime Amazon executive, is joining its board and taking on the role of CEO this August.
+ He will be succeeding Carlos Cashman, one of the co-founders of the company, who will remain on Thrasio’s board as a director.
+ The layoffs and new CEO appointment are the latest developments in a series of ups and downs for Thrasio in the last six months that underscore some of the challenges in the aggregator business model:
+ – In April 2021, when Thrasio was announcing a $100 million raise, co-founder Josh Silberstein — who at the time was co-CEO at the company with Cashman — told TechCrunch that Thrasio was eyeing up a public listing to raise more money for expansion, either through a traditional IPO or via a SPAC; it was also appointing a new CFO to oversee the process.
+ – The SPAC idea started to take shape over the summer, potentially valuing Thrasio as high as $10 billion. But then the new CFO left in July, just three months after joining; Silberstein subsequently left the company in September; and by the beginning of October , the SPAC option was delayed, reportedly due to problems that arose during a financial audit.
+ – Yet by the end of that month, Thrasio announced another private fundraising, a whopping $1 billion deal led by Silver Lake, which was when it hit its $5-10 billion valuation.
+ – Last week, people were sharing  an email allegedly looking for investors in the company via a special purpose vehicle at a $2.7 billion valuation. Tellingly, the sender has gone silent (meaning: it may well be a hoax). The company declined to comment.
+ Thrasio, the Amazon aggregator, raises $1B in fresh funding at a valuation of up to $10 billion 
+ Unfortunately, the layoffs are not a hoax. TechCrunch confirmed the rumors with the company, and we have also been shown an internal memo that explains how they will be carried out: people will be getting informed by their managers over the next two days (Tuesday and Wednesday).
+ The company said in the memo that it “made the decision to reduce the size of the Thrasio team,” but it has not confirmed how many employees will be impacted.
+ We understand that the layoffs will be part of a bigger reorganization. In that memo to employees, Cashman and Thrasio president Danny Boockvar write that in order to keep Thrasio on its trajectory, the company would need to make certain “strategic and operational changes.”
+ “This is not an easy decision – especially within a culture like ours that is shaped around community and sharing,” they added.
+ Employees being let go will receive “severance, healthcare, job support, and accelerated vesting of some of your options,” as well as career transition support and an alumni network for continued support, the memo mentioned. Their final working day will be May 13.
+ Thrasio’s growth
+ Thrasio was founded in 2018 by Cashman and Silberstein to capitalize on a very Amazon-like economy of scale: the Amazon Marketplace has millions of businesses and brands selling on it (nearly 2 million active sellers by one estimate ) and there is a business to be built in bringing some of them together to run more efficient production, marketing and analytics, and fulfillment across them.
+ The businesses would be picked up by Thrasio, which would invest in tech to run them better and more profitably as e-commerce operations, both on Amazon and potentially outside of it as well — a new kind of Procter & Gamble for the twenty-first century.
+ It raised nearly $3.4 billion in funding to build out its business, acquiring hundreds of brands, with investors including the likes of Silver Lake, Advent International, Oaktree, Upper90, Harlan and more. When it raised its $1 billion round last October, it was buying businesses at a rate of 1.5 per week and had several hundred brands in its portfolio.
+ Dozens of other aggregators followed in Thrasio’s wake — some 150 according to Thrasio’s estimates, collectively raising some $15 billion in capital to fuel those ambitions — eyeing up the same opportunity as Thrasio was chasing. Thrasio itself became a top-five seller on Amazon.
+ Thrasio raises $100M for its Amazon roll-up play, appoints retail CFO for its next steps 
+ Where Thrasio is headed
+ It’s not clear why a financial audit would have stalled Thrasio’s SPAC last year, but it speaks to some of the challenges of running a business and accounting for it when it’s evolving at a fast pace, and at its heart is about bringing multiple other businesses together.
+ The concept of consolidating repetitive processes across multiple retailers sounds like a great idea in theory.
+ “What happens when you get into that price range is that it gets hard to grow your business and manage it,” Silberstein told me last year, citing SEO, marketing and supply chain management as some of the challenges. “That means as you grow from $1 million to $10 million, the margins would decrease and it gets even harder to make returns. We simply observed the reality that all these great companies had reached a point between a lack of access to capital and simply not being able to keep doing what they do. We thought, if we acquire 10-20 of these we would have the scale to build best in breed supply chain, marketing and so on. We would fix the problem.”
+ But in reality Thrasio has been building a business spanning a number of different consumer categories, geographies and demographics. Integrating even similar businesses can be costly and difficult (and it often goes wrong).
+ And aggregators generally position themselves as solving those issues with tech, but in some cases, aggregators are not building as much technology as you might think: they are buying third-party tools to help with SEO, fulfillment and more.
+ In that context, the move to bring in Greeley — whose roles at Amazon included running its global Prime program — suggests that the company wanted a more seasoned executive at the helm to keep its long-term strategy on the right path, especially given Greeley’s background and track record in the consumer marketplace space.
+ Cashman has also been grappling with another controversy outside of Thrasio. He is facing a lawsuit being brought against him by Stacy Chang, an investor who left Founders Fund to join Cashman in a new venture capital firm called Arrowside Capital. She alleges he dismissed her after deciding not to move forward with the firm, and she is seeking damages, including for work she says she did over a six-month period.
+ Thrasio also alludes to growing too big, too fast in the joint memo to employees. “Now, as we assess our strategy for the road ahead, we need to take the time to properly absorb and grow the businesses we have acquired, make sure we have rigorous processes and controls, and then look to re-scale our team in the optimal areas for growth.”
+ They went on to say that some of that included “refining” its M&A team to be able to handle acquisitions and integrate them into the company’s processes, as well as “undergoing our transformation in an environment with a pandemic, a war, a sharp rise in inflation, supply chain disruptions and changing consumer behaviors.”
+ This is unlikely to be the final chapter for Thrasio, which remains the owner of hundreds of big-selling e-commerce brands. But the big question will be whether it continues as a single entity under Greeley, and whether it continues to grow as it has; or whether it takes a course to “rationalize” some of the many investments and acquisitions it has made over the years.
+ “Just four years ago, the innovative team at Thrasio created an entirely new way for this community of entrepreneurs to achieve their business goals and see the reach of their products expand – and Thrasio continues to blaze the trail,” Greeley noted in a statement today. “It’s been truly remarkable – and it’s still early in a marketplace with nearly $400 billion in total third-party sales in 2021 and trillions more in the broader retail ecosystem.”
+ E-commerce roll-ups are the next wave of disruption in consumer packaged goods 
+ Topics
+ Advent International , Airbnb , Amazon , Amazon Marketplace , Better.com , Carlos Cashman , Founders Fund , General Electric , greg greeley , healthcare , Josh Silberman , labor , Layoffs , Media & Entertainment , procter & gamble , silver lake , special-purpose acquisition company , Startups , thrasio , venture capital 
+ When you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence. 
+ Christine Hall 
+ Senior Reporter 
+ Christine Hall wrote about enterprise/B2B, e-commerce, and foodtech for TechCrunch, and venture capital rounds for Crunchbase News. Based in Houston, Christine previously reported for the Houston Business Journal, the Texas Medical Center’s Pulse magazine, and Community Impact Newspaper. She has an undergraduate journalism degree from Murray State University and a graduate degree from The Ohio State University. 
+ View Bio 
+ Ingrid Lunden 
+ Europe Editor 
+ Ingrid was a writer and editor for TechCrunch, from February 2012 through May 2025, based out of London.
+ Before TechCrunch, Ingrid worked at paidContent.org, where she was a staff writer, and has in the past also written freelance regularly for other publications such as the Financial Times. Ingrid covers mobile, digital media, advertising and the spaces where these intersect.
+ When it comes to work, she feels most comfortable speaking in English but can also speak Russian, Spanish and French (in descending order of competence).
+ View Bio 
+ 2027
+ San Francisco 
+ Get an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist 
+ Register Now 
+ Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks 
+ Aisha Malik 
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes 
+ Dominic-Madori Davis 
+ Lucas Ropek 
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say 
+ Kirsten Korosec 
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production 
+ Kirsten Korosec 
+ Tesla will stop making the Cybertruck in 2027 
+ Sean O'Kane 
+ Claude can now analyze your spending with its new Personal Finance tool 
+ Aisha Malik 
+ Harbinger raises $240M after expanding into defense 
+ Sean O'Kane 
+ Loading the next article 
+ Error loading the next article 
+

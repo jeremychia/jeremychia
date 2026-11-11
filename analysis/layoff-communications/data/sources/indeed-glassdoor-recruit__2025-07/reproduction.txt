@@ -1,0 +1,15 @@
+URL: https://techcrunch.com/2025/07/11/indeed-glassdoor-to-lay-off-1300-staff/
+RETRIEVED_VIA: direct
+Indeed, Glassdoor to lay off 1,300 staff amid AI push Ram Iyer 4:52 AM PDT · July 11, 2025 Recruit Holdings, the Japanese parent of Indeed and Glassdoor, said on Friday it is laying off about 1,300 employees at the two companies. The layoffs are part of a broader restructuring that involves Glassdoor’s operations being integrated within Indeed, and an increasing focus on using AI.
+
+The job cuts would affect functions mostly in the U.S. across the two companies’ R&D, tech, and HR and sustainability divisions, though all functions across all countries will be affected, according to an internal memo by CEO, Hisayuki “Deko” Idekoba, seen by TechCrunch. The cuts would affect 6% of Recruit’s HR technology division.
+
+Highlighting internal figures that AI helps people find a job every 2.2 seconds, the company said in a statement that it is focusing on “simplifying hiring by building a better job seeker and employer experience using AI.”
+
+“AI is changing the world, and we must adapt by ensuring our product delivers truly great experiences for job seekers and employers,” Idekoba wrote in the memo.
+
+As part of the restructuring, Glassdoor’s current CEO, Christian Sutherland-Wong, is leaving the company on October 1. LaFawn Davis, chief people and sustainability officer at Indeed, is also leaving the company.
+
+The job cuts come as tech companies across the world roll back their sustainability initiatives and cut jobs to balance out extensive spending on integrating AI into their businesses. Tens of thousands of people stand to lose jobs at Microsoft, TikTok, Match, Intel, and Meta, per announcements in just the past couple of months.
+
+Updated with additional details from the company memo.

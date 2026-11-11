@@ -1,0 +1,206 @@
+URL: https://siliconangle.com/2021/01/13/dropbox-lays-off-11-workforce-coo-departs/
+RETRIEVED_VIA: direct
+
+Dropbox lays off 11% of its workforce as COO departs - SiliconANGLE
+Skip to content
+SHARE
+						UPDATED 16:06 EST / JANUARY 13 2021					
+CLOUD
+Dropbox lays off 11% of its workforce as COO departs
+																																	by								
+Maria Deutscher
+Dropbox Inc. is laying off about 11% of its workforce, or 315 employees, in a move that Chief Executive Drew Houston described as “painful, but necessary.”
+Houston (pictured) notified employees about the cuts in an 
+internal memo
+ that was published today as part of a 
+regulatory filing
+. In the same filing, Dropbox told shareholders that Chief Operating Officer Olivia Nottebohm is stepping down. 
+Houston wrote in the memo that “our recent decisions regarding our new leadership structure and remote work policy have set us on the right path, and now we need to make sure our teams and investments also line up.” The CEO pointed to the company’s switch to remote working as one factor behind the workforce reduction. “We require fewer resources to support our in-office environment, so we’re scaling back that investment and redeploying those resources to drive our ambitious product roadmap,” he said.
+Dropbox, which provides a cloud-based file storage platform popular in the enterprise, has been expanding its feature set to win more business from big organizations. The company in November 
+introduced
+ a paid add-on that enables companies to set limits on how long files are retained to comply with data regulations. Dropbox also rolled out two other add-ons earlier in 2020 that make it easier for designers to work with visual assets and simplify the process of migrating business records to its platform. 
+The company’s investments in engineering have put it in a strong position to support customers’ shift to remote work. Dropbox 
+recorded
+ its very first quarterly profit last year and, in its most recent earnings report, 
+exceeded analyst expectations
+ by announcing that revenues had increased 14%, to $487.4 million, during the three months ended Sept. 30. Dropbox maintained its newly achieved profitability in that quarter with earnings of 18 cents per share.
+“Over the past year, we’ve talked a lot about the importance of running a tight ship and getting the company ready for the next stage of growth,” Houston told employees in the memo today. “This will require relentless focus on initiatives that align tightly with our strategic priorities, and having the discipline to pull back from those that don’t.”
+He added, “This is one of the toughest decisions I’ve had to make in my 14 years as CEO.”
+Dropbox in November 
+provided
+ revenue guidance of $497 million to $499 million for the fourth quarter. The company 
+said
+ at the time that it’s aiming to achieve margins of 28% to 30% in the long term. 
+Photo: Dropbox
+A message from John Furrier, co-founder of SiliconANGLE:
+Support our mission to keep content open and free by engaging with theCUBE community. 
+Join theCUBE’s Alumni Trust Network
+, where technology leaders connect, share intelligence and create opportunities.
+15M+ viewers of theCUBE videos
+, powering conversations across AI, cloud, cybersecurity and more
+11.4k+ theCUBE alumni
+ — Connect with more than 11,400 tech and business leaders shaping the future through a unique trusted-based network
+Are you an AWS customer?  
+Support SiliconANGLE financially by buying your AWS services from our 
+Marketplace portal page and links: 
+https://siliconangle.com/aws-marketplace/
+About SiliconANGLE Media
+SiliconANGLE Media is a recognized leader in digital media innovation, uniting breakthrough technology, strategic insights and real-time audience engagement. As the parent company of 
+SiliconANGLE
+, 
+theCUBE Network
+, 
+theCUBE Research
+, 
+CUBE365
+, 
+theCUBE AI
+ and theCUBE SuperStudios — with flagship locations in Silicon Valley and the New York Stock Exchange — SiliconANGLE Media operates at the intersection of media, technology and AI.
+Founded by tech visionaries John Furrier and Dave Vellante, SiliconANGLE Media has built a dynamic ecosystem of industry-leading digital media brands that reach 15+ million elite tech professionals. Our new proprietary theCUBE AI Video Cloud is breaking ground in audience interaction, leveraging theCUBEai.com neural network to help technology companies make data-driven decisions and stay at the forefront of industry conversations.
+LATEST STORIES
+OpenAI to acquire developer tooling startup Pierre Computer
+Research prediction: Shift from digital banking to AI-driven finance will transform financial services in 2027
+Oracle connects AI-driven testing with a new approach to database security
+As AI takes over coding, Oracle rethinks how applications are built
+Oracle rethinks the lakehouse as AI agents become data consumers
+Oracle urges database customers to prepare for quantum security risks
+LATEST STORIES
+OpenAI to acquire developer tooling startup Pierre Computer
+AI
+ - BY 
+MARIA DEUTSCHER
+ . 
+5 MINUTES AGO
+Research prediction: Shift from digital banking to AI-driven finance will transform financial services in 2027
+AI
+ - BY 
+MARK ALBERTSON
+ . 
+39 MINUTES AGO
+Oracle connects AI-driven testing with a new approach to database security
+AI
+ - BY 
+JONATHAN ANTHONY
+ . 
+57 MINUTES AGO
+As AI takes over coding, Oracle rethinks how applications are built
+AI
+ - BY 
+JONATHAN ANTHONY
+ . 
+1 HOUR AGO
+Oracle rethinks the lakehouse as AI agents become data consumers
+AI
+ - BY 
+RYAN STEVENS
+ . 
+2 HOURS AGO
+Oracle urges database customers to prepare for quantum security risks
+SECURITY
+ - BY 
+JONATHAN ANTHONY
+ . 
+2 HOURS AGO
+CUBE EVENT COVERAGE
+help_outline
+LATEST FROM THECUBE
+Research prediction: Shift from digital banking to AI-driven finance will transform financial services in 2027
+Oracle connects AI-driven testing with a new approach to database security
+As AI takes over coding, Oracle rethinks how applications are built
+Oracle rethinks the lakehouse as AI agents become data consumers
+Oracle urges database customers to prepare for quantum security risks
+DIVE INTO DAVE VELLANTE’S BREAKING ANALYSIS SERIES
+help_outline
+Can enterprise AI pay for the boom?
+Micron’s memory boom: Is the industry's cyclicality really ending?
+ServiceNow AI Control Tower: Selling a penthouse while building the frame
+The AI control gap: Who gets to say ‘It’s safe'?
+Nvidia’s scale-in play: Controlling agents is the next infrastructure priority
+Sign Up for Our Weekly Newsletter
+SUBSCRIBE
+UPCOMING CUBE EVENTS
+SEE MORE
+RECENT CUBE EVENTS
+Oracle AI World 2026
+monday.com Elevate 2026
+Intuit Connect 2026
+EVOLVE26
+AI Cybersecurity & Resilience Summit 2026
+IBM's AI Operating Model 2026
+×
+Send us a news tip
+Send us a News Tip
+URL
+This field is for validation purposes and should be left unchanged.
+Name
+*
+First
+Last
+Type of Pitch
+*
+Consumer or Enterprise?
+Enterprise
+Startup News
+Emerging Technology
+Email
+*
+What's your story?
+*
+File
+Max. file size: 244 MB.
+CAPTCHA
+×
+Sign in
+SIGN IN
+...
+ Remember me
+LOGIN
+Forgot Password?
+×
+Bio
+Ethics statement
+×
+Extract the signal from the noise
+Get SiliconANGLE updates and analysis.
+×
+Contact us
+Inquire about guest posts
+All other inquiries
+×
+Partner with us
+NAME OF INDIVIDUAL
+*
+NAME OF COMPANY
+*
+EMAIL
+*
+COMMENTS
+*
+×
+Contact us
+NAME OF INDIVIDUAL
+*
+NAME OF COMPANY
+*
+EMAIL
+*
+COMMENTS
+*
+CAPTCHA
+×
+Guest inquiry
+NAME OF INDIVIDUAL
+*
+NAME OF COMPANY
+*
+EMAIL
+*
+COMMENTS
+*
+CAPTCHA
+We use cookies for analytics and measurement. You can accept or reject tracking cookies. See our 
+Privacy Policy
+.
+Accept
+Reject
+

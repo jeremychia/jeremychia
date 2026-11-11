@@ -1,0 +1,39 @@
+URL: https://betakit.com/klue-lays-off-40-percent-of-staff-as-startup-faces-internal-and-external-ai-pressure/
+RETRIEVED_VIA: direct
+Canadian Tech & Startup News BC software firm restructures to become “AI-first” amid rising competition from DIY solutions. Vancouver-based Klue has slashed just over 40 percent of its workforce as it contends with growing competition from businesses experimenting with artificial intelligence (AI) internally, BetaKit has learned.
+
+Klue sells AI-powered business intelligence software products to help sales professionals at other tech firms gather information on competitors and win more deals. Klue co-founder and CEO Jason Smith told BetaKit that the startup proactively made these cuts to increase efficiency and hasten a path to profitability amid increasing uncertainty as to what companies are willing to pay for versus building themselves in the age of AI.
+
+“There is ambiguity about what people will pay for.”
+
+The restructuring took place June 25 and included layoffs and voluntary departures, impacting approximately 85 of the startup’s employees across teams and locations, Smith said. He noted that AI, both as an external competitor and an internal replacement for some of the work done by staff, was “the common thread” necessitating the decision, adding that Klue hopes to become “AI-first operationally” through this reorganization.
+
+“A layoff of this magnitude acts as a kind of forcing function for us as a company—to find efficiencies, one has to look to AI apps and agents,” Smith said over email. As part of this restructuring, Klue is also consolidating its engineering operations in Canada and reducing its compute spending.
+
+Klue informed employees of the impending layoffs on June 13, offering them the opportunity to leave voluntarily for the same severance package. Smith said Klue also held one-on-ones and other sessions for staff leading up to June 25. The Globe and Mail first reported Klue’s staff reduction plans.
+
+The CEO said Klue is providing everyone impacted by these layoffs with “generous severance packages, extended benefits, and support for their transition,” noting that “every individual affected has contributed meaningfully to building Klue.”
+
+A frequently asked question (FAQ) document Klue shared with staff in the lead-up to the layoffs and viewed by BetaKit indicated that the startup had failed to reach its topline revenue growth targets while seeing increasing customer churn this year. The FAQ noted that Klue has been facing difficulty competing against OpenAI’s ChatGPT offering.
+
+The FAQ stated specifically that Klue has been “losing more deals to ChatGPT (AI-disruption),” and is building a new product to address this and help the company “re-find product-market fit—with AI at the core.”
+
+The document also said that Klue has burned $28 million since 2023 to grow $2.5 million, and that the startup would run out of cash in two years if it were to continue at its current rate and team size without layoffs. BetaKit has not confirmed the accuracy of the burn and revenue growth rate numbers originally included in the FAQ.
+
+RELATED: Klue scores $79 million CAD from Tiger Global, Salesforce Ventures
+
+One source familiar with the company’s operations confirmed to BetaKit that the burn and revenue growth numbers were subsequently removed from the document after it was shared with employees. In an interview with BetaKit, Smith disputed some of the information obtained by BetaKit, including information related to the company’s financial health.
+
+Smith told BetaKit that the burn and revenue growth figures contained in the FAQ are inaccurate, claiming that someone had “mixed up burn with projected future spend.” He asserted that Klue has generated more than $25 million CAD in new and expansion revenue on top of its existing recurring base since 2023.
+
+Smith also claimed that the FAQ’s assertion of a two-year runway was “patently false,” adding he had “no idea where that’s coming from.” He believed a five-year estimate would be “more appropriate.”
+
+Klue raised nearly $80 million CAD in Series B funding from Tiger Global and Salesforce Ventures in 2021, bringing its total funding to more than $100 million CAD. Smith maintained that Klue still has $50 million CAD in the bank today.
+
+“We are well-funded, spend judiciously and strategically, and never have to raise outside capital again,” he said.
+
+The CEO declined to disclose Klue’s exact sales, but did indicate that Klue is currently generating somewhere between $25 million and $50 million CAD in annual revenue.
+
+“[Klue] was screaming product-market fit in the early days … and then AI comes along with internal experimentation, and there’s a higher bar for what quality looks like,” Smith told BetaKit. “We as a company are just looking at that realistically, and saying we need to maintain an even higher bar than what you can get out of the box by throwing your regular data into it.”
+
+Smith acknowledged that ChatGPT is powerful, and said Klue uses OpenAI’s latest models and others in its own Compete AI product. But the CEO argued that seasoned sellers and othe

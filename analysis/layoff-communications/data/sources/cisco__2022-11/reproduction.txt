@@ -1,0 +1,116 @@
+URL: https://www.theregister.com/2022/11/17/cisco_embarks_on_talent_movement/
+RETRIEVED_VIA: direct
+ 
+ Cisco embarks on 'talent movement options and restructuring' 
+ Jump to main content 
+ REG AD 
+ Networks 
+ Cisco starts 'talent movement options', and restructuring amid real estate cuts
+ Profit down in latest quarter but forecast for 2023 raised
+ Paul Kunert 
+ Paul 
+ Kunert 
+ Published 
+ thu 17 Nov 2022 // 13:15 UTC 
+ Make us preferred on Google 
+ Cisco is forging ahead with restructuring that involves cutting jobs, moving headcount to priority divisions and consolidating real estate, despite raising its revenue forecast for the current financial year.
+ The plan was outlined as Cisco reported a 6 percent year-on-year spike in revenues to $13.6 billion for Q1 of its fiscal 2023 ended 29 October , with healthy gains made in the core switch and router division and in security.
+ “We delivered the largest quarterly revenue in our history, driven by excellent execution and the actions our team took to remediate our supply challenges,” said CEO Chuck Robbins on a conference call. “Given these results, along with the strength of our orders, our visibility and easing supply constraints, we are raising our full year outlook.”
+ REG AD 
+ “The easing of supply constraints and our ability to deliver hardware is now releasing software subscriptions that were sitting in backlog connecting to unshipped hardware,” he said. “The redesign of many of our products has also helped bring supply stability and more resiliency.”
+ REG AD 
+ The Secure, Agile Networks division bounced 12 percent to $6.684 billion led by campus switches, End to End Security was up 9 percent to $971 million on Zero Trust demand and Optimized Application Experiences grew 7 percent to $193 million, fueled by SaaS-based Thousand Eyes.
+ On the way down were Internet of the Future (cables, optical and edge), which slid 5 percent to $1.31 billion, and Collaboration dropped 2 percent to $1.086 billion due to a decline in meetings.
+ The CEO said hybrid work, 400G datacenter switches (for which it has 1,200 customers now), Wi-Fi 6, security, and full stack observability were “tailwinds.” He added: “We believe these broader technology transitions will require every customer to re-architect their network infrastructure, and in turn, fuel long-term growth across our portfolio.”
+ MORE CONTEXT
+ Investor tells Google: Cut costs now and stop paying staff so much
+ Amazon founder Bezos to donate 'majority' of $126bn fortune
+ You're Shipt outta luck: App sued for treating delivery workers as contractors
+ Philips axes thousands amid financial loss
+ Cisco, like many aging hardware vendors, is switching to more software and subscriptions, and annualized recurring revenue was up 7 percent to $23.2 billion.
+ For the year ahead, Cisco upped revenues forecast to 6.5 percent growth from 6 percent.
+ Robbins said customers are “closely watching the economy” but he reckons they intend to continue investing in networking tech. He added it had seen “some emerging cautiousness in Europe” due to “the energy cost” but Asia was “resilient” and Americas “mixed.”
+ Profit was down $300 million or 10 percent year-on-year to $2.7 billion. Total expenses were up to $4.806 billion from $4.615 billion.
+ In a nod to market uncertainty in June, Cisco froze hiring in parts of the organization . Now it has taken things further by announcing a restructuring plan to “rebalance the organization and enable further investment in key priority areas.” Around 5 percent of the 26,000 strong workforce are to be chopped.
+ REG AD 
+ In a statement, Cisco said this “rebalancing will include talent movement options and restructuring.” Basically, if an employee is chopped they will be allowed to seek alternative employment in Cisco, but it’s not guaranteed.
+ “Cisco currently estimates that it will recognize pre-tax charges to its GAAP financial results of approximately $600 million consisting of severance and other one-time termination benefits, real estate-related charges, and other costs,” it said.
+ The company, like many others in tech and elsewhere in business, has embraced the remote working movement, and is “rightsizing our real estate footprint,” said CFO Scott Herren.
+ In recent weeks, Meta , Amazon , Intel , Twitter and others have announced layoffs. Many more have paused recruitment.
+ Robbins said he is speaking to employees about the restructuring today so was reluctant to go into the nitty gritty with analysts on a conference call last night.
+ “I would say that what we're doing is rightsizing certain businesses. We're really focused on resource moving into the enterprise networking space, accelerating our platform strategy. We will be making significant investments in security and beefing up our team there and the capacity to continue to innovate there. Those are important areas."
+ Heren added: “Don't think of this as a headcount action that is motivated by cost savings. This really is a rebalancing… In a perfect world, you'd have 100 percent skill match, and you can take the people in the areas or the skills in certain areas and just move them to where we need to invest but unfortunately, it's not a perfect world.”
+ Beefing up the security teams and delivering more cloud-based products seem to be the goals.
+ REG AD 
+ Wall Street liked the tone of Cisco's plan and the share price is up by more than 4 percent today. ®
+ cisco 
+ router 
+ on_prem 
+ networks 
+ network switch 
+ zero trust 
+ Make us preferred on Google 
+ REG AD 
+ Shipping giant Maersk probes 'IT security incident,' data theft
+ Says it 'strongly' suspects attack limited to legacy system, and that nothing sensitive is at risk
+ Google gooses Python AI performance by... removing Python
+ Newly open sourced XSE handles six million queries a second across services including Search, Ads, and YouTube Shorts
+ From expertise to intelligence: NISCO deploys world's first swarm-intelligence steel model at scale
+ PARTNER CONTENT: 300+ AI applications delivering surges in core metrics and annual cost reduction of over CNY100m
+BORK!BORK!BORK!
+ Linux joins Heathrow's grounded fleet of information screens
+ Anything Windows can bork, the penguin can bork sideways
+OPINION
+ AI echo chambers and sanity in tech leadership: Three case studies
+ Altman, Torvalds, Yen. One has got his head screwed on. The others could do with some grounding 
+ AMD: Where we're going we don't need (as much) DRAM
+ The House of Zen's Mext team promises smarter SWAP through the power of, you'll never guess: AI
+ TOP STORIES
+ British fintech Revolut slashes AI coding costs 10x by cutting out Claude and going self-hosted
+ Cops bust botnet of 1.3M infected Android TV boxes
+ Microsoft teaches schools that free email was just a phase
+ North Korean fake job interview led to $6.3B Binance heist
+ VMware returns to low-end server virtualization with 'vSphere Express'
+ Uber says it alone can make robotaxis pay, hours after Waymo quit its app
+ AI 
+ To thwart reverse engineering by agents, dev proposes blinding them
+ A poke in the AI with a sharp stick
+ AMD winds up Zen 6 cores for faster clock speeds
+ Chips boast up to 256 cores, clocks up to 5.3 GHz, and IPC gains of 20 to 31 percent, just not all on the same SKU
+ A closer look at Verano, AMD's first step toward a Zen-based superchip to rival Nvidia's Vera Rubin
+ Cores, clocks, memory, and interconnects all perfectly balanced for a singular mission: keeping instinct fed.
+ Fireworks AI gets burned twice as customer data exposure widens
+ Inference biz pins latest breach on cloud provider and LLMJacking miscreants
+ Microsoft's Azure Linux gets 470-plus security fixes in one almighty patching session
+ A mountain of CVEs, a certificate cleanup, and yet more work for Microsoft's patching teams
+ Infosec 
+ Security
+ Russians are posing as Signal support to launch phishing attacks
+ PLUS: US takes down Iranian propaganda sites; Marketing company asks 'Why Do We Have Your Information?' And more!
+ Security
+ Microsoft patches failed to fix on-prem SharePoint, which is now under zero-day attack
+ PLUS: China upgrades smartphone surveillance tools; Ring eases anti-snooping stance; and more
+ Black Hat and DEF CON
+ DEF CON Franklin project enlists hackers to harden critical infrastructure
+ Voting village reports have been so successful, says Jeff Moss, that the whole of DEF CON will now be included
+ Security
+ EQT buys majority share in Swiss cybersecurity biz Acronis
+ Went at equivalent of $3.5B+ valuation for entire firm, though portion sold not specified
+ Malware Month
+ Ten years since the first corp ransomware, Mikko Hyppönen sees no end in sight
+ On the plus side, infosec's a good bet for a long, stable career
+ FOSS 
+ Crowd fave Linux Mint update approaches, fresh from autumn release of Cinnamon desktop 
+ Mint 27 to land before Christmas, with stable Wayland display upgrades, as punters try out Cinnamon 6.8
+ openSUSE Leap 16.1 gives Linux users the right to remain immutable
+ One installer now offers conventional and read-only systems as separate Micro distro bows out
+ Achieving nirvana: Enlightenment 0.28 hits the desktop
+ Very nearly 30something environment gets spruced up… and there's a new Trinity, too
+ Architect creates open source replacement for VM migration tool VMware has hidden
+ OpenVDDK is reportedly already being used in production, at scale
+ AlpineBSD announced – an AI-free FOSS OS
+ Combining the NetBSD kernel with the Alpine Linux userland
+ Ubuntu 27.04 may bring a preview of the long-awaited Core Desktop
+ Canonical has a long way to catch up, but it knows who it's chasing
+ ✕ 
+

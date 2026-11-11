@@ -1,0 +1,57 @@
+URL: https://techcrunch.com/2023/02/13/twilio-cuts-17-of-its-workforce-just-months-after-previous-round-of-layoffs
+RETRIEVED_VIA: direct
+
+ Twilio cuts 17% of its workforce just months after previous round of layoffs | TechCrunch
+ –:–:–:– 
+Buy One Founder Summit Ticket, Get a Second for Free. Register now.
+Founder Summit begins Nov. 4, 9:00 a.m. ET. Get your pass savings & deals before it starts. REGISTER HERE.
+ Close
+ Enterprise 
+ Twilio cuts 17% of its workforce just months after previous round of layoffs
+ Romain Dillet
+ 7:57 AM PST · February 13, 2023
+ Twilio just announced that it will be conducting a round of layoffs that will impact around 17% of its global workforce. The company will also restructure its internal organization and create two business units — Twilio Communications and Twilio Data & Applications.
+Today’s news must be particularly difficult for Twilio employees as the company already conducted a round of layoffs in September, 2022. At the time, the company announced that it would lay off 11% of its staff.
+According to Twilio’s latest earnings release, the company had 8,992 employees as of September 30, 2022 and expected to lay off 816 employees for the 2022 round of layoffs. Based on these figures, around 1,400 people will be impacted by this year’s layoffs.
+“We have to spend less, streamline, and become more efficient. To do that, we’re forming two business units: Twilio Communications and Twilio Data & Applications. And today, I’m unfortunately bearing the news that we’re parting ways with approximately 17% of our team,” Twilio co-founder and CEO Jeff Lawson wrote in an email sent to all Twilio employees.
+While Twilio started with application programming interfaces (APIs) that let you send and receive phone calls and text messages, the company has expanded its product portfolio through several acquisitions and product developments. For instance, Twilio acquired Segment to move deeper into marketing data and customer engagement services in general. According to the company’s CEO, these products haven’t reached the same maturity level.
+“In Communications, we have to get more efficient. For Segment, Flex, and Engage, we must accelerate growth. These are distinctly different tasks for our teams, and our current structure is slowing our progress toward both these goals, which are critical to our growth, our profit, and our Customer Engagement Platform ambitions,” Lawson wrote.
+Each business unit will have its own president — Elena Donio for Data & Applications, and Khozema Shipchandler for Communications. Each division will also have its own sales, R&D and admin resources. With this clear line, it becomes easier to conduct different strategies for each part of the business.
+The Communications side of the business seems to be particularly affected by today’s layoffs. “When we look at these two business units on their own, it’s clear that we’ve gotten too big, especially in Communications. And that’s why we’re also letting go of some colleagues today,” Lawson wrote.
+Affected employees will receive 12 weeks of base pay plus one week for every year of service, as well as health coverage and career resources. The company is also ending some benefits, such as book and wellness allowances as well as Twilio Recharge — a four-week paid sabbatical that employees would get every three years.
+“We’ve also decided to sunset Twilio Recharge, which I believe in, but which (in retrospect) was ill-timed given our profitability goals,” Lawson wrote.
+Paperwork filed with the U.S. Securities and Exchange Commission shows that the board will lower Jeff Lawson’s annual base salary from $134,000 per year to $65,535. Twilio expects to spend $100 to $135 million in charges related to the workforce reduction. There will be additional costs associated with office closures.
+Twilio shares are currently trading up 2.8% compared to Friday’s closing price. The company is going to announce its fourth-quarter earnings in a couple of days.
+ Topics
+ Enterprise, Layoffs, Twilio 
+ When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+ Romain Dillet 
+ Senior Reporter
+ Romain Dillet was a Senior Reporter at TechCrunch until April 2025. 
+He has written over 3,500 articles on technology and tech startups and has established himself as an influential voice on the European tech scene. He has a deep background in startups, AI, fintech, privacy, security, blockchain, mobile, social and media.
+With thirteen years of experience at TechCrunch, he’s one of the familiar faces of the tech publication that obsessively covers Silicon Valley and the tech industry — his career started at TechCrunch when he was 21. Based in Paris, many people in the tech ecosystem consider him as the most knowledgeable tech journalist in town.
+Romain likes to spot important startups before anyone else. He was the first person to cover Revolut, Alan and N26. He has written scoops on large acquisitions from Apple, Microsoft and Snap.
+When he’s not writing, Romain is also a developer — he understands how the tech behind the tech works. He also has a deep historical knowledge of the computer industry for the past 50 years. He knows how to connect the dots between innovations and the effect on the fabric of our society.
+Romain graduated from Emlyon Business School, a leading French business school specialized in entrepreneurship. He has helped several non-profit organizations, such as StartHer, an organization that promotes education and empowerment of women in technology, and Techfugees, an organization that empowers displaced people with technology. 
+ View Bio 
+ November 4
+ Boston
+ Buy One Pass, Get a Second FreeCover more ground at TechCrunch’s ultimate founder bootcamp of the year by bringing your co-founder or partner for freeBook before the BOGO deal expires
+Register Now
+Most Popular
+ New York City’s Mamdani criticizes Madison Square Garden owner over surveillance tech
+Zack Whittaker
+ Anthropic warns that it’s very close to RSI capability, aka self-building AI
+Julie Bort
+ New York Times and other outlets sue web browser Brave over alleged content scraping
+Rebecca Bellan
+ Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says
+Lucas Ropek
+ Google’s first data center satellite is online and writing poetry
+Tim Fernholz
+ Binance pauses withdrawals as hackers suspected of stealing billions in crypto
+Zack Whittaker
+ As search traffic dries up, Reddit announces it’s shifting to a logged-in experience
+Sarah Perez
+ Loading the next article 
+ Error loading the next article 

@@ -1,0 +1,47 @@
+URL: https://getcruise.com/news/blog/2023/cruise-team-updates
+RETRIEVED_VIA: wayback
+
+Cruise Team Updates
+
+ Share
+
+ In October, Cruise paused operations to take time to examine our processes, systems and tools and improve how we operate. While we remain committed to commercialization, we will approach it within a thoughtful and achievable time frame—with safety as our north star.
+ As a result of our updated operating plans, today Cruise shared the difficult news that we are making staff reductions impacting 24% of full-time Cruisers. This reflects our new future and a more deliberate go-to-market path, meaning less immediate need for field, commercial operations and corporate staffing. 
+ As we look forward, the road to successful commercialization is dependent on defining and meeting an exceptional performance and heightened safety bar.  Cruise is committed to playing a key role in defining these standards with the input of our regulators, our communities and other AV industry leaders.
+ We are extremely grateful to the departing employees who have helped further our mission, and the remaining Cruisers who will carry that mission forward in our next chapter.  
+ Below is a letter from Mo ElShenawy, President and CTO of Cruise, that went to all employees today:
+ Cruisers: 
+ We knew this day was coming, but that does not make it any less difficult—especially for those whose jobs are affected.   
+ Today, we are making staff reductions that will affect 24% of full-time Cruisers, through no fault of their own. We are simplifying and focusing our efforts to return with an exceptional service in one city to start with and focusing on the Bolt platform for this first step before we scale. As a result, we are reducing our employee counts in operations and other areas. These impacts are largely outside of engineering, although some Tech positions are impacted also. As you might have learned, yesterday, we took action to part ways with several SLT members.   
+ Craig and I believe this is a necessary step, and our leadership team and the board are fully aligned with how our go-forward U.S. staffing needs will map to the priorities ahead of us, and set up Cruise for the long term. We have also ended additional assignments of contingent workers who support our driverless operations, as we refined our go forward plans.   
+ In a few moments, you will receive an email letting you know whether or not you are affected by this staffing reduction.  If you are impacted, you will get details about what happens next in a subsequent email.   
+ Please know that our first priority is to treat departing Cruisers with fairness, and I will describe more about how we are doing that below.   
+ I also want to explain why we are making these reductions, and what this means for Cruise moving forward.   
+ Cruise today vs Cruise moving forward  
+ As we’ve shared, our goal is to focus our work on a fully driverless L4 service that meets a new AV performance bar, prioritize the Bolt platform, relaunch ridehail in one city to start, and enhance our safety standards and processes before we scale. We are ceasing work on the Origin MY24 but not losing sight of our work on future programs. This is very different from our prior plans to expand into more than a dozen new cities in 2024.   
+ As a result of our decision to slow down commercialization, we are restructuring to focus on delivering the improvements to our tech and vehicle performance that will build trust in our AVs.   
+ Many of you will be impacted because we aren’t commercializing as quickly, and therefore don’t need support in certain cities or facilities. In other cases, we restructured teams based on the work we’re prioritizing. We didn’t take any of these decisions lightly, though I know that isn’t much of a consolation if you’re someone affected by the actions we are taking today.   
+ How we’re helping departing employees  
+ We know there’s no “good” way to lay off employees, but treating people fairly on their way out was a key principle that guided our approach, and our top priority was determining how we could provide a strong severance package, while treating departing Cruisers with respect. In short, we are offering departing Cruisers pay, at minimum, through April 8, 2024 (approximately 16 weeks), plus continued subsidized health benefits, RSU vesting, the January 5 bonus, and additional immigration support for those holding work visas.   
+  Severance details include:   
+ Severance pay: Departing employees will remain on payroll through Feb. 12 and are eligible for an additional 8 weeks of pay, with long-term employees offered an additional 2 weeks’ pay per every year at Cruise over 3 years.   
+
+ Bonus: All impacted employees will receive their 2023 bonus (eligible target payout) on Jan. 5, 2024.  
+
+ Medical, Dental, Vision: we will provide Cruisers and their dependents who are currently enrolled in Cruise benefits the option to receive Cruise-subsidized medical, dental and mental health/EAP benefits through the end of May.   
+
+ Perks Wallet: We will give Cruisers two months to access the perks most important to them via our Perks Wallet.   
+
+ 401(k): We will give Cruisers two months to continue contributions into their 401(k) plan, including our employer match.   
+
+ RSU vesting: All Cruisers, including those impacted and those remaining, will receive their January 15th RSU vest. In addition, we will provide liquidity for all of these January 15th shares in Q1 based on an updated 409A fair market valuation that we will conduct in the first quarter. Tax obligations for these January 15th vested shares will not be incurred until we provide you liquidity for these shares. 
+
+ Career support: Departing employees will receive a year-long subscription to LinkedIn Premium, and we will create an opt-in alumni directory to connect potential employers with impacted Cruisers. Cruise Talent Acquisition will also run workshops on resume building, networking, and interview prep with departed Cruisers in the new year.  
+
+ Immigration support: We are offering continued time on payroll through March 24 in lieu of a lump-sum severance payment to allow visa holders additional time to help transition and manage their immigration status. Eligibility for the Perks Wallet and 401(k) contributions and match will also continue through this time. We also have dedicated support lined up to help Cruisers based on their needs.   
+
+ Our message to other employers in the market is that each departing Cruiser is a talented, driven, and mission-focused team member who will contribute and achieve great things elsewhere. They are departing us through no fault of their own. Other companies will be privileged to have these professionals on their teams, as we were privileged to have them here during their time at Cruise.   
+   What’s next  
+ As mentioned, in a few moments, you will receive an email letting you know whether or not you are affected by this staffing reduction, and if you are impacted, you will get details about what happens next. I am so sorry we have to do this by email, as I would prefer that we have a conversation with each of you. Unfortunately, given the scale of this change, this approach allows us to communicate to those who are impacted at the same time. We know you will want to say goodbye to your colleagues, so you will have access to Cruise email and Zoom for the next couple of hours (until 10am PT).   
+ This is one of the hardest days we’ve had so far because so many talented people are leaving. I’m thankful we had the chance to work together, and I know I speak on behalf of so many Cruisers who will be reaching out to those departing to help with our professional networks and references. On behalf of the SLT, the Cruise Board and GM, I’m truly grateful to everyone who has played a role in building Cruise and who has poured so much into the promise of making our roads safer and our world better.  
+  Mo

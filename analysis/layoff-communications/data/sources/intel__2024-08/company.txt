@@ -1,0 +1,119 @@
+URL: https://d1io3yog0oux5.cloudfront.net/_30f8d843824dfbccc3bd0b0cd772d41f/intel/news/2024-08-01_Actions_to_Accelerate_our_1712.pdf
+RETRIEVED_VIA: direct
+
+August 1, 2024
+
+
+
+
+Actions to Accelerate our Progress
+Intel CEO Pat Gelsinger sent the following note to employees after second-quarter 2024
+earnings were published on Aug. 1, 2024:
+
+Team,
+
+We have moved our All Company Meeting to today, following our earnings call, as we
+are announcing significant actions to reduce our costs. We plan to deliver $10 billion in cost
+savings in 2025, and this includes reducing our head count by roughly 15,000 roles, or 15%
+of our workforce. The majority of these actions will be completed by the end of this year.
+
+This is painful news for me to share. I know it will be even more difficult for you to read. This
+is an incredibly hard day for Intel as we are making some of the most consequential changes
+in our company’s history. When we meet in a few hours, I’ll talk about why we’re doing this
+and what you can expect in the coming weeks. In advance of that, I wanted to preview some
+of what’s on my mind.
+
+Simply put, we must align our cost structure with our new operating model and
+fundamentally change the way we operate. Our revenues have not grown as expected – and
+we’ve yet to fully benefit from powerful trends, like AI. Our costs are too high, our margins
+are too low. We need bolder actions to address both – particularly given our financial results
+and outlook for the second half of 2024, which is tougher than previously expected.
+
+These decisions have challenged me to my core, and this is the hardest thing I’ve done in
+my career. My pledge to you is that we will prioritize a culture of honesty, transparency and
+respect in the weeks and months to come.
+
+Next week, we’ll announce a companywide enhanced retirement offering for eligible
+employees and broadly offer an application program for voluntary departures. I believe
+that how we implement these changes is just as important as the changes themselves, and
+we will adhere to Intel values throughout this process.
+
+Why Now?
+
+Since introducing our new operating model, we have taken a clean-sheet view of the
+business and assessed ourselves against benchmarks for high-performing foundries, fabless
+product companies and corporate functions. This work made it clear our cost structure is not
+competitive.
+
+For example, our annual revenue in 2020 was about $24 billion higher than it was last year,
+yet our current workforce is actually 10% larger now than it was then. There are a lot of
+reasons for this, but it’s not a sustainable path forward.
+
+Beyond our costs, we need to change the way we operate – something many of you shared
+as part of our Employee Experience Survey. There’s too much complexity, so we need to
+both automate and simplify processes. It takes too long for decisions to be made, so we
+need to eliminate bureaucracy. And there’s too much inefficiency in the system, so we need
+to expedite workflows.
+
+Key Priorities
+
+The actions we are taking will make Intel a leaner, simpler and more agile company. Let me
+highlight our areas of focus:
+
+     Reducing Operational Costs: We will drive companywide operational and cost
+     efficiencies, including the cost savings and head count reductions mentioned above.
+     Simplifying Our Portfolio: We will complete actions this month to simplify our
+     businesses. Each business unit is conducting a portfolio review and identifying
+     underperforming products. We are also integrating key software assets into our
+     business units so we accelerate our shift to systems-based solutions. And we will
+     narrow our incubation focus on fewer, more impactful projects.
+     Eliminating Complexity: We will reduce layers, eliminate overlapping areas of
+     responsibility, stop non-essential work, and foster a culture of greater ownership and
+     accountability. For example, we will consolidate Customer Success into the Sales,
+     Marketing and Communications Group to streamline our go-to-market motions.
+     Reducing Capital and Other Costs: With the completion of our historic five-nodes-in-
+     four-years roadmap clearly in sight, we will review all active projects and equipment so
+     we begin to shift our focus toward capital efficiency and more normalized spending
+     levels. This will reduce our 2024 capital expenditures by more than 20%, and we plan
+     to reduce our non-variable cost of goods sold by roughly $1 billion in 2025.
+     Suspending Our Dividend: We will suspend our stock dividend beginning next
+     quarter to prioritize investments in the business and drive more sustained profitability.
+     Maintaining Growth Investments: Our IDM2.0 strategy is unchanged. Having fought
+     hard to reestablish our innovation engine, we will maintain the key investments in our
+     process technology and core product leadership.
+
+The Future
+
+I have no illusions that the path in front of us will be easy. You shouldn’t either. This is a
+tough day for all of us and there will be more tough days ahead. But as difficult as all of this
+is, we are making the changes necessary to build on our progress and usher in a new era of
+growth.
+
+When we began this journey, we set our sights high, knowing that Intel is a place where big
+ideas are born and the power of what’s possible triumphs over the status quo. After all, our
+mission is to create world-changing technologies that improve the lives of every person on
+the planet. And at our best, we have exemplified these ideals more than any company in the
+world.
+
+To live up to this mission, we must continue to drive our IDM 2.0 strategy, which remains the
+same: re-establish process technology leadership; invest in at-scale, globally resilient supply
+chain by expanding manufacturing capacity in the U.S. and EU; become a world-class,
+leading-edge foundry for internal and external customers; rebuild product portfolio
+leadership; and deliver AI Everywhere.
+Over the past few years, we have rebuilt a sustainable innovation engine that is largely in
+place and on track. It’s now time to focus on building the sustainable financial engine
+needed to drive our performance. We must improve our execution, adapt to new market
+realities and operate as a more agile company. That’s the spirit of the actions we are taking
+– knowing that the choices we make today, as difficult as they are, will strengthen our ability
+to serve our customers and grow our business for years to come.
+
+As we take these next steps in our journey, let’s not forget that there has never been a
+greater need for what we do. The world will increasingly run on silicon – and the world needs
+a healthy and vibrant Intel. That’s why the work we are doing is so consequential. Not only
+are we remaking a great company, but we are also creating technology and manufacturing
+capabilities that will reshape the world for decades to come. And this is something we should
+never lose sight of as we push forward in pursuit of our goals.
+
+We’ll talk more in a few hours. Please come with your questions so we can have an open
+and honest discussion about what comes next.
+

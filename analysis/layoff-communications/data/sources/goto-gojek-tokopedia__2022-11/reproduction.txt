@@ -1,0 +1,4 @@
+URL: https://www.cnbc.com/2022/11/18/goto-retrenching-1300-people-12percent-of-indonesia-tech-giants-headcount.html
+RETRIEVED_VIA: direct
+NOTE: passages below are verbatim quotes extracted from the news article by a fetch summariser, not the full article.
+GoTo announcement as quoted: "Considering the challenging global macroeconomic conditions" ... "a reduction in staffing levels that will sadly affect 1,300 people" ... "approximately 800 billion [Indonesian rupiah] in structural cost savings had been achieved"

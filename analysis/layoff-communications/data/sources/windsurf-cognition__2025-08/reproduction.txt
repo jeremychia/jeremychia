@@ -1,0 +1,15 @@
+URL: https://techcrunch.com/2025/08/05/three-weeks-after-acquiring-windsurf-cognition-offers-staff-the-exit-door/
+RETRIEVED_VIA: direct
+Three weeks after acquiring Windsurf, Cognition offers staff the exit door Rebecca Bellan 8:24 AM PDT · August 5, 2025 Cognition, the AI coding startup that acquired rival company Windsurf three weeks ago, laid off 30 employees last week and is offering buyouts to the roughly 200 remaining employees on the team, reports The Information.
+
+This is the latest bout of whiplash that Windsurf employees have faced after a tumultuous stretch for the company. The startup was initially almost acquired by OpenAI, then lost its CEO, co-founder, and research leads to Google in a $2.4 billion deal known as a reverse-acquihire (where Google hired the key talent rather than buying the company), before ultimately getting acquired by Cognition.
+
+At the time of the acquisition, Cognition stated that 100% of Windsurf employees would receive financial compensation as part of the deal and stressed that the company was excited to bring on Windsurf’s “world-class people” to develop top-notch coding tools.
+
+Now, it’s becoming clear that Windsurf’s intellectual property, not its talent, was the real buy.
+
+According to an email The Information viewed, employees were given until August 10 to decide whether they want to take the buyout, which amounts to nine months of salary. Those who choose to stay are reportedly required to spend six days at the office and clock more than 80-hour weeks — draconian conditions that have become table stakes among workers at top AI firms.
+
+“We don’t believe in work-life balance—building the future of software engineering is a mission we all care so deeply about that we couldn’t possibly separate the two,” wrote Cognition CEO Scott Wu in the email.
+
+TechCrunch has reached out to Cognition for more details.

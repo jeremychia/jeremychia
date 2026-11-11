@@ -1,0 +1,177 @@
+URL: https://thenextweb.com/news/amex-job-cuts-ai-agents-run-rogue
+RETRIEVED_VIA: direct
+American Express cuts 5% of staff and won’t let AI agents ‘run rogue’
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
+    
+        
+    
+    
+    
+    
+    
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+
+
+
+
+        
+
+    Skip to content
+
+    
+
+    
+
+    
+
+    
+    
+        
+            
+
+
+
+
+
+
+    
+        
+
+        
+        
+        
+        
+        
+            
+
+                                                                
+                    
+                        
+                                                            
+                                                    
+
+                                                    
+
+                                
+                                                                    
+                                        
+                                                                                    Credit: appshunter.io on Unsplash
+                                                                            
+                                
+                            
+                        
+                    
+                
+                                                
+                
+                
+                    
+                        American Express is cutting about 5% of its global workforce and taking a $336M restructuring charge. Chief executive Stephen Squeri told analysts about the cuts on Friday, CNBC’s Hugh Son reported.
+The company had almost 77,000 employees at the end of 2025, according to CNBC. Chief financial officer Christophe Le Caillec told CNBC the restructuring was to prepare for AI. It would also make Amex “leaner, more agile”, he said.
+“You don’t want to automate processes that are not optimally structured. So what we’re doing here is to reduce layers and increase spans of controls.” Christophe Le Caillec, American Express, to CNBC
+Squeri told analysts the charge was about efficiency.
+“We’ve got good momentum, but to accelerate innovation and win over the next few years, we needed to become [a] more agile and efficient organization.” Stephen Squeri, American Express, on the earnings call
+The Amex job cuts came a day after Barclays confirmed plans to cut 5,000 jobs, also about 5% of its staff. In May, Wall Street’s six largest banks reported 15,000 job cuts between them.
+AI agents, through approved channels only
+Squeri spent about 10 minutes of his prepared remarks on AI, CNBC reported. Most of it was about using AI to personalise experiences and offers for card members.
+He said Amex wants to serve customers who use AI agents. But it will not let assistants “run rogue” through its systems.
+“We need to protect our customers [and] merchants, and we’re only going to allow agents to access our systems that are either approved through API or MCP channels.” Stephen Squeri, American Express
+APIs and MCP (Model Context Protocol) are two ways for outside software to connect to a company’s systems. On 13 October, Amex published its Intent Intelligence framework. It sets out how to confirm what a customer wants to buy before an AI agent completes the purchase. Google announced its own agent-led payments plans in May.
+Revenue rose 9% to a record $20.1bn, Amex said in its earnings release. That was slightly below the $20.12bn analysts expected, according to LSEG data cited by CNBC. Adjusted earnings per share were $4.68, above the $4.48 average estimate.
+Net income rose 28% to $3.7bn. It includes a $982M pre-tax gain from selling Amex’s stake in Global Business Travel Group. Part of that gain paid for the restructuring. Amex raised its full-year guidance to $18.30 to $18.60 a share.
+The shares fell roughly 4% in Friday afternoon trading, CNBC reported.
+Story by
+                                
+                                    Alina Maria Stan
+Alina Maria Stan builds connections that people actually feel. As co-founder and COO of Tekpon, she turns product intuition into real moment                                                                        (show all)
+                                                                    
+                                Alina Maria Stan builds connections that people actually feel. As co-founder and COO of Tekpon, she turns product intuition into real moments of discovery, shaping how teams find and adopt SaaS every day. Since 2020, she has led Tekpon’s brand voice, media strategy, and growth plays with a clear focus on human outcomes behind every metric.
+Before Tekpon, Alina followed curiosity across industries and countries. She was CEO of King Casino Bonus and led affiliate and brand strategy at Extremoo Media and Fable Media in Denmark, where she learned how to build partnerships that last. Early on, she sharpened her CRM and pricing instincts at K.H. ApS, always asking why customers choose what they choose.
+Her approach is rooted in more than a decade of international experience and two master’s degrees, one in Sustainable Consumption from the Technical University of Munich and one in Consumer Affairs Management from Aarhus University.
+Get the most important tech news in your inbox each week.
+Thanks! Check your inbox to confirm your subscription.
+By subscribing you agree to our Privacy Statement.
+1
+                                    
+                                        Amazon pledges 30,000 entry-level UK jobs to young people by 2030
+2
+                                    
+                                        American Express cuts 5% of staff and won’t let AI agents ‘run rogue’
+3
+                                    
+                                        Sam Altman says AI means we can no longer just patch all the bugs
+4
+                                    
+                                        OpenAI checked fired researchers’ phones for Signal chats, WSJ reports
+5
+                                    
+                                        Web Summit survey: 60% in tech say AI has increased their workload
+Get the most important tech news in your inbox each week.
+Thanks! Check your inbox to confirm your subscription.
+By subscribing you agree to our Privacy Statement.

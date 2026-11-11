@@ -1,0 +1,29 @@
+URL: https://techcrunch.com/2025/04/02/wordpress-maker-automattic-lays-off-16-of-staff/
+RETRIEVED_VIA: direct
+WordPress maker Automattic lays off 16% of staff Sarah Perez 11:29 AM PDT · April 2, 2025 Automattic, the company behind WordPress.com, Tumblr, WooCommerce, and a range of other online services, is reducing its workforce. The layoffs will impact 16% of staff across divisions, an Automattic blog post published Wednesday reveals.
+
+Ahead of the layoffs, Automattic’s website listed 1,744 employees, which means north of 270 people may have lost their jobs. (Automattic declined to confirm this number but we’re hearing the exact number was 281.)
+
+The post, which was also shared with company employees via Slack earlier on Wednesday, explains that this “restructuring” was necessary due to the competitive nature of the market and the speed with which technology is evolving.
+
+However, the move also comes after a tumultuous year for Automattic, which has engaged in a controversial legal battle with hosting company WP Engine. The ongoing drama already led to the departure of some Automattic employees last fall. In Automattic CEO Matt Mullenweg’s opinion, hosting provider WP Engine did not sufficiently contribute to the open source project WordPress.org, and its use of the “WP” brand was confusing consumers about its affiliation with WordPress itself.
+
+In Wednesday’s announcement, Mullenweg explained that the newly announced layoffs will allow Automattic to become “more agile and responsive,” “break down silos that have created inefficiencies,” “focus on product quality,” and “ensure a viable financial model for long-term success.”
+
+“To support our customers and products, we must improve our productivity, profitability, and capacity to invest,” reads the post, authored by Mullenweg.
+
+The layoffs will impact employees across 90 countries, who will receive a severance package and job placement assistance, among other things.
+
+“Automattic has multiple products with world-touching potential in WordPress and beyond. I’m confident we will come out of this situation in a better position, poised to create a vibrant, profitable, well-designed company that will continue our mission to democratize the internet,” Mullenweg wrote.
+
+TechCrunch sources told us that the layoffs were effective immediately, meaning people received an email and then immediately lost access to Slack. The layoffs include some longtime employees who have been with the company for north of a decade, we understand.
+
+The news follows Automattic’s cancellation of its annual “Grand Meetup” company retreat for 2025, a source also told us.
+
+After publication, we began hearing more about which orgs were impacted from various sources. According to at least one source, just north of 100 were from WooCommerce. We’ve also heard Tumblr, Day One, and the AI orgs were impacted. (Day One layoffs were well north of 16%, as one source described the org as “gutted.”) In the U.S., layoffs spanned roles, including account execs, marketing, product (management and design), sales, community, business operations, advertising (16 out of 50 are left), and more. The default severance package is just 9 weeks, with exceptions for countries outside the U.S. that require more, sources said.
+
+Automattic later told TechCrunch the 9-week figure was incorrect, however.
+
+“The public statements regarding the size of the severance packages are not true,” reads a company statement on the matter. “We’re committed to handling all employment matters with integrity and fairness, aligning with our core operating values. Those impacted have our enduring gratitude for their time with the company and we wish them well.”
+
+Sarah Perez can be reached at @sarahperez.01 on Signal and [email protected] . This story was updated after publication with more details, including a new comment from Automattic regarding severance.

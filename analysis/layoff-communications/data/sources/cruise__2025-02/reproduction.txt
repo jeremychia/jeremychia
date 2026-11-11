@@ -1,0 +1,33 @@
+URL: https://techcrunch.com/2025/02/04/cruise-to-slash-workforce-by-50-after-gm-cuts-funding-to-robotaxi-operations/
+RETRIEVED_VIA: direct
+Cruise to slash workforce by nearly 50% after GM cuts funding to robotaxi operations Rebecca Bellan 9:16 AM PST · February 4, 2025 Autonomous vehicle company Cruise is laying off “nearly” 50% of its workforce — cuts that extend to the CEO and several other top executives — as it prepares to shut down operations. What remains of Cruise will move under parent company General Motors as the automaker directs its resources toward improving its hands-free driver assistance system Super Cruise — and eventually rolls out personal autonomous vehicles.
+
+The layoffs were announced by Craig Glidden, Cruise’s president and chief administrative officer, according to a companywide email that TechCrunch has viewed and verified with sources. Individuals who were affected received a separate email from Cruise Chief Human Resources Officer Nilka Thomas.
+
+CEO Marc Whitten will depart from Cruise this week, along with Thomas, Chief Safety Officer Steve Kenner, and Global Head of Public Policy Rob Grant.
+
+Mo Elshenawy, Cruise’s chief technologist, will stay on through the end of April to help with the transition.
+
+“As a result of the change in strategy we announced in December, today we will part with nearly 50% of our Cruise employee base, through a reduction in force,” the email from Glidden reads. “Anyone who has been through a reduction knows that days like this are extremely difficult, and today is no different. With our move away from the ride-hail business and toward providing autonomous vehicles to customers alongside GM, our staffing and resource needs have dramatically changed. Today’s actions align our teams to our new needs, and focus our efforts on continuing to build world-class AV technology.”
+
+As of January 2024, Cruise employed about 2,100 people, according to sources who based the estimates on the number of members on a Slack channel for company announcements. That means more than 1,000 employees might have been impacted by the layoffs.
+
+“Cruise shared the difficult decision to part ways with approximately 50% of its workforce,” the company wrote in an emailed statement. “We are grateful for their passion and contributions to help us reach this stage, and our focus is on supporting them into their next chapter with severance packages and career support. While not an easy decision, we are focused on combining efforts with General Motors to accelerate autonomy at scale on personal autonomous vehicles.”
+
+GM sent out a press release (after the layoffs were announced internally) that it has completed its acquisition of GM Cruise Holdings LLC following the approval of GM’s merger offer by the Cruise board of directors. Cruise is now a wholly-owned subsidiary of GM.
+
+All employees who were laid off will remain on the company’s payroll through April 5 and receive benefits through the end of April. Affected workers will receive eight weeks of severance pay and benefits. Long-term employees will be offered another two weeks of pay and benefits for every full year of employment over three years. All employees will also receive three months of company-paid COBRA coverage, as well as a Linkedin Premium subscription for a year to support their job search.
+
+The layoffs come nearly two months after GM said it would no longer fund the development of a commercial robotaxi business and would instead focus on building personal autonomous vehicle technology.
+
+The automaker expects to save up to $1 billion annually by ending its Cruise robotaxi development program, according to details shared during the company’s fourth-quarter earnings call. At the time, CFO Paul Jacobson said the projected cost savings were based on the assumption that “Cruise employees will be fully integrated into GM by mid-year.”
+
+In mid-January, Cruise management started to extend retention offers to employees, almost all of whom were engineers, according to sources familiar with the matter. In an email to Cruise employees, CEO Marc Whitten indicated that next steps would come after the Cruise board met. That meeting happened on Monday, according to one source.
+
+While Cruise employees were initially blindsided by GM’s decision to pull the plug on the robotaxi development program, they have been expecting such an announcement for weeks.
+
+Sources who spoke to TechCrunch said they have been hardly working and in a state of limbo since GM’s announcement as they awaited next steps. On Monday afternoon, Glidden sent a Slack message to employees saying that he expects to share “some news regarding the transition plans tomorrow” and advised staffers to “plan on working from home.”
+
+“Thank you for your patience during this time – we know the uncertainty has been difficult but you have navigated the past weeks with grace and professionalism,” Glidden wrote.
+
+Glidden had previously served as GM’s executive vice president of legal and policy, but the automaker assigned him his role at Cruise in November 2023, following a Cruise safety incident that led to the company’s do

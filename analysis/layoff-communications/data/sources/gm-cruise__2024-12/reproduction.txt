@@ -1,0 +1,66 @@
+URL: https://techcrunch.com/2024/12/11/cruise-employees-blindsided-by-gms-plan-to-end-robotaxi-program
+RETRIEVED_VIA: direct
+
+ Cruise employees 'blindsided' by GM’s plan to end robotaxi program | TechCrunch
+ –:–:–:– 
+Buy One Founder Summit Ticket, Get a Second for Free. Register now.
+Founder Summit begins Nov. 4, 9:00 a.m. ET. Get your pass savings & deals before it starts. REGISTER HERE.
+ Close
+ Image Credits:Cruise 
+ Transportation 
+ Cruise employees ‘blindsided’ by GM’s plan to end robotaxi program
+ Kirsten Korosec
+ Rebecca Bellan
+ 11:18 AM PST · December 11, 2024
+The news came by Slack message. 
+Cruise CEO Marc Whitten, who took the top post in June, posted a message Tuesday afternoon in the company’s announcements channel along with a link to a press release entitled “GM to refocus autonomous driving development on personal vehicles.”
+GM, which acquired the self-driving car startup in 2016, would no longer fund the company, ending a mission that hundreds of Cruise engineers had worked on for years.  
+Minutes later, during an all-hands meeting, Cruise employees learned a few more details. The self-driving car company would be absorbed into parent company GM and combined with the automaker’s own efforts to develop driver assistance features — and eventually fully autonomous personal vehicles. Whether their jobs would be safe or cut was, and still is, unclear.
+That meeting was short and unsatisfactory, according to one source, who noted that the senior leadership team was also surprised by this turn of events. Whitten, president and chief technology officer Mo Elshenawy, and chief administrative officer Craig Glidden, led the all-hands. 
+Several Cruise employees who spoke to TechCrunch on condition of anonymity said they were “surprised” and “blindsided” by the decision. One source told TechCrunch that employees learned about GM’s plans the same time the media did. 
+Staff were told they “should be proud” of themselves and that “the technology will live on,” noting there would be a restructuring and that it would take several months for Cruise to transition to GM’s team. 
+The executives provided no details about potential layoffs, according to sources. However, several employees told TechCrunch they expect job cuts. While details are slim, it’s likely that the most vulnerable will be non-engineering roles or those related to robotaxi operations, including government affairs, communications teams, ground operations, and remote assistance teams in the cities where Cruise has slowly restarted testing, such as Phoenix, Houston, and Dallas.
+Our source told TechCrunch that they had been following a roadmap to launch a driverless service in Houston in 2025, and were not expecting this. 
+Cruise has been under pressure to commercialize robotaxis — and generate revenue — for years. And at one point, hopes and ambitions were high. In 2021, GM projected that Cruise would have tens of thousands of custom-built Origin robotaxis on the road that could generate $50 billion in annual revenue by the end of the decade. 
+The company was eventually forced to push back its ambitious deadline, like many other autonomous vehicle startups. 
+Cruise finally received in August 2023 the final permit required by California regulators to operate commercially in San Francisco. Two months later, the company would come under intense scrutiny following an October 2 incident that left a pedestrian stuck under and then dragged by one of its robotaxis. That incident, and Cruise’s actions in the immediate aftermath, led to Cruise losing its permits to operate in California, grounding its entire U.S. fleet, its co-founder and CEO Kyle Vogt stepping down, rounds of layoffs, and GM taking more direct control over what was once a promising self-driving startup.
+Even as GM tried to reign in costs, all roads seemed to point toward a reboot.  
+In June, GM handed Cruise a $850 million lifeline to help it relaunch testing of its robotaxis in Phoenix, Dallas, and Houston. Cruise even signed a partnership deal with Uber to launch its robotaxis on the Uber platform in 2025. 
+Still, there were signs that a pivot was coming, notably when GM announced in June 2024 it would shelve the Origin, a custom-built robotaxi with no steering wheel or pedals that was first revealed in January 2020. Barra told shareholders at the time the decision to scrap the Origin and instead use the next-generation Chevrolet Bolt in its operations would simplify their path to scale and addresses the regulatory uncertainty faced with the Origin robotaxi because of its unique design. GM took a $583 million charge in the second quarter related to Origin assets and other restructuring costs.
+In 2022, GM sent a request to the National Highway Traffic and Safety Administration for a temporary exemption from six federal motor vehicle safety standards for the Origin that would allow them to operate a vehicle that didn’t have a steering wheel. The FAST Act, which was signed into law by President Obama in December 2015, allows manufacturers like GM to test and evaluate vehicles that might not otherwise meet federal motor vehicle safety standards (FMVSS). If Cruise wanted to launch a commercial service — meaning charging for rides or delivery — with the Origin, it needed special exemptions from the National Highway Traffic and Safety Administration.
+While GM waited on the exemption, it continued development and the eventual production of the custom-built Origin robotaxi. But as Reuters later discovered and reported, GM withdrew its request on October 25. 
+Updated: The article was originally published at 6:11 p.m. PT December 10. The article has been updated with new information regarding the company’s Origin robotaxi and exemption request with federal safety regulators. 
+ Topics
+ autonomous vehicles, Cruise, GM, robotaxis, Transportation 
+ When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+ Kirsten Korosec 
+ Transportation Editor
+ Kirsten Korosec is a reporter and editor who has covered the future of transportation from EVs and autonomous vehicles to urban air mobility and in-car tech for more than a decade. She is currently the transportation editor at TechCrunch and co-host of TechCrunch’s Equity podcast. She is also co-founder and co-host of the podcast, “The Autonocast.” She previously wrote for Fortune, The Verge, Bloomberg, MIT Technology Review and CBS Interactive.
+You can contact or verify outreach from Kirsten by emailing [email protected] or via encrypted message at kkorosec.07 on Signal. 
+ View Bio 
+ Rebecca Bellan 
+ Senior Reporter
+ Rebecca Bellan is a senior reporter at TechCrunch where she covers the business, policy, and emerging trends shaping artificial intelligence. Her work has also appeared in Forbes, Bloomberg, The Atlantic, The Daily Beast, and other publications. 
+You can contact or verify outreach from Rebecca by emailing [email protected] or via encrypted message at rebeccabellan.491 on Signal.
+ View Bio 
+ November 4
+ Boston
+ Buy One Pass, Get a Second FreeCover more ground at TechCrunch’s ultimate founder bootcamp of the year by bringing your co-founder or partner for freeBook before the BOGO deal expires
+Register Now
+Most Popular
+ New York City’s Mamdani criticizes Madison Square Garden owner over surveillance tech
+Zack Whittaker
+ Anthropic warns that it’s very close to RSI capability, aka self-building AI
+Julie Bort
+ New York Times and other outlets sue web browser Brave over alleged content scraping
+Rebecca Bellan
+ Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says
+Lucas Ropek
+ Google’s first data center satellite is online and writing poetry
+Tim Fernholz
+ Binance pauses withdrawals as hackers suspected of stealing billions in crypto
+Zack Whittaker
+ As search traffic dries up, Reddit announces it’s shifting to a logged-in experience
+Sarah Perez
+ Loading the next article 
+ Error loading the next article 

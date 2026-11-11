@@ -1,0 +1,39 @@
+URL: https://www.cnbc.com/2025/02/12/fintech-unicorn-zepz-to-lay-off-200-employees-sources-say.html
+RETRIEVED_VIA: direct
+LONDON — British digital remittances company Zepz is laying off dozens of IT workers and is in the process of closing down business units in Poland and Kenya.
+
+Roughly 200 staff members will be impacted by the redundancy measures, two employees who were made redundant told CNBC, asking to remain anonymous due to the sensitivity of the matter.
+
+As of January, London-headquartered Zepz — formerly known as WorldRemit — had a global headcount of 1,000 people, meaning the redundancies affect around 20% of its total workforce.
+
+The layoffs affect several IT functions at the company, including database administration, development operations and software engineering, the former employees said.
+
+Zepz confirmed to CNBC that it was reducing headcount in order to "sustainably support the next phase of long-term strategic goals and continued growth." The company declined to comment on the number of employees impacted by the layoffs, with a spokesperson explaining that the redundancy process was ongoing.
+
+"Following the successful completion of its replatforming efforts, bolstered by advanced automation and AI, Zepz has embarked on a strategic initiative to optimise operations across the organisation," a Zepz spokesperson told CNBC by email.
+
+"This transformation has reinforced the technology foundation and reduced the need for certain operational and technical capacities, prompting a proposed reduction in roles as part of the overall plan," the spokesperson added.
+
+Zepz has been touted as one of Britain's fintech darlings. The company was founded by Ismail Ahmed, a Somalia-born British entrepreneur who fled the country during the Somali Civil War. Ahmed today serves as the company's non-executive chairman.
+
+The group was renamed Zepz following the acquisition of money transfer platform Sendwave in 2020, with the brand and WorldRemit coming under one parent company.
+
+CNBC obtained a company memo announcing the cost-cutting measures shared by Zepz CEO Mark Lenhard internally in January.
+
+"Today we are announcing a very difficult decision — proposed reductions in our team across all HQ functions, and most regions. And specifically we are proposing the closure of our Kenya and Poland employing entities," Lenhard said in the memo.
+
+Zepz touts itself as a "remote-first employer," with regional offices in Kenya and Poland.
+
+"This is a difficult choice, which impacts the lives of our colleagues and friends. This is also a choice which is critical to the success of our mission to serve immigrants everywhere. Both facts are true, at the same time," Lenhard said.
+
+"To be clear, this is not a change of strategy. We're doubling down on our mission in an effort to expand our impact faster," he added. "In some places, this will mean we'll need to continue to ruthlessly prioritize. In others, we're going to get more efficient. In many cases it will involve rethinking how we do things today."
+
+Zepz's spokesperson insisted that the IT worker layoffs "will not impact customers in any region or market," and added that the firm "remains committed to its mission of serving migrants worldwide, driving innovation, and delivering meaningful financial solutions to millions globally."
+
+This isn't the first time Zepz has cut a spate of roles to save on costs. In 2023, Zepz laid off 420 employees, which accounted for about 26% of its global headcount at the time. Later that year, Zepz slashed a further 30 roles across its people and marketing functions.
+
+Zepz has long been touted as a potential IPO candidate, but a timeline for this is unclear. Counting the likes of Accel, TCV and Leapfrog as investors, the startup was valued at $5 billion in 2021. The company announced a $267 million funding round last year.
+
+Zepz faces competition from several notable digital payments players including PayPal, Wise, Revolut and Remitly.
+
+WATCH: We now have 'a whole generation' of fintechs preparing for IPOs, says QED Investors' Nigel Morris

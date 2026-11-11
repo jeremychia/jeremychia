@@ -1,0 +1,48 @@
+URL: https://techcrunch.com/2023/03/22/job-listing-platform-indeed-lays-off-2200-employees/
+RETRIEVED_VIA: direct
+
+ Job listing platform Indeed lays off 2,200 employees | TechCrunch
+ Image Credits:Zed Jameson/Bloomberg / Getty Images 
+ Enterprise 
+ Job listing platform Indeed lays off 2,200 employees
+ Amanda Silberling
+ 11:21 AM PDT · March 22, 2023
+ At a company that helps people find jobs, 2,200 employees will now have to embark on a job search of their own. Indeed laid off 15% of employees today, CEO Chris Hyams announced in an all-hands meeting.
+In a blog post, Hyams elaborated on the decision by explaining that the job market is expected to continue to cool down. Indeed makes its money by allowing companies to sponsor job listings, which shows the listing to more job seekers. But Hyams said that as of last quarter, sponsored job volumes were down 33% year over year, and total job openings were down 3.5%.
+“With future job openings at or below pre-pandemic levels, our organization is simply too big for what lies ahead,” Hyams wrote. “We have held out longer than many other companies, but the revenue trends are undeniable. So I have decided to act now.”
+The CEO will take a 25% cut in base pay himself.
+Employees were emailed about their job status within an hour of the announcement — the subject lines of these emails either read “Your Position Has Been Impacted” or “Your Position Has Not Been Impacted.” Employees in the U.K., Ireland, the Netherlands and Japan may still be in limbo, due to local regulations.
+Indeed is offering at least 16 weeks of base salary pay, compensation for accrued PTO, a cash payout for RSUs that haven’t vested and access to career placement and mental health services. U.S. employees are eligible for four months of health insurance via COBRA. They can also keep their work laptop, which will be immediately disconnected from Indeed business systems; but Slack, email and Workday access won’t be immediately impacted, so people can say bye to colleagues and remove personal materials from their laptops, which will be reset remotely.
+Hyams wrote that these cuts are impacting nearly every team, at every function, level and region. The company consulted HR, legal and DEIB+ teams to ensure that the layoffs did not disproportionately impact underrepresented minorities in the U.S.
+Layoffs have continued to make waves across the tech industry. Just this week, Amazon conducted its second substantial round of layoffs in just a few months, impacting an additional 9,000 employees on top of layoffs that already impacted 18,000 people. Last week, Meta also announced a second round of massive layoffs: The social media giant plans to cut another 10,000 jobs, despite eliminating 11,000 roles in November.
+https://techcrunch.com/2023/03/20/tech-industry-layoffs/?utm_source=internal&utm_medium=WPunit
+ Topics
+ Apps, Enterprise, Indeed, Layoffs 
+ When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+ Amanda Silberling 
+ Senior Writer
+ Amanda Silberling is a senior writer at TechCrunch covering the intersection of technology and culture. She has also written for publications like Polygon, MTV, the Kenyon Review, NPR, and Business Insider. She is the co-host of Wow If True, a podcast about internet culture, with science fiction author Isabel J. Kim. Prior to joining TechCrunch, she worked as a grassroots organizer, museum educator, and film festival coordinator. She holds a B.A. in English from the University of Pennsylvania and served as a Princeton in Asia Fellow in Laos.
+You can contact or verify outreach from Amanda by emailing [email protected] or via encrypted message at @amanda.100 on Signal. 
+ View Bio 
+ 2027
+ San Francisco
+ Get an Early Peek at the Next TechCrunch DisruptDisrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line.Sign up for our waitlist
+Register Now
+Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks
+Aisha Malik
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes
+Dominic-Madori Davis
+Lucas Ropek
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say
+Kirsten Korosec
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production
+Kirsten Korosec
+ Tesla will stop making the Cybertruck in 2027
+Sean O'Kane
+ Claude can now analyze your spending with its new Personal Finance tool
+Aisha Malik
+ Harbinger raises $240M after expanding into defense
+Sean O'Kane
+ Loading the next article 
+ Error loading the next article 

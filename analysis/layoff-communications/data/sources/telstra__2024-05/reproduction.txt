@@ -1,0 +1,83 @@
+URL: https://theconversation.com/telstra-says-slashing-almost-a-tenth-of-its-workforce-will-help-save-350-million-why-is-the-business-under-pressure-230533
+RETRIEVED_VIA: direct
+
+ Telstra says slashing almost a tenth of its workforce will help save $350 million. Why is the business under pressure?
+ Skip to content
+ Joel Carrett/AAP
+ https://theconversation.com/telstra-says-slashing-almost-a-tenth-of-its-workforce-will-help-save-350-million-why-is-the-business-under-pressure-230533
+ https://theconversation.com/telstra-says-slashing-almost-a-tenth-of-its-workforce-will-help-save-350-million-why-is-the-business-under-pressure-230533
+ Link copied
+ Share article
+ Share article
+ Copy link
+ Email 
+ Bluesky 
+ Facebook 
+ WhatsApp 
+ Messenger 
+ LinkedIn 
+ X (Twitter) 
+ Print article
+ On Tuesday, Telstra announced it will be cutting up to 2,800 jobs as part of a major restructure. 
+Of these layoffs, 377 will take effect immediately from within the Telstra Enterprise business unit. Most of the remaining cuts will be announced in detail soon and finalised by the end of the year.
+ Telstra CEO Vicki Brady.
+ Detail from Bianca De Marchi/AAP
+The announcement followed a review of the company’s enterprise division, which services large business and government clients. 
+Providing voice calls and other network services to these clients has historically been an important part of Telstra’s business. But recently, low-cost internet-based competitors have been whittling away at this revenue. 
+Speaking at a press conference, Telstra CEO Vicki Brady said while the company continues to see solid growth across its mobile network, it now faces a changing business landscape:
+Our industry and the world we are operating in are changing. We have new and different competitors. We have rapid advances in technologies happening. Our customer needs continue to evolve and we have ongoing inflationary and cost pressures. 
+But it’s possible these job cuts are also part of a strategy to boost Telstra’s flagging share price, which fell to a low of A$3.57 the day of the announcement.
+This was down from its 52-week high of $4.46 and well below its ten-year high of $6.61 in February 2015.
+How did we get here?
+In February, Telstra reported a 66.7% drop in EBITDA – an important measure of earnings – for its fixed-enterprise business unit. 
+Telstra said this fall-off was the result of a continued decline in income from call charges, business connectivity, network applications and services. 
+It’s possible the slowing Australian economy may have exacerbated the decline, impacting businesses’ spending on telecommunications products and services.
+ Business demand for Telstra’s call services has dropped off significantly in recent years.
+ chainarong06/Shutterstock
+Telstra has been under pressure to find savings under its ambitious “T25” target to achieve a $500 million reduction in net costs by the end of financial year 2024–25.
+Telstra expects this major restructure to incur a one-off cost of between $200 million to $250 million over this period. 
+The company also said it would focus on reducing other cost categories, including non-labour-related costs. One such cost is energy usage, a major expense for telcos. 
+Now, the company expects to achieve $350 million of its cost reduction target by the 2025 deadline.
+Telstra hasn’t directly tied this latest round of cuts to the broader adoption of artificial intelligence (AI). But the company has been exploring ways of using the technology. 
+Telstra announced in February it was moving forward with AI technologies it had developed in-house, following pilot trials with frontline team members. 
+The company was at pains to point out that these particular technologies aim to assist existing human staff, for example, by summarising interactions with customers or better searching for information from internal databases. 
+Down the line, however, further adoption of AI could eventually impact employee numbers as Telstra and other telecommunications companies aim to ramp up and exploit cost-cutting uses of the technology. 
+Mobile tells a stronger story
+Telstra’s core mobile business has meanwhile performed strongly, with subscriber numbers growing steadily over the last year. 
+The company’s latest announcement included a significant change to the terms of its postpaid mobile plans. 
+Prices of these plans have historically been automatically indexed to the consumer price index each financial year. That will no longer happen, bringing postpaid mobile plans into line with most of Telstra’s other products. There will be no increase this July.
+Brady said the move would give the company greater flexibility: 
+This approach reflects there are a range of factors that go into any pricing decision, and will provide greater flexibility to adjust prices at different times and across different plans based on their value propositions and customer needs.
+The change does mean consumers might see relief from large automatic price increases when the consumer price index is high. 
+But it will likely cause concern among consumer groups. There will now be uncertainty on the exact timing of price changes for postpaid mobile plans, and their size and direction will be largely up to Telstra.
+Telstra’s future direction remains unclear
+ Telstra has a strong market foothold in rural and regional Australia.
+ Sam Bianchini/Shutterstock
+There are other pressures looming for Telstra. 
+Before the next election, the government is expected to announce the outcome of a review into the universal service obligation (USO), a consumer protection that guarantees Australians “reasonable access to fixed telephone and payphone services”. 
+Telstra is Australia’s nominated USO provider, and this delivery contract has been a key driver of its dominant position in regional and remote areas. But there’s no guarantee it will be renewed with Telstra in 2032. 
+Telstra says its restructuring aims to put the company in better financial shape. But the announcement does not offer strong guidance on how Telstra plans to grow its business in coming years.
+Telstra is facing increasing competition in a maturing market and its growth appears to be based primarily on expanding its customer base rather than introducing new products and services.
+In the short term, Telstra continues to struggle to reduce costs at a time of what it calls “higher-than-expected inflation” and high energy costs.
+ Economy
+ Telecommunications
+ Telstra
+ Job cuts
+ Telecoms
+ Enterprise
+ Business
+ Layoffs
+ B2B
+ Mark A Gregory, RMIT University
+ Author
+ Mark A Gregory
+ Associate Professor, School of Engineering, RMIT University
+ Disclosure statement
+ Mark A Gregory received funding from the Australian Research Council, the Australian Communications Consumer Action Network and the AuDA Foundation.
+ Partners
+ RMIT University provides funding as a strategic partner of The Conversation AU.
+ View all partners
+ DOI
+ https://doi.org/10.64628/AA.shsw3qcec
+ Events
+ More events

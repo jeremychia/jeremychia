@@ -1,0 +1,143 @@
+URL: https://thenextweb.com/news/monday-com-layoffs-20-percent-ai-growth-strategy
+RETRIEVED_VIA: direct
+Monday.com is cutting 20 percent of its workforce as it pivots to an AI work platform
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
+    
+        
+    
+    
+    
+    
+    
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+
+
+
+
+        
+
+    Skip to content
+
+    
+
+    
+
+    
+
+    
+    
+        
+            
+
+
+
+
+
+
+    
+        
+
+        
+                
+            This article was published on July 22, 2026
+Monday.com plans to cut about 620 jobs, 20 percent of staff, as it restructures around its AI-driven growth strategy and flatter organisation
+Monday.com is cutting roughly 20 percent of its global workforce, about 620 people, as the Israeli project management company restructures around what it calls its AI Work Platform. The company disclosed the plan in a Form 6-K filed with the US Securities and Exchange Commission on Tuesday, citing the need to support a leaner operating model aligned with its AI-driven growth strategy. Co-founder and co-CEO Eran Zinman published a note to staff on LinkedIn calling it the most painful decision the company has made since its founding.
+The layoffs follow a brutal stretch for Monday.com’s stock, which has lost more than half its value in 2026 and roughly 75 percent from its 52-week high. The company is caught in the broader SaaSpocalypse selloff that has punished enterprise software stocks as investors worry that AI agents and vibe coding could make conventional SaaS tools obsolete. Monday.com’s market capitalisation has fallen to roughly $3 billion, a fraction of the valuations it commanded during the pandemic-era software boom.
+Zinman framed the restructuring as an offensive move rather than a defensive one, writing that the company is not making the change to protect what it has but to go all in on what it can become. He said Monday.com had shifted its core vision over the past nine months from managing work to doing the work for customers, with people and AI agents working together in one workspace. The organisation built for the previous chapter, he argued, does not fit the new AI era.
+The company expects to incur between $45 million and $55 million in restructuring charges, split between $30 million to $35 million in severance and employee benefits and roughly the same amount in office space impairments, partially offset by about $15 million in non-cash credits for share-based compensation. Most charges are expected to land in the second half of 2026. Monday.com said it plans to continue hiring in key strategic areas even as it cuts elsewhere.
+The restructuring mirrors moves by other SaaS companies caught between strong revenue growth and investor anxiety about AI disruption. Fellow Israeli software company Wix cut 20 percent of its staff in May, citing similar pressures from AI competition and a strengthening shekel, while Atlassian cut 1,600 jobs in March and replaced its CTO as part of its own AI pivot. The pattern across the industry is consistent: record or near-record revenues, significant headcount reductions, and savings redirected toward AI.
+Zinman addressed the obvious question directly in a FAQ appended to his note, writing that the decision was not made to reduce costs or replace people with AI. He described three structural changes: a flatter organisation with fewer management layers, more autonomous teams with broader ownership, and a new go-to-market model that puts staff closer to customers as they adopt AI. The company said it intends to reinvest the vast majority of savings in people, products, and future growth.
+Whether the market believes that framing remains to be seen. Monday.com reported first-quarter revenue of $351 million, up 24 percent year on year, the kind of growth rate that would have delighted investors two years ago. But in a market where AI is simultaneously the justification for cutting staff and the product companies are pivoting toward, the question is whether restructuring announcements like this one represent genuine strategic shifts or what OpenAI CEO Sam Altman has called AI washing, the practice of citing artificial intelligence to justify decisions driven by other pressures entirely.
+Story by
+                                
+                                    Ana Maria Constantin
+With expertise in digital marketing, product management, and branding &amp; identity, Ana Maria Constantin develops strategies that resonate                                                                        (show all)
+                                                                    
+                                With expertise in digital marketing, product management, and branding & identity, Ana Maria Constantin develops strategies that resonate with our target audience in the software/SaaS industry. Collaboration and teamwork are paramount to her, as she loves empowering her colleagues to achieve outstanding results and unlock their full potential.
+Get the most important tech news in your inbox each week.
+Thanks! Check your inbox to confirm your subscription.
+By subscribing you agree to our Privacy Statement.
+1
+                                    
+                                        Anthropic files for Nasdaq IPO as half-year revenue hits $16.3bn
+2
+                                    
+                                        OpenAI’s discounts win Anthropic customers, The Information reports
+3
+                                    
+                                        Apollo’s Slok says US companies now treat AI spending as a cost, not growth
+4
+                                    
+                                        American Express cuts 5% of staff and won’t let AI agents ‘run rogue’
+5
+                                    
+                                        Goldman Sachs puts $500M into small-business AI with four AI labs
+Get the most important tech news in your inbox each week.
+Thanks! Check your inbox to confirm your subscription.
+By subscribing you agree to our Privacy Statement.

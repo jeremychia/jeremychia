@@ -1,0 +1,47 @@
+URL: https://techcrunch.com/2023/02/09/yahoo-will-lay-off-20-of-staff-or-1600-people/
+RETRIEVED_VIA: direct
+
+ Yahoo will lay off 20% of staff, or 1600 people | TechCrunch
+ Image Credits:SOPA Images / Contributor / Getty Images 
+ Media & Entertainment 
+ Yahoo will lay off 20% of staff, or 1600 people
+ Amanda Silberling
+ 11:00 AM PST · February 9, 2023
+ Yahoo is laying off 20% of its staff, impacting 1,600 employees in its ad tech business. Yahoo is the parent company to TechCrunch.
+Employees were notified on Thursday that 12% of the company (1,000 employees) would be laid off before the end of the day. In six months, another 8% — or 600 people — will be let go. These cuts will impact around half of Yahoo’s ad tech business.
+In an interview with Axios, Yahoo CEO Jim Lanzone said that these layoffs are not a result of economic issues, but rather, they are intentional changes to strengthen the unprofitable Yahoo for Business advertising unit. As a whole, Yahoo is profitable, earning around $8 billion in yearly revenue.
+In November, Yahoo took an almost 25% stake in advertising network Taboola, which is now the company’s native advertising partner in a 30-year commercial agreement. Lanzone told Axios that these changes will allow Yahoo to increase competition for ad placements eight times over — but as a result of this transition, Yahoo will shut down native advertising platforms like Gemini and its supply-side platform (SSP). Yahoo will also focus on its demand-side platform (DSP), which will be renamed Yahoo Advertising. This division will focus on deals with Fortune 500 companies.
+“Over several years, the strategy of our ads business was to compete in the ad tech industry by offering a ‘unified stack’ consisting of our Demand Side Platform (DSP), Supply Side Platform (SSP) and Native platforms,” a Yahoo spokesperson said in a statement to TechCrunch. “Despite many years of effort and investment, this strategy was not profitable and struggled to live up to our high standards across the entire stack.”
+In 2021, private equity firm Apollo Global Management completed its $5 billion acquisition of Yahoo, which was formerly known as Verizon Media group.
+Update, 2/9/23, 3:05 p.m. ET with comment from Yahoo.
+Yahoo gets 25% stake in Taboola as part of long-term advertising deal
+ Topics
+ Jim Lanzone, Layoffs, Media & Entertainment, Yahoo 
+ When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+ Amanda Silberling 
+ Senior Writer
+ Amanda Silberling is a senior writer at TechCrunch covering the intersection of technology and culture. She has also written for publications like Polygon, MTV, the Kenyon Review, NPR, and Business Insider. She is the co-host of Wow If True, a podcast about internet culture, with science fiction author Isabel J. Kim. Prior to joining TechCrunch, she worked as a grassroots organizer, museum educator, and film festival coordinator. She holds a B.A. in English from the University of Pennsylvania and served as a Princeton in Asia Fellow in Laos.
+You can contact or verify outreach from Amanda by emailing [email protected] or via encrypted message at @amanda.100 on Signal. 
+ View Bio 
+ 2027
+ San Francisco
+ Get an Early Peek at the Next TechCrunch DisruptDisrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line.Sign up for our waitlist
+Register Now
+Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks
+Aisha Malik
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes
+Dominic-Madori Davis
+Lucas Ropek
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say
+Kirsten Korosec
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production
+Kirsten Korosec
+ Tesla will stop making the Cybertruck in 2027
+Sean O'Kane
+ Claude can now analyze your spending with its new Personal Finance tool
+Aisha Malik
+ Harbinger raises $240M after expanding into defense
+Sean O'Kane
+ Loading the next article 
+ Error loading the next article 

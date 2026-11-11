@@ -1,0 +1,17 @@
+URL: https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/
+RETRIEVED_VIA: direct
+Cybersecurity firm Deepwatch lays off dozens, citing move to ‘accelerate’ AI investment Lorenzo Franceschi-Bicchierai 12:05 PM PST · November 12, 2025 Deepwatch, a cybersecurity firm that makes an AI-powered detection and response platform, laid off dozens of employees on Wednesday, citing AI as one of the reasons.
+
+John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company “is aligning our organization to accelerate our significant investments in AI and automation.”
+
+A current Deepwatch employee, who asked not to be named because they were not authorized to speak with the press, told TechCrunch that the layoffs affected between 60 and 80 staffers, out of a workforce of around 250 employees. A post on Linkedin by a person who said they were laid off mentioned 80 people as well.
+
+“They’re doing something with AI and agentic AI but it sounds like bullshit,” the current employee told TechCrunch.
+
+Contact Us Do you have more information about the layoffs at Deepwatch? Or about layoffs at other cybersecurity companies? From a non-work device, you can contact Lorenzo Franceschi-Bicchierai securely on Signal at +1 917 257 1382, or via Telegram and Keybase @lorenzofb, or email. You also can contact TechCrunch via SecureDrop.
+
+Eight former Deepwatch employees announced that they were laid off, according to LinkedIn posts seen by TechCrunch.
+
+Deepwatch is not the only cybersecurity company that has conducted layoffs this year. In May, cybersecurity giant CrowdStrike laid off around 500 workers, or 5% of its workforce. The cuts came despite a record year with “operating cash flow of $1.38 billion and record full year free cash flow of $1.07 billion,” according to a press release at the time.
+
+Other cybersecurity companies that have cut their workforce this year are Deep Instinct, Otorio, ActiveFence, SkyBox Security, and Sophos.

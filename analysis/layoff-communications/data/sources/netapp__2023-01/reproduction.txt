@@ -1,0 +1,51 @@
+URL: https://techcrunch.com/2023/01/31/netapp-a-specialist-in-cloud-data-management-says-it-will-lay-off-8-or-around-960-people-citing-economic-climate/
+RETRIEVED_VIA: direct
+
+ NetApp, a specialist in cloud data management, says it will lay off 8%, or around 960 people, citing economic climate | TechCrunch
+ –:–:–:– 
+Buy One Founder Summit Ticket, Get a Second for Free. Register now.
+Founder Summit begins Nov. 4, 9:00 a.m. ET. Get your pass savings & deals before it starts. REGISTER HERE.
+ Close
+ Enterprise 
+ NetApp, a specialist in cloud data management, says it will lay off 8%, or around 960 people, citing economic climate
+ Ingrid Lunden
+ 6:34 AM PST · January 31, 2023
+ NetApp, one of the big players in cloud data management, today announced that it would lay off 8% of its staff, citing “macroeconomic challenges and the reduced spending environment” in the current market. The company is estimated to employ about 12,000 people globally, so this will work out to around 960 people impacted. NetApp said that it would begin the process this quarter and is expected to take a charge of $85 million to $95 million related to that.
+We have contacted the company to ask which product lines or types of jobs might be impacted. It looks like the cuts will be in multiple geographies, including EMEA and Asia-Pacific.
+San Jose-based NetApp is listed on Nasdaq and has a market cap of just over $14 billion. Like a lot of tech stocks, NetApp has seen its shareprice rollercoaster over the last year and overall drop in value over that time.
+Businesses are spending significantly less on IT at the moment, and that has been weighing heavily on tech companies that count them as customers. Companies working in cloud services saw a massive surge in demand during the COVID-19 pandemic — both from the world simply using more digital channels in their work and leisure activities, but also from businesses investing in so-called “digital transformation” and updating systems to work on newer technologies. NetApp itself made a splashy acquisition of Spot.io for $450 million as part of that push. 
+But overall, even cloud businesses have not been immune to the more recent downturn, and subsequent drop in demand for their products, too. 
+“Companies are facing an increasingly challenging macroeconomic environment, which is driving more conservatism in IT spending. We are not immune to these challenges,” CEO George Kurian wrote in a memo to employees today. “Against this backdrop, we must be agile, deliver on our near-term commitments, while positioning ourselves for long-term success. This means sharpening our strategy to focus on the areas of our business best positioned for growth, adapting our cost structure to reflect focus and market conditions and raising the bar on our performance. Having successfully navigated similar challenges together with you before, I am confident that sharp focus on our strategy and strong execution will enable us to capture the opportunity ahead.”
+Indeed, NetApp is not a stranger to layoffs. In 2016, also under Kurian as CEO, the company laid off first 12%, and then a further 6%, of employees within months of each other. This time around, it is part of a bigger wave of reductions across all of tech, covering not just a number of major enterprise vendors, but those in consumer, too.
+Other recent layoffs have been announced at Google (12,000), Amazon (18,000), Groupon (500), SAP (3,000), IBM (3,900) and more. Counting this recent round at NetApp, there have been more than 76,000 layoffs in the technology sector this year alone, according to Layoffs.fyi. That’s a massive and very disconcerting rate. All of 2022 had 159,684, but we’re only two months into the year.
+NetApp last quarter beat on both earnings and revenues, and set guidance of net revenues in the range of $1.525 billion to $1.675 billion and non-GAPP earnings of $1.25 – $1.35. Let’s see how the company performs in Q3 when it reports on February 22.
+ Topics
+ cloud services, Enterprise, Layoffs, NetApp 
+ When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+ Ingrid Lunden 
+ Europe Editor
+ Ingrid was a writer and editor for TechCrunch, from February 2012 through May 2025, based out of London.
+Before TechCrunch, Ingrid worked at paidContent.org, where she was a staff writer, and has in the past also written freelance regularly for other publications such as the Financial Times. Ingrid covers mobile, digital media, advertising and the spaces where these intersect.
+When it comes to work, she feels most comfortable speaking in English but can also speak Russian, Spanish and French (in descending order of competence).
+ View Bio 
+ November 4
+ Boston
+ Buy One Pass, Get a Second FreeCover more ground at TechCrunch’s ultimate founder bootcamp of the year by bringing your co-founder or partner for freeBook before the BOGO deal expires
+Register Now
+Most Popular
+ New York City’s Mamdani criticizes Madison Square Garden owner over surveillance tech
+Zack Whittaker
+ Anthropic warns that it’s very close to RSI capability, aka self-building AI
+Julie Bort
+ New York Times and other outlets sue web browser Brave over alleged content scraping
+Rebecca Bellan
+ Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says
+Lucas Ropek
+ Google’s first data center satellite is online and writing poetry
+Tim Fernholz
+ Binance pauses withdrawals as hackers suspected of stealing billions in crypto
+Zack Whittaker
+ As search traffic dries up, Reddit announces it’s shifting to a logged-in experience
+Sarah Perez
+ Loading the next article 
+ Error loading the next article 

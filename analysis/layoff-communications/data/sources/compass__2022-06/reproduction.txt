@@ -1,0 +1,74 @@
+URL: https://techcrunch.com/2022/06/17/layoffs-crypto-real-estate-tech-june/
+RETRIEVED_VIA: direct
+ 
+ Layoffs hit crypto and real estate tech particularly hard 
+ Layoffs hit crypto and real estate tech particularly hard this week
+ Amanda Silberling 
+ 3:53 PM PDT · June 17, 2022 
+ Hey Siri, when does a “macroeconomic downturn” become a “recession”?
+ It’s another bleak week for startups weathering dismal tech stocks and even worse cryptocurrency prices. But let’s start with some good news: your children can get vaccinated against COVID-19!
+ Back to the bad news: We’re writing another weekly layoffs column , because once again, there’s been enough bad news this week that it’s necessary to round it all up.
+ This week, startups in crypto and real estate fared particularly badly — naturally, as mortgage interest rates rise , fewer people want to buy homes. Meanwhile, Bitcoin is nearing dangerously close to the $20,000 mark, a serious plunge from the $60,000+ prices we saw just seven months ago (I have been told on Twitter that #ItsNotAllAboutPrices).
+ Unfortunately, this week’s layoffs spanned beyond just those two fields, with consumer tech, fintech and food delivery impacted as well.
+ Let’s start with real estate
+ Our own Mary Ann Azevedo has been tracking the real estate tech sector, reporting on Tuesday that publicly traded real estate brokerage platforms Redfin and Compass laid off a combined 900 employees .
+ “I said we wouldn’t lay off people unless we had to,” said Redfin CEO Glenn Kelman. “We have to.”
+ Redfin offered laid-off employees 10 weeks of base salary, plus an additional week of pay for every year of service, capped at 15 weeks. They will also be paid the cost of three months of company healthcare so they can temporarily continue coverage.
+ In addition to cutting 450 jobs, or 10% of employees, Compass will pause hiring and M&A for the rest of the year.
+ San Francisco-based rental platform Zumper also cut about 15% of its 300 employees , which mostly affected its art, sales and customer service departments, according to The Real Deal. Earlier this month, another Bay Area brokerage, Side, cut 10% of its staff as well.
+ Despite this industy-wide shakeup, some companies are still chugging along. Proptech company HomeLight raised $60 million and acquired lending startup Accept.inc this week.
+ Redfin and Compass lay off a combined 900+ employees as mortgage interest rates continue to climb 
+ Pain on the blockchain
+ Coinbase is suffering a slow, morale-crushing descent. After a hiring freeze, then the controversial rescinding of accepted offers, the crypto exchange announced this week that it will reduce its workforce by 18%.
+ Remember when we said that layoffs are a bit more bearable when you’re not a jerk to your employees? I regret to inform you that Coinbase’s higher-ups probably do not read my work.
+ In a letter to employees, CEO Brian Armstrong said that employees who were laid off would be notified about their status via their personal emails — they would be cut off from their corporate accounts immediately to protect sensitive data.
+ True, angered former employees might retaliate by leaking such info. But you know how to make them even more aggrieved? Cut them off from their work accounts with no warning and tell them they no longer have a job.
+ Coinbase had 1,250 employees at the beginning of 2021, when the NFT craze ushered a new wave of participants into crypto. Since then, the team had more than quadrupled.
+ “There were new use cases enabled by crypto getting traction practically every week,” Armstrong explained . “While we tried our best to get this just right, in this case it is now clear to me that we over-hired.”
+ Armstrong also added that onboarding new employees made the team less productive in recent months.
+ Coinbase is providing 14 weeks of severance pay to affected employees, plus two weeks for every year of employment beyond one year. The platform also will offer four months of COBRA health insurance in the U.S., and four months of mental health support for international employees.
+ The crypto layoffs don’t end there. Exchanges that depend on transaction fees are losing their income streams because of the downturn. The $3 billion crypto-lending platform BlockFi cut 20% of its staff of about 850 — less than two years ago, the blockchain startup only had 150 employees. Crypto.com also laid off 5% of its workforce, or 260 employees (meanwhile, Crypto.com has committed $700 million over 20 years for the naming rights to the Staples Center…). Finally, Huobi Thailand is shutting down in July due to government licensing issues.
+ Consumer tech takes a hit, too
+ While Spotify is not yet conducting layoffs, CEO Daniel Ek told employees that the streaming giant will slow hiring by 25% , citing market uncertainty. So far this year, Spotify has shut down its live audio creator fund and cut its internal podcast group, Studio 4 , affecting about 15 jobs.
+ Is WordPress design tool Elementor consumer tech? It’s saved my ass several times, so let’s go with it. Just last week, Elementor acquired Strattic , which converts WordPress sites into Jamstack, a newer web development architecture. But, citing the “rising inflation and pending recession,” Elementor co-founder and CEO Yoni Luksenberg announced that the company would lay off 15% of its workforce, mostly in the marketing department.
+ That brings us to ByteDance — don’t worry, TikTok is fine. Three years ago, TikTok’s China-based parent company purchased Mokun Technology , an online game developer. 101 Studio, which was part of that acquisition, was shut down this week, cutting around 150 staffers , offering the other 150 workers in the studio internal transfers. This marks a setback in ByteDance’s race against Tencent to dominate mobile gaming.
+ And still, there’s more
+ TechCrunch’s Mary Ann Azevedo reports :
+ Canadian fintech giant Wealthsimple , which was valued at $4 billion as of last year, is laying off 159 people — or about 13% of its staff. The Toronto-based company has been a leader in the realm of democratizing financial products for consumers, including stock trading, crypto asset sales and peer-to-peer money transfers. And now it appears that Wealthsimple is an example of another company that experienced a boom during the early days of the pandemic and is now seeing a slowdown in business.
+ Mary Ann also reported a 25% workforce reduction affecting 110 employees at Notarize , a startup that offers remote online notarization. Of course, this startup boomed at the start of the pandemic, but now, online notarization isn’t in as high demand.
+ Our own Christine Hall shared news of JOKR , an on-demand food delivery company, leaving the U.S. to focus on Latin American markets.
+ Christine writes:
+ Food delivery companies are facing tough times as funding dried up and the rush to invest into this sector, partly as a result of the global pandemic, caused it to become quite inflated and due for a course-correct. This became evident when some of JOKR’s competitors began announcing layoffs. For example, in May, Gopuff ,  Gorillas  and  Getir  announced staff reductions.
+ TechCrunch took a deeper look at  what was happening in the on-demand delivery space  earlier this month and what it means for the industry going forward.
+ The delivery market is coming down from its pandemic highs 
+ Topics
+ brian armstrong , bytedance , coinbase , Crypto , daniel ek , economy , Electronic Arts , Elementor , finance , financial products , Fintech , food delivery , glenn kelman , health insurance , HomeLight , jokr , labor , layoff , leader , Notarize , on-demand food delivery , online notarization , peer to peer , real estate , Redfin , remote online notarization , San Francisco , siri , Spotify , Strattic , TikTok , toronto , United States , wealthsimple , WordPress , Zumper 
+ When you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence. 
+ Amanda Silberling 
+ Senior Writer 
+ Amanda Silberling is a senior writer at TechCrunch covering the intersection of technology and culture. She has also written for publications like Polygon, MTV, the Kenyon Review, NPR, and Business Insider. She is the co-host of Wow If True, a podcast about internet culture, with science fiction author Isabel J. Kim. Prior to joining TechCrunch, she worked as a grassroots organizer, museum educator, and film festival coordinator. She holds a B.A. in English from the University of Pennsylvania and served as a Princeton in Asia Fellow in Laos.
+ You can contact or verify outreach from Amanda by emailing [email protected]  or via encrypted message at @amanda.100 on Signal. 
+ View Bio 
+ 2027
+ San Francisco 
+ Get an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist 
+ Register Now 
+ Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks 
+ Aisha Malik 
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes 
+ Dominic-Madori Davis 
+ Lucas Ropek 
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say 
+ Kirsten Korosec 
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production 
+ Kirsten Korosec 
+ Tesla will stop making the Cybertruck in 2027 
+ Sean O'Kane 
+ Claude can now analyze your spending with its new Personal Finance tool 
+ Aisha Malik 
+ Harbinger raises $240M after expanding into defense 
+ Sean O'Kane 
+ Loading the next article 
+ Error loading the next article 
+

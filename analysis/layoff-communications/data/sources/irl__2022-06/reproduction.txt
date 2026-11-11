@@ -1,0 +1,90 @@
+URL: https://techcrunch.com/2022/06/02/irl-layoffs-abraham-shafi-social-media/
+RETRIEVED_VIA: direct
+ 
+ Social app IRL lays off 25% of team 
+ Image Credits: Bryce Durbin/TechCrunch 
+ Social app IRL lays off 25% of team, says it has enough cash to last well into 2024
+ Natasha Mascarenhas 
+ Amanda Silberling 
+ 3:31 PM PDT · June 2, 2022 
+ “We have all seen the state of the market,” IRL CEO and co-founder Abraham Shafi wrote in a company-wide memo where the social app announced it would be dramatically cutting staff. Similar to dozens of startups over the past few weeks, IRL has just announced it’s laying off 25% of its team, or around 25 people, citing market dynamics. The cut comes around a year after the startup landed a $170 million SoftBank-led Series C and hit coveted unicorn status.  
+ What’s different from recent layoffs, though, is the company’s tone.
+ “Courage is a decision, and we will choose courage,” Shafi wrote in the memo, obtained by TechCrunch. “Whatever we are facing today can’t be any worse than the uncertainty we met at the beginning of the COVID 19 pandemic.”
+ Regardless of the state of the pandemic, though, layoffs force workers into an unexpected period of precariousness, augmented by the impending loss of health insurance.
+ Regarding the decision to cut staff, Shafi wrote that IRL has “more than enough cash to last well into 2024.” Over the last year, the startup increased its head count by 3.5 times, but Shafi noted that WhatsApp was able to grow to 450 million users with a team of 55. This suggests that the workforce reduction was less about trying to reduce runway and more about right-sizing the team after a period of overhiring.
+ “Becoming one of these iconic, impactful companies is akin to winning a gold medal in the Olympics. In fact, probably more challenging,” the CEO wrote. “Like the Olympics, we know most people don’t want to be Olympians. In the same way, not everyone will want to walk the path we are walking. But for those that want to push their limits and find out what they are capable of, this culture is for you.”
+ Throughout the memo, Shafi emphasizes the employees’ necessity to “adapt” and be “disciplined.”
+ “I have been reflecting on Darwin’s observation that the highest indicator of survival for any living organism is not brute force strength, but how quickly it can adapt to its changing environment,” Shafi wrote. “This company is a living organism, and our ability to adapt to our changing environment is of the utmost importance.”
+ Going forward, IRL is focused on being an engineering-led organization, suggesting that the layoffs impacted other teams.
+ An employee at IRL, who spoke to TechCrunch on the condition of anonymity, confirmed the layoffs and said that they “support the move and respect it.”
+ “It shows a SoftBank company is taking responsibility, usually SoftBank companies get criticized a lot,” they said. “Financially, I know we’re good because I heard we have around $100 million still in the bank…years and years of runway.” The employee, who was not impacted by this layoff, said that the startup has a ton of new features, partnerships and prototypes in the works to create a more meaningful service in the future.
+ IRL was founded in 2017 as a way to help users find real-world events, but when the pandemic hit, the platform pivoted to prioritize the discovery of online events. The company told TechCrunch at the time of its Series C that it had 20 million registered users , with 400% growth over a 15-month period. But some employees told The Information that they were skeptical of the accuracy of these numbers. It’s unclear if IRL’s user growth played a role in today’s layoffs, but it’s more likely a combination of factors, including also the current economic downturn that’s impacting the tech industry more broadly.
+ Even as global lockdowns have eased, IRL remained dedicated to its new, digital-first strategy while also allocating money from its Series C to help bring back in-person events. At the same time, IRL also invested in its integration with TikTok and thought of itself as a potential “ WeChat of the West .” It later acquired the “digital nutrition” startup AeBeZe Labs with an eye on making its service a “healthier social app.”
+ While the co-founder cites macroeconomic environment as reasoning to adapt, he also talked about how both individual economic hardship and recent tragedies like mass shootings could increase the demand for “humans’ need to feel connection and intimacy,” which is IRL’s mission.
+ “Now, our mission is not for the faint of heart. There will be naysayers, critics, hackers, spammers and so on, he continued. “We will succeed as long as we focus on what we know and what we can control. Not just for us but our users worldwide.”
+ Shafi confirmed the layoffs, and provided the following statement to TechCrunch:
+ “As we assess our path forward, we’ve had to make the unfortunate decision to reduce our team. We’re grateful for each of these individuals’ contributions in bringing IRL’s mission to life as well as the impressive business acumen that they brought to the table everyday. We wish our former teammates the best on their journeys ahead; They are talented people, and we have no doubt they will thrive anywhere. As such, along with the offered severance, we’ll provide any support where we can for those who may want it in their search for their next endeavor. As for what’s next for IRL, we’ll remain focused on building a product and community that creates more fulfilling human connections for the next generation.” 
+ You can read the memo he sent to staff, per sources, in its entirety below:
+ Dear IRL Team, 
+ Today was tough. We had to lay off many talented people, which is never easy. The journey ahead isn’t easy either, but I am confident that it will be easier with all of you. 
+ We have all seen the state of the market. It is the worst since 2007-2008, but this is not a time to panic. Instead, this is a time to make the most of constraints. Courage is a decision, and we will choose courage. Whatever we are facing today can’t be any worse than the uncertainty we met at the beginning of the COVID 19 pandemic. Let’s remember that great tech companies were forged during more challenging economic times. Many of the great products and services we all use today (Uber, AirBnB, etc…) caught their stride during a downturn, and we will be no different. 
+ We can’t control market dynamics, but we can control how we invest our time and resources in any market dynamic. To increase our success, we will continue to be more disciplined with our time and resources. We also needed to downsize our team to the fundamentals in service of our focus. Exercising discipline and adaptation to our current environment means moving from a 100-person team to a ~75-person team. With a focus on being an engineering led organization. To put it into perspective, this is still a 3.5x increase in headcount from a year ago. Gratefully we have more than enough cash to last well in 2024 and now is the time to be offensive, diligent, and proactive. Whatsapp was able to grow to 450M users with a team of 55. I am inspired by that and I believe we will forge our own amazing story with a small but incredibly amazing team. 
+ I have been reflecting on Darwin’s observation that the highest indicator of survival for any living organism is not brute force strength, but how quickly it can adapt to its changing environment. This company is a living organism, and our ability to adapt to our changing environment is of the utmost importance. 
+ Our goal remains the same, to provide a product and a set of tools that helps to truly bring the entire world closer together through shared interests, communities, and more intimate and meaningful conversations. 
+ The world is going through a collective struggle of inflation, higher cost of goods, layoffs, school shootings, and many experiencing loneliness and depression. During these kinds of shifts, humans’ need to feel connection and intimacy through tough times increases massively. 
+ Our mission has never been more critical than it is now. I am not saying we can solve all human suffering or loneliness entirely, but if we can even play our role enabling any meaningful impact, it’s worth it . 
+ The way things get better is by everyone doing their best to help make the world a little nicer, a little softer, and a little more friendly. All of that compounds into real impact. One of the intentional decisions I made in building our product is to focus on making the business success symbiotic with consumer success. It is a virtuous loop. As long as we focus everything we have on being of service and to people, connecting and feeling less alone in this world,  we will be building a deeply meaningful business. 
+ We have already seen the people who are adopting IRL are doing so because they don’t want to use Facebook and no other product fits their core needs around groups, events, and communities. I have always believed that every excellent consumer company reflects and amplifies a part of humanity. And each product satisfies a specific and unique human need, impulse, or compulsion. 
+ Tiktok is for entertainment. 
+ Twitter caters to venting. 
+ Instagram is for showing off your lifestyle. 
+ Snapchat is for sharing moments. 
+ IRL is for your communities. 
+ The original, fundamental thing that makes us human is to be in community. Given this truth, it is incredible no single company is winning across the globe. This is our opportunity. To become the place for humans to organize and find their community. Big or small. Public or private. 
+ We see the impact we are making on our users and the thriving communities and conversations people have found in our product to date, and we are just getting started. A small handful of companies in the social space have made such an impact on people that they can consider themselves iconic and meaningful for decades to come. I fundamentally believe that if we are successful in our mission, we will cement ourselves as one of them as well. 
+ For us at IRL, it’s critical to deliver a measurable sense of progress in digital interactions and relationships so they don’t feel swift and superficial; or utterly repetitive and removed from real life. We can (and must) develop prompts, nudges, design in delight that makes people smile, and create an incredible product to improve the human experience online. 
+ Now, our mission is not for the faint of heart. There will be naysayers, critics, hackers, spammers, and so on. We will succeed as long as we focus on what we know and what we can control. Not just for us but our users worldwide. 
+ Becoming one of these iconic, impactful companies is akin to winning a gold medal in the Olympics. In fact, probably more challenging. Like the Olympics, we know most people don’t want to be Olympians. In the same way, not everyone will want to walk the path we are walking. But for those that want to push their limits and find out what they are capable of, this culture is for you. 
+ I have worked my entire life for a moment like this, and I am dedicated to putting every ounce of blood, sweat, and tears into making this a reality. Life is short, and I want to make the most of every moment. I am grateful that every day I get to wake up and obsess over helping others connect through community. I believe all of you feel this way, and I am so deeply honored to work alongside you all. 
+ I wish our former teammates the best on their journeys ahead. They are talented people, and I have no doubt they will thrive elsewhere. 
+ For those of us who remain at IRL, this is a new chapter for all of us to see what we are capable of. 
+ Here in service to you, 
+ Abraham Shafi 
+ Sarah Perez contributed reporting to this piece. 
+ Messaging social network IRL hits unicorn status with SoftBank-led $170M Series C 
+ Tech layoffs top 15K in a brutal May 
+ Topics
+ Abraham Shafi , irl , labor , layoff , Layoffs , Media & Entertainment , online events , social media , Softbank , SoftBank Group , startup , TikTok , WhatsApp 
+ When you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence. 
+ Natasha Mascarenhas 
+ Senior Reporter 
+ Natasha Mascarenhas was a senior reporter at TechCrunch covering early stage startups and venture capital trends.
+ View Bio 
+ Amanda Silberling 
+ Senior Writer 
+ Amanda Silberling is a senior writer at TechCrunch covering the intersection of technology and culture. She has also written for publications like Polygon, MTV, the Kenyon Review, NPR, and Business Insider. She is the co-host of Wow If True, a podcast about internet culture, with science fiction author Isabel J. Kim. Prior to joining TechCrunch, she worked as a grassroots organizer, museum educator, and film festival coordinator. She holds a B.A. in English from the University of Pennsylvania and served as a Princeton in Asia Fellow in Laos.
+ You can contact or verify outreach from Amanda by emailing [email protected]  or via encrypted message at @amanda.100 on Signal. 
+ View Bio 
+ 2027
+ San Francisco 
+ Get an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist 
+ Register Now 
+ Most Popular
+ Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks 
+ Aisha Malik 
+ Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes 
+ Dominic-Madori Davis 
+ Lucas Ropek 
+ Waymo robotaxis kept illegally passing school buses after software fix, feds say 
+ Kirsten Korosec 
+ Musk says Tesla will refund some Cybertruck deposits, defends decision to end production 
+ Kirsten Korosec 
+ Tesla will stop making the Cybertruck in 2027 
+ Sean O'Kane 
+ Claude can now analyze your spending with its new Personal Finance tool 
+ Aisha Malik 
+ Harbinger raises $240M after expanding into defense 
+ Sean O'Kane 
+ Loading the next article 
+ Error loading the next article 
+

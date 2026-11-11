@@ -1,0 +1,15 @@
+URL: https://techcrunch.com/2025/05/07/crowdstrike-says-it-will-lay-off-500-workers/
+RETRIEVED_VIA: direct
+CrowdStrike says it will lay off 500 workers Lorenzo Franceschi-Bicchierai 7:25 AM PDT · May 7, 2025 Cybersecurity giant CrowdStrike said on Wednesday that it would lay off 5% of its global workforce, which amounts to about 500 workers.
+
+In an 8-K filing, CrowdStrike said the layoffs were part of a “a strategic plan (the ‘Plan’) to evolve its operations to yield greater efficiencies as the Company continues to scale its business with focus and discipline to meet its goal of $10 billion in ending [Annual Recurring Revenue].”
+
+The company also said it was planning to “to hire in key strategic areas throughout its fiscal year ending January 31, 2026.”
+
+“These changes position us to move faster, operate more efficiently, and continue our cybersecurity leadership,” company CEO George Kurtz said in a letter to employees, according to The Wall Street Journal.
+
+On Sunday, CrowdStrike said in a press release that last year, it delivered a “record full year operating cash flow of $1.38 billion and record full year free cash flow of $1.07 billion.”
+
+Last year, Kurtz made a total of more than $46 million, according to the AFL-CIO, a federation of labor unions in the United States.
+
+CrowdStrike became a household name in 2016 when it investigated the Democratic National Committee hack and attributed it to the Russian government. Last summer, the company made headlines for the wrong reasons — a faulty update to its software impacted 8.5 million Windows devices around the world and caused a massive outage all over the world, forcing airports to shut down and hindering airlines, banks, hotels, and other kinds of businesses.
