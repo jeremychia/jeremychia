@@ -1,3 +1,1 @@
-# Raw SEC filing text (1.6 GB); regenerate with scripts/edgar_fetch.py
-data/edgar/text/
 .DS_Store
