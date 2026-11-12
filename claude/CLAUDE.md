@@ -86,6 +86,7 @@ and the failure cases; this file is what should be in mind by default.
 - **One definition per concept.** The same business rule computed in two places drifts.
   Reusing an established name for a different definition is worse than duplicating it.
 - **Prefer a named CTE to a nested subquery.**
+- **Filter where the data is read.** Put each row filter in the import CTE and name it for the rows it keeps. Renames and joins go below.
 - **Pass only what the code reads.** A lean shared field of the needed data, never a whole
   parent structure. Keep the central class where it is, so a change touches no other code.
 - **Full words for every name**, comprehension variables included: `parent`, never `p`.
