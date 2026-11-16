@@ -26,3 +26,6 @@
 - [Full-word names in code](full-word-names-in-code.md) — naming loop and comprehension variables: `parent`, never `p`
 - [Filter, then act](filter-then-act.md) — a loop full of `if …: continue` guards: move scope into a named generator, keep only the deciding condition
 - [Filter where the data is read](filter-where-the-data-is-read.md) — writing or reviewing a dbt model with a `where` below the import ctes: move the filter into the import, name it for the rows it keeps
+- [Name every value, no catch-all else](name-every-value-no-catch-all-else.md) — writing a case, `not in` or var that sorts source values into groups; name each value, send the rest to other, warn on other
+- [What colleagues catch on my PRs](what-colleagues-catch-on-my-prs.md) — self-reviewing before asking for review; what to do when it fires, two matching rows, cost and alerts per run, merge side effects
+- [Coding checklist from team reviews](coding-checklist-from-team-reviews.md) — writing a dbt change, before opening the PR; nine checks from descriptions to scan × runs

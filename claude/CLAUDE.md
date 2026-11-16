@@ -85,6 +85,14 @@ and the failure cases; this file is what should be in mind by default.
   filename.
 - **One definition per concept.** The same business rule computed in two places drifts.
   Reusing an established name for a different definition is worse than duplicating it.
+- **No catch-all `else`.** Name every known value, send the rest to `other`, and warn on `other`.
+- **Say what to do when a check fires.** Each test and job description names the action, who acts, and whether it clears by itself.
+- **Update the description in the same commit as the sql.** A description that no longer matches the code misleads every reader.
+- **Delete the new line and run the unit test.** If it still passes, add the mock row that reaches it.
+- **Check what the merge builds and what a re-run of last month gives.** A model that reads a table not yet in production fails on merge.
+- **No data test on what our own sql guarantees.** Unit-test our logic; data-test inputs another team controls.
+- **Join on the id, not on an equal amount.** Two rows with the same amount can share one partner.
+- **Multiply the scan by the number of runs.** Count the bytes and the alerts, and test the table that gets booked.
 - **Prefer a named CTE to a nested subquery.**
 - **Filter where the data is read.** Put each row filter in the import CTE and name it for the rows it keeps. Renames and joins go below.
 - **Pass only what the code reads.** A lean shared field of the needed data, never a whole
